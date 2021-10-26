@@ -535,7 +535,7 @@
  fort_maintenance_cost_inv_desc:0 "Ensuring our fortifications and their garrisons are well stocked, repaired, and manned with only the most necessary personnel will keep maintenance costs down."
  recruit_mercenary_inv:0 "Mercenary Benefits"
  recruit_mercenary_inv_desc:0 "Rewarding mercenaries for their service as if they were our own veterans will attract greater numbers of foreign volunteers willing to accept less pay."
- change_governor_policy_inv:0 "Centralized Comites"
+ change_governor_policy_inv:0 "Centralized Commitees"
  change_governor_policy_inv_desc:0 "Standardizing the bureaucratic tools of our governors by providing them with competent assistants will improve the effectiveness of local government by cutting inefficiency."
  assemble_raiding_inv:0 "Experienced Raiders"
  assemble_raiding_inv_desc:0 "As our people are forced to fight back the many threats at our borders, we have grown experienced and skilled at making the most out of our raids into foreign territory."
@@ -1007,3 +1007,24 @@
 #inventions law rework
 
  commands_gain_martial_invention:0 "Every #Y Legion Commander#! gains #Y 1#! @military_icon! "
+
+
+ counterespionage_defence:0 "This invention will increase your ability to root out #Y Spies#! by 10% and protect your nation from foreign infiltration."
+ scorched_earth_decision:0 "This invention unlocks a special decision, #Y Scorched Earth Policy#!, which devastates enemy invaders of your nation."
+ fortified_capital_decision:0 "This invention unlocks a special decision, #Y Fortify Capital#!, to withstand any attack."
+
+ cruise_seas_decision:0 "This invention unlocks a special decision, #Y Cruise the Sea#!, which boosts your naval strength."
+ defend_coast_decision:0 "This invention unlocks a special decision, #Y Defend the Coast#!, which boosts your naval strength."
+
+ persecute_minority_decision:0 "This invention unlocks a special cultural decision, #Y Persecute Minority#!, killing their members, confiscating their wealth and driving them from their homes."
+ exile_minority_decision:0 "This invention unlocks a special cultural decision, #Y Exile Minority#!, which uproots a community and settles it elsewhere in your nation."
+ pander_minority_decision:0 "This invention unlocks a special cultural decision, #Y Promote Minority#!, which boosts population growth in a minority-dominant province."
+ zoonotic_defence:0 "This invention will decrease the attrition suffered by #Y Mounted Units#! when they make up 50% of a besieging army."
+
+ anti_corruption_decision:0 "This invention unlocks a decision, #Y Reform Bureaucracy#!, which allows you to lower corruption, though some will object."
+ another_anti_corruption_decision:0 "This invention unlocks a decision, #Y Anti-Corruption Crackdown#!, which allows you to lower corruption quickly, but painfully."
+
+ pay_the_crown_tt:0 "This invention unlocks a law, #Y Burdensome Tribute#!, which maximises the tribute paid by your subjects."
+ new_friends_law_tt:0 "This invention unlocks a law, #Y Personal Diplomacy#!, which increases the quantity of subject relations at the expense of their quality."
+ king_of_kings_law_tt:0 "This invention unlocks a law, #Y King of Kings#!, which allows you to have more vassals, though they will not be as loyal."
+ bread_stamp_law_tt:0 "This invention unlocks a law, #Y Sponsored Food and Board#!, which promotes population growth by lightening the tax burden on the poor."

@@ -1,0 +1,90 @@
+﻿force_divorce = { 
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_arrange_marriage"
+	
+	message = no
+	
+	
+	potential_trigger = {
+		scope:actor = {
+			OR = {
+				is_monarchy = yes 
+				is_tribal = yes
+				is_republic = yes 
+			}
+			tyranny <= 99
+		}
+		hidden:scope:target = {
+			is_alive = yes
+			employer = scope:actor
+			is_married = yes
+			is_mercenary = no
+			NOT ={
+				has_character_modifier = spy_recruit_character
+			}
+			spouse = {
+				is_alive = yes
+				is_ruler = no
+			}
+
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+		}
+	}
+	
+	
+	allowed_trigger = {
+		hidden:scope:actor = {
+			can_pay_price = price_force_divorce 
+		}
+		scope:target = {
+			is_married = yes
+			is_adult = yes
+			prisoner = no
+			loyalty >= 45
+		}
+	}
+	
+	
+	effect = {
+		scope:target.spouse = {
+			add_loyalty = forced_to_divorce
+			add_popularity = -30
+			#add_prominence = -30
+		}
+		
+		scope:target = {
+			divorce_character = spouse
+			add_loyalty = forced_to_divorce
+			add_popularity = -30
+			#add_prominence = -30
+			hidden_effect = {
+				family = {
+					every_family_member = {
+						limit = {
+							employer = scope:actor
+							is_ruler = no
+						}
+						add_loyalty = family_forced_to_divorce 
+					}
+				} 
+			}
+		}
+
+		scope:actor = { 
+			add_tyranny = {
+				value = scope:target.power_base
+				divide = 2
+				add = 5
+				min = 10
+			}
+			pay_price = price_force_divorce
+		}	
+	}	
+}

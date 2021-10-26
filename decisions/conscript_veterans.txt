@@ -13,9 +13,8 @@
 		}
 		
 		allow = {
-			has_war_exhaustion >= 10
-			treasury >= 100
-			military_experience >= 25
+			has_war_exhaustion >= 5
+			military_experience >= 15
 			manpower_percentage <= 0.2
 			#global_manpower = 0
 		}
@@ -34,8 +33,7 @@
 			}
 			
 			add_manpower = veterans_fight_svalue
-			add_treasury = -100
-			add_military_experience = -25
+			add_military_experience = -15
 			add_country_modifier = {
 				name = veterans_conscripted
 				duration = 1825

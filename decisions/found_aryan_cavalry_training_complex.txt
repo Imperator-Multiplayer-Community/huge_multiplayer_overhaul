@@ -25,11 +25,6 @@
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			OR = {
-				is_tribal = yes
-				is_monarchy = yes
-				is_republic = yes
-			}
 			owns = 4415
 		}
 		

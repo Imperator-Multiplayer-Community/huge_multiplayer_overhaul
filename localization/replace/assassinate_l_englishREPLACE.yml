@@ -1,0 +1,138 @@
+﻿l_english:
+ assassinate.1.t:0 "Contact Reports In"
+ assassinate.1.desc:0 "Our advisors report that [SCOPE.sChar('foreign_agent').GetName], a trusted friend of our [ROOT.GetCountry.GetRulerTitle], has made contact with our agents in [SCOPE.sChar('target').GetEmployer.GetName]. The planned assassination of [SCOPE.sChar('target').GetName] is beginning to take shape - however, [SCOPE.sChar('foreign_agent').GetPraenomen] has requested that we send aid, that [SCOPE.sChar('foreign_agent').GetSheHe] might be better able to perform [SCOPE.sChar('foreign_agent').GetHerHis] covert duties."
+ assassinate.1.a:0 "Anything. [SCOPE.sChar('target').GetPraenomen] must die."
+ assassinate.1.b:0 "Surely this is not necessary?"
+ assassinate.1.c:0 "Tell [SCOPE.sChar('foreign_agent').GetHerHim] to use some initiative!"
+ plot_becomes_more_unlikely:0 "The planned assassination will be #R less#! likely to succeed."
+ #
+ assassinate.2.t:0 "Assassination Called Off"
+ assassinate.2.desc:0 "Due to the convenient death of [SCOPE.sChar('target').GetName], in circumstances not of our making, our attempted assassination is no longer required.\n\nWe have instructed our agents to return what resources they have not already made use of, that we might recover some of our costs."
+ assassinate.2.a:0 "Fate smiles upon us."
+ #
+ assassinate.3.t:0 "Agent Expired!"
+ assassinate.3.desc:0 "Our attempted assassination of [SCOPE.sChar('target').GetName], has come to a sudden halt. The agent that we entreated to assist us in this matter, has died under dubious circumstances.\n\nFortunately, our contacts in [SCOPE.sChar('target').GetEmployer.GetName] have managed to recover some of the resources we committed to this scheme."
+ assassinate.3.a:0 "Most unfortunate."
+ #
+ assassinate.4.t:0 "Agent Exposed!"
+ assassinate.4.desc:0 "Seemingly, we were unwise to put our trust in foreign friends. [SCOPE.sChar('foreign_agent').GetName], who our agents had contracted for use in our attempted assassination of [SCOPE.sChar('target').GetName], has been clapped in irons by the curs in [SCOPE.sChar('target').GetEmployer.GetName].\n\nFortunately, our involvement remains undetected, and our agents were able to recover some of the resources we had expended in this ill-fated endeavor."
+ assassinate.4.a:0 "Drat."
+ #
+ assassinate.5.t:0 "Murder is a Tricky Business"
+ assassinate.5.desc:0 "Once more, our agents have received communication from our contact in [SCOPE.sChar('target').GetEmployer.GetName]. It would appear that [SCOPE.sChar('foreign_agent').GetSheHe] is having some trouble planning [SCOPE.sChar('foreign_agent').GetHerHis] escape, once [SCOPE.sChar('target').GetPraenomen] has been assassinated. [SCOPE.sChar('foreign_agent').GetSheHe|U] demands that we send a scapegoat, in order that someone is able to take the fall without drawing suspicion.\n\nSuch a scapegoat would be unlikely to return from this task..."
+ assassinate.5.a:0 "We know just the [SCOPE.sChar('scapegoat').GetWomanMan]!"
+ assassinate.5.b:0 "And risk our own? Never!"
+ #
+ assassinate.6.t:0 "Thinking Ahead"
+ assassinate.6.desc:0 "Clearly beset by future concerns, our agent in [SCOPE.sChar('target').GetEmployer.GetName] has contacted us once more, requesting a promise of asylum once the deed is done.\n\nOur advisors are divided as to whether this would be a wise move."
+ assassinate.6.a:0 "Anything to soothe [SCOPE.sChar('foreign_agent').GetHerHis] mind."
+ assassinate.6.b:0 "Certainly not."
+ agent_will_flee_to_us_tt:0 "[SCOPE.sChar('foreign_agent').GetName] will attempt to flee to our country, after the assassination attempt."
+ #
+ assassinate.7.t:0 "The Eve is Nigh"
+ assassinate.7.desc:0 "Our agent in [SCOPE.sChar('target').GetEmployer.GetName] has informed us that the attempted assassination targeting [SCOPE.sChar('target').GetName] will go ahead imminently. [SCOPE.sChar('foreign_agent').GetSheHe|U] only requests one further instruction.\n\nIn what manner should we attempt to do away with [SCOPE.sChar('target').GetPraenomen]?"
+ assassinate.7.a:0 "Poison is sure to work."
+ assassinate.7.b:0 "A quick stabbing ought to suffice."
+ assassinate.7.c:0 "Skin [SCOPE.sChar('target').GetHerHim] alive!"
+ assassinate.7.d:0 "Impale [SCOPE.sChar('target').GetHerHim] on a battering ram!"
+ assassinate.7.e:0 "Lure [SCOPE.sChar('target').GetHerHim] away, then crucify [SCOPE.sChar('target').GetHerHim]."
+ assassinate.7.f:0 "Have [SCOPE.sChar('target').GetHerHim] garroted in the night."
+ assassinate.7.g:0 "Arrange a bathing accident."
+ assassinate.7.h:0 "Batter [SCOPE.sChar('target').GetHerHim] to death."
+ assassinate.7.i:0 "Anything, as long as it's quick."
+ attempted_assassination_on_us:0 "Attempted Assassination"
+ #
+ assassinate.8.t:0 "[SCOPE.Custom('assassination_result_string')]"
+ assassination_attempt_failed_string:0 "Assassination Failed!"
+ assassination_attempt_succeeded_string:0 "Assassination Successful!"
+ assassinate.8.desc:0 "[SCOPE.Custom('assassination_result_first_paragraph')]\n\n[SCOPE.Custom('assassination_result_second_paragraph')] [SCOPE.Custom('assassination_result_third_paragraph_asylum_promised_agent')]\n\n[SCOPE.Custom('assassination_result_fourth_paragraph')]"
+ assassination_result_first_paragraph_failed:0 "We have received grave news from our agents in [SCOPE.sChar('target').GetEmployer.GetName]. The blundering fool we sent to slay [SCOPE.sChar('target').GetName], has failed entirely - [SCOPE.sChar('target').GetPraenomen] yet lives!"
+ assassination_result_first_paragraph_succeeded:0 "Our agents in [SCOPE.sChar('target').GetEmployer.GetName] report that the court of [SCOPE.sChar('target').GetEmployer.GetName] is in turmoil! It appears that our brave assassin, [SCOPE.sChar('foreign_agent').GetName], has succeeded in [SCOPE.sChar('foreign_agent').GetHerHis] task to rid the world of [SCOPE.sChar('target').GetName]."
+ assassination_result_second_paragraph_scapegoat_killed:0 "The poor [SCOPE.sChar('scapegoat').GetWomanMan] we sent to take the fall for the assassination, one [SCOPE.sChar('scapegoat').GetName], performed [SCOPE.sChar('scapegoat').GetHerHis] role most admirably; having been fallen upon in a frenzy, mere moments after the deed was done. An unwilling accomplice mayhap, but an effective one."
+ assassination_result_second_paragraph_scapegoat_survived:0 "The poor [SCOPE.sChar('scapegoat').GetWomanMan] we sent to take the fall for the deed, has apparently survived. Naturally, we have severed all connections with [SCOPE.sChar('scapegoat').GetHerHim] - [SCOPE.sChar('scapegoat').GetSheHe] shall have to make [SCOPE.sChar('scapegoat').GetHerHis] own way in life now."
+ assassination_result_second_paragraph_generic:1 "We are told that many were present at the scene of the attempted deed."
+ assassination_result_third_paragraph_asylum_promised_agent:0 "Our agent somehow managed to flee the scene, and at this very moment travels towards our borders, hoping to take advantage of our offer of asylum. It is not too late to change our minds, of course..."
+ assassination_result_third_paragraph_default:0 "Our agent appears to have decided to face [SCOPE.sChar('foreign_agent').GetHerHis] fate in [SCOPE.sChar('foreign_agent').GetEmployer.GetName] - whether [SCOPE.sChar('foreign_agent').GetSheHe] survives is entirely down to [SCOPE.sChar('foreign_agent').GetHerHis] own considerable skills."
+ assassination_result_fourth_paragraph_discovered:0 "Lastly, and perhaps most unfortunately, it seems that enough evidence was discarded at the scene to link our proud nation to the assassination of [SCOPE.sChar('target').GetPraenomen]; we are sure to draw the ire of the [SCOPE.sChar('target').GetEmployer.GetAdjective] people."
+ assassination_result_fourth_paragraph_undiscovered:0 "Lastly, it appears that our involvement in this affair went quite unnoticed by the [SCOPE.sChar('target').GetEmployer.GetAdjective] people - clearly they are more foolish than we had anticipated."
+ assassinate.8.a:0 "Give [SCOPE.sChar('foreign_agent').GetPraenomen] a hero's welcome!"
+ assassinate.8.b:0 "Excellent! But, about that matter of asylum..."
+ assassinate.8.c:1 "Interesting."
+ assassinate.9.t:0 "Assassinated!"
+ assassinate.9.desc:0 "Our dear [ROOT.GetCountry.GetRulerTitle], [SCOPE.sChar('target').GetName], has been assassinated by foreign agents!\n\n[SCOPE.Custom('assassinated_ping_paragraph_two')][SCOPE.Custom('assassinated_ping_paragraph_three')]"
+ assassination_culprit_discovered:0 "In the furious melee surrounding [SCOPE.sChar('target').GetHerHis] death, a culprit was apprehended. After grueling torture, [SCOPE.sChar('culprit').GetSheHe] identified [SCOPE.sChar('culprit').GetHerselfHimself] as [SCOPE.sChar('culprit').GetName], a [SCOPE.sChar('culprit').GetWomanMan] of little notoriety, clearly acting on someone's behalf."
+ assassination_culprit_undiscovered:0 "Despite desperate searching, questioning, and intimidation, the perpetrator of this vile deed could not be located."
+ discovered_ruler_para:0 "Despite the paranoia gripping our nation, evidence discovered at the scene, and our dire political situation point to [SCOPE.sChar('discovered_ruler').GetName] of [SCOPE.sChar('discovered_ruler').GetEmployer.GetName] as being the puppet master behind this action. We must surely punish them for this vile deed."
+ undiscovered_ruler_para:0 "No evidence could be found linking any one state to this terrible deed - we are unable to identify who was behind it."
+ assassinate.9.a:0 "Woe is us!"
+ assassinate.10.t:0 "Assassination Attempt!"
+ assassinate.10.desc:0 "In a frightening turn of events, an assassination attempt was made upon our dear [ROOT.GetCountry.GetRulerTitle], this very day. The gods themselves must have been smiling upon us, as [SCOPE.sChar('target').GetSheHe] managed to escape unharmed - and members of the [ROOT.GetCountry.Custom('get_court_type')] are calling for retribution.\n\n[SCOPE.Custom('enemy_discovered_10_para')]"
+ enemy_discovered_10_para:0 "Through diligent interrogation, and shrewd tactics, we have identified [SCOPE.sChar('discovered_ruler').GetName], of [SCOPE.sChar('discovered_ruler').GetEmployer.GetName], as the author of this vile deed. Our people stand ready to act."
+ enemy_undiscovered_10_para:0 "Despite our best efforts, we could not identify the author of this vile deed, and must let it go unpunished. Thankfully, our people have rallied about our [ROOT.GetCountry.GetRulerTitle], showing their best side in the face of adversity."
+ assassinate.10.a:0 "Outrageous!"
+ assassinate.1.d:0 "How exciting! Tell everybody!"
+
+ assassinate.11.t:0 "Assassin Expired!"
+ assassinate.11.desc:0 "Our attempted assassination of [SCOPE.sChar('target').GetName], has come to a sudden halt. The agent who was coordinating the operation, [SCOPE.sChar('hitman').GetName], has died under dubious circumstances.\n\nFortunately, our other contacts in [SCOPE.sChar('target').GetEmployer.GetName] have managed to recover some of the resources we committed to this scheme."
+ assassinate.11.a:0 "Most unfortunate."
+ #
+ assassinate.12.t:0 "Assassin Imprisoned!"
+ assassinate.12.desc:0 "Unfortunately, our trusted spy, [SCOPE.sChar('hitman').GetName], who was orchestrating the assassination of [SCOPE.sChar('target').GetName], has been clapped in irons by the curs in [SCOPE.sChar('target').GetEmployer.GetName].\n\nFortunately, our spy is not talking and involvement remains undetected. We were even able to recover some of the resources we had expended in this ill-fated endeavor."
+ assassinate.12.a:0 "Drat."
+
+ assassinate.14.t:0 "Assassination Delayed"
+ assassinate.14.desc:0 "Our trusted spy, [SCOPE.sChar('hitman').GetName], who is orchestrating the assassination of [SCOPE.sChar('target').GetName], reports that the authorities may suspect something and is keeping a low profile until the tension drops."
+ assassinate.14.a:0 "Patience is a virtue."
+
+ assassinate.15.t:0 "Assassination Plot Abandoned"
+ assassinate.15.desc:0 "Unfortunately, our trusted spy, [SCOPE.sChar('hitman').GetName], who was coordinating the assassination of [SCOPE.sChar('target').GetName] with [SCOPE.sChar('foreign_agent').GetName], reports that the local authorities are close to discovering their plot, so it must be abandoned. How should [SCOPE.sChar('hitman').GetName] proceed?"
+ assassinate.15.a:0 "Go into hiding"
+ assassinate.15.b:0 "Stay for another mission"
+ assassinate.15.c:0 "Return home"
+
+ assassinate.17.t:0 "Assassination Delayed"
+ assassinate.17.desc:0 "Our trusted spy, [SCOPE.sChar('hitman').GetName], who is orchestrating the assassination of [SCOPE.sChar('target').GetName], reports that the authorities may suspect something and is keeping a low profile until the tension drops."
+ assassinate.17.a:0 "Patience is a virtue."
+
+ assassinate.18.t:0 "Assassination Plot Abandoned"
+ assassinate.18.desc:0 "Unfortunately, our trusted spy, [SCOPE.sChar('hitman').GetName], who was coordinating the assassination of [SCOPE.sChar('target').GetName] with [SCOPE.sChar('foreign_agent').GetName], reports that the local authorities are close to discovering their plot, so it must be abandoned. How should [SCOPE.sChar('hitman').GetName] proceed?"
+ assassinate.18.a:0 "Go into hiding"
+ assassinate.18.b:0 "Stay for another mission"
+ assassinate.18.c:0 "Return home"
+
+ assassinate.23.t:0 "Tracked and Cornered" 
+ assassinate.23.desc:0 "Your guards have tracked down and apprehended the mastermind behind the recent assassination attempt. How do you wish to proceed?"
+ assassinate.23.a:0 "Execute" #Execute
+ assassinate.23.b:0 "Imprison" #Imprison
+ assassinate.23.c:0 "Offer amnesty" #
+
+ assassinate.24.t:0 "The Coast Is Clear"
+ assassinate.24.desc:0 "Your assassin [SCOPE.sChar('hitman').GetName] managed to escape the police... for now."
+ assassinate.24.a:0 "Go into hiding"
+ assassinate.24.b:0 "Stay for another mission"
+ assassinate.24.c:0 "Return home"
+ 
+ assassinate.25.t:0 "The Art of Death"
+ assassinate.25.desc:0 "Your assassin [SCOPE.sChar('hitman').GetName] has killed the target, improving [SCOPE.sChar('hitman').GetHerHis] craft."
+ assassinate.25.a:0 "Ever the better hunter"
+
+ assassinate.26.t:0 "Hot Pursuit" 
+ assassinate.26.desc:0 "Having failed to kill the target, your assassin is being pursued by the secret police."
+ assassinate.26.a:0 "Try to escape"
+
+ assassinate.27.t:0 "Time to Strike" 
+ assassinate.27.desc:0 "At long last, your assassin has isolated the target and is poised to strike."
+ assassinate.27.a:0 "Don't think twice about it" #Execute
+
+ assassinate.28.t:0 "Something Fishy"
+ assassinate.28.desc:0 "Your bodyguard,[SCOPE.sChar('bodyguard').GetName], believes there is something suspicious in the air. Someone may be plotting to kill you."
+ assassinate.28.a:0 "Order the bodyguard to take all precautions"
+
+ assassinate.31.t:0 "Homeland Security"
+ assassinate.31.desc:0 "Your bodyguard [SCOPE.sChar('bodyguard').GetName] has foiled an assassination attempt, improving [SCOPE.sChar('bodyguard').GetHerHis] craft."
+ assassinate.31.a:0 "Ever the better hunter"
+
+ assassinate.40.t:0 "Those Left behind"
+ assassinate.40.a:0 "Give [SCOPE.sChar('foreign_agent').GetPraenomen] a hero's welcome!"
+ assassinate.40.b:0 "Excellent! But, about that matter of asylum..."
+ assassinate.40.c:1 "Interesting."

@@ -49,3 +49,9 @@ embellished_temple_jupiter_optimus_maximus = { #Now a country modifier
 	happiness_for_same_religion_modifier = 0.025
 	omen_power = 0.1
 }
+
+exiled_community = {
+	local_pop_assimilation_speed_modifier = -1
+	local_unrest = 1
+	local_population_capacity_modifier = 0.2
+}

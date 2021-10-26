@@ -1,0 +1,1955 @@
+﻿namespace = relic_gift_event
+
+relic_gift_event.1 = { #You send the letter to a player. Does he accept to correspond? Received by target employer
+	type = country_event
+	title = "relic_gift_event.1.t"
+	desc = "relic_gift_event.1.desc"
+	left_portrait = current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = greek_philosophers
+	
+	option = { #Option for recipient to accept
+		name = "relic_gift_event.1.a"
+		scope:target = {
+			set_variable = {
+				name = relic_recipient
+				value = scope:actor.current_ruler
+				days = 1460
+			}
+			save_scope_as = treasure_recipient
+		}
+		scope:actor.current_ruler = {
+			set_variable = {
+				name = relic_giver
+				value = scope:target
+				days = 1460
+			}
+		}
+		custom_tooltip = friend_refusal
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = relic_gift_event.3
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #Option for recipient to decline
+		name = "relic_gift_event.1.b"
+		custom_tooltip = friend_refusal
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = relic_gift_event.2
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+relic_gift_event.2 = { #Declined... he didnt even read it 
+	type = country_event
+	title = "relic_gift_event.2.t"
+	desc = "relic_gift_event.2.desc"
+	
+	left_portrait = current_ruler
+	right_portrait = scope:target
+	
+	picture = greek_court
+	
+	option = {
+		name = "relic_gift_event.2.a"
+		custom_tooltip = no_effect_tooltip
+	}
+	
+}
+
+relic_gift_event.3 = { #accepted with pleasure
+	type = country_event
+	title = "relic_gift_event.3.t"
+	desc = "relic_gift_event.3.desc"
+	left_portrait = current_ruler
+	right_portrait = scope:treasure_recipient
+	goto_location = scope:treasure_recipient
+	
+	picture = council_country
+	
+	option = {
+		name = "relic_gift_event.3.a"
+		scope:actor = {
+			pay_price = gift_slave
+		}
+		scope:actor = {
+			trigger_event = { 
+				id = relic_gift_event.4
+				days = 7
+			}
+		}
+	}
+}
+
+
+relic_gift_event.4 = {
+	type = country_event
+	title = "relic_gift_event.4.t"
+	desc = "relic_gift_event.4.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = council_country
+	goto_location = scope:treasure_recipient
+
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.4.a"
+		ROOT.employer = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.martial
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.13
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.14
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+	}
+
+	option = {
+		name = "relic_gift_event.4.b"
+		ROOT.employer = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.finesse
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.15
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.16
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+	}
+
+	option = {
+		name = "relic_gift_event.4.c"
+		ROOT.employer = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.zeal
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.17
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.18
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+	}
+
+	option = {
+		name = "relic_gift_event.4.d"
+		ROOT.employer = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.charisma
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.19
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = relic_gift_event.20
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+	}
+
+}
+
+
+###############################################################
+
+
+relic_gift_event.13 = { #Good relic martial
+	type = country_event
+	title = "relic_gift_event.13.t"
+	desc = "relic_gift_event.13.desc"
+
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.13.a"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = mp_salt_rock
+				}
+			}
+			set_global_variable = {
+				name = mp_salt_rock
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_multiplayer_salt_rock
+					icon = treasure_armor
+
+					modifier = {
+						local_defensive = 0.25
+						attrition = 2
+						max_attrition = 2
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.21 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.13.b"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = honey_badger
+				}
+			}
+			set_global_variable = {
+				name = honey_badger
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_honey_badger
+					icon = treasure_armor
+
+					modifier = {
+						local_freemen_output = 0.1
+						local_manpower_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.22 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.13.c"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = jake_shirt_var
+				}
+			}
+			set_global_variable = {
+				name = jake_shirt_var
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_jake_shirt
+					icon = treasure_armor
+
+					modifier = {
+					local_manpower_modifier = 0.1
+					local_freemen_output = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.23 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.13.d"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = god_of_war
+				}
+			}
+			set_global_variable = {
+				name = god_of_war
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_sword_of_ares
+					icon = treasure_armor
+
+					modifier = {
+						local_manpower_modifier = 0.1
+						local_freemen_output = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.24 }
+		}
+	}		
+
+}
+
+relic_gift_event.14 = { #Bad relic martial
+	type = country_event
+	title = "relic_gift_event.14.t"
+	desc = "relic_gift_event.14.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.14.a"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = hugbox_var
+				}
+			}
+			set_global_variable = {
+				name = hugbox_var
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_hugbox_coat
+					icon = treasure_armor
+
+					modifier = {
+						local_defensive = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.25 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.14.b"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = vic2steam_numbers
+				}
+			}
+			set_global_variable = {
+				name = vic2steam_numbers
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_vic2steam_numbers
+					icon = treasure_armor
+
+					modifier = {
+						local_freemen_output = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.26 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.14.c"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = shitty_mechanic
+				}
+			}
+			set_global_variable = {
+				name = shitty_mechanic
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_shitty_mechanic
+					icon = treasure_armor
+
+					modifier = {
+						local_manpower_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.27 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.14.d"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = nakama_server
+				}
+			}
+			set_global_variable = {
+				name = nakama_server
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_nakama_server
+					icon = treasure_armor
+
+					modifier = {
+						fort_level = 1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.28 }
+		}
+	}		
+
+}
+
+
+relic_gift_event.15 = { #Good relic finesse
+	type = country_event
+	title = "relic_gift_event.15.t"
+	desc = "relic_gift_event.15.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.15.a"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = stash
+				}
+			}
+			set_global_variable = {
+				name = stash
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_stash
+					icon = treasure_armor
+
+					modifier = {
+						local_citizen_output = 0.1
+						local_research_points_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.29 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.15.b"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = popes_tips
+				}
+			}
+			set_global_variable = {
+				name = popes_tips
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_popes_tips
+					icon = treasure_armor
+
+					modifier = {
+						local_base_trade_routes = 1
+						state_commerce_modifier = 0.2
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.30 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.15.c"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = mighty_ink
+				}
+			}
+			set_global_variable = {
+				name = mighty_ink
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_mighty_pen
+					icon = treasure_armor
+
+					modifier = {
+						local_citizen_output = 0.1
+						local_nobles_happyness = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.31 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.15.d"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = headhunting
+				}
+			}
+			set_global_variable = {
+				name = headhunting
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_blood_skull
+					icon = treasure_armor
+
+					modifier = {
+						local_base_trade_routes = 1
+						local_pop_promotion_speed = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.32 }
+		}
+	}		
+
+}
+
+
+relic_gift_event.16 = { #Bad relic finesse
+	type = country_event
+	title = "relic_gift_event.16.t"
+	desc = "relic_gift_event.16.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.16.a"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = pineapple_pizza #############################GOOOOD############################
+				}
+			}
+			set_global_variable = {
+				name = pineapple_pizza
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_pineapple_pizza
+					icon = treasure_armor
+
+					modifier = {
+						local_slaves_output = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.33 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.16.b"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = meta_gaming
+				}
+			}
+			set_global_variable = {
+				name = meta_gaming
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_meta_gaming_manual
+					icon = treasure_armor
+
+					modifier = {
+						local_pop_promotion_speed = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.34 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.16.c"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = russa_wifi
+				}
+			}
+			set_global_variable = {
+				name = russa_wifi
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_russa_wifi
+					icon = treasure_armor
+
+					modifier = {
+						local_monthly_civilization = 0.01
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.35 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.16.d"
+		#add_friend = scope:treasure_recipient #####################
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = joshuas_shitlist
+				}
+			}
+			set_global_variable = {
+				name = joshuas_shitlist
+			}
+			scope:treasure_recipient.employer = { # scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_joshuas_shitlist
+					icon = treasure_armor
+
+					modifier = {
+						local_population_growth = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.36 }
+		}
+	}		
+
+}
+
+
+relic_gift_event.17 = { #Good relic zeal
+	type = country_event
+	title = "relic_gift_event.17.t"
+	desc = "relic_gift_event.17.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.17.a"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = onlyfans_subs
+				}
+			}
+			set_global_variable = {
+				name = onlyfans_subs
+			}
+			scope:treasure_recipient.employer = { #
+				create_country_treasure = {
+					key = treasure_onlyfans_subs
+					icon = treasure_armor
+
+					modifier = {
+						local_population_growth = 0.2
+						local_population_capacity_modifier = 0.1
+						local_migration_speed = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.37 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.17.b"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = giants_toe
+				}
+			}
+			set_global_variable = {
+				name = giants_toe
+			}
+			scope:treasure_recipient.employer = { #
+				create_country_treasure = {
+					key = treasure_giants_toe
+					icon = treasure_armor
+
+					modifier = {
+						local_nobles_output = 0.1
+						local_nobles_desired_pop_ratio = 0.05
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.38 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.17.c"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = temple_hussy
+				}
+			}
+			set_global_variable = {
+				name = temple_hussy
+			}
+			scope:treasure_recipient.employer = {
+				create_country_treasure = {
+					key = treasure_temple_hussy
+					icon = treasure_armor
+
+					modifier = {
+						local_population_growth = 0.2
+						local_building_slot = 1
+						local_migration_speed = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.39 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.17.d"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = decent_mechanic
+				}
+			}
+			set_global_variable = {
+				name = decent_mechanic
+			}
+			scope:treasure_recipient.employer = { 
+				create_country_treasure = {
+					key = treasure_decent_mechanic
+					icon = treasure_armor
+
+					modifier = {
+						local_monthly_civilization = 0.02
+						local_citizen_desired_pop_ratio = 0.05
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.40 }
+		}
+	}		
+
+}
+######################################################################################################
+
+relic_gift_event.18 = { #Bad relic zeal
+	type = country_event
+	title = "relic_gift_event.18.t"
+	desc = "relic_gift_event.18.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.18.a"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = mosaic_megacap
+				}
+			}
+			set_global_variable = {
+				name = mosaic_megacap
+			}
+			scope:treasure_recipient.employer = { #
+				create_country_treasure = {
+					key = treasure_mosaic_megacap
+					icon = treasure_armor
+
+					modifier = {
+						local_slaves_desired_pop_ratio = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.41 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.18.b"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = all_the_dlc
+				}
+			}
+			set_global_variable = {
+				name = all_the_dlc
+			}
+			scope:treasure_recipient.employer = { #
+				create_country_treasure = {
+					key = treasure_all_the_dlc
+					icon = treasure_armor
+
+					modifier = {
+						local_freemen_desired_pop_ratio = 0.05
+					}
+				}
+			}
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.42 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.18.c"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = trade_organiser
+				}
+			}
+			set_global_variable = {
+				name = trade_organiser
+			}
+			scope:treasure_recipient.employer = { # 
+				create_country_treasure = {
+					key = treasure_trade_organiser
+					icon = treasure_armor
+
+					modifier = {
+						state_commerce_modifier = 0.15
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.43 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.18.d"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = braunys_golden_ram
+				}
+			}
+			set_global_variable = {
+				name = braunys_golden_ram
+			}
+			scope:treasure_recipient.employer = { #
+				create_country_treasure = {
+					key = treasure_braunys_golden_ram
+					icon = treasure_armor
+
+					modifier = {
+						happiness_for_wrong_culture_group_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.44 }
+		}
+	}		
+}
+
+
+relic_gift_event.19 = { #Good relic charisma
+	type = country_event
+	title = "relic_gift_event.19.t"
+	desc = "relic_gift_event.19.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.19.a"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = mirror_narcissus
+				}
+			}
+			set_global_variable = {
+				name = mirror_narcissus
+			}
+			scope:treasure_recipient.employer = { #
+				create_country_treasure = {
+					key = treasure_mirror_narcissus
+					icon = treasure_armor
+
+					modifier = {
+						local_happiness_for_same_religion_modifier = 0.1
+						local_happiness_for_same_culture_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.45 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.19.b"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = hotjoin_talisman
+				}
+			}
+			set_global_variable = {
+				name = hotjoin_talisman
+			}
+			scope:treasure_recipient.employer = { # 
+				create_country_treasure = {
+					key = treasure_hotjoin_talisman
+					icon = treasure_armor
+
+					modifier = {
+						local_ship_start_experience = 0.2
+						local_ship_recruit_speed = 0.2
+						local_goods_from_slaves = -4
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.46 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.19.c"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = wine_cellar
+				}
+			}
+			set_global_variable = {
+				name = wine_cellar
+			}
+			scope:treasure_recipient.employer = { # 
+				create_country_treasure = {
+					key = treasure_wine_cellar
+					icon = treasure_armor
+
+					modifier = {
+						local_happiness_for_same_culture_modifier = 0.1
+						local_happiness_for_same_religion_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.47 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.19.d"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = push_to_talk
+				}
+			}
+			set_global_variable = {
+				name = push_to_talk
+			}
+			scope:treasure_recipient.employer = { #
+				create_country_treasure = {
+					key = treasure_push_to_talk
+					icon = treasure_armor
+
+					modifier = {
+						base_resources = 1
+						local_goods_from_slaves = -3
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.48 }
+		}
+	}		
+
+}
+
+
+relic_gift_event.20 = { #Bad relic charisma
+	type = country_event
+	title = "relic_gift_event.20.t"
+	desc = "relic_gift_event.20.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:treasure_recipient
+	
+	picture = greek_philosophers
+	
+	goto_location = scope:treasure_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "relic_gift_event.20.a"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = pie_charts
+				}
+			}
+			set_global_variable = {
+				name = pie_charts
+			}
+			scope:treasure_recipient.employer = { # 
+				create_country_treasure = {
+					key = treasure_lamberts_pie_charts
+					icon = treasure_armor
+
+					modifier = {
+						local_migration_attraction = 5
+						local_migration_speed = 1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.49 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.20.b"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = swannys_brain
+				}
+			}
+			set_global_variable = {
+				name = swannys_brain
+			}
+			scope:treasure_recipient.employer = { 
+				create_country_treasure = {
+					key = treasure_swannys_brain
+					icon = treasure_armor
+
+					modifier = {
+						local_pop_assimilation_speed_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.50 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.20.c"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = love_poem_treasure
+				}
+			}
+			set_global_variable = {
+				name = love_poem_treasure
+			}
+			scope:treasure_recipient.employer = { 
+				create_country_treasure = {
+					key = treasure_love_poem
+					icon = treasure_armor
+
+					modifier = {
+						local_slaves_happyness = 0.15
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.51 }
+		}
+	}
+
+	option = {
+		name = "relic_gift_event.20.d"
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = conch_of_agonia
+				}
+			}
+			set_global_variable = {
+				name = conch_of_agonia
+			}
+			scope:treasure_recipient.employer = { 
+				create_country_treasure = {
+					key = treasure_conch_of_agonia
+					icon = treasure_armor
+
+					modifier = {
+						local_pop_conversion_speed_modifier = 0.1
+					}
+				}
+			}
+
+		}
+		scope:treasure_recipient.employer = {
+			trigger_event = { id = relic_gift_event.52 }
+		}
+	}		
+}
+
+
+##########RESOLUTIONS
+
+
+relic_gift_event.21 = { # Final resolution mil relic 
+	type = country_event
+	title = relic_gift_event.21.t
+	desc = relic_gift_event.21.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.21.a"
+	}
+}
+
+relic_gift_event.22 = { # Final resolution mil relic 
+	type = country_event
+	title = relic_gift_event.22.t
+	desc = relic_gift_event.22.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.22.a"
+	}
+}
+
+relic_gift_event.23 = { # Final resolution mil relic 
+	type = country_event
+	title = relic_gift_event.23.t
+	desc = relic_gift_event.23.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.23.a"
+	}
+}
+
+relic_gift_event.24 = { # Final resolution mil relic 
+	type = country_event
+	title = relic_gift_event.24.t
+	desc = relic_gift_event.24.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.24.a"
+	}
+}
+
+relic_gift_event.25 = { # Final resolution martial relic 
+	type = country_event
+	title = relic_gift_event.25.t
+	desc = relic_gift_event.25.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.25.a"
+	}
+}
+
+relic_gift_event.26 = { # Final resolution martial relic 
+	type = country_event
+	title = relic_gift_event.26.t
+	desc = relic_gift_event.26.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.26.a"
+	}
+}
+
+relic_gift_event.27 = { # Final resolution martial relic 
+	type = country_event
+	title = relic_gift_event.27.t
+	desc = relic_gift_event.27.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.27.a"
+	}
+}
+
+relic_gift_event.28 = { # Final resolution martial relic 
+	type = country_event
+	title = relic_gift_event.28.t
+	desc = relic_gift_event.28.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.28.a"
+	}
+}
+
+relic_gift_event.29 = { # Final resolution finesse relic 
+	type = country_event
+	title = relic_gift_event.29.t
+	desc = relic_gift_event.29.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.29.a"
+	}
+}
+
+relic_gift_event.30 = { # Final resolution finesse relic 
+	type = country_event
+	title = relic_gift_event.30.t
+	desc = relic_gift_event.30.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.30.a"
+	}
+}
+
+relic_gift_event.31 = { # Final resolution finesse relic 
+	type = country_event
+	title = relic_gift_event.31.t
+	desc = relic_gift_event.31.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.31.a"
+	}
+}
+
+relic_gift_event.32 = { # Final resolution finesse relic  
+	type = country_event
+	title = relic_gift_event.32.t
+	desc = relic_gift_event.32.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.32.a"
+	}
+}
+
+relic_gift_event.33 = { # Final resolution finesse relic  
+	type = country_event
+	title = relic_gift_event.33.t
+	desc = relic_gift_event.33.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.33.a"
+	}
+}
+
+relic_gift_event.34 = { # Final resolution finesse relic 
+	type = country_event
+	title = relic_gift_event.34.t
+	desc = relic_gift_event.34.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.34.a"
+	}
+}
+
+relic_gift_event.35 = { # Final resolution finesse relic 
+	type = country_event
+	title = relic_gift_event.35.t
+	desc = relic_gift_event.35.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.35.a"
+	}
+}
+
+relic_gift_event.36 = { # Final resolution finesse relic 
+	type = country_event
+	title = relic_gift_event.36.t
+	desc = relic_gift_event.36.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.36.a"
+	}
+}
+
+relic_gift_event.37 = { # Final resolution zeal relic
+	type = country_event
+	title = relic_gift_event.37.t
+	desc = relic_gift_event.37.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.37.a"
+	}
+}
+
+relic_gift_event.38 = { # Final resolution zeal relic
+	type = country_event
+	title = relic_gift_event.38.t
+	desc = relic_gift_event.38.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.38.a"
+	}
+}
+
+relic_gift_event.39 = { # Final resolution zeal relic
+	type = country_event
+	title = relic_gift_event.39.t
+	desc = relic_gift_event.39.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.39.a"
+	}
+}
+
+relic_gift_event.40 = { # Final resolution zeal relic
+	type = country_event
+	title = relic_gift_event.40.t
+	desc = relic_gift_event.40.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.40.a"
+	}
+}
+
+relic_gift_event.41 = { # Final resolution zeal relic
+	type = country_event
+	title = relic_gift_event.41.t
+	desc = relic_gift_event.41.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.41.a"
+	}
+}
+
+relic_gift_event.42 = { # Final resolution zeal relic
+	type = country_event
+	title = relic_gift_event.42.t
+	desc = relic_gift_event.42.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.42.a"
+	}
+}
+
+relic_gift_event.43 = { # Final resolution zeal relic
+	type = country_event
+	title = relic_gift_event.43.t
+	desc = relic_gift_event.43.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.43.a"
+	}
+}
+
+relic_gift_event.44 = { # Final resolution zeal relic 
+	type = country_event
+	title = relic_gift_event.44.t
+	desc = relic_gift_event.44.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.44.a"
+	}
+}
+
+relic_gift_event.45 = { # Final resolution charisma relic
+	type = country_event
+	title = relic_gift_event.45.t
+	desc = relic_gift_event.45.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.45.a"
+	}
+}
+
+relic_gift_event.46 = { # Final resolution charisma relic
+	type = country_event
+	title = relic_gift_event.46.t
+	desc = relic_gift_event.46.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.46.a"
+	}
+}
+
+relic_gift_event.47 = { # Final resolution charisma relic
+	type = country_event
+	title = relic_gift_event.47.t
+	desc = relic_gift_event.47.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.47.a"
+	}
+}
+
+relic_gift_event.48 = { # Final resolution charisma relic
+	type = country_event
+	title = relic_gift_event.48.t
+	desc = relic_gift_event.48.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.48.a"
+	}
+}
+
+relic_gift_event.49 = { # Final resolution charisma relic
+	type = country_event
+	title = relic_gift_event.49.t
+	desc = relic_gift_event.49.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.49.a"
+	}
+}
+
+relic_gift_event.50 = { # Final resolution charisma relic
+	type = country_event
+	title = relic_gift_event.50.t
+	desc = relic_gift_event.50.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.50.a"
+	}
+}
+
+relic_gift_event.51 = { # Final resolution charisma relic
+	type = country_event
+	title = relic_gift_event.51.t
+	desc = relic_gift_event.51.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.51.a"
+	}
+}
+
+relic_gift_event.52 = { # Final resolution charisma relic 
+	type = country_event
+	title = relic_gift_event.52.t
+	desc = relic_gift_event.52.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:treasure_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		remove_relic_gift_variables = yes
+	}
+
+	option = {
+		name = "relic_gift_event.52.a"
+	}
+}

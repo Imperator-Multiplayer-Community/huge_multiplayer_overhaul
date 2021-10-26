@@ -1,0 +1,50 @@
+﻿# Zoom level modding. I removed most sections out of NCamera and left in the parts that sounded relevant
+# I added in three more zoom levels
+# If you zoom out further than ZOOM_STEPS 9700, a light blue overlay will cover the map
+# If you zoom in closer than ZOOP_STEPS 50, terrain clipping might occur in mountainous areas
+# Adding in more zoom levels before vanilla level 0 will break a lot of map modes and rendering, as Paradox used absolute numbers to define transitions all over the place. Some files use variables, some use numbers
+# Futher adjustments can be made with the FOV setting
+
+#three zoom ranges: province, state, country
+#try to use these to filter out what information is given to the player at which zoom levels
+
+@province_zoomstep_min = 3		# default 3
+@province_mapname_zoomstep_min = 3	# default 3
+@province_zoomstep_max = 7		# default 7
+@state_zoomstep_min = 8			# default 8
+@state_zoomstep_max = 10		# default 10
+@country_zoomstep_min = 11		# default 11
+@country_zoomstep_max = 15		# default 15
+
+NCamera = {
+	FOV	= 35 # Field-of-View, default 35
+	ZNEAR = 10 # default 10
+	ZFAR = 10000 # default
+
+	EDGE_SCROLLING_PIXELS = 10 # how many pixels from window edge that will trigger edge scrolling, default 10
+	MIN_PITCH = 30		# Minimum tilt value, default 30
+	MAX_PITCH = 89		# Maximum tilt value, dont put this above 89.99, default 89
+
+	SCROLL_SPEED = 0.045 	# higher values = faster camera. NOTE that this is tweakables from settings as well!
+	ZOOM_RATE = 0.2 	# Zoom when right-mouse down
+
+### STABLE zoom out values
+
+	# Zoom Level Vanilla	0   1   2   3   4   5   6   7   8    9    10   11   12   13   14   15   16   17   18   19   20   21		# Vanilla: 0 through 17, all other steps are modded in
+	ZOOM_STEPS = { 		100 150 200 275 375 500 650 850 1100 1400 1750 2150 2600 3050 3500 4000 4500 5000 6000 7000 8250 9500 }		# Zoom steps, vanilla min=100, max=5000. clipping below 50, blue overlay above 9700
+	ZOOM_STEPS_TILT = { 	40  40  45  50  55  60  65  70  72   73   78   80   85   85   85   85   85   85   85   85   85   85   }		# Zoom steps
+	ZOOM_STEPS_MIN_TILT = { 30  30  35  35  34  36  38  40  42   44   50   50   50   50   50   50   50   50   50   55   55   60   }		# Min defined above
+	ZOOM_STEPS_MAX_TILT = { 89  89  89  89  89  89  89  89  89   89   89   89   89   89   89   89   89   89   89   89   89   89   }		# Max defined above
+
+### BUGGED zoom in values, enables zooming in closer but breaks rendering and fading in many places
+
+	# Zoom Level Modded	0  1  2  3  4  5  6   7   8   9   10  11  12  13  14   15   16   17   18   19   20   21   22   23   24   25   26   27		# Modded, adjusted to show the values the game uses to determine
+	# Zoom Level Vanilla	-6 -5 -4 -3 -2 -1 0   1   2   3   4   5   6   7   8    9    10   11   12   13   14   15   16   17   18   19   20   21		# Vanilla: 0 through 17, all other steps are modded in
+#del#	ZOOM_STEPS = { 		25 30 40 50 60 75 100 150 200 275 375 500 650 850 1100 1400 1750 2150 2600 3050 3500 4000 4500 5000 6000 7000 8250 9500 }	# Zoom steps, vanilla min=100, max=5000. clipping below 50, blue overlay above 9700
+#del#	ZOOM_STEPS_TILT = { 	35 35 35 35 35 35 40  40  45  50  55  60  65  70  72   73   78   80   85   85   85   85   85   85   85   85   85   85   }	# Zoom steps
+#del#	ZOOM_STEPS_MIN_TILT = { 30 30 30 30 30 30 30  30  35  35  34  36  38  40  42   44   50   50   50   50   50   50   50   50   50   55   55   60   }	# Min defined above
+#del#	ZOOM_STEPS_MAX_TILT = { 89 89 89 89 89 89 89  89  89  89  89  89  89  89  89   89   89   89   89   89   89   89   89   89   89   89   89   89   }	# Max defined above
+
+	MAX_PAN_TO_ZOOM_STEP = 3	# default 3; The camera will lower to this height (but only if above it) when panning to characters/provinces etc.
+	START_LOOK_AT = { 2900.7 0 2385.5 }					# Initial look at (X/Y), default { 1720.7 0 2385.5 }
+}

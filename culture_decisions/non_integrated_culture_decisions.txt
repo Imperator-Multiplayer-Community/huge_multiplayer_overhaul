@@ -365,7 +365,7 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "colonia_founded" 
-					duration = -1
+					duration = 18262
 				}
 			}
 			add_country_modifier = {

@@ -55,6 +55,7 @@
 		icon = greek_antigonid_path_6
 		modifier = {
 			archers_defensive = 0.1
+			army_maintenance_cost = 0.01
 		}
 		requires = { }
 	}
@@ -72,6 +73,7 @@
 		icon = greek_seleucid_path_6
 		modifier = {
 			archers_morale = 0.1
+			army_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_1 }
 	}
@@ -81,6 +83,7 @@
 		modifier = {
 			trireme_discipline = 0.1
 			trireme_offensive = 0.1
+			navy_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_2 }
 	}
@@ -90,6 +93,7 @@
 		modifier = {
 			liburnian_defensive = 0.1
 			riverine_terrain_combat_bonus = 0.15 
+			navy_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_2 }
 	}
@@ -99,6 +103,7 @@
 		modifier = {
 			global_manpower_modifier = 0.1
 			governor_loyalty = 5
+			army_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_3 }
 	}
@@ -112,6 +117,7 @@
 			global_defensive = 0.15
 			fort_limit = 1
 			garrison_size = 0.2
+			fort_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_4 }
 	}
@@ -143,6 +149,7 @@
 		modifier = {
 			naval_damage_done = 0.1
 			coastal_terrain_combat_bonus = 0.15
+			navy_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_5 }
 	}
@@ -209,6 +216,7 @@
 		modifier = {
 			global_ship_start_experience = 10
 			naval_damage_taken = -0.05
+			navy_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_7 }
 	}
@@ -218,6 +226,7 @@
 		modifier = {
 			naval_damage_taken = -0.1
 			naval_morale_modifier = 0.05
+			navy_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_8 }
 	}
@@ -255,6 +264,7 @@
 		modifier = {
 			octere_cost = -0.1
 			octere_offensive = 0.05
+			navy_maintenance_cost = 0.01
 		}
 	
 		requires = { phoenician_path_10 }
@@ -265,6 +275,7 @@
 		modifier = {
 			ocean_combat_bonus = 0.15
 			tetrere_defensive = 0.1
+			navy_maintenance_cost = 0.01
 		}
 		requires = { phoenician_path_11 }
 	}

@@ -1,0 +1,470 @@
+﻿culture_decisions = {	
+
+	pander_minority_cultural_decision = {
+		potential = {
+			NOT = { primary_culture = scope:target_culture.culture }
+			scope:target_culture = {
+				is_integrated = yes
+				OR = {
+					has_pop_type_right = citizen
+					has_pop_type_right = nobles
+				}
+			}
+		}
+		allow = {
+			NOT = { has_country_modifier = pandered_project }
+			scope:target_culture = {
+				is_integrated = yes
+				NOT = { has_country_culture_modifier = pandered_people }
+				country_culture_pop_count > 100
+			}
+			custom_tooltip = {
+				text = explain_pander_tt
+				any_owned_province = {
+					dominant_province_culture = scope:target_culture.culture
+					any_neighbor_province = {
+						count > 1
+							dominant_province_culture = scope:target_culture.culture
+					}
+				}
+			}
+			stability > 40
+			political_influence > 50
+			invention = happiness_for_wrong_culture_modifier_inv_2
+		}
+		
+
+		effect = {
+			ordered_owned_province = {
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+					any_neighbor_province = {
+						count > 1
+						dominant_province_culture = scope:target_culture.culture
+					}
+				}
+				order_by = total_population #pop_hapiness
+				state = {
+					add_state_modifier = {
+						name = "baby_boom"
+						duration = 1826
+					}
+				}
+				add_state_loyalty = 10
+			}		
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "pandered_people" 
+					duration = 9131
+				}
+			}
+			add_political_influence = -50
+			add_stability = -10
+			add_country_modifier = {
+				name = "pandered_project"
+				duration = 9131
+			}
+			trigger_event = {
+					id = cultural_integration.4
+			}	
+		}
+		ai_will_do = {
+			modifier = {
+				add = 1
+				scope:target_culture = {
+					country_culture_pop_count = 50
+				}
+				culture_pops_in_country = {
+					target = scope:target_culture
+					value <= 15
+				}
+			}
+			modifier = {
+				factor = 0
+				stability < 50
+			}
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+
+
+	promote_integrated_talent = {
+		potential = {
+			NOT = { primary_culture = scope:target_culture.culture }
+			scope:target_culture = {
+				is_integrated = yes
+				OR = {
+					has_pop_type_right = citizen
+					has_pop_type_right = nobles
+				}
+			}
+		}
+		allow = {
+			any_owned_province = {
+				dominant_province_culture = scope:target_culture.culture
+			}
+			trigger_if = {
+				limit = {
+					any_country_culture = {
+						count <= 1
+						is_integrated = yes
+					}
+				}
+				stability > 10
+				political_influence = 10
+			}
+		}
+		effect = {
+			add_political_influence = -10
+			custom_tooltip = recruit_talent_tt
+			ordered_owned_province = {
+				limit = { dominant_province_culture = scope:target_culture.culture }
+				order_by = total_population
+				ROOT = {
+					create_character = {
+						culture = scope:target_culture.culture
+						religion = prev.prev.religion
+						hidden_effect = {
+							random_list = {
+								10 = { 
+									add_trait = energetic
+								}
+								10 = {
+									add_trait = silver_tongued
+								}
+								10 = {
+									add_trait = assertive
+								}
+								10 = {
+									add_trait = cruel
+								}
+								10 = {
+									add_trait = founder
+								}
+								10 = {
+									add_trait = just
+								}
+								10 = {
+									add_trait = prominent
+								}
+								10 = {
+									add_trait = merciful
+								}
+								10 = {
+									add_trait = loving
+								}
+								10 = {
+									add_trait = benefactor
+								}
+							}
+							add_character_modifier = {
+								name = "promoted_talent_character"
+								duration = -1
+							}
+							save_scope_as = new_talent
+						}
+					}
+				}
+            }
+            trigger_event = {
+				id = character_introductions.2
+				days = 5
+			}
+        }	
+			
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	present_integrated_debutante = {
+		potential = {
+			NOT = { primary_culture = scope:target_culture.culture }
+			scope:target_culture = {
+				is_integrated = yes
+				OR = {
+					has_pop_type_right = citizen
+					has_pop_type_right = nobles
+				}
+			}
+		}
+		allow = {
+			any_owned_province = {
+				dominant_province_culture = scope:target_culture.culture
+			}
+			trigger_if = {
+				limit = {
+					any_country_culture = {
+						count <= 1
+						is_integrated = yes
+					}
+				}
+				stability > 10
+				political_influence = 10
+			}
+		}
+		effect = {
+			add_political_influence = -10
+			custom_tooltip = present_debutante_tt
+			ordered_owned_province = {
+				limit = { dominant_province_culture = scope:target_culture.culture }
+				order_by = total_population
+				ROOT = {
+					create_character = {
+						female = yes
+						age = { 16 20 }
+						culture = scope:target_culture.culture
+						religion = prev.prev.religion
+						hidden_effect = {
+							random_list = {
+								10 = { 
+									add_trait = energetic
+								}
+								10 = {
+									add_trait = silver_tongued
+								}
+								10 = {
+									add_trait = assertive
+								}
+								10 = {
+									add_trait = cruel
+								}
+								10 = {
+									add_trait = lustful
+								}
+								10 = {
+									add_trait = ambitious
+								}
+								10 = {
+									add_trait = fair
+								}
+								10 = {
+									add_trait = merciful
+								}
+								10 = {
+									add_trait = loving
+								}
+								10 = {
+									add_trait = forgiving
+								}
+								10 = {
+									add_trait = good_natured
+								}
+								10 = {
+									add_trait = proud
+								}
+							}
+							add_character_modifier = {
+								name = "debutante_character"
+								duration = -1
+							}
+							save_scope_as = new_debutante
+						}
+					}
+				}
+            }
+            trigger_event = {
+				id = character_introductions.1
+				days = 5
+			}
+        }	
+			
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	recruit_integrated_spy = {
+		potential = {
+			NOT = { primary_culture = scope:target_culture.culture }
+			scope:target_culture = {
+				is_integrated = yes
+				OR = {
+					has_pop_type_right = citizen
+					has_pop_type_right = nobles
+				}
+			}
+			NOT = {
+				has_country_modifier = kautilyas_espionage_programme 
+			}
+		}
+		allow = {
+			NOT = { 
+				has_variable = spy_recruit_cooldown
+			}	
+			stability > 10
+			treasury >= 50
+			military_experience >= 5
+			}
+			
+		effect = {
+			add_military_experience = -5
+			add_treasury = -50
+			add_country_modifier = {
+					name = "spy_recruited"
+					duration = 7305
+					mode = add
+			}
+			set_variable = {
+					name = "spy_recruit_cooldown"
+					days = 548
+			}			
+			custom_tooltip = recruit_spymaster_tt
+			ordered_owned_province = {
+				limit = { dominant_province_culture = scope:target_culture.culture }
+				order_by = total_population
+				ROOT = {
+					create_character = {
+						female = yes
+						age = { 18 22 }
+						culture = scope:target_culture.culture
+						religion = prev.prev.religion
+						hidden_effect = {
+							random_list = {
+								10 = { 
+									add_trait = unnoticeable
+								}
+								10 = {
+									add_trait = secure
+								}
+								10 = {
+									add_trait = fair
+								}
+								10 = {
+									add_trait = crafty
+								}
+								10 = {
+									add_trait = loving
+									add_trait = lustful
+								}
+								10 = {
+									add_trait = silver_tongued
+								}
+								10 = {
+									add_trait = deceitful
+								}
+							}
+							add_character_modifier = {
+								name = "spy_recruit_character"
+								duration = -1
+							}
+							add_character_modifier = {
+								name = "counterintelligence"
+								duration = -1
+							}
+							save_scope_as = new_intel_recruit
+						}
+					}
+				}
+            }
+			trigger_event = {
+				id = counterintel.8
+				days = 5
+			}
+        }	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+		recruit_aryan_integrated_spy = {
+		potential = {
+			NOT = { primary_culture = scope:target_culture.culture }
+			scope:target_culture = {
+				is_integrated = yes
+				OR = {
+					has_pop_type_right = citizen
+					has_pop_type_right = nobles
+				}
+			}
+			has_country_modifier = kautilyas_espionage_programme 
+		}
+		allow = {
+			NOT = { 
+				has_variable = aryan_spy_recruit_cooldown
+			}	
+			stability > 10
+			treasury >= 40
+			military_experience >= 4
+			}
+			
+		effect = {
+			add_military_experience = -4
+			add_treasury = -40
+			add_country_modifier = {
+					name = "spy_recruited"
+					duration = 3650
+					mode = add
+			}
+			set_variable = {
+					name = "aryan_spy_recruit_cooldown"
+					days = 365
+			}			
+			custom_tooltip = recruit_spymaster_tt
+			ordered_owned_province = {
+				limit = { dominant_province_culture = scope:target_culture.culture }
+				order_by = total_population
+				ROOT = {
+					create_character = {
+						female = yes
+						age = { 18 22 }
+						culture = scope:target_culture.culture
+						religion = prev.prev.religion
+						hidden_effect = {
+							random_list = {
+								10 = { 
+									add_trait = unnoticeable
+									add_charisma = 1
+								}
+								10 = {
+									add_trait = secure
+								}
+								10 = {
+									add_trait = fair
+								}
+								10 = {
+									add_trait = crafty
+								}
+								10 = {
+									add_trait = loving
+									add_trait = lustful
+								}
+								10 = {
+									add_trait = silver_tongued
+								}
+								10 = {
+									add_trait = deceitful
+								}
+								10 = {
+									add_charisma = 2
+								}
+							}
+							add_character_modifier = {
+								name = "spy_recruit_character"
+								duration = -1
+							}
+							add_character_modifier = {
+								name = "counterintelligence"
+								duration = -1
+							}
+							save_scope_as = new_intel_recruit
+						}
+					}
+				}
+            }
+			trigger_event = {
+				id = counterintel.8
+				days = 5
+			}
+        }	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

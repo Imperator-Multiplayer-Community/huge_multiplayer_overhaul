@@ -1,0 +1,79 @@
+﻿remove_relic_gift_variables = {
+	if = {
+		limit = {
+			has_variable = relic_giver
+		}
+		remove_variable = relic_giver
+	}
+	if = {
+		limit = {
+			has_variable = relic_recipient
+		}
+		remove_variable = relic_recipient
+	}
+	if = {
+		limit = {
+			has_variable = relic_giver
+			exists = var:relic_giver
+		}
+		var:relic_giver = {
+			remove_variable = relic_recipient
+		}
+	}
+	if = {
+		limit = {
+			has_variable = relic_giver
+		}
+		remove_variable = relic_giver
+	}
+}
+
+
+fire_next_letter_event_effect = {
+	if = {
+		limit = {
+			#has_variable = friend_progress
+			#var:friend_progress >= 6
+		}
+		trigger_event = {
+			on_action = letter_resolution
+			days = { 15 60 }
+		}
+	}
+	else_if = {
+		limit = {
+			#has_variable = friend_event_counter
+			#var:friend_event_counter >= 3
+		}
+		trigger_event = {
+			on_action = letter_fail
+			days = { 15 60 }
+		}
+	}
+	else = {
+		trigger_event = {
+			on_action = letter_friend_pulse
+			days = { 15 60 }
+		}
+	}
+}
+
+letter_friend_event_counter_variable_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = letter_friend_event_counter
+			}
+		}
+		set_variable = {
+			name = letter_friend_event_counter
+			value = 1
+		}
+	}
+	else = {
+		change_variable = {
+			name = letter_friend_event_counter
+			add = 1
+		}
+	}
+}

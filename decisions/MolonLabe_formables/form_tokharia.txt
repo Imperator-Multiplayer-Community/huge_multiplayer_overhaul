@@ -93,7 +93,7 @@
 			custom_tooltip = "form_tokharia_claims_tooltip"
 			hidden_effect = {
 				area:margiana_area = { formable_area_province_effect = yes }
-				area:kharesmia_superior = { formable_area_province_effect = yes }
+				area:kharesmia_superior_area = { formable_area_province_effect = yes }
 				area:aria_area = { formable_area_province_effect = yes }
 				area:gandhara_area = { formable_area_province_effect = yes }
 				area:gilgit_area = { formable_area_province_effect = yes }

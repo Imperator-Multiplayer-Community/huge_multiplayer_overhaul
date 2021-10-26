@@ -1,0 +1,43 @@
+﻿come_out_of_hiding = { 
+
+	on_other_nation = yes 
+	on_own_nation = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
+	
+	message = no
+	
+	
+	potential_trigger = {
+
+		hidden:scope:target = {
+			has_character_modifier = spy_recruit_character
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+		}
+	}
+	
+	
+	allowed_trigger = {
+		scope:actor = { #
+		#	has_variable = on_espionage_mission_origin #
+			has_country_modifier = foreign_intel_ops #
+		} #
+		scope:target = {
+			is_adult = yes
+			prisoner = no	
+			has_character_modifier = spy_recruit_character
+			has_character_modifier = in_hiding
+			#has_variable = on_espionage_mission_origin
+		}
+	}
+	
+	
+	effect = {
+		scope:target = {
+			remove_character_modifier = in_hiding
+		}
+		#add a new timed modifier for recovery
+	}	
+}	
+

@@ -1,0 +1,9986 @@
+﻿namespace = assign_mission
+
+assign_mission.1 = {
+	type = country_event
+	title = "assign_mission.1.t"
+	desc = "assign_mission.1.desc"
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "assign_mission.1.a" #TARGET MILITARY
+		hidden_effect = { 
+			scope:mission_spy = {
+				clear_ambition_effect = yes
+			}
+			scope:mission_origin_country = {
+				trigger_event = {
+					id = assign_mission.2
+					days = 3
+				}
+			}				
+		}	
+	}
+
+	option = {
+		name = "assign_mission.1.b" #TARGET SOCIETY		
+		hidden_effect = { 
+			scope:mission_spy = {
+				clear_ambition_effect = yes
+			}
+			scope:mission_origin_country = {
+				trigger_event = {
+					id = assign_mission.3
+					days = 3
+				}
+			}				
+		}	
+	}
+}
+
+
+
+assign_mission.2 = {
+	type = country_event
+	title = "assign_mission.2.t"
+	desc = "assign_mission.2.desc"
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = interesting_histories_generic_city_soldiers
+	
+	option = {
+		name = "assign_mission.2.a" #OFFENSIVE
+
+		scope:mission_origin_country = {
+			trigger_event = {
+				id = assign_mission.4
+				days = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "assign_mission.2.b" #DEFENSIVE
+
+		scope:mission_origin_country = {
+			trigger_event = {
+				id = assign_mission.5
+				days = 3
+			}
+		}		
+	}
+
+	option = {
+		name = "assign_mission.2.c" #NAVAL
+
+		scope:mission_origin_country = {
+			trigger_event = {
+				id = assign_mission.6
+				days = 3
+			}
+		}
+	}
+}
+
+assign_mission.3 = {
+	type = country_event
+	title = "assign_mission.3.t"
+	desc = "assign_mission.3.desc"
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = interesting_histories_greek_debate
+	
+	option = {
+		name = "assign_mission.3.a"	 #POLITICAL LIFE
+
+		scope:mission_origin_country = {
+			trigger_event = {
+				id = assign_mission.7
+				days = 3
+			}
+		}		
+	}
+	
+	option = {
+		name = "assign_mission.3.b" #SOCIO-CULTURAL LIFE	
+	
+		scope:mission_origin_country = {
+			trigger_event = {
+				id = assign_mission.8
+				days = 3
+			}
+		}
+	}	
+}
+
+### PICK A RANDOM TARGET OFFENCE ##################################################################################################
+
+assign_mission.4 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		hidden_effect = {
+				random_list = {
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.9
+								days = 30
+							}
+						}	
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.10
+								days = 30
+							}
+						}
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.11
+								days = 30
+							}
+						}
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.12
+								days = 30
+							}
+						} 
+					}
+					10 = {
+						scope:mission_origin_country = { 
+							trigger_event = {
+								id = assign_mission.13
+								days = 30
+							}
+						}
+					}
+				}
+		}		
+	}
+}
+
+### PICK A RANDOM TARGET DEFENCE ###################################
+
+assign_mission.5 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		hidden_effect = {	
+				random_list = {
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.14
+								days = 30
+							}
+						}	
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.15
+								days = 30
+							}
+						}
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.16
+								days = 30
+							}
+						}
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.17
+								days = 30
+							}
+						} 
+					}
+					10 = {
+						scope:mission_origin_country = { 
+							trigger_event = {
+								id = assign_mission.18
+								days = 30
+							}
+						}
+					}
+				}
+		}		
+	} 
+}
+
+
+### PICK A RANDOM TARGET NAVAL ###################################
+
+assign_mission.6 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		hidden_effect = {	
+				random_list = {
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.19
+								days = 30
+							}
+						}	
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.20
+								days = 30
+							}
+						}
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.21
+								days = 30
+							}
+						}
+					}
+					10 = {
+						scope:mission_origin_country = {
+							trigger_event = {
+								id = assign_mission.22
+								days = 30
+							}
+						} 
+					}
+					10 = {
+						scope:mission_origin_country = { 
+							trigger_event = {
+								id = assign_mission.23
+								days = 30
+							}
+						}
+					}
+				}
+		}		
+	} 
+}
+
+### PICK A RANDOM TARGET POLITICAL LIFE ###################################
+
+assign_mission.7 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.24
+							days = 30
+						}
+					}	
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.25
+							days = 30
+						}
+					}
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.26
+							days = 30
+						}
+					}
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.27
+							days = 30
+						}
+					} 
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.28
+							days = 30
+						}
+					}
+				}
+			}
+		}
+	}		
+}
+
+
+### PICK A RANDOM SOCIO-CULTURAL LIFE ####################################
+
+assign_mission.8 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.29
+							days = 30
+						}
+					}	
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.30
+							days = 30
+						}
+					}
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.31
+							days = 30
+						}
+					}
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.32
+							days = 30
+						}
+					} 
+				}
+				10 = {
+					scope:mission_origin_country = {
+						trigger_event = {
+							id = assign_mission.33
+							days = 30
+						}
+					}
+				}
+			}
+		}
+	}		
+}
+
+
+####DECLARE THE TARGET AND ROLL############################## ROLL NOW AND SEE IF YOUR SPY HAS WHAT IT TAKES #####################################
+ ######################################################## CHANGE TO CHARACTER EVENTS ##################################################################
+
+# OFFENCE
+
+assign_mission.9 = { 
+	type = country_event
+	title = assign_mission.9.t
+	desc = assign_mission.9.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.210 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.9.a"
+	}
+}
+
+assign_mission.210 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.34 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.35
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+
+assign_mission.10 = { 
+	type = country_event
+	title = assign_mission.10.t
+	desc = assign_mission.10.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.211 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.10.a"
+	}
+}
+
+assign_mission.211 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.36 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.37 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+	
+}
+
+
+assign_mission.11 = { 
+	type = country_event
+	title = assign_mission.11.t
+	desc = assign_mission.11.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.212 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.11.a"
+	}
+}
+
+assign_mission.212 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.38 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.39 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+	
+}
+
+assign_mission.12 = { 
+	type = country_event
+	title = assign_mission.12.t
+	desc = assign_mission.12.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.213 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.12.a"
+	}
+}
+
+assign_mission.213 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.40 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.41 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.13 = { 
+	type = country_event
+	title = assign_mission.13.t
+	desc = assign_mission.13.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.214 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.13.a"
+	}
+}
+
+assign_mission.214 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.42 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.43 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+####DECLARE THE TARGET AND ROLL##############################
+
+
+# DEFENCE
+
+
+assign_mission.14 = { 
+	type = country_event
+	title = assign_mission.14.t
+	desc = assign_mission.14.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.215 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.14.a"
+	}
+}
+
+assign_mission.215 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.44 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.45 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+assign_mission.15 = { 
+	type = country_event
+	title = assign_mission.15.t
+	desc = assign_mission.15.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.216 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.15.a"
+	}
+}
+
+assign_mission.216 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.46 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.47 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+assign_mission.16 = { 
+	type = country_event
+	title = assign_mission.16.t
+	desc = assign_mission.16.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.217 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.16.a"
+	}
+}
+
+assign_mission.217 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.48 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.49
+					days = 30 
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.17 = { 
+	type = country_event
+	title = assign_mission.17.t
+	desc = assign_mission.17.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.218 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.17.a"
+	}
+}
+
+assign_mission.218 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.50 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.51 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.18 = { 
+	type = country_event
+	title = assign_mission.18.t
+	desc = assign_mission.18.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.219 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.18.a"
+	}
+}
+
+assign_mission.219 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.52 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.53 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+####DECLARE THE TARGET AND ROLL##############################
+
+
+# NAVAL
+
+
+assign_mission.19 = { 
+	type = country_event
+	title = assign_mission.19.t
+	desc = assign_mission.19.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.220 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.19.a"
+	}
+}
+
+assign_mission.220 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.54 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.55 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+assign_mission.20 = { 
+	type = country_event
+	title = assign_mission.20.t
+	desc = assign_mission.20.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.221 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.20.a"
+	}
+}
+
+assign_mission.221 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.56 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.57 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+assign_mission.21 = { 
+	type = country_event
+	title = assign_mission.21.t
+	desc = assign_mission.21.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.222 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.21.a"
+	}
+}
+
+assign_mission.222 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.58
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.59 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.22 = { 
+	type = country_event
+	title = assign_mission.22.t
+	desc = assign_mission.22.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.223 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.22.a"
+	}
+}
+
+assign_mission.223 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.60
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.61 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.23 = { 
+	type = country_event
+	title = assign_mission.23.t
+	desc = assign_mission.23.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.224 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.23.a"
+	}
+}
+
+assign_mission.224 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.62 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.63 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+####DECLARE THE TARGET AND ROLL##############################
+
+
+# ECONOMIC LIFE
+
+
+assign_mission.24 = { 
+	type = country_event
+	title = assign_mission.24.t
+	desc = assign_mission.24.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.225 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.24.a"
+	}
+}
+
+assign_mission.225 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.64
+					days = 30 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.65 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+assign_mission.25 = { 
+	type = country_event
+	title = assign_mission.25.t
+	desc = assign_mission.25.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.226 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.25.a"
+	}
+}
+
+assign_mission.226 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.66 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.67 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+assign_mission.26 = { 
+	type = country_event
+	title = assign_mission.26.t
+	desc = assign_mission.26.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.227 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.26.a"
+	}
+}
+
+assign_mission.227 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.68
+					days = 30 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.69
+					days = 30 
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.27 = { 
+	type = country_event
+	title = assign_mission.27.t
+	desc = assign_mission.27.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.228 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.27.a"
+	}
+}
+
+assign_mission.228 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.70
+					days = 30 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.71 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.28 = { 
+	type = country_event
+	title = assign_mission.28.t
+	desc = assign_mission.28.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.229 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.28.a"
+	}
+}
+
+assign_mission.229 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.72 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.73 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+####DECLARE THE TARGET AND ROLL##############################
+
+
+# SOCIO-CULTURAL LIFE
+
+
+assign_mission.29 = { 
+	type = country_event
+	title = assign_mission.29.t
+	desc = assign_mission.29.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.232 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.29.a"
+	}
+}
+
+assign_mission.232 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.74 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.75 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+
+assign_mission.30 = { 
+	type = country_event
+	title = assign_mission.30.t
+	desc = assign_mission.30.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.233 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.30.a"
+	}
+}
+
+assign_mission.233 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.76 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.77 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+assign_mission.31 = { 
+	type = country_event
+	title = assign_mission.31.t
+	desc = assign_mission.31.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.234 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.31.a"
+	}
+}
+
+assign_mission.234 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.78 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.79
+					days = 30 
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.32 = { 
+	type = country_event
+	title = assign_mission.32.t
+	desc = assign_mission.32.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.235 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.32.a"
+	}
+}
+
+assign_mission.235 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.80 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.81 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+assign_mission.33 = { 
+	type = country_event
+	title = assign_mission.33.t
+	desc = assign_mission.33.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	immediate = {
+		scope:mission_spy = {
+				trigger_event = { id = assign_mission.236 }
+			}
+
+ 	}
+	
+	option = {
+		name = "assign_mission.33.a"
+	}
+}
+
+assign_mission.236 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_spy = {
+				trigger_event = { 
+					id = assign_mission.82 
+					days = 30
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { 
+					id = assign_mission.83 
+					days = 30
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+####################################################  SUCCESS STORIES START HERE ####################################################################
+
+## SUCCESS STORIES ## ALL EVEN NUMBERS FROM 34 TO 82 (FAILURE IS 35 to 83)
+## NOW WE ROLL TO DISTINGUISH BETWEEN GREAT AND GOOD SUCCESS ####
+############    GREAT RESULTS EVEN, GOOD RESULTS ODD
+
+## ODD NUMBERS (FAILURE IS 35 to 83) FAIL ################################ CHANGE TO CHARACTER EVENTS #############################################
+
+#################################################### SORTING THE SUCCESS STORIES INTO TWO TIERS ######################################################
+
+
+
+assign_mission.34 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.84 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.85 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+
+assign_mission.36 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.86 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.87 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.38 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.88 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.89 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.40 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.90 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.91 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.42 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.92 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.93 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.44 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.94 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.95 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.46 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.96 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.97 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.48 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.98 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.99 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.50 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.100 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.101 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.52 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.102 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.103 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.54 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.104 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.105 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.56 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.106 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.107 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.58 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.108 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.109 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.60 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.110 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.111 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.62 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.112 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.113 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.64 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.114 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.115 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.66 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.116 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.117 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.68 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.118 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.119 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.70 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.120 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.121 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.72 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.122 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.123 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.74 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.124 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.125 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.76 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.126 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.127 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.78 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.128 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.129 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.80 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.130 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.131 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+assign_mission.82 = {
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.charisma
+			}
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.132 }
+			}
+		}
+		else = {
+			scope:mission_origin_country = {
+				trigger_event = { id = assign_mission.133 }
+			}
+		}
+		remove_variable = roll
+ 	}	
+}
+
+
+
+
+######################################################################################################################################################
+
+## SUCCESS STORIES ## REFINED ### ONE GREAT, ONE GOOD ##
+
+## EVEN NUMBER GREAT, ODD NUMBER GOOD 84 to 133 ##   THE ARE THE ACTUAL RESULTS WITH THE EFFECTS AND LOCALISATION EXPLAINING THE EFFECTS ####
+
+############################## YES THESE ARE COUNTRY EVENTS ########################################################
+
+######################################################################################################################################################
+#### RESULTS ###
+
+
+assign_mission.84 = { #GREAT misdirect army
+	type = country_event
+	title = assign_mission.84.t
+	desc = assign_mission.84.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_army = {
+				limit = { unit_size >= 1 }
+				order_by = unit_size
+				save_scope_as = sabotage_army
+			}
+		}	
+	}
+
+		option = { 
+		name = "assign_mission.84.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		
+		scope:sabotage_army = {
+			add_unit_modifier = {
+				name = "espionage_army_sabotage_modifier"
+				duration = 90
+				mode = add # 60 days
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.84.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.85 = { #GOOD
+	type = country_event
+	title = assign_mission.85.t
+	desc = assign_mission.85.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_army = {
+				limit = { unit_size >= 1 }
+				order_by = unit_size
+				save_scope_as = sabotage_army
+				
+			}
+		}
+	}
+
+		option = { 
+		name = "assign_mission.85.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:sabotage_army = {
+			add_unit_modifier = {
+				name = "espionage_army_sabotage_modifier"
+				duration = 45
+				mode = add # 60 days
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.86 = { #GREAT criticise war effort
+	type = country_event
+	title = assign_mission.86.t
+	desc = assign_mission.86.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = { 
+		name = "assign_mission.86.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "war_effort_criticised"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.86.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.87 = { #GOOD
+	type = country_event
+	title = assign_mission.87.t
+	desc = assign_mission.87.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.87.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "war_effort_criticised"
+				duration = 365
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.88 = { #GREAT STEAL TECH
+	type = country_event
+	title = assign_mission.88.t
+	desc = assign_mission.88.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+	
+	}
+
+	option = { 
+		name = "assign_mission.88.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "stealing_tech"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "poorly_taught"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.88.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.89 = { #GOOD
+	type = country_event
+	title = assign_mission.89.t
+	desc = assign_mission.89.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		
+	}
+
+	option = { 
+		name = "assign_mission.89.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "stealing_tech"
+				duration = 180
+				mode = add
+			}
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "poorly_taught"
+				duration = 180
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.90 = { #GREAT ERODE DISCIPLINE
+	type = country_event
+	title = assign_mission.90.t
+	desc = assign_mission.90.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_army = {
+				limit = { unit_size >= 1 }
+				order_by = unit_size
+				save_scope_as = undisciplined_army
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.90.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+				
+		scope:undisciplined_army = {
+			add_unit_modifier = {
+				name = "undisciplined_army_sabotage_modifier"
+				duration = 90
+				mode = add # 60 days
+			}
+		}
+	}
+
+
+	option = { 
+		name = "assign_mission.90.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.91 = { #GOOD
+	type = country_event
+	title = assign_mission.91.t
+	desc = assign_mission.91.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_army = {
+				limit = { unit_size >= 1 }
+				order_by = unit_size
+				save_scope_as = undisciplined_army
+			}
+		}	
+	}
+
+	option = { 
+		name = "assign_mission.91.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		
+		scope:undisciplined_army = {
+			add_unit_modifier = {
+				name = "undisciplined_army_sabotage_modifier"
+				duration = 45
+				mode = add # 60 days
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.92 = { #GREAT MERC RELATIONS
+	type = country_event
+	title = assign_mission.92.t
+	desc = assign_mission.92.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.92.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "good_merc_reputation"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "bad_merc_reputation"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.92.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.93 = { #GOOD
+	type = country_event
+	title = assign_mission.93.t
+	desc = assign_mission.93.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.93.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "good_merc_reputation"
+				duration = 180
+				mode = add
+			}
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "bad_merc_reputation"
+				duration = 180
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.94 = { #GREAT OPEN GATES
+	type = country_event
+	title = assign_mission.94.t
+	desc = assign_mission.94.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_province = { has_siege = yes }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_owned_province = {
+				limit = { 
+					has_siege = yes 
+					siege = {
+						has_breach = no
+					}
+					has_owner = yes
+					has_enemy_army = yes
+					#NOT = { controller = root.unit_owner }	
+				}
+				order_by = fort_level
+				save_scope_as = opening_gates
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.94.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:opening_gates = {
+			siege = { add_breach = 1 }
+		}
+	}
+
+	option = { 
+		name = "assign_mission.94.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.95 = { #GOOD
+	type = country_event
+	title = assign_mission.95.t
+	desc = assign_mission.95.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_province = { has_siege = yes }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_owned_province = {
+				limit = { 
+					has_siege = yes 
+					siege = {
+						has_breach = no
+					}
+					has_owner = yes
+					has_enemy_army = yes
+					#NOT = { controller = root.unit_owner }	
+				}
+				order_by = fort_level
+				save_scope_as = opening_gates
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.95.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:opening_gates = {
+			siege = { add_breach = 1 }
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.96 = { #GREAT SAP MORALE
+	type = country_event
+	title = assign_mission.96.t
+	desc = assign_mission.96.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_army = {
+				limit = { unit_size >= 1 }
+				order_by = unit_size
+				save_scope_as = demoralised_army
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.96.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:demoralised_army = {
+			add_unit_modifier = {
+				name = "demoralised_army_sabotage_modifier"
+				duration = 90
+				mode = add # 60 days
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.96.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.97 = { #GOOD
+	type = country_event
+	title = assign_mission.97.t
+	desc = assign_mission.97.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		scope:mission_target_country = {
+			any_army = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_army = {
+				limit = { unit_size >= 1 }
+				order_by = unit_size
+				save_scope_as = demoralised_army
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.97.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		
+		scope:demoralised_army = {
+			add_unit_modifier = {
+				name = "demoralised_army_sabotage_modifier"
+				duration = 45
+				mode = add # 60 days
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.98 = { #GREAT POISON WELLS
+	type = country_event
+	title = assign_mission.98.t
+	desc = assign_mission.98.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.98.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "poisoned_wells"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.98.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.99 = { #GOOD
+	type = country_event
+	title = assign_mission.99.t
+	desc = assign_mission.99.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.99.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "poisoned_wells"
+				duration = 180
+				mode = add
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.100 = { #GREAT SUPPLY
+	type = country_event
+	title = assign_mission.100.t
+	desc = assign_mission.100.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.100.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "supplies_revealed"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.100.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.101 = { #GOOD
+	type = country_event
+	title = assign_mission.101.t
+	desc = assign_mission.101.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.101.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "supplies_revealed"
+				duration = 180
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+assign_mission.102 = { #STEAL RELIC
+	type = country_event
+	title = assign_mission.102.t
+	desc = assign_mission.102.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+ 	#	scope:mission_target_country = {
+	#		treasure_count >= 1
+	#	}
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			random_country_treasure = {
+			save_scope_as = stolen_treasure
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.102.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:stolen_treasure = {
+			transfer_treasure_to_country = scope:mission_origin_country
+		}		
+	}
+
+	option = { 
+		name = "assign_mission.102.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.103 = { #GOOD
+	type = country_event
+	title = assign_mission.103.t
+	desc = assign_mission.103.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+ 	#	scope:mission_target_country = {
+	#		treasure_count >= 1
+	#	}
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			random_country_treasure = {
+			save_scope_as = stolen_treasure
+			}
+		}
+		
+	}
+
+	option = { 
+		name = "assign_mission.103.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:stolen_treasure = {
+			transfer_treasure_to_country = scope:mission_origin_country
+		}		
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.104 = { #GREAT BURN FLEET
+	type = country_event
+	title = assign_mission.104.t
+	desc = assign_mission.104.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	trigger = {
+		scope:mission_target_country = {
+			#any_navy = { unit_size >= 1 }
+			any_country_sub_unit = {
+	        	count >= 5
+	        	#owning_unit.unit_location = port_building
+	        	OR = {
+	    			sub_unit_type = trireme
+	    			sub_unit_type = tetrere
+	    		}
+	        }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_country_sub_unit = {
+	        	order_by = subunit_strength_percentage
+	        	limit = {
+	        	#owning_unit.unit_location = port_building
+		        	OR = {
+		        		sub_unit_type = liburnian
+		    			sub_unit_type = trireme
+		    			sub_unit_type = tetrere
+		    			sub_unit_type = hexere
+		    			sub_unit_type = octere
+		    			sub_unit_type = mega_galley
+		    		}
+	        	}
+	        	save_scope_as = burnt_ships
+	        }
+		}	
+	}
+
+
+	option = {
+		name = "assign_mission.104.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:mission_target_country = { #Change to 20%
+			while = {
+				count = { 10  35 }
+				scope:burnt_ships = {
+	       			 destroy_subunit = yes
+	    		}
+	    	}
+	    	if = {
+	       		limit = {
+	       			any_navy = {
+	        			unit_size = 0
+	        		}
+	        	}
+	       		every_navy = {
+	        		limit = {
+	        			unit_size = 0
+	        		}
+	        	destroy_unit = yes
+	        	}
+	 		}
+	 	}
+	 }
+
+	option = { 
+		name = "assign_mission.104.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.105 = { #GOOD
+	type = country_event
+	title = assign_mission.105.t
+	desc = assign_mission.105.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	trigger = {
+		scope:mission_target_country = {
+			#any_navy = { unit_size >= 1 }
+			any_country_sub_unit = {
+	        	count >= 5
+	        	#owning_unit.unit_location = port_building
+	        	OR = {
+	    			sub_unit_type = trireme
+	    			sub_unit_type = tetrere
+	    		}
+	        }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_country_sub_unit = {
+	        	order_by = subunit_strength_percentage
+	        	limit = {
+	        	#owning_unit.unit_location = port_building
+		        	OR = {
+		    			sub_unit_type = liburnian
+		    			sub_unit_type = trireme
+		    			sub_unit_type = tetrere
+		    			sub_unit_type = hexere
+		    			sub_unit_type = octere
+		    			sub_unit_type = mega_galley
+		    		}
+	        	}
+	        	save_scope_as = burnt_ships
+	        }
+		}	
+	}
+
+	option = {
+		name = "assign_mission.105.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:mission_target_country = {
+			while = {
+				count = { 5  25 } #Change to 10%
+				scope:burnt_ships = {
+	       			 destroy_subunit = yes
+	    		}
+	    	}
+	    	if = {
+	       		limit = {
+	       			any_navy = {
+	        			unit_size = 0
+	        		}
+	        	}
+	       		every_navy = {
+	        		limit = {
+	        			unit_size = 0
+	        		}
+	        	destroy_unit = yes
+	        	}
+	 		}
+	 	}
+		
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.106 = { #GREAT SABOTAGE SHIPYARD
+	type = country_event
+	title = assign_mission.106.t
+	desc = assign_mission.106.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	trigger = {
+		scope:mission_target_country = {
+			any_province = { is_port = yes }
+		} 
+	}	
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_owned_province = {
+				limit = { 
+					is_port = yes 
+					has_owner = yes
+					#NOT = { controller = root.unit_owner }	
+				}
+				order_by = num_of_port_building
+				save_scope_as = burned_port
+			}
+		}
+	}
+
+	option = {
+		name = "assign_mission.106.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		
+		scope:mission_target_country = {
+			while = {
+				count = { 2  3 }
+				scope:burned_port = {
+                	remove_building_level = port_building
+         	      	add_city_smoke_effect = yes
+					add_city_fire_effect = yes	
+				}
+			}
+		}	
+
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "damaged_shipyards"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.106.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.107 = { #GOOD
+	type = country_event
+	title = assign_mission.107.t
+	desc = assign_mission.107.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+
+	trigger = {
+		scope:mission_target_country = {
+			any_province = { is_port = yes }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_owned_province = {
+				limit = { 
+					is_port = yes 
+					has_owner = yes
+					#NOT = { controller = root.unit_owner }	
+				}
+				order_by = num_of_port_building
+				save_scope_as = burned_port
+			}
+		}
+	}
+
+	option = {
+		name = "assign_mission.107.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:mission_target_country = {
+			while = {
+				count = { 1  2 }
+				scope:burned_port = {
+                	remove_building_level = port_building
+         	      	add_city_smoke_effect = yes
+					add_city_fire_effect = yes	
+				}
+			}
+		}
+
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "damaged_shipyards"
+				duration = 180
+				mode = add
+			}
+		}
+
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.108 = { #GREAT DEMORALISE CREWS
+	type = country_event
+	title = assign_mission.108.t
+	desc = assign_mission.108.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+
+	trigger = {
+		scope:mission_target_country = {
+			any_navy = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_navy = {
+				limit = { 
+					unit_size >= 1
+				}	
+			order_by = unit_size
+			save_scope_as = demoralised_fleet
+			}	
+		}
+	}
+
+
+	option = {
+		name = "assign_mission.108.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+	
+		scope:demoralised_fleet = {
+			add_unit_modifier = {
+				name = "demoralised_crew"
+				duration = 90
+				mode = add
+			}
+		}
+	}
+
+
+	option = { 
+		name = "assign_mission.108.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.109 = { #GOOD
+	type = country_event
+	title = assign_mission.109.t
+	desc = assign_mission.109.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	trigger = {
+		scope:mission_target_country = {
+			any_navy = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_navy = {
+				limit = { 
+					unit_size >= 1
+				}	
+			order_by = unit_size
+			save_scope_as = demoralised_fleet
+			}	
+		}
+	}
+
+
+	option = {
+		name = "assign_mission.109.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:demoralised_fleet = {
+			add_unit_modifier = {
+				name = "demoralised_crew"
+				duration = 45
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.110 = { #GREAT MISDIRECT FLEET
+	type = country_event
+	title = assign_mission.110.t
+	desc = assign_mission.110.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	trigger = {
+		scope:mission_target_country = {
+			any_navy = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_navy = {
+				limit = { 
+					unit_size >= 1
+				}	
+			}	
+		}
+	}
+
+
+	option = {
+		name = "assign_mission.110.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+
+		scope:misled_fleet = {
+			add_unit_modifier = {
+				name = "misdirected_fleet"
+				duration = 90
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.110.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.111 = { #GOOD
+	type = country_event
+	title = assign_mission.111.t
+	desc = assign_mission.111.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+	trigger = {
+		scope:mission_target_country = {
+			any_navy = { unit_size >= 1 }
+		} 
+	}
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_navy = {
+				limit = { 
+					unit_size >= 1
+				}	
+			order_by = unit_size
+			save_scope_as = misled_fleet
+			}	
+		}
+	}
+
+
+	option = {
+		name = "assign_mission.111.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		
+		scope:misled_fleet = {
+			add_unit_modifier = {
+				name = "misdirected_fleet"
+				duration = 45
+				mode = add
+			}
+		}
+		
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.112 = { #GREAT FALSIFY MAPS
+	type = country_event
+	title = assign_mission.112.t
+	desc = assign_mission.112.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.112.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "falsified_maps"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.112.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.113 = { #GOOD
+	type = country_event
+	title = assign_mission.113.t
+	desc = assign_mission.113.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.113.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "falsified_maps"
+				duration = 180
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.114 = { #GREAT LOOT TREASURY
+	type = country_event
+	title = assign_mission.114.t
+	desc = assign_mission.114.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.114.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "looted_treasury"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "treasury_loot"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.114.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.115 = { #GOOD
+	type = country_event
+	title = assign_mission.115.t
+	desc = assign_mission.115.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.115.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "looted_treasury"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "treasury_loot"
+				duration = 365
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.116 = { #GREAT HARASS MERCHANTS 
+	type = country_event
+	title = assign_mission.116.t
+	desc = assign_mission.116.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.116.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "harassed_merchants"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:mission_target_country = {
+			while = {
+				count = 1
+				capital_scope = {
+					random_pops_in_province = {
+						limit = {
+							pop_type = nobles
+						}
+						kill_pop = yes
+					}
+				}
+			}			
+		}
+	}
+
+	option = { 
+		name = "assign_mission.116.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.117 = { #GOOD
+	type = country_event
+	title = assign_mission.117.t
+	desc = assign_mission.117.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.117.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "harassed_merchants"
+				duration = 180
+				mode = add
+			}
+		}
+		scope:mission_target_country = {
+			while = {
+				count = 1
+				capital_scope = {
+					random_pops_in_province = {
+						limit = {
+							pop_type = nobles
+						}
+						kill_pop = yes
+					}
+				}
+			}			
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.118 = { #GREAT SPREAD CORRUPTION
+	type = country_event
+	title = assign_mission.118.t
+	desc = assign_mission.118.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.118.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "spreading_corruption"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.118.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.119 = { #GOOD
+	type = country_event
+	title = assign_mission.119.t
+	desc = assign_mission.119.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.119.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "spreading_corruption"
+				duration = 180
+				mode = add
+			}
+		}		
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.120 = { #GREAT COMMIT ARSON
+	type = country_event
+	title = assign_mission.120.t
+	desc = assign_mission.120.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+ 
+	}	
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_owned_province = {
+				if = {
+					limit = { 
+                    	has_city_status = yes
+                   		free_building_slots < 1
+                   	}
+				}
+			order_by = civilization_value
+			save_scope_as = arson_site
+			}
+		}
+	}
+
+	option = {
+		name = "assign_mission.120.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			while = {
+				count = { 2  3 }
+				scope:arson_site = {
+                	destroy_building_effect = yes
+         	      	add_city_smoke_effect = yes
+					add_city_fire_effect = yes	
+				}
+			}
+		}	
+	}
+
+	option = { 
+		name = "assign_mission.120.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.121 = { #GOOD
+	type = country_event
+	title = assign_mission.121.t
+	desc = assign_mission.121.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+
+	}	
+
+	immediate = {
+		scope:mission_target_country = {
+			ordered_owned_province = {
+				if = {
+					limit = { 
+                    	has_city_status = yes
+                   		free_building_slots < 1
+                   	}
+				}
+			order_by = civilization_value
+			save_scope_as = arson_site
+			}
+		}
+	}
+
+	option = {
+		name = "assign_mission.121.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			while = {
+				count = { 1  2 }
+				scope:arson_site = {
+                	destroy_building_effect = yes
+         	      	add_city_smoke_effect = yes
+					add_city_fire_effect = yes	
+				}
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.122 = { #GREAT INCITE CIVIL DISOBEDIENCE
+	type = country_event
+	title = assign_mission.122.t
+	desc = assign_mission.122.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.122.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "civil_disobedience"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.122.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.123 = { #GOOD
+	type = country_event
+	title = assign_mission.123.t
+	desc = assign_mission.123.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.123.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "civil_disobedience"
+				duration = 180
+				mode = add
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.124 = { #GREAT UNDERMINE STABILITY
+	type = country_event
+	title = assign_mission.124.t
+	desc = assign_mission.124.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.124.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "rocky_stability"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.124.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.125 = { #GOOD
+	type = country_event
+	title = assign_mission.125.t
+	desc = assign_mission.125.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.125.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "rocky_stability"
+				duration = 180
+				mode = add
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.126 = { #GREAT RAISE LEGAL CHALLENGE
+	type = country_event
+	title = assign_mission.126.t
+	desc = assign_mission.126.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.126.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "legal_challenges"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.126.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.127 = { #GOOD
+	type = country_event
+	title = assign_mission.127.t
+	desc = assign_mission.127.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.127.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "legal_challenges"
+				duration = 180
+				mode = add
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.128 = { #GREAT EMBOLDEN REGIONAL LEADERS
+	type = country_event
+	title = assign_mission.128.t
+	desc = assign_mission.128.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.128.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "promote_local_government"
+				duration = 365
+				mode = add
+			}
+		}
+
+	}
+
+	option = { 
+		name = "assign_mission.128.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.129 = { #GOOD
+	type = country_event
+	title = assign_mission.129.t
+	desc = assign_mission.129.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.129.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "promote_local_government"
+				duration = 180
+				mode = add
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+assign_mission.130 = { #GREAT FALSIFY INSULT AGAINST GODS
+	type = country_event
+	title = assign_mission.130.t
+	desc = assign_mission.130.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.130.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "gods_insulted"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.130.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+assign_mission.131 = { #GOOD
+	type = country_event
+	title = assign_mission.131.t
+	desc = assign_mission.131.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.131.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "gods_insulted"
+				duration = 180
+				mode = add
+			}
+		}
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+assign_mission.132 = { #GREAT SOW DIVISION
+	type = country_event
+	title = assign_mission.132.t
+	desc = assign_mission.132.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.132.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "social_division"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+
+	option = { 
+		name = "assign_mission.132.b"
+		custom_tooltip = no_effect_tooltip
+	}
+
+}
+
+
+
+assign_mission.133 = { #GOOD
+	type = country_event
+	title = assign_mission.133.t
+	desc = assign_mission.133.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.133.a"
+		add_aggressive_expansion = 5
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -0.5
+			max = 30
+		}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "social_division"
+				duration = 180
+				mode = add
+			}
+		}
+
+
+		hidden_effect = {
+			random_list = {
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.230
+							days = 7
+						}
+					}	
+				}
+				10 = {
+					scope:mission_target_country = {
+						trigger_event = {
+							id = assign_mission.134
+							days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+###################################################################################################################################################
+
+## NOW THE FAILURE, THE ODD NUMBERS 35 to 83 ##
+
+## DOES COUNTERINTELLIGENCE GET INVOLVED? ##
+
+## THE VICTIM WILL NOW BE INFORMED EITHER WAY ##
+
+#########################################################################################################################################################
+
+
+
+###### FIND THE COUNTERINTEL OFFICER #################
+
+
+
+
+###### FIND THE COUNTERINTEL OFFICER ######## FIRST A COUNTRY EVENT (35) TO SCOPE THE COUNTERINTEL OFFICER, FOLLOWED BY CHARACTER EVENT TO ROLL (184)###
+
+
+
+assign_mission.35 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.35.t
+	desc = assign_mission.35.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+ 	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.184 }
+		}
+
+		####### ALSO SEND AN EVENT INFORMING THE VICTIM OF THE FAILED ATTACK #########
+
+	}
+
+	option = {
+		name = "assign_mission.35.a"
+	}
+
+}
+
+assign_mission.184 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.135
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.37 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.37.t
+	desc = assign_mission.37.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.185 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.37.a"
+	}
+
+}
+
+assign_mission.185 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.136 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+assign_mission.39 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.39.t
+	desc = assign_mission.39.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.186 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.39.a"
+	}
+
+}
+
+assign_mission.186 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.137 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+assign_mission.41 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.41.t
+	desc = assign_mission.41.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.187 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.41.a"
+	}
+
+}
+
+assign_mission.187 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.138 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+assign_mission.43 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.43.t
+	desc = assign_mission.43.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.188 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.43.a"
+	}
+
+}
+
+assign_mission.188 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.139 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+assign_mission.45 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.45.t
+	desc = assign_mission.45.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.190 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.45.a"
+	}
+
+}
+
+assign_mission.190 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.140 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+
+assign_mission.47 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.47.t
+	desc = assign_mission.47.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.191 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.47.a"
+	}
+
+}
+
+assign_mission.191 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.141 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+
+assign_mission.49 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.49.t
+	desc = assign_mission.49.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.192 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.49.a"
+	}
+
+}
+
+assign_mission.192 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.142
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.51 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.51.t
+	desc = assign_mission.51.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.193 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.51.a"
+	}
+
+}
+
+assign_mission.193 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.143
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.53 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.53.t
+	desc = assign_mission.53.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.194 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.53.a"
+	}
+
+}
+
+assign_mission.194 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.144
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+assign_mission.55 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.55.t
+	desc = assign_mission.55.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.195 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.55.a"
+	}
+
+}
+
+assign_mission.195 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.145 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.57 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.57.t
+	desc = assign_mission.57.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.196 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.57.a"
+	}
+
+}
+
+assign_mission.196 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.146
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.59 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.59.t
+	desc = assign_mission.59.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.197 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.59.a"
+	}
+
+}
+
+assign_mission.197 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.147
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.61 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.61.t
+	desc = assign_mission.61.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.198 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.61.a"
+	}
+
+}
+
+assign_mission.198 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.148
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.63 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.63.t
+	desc = assign_mission.63.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.199 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.63.a"
+	}
+
+}
+
+assign_mission.199 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.149
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+
+assign_mission.65 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.65.t
+	desc = assign_mission.65.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.200 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.65.a"
+	}
+
+}
+
+assign_mission.200 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.150
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+
+assign_mission.67 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.67.t
+	desc = assign_mission.67.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.201 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.67.a"
+	}
+
+}
+
+assign_mission.201 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.151
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.69 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.69.t
+	desc = assign_mission.69.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.202 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.69.a"
+	}
+
+}
+
+assign_mission.202 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.152
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.71 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.71.t
+	desc = assign_mission.71.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.203 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.71.a"
+	}
+
+}
+
+assign_mission.203 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.153
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.73 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.73.t
+	desc = assign_mission.73.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.204 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.73.a"
+	}
+
+}
+
+assign_mission.204 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.154
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.75 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.75.t
+	desc = assign_mission.75.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.205 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.75.a"
+	}
+
+}
+
+assign_mission.205 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.155
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.77 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.77.t
+	desc = assign_mission.77.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.206 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.77.a"
+	}
+
+}
+
+assign_mission.206 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.156
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.79 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.79.t
+	desc = assign_mission.79.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.207 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.79.a"
+	}
+
+}
+
+assign_mission.207 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.157
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+assign_mission.81 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.81.t
+	desc = assign_mission.81.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.208 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.81.a"
+	}
+
+}
+
+assign_mission.208 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.158
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+
+
+assign_mission.83 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.83.t
+	desc = assign_mission.83.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { id = assign_mission.209 }
+		}
+	}
+
+	option = {
+		name = "assign_mission.83.a"
+	}
+
+}
+
+assign_mission.209 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.159
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+
+##############################################################FAILURE #######################################################################
+
+##############################################################FAILURE #######################################################################
+
+assign_mission.134 = {
+	type = country_event
+	title = assign_mission.134.t
+	desc = assign_mission.134.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		scope:mission_target_country = { #Spy escapes, tell the victim he senses something
+				trigger_event = { id = assign_mission.160 } 
+			}
+
+	}
+
+	option = {
+		name = "assign_mission.134.a"
+		random_list = {
+			25 = {
+				scope:mission_spy = {
+					add_character_modifier = {
+						name = "elusive"
+						duration = 180
+						mode = add
+					}
+				}			
+			}
+			25 = {
+				scope:mission_spy = {
+					add_character_modifier = {
+						name = "knife_wounds"
+						duration = 180
+						mode = add
+					}
+				}			
+			}
+			50 = {			
+			}
+		}
+
+	}
+
+	option = {
+		name = "assign_mission.134.b" #Go into hiding
+		scope:mission_spy = {
+			add_character_modifier = {
+				name = "in_hiding"
+				duration = -1
+			}
+		}
+	}
+
+}
+
+assign_mission.160 = { ################## TELL THE VICTIM ###########################
+	type = country_event
+	title = assign_mission.160.t
+	desc = assign_mission.160.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "assign_mission.160.a"
+	}
+
+}
+
+##############################################################FAILURE #######################################################################
+
+##############################################################FAILURE #######################################################################
+
+
+
+
+####### THE BATTLE BEGINS ############################################################################################################################
+
+
+assign_mission.135 = { # COUNTERINTEL STRIKES BACK --- INFORM THE VICTIM 
+	type = character_event
+	title = assign_mission.135.t
+	desc = assign_mission.135.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5
+				}
+			}
+
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.135.a"
+	}
+}
+
+
+
+assign_mission.136 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.136.t
+	desc = assign_mission.136.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.136.a"
+	}
+}
+
+
+
+
+assign_mission.137 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.137.t
+	desc = assign_mission.137.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.137.a"
+	}
+}
+
+
+
+assign_mission.138 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.138.t
+	desc = assign_mission.138.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.138.a"
+	}
+}
+
+
+
+assign_mission.139 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.139.t
+	desc = assign_mission.139.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.139.a"
+	}
+}
+
+
+
+assign_mission.140 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.140.t
+	desc = assign_mission.140.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.140.a"
+	}
+}
+
+
+assign_mission.141 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.141.t
+	desc = assign_mission.141.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.141.a"
+	}
+}
+
+
+assign_mission.142 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.142.t
+	desc = assign_mission.142.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.142.a"
+	}
+}
+
+assign_mission.143 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.143.t
+	desc = assign_mission.143.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.143.a"
+	}
+}
+
+
+
+assign_mission.144 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.144.t
+	desc = assign_mission.144.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.144.a"
+	}
+}
+
+
+assign_mission.145 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.145.t
+	desc = assign_mission.145.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.145.a"
+	}
+}
+
+assign_mission.146 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.146.t
+	desc = assign_mission.146.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.146.a"
+	}
+}
+
+
+assign_mission.147 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.147.t
+	desc = assign_mission.147.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.147.a"
+	}
+}
+
+
+assign_mission.148 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.148.t
+	desc = assign_mission.148.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.148.a"
+	}
+}
+
+assign_mission.149 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.149.t
+	desc = assign_mission.149.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5 
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.149.a"
+	}
+}
+
+
+assign_mission.150 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.150.t
+	desc = assign_mission.150.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.150.a"
+	}
+}
+
+
+
+assign_mission.151 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.151.t
+	desc = assign_mission.151.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.151.a"
+	}
+}
+
+
+
+assign_mission.152 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.152.t
+	desc = assign_mission.152.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.152.a"
+	}
+}
+
+
+
+assign_mission.153 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.153.t
+	desc = assign_mission.153.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.153.a"
+	}
+}
+
+
+
+assign_mission.154 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.154.t
+	desc = assign_mission.154.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.154.a"
+	}
+}
+
+
+assign_mission.155 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.155.t
+	desc = assign_mission.155.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5
+				 } 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.155.a"
+	}
+}
+
+
+assign_mission.156 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.156.t
+	desc = assign_mission.156.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.156.a"
+	}
+}
+
+
+
+assign_mission.157 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.157.t
+	desc = assign_mission.157.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.157.a"
+	}
+}
+
+
+
+assign_mission.158 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.158.t
+	desc = assign_mission.158.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.158.a"
+	}
+}
+
+
+
+assign_mission.159 = { # COUNTERINTEL STRIKES BACK
+	type = character_event
+	title = assign_mission.159.t
+	desc = assign_mission.159.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+
+	option = {
+		name = "assign_mission.159.a"
+	}
+}
+
+
+
+#################### COUNTERINTEL STRIKES BACK ##############################################################################################
+
+
+###################################################### NOW WE SEE HOW IT ENDS #############################################################
+
+
+
+assign_mission.161 = { # COUNTERINTEL WINS, ASSESS THE DAMAGE
+	type = character_event
+	hidden = yes
+	
+
+ 	trigger = {
+		
+	}
+
+
+	immediate = {		
+		random_list = {
+				30 = {
+					scope:counterintel_officer = {
+						add_martial = 1	
+						add_loyalty = sense_of_duty
+					}					
+				}
+				15 = {
+					scope:counterintel_officer = {
+						add_loyalty = sense_of_duty
+						add_character_modifier = {
+							name = "state_detective"
+							duration = 365
+							mode = add
+						}
+					}	
+				}
+				25 = {
+					scope:mission_spy = {
+						add_character_modifier = {
+							name = "wounded_spy"
+							duration = 365
+							mode = add
+						}
+					}
+					scope:counterintel_officer = {
+						add_loyalty = sense_of_duty
+						add_character_modifier = {
+							name = "state_detective"
+							duration = 365
+							mode = add
+						}
+					}			
+				}
+				5 = {
+					scope:counterintel_officer = {
+						add_character_modifier = {
+							name = "wounded_spy"
+							duration = 365
+							mode = add
+						}
+						add_loyalty = sense_of_duty
+					}			
+				}
+				25 = {
+            		scope:counterintel_officer = {
+            			add_martial = 1
+            			add_charisma = 1
+            			add_loyalty = sense_of_duty
+            		}
+				} 
+			}
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "homeland_security"
+				duration = 3650
+				mode = add
+			}
+		}
+	}
+}
+
+
+assign_mission.162 = { # SPY STRIKES BACK
+	type = character_event
+	hidden = yes
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:mission_spy.martial
+			}
+			scope:mission_spy = { #Spy wins
+				trigger_event = { 
+					id = assign_mission.163
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { # Loop back
+				trigger_event = { 
+					id = assign_mission.164 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+	}
+}
+
+
+
+
+assign_mission.163 = { # SPY WINS, ASSESS THE DAMAGE
+	type = character_event
+	hidden = yes
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		scope:counterintel_officer = {
+			death = {
+				death_reason = death_execution
+			}	
+		}	
+
+		scope:mission_target_country = {
+			add_country_modifier = {
+				name = "homeland_insecurity"
+				duration = 3650
+				mode = add
+			}
+		}
+	}
+
+
+	option = {
+		name = "assign_mission.163.a"
+		random_list = {
+			25 = {
+				scope:mission_spy = {
+					add_charisma = 1
+					add_loyalty = sense_of_duty
+					add_character_modifier = {
+						name = "elusive"
+						duration = 180
+						mode = add
+					}
+				}			
+			}
+			25 = {
+				scope:mission_spy = {
+					add_character_modifier = {
+						name = "knife_wounds"
+						duration = 180
+						mode = add
+					}
+					add_martial = 2
+					add_loyalty = sense_of_duty
+				}			
+			}
+			25 = {
+				scope:mission_spy = {
+					add_charisma = 1
+					add_loyalty = sense_of_duty
+				}			
+			}
+			25 = {
+				scope:mission_spy = {
+					add_martial = 1
+					add_loyalty = sense_of_duty
+				}			
+			}
+		}
+	}
+}
+
+
+
+
+assign_mission.164 = { # RETURN TO COMBAT
+	type = country_event
+	title = assign_mission.164.t
+	desc = assign_mission.164.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+
+	}
+
+
+	option = {
+		name = "assign_mission.164.a" #STAND AND FIGHT
+		scope:counterintel_officer = { 
+			trigger_event = { 
+				id = assign_mission.165
+				days = 5
+			}
+		}
+		random_list = {
+				20 = {
+					scope:mission_spy = {
+						add_character_modifier = {
+							name = "knife_wounds"
+							duration = 180
+							mode = add
+						}
+					}			
+				}
+				30 = {
+					scope:counterintel_officer = {
+						add_character_modifier = {
+							name = "knife_wounds"
+							duration = 180
+							mode = add
+						}
+					}			
+				}
+				20 = {
+					scope:mission_spy = {
+						add_character_modifier = {
+							name = "knife_wounds"
+							duration = 180
+							mode = add
+						}
+					}
+					scope:counterintel_officer = {
+						add_character_modifier = {
+							name = "knife_wounds"
+							duration = 180
+							mode = add
+						}
+					}				
+				}
+				30 = {
+
+			}
+		}
+
+	}
+
+	option = {
+		name = "assign_mission.164.b" #TRY TO ESCAPE
+		random_list = {
+			25 = {
+				scope:mission_spy = {
+					add_character_modifier = {
+						name = "elusive"
+						duration = 180
+					}
+				}			
+			}
+			75 = {
+			}
+		}
+		scope:counterintel_officer = { 
+			trigger_event = { 
+				id = assign_mission.166
+				days = 5 
+			}
+		}
+	}
+}
+
+
+assign_mission.165 = { # STAND AND FIGHT
+	type = character_event
+	hidden = yes
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161 
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_spy = { #Spy can counterattack
+				trigger_event = { 
+					id = assign_mission.162
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+}
+
+
+assign_mission.166 = { # SPY TRIES TO FLEE
+	type = character_event
+	hidden = yes
+	
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = { #Counterintel wins, assess the damage
+				trigger_event = { 
+					id = assign_mission.161
+					days = 5 
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes
+				trigger_event = { 
+					id = assign_mission.134
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+}
+
+
+
+##########################################
+############ COUNTERINTEL CAN GET INVOLVED AFTER GOOD RESULT ###################################
+
+
+
+
+assign_mission.230 = { # FAIL - INTRODUCE THE COUNTERINTEL OFFICER - SCOPE AND ROLL
+	type = country_event
+	title = assign_mission.230.t
+	desc = assign_mission.230.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:counterintel_officer
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
+	#interface_lock = no
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		scope:mission_target_country = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+
+		}
+		scope:counterintel_officer = {
+			trigger_event = { 
+				id = assign_mission.231
+			}
+		}
+	}
+
+	option = {
+		name = "assign_mission.230.a"
+	}
+
+}
+
+assign_mission.231 = { # A CHARACTER EVENT FOR THE ROLL
+	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = { #Counterintel pursues spy, tell the victim of the specific failed plot, then the spy's king. Battle begins!
+				trigger_event = { 
+					id = assign_mission.144
+					days = 5
+				}
+			}
+		}
+		else = {
+			scope:mission_origin_country = { #Spy escapes, tell the spy's king, maybe tell the victim he senses something
+				trigger_event = { 
+					id = assign_mission.134 
+					days = 5
+				} 
+			}
+		}
+		remove_variable = roll
+
+	}
+
+	option = {
+		
+	}
+
+}
+
+
+# 237 is next number

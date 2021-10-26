@@ -1,0 +1,1466 @@
+﻿namespace = temptress
+
+temptress.1 = { # Final resolution Success Titllita
+	type = country_event
+	title = temptress.1.t
+	desc = temptress.1.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:target
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.1.a"
+		scope:actor.current_ruler.employer = {
+			pay_price = bribe_pi ###############################################
+		}
+		scope:actor.current_ruler = {
+			hidden_effect = {
+				random_list = {
+					2 = { 
+						scope:actor.current_ruler = {
+							add_popularity = 5
+							add_charisma = 1
+						}					
+					}
+					2 = { 
+						scope:actor.current_ruler = {
+							add_popularity = 15
+							add_charisma = 1
+						}						
+					}
+					2 = { 
+						scope:actor.current_ruler = {
+							add_trait = loving
+						}						
+					}
+					3 = { 
+						scope:actor.current_ruler = {
+							add_trait = lustful
+						}					
+					}
+					2 = { 
+						scope:actor.current_ruler = {
+							add_trait = silver_tongued
+						}						
+					}
+					2 = { 
+						scope:actor.current_ruler = {
+							add_trait = fair
+						}					
+					}
+					85 = { 
+						scope:actor.current_ruler = {
+						}					
+					}
+					2 = { 
+						scope:actor.current_ruler = {
+							add_popularity = 10
+							add_charisma = 1
+						}					
+					}
+				}	
+			}
+		}
+		scope:target = {
+			add_loyalty = temptress_bribe
+		}
+	}
+}
+
+
+temptress.2 = { # Final resolution Failure Titillate
+	type = country_event
+	title = temptress.2.t
+	desc = temptress.2.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:target
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.2.a"
+		scope:actor.current_ruler.employer = {
+			pay_price = bribe_pi ###############################################
+		}
+		scope:actor.current_ruler = {
+			add_popularity = -15
+			#add_prominence = -30
+		}
+		scope:target = {
+			add_loyalty = temptress_cringe
+		}
+	}
+}
+
+
+temptress.3 = { # Final resolution Success ##Tempt - Inspire Disloyalty the Female Way #############
+	type = country_event
+	title = temptress.3.t
+	desc = temptress.3.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:target
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.3.a"
+		scope:actor.current_ruler = {
+			add_popularity = 10
+			#add_prominence = -30
+		}
+		scope:target = {
+			add_loyalty = loyalty_inspire_disloyalty_black_widow
+			#add_triggered_character_modifier = {
+			#	name = inspire_disloyalty_modifier_black_widow
+			#}
+		}
+	}
+}
+
+temptress.4 = { # Final resolution Failure ##Tempt - Inspire Disloyalty the Female Way #############
+	type = country_event
+	type = country_event
+	title = temptress.4.t
+	desc = temptress.4.desc
+	left_portrait = root.current_ruler
+	right_portrait = scope:target
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.4.a"
+		scope:actor.current_ruler = {
+			add_popularity = -20
+			#add_prominence = -30
+		}
+		scope:target = {
+			add_loyalty = sense_of_duty #########Something else for it to backfire
+			#add_triggered_character_modifier = {
+			#	name = inspire_disloyalty_modifier_black_widow #########Something else for it to backfire
+			#}
+		}
+	}
+}
+
+
+### MANIPULATION ##############
+
+
+
+temptress.5 = { # Final resolution Success MANIPULATED SIMP HELPS THE QUEEN / GETS REKT
+	type = country_event
+	title = temptress.5.t
+	desc = temptress.5.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.5.a"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:manipulated_character.finesse
+					}
+					scope:actor.current_ruler.employer = { # { HELPS QUEEN BY STEALING MONEY
+						trigger_event = { 
+							id = temptress.7
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { # { REKT
+						trigger_event = { 
+							id = temptress.8
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+	option = {
+		name = "temptress.5.b"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:manipulated_character.charisma
+					}
+					scope:actor.current_ruler.employer = { #scope:target.employer = { HELPS QUEEN BY STRENGTHENING ENEMY'S RIVAL
+						trigger_event = { 
+							id = temptress.9
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { #scope:target.employer = { REKT
+						trigger_event = { 
+							id = temptress.10
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+	option = {
+		name = "temptress.5.c"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:target.martial
+					}
+					scope:actor.current_ruler.employer = { #scope:target.employer = { HELPS QUEEN BY KILLING A FRIEND OF THE ENEMY KING
+						trigger_event = { 
+							id = temptress.11
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { #scope:target.employer = { REKT
+						trigger_event = { 
+							id = temptress.12
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+	option = {
+		name = "temptress.5.d"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:manipulated_character.zeal
+					}
+					scope:actor.current_ruler.employer = { #scope:target.employer = { HELPS QUEEN BY MAKING POPULATION UNHAPPY
+						trigger_event = { 
+							id = temptress.13
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { #scope:target.employer = { REKT
+						trigger_event = { 
+							id = temptress.14
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+}
+
+
+#1) Imprisoned
+#2) Killed
+#3) Horribly wounded
+#4) Leaves wife and country
+
+
+temptress.6 = { # Final resolution Failure MANPULATED SIMP GETS REKT / HURTS THE QUEEN
+	type = country_event
+	title = temptress.6.t
+	desc = temptress.6.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.6.a"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:manipulated_character.finesse
+					}
+					scope:actor.current_ruler.employer = { #scope:target.employer = { REKT
+						trigger_event = { 
+							id = temptress.15
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { #scope:target.employer = { HURTS THE QUEEN - HIS MONEY STOLEN BY ENEMY
+						trigger_event = { 
+							id = temptress.16
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+	option = {
+		name = "temptress.6.b"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:manipulated_character.martial
+					}
+					scope:actor.current_ruler.employer = { #scope:target.employer = { REKT
+						trigger_event = { 
+							id = temptress.17
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { #scope:target.employer = { HURTS QUEEN BY WEAKENING ENEMY'S RIVAL
+						trigger_event = { 
+							id = temptress.18
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+	option = {
+		name = "temptress.6.c"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:manipulated_character.charisma
+					}
+					scope:actor.current_ruler.employer = { #scope:target.employer = { REKT
+						trigger_event = { 
+							id = temptress.19
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { #scope:target.employer = { HELPS QUEEN BY HELPING A FRIEND OF THE ENEMY KING
+						trigger_event = { 
+							id = temptress.20
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+	option = {
+		name = "temptress.6.d"		
+		scope:actor.current_ruler = { #scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = roll
+					value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:manipulated_character.zeal
+					}
+					scope:actor.current_ruler.employer = { #scope:target.employer = { REKT
+						trigger_event = { 
+							id = temptress.21
+							days = 90
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = { #scope:target.employer = { HURTS QUEEN BY MAKING POPULATION HAPPY
+						trigger_event = { 
+							id = temptress.22
+							days = 90				 
+						}
+					}
+				}
+				remove_variable = roll
+			}
+		}	
+	}
+
+}
+
+
+
+####################
+## FINAL RESOLUTION
+###########
+
+
+temptress.7 = { # Steal money for Queen success
+	type = country_event
+	title = temptress.7.t
+	desc = temptress.7.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.7.a"
+		scope:manipulating_queen = {
+			add_character_modifier = {
+				name = "admirers_gift"
+				duration = 365
+			}
+		}
+		scope:manipulator = {
+			add_country_modifier = {
+				name = "foreign_gold_seized"
+				duration = 730
+			}
+		}
+		scope:manipulated = {
+			add_country_modifier = {
+				name = "our_gold_seized"
+				duration = 730
+			}
+		}
+	}
+}
+
+temptress.8 = { # Steal money for Queen success but rekt
+	type = country_event
+	title = temptress.8.t
+	desc = temptress.8.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.8.a"
+		scope:manipulating_queen = {
+			add_character_modifier = {
+				name = "admirers_gift"
+				duration = 365
+			}
+		}
+		scope:manipulator = {
+			add_country_modifier = {
+				name = "foreign_gold_seized"
+				duration = 730
+			}
+		}
+		scope:manipulated = {
+				imprison = { target = scope:manipulated_character } ##
+				trigger_event = {
+					on_action = custom_on_action_imprison
+					days = { 30 360 }
+				}
+		}
+		scope:manipulated_character = {
+				add_loyalty = imprisoned_l
+				hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+	}
+}
+
+temptress.9 = { # Strengthen enemy king's rival success
+	type = country_event
+	title = temptress.9.t
+	desc = temptress.9.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					is_rival = scope:manipulated.current_ruler
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_enemy
+	 		}
+		}
+	}
+
+
+	option = {
+		name = "temptress.9.a"
+		scope:my_enemys_enemy = {
+			add_popularity = 50
+			add_loyalty = foreign_support 
+		}
+	}
+}
+
+temptress.10 = { # Strengthen enemy king's rival success but rekt
+	type = country_event
+	title = temptress.10.t
+	desc = temptress.10.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					is_rival = scope:manipulated.current_ruler
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_enemy
+	 		}
+		}
+	}
+
+
+	option = {
+		name = "temptress.10.a"
+		scope:my_enemys_enemy = {
+			add_popularity = 50
+			add_loyalty = foreign_support 
+			add_character_modifier = {
+				name = "admirers_gift"
+				duration = 365
+			}
+		}
+		scope:manipulated_character = {
+			add_trait = wounded
+			add_loyalty = assets_seized_sl
+		}
+	}
+}
+
+temptress.11 = { # Weaken friend of enemy king success
+	type = country_event
+	title = temptress.11.t
+	desc = temptress.11.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					loyalty >= 60
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_friend
+	 		}
+		}
+	}
+
+
+	option = {
+		name = "temptress.11.a"
+		scope:my_enemys_friend = {
+			add_character_modifier = {
+				name = "knife_wounds"
+				duration = 365
+			}
+		}
+		scope:manipulated_character = {
+			add_trait = brave
+			add_loyalty = rebellious 
+		}
+	}
+}
+
+temptress.12 = {  # Weaken friend of enemy king success but rekt
+	type = country_event
+	title = temptress.12.t
+	desc = temptress.12.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					loyalty >= 60
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_friend
+	 		}
+		}
+	}
+
+
+	option = {
+		name = "temptress.11.a"
+		scope:my_enemys_friend = {
+			add_character_modifier = {
+				name = "knife_wounds"
+				duration = 365
+			}
+		}
+		scope:manipulated_character = {
+			death = { 
+				death_reason = death_execution
+				killer = scope:manipulated.current_ruler
+			}	
+		}
+	}
+}
+
+temptress.13 = { # Make enemy king's people unhappy success
+	type = country_event
+	title = temptress.13.t
+	desc = temptress.13.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_area = {
+				limit = {
+					state_loyalty <= 60
+					NOT = { primary_culture = scope:target_culture.culture }
+					#any_owned_province = {
+					#	NOT = { dominant_province_culture = primary_culture }
+					#}
+				}
+				save_scope_as = unhappy_place
+			}
+		}
+	}
+
+	option = {
+		name = "temptress.13.a"
+		scope:unhappy_place = {
+			add_state_modifier = {
+				name = unhappy_people
+				duration = 3650
+			}
+		}
+		scope:manipulated_character = {
+			add_charisma = 2
+			add_loyalty = rebellious
+		}
+
+	}
+}
+
+temptress.14 = {  # Make enemy king's people unhappy success but rekt
+	type = country_event
+	title = temptress.14.t
+	desc = temptress.14.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_area = {
+				limit = {
+					state_loyalty <= 60
+					NOT = { primary_culture = scope:target_culture.culture }
+					#any_owned_province = {
+					#	NOT = { dominant_province_culture = primary_culture }
+					#}
+				}
+				save_scope_as = unhappy_place
+			}
+		}
+	}
+
+	option = {
+		name = "temptress.14.a"
+		scope:unhappy_place = {
+			add_state_modifier = {
+				name = unhappy_people
+				duration = 3650
+			}
+		}
+		scope:manipulated = {
+			imprison = { target = scope:manipulated_character } ##
+			trigger_event = {
+				on_action = custom_on_action_imprison
+					days = { 30 360 }
+			}
+		}
+		scope:manipulated_character = {
+				add_loyalty = imprisoned_l
+				hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+
+	}
+}
+
+
+
+#################################################################
+
+
+temptress.15 = {  # Steal money for Queen failure
+	type = country_event
+	title = temptress.15.t
+	desc = temptress.15.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.15.a"
+		scope:manipulating_queen = {
+			add_popularity = -10
+		}
+		scope:manipulator = {
+			add_political_influence = -15
+		}
+		scope:manipulated.current_ruler = {
+			add_popularity = 10
+		}
+		scope:manipulated = {
+				imprison = { target = scope:manipulated_character } ##
+				trigger_event = {
+					on_action = custom_on_action_imprison
+					days = { 30 360 }
+				}
+		}
+		scope:manipulated_character = {
+				add_loyalty = imprisoned_l
+				hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+	}
+}
+
+temptress.16 = {  # Steal money for Queen failure and rekt
+	type = country_event
+	title = temptress.16.t
+	desc = temptress.16.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+
+	option = {
+		name = "temptress.16.a"
+		scope:manipulating_queen = {
+			add_popularity = -15
+		}
+		scope:manipulator = {
+			add_political_influence = -20
+		}
+		scope:manipulated.current_ruler = {
+			add_popularity = 15
+		}
+		scope:manipulated_character = {
+			death = { 
+				death_reason = death_execution
+				killer = scope:manipulated.current_ruler
+			}	
+		}
+	}
+}
+
+temptress.17 = {  # Strengthen enemy king's rival failure
+	type = country_event
+	title = temptress.17.t
+	desc = temptress.17.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					is_rival = scope:manipulated.current_ruler
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_enemy
+	 		}
+		}
+	}
+
+	option = {
+		name = "temptress.17.a"
+		scope:my_enemys_enemy = {
+			add_loyalty = sense_of_duty 
+			add_gold = 200
+		}
+	}
+}
+
+
+temptress.18 = {  # Strengthen enemy king's rival failure and rekt
+	type = country_event
+	title = temptress.18.t
+	desc = temptress.18.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					is_rival = scope:manipulated.current_ruler
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_enemy
+	 		}
+		}
+	}
+
+
+	option = {
+		name = "temptress.18.a"
+		scope:my_enemys_enemy = {
+			add_loyalty = sense_of_duty 
+			add_gold = 450
+		}
+		scope:manipulated.current_ruler = {
+			add_popularity = 10
+		}
+		scope:manipulated = {
+				imprison = { target = scope:manipulated_character } ##
+				trigger_event = {
+					on_action = custom_on_action_imprison
+					days = { 30 360 }
+				}
+		}
+		scope:manipulated_character = {
+				add_loyalty = imprisoned_l
+				hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+	}
+}
+
+
+temptress.19 = {  #  Weaken friend of enemy king failure
+	type = country_event
+	title = temptress.19.t
+	desc = temptress.19.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					loyalty >= 70
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_friend
+	 		}
+		}
+	}
+
+
+	option = {
+		name = "temptress.19.a"
+		scope:my_enemys_friend = {
+			add_character_modifier = {
+				name = "knife_fighter"
+				duration = 3650
+			}
+			add_popularity = 15
+			add_gold = 100
+		}
+		scope:manipulated_character = {
+			death = { 
+				death_reason = death_execution
+				killer = scope:my_enemys_friend
+			}	
+		}
+	}
+}
+
+temptress.20 = {  #  Weaken friend of enemy king failure rekt
+	type = country_event
+	title = temptress.20.t
+	desc = temptress.20.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					loyalty >= 70
+					is_ruler = no
+				}
+ 				check_range_bounds = no
+				order_by = power_base
+				position = 0
+	 			save_scope_as = my_enemys_friend
+	 		}
+		}
+	}
+
+
+	option = {
+		name = "temptress.20.a"
+		scope:my_enemys_friend = {
+			add_character_modifier = {
+				name = "knife_fighter"
+				duration = -1
+			}
+			add_popularity = 35
+			add_gold = 300
+		}
+		scope:manipulated_character = {
+			death = { 
+				death_reason = death_execution
+				killer = scope:my_enemys_friend
+			}	
+		}
+		scope:manipulating_queen = {
+			add_popularity = -20
+		}
+	}
+}
+
+temptress.21 = {  # Make enemy king's people unhappy failure
+	type = country_event
+	title = temptress.21.t
+	desc = temptress.21.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_area = {
+				limit = {
+					state_loyalty <= 60
+					#any_owned_province = {
+					#	NOT = { dominant_province_culture = primary_culture }
+					#}
+				}
+				save_scope_as = unhappy_place
+			}
+		}
+	}
+
+	option = {
+		name = "temptress.21.a"
+		scope:unhappy_place = {
+			add_state_modifier = {
+				name = happy_people
+				duration = 1826
+			}
+		}
+		scope:manipulated = {
+			imprison = { target = scope:manipulated_character } ##
+			trigger_event = {
+				on_action = custom_on_action_imprison
+					days = { 30 360 }
+			}
+		}
+		scope:manipulated_character = {
+				add_loyalty = imprisoned_l
+				hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+	}
+}
+
+temptress.22 = {  # Make enemy king's people unhappy failure and rekt
+	type = country_event
+	title = temptress.22.t
+	desc = temptress.22.desc
+	left_portrait = scope:manipulating_queen
+	left_portrait = scope:manipulator.current_ruler
+	right_portrait = scope:manipulated_character
+	right_portrait = scope:manipulated.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	immediate = {
+		scope:manipulated = {
+			ordered_area = {
+				limit = {
+					state_loyalty <= 60
+					#any_owned_province = {
+					#	NOT = { dominant_province_culture = primary_culture }
+					#}
+				}
+				save_scope_as = unhappy_place
+			}
+		}
+	}
+
+	option = {
+		name = "temptress.14.a"
+		scope:unhappy_place = {
+			add_state_modifier = {
+				name = happy_people
+				duration = 3650
+			}
+		}
+		scope:manipulated = {
+			add_stability = 5
+			imprison = { target = scope:manipulated_character } ##
+			trigger_event = {
+				on_action = custom_on_action_imprison
+					days = { 30 360 }
+			}
+		}
+		scope:manipulated_character = {
+				add_loyalty = imprisoned_l
+				hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+		scope:manipulating_queen = {
+			add_popularity = -20
+		}
+	}
+}
+
+
+######################BEWITCH GOVERNOR##############################################################################################
+
+
+
+temptress.23 = {  # Bewitch governor succeeds
+	type = country_event
+	title = temptress.23.t
+	desc = temptress.23.desc
+	left_portrait = scope:bewitching_queen
+	left_portrait = scope:bewitcher.current_ruler
+	right_portrait = scope:bewitched_gov
+	right_portrait = scope:bewitchee.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+		scope:bewitcher = { 
+			if = {
+				limit = {
+					has_variable = bewitching_nation
+					var:bewitching_nation = {
+						exists = this
+						has_land = yes
+					}
+					has_variable = nation_bewitched
+					var:nation_bewitched = {
+						exists = this
+						has_land = yes
+					}
+				}
+				var:nation_bewitched = {
+					save_scope_as = bewitchee
+				}
+				var:bewitching_nation = {
+					save_scope_as = bewitcher
+				}
+			}
+		}
+
+		scope:bewitchee = {
+			trigger_event = {
+				id = temptress.24
+			}
+		}
+	}
+
+
+	option = {
+		name = "temptress.23.a"
+
+		scope:bewitcher = {
+			add_country_modifier = {
+				name = foreign_treasury
+				duration = 365
+			}
+			add_manpower = 10
+		}
+	}
+}
+
+
+
+temptress.24 = {  # Bewitch governor succeeds
+	type = country_event
+	title = temptress.24.t
+	desc = temptress.24.desc
+	left_portrait = scope:bewitching_queen
+	left_portrait = scope:bewitcher.current_ruler
+	right_portrait = scope:bewitched_gov
+	right_portrait = scope:bewitchee.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	trigger = {
+
+
+	}
+	
+	immediate = {
+	}
+
+
+	option = {
+		name = "temptress.24.a"
+	}
+}
+
+
+temptress.25 = {  # Bewitch governor fails
+	type = country_event
+	title = temptress.25.t
+	desc = temptress.25.desc
+	left_portrait = scope:bewitching_queen
+	left_portrait = scope:bewitcher.current_ruler
+	right_portrait = scope:bewitched_gov
+	right_portrait = scope:bewitchee.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+
+	trigger = {
+
+	}
+	
+	immediate = {
+		scope:bewitcher = { 
+			if = {
+				limit = {
+					has_variable = bewitching_nation
+					var:bewitching_nation = {
+						exists = this
+						has_land = yes
+					}
+					has_variable = nation_bewitched
+					var:nation_bewitched = {
+						exists = this
+						has_land = yes
+					}
+				}
+				save_scope_as = bewitching_queen
+				var:nation_bewitched = {
+					save_scope_as = bewitchee
+				}
+				var:bewitching_nation = {
+					save_scope_as = bewitcher
+				}
+			}
+		}
+
+		scope:bewitchee = {
+			trigger_event = {
+				id = temptress.26
+			}
+		}
+	}
+
+
+	option = {
+		name = "temptress.25.a"
+
+		scope:bewitcher = {
+			add_country_modifier = {
+				name = failed_venture
+				duration = 365
+			}
+		}
+	}
+}
+
+
+
+temptress.26 = {  # Bewitch governor fail
+	type = country_event
+	title = temptress.26.t
+	desc = temptress.26.desc
+	left_portrait = scope:bewitching_queen
+	left_portrait = scope:bewitcher.current_ruler
+	right_portrait = scope:bewitched_gov
+	right_portrait = scope:bewitchee.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.26.a"
+
+		scope:bewitchee = {
+			add_country_modifier = {
+				name = gov_confiscation
+				duration = 365
+			}
+		}
+
+		scope:bewitchee = {
+			imprison = { target = scope:bewitched_gov }
+			if = {
+				limit = {
+					invention = global_slaves_output_inv_3
+					scope:target = {
+						OR = {
+							has_trait = corrupt
+							wealth < 0
+							has_character_modifier = secret_gambler
+						}
+					}
+				}
+			}
+			else = {
+				current_ruler = {
+					add_popularity = subtract_popularity_small
+				}
+			}
+			trigger_event = {
+				on_action = custom_on_action_imprison
+				days = { 30 360 }
+			}
+		}
+
+		scope:bewitched_gov = {
+			add_loyalty = imprisoned_l
+			hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+	}
+}
+
+################################ BLACK WIDOW TEMPT #################################
+
+temptress.27 = {  # Success
+	type = country_event
+	title = temptress.27.t
+	desc = temptress.27.desc
+	left_portrait = scope:disloyal_inspiring_queen
+	left_portrait = scope:disloyal_inspirer.current_ruler
+	right_portrait = scope:disloyal_inspired_character
+	right_portrait = scope:disloyal_inspired.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.27.a"
+		scope:disloyal_inspirer.current_ruler = {
+			add_popularity = 10
+		}
+		scope:disloyal_inspired_character = {
+			add_loyalty = loyalty_inspire_disloyalty_black_widow
+		}
+	}
+}
+
+
+temptress.28 = {  #  Success
+	type = country_event
+	title = temptress.28.t
+	desc = temptress.28.desc
+	left_portrait = scope:disloyal_inspiring_queen
+	left_portrait = scope:disloyal_inspirer.current_ruler
+	right_portrait = scope:disloyal_inspired_character
+	right_portrait = scope:disloyal_inspired.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.28.a"
+	}
+}
+
+
+
+temptress.29 = {  # Failure
+	type = country_event
+	title = temptress.29.t
+	desc = temptress.29.desc
+	left_portrait = scope:disloyal_inspiring_queen
+	left_portrait = scope:disloyal_inspirer.current_ruler
+	right_portrait = scope:disloyal_inspired_character
+	right_portrait = scope:disloyal_inspired.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "temptress.29.a"
+		scope:disloyal_inspirer.current_ruler = {
+			add_popularity = -20
+			#add_prominence = -30
+		}
+		scope:disloyal_inspired_character = {
+			add_loyalty = sense_of_duty 
+		}
+	}
+}
+
+
+########################################## MANIPULATION ########################################################
+
+
+

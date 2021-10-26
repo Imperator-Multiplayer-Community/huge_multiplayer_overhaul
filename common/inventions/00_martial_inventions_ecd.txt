@@ -322,6 +322,9 @@
 	global_supply_limit_modifier_inv_4 = { 
 		requires = { fort_maintenance_cost_inv }
 		modifier = { global_supply_limit_modifier = 0.05 }
+		on_activate = {
+			custom_tooltip = "zoonotic_defence"
+		}
 	}
 
 	#New HMO invention
@@ -504,6 +507,7 @@
 				id = maintenance_event.6
 			}
 			custom_tooltip = "ArmyMaintUp_TT"
+			custom_tooltip = "scorched_earth_decision"
 		}
 		requires = { retreat_delay_inv }
 	}
@@ -1068,6 +1072,7 @@ military_inventions = {
 			global_defensive = 0.20 
 			fort_maintenance_cost = 0.01  
 		}
+		on_activate = { custom_tooltip = "fortified_capital_decision" }
 		keystone = yes
 	}
 
@@ -1574,6 +1579,7 @@ naval_tree = {
 					}
 			 on_activate = {
 				custom_tooltip = "NavyMaintUp_TT"
+				custom_tooltip = "defend_coast_decision"
 
 				 trigger_event = {
 					 id = maintenance_event.3
@@ -1619,6 +1625,7 @@ naval_tree = {
 					}
 				}
 			}
+			custom_tooltip = "cruise_seas_decision"
 		}
 	}
 

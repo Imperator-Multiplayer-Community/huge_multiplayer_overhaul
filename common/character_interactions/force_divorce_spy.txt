@@ -1,0 +1,56 @@
+﻿force_divorce_spy = { 
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_arrange_marriage"
+	
+	message = no
+	
+	
+	potential_trigger = {
+		scope:actor = {
+			OR = {
+				is_monarchy = yes 
+				is_tribal = yes
+				is_republic = yes 
+			}
+			tyranny <= 99
+		}
+		hidden:scope:target = {
+			has_character_modifier = spy_recruit_character
+			is_alive = yes
+			employer = scope:actor
+			is_married = yes
+			is_mercenary = no
+			spouse = {
+				is_alive = yes
+				is_ruler = no
+			}
+			is_ruler = no
+
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+		}
+	}
+	
+	
+	allowed_trigger = {
+		scope:target = {
+			is_married = yes
+			is_adult = yes
+			prisoner = no
+			loyalty >= 45
+		}
+	}
+	
+	
+	effect = {
+		scope:target = {
+			divorce_character = spouse
+		}	
+	}	
+}

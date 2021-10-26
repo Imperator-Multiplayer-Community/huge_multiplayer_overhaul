@@ -25,20 +25,12 @@ change_diplomatic_stance = {
 	political_influence = 20
 }
 
-tribe_new_ruler = {
-	stability = 15
-}
-
 support_rebels = {
-	aggressive_expansion = 20
-	political_influence = 10
-	scaled_gold = 2
+	aggressive_expansion = 15
+	political_influence = 15
+	scaled_gold = 1
 }
 
 buy_idea = {
 	political_influence = 10
-}
-
-change_diplomatic_stance = {
-	political_influence = 15
 }

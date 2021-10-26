@@ -1,0 +1,41 @@
+﻿ransom_prisoner = {
+
+	on_other_nation = yes
+	on_own_nation = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_diplomacy"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_alive = yes
+			prisoner = yes
+			#employer = scope:actor
+			employer = { is_ai = no }
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+		}
+		
+	}
+	
+	allowed_trigger = {
+			scope:target = { employer = { war = no } }
+		
+	}
+	
+	
+	diplomatic_action = ransom
+	effect = {
+		custom_tooltip = ransom_prisoner_tooltip
+		hidden_effect = {
+			scope:target = {
+				if = {
+					limit = {
+						has_character_modifier = foreign_citizen
+					}
+					remove_character_modifier = foreign_citizen
+				}
+			}
+		}
+	}
+	
+}	

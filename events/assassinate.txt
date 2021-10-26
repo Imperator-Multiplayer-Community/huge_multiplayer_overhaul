@@ -1,0 +1,1853 @@
+﻿namespace = assassinate
+
+assassinate.1 = {
+	type = country_event
+	title = "assassinate.1.t"
+	desc = "assassinate.1.desc"
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:foreign_agent
+	
+	picture = senator_conversing
+	
+	goto_location = scope:kill_target
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+		set_local_variable = {
+			name = assassinate_first_demand
+			value = {
+				integer_range = { min = 1 max = 4 }
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.1.a"
+		if = { #don't put this in a scripted effect
+			limit = {
+				local_var:assassinate_first_demand = 1
+			}
+			add_treasury = {
+				value = root.has_monthly_income
+				multiply = -3
+			}
+		}
+		else_if = {
+			limit = {
+				local_var:assassinate_first_demand = 2
+			}
+			add_manpower = -5
+		}
+		else_if = {
+			limit = {
+				local_var:assassinate_first_demand = 3
+				political_influence >= influence_medium
+			}
+			add_political_influence = subtract_influence_medium
+		}
+		else_if = {
+			limit = {
+				local_var:assassinate_first_demand = 3
+				political_influence >= influence_small
+			}
+			add_political_influence = subtract_influence_small
+		}
+		else = {
+			add_treasury = {
+				value = root.has_monthly_income
+				multiply = -6
+			}
+		}
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.19
+				days = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.1.b"
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.13
+				days = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.1.c"
+		trigger = {
+			current_ruler = {
+				has_trait = shrewd
+			}
+		}
+		custom_tooltip = shrewd_tooltip
+		highlight = yes
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.19
+				days = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.1.d"
+		trigger = {
+			current_ruler = {
+				has_trait = incapable
+			}
+		}
+		custom_tooltip = incapable_bad_tooltip
+		highlight = yes
+		exclusive = yes
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.13
+				days = 3
+			}
+		}
+	}
+}
+
+assassinate.2 = { #fallback for target death
+	type = country_event
+	title = "assassinate.2.t"
+	desc = "assassinate.2.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:foreign_agent
+	
+	goto_location = scope:kill_target
+	
+	trigger = {
+		exists = scope:kill_target
+		scope:kill_target = {
+			is_alive = no
+		}
+	}
+	
+	option = {
+		name = "assassinate.2.a"
+		add_political_influence = influence_large
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+	
+}
+
+assassinate.3 = { #fallback for friend death
+	type = country_event
+	title = "assassinate.3.t"
+	desc = "assassinate.3.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:foreign_agent
+	
+	goto_location = scope:foreign_agent
+	
+	trigger = {
+		exists = scope:foreign_agent
+		scope:foreign_agent = {
+			is_alive = no
+		}
+	}
+	
+	option = {
+		name = "assassinate.3.a"
+		add_political_influence = influence_large
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+	
+}
+
+assassinate.4 = { #fallback for friend imprisonment 
+	type = country_event
+	title = "assassinate.4.t"
+	desc = "assassinate.4.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:foreign_agent
+	
+	goto_location = scope:foreign_agent
+	
+	trigger = {
+		exists = scope:foreign_agent
+		scope:foreign_agent = {
+			is_alive = yes
+			prisoner = yes
+		}
+	}
+	
+	option = {
+		name = "assassinate.4.a"
+		add_political_influence = influence_large
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+	
+}
+
+
+assassinate.5 = {
+	type = country_event
+	title = "assassinate.5.t"
+	desc = "assassinate.5.desc"
+	
+	left_portrait = scope:hitman
+	left_portrait = scope:scapegoat
+	right_portrait = scope:foreign_agent
+	right_portrait = scope:kill_target
+	
+	goto_location = scope:kill_target
+	
+	picture = dagger_behind_back
+	
+	trigger = {
+		any_character = {
+			is_adult = yes
+			has_any_office = no
+			is_general = no
+			is_admiral = no
+			is_mercenary = no
+			is_governor = no
+			prominence < 20
+			trigger_if = {
+				limit = {
+					employer = {
+						gender_equality = no
+					}
+				}
+				is_male = yes
+			}
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_adult = yes
+				has_any_office = no
+				is_general = no
+				is_admiral = no
+				is_mercenary = no
+				is_governor = no
+				prominence < 20
+				trigger_if = {
+					limit = {
+						employer = {
+							gender_equality = no
+						}
+					}
+					is_male = yes
+				}
+			}
+			weight = {
+				title_importance_modifier = yes
+			}
+			save_scope_as = scapegoat
+		}
+	}
+	
+	option = {
+		name = "assassinate.5.a"
+		current_ruler = {
+			add_popularity = subtract_popularity_small
+		}
+		scope:scapegoat = {
+			hidden_effect = {
+				remove_all_positions = yes
+			}
+			move_country = scope:kill_target.employer
+			hidden_effect = { 
+				remove_character_modifier = foreign_citizen
+			}
+			set_as_minor_character = this
+		}
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.20
+				days = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.5.b"
+		scope:scapegoat = {
+			add_loyalty = loyalty_spared_scapegoat
+		}
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.16
+				days = 3
+			}
+		}
+	}
+}
+
+assassinate.6 = {
+	type = country_event
+	title = "assassinate.6.t"
+	desc = "assassinate.6.desc"
+	
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:foreign_agent
+	
+	goto_location = scope:foreign_agent
+	
+	picture = senator_conversing
+	
+	trigger = {
+
+	}
+	
+	option = {
+		name = "assassinate.6.a"
+		custom_tooltip = agent_will_flee_to_us_tt
+		add_stability = -5
+		set_local_variable = {
+			name = asylum_promised
+		}
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.20
+				days = 3
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.6.b"
+		scope:hitman = {
+			trigger_event = { 
+				id = assassinate.16
+				days = 3
+			}
+		}
+	}
+}
+
+assassinate.7 = {
+	type = country_event
+	title = "assassinate.7.t"
+	desc = "assassinate.7.desc"
+	
+	picture = dagger_behind_back
+	
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:foreign_agent
+	
+	goto_location = scope:foreign_agent
+
+	trigger = {
+
+	}
+	
+	immediate = {
+		scope:kill_target.employer = {
+			ordered_character = {
+				limit = {
+					is_adult = yes
+					prisoner = no
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+					}
+				}
+				check_range_bounds = no
+				order_by = charisma
+				position = 0
+				save_scope_as = counterintel_officer
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.a"
+		set_local_variable = {
+			name = death_method
+			value = 1 #poison
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.b"
+		set_local_variable = {
+			name = death_method
+			value = 2 #stabbing
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.c"
+		custom_tooltip = cruel_tooltip
+		trigger = {
+			current_ruler = {
+				has_trait = cruel
+			}
+		}
+		highlight = yes
+		set_local_variable = {
+			name = death_method
+			value = 3 #flaying
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.d"
+		custom_tooltip = lunatic_tooltip
+		trigger = {
+			current_ruler = {
+				has_trait = lunatic
+			}
+		}
+		exclusive = yes
+		highlight = yes
+		set_local_variable = {
+			name = death_method
+			value = 4 #battering ram
+		}
+		#set_assassinate_malus_effect = yes
+	}
+	
+	option = {
+		name = "assassinate.7.e"
+		custom_tooltip = ambitious_tooltip
+		trigger = {
+			current_ruler = {
+				has_trait = ambitious
+			}
+		}
+		highlight = yes
+		set_local_variable = {
+			name = death_method
+			value = 5 # crucifixion
+		}
+		#set_assassinate_malus_effect = yes
+		current_ruler = {
+			add_popularity = popularity_small
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.f"
+		custom_tooltip = unnoticeable_tooltip
+		trigger = {
+			current_ruler = {
+				has_trait = unnoticeable
+			}
+		}
+		highlight = yes
+		set_local_variable = {
+			name = death_method
+			value = 6 # Garrote
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.g"
+		custom_tooltip = crafty_tooltip
+		trigger = {
+			current_ruler = {
+				has_trait = crafty
+			}
+		}
+		highlight = yes
+		set_local_variable = {
+			name = death_method
+			value = 7 # bathing accident
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.h"
+		custom_tooltip = blunt_tooltip
+		trigger = {
+			current_ruler = {
+				has_trait = blunt
+			}
+		}
+		highlight = yes
+		set_local_variable = {
+			name = death_method
+			value = 8 # batter with club
+		}
+	}
+	
+	option = {
+		name = "assassinate.7.i"
+		custom_tooltip = merciful_tooltip
+		trigger = {
+			current_ruler = {
+				has_trait = merciful
+			}
+		}
+		highlight = yes
+		set_local_variable = {
+			name = death_method
+			value = 9 # a quick death
+		}
+	}
+	
+	after = {
+		scope:kill_target.employer = {
+			trigger_event = {
+				id = assassinate.28
+				days = 7
+			}
+		}
+	}
+}
+
+assassinate.40 = {
+	type = country_event
+	title = "assassinate.40.t"
+	desc = "assassinate.40.desc"
+	
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:counterintel_officer
+	
+	picture = dagger_behind_back
+	
+	goto_location = scope:kill_target
+	
+
+	immediate = {
+	#	if = {
+	#		limit = {
+	#			local_var:implication_discovered > 5 
+	#	}
+	#		add_aggressive_expansion = 5
+	#		scope:kill_target.employer = {
+	#			add_opinion = {
+	#				target = root
+	#				modifier = attempted_assassination_on_us
+	#			}
+	#		}		
+	#	}
+	}
+
+
+	option = {
+		name = "assassinate.40.a" #offered asylum and agent got away, grant asylum
+		trigger = {
+			has_local_variable = asylum_promised
+			scope:foreign_agent = {
+				is_alive = yes
+				employer = scope:kill_target.employer
+			}
+		}
+		scope:foreign_agent = {
+			hidden_effect = {
+				remove_all_positions = yes
+			}
+			move_country = root
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+			}
+			set_as_minor_character = this
+		}
+	}
+	
+	option = {
+		name = "assassinate.40.b" #offered asylum and agent got away, refused asylum
+		trigger = {
+			has_local_variable = asylum_promised
+			scope:foreign_agent = {
+				is_alive = yes
+				employer = scope:kill_target.employer
+			}
+		}
+		current_ruler = {
+			add_popularity = subtract_popularity_medium
+			if = {
+				limit = {
+					is_friend = scope:foreign_agent
+				}
+				remove_friend = scope:foreign_agent
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.40.c"
+		trigger = {
+			NOT = {
+				has_local_variable = asylum_promised
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+}
+
+
+
+
+assassinate.9 = {
+	type = country_event
+	title = "assassinate.9.t"
+	desc = "assassinate.9.desc"
+	
+	left_portrait = scope:portrait_why
+	right_portrait = scope:kill_target
+	right_portrait = scope:discovered_ruler
+	right_portrait = scope:culprit
+	
+	goto_location = scope:kill_target
+
+	picture = revolt
+	
+	immediate = {
+		if = {
+			limit = {
+				local_var:implication_discovered > 5
+			}
+			scope:actor.current_ruler = {
+				save_scope_as = discovered_ruler
+			}
+		}
+		if = {
+			limit = {
+				has_local_variable = scapegoat_killed
+				local_var:scapegoat_killed > 5
+			}
+			scope:scapegoat = {
+				save_scope_as = culprit
+			}
+		}
+		current_ruler = {
+			save_scope_as = portrait_why
+		}
+	}
+	
+	option = {
+		name = "assassinate.9.a"
+		if = {
+			limit = {
+				local_var:implication_discovered > 5
+			}
+			show_as_tooltip = {
+				add_opinion = {
+					target = scope:actor
+					modifier = attempted_assassination_on_us
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_monarchy = yes
+			}
+			add_legitimacy = -10
+		}
+		else = {
+			current_ruler = {
+				add_popularity = subtract_popularity_medium
+			}
+		}
+	}
+}
+
+assassinate.10 = {
+	type = country_event
+	title = "assassinate.10.t"
+	desc = "assassinate.10.desc"
+	
+	left_portrait = current_ruler
+	right_portrait = scope:kill_target
+	right_portrait = scope:discovered_ruler
+	
+	goto_location = scope:kill_target
+	
+	picture = revolt
+	
+	immediate = {
+		if = {
+			limit = {
+				local_var:implication_discovered > 5
+			}
+			scope:actor.current_ruler = {
+				save_scope_as = discovered_ruler
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.10.a"
+		if = {
+			limit = {
+				local_var:implication_discovered > 5
+			}
+			show_as_tooltip = {
+				add_opinion = {
+					target = scope:actor
+					modifier = attempted_assassination_on_us
+				}
+			}
+		}
+		current_ruler = {
+			add_popularity = popularity_small
+		}
+		add_stability_effect = yes
+	}
+	
+}
+
+
+assassinate.11 = { #fallback for assassin death
+	type = country_event
+	title = "assassinate.11.t"
+	desc = "assassinate.11.desc"
+	
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = scope:hitman
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	option = {
+		name = "assassinate.11.a"
+		add_political_influence = influence_large
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+	
+}
+
+assassinate.12 = { #fallback for assassin imprisonment 
+	type = country_event
+	title = "assassinate.12.t"
+	desc = "assassinate.12.desc"
+	
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = scope:hitman
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	option = {
+		name = "assassinate.12.a"
+		add_political_influence = influence_large
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+}
+
+assassinate.13 = { #assassin tries to save it 
+	type = character_event
+	hidden = yes
+	trigger = {
+
+	}
+
+	immediate = {
+
+				set_variable = {
+					name = roll
+						value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:hitman.charisma
+					}
+			
+					scope:actor = {
+						trigger_event = { 
+							id = assassinate.14
+							days = 3
+						}
+					}
+				}	
+				else = {
+					scope:actor = {
+						trigger_event = { 
+							id = assassinate.15
+							days = 3
+						}
+					}
+				}
+				remove_variable = roll
+
+	}	
+}
+
+
+assassinate.14 = { #assassin tries to save it SUCCESS
+	type = country_event
+	title = "assassinate.14.t"
+	desc = "assassinate.14.desc"
+	
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = scope:hitman
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	option = {
+		name = "assassinate.14.a"
+		scope:actor = {
+			add_political_influence = -10
+			trigger_event = {
+				id = assassinate.6 #on_action = assassinate_step_two
+				days = 90
+			}
+		}
+	}
+}
+
+
+
+assassinate.15 = { #assassin tries to save it FAILURE
+	type = country_event
+	title = "assassinate.15.t"
+	desc = "assassinate.15.desc"
+	
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = scope:hitman
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	option = { #Go into hiding 
+		name = "assassinate.15.a"
+		scope:hitman = {
+			add_character_modifier = {
+				name = "in_hiding"
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Finish my mission
+		name = "assassinate.15.b"
+	}
+
+	option = { #Return home
+		name = "assassinate.15.c"
+		scope:hitman = {
+			remove_espionage_variables_effect = yes
+			remove_all_positions = yes
+			move_country = scope:actor
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}	
+}
+
+assassinate.16 = { #assassin tries to save it 
+	type = character_event
+	hidden = yes
+	
+	trigger = {
+
+	}
+
+	immediate = {
+
+				set_variable = {
+					name = roll
+						value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:hitman.charisma
+					}
+			
+					scope:actor = {
+						trigger_event = { 
+							id = assassinate.17
+							days = 3
+						}
+					}
+				}	
+				else = {
+					scope:actor = {
+						trigger_event = { 
+							id = assassinate.18
+							days = 3
+						}
+					}
+				}
+				remove_variable = roll
+
+	}	
+}
+
+
+assassinate.17 = { #assassin tries to save it SUCCESS
+	type = country_event
+	title = "assassinate.17.t"
+	desc = "assassinate.17.desc"
+	
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = scope:hitman
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	option = {
+		name = "assassinate.17.a"
+		scope:actor = {
+			trigger_event = {
+				id = assassinate.7
+				days = { 10 30 }
+			}
+		}
+	}
+}
+
+assassinate.18 = { #assassin tries to save it FAILURE
+	type = country_event
+	title = "assassinate.18.t"
+	desc = "assassinate.18.desc"
+	
+	picture = greek_court
+	
+	left_portrait = current_ruler
+	right_portrait = scope:hitman
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	option = { #Go into hiding - this will greatly reduce the chance of getting caught, but make spy abilities impossible
+		name = "assassinate.18.a"
+		scope:hitman = {
+			add_character_modifier = {
+				name = "in_hiding"
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Finish my mission
+		name = "assassinate.18.b"
+	}
+
+	option = { #Return home
+		name = "assassinate.18.c"
+		scope:hitman = {
+			remove_espionage_variables_effect = yes
+			remove_all_positions = yes
+			move_country = scope:actor
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}	
+}
+
+
+
+assassinate.19 = { #Assassin tries to dig in
+	type = character_event
+	hidden = yes
+	
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:hitman.charisma
+			}
+			
+			scope:actor = {
+				trigger_event = { 
+					id = assassinate.5 #on_action = assassinate_step_two
+					days = { 10 30 }
+				}
+			}
+		}	
+		else = {
+			scope:hitman = {
+				trigger_event = { 
+					id = assassinate.13
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+	}	
+}
+
+assassinate.20 = { #Assassin tries to save it 
+	type = character_event
+	hidden = yes
+	
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:hitman.charisma
+			}
+				
+			scope:actor = {
+				trigger_event = { 
+					id = assassinate.7
+					days = 30
+				}
+			}
+		}	
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = assassinate.18
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll	
+	}	
+}
+
+assassinate.21 = { # Counterintel 
+	type = character_event
+	hidden = yes
+	
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			
+			scope:kill_target.employer = {
+				trigger_event = { 
+					id = assassinate.23 #ARRESTED
+					days = 7
+				}
+			}
+		}	
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = assassinate.24 #ASSASSIN CAN ESCAPE
+					days = 7
+				}
+			}
+		}
+		remove_variable = roll
+	}	
+}
+
+
+assassinate.22 = { # Assassination chance to kill  ###  
+	type = character_event
+	hidden = yes
+	
+	trigger = {
+
+	}
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 18 } } ####################################################################################
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:hitman.martial
+			}
+			
+			scope:actor = {
+				trigger_event = { 
+					id = assassinate.30 #KILL 
+				}
+			}
+		}	
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = assassinate.26 #FAILED; NOW BACK TO COUNTERINTEL
+					days = 3
+				}
+			}	
+		}
+		remove_variable = roll
+	}	
+}
+
+
+assassinate.23 = { # ARRESTED
+	type = country_event
+	title = "assassinate.23.t"
+	desc = "assassinate.23.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:counterintel_officer
+	
+	goto_location = scope:hitman
+
+	trigger = {
+
+	}
+
+	immediate = {		
+		random_list = {
+			30 = {
+				scope:counterintel_officer = {
+					add_martial = 1	
+					add_loyalty = sense_of_duty
+				}					
+			}
+			15 = {
+				scope:counterintel_officer = {
+					add_loyalty = sense_of_duty
+					add_character_modifier = {
+						name = "state_detective"
+						duration = 365
+						mode = add
+					}
+				}	
+			}
+			25 = {
+				scope:hitman = {
+					add_character_modifier = {
+						name = "wounded_spy"
+						duration = 365
+						mode = add
+					}
+				}
+				scope:counterintel_officer = {
+					add_loyalty = sense_of_duty
+					add_character_modifier = {
+						name = "state_detective"
+						duration = 365
+						mode = add
+					}
+				}			
+			}
+			5 = {
+				scope:counterintel_officer = {
+					add_character_modifier = {
+						name = "wounded_spy"
+						duration = 365
+						mode = add
+					}
+					add_loyalty = sense_of_duty
+				}			
+			}
+			25 = {
+           		scope:counterintel_officer = {
+           			add_martial = 1
+           			add_charisma = 1
+           			add_loyalty = sense_of_duty
+           		}
+			} 
+		}
+		scope:kill_target.employer = {
+			add_country_modifier = {
+				name = "homeland_security"
+				duration = 3650
+				mode = add
+			}
+		}
+	}
+	
+	option = { 
+		name = "assassinate.23.a" #Execute
+		scope:hitman = { #
+			death = {
+				death_reason = death_execution
+			}
+		}
+		scope:kill_target.employer.current_ruler = {
+			add_popularity = popularity_large
+		}
+		show_as_tooltip = {
+			scope:actor = { 
+				current_ruler = {
+					add_popularity = subtract_popularity_medium
+				}
+			}
+		}
+		scope:actor = { # 
+			trigger_event = {
+				id = country_diplomacy.44 #Death
+			}
+		}
+	}
+
+	option = { #
+	name = "assassinate.23.b" #Imprison
+		scope:kill_target.employer = {
+			imprison = { target = scope:hitman } 
+			trigger_event = {
+				on_action = custom_on_action_imprison
+				days = { 30 360 }
+			}
+		}
+		scope:hitman = {
+			add_loyalty = imprisoned_l
+			hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+		}
+	}
+
+
+	option = { #
+		name = "assassinate.23.c" #Amnesty
+		scope:hitman = {
+			remove_espionage_variables_effect = yes
+			remove_character_modifier = foreign_citizen
+			remove_character_modifier = on_espionage_mission_cmod 
+			remove_character_modifier = spy_recruit_character
+			add_loyalty = granted_citizenship
+			set_as_minor_character = THIS
+			set_home_country = employer
+			if = {
+				limit = {
+					has_variable = came_from
+				}
+				remove_variable = came_from
+			}
+			set_variable = {
+				name = spy_amnesty
+				value = scope:actor
+				days = -1
+			}
+		}
+		scope:kill_target.employer.current_ruler = {
+			add_popularity = subtract_popularity_small
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}		
+}
+
+
+assassinate.24 = { # ESCAPE
+	type = country_event
+	title = "assassinate.24.t"
+	desc = "assassinate.24.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:counterintel_officer
+	
+	goto_location = scope:hitman
+
+	
+	immediate = {
+
+	}
+
+	option = { #Go into hidin
+		name = "assassinate.24.a"
+		scope:hitman = { #
+			add_character_modifier = {
+				name = "in_hiding"
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Finish my mission
+		name = "assassinate.24.b"
+	}
+
+	option = { #Return home
+		name = "assassinate.24.c"
+		scope:hitman = {
+			remove_all_positions = yes
+			move_country = scope:actor # 
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+}
+
+assassinate.25 = { # Reward the killer
+	type = country_event
+	title = "assassinate.25.t"
+	desc = "assassinate.25.desc"
+	
+	picture = greek_court
+
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:counterintel_officer
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = { #Get reward
+		name = "assassinate.25.a"
+		
+		random_list = {
+			20 = {
+				scope:hitman = {
+					add_martial = 1
+					add_loyalty = sense_of_duty
+				}						
+			}
+			5 = {
+				scope:hitman = {
+					add_character_modifier = {
+						name = "elusive"
+						duration = 180
+					}
+					add_martial = 1
+					add_charisma = 1
+					add_loyalty = sense_of_duty
+				}						
+			}
+			20 = {
+				scope:hitman = {
+					add_character_modifier = {
+						name = "elusive"
+						duration = 180
+					}
+					add_loyalty = sense_of_duty
+				}						
+			}
+			20 = {
+				scope:hitman = {
+					add_character_modifier = {
+						name = "wounded_spy"
+						duration = 365
+						mode = add
+					}
+					add_loyalty = sense_of_duty
+				}				
+			}
+			15 = {
+            	scope:hitman = {
+            		add_charisma = 1
+            		add_martial = 1
+            		add_loyalty = sense_of_duty
+            	}
+			}
+			20 = {
+            	scope:hitman = {
+            		add_loyalty = sense_of_duty
+            	}
+			}  
+		}
+	}
+}
+
+	
+
+assassinate.26 = { # BACK TO COUNTERINTEL
+	type = country_event
+	title = "assassinate.26.t"
+	desc = "assassinate.26.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:counterintel_officer
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+		scope:counterintel_officer = {  
+			trigger_event = {
+				id = assassinate.21
+				days = 3
+			}
+		}
+		scope:kill_target.employer = {
+			trigger_event = {
+				id = assassinate.10
+				days = 3
+			}
+		} 
+	}
+
+	option = {
+		name = "assassinate.26.a" 
+	}
+}
+
+assassinate.27 = { # TIME TO STRIKE
+	type = country_event
+	title = "assassinate.27.t"
+	desc = "assassinate.27.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:counterintel_officer
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+	
+	}
+
+	option = {
+		name = "assassinate.27.a" 
+		scope:hitman = {  
+			trigger_event = {
+				id = assassinate.22
+				days = 3
+			}
+		} 
+	}
+}
+
+
+assassinate.28 = { # INTRODUCE BODYGUARD
+	type = country_event
+	title = "assassinate.28.t"
+	desc = "assassinate.28.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:counterintel_officer
+	
+	goto_location = scope:hitman
+	
+	trigger = {
+
+	}
+
+
+	immediate = {
+		if = {
+			limit = {
+				exists = scope:scapegoat
+				scope:scapegoat = {
+					is_alive = yes
+					employer = scope:kill_target.employer
+				}
+			}
+			set_local_variable = {
+				name = scapegoat_killed
+				value = {
+					integer_range = { min = 1 max = 10 }
+				}
+			}
+		}
+		set_local_variable = {
+			name = implication_discovered
+			value = {
+				integer_range = { min = 1 max = 10 }
+			}
+		}
+		if = {
+			limit = {
+				has_local_variable = scapegoat_killed
+				local_var:scapegoat_killed > 5
+				scope:scapegoat = {
+					is_alive = yes
+				}
+			}
+			scope:scapegoat = {
+				death = {
+					death_reason = death_battering
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:kill_target.employer = {
+					OR = {
+						is_tribal = yes
+						is_monarchy = yes
+					}
+					any_character = {
+						OR = {
+							has_office = office_bodyguard
+							has_office = office_master_of_the_guard
+						}
+					}
+				}
+			}
+			scope:kill_target.employer = {
+				random_character = {
+					limit = {
+						OR = {
+							has_office = office_bodyguard
+							has_office = office_master_of_the_guard
+						}
+					}
+					save_scope_as = bodyguard
+				}
+			}					
+		}		
+	}
+
+	option = {
+	name = "assassinate.28.a" 
+		scope:bodyguard = {  
+			trigger_event = {
+				id = assassinate.29
+			}
+		} 
+	}
+}
+
+
+assassinate.29 = { # Bodyguard chance to stop  ###  
+	type = character_event
+	hidden = yes
+	
+	immediate = {
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } } ####################################################################################
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:bodyguard.martial
+			}
+			scope:counterintel_officer = {
+				trigger_event = { 
+					id = assassinate.21 
+				} 
+			}
+			scope:kill_target.employer = {
+				trigger_event = {
+					id = assassinate.10
+					days = 3
+				}
+			}
+			scope:kill_target.employer = {
+				trigger_event = {
+					id = assassinate.31
+					days = 15
+				}
+			}						
+		}
+		else = {
+			scope:actor = {
+				trigger_event = {
+					id = assassinate.27
+					days = 1
+				}
+			}
+		}
+		remove_variable = roll
+
+	}
+ }
+
+
+assassinate.30 = { # Assassination success ###  
+	type = country_event
+	hidden = yes
+	
+
+	immediate = {
+		scope:kill_target = {
+				appropriate_death_effect_assassination = yes
+			}
+		scope:kill_target.employer = {
+			trigger_event = {
+				id = assassinate.9 #inform of murder, check local_var implication_discovered > 5 to see if they realise who didit.
+			}
+		}
+		scope:actor = {
+			trigger_event = {
+				id = assassinate.25
+			}
+		}
+		scope:actor = {
+			trigger_event = {
+				id = assassinate.40
+				days = 15
+			}
+		}
+	}
+ }
+
+ 
+
+ assassinate.31 = { # BODYGUARD REWARD
+	type = country_event
+	title = "assassinate.31.t"
+	desc = "assassinate.31.desc"
+	
+	picture = greek_court
+	
+	left_portrait = scope:foreign_agent
+	left_portrait = scope:hitman
+	right_portrait = scope:kill_target
+	right_portrait = scope:bodyguard
+
+	immediate = { }
+ 		
+	option = {
+		name = "assassinate.31.a"
+		scope:kill_target.employer = {
+			trigger_event = {
+				id = assassinate.10
+				days = 3
+			}
+			add_country_modifier = {
+				name = "homeland_security"
+				duration = 3650
+				mode = add
+			}
+		}						
+		scope:bodyguard = { 
+			add_loyalty = sense_of_duty
+			add_character_modifier = {
+				name = "state_detective"
+				duration = 365
+				mode = add
+			}
+		}
+	}
+ }	

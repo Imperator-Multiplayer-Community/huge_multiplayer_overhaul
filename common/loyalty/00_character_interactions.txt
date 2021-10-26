@@ -1,0 +1,269 @@
+﻿###################################################################
+# Actual Value is calculated through the interaction script.
+##################################################################
+
+loyalty_banish_char = { #Used by party impact
+	value = 1
+	min = -20
+	max = 20
+	yearly_decay = 2
+}
+
+ci_bribe = {
+	value = 15
+	months = 48
+	max = 15
+}
+
+force_converted_religion = {
+	value = -30
+	months = 120
+	min = -30
+}
+
+chief_exalted = {
+	value = 20
+	months = 120
+	max = 20
+}
+
+given_free_hands = { #Lasts until revoked
+	value = 20
+}
+
+free_hands_revoked = {
+	value = -15
+	yearly_decay = 2
+	min = -15
+}
+
+granted_citizenship = {
+	value = 15
+	months = 120
+	max = 15
+}
+
+benevolent_overlord_tribal_chiefdom = {
+	value = 30
+	yearly_decay = 2
+	max = 60
+}
+
+granted_holding_l = {
+	value = 5
+	yearly_decay = 1
+	max = 20
+}
+
+laurels_acknowledged_l = {
+	value = 60
+	months = 120
+	max = 60
+}
+
+triumph_l = {
+	value = 20
+	months = 120
+	max = 20
+}
+
+corruption_sanctions_l = {
+	value = -20
+	months = 60
+	min = -20
+}
+
+imprisoned_l = {
+	value = -50
+	min = -50
+	months = 120
+}
+
+flogged_l = {
+	value = -10
+	yearly_decay = 2
+	min = -50
+}
+
+flogged_rival_l = {
+	value = 2
+	yearly_decay = 2
+	max = 10
+}
+
+brought_to_trial_l = {
+	value = -30
+	months = 60
+}
+
+family_property_seized_l = {
+	value = -40
+	months = 240 #20 years
+}
+
+assets_seized_sl = {
+	value = -10
+	yearly_decay = 2
+	min = -50
+}
+
+loyalty_inspire_disloyalty = {
+	value = -20
+	min = -40
+}
+
+loyalty_sold_family_member = {
+	value = -10
+	yearly_decay = 1
+	min = -50
+}
+
+loyalty_sold_family_head = {
+	value = -30
+	months = 120
+	min = -30
+}
+
+revoked_holding_l = {
+	value = -5
+	yearly_decay = 2
+}
+
+loyalty_granted_stipends = {
+	value = 20
+	months = 60
+}
+
+loyalty_ostracize_char = {
+	value = -5
+	yearly_decay = 1
+}
+
+deposed_king = {
+	value = -40
+	months = 120
+}
+
+royal_marriage = {
+	value = 15
+	yearly_decay = 2
+}
+
+royal_marriage_members = {
+	value = 5
+	yearly_decay = 2
+}
+
+
+spurned_family = {
+	value = -15
+	yearly_decay = 2
+}
+
+spurned_family_members = {
+	value = -5
+	yearly_decay = 2
+}
+
+great_works_religious_dislike= {
+	value = -50
+	yearly_decay = 5
+}
+
+legacy_of_the_druids = {
+	value = 50
+	yearly_decay = 1
+}
+
+#New ones
+
+not_in_the_mood = {
+	value = -15
+	months = 12
+}
+
+sexual_healing = {
+	value = 10
+	months = 6
+}
+
+divorced_by_ruler = {
+	value = -40
+	yearly_decay = 1
+}
+
+forced_to_divorce = {
+	value = -30
+	yearly_decay = 1
+}
+
+family_forced_to_divorce = {
+	value = -10
+	yearly_decay = 1
+}
+
+temptress_bribe = {
+	value = 10
+	months = 48
+	max = 10
+}
+
+temptress_cringe = {
+	value = -15
+	yearly_decay = 3
+}
+
+loyalty_inspire_disloyalty_black_widow = {
+	value = -10
+	yearly_decay = 5
+}
+
+perk_loyalty = {
+	value = 6
+	yearly_decay = 2
+}
+
+sense_of_duty = {
+	value = 10
+	yearly_decay = 1
+}
+
+job_well_done = {
+	value = 5
+	yearly_decay = 1
+}
+
+foreign_support = {
+	value = -12
+	yearly_decay = 2
+}
+
+rebellious = {
+	value = -5
+	yearly_decay = 1
+}
+
+loyal_gifted_slave = {
+	value = 100
+	yearly_decay = 1
+}
+
+gremlin_gifted_slave = {
+	value = -10
+	yearly_decay = 1
+}
+
+loyalty_test_passed = {
+	value = 5
+	yearly_decay = 1
+}
+
+loyalty_test_failed = {
+	value = -6
+	yearly_decay = 1
+}
+
+corruption_probe = {
+	value = -8
+	yearly_decay = 1
+}

@@ -1,6 +1,6 @@
 ﻿assassinate = {
 
-	on_other_nation = no
+	on_other_nation = yes
 	on_own_nation = no
 	message = no
 	
@@ -9,7 +9,204 @@
 	potential_trigger = {
 		hidden:scope:target = {
 			is_alive = yes
-			is_alive = no
+			is_mercenary = no
+			employer = {
+				NOT = { tag = MER }
+				NOT = { tag = BAR }
+				NOT = { tag = REB }
+				NOT = { tag = PIR }
+			}
+			NOT = {
+				employer = scope:actor
+			}
 		}
-	}	
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor = {
+			can_pay_price = assassinate_attempt_foreign
+		}
+		scope:target = {
+			NOT = {
+				is_friend = scope:actor.current_ruler
+			}
+		}
+		scope:target = {
+			NOT = {
+				has_variable = assassination_target
+			}
+		}
+		custom_tooltip = {
+			text = employer_is_target_employer_tt
+			scope:actor.current_ruler = {
+				any_friend = {
+					employer = scope:target.employer
+					NOR = {
+						is_ruler = yes
+						is_close_relative = scope:target
+						is_spouse_of = scope:target
+						trigger_if = {
+							limit = {
+								employer = {
+									is_tribal = yes
+								}
+							}
+							has_office = office_bodyguard
+						}
+						trigger_if = {
+							limit = {
+								employer = {
+									is_monarchy = yes
+								}
+							}
+							has_office = office_master_of_the_guard
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = need_assassin_in_place_tt
+			scope:target.employer = {
+				any_character = {
+					has_character_modifier = on_espionage_mission_cmod
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = foreign_citizen
+					NOR = {
+ 						has_character_modifier = getting_oriented
+ 						has_character_modifier = in_hiding
+ 						has_character_modifier = assigned_mission
+ 						has_character_modifier = recently_tasked
+	 					is_adult = no
+						prisoner = yes
+						is_ruler = yes 
+ 					}
+	 			}
+	 		}
+		}
+
+		custom_tooltip = {
+			text = only_one_assassination
+			scope:actor = {
+				NOT = {
+					has_variable = ongoing_assassination
+				}
+			}
+		}
+	}
+	
+	
+	effect = {
+		scope:actor = {
+			pay_price = assassinate_attempt_foreign
+			set_variable = {
+				name = ongoing_assassination
+				days = 360
+			}
+		}
+		scope:target = {
+			set_variable = {
+				name = assassination_target
+				days = 360
+			}
+		}
+		custom_tooltip = assassinate_attempt_effect_tooltip
+		hidden_effect = {
+			scope:actor.current_ruler = {
+				random_friend = {
+					limit = {
+						employer = scope:target.employer
+						NOR = {
+							is_ruler = yes
+							is_close_relative = scope:target
+							is_spouse_of = scope:target
+							trigger_if = {
+								limit = {
+									employer = {
+										is_tribal = yes
+									}
+								}
+								has_office = office_bodyguard
+							}
+							trigger_if = {
+								limit = {
+									employer = {
+										is_monarchy = yes
+									}
+								}
+								has_office = office_master_of_the_guard
+							}
+							has_character_modifier = counterintelligence
+						}
+					}
+					save_scope_as = foreign_agent
+				}
+			}
+
+			scope:target.employer = {
+				ordered_character = {
+					limit = {
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = spy_recruit_character
+						has_character_modifier = foreign_citizen
+						NOR = {
+ 							has_character_modifier = getting_oriented
+ 							has_character_modifier = in_hiding
+ 							has_character_modifier = assigned_mission
+ 							has_character_modifier = recently_tasked
+	 						is_adult = no
+							prisoner = yes
+							is_ruler = yes 
+ 						}
+					}
+ 					check_range_bounds = no
+					order_by = charisma
+					position = 0
+		 			save_scope_as = hitman
+	 			}
+	 		}
+
+	 		scope:target.employer = {
+				random_character = {
+					limit = {
+						has_variable = assassination_target
+					}
+		 			save_scope_as = kill_target
+	 			}
+	 		}
+
+	 		scope:actor = {
+				limit = {
+					has_variable = ongoing_assassination
+					}
+				save_scope_as = terminator
+			}
+
+			scope:actor = {
+				trigger_event = {
+					id = assassinate.1
+					days = { 10 20 } ####################
+				}
+			}
+
+		}
+		if = {
+			limit = {
+				scope:target.employer = {
+					is_monarchy = yes
+				}
+			}
+			custom_tooltip = estimated_chance_to_assassinate_tooltip_monarchy
+		}
+		else_if = {
+			limit = {
+				scope:target.employer = {
+					is_tribal = yes
+				}
+			}
+			custom_tooltip = estimated_chance_to_assassinate_tooltip_tribal
+		}
+	}
+	
 }	

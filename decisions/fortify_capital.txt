@@ -13,7 +13,7 @@
 		
 		allow = {
 			treasury >= 250
-			military_experience >= 30
+			military_experience >= 20
 			war = yes
 			stability >= 40
 			capital_scope.state = { 
@@ -33,9 +33,9 @@
 			}
 
 			add_treasury = -250
-			add_military_experience = -30
+			add_military_experience = -20
 			add_stability = -10
-			add_war_exhaustion = 5
+			add_war_exhaustion = 3
 		}
 		
 		ai_will_do = {

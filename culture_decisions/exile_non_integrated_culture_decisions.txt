@@ -1,0 +1,96 @@
+﻿culture_decisions = {
+	#Non-Integrated Culture Decisions:
+
+	exile_cultural_decision = {
+		potential = {
+			NOT = { primary_culture = scope:target_culture.culture }
+			scope:target_culture = {
+				NOT = { has_pop_type_right = citizen }
+				NOT = { has_pop_type_right = nobles }
+			}
+		}
+		allow = {
+			NOT = { has_country_modifier = exile_project }
+			scope:target_culture = {
+				NOT = { has_country_culture_modifier = exiled_people }
+				country_culture_pop_count > 50
+			}
+			custom_tooltip = {
+				text = explain_exile_tt
+				any_owned_province = {
+					NOT = {
+						dominant_province_culture = scope:target_culture.culture
+					}
+						any_neighbor_province = {
+							count > 1
+							NOT = {
+								dominant_province_culture = scope:target_culture.culture
+							}
+						}
+				}
+			}
+			stability > 40
+			political_influence > 20
+			invention = control_range_modifier_inv
+		}
+		effect = {
+			ordered_owned_province = {
+				limit = {
+					NOT = {
+						dominant_province_culture = scope:target_culture.culture
+					}
+					any_neighbor_province = {
+						count > 1
+						NOT = {
+						dominant_province_culture = scope:target_culture.culture
+						}
+					}
+				}
+				order_by = {
+					value = 0
+					add = population_cap
+					subtract = total_population
+				}
+				add_province_modifier = {
+					name = "exiled_community"
+					duration = 18262
+				}
+				add_state_loyalty = -20
+				#custom_tooltip = exiled_to_here_tt
+				trigger_event = { id = cultural_integration.12 }
+			}
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "exiled_people" 
+					duration = 7305
+				}
+			}
+			add_country_modifier = {
+				name = "exile_project"
+				duration = 1826
+			}
+			add_tyranny = 15
+			add_political_influence = -20
+		}
+		ai_will_do = {
+			modifier = {
+				add = 1
+				scope:target_culture = {
+					country_culture_pop_count = 50
+				}
+				culture_pops_in_country = {
+					target = scope:target_culture
+					value <= 15
+				}
+			}
+			modifier = {
+				factor = 0
+				stability < 50
+			}
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+	}
+}

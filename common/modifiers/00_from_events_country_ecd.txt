@@ -64,15 +64,118 @@ war_hero = {
 	military_tech_investment = 0.05
 }
 
+naval_war_hero = {
+	military_tech_investment = 0.05
+}
+
+spy_recruited = {
+	oratory_tech_investment = 0.01
+	character_loyalty = -2
+}
+
+foreign_intel_ops = {
+	global_tax_modifier = -0.01
+}
+
+homeland_security = {
+	character_loyalty = 1
+}
+
+homeland_insecurity = {
+	character_loyalty = -1
+}
+
 civilized_tribe = { #Reward for changing from tribal government.
     global_monthly_civilization = 0.1
     global_pop_promotion_speed = 2.5
     happiness_for_same_culture_modifier = 0.1
-    price_found_city_cost_modifier = -0.1
+    price_found_city_cost_modifier = -0.15
     local_forum_building_cost = -0.15
 }
 
 persecution_project = {
-	global_slaves_output = 0.08
+	global_tax_modifier = 0.25
+	research_points_modifier = 0.15
 	global_pop_demotion_speed_modifier = 0.25
+	subject_opinions = -5
+	integrate_speed = -0.3
+	cultural_integration_speed_modifier = -0.3
+}
+
+exile_project = {
+	global_tax_modifier = 0.05
+	global_pop_demotion_speed_modifier = 0.1
+	subject_opinions = -5
+	integrate_speed = -0.3
+	cultural_integration_speed_modifier = -0.3
+}
+
+citizen_exemption_from_census_tax = {
+	happiness_for_same_culture_modifier = 0.12
+	global_citizen_output = -0.05
+	global_nobles_output = -0.03
+}
+
+pandered_project = {
+	happiness_for_same_culture_modifier = -0.04
+}
+
+gov_confiscation = {
+	global_tax_modifier = 0.2
+}
+
+foreign_gold_seized = {
+	global_tax_modifier = 0.2
+}
+
+our_gold_seized = {
+	global_tax_modifier = 0.1
+}
+
+foreign_treasury = {
+	global_tax_modifier = 0.2
+}
+
+failed_venture = {
+	global_tax_modifier = -0.15
+}
+
+parthian_hordes = {
+    fabricate_claim_cost_modifier = -0.1
+}
+
+unhappy_people = {
+	local_monthly_state_loyalty = -0.08
+}
+
+happy_people = {
+	local_monthly_state_loyalty = 0.08
+}
+
+reforming_bureaucracy = {
+	monthly_corruption = -0.15
+	monthly_wage_modifier = 0.05
+	stability_monthly_change = -0.15
+	civil_war_threshold = -0.125
+	global_monthly_state_loyalty = 0.05
+	monthly_tyranny = 0.03
+	price_bring_to_trial_cost_modifier = -0.25
+}
+
+purging_bureaucrats = {
+	monthly_corruption = -0.3
+	monthly_wage_modifier = 0.05
+	stability_monthly_change = -0.3
+	civil_war_threshold = -0.25
+	global_monthly_state_loyalty = 0.1
+	monthly_tyranny = 0.06
+	price_bring_to_trial_cost_modifier = -0.5
+}
+
+loved_by_the_gods = {
+	omen_power = 0.25
+}
+
+unloved_by_the_gods = {
+	omen_power = -0.25
 }

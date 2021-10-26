@@ -1,0 +1,470 @@
+﻿namespace = tribal_duel
+
+tribal_duel.1 = {
+	type = country_event
+	title = "tribal_duel.1.t"
+	desc = "tribal_duel.1.desc"
+	picture = interesting_histories_celt_town
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:champion
+	right_portrait = scope:target
+
+ 	trigger = {	
+	}
+
+	immediate = {
+
+ 	}
+
+ 	option = {
+		name = "tribal_duel.1.a"
+		scope:actor.current_ruler = { # Ruler
+			trigger_event = { 
+				id = tribal_duel.2
+				days = 7
+			}
+		}
+	}
+
+	option = {
+		name = "tribal_duel.1.b"
+		scope:actor.current_ruler = { # Champion
+			trigger_event = { 
+				id = tribal_duel.3
+				days = 7
+			}
+		}
+	}
+}
+
+tribal_duel.2 = {
+ 	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+ 		scope:actor.current_ruler = {
+ 			is_alive = yes
+ 		}
+ 		scope:target = {
+ 			is_alive = yes
+ 		}
+ 		scope:champion = {
+ 			is_alive = yes
+ 		}
+ 	}
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.martial # Ruler attacks
+			}
+			
+			scope:actor.current_ruler.employer = { #Success
+				trigger_event = { 
+					id = tribal_duel.4
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:actor.current_ruler.employer = { #Failure
+				trigger_event = { 
+					id = tribal_duel.5
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+tribal_duel.3 = {
+ 	type = character_event
+ 	hidden = yes
+
+ 	trigger = {
+ 		scope:actor.current_ruler = {
+ 			is_alive = yes
+ 		}
+ 		scope:target = {
+ 			is_alive = yes
+ 		}
+ 		scope:champion = {
+ 			is_alive = yes
+ 		}
+ 	}
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:champion.martial # Champion attacks
+			}
+			
+			scope:actor.current_ruler.employer = { #Success
+				trigger_event = { 
+					id = tribal_duel.6
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:actor.current_ruler.employer = { #Failure
+				trigger_event = { 
+					id = tribal_duel.7
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+tribal_duel.4 = { #Report results
+	type = country_event
+	title = "tribal_duel.4.t"
+	desc = "tribal_duel.4.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:target
+
+	immediate = {
+		scope:target = {
+			add_health = { -10 -65 }
+		}
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.4.a"
+ 		scope:target = { #
+			trigger_event = { 
+				id = tribal_duel.10
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.4.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}
+
+
+
+tribal_duel.5 = { #Report results
+	type = country_event
+	title = "tribal_duel.5.t"
+	desc = "tribal_duel.5.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.5.a"
+ 		scope:target = { #
+			trigger_event = { 
+				id = tribal_duel.10
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.5.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}
+
+
+
+tribal_duel.6 = { #Report results
+	type = country_event
+	title = "tribal_duel.6.t"
+	desc = "tribal_duel.6.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:champion
+	right_portrait = scope:target
+
+	immediate = {
+		scope:target = {
+			add_health = { -10 -65 }
+		}
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.6.a"
+ 		scope:target = { #
+			trigger_event = { 
+				id = tribal_duel.13
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.6.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}
+
+
+
+tribal_duel.7 = { #Report results
+	type = country_event
+	title = "tribal_duel.7.t"
+	desc = "tribal_duel.7.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:champion
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.7.a"
+ 		scope:target = { #
+			trigger_event = { 
+				id = tribal_duel.13
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.7.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}
+
+
+tribal_duel.10 = {
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:target.martial # Rival attacks
+			}
+			
+			scope:actor.current_ruler.employer = { #Success
+				trigger_event = { 
+					id = tribal_duel.11
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:actor.current_ruler.employer = { #Failure
+				trigger_event = { 
+					id = tribal_duel.12
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+tribal_duel.11 = { #Report results
+	type = country_event
+	title = "tribal_duel.11.t"
+	desc = "tribal_duel.11.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	#left_portrait = scope:champion
+	right_portrait = scope:target
+
+	immediate = {
+		scope:actor.current_ruler = {
+			add_health = { -5 -35 }
+		}
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.11.a"
+ 		scope:actor.current_ruler = { #
+			trigger_event = { 
+				id = tribal_duel.2
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.11.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}
+
+
+tribal_duel.12 = { #Report results
+	type = country_event
+	title = "tribal_duel.12.t"
+	desc = "tribal_duel.12.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	#left_portrait = scope:champion
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.12.a"
+ 		scope:actor.current_ruler = { #
+			trigger_event = { 
+				id = tribal_duel.2
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.12.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}
+
+
+
+tribal_duel.13 = {
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:target.martial # Rival attacks
+			}
+			
+			scope:actor.current_ruler.employer = { #Success
+				trigger_event = { 
+					id = tribal_duel.14
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:actor.current_ruler.employer = { #Failure
+				trigger_event = { 
+					id = tribal_duel.15
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+tribal_duel.14 = { #Report results
+	type = country_event
+	title = "tribal_duel.14.t"
+	desc = "tribal_duel.14.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:champion
+	right_portrait = scope:target
+
+	immediate = {
+		scope:champion = {
+			add_health = { -5 -35 }
+		}
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.14.a"
+ 		scope:champion = { #
+			trigger_event = { 
+				id = tribal_duel.3
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.14.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}
+
+tribal_duel.15 = { #Report results
+	type = country_event
+	title = "tribal_duel.15.t"
+	desc = "tribal_duel.15.desc"
+	picture = games_in_an_arena_gladiators_or_athletes
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:champion
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "tribal_duel.15.a"
+ 		scope:champion = { #
+			trigger_event = { 
+				id = tribal_duel.3
+				days = 3
+			}
+		}
+ 	}
+
+ 	option = { #Surrender
+ 		name = "tribal_duel.15.b"
+ 		scope:actor = {
+ 			add_tyranny = 10
+ 		}
+ 	}
+}

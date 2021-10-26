@@ -83,6 +83,7 @@
 		modifier = { 
 			light_infantry_offensive = 0.1
 			global_freemen_output = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = celtic_gallic_path_2
 		requires = { }
@@ -91,6 +92,7 @@
 	arabian_path_3 = { ###
 		modifier = { 
 			camels_defensive = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_egyptian_path_6
 		requires = { }
@@ -101,6 +103,7 @@
 		modifier = {
 			trireme_offensive = 0.05
 			enslavement_efficiency = 0.1
+			navy_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_2
 		requires = { arabian_path_1 }
@@ -136,6 +139,7 @@
 		modifier = { 
 			camels_morale = 0.15
 			light_cavalry_morale = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_3
 		requires = { arabian_path_3 }
@@ -147,6 +151,7 @@
 			fort_limit = 1
 			garrison_size = 0.1
 			hostile_attrition = 1
+			fort_maintenance_cost = 0.01
 		} 
 		icon = north_african_naval_path_6
 		requires = { arabian_path_4 }
@@ -168,6 +173,7 @@
 			army_weight_modifier = -0.15
 			hostile_attrition = 1
 			archers_morale = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_tribal_path_end_bonus
 		requires = { arabian_path_5 }
@@ -249,6 +255,7 @@
 		modifier = { 
 			naval_damage_done = 0.1
 			naval_range = 0.15
+			navy_maintenance_cost = 0.01
 		} 
 		icon = north_african_naval_path_3
 		requires = { arabian_path_7 arabian_path_8 }
@@ -260,6 +267,7 @@
 		modifier = { 
 			horse_archers_morale = 0.1
 			horse_archers_offensive = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_tribal_path_2
 		requires = { arabian_path_10 }
@@ -270,6 +278,7 @@
 			ocean_combat_bonus = 0.1
 			octere_defensive = 0.1
 			tetrere_defensive = 0.05
+			navy_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_5
 		requires = { arabian_path_11 }
@@ -280,6 +289,7 @@
 			camels_defensive = 0.1
 			horse_archers_defensive = 0.05
 			desert_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_4
 		requires = { arabian_path_12 }
@@ -289,6 +299,7 @@
 		modifier = { 
 			camels_discipline = 0.15
 			light_cavalry_discipline = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_7
 		requires = { arabian_path_12 }

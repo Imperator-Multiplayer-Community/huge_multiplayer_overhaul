@@ -127,7 +127,7 @@ defriend = {
 				scope:target.employer = scope:actor
 			}
 			scope:actor = {
-				political_influence >= 30
+				political_influence >= 25
 			}
 		}
 	}
@@ -140,7 +140,7 @@ defriend = {
 				scope:target.employer = scope:actor
 			}
 			scope:actor = {
-				add_political_influence = -30
+				add_political_influence = -25
 			}
 		}
 		scope:target = {

@@ -42,6 +42,7 @@
 	pracyan_path_1 = { ###
 		modifier = { 
 			light_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_greco_path_1
 		requires = { }
@@ -58,6 +59,7 @@
 	pracyan_path_3 = { ###
 		modifier = { 
 			archers_offensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_7
 		requires = { pracyan_path_1 }
@@ -67,7 +69,7 @@
 		modifier = { 
 			manpower_recovery_speed = 0.05
 			jungle_combat_bonus = 0.15
-
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_6
 		requires = { pracyan_path_1 }
@@ -93,6 +95,7 @@
 		modifier = { 
 			naval_range = 0.15
 			trireme_morale = 0.1
+			navy_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_end_bonus
 		requires = { pracyan_path_2 }
@@ -102,6 +105,7 @@
 		modifier = { 
 			liburnian_defensive = 0.15
 			liburnian_coastal_terrain_combat_bonus = 0.15
+			navy_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_3
 		requires = { pracyan_path_2 }
@@ -119,6 +123,7 @@
 		}
 		modifier = { 
 			global_manpower_modifier = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_7
 		requires = { pracyan_path_3 }
@@ -127,6 +132,7 @@
 	pracyan_path_8 = { ###
 		modifier = { 
 			warelephant_discipline = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_army_path_5
 		requires = { pracyan_path_4 }
@@ -136,6 +142,7 @@
 		modifier = { 
 			riverine_terrain_combat_bonus = 0.15
 			coastal_terrain_combat_bonus = 0.15
+			navy_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_1
 		requires = { pracyan_path_5 }
@@ -160,6 +167,7 @@
 		}
 		modifier = { 
 			trireme_defensive = 0.15
+			navy_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_3
 		requires = { pracyan_path_6 }
@@ -169,6 +177,7 @@
 		modifier = { 
 			warelephant_offensive = 0.1
 			global_freemen_output = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_army_path_7
 		requires = { pracyan_path_7 }
@@ -178,6 +187,7 @@
 		modifier = { 
 			warelephant_morale = 0.1
 			light_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_6
 		requires = { pracyan_path_8 }
@@ -188,6 +198,8 @@
 		modifier = { 
 			levy_size_multiplier = 0.025
 			naval_damage_done = 0.1
+			army_maintenance_cost = 0.01
+			navy_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_end_bonus
 		requires = { pracyan_path_9 pracyan_path_10 }
@@ -199,6 +211,7 @@
 		modifier = { 
 			heavy_infantry_defensive = 0.1
 			heavy_infantry_mountain_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_7
 		requires = { pracyan_path_11 }
@@ -211,6 +224,7 @@
 			warelephant_farmland_combat_bonus = 0.1
 			heavy_infantry_plains_combat_bonus = 0.1
 			heavy_infantry_farmland_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_end_bonus
 		requires = { pracyan_path_12 }

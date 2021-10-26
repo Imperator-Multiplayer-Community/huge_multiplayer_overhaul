@@ -42,6 +42,9 @@
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
 		}
+		scope:target = {
+			is_friend = scope:actor.current_ruler
+		}
 		
 	}
 
@@ -50,7 +53,7 @@
 			set_variable = {
 				name = manpowercooldown
 				value = 1
-				days = 30
+				days = 90
 			}
 			pay_price = onekman
 		}
@@ -109,7 +112,7 @@ send_men_5k = {
 			set_variable = {
 				name = manpowercooldown
 				value = 1
-				days = 30
+				days = 90
 			}
 			pay_price = fivekman
 		}
@@ -167,7 +170,7 @@ send_men_10k = {
 			set_variable = {
 				name = manpowercooldown
 				value = 1
-				days = 30
+				days = 90
 			}
 		}
 		scope:target.employer = {
@@ -176,65 +179,66 @@ send_men_10k = {
 	}
 
 }
-send_men_50k = {
-	on_other_nation = yes
-	on_own_nation = no
-	message = yes
 
-	potential_trigger = {
-		scope:target = {
-			NOT = { employer = scope:actor }
-			NOT = { employer = { tag = REB } }
-			NOT = { employer = { tag = BAR } }	
-		}
-		scope:actor = {
-			is_ai = no
-		}
-		scope:actor.current_ruler ={
-			trigger_if = {
-				limit = {
-					has_variable = manpoweropen
-				}
-				var:manpoweropen = 0
-			}
-			trigger_else = {
-				always = no
-			}
-		}
-	}
-
-	allowed_trigger = {
-		scope:actor = {
-			trigger_if = {
-				limit = {
-					has_variable = manpowercooldown
-				 }
-				 custom_tooltip = {
-					text = manpowercd
-					NOT = {var:manpowercooldown = 1}
-				}			}
-			manpower > 100
-		}
-		scope:target.employer = {
-			in_diplomatic_range = scope:actor
-		}
-	}
-
-	effect = {
-		scope:actor = {
-			set_variable = {
-				name = manpowercooldown
-				value = 1
-				days = 30
-			}
-			pay_price = fiftykman
-		}
-		scope:target.employer = {
-			add_manpower = 100
-		}
-	}
-
-}
+#send_men_50k = {
+#	on_other_nation = yes
+#	on_own_nation = no
+#	message = yes
+#
+#	potential_trigger = {
+#		scope:target = {
+#			NOT = { employer = scope:actor }
+#			NOT = { employer = { tag = REB } }
+#			NOT = { employer = { tag = BAR } }	
+#		}
+#		scope:actor = {
+#			is_ai = no
+#		}
+#		scope:actor.current_ruler ={
+#			trigger_if = {
+#				limit = {
+#					has_variable = manpoweropen
+#				}
+#				var:manpoweropen = 0
+#			}
+#			trigger_else = {
+#				always = no
+#			}
+#		}
+#	}
+#
+#	allowed_trigger = {
+#		scope:actor = {
+#			trigger_if = {
+#				limit = {
+#					has_variable = manpowercooldown
+#				 }
+#				 custom_tooltip = {
+#					text = manpowercd
+#					NOT = {var:manpowercooldown = 1}
+#				}			}
+#			manpower > 100
+#		}
+#		scope:target.employer = {
+#			in_diplomatic_range = scope:actor
+#		}
+#	}
+#
+#	effect = {
+#		scope:actor = {
+#			set_variable = {
+#				name = manpowercooldown
+#				value = 1
+#				days = 30
+#			}
+#			pay_price = fiftykman
+#		}
+#		scope:target.employer = {
+#			add_manpower = 100
+#		}
+#	}
+#
+#}
 send_men_open = {
 	on_other_nation = yes
 	on_own_nation = no

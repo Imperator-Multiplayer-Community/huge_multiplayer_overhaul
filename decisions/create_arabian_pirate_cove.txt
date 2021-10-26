@@ -1,0 +1,71 @@
+﻿country_decisions = {
+	
+	
+	create_arabian_pirate_cove = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 7216
+			NOR = {
+				has_variable = created_arabian_pirate_cove
+			}
+			OR = { 	country_culture_group = south_levantine
+					primary_culture = nabatean
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							is_culture = nabatean
+						}
+					}			
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 7216
+			}
+		}
+		allow = {
+			treasury >= 200
+			military_experience >= 100
+			invention = navy_maintenance_cost_inv_1
+			owns = 7216
+			capital_scope.state = { 
+				trade_good_surplus = { target = wood value > 1 }
+			}
+		}
+		
+		effect = {
+			set_variable = created_arabian_pirate_cove
+			add_treasury = -200
+			add_military_experience = -100
+			add_country_modifier = {
+				name = arabian_piracy
+				duration = -1
+			}
+			
+			p:7216 = {
+					add_province_modifier = {
+						name = arabian_pirate_cove
+						duration = -1					
+					}
+					add_building_level = port_building
+			}
+			create_unit = {
+				navy = yes
+				location = 7216
+				add_subunit = hexere
+				add_subunit = hexere
+				add_subunit = hexere
+				add_subunit = hexere
+				add_subunit = hexere
+			}
+				
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

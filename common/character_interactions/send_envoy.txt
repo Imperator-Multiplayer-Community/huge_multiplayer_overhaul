@@ -1,0 +1,71 @@
+﻿send_envoy = { 
+
+	on_other_nation = yes 
+	on_own_nation = no 
+	close_ui = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_befriend"
+	
+	potential_trigger = {
+		scope:actor = {
+			OR = {
+				is_monarchy = yes 
+				is_tribal = yes
+				is_republic = yes
+			}
+			NOT = { 
+				has_variable = anti_spam_envoy
+			}
+		}
+		hidden:scope:target = {
+			is_alive = yes
+			is_mercenary = no
+			is_ruler = yes
+			employer = {
+				NOR = {
+					tag = PIR
+					tag = REB
+					tag = BAR
+				}
+			}
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+		}
+	}
+	
+	allowed_trigger = {
+
+		scope:actor = {
+			in_diplomatic_range = scope:target.employer
+		}
+		scope:actor.current_ruler = {
+			is_alive = yes
+		}
+		scope:target = {
+			is_alive = yes
+		}
+	}
+	
+	effect = {
+
+		scope:target.employer = {
+			save_scope_as = envoy_received
+			trigger_event = {
+				id = send_envoy.1 
+				days = 1
+			}
+		}
+
+
+		scope:actor = {
+			save_scope_as = envoy_sender
+			set_variable = {
+				name = anti_spam_envoy
+				value = scope:target
+				days = 30
+			}
+		}
+	}
+}	
+

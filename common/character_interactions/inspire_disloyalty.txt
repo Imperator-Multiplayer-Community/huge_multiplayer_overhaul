@@ -1,0 +1,299 @@
+﻿inspire_disloyalty = {
+
+	on_other_nation = yes
+	on_own_nation = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_corruption"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_alive = yes
+			is_mercenary = no
+			employer = {
+				NOT = { tag = MER }
+				NOT = { tag = BAR }
+				NOT = { tag = REB }
+				NOT = { tag = PIR }
+			}
+			NOT = {
+				employer = scope:actor
+			}
+			NOT = {
+				has_character_modifier = inspire_disloyalty_modifier
+			}
+		}
+	}
+	
+	
+	allowed_trigger = {
+		custom_tooltip = {
+			text = already_inspiring_tooltip
+			hidden:scope:actor = {
+				OR = {
+					NOT = {
+						has_variable = inspiring_foreign_character
+					}
+					AND = {
+						has_variable = inspiring_foreign_character
+						NOT = {
+							exists = var:inspiring_foreign_character
+						}
+					}
+					AND = {
+						has_variable = inspiring_foreign_character
+						var:inspiring_foreign_character = {
+							OR = {
+								is_alive = no
+								NOT = {
+									has_character_modifier = inspire_disloyalty_modifier
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		hidden:scope:actor = {
+			can_pay_price = inspire_disloyalty
+			has_country_modifier = foreign_intel_ops
+		}
+		scope:actor = {
+			in_diplomatic_range = scope:target.employer
+		}
+		hidden:scope:target = {
+			is_adult = yes
+			is_ruler = no
+		}
+		scope:target = {
+			NOR = {
+				has_triggered_character_modifier = free_hands_cmod
+				has_character_modifier = on_espionage_mission_cmod
+			}
+		}
+	}
+	
+
+	
+	effect = {
+		scope:actor = {
+			pay_price = inspire_disloyalty
+		}
+
+		scope:actor.current_ruler.employer = {
+			hidden_effect = {
+				set_variable = {
+					name = inspiring_country
+					days = 45
+				}
+			}
+		save_scope_as = inspiring	
+		}
+		scope:actor.current_ruler = {
+			hidden_effect = {
+				set_variable = {
+					name = inspiring_ruler
+					days = 45
+				}
+			}
+		save_scope_as = inspirer	
+		}
+		
+		scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = character_inspired
+					days = 45
+				}
+
+				set_variable = {
+					name = inspire_cooldown
+					days = 730
+				}
+			}
+		save_scope_as = inspired_character
+		}
+		scope:target.employer = {
+			hidden_effect = {
+				set_variable = {
+					name = country_inspired
+					days = 45
+				}
+			}
+		save_scope_as = inspired
+		}
+
+		scope:target.employer = {
+			ordered_character = {
+				limit = {
+					has_character_modifier = on_espionage_mission_cmod
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = foreign_citizen
+					NOR = {
+ 						has_character_modifier = getting_oriented
+ 						has_character_modifier = in_hiding
+	 					is_adult = no
+						prisoner = yes
+						is_ruler = yes ############# ONLY BECAUSE WEIGHT ISNT WORKING #############
+ 					}
+				}
+ 				check_range_bounds = no
+				order_by = charisma
+				position = 0
+		 		save_scope_as = spy	
+	 		}
+	 		hidden_effect = {
+				set_variable = {
+					name = roll
+						value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:spy.charisma
+					}
+			
+					scope:actor.current_ruler.employer = {
+						trigger_event = { 
+							id = counterintel.34
+							days = 3
+						}
+					}
+					scope:target.employer = {
+						trigger_event = { 
+							id = counterintel.35
+							days = 3
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = {
+						trigger_event = { 
+							id = counterintel.36
+							days = 3
+						}
+					}
+				}
+				remove_variable = roll
+			}
+	 	}
+
+		custom_tooltip = inspire_cooldown_action_tooltip
+		hidden_effect = {
+			scope:actor = {
+				set_variable = {
+					name = inspiring_foreign_character
+					value = scope:target
+				}
+			}
+		}
+	}
+}
+
+	
+
+stop_inspire_disloyalty = {
+
+	on_other_nation = yes 
+	on_own_nation = no 
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_corruption"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			has_character_modifier = inspire_disloyalty_modifier
+		}
+		hidden:scope:actor = {
+			has_variable = inspiring_foreign_character
+			exists = var:inspiring_foreign_character
+			var:inspiring_foreign_character = scope:target
+		}
+	}
+	
+	
+	allowed_trigger = {
+		scope:target = {
+			is_alive = yes
+			has_character_modifier = inspire_disloyalty_modifier
+			custom_tooltip = {
+				text = inspire_cooldown_tooltip
+				NOT = {
+					has_variable = inspire_cooldown
+				}
+			}
+		}
+	}
+	
+
+	
+	effect = {
+		scope:target = {
+			remove_character_modifier = inspire_disloyalty_modifier
+			remove_loyalty = loyalty_inspire_disloyalty
+		}
+		hidden_effect = {
+			scope:actor = {
+				remove_variable = inspiring_foreign_character
+			}
+		}
+	}
+	
+}
+
+stop_inspire_disloyalty_ruler = {
+
+	on_other_nation = no 
+	on_own_nation = yes 
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_corruption"
+	
+	potential_trigger = {
+		hidden:scope:actor = {
+			has_variable = inspiring_foreign_character
+			exists = var:inspiring_foreign_character
+			var:inspiring_foreign_character = {
+				is_alive = yes
+				has_character_modifier = inspire_disloyalty_modifier
+			}
+		}
+		scope:actor.current_ruler = scope:target
+	}
+	
+	
+	allowed_trigger = {
+		scope:actor = {
+			var:inspiring_foreign_character = {
+				is_alive = yes
+				has_character_modifier = inspire_disloyalty_modifier
+				custom_tooltip = {
+					text = inspire_cooldown_tooltip
+					NOT = {
+						has_variable = inspire_cooldown
+					}
+				}
+			}
+		}
+	}
+	
+
+	
+	effect = {
+		scope:actor = {
+			if = {
+				limit = {
+					var:inspiring_foreign_character = {
+						has_character_modifier = inspire_disloyalty_modifier
+					}
+				}
+				var:inspiring_foreign_character = {
+					remove_character_modifier = inspire_disloyalty_modifier
+				}
+			}
+		}
+		hidden_effect = {
+			scope:actor = {
+				remove_variable = inspiring_foreign_character
+			}
+		}
+	}
+	
+}

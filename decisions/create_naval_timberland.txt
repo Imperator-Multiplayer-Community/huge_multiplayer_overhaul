@@ -25,8 +25,8 @@
 			}
 		}
 		allow = {
-			treasury >= 100
-			military_experience >= 50
+			treasury >= 150
+			military_experience >= 85
 			invention = naval_weapon_platform_inv_3
 			owns = 2017
 			capital_scope.state = { 
@@ -36,8 +36,8 @@
 		
 		effect = {
 			set_variable = created_naval_timberland
-			add_treasury = -100
-			add_military_experience = -50
+			add_treasury = -150
+			add_military_experience = -85
 			add_country_modifier = {
 				name = britannic_shipbuilding_programme
 				duration = -1

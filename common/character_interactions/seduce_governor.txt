@@ -1,0 +1,226 @@
+﻿secude_governor = {
+
+	on_other_nation = yes
+	on_own_nation = no
+	
+	message = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_corruption"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			NOT = { employer = scope:actor }
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+			is_alive = yes
+			is_mercenary = no
+		}
+	}
+	
+	
+	allowed_trigger = {
+		hidden:scope:actor = {
+			can_pay_price = secude_governor
+			has_country_modifier = foreign_intel_ops
+		}
+		scope:target.employer = {
+			any_character = {
+				has_character_modifier = on_espionage_mission_cmod
+ 				has_character_modifier = spy_recruit_character
+ 				has_character_modifier = foreign_citizen
+ 				NOR = {
+ 					has_character_modifier = getting_oriented
+ 					has_character_modifier = in_hiding
+ 				}
+ 			}
+		}
+		scope:target = {
+			is_governor = yes
+			is_ruler = no
+			loyalty <= 40
+			is_friend = scope:actor.current_ruler
+			NOT = {
+				has_variable = entice_cooldown
+			}
+			
+			custom_tooltip = {
+				text = must_have_adjacent_disloyal_state
+				any_governor_state = {
+					any_state_province = {
+						state_loyalty <= 50
+						any_neighbor_province = {
+							has_owner = yes
+							owner = scope:actor
+						}
+					}
+				}
+			}
+		}
+	} 
+	
+	effect = {
+		scope:actor.current_ruler.employer = {
+			hidden_effect = {
+				set_variable = {
+					name = enticing_nation
+					days = 45
+				}
+			}
+		save_scope_as = enticer	
+		}
+		
+		scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = character_enticed
+					days = 180
+				}
+			}
+		save_scope_as = enticed_govnah
+		}
+		scope:target.employer = {
+			hidden_effect = {
+				set_variable = {
+					name = nation_enticed
+					days = 45
+				}
+			}
+		save_scope_as = enticed_nation
+		}
+
+		scope:target.employer = {
+			ordered_character = {
+				limit = {
+					has_character_modifier = on_espionage_mission_cmod
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = foreign_citizen
+					NOR = {
+ 						has_character_modifier = getting_oriented
+ 						has_character_modifier = in_hiding
+	 					is_adult = no
+						prisoner = yes
+						is_ruler = yes ############# ONLY BECAUSE WEIGHT ISNT WORKING #############
+ 					}
+				}
+ 				check_range_bounds = no
+				order_by = charisma
+				position = 0
+		 		save_scope_as = spy	
+	 		}
+	 		hidden_effect = {
+				set_variable = {
+					name = roll
+						value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:spy.charisma
+					}
+					scope:actor = {
+						pay_price = secude_governor
+					}
+					scope:target = {
+						if = {
+							limit = {
+								is_friend = scope:target.employer.current_ruler
+							}
+							remove_friend = scope:target.employer.current_ruler
+						}
+						employer = {
+							add_opinion = {
+								target = scope:actor
+								modifier = enticed_our_governor
+							}
+						}
+						show_as_tooltip = { move_country = scope:actor }
+						custom_tooltip = adjacent_provinces_enticed
+						custom_tooltip = province_claims_enticed
+						hidden_effect = {
+							every_governor_state = {
+								limit = {
+									any_state_province = {
+										state_loyalty <= 50
+										any_neighbor_province = {
+											owner = scope:actor
+										}
+									}
+								}
+								every_state_province = {
+									set_owned_by = scope:actor
+									add_claim = scope:target.employer
+									save_scope_as = to_set_governor
+								}
+							}
+						}
+						hidden_effect = {
+							if = {
+								limit = {
+									num_of_children > 0
+									any_child = {
+										is_adult = no
+									}
+								}
+								add_character_modifier = {
+									name = abandoned_family
+									duration = -1
+								}
+								every_child = {
+									limit = {
+										is_adult = no
+									}
+									add_character_modifier = {
+										name = absentee_father
+										duration = -1
+									}
+								}
+							}
+						}
+						hidden_effect = {
+							remove_all_positions = yes
+							move_country = scope:actor
+							remove_character_modifier = foreign_citizen
+							set_as_minor_character = THIS
+							set_home_country = scope:actor
+						}
+						hidden_effect = {
+							if = {
+								limit = {
+									exists = scope:to_set_governor 
+								}
+								scope:to_set_governor = {
+									set_as_governor = scope:target
+								}
+							}
+						}
+					}
+
+					scope:actor.current_ruler.employer = {
+						trigger_event = { 
+							id = counterintel.30
+							days = 3
+						}
+					}
+				}	
+				else = {
+					scope:actor.current_ruler.employer = {
+						trigger_event = { 
+							id = counterintel.32
+							days = 15
+						}
+					}
+				}
+				remove_variable = roll
+			}
+	 	}
+
+		scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = entice_cooldown
+					days = 180
+				}
+			}
+		}
+	}
+}

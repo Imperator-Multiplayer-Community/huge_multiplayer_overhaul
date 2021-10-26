@@ -1,0 +1,87 @@
+﻿country_decisions = {
+	
+	recruit_aryan_intel_agent = {
+		potential = {
+			has_country_modifier = kautilyas_espionage_programme 
+		}
+
+		allow = {
+			NOR = { 
+				has_variable = aryan_spy_recruit_cooldown
+				has_variable = spy_recruit_cooldown
+			}	
+			stability > 10
+			treasury >= 40
+			military_experience >= 4
+			}
+			
+		effect = {
+			add_treasury = -40
+			add_military_experience = -4
+			add_country_modifier = {
+				name = "spy_recruited"
+				duration = 3650
+				mode = add
+			}
+			set_variable = {
+				name = "aryan_spy_recruit_cooldown"
+				days = 365
+			}				
+			custom_tooltip = recruit_spymaster_tt
+				ROOT = {
+					create_character = {
+						female = yes
+						age = { 18 22 }
+						#culture = scope:target_culture.culture
+						#religion = prev.prev.religion
+						hidden_effect = {
+							random_list = {
+								10 = { 
+									add_trait = unnoticeable
+									add_charisma = 1
+								}
+								10 = {
+									add_trait = secure
+								}
+								10 = {
+									add_trait = fair
+								}
+								10 = {
+									add_trait = crafty
+								}
+								10 = {
+									add_trait = loving
+									add_trait = lustful
+								}
+								10 = {
+									add_trait = silver_tongued
+								}
+								10 = {
+									add_trait = deceitful
+								}
+								10 = {
+									add_charisma = 2
+								}
+							}
+							add_character_modifier = {
+								name = "spy_recruit_character"
+								duration = -1
+							}
+							add_character_modifier = {
+								name = "counterintelligence"
+								duration = -1
+							}
+							save_scope_as = new_intel_recruit
+						}
+					}
+				}
+           	trigger_event = {
+				id = counterintel.8
+				days = 5
+			}
+        }	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

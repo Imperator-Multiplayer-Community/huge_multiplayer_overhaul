@@ -528,6 +528,9 @@ religious_1 = {
 		}
 		keystone = yes
 		requires_or = { technology_cost_inv_3 ruler_popularity_gain_inv_4 }
+		on_activate = {
+			custom_tooltip = "bread_stamp_law_tt"
+		}
 	} 		
 
 	technology_cost_inv_4 = {
@@ -687,7 +690,7 @@ religious_1 = {
     carpets_inv = {
     	modifier = { 
     		max_friends = 1 
-    		monthly_character_experience = 0.02
+    		max_rivals = 1
     	}
         
         requires_or = { ruler_popularity_gain_inv_4 global_freemen_happyness_inv }

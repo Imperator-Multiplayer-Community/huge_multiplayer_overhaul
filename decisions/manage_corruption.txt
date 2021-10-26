@@ -1,0 +1,72 @@
+﻿country_decisions = {
+	
+	reform_bureaucracy = {
+		potential = {
+			num_of_cities >= 1
+			NOR = {
+				has_country_modifier = purging_bureaucrats
+				has_country_modifier = reforming_bureaucracy
+			}
+		}
+		
+		allow = {
+			political_influence >= 25
+			invention = tyranny_inv_2
+		}
+		
+		effect = {
+			every_character = {
+				limit = {
+					corruption >= 10
+					power_base >= 5
+				}
+				add_loyalty = corruption_probe						
+			}
+
+			add_political_influence = -25
+			add_country_modifier = {
+				name = reforming_bureaucracy
+				duration = 1826
+			}	
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	purge_bureaucrats = {
+		potential = {
+			num_of_cities >= 1
+			NOR = {
+				has_country_modifier = purging_bureaucrats
+				has_country_modifier = reforming_bureaucracy
+			}
+		}
+		
+		allow = {
+			political_influence >= 25
+			invention = monthly_character_loyalty_inv_5
+		}
+		
+		effect = {
+			every_character = {
+				limit = {
+					corruption >= 10
+					power_base >= 5
+				}
+				add_loyalty = corruption_probe						
+			}
+	
+			add_political_influence = -25
+			add_country_modifier = {
+				name = purging_bureaucrats
+				duration = 1826
+			}	
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

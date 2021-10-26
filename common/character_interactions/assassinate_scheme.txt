@@ -1,0 +1,140 @@
+﻿assassinate_scheme = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	message = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_war"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_ruler = yes
+			employer = scope:actor
+		}
+	}
+	
+	allowed_trigger = {
+		scope:target = {
+			trigger_if = {
+				limit = { is_adult = no }
+				is_adult = yes
+			}
+		}
+		hidden:scope:actor = {
+			can_pay_price = assassinate_attempt
+		}
+		custom_tooltip = {
+			text = assassinate_internal_scheme_tt
+			NOT = {
+				scope:target = {
+					has_ambition = scheme_assassinate
+				}
+			}
+		}
+		custom_tooltip = {
+			text = assassinate_internal_rival_tt
+			scope:target = {
+				num_of_rivals >= 1
+				any_rival = {
+					employer = scope:actor
+				}
+			}
+		}
+	}
+	
+	character_actor_trigger = {
+		is_rival = scope:target
+		employer = scope:actor
+	}
+	
+	effect = {
+		scope:actor = {
+			pay_price = assassinate_attempt
+		}
+		scope:target = {
+			clear_ambition_effect_ci = yes
+			set_ambition = scheme_assassinate
+		}
+		if = {
+			limit = {
+				exists = scope:recipient
+			}
+			scope:recipient = {
+				save_scope_as = ongoing_scheme_target
+			}
+			scope:target = {
+				set_variable = {
+					name = ongoing_scheme_target
+					value = scope:ongoing_scheme_target
+					days = 770
+				}
+			}
+			scope:ongoing_scheme_target = {
+				add_to_variable_list = {
+					name = targeted_by
+					target = scope:target
+				}
+			}
+		}
+		else = { custom_tooltip = scheme_assassinate_tt }
+	}
+}
+
+assassinate_scheme_other = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	message = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_war"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			employer = scope:actor
+			NOT = { THIS = scope:actor.current_ruler }
+		}
+	}
+	
+	allowed_trigger = {
+		scope:target = {
+			trigger_if = {
+				limit = { is_adult = no }
+				is_adult = yes
+			}
+		}
+		hidden:scope:actor = {
+			can_pay_price = assassinate_attempt
+		}
+		NOT = {
+			scope:actor.current_ruler = {
+				has_ambition = scheme_assassinate
+			}
+		}
+		scope:actor.current_ruler = { is_rival = scope:target }
+	}
+	
+	effect = {
+		scope:actor = {
+			pay_price = assassinate_attempt
+			current_ruler = {
+				clear_ambition_effect_ci = yes
+				set_ambition = scheme_assassinate
+			}
+		}
+		scope:target = { save_scope_as = ongoing_scheme_target }
+		scope:actor.current_ruler = {
+			set_variable = {
+				name = ongoing_scheme_target
+				value = scope:ongoing_scheme_target
+				days = 770
+			}
+		}
+		scope:ongoing_scheme_target = {
+			add_to_variable_list = {
+				name = targeted_by
+				target = scope:actor.current_ruler
+			}
+		}
+		custom_tooltip = scheme_assassinate_other_tt
+	}
+}

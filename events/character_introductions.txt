@@ -1,0 +1,70 @@
+﻿namespace = character_introductions
+
+character_introductions.1 = { 
+	type = country_event
+	title = character_introductions.1.t
+	desc = character_introductions.1.desc
+	left_portrait = scope:root.current_ruler
+	right_portrait = scope:new_debutante
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+	}
+
+	option = {
+		name = "character_introductions.1.a"
+	}
+}
+
+character_introductions.2 = { 
+	type = country_event
+	title = character_introductions.2.t
+	desc = character_introductions.2.desc
+	left_portrait = scope:root.current_ruler
+	right_portrait = scope:new_talent
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+	}
+
+	option = {
+		name = "character_introductions.2.a"
+	}
+}
+
+character_introductions.3 = { 
+	type = country_event
+	title = character_introductions.3.t
+	desc = character_introductions.3.desc
+	left_portrait = scope:root.current_ruler
+	right_portrait = scope:war_hero_char
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+	}
+
+	option = {
+		name = "character_introductions.3.a"
+	}
+}
+
+character_introductions.4 = { 
+	type = country_event
+	title = character_introductions.4.t
+	desc = character_introductions.4.desc
+	left_portrait = scope:root.current_ruler
+	right_portrait = scope:naval_war_hero_char
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+	}
+
+	option = {
+		name = "character_introductions.4.a"
+	}
+}
+

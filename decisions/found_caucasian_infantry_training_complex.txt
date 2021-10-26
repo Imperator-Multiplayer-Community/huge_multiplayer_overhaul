@@ -1,0 +1,52 @@
+﻿country_decisions = {
+	
+	found_caucasian_infantry_training_complex = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 1686
+			NOR = {
+				has_variable = founded_caucasian_infantry_training_complex
+			}
+			OR = { 	country_culture_group = caucasian
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= small_percent_size_culture_group_comparison
+						this.culture.culture_group = culture_group:caucasian
+					}			
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 1686
+			}
+		}
+		allow = {
+			treasury >= 100
+			military_experience >= 65
+			owns = 1686
+		}
+		
+		effect = {
+			set_variable = founded_caucasian_infantry_training_complex
+			add_treasury = -100
+			add_military_experience = -65
+			add_country_modifier = {
+				name = caucasian_infantry_training_programme 
+				duration = -1
+			}
+			
+			p:1686 = {
+					add_province_modifier = {
+						name = caucasian_infantry_training_complex
+						duration = -1					
+					}
+				}
+				
+			}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

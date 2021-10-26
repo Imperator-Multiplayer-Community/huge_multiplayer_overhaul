@@ -1,0 +1,145 @@
+﻿grant_perk = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	message = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_mercenary = no
+			employer = {
+				NOR = {
+					tag = PIR
+					tag = REB
+					tag = BAR
+				}
+			}
+			employer = scope:actor
+			is_alive = yes
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+			NOR = {
+				has_character_modifier = granted_perk
+				has_character_modifier = commander_king
+				has_character_modifier = on_espionage_mission_cmod
+			}
+			OR = {
+				has_any_office = yes
+				has_tech_office = yes
+				is_general = yes
+				is_admiral = yes
+				is_governor = yes
+			}
+
+			NOR = {
+				is_co_ruler = yes
+				is_rival = scope:actor.current_ruler
+			}		
+		}
+	}
+
+	
+	allowed_trigger = {
+		scope:target = {
+			loyalty >= 30
+		}
+
+		scope:target.employer = {
+			political_influence >= 10
+			treasury >= 25
+		}
+
+		custom_tooltip = {
+			text = ready_for_task_tt
+			scope:target = {
+				is_adult = yes
+				prisoner = no
+				NOT = { has_character_modifier = disloyal_successor_cmod }
+				NOT = { is_rival = scope:actor.current_ruler }
+				custom_tooltip = {
+					text = recently_busy_tt
+					NOT = { has_character_modifier = granted_perk }
+				}
+			}
+		}
+	}
+	
+	
+	effect = {
+		
+		random_list = {
+			30 = {
+				scope:target = {
+					add_character_modifier = {
+						name = "delusional"
+					  	duration = -1
+					}			
+				}
+			}
+			25 = {	
+				scope:target = {
+            		add_character_modifier = {
+						name = "apathetic"
+					  	duration = -1
+					}	
+            	}		
+			}
+			30 = {
+				scope:target = {
+					add_character_modifier = {
+						name = "degenerate"
+					  	duration = -1
+					}
+				}			
+			}
+			30 = {
+				scope:target = {
+					add_character_modifier = {
+						name = "drunkard"
+						duration = -1
+					}
+				}			
+			}
+			25 = {
+            	scope:target = {
+            		add_character_modifier = {
+						name = "sadistic"
+					  	duration = -1
+					}
+            	}
+			}
+			30 = {
+            	scope:target = {
+            		add_character_modifier = {
+						name = "wastrel"
+					  	duration = -1
+					}
+            	}
+			}
+			30 = {
+            	scope:target = {
+            		add_character_modifier = {
+						name = "depraved"
+					  	duration = -1
+					}
+            	}
+			}			 
+		}
+
+		scope:target = {
+			add_character_modifier = {
+				name = "granted_perk"
+				duration = 3650
+			}
+			add_loyalty = perk_loyalty
+		}
+		scope:target.employer = {
+			add_political_influence = -10
+			add_treasury = -25
+			add_legitimacy = -10
+		}
+	}
+}	

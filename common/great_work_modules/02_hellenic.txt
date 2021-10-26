@@ -1,0 +1,27 @@
+﻿##############################
+########## Hellenic  #########
+##############################
+
+wonder_greek_academy = {
+	entity_name = {"wonder_greek_academy_entity"}
+	great_work_category = "gw_category_ancient"
+	great_work_category_slot = 0
+}
+
+wonder_knossos_palace = {
+	entity_name = {"wonder_knossos_palace_entity"}
+	great_work_category = "gw_category_ancient"
+	great_work_category_slot = 0
+}
+
+wonder_cothon = {
+	entity_name = {"wonder_carthage_harbour_entity"}
+	great_work_category = "gw_category_ancient"
+	great_work_category_slot = 0
+}
+
+#wonder_numidian_tombs = {
+#	entity_name = {"wonder_numidian_tomb_02_entity"}
+#	great_work_category = "gw_category_ancient"
+#	great_work_category_slot = 0
+#}

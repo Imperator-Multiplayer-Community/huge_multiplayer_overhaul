@@ -319,7 +319,6 @@ olive = { #143 territories - ML 142#
 	}
 	country = {
 		global_slaves_happyness = happiness_large_svalue
-		# marines_maintenance_cost = -0.1
 	}
 	
 	color = { 0.57 0.7 0.2 }
@@ -365,6 +364,7 @@ woad = { #141 territories - ML 137#
 	}
 	country = {
 		global_tribesmen_happyness = happiness_large_svalue
+		manpower_recovery_speed = 0.015
 	}
 	
 	color = hsv { 0.67 0.8 0.9 }
@@ -395,7 +395,7 @@ honey = { #86 territories
 	}
 	country = {
 		diplomatic_reputation = 3
-		# marines_maintenance_cost = -0.1
+		light_cavalry_discipline = 0.1
 	}
 	
 	color = { 0.9 0.8 0.2 }
@@ -411,7 +411,6 @@ incense = { #55 territories - ML 55#
 	}
 	country = {
 		happiness_for_same_religion_modifier = 0.05
-		# marines_maintenance_cost = -0.1
 	}
 	
 	color = { 0.2 0.3 0.7 }

@@ -33,6 +33,10 @@
 			employer = { in_diplomatic_range = scope:actor }
 			NOT = { loyalty > 45 }
 			is_friend = scope:actor.current_ruler
+			NOR = { 
+				has_character_modifier = on_espionage_mission_cmod
+				#has_character_modifier = spy_recruit_character 
+			} #NEW ######################
 			trigger_if = {
 				limit = {
 					OR = {

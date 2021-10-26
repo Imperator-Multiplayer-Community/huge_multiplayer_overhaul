@@ -1,6 +1,5 @@
 ﻿country_decisions = {
 	
-	# Found Tarentine Cavalry Training Complex
 	found_tarentine_cavalry_training_complex = {
 	
 		potential = {
@@ -9,15 +8,11 @@
 			NOR = {
 				has_variable = founded_tarentine_cavalry_training_complex
 			}
-			OR = { 	country_culture_group = latin
-					country_culture_group = hellenic
+			OR = { 	primary_culture = italiotian
 					any_country_culture = {
 						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:latin
-							this.culture.culture_group = culture_group:hellenic
-						}
+						country_culture_pop_count >= small_percent_size_culture_group_comparison
+						is_culture = italiotian
 					}			
 			}
 		}
@@ -29,11 +24,6 @@
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			OR = {
-				is_tribal = yes
-				is_monarchy = yes
-				is_republic = yes
-			}
 			owns = 56
 		}
 		

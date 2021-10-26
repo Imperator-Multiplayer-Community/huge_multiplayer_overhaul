@@ -2,13 +2,19 @@
 
 inspire_disloyalty = {
 	aggressive_expansion = 5
-	political_influence = 5
+	political_influence = 10
+	scaled_gold = 1
+}
+
+inspire_disloyalty_black_widow = {
+	aggressive_expansion = 5
+	political_influence = 10
 	scaled_gold = 1
 }
 
 recruit_character = {
 	aggressive_expansion = 5
-	political_influence = 5
+	political_influence = 10
 	scaled_gold = 1
 }
 
@@ -19,36 +25,55 @@ recruit_general = {
 }
 
 secude_governor = {
-	aggressive_expansion = 20
-	political_influence = 10
-	scaled_gold = 2
+	aggressive_expansion = 15
+	political_influence = 25
+	scaled_gold = 1
+}
+
+gift_slave = {
+	scaled_gold = 5
+}
+
+price_force_divorce = {
+	political_influence = 12
 }
 
 price_state_investment_military = {
-	political_influence = 75
+	political_influence = 60
 }
 price_state_investment_civic = {
-	political_influence = 75
+	political_influence = 60
 }
 price_state_investment_oratory = {
-	political_influence = 75
+	political_influence = 60
 }
 price_state_investment_religious = {
-	political_influence = 75
+	political_influence = 60
 }
 
 price_oaths_of_allegiance_button = {
-	political_influence = 75
+	political_influence = 50
 }
 
 price_patron_of_arts_button = {
-	political_influence = 75
+	political_influence = 50
 }
 
 price_assemble_raiding_party_button = {
 	political_influence = 75
 }
 
-create_merc_state_price = { 
-	political_influence = 40
+price_tribal_duel = {
+	political_influence = 12
+	tyranny = 4
 }
+
+price_test_loyalty = {
+	political_influence = 8
+	tyranny = 4
+}
+
+
+#create_merc_state_price = { 
+#	political_influence = 40
+#}

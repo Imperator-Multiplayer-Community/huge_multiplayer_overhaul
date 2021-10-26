@@ -1,0 +1,125 @@
+﻿namespace = zoonotic
+
+zoonotic.1 = {
+ 	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		war = yes
+		is_ai = no
+		NOT = {
+			invention = global_supply_limit_modifier_inv_4
+		}		
+	}
+
+	immediate = {
+ 		every_army = {
+ 			if = {
+ 				limit = {
+ 					in_siege = yes
+ 					root = {
+ 						zoonotic_ratio >= zoonotic_limit
+ 					}
+ 				}
+ 			}
+ 			random_list = {
+ 				25 = {
+
+ 				}
+ 				25 = {
+ 					random_sub_unit = {
+						limit = {
+							subunit_strength_percentage >= 0.05
+						}
+						add_subunit_strength = -0.2
+					}	
+ 				}
+ 				25 = {
+ 					random_sub_unit = {
+						limit = {
+							subunit_strength_percentage >= 0.05
+						}
+						add_subunit_strength = -0.2
+					}
+					random_sub_unit = {
+						limit = {
+							subunit_strength_percentage >= 0.05
+						}
+						add_subunit_strength = -0.2
+					}	
+ 				}
+ 				25 = {
+ 					random_sub_unit = {
+						limit = {
+							subunit_strength_percentage >= 0.05
+						}
+						add_subunit_strength = -0.2
+					}
+					random_sub_unit = {
+						limit = {
+							subunit_strength_percentage >= 0.05
+						}
+						add_subunit_strength = -0.2
+					}
+					random_sub_unit = {
+						limit = {
+							subunit_strength_percentage >= 0.05
+						}
+						add_subunit_strength = -0.2
+					}
+
+ 				}
+ 			}
+
+ 			#else = {
+
+ 			#}
+ 		}
+
+ 	}
+}
+
+zoonotic.2 = {
+ 	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		war = yes
+		is_ai = no
+		invention = global_supply_limit_modifier_inv_4
+	}
+
+	immediate = {
+ 		every_army = {
+ 			#save_scope_as = zoonotic_army
+ 			if = {
+ 				limit = {
+ 					in_siege = yes
+ 					root = {
+ 						zoonotic_ratio >= zoonotic_limit
+ 					}
+ 				}
+ 			}
+ 			random_list = {
+ 				80 = {
+
+ 				}
+ 				20 = {
+ 					random_sub_unit = {
+						limit = {
+							subunit_strength_percentage >= 0.05
+						}
+						add_subunit_strength = -0.1
+					}
+ 				}
+ 			}
+
+ 			#else = {
+
+ 			#}
+ 		}
+
+ 	}
+}
+
+

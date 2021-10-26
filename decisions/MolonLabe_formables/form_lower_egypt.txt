@@ -1,0 +1,103 @@
+#Form Kingdom of Lower Egypt
+
+country_decisions = {
+	form_lower_egypt = { 
+
+	potential = {
+		num_of_cities >= 1
+		#var:formables = 1
+		OR = {
+		country_culture_group = north_african
+		country_culture_group = meroitic_group
+		}
+		is_monarchy = yes
+		religion = egyptian_pantheon
+
+		capital_scope = {
+			OR = {
+			is_in_region = lower_egypt_region
+			is_in_area = heptanomis_area
+			}
+		}
+		
+		OR = {
+			is_ai = no
+			num_of_cities >= 20
+		}
+		NOT = {
+			is_endgame_tag_trigger = yes
+			is_tier_2_formable_trigger = yes
+			is_tier_1_formable_trigger = yes
+		}
+	}
+
+		highlight = {
+			scope:province = {
+					OR = {
+					
+					province_id = 500 #Memphis
+					province_id = 544 #Herakleopolis
+					province_id = 538 #Aphroditopolis
+					province_id = 507 #Leontopolis(Hel)
+					province_id = 504 #Leontoplolis
+					province_id = 518 #Buto
+					province_id = 515 #Naukratis
+					province_id = 7688 #Thenessos	
+				}	
+			}			
+		}
+
+		allow = {
+			is_monarchy = yes
+			religion = egyptian_pantheon
+			custom_tooltip = {
+				text = egypt_not_existing
+				NOT = {
+					any_country = {
+						tag = EGT
+					}
+				}
+				NOT = {
+					any_country = {
+						tag = EGY
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns = 500 #Memphis
+			owns = 544 #Herakleopolis
+			owns = 538 #Aphroditopolis
+			owns = 507 #Leontopolis(Hel)
+			owns = 504 #Leontopolis
+			owns = 518 #Buto
+			owns = 515 #Naukratis
+			owns = 7688 #Thenessos
+		}
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+			}
+			change_country_name = "LOWER_EGYPT"
+			hidden_effect = {
+				change_country_flag = "lower_egypt_flag"
+				change_country_adjective = "EGYPTIAN_ADJECTIVE"
+				change_country_color = "roman_red"
+				change_country_tag = LOE 
+				#trigger_event = 
+				
+			}				
+			
+			capital_scope = {
+				capital_formable_small_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			add_political_influence = influence_large
+			add_1_free_province_investments = yes
+		}
+	}
+}

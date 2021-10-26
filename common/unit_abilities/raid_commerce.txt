@@ -137,12 +137,17 @@
 
 		unit_owner = {
 			while = {
-				count >= num_of_ships_svalue #This script value is not working. 
-											#A number will work, but it will not adjust to the ships in the fleet
+				count >= num_of_ships_svalue
 				add_country_modifier = {
 					name = naughty_mugger
-					duration = 90
+					duration = 180
 					mode = add
+				}
+				count >= num_of_ships_svalue
+				add_country_modifier = {
+					name = naval_action
+					duration = 90
+					mode = add	
 				}
 			}
 		}
@@ -173,7 +178,7 @@
 			}
 			hidden_effect = {
 				root.unit_owner = {
-					add_aggressive_expansion = 5
+					add_aggressive_expansion = 2
 				}
 			}
 			unit_location = {
@@ -187,7 +192,7 @@
 					order_by = total_population
 					hidden_effect = {
 						root.unit_owner = {
-							add_aggressive_expansion = 5
+							add_aggressive_expansion = 2
 						}
 						add_province_modifier = {
 							name = mugged_by_reality

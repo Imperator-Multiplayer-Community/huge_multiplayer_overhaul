@@ -580,7 +580,7 @@ latifundia_building = { #New Slave Estate
 		has_city_status = no
 	}
 
-	cost = 200
+	cost = 120
 	time = 360
 	
 	modification_display = {
@@ -614,7 +614,7 @@ slave_mine_building = { #New Mine, worst place for a slave
 		
 	}
 	
-	cost = 200
+	cost = 150
 	time = 360
 	
 	modification_display = {
@@ -650,7 +650,7 @@ basic_settlement_infratructure_building = { #Farming Settlements reflecting the 
 		has_food_trade_good_trigger = yes
 	}
 	
-	cost = 200
+	cost = 150
 	time = 360
 	
 	modification_display = {
@@ -737,7 +737,7 @@ local_forum_building = { #Provincial Legation as a town
 		has_city_status = no
 	}
 	
-	cost = 175
+	cost = 200
 	time = 360
 	
 	modification_display = {

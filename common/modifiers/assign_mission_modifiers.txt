@@ -1,0 +1,112 @@
+﻿navy = {
+	naval_morale = 0.1
+}
+
+
+#UNIT MODIFIERS
+
+
+
+
+#COUNTRY MODIFIERS
+
+bad_merc_reputation = {
+	max_mercenary_stacks = -1	
+	recruit_mercenary_cost_modifier = 2
+	mercenary_land_maintenance_cost = 2
+	mercenary_naval_maintenance_cost = 2
+}
+
+good_merc_reputation = {
+	max_mercenary_stacks = 1
+	recruit_mercenary_cost_modifier = 0.2
+	mercenary_land_maintenance_cost = 0.2
+	mercenary_naval_maintenance_cost = 0.2
+}
+
+war_effort_criticised = {
+	manpower_recovery_speed = -0.05
+}
+
+poisoned_wells = {
+	global_monthly_food_modifier = -0.7
+	global_food_capacity = -400
+}
+
+supplies_revealed = {
+	army_weight_modifier = -0.35
+	land_unit_attrition = -2
+}
+
+damaged_shipyards = {
+	global_ship_recruit_speed = -0.5
+	ship_cost = 0.2
+}
+
+falsified_maps = {
+	naval_range = -0.4
+}
+
+looted_treasury = {
+	global_tax_modifier = -0.15
+}
+
+treasury_loot = {
+	global_tax_modifier = 0.15
+}
+
+harassed_merchants = {
+	global_import_commerce_modifier = -0.2
+	global_capital_trade_routes = -3
+}
+
+spreading_corruption = {
+	character_loyalty = -5
+	monthly_corruption = 0.12
+}
+
+civil_disobedience = {
+	global_unrest = 1
+	build_time = 2
+	build_cost = 2
+	slaves_move_cost_modifier = 4
+	stability_monthly_change = -0.05
+}
+
+legal_challenges = {
+	monthly_political_influence_modifier = -0.5
+	monthly_tyranny = 0.25
+	research_points_modifier = -0.3
+	stability_cost_modifier = 2
+}
+
+social_division = {
+	global_unrest = 2
+	stability_monthly_change = -0.05
+	global_population_happiness = -0.1
+}
+
+gods_insulted = {
+	omen_power = -1.5
+	global_pop_conversion_speed_modifier = -2
+}
+
+promote_local_government = {
+	global_monthly_state_loyalty = -0.2
+	monthly_political_influence_modifier = -0.3
+	governor_loyalty = -10
+}
+
+rocky_stability = {
+	character_loyalty = -5
+	stability_monthly_change = -0.3
+	stability_cost_modifier = 2
+}
+
+poorly_taught = {
+	research_points_modifier = -0.5
+}
+
+stealing_tech = {
+	research_points_modifier = 2
+}

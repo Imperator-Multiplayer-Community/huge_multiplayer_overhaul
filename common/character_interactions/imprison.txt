@@ -22,8 +22,9 @@
 	
 	allowed_trigger = {
 		hidden:scope:target = {
-			NOT = {
+			NOR = {
 				has_character_modifier = disloyal_successor_cmod
+				has_character_modifier = on_espionage_mission_cmod #NEW ######################
 			}
 			prisoner = no
 			is_ruler = no

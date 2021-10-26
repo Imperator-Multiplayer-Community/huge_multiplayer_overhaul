@@ -1,0 +1,103 @@
+﻿task_character = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	message = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_mercenary = no
+			employer = {
+				NOR = {
+					tag = PIR
+					tag = REB
+					tag = BAR
+				}
+			}
+			employer = scope:actor
+			is_alive = yes
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+			NOR = {
+				has_character_modifier = commander_king
+				has_character_modifier = recently_tasked
+				has_character_modifier = on_espionage_mission_cmod
+				has_character_modifier = foreign_citizen
+				has_character_modifier = assigned_mission
+				has_character_modifier = getting_oriented
+ 				has_character_modifier = in_hiding
+			}
+			OR = {
+				has_any_office = yes
+				has_character_modifier = spy_recruit_character
+				has_character_modifier = gifted_slave
+				has_tech_office = yes
+				is_general = yes
+				is_admiral = yes
+				is_governor = yes
+			}
+			
+			NOT = {
+				#has_tech_office = yes
+				#is_general = yes
+				#is_admiral = yes
+				#is_governor = yes
+				is_co_ruler = yes
+			}		
+		}
+	}
+
+	
+	allowed_trigger = {
+		scope:target = {
+			loyalty >= 50
+			martial <= 16
+			finesse <= 16
+			charisma <= 16
+			zeal <= 16
+		}
+
+		scope:target.employer = {
+			political_influence >= 10
+			treasury >= 25
+		}
+
+		custom_tooltip = {
+			text = ready_for_task_tt
+			scope:target = {
+				is_adult = yes
+				prisoner = no
+				NOT = { has_character_modifier = disloyal_successor_cmod }
+				NOT = { is_rival = scope:actor.current_ruler }
+				custom_tooltip = {
+					text = recently_busy_tt
+					NOT = { has_character_modifier = recently_tasked }
+				}
+			}
+		}
+	}
+	
+	
+	effect = {
+		
+		scope:target = {
+			add_character_modifier = {
+				name = "recently_tasked"
+				duration = 1825
+			}
+
+		}
+	
+		scope:target.employer = {
+			add_political_influence = -10
+			add_treasury = -25
+			trigger_event = {
+				id = task.1
+				days = 3
+			}
+		}
+	}
+}	

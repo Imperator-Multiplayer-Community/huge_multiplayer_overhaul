@@ -84,10 +84,6 @@ interesting_treasures.1 = {
 			treasure:treasure_it_cult_bear_sculpture = { transfer_treasure_to_country = c:BOA }
 			treasure:treasure_it_beast_of_achelous = { transfer_treasure_to_country = c:CNT }
 			treasure:treasure_it_holy_cart_of_nerthus = { transfer_treasure_to_country = c:HRE }
-			#treasure:treasure_it_swannys_brain = { transfer_treasure_to_country = c:DUM }
-			#treasure:treasure_it_lamberts_pie_charts = { transfer_treasure_to_country = c:MAC }
-			#treasure:treasure_it_fregators_cheese = { transfer_treasure_to_country = c:SEL }
-			#treasure:treasure_it_multiplayer_salt_rock = { transfer_treasure_to_country = c:SYR }
 		}
 	}
 }

@@ -92,7 +92,6 @@
  found_celtic_cavalry_training_complex_desc:0 "Found the complex." 
  found_numidian_cavalry_training_complex:0 "Found Numidian Cavalry Training Complex"
  found_numidian_cavalry_training_complex_desc:0 "Found the complex."
-
  found_thessalian_cavalry_training_complex:0 "Found Thessalian Cavalry Training Complex"
  found_thessalian_cavalry_training_complex_desc:0 "Found the complex."
  found_tarentine_cavalry_training_complex:0 "Found Tarentine Cavalry Training Complex"
@@ -107,11 +106,45 @@
  found_armenian_cavalry_training_complex_desc:0 "Found the complex."
  found_tibetan_infantry_training_complex:0 "Found Tibetan Infantry Training Complex"
  found_tibetan_infantry_training_complex_desc:0 "Found the complex."
+
+ found_aksumite_horse_archer_training_complex:0 "Found Aethiopian Skirmisher Training Complex"
+ found_aksumite_horse_archer_training_complex_desc:0 "Found the complex."
+ found_aramaic_infantry_training_complex:0 "Found Aramaic Infantry Training Complex"
+ found_aramaic_infantry_training_complex_desc:0 "Found the complex."
+ found_balearic_slingers_training_complex:0 "Found Talaiotic Slingers Training Complex"
+ found_balearic_slingers_training_complex_desc:0 "Found the complex."
+ found_bangli_infantry_training_complex:0 "Found Bangli Infantry Training Complex"
+ found_bangli_infantry_training_complex_desc:0 "Found the complex."
+ found_belgian_infantry_training_complex:0 "Found Belgae Infantry Training Complex"
+ found_belgian_infantry_training_complex_desc:0 "Found the complex."
+ found_caucasian_infantry_training_complex:0 "Found Caucasian Infantry Training Complex"
+ found_caucasian_infantry_training_complex_desc:0 "Found the complex."
+ found_dacian_infantry_training_complex:0 "Found Dacian Infantry Training Complex"
+ found_dacian_infantry_training_complex_desc:0 "Found the complex."
+ found_egyptian_infantry_training_complex:0 "Found Egyptian Infantry Training Complex"
+ found_egyptian_infantry_training_complex_desc:0 "Found the complex."
+ found_hebrew_slingers_training_complex:0 "Found Hebrew Slingers Training Complex"
+ found_hebrew_slingers_training_complex_desc:0 "Found the complex."
+ found_iberian_cavalry_training_complex:0 "Found Iberian Cavalry Training Complex"
+ found_iberian_cavalry_training_complex_desc:0 "Found the complex."
+ found_median_infantry_training_complex:0 "Found Median Infantry Training Complex"
+ found_median_infantry_training_complex_desc:0 "Found the complex."
+ found_scythian_infantry_training_complex:0 "Found Scythian Infantry Training Complex"
+ found_scythian_infantry_training_complex_desc:0 "Found the complex."
+
+ create_cilician_pirate_cove:0 "Create Cilician Pirate Cove"
+ create_cilician_pirate_cove_desc:0 "Found the complex."
+ create_illyrian_pirate_cove:0 "Create Illyrian Pirate Cove"
+ create_illyrian_pirate_cove_desc:0 "Found the complex."
+ create_arabian_pirate_cove:0 "Create Arabian Pirate Cove"
+ create_arabian_pirate_cove_desc:0 "Found the complex." 
+
+
  create_naval_timberland:0 "Create Naval Timberland"
  create_naval_timberland_desc:0 "Found the complex."
  create_germanic_raiders_dock:0 "Build Germanic Raiding Dock"
  create_germanic_raiders_dock_desc:0 "Found the complex."
- 
+
 
  expand_incense_route:0 "Expand Incense Trade Route"
  expand_incense_route_desc:0 "Strabo described Eudaimon as the main port of call for maritime commerce between India and Egypt."
@@ -136,6 +169,7 @@
  expand_west_tarim_silk_road_desc:0 ""
  expand_north_tarim_silk_road:0 "Expand Silk Trade with China"
  expand_north_tarim_silk_road_desc:0 ""
+
 
  #form_nubia:0 "Form Nubia"
  #form_punt:0 "Form Punt"
@@ -162,11 +196,25 @@
  desc_incense_fields_qana:0 "Incense Fields of Hadhramaut"
  spice_route_hub:0 "Spice Route Hub"
  desc_spice_route_hub:0 "Spice Route Hub"
+
  naval_timberland:0 "Naval Timberland"
  desc_naval_timberland:0 ""
-
  germanic_raiders_dock:0 "Germanic Raiding Base"
  desc_germanic_raiders_dock:0 ""
+ cilician_pirate_cove:0 "Cilician Pirate Cove"
+ desc_cilician_pirate_cove:0 ""
+ illyrian_pirate_cove:0 "Illyrian Pirate Cove"
+ desc_illyrian_pirate_cove:0 "" 
+ arabian_pirate_cove:0 "Arabian Pirate Cove"
+ desc_arabian_pirate_cove:0 "" 
+
+
+ espionage_bureau:0 "State Espionage Bureau"
+ espionage_bureau_desc:0 "" 
+
+ recruit_character_cost_modifier:0 "Recruit Character Cost Modifier"
+ secude_governor_cost_modifier:0 "Entice Governor Cost Modifier"
+
 
  incense_route_hub:0 "Incense Trade Hub"
  desc_incense_route_hub:0 "Strabo described Eudaimon as the main port of call for maritime commerce between India and Egypt." 
@@ -192,7 +240,7 @@
  west_tarim_silk_road_hub:0 "Chinese Merchants"
  desc_west_tarim_silk_road_hub:0 ""
 
- elephant_training_complex:0 "Elephant Training Complex"
+ elephant_training_complex:0 "Nubian Elephant Training Complex"
  desc_elephant_training_complex:0 "The current site of Musawarat al-Sufra is a large temple complex dating back to the early Meroitic period of the 3rd century BC. The great enclosure and labyrinth-like building complex covers approximately 45,000 m2 and bear many representations of elephants."
  dromedary_training_complex:0 "Dromedary Training Complex"
  desc_dromedary_training_complex:0 ""
@@ -220,7 +268,33 @@
  armenian_cavalry_training_complex:0 "Armenian Cavalry Training Complex"
  desc_armenian_cavalry_training_complex:0 "" 
  tibetan_infantry_training_complex:0 "Tibetan Infantry Training Complex"
- desc_tibetan_infantry_training_complex:0 "" 
+ desc_tibetan_infantry_training_complex:0 ""
+
+ aksumite_horse_archer_training_complex:0 "Aethiopian Skirmisher Training Complex"
+ desc_aksumite_horse_archer_training_complex:0 ""
+ aramaic_infantry_training_complex:0 "Aramaic Infantry Training Complex"
+ desc__aramaic_infantry_training_complex:0 ""
+ balearic_slingers_training_complex:0 "Talaiotic Slingers Training Complex"
+ desc_found_balearic_slingers_training_complex:0 ""
+ bangli_infantry_training_complex:0 "Bangli Infantry Training Complex"
+ desc_bangli_infantry_training_complex:0 ""
+ belgian_infantry_training_complex:0 "Belgae Infantry Training Complex"
+ desc_belgian_infantry_training_complex:0 ""
+ caucasian_infantry_training_complex:0 "Caucasian Infantry Training Complex"
+ desc_caucasian_infantry_training_complex:0 ""
+ dacian_infantry_training_complex:0 "Dacian Infantry Training Complex"
+ desc_dacian_infantry_training_complex:0 ""
+ egyptian_infantry_training_complex:0 "Egyptian Infantry Training Complex"
+ desc_egyptian_infantry_training_complex:0 ""
+ hebrew_slingers_training_complex:0 "Hebrew Slingers Training Complex"
+ desc_hebrew_slingers_training_complex:0 ""
+ iberian_cavalry_training_complex:0 "Iberian Cavalry Training Complex"
+ desc_iberian_cavalry_training_complex:0 ""
+ median_infantry_training_complex:0 "Median Infantry Training Complex"
+ desc_median_infantry_training_complex:0 ""
+ scythian_infantry_training_complex:0 "Scythian Infantry Training Complex"
+ desc_scythian_infantry_training_complex:0 ""
+
 
  #Country Modifiers
  elephant_training_programme:0 "Elephant Training Programme"
@@ -237,7 +311,6 @@
  desc_aryan_cavalry_training_programme:0 "Do it"
  celtic_cavalry_training_programme:0 "Celtic Cavalry Training Programme"
  desc_celtic_cavalry_training_programme:0 "Do it"
-
  thessalian_cavalry_training_programme:0 "Thessalian Cavalry Training Programme"
  desc_thessalian_cavalry_training_programme:0 ""
  asian_elephant_training_programme:0 "Asian Elephant Training Programme"
@@ -253,11 +326,48 @@
  himalayan_training_programme:0 "Himalayan Training Programme"
  desc_himalayan_training_programme:0 ""
 
+ aksumite_horse_archer_training_programme:0 "Aethiopian Skirmisher Training Programme"
+ desc_aksumite_horse_archer_training_programme:0 ""
+ aramaic_infantry_training_programme:0 "Aramaic Infantry Training Programme"
+ desc__aramaic_infantry_training_programme:0 ""
+ balearic_slingers_training_programme:0 "Talaiotic Slingers Training Programme"
+ desc_found_balearic_slingers_training_programme:0 ""
+ bangli_infantry_training_programme:0 "Bangli Infantry Training Programme"
+ desc_bangli_infantry_training_programme:0 ""
+ belgian_infantry_training_programme:0 "Belgae Infantry Training Programme"
+ desc_belgian_infantry_training_programme:0 ""
+ caucasian_infantry_training_programme:0 "Caucasian Infantry Training Programme"
+ desc_caucasian_infantry_training_programme:0 ""
+ dacian_infantry_training_programme:0 "Dacian Infantry Training Programme"
+ desc_dacian_infantry_training_programme:0 ""
+ egyptian_infantry_training_programme:0 "Egyptian Infantry Training Programme"
+ desc_egyptian_infantry_training_programme:0 ""
+ hebrew_slingers_training_programme:0 "Hebrew Slingers Training Programme"
+ desc_hebrew_slingers_training_programme:0 ""
+ iberian_cavalry_training_programme:0 "Iberian Cavalry Training Programme"
+ desc_iberian_cavalry_training_programme:0 ""
+ median_infantry_training_programme:0 "Median Infantry Training Programme"
+ desc_median_infantry_training_programme:0 ""
+ scythian_infantry_training_programme:0 "Scythian Infantry Training Programme"
+ desc_scythian_infantry_training_programme:0 ""
+ kautilyas_espionage_programme:0 "Secret Service"
+ desc_kautilyas_espionage_programme:0 "Sometimes it feels like somebody's watching me"
+
+
  britannic_shipbuilding_programme:0 "Britannic Shipbuilding Programme"
  desc_britannic_shipbuilding_programme:0 ""
 
  germanic_raiding_tradition:0 "Germanic Raiding Tradition"
  desc_germanic_raiding_tradition:0 ""
+
+ cilician_piracy:0 "Cilician Piracy"
+ desc_cilician_piracy:0 ""
+
+ illyrian_piracy:0 "Illyrian Piracy"
+ desc_illyrian_piracy:0 ""
+
+ arabian_piracy:0 "Arabian Piracy"
+ desc_arabian_piracy:0 ""
 
 
  # Province Flavor

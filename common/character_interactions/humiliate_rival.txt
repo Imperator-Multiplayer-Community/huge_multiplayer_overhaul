@@ -1,0 +1,99 @@
+﻿humiliate_rival = {
+
+	on_other_nation = yes
+	on_own_nation = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_alive = yes
+			is_mercenary = no
+			employer = {
+				NOT = { tag = MER }
+				NOT = { tag = BAR }
+				NOT = { tag = REB }
+				NOT = { tag = PIR }
+			}
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor = {
+			can_pay_price = price_test_loyalty
+		}
+		scope:actor = {
+			NOR = {
+				has_country_modifier = loved_by_the_gods
+				has_country_modifier = unloved_by_the_gods
+			}
+		}
+		hidden:scope:target = {
+			is_adult = yes
+			is_rival = scope:actor.current_ruler
+		}
+		scope:target = {
+			NOR = {
+				has_trait = pious
+				has_trait = zealous
+				has_trait = devout
+			}
+			trigger_if = {
+				limit = {
+					has_variable = humiliate_rival_cooldown
+				}
+				custom_tooltip = {
+					text = "humiliate_rival_cooldown_recently"
+			
+					NOT = { has_variable = humiliate_rival_cooldown }
+				}
+			}
+		}
+	}
+	
+	effect = {
+		scope:actor = {
+			pay_price = price_test_loyalty
+		}
+		
+		scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = humiliate_rival_cooldown
+					days = 1095
+				}
+			}
+		}
+
+		scope:actor = {
+	 		hidden_effect = {
+				set_variable = {
+					name = roll
+						value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:actor.current_ruler.zeal
+					}
+			
+					scope:target = {
+						trigger_event = { 
+							id = rival_challenge.1
+							days = 3
+						}
+					}
+				}	
+				else = {
+					scope:target = {
+						trigger_event = { 
+							id = rival_challenge.2
+							days = 3
+						}
+					}
+				}
+				remove_variable = roll
+			}
+	 	}
+	}
+}

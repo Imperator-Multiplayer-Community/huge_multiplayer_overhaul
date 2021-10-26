@@ -8,6 +8,7 @@
 			OR = {
 				country_culture_group = north_african
 				country_culture_group = meroitic_group
+				religion = egyptian_pantheon
 			}
 			is_monarchy = yes
 			NOT = {
@@ -38,6 +39,9 @@
 					province_id = 561 #Abydos
 					province_id = 569 #Diospolis Magna
 					province_id = 591 #Syene
+					province_id = 599 #Cambusis
+					province_id = 552 #Koussai
+					province_id = 536 #Babylon
 				}
 			}
 		}
@@ -66,6 +70,9 @@
 			owns = 561 #Abydos
 			owns = 569 #Diospolis Magna
 			owns = 591 #Syene
+			owns = 599 #Cambusis
+			owns = 552 #Koussai
+			owns = 536 #Babylon
 		}
 		
 		

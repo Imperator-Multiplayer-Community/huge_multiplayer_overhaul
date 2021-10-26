@@ -1557,3 +1557,27 @@ ESTU_IMPERIJA_FLAG = {
 		}
 	}
 }
+
+lower_egypt_flag = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 58 109 128 }	
+	textured_emblem = {
+	texture = "lower_egypt_flag.png"
+	}
+}
+
+upper_egypt_flag = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 58 109 128 }	
+	textured_emblem = {
+	texture = "upper_egypt_flag.png"
+	}
+}
+
+kemet_flag = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 0 0 0 }
+	textured_emblem = {
+	texture = "kemet_flag.png"
+	}
+}

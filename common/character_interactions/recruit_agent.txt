@@ -1,0 +1,106 @@
+﻿recruit_agent = { 
+	on_other_nation = no
+	on_own_nation = yes
+	close_ui = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			employer = scope:actor
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+			is_mercenary = no
+			prisoner_valid_for_country_events_trigger = yes
+			NOT = {
+				has_character_modifier = disloyal_successor_cmod
+			}
+			NOT = {
+				has_character_modifier = commander_king
+			}
+			NOT = {
+				has_character_modifier = spy_recruit_character
+			}
+		}
+		hidden:scope:actor = {
+			NOT = {
+				has_country_modifier = kautilyas_espionage_programme 
+			}
+		}
+	}	
+	
+	allowed_trigger = {
+		scope:actor = {
+			NOT = { 
+				has_variable = spy_recruit_cooldown
+			}	
+			stability > 10
+			treasury >= 50
+			military_experience >= 5
+		}
+		scope:target = { 
+			is_adult = yes
+			is_ruler = no
+			is_co_ruler = no
+			loyalty >= 45
+			custom_tooltip = {
+				text = has_any_position_tooltip
+				has_any_position = no
+			}
+			is_successor = no
+			prisoner = no
+			trigger_if = {
+				limit = {
+					is_female = yes
+					is_married = yes
+				}
+				custom_tooltip = {
+					text = prominent_spouse_tooltip
+					spouse = {
+						NOR = {
+							is_minor_character = no
+							is_ruler = yes
+							is_co_ruler = yes
+							is_successor = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	effect = {
+		scope:actor = {
+			add_treasury = -50
+			add_military_experience = -5
+			add_country_modifier = {
+				name = "spy_recruited"
+				duration = 7305
+				mode = add
+			}
+			set_variable = {
+				name = "spy_recruit_cooldown"
+				days = 548
+			}
+		}
+		scope:target = {
+			add_character_modifier = {
+				name = "spy_recruit_character"
+				duration = -1
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+			save_scope_as = new_intel_recruit
+		}
+
+		scope:actor = {
+			trigger_event = {
+				id = counterintel.8
+				days = 5
+			}
+		}
+	}	
+}

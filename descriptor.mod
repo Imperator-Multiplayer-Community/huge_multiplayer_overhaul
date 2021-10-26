@@ -1,8 +1,7 @@
-version="2.0.3"
+version="1"
 tags={
-	"Overhaul"
-	"Total Conversions"
+	"Characters"
 }
-name="Huge Multiplayer Overhaul"
-supported_version="2.0.3"
-remote_file_id="2592557468"
+name="HMO: Character Pack"
+supported_version="1"
+remote_file_id="2636033462"

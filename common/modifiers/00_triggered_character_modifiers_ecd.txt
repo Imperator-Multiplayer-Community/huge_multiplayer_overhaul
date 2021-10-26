@@ -6,10 +6,356 @@ brilliant_foreign_researcher_character = {
 	martial = 4
 	finesse = 4
 	zeal = 4
-	charisma = 4	
+	charisma = 4
+	monthly_wage_for_character = 0.001
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.15
 }
-
 
 war_hero_character = {
 	martial = 6
+	monthly_wage_for_character = 0.001
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.15
+}
+
+naval_war_hero_character = {
+	martial = 6
+	monthly_wage_for_character = 0.001
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.15
+}
+
+spy_recruit_character = {
+	charisma = 4
+	monthly_wage_for_character = 0.001
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.15
+}
+
+assigned_mission = {
+	monthly_wage_for_character = 0.0025
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.15
+	health = 1
+}
+
+in_hiding = {
+	health = -2
+}
+
+knife_wounds = {
+	health = -3
+}
+
+elusive = {
+	health = 3
+	charisma = 2
+	martial = 2
+}
+
+knife_fighter = {
+	martial = 2
+}
+
+counterintelligence = {
+	martial = 2
+	health = 1
+}
+
+state_detective = {
+	health = 1
+	charisma = 1
+	martial = 1
+}
+
+wounded_spy = {
+	health = -4
+	charisma = -2
+	martial = -2
+}
+
+debutante_character = {
+	martial = 1
+	finesse = 1
+	zeal = 1
+	charisma = 1	
+}
+
+promoted_talent_character = {
+	martial = 1
+	finesse = 1
+	zeal = 1
+	charisma = 1	
+}
+
+recently_tasked = {
+	monthly_wage_for_character = 0.0025
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.1
+}
+
+stuffed_shirt = {
+	monthly_wage_for_character = 0.005
+	monthly_character_experience = 0.2
+	monthly_character_experience_decay = -0.1
+}
+
+swamp_creature = {
+	monthly_wage_for_character = 0.02
+	monthly_character_experience = 0.3
+	monthly_character_experience_decay = -0.2
+}
+
+granted_perk = {
+	monthly_wage_for_character = 0.01
+}
+
+marksman = {
+	martial = 1
+	monthly_character_experience = 0.1
+	monthly_character_experience_decay = -0.05
+}
+
+master_hunter = {
+	martial = 2
+	charisma = 1
+	monthly_character_experience = 0.2
+	monthly_character_experience_decay = -0.1
+}
+
+city_slicker = {
+	martial = -1
+	monthly_character_experience = -0.1
+	monthly_character_experience_decay = 0.05
+}
+
+vegetarian = {
+	martial = -2
+	charisma = -1
+	monthly_character_experience = -0.2
+	monthly_character_experience_decay = 0.1
+}
+
+getting_oriented = {
+	monthly_character_experience = 0.2
+	monthly_character_experience_decay = -0.2
+}
+
+admirers_gift = {
+	monthly_wage_for_character = 0.025
+}
+
+degenerate = {
+	martial = -2
+	charisma = -2
+	finesse = -2
+}
+
+sadistic = {
+	martial = 1
+	finesse = -3
+	charisma = -4
+}
+
+apathetic = {
+	zeal = -3
+	finesse = -2
+	martial = -1
+}
+
+drunkard = {
+	finesse = -3
+	zeal = -2
+	charisma = -1
+	health = -0.05
+}
+
+delusional = {
+	finesse = -4
+	charisma = -2
+}
+
+depraved = {
+	charisma = -3
+	zeal = -3
+}
+
+wastrel = {
+	monthly_wage_for_character = 0.02
+	finesse = -3
+	martial = -1
+}
+
+gifted_slave = {
+	monthly_wage_for_character = 0.01
+	monthly_character_experience = 0.2
+	monthly_character_experience_decay = -0.2
+}
+
+
+
+
+
+#LETTER WRITING SCHEME ##################################################
+
+
+schooled_in_martial = {
+	martial = -1
+}
+
+schooled_in_finesse = {
+	finesse = -1
+}
+
+schooled_in_zeal = {
+	zeal = -1
+}
+
+schooled_in_charisma = {
+	charisma = -1
+}
+
+very_schooled_in_martial = {
+	martial = -2
+}
+
+very_schooled_in_finesse = {
+	finesse = -2
+}
+
+very_schooled_in_zeal = {
+	zeal = -2
+}
+
+very_schooled_in_charisma = {
+	charisma = -2
+}
+
+quite_schooled_in_martial = {
+	martial = -3
+}
+
+quite_schooled_in_finesse = {
+	finesse = -3
+}
+
+quite_schooled_in_zeal = {
+	zeal = -3
+}
+
+quite_schooled_in_charisma = {
+	charisma = -3
+}
+
+fooled_in_martial = {
+	martial = -4
+}
+
+fooled_in_finesse = {
+	finesse = -4
+}
+
+fooled_in_zeal = {
+	zeal = -4
+}
+
+fooled_in_charisma = {
+	charisma = -4
+}
+
+rekt_in_martial = {
+	martial = -5
+}
+
+rekt_in_finesse = {
+	finesse = -5
+}
+
+rekt_in_zeal = {
+	zeal = -5
+}
+
+rekt_in_charisma = {
+	charisma = -5
+}
+
+better_martial = {
+	martial = 1
+}
+
+better_finesse = {
+	finesse = 1
+}
+
+better_zeal = {
+	zeal = 1
+}
+
+better_charisma = {
+	charisma = 1
+}
+
+really_better_martial = {
+	martial = 2
+}
+
+really_better_finesse = {
+	finesse = 2
+}
+
+really_better_zeal = {
+	zeal = 2
+}
+
+really_better_charisma = {
+	charisma = 2
+}
+
+earnestly_better_martial = {
+	martial = 3
+}
+
+earnestly_better_finesse = {
+	finesse = 3
+}
+
+earnestly_better_zeal = {
+	zeal = 3
+}
+
+earnestly_better_charisma = {
+	charisma = 3
+}
+
+much_better_martial = {
+	martial = 4
+}
+
+much_better_finesse = {
+	finesse = 4
+}
+
+much_better_zeal = {
+	zeal = 4
+}
+
+much_better_charisma = {
+	charisma = 4
+}
+
+quite_better_martial = {
+	martial = 5
+}
+
+quite_better_finesse = {
+	finesse = 5
+}
+
+quite_better_zeal = {
+	zeal = 5
+}
+
+quite_better_charisma = {
+	charisma = 5
 }

@@ -31,6 +31,7 @@
 	tamil_path_1 = { ###
 		modifier = { 
 			archers_defensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_7
 		requires = { }
@@ -49,6 +50,7 @@
 		modifier = { 
 			archers_morale = 0.1
 			hills_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
 		requires = { tamil_path_1 }
@@ -57,6 +59,7 @@
 	tamil_path_4 = { ###
 		modifier = { 
 			light_infantry_defensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_1
 		requires = { tamil_path_1 }
@@ -67,6 +70,7 @@
 			global_defensive = 0.15
 			fort_limit = 1
 			garrison_size = 0.1
+			fort_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_6
 		requires = { tamil_path_2 }
@@ -84,6 +88,7 @@
 		}
 		modifier = { 
 			global_manpower_modifier = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_3
 		requires = { tamil_path_3 }
@@ -92,6 +97,7 @@
 	tamil_path_7 = { ###
 		modifier = { 
 			heavy_infantry_defensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = persian_scythian_path_7
 		requires = { tamil_path_4 }
@@ -101,6 +107,7 @@
 		modifier = { 
 			trireme_defensive = 0.1
 			hexere_defensive = 0.1
+			navy_maintenance_cost = 0.01
 		} 
 		icon = north_african_naval_path_end_bonus
 		requires = { tamil_path_5 }
@@ -110,6 +117,7 @@
 		modifier = { 
 			tetrere_offensive = 0.1
 			hexere_offensive = 0.1
+			navy_maintenance_cost = 0.01
 		} 
 		icon = north_african_naval_path_3
 		requires = { tamil_path_5 }
@@ -118,6 +126,7 @@
 	tamil_path_10 = { ###
 		modifier = { 
 			jungle_combat_bonus = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_6
 		requires = { tamil_path_6 }
@@ -126,6 +135,7 @@
 	tamil_path_11 = { ###
 		modifier = { 
 			warelephant_offensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_2
 		requires = { tamil_path_7 }
@@ -136,6 +146,7 @@
 		modifier = { 
 			octere_defensive = 0.05
 			naval_range = 0.15
+			navy_maintenance_cost = 0.01
 		}
 		on_activate = {
 			random_owned_province = {
@@ -160,6 +171,7 @@
 		modifier = { 
 			ship_capture_chance = 0.025
 			naval_damage_taken = -0.1 
+			navy_maintenance_cost = 0.01
 		} 
 		icon = levantine_egyptian_path_2
 		requires = { tamil_path_9 }
@@ -169,6 +181,8 @@
 		modifier = { 
 			octere_offensive = 0.1
 			levy_size_multiplier = 0.025
+			army_maintenance_cost = 0.01
+			navy_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_5
 		requires = { tamil_path_10 }
@@ -177,6 +191,7 @@
 	tamil_path_15 = { ###
 		modifier = { 
 			warelephant_defensive = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_5
 		requires = { tamil_path_11 }

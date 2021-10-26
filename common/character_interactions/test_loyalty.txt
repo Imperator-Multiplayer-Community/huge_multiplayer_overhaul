@@ -1,0 +1,122 @@
+﻿test_loyalty = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_alive = yes
+			is_mercenary = no
+			employer = {
+				NOT = { tag = MER }
+				NOT = { tag = BAR }
+				NOT = { tag = REB }
+				NOT = { tag = PIR }
+			}
+			employer = scope:actor
+		#	NOT = {
+		#		has_variable = loyalty_test_cooldown
+		#	}
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor = {
+			can_pay_price = price_test_loyalty
+		}
+		scope:actor = {
+			has_country_modifier = spy_recruited
+		}
+		hidden:scope:target = {
+			is_adult = yes
+			is_ruler = no
+			loyalty >= 30
+		}
+		scope:target = {
+			NOR = {
+				has_triggered_character_modifier = free_hands_cmod
+				has_character_modifier = inspire_disloyalty_modifier
+				has_character_modifier = on_espionage_mission_cmod
+				is_rival = scope:actor.current_ruler
+			}
+			trigger_if = {
+				limit = {
+					has_variable = loyalty_test_cooldown
+				}
+				custom_tooltip = {
+					text = "loyalty_tested_recently"
+			
+					NOT = { has_variable = loyalty_test_cooldown }
+				}
+			}
+		}
+	}
+	
+	effect = {
+		scope:actor = {
+			pay_price = price_test_loyalty
+		}
+		
+		scope:target = {
+			hidden_effect = {
+				set_variable = {
+					name = loyalty_test_cooldown
+					days = 730
+				}
+			}
+		}
+
+		scope:actor = {
+			ordered_character = {
+				limit = {
+					loyalty >= 55
+					has_character_modifier = spy_recruit_character
+					has_character_modifier = counterintelligence
+					NOR = {
+						has_character_modifier = foreign_citizen
+ 						has_character_modifier = on_espionage_mission_cmod
+ 						has_character_modifier = getting_oriented
+ 						has_character_modifier = in_hiding
+	 					is_adult = no
+						prisoner = yes
+						is_ruler = yes 
+ 					}
+				}
+ 				check_range_bounds = no
+				order_by = zeal
+				position = 0
+		 		save_scope_as = loyalty_officer
+	 		}
+	 		hidden_effect = {
+				set_variable = {
+					name = roll
+						value = { integer_range = { min = 1 max = 20 } }
+				}
+				if = { 
+					limit = {
+						has_variable = roll
+						var:roll <= scope:loyalty_officer.zeal
+					}
+			
+					scope:loyalty_officer = {
+						trigger_event = { 
+							id = loyalty_test.1
+							days = 3
+						}
+					}
+				}	
+				else = {
+					scope:target = {
+						trigger_event = { 
+							id = loyalty_test.2
+							days = 3
+						}
+					}
+				}
+				remove_variable = roll
+			}
+	 	}
+	}
+}

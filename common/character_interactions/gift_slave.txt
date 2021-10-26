@@ -1,0 +1,93 @@
+﻿gift_slave = { #Gift a noble slave
+
+	on_other_nation = yes #no
+	on_own_nation = no
+	close_ui = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_befriend"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_mercenary = no
+			employer = {
+				NOR = {
+					tag = PIR
+					tag = REB
+					tag = BAR
+				}
+			}
+			is_alive = yes
+			is_friend = scope:actor.current_ruler
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+			NOT = {
+				has_character_modifier = commander_king
+			}			
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor.current_ruler = {
+			is_friend = scope:target
+		}
+		scope:actor = {
+			in_diplomatic_range = scope:target.employer
+			can_pay_price = gift_slave
+		}
+		scope:target = {
+			is_alive = yes
+			is_adult = yes
+		#	NOT = { #
+		#		employer = {
+		#			is_ai = yes
+		#		}
+		#	}
+			NOR = {
+				has_variable = slave_gift_recipient
+				is_rival = scope:actor.current_ruler
+			}
+			NOT = { has_character_modifier = disloyal_successor_cmod }
+			trigger_if = {
+				limit = {
+					has_variable = anti_spam_slave_gift
+				}
+				custom_tooltip = {
+					text = "anti_spam_slave_gift_recently"
+			
+					NOT = { has_variable = anti_spam_slave_gift }
+				}
+			}
+		}
+		hidden:scope:actor.current_ruler = {
+			custom_tooltip = {
+				text = relic_giver_tooltip 
+				NOT = {
+					has_variable = slave_gift_giver
+				}
+			}
+		}
+	}
+	
+
+	effect = {
+		custom_tooltip = "letter_cost_tt" 
+		scope:target.employer = { 
+			trigger_event = {
+				id = slave_gift_event.1 
+					days = 5
+				}
+			}
+	
+		scope:target = {
+			set_variable = {
+				name = anti_spam_slave_gift
+				days = 5478
+			}
+		}
+	}	
+}
+
+
+
+

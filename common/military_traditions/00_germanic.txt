@@ -41,6 +41,7 @@
 	germanic_path_1 = { ###
 		modifier = { 
 			archers_offensive = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_6
         requires = {}
@@ -51,6 +52,7 @@
 	    enable_tactic = hit_and_run_tactics
 		modifier = { 
 			light_infantry_morale = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = celtic_gallic_path_4
 		requires = {germanic_path_1}
@@ -61,6 +63,7 @@
 		modifier = { 
 			archers_offensive = 0.15
 			archers_forest_combat_bonus = 0.2
+			army_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_6
 		requires = {germanic_path_2}
@@ -90,6 +93,7 @@
 		modifier = { 
 			archers_morale = 0.1
 			archers_mountain_combat_bonus = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = celtic_germanic_path_7
 		requires = {germanic_path_4}
@@ -101,7 +105,7 @@
 			forest_combat_bonus = 0.20
 			land_morale_modifier = 0.05
 			marsh_combat_bonus = 0.175
-         
+			army_maintenance_cost = 0.01
 		} 
 		icon = persian_bactrian_path_7
 		requires = {germanic_path_6 germanic_path_8 }
@@ -113,6 +117,7 @@
 			archers_morale = 0.1
 			archers_mountain_combat_bonus = 0.15
 			archers_hills_combat_bonus = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
 		requires = {germanic_path_9}
@@ -135,6 +140,7 @@
 		modifier = { 
 			global_defensive = 0.15
 			fort_limit = 1
+			fort_maintenance_cost = 0.01
 		} 
 		icon = celtic_gallic_path_7
 
@@ -162,6 +168,7 @@
 	germanic_path_13 = { ###
 		modifier = { 
 			army_movement_speed = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_end_bonus
 		requires = {germanic_path_12}

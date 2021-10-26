@@ -126,7 +126,7 @@ berber_religion = { # Megalithic
 		horse_archers_discipline = 0.05 
 		slaves_move_cost_modifier = -0.2
 		diplomatic_relations = 1
-		character_loyalty = -3
+		character_loyalty = -2
 	}
 	religion_category = pantheon
 }
@@ -160,7 +160,7 @@ arabian_pantheon = { # Arabic
 		hostile_attrition = 1
 		enslavement_efficiency = 0.05
 		slaves_move_cost_modifier = -0.1
-		character_loyalty = -3
+		character_loyalty = -2
 	}
 	religion_category = pantheon
 }

@@ -1,39 +1,19 @@
-﻿#marines_modifier = {
-# naval_morale = 0.1
-# naval_damage_done = 0.05
-# naval_damage_taken = -0.05
-#}
+﻿
 
 protect_merchants = {
  global_commerce_modifier = 0.0015
- navy_movement_speed = -0.005
- naval_morale_modifier = -0.002
- naval_damage_done = -0.001
- naval_morale_recovery = -0.001
 }
 
 go_fish = {
  global_monthly_food_modifier = 0.002
- navy_movement_speed = -0.005
- naval_morale_modifier = -0.002
- naval_damage_done = -0.001
- naval_morale_recovery = -0.001
 }
 
 naughty_mugger = {
  global_tax_modifier = 0.0025
- navy_movement_speed = -0.005
- naval_morale_modifier = -0.002
- naval_damage_done = -0.001
- naval_morale_recovery = -0.001
 }
 
 naval_supplier = {
  global_monthly_food_modifier = -0.75
- navy_movement_speed = -0.3
- naval_morale_modifier = -0.1
- naval_damage_done = -0.1
- naval_morale_recovery = -0.1
 }
 
 #province modifiers
@@ -61,13 +41,14 @@ supplied_by_sea = {
 }
 
 naval_action = {
- navy_movement_speed = -0.15
- naval_morale_modifier = -0.05
- naval_damage_done = -0.05
- naval_morale_recovery = -0.05
+ navy_movement_speed = -0.005
+ naval_morale_modifier = -0.0015
+ naval_damage_done = -0.0015
+ naval_morale_recovery = -0.0015
 }
 
 #Raiding victim revenge event
 cheap_cb = {
  war_no_cb_cost_modifier = -0.75            
 }
+

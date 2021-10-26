@@ -51,7 +51,7 @@ treasure_manager = {
 			key = "treasure_axe_of_zalmoxis"
 			icon = "treasure_chest"
 			state_modifier = {
-				local_tribesmen_output = 0.15
+				local_freemen_output = 0.1
 			}
 		}
 		8 = { # Ephesos
@@ -100,7 +100,7 @@ treasure_manager = {
 			key = "treasure_stone_of_sinifere"
 			icon = "treasure_sarcophagus"
 			state_modifier = {
-				local_tribesmen_output = 0.15
+				local_freemen_output = 0.1
 			}
 		}
 		15 = { # Arcus - Bicha of Balazote
@@ -198,7 +198,7 @@ treasure_manager = {
 			key = "treasure_scythian_altar"
 			icon = "treasure_chest"
 			state_modifier = {
-				local_tribesmen_happyness = 0.1
+				local_freemen_happyness = 0.1
 			}
 		}
 		29 = { # Armaouira
@@ -444,7 +444,7 @@ treasure_manager = {
             key = "treasure_sprig_of_tyr"
             icon = "treasure_chest"
             state_modifier = {
-                local_tribesmen_output = 0.15
+                local_freemen_output = 0.1
             }
         }
         64 = { # Athenai
@@ -465,7 +465,7 @@ treasure_manager = {
             key = "treasure_fetters_of_woden"
             icon = "treasure_chest"
             state_modifier = {
-                local_tribesmen_happyness = 0.1
+                local_freemen_happyness = 0.1
             }
         }
         67 = { # ?
@@ -785,7 +785,7 @@ treasure_manager = {
             icon = "treasure_architecture"
 			dlc = "Magna Graecia"
             state_modifier = {
-                local_tribesmen_happyness = 0.1
+                local_freemen_happyness = 0.1
             }
         }
         109 = { #r2 Troizen
@@ -1344,7 +1344,7 @@ treasure_manager = {
 			key = "treasure_callaecian_ornated_axe"
 			icon = "treasure_chest"
 			state_modifier = {
-				local_tribesmen_happyness = 0.1
+				local_freemen_happyness = 0.1
 			}
 		}
 		506 = { # Tartessia - Bronze Carriazo
@@ -1540,7 +1540,7 @@ treasure_manager = {
 			key = "treasure_it_statue_of_protis"
 			icon = "treasure_it_statue_of_protis"
 			state_modifier = {
-                local_tribesmen_happyness = 0.03
+                local_freemen_happyness = 0.03
 			}
 		}
 		824 = { # 687
@@ -1575,14 +1575,14 @@ treasure_manager = {
 			key = "treasure_it_scythian_ritualistic_treasure"
 			icon = "treasure_it_scythian_ritualistic_treasure"
 			state_modifier = {
-                local_tribesmen_happyness = 0.03
+                local_freemen_happyness = 0.03
 			}
 		}
 		829 = { # LGI
 			key = "treasure_it_scythian_princes_plunder"
 			icon = "treasure_it_scythian_princes_plunder"
 			state_modifier = {
-                local_tribesmen_happyness = 0.03
+                local_freemen_happyness = 0.03
 			}
 		}
 		830 = { # ARG
@@ -1736,14 +1736,14 @@ treasure_manager = {
 			key = "treasure_it_basamum_ibex_statue"
 			icon = "treasure_it_basamum_ibex_statue"
 			state_modifier = {
-				local_tribesmen_output = 0.03	
+				local_freemen_output = 0.03	
 			}
 		}
 		852 = { # TQF
 			key = "treasure_it_baetyl_goddess_aluzza"
 			icon = "treasure_it_baetyl_goddess_aluzza"
 			state_modifier = {
-				local_tribesmen_happyness = 0.03
+				local_freemen_happyness = 0.03
 			}
 		}
 		853 = { # SHB
@@ -1757,7 +1757,7 @@ treasure_manager = {
 			key = "treasure_it_arabian_snake_cult_shrine"
 			icon = "treasure_it_arabian_snake_cult_shrine"
 			state_modifier = {
-				local_tribesmen_happyness = 0.03
+				local_freemen_happyness = 0.03
 			}
 		}
 		855 = { # DUR
@@ -1785,7 +1785,7 @@ treasure_manager = {
 			key = "treasure_it_medeina_forest_mother"
 			icon = "treasure_it_medeina_forest_mother"
 			state_modifier = {
-				local_tribesmen_happyness = 0.03
+				local_freemen_happyness = 0.03
 			}
 		}
 		859 = { # SLV
@@ -1799,7 +1799,7 @@ treasure_manager = {
 			key = "treasure_it_lusitanian_silver_breastplate"
 			icon = "treasure_it_lusitanian_silver_breastplate"
 			state_modifier = {
-				local_tribesmen_happyness = 0.03
+				local_freemen_happyness = 0.03
 			}
 		}
 		
@@ -1847,7 +1847,7 @@ treasure_manager = {
 			key = "treasure_it_cult_bear_sculpture"
 			icon = "treasure_it_cult_bear_sculpture"
 			state_modifier = {
-				local_tribesmen_happyness = 0.03
+				local_freemen_happyness = 0.03
 			}
 		}
 		
@@ -1869,46 +1869,7 @@ treasure_manager = {
 
     }
 }
-	#Molon Labe Treasures
-		#900 = {
-		#	key = "arrows_of_hubal" #Mecca
-		#	icon = "treasure_arrows_of_hubal"
-         #   state_modifier = {
-		#		local_monthly_food_modifier = 0.1
-		#	}
-		#}
-##
-#		901 = { # DUM
-#			key = "treasure_it_swannys_brain"
-#			icon = "treasure_chest"
-#			state_modifier = {
-#				local_population_happiness = 0.03
-#			}
-#		}
-#
-#		902 = { # MAC
-#			key = "treasure_it_lamberts_pie_charts"
-#			icon = "treasure_chest"
-#			state_modifier = {
-#				local_migration_attraction = 5
-#			}
-#		}
-#
-#		903 = { # SEL
-#			key = "treasure_it_fregators_cheese"
-#			icon = "treasure_chest"
-#			state_modifier = {
-#				local_population_growth = 0.04
-#			}
-#		}
-#
-#		904 = { # SYR
-#			key = "treasure_it_multiplayer_salt_rock"
-#			icon = "treasure_chest"
-#			state_modifier = {
-#				attrition = 1.5
-#			}
-#		}
+
 
 
 

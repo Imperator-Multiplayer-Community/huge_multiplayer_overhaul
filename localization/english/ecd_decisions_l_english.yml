@@ -74,7 +74,83 @@
  promote_talent_desc:0 "We will scour the realm for exceptionally capable individuals ready and willing to render service to the state."
  promote_talent_tt:0 "Why is it so hard to find good help these days?"
  promote_talent:0 "Promote Talent"
+ promote_integrated_talent_desc:0 "We will scour the realm for exceptionally capable citizens born to sister cultures who are ready and willing to render service to the state."
+ promote_integrated_talent:0 "Promote Minority Talent"
+
+ present_debutante:0 "Present Debutante"
+ present_debutante_desc:0 "Let us find good matches for our noble men."
+ present_debutante_tt:0 "Identify a promising young woman seeking an introduction to the eligible bachelors of high society."
+ present_integrated_debutante:0 "Present Debutante"
+ present_integrated_debutante_desc:0 "Let us find good matches for our noble men."
+ present_integrated_debutante_tt:0 "Identify a promising young woman seeking an introduction to the eligible bachelors of high society."
+
+ recruit_spymaster:0 "Recruit Spy"
+ recruit_spymaster_desc:0 "Let us expand the internal security of the state with fresh recruits."
+ recruit_spymaster_tt:0 "This character will investigate internal threats to the state, but may also be sent abroad on espionage missions. Of course the more spies we hire, the more it will erode the public trust." 
+ recruit_integrated_spy:0 "Recruit Spy"
+ recruit_integrated_spy_desc:0 "Let us expand the internal security of the state with fresh recruits."
+ recruit_integrated_spy_tt:0 "This character will investigate internal threats to the state, but may also be sent abroad on espionage missions. Of course the more spies we hire, the more it will erode the public trust." 
+
+ recruit_aryan_spy:0 "Recruit Spy"
+ recruit_aryan_spy_desc:0 "Let us expand the internal security of the state with fresh recruits."
+ recruit_aryan_spy_tt:0 "This character will investigate internal threats to the state, but may also be sent abroad on espionage missions. Of course the more spies we hire, the more it will erode the public trust." 
+ recruit_aryan_integrated_spy:0 "Recruit Spy"
+ recruit_aryan_integrated_spy_desc:0 "Let us expand the internal security of the state with fresh recruits."
+ recruit_aryan_integrated_spy_tt:0 "This character will investigate internal threats to the state, but may also be sent abroad on espionage missions. Of course the more spies we hire, the more it will erode the public trust." 
+
+
  brilliant_foreign_researcher_tt:0 "There is so much yet to learn."
+
+ persecute_cultural_decision:0 "Persecute Minority"
+ persecute_cultural_decision_desc:0 "Persecute this troublesome minority, killing their members, confiscating their wealth and driving them from their homes."
+ explain_persecute_tt:0 "Persecute the troublesome #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]#! minority, killing their members, confiscating their wealth and driving them from their homes."
+
+ persecution_project:0 "Persecuting Minority"
+ persecution_project_desc:0 ""
+
+ persecuted_people:0 "Persecuted"
+ persecuted_people_desc:0 ""
+
+ persecuted_community:0 "Persecuted Community"
+ persecuted_community_desc:0 ""
+
+ pander_minority_cultural_decision:0 "Promote Minority"
+ pander_minority_cultural_decision_desc:0 "Promote this minority, lowering their taxes and encouraging their growth and prosperity. Of course people of other cultures will resent them for it."
+ explain_pander_tt:0 "Promote the #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]#! minority, lowering their taxes and encouraging their growth and prosperity. Of course people of other cultures will resent them for it."
+ pandered_here_tt:0 ""
+ 
+ pandered_people:0 "Promoted"
+ pandered_people_desc:0 "This culture has become stylish and is all the rage among the upper classes. Of course this tends to turn off just about everyone else..."
+
+ pandered_project:0 "Promoting Minority"
+ pandered_project_desc:0 ""
+
+ baby_boom:0 "Baby Boom"
+ baby_boom_desc:0 "Confident and enjoying a host of new privileges, the people of this culture are producing a birth rate to match their newfound prosperity and prestige."
+
+ exile_cultural_decision:0 "Exile Minority"
+ exile_cultural_decision_desc:0 "Punish this recalcitrant minority by sending it into exile. In a distant land they can ponder their errors... if they manage to remain cohesive, that is."
+ explain_exile_tt:0 "Punish the recalcitrant #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]#! minority by sending it into exile. In a distant land they can ponder their errors... if they manage to remain cohesive, that is."
+ #exiled_to_here_tt:0 ""
+
+ exiled_community:0 "Exiled Community"
+ exiled_community_desc:0 "This community is still adjusting to the arrival of a large population of exiles from a distant land."
+
+ exiled_people:0 "Pain of Exile"
+ exiled_people_desc:0 ""
+
+ exile_project:0 "Enforcing Exile"
+ exile_project_desc:0 ""
+
+ cultural_integration.12.t:0 "[ROOT.GetProvince.GetName] - A New Home for the [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]s"
+ cultural_integration.12.desc:0 "The arrival of so many #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]#! exiles here will place a major burden on the local population, which will come to resent the newcomers.\n\nFurthermore, the [SCOPE.sCountryCulture('target_culture').GetCulture.GetName] exiles will cling to their identity, resisting any influence from their tyrannical masters."
+ cultural_integration.12.a:0 "The [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]s are troublesome pests. May they rot at the far end of the earth."
+
+ reform_bureaucracy:0 "Reform Bureaucracy"
+ reform_bureaucracy_desc:0 "Rein in the bureaucracy, making it more cooperative and transparent and punishing corruption. Some of the greedy will oppose these measures."
+ purge_bureaucrats:0 "Anti-Corruption Crackdown"
+ purge_bureaucrats_desc:0 "Crack down on corruption, which is gnawing away at the state, leading to faithlessness and social decay. The rot is now so deep that many will oppose these measures."
 
 #Tooltips
  culture_group_embraced_tt:0 "Freemen that are currently in our country and that belong to the #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetCultureGroup.GetName]#! Culture Group gain #G 5%#! Happiness and #G 3%#! Output for #Y 30 Years#! (Currently there are #Y [SCOPE.ScriptValue('num_of_pops_in_country_cultures_in_same_group_svalue')|0]#! Pops that would be affected)."
+ 

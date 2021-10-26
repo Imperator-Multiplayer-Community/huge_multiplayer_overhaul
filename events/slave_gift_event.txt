@@ -1,0 +1,652 @@
+﻿namespace = slave_gift_event
+
+slave_gift_event.1 = { #You send the letter to a player. Does he accept to correspond? Received by target employer
+	type = country_event
+	title = "slave_gift_event.1.t"
+	desc = "slave_gift_event.1.desc"
+	
+	left_portrait = current_ruler
+	right_portrait = scope:actor.current_ruler
+
+	picture = greek_philosophers
+	
+	option = { #Option for recipient to accept
+		name = "slave_gift_event.1.a"
+		scope:target = {
+			set_variable = {
+				name = slave_gift_recipient
+				value = scope:actor.current_ruler
+				days = 1460
+			}
+		save_scope_as = slave_gift_recipient
+		}
+		scope:actor.current_ruler = {
+			set_variable = {
+				name = slave_gift_giver
+				value = scope:target
+				days = 1460
+			}
+		}
+		custom_tooltip = friend_refusal
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = slave_gift_event.3
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #Option for recipient to decline
+		name = "slave_gift_event.1.b"
+		custom_tooltip = friend_refusal
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = slave_gift_event.2
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+slave_gift_event.2 = { #Declined... he didnt even read it 
+	type = country_event
+	title = "slave_gift_event.2.t"
+	desc = "slave_gift_event.2.desc"
+	
+	left_portrait = current_ruler
+	right_portrait = scope:target
+	
+	picture = greek_philosophers
+	
+	option = {
+		name = "slave_gift_event.2.a"
+		custom_tooltip = no_effect_tooltip
+	}
+	
+}
+
+slave_gift_event.3 = { #accepted with pleasure
+	type = country_event
+	title = "slave_gift_event.3.t"
+	desc = "slave_gift_event.3.desc"
+	left_portrait = current_ruler
+	right_portrait = scope:slave_gift_recipient
+	picture = greek_philosophers
+	goto_location = scope:treasure_recipient
+	
+	option = {
+		name = "slave_gift_event.3.a"
+		scope:actor = {
+			pay_price = gift_slave
+		}
+		scope:actor = {
+			trigger_event = { 
+				id = slave_gift_event.4
+				days = 7
+			}
+		}
+	}
+}
+
+
+slave_gift_event.4 = {
+	type = country_event
+	title = "slave_gift_event.4.t"
+	desc = "slave_gift_event.4.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:slave_gift_recipient
+	picture = council_country
+	goto_location = scope:slave_gift_recipient
+
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "slave_gift_event.4.a"
+		scope:actor = {
+			add_political_influence = subtract_influence_small
+		}
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.finesse
+			}
+			scope:slave_gift_recipient.employer = {
+				trigger_event = { 
+					id = slave_gift_event.5 # Good male slave
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:slave_gift_recipient.employer = {
+				trigger_event = { 
+					id = slave_gift_event.6 # Bad male slave
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+	}
+
+	option = {
+		name = "slave_gift_event.4.b"
+		scope:actor = {
+			add_political_influence = subtract_influence_small
+		}
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.finesse
+			}
+			scope:slave_gift_recipient.employer = {
+				trigger_event = { 
+					id = slave_gift_event.7 # Good female slave
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:slave_gift_recipient.employer = {
+				trigger_event = { 
+					id = slave_gift_event.8 # Bad female slave
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+	}
+}
+
+
+
+slave_gift_event.5 = { #Good male slave
+	type = country_event
+	title = "slave_gift_event.5.t"
+	desc = "slave_gift_event.5.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:slave_gift_recipient
+	picture = greek_philosophers
+	goto_location = scope:slave_gift
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "slave_gift_event.5.a"
+		
+		scope:slave_gift_recipient.employer = {
+			ROOT = {
+				create_character = {
+					female = no
+					age = { 18 22 }
+					#culture = scope:target_culture.culture
+					#religion = prev.prev.religion
+					hidden_effect = {
+						random_list = {
+							10 = {
+								add_charisma = 5
+							}
+							10 = {
+								add_zeal = 5
+							}
+							10 = {
+								add_finesse = 5
+							}
+							10 = {
+								add_martial = 5
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							5 = { 
+								add_trait = ambitious
+							}
+							5 = {
+								add_trait = brave
+							}
+							5 = {
+								add_trait = disciplined
+							}
+							5 = {
+								add_trait = content
+							}
+							5 = {
+								add_trait = silver_tongued
+							}
+							5 = {
+								add_trait = energetic
+							}
+							5 = {
+								add_trait = intelligent
+							}
+							5 = {
+								add_trait = scholar
+							}
+							5 = {
+								add_trait = obsessive
+							}
+							5 = {
+								add_trait = polymath
+							}
+							50 = {
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							10 = {
+								add_trait = lustful
+							}
+							20 = {
+								add_trait = fair
+								add_trait = lustful
+							}
+							20 = {
+								add_trait = fair
+							}
+							25 = {
+								add_trait = castrated
+								add_trait = fair
+							}
+							25 = {
+
+							}
+						}
+						add_character_modifier = {
+							name = "gifted_slave"
+							duration = -1
+						}
+						add_loyalty = loyal_gifted_slave
+						save_scope_as = slave_gift
+					}
+				}
+			}
+           	trigger_event = {
+				id = slave_gift_event.9
+				days = 3
+			}
+        }
+    }	
+}
+
+
+slave_gift_event.6 = { #Bad male slave
+	type = country_event
+	title = "slave_gift_event.6.t"
+	desc = "slave_gift_event.6.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:slave_gift_recipient
+	picture = greek_philosophers
+	goto_location = scope:slave_gift
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "slave_gift_event.6.a"
+		
+		scope:slave_gift_recipient.employer = {
+			ROOT = {
+				create_character = {
+					female = no
+					age = { 18 22 }
+					#culture = scope:target_culture.culture
+					#religion = prev.prev.religion
+					hidden_effect = {
+						random_list = {
+							10 = {
+								add_charisma = -5
+							}
+							10 = {
+								add_zeal = -5
+							}
+							10 = {
+								add_finesse = -5
+							}
+							10 = {
+								add_martial = -5
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							10 = { 
+								add_trait = lazy
+							}
+							10 = {
+								add_trait = coward
+							}
+							10 = {
+								add_trait = incapable
+							}
+							10 = {
+								add_trait = inbred
+							}
+							10 = {
+								add_trait = stubborn
+							}
+							10 = {
+								add_trait = uncaring
+							}
+							10 = {
+								add_trait = hunchback
+							}
+							10 = {
+								add_trait = leper
+							}
+							10 = {
+								add_trait = stutter
+							}
+							10 = {
+								add_trait = ugly
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							70 = {
+								add_trait = castrated
+							}
+							30 = {
+
+							}
+						}
+						add_character_modifier = {
+							name = "gifted_slave"
+							duration = -1
+						}
+						add_loyalty = gremlin_gifted_slave
+						save_scope_as = slave_gift
+					}
+				}
+			}
+           	trigger_event = {
+				id = slave_gift_event.9
+				days = 3
+			}
+        }
+    }	
+}
+
+
+slave_gift_event.7 = { #Good female slave
+	type = country_event
+	title = "slave_gift_event.7.t"
+	desc = "slave_gift_event.7.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:slave_gift_recipient
+	picture = greek_philosophers
+	goto_location = scope:slave_gift
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "slave_gift_event.7.a"
+		
+		scope:slave_gift_recipient.employer = {
+			ROOT = {
+				create_character = {
+					female = yes
+					age = { 18 22 }
+					#culture = scope:target_culture.culture
+					#religion = prev.prev.religion
+					hidden_effect = {
+						random_list = {
+							10 = {
+								add_charisma = 5
+							}
+							10 = {
+								add_zeal = 5
+							}
+							10 = {
+								add_finesse = 5
+							}
+							10 = {
+								add_martial = 5
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							5 = { 
+								add_trait = ambitious
+							}
+							5 = {
+								add_trait = obsessive
+							}
+							5 = {
+								add_trait = intelligent
+							}
+							10 = {
+								add_trait = content
+							}
+							10 = {
+								add_trait = silver_tongued
+							}
+							5 = {
+								add_trait = energetic
+							}
+							5 = {
+								add_trait = polymath
+							}
+							5 = {
+								add_trait = scholar
+							}
+							50 = {
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							20 = {
+								add_trait = fair
+								add_trait = lustful
+							}
+							10 = {
+								add_trait = fair
+								add_trait = loving
+							}
+							10 = {
+								add_trait = loving
+								add_trait = lustful
+							}
+							30 = {
+								add_trait = fair
+							}
+							10 = {
+								add_trait = lustful
+							}
+							20 = {
+							}
+						}
+						add_character_modifier = {
+							name = "gifted_slave"
+							duration = -1
+						}
+						add_loyalty = loyal_gifted_slave
+						save_scope_as = slave_gift
+					}
+				}
+			}
+           	trigger_event = {
+				id = slave_gift_event.9
+				days = 3
+			}
+        }
+    }	
+}
+
+
+
+slave_gift_event.8 = { #Bad female slave
+	type = country_event
+	title = "slave_gift_event.8.t"
+	desc = "slave_gift_event.8.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:slave_gift_recipient
+	picture = greek_philosophers
+	goto_location = scope:slave_gift_recipient
+	
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = "slave_gift_event.8.a"
+		
+		scope:slave_gift_recipient.employer = {
+			ROOT = {
+				create_character = {
+					female = yes
+					age = { 18 22 }
+					#culture = scope:target_culture.culture
+					#religion = prev.prev.religion
+					hidden_effect = {
+						random_list = {
+							10 = {
+								add_charisma = -5
+							}
+							10 = {
+								add_zeal = -5
+							}
+							10 = {
+								add_finesse = -5
+							}
+							10 = {
+								add_martial = -5
+							}
+						}
+					}
+					hidden_effect = {
+						random_list = {
+							10 = { 
+								add_trait = lazy
+							}
+							10 = {
+								add_trait = coward
+							}
+							10 = {
+								add_trait = incapable
+							}
+							10 = {
+								add_trait = inbred
+							}
+							10 = {
+								add_trait = stubborn
+							}
+							10 = {
+								add_trait = uncaring
+							}
+							10 = {
+								add_trait = hunchback
+							}
+							10 = {
+								add_trait = leper
+							}
+							10 = {
+								add_trait = stutter
+							}
+							10 = {
+								add_trait = ugly
+							}
+						}
+					}
+					hidden_effect = {
+						add_character_modifier = {
+							name = "gifted_slave"
+							duration = -1
+						}
+						add_loyalty = gremlin_gifted_slave
+						save_scope_as = slave_gift
+					}
+				}
+			}
+           	trigger_event = {
+				id = slave_gift_event.9
+				days = 3
+			}
+        }
+    }	
+}
+
+
+slave_gift_event.9 = { #Introducing your new slave gift
+	type = country_event
+	title = "slave_gift_event.9.t"
+	desc = "slave_gift_event.9.desc"
+	left_portrait = scope:slave_gift
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:slave_gift_recipient
+	picture = greek_philosophers
+	goto_location = scope:slave_gift
+
+	trigger = {
+
+	}
+	
+	immediate = {
+	
+	} 
+
+	option = { #
+		name = "slave_gift_event.9.a"
+	}
+}
+
+
+
+

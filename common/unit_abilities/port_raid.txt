@@ -112,10 +112,13 @@
 			}
 			hidden_effect = {
 				root.unit_owner = {
-
-					add_country_modifier = {
-						name = naval_action
-						duration = 45
+					while = {
+						count >= num_of_ships_svalue
+						add_country_modifier = {
+							name = naval_action
+							duration = 90
+							mode = add	
+						}
 					}
 				}
 			}

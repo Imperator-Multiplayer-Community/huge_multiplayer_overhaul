@@ -1,0 +1,51 @@
+﻿namespace = cultural_integration
+
+
+cultural_integration.12 = { # Exile
+	type = province_event
+	title = "cultural_integration.12.t"
+	desc = "cultural_integration.12.desc"
+	picture = city_province
+	left_portrait = owner.current_ruler
+	goto_location = root
+
+	trigger = {
+		owner = {
+			any_owned_province = {
+				dominant_province_culture = scope:target_culture.culture
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			ordered_owned_province = {
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+					any_pops_in_province = {
+						pop_culture = scope:target_culture.culture
+					}
+				}
+				order_by = total_population
+				max = 100
+				check_range_bounds = no
+				random_pops_in_province = {
+					limit = {
+						pop_culture = scope:target_culture.culture
+					}
+					add_to_list = pops_for_exile
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "cultural_integration.12.a"
+		every_in_list = {
+			list = pops_for_exile
+			move_pop = ROOT
+			remove_from_list = pops_for_exile
+		}
+	}
+
+}

@@ -40,6 +40,7 @@
 		modifier = { 
 			light_infantry_morale = 0.1
 			global_freemen_output = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_end_bonus
 		requires = { }
@@ -48,6 +49,7 @@
 	andhra_path_3 = { ###
 		modifier = { 
 			warelephant_discipline = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_end_bonus
 		requires = { andhra_path_1 }
@@ -57,6 +59,7 @@
 	andhra_path_4 = { ###
 		modifier = { 
 			light_infantry_offensive = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_1
 		requires = { andhra_path_2 }
@@ -66,6 +69,7 @@
 	andhra_path_5 = { ###
 		modifier = { 
 			archers_offensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
 		requires = { andhra_path_2 }
@@ -75,6 +79,7 @@
 	andhra_path_6 = { ###
 		modifier = { 
 			warelephant_morale = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_3
 		requires = { }
@@ -85,6 +90,7 @@
 		modifier = { 
 			light_infantry_defensive = 0.15
 			light_infantry_jungle_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_6
 		requires = { andhra_path_4 }
@@ -95,6 +101,7 @@
 		modifier = { 
 			archers_jungle_combat_bonus = 0.1
 			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_7
 		requires = { andhra_path_5 }
@@ -104,6 +111,7 @@
 	andhra_path_9 = { ###
 		modifier = { 
 			warelephant_defensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_2
 		requires = { andhra_path_6 }
@@ -114,6 +122,7 @@
 		modifier = { 
 			heavy_infantry_offensive = 0.1
 			global_citizen_output = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_7
 		requires = { andhra_path_7 }
@@ -124,6 +133,7 @@
 		modifier = { 
 			archers_morale = 0.1
 			heavy_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_1
 		requires = { andhra_path_8 }
@@ -135,6 +145,7 @@
 			warelephant_jungle_combat_bonus = 0.15
 			warelephant_forest_combat_bonus = 0.15
 			warelephant_morale = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_4
 		requires = { andhra_path_9 }
@@ -168,6 +179,7 @@
 			general_loyalty = 5
 			warelephant_morale = 0.05
 			warelephant_hills_combat_bonus = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_2
 		requires = { andhra_path_12 andhra_path_13}

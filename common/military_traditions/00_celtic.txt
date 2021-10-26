@@ -62,15 +62,15 @@
 			}
 			country_culture_group = illyrian_group
 		}
-		trigger_else_if = {
-			limit = { 
-				tag = MAS
-			}
-			custom_tooltip = {
-				text = "began_with_tradition_group"
-			}
-			tag = MAS
-		}
+		#trigger_else_if = {
+		#	limit = { 
+		#		tag = MAS
+		#	}
+		#	custom_tooltip = {
+		#		text = "began_with_tradition_group"
+		#	}
+		#	tag = MAS
+		#}
 		trigger_else = {
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
@@ -97,6 +97,7 @@
 	celtic_gallic_path_1 = { ###Celtic 1A
 		modifier = { 
 			archers_offensive = 0.15
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_1
 		requires = { celtic_germanic_path_3 }
@@ -114,6 +115,7 @@
 		modifier = { 
 			archers_defensive = 0.15
 			archers_plains_combat_bonus = 0.2
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_7
 		requires = {celtic_britannic_path_7}
@@ -122,6 +124,7 @@
 	celtic_germanic_path_1 = { ###Celtic 1B
 		modifier = { 
 			light_infantry_morale = 0.15
+			navy_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_1
 		requires = { celtic_germanic_path_3 }
@@ -139,6 +142,7 @@
 		modifier = { 
 			light_infantry_defensive = 0.15
 			light_infantry_plains_combat_bonus = 0.2
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_britannic_path_2
 		requires = {celtic_germanic_path_6}
@@ -148,6 +152,7 @@
 		modifier = { 
 			light_infantry_discipline = 0.1
 			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_end_bonus
 		requires = { celtic_germanic_path_1 celtic_gallic_path_1 }
@@ -166,6 +171,7 @@
 		modifier = { 
 			heavy_infantry_defensive = 0.1
 			global_freemen_output = 0.05 
+			army_maintenance_cost = 0.01
 		}
 		requires = { celtic_gallic_path_6 }
 		icon = latin_roman_path_7
@@ -176,6 +182,7 @@
 		modifier = { 
 			forest_combat_bonus = 0.15
 			marsh_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_3
 		requires = { }
@@ -186,6 +193,7 @@
 			forest_combat_bonus = 0.15
 			marsh_combat_bonus = 0.15
 			hills_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_3
 		requires = {celtic_britannic_path_2 celtic_germanic_path_7 }
@@ -195,6 +203,7 @@
 		modifier = { 
 			siege_ability = 0.1
 			enslavement_efficiency = 0.05
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_7
 		requires = { }
@@ -203,6 +212,7 @@
 	celtic_germanic_path_5 = { ###Celtic 6A
 		modifier = { 
 			heavy_infantry_defensive = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_5
 		requires = {celtic_gallic_path_7}
@@ -211,6 +221,7 @@
 	celtic_gallic_path_6 = { ###Celtic 6B
 		modifier = { 
 			heavy_infantry_offensive = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_6
 		requires = {celtic_germanic_path_5}

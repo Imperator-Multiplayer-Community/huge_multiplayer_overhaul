@@ -1,0 +1,66 @@
+﻿country_decisions = {
+	
+	create_cilician_pirate_cove = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 795
+			NOR = {
+				has_variable = created_cilician_pirate_cove
+			}
+			OR = { 	primary_culture = cilician
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= small_percent_size_culture_group_comparison
+						is_culture = cilician
+					}			
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 795
+			}
+		}
+		allow = {
+			treasury >= 200
+			military_experience >= 100
+			invention = navy_maintenance_cost_inv_1
+			owns = 795
+			capital_scope.state = { 
+				trade_good_surplus = { target = wood value > 1 }
+			}
+		}
+		
+		effect = {
+			set_variable = created_cilician_pirate_cove
+			add_treasury = -200
+			add_military_experience = -100
+			add_country_modifier = {
+				name = cilician_piracy
+				duration = -1
+			}
+			
+			p:795 = {
+					add_province_modifier = {
+						name = cilician_pirate_cove
+						duration = -1					
+					}
+					add_building_level = port_building
+			}
+			create_unit = {
+				navy = yes
+				location = 795
+				add_subunit = hexere
+				add_subunit = hexere
+				add_subunit = hexere
+				add_subunit = hexere
+				add_subunit = hexere
+			}
+				
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

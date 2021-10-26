@@ -1,0 +1,52 @@
+﻿country_decisions = {
+	
+	found_bangli_infantry_training_complex = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 7396
+			NOR = {
+				has_variable = founded_bangli_infantry_training_complex
+			}
+			OR = { 	primary_culture = bangli
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						is_culture = bangli
+					}			
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 7396
+			}
+		}
+		allow = {
+			treasury >= 100
+			military_experience >= 65
+			owns = 7396
+		}
+		
+		effect = {
+			set_variable = founded_bangli_infantry_training_complex
+			add_treasury = -100
+			add_military_experience = -65
+			add_country_modifier = {
+				name = bangli_infantry_training_programme 
+				duration = -1
+			}
+			
+			p:7396 = {
+					add_province_modifier = {
+						name = bangli_infantry_training_complex
+						duration = -1					
+					}
+				}
+				
+			}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

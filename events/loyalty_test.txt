@@ -1,0 +1,156 @@
+﻿namespace = loyalty_test
+
+loyalty_test.1 = { #You hit
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:target.zeal 
+			}
+			
+			scope:loyalty_officer = { #He hits
+				trigger_event = { 
+					id = loyalty_test.3
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:actor = { #YOU WIN
+				trigger_event = { 
+					id = loyalty_test.4
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+
+loyalty_test.2 = { #You miss
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = { 
+				has_variable = roll
+				var:roll <= scope:target.zeal 
+			}
+			
+			scope:actor = { #YOU LOSE
+				trigger_event = { 
+					id = loyalty_test.5
+					days = 3
+				}
+			}
+		}	
+		else = { 
+			scope:loyalty_officer = { #LOOP
+				trigger_event = { 
+					id = loyalty_test.3
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+
+
+loyalty_test.3 = { #You go
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:loyalty_officer.zeal
+			}
+			
+			scope:target = { #You hit
+				trigger_event = { 
+					id = loyalty_test.1
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:target = { #You miss
+				trigger_event = { 
+					id = loyalty_test.2
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+
+loyalty_test.4 = { #Report results
+	type = country_event
+	title = "loyalty_test.4.t"
+	desc = "loyalty_test.4.desc"
+	picture = court_scene_in_macedonian_court
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:loyalty_officer
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "loyalty_test.4.a"
+ 		scope:target = { 
+ 			add_loyalty = loyalty_test_passed
+		}
+ 	}
+}
+
+
+
+loyalty_test.5 = { #Report results
+	type = country_event
+	title = "loyalty_test.5.t"
+	desc = "loyalty_test.5.desc"
+	picture = court_scene_in_macedonian_court
+	left_portrait = scope:actor.current_ruler
+	left_portrait = scope:loyalty_officer
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "loyalty_test.5.a"
+  		scope:target = { 
+  			add_loyalty = loyalty_test_failed
+		}		
+ 	}
+
+}

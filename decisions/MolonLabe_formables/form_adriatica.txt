@@ -10,6 +10,7 @@
 				country_culture_group = illyrian_group
 				country_culture_group = gallic
 				country_culture_group = celto_pannonian_group
+				country_culture_group = hellenic
 			}
 			NOT = {
 				tag = ADX
@@ -39,7 +40,14 @@
 					is_in_area = dalmatia_occidentalis_area
 					is_in_area = dalmatia_centralis_area
 					is_in_area = dalmatia_orientalis_area
-					is_in_area = aemilla_area
+					province_id = 144
+					province_id = 145
+					province_id = 150
+					province_id = 3592
+					province_id = 142
+					province_id = 147
+					province_id = 146
+					province_id = 149
 				}
 			}
 		}
@@ -60,7 +68,14 @@
 			owns_or_subject_owns_area = dalmatia_occidentalis_area
 			owns_or_subject_owns_area = dalmatia_centralis_area
 			owns_or_subject_owns_area = dalmatia_orientalis_area
-			owns_or_subject_owns_area = aemilla_area
+			owns_or_subject_owns = 144
+			owns_or_subject_owns = 145
+			owns_or_subject_owns = 150
+			owns_or_subject_owns = 3592
+			owns_or_subject_owns = 142
+			owns_or_subject_owns = 147
+			owns_or_subject_owns = 146
+			owns_or_subject_owns = 149
 		}
 		
 		effect = {

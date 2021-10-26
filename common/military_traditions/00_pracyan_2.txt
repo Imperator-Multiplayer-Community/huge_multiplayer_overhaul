@@ -42,6 +42,7 @@
 	tibetan_path_1 = { ###
 		modifier = { 
 			heavy_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_naval_path_2
 		requires = { }
@@ -61,6 +62,7 @@
 	tibetan_path_3 = { ###
 		modifier = { 
 			light_infantry_defensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_army_path_1
 		requires = { tibetan_path_1 }
@@ -70,6 +72,7 @@
 	tibetan_path_4 = { ###
 		modifier = { 
 			heavy_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_army_path_3
 		requires = { tibetan_path_1 }
@@ -93,6 +96,7 @@
 	tibetan_path_6 = { ###
 		modifier = { 
 			light_infantry_offensive = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = latin_roman_path_end_bonus
 		requires = { tibetan_path_3 }
@@ -102,6 +106,7 @@
 	tibetan_path_7 = { ###
 		modifier = { 
 			mountain_combat_bonus = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_7
 		requires = { tibetan_path_4 }
@@ -114,6 +119,7 @@
 			fort_limit = 1
 			garrison_size = 0.2
 			global_food_capacity = 200
+			fort_maintenance_cost = 0.01
 		} 
 		icon = greek_states_path_6
 		requires = { tibetan_path_5 }
@@ -123,6 +129,7 @@
 	tibetan_path_9 = { ###
 		modifier = { 
 			heavy_infantry_offensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = greek_states_path_end_bonus
 		requires = { tibetan_path_6 }
@@ -143,6 +150,7 @@
 		modifier = { 
 			discipline = 0.025
 			forest_combat_bonus = 0.15
+			army_maintenance_cost = 0.01
 		} 
 		icon = celtic_gallic_path_2
 		requires = { tibetan_path_7 }
@@ -153,6 +161,7 @@
 		modifier = { 
 			heavy_infantry_defensive = 0.1
 			warelephant_defensive = 0.05
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_3
 		requires = { tibetan_path_8 }
@@ -164,6 +173,7 @@
 			light_infantry_mountain_combat_bonus = 0.1
 			archers_mountain_combat_bonus = 0.1
 			heavy_infantry_mountain_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = celtic_gallic_path_3
 		requires = { tibetan_path_9 }
@@ -174,6 +184,7 @@
 		modifier = { 
 			heavy_infantry_offensive = 0.05
 			archers_offensive = 0.1
+			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_6
 		requires = { tibetan_path_10 }
@@ -185,6 +196,7 @@
 			warelephant_mountain_combat_bonus = 0.15
 			global_supply_limit_modifier = 0.2
 			hostile_attrition = 1
+			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_noble_path_2
 		requires = { tibetan_path_11 }

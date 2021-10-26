@@ -11,7 +11,7 @@
 			}
 			capital_scope = {
 				OR = {
-					is_in_region = first_provincia_region
+					is_in_region = magna_graecia_region
 					is_in_region = central_italy_region
 					is_in_region = cisalpine_gaul_region
 				}

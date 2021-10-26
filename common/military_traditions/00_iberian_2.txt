@@ -40,6 +40,7 @@
 		modifier = { 
 			hills_combat_bonus = 0.10
 			plains_combat_bonus = 0.10
+			army_maintenance_cost = 0.01
 		}
 		icon = persian_bactrian_path_7
 		requires = { celt_iberian_path_b_2 }
@@ -49,6 +50,7 @@
 	celt_iberian_path_b_1 = { ###Celt-Iberian 2A Barritus
 		modifier = {
 			light_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_6
 		requires = { celt_iberian_path_8 }
@@ -58,6 +60,7 @@
 		enable_tactic = hit_and_run_tactics
 		modifier = {
 			light_cavalry_offensive = 0.15
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_1
 		requires = { celt_iberian_path_b_1 }
@@ -84,6 +87,7 @@
 		modifier = {
 			global_start_experience = 2.5
 			forest_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_3
 		requires = {  }
@@ -93,6 +97,7 @@
 		modifier = { 
 			manpower_recovery_speed = 0.05
 			enslavement_efficiency = 0.05	
+			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_4
 		requires = { celt_iberian_path_8 }
@@ -127,6 +132,7 @@
 		modifier = { 
 			horse_archers_defensive = 0.1
 			light_cavalry_discipline = 0.05
+			army_maintenance_cost = 0.01
 		}
 		enable_tactic = cavalry_skirmish
 		icon = latin_support_path_7
@@ -195,6 +201,7 @@
 		modifier = {
 			global_defensive  = 0.15
 			fort_limit = 1
+			fort_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_7
 		requires = { celt_iberian_path_e_1 }
@@ -203,6 +210,7 @@
 	celt_iberian_path_c_1 = { ###Celt-Iberian 3A Soliferrum
 		modifier = {
 			levy_size_multiplier = 0.025
+			army_maintenance_cost = 0.01
 			}
 		requires = { celt_iberian_path_e_2 }
 		icon = celtic_germanic_path_end_bonus

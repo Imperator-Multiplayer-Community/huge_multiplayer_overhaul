@@ -1,0 +1,132 @@
+﻿seize_property = { #Proscribe, AKA Nuke family
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_punishment"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			employer = scope:actor
+			is_alive = yes
+			is_head_of_family = yes
+			is_mercenary = no
+			is_ruler = no
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+		}
+	}
+	
+	allowed_trigger = {
+		scope:target = {
+			is_head_of_family = yes
+			prisoner = yes
+			from_ruler_family = no
+			NOR = {
+				has_character_modifier = disloyal_successor_cmod
+				has_character_modifier = increased_family_wages
+			}
+			NOT = {
+				has_character_modifier = foreign_citizen
+			}
+		}
+		scope:actor = { tyranny > 40 }
+	}
+	
+	effect = {
+		scope:actor = {
+			add_tyranny = {
+				value = 30
+				if = {
+					limit = {
+						scope:target = { has_character_modifier = traitor_in_civil_war_modifier }
+					}
+					subtract = 15
+				}
+				if = {
+					limit = {
+						scope:target.family = { prestige < 500 }
+					}
+					subtract = 5
+				}
+			}
+			add_treasury = {
+				value = 200
+			}
+		}
+		if = {
+			limit = { scope:target.wealth > 300 }
+			scope:actor.current_ruler = {
+				add_gold = {
+					value = scope:target.wealth
+					subtract = 300
+					min = 0
+				}
+			}
+		}
+		show_as_tooltip = {
+			scope:target = {
+				death = { 
+					death_reason = death_execution
+					killer = scope:actor.current_ruler
+				}
+			}
+		}
+		custom_tooltip = family_fallen_from_grace
+		scope:target = {
+			hidden_effect = {
+				add_gold = {
+					value = 0
+					subtract = wealth
+				}
+			}
+			hidden_effect = {
+				family = {
+					every_family_member = {
+						limit = {
+							employer = scope:actor
+							is_ruler = no
+						}
+						add_loyalty = family_property_seized_l
+					}
+				} 
+			}
+			#Also do Holdings
+			if = {
+				limit = { num_holdings_owned > 0 }
+				hidden_effect = {
+					every_holdings = {
+						scope:target = {
+							remove_holding = PREV
+						}
+						if = {
+							limit = { has_province_modifier = family_estate_modifier }
+							remove_province_modifier = family_estate_modifier
+						}
+						if = {
+							limit = { has_province_modifier = family_estates_being_expanded_modifier }
+							remove_province_modifier = family_estates_being_expanded_modifier
+						}
+					}
+				}
+			}
+			#And now we will disgrace you all:
+			hidden_effect = {
+				family = {
+					every_family_member = {
+						set_as_minor_character = THIS
+						add_triggered_character_modifier = {
+							name = "was_once_great"
+							duration = -1
+						}
+					}
+					remove_family = scope:actor
+				}
+				death = { 
+					death_reason = death_execution
+					killer = scope:actor.current_ruler
+				}
+			}
+		}
+	}
+}

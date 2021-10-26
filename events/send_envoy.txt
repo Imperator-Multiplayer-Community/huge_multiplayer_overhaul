@@ -1,0 +1,19 @@
+﻿namespace = send_envoy
+
+send_envoy.1 = { 
+	type = country_event
+	title = send_envoy.1.t
+	desc = send_envoy.1.desc
+	left_portrait = scope:envoy_sender #root.current_ruler
+	right_portrait = scope:envoy_received #scope:target
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+	}
+
+	option = {
+		name = "send_envoy.1.a"
+	}
+}
+

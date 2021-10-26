@@ -128,13 +128,19 @@
 
 		unit_owner = {
 			while = {
-				count >= num_of_ships_svalue  #num_of_ships_svalue #This script value is not working. 
-							#A number will work, but it will not adjust to the ships in the fleet
+				count >= num_of_ships_svalue
 				add_country_modifier = {
 					name = protect_merchants
-					duration = 90
+					duration = 180
 					mode = add
 				}
+				count >= num_of_ships_svalue
+				add_country_modifier = {
+					name = naval_action
+					duration = 90
+					mode = add	
+				}
+
 			}
 		}
 

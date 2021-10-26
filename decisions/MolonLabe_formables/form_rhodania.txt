@@ -76,7 +76,7 @@
 			}
 			custom_tooltip = "form_rhodania_claims_tooltip"
 			hidden_effect = {
-				area:indiketia_area = { formable_area_province_effect = yes }
+				region:indiketia_region = { formable_area_province_effect = yes }
 				area:cessetania_area = { formable_area_province_effect = yes }
 				area:liguria_area = { formable_area_province_effect = yes }
 				area:allobrogia_area = { formable_area_province_effect = yes }

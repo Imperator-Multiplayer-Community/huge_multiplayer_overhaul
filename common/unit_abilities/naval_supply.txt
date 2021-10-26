@@ -127,6 +127,14 @@
 	start_effect = {
 	
 		unit_owner = {
+			while = {
+				count >= num_of_ships_svalue
+				add_country_modifier = {
+					name = naval_action
+					duration = 90
+					mode = add	
+				}
+			}
 			add_country_modifier = {
 				name = naval_supplier
 				duration = 90

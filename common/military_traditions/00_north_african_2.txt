@@ -56,6 +56,7 @@
 		modifier = {
 			global_freemen_output = 0.05
 			light_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = latin_tribal_path_end_bonus
 		requires = { north_african_tribal_path_end_bonus }	
@@ -65,6 +66,7 @@
 		modifier = { 
 			land_unit_attrition = -0.15
 			desert_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_5
 		requires = {}
@@ -110,6 +112,7 @@
 		modifier = {
 			plains_combat_bonus = 0.1
 			farmland_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_2
 		requires = {}
@@ -118,6 +121,7 @@
 	north_african_tribal_path_7 = { ###North Aftica 2CA
 		modifier = { 
 			light_cavalry_discipline = 0.15
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_7
 		requires = {north_african_tribal_path_2}
@@ -126,6 +130,7 @@
 	north_african_army_path_6 = { ###North Aftica 2CB
 		modifier = { 
 			light_cavalry_offensive = 0.2
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_6
 		requires = {north_african_tribal_path_2}
@@ -144,6 +149,7 @@
 		modifier = { 
 			global_defensive = 0.15
 			fort_limit = 1
+			fort_maintenance_cost = 0.01
 		}
 		icon = north_african_naval_path_6
 		requires = {north_african_army_path_6}
@@ -152,13 +158,17 @@
 	north_african_tribal_path_1 = { ###North Aftica 4CA
 		modifier = { 
 			light_cavalry_morale = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_1
 		requires = {north_african_tribal_path_3}
 	}
 
 	north_african_tribal_path_4 = { ###North Aftica 4CB
-		modifier = { light_cavalry_discipline = 0.1 }
+		modifier = { 
+			light_cavalry_discipline = 0.1
+			army_maintenance_cost = 0.01
+		 }
 		enable_tactic = cavalry_skirmish
 		icon = north_african_tribal_path_4
 		requires = {north_african_tribal_path_3}

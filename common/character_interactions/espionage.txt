@@ -19,8 +19,8 @@
 				has_character_modifier = commander_king
 			}
 			NOR = {
-				has_variable = on_espionage_mission_origin
-				has_variable = on_espionage_mission_recipient
+				has_variable = on_espionage_mission_origin #This is the spy #### SO YOU CANT SPY IN TWO NATIONS AT THE SAME TIME???
+				has_variable = on_espionage_mission_recipient #This is the country where the spy is operating ####################################
 			}
 		}
 	}	
@@ -28,36 +28,38 @@
 	allowed_trigger = {
 		scope:actor = { invention = inspire_disloyalty_cost_modifier_inv }
 		scope:actor = {
-			treasury >= 100
+			treasury >= 50
 			invention = inspire_disloyalty_cost_modifier_inv
 		}
 		scope:target = { 
 			is_adult = yes
 			is_ruler = no
 			is_co_ruler = no
+			loyalty >= 40
 			custom_tooltip = {
 				text = has_any_position_tooltip
 				has_any_position = no
 			}
 			is_successor = no
+			has_character_modifier = spy_recruit_character ################################
 			prisoner = no
-			trigger_if = {
-				limit = {
-					is_female = yes
-					is_married = yes
-				}
-				custom_tooltip = {
-					text = prominent_spouse_tooltip
-					spouse = {
-						NOR = {
-							is_minor_character = no
-							is_ruler = yes
-							is_co_ruler = yes
-							is_successor = yes
-						}
-					}
-				}
-			}
+			#trigger_if = {
+			#	limit = {
+			#		is_female = yes
+			#		is_married = yes
+			#	}
+			#	custom_tooltip = {
+			#		text = prominent_spouse_tooltip
+			#		spouse = {
+			#			NOR = {
+			#				is_minor_character = no
+			#				is_ruler = yes
+			#				is_co_ruler = yes
+			#				is_successor = yes
+			#			}
+			#		}
+			#	}
+			#}
 		}
 	}
 	
@@ -76,7 +78,7 @@
 	
 	effect = {
 		scope:actor = {
-			add_treasury = -100
+			add_treasury = -50
 		}
 		scope:target = {
 			custom_tooltip = "espionage_effect_tooltip"
@@ -86,12 +88,12 @@
 				}
 				move_country = scope:recipient
 				set_variable = {
-					name = on_espionage_mission_origin
+					name = on_espionage_mission_origin #This is the country that sent the spy?? And it is the spy also???
 					value = scope:actor
 					days = -1
 				}
 				set_variable = {
-					name = on_espionage_mission_recipient
+					name = on_espionage_mission_recipient #This is the country where the spy is operating??
 					value = scope:recipient
 					days = -1
 				}
@@ -104,26 +106,24 @@
 						value = scope:target.family
 					}
 				}
-				trigger_event = { 
+				trigger_event = {
 					id = country_diplomacy.41
 					days = { 3 5 } 
 				}
 			}
 			add_character_modifier = {
-				name = on_espionage_mission_cmod
+				name = "on_espionage_mission_cmod"
 				duration = -1
 			}
+			remove_character_modifier = counterintelligence
 			hidden_effect = {
 				set_as_minor_character = THIS
 			}
 		}
 	}
-	
-	
-	
 }
 
-char_espionage_return = {
+char_espionage_return = { #THE SPY RETURNS HOME ##############################
 	on_other_nation = yes
 	close_ui = yes
 	
@@ -134,18 +134,22 @@ char_espionage_return = {
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
 			is_mercenary = no
+			NOT = { has_character_modifier = disloyal_successor_cmod }
 			prisoner_valid_for_country_events_trigger = yes
-			NOT = {
-				has_character_modifier = disloyal_successor_cmod
-			}
+			prisoner = no
 			is_adult = yes
 			has_variable = on_espionage_mission_origin
 			var:on_espionage_mission_origin = scope:actor
+			NOT = { has_variable = spy_amnesty }
 		}
 	}	
 	
 	allowed_trigger = {
 		scope:target = {
+			NOR = {
+				has_character_modifier = assigned_mission
+				has_character_modifier = in_hiding
+			}
 			has_any_position = no
 		}
 	}
@@ -175,9 +179,10 @@ char_espionage_return = {
 				}
 				else = { set_as_minor_character = THIS }
 			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
 		}
 	}
-	
-	
-	
 }	

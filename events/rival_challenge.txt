@@ -1,0 +1,221 @@
+﻿namespace = rival_challenge
+
+rival_challenge.1 = { #You hit
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:target.zeal 
+			}
+			
+			scope:target = { #He hits
+				trigger_event = { 
+					id = rival_challenge.3
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:actor = { #YOU WIN
+				trigger_event = { 
+					id = rival_challenge.4
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+
+rival_challenge.2 = { #You miss
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = { 
+				has_variable = roll
+				var:roll <= scope:target.zeal 
+			}
+			
+			scope:actor = { #YOU LOSE
+				trigger_event = { 
+					id = rival_challenge.5
+					days = 3
+				}
+			}
+		}	
+		else = { 
+			scope:actor.current_ruler = { #LOOP
+				trigger_event = { 
+					id = rival_challenge.3
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+
+
+rival_challenge.3 = { #You go
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		set_variable = {
+			name = roll
+				value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:actor.current_ruler.zeal
+			}
+			
+			scope:target = { #You hit
+				trigger_event = { 
+					id = rival_challenge.1
+					days = 3
+				}
+			}
+		}	
+		else = {
+			scope:target = { #You miss
+				trigger_event = { 
+					id = rival_challenge.2
+					days = 3
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+
+rival_challenge.4 = { #Report results YOU WIN
+	type = country_event
+	title = "rival_challenge.4.t"
+	desc = "rival_challenge.4.desc"
+	picture = court_scene_in_macedonian_court
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "rival_challenge.4.a"
+ 		scope:actor.current_ruler = { 
+ 			add_popularity = 10
+			random_list = {
+				1 = {
+					add_trait = pious
+				}
+				1 = {
+					add_trait = zealous
+				}
+				1 = {
+					add_zeal = 2
+				}
+				2 = {
+					add_zeal = 1
+				}
+				95 = {
+					
+				}
+			}		
+		}
+		scope:actor.current_ruler.employer = {
+			add_country_modifier = {
+				name = "loved_by_the_gods"
+				duration = 1095
+				mode = add
+			}
+		}
+		scope:target = {
+			add_popularity = -15		
+		}
+		scope:target.employer = {
+			add_country_modifier = {
+				name = "unloved_by_the_gods"
+				duration = 1095
+				mode = add
+			}	
+		}		
+ 	}
+}
+
+
+
+rival_challenge.5 = { #Report results YOU LOSE
+	type = country_event
+	title = "rival_challenge.5.t"
+	desc = "rival_challenge.5.desc"
+	picture = court_scene_in_macedonian_court
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:target
+
+	immediate = {
+
+ 	}
+
+ 	option = { #Continue
+ 		name = "rival_challenge.5.a"
+  		scope:actor.current_ruler = { 
+  			add_popularity = -15
+		}	
+		scope:target = {
+			add_popularity = 10
+			random_list = {
+				1 = {
+					add_trait = pious
+				}
+				1 = {
+					add_trait = zealous
+				}
+				1 = {
+					add_zeal = 2
+				}
+				2 = {
+					add_zeal = 1
+				}
+				95 = {
+					
+				}
+			}	
+		}
+		scope:actor.current_ruler.employer = {
+			add_country_modifier = {
+				name = "unloved_by_the_gods"
+				duration = 1095
+				mode = add
+			}
+		}
+		scope:target.employer = {
+			add_country_modifier = {
+				name = "loved_by_the_gods"
+				duration = 1095
+				mode = add
+			}	
+		}		
+ 	}
+}

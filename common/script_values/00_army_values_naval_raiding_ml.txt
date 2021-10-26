@@ -28,7 +28,7 @@ naval_raiding_ae_gain_tooltip_svalue = {
 	}
 	max = {
 		value = naval_raid_capacity_svalue
-		add = 2
+		add = 1
 	}
 	ceiling = yes
 }

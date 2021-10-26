@@ -69,6 +69,7 @@
 	north_african_army_path_7 = { ###North Aftica 2AA
 		modifier = { 
 			warelephant_offensive = 0.15
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_7
 		requires = { north_african_army_path_1 }
@@ -77,6 +78,7 @@
 	north_african_army_path_3 = { ###North Aftica 2AB
 		modifier = { 
 			heavy_infantry_offensive = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_3
 		requires = { north_african_army_path_1 }
@@ -94,6 +96,7 @@
 	north_african_naval_path_2 = { ###North Aftica 2AC
 		modifier = { 
 			heavy_infantry_defensive = 0.1
+			army_maintenance_cost = 0.01
 		}
 		on_activate = {
 			ordered_owned_province = {
@@ -122,6 +125,7 @@
 			warelephant_defensive = 0.1
 			warelephant_plains_combat_bonus = 0.1
 			warelephant_farmland_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_5
 		requires = {north_african_army_path_7}
@@ -131,6 +135,7 @@
 		modifier = { 
 			global_manpower_modifier = 0.1
 			levy_size_multiplier = 0.025
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_6
 		requires = {north_african_army_path_3 north_african_naval_path_2}
@@ -159,6 +164,7 @@
 	north_african_naval_path_1 = { ###North Aftica 5BA
 		modifier = { 
 			naval_morale = 0.05
+			navy_maintenance_cost = 0.01
 		}
 		icon = north_african_naval_path_1
 		requires = { }
@@ -190,6 +196,7 @@
 		modifier = { 
 			ocean_combat_bonus = 0.1
 			naval_range = 0.15
+			navy_maintenance_cost = 0.01
 		}
 }
 
@@ -197,6 +204,7 @@
 		modifier = { 
 			naval_damage_done = 0.1
 			coastal_terrain_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_2
 		requires = { north_african_naval_path_1 }
@@ -268,6 +276,7 @@
 		modifier = { 
 			ship_repair_at_sea = 0.02
 			naval_range = 0.1
+			navy_maintenance_cost = 0.01
 		}
 		icon = north_african_naval_path_4
 		requires = { north_african_naval_path_end_bonus }
@@ -279,6 +288,7 @@
 			liburnian_offensive = 0.15
 			trireme_movement_speed = 0.1
 			liburnian_movement_speed = 0.1
+			navy_maintenance_cost = 0.01
 		}
 		icon = north_african_naval_path_end_bonus
 		requires = { north_african_naval_path_7 }
@@ -287,6 +297,7 @@
 	north_african_naval_path_3 = { ###North Aftica 5BB
 		modifier = { 
 			naval_damage_taken = -0.1
+			navy_maintenance_cost = 0.01
 		}
 		icon = north_african_naval_path_3
 		requires = {north_african_naval_path_end_bonus}

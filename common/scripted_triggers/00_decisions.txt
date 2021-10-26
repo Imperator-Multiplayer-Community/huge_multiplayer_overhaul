@@ -40,6 +40,8 @@
 		tag = BTN #Brittany
 		tag = HIB #Hibernia
 		tag = XXS #Saxonia
+		tag = LOE #Lower Egypt
+		tag = UPE #Upper Egypt
 	}
 }
 
@@ -113,6 +115,7 @@ is_tier_2_formable_trigger = {
 		tag = RBR #Britannia
 		tag = BRY #Hibernia Magna	
 		tag = RON #Republic of the Nile	
+		tag = KEM #Kemet 
 	}
 }
 
@@ -237,6 +240,7 @@ has_unminable_trade_good_trigger = {
 		trade_goods = base_metals
 		trade_goods = iron
 		trade_goods = gems
+		trade_goods = amber
 	}
 }
 

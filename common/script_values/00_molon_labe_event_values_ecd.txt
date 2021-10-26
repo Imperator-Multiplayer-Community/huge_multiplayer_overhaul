@@ -6,6 +6,13 @@ percent_size_culture_group_comparison = {
 	min = 25
 }
 
+small_percent_size_culture_group_comparison = {
+	value = root.country_culture.country_culture_pop_count
+	multiply = 0.1
+	max = 100
+	min = 10
+}
+
 administrators_in_subcultures_cost_svalue = {
 	value = 0
 	ROOT = {
@@ -25,7 +32,7 @@ administrators_in_subcultures_cost_svalue = {
 
 veterans_fight_svalue = {
 	value = max_manpower
-	multiply = 0.15
+	multiply = 0.25
 	max = 100
 	min = 10
 }

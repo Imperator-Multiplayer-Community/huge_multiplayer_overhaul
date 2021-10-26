@@ -1,0 +1,92 @@
+﻿arrest_spy = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_imprison"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			#NOT = { employer = scope:actor }
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+			NOT = {
+				has_character_modifier = commander_king
+			}
+			has_character_modifier = on_espionage_mission_cmod
+			has_character_modifier = foreign_citizen
+			is_alive = yes
+			is_mercenary = no
+			prisoner = no
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:target = {
+			has_character_modifier = on_espionage_mission_cmod
+			has_character_modifier = foreign_citizen
+			has_character_modifier = spy_recruit_character
+			NOR = {
+				has_character_modifier = disloyal_successor_cmod
+				has_character_modifier = in_hiding
+				has_character_modifier = elusive
+				has_character_modifier = getting_oriented
+				has_character_modifier = counterintelligence
+			}
+			trigger_if = {
+				limit = {
+					has_variable = arrest_cooldown
+				}
+				custom_tooltip = {
+					text = "arrested_recently"
+			
+					NOT = { has_variable = arrest_cooldown }
+				}
+			}
+
+
+			prisoner = no
+			is_ruler = no
+			is_co_ruler = no
+			is_general = no
+			is_admiral = no
+			is_pretender = no
+			is_primary_heir = no
+			is_governor = no
+			has_any_office = no
+			has_tech_office = no
+			has_legion_trigger = no
+			NOT = {
+				employer = {
+					is_monarchy = yes
+					exists = consort
+					scope:target = scope:target.employer.consort
+				}
+			}
+		}
+		hidden:scope:actor = {
+			has_country_modifier = spy_recruited
+			any_character = {
+				#limit = {
+					has_character_modifier = counterintelligence
+				#}
+			}
+		}
+	}
+
+	
+	effect = {
+		
+		scope:actor = {
+			trigger_event = {
+				id = counterintel.11
+			}
+		}
+		scope:target = {
+			set_variable = {
+				name = arrest_cooldown
+				days = 120
+			}
+		}
+	}
+}

@@ -1,0 +1,2764 @@
+﻿namespace = counterintel #  
+
+counterintel.1 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		is_ai = no
+
+		any_character = {
+			is_adult = yes
+			prisoner = no
+			has_character_modifier = spy_recruit_character
+			has_character_modifier = counterintelligence
+			NOR = {
+				has_character_modifier = on_espionage_mission_cmod
+				has_character_modifier = foreign_citizen
+					}
+			#employer = var:on_espionage_mission_recipient
+ 		}
+
+ 		any_character = {
+ 			is_adult = yes
+ 			prisoner = no
+ 			has_character_modifier = spy_recruit_character
+ 			has_character_modifier = on_espionage_mission_cmod
+ 			has_character_modifier = foreign_citizen
+ 			NOR = {
+ 				has_character_modifier = getting_oriented
+ 				has_character_modifier = in_hiding ############# ONLY BECAUSE WEIGHT ISNT WORKING #############
+ 				has_character_modifier = elusive
+ 				has_character_modifier = counterintelligence
+ 			}
+ 			#employer = var:on_espionage_mission_origin
+ 		}
+ 	
+ 		NOT = { tag = PIR }
+		NOT = { tag = REB }
+		NOT = { tag = MER }
+		NOT = { tag = BAR }	
+		}
+
+		immediate = {
+			#hidden_effect = {
+				ordered_character = {
+					limit = {
+						is_adult = yes
+						prisoner = no
+						has_character_modifier = spy_recruit_character
+						has_character_modifier = counterintelligence
+						NOR = {
+							has_character_modifier = on_espionage_mission_cmod
+							has_character_modifier = foreign_citizen
+						}
+					}
+					check_range_bounds = no
+					order_by = charisma
+					position = 0
+					save_scope_as = counterintel_officer
+				}
+				ordered_character = {
+					limit = {
+						is_adult = yes
+						prisoner = no
+						has_character_modifier = spy_recruit_character
+						has_character_modifier = on_espionage_mission_cmod
+						has_character_modifier = foreign_citizen
+						NOR = {
+ 							has_character_modifier = getting_oriented
+ 							has_character_modifier = in_hiding ############# ONLY BECAUSE WEIGHT ISNT WORKING #############
+ 							has_character_modifier = elusive
+ 							has_character_modifier = counterintelligence
+ 						}
+					}
+ 					check_range_bounds = no
+					order_by = charisma
+					position = 0
+	 				save_scope_as = tracked_spy	
+	 			}
+			#hidden_effect = {
+				if = {
+					limit = {
+						invention = diplo_range_inv_1 #Defender has only one invention
+						NOR = {
+							invention = oratory_tech_investment_inv_2
+							invention = monthly_character_loyalty_inv_3
+						}	
+					}
+					random_list = {
+						15 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.2
+									days = 3
+								}
+							}						
+						}
+
+						85 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						} 
+					}
+				}
+				else_if = {
+					limit = {
+						invention = oratory_tech_investment_inv_2 #Defender has only one invention
+						NOR = {
+							invention = diplo_range_inv_1
+							invention = monthly_character_loyalty_inv_3
+						}	
+					}
+					random_list = {
+						15 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.2
+									days = 3
+								}
+							}						
+						}
+
+						85 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						invention = monthly_character_loyalty_inv_3 #Defender has only one invention
+						NOR = {
+							invention = diplo_range_inv_1
+							invention = oratory_tech_investment_inv_2
+						}	
+					}
+					random_list = {
+						15 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.2
+									days = 3
+								}
+							}						
+						}
+
+						85 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						}
+					}
+				}	
+				else_if = {
+					limit = {
+						invention = oratory_tech_investment_inv_2 #Defender has two inventions
+						invention = diplo_range_inv_1
+						NOT = {
+							invention = monthly_character_loyalty_inv_3
+						}
+					}
+					random_list = {
+						25 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.3
+									days = 3
+								}
+							}						
+						}
+
+						75 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						}
+					}	 
+				}
+				else_if = {
+					limit = {
+						invention = oratory_tech_investment_inv_2 #Defender has two inventions
+						invention = monthly_character_loyalty_inv_3
+						NOT = {
+							invention = diplo_range_inv_1
+						}
+					}
+					random_list = {
+						25 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.3
+									days = 3
+								}
+							}						
+						}
+
+						75 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						}
+					}	 
+				}
+				else_if = {
+					limit = {
+						invention = monthly_character_loyalty_inv_3 #Defender has two inventions
+						invention = diplo_range_inv_1
+						NOT = {
+							invention = oratory_tech_investment_inv_2
+						}
+					}
+					random_list = {
+						25 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.3
+									days = 3
+								}
+							}						
+						}
+
+						75 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						}
+					}	 
+				}
+				else_if = {
+					limit = {
+						invention = monthly_character_loyalty_inv_3 #Defender has two inventions
+						invention = diplo_range_inv_1
+						invention = oratory_tech_investment_inv_2
+					}
+					random_list = {
+						35 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.37
+									days = 3
+								}
+							}						
+						}
+
+						65 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						}
+					}	 
+				}
+				else = {
+					random_list = { #Defender has no invention
+						15 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+							scope:counterintel_officer = { #WEIGHTED WITH PROMINENT TRACKED_SPY
+								trigger_event = {
+									id = counterintel.4
+									days = 3
+								}
+							}						
+						}
+
+						95 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				##### NO EFFECT BECAUSE THE SPY EVADES THE AGENTS
+						}
+					}	 
+				}
+ 			#} 
+		}
+		
+}
+
+counterintel.2 = { #One invention
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = {
+				trigger_event = { id = counterintel.5 }
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = { id = counterintel.6 }
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+counterintel.3 = { # Both inventions
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = {
+				trigger_event = { id = counterintel.5 }
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = { id = counterintel.6 }
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+######################## DISCOVERY THREE COUNTERINTEL INVENTIONS #######################
+
+
+counterintel.37 = { #All three inventions
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = {
+				trigger_event = { 
+					id = counterintel.5
+					days = 7
+				}
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = { 
+					id = counterintel.6
+					days = 7
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+######################## DISCOVERY THREE COUNTERINTEL INVENTIONS #######################
+
+
+counterintel.4 = { #No inventions 
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = {
+				trigger_event = { id = counterintel.5 }
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = { id = counterintel.6 }
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+### PLAYING CAT AND MOUSE ###
+
+
+counterintel.5 = { #The spy struggles - can the agent win?
+	type = character_event
+	hidden = yes 
+
+
+	immediate = {
+		scope:tracked_spy = { 
+			if = {
+				limit = {
+					has_variable = on_espionage_mission_origin
+					var:on_espionage_mission_origin = {
+						exists = this
+						has_land = yes
+					}
+					has_variable = on_espionage_mission_recipient
+					var:on_espionage_mission_recipient = {
+						exists = this
+						has_land = yes
+					}
+				}
+				save_scope_as = spy
+				var:on_espionage_mission_recipient = {
+					save_scope_as = spied_upon
+				}
+				var:on_espionage_mission_origin = {
+					save_scope_as = esp_o
+				}
+			}
+		}
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer.employer = {
+				trigger_event = { id = counterintel.9 } #SPY IS PHYSICALLY RESTRAINED
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = { ####AGENT HAS FAILED TO PHYSICALLY RESTRAIN SPY... GO TO DIVERSIFIED RESULTS
+				trigger_event = { id = counterintel.10 } 
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+counterintel.6 = { #Spy escapes and you have lost her trace
+	type = country_event
+	title = "counterintel.6.t"
+	desc = "counterintel.6.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		scope:tracked_spy = { # NOT WORKING ################# 
+			if = {
+				limit = {
+					has_variable = on_espionage_mission_origin
+					var:on_espionage_mission_origin = {
+						exists = this
+						has_land = yes
+					}
+					has_variable = on_espionage_mission_recipient
+					var:on_espionage_mission_recipient = {
+						exists = this
+						has_land = yes
+					}
+				}
+				save_scope_as = spy
+				var:on_espionage_mission_recipient = {
+					save_scope_as = spied_upon
+				}
+				var:on_espionage_mission_origin = {
+					save_scope_as = esp_o
+				}
+				scope:esp_o = {
+					trigger_event = {
+						id = counterintel.7
+					}
+				}
+			}
+		}
+	} 
+
+	option = { 
+		name = "counterintel.6.a" #trigger event for spy nation: counterintel.7
+				#spy gets temporary modifier of "in hiding"
+		#scope:spy = {
+		#	add_character_modifier = {
+		#		name = "elusive"
+		#		duration = 180
+		#	}
+		#}
+	}
+}
+
+counterintel.7 = { #Spy escapes -  Spy is alerted and can go into hiding
+	type = country_event
+	title = "counterintel.7.t"
+	desc = "counterintel.7.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:spied_upon.current_ruler
+	right_portrait = scope:spy #tracked_spy 
+	right_portrait = scope:esp_o.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy
+
+	trigger = {
+		#limit = {
+		#	has_character_modifier = spy_recruit_character
+		#	has_variable = spy_evades
+		#}
+	}
+	
+	immediate = {
+
+	}
+
+	option = { #Go into hiding - this will greatly reduce the chance of getting caught, but make spy abilities impossible
+		name = "counterintel.7.a"
+		scope:spy = { #tracked_spy
+			add_character_modifier = {
+				name = "in_hiding"
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Finish my mission
+		name = "counterintel.7.b"
+	}
+
+	option = { #Return home
+		name = "counterintel.7.c"
+		scope:spy = {
+			remove_all_positions = yes
+			move_country = scope:esp_o # NOT WORKING #################
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+		}
+	}
+}
+
+#################################################################################
+
+counterintel.8 = { #Introducing your new intel recruit
+	type = country_event
+	title = "counterintel.8.t"
+	desc = "counterintel.8.desc"
+	left_portrait = scope:new_intel_recruit
+	right_portrait = scope:actor.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:new_intel_recruit
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+	
+	} 
+
+	option = { #
+		name = "counterintel.8.a"
+	}
+
+}
+
+#################################################################################
+
+counterintel.9 = { # Spy is physically restrained
+	type = country_event
+	title = "counterintel.9.t"
+	desc = "counterintel.9.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		scope:counterintel_officer = { 
+			add_loyalty = sense_of_duty
+			add_character_modifier = {
+				name = "state_detective"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:spied_upon = {
+			add_country_modifier = {
+				name = "homeland_security"
+				duration = 3650
+				mode = add
+			}
+		}
+	} 
+
+	option = { #
+		name = "counterintel.9.a" #Execute
+		scope:spy = {
+				death = {
+				death_reason = death_execution
+				}
+		}
+		scope:spied_upon.current_ruler = {
+			add_popularity = popularity_large
+		}
+		show_as_tooltip = {
+			scope:esp_o = { # NOT WORKING #################
+				current_ruler = {
+					add_popularity = subtract_popularity_medium
+				}
+			}
+		}
+		scope:esp_o = { # NOT WORKING #################
+			trigger_event = {
+				id = country_diplomacy.44 #Death #################UPDATE WITH CORRECT SCOPES ################################
+			}
+		}
+	}
+
+	option = { #
+		name = "counterintel.9.b" #Imprison
+			#immediate = {
+			scope:spied_upon = {
+				imprison = { target = scope:spy } #########MOVE ALL THIS TO THE SUCCESSFUL ARREST EVENT ###################################
+				trigger_event = {
+					on_action = custom_on_action_imprison
+					days = { 30 360 }
+				}
+			}
+		scope:spy = {
+			add_loyalty = imprisoned_l
+			hidden_effect = {
+				set_variable = {
+					name = imprisoned_manually
+				}
+				clear_ambition_effect_ci = yes
+			}
+			if = {
+				limit = {
+					has_variable = olympic_attendee
+				}
+				var:olympic_attendee = {
+					save_scope_as = imprisoned_athlete_country
+				}
+				if = {
+					limit = {
+						NOT = {
+							scope:imprisoned_athlete_country = scope:actor
+						}
+					}
+					remove_variable = olympic_attendee
+					save_scope_as = imprisoned_athlete
+					custom_tooltip = "imprison_olympic_ransom"
+					hidden_effect = {	
+						every_country = {
+							limit = {
+								has_variable = is_competing_in_olympics
+								NOT = {
+									this = scope:spied_upon
+								}
+							}
+							add_opinion = {
+								modifier = olympic_outrage
+								target = scope:spied_upon
+							}
+						}
+						scope:imprisoned_athlete_country = {
+							trigger_event = {
+								id = olympic.7
+							}
+						}
+					}
+				}
+			}
+		}
+	} 		
+	
+	option = { #
+		name = "counterintel.9.c" #Make a double agent (if it succeeds, send spy back and gain foreign_intel variable; if it fails, spy goes back and stays)
+		scope:spy = {
+			remove_character_modifier = foreign_citizen
+			remove_character_modifier = on_espionage_mission_cmod #NEW ######################
+			remove_character_modifier = spy_recruit_character
+			add_loyalty = granted_citizenship
+			set_as_minor_character = THIS
+			set_home_country = employer
+			if = {
+				limit = {
+					has_variable = came_from
+				}
+				remove_variable = came_from
+			}
+			set_variable = {
+				name = spy_amnesty
+				value = scope:actor
+				days = -1
+			}
+		}
+		scope:spied_upon.current_ruler = {
+			add_popularity = subtract_popularity_small
+		}
+	}
+
+
+	option = { #
+		name = "counterintel.9.d"
+		scope:spy = {
+			remove_all_positions = yes
+			move_country = scope:esp_o # NOT WORKING #################
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+		}
+		add_tyranny = -5
+		show_as_tooltip = {
+			scope:esp_o = {
+				current_ruler = {
+					add_popularity = subtract_popularity_huge
+				}
+			}
+		}
+		scope:esp_o = { # NOT WORKING #################
+			trigger_event = {
+				id = country_diplomacy.45 #################UPDATE WITH CORRECT SCOPES ################################
+			}
+		} 
+	}		
+}
+
+counterintel.10 = { # The struggle ensues. This event builds the story
+	type = country_event
+	title = "counterintel.10.t"
+	desc = "counterintel.10.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		#scope:tracked_spy = { # NOT WORKING ################# 
+		#	if = {
+		#		limit = {
+		#			has_variable = on_espionage_mission_origin
+		#			var:on_espionage_mission_origin = {
+		#				exists = this
+		#				has_land = yes
+		#			}
+		#			has_variable = on_espionage_mission_recipient
+		#			var:on_espionage_mission_recipient = {
+		#				exists = this
+		#				has_land = yes
+		#			}
+		#		}
+		#		save_scope_as = spy
+		#		var:on_espionage_mission_recipient = {
+		#			save_scope_as = spied_upon
+		#		}
+		#		var:on_espionage_mission_origin = {
+		#			save_scope_as = esp_o
+		#		}
+		#	}
+		#}
+		scope:counterintel_officer = {
+			trigger_event = {
+				id = counterintel.24
+				days = 7
+			}
+		}
+
+	}
+
+	option = { #
+		name = "counterintel.10.a"
+	}
+
+}
+
+
+
+
+#######################################  THE ARREST INTERACTION ###################################
+
+counterintel.11 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		is_ai = no
+
+		any_character = {
+			is_adult = yes
+			prisoner = no
+			has_character_modifier = spy_recruit_character
+			NOR = {
+				has_character_modifier = on_espionage_mission_cmod
+				has_character_modifier = foreign_citizen
+					}
+			#employer = var:on_espionage_mission_recipient
+ 		}
+
+ 		any_character = {
+ 			is_adult = yes
+ 			prisoner = no
+ 			has_character_modifier = spy_recruit_character
+ 			has_character_modifier = on_espionage_mission_cmod
+ 			has_character_modifier = foreign_citizen
+ 			has_variable = arrest_cooldown
+ 			#employer = var:on_espionage_mission_origin
+ 		}
+ 	
+ 		NOT = { tag = PIR }
+		NOT = { tag = REB }
+		NOT = { tag = MER }
+		NOT = { tag = BAR }	
+	}
+
+	immediate = {
+		#hidden_effect = {
+		ordered_character = {
+			limit = {
+				is_adult = yes
+				prisoner = no
+				has_character_modifier = spy_recruit_character
+				NOR = {
+					has_character_modifier = on_espionage_mission_cmod
+					has_character_modifier = foreign_citizen
+				}
+			}
+			check_range_bounds = no
+			order_by = martial
+			position = 0
+			save_scope_as = counterintel_officer
+		}
+		ordered_character = {
+			limit = {
+				is_adult = yes
+				prisoner = no
+				has_character_modifier = spy_recruit_character
+				has_character_modifier = on_espionage_mission_cmod
+				has_character_modifier = foreign_citizen
+				has_variable = arrest_cooldown
+			}
+ 			check_range_bounds = no
+			order_by = martial
+			position = 0
+	 		save_scope_as = tracked_spy	
+	 	}
+		#hidden_effect = {
+			if = {
+				limit = {
+					invention = diplo_range_inv_1 #Defender has only one invention
+						NOR = {
+							invention = oratory_tech_investment_inv_2
+							invention = monthly_character_loyalty_inv_3
+						}	
+					}
+					random_list = {
+						30 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.12
+									days = 3
+								}
+							}						
+						}
+
+						70 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}
+			}
+			else_if = {
+				limit = {
+					invention = oratory_tech_investment_inv_2 #Defender has only one invention
+					NOR = {
+						invention = diplo_range_inv_1
+						invention = monthly_character_loyalty_inv_3
+					}	
+				}
+					random_list = {
+						30 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.12
+									days = 3
+								}
+							}						
+						}
+
+						70 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}
+			}
+			else_if = {
+				limit = {
+					invention = monthly_character_loyalty_inv_3 #Defender has only one invention
+					NOR = {
+						invention = diplo_range_inv_1
+						invention = oratory_tech_investment_inv_2 
+					}	
+				}
+					random_list = {
+						30 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.12
+									days = 3
+								}
+							}						
+						}
+
+						70 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}
+			}	
+			else_if = {
+				limit = {
+					invention = oratory_tech_investment_inv_2 #Defender has both inventions
+					invention = diplo_range_inv_1
+					NOT = {
+						invention = monthly_character_loyalty_inv_3
+					}
+				}
+					random_list = {
+						40 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.13
+									days = 3
+								}
+							}						
+						}
+
+						60 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}	 
+				}
+				else_if = {
+				limit = {
+					invention = oratory_tech_investment_inv_2 #Defender has both inventions
+					invention = monthly_character_loyalty_inv_3
+					NOT = {
+						invention = diplo_range_inv_1
+					}
+				}
+					random_list = {
+						40 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.13
+									days = 3
+								}
+							}						
+						}
+
+						60 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}	 
+				}
+				else_if = {
+				limit = {
+					invention = monthly_character_loyalty_inv_3  #Defender has both inventions
+					invention = diplo_range_inv_1
+					NOT = {
+						invention = oratory_tech_investment_inv_2
+					}
+				}
+					random_list = {
+						40 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.13
+									days = 3
+								}
+							}						
+						}
+
+						60 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}	 
+				}
+				else_if = {
+				limit = {
+					invention = monthly_character_loyalty_inv_3  #Defender has both inventions
+					invention = diplo_range_inv_1
+					invention = oratory_tech_investment_inv_2
+				}
+					random_list = {
+						50 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.38
+									days = 3
+								}
+							}						
+						}
+
+						50 = {
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}	 
+				}
+				else = {
+					random_list = { #Defender has no invention
+						20 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:counterintel_officer = { has_trait = obsessive } # TRIGGER - This trigger is the condition for this modifier to #work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 2 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = prominent } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+            				#}
+            				scope:counterintel_officer = {
+								trigger_event = {
+									id = counterintel.14
+									days = 3
+								}
+							}						
+						}
+
+						80 = { 
+							#trigger = {  }
+							#weight = { 
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    		#		factor = 1.5 # FACTOR - Multiply the chance
+                    		#		scope:tracked_spy = { has_trait = unnoticeable } # TRIGGER - This trigger is the condition for this modifier to work
+               				#	}
+               				#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                   			#		factor = 3 # FACTOR - Multiply the chance 
+                   			#		scope:tracked_spy = { has_character_modifier = in_hiding } # TRIGGER - This trigger is the condition for this modifier #to work
+                			#	}
+            				#}
+            				scope:counterintel_officer.employer = {
+								trigger_event = {
+									id = counterintel.29
+									days = 60
+								}
+							}
+						}
+					}
+				}
+ 			#} 
+	}		
+}
+
+
+counterintel.12 = { #One invention
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		#scope:counterintel_officer.employer = {
+		#	add_political_influence = subtract_influence_small
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = {
+				trigger_event = { 
+					id = counterintel.15
+					days = 7
+				}
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = { 
+					id = counterintel.16
+					days = 7
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+counterintel.13 = { # Both inventions
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = {
+				trigger_event = { 
+					id = counterintel.15
+					days = 7
+				}
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = { 
+					id = counterintel.16
+					days = 7
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+######################## ARREST THREE COUNTERINTEL INVENTIONS #######################
+
+counterintel.38 = { #All three inventions
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.charisma
+			}
+			scope:counterintel_officer = {
+				trigger_event = { 
+					id = counterintel.15
+					days = 7
+				}
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = { 
+					id = counterintel.16
+					days = 7
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+######################## ARREST THREE COUNTERINTEL INVENTIONS #######################
+
+counterintel.14 = { #No inventions 
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+		#scope:counterintel_officer.employer = {
+		#	add_political_influence = subtract_influence_small
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer = {
+				trigger_event = { 
+					id = counterintel.15 
+					days = 7
+				}
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = {
+				trigger_event = {
+					id = counterintel.16
+					days = 7
+				}
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+### PLAYING CAT AND MOUSE ###
+
+
+counterintel.15 = { #Cornered .. the struggle begins
+	type = character_event
+	hidden = yes 
+
+
+	immediate = {
+		scope:tracked_spy = { # NOT WORKING ################# 
+			if = {
+				limit = {
+					has_variable = on_espionage_mission_origin
+					var:on_espionage_mission_origin = {
+						exists = this
+						has_land = yes
+					}
+					has_variable = on_espionage_mission_recipient
+					var:on_espionage_mission_recipient = {
+						exists = this
+						has_land = yes
+					}
+				}
+				save_scope_as = spy
+				var:on_espionage_mission_recipient = {
+					save_scope_as = spied_upon
+				}
+				var:on_espionage_mission_origin = {
+					save_scope_as = esp_o
+				}
+			}
+		}
+		# LETS SEE IF THIS HELPS TO SET THE DAMN SCOPE ###################################
+		#
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:counterintel_officer.martial
+			}
+			scope:counterintel_officer.employer = { ################The agent wins
+				trigger_event = { 
+					id = counterintel.18
+					days = 7
+				}
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = { ######The agent is not winning
+				trigger_event = { 
+					id = counterintel.23
+					days = 7 
+				} 
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+counterintel.16 = { #Spy escapes and you have lost her trace
+	type = country_event
+	title = "counterintel.16.t"
+	desc = "counterintel.16.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		scope:tracked_spy = { # NOT WORKING ################# 
+			if = {
+				limit = {
+					has_variable = on_espionage_mission_origin
+					var:on_espionage_mission_origin = {
+						exists = this
+						has_land = yes
+					}
+					has_variable = on_espionage_mission_recipient
+					var:on_espionage_mission_recipient = {
+						exists = this
+						has_land = yes
+					}
+				}
+				save_scope_as = spy
+				var:on_espionage_mission_recipient = {
+					save_scope_as = spied_upon
+				}
+				var:on_espionage_mission_origin = {
+					save_scope_as = esp_o
+				}
+				scope:esp_o = {
+					trigger_event = {
+						id = counterintel.17
+					}
+				}
+			}
+		}
+	} 
+
+	option = { 
+		name = "counterintel.16.a" #trigger event for spy nation: counterintel.7
+				#spy gets temporary modifier of "in hiding"
+		scope:spy = {
+			add_character_modifier = {
+				name = "elusive"
+				duration = 180
+			}
+		}		
+	}
+}
+
+counterintel.17 = { #Spy escapes -  Spy is alerted and can go into hiding
+	type = country_event
+	title = "counterintel.17.t"
+	desc = "counterintel.17.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:spied_upon.current_ruler
+	right_portrait = scope:spy
+	right_portrait = scope:esp_o.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy
+
+	trigger = {
+		#limit = {
+		#	has_character_modifier = spy_recruit_character
+		#	has_variable = spy_evades
+		#}
+	}
+	
+	immediate = {
+
+
+	}
+
+	option = { #Go into hiding - this will greatly reduce the chance of getting caught, but make spy abilities impossible
+		name = "counterintel.17.a"
+		scope:spy = {
+			add_character_modifier = {
+				name = "in_hiding"
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Finish my mission
+		name = "counterintel.17.b"
+	}
+
+	option = { #Return home
+		name = "counterintel.17.c"
+		scope:spy = {
+			remove_all_positions = yes
+			move_country = scope:esp_o # NOT WORKING #################
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+		}
+	}
+}
+
+
+counterintel.18 = { # Spy caught like a fish on a hook
+	type = country_event
+	title = "counterintel.18.t"
+	desc = "counterintel.18.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+
+	immediate = {
+		#scope:spy = { # NOT WORKING ################# 
+			
+			random_list = {
+				30 = {
+					scope:counterintel_officer = {
+						add_martial = 1	
+						add_loyalty = sense_of_duty
+					}					
+				}
+				15 = {
+					scope:counterintel_officer = {
+						add_loyalty = sense_of_duty
+						add_character_modifier = {
+							name = "state_detective"
+							duration = 365
+							mode = add
+						}
+					}	
+				}
+				25 = {
+					scope:spy = {
+						add_character_modifier = {
+							name = "wounded_spy"
+							duration = 365
+							mode = add
+						}
+					}
+					scope:counterintel_officer = {
+						add_loyalty = sense_of_duty
+						add_character_modifier = {
+							name = "state_detective"
+							duration = 365
+							mode = add
+						}
+					}			
+				}
+				5 = {
+					scope:counterintel_officer = {
+						add_character_modifier = {
+							name = "wounded_spy"
+							duration = 365
+							mode = add
+						}
+						add_loyalty = sense_of_duty
+					}			
+				}
+				25 = {
+					#trigger = {  }
+					#weight = { 
+               		#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    #		factor = 2 # FACTOR - Multiply the chance
+                    #		scope:counterintel_officer = { has_trait = crafty } # TRIGGER - This trigger is the condition for this modifier to work
+               		#	}
+               		#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                 	#		factor = 2 # FACTOR - Multiply the chance 
+                   	#		scope:counterintel_officer = { has_trait = steadfast } # TRIGGER - This trigger is the condition for this modifier to work
+                	#	}
+                	#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                 	#		factor = 2 # FACTOR - Multiply the chance 
+                   	#		scope:counterintel_officer = { has_trait = energetic } # TRIGGER - This trigger is the condition for this modifier to work
+                	#	}
+                	#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                 	#		factor = 2 # FACTOR - Multiply the chance 
+                   	#		scope:counterintel_officer = { has_trait = original_thinker } # TRIGGER - This trigger is the condition for this modifier to #work
+                	#	}
+            		#}
+            		scope:counterintel_officer = {
+            			add_martial = 1
+            			add_charisma = 1
+            			add_loyalty = sense_of_duty
+            		}
+				} 
+			}
+		#}
+		scope:spied_upon = {
+			add_country_modifier = {
+				name = "homeland_security"
+				duration = 3650
+				mode = add
+			}
+		}
+	}
+	
+	option = { #
+		name = "counterintel.18.a" #Execute
+		scope:spy = { #tracked_spy
+			death = {
+				death_reason = death_execution
+			}
+		}
+		scope:spied_upon.current_ruler = {
+			add_popularity = popularity_large
+		}
+		show_as_tooltip = {
+			scope:esp_o = { # NOT WORKING #################
+				current_ruler = {
+					add_popularity = subtract_popularity_medium
+				}
+			}
+		}
+		scope:esp_o = { # NOT WORKING #################
+			trigger_event = {
+				id = country_diplomacy.44 #Death #################UPDATE WITH CORRECT SCOPES ################################
+			}
+		}
+	}
+
+	option = { #
+	name = "counterintel.18.b" #Imprison
+			#immediate = {
+			scope:spied_upon = {
+				imprison = { target = scope:spy } #########MOVE ALL THIS TO THE SUCCESSFUL ARREST EVENT ###################################
+				trigger_event = {
+					on_action = custom_on_action_imprison
+					days = { 30 360 }
+				}
+			}
+			scope:spy = {
+				add_loyalty = imprisoned_l
+				hidden_effect = {
+					set_variable = {
+						name = imprisoned_manually
+					}
+					clear_ambition_effect_ci = yes
+				}
+			if = {
+				limit = {
+					has_variable = olympic_attendee
+				}
+				var:olympic_attendee = {
+					save_scope_as = imprisoned_athlete_country
+				}
+				if = {
+					limit = {
+						NOT = {
+							scope:imprisoned_athlete_country = scope:spied_upon
+						}
+					}
+					remove_variable = olympic_attendee
+					save_scope_as = imprisoned_athlete
+					custom_tooltip = "imprison_olympic_ransom"
+					hidden_effect = {	
+						every_country = {
+							limit = {
+								has_variable = is_competing_in_olympics
+								NOT = {
+									this = scope:spied_upon
+								}
+							}
+								add_opinion = {
+									modifier = olympic_outrage
+									target = scope:spied_upon
+								}
+							}
+						scope:imprisoned_athlete_country = {
+							trigger_event = {
+								id = olympic.7
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	option = { #
+		name = "counterintel.18.c" #Make a double agent (if it succeeds, send spy back and gain foreign_intel variable; if it fails, spy goes back and stays)
+		scope:spy = {
+			remove_espionage_variables_effect = yes
+			remove_character_modifier = foreign_citizen
+			remove_character_modifier = on_espionage_mission_cmod #NEW ######################
+			remove_character_modifier = spy_recruit_character
+			add_loyalty = granted_citizenship
+			set_as_minor_character = THIS
+			set_home_country = employer
+			if = {
+				limit = {
+					has_variable = came_from
+				}
+				remove_variable = came_from
+			}
+			set_variable = {
+				name = spy_amnesty
+				value = scope:actor
+				days = -1
+			}
+		}
+		scope:spied_upon.current_ruler = {
+			add_popularity = subtract_popularity_small
+		}
+	}
+
+	option = { # 
+		name = "counterintel.18.d"
+		scope:spy = { #tracked_spy
+			remove_all_positions = yes
+			move_country = scope:esp_o # NOT WORKING #################
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+		}
+		add_tyranny = -5
+		show_as_tooltip = {
+			scope:esp_o = {
+				current_ruler = {
+					add_popularity = subtract_popularity_huge
+				}
+			}
+		}
+		scope:esp_o = { # NOT WORKING #################
+			trigger_event = {
+				id = country_diplomacy.45 #################UPDATE WITH CORRECT SCOPES ################################
+			}
+		} 
+	}		
+}
+
+
+counterintel.19 = { #The arrest gets violent... someone dies
+ 	type = character_event
+ 	hidden = yes
+
+	immediate = {
+
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:spy.martial
+			}
+			scope:counterintel_officer.employer = {
+				trigger_event = { id = counterintel.21 } 
+			}
+		}
+		else = {
+			scope:counterintel_officer.employer = { ##SPY DIES 
+				trigger_event = { id = counterintel.20 }
+			}
+		}
+		remove_variable = roll
+ 	}
+}
+
+
+
+counterintel.20 = { # Spy killed when apprehended 
+	type = country_event
+	title = "counterintel.20.t"
+	desc = "counterintel.20.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		scope:spy = { #tracked_spy
+			death = {
+				death_reason = death_execution
+			}
+		}
+		scope:counterintel_officer = { 
+			add_loyalty = sense_of_duty
+			add_character_modifier = {
+				name = "state_detective"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:spied_upon = {
+			add_country_modifier = {
+				name = "homeland_security"
+				duration = 3650
+				mode = add
+			}
+		}
+		scope:esp_o = { 
+			trigger_event = {
+				id = country_diplomacy.44 
+			}
+		}
+	} 
+
+	option = { #
+		name = "counterintel.20.a"
+	}
+}
+
+
+counterintel.21 = { # The spy you tried to arrest kills your agent ########### IS THIS MURDER OF THE AGENT WORKING? ################
+	type = country_event
+	title = "counterintel.21.t"
+	desc = "counterintel.21.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		scope:spied_upon = {
+			add_country_modifier = {
+				name = "homeland_insecurity"
+				duration = 3650
+				mode = add
+			}
+		}
+		scope:counterintel_officer = {
+			death = {
+				death_reason = death_execution
+			}			
+		}
+		scope:esp_o = {
+			trigger_event = {
+				id = counterintel.22
+			}
+		}
+	}
+			
+
+	option = { #
+		name = "counterintel.21.a"
+	}
+}
+
+
+
+counterintel.22 = { #Spy escapes and kills an agent. Her king is alerted and she can go into hiding ##### IS THIS MURDER OF THE AGENT WORKING?###
+	type = country_event
+	title = "counterintel.22.t"
+	desc = "counterintel.22.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:spied_upon.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:esp_o.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy 
+
+	trigger = {
+		#limit = {
+		#	has_character_modifier = spy_recruit_character
+		#	has_variable = spy_evades
+		#}
+	}
+	
+	immediate = {
+		#scope:spy = {
+			random_list = {
+				40 = {
+					scope:spy = {
+						add_martial = 1
+						add_loyalty = sense_of_duty
+					}						
+				}
+				30 = {
+					scope:spy = {
+						add_character_modifier = {
+							name = "wounded_spy"
+							duration = 365
+							mode = add
+						}
+						add_loyalty = sense_of_duty
+					}				
+				}
+				30 = {
+					#trigger = {  }
+					#weight = { 
+               		#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                    #		factor = 2 # FACTOR - Multiply the chance
+                    #		scope:spy = { has_trait = suspicious } # TRIGGER - This trigger is the condition for this modifier to work
+               		#	}
+               		#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                 	#		factor = 2 # FACTOR - Multiply the chance 
+                   	#		scope:spy = { has_trait = cautious } # TRIGGER - This trigger is the condition for this modifier to work
+                	#	}
+                	#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                 	#		factor = 2 # FACTOR - Multiply the chance 
+                   	#		scope:spy = { has_trait = tactician } # TRIGGER - This trigger is the condition for this modifier to work
+                	#	}
+               		#	modifier = { # MODIFIER - This can either increase or decrease the chance of this happening
+                 	#		factor = 2 # FACTOR - Multiply the chance 
+                   	#		scope:spy = { has_trait = improviser } # TRIGGER - This trigger is the condition for this modifier to work
+                	#	}
+            		#}
+            		scope:spy = {
+            			add_charisma = 1
+            			add_martial = 1
+            			add_loyalty = sense_of_duty
+            		}
+				} 
+			}
+		#}
+	}
+
+	option = { #Go into hiding - this will greatly reduce the chance of getting caught, but make spy abilities impossible
+		name = "counterintel.22.a"
+		scope:spy = { #tracked_spy
+			add_character_modifier = {
+				name = "in_hiding"
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Finish my mission
+		name = "counterintel.22.b"
+	}
+
+	option = { #Return home
+		name = "counterintel.22.c"
+		scope:spy = { #tracked_spy
+			remove_all_positions = yes
+			move_country = scope:esp_o # NOT WORKING #################
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+				if = {
+					limit = {
+						has_variable = on_espionage_mission_family
+					}
+					if = {
+						limit = {
+							exists = var:on_espionage_mission_family
+							scope:actor = {
+								any_family = { THIS = scope:target.var:on_espionage_mission_family }
+							}
+						}
+						set_family = var:on_espionage_mission_family
+					}
+					else = { set_as_minor_character = THIS }
+					remove_variable = on_espionage_mission_family
+				}
+				else = { set_as_minor_character = THIS }
+			}
+			add_character_modifier = {
+				name = "counterintelligence"
+				duration = -1
+			}
+		}
+	}
+}
+
+
+
+counterintel.23 = { # Spy struggles --- This builds the story
+	type = country_event
+	title = "counterintel.23.t"
+	desc = "counterintel.23.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy #tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+	}
+	
+	immediate = {
+
+		scope:spy = {
+			trigger_event = {
+				id = counterintel.19
+				days = 7
+			} 
+		}
+	}
+
+	option = { #
+		name = "counterintel.23.a"
+	}
+}
+
+
+
+counterintel.24 = { #  #NOW THE ACTUAL STRUGGLE - THE SPY FIGHTS BACK
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		#scope:counterintel_officer.employer = {
+		#	add_political_influence = subtract_influence_small
+				
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:spy.martial
+			}
+			scope:spied_upon = {
+				trigger_event = { id = counterintel.25 } #Agent wounded, spy escapes
+			}
+		}
+		else = {
+			scope:spied_upon = {
+				trigger_event = { id = counterintel.27 } #Spy wounded and escapes
+			}
+		}
+		remove_variable = roll
+ 	}
+
+}
+
+
+
+#DIVERSIFIED RESULTS
+
+
+counterintel.25 = { # AGENT WOUNDED, SPY ESCAPES - SPIED UPON
+	type = country_event
+	title = "counterintel.25.t"
+	desc = "counterintel.25.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy # tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy # tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		scope:counterintel_officer = {		
+			add_character_modifier = {
+				name = "wounded_spy"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:esp_o = {
+				trigger_event = { id = counterintel.26 } 
+		}
+	} 
+
+	option = { #
+		name = "counterintel.25.a"
+	}
+
+}
+
+
+
+counterintel.26 = { # AGENT WOUNDED, SPY ESCAPES - SPIER
+	type = country_event
+	title = "counterintel.26.t"
+	desc = "counterintel.26.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy # tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy # tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+	
+	} 
+
+	option = { #
+		name = "counterintel.26.a"
+		scope:spy = {
+            add_martial = 1
+            add_loyalty = sense_of_duty
+        }
+	}
+}
+
+
+ 
+counterintel.27 = { #SPY WOUNDED, SPY ESCAPES - SPIED UPON
+	type = country_event
+	title = "counterintel.27.t"
+	desc = "counterintel.27.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy # tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy # tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+		scope:spy = {
+			add_character_modifier = {
+				name = "wounded_spy"
+				duration = 365
+				mode = add
+			}
+		}
+		scope:esp_o = {
+				trigger_event = { id = counterintel.28 } 
+		}
+	} 
+
+	option = { #
+		name = "counterintel.27.a"
+		scope:counterintel_officer = {
+            add_martial = 1
+            add_loyalty = sense_of_duty
+        }
+	}
+}
+
+counterintel.28 = { #SPY WOUNDED, SPY ESCAPES - SPIER
+	type = country_event
+	title = "counterintel.28.t"
+	desc = "counterintel.28.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:spy # tracked_spy
+	right_portrait = scope:target.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:spy # tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+
+	immediate = {
+	
+	} 
+	
+
+	option = { #
+		name = "counterintel.28.a"
+	}
+
+}
+
+
+######################## FROM ARREST INTERACTION #######################
+
+counterintel.29 = { #THE ARREST ATTEMPT FAILED
+	type = country_event
+	title = "counterintel.29.t"
+	desc = "counterintel.29.desc"
+	left_portrait = scope:counterintel_officer
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:tracked_spy
+	right_portrait = scope:target.employer.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+
+
+	option = { #
+		name = "counterintel.29.a"
+	}
+
+}
+
+######################## END ARREST INTERACTION #######################
+
+
+
+
+
+
+######################## ENTICE GOVERNOR #######################
+
+
+
+counterintel.30 = { # The spying country gets the news. You have enticed the governor!
+	type = country_event
+	title = "counterintel.30.t"
+	desc = "counterintel.30.desc"
+	left_portrait = scope:enticed_govnah
+	left_portrait = scope:enticed_nation.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:entincer.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:enticed_govnah #tracked_spy
+
+	trigger = {
+		#has_variable = tracked_spy
+		#exists = var:tracked_spy
+
+	}
+	
+	immediate = {
+
+		scope:enticed_nation = {
+			trigger_event = {
+				id = counterintel.31
+			}
+		}
+
+	}
+
+	option = { #
+		name = "counterintel.30.a"
+	}
+
+}
+
+
+
+counterintel.31 = { # The spy entices the governor... Your governor has been stolen!
+	type = country_event
+	title = "counterintel.31.t"
+	desc = "counterintel.31.desc"
+	left_portrait = scope:enticed_govnah
+	left_portrait = scope:enticed_nation.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:enticer.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:enticed_govnah #tracked_spy
+
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+
+	option = { #
+		name = "counterintel.31.a"
+	}
+}
+
+
+
+
+counterintel.32 = { #Spy doesnt even come close -  set scope
+	type = country_event
+	title = "counterintel.32.t"
+	desc = "counterintel.32.desc"
+	left_portrait = scope:enticed_govnah
+	left_portrait = scope:enticed_nation.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:enticer.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:enticed_govnah #tracked_spy
+
+
+	trigger = {
+
+	}
+	
+	immediate = {
+
+		scope:enticed_nation = {
+			trigger_event = {
+				id = counterintel.33
+			}
+		}
+	}
+
+	option = { #
+		name = "counterintel.32.a"
+	}
+}
+
+counterintel.33 = { #Spy doesnt even come close
+	type = country_event
+	title = "counterintel.33.t"
+	desc = "counterintel.33.desc"
+	left_portrait = scope:enticed_govnah
+	left_portrait = scope:enticed_nation.current_ruler
+	right_portrait = scope:spy #tracked_spy
+	right_portrait = scope:enticer.current_ruler
+	picture = dagger_behind_back
+	goto_location = scope:enticed_govnah #tracked_spy
+
+	trigger = {
+
+	}
+	
+	immediate = {
+
+	}
+
+	option = { #
+		name = "counterintel.33.a"
+	}
+}
+
+
+######################## END ENTICE GOVERNOR #######################
+
+######################## INSPIRE DISLOYALTY ########################
+
+counterintel.34 = {  # Success
+	type = country_event
+	title = counterintel.34.t
+	desc = counterintel.34.desc
+	left_portrait = scope:inspiring
+	left_portrait = scope:inspirer.current_ruler
+	right_portrait = scope:inspired_character
+	right_portrait = scope:inspired.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "counterintel.34.a"
+		scope:inspired_character = {
+			add_loyalty = loyalty_inspire_disloyalty
+			add_triggered_character_modifier = {
+				name = inspire_disloyalty_modifier
+			}
+		}
+
+		random_list = {
+			5 = {
+				scope:spy = { 
+					add_charisma = 1
+            		add_loyalty = sense_of_duty
+				}						
+			}
+			10 = {
+				scope:spy = { 
+            		add_loyalty = sense_of_duty
+				}
+			}  
+			10 = {
+				scope:spy = { 
+            		add_loyalty = job_well_done
+				}
+			}
+			5 = {
+				scope:spy = { 
+					add_charisma = 1
+            		add_loyalty = job_well_done
+				}						
+			}
+			70 = {						
+			}
+		}
+	}
+}
+
+
+counterintel.35 = {  #  Success
+	type = country_event
+	title = counterintel.35.t
+	desc = counterintel.35.desc
+	left_portrait = scope:inspiring
+	left_portrait = scope:inspirer.current_ruler
+	right_portrait = scope:inspired_character
+	right_portrait = scope:inspired.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "counterintel.35.a"
+	}
+}
+
+
+
+counterintel.36 = {  # Failure
+	type = country_event
+	title = counterintel.36.t
+	desc = counterintel.36.desc
+	left_portrait = scope:inspiring
+	left_portrait = scope:inspirer.current_ruler
+	right_portrait = scope:inspired_character
+	right_portrait = scope:inspired.current_ruler
+	picture = interesting_histories_greek_lady
+	interface_lock = no
+	
+	option = {
+		name = "counterintel.36.a"
+		scope:inspired_character = {
+			add_loyalty = sense_of_duty 
+		}
+	}
+}
+
+######################## INSPIRE DISLOYALTY ########################

@@ -17,16 +17,17 @@ slave_move.1 = {
 	}
 
 	immediate = {
-		every_owned_province = {
+		random_owned_province = {
 			limit = {
 				OR = {
 					has_province_modifier = slave_move_yes
 				}
 			}
-			save_scope_as = slave_move_province
-
-			root = {
+			scope:root = {
 				add_treasury = -5
+			}
+			save_scope_as = slave_move_province
+		}
 			random_owned_province = {
 				limit = {
 					NOT = {
@@ -54,36 +55,6 @@ slave_move.1 = {
 					}
 				}
 			}
-		}
-
-		}
-			# random_owned_province = {
-			# 	limit = {
-			# 		NOT = {
-			# 			has_province_modifier = slave_move_yes
-			# 			has_province_modifier = no_slave_move
-			# 		}
-			# 		total_population > 1
-			# 		any_pops_in_province = {
-			# 			pop_type = slaves
-			# 		}
-			# 	}
-			# 	random_pops_in_province = {
-			# 		limit = {
-			# 			pop_type = slaves
-			# 			pop_can_move = yes
-			# 		}
-			# 		move_pop = scope:slave_move_province
-			# 	}
-			# 	scope:slave_move_province = {
-			# 		if = {
-			# 			limit = {
-			# 				total_population = population_cap
-			# 			}
-			# 			remove_province_modifier = slave_move_yes
-			# 		}
-			# 	}
-			# }
 
 	}
 }

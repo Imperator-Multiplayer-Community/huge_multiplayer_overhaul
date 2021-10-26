@@ -1,0 +1,95 @@
+﻿correspond_friend = { #Send your friend a letter, hoping to start corresponding
+
+	on_other_nation = no
+	on_own_nation = no
+	close_ui = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_befriend"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_mercenary = no
+			employer = {
+				NOR = {
+					tag = PIR
+					tag = REB
+					tag = BAR
+				}
+			}
+			is_alive = yes
+			is_friend = scope:actor.current_ruler
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+			NOT = {
+				has_character_modifier = commander_king
+			}			
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor.current_ruler = {
+			is_friend = scope:target
+		}
+		scope:actor = {
+			in_diplomatic_range = scope:target.employer
+		}
+		scope:target = {
+			is_alive = yes
+			is_adult = yes
+			prisoner = no
+			martial <= 16
+			finesse <= 16
+			charisma <= 16
+			zeal <= 16
+		#	NOT = { #
+		#		employer = {
+		#			is_ai = yes
+		#		}
+		#	}
+			NOR = {
+				has_variable = letter_recipient
+				is_rival = scope:actor.current_ruler
+			}
+			NOT = { has_character_modifier = disloyal_successor_cmod }
+			trigger_if = {
+				limit = {
+					has_variable = anti_spam
+				}
+				custom_tooltip = {
+					text = "anti_spam_recently"
+			
+					NOT = { has_variable = anti_spam }
+				}
+			}
+		}
+		scope:actor.current_ruler = {
+			custom_tooltip = {
+				text = letter_writer_tooltip
+				NOT = {
+					has_variable = letter_writer
+				}
+			}
+		}
+	}
+	
+	
+	effect = {
+		custom_tooltip = "letter_cost_tt" 
+		scope:target.employer = {
+			trigger_event = {
+				id = letter_friend.1
+				days = 5
+			}
+		}
+
+		scope:target = {
+			set_variable = {
+				name = anti_spam
+				days = 5478
+			}
+		}
+	}
+}
+
+

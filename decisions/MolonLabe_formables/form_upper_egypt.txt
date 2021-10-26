@@ -1,0 +1,103 @@
+#Form Kingdom of Upper Egypt
+
+country_decisions = {
+	form_upper_egypt = { 
+
+	potential = {
+		num_of_cities >= 1
+		#var:formables = 1
+		capital_scope = {
+		OR = {
+		is_in_area = aswan_area
+		is_in_area = luxor_area
+		is_in_area = hema_nome_area
+		}
+	}
+		OR = {
+		country_culture_group = north_african
+		country_culture_group = meroitic_group
+		}
+
+		is_monarchy = yes
+		religion = egyptian_pantheon
+		
+		OR = {
+			is_ai = no
+			num_of_cities >= 20
+		}
+		NOT = {
+			is_endgame_tag_trigger = yes
+			is_tier_2_formable_trigger = yes
+			is_tier_1_formable_trigger = yes
+		}
+	}
+
+		highlight = {
+			scope:province = {
+					OR = {
+					
+					province_id = 569 #Luxor
+					province_id = 599 #Cambusis
+					province_id = 593 #Pselkis
+					province_id = 574 #Latopolis
+					province_id = 552 #Koussai
+					province_id = 563 #Tenthyris
+					province_id = 556 #Antaiopolis
+					province_id = 562 #Diospolis Mikra
+				}	
+			}			
+		}
+
+		allow = {
+			is_monarchy = yes
+			religion = egyptian_pantheon
+			custom_tooltip = {
+				text = egypt_not_existing
+				NOT = {
+					any_country = {
+						tag = EGT
+					}
+				}
+				NOT = {
+					any_country = {
+						tag = EGY
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns = 569 #Luxor
+			owns = 599 #Cambusis
+			owns = 593 #Pselkis
+			owns = 574 #Latopolis
+			owns = 552 #Koussai
+			owns = 563 #Tenthyris
+			owns = 556 #Antaiopolis
+			owns = 562 #Diospolis Mikra
+		}
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+			}
+			change_country_name = "UPPER_EGYPT"
+			hidden_effect = {
+				change_country_flag = "upper_egypt_flag"
+				change_country_adjective = "EGYPTIAN_ADJECTIVE"
+				change_country_color = "bone_color"
+				change_country_tag = UPE 
+				#trigger_event = 
+					
+			}				
+			capital_scope = {
+				capital_formable_small_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			add_political_influence = influence_large
+			add_1_free_province_investments = yes
+		}
+	}
+}

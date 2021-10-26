@@ -1,0 +1,225 @@
+﻿plow_the_wife = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_arrange_marriage"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_alive = yes
+			is_female = yes
+			is_spouse_of = scope:actor.current_ruler
+		}
+	}
+	
+	allowed_trigger = {
+		hidden:scope:actor.current_ruler = {
+			is_adult = yes
+			is_male = yes
+			NOR = { 
+				has_trait = castrated
+				has_trait = chaste
+				has_trait = cold
+				has_trait = ugly 
+				has_trait = barren
+				has_trait = depressed
+				has_trait = dementia
+				has_trait = hunchback
+				has_trait = gangrene
+				has_trait = leper
+				has_trait = mentagra
+				has_trait = pox
+				has_trait = plague
+				has_trait = paralysis
+				has_trait = invalid
+				has_trait = dysentery
+				has_trait = diphtheria
+				has_trait = cancer
+				has_trait = brain_damaged
+				has_trait = hemorrhagic_fever
+				has_trait = pneumonia
+			}
+		}
+		hidden:scope:target = {
+			is_adult = yes
+		}
+		scope:target = {
+			is_spouse_of = scope:actor.current_ruler
+			is_pregnant = no
+			is_female = yes
+			loyalty >= 45
+			age < 45
+			NOT = {
+				is_rival = scope:actor.current_ruler
+			}
+			trigger_if = {
+				limit = {
+					has_variable = loving_cooldown
+				}
+				custom_tooltip = {
+					text = "loving_cooldown_recently"
+			
+					NOT = { has_variable = loving_cooldown }
+				}
+			}
+
+			NOT = { has_trait = chaste }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				scope:actor.current_ruler = {
+					has_trait = lustful
+				}
+			}
+			custom_tooltip = plow_the_wife_tt
+			random_list = {
+				40 = { 
+					scope:target = {
+						add_loyalty = sexual_healing
+						add_health = 5
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {
+							name = loving_cooldown
+							days = 180
+						}			
+					}
+				}
+				20 = { 
+					scope:target = {
+						add_trait = lustful
+						add_loyalty = sexual_healing
+						add_health = 10
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {
+							name = loving_cooldown
+							days = 180
+						}			
+					}
+				}
+				10 = { 
+					scope:target = {
+						add_trait = infection
+						add_loyalty = sexual_healing
+						add_health = -10
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {
+							name = loving_cooldown
+							days = 180
+						}			
+					}
+				}
+				10 = { 
+					scope:target = {
+						add_loyalty = not_in_the_mood
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {							
+							name = loving_cooldown
+							days = 365
+						}			
+					}
+				}
+				20 = { 
+					scope:target = {
+						add_loyalty = sexual_healing
+						add_health = -5
+						make_pregnant = {
+							father = scope:actor.current_ruler
+						}
+					}
+				}
+
+			}
+		}
+
+		else_if = {
+			custom_tooltip = plow_the_wife_tt
+			random_list = {
+				50 = { 
+					scope:target = {
+						add_loyalty = sexual_healing
+						add_health = 5
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {
+							name = loving_cooldown
+							days = 180
+						}			
+					}
+				}
+				10 = { 
+					scope:target = {
+						add_trait = lustful
+						add_loyalty = sexual_healing
+						add_health = 10
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {
+							name = loving_cooldown
+							days = 180
+						}			
+					}
+				}
+				5 = { 
+					scope:target = {
+						add_trait = infection
+						add_loyalty = sexual_healing
+						add_health = -10
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {
+							name = loving_cooldown
+							days = 180
+						}			
+					}
+				}
+				15 = { 
+					scope:target = {
+						add_loyalty = not_in_the_mood
+						#add_triggered_character_modifier = {
+						#	name = free_hands_cmod
+						#	duration = -1
+						#}
+						set_variable = {							
+							name = loving_cooldown
+							days = 365
+						}			
+					}
+				}
+				20 = { 
+					scope:target = {
+						add_loyalty = sexual_healing
+						add_health = -5
+						make_pregnant = {
+							father = scope:actor.current_ruler
+						}
+					}
+				}
+
+			}
+		}
+
+	}
+
+}

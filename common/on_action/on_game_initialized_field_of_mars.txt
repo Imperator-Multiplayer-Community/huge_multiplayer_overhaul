@@ -6,6 +6,7 @@
 	}
 	
 	events = {
+		#free_inventions.1 #Please keep this event here, useful for testing purposes, as it adds 40 inventions
 		fighting_ground_military_events.1 #Combat terrain modifier events
 		fighting_ground_military_events.2
 		iberian_starting_country_events.1

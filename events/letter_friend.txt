@@ -1,0 +1,983 @@
+﻿namespace = letter_friend
+
+letter_friend.1 = { #You send the letter to a player. Does he accept to correspond? Received by target employer
+	type = country_event
+	title = "letter_friend.1.t"
+	desc = "letter_friend.1.desc"
+	left_portrait = current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = greek_philosophers
+	
+	option = { #Option for recipient to accept
+		name = "letter_friend.1.a"
+		scope:target = {
+			set_variable = {
+				name = received_letter
+				value = scope:actor.current_ruler
+				days = 1460
+			}
+			save_scope_as = letter_recipient
+		}
+		scope:actor.current_ruler = {
+			set_variable = {
+				name = wrote_letter
+				value = scope:target
+				days = 1460
+			}
+			save_scope_as = letter_writer
+		}
+		custom_tooltip = friend_refusal
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = letter_friend.3
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #Option for recipient to decline
+		name = "letter_friend.1.b"
+		custom_tooltip = friend_refusal
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = letter_friend.2
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+letter_friend.2 = { #Declined... he didnt even read it 
+	type = country_event
+	title = "letter_friend.2.t"
+	desc = "letter_friend.2.desc"
+	
+	left_portrait = current_ruler
+	right_portrait = scope:target
+	
+	picture = greek_court
+	
+	option = {
+		name = "letter_friend.2.a"
+		custom_tooltip = no_effect_tooltip
+	}
+	
+}
+
+letter_friend.3 = { #accepted with pleasure
+	type = country_event
+	title = "letter_friend.3.t"
+	desc = "letter_friend.3.desc"
+	left_portrait = current_ruler
+	right_portrait = scope:letter_recipient
+	goto_location = scope:letter_recipient
+	picture = council_country
+	
+	option = {
+		name = "letter_friend.3.a"
+		scope:actor = {
+			pay_price = gift_slave
+		}
+		scope:actor = {
+			trigger_event = { 
+				id = letter_friend.4
+				days = 7
+			}
+		}
+	}
+}
+
+
+letter_friend.4 = {
+	type = country_event
+	title = "letter_friend.4.t"
+	desc = "letter_friend.4.desc"
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = council_country
+	goto_location = scope:letter_recipient
+	
+
+	trigger = {
+	}
+	
+	immediate = {
+	}
+
+	
+	option = {
+		name = "letter_friend.4.a"
+		scope:actor = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:letter_recipient.martial
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.13
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.14
+					days = 90
+				 }
+			}
+		}
+		remove_variable = roll
+		#fire_next_letter_event_effect = yes
+	}
+
+	option = {
+		name = "letter_friend.4.b"
+		scope:actor = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:letter_recipient.finesse
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.15
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.16 
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+		#fire_next_letter_event_effect = yes
+	}
+
+	option = {
+		name = "letter_friend.4.c"
+		scope:actor = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:letter_recipient.zeal
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.17 
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.18 
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+		#fire_next_letter_event_effect = yes
+	}
+
+	option = {
+		name = "letter_friend.4.d"
+		scope:actor = {
+			add_political_influence = subtract_influence_small
+		}		
+		#custom_tooltip = espionage_suspicion_tooltip
+		set_variable = {
+			name = roll
+			value = { integer_range = { min = 1 max = 20 } }
+		}
+		if = { 
+			limit = {
+				has_variable = roll
+				var:roll <= scope:letter_recipient.charisma
+			}
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.19 
+					days = 90
+				}
+			}
+		}
+		else = {
+			scope:actor = {
+				trigger_event = { 
+					id = letter_friend.20 
+					days = 90
+				}
+			}
+		}
+		remove_variable = roll
+		#fire_next_letter_event_effect = yes
+	}
+
+}
+
+
+
+
+###############################################################
+## RESULTS ##
+
+###############################################################
+
+
+
+
+letter_friend.13 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = better_martial
+	 				}
+	 			remove_character_modifier = better_martial
+				add_character_modifier = {
+					name = "really_better_martial"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = really_better_martial
+	 				}
+				remove_character_modifier = really_better_martial
+				add_character_modifier = {
+					name = "earnestly_better_martial"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = earnestly_better_martial
+	 				}
+				remove_character_modifier = earnestly_better_martial
+				add_character_modifier = {
+					name = "much_better_martial"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = much_better_martial
+	 				}
+				remove_character_modifier = much_better_martial
+				add_character_modifier = {
+					name = "quite_better_martial"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = quite_better_martial
+						}
+					}
+				add_character_modifier = {
+					name = "better_martial"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.21 }
+		}
+	}
+}
+
+
+
+letter_friend.14 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = schooled_in_martial
+	 				}
+	 			remove_character_modifier = schooled_in_martial
+				add_character_modifier = {
+					name = "very_schooled_in_martial"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = very_schooled_in_martial
+	 				}
+				remove_character_modifier = very_schooled_in_martial
+				add_character_modifier = {
+					name = "quite_schooled_in_martial"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = quite_schooled_in_martial
+	 				}
+				remove_character_modifier = quite_schooled_in_martial
+				add_character_modifier = {
+					name = "fooled_in_martial"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = fooled_in_martial
+	 				}
+				remove_character_modifier = fooled_in_martial
+				add_character_modifier = {
+					name = "rekt_in_martial"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = rekt_in_martial
+						}
+					}
+				add_character_modifier = {
+					name = "schooled_in_martial"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.22 }
+		}
+	}
+}
+
+letter_friend.15 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = better_finesse
+	 				}
+	 			remove_character_modifier = better_finesse
+				add_character_modifier = {
+					name = "really_better_finesse"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = really_better_finesse
+	 				}
+				remove_character_modifier = really_better_finesse
+				add_character_modifier = {
+					name = "earnestly_better_finesse"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = earnestly_better_finesse
+	 				}
+				remove_character_modifier = earnestly_better_finesse
+				add_character_modifier = {
+					name = "much_better_finesse"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = much_better_finesse
+	 				}
+				remove_character_modifier = much_better_finesse
+				add_character_modifier = {
+					name = "quite_better_finesse"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = quite_better_finesse
+						}
+					}
+				add_character_modifier = {
+					name = "better_finesse"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.23 }
+		}
+	}
+}
+
+
+
+letter_friend.16 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = schooled_in_finesse
+	 				}
+	 			remove_character_modifier = schooled_in_finesse
+				add_character_modifier = {
+					name = "very_schooled_in_finesse"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = very_schooled_in_finesse
+	 				}
+				remove_character_modifier = very_schooled_in_finesse
+				add_character_modifier = {
+					name = "quite_schooled_in_finesse"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = quite_schooled_in_finesse
+	 				}
+				remove_character_modifier = quite_schooled_in_finesse
+				add_character_modifier = {
+					name = "fooled_in_finesse"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = fooled_in_finesse
+	 				}
+				remove_character_modifier = fooled_in_finesse
+				add_character_modifier = {
+					name = "rekt_in_finesse"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = rekt_in_finesse
+						}
+					}
+				add_character_modifier = {
+					name = "schooled_in_finesse"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.24 }
+		}
+	}
+}
+
+letter_friend.17 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = better_zeal
+	 				}
+	 			remove_character_modifier = better_zeal
+				add_character_modifier = {
+					name = "really_better_zeal"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = really_better_zeal
+	 				}
+				remove_character_modifier = really_better_zeal
+				add_character_modifier = {
+					name = "earnestly_better_zeal"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = earnestly_better_zeal
+	 				}
+				remove_character_modifier = earnestly_better_zeal
+				add_character_modifier = {
+					name = "much_better_zeal"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = much_better_zeal
+	 				}
+				remove_character_modifier = much_better_zeal
+				add_character_modifier = {
+					name = "quite_better_zeal"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = quite_better_zeal
+						}
+					}
+				add_character_modifier = {
+					name = "better_zeal"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.25 }
+		}
+	}
+}
+
+
+
+letter_friend.18 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = schooled_in_zeal
+	 				}
+	 			remove_character_modifier = schooled_in_zeal
+				add_character_modifier = {
+					name = "very_schooled_in_zeal"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = very_schooled_in_zeal
+	 				}
+				remove_character_modifier = very_schooled_in_zeal
+				add_character_modifier = {
+					name = "quite_schooled_in_zeal"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = quite_schooled_in_zeal
+	 				}
+				remove_character_modifier = quite_schooled_in_zeal
+				add_character_modifier = {
+					name = "fooled_in_zeal"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = fooled_in_zeal
+	 				}
+				remove_character_modifier = fooled_in_zeal
+				add_character_modifier = {
+					name = "rekt_in_zeal"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = rekt_in_zeal
+						}
+					}
+				add_character_modifier = {
+					name = "schooled_in_zeal"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.26 }
+		}
+	}
+}
+
+letter_friend.19 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = better_charisma
+	 				}
+	 			remove_character_modifier = better_charisma
+				add_character_modifier = {
+					name = "really_better_charisma"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = really_better_charisma
+	 				}
+				remove_character_modifier = really_better_charisma
+				add_character_modifier = {
+					name = "earnestly_better_charisma"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = earnestly_better_charisma
+	 				}
+				remove_character_modifier = earnestly_better_charisma
+				add_character_modifier = {
+					name = "much_better_charisma"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = much_better_charisma
+	 				}
+				remove_character_modifier = much_better_charisma
+				add_character_modifier = {
+					name = "quite_better_charisma"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = quite_better_charisma
+						}
+					}
+				add_character_modifier = {
+					name = "better_charisma"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.27 }
+		}
+	}
+}
+
+
+
+letter_friend.20 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:letter_writer = {
+			if = {
+				limit = {
+					has_character_modifier = schooled_in_charisma
+	 				}
+	 			remove_character_modifier = schooled_in_charisma
+				add_character_modifier = {
+					name = "very_schooled_in_charisma"
+					duration = -1
+	 			}
+	 		}
+			else_if = {
+				limit = {
+					has_character_modifier = very_schooled_in_charisma
+	 				}
+				remove_character_modifier = very_schooled_in_charisma
+				add_character_modifier = {
+					name = "quite_schooled_in_charisma"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = quite_schooled_in_charisma
+	 				}
+				remove_character_modifier = quite_schooled_in_charisma
+				add_character_modifier = {
+					name = "fooled_in_charisma"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					has_character_modifier = fooled_in_charisma
+	 				}
+				remove_character_modifier = fooled_in_charisma
+				add_character_modifier = {
+					name = "rekt_in_charisma"
+					duration = -1
+				}		
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_character_modifier = rekt_in_charisma
+						}
+					}
+				add_character_modifier = {
+					name = "schooled_in_charisma"
+					duration = -1
+	 			}
+			}
+		}
+		scope:letter_writer.employer = {
+			trigger_event = { id = letter_friend.28 }
+		}
+	}
+}
+
+
+
+
+
+
+############THE RESULTS OF THE LETTER WRITING ARE REVEALED#########################
+
+## THESE END THE LETTER CHAIN ###########
+
+
+letter_friend.21 = { # Final resolution Martial success
+	type = country_event
+	title = letter_friend.21.t
+	desc = letter_friend.21.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.21.a"
+	}
+}
+
+letter_friend.22 = { # Final resolution Martial failure
+	type = country_event
+	title = letter_friend.22.t
+	desc = letter_friend.22.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.22.a"
+	}
+
+	option = {
+		name = "letter_friend.22.b"
+		scope:letter_recipient = {
+			remove_friend = scope:letter_writer
+		}
+		add_political_influence = -25
+	}
+
+}
+
+letter_friend.23 = { # Final resolution Finesse success
+	type = country_event
+	title = letter_friend.23.t
+	desc = letter_friend.23.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.23.a"
+	}
+}
+
+letter_friend.24 = { # Final resolution Finesse failure
+	type = country_event
+	title = letter_friend.24.t
+	desc = letter_friend.24.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.24.a"
+	}
+
+	option = {
+		name = "letter_friend.24.b"
+		scope:letter_recipient = {
+			remove_friend = scope:letter_writer
+		}
+		add_political_influence = -25
+	}
+
+}
+
+letter_friend.25 = { # Final resolution Zeal success
+	type = country_event
+	title = letter_friend.25.t
+	desc = letter_friend.25.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.25.a"
+	}
+}
+
+letter_friend.26 = { # Final resolution Zeal failure
+	type = country_event
+	title = letter_friend.26.t
+	desc = letter_friend.26.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.26.a"
+	}
+
+	option = {
+		name = "letter_friend.26.b"
+		scope:letter_recipient = {
+			remove_friend = scope:letter_writer
+		}
+		add_political_influence = -25
+	}
+}
+
+letter_friend.27 = { # Final resolution Charisma success
+	type = country_event
+	title = letter_friend.27.t
+	desc = letter_friend.27.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.27.a"
+	}
+}
+
+letter_friend.28 = { # Final resolution Charisma failure
+	type = country_event
+	title = letter_friend.28.t
+	desc = letter_friend.28.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.28.a"
+	}
+
+	option = {
+		name = "letter_friend.28.b"
+		scope:letter_recipient = {
+			remove_friend = scope:letter_writer
+		}
+		add_political_influence = -25
+	}
+
+}
