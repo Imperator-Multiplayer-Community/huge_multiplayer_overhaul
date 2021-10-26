@@ -142,7 +142,7 @@ tribal_duel.4 = { #Report results
 
 	immediate = {
 		scope:target = {
-			add_health = { -10 -65 }
+			add_health = { -15 -80 }
 		}
 
  	}
@@ -210,7 +210,7 @@ tribal_duel.6 = { #Report results
 
 	immediate = {
 		scope:target = {
-			add_health = { -10 -65 }
+			add_health = { -15 -80 }
 		}
 
  	}
@@ -312,7 +312,7 @@ tribal_duel.11 = { #Report results
 
 	immediate = {
 		scope:actor.current_ruler = {
-			add_health = { -5 -35 }
+			add_health = { -15 -80 }
 		}
 
  	}
@@ -415,7 +415,7 @@ tribal_duel.14 = { #Report results
 
 	immediate = {
 		scope:champion = {
-			add_health = { -5 -35 }
+			add_health = { -15 -80 }
 		}
 
  	}
