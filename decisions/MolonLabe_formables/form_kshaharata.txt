@@ -1,0 +1,111 @@
+﻿country_decisions = {
+	
+	# Form Kshaharata
+	form_kshaharata = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = scythia
+			NOT = {
+				tag = KST
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = taxila_area
+					is_in_area = panchanada_area
+					is_in_area = north_sindhu_area
+					is_in_area = sauvira_area
+					is_in_area = madra_area
+					is_in_area = trigarta_area
+					is_in_area = patalene_area
+					is_in_area = abhiria_area
+					is_in_area = sthanisvara_area
+					is_in_area = kuru_area
+					province_id = 4420
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = kshaharata_not_exists
+				NOT = {
+					any_country = {
+						tag = KST
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = taxila_area
+			owns_or_subject_owns_area = panchanada_area
+			owns_or_subject_owns_area = north_sindhu_area
+			owns_or_subject_owns_area = sauvira_area
+			owns_or_subject_owns_area = madra_area
+			owns_or_subject_owns_area = trigarta_area
+			owns_or_subject_owns_area = patalene_area
+			owns_or_subject_owns_area = abhiria_area
+			owns_or_subject_owns_area = sthanisvara_area
+			owns_or_subject_owns_area = kuru_area
+			owns = 4420
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "KSHAHARATA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "KSHAHARATA_ADJECTIVE"
+				change_country_color = "kshaharata_color"
+				change_country_tag = KST
+				change_country_flag = KSHAHARATA_FLAG
+				trigger_event = {
+					id = formable_heritage.15
+				}				
+			}
+				capital_scope = {
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_kshaharata_claims_tooltip"
+			hidden_effect = {
+				area:kaccha_area = { formable_area_province_effect = yes }
+				area:inner_saurashtra_area = { formable_area_province_effect = yes }
+				area:outer_saurashtra_area = { formable_area_province_effect = yes }
+				area:ahicchatra_area = { formable_area_province_effect = yes }
+				area:surasena_area = { formable_area_province_effect = yes }
+				area:pancala_area = { formable_area_province_effect = yes }
+				area:matsya_area = { formable_area_province_effect = yes }
+				area:maru_area = { formable_area_province_effect = yes }
+				area:avanti_area = { formable_area_province_effect = yes }
+				area:madhyamika_area = { formable_area_province_effect = yes }
+				area:anartta_area = { formable_area_province_effect = yes }
+			}		
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

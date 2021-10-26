@@ -1,0 +1,49 @@
+﻿country_decisions = {
+	
+	# Call up the old men as you try to roach it out
+	conscript_veterans = {
+	
+		potential = {
+			num_of_cities >= 1
+			NOR = {
+				has_country_modifier = veterans_conscripted
+			}
+			manpower_percentage <= 0.2
+			#global_manpower = 0
+		}
+		
+		allow = {
+			has_war_exhaustion >= 10
+			treasury >= 100
+			military_experience >= 25
+			manpower_percentage <= 0.2
+			#global_manpower = 0
+		}
+		
+		effect = {
+			while = {
+				count = veterans_fight_svalue_slaves
+				random_owned_province = {
+					random_pops_in_province = {
+						limit = {
+							pop_type = freemen
+						}
+						kill_pop = yes
+					}
+				}
+			}
+			
+			add_manpower = veterans_fight_svalue
+			add_treasury = -100
+			add_military_experience = -25
+			add_country_modifier = {
+				name = veterans_conscripted
+				duration = 1825
+			}	
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

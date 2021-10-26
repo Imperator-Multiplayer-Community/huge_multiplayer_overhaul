@@ -1,0 +1,75 @@
+﻿country_decisions = {
+	
+	# Mega-polyremes and faster shipbuilding
+	create_naval_timberland = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 2017
+			NOR = {
+				has_variable = created_naval_timberland
+			}
+			OR = { 	country_culture_group = britannic
+					country_culture_group = gaelic
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						this.culture.culture_group = culture_group:britannic
+						this.culture.culture_group = culture_group:gaelic
+					}			
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 2017
+			}
+		}
+		allow = {
+			treasury >= 100
+			military_experience >= 50
+			invention = naval_weapon_platform_inv_3
+			owns = 2017
+			capital_scope.state = { 
+				trade_good_surplus = { target = wood value > 1 }
+			}
+		}
+		
+		effect = {
+			set_variable = created_naval_timberland
+			add_treasury = -100
+			add_military_experience = -50
+			add_country_modifier = {
+				name = britannic_shipbuilding_programme
+				duration = -1
+			}
+			#allow_unit_type = mega_galley
+			
+			p:2017 = {
+					add_province_modifier = {
+						name = naval_timberland
+						duration = -1					
+					}
+					add_building_level = port_building
+			}
+			create_unit = {
+				navy = yes
+				location = 2017
+				add_subunit = mega_galley
+				add_subunit = mega_galley
+				add_subunit = mega_galley
+				add_subunit = mega_galley
+				add_subunit = mega_galley
+				add_subunit = octere
+				add_subunit = octere
+				add_subunit = octere
+				add_subunit = octere
+				add_subunit = octere
+			}
+				
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

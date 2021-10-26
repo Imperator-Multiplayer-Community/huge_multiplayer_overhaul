@@ -1,0 +1,98 @@
+﻿country_decisions = {
+	
+	# Form Yavana Rajya
+	form_yavana_rajya = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = hellenic
+			NOT = {
+				tag = YRY
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes				
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = taxila_area
+					is_in_area = panchanada_area
+					is_in_area = north_sindhu_area
+					is_in_area = sauvira_area
+					is_in_area = madra_area
+					is_in_area = trigarta_area
+					is_in_area = patalene_area
+					is_in_area = south_sindhu_area
+					is_in_area = sivi_area
+					is_in_area = kasmira_area
+					is_in_area = gandhara_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = yavana_rajya_not_exists
+				NOT = {
+					any_country = {
+						tag = YRY
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = taxila_area
+			owns_or_subject_owns_area = panchanada_area
+			owns_or_subject_owns_area = north_sindhu_area
+			owns_or_subject_owns_area = sauvira_area
+			owns_or_subject_owns_area = madra_area
+			owns_or_subject_owns_area = trigarta_area
+			owns_or_subject_owns_area = patalene_area
+			owns_or_subject_owns_area = south_sindhu_area
+			owns_or_subject_owns_area = sivi_area
+			owns_or_subject_owns_area = kasmira_area
+			owns_or_subject_owns_area = gandhara_area
+			owns_or_subject_owns_area = taxila_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "YAVANA_RAJYA_NAME"			
+			hidden_effect = {
+				change_country_adjective = "YAVANA_RAJYA_ADJECTIVE"
+				change_country_color =  "yavana_rajya_color"
+				change_country_tag = YRY
+				change_country_flag = YAVANA_RAJYA_FLAG
+				trigger_event = {
+					id = formable_heritage.24
+				}								
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_yavana_rajya_claims_tooltip"
+			hidden_effect = {
+				area:bamyan_area = { formable_area_province_effect = yes }
+				area:candara_area = { formable_area_province_effect = yes }
+				area:abhiria_area = { formable_area_province_effect = yes }
+				area:sthanisvara_area = { formable_area_province_effect = yes }
+				area:kuru_area = { formable_area_province_effect = yes }
+			}			
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

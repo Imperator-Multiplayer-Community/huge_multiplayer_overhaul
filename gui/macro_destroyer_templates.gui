@@ -1,0 +1,3055 @@
+template building_list_template {
+
+  block "category" {
+    widget = {
+      size = { 480 32 }
+
+      block "widget dc" {
+        datacontext = "[GetScriptedGui('d_hill_fort')]"
+      }
+
+      category_drop = {
+        size = { 430 100% }
+        position = { 0 0 }
+        block "category dc" {
+          datacontext = "[GetScriptedGui('expand_hill_fort')]"
+        }
+        block "category_visible" {}
+        onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+        blockoverride "Right" {
+          visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+        }
+        blockoverride "Down" {
+          visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+        }
+      }
+
+      icon_button_square = {
+        size = { 30 30 }
+        parentanchor = right
+        position = { -15 2 }
+
+        block "destroy all" {
+          datacontext = "[GetScriptedGui('d_hill_fort')]"
+          tooltip = "d_hill_fort"
+        }
+        blockoverride "On_click" {
+          texture = "gfx/interface/base_parts/button_color_400fs_red.dds"
+          onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+          enabled = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+        }
+        blockoverride "Icon" {}
+
+        icon = {
+          position = { 0 0 }
+          scale = 0.85
+          parentanchor = center
+          texture = "gfx/interface/icons/unit_abilities/raze_city.dds"
+        }
+      }
+
+      flowcontainer = {
+        ignoreinvisible = yes
+        position = { 2 1 }
+
+        container = {
+          tooltip = "num_of_buildings"
+          icon = {
+            size = { 36 36 }
+            position = { 0 -4 }
+            block "building icon" {
+              texture = "gfx/interface/icons/buildings/hill_fort.dds"
+            }
+          }
+
+          tag_left_fixed = {
+            position = { 45 0 }
+            block "num" {
+              text = "[Player.MakeScope.Var('num_hill_fort').GetValue|0]"
+            }
+            size = { 30 24 }
+            blockoverride "LineVisibility" { visible = no }
+          }
+        }
+
+        widget = {
+          block "locked visibility" {
+            visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_hill_fort_blocked').GetValue, '(CFixedPoint)0')]"
+          }
+          tooltip = "locked_buildings"
+          size = { 60 20 }
+
+          icon = {
+  					texture = "gfx/icons/lock.dds"
+            framesize = { 36 36 }
+            frame = 2
+            size = { 22 22 }
+            position = { 0 3 }
+  				}
+
+          tag_left_fixed = {
+            block "num locked" {
+              text = "[Player.MakeScope.Var('num_hill_fort_blocked').GetValue|0]"
+            }
+            blockoverride "LineVisibility" { visible = no }
+            position = { 30 0 }
+          }
+        }
+
+        widget = {
+          size = { 95 20 }
+          block "total cost tooltip" {
+            tooltip = "hill_fort_cost_tooltip"
+          }
+
+          icon = {
+            using = icon_treasury
+            size = { 25 25 }
+            position = { 0 0 }
+          }
+
+          tag_left_fixed = {
+            block "total cost" {
+              text = "+[Player.MakeScope.Var('hill_fort_cost').GetValue|0]"
+            }
+            position = { 30 0 }
+            blockoverride "LineVisibility" { visible = no }
+          }
+        }
+
+        container = {
+          block "category dc" {
+            datacontext = "[GetScriptedGui('expand_hill_fort')]"
+          }
+          tag = {
+            block "building name" {
+              visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_hill_fort_blocked').GetValue, '(CFixedPoint)0')]"
+              text = "hill_fort"
+            }
+            blockoverride "LineVisibility" { visible = no }
+            maximumsize = { 200 -1 }
+          }
+
+          tag = {
+            block "building name2" {
+              visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_hill_fort_blocked').GetValue, '(CFixedPoint)0')]"
+              text = "hill_fort"
+            }
+            blockoverride "LineVisibility" { visible = no }
+            maximumsize = { 160 -1 }
+          }
+        }
+      }
+
+      widget = {
+        size = { 100% 100% }
+        visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+        block "category dc" {
+          datacontext = "[GetScriptedGui('expand_hill_fort')]"
+        }
+
+        icon = {
+          size = { 415 6 }
+          parentanchor = bottom
+          position = { 0 4 }
+          texture = "gfx/interface/base_parts/brown_underline_x60bd.dds"
+          spriteType = Corneredtiled
+          spriteborder = { 30 0 }
+        }
+      }
+    }
+  }
+
+  block "buildings" {
+    fixedgridbox = {
+      block "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_hill_fort')]"
+        datacontext = "[GetScriptedGui('expand_hill_fort')]"
+      }
+      visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+      addrow = 32
+      addcolumn = 475
+
+      item = {
+        widget = {
+          size = { 475 32 }
+
+          icon = {
+            size = { 100% 6 }
+            parentanchor = right
+            position = { 0 0 }
+            texture = "gfx/interface/base_parts/brown_underline_x60bd.dds"
+            spriteType = Corneredtiled
+            spriteborder = { 30 0 }
+          }
+          icon = {
+            size = { 100% 6 }
+            parentanchor = bottom|right
+            position = { 0 0 }
+            texture = "gfx/interface/base_parts/brown_underline_x60bd.dds"
+            spriteType = Corneredtiled
+            spriteborder = { 30 0 }
+          }
+
+          flowcontainer = {
+            position = { 0 0 }
+
+            goto_button = {
+              size = { 30 30 }
+              parentanchor = vcenter
+              tooltip = "go_to"
+              tooltip_offset = { 0 25 }
+              blockoverride "On_click" {
+
+                onclick = "[OnClickOnProvince(Scope.GetProvince)]"
+                onmousehierarchyenter = "[SetHighlightProvince(Scope.GetProvince.GetId)]"
+                onmousehierarchyleave = "[ClearHighlightColors]"
+              }
+
+            }
+
+            widget = {
+              size = { 1 0 }
+            }
+
+            button_round_inverted = {
+              size = { 30 30 }
+              parentanchor = vcenter
+              tooltip = "dont_remove_tooltip"
+              tooltip_offset = { 0 25 }
+
+              block "lock button" {
+                datacontext = "[GetScriptedGui('dont_remove_hill_fort')]"
+              }
+              blockoverride "On_click" {
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Scope.GetProvince.MakeScope ).End )]"
+              }
+              blockoverride "Icon" {
+                texture = "gfx/icons/lock.dds"
+                framesize = { 35 35 }
+                frame = 1
+              }
+
+              icon = {
+                texture = "gfx/icons/lock.dds"
+                framesize = { 35 35 }
+                frame = 2
+                size = { 18 18 }
+                parentanchor = center
+                block "lock icon" {
+                  datacontext = "[GetScriptedGui('d_1_hill_fort')]"
+                }
+                visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Scope.GetProvince.MakeScope ).End ))]"
+              }
+
+              onmousehierarchyenter = "[SetHighlightProvince(Scope.GetProvince.GetId)]"
+              onmousehierarchyleave = "[ClearHighlightColors]"
+            }
+
+            widget = {
+              size = { 3 0 }
+            }
+
+            widget = {
+              size = { 340 34 }
+
+              list_button = {
+                #texture = "gfx/interface/base_parts/button_color_400fs_red.dds"
+                size = { 100% 34 }
+                onmousehierarchyenter = "[SetHighlightProvince(Scope.GetProvince.GetId)]"
+                onmousehierarchyleave = "[ClearHighlightColors]"
+                #tooltip = "#r Destroy this building"
+
+                block "destroy button" {
+                  datacontext = "[GetScriptedGui('d_1_hill_fort')]"
+                }
+                enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Scope.GetProvince.MakeScope ).End )]"
+                onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Scope.GetProvince.MakeScope ).End )]"
+                alpha = 0.6
+              }
+
+              widget = {
+                size = { 30 33 }
+                parentanchor = vcenter
+
+                icon = {
+                  size = { 31 31 }
+                  block "building icon2" {
+                    texture = "gfx/interface/icons/buildings/hill_fort.dds"
+                  }
+                  block "blocked icon" {
+                    datacontext = "[GetScriptedGui('blocking_farm')]"
+                    visible = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Scope.GetProvince.MakeScope ).End ))]"
+                  }
+                }
+
+                block "blocked icon" {
+                  icon = {
+                    tooltip = "blocking_farm"
+                    texture = "gfx/icons/wrong.dds"
+                    datacontext = "[GetScriptedGui('blocking_farm')]"
+                    visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Scope.GetProvince.MakeScope ).End )]"
+                    size = { 30 30 }
+                    position = { 0 1 }
+                    icon = {
+                      texture = "[GetTradeGoodsIcon(Scope.GetProvince.GetTradeGoods)]"
+                      size = { 30 30 }
+                      position = { 0 -2 }
+                      glow = {
+                        color = { 0.4 0.2 0.2 0.8 }
+                        glow_radius = 2
+                      }
+                    }
+                  }
+                }
+              }
+
+              tag = {
+                block "num buildings" {
+                  #text = "[Scope.GetProvince.GetPopulation('tribesmen')]"
+                  #tooltip = "#T Number of tribesmen"
+                }
+                position = { 40 2 }
+              }
+
+              widget = {
+                parentanchor = right
+                size = { 180 100% }
+                block "cost tooltip"
+                {
+                  tooltip = "gold_restored_settlement"
+                }
+              }
+
+              widget = {
+                block "widget size" {
+                  size = { 320 100% }
+                  position = { 25 0 }
+                }
+
+                flowcontainer = {
+                  ignoreinvisible = yes
+
+                  widget = {
+                    size = { 15 0 }
+                  }
+
+                  widget = {
+                    block "city" {
+                      visible = no
+                    }
+                    size = { 20 0 }
+                  }
+
+                  widget = {
+                    size = { 60 32 }
+                    block "stat tooltip" {
+                      tooltip = "num_of_tribesmen"
+                    }
+                    icon = {
+                      block "stat icon" {
+                        using = icon_pop_tribal
+                      }
+                      size = { 22 22 }
+                      position = { 0 5 }
+                    }
+
+                    tag = {
+                      block "stat num" {
+                        text = "[Scope.GetProvince.GetPopulation('tribesmen')]"
+                      }
+                      position = { 28 2 }
+                    }
+                  }
+
+                  widget = {
+                    size = { 95 32 }
+                    block "extra tooltip" {
+                      tooltip = "pop_cap"
+                    }
+                    icon = {
+                      block "extra stat" {
+                        using = icon_population
+                      }
+                      position = { 0 5 }
+                      size = { 22 22 }
+                    }
+
+                    tag = {
+                      block "extra stat num" {
+                        text = "[Scope.GetProvince.GetPopulation('total')]/[Scope.GetProvince.GetPopulationCapacityValue]"
+                      }
+                      position = { 28 2 }
+                    }
+                  }
+
+                  block "empty" {
+                  }
+
+                  tag_left_fixed = {
+                    text = "[Scope.GetProvince.GetNameWithNoTooltip]"
+                    size = { 90 32 }
+                    block "province_name" {}
+                  }
+                }
+
+                icon = {
+                  scale = 0.9
+                  parentanchor = right
+                  position = { 0 -2 }
+                  texture = "gfx/interface/icons/unit_abilities/raze_city.dds"
+
+                  block "lock icon" {
+                    datacontext = "[GetScriptedGui('d_1_hill_fort')]"
+                  }
+                  visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Scope.GetProvince.MakeScope ).End )]"
+                }
+              }
+            }
+
+            tag = {
+              size = { 50 33 }
+              blockoverride "LineVisibility" { visible = no }
+              block "restore_sum" {
+                text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('settlement_building_cost')|0] @gold!"
+              }
+              tooltip = "restore_sum"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+types destroyerTypes {
+  type barracks_building_list = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_barracks_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_barracks_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_barracks_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_barracks_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_barracks_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_barracks_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/barracks_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_barracks_building')]"
+        tooltip = "d_barracks_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_barracks_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_barracks_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_barracks_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "barracks_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('barracks_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_barracks_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "barracks_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_barracks_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "barracks_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_barracks_building')]"
+        datacontext = "[GetScriptedGui('expand_barracks_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/barracks_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_barracks_building')]"
+      }
+      blockoverride "stat tooltip" {
+
+        tooltip = "manpower"
+      }
+      blockoverride "stat icon" {
+        using = icon_manpower
+      }
+      blockoverride "stat num" {
+        text = "[GetManpowerDisplay(Scope.GetProvince.GetCurrentManpowerIncome)]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_barracks_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_barracks_building')]"
+      }
+    }
+  }
+
+  type latifundia_building_list = container {
+    ignoreinvisible = yes
+    datacontext = "[GetScriptedGui('expand_latifundia_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_latifundia_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_latifundia_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_latifundia_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_latifundia_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_latifundia_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/latifundia_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_latifundia_building')]"
+        tooltip = "d_latifundia_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_latifundia_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_latifundia_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_latifundia_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "latifundia_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('latifundia_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_latifundia_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "latifundia_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_latifundia_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "latifundia_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_latifundia_building')]"
+        datacontext = "[GetScriptedGui('expand_latifundia_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/latifundia_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_latifundia_building')]"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "num_of_slaves"
+      }
+      blockoverride "stat icon" {
+        using = icon_pop_slaves
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopulation('slaves')]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_latifundia_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_latifundia_building')]"
+      }
+    }
+  }
+
+  type local_forum_building_list = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_local_forum_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_local_forum_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_local_forum_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_local_forum_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_local_forum_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_local_forum_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/local_forum_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_local_forum_building')]"
+        tooltip = "d_local_forum_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_local_forum_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_local_forum_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_local_forum_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "local_forum_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('local_forum_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_local_forum_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "local_forum_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_local_forum_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "local_forum_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_local_forum_building')]"
+        datacontext = "[GetScriptedGui('expand_local_forum_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/local_forum_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_local_forum_building')]"
+      }
+      blockoverride "stat tooltip" {
+        size = { 75 32 }
+        tooltip = "[Scope.GetProvince.GetCultureBreakdown]"
+      }
+      blockoverride "stat icon" {
+        using = icon_culture
+      }
+      blockoverride "stat num" {
+        text = "[GuiScope.SetRoot(Scope.GetProvince.MakeScope).ScriptValue('province_cultural_unity')|0]%"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_local_forum_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_local_forum_building')]"
+      }
+    }
+  }
+
+  type slave_mine_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_slave_mine_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_slave_mine_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_slave_mine_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_slave_mine_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_slave_mine_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_slave_mine_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/slave_mine_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_slave_mine_building')]"
+        tooltip = "d_slave_mine_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_slave_mine_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_slave_mine_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_slave_mine_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "slave_mine_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('slave_mine_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_slave_mine_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "slave_mine_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_slave_mine_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "slave_mine_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_slave_mine_building')]"
+        datacontext = "[GetScriptedGui('expand_slave_mine_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/slave_mine_building.dds"
+      }
+      blockoverride "blocked icon" {
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_slave_mine_building')]"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetTradeGoods.GetTooltip]"
+      }
+      blockoverride "stat icon" {
+        texture = "[GetTradeGoodsIcon(Scope.GetProvince.GetTradeGoods)]"
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetNumGoodsProduced]"
+      }
+      blockoverride "extra tooltip" {
+        tooltip = "num_of_slaves"
+      }
+      blockoverride "extra stat" {
+        using = icon_pop_slaves
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetPopulation('slaves')]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_slave_mine_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_slave_mine_building')]"
+      }
+    }
+  }
+
+  type basic_settlement_infratructure_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_basic_settlement_infratructure_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_basic_settlement_infratructure_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_basic_settlement_infratructure_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_basic_settlement_infratructure_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_basic_settlement_infratructure_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_basic_settlement_infratructure_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/basic_settlement_infratructure_building.dds"
+        position = { 0 -2 }
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_basic_settlement_infratructure_building')]"
+        tooltip = "d_basic_settlement_infratructure_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_basic_settlement_infratructure_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_basic_settlement_infratructure_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_basic_settlement_infratructure_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "basic_settlement_infratructure_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('basic_settlement_infratructure_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_basic_settlement_infratructure_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "basic_settlement_infratructure_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_basic_settlement_infratructure_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "basic_settlement_infratructure_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_basic_settlement_infratructure_building')]"
+        datacontext = "[GetScriptedGui('expand_basic_settlement_infratructure_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/basic_settlement_infratructure_building.dds"
+      }
+      blockoverride "blocked icon" {
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_basic_settlement_infratructure_building')]"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetTradeGoods.GetTooltip]"
+      }
+      blockoverride "stat icon" {
+        texture = "[GetTradeGoodsIcon(Scope.GetProvince.GetTradeGoods)]"
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetNumGoodsProduced]"
+      }
+      blockoverride "extra tooltip" {
+        tooltip = "num_of_slaves"
+      }
+      blockoverride "extra stat" {
+        using = icon_pop_slaves
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetPopulation('slaves')]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_basic_settlement_infratructure_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_basic_settlement_infratructure_building')]"
+      }
+    }
+  }
+
+  type fortress_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_fortress_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_fortress_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_fortress_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_fortress_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_fortress_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_fortress_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/fortress_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_fortress_building')]"
+        tooltip = "d_fortress_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_fortress_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_fortress_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_fortress_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "fortress_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('fortress_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_fortress_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "fortress_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_fortress_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "fortress_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_fortress_building')]"
+        datacontext = "[GetScriptedGui('expand_fortress_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/shared_icons/fort_frames.dds"
+        framesize = { 50 50 }
+        frame = "[Scope.GetProvince.GetFortLevel]"
+        size = { 25 25 }
+        position = { 3 2 }
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_fortress_building')]"
+      }
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_fortress_building')|0]"
+        tooltip = "[Scope.GetProvince.GetFortLevelTooltip]"
+      }
+      blockoverride "city" {}
+      blockoverride "stat icon" {
+        icon = {
+          texture = "gfx/interface/icons/shared_icons/country_capital.dds"
+          size = { 23 23 }
+          visible = "[Scope.GetProvince.IsCapital]"
+          tooltip = "[Scope.GetProvince.GetCapitalTooltip]"
+        }
+        icon = {
+          texture = "gfx/interface/icons/shared_icons/state_capital.dds"
+          size = { 23 23 }
+          visible = "[And(Scope.GetProvince.IsStateCapital, Not(Scope.GetProvince.IsCapital))]"
+          tooltip = "[Scope.GetProvince.GetStateCapitalTooltip]"
+        }
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "total_population"
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopulation('total')]"
+      }
+      blockoverride "extra stat" {
+        texture = "gfx/interface/icons/modifiers/fort_limit.dds"
+        framesize = { 50 50 }
+        frame = "[Scope.GetProvince.GetFortLevel]"
+      }
+      blockoverride "extra tooltip" {
+        tooltip = "[Scope.GetProvince.GetState.GetFortsDesc]"
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetState.GetFortsCurrent]/[Scope.GetProvince.GetState.GetFortsLimit]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_fortress_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_fortress_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+
+  type port_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_port_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_port_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_port_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_port_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_port_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_port_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/port_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_port_building')]"
+        tooltip = "d_port_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_port_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_port_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_port_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "port_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('port_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_port_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "port_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_port_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "port_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_port_building')]"
+        datacontext = "[GetScriptedGui('expand_port_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/port_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_port_building')]"
+      }
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_port_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "city" {}
+      blockoverride "stat tooltip" {
+        tooltip = "total_population"
+      }
+      blockoverride "stat icon" {
+          using = icon_population
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopulation('total')]/[Scope.GetProvince.GetPopulationCapacityValue]"
+      }
+      blockoverride "extra stat" {
+      }
+      blockoverride "extra tooltip" {
+        #size = { 70 0 }
+      }
+      blockoverride "extra stat num" {
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_port_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_port_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+
+  type aqueduct_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_aqueduct_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_aqueduct_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_aqueduct_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_aqueduct_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_aqueduct_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_aqueduct_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/aqueduct_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_aqueduct_building')]"
+        tooltip = "d_aqueduct_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_aqueduct_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_aqueduct_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_aqueduct_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "aqueduct_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('aqueduct_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_aqueduct_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "aqueduct_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_aqueduct_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "aqueduct_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_aqueduct_building')]"
+        datacontext = "[GetScriptedGui('expand_aqueduct_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/aqueduct_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_aqueduct_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_aqueduct_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat icon" {
+        using = icon_population
+        tooltip = "total_population"
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopulation('total')] / [Scope.GetProvince.GetPopulationCapacityValue]"
+        tooltip = "[Scope.GetProvince.GetPopulationCapacityInfo]"
+      }
+
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+
+      ###
+
+
+      blockoverride "extra stat" {
+
+      }
+      blockoverride "extra stat num" {
+
+      }
+      blockoverride "territory name" {
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_aqueduct_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_aqueduct_building')]"
+      }
+    }
+  }
+
+  type population_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_population_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_population_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_population_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_population_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_population_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_population_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/population_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_population_building')]"
+        tooltip = "d_population_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_population_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_population_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_population_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "population_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('population_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_population_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "population_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_population_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "population_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_population_building')]"
+        datacontext = "[GetScriptedGui('expand_population_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/population_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_population_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_population_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetState.GetFoodTooltip][Scope.GetProvince.GetState.GetFoodModifierEffect]"
+      }
+      blockoverride "stat icon" {
+        using = icon_food
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetState.GetFood|0]/[Scope.GetProvince.GetState.GetFoodCapacity|0]"
+      }
+
+      ###
+      blockoverride "extra tooltip" {
+      }
+      blockoverride "extra stat" {
+      }
+      blockoverride "extra stat num" {
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_population_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_population_building')]"
+      }
+
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_100"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_100')|0] @gold!"
+      }
+    }
+  }
+
+  type library_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_library_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_library_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_library_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_library_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_library_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_library_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/library_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_library_building')]"
+        tooltip = "d_library_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_library_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_library_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_library_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "library_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('library_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_library_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "library_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_library_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "library_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_library_building')]"
+        datacontext = "[GetScriptedGui('expand_library_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/library_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_library_building')]"
+      }
+
+      ###
+
+      blockoverride "city" {}
+
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_library_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        size = { 75 32 }
+        tooltip = "[Scope.GetProvince.GetReligionBreakdown]"
+      }
+      blockoverride "stat icon" {
+        using = icon_religious
+      }
+      blockoverride "stat num" {
+        text = "[GuiScope.SetRoot(Scope.GetProvince.MakeScope).ScriptValue('province_religious_unity')|0]%"
+      }
+      ###
+      blockoverride "extra tooltip" {
+        tooltip = "[Scope.GetProvince.GetCurrentResearchDescription]"
+      }
+      blockoverride "extra stat" {
+        icon = {
+          using = icon_research
+          size = { 25 25 }
+          parentanchor = vcenter
+        }
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetCurrentResearch|1]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_library_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_library_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_100"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_100')|0] @gold!"
+      }
+    }
+  }
+
+  type commerce_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_commerce_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_commerce_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_commerce_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_commerce_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_commerce_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_commerce_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/commerce_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_commerce_building')]"
+        tooltip = "d_commerce_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_commerce_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_commerce_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_commerce_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "commerce_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('commerce_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_commerce_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "commerce_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_commerce_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "commerce_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_commerce_building')]"
+        datacontext = "[GetScriptedGui('expand_commerce_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/commerce_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_commerce_building')]"
+      }
+
+      ###
+
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_commerce_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        size = { 75 32 }
+        tooltip = "[Scope.GetProvince.GetCultureBreakdown]"
+      }
+      blockoverride "stat icon" {
+        using = icon_culture
+      }
+      blockoverride "stat num" {
+        text = "[GuiScope.SetRoot(Scope.GetProvince.MakeScope).ScriptValue('province_cultural_unity')|0]%"
+      }
+      blockoverride "extra tooltip" {
+        tooltip = "[Scope.GetProvince.GetTradeRoutesFromPopsTooltip]"
+      }
+      blockoverride "extra stat" {
+        texture = "gfx/interface/icons/modifiers/local_base_trade_routes.dds"
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetTradeRoutesFromPopsValue|2]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_100"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_100')|0] @gold!"
+      }
+
+      ###
+
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_commerce_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_commerce_building')]"
+      }
+    }
+  }
+
+  type military_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_military_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_military_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_military_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_military_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_military_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_military_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/military_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_military_building')]"
+        tooltip = "d_military_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_military_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_military_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_military_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "military_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('military_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_military_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "military_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_military_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "military_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_military_building')]"
+        datacontext = "[GetScriptedGui('expand_military_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/military_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_military_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_military_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "manpower"
+      }
+      blockoverride "stat icon" {
+        using = icon_manpower
+      }
+      blockoverride "stat num" {
+        text = "[GetManpowerDisplay(Scope.GetProvince.GetCurrentManpowerIncome)]"
+      }
+
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_100"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_100')|0] @gold!"
+      }
+
+      ###
+      blockoverride "extra tooltip" {}
+      blockoverride "extra stat" {
+
+      }
+      blockoverride "extra stat num" {
+
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_military_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_military_building')]"
+      }
+    }
+  }
+
+  type town_hall_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_town_hall_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_town_hall_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_town_hall_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_town_hall_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_town_hall_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_town_hall_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/town_hall_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_town_hall_building')]"
+        tooltip = "d_town_hall_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_town_hall_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_town_hall_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_town_hall_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "town_hall_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('town_hall_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_town_hall_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "town_hall_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_town_hall_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "town_hall_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_town_hall_building')]"
+        datacontext = "[GetScriptedGui('expand_town_hall_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/town_hall_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_town_hall_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_town_hall_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+
+        tooltip = "[Scope.GetProvince.GetIncomeDescription]"
+      }
+      blockoverride "stat icon" {
+        using = icon_treasury
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetCurrentIncome|2]"
+      }
+
+      ###
+
+      blockoverride "extra tooltip" {}
+      blockoverride "extra stat" {
+
+      }
+      blockoverride "extra stat num" {
+
+      }
+      blockoverride "territory name" {
+        #widgetanchor = left
+        position = { 15 2 }
+        maximumsize = { 80 -1 }
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_town_hall_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_town_hall_building')]"
+      }
+
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_100"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_100')|0] @gold!"
+      }
+    }
+  }
+
+  type fortress_ramparts_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_fortress_ramparts_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_fortress_ramparts_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_fortress_ramparts_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_fortress_ramparts_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_fortress_ramparts_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_fortress_ramparts_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/fortress_ramparts_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_fortress_ramparts_building')]"
+        tooltip = "d_fortress_ramparts_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_fortress_ramparts_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_fortress_ramparts_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_fortress_ramparts_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "fortress_ramparts_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('fortress_ramparts_building_cost').GetValue|0]"
+      }
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_fortress_ramparts_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "fortress_ramparts_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_fortress_ramparts_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "fortress_ramparts_building"
+      }
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_fortress_ramparts_building')]"
+        datacontext = "[GetScriptedGui('expand_fortress_ramparts_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/fortress_ramparts_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_fortress_ramparts_building')]"
+      }
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_fortress_ramparts_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "city" {}
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetCombatWidthTooltip]"
+      }
+      blockoverride "stat icon" {
+        texture = "gfx/interface/icons/diplomatic_status/war.dds"
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetCombatWidth]"
+      }
+      blockoverride "extra stat" {
+      }
+      blockoverride "extra tooltip" {
+      }
+      blockoverride "extra stat num" {
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_fortress_ramparts_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_fortress_ramparts_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+
+  type foundry_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_foundry_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_foundry_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_foundry_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_foundry_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_foundry_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_foundry_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/foundry_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_foundry_building')]"
+        tooltip = "d_foundry_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_foundry_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_foundry_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_foundry_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "foundry_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('foundry_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_foundry_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "foundry_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_foundry_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "foundry_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_foundry_building')]"
+        datacontext = "[GetScriptedGui('expand_foundry_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/foundry_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_foundry_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_foundry_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetTradeGoods.GetTooltip]"
+      }
+      blockoverride "stat icon" {
+        texture = "[GetTradeGoodsIcon(Scope.GetProvince.GetTradeGoods)]"
+      }
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetNumGoodsProduced]"
+      }
+
+      ###
+      blockoverride "extra tooltip" {
+        size = { 70 32 }
+        tooltip = "[Scope.GetProvince.GetCurrentResearchDescription]"
+      }
+      blockoverride "extra stat" {
+        icon = {
+          using = icon_research
+          size = { 25 25 }
+          parentanchor = vcenter
+        }
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetCurrentResearch|1]"
+      }
+
+      blockoverride "empty" {
+        widget = {
+          size = { 95 32 }
+          tooltip = "[Scope.GetProvince.GetIncomeDescription]"
+          icon = {
+            using = icon_treasury
+            position = { 0 5 }
+            size = { 22 22 }
+          }
+
+          tag = {
+            text = "[Scope.GetProvince.GetCurrentIncome|2]"
+            position = { 28 2 }
+          }
+        }
+      }
+
+      blockoverride "province_name" {
+        visible = no
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_foundry_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_foundry_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+
+  type temple_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_temple_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_temple_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_temple_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_temple_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_temple_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_temple_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/temple_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_temple_building')]"
+        tooltip = "d_temple_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_temple_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_temple_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_temple_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "temple_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('temple_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_temple_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "temple_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_temple_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "temple_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_temple_building')]"
+        datacontext = "[GetScriptedGui('expand_temple_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/temple_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_temple_building')]"
+      }
+
+      ###
+
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_temple_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        size = { 75 32 }
+        tooltip = "[Scope.GetProvince.GetReligionBreakdown]"
+      }
+      blockoverride "stat icon" {
+        using = icon_religious
+      }
+      blockoverride "stat num" {
+        text = "[GuiScope.SetRoot(Scope.GetProvince.MakeScope).ScriptValue('province_religious_unity')|0]%"
+      }
+
+      ###
+
+      blockoverride "extra tooltip" {
+        tooltip = "[Scope.GetProvince.GetImpactOnStateLoyaltyTooltip]"
+      }
+      blockoverride "extra stat" {
+        texture = "gfx/interface/icons/modifiers/local_monthly_state_loyalty.dds"
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetImpactOnStateLoyalty|=2]"
+      }
+
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_temple_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_temple_building')]"
+      }
+
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_300"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_300')|0] @gold!"
+      }
+    }
+  }
+
+  type theathre_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_theathre_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_theathre_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_theathre_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_theathre_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_theathre_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_theathre_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/theathre_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_theathre_building')]"
+        tooltip = "d_theathre_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_theathre_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_theathre_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_theathre_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "theathre_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('theathre_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_theathre_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "theathre_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_theathre_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "theathre_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_theathre_building')]"
+        datacontext = "[GetScriptedGui('expand_theathre_building')]"
+        name = "theathre_building"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/theathre_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_theathre_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_theathre_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+
+      blockoverride "stat tooltip" {
+        size = { 75 32 }
+        tooltip = "[Scope.GetProvince.GetCultureBreakdown]"
+      }
+      blockoverride "stat icon" {
+        using = icon_culture
+      }
+      blockoverride "stat num" {
+        text = "[GuiScope.SetRoot(Scope.GetProvince.MakeScope).ScriptValue('province_cultural_unity')|0]%"
+      }
+
+      ###
+
+      blockoverride "extra tooltip" {
+        tooltip = "[Scope.GetProvince.GetImpactOnStateLoyaltyTooltip]"
+      }
+      blockoverride "extra stat" {
+        texture = "gfx/interface/icons/modifiers/local_monthly_state_loyalty.dds"
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetImpactOnStateLoyalty|=2]"
+      }
+
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_theathre_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_theathre_building')]"
+      }
+
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_300"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_300')|0] @gold!"
+      }
+    }
+  }
+
+  type academy_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_academy_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_academy_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_academy_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_academy_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_academy_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_academy_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/academy_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_academy_building')]"
+        tooltip = "d_academy_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_academy_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_academy_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_academy_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "academy_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('academy_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_academy_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "academy_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_academy_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "academy_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_academy_building')]"
+        datacontext = "[GetScriptedGui('expand_academy_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/academy_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_academy_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_academy_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetPopHappyInformation('nobles')]"
+        size = { 75 100% }
+      }
+
+      blockoverride "stat icon" {
+        texture = "gfx/interface/icons/modifiers/local_nobles_happyness.dds"
+      }
+
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopTypeHappiness('nobles')|0]%"
+      }
+
+      blockoverride "province_name" {
+        visible = no
+      }
+
+      ###
+      blockoverride "extra tooltip" {
+
+        tooltip = "nobles_ratios"
+      }
+      blockoverride "extra stat" {
+        icon = {
+          using = icon_pop_nobles
+          size = { 100% 100% }
+          position = { 0 0 }
+        }
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetPopulation('nobles')]    [Scope.GetProvince.GetCurrentPopRatio('nobles')|%0] / [Scope.GetProvince.GetDesiredPopRatio('nobles')|%0]"
+      }
+
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_academy_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_academy_building')]"
+      }
+
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+
+  type court_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_court_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_court_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_court_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_court_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_court_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_court_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/court_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_court_building')]"
+        tooltip = "d_court_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_court_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_court_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_court_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "court_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('court_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_court_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "court_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_court_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "court_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_court_building')]"
+        datacontext = "[GetScriptedGui('expand_court_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/court_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_court_building')]"
+      }
+
+      ###
+
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_court_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetPopHappyInformation('citizen')]"
+        size = { 75 100% }
+      }
+
+      blockoverride "stat icon" {
+        texture = "gfx/interface/icons/modifiers/local_citizen_happyness.dds"
+      }
+
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopTypeHappiness('citizen')|0]%"
+      }
+
+      blockoverride "province_name" {
+        visible = no
+      }
+
+      ###
+      blockoverride "extra tooltip" {
+
+        tooltip = "citizens_ratios"
+      }
+      blockoverride "extra stat" {
+        icon = {
+          using = icon_pop_citizens
+          size = { 100% 100% }
+          position = { 0 0 }
+        }
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetPopulation('citizen')]    [Scope.GetProvince.GetCurrentPopRatio('citizen')|%0] / [Scope.GetProvince.GetDesiredPopRatio('citizen')|%0]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_court_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_court_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+
+  type forum_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_forum_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_forum_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_forum_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_forum_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_forum_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_forum_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/forum_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_forum_building')]"
+        tooltip = "d_forum_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_forum_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_forum_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_forum_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "forum_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('forum_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_forum_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "forum_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_forum_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "forum_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_forum_building')]"
+        datacontext = "[GetScriptedGui('expand_forum_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/forum_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_forum_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_forum_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetPopHappyInformation('freemen')]"
+        size = { 75 100% }
+      }
+
+      blockoverride "stat icon" {
+        texture = "gfx/interface/icons/modifiers/local_freemen_happyness.dds"
+      }
+
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopTypeHappiness('freemen')|0]%"
+      }
+
+      blockoverride "province_name" {
+        visible = no
+      }
+
+      ###
+      blockoverride "extra tooltip" {
+
+        tooltip = "freemen_ratios"
+      }
+      blockoverride "extra stat" {
+        icon = {
+          using = icon_pop_freemen
+          size = { 100% 100% }
+          position = { 0 0 }
+        }
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetPopulation('freemen')]    [Scope.GetProvince.GetCurrentPopRatio('freemen')|%0] / [Scope.GetProvince.GetDesiredPopRatio('freemen')|%0]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_forum_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_forum_building')]"
+      }
+      blockoverride "lock icon2" {
+        datacontext = "[GetScriptedGui('d_1_forum_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+
+  type workshop_building = container {
+    ignoreinvisible = yes
+
+    datacontext = "[GetScriptedGui('expand_workshop_building')]"
+
+    flowcontainer = {
+      direction = vertical
+      spacing = 6
+      visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_workshop_building').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_workshop_building_blocked').GetValue, '(CFixedPoint)0'))]"
+
+      using = building_list_template
+
+      blockoverride "widget dc" {
+        datacontext = "[GetScriptedGui('d_workshop_building')]"
+      }
+      blockoverride "category dc" {
+        datacontext = "[GetScriptedGui('expand_workshop_building')]"
+      }
+      blockoverride "category dc2" {
+        datacontext = "[GetScriptedGui('expand_workshop_building')]"
+      }
+      blockoverride "building icon" {
+        texture = "gfx/interface/icons/buildings/workshop_building.dds"
+      }
+      blockoverride "destroy all" {
+        datacontext = "[GetScriptedGui('d_workshop_building')]"
+        tooltip = "d_workshop_building"
+      }
+      blockoverride "num" {
+        text = "[Player.MakeScope.Var('num_workshop_building').GetValue|0]"
+      }
+      blockoverride "locked visibility" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_workshop_building_blocked').GetValue, '(CFixedPoint)0')]"
+      }
+      blockoverride "num locked" {
+        text = "[Player.MakeScope.Var('num_workshop_building_blocked').GetValue|0]"
+      }
+      blockoverride "total cost tooltip" {
+        tooltip = "workshop_building_cost_tooltip"
+      }
+      blockoverride "total cost" {
+        text = "+[Player.MakeScope.Var('workshop_building_cost').GetValue|0]"
+      }
+
+      ###
+
+      blockoverride "building name" {
+        visible = "[EqualTo_CFixedPoint(Player.MakeScope.Var('num_workshop_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "workshop_building"
+      }
+      blockoverride "building name2" {
+        visible = "[GreaterThan_CFixedPoint(Player.MakeScope.Var('num_workshop_building_blocked').GetValue, '(CFixedPoint)0')]"
+        text = "workshop_building"
+      }
+
+      ###
+
+      blockoverride "list grid" {
+        datamodel = "[Player.MakeScope.GetList('all_workshop_building')]"
+        datacontext = "[GetScriptedGui('expand_workshop_building')]"
+      }
+      blockoverride "building icon2" {
+        texture = "gfx/interface/icons/buildings/workshop_building.dds"
+      }
+      blockoverride "destroy button" {
+        datacontext = "[GetScriptedGui('d_1_workshop_building')]"
+      }
+
+      ###
+      blockoverride "city" {}
+      blockoverride "num buildings" {
+        text = "[GuiScope.SetRoot( Scope.GetProvince.MakeScope).ScriptValue('real_num_of_workshop_building')|0]"
+        tooltip = "num_of_buildings_list"
+      }
+
+      blockoverride "stat tooltip" {
+        tooltip = "[Scope.GetProvince.GetPopHappyInformation('slaves')]"
+        size = { 75 100% }
+      }
+
+      blockoverride "stat icon" {
+        texture = "gfx/interface/icons/modifiers/local_slaves_happyness.dds"
+      }
+
+      blockoverride "stat num" {
+        text = "[Scope.GetProvince.GetPopTypeHappiness('slaves')|0]%"
+      }
+
+      blockoverride "province_name" {
+        visible = no
+      }
+
+      ###
+      blockoverride "extra tooltip" {
+
+        tooltip = "slaves_ratios"
+      }
+      blockoverride "extra stat" {
+        icon = {
+          using = icon_pop_slaves
+          size = { 100% 100% }
+          position = { 0 0 }
+        }
+      }
+      blockoverride "extra stat num" {
+        text = "[Scope.GetProvince.GetPopulation('slaves')]    [Scope.GetProvince.GetCurrentPopRatio('slaves')|%0] / [Scope.GetProvince.GetDesiredPopRatio('slaves')|%0]"
+      }
+      blockoverride "lock button" {
+        datacontext = "[GetScriptedGui('dont_remove_workshop_building')]"
+      }
+      blockoverride "lock icon" {
+        datacontext = "[GetScriptedGui('d_1_workshop_building')]"
+      }
+      blockoverride "cost tooltip" {
+        tooltip = "gold_restored_city_150"
+      }
+      blockoverride "restore_sum" {
+        text = "+[GuiScope.SetRoot( Player.MakeScope).ScriptValue('city_building_cost_150')|0] @gold!"
+      }
+    }
+  }
+}
+
+
+template destroyer_flowcontainer {
+
+  container = { # categories
+    ignoreinvisible = yes
+
+    flowcontainer = { #unopened categories
+      datacontext = "[GetScriptedGui('expand_macro')]"
+      visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+      direction = vertical
+      ignoreinvisible = yes
+
+      flowcontainer = { #hill_fort
+        direction = vertical
+  			spacing = 6
+  			visible = "[Or(GreaterThan_CFixedPoint( Player.MakeScope.Var('num_hill_fort').GetValue, '(CFixedPoint)0'), GreaterThan_CFixedPoint( Player.MakeScope.Var('num_hill_fort_blocked').GetValue, '(CFixedPoint)0'))]"
+
+        using = building_list_template
+        blockoverride "buildings" {}
+      }
+
+      barracks_building_list = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      latifundia_building_list = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      local_forum_building_list = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+      slave_mine_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+      basic_settlement_infratructure_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      flowcontainer = {
+        direction = vertical
+        # widget = {
+        #   size = { 0 10 }
+        # }
+        fortress_building = {
+          block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+          blockoverride "buildings" {}
+        }
+      }
+
+      port_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      aqueduct_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      population_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      library_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      commerce_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      military_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      town_hall_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      fortress_ramparts_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      foundry_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      temple_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      theathre_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      academy_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      court_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      forum_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+      workshop_building = {
+        block "category_visible" { visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"}
+        blockoverride "buildings" {}
+      }
+
+    }
+
+  	flowcontainer = { #buildings without categories
+  		direction = vertical
+  		ignoreinvisible = yes
+
+      datacontext = "[GetScriptedGui('expand_macro')]"
+      visible = "[Not(ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End))]"
+
+      fortress_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      flowcontainer = { #hill_fort
+        direction = vertical
+  			spacing = 6
+        datacontext = "[GetScriptedGui('expand_hill_fort')]"
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+
+        blockoverride "category" {}
+
+        using = building_list_template
+      }
+
+      barracks_building_list = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        # can probably clean this up more, but whatever
+        blockoverride "category" {}
+      }
+
+      latifundia_building_list = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      local_forum_building_list = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      slave_mine_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      basic_settlement_infratructure_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      port_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      aqueduct_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      population_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      library_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      commerce_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      military_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      town_hall_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      fortress_ramparts_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      temple_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      theathre_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      academy_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      court_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      forum_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      workshop_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+
+      foundry_building = {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+        blockoverride "category" {}
+      }
+  	}
+  }
+}
+
+template destroyer_categories { #opened categories
+  container = {
+    ignoreinvisible = yes
+
+    container = {
+      datacontext = "[GetScriptedGui('expand_hill_fort')]"
+      visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+
+      using = building_list_template
+      blockoverride "buildings" {}
+    }
+
+    barracks_building_list = {
+      block "category_visible" {
+        visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"
+      }
+      blockoverride "buildings" {}
+    }
+    latifundia_building_list = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+    local_forum_building_list = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+    slave_mine_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+    basic_settlement_infratructure_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+    port_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+    fortress_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+      }
+
+    aqueduct_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    population_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    library_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    commerce_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    military_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    town_hall_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    fortress_ramparts_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    foundry_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    temple_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    theathre_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    academy_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    court_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    forum_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+
+    workshop_building = {
+      block "category_visible" { visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(Player.MakeScope).End)]"}
+      blockoverride "buildings" {}
+    }
+  }
+}

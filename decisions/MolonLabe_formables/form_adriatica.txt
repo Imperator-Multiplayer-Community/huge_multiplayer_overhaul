@@ -1,0 +1,107 @@
+﻿country_decisions = {
+	
+	# Form Adriatica
+	form_adriatica = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				country_culture_group = latin
+				country_culture_group = illyrian_group
+				country_culture_group = gallic
+				country_culture_group = celto_pannonian_group
+			}
+			NOT = {
+				tag = ADX
+			}
+			NOT = {
+				tag = ROM
+			}	
+			NOT = {
+				tag = ILL
+			}			
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = venetia_area
+					is_in_area = ferraria_area
+					is_in_area = histria_area
+					is_in_area = dalmatia_occidentalis_area
+					is_in_area = dalmatia_centralis_area
+					is_in_area = dalmatia_orientalis_area
+					is_in_area = aemilla_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = adriatica_not_exists
+				NOT = {
+					any_country = {
+						tag = ADX
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = venetia_area
+			owns_or_subject_owns_area = ferraria_area
+			owns_or_subject_owns_area = histria_area
+			owns_or_subject_owns_area = dalmatia_occidentalis_area
+			owns_or_subject_owns_area = dalmatia_centralis_area
+			owns_or_subject_owns_area = dalmatia_orientalis_area
+			owns_or_subject_owns_area = aemilla_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "ADRIATICA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ADRIATICA_ADJECTIVE"
+				change_country_color =  "adriatica_color"
+				change_country_tag = ADX
+				change_country_flag = ADRIATICA_FLAG
+				trigger_event = {
+					id = formable_heritage.112
+				}									
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_adriatica_claims_tooltip"
+			hidden_effect = {
+				area:illyria_graeca_area = { formable_area_province_effect = yes }
+				area:ariminum_area = { formable_area_province_effect = yes }
+				area:east_insubria_area = { formable_area_province_effect = yes }						
+			}			
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

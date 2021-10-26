@@ -1,0 +1,103 @@
+﻿country_decisions = {
+	
+	# Form Boihaemia Magna
+
+	form_boihaemia_magna = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = { tag = BOM }
+			primary_culture = boian
+			NOT = {
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 3761
+					province_id = 3760
+					province_id = 3759
+					province_id = 3758
+					province_id = 3756
+					province_id = 3053
+					is_in_area = chattia_occidentalis_area
+					is_in_area = vangionia_area
+					is_in_area = mediomatricia_area
+					is_in_area = treveria_area
+					is_in_area = menapia_orientalis
+					is_in_region = germania_region
+					is_in_region = bohemia_area
+					is_in_region = venedia_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = boihaemia_magna_not_exists
+				NOT = {
+					any_country = {
+						tag = BOM
+					}
+				}
+			}
+
+			can_form_nation_trigger = yes
+			owns_or_subject_owns = 3761
+			owns_or_subject_owns = 3760
+			owns_or_subject_owns = 3759
+			owns_or_subject_owns = 3758
+			owns_or_subject_owns = 3756
+			owns_or_subject_owns = 3053
+			owns_or_subject_owns_area = chattia_occidentalis_area
+			owns_or_subject_owns_area = vangionia_area
+			owns_or_subject_owns_area = mediomatricia_area
+			owns_or_subject_owns_area = treveria_area
+			owns_or_subject_owns_area = menapia_orientalis
+			owns_or_subject_owns_region = germania_region
+			owns_or_subject_owns_region = bohemia_area
+			owns_or_subject_owns_region = venedia_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "BOIHAEMIA_MAGNA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_large_effect = yes
+				formable_capital_modifier_large_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "BOIHAEMIA_MAGNA_ADJECTIVE"
+				change_country_color =  "boihaemia_magna_color"
+				change_country_tag = BOM
+				change_country_flag = BOIHAEMIA_MAGNA_FLAG
+				trigger_event = {
+					id = formable_heritage.127
+				}
+			}
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				current_date > 600.1.1
+			}
+		}
+	}
+
+} 
+

@@ -1,0 +1,88 @@
+﻿country_decisions = {
+	
+	# Form Kavkasia
+	form_kavkasia = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				country_culture_group = scythia
+				country_culture_group = persia
+				country_culture_group = caucasian
+				country_culture_group = anatolian
+			}
+			NOT = {
+				tag = KVK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = albania_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = kavkasia_not_exists
+				NOT = {
+					any_country = {
+						tag = KVK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = albania_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "KAVKASIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "KAVKASIA_ADJECTIVE"
+				change_country_color =  "kavkasia_color"
+				change_country_tag = KVK
+				change_country_flag = KAVKASIA_FLAG
+				trigger_event = {
+					id = formable_heritage.25
+				}								
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_kavkasia_claims_tooltip"
+			hidden_effect = {
+				region:armenia_region = { formable_area_province_effect = yes }
+				region:taurica_region = { formable_area_province_effect = yes }
+			}			
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

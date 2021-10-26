@@ -1,0 +1,278 @@
+﻿namespace = TTC
+
+TTC.1 = {
+	type = country_event
+	title = TTC.1.t
+	desc = TTC.1.d
+	picture = great_city
+
+	trigger = {
+		any_owned_province = {
+			has_building = local_forum_building
+			num_of_citizen >= 10
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_building = local_forum_building
+				num_of_citizen >= 10
+			}
+			save_scope_as = cityscope
+		}
+	}
+	option = { #found a city
+		name = TTC.1.a
+		scope:cityscope = {
+			hidden_effect = {remove_building_level = local_forum_building}
+			set_city_status = city
+		}
+
+	}
+	option = {#coastal fishing port
+		name = TTC.1.b
+		trigger = {
+			scope:cityscope = {
+				can_have_port = yes
+				trade_goods = fish
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.FP_TOOLTIP
+
+			remove_building_level = local_forum_building
+			add_building_level = port_building
+			add_province_modifier = {
+				name = FishingPort
+				duration = -1
+			}
+		}
+	}
+	option = { #coastal market port
+		name = TTC.1.c
+		trigger = {
+			scope:cityscope = {
+				can_have_port = yes
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.MP_TOOLTIP
+			
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = port_building
+			add_province_modifier = {
+				name = MarketPort
+				duration = -1
+			}}
+		}
+	}
+	option = { #non-coastal market town
+		name = TTC.1.n
+		trigger = {
+			scope:cityscope = {
+				can_have_port = no
+			}
+		}
+		scope:cityscope = {
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Market_Town_Building}
+			custom_tooltip = TTC.1.MT_TOOLTIP
+		}
+	}
+	option = { #cattle, grain veg only Farming town
+		name = TTC.1.e
+		trigger = {
+			scope:cityscope = {
+				OR = {
+					trade_goods = cattle
+					trade_goods = grain
+					trade_goods = vegetables
+				}
+			}
+
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.FT_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Farming_Town_building}
+		}
+	}
+	
+	option = { #Mining Town
+		name = TTC.1.f
+		trigger = {
+			scope:cityscope = {
+				OR = {
+					trade_goods = stone
+					trade_goods = marble
+					trade_goods = base_metals
+					trade_goods = precious_metals
+					trade_goods = gems
+					trade_goods = amber
+					trade_goods = iron
+					trade_goods = salt
+
+				}
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.MiT_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Mining_Town_Building}
+		}
+	}
+		
+	option = { #horse ranch
+		name = TTC.1.g
+		trigger = {
+			scope:cityscope = {
+				trade_goods = horses
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.HR_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Horse_Ranch_building}
+		}
+	}
+		
+	option = { #help me steppe horse, I'm stuck
+		name = TTC.1.h
+		trigger = {
+			scope:cityscope = {
+				trade_goods = steppe_horses
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.SHR_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Steppe_Horse_Ranch_building}
+		}
+	}
+		
+	option = { # elephant ranch
+		name = TTC.1.i
+		trigger = {
+			scope:cityscope = {
+				trade_goods = elephants
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.ER_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Elephant_Ranch_building}
+		}
+	}
+		
+	option = { #camel ranch
+		name = TTC.1.j
+		trigger = {
+			scope:cityscope = {
+				trade_goods = camel
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.CR_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = camel_ranch_building}
+		}
+	}
+		
+	option = { # vineyard
+		name = TTC.1.k
+		trigger = {
+			scope:cityscope = {
+				OR = {
+					trade_goods = wine
+					trade_goods = dates
+					trade_goods = honey
+					trade_goods = olive
+					trade_goods = spices
+					trade_goods = wild_game
+
+				}
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.LT_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Vineyard_building}
+		}
+	}
+	option = {#industrial town
+		name = TTC.1.l
+		trigger = {
+			scope:cityscope = {
+				OR = {
+					trade_goods = earthware
+					trade_goods = glass
+					trade_goods = leather
+					trade_goods = silk
+					trade_goods = incense
+					trade_goods = dye
+					trade_goods = cloth
+					trade_goods = papyrus
+				}
+			}
+		}
+		scope:cityscope = {
+			custom_tooltip = TTC.1.IT_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = Industry_Town_building}
+		}
+	}
+	option = {
+		name = TTC.1.m
+		
+		scope:cityscope = {
+			custom_tooltip = TTC.1.LaT_TOOLTIP
+			hidden_effect = {remove_building_level = local_forum_building
+			add_building_level = large_town_building}
+		}
+	}
+
+}
+TTC.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_owned_province = {
+			NOT = {
+				is_port = yes
+				can_have_port = yes
+			}
+			OR = {
+				has_province_modifier = MarketPort
+				has_province_modifier = FishingPort
+			}
+			
+		}
+	}
+	immediate = {
+		every_owned_province = {
+			limit = {
+				NOT = {
+					is_port = yes
+					can_have_port = yes
+				}
+				OR = {
+					has_province_modifier = MarketPort
+					has_province_modifier = FishingPort
+				}
+			}
+			if = {
+				limit = {
+					has_province_modifier = MarketPort
+				}
+				remove_province_modifier = MarketPort
+			}
+			if = {
+				limit = {
+					has_province_modifier = FishingPort
+				}
+				remove_province_modifier = FishingPort
+			}
+		}
+	}
+}

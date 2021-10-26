@@ -1,0 +1,131 @@
+﻿#Country rank
+migrant_horde = 0
+city_power = 1
+local_power = 2
+regional_power = 3
+major_power = 4
+great_power = 5
+
+scripted_gui_country_rank_svalue = {
+	value = scope:player.rank
+}
+
+# Centralization
+
+centralization_small = 2
+centralization_medium = 3
+centralization_large = 5
+centralization_huge = 8
+centralization_gargantuan = 10
+
+subtract_centralization_small = -2
+subtract_centralization_medium = -3
+subtract_centralization_large = -5
+subtract_centralization_huge = -8
+subtract_centralization_gargantuan = -10
+
+
+# Military Power
+
+mil_power_small = 10
+mil_power_medium = 15
+mil_power_large = 25
+mil_power_huge = 50
+mil_power_gargantuan = 80
+
+subtract_mil_power_small = -10
+subtract_mil_power_medium = -15
+subtract_mil_power_large = -25
+subtract_mil_power_huge = -50
+subtract_mil_power = -80
+
+
+# Oratory Power
+
+oratory_power_small = 10
+oratory_power_medium = 15
+oratory_power_large = 25
+oratory_power_huge = 50
+oratory_power_gargantuan = 80
+
+subtract_oratory_power_small = -10
+subtract_oratory_power_medium = -15
+subtract_oratory_power_large = -25
+subtract_oratory_power_huge = -50
+subtract_oratory_power = -80
+
+
+# Civic Power
+
+civ_power_small = 10
+civ_power_medium = 15
+civ_power_large = 25
+civ_power_huge = 50
+civ_power_gargantuan = 80
+
+subtract_civ_power_small = -10
+subtract_civ_power_medium = -15
+subtract_civ_power_large = -25
+subtract_civ_power_huge = -50
+subtract_civ_power = -80
+
+
+# Religious Power
+
+rel_power_small = 10
+rel_power_medium = 15
+rel_power_large = 25
+rel_power_huge = 50
+rel_power_gargantuan = 80
+
+subtract_rel_power_small = -10
+subtract_rel_power_medium = -15
+subtract_rel_power_large = -25
+subtract_rel_power_huge = -50
+subtract_rel_power = -80
+
+# Influence
+
+influence_small = 10
+influence_medium = 15
+influence_large = 25
+influence_huge = 50
+influence_gargantuan = 80
+
+subtract_influence_small = -10
+subtract_influence_medium = -15
+subtract_influence_large = -25
+subtract_influence_huge = -50
+subtract_influence_gargantuan = -80
+
+
+# State Province Loyalty
+
+state_province_loyalty_small = 2
+state_province_loyalty_medium = 5
+state_province_loyalty_large = 10
+state_province_loyalty_huge = 20
+state_province_loyalty_gargantuan = 40
+
+subtract_state_province_loyalty_small = -2
+subtract_state_province_loyalty_medium = -5
+subtract_state_province_loyalty_large = -10
+subtract_state_province_loyalty_huge = -20
+subtract_state_province_loyalty_gargantuan = -40
+
+#Free Heretics in Capital
+majority_of_free_men_in_capital_svalue = {
+	min = 5
+	value = root.capital_scope.total_population
+	subtract = root.capital_scope.num_of_slaves
+	divide = 10
+}
+
+#Free Pople in Province
+non_slave_population_svalue = {
+	value = total_population
+	subtract = num_of_slaves
+}
+
+#
+stability_after_battle = 5

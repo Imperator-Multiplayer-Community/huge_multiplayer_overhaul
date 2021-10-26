@@ -1,0 +1,127 @@
+﻿country_decisions = {
+	
+	# Form Estu Imperija
+
+	form_estu_imperija = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = { tag = EST }
+			country_culture_group = baltic
+			NOT = {
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 3907
+					province_id = 3893
+					province_id = 3900
+					province_id = 3892
+					province_id = 3895
+					province_id = 3858
+					province_id = 3891
+					province_id = 3888
+					province_id = 3889
+					province_id = 3855
+					is_in_area = semnonia_area
+					is_in_area = pharodenia_area
+					is_in_area = ciscarpathia_area
+					is_in_area = vistulia_area
+					is_in_area = ossioia_area
+					is_in_area = amadocia_occidentalis_area
+					is_in_area = vistulia_inferioris_area
+					is_in_area = bassetia_area
+					is_in_area = subcarpathia_area
+					is_in_area = hypania_minoris_area
+					is_in_area = transhypania_area
+					is_in_area = caluconia_area
+					is_in_area = buria_area
+					is_in_area = boioa_septentrionalis_area
+					is_in_region = venedia_region
+					is_in_region = scandinavia_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = estu_imperija_not_exists
+				NOT = {
+					any_country = {
+						tag = EST
+					}
+				}
+			}
+
+			can_form_nation_trigger = yes
+			owns_or_subject_owns = 3907
+			owns_or_subject_owns = 3893
+			owns_or_subject_owns = 3900
+			owns_or_subject_owns = 3892
+			owns_or_subject_owns = 3895
+			owns_or_subject_owns = 3858
+			owns_or_subject_owns = 3891
+			owns_or_subject_owns = 3888
+			owns_or_subject_owns = 3889
+			owns_or_subject_owns = 3855
+			owns_or_subject_owns_area = semnonia_area
+			owns_or_subject_owns_area = pharodenia_area
+			owns_or_subject_owns_area = ciscarpathia_area
+			owns_or_subject_owns_area = vistulia_area
+			owns_or_subject_owns_area = ossioia_area
+			owns_or_subject_owns_area = amadocia_occidentalis_area
+			owns_or_subject_owns_area = vistulia_inferioris_area
+			owns_or_subject_owns_area = bassetia_area
+			owns_or_subject_owns_area = subcarpathia_area
+			owns_or_subject_owns_area = hypania_minoris_area
+			owns_or_subject_owns_area = transhypania_area
+			owns_or_subject_owns_area = caluconia_area
+			owns_or_subject_owns_area = buria_area
+			owns_or_subject_owns_area = boioa_septentrionalis_area
+			owns_or_subject_owns_region = venedia_region
+			owns_or_subject_owns_region = scandinavia_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "ESTU_IMPERIJA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_large_effect = yes
+				formable_capital_modifier_large_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ESTU_IMPERIJA_ADJECTIVE"
+				change_country_color =  "estu_imperija_color"
+				change_country_tag = EST
+				change_country_flag = ESTU_IMPERIJA_FLAG
+				trigger_event = {
+					id = formable_heritage.135
+				}
+			}
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				current_date > 600.1.1
+			}
+		}
+	}
+
+} 
+

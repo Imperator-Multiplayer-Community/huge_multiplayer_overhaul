@@ -1,0 +1,54 @@
+﻿
+NCountry = {
+
+	BASE_NAVAL_RANGE = 500
+}
+
+NPop = {
+		
+	ASSIMILATE_DIFF_RELIGION_PENALTY = -0.15 #Was 33%
+	CONVERT_DIFF_CULTURE_PENALTY = -0.15 #Was 20%
+
+	CONVERSION_SCALE_PER_MISMATCHED_DEITY = -0.05 #Was -20%
+}
+
+NCombat = {
+	
+	#WAR_EXHAUTION_FROM_LOSSES = 1.8 #Multiplier on losses
+	MAX_WAR_EXHAUSTION_FROM_BATTLE = 5 #Was 3.5
+	#ASSAULT_ATTACKER_LOSS = 1.0 - This could be 1.25 and we could remove the Realistic Assault modifier	
+	GREAT_BATTLE_SIZE_THRESHOLD = 10000 # Legion Distinctions Overhaul: default is 8000
+}
+
+NUnit = {
+
+	ATTRITION_ON_FOOD_CONSUMPTION_IMPACT = 0.2 #Was 0.1
+
+	OUTSIDE_OF_NAVAL_RANGE_ATTRITION = 8 #Was 4.0
+	NAVAL_ATTRITION_CHANCE = 1 #Was 0.4
+}
+
+NDiplomacy = {
+	
+	DEFAULT_WARGOAL_BATTLESCORE_BONUS = 10 #Was 3
+	WARSCORE_MAX_FROM_BATTLES = 80 #Was 40	
+}
+
+NTrade = {
+
+	MINIMUM_SLAVES_PER_GOOD = 4 #Was 3
+}
+
+NLevy = {
+	DISBAND_MILITARY_EXP_MULT = 0 # when disbanding a levy military experience will be added to the country
+}
+NGame = {
+#MERCENARY_BASE_AMOUNT = 0 #Changes the base A 'minimum' of sorts.
+#MERCENARY_PER_POP_SCALE = 0.0 #Adds x amount of cohorts per pop
+#MERCENARY_AMOUNT_DEVIATION = 10	 #Not sure, assuming it's some kind of 'fuzz' value
+STARTING_SHIPS_PER_PORT_POPULATION = 0.06 #was 0.06
+
+}
+NAI = {
+	NAVY_BUDGET = 25 #was 25
+}

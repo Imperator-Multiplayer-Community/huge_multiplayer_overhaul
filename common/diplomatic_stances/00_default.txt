@@ -1,0 +1,97 @@
+﻿neutral_stance = {
+	modifier = {
+		diplomatic_relations = 2
+	}
+	ai_will_do = {
+		modifier = {
+			add = 10
+		}
+	}
+}
+
+
+appeasement_stance = {
+	modifier = {
+		agressive_expansion_monthly_decay = 0.005
+		improve_relation_cost_modifier = -0.25
+	}
+	ai_will_do = {
+		modifier = {
+			add = has_aggressive_expansion
+			war = no
+		}
+	}
+}
+
+
+trading_stance = {
+	modifier = {
+		global_commerce_modifier = 0.20
+	}
+	ai_will_do = {
+		modifier = {
+			add = 100
+			is_subject = yes
+		}
+		modifier = {
+			add = 15
+			war = no
+		}
+	}
+}
+
+warmongering_stance = {
+	modifier = {
+		fabricate_claim_speed = 2
+		war_score_cost = -0.15
+		agressive_expansion_impact = -0.15
+	}
+	ai_will_do = {
+		modifier = {
+			add = 25
+			is_antagonist = yes
+		}
+		modifier = {
+			add = 10
+			is_subject = no
+			has_aggressive_expansion < 25
+		}
+		modifier = {
+			add = 15
+			rank > 2
+		}
+		modifier = {
+			add = -20
+			safety < 50
+		}
+	}
+}
+
+
+vassaling_stance = {
+	modifier = {
+		subject_loyalty = 30
+		integrate_speed = 0.50
+	}
+	ai_will_do = {
+		modifier = {
+			add = -100
+			any_subject = {
+				count < 1
+			}
+		}
+		modifier = {
+			add = 5
+			any_subject = {
+				count > 1
+			}
+		}
+		modifier = {
+			add = 15
+			any_subject = {
+				count > 3
+			}
+		}
+	}
+}
+

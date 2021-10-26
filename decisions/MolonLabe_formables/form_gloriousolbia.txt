@@ -1,0 +1,120 @@
+﻿country_decisions = {
+	
+	# Form Glorious Olbia
+	form_gloriousolbia = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = hellenic
+			is_republic = yes
+			tag = OLB
+			NOT = {
+				tag = GLO
+			}
+			NOT = {
+				tag = HLA
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+			capital_scope = {
+				OR = {
+					province_id = 4529
+					#province_id = 446
+					#province_id = 439
+					#province_id = 460
+					#province_id = 444
+					#province_id = 7890
+					#province_id = 7893
+				}
+			}
+			OR = {
+				is_ai = no
+				#num_of_cities <= 12
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 4529
+					province_id = 7186
+					province_id = 4525
+					province_id = 4522
+					province_id = 6121
+					province_id = 6128
+					province_id = 6092
+					province_id = 6070
+					province_id = 5383
+					province_id = 6238
+					province_id = 6253
+					province_id = 7828
+					province_id = 6294
+					province_id = 6289
+					province_id = 6089
+					province_id = 6072
+					province_id = 7830
+					province_id = 7816
+					province_id = 6266
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = glorious_olbia_not_exists
+				NOT = {
+					any_country = {
+						tag = GLO
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns = 4529
+			owns = 7186
+			owns = 4525
+			owns = 4522
+			owns = 6121
+			owns = 6128
+			owns = 6092
+			owns = 6070
+			owns = 5383
+			owns = 6238
+			owns = 6253
+			owns = 7828
+			owns = 6294
+			owns = 6289
+			owns = 6089
+			owns = 6072
+			owns = 7830
+			owns = 7816
+			owns = 6266
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = GLORIOUSOLBIA_NAME
+			hidden_effect = {
+				change_country_adjective = GLORIOUSOLBIA_ADJECTIVE
+				change_country_tag = GLO
+				change_country_color = glorious_olbia_color
+				change_country_flag = GLORIOUS_OLBIA_FLAG
+				trigger_event = {
+					id = formable_heritage.28
+				}								
+			}
+			capital_scope = {
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

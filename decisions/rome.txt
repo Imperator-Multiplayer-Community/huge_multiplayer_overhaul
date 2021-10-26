@@ -1,0 +1,110 @@
+﻿country_decisions = {
+	expand_the_campus_martius = {
+		potential = {
+			num_of_cities >= 1
+			tag = ROM
+			NOT = { has_country_modifier = expanded_campus_martius }
+			religion = roman_pantheon
+		}
+		allow = {
+			p:1 = {
+				controller = ROOT
+			}
+			military_tech > 3
+			treasury > 250
+		}
+		effect = {
+			add_treasury = -250
+			add_country_modifier = {
+				name = expanded_campus_martius
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	embellish_jupiter_optimus_maximus = {
+		potential = {
+			num_of_cities >= 1
+			tag = ROM
+			NOT = { has_country_modifier = embellished_temple_jupiter_optimus_maximus }
+			religion = roman_pantheon
+			p:1={
+				has_ancient_wonder = "temple_of_jupiter"
+			}
+		}
+		allow = {
+			p:1 = {
+				controller = ROOT
+			}
+			religious_tech > 5
+			treasury > 350
+		}
+		effect = {
+			add_treasury = -350
+			if = {
+				limit = {
+					is_monarchy = yes
+				}
+				add_legitimacy = legitimacy_huge
+			}
+			if = {
+				limit = { 
+					is_republic = yes
+					has_party_type = boni_party
+				}
+				add_party_approval = {
+					party_type = boni_party
+					value = 10
+				}
+			}
+			current_ruler = {
+				add_popularity = popularity_huge
+			}
+			add_country_modifier = {
+				name = embellished_temple_jupiter_optimus_maximus
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	rebuild_corinth = {
+		potential = {
+			num_of_cities >= 1
+			tag = ROM
+			any_owned_province = {
+				is_in_region = greece_region
+			}
+			NOT = {
+				has_variable = corinth_rebuilt
+			}
+		}
+		allow = {
+			treasury >= 300
+			owns_area = achaea_area
+		}
+		effect = {
+			add_treasury = -300
+			p:418 = {
+				custom_tooltip = corinth_gets_tt
+				capital_formable_medium_effect = yes
+				if = {
+					limit = {
+						can_build_building = population_building
+					}
+					add_building_level = population_building
+				}
+			}
+			set_variable = {
+				name = corinth_rebuilt
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+

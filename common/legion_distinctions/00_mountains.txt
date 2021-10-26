@@ -1,0 +1,122 @@
+﻿### mountains ###
+distinction_mountains_master_01 = {
+	icon = "phalera_ox"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.05
+	}
+}
+
+
+distinction_mountains_master_02 = {
+	icon = "phalera_ox"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.05
+		army_movement_speed = 0.02
+	}
+}
+
+distinction_mountains_01 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.02
+	}
+}
+
+distinction_mountains_02 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.04
+	}
+}
+
+distinction_mountains_03 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.06
+	}
+}
+
+distinction_mountains_04 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.08
+	}
+}
+
+distinction_mountains_05 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.10
+	}
+}
+
+distinction_mountains_06 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.12
+	}
+}
+
+distinction_mountains_07 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.14
+	}
+}
+
+distinction_mountains_08 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.16
+	}
+}
+
+distinction_mountains_09 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.18
+	}
+}
+
+distinction_mountains_10 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		mountain_combat_bonus = 0.20
+	}
+}

@@ -1,0 +1,278 @@
+﻿namespace = dhe_jainism
+
+# Recurring jainism event
+dhe_jainism.1 = {
+	type = country_event
+	title = "dhe_jainism.1.t"
+	desc = "dhe_jainism.1.desc"
+	picture = ascetic
+	
+	left_portrait = current_ruler
+
+	goto_location = scope:randomized_country_province
+	
+	trigger = {
+		current_date < 550.1.1
+		NOT = { has_variable = dhe_jainism_1_cooldown }
+		NOT = { religion = jainism }
+		any_owned_province = {
+			city_is_in_india_trigger = yes
+			any_pops_in_province = {
+				count > 5
+				NOT = { pop_religion = jainism }
+			}
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				city_is_in_india_trigger = yes
+				any_pops_in_province = {
+					count > 5
+					NOT = { pop_religion = jainism }
+				}
+			}
+			save_scope_as = randomized_country_province
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					any_pops_in_province = {
+						NOT = { pop_religion = jainism }
+					}
+					any_neighbor_province = {
+						this = scope:randomized_country_province
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					any_pops_in_province = {
+						NOT = { pop_religion = jainism }
+					}
+					any_neighbor_province = {
+						this = scope:randomized_country_province
+					}
+				}
+				save_scope_as = randomized_country_province_2
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						NOT = { this = scope:randomized_country_province_2 }
+						any_pops_in_province = {
+							NOT = { pop_religion = jainism }
+						}
+						any_neighbor_province = {
+							this = scope:randomized_country_province
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						NOT = { this = scope:randomized_country_province_2 }
+						any_pops_in_province = {
+							NOT = { pop_religion = jainism }
+						}
+						any_neighbor_province = {
+							this = scope:randomized_country_province
+						}
+					}
+					save_scope_as = randomized_country_province_3
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							NOR = { 
+								this = scope:randomized_country_province_2 
+								this = scope:randomized_country_province_3
+							}
+							any_pops_in_province = {
+								NOT = { pop_religion = jainism }
+							}
+							any_neighbor_province = {
+								this = scope:randomized_country_province
+							}
+						}
+					}
+					random_owned_province = {
+						limit = {
+							NOR = { 
+								this = scope:randomized_country_province_2 
+								this = scope:randomized_country_province_3
+							}
+							any_pops_in_province = {
+								NOT = { pop_religion = jainism }
+							}
+							any_neighbor_province = {
+								this = scope:randomized_country_province
+							}
+						}
+						save_scope_as = randomized_country_province_4
+					}
+					if = {
+						limit = {
+							any_owned_province = {
+								NOR = { 
+									this = scope:randomized_country_province_2 
+									this = scope:randomized_country_province_3
+									this = scope:randomized_country_province_4
+								}
+								any_pops_in_province = {
+									NOT = { pop_religion = jainism }
+								}
+								any_neighbor_province = {
+									this = scope:randomized_country_province
+								}
+							}
+						}
+						random_owned_province = {
+							limit = {
+								NOR = { 
+									this = scope:randomized_country_province_2 
+									this = scope:randomized_country_province_3
+									this = scope:randomized_country_province_4
+								}
+								any_pops_in_province = {
+									NOT = { pop_religion = jainism }
+								}
+								any_neighbor_province = {
+									this = scope:randomized_country_province
+								}
+							}
+							save_scope_as = randomized_country_province_5
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = dhe_jainism_1_cooldown
+			days = 1825
+		}
+	}
+
+	option = {
+		name = "dhe_jainism.1.a"
+		scope:randomized_country_province = {
+			custom_tooltip = "jainism_medium.tt"
+			hidden_effect = {
+				ordered_pops_in_province = {
+					limit = {
+						NOT = {
+							pop_religion = jainism
+						}
+					}
+					order_by = pop_hapiness
+					max = {
+						value = total_population
+						divide = 5
+					}
+					set_pop_religion = jainism
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:randomized_country_province_2
+			}
+			scope:randomized_country_province_2 = {
+				custom_tooltip = "jainism_minor.tt"
+				hidden_effect = {
+					ordered_pops_in_province = {
+						limit = {
+							NOT = {
+								pop_religion = jainism
+							}
+						}
+						order_by = pop_hapiness
+						max = {
+							value = total_population
+							divide = 9
+						}
+						set_pop_religion = jainism
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:randomized_country_province_3
+				}
+				scope:randomized_country_province_3 = {
+					custom_tooltip = "jainism_minor.tt"
+					hidden_effect = {
+						ordered_pops_in_province = {
+							limit = {
+								NOT = {
+									pop_religion = jainism
+								}
+							}
+							order_by = pop_hapiness
+							max = {
+								value = total_population
+								divide = 9
+							}
+							set_pop_religion = jainism
+						}
+					}
+				}
+				if = {
+					limit = {
+						exists = scope:randomized_country_province_4
+					}
+					scope:randomized_country_province_4 = {
+						custom_tooltip = "jainism_minor.tt"
+						hidden_effect = {
+							ordered_pops_in_province = {
+								limit = {
+									NOT = {
+										pop_religion = jainism
+									}
+								}
+								order_by = pop_hapiness
+								max = {
+									value = total_population
+									divide = 9
+								}
+								check_range_bounds = no
+								set_pop_religion = jainism
+							}
+						}
+					}
+					if = {
+						limit = {
+							exists = scope:randomized_country_province_5
+						}
+						scope:randomized_country_province_5 = {
+							custom_tooltip = "jainism_minor.tt"
+							hidden_effect = {
+								ordered_pops_in_province = {
+									limit = {
+										NOT = {
+											pop_religion = jainism
+										}
+									}
+									order_by = pop_hapiness
+									max = {
+										value = total_population
+										divide = 9
+									}
+									set_pop_religion = jainism
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "dhe_jainism.1.b"
+		trigger = {
+			is_ai = no
+		}
+		remove_stability_effect = yes
+	}
+}

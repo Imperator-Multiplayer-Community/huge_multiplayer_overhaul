@@ -1,0 +1,81 @@
+﻿#Militray decision modifers 
+
+better_armour = { 
+ heavy_cavalry_defensive = 0.05
+ heavy_infantry_defensive = 0.05
+ light_cavalry_defensive = 0.05
+ light_infantry_defensive = 0.05
+ warelephant_defensive = 0.05
+ archers_defensive = 0.05
+ horse_archers_defensive = 0.05
+ camels_defensive = 0.05
+ army_maintenance_cost = 0.05
+}
+
+better_weapons = {
+ heavy_cavalry_offensive = 0.05
+ heavy_infantry_offensive = 0.05
+ light_cavalry_offensive = 0.05
+ light_infantry_offensive = 0.05
+ warelephant_offensive = 0.05
+ archers_offensive = 0.05
+ horse_archers_offensive = 0.05
+ camels_offensive = 0.05
+ army_maintenance_cost = 0.05
+}
+
+routine_drill = {
+ heavy_cavalry_discipline = 0.05
+ heavy_infantry_discipline = 0.05
+ light_cavalry_discipline = 0.05
+ warelephant_discipline = 0.05
+ archers_discipline = 0.05
+ horse_archers_discipline = 0.05
+ camels_discipline = 0.05
+ army_maintenance_cost = 0.05
+}
+
+veterans_conscripted = {
+ manpower_recovery_speed = -0.5
+ war_exhaustion = 0.02
+}
+
+coastal_defence = {
+ naval_morale_modifier = 0.05
+ naval_damage_taken = -0.05
+ global_ship_recruit_speed = 0.1
+ ship_cost = -0.05
+ global_ship_start_experience = 15
+ riverine_terrain_combat_bonus = 0.05
+}
+
+sea_offence = {
+ navy_movement_speed = 0.1
+ naval_range = 0.1
+ naval_damage_done = 0.05
+ naval_morale_recovery = 0.05
+ mercenary_naval_maintenance_cost = -0.15
+ ocean_combat_bonus = 0.1
+}
+
+burnt_ground = {
+ max_attrition = 1
+ hostile_attrition = 4
+ global_defensive = 1
+ garrison_size = 0.2
+ max_war_exhaustion = 10
+ global_tax_modifier = -0.3
+ global_commerce_modifier = -0.3
+ stability_monthly_change = -0.04
+}
+
+fortified_capital = {
+ max_attrition = 5
+ local_hostile_attrition = 5
+ local_defensive = 3
+ garrison_growth = 0.3
+ local_monthly_food_modifier = 3
+ local_tax_modifier = -1
+ local_manpower_modifier = 2
+}
+

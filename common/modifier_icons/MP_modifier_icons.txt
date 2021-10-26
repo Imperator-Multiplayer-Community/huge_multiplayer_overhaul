@@ -1,0 +1,164 @@
+﻿######### DEFAULT #########
+
+default = {
+    positive = "gfx/interface/icons/_default.dds"
+    default = yes
+}
+
+######### STATIC #########
+
+marines_discipline = {
+    positive = "gfx/interface/icons/modifiers/marines_discipline.dds"
+}
+
+marines_morale = {
+    positive = "gfx/interface/icons/modifiers/marines_morale.dds"
+}
+
+marines_offensive = {
+    positive = "gfx/interface/icons/modifiers/marines_offensive.dds"
+}
+
+marines_defensive = {
+    positive = "gfx/interface/icons/modifiers/marines_defensive.dds"
+}
+
+marines_cost = {
+    positive = "gfx/interface/icons/modifiers/marines_cost.dds"
+}
+
+marines_maintenance_cost = {
+    positive = "gfx/interface/icons/modifiers/marines_maintenance_cost.dds"
+}
+
+marines_movement_speed = {
+    positive = "gfx/interface/icons/modifiers/marines_movement_speed.dds"
+}
+
+marines_plains_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_plains_combat_bonus.dds"
+}
+
+marines_mountain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_mountain_combat_bonus.dds"
+}
+
+marines_hills_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_desert_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_marsh_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_jungle_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_farmland_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_forest_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_ocean_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_coastal_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_riverine_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+marines_impassable_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marines_hills_combat_bonus.dds"
+}
+
+
+onekman_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/local_manpower.dds"
+}
+fivekman_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/local_manpower.dds"
+}
+tenkman_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/local_manpower.dds"
+}
+fiftykman_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/local_manpower.dds"
+}
+tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+archers_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+camels_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+engineer_cohort_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+heavy_cavalry_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+heavy_infantry_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+horse_archers_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+light_cavalry_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+light_infantry_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+marines_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+supply_train_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+warelephant_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+large_town_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Market_Town_Building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Farming_Town_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Mining_Town_Building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Horse_Ranch_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Steppe_Horse_Ranch_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Elephant_Ranch_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+camel_ranch_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Vineyard_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+Industry_Town_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}

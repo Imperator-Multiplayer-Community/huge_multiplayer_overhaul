@@ -1,0 +1,35 @@
+﻿
+#Naval Raid:
+
+naval_raiding_ae_gain_tooltip_svalue = {
+	value = 1 #You get one for pushing the button
+	if = {
+		limit = {
+			unit_location = {
+				any_neighbor_province = {
+					count >= 5
+					naval_raid_target_province_trigger = yes
+					NOT = {	has_province_modifier = port_province_raided }
+				}
+			}
+		}
+		add = 5
+	}
+	else = {
+		unit_location = {
+			every_neighbor_province = {
+				limit = { 
+					naval_raid_target_province_trigger = yes 
+					NOT = {	has_province_modifier = port_province_raided }
+				}
+				add = 1
+			}
+		}
+	}
+	max = {
+		value = naval_raid_capacity_svalue
+		add = 2
+	}
+	ceiling = yes
+}
+

@@ -1,0 +1,221 @@
+﻿# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+
+#these names can NOT be removed or changes, as the code uses them....
+
+##########################################################################
+# Difficulty Modifiers
+##########################################################################
+
+
+##########################################################################
+# Province Static Modifiers
+##########################################################################
+
+number_of_prisoners_abroad = {
+	stability_monthly_change = -0.0
+}
+
+
+##########################################################################
+# Unit Static Modifiers
+##########################################################################
+
+
+in_siege = {
+	experience_decay = -0.05
+	monthly_experience_gain = 0.10
+}
+
+##########################################################################
+# Country Static Modifiers
+##########################################################################
+
+#
+# Order of War modifiers, offensive_war OR defensive_war OR civil_war then peace.
+#
+
+
+defensive_war = {
+	max_war_exhaustion = 30
+	war_exhaustion = -0.03
+	global_migration_speed_modifier = 0.1
+	#levy_size_multiplier = 0.01
+	#monthly_military_experience_modifier = 0.10
+}
+
+
+total_blockaded = {
+	war_exhaustion = 0.20				#increases exhaustion.
+}
+
+
+war_exhaustion = {
+	global_population_happiness = -0.01
+	ruler_popularity_gain = -0.01
+	monthly_military_experience_modifier = 0.0125
+}
+
+
+
+nation_rank_1 = {
+	global_commerce_modifier = 0.2	
+	global_defensive = 0.2
+	diplomatic_relations = 2
+	diplomatic_range_modifier = 0.25
+	num_of_clan_chiefs = 1
+	integrate_speed = 0.05
+	monthly_wage_modifier = 0.015
+	levy_size_multiplier = 0.12
+	mercenary_land_maintenance_cost = -0.15
+	build_cost = -0.15
+	max_mercenary_stacks = 1
+}
+
+nation_rank_2 = {
+	diplomatic_relations = 1
+	diplomatic_range_modifier = 0.5
+	num_of_clan_chiefs = 1
+	integrate_speed = 0.1
+	happiness_for_same_culture_modifier = 0.04
+	monthly_wage_modifier = 0.025
+	mercenary_land_maintenance_cost = -0.1
+	build_cost = -0.1
+	max_mercenary_stacks = 1
+}
+
+nation_rank_3 = {
+	diplomatic_relations = 1
+	global_capital_trade_routes = 1
+	diplomatic_range_modifier = 1.25
+	num_of_clan_chiefs = 1.5
+	integrate_speed = 0.15
+	monthly_political_influence_modifier = 0.05
+	civil_war_threshold = -0.03
+	global_monthly_state_loyalty = -0.01
+	war_score_cost = -0.05
+	happiness_for_same_culture_modifier = 0.08
+	monthly_wage_modifier = 0.040
+	build_cost = -0.05
+	max_mercenary_stacks = 2
+}
+
+nation_rank_4 = {
+	diplomatic_relations = 2
+	global_capital_trade_routes = 2
+	diplomatic_range_modifier = 2
+	num_of_clan_chiefs = 3
+	change_governor_policy_cost_modifier = -0.1
+	general_loyalty = -2.5
+	admiral_loyalty = -2.5
+	governor_loyalty = -2.5
+	integrate_speed = 0.2
+	monthly_political_influence_modifier = 0.1
+	civil_war_threshold = -0.05
+	war_score_cost = -0.1
+	happiness_for_same_culture_modifier = 0.12
+	monthly_wage_modifier = 0.075
+	max_mercenary_stacks = 3
+}
+
+
+nation_rank_5 = {
+	diplomatic_relations = 2
+	global_capital_trade_routes = 2
+	diplomatic_range_modifier = 4
+	num_of_clan_chiefs = 3
+	change_governor_policy_cost_modifier = -0.3
+	general_loyalty = -5
+	admiral_loyalty = -5
+	governor_loyalty = -5
+	integrate_speed = 0.25
+	monthly_political_influence_modifier = 0.15
+	civil_war_threshold = -0.08
+	war_score_cost = -0.15
+	happiness_for_same_culture_modifier = 0.16
+	monthly_wage_modifier = 0.10
+	max_mercenary_stacks = 4
+}
+
+is_tribe = {
+	max_loyalty = 100
+	enslavement_efficiency = 0.025
+	change_governor_policy_cost_modifier = 0.1
+	army_maintenance_cost = 0.5
+	global_tribesmen_desired_pop_ratio = 0.1
+	research_points_modifier = -0.5
+	price_found_city_cost_modifier = 0.10
+	price_revoke_city_status_cost_modifier = -0.5
+    price_revoke_metropolis_status_cost_modifier = -0.5
+	global_population_capacity_modifier = -0.1 
+	monthly_military_experience = 0.1 
+	global_defensive = -0.25
+	#buy_military_tradition_cost_modifer = -0.1
+
+}
+
+is_monarchy = {
+	max_loyalty = 100
+	global_freemen_desired_pop_ratio = 0.025
+}
+
+is_republic = {
+	max_loyalty = 100
+	change_governor_policy_cost_modifier = -0.1
+	max_mercenary_stacks = 2
+	
+	global_freemen_desired_pop_ratio = 0.025
+	global_freemen_city_desired_pop_ratio = 0.075
+	global_citizen_city_desired_pop_ratio = 0.05
+}
+
+negative_centralization = {
+	global_tribesmen_output = -0.25
+	levy_size_multiplier = -0.15
+	land_morale_modifier = -0.25
+	start_migration_cost_modifier = 0.5
+	price_found_city_cost_modifier = -0.5
+	monthly_military_experience = -0.4
+}
+
+positive_centralization = {
+	global_pop_promotion_speed = 2.5
+	country_civilization_value = 15
+	research_points_modifier = 0.5
+}
+
+
+
+#########################################################################
+# Ruler, CoRuler or Consort, highest value picked, and then multiplied
+#########################################################################
+
+ruler_finesse_mod = {
+	global_commerce_modifier = 0.01
+	build_cost = -0.01
+}
+
+ruler_charisma_mod = {
+	monthly_tyranny = -0.01
+	fabricate_claim_speed = 0.2
+	ruler_popularity_gain = 0.05
+}
+
+ruler_martial_mod = {
+	manpower_recovery_speed = 0.01
+	land_morale_recovery = 0.01
+	monthly_military_experience = 0.05
+}
+
+ruler_zeal_mod = {
+	stability_monthly_change = 0.01
+	war_exhaustion = -0.01
+}
+
+positive_state_food_growth = {
+	local_population_growth = 0.04
+	local_defensive = 0.025
+}
+

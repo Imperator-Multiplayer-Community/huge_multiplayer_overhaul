@@ -1,0 +1,226 @@
+﻿#Province modifiers
+
+pearl_divers_tylos = {
+	base_resources = 1
+	local_state_trade_routes = 2
+}
+
+royal_ironworks_ganagaras = {
+	local_goods_from_slaves = -4
+	base_resources = 1
+}
+
+dragonsblood_soqotra = {
+	base_resources = 2
+}
+
+incense_fields_qana = {
+	local_goods_from_slaves = -4
+	base_resources = 1
+}
+
+incense_route_hub = {
+	state_commerce_modifier = 0.25
+	local_state_trade_routes = 2
+}
+
+cinnamon_route_hub = {
+	state_commerce_modifier = 0.25
+	local_state_trade_routes = 2
+}
+
+lapis_lazuli_route_hub = {
+	state_commerce_modifier = 0.25
+	local_state_trade_routes = 2
+}
+
+monsoon_route_hub = {
+	state_commerce_modifier = 0.25
+	local_state_trade_routes = 2
+}
+
+black_pepper_route_hub = {
+	state_commerce_modifier = 0.25
+	local_state_trade_routes = 2
+}
+
+red_sea_route_hub = {
+	state_commerce_modifier = 0.25
+	local_state_trade_routes = 2
+}
+
+bactrian_silk_road_hub = {
+	state_commerce_modifier = 0.15
+	local_state_trade_routes = 2
+}
+
+sogdian_silk_road_hub = {
+	state_commerce_modifier = 0.15
+	local_state_trade_routes = 2
+}
+
+margian_silk_road_hub = {
+	state_commerce_modifier = 0.15
+	local_state_trade_routes = 2
+}
+
+north_tarim_silk_road_hub = {
+	state_commerce_modifier = 0.15
+	local_state_trade_routes = 2
+}
+
+west_tarim_silk_road_hub = {
+	state_commerce_modifier = 0.15
+	local_state_trade_routes = 2
+}
+
+elephant_training_complex = {
+	local_goods_from_slaves = -4 
+	base_resources = 1
+}
+
+dromedary_training_complex = {
+	local_goods_from_slaves = -4 
+	base_resources = 1
+}
+
+bactrian_camel_training_complex = {
+	local_goods_from_slaves = -4 
+	base_resources = 1
+}
+
+cantabrian_horse_training_complex = {
+	local_goods_from_slaves = -4 
+	base_resources = 1
+}
+
+aryan_cavalry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+celtic_cavalry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+numidian_cavalry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+thessalian_cavalry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+asian_elephant_training_complex = {
+	local_goods_from_slaves = -4 
+	base_resources = 1
+}
+
+tarentine_cavalry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+libyan_elephant_training_complex = {
+	local_goods_from_slaves = -4 
+	base_resources = 1
+}
+
+ferghani_cavalry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+armenian_cavalry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+naval_timberland = {
+	base_resources = 2
+	local_goods_from_slaves = -4
+}
+
+germanic_raiders_dock = {
+	base_resources = 1
+	local_ship_recruit_speed = 0.15
+}
+
+tibetan_infantry_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+	local_population_capacity = 0.15
+}
+
+
+###Country modifiers###
+elephant_training_programme = { 
+	warelephant_defensive = 0.1
+}
+
+dromedary_training_programme = { 
+	camels_morale = 0.1
+}
+
+bactrian_camel_training_programme = { 
+	camels_defensive = 0.1
+}
+
+cantabrian_horse_training_programme = { 
+	horse_archers_offensive = 0.1
+}
+
+aryan_cavalry_training_programme = { 
+	light_cavalry_offensive = 0.1
+}
+
+celtic_cavalry_training_programme = { 
+	light_cavalry_defensive = 0.1
+}
+
+numidian_cavalry_training_programme = { 
+	horse_archers_defensive = 0.1
+}
+
+thessalian_cavalry_training_programme = {
+	heavy_cavalry_morale = 0.1
+}
+
+asian_elephant_training_programme = { 
+	warelephant_morale = 0.1
+}
+
+libyan_elephant_training_programme = { 
+	warelephant_discipline = 0.1
+}
+
+tarentine_cavalry_training_programme = { 
+	horse_archers_morale = 0.1
+}
+
+ferghani_cavalry_training_programme = { 
+	heavy_cavalry_offensive = 0.1
+}
+
+armenian_cavalry_training_programme = { 
+	heavy_cavalry_defensive = 0.1
+}
+
+himalayan_training_programme = { 
+	heavy_infantry_discipline = 0.1
+}
+
+britannic_shipbuilding_programme = { 
+	global_ship_recruit_speed = 0.15
+	octere_offensive = 0.1
+}
+
+germanic_raiding_tradition = { 
+	global_ship_recruit_speed = 0.2
+	riverine_terrain_combat_bonus = 0.2
+	global_ship_start_experience = 10
+	naval_range = 0.10
+}

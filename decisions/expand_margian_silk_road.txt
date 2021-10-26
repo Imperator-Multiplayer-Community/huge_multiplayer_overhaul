@@ -1,0 +1,42 @@
+﻿country_decisions = {
+	
+	# Expand Alex Margiana Silk Route
+	expand_margian_silk_road = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 6668
+			NOR = {
+				has_variable = founded_margian_silk_road_hub
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 6668
+			}
+		}
+		allow = {
+			treasury >= 500
+			political_influence >= 20
+			owns = 6668
+			invention = subject_loyalty_inv
+		}
+		
+		effect = {
+			set_variable = founded_margian_silk_road_hub
+			add_treasury = -500
+			add_political_influence = -20
+			
+			p:6668.state = {
+					add_state_modifier = {
+						name = margian_silk_road_hub
+						duration = -1					
+					}
+				}
+			}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

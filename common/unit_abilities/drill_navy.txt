@@ -1,0 +1,93 @@
+﻿drill_navy = {
+	duration = -1
+	enable = no
+	toggle = yes
+	navy_only = yes
+	cancel_on_combat_end = yes
+	
+	map = yes
+	
+	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
+
+
+	allow = {
+		is_navy = yes
+		in_combat = no
+		is_moving = no
+		has_commander = yes
+		# custom_tooltip = {
+		# 	text = marines_ratio
+		# 	num_of_marines >= num_of_ships_10
+		# }
+		
+		NOT = { unit_owner = { has_low_economic_policy = expense_navy } }
+
+		trigger_if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				loyalty > 33
+			}
+		}
+		#trigger_else = {
+		#	custom_tooltip = {
+		#		text = no_marines_tt
+		#	}
+		#}
+	}
+	modifier = {
+		monthly_experience_gain = 2.5
+		loyalty_gain_chance = 1.0
+		navy_maintenance_cost = 0.33
+	}
+	
+	
+	start_effect = {
+	}
+	
+	
+	
+	finished_when = {
+		OR = {
+			in_combat = yes
+			is_moving = yes
+			is_exiled = yes
+			unit_owner = { has_low_economic_policy = expense_navy }
+			has_commander = no
+		}
+	}
+	
+	ai_will_do = {
+		modifier = {
+			trigger = {
+
+				experience_percentage < 0.65
+				
+				unit_owner = {
+					treasury > 50
+					manpower > 20
+				}
+			}
+			add = {
+				value = 250
+				divide = unit_size_rank
+			}
+		}
+	}
+	
+	ai_will_revoke = {
+		OR = {
+			is_idle = no
+			unit_threat > 0.2
+			experience_percentage >= 0.95
+
+			unit_owner = {
+				treasury < 1
+			}
+			unit_owner = {
+				months_to_war < 12
+			}
+		}
+	}
+}

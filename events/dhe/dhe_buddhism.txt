@@ -1,0 +1,944 @@
+﻿namespace = dhe_buddhism
+
+# Recurring Buddhism event
+dhe_buddhism.1 = {
+	type = country_event
+	title = "dhe_buddhism.1.t"
+	desc = "dhe_buddhism.1.desc"
+	picture = ascetic
+	
+	left_portrait = current_ruler
+
+	goto_location = scope:randomized_country_province
+	
+	trigger = {
+		current_date < 550.1.1
+		NOT = { has_variable = dhe_buddhism_1_cooldown }
+		NOT = { religion = buddhism }
+		any_owned_province = {
+			city_is_in_india_trigger = yes
+			any_pops_in_province = {
+				count > 5
+				NOT = { pop_religion = buddhism }
+			}
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				city_is_in_india_trigger = yes
+				any_pops_in_province = {
+					count > 5
+					NOT = { pop_religion = buddhism }
+				}
+			}
+			save_scope_as = randomized_country_province
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					any_pops_in_province = {
+						NOT = { pop_religion = buddhism }
+					}
+					any_neighbor_province = {
+						this = scope:randomized_country_province
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					any_pops_in_province = {
+						NOT = { pop_religion = buddhism }
+					}
+					any_neighbor_province = {
+						this = scope:randomized_country_province
+					}
+				}
+				save_scope_as = randomized_country_province_2
+			}
+			if = {
+				limit = {
+					any_owned_province = {
+						NOT = { this = scope:randomized_country_province_2 }
+						any_pops_in_province = {
+							NOT = { pop_religion = buddhism }
+						}
+						any_neighbor_province = {
+							this = scope:randomized_country_province
+						}
+					}
+				}
+				random_owned_province = {
+					limit = {
+						NOT = { this = scope:randomized_country_province_2 }
+						any_pops_in_province = {
+							NOT = { pop_religion = buddhism }
+						}
+						any_neighbor_province = {
+							this = scope:randomized_country_province
+						}
+					}
+					save_scope_as = randomized_country_province_3
+				}
+				if = {
+					limit = {
+						any_owned_province = {
+							NOR = { 
+								this = scope:randomized_country_province_2 
+								this = scope:randomized_country_province_3
+							}
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+							any_neighbor_province = {
+								this = scope:randomized_country_province
+							}
+						}
+					}
+					random_owned_province = {
+						limit = {
+							NOR = { 
+								this = scope:randomized_country_province_2 
+								this = scope:randomized_country_province_3
+							}
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+							any_neighbor_province = {
+								this = scope:randomized_country_province
+							}
+						}
+						save_scope_as = randomized_country_province_4
+					}
+					if = {
+						limit = {
+							any_owned_province = {
+								NOR = { 
+									this = scope:randomized_country_province_2 
+									this = scope:randomized_country_province_3
+									this = scope:randomized_country_province_4
+								}
+								any_pops_in_province = {
+									NOT = { pop_religion = buddhism }
+								}
+								any_neighbor_province = {
+									this = scope:randomized_country_province
+								}
+							}
+						}
+						random_owned_province = {
+							limit = {
+								NOR = { 
+									this = scope:randomized_country_province_2 
+									this = scope:randomized_country_province_3
+									this = scope:randomized_country_province_4
+								}
+								any_pops_in_province = {
+									NOT = { pop_religion = buddhism }
+								}
+								any_neighbor_province = {
+									this = scope:randomized_country_province
+								}
+							}
+							save_scope_as = randomized_country_province_5
+						}
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = dhe_buddhism_1_cooldown
+			days = 1825
+		}
+	}
+
+	option = {
+		name = "dhe_buddhism.1.a"
+		scope:randomized_country_province = {
+			custom_tooltip = "buddhism_medium.tt"
+			hidden_effect = {
+				ordered_pops_in_province = {
+					limit = {
+						NOT = {
+							pop_religion = buddhism
+						}
+					}
+					order_by = pop_hapiness
+					max = {
+						value = total_population
+						divide = 5
+					}
+					check_range_bounds = no
+					set_pop_religion = buddhism
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:randomized_country_province_2
+			}
+			scope:randomized_country_province_2 = {
+				custom_tooltip = "buddhism_minor.tt"
+				hidden_effect = {
+					ordered_pops_in_province = {
+						limit = {
+							NOT = {
+								pop_religion = buddhism
+							}
+						}
+						order_by = pop_hapiness
+						max = {
+							value = total_population
+							divide = 9
+						}
+						check_range_bounds = no
+						set_pop_religion = buddhism
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:randomized_country_province_3
+				}
+				scope:randomized_country_province_3 = {
+					custom_tooltip = "buddhism_minor.tt"
+					hidden_effect = {
+						ordered_pops_in_province = {
+							limit = {
+								NOT = {
+									pop_religion = buddhism
+								}
+							}
+							order_by = pop_hapiness
+							max = {
+								value = total_population
+								divide = 9
+							}
+							check_range_bounds = no
+							set_pop_religion = buddhism
+						}
+					}
+				}
+				if = {
+					limit = {
+						exists = scope:randomized_country_province_4
+					}
+					scope:randomized_country_province_4 = {
+						custom_tooltip = "buddhism_minor.tt"
+						hidden_effect = {
+							ordered_pops_in_province = {
+								limit = {
+									NOT = {
+										pop_religion = buddhism
+									}
+								}
+								order_by = pop_hapiness
+								max = {
+									value = total_population
+									divide = 9
+								}
+								check_range_bounds = no
+								set_pop_religion = buddhism
+							}
+						}
+					}
+					if = {
+						limit = {
+							exists = scope:randomized_country_province_5
+						}
+						scope:randomized_country_province_5 = {
+							custom_tooltip = "buddhism_minor.tt"
+							hidden_effect = {
+								ordered_pops_in_province = {
+									limit = {
+										NOT = {
+											pop_religion = buddhism
+										}
+									}
+									order_by = pop_hapiness
+									max = {
+										value = total_population
+										divide = 9
+									}
+									check_range_bounds = no
+									set_pop_religion = buddhism
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "dhe_buddhism.1.b"
+		trigger = {
+			is_ai = no
+		}
+		add_tyranny = tyranny_large
+	}
+}
+
+# Third Buddhist Council P.1 - Supporting Buddhism
+dhe_buddhism.2 = {
+	type = country_event
+	title = "dhe_buddhism.2.t"
+	desc = "dhe_buddhism.2.desc"
+	picture = pataliputra
+
+	left_portrait = current_ruler
+
+	fire_only_once = yes
+
+	goto_location = scope:buddhist_province_1
+	
+	trigger = {
+		OR = {
+			religion = buddhism
+			current_ruler = {
+				has_religion = buddhism
+			}
+		}
+		current_date > 500.1.1
+		num_of_cities > 100
+		any_owned_province = {
+			OR = {
+				AND = {
+					dominant_province_religion = buddhism
+					any_pops_in_province = {
+						NOT = { pop_religion = buddhism }
+					}
+				}
+				AND = {
+					dominant_province_religion = hindu
+					any_pops_in_province = {
+						pop_religion = buddhism
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					AND = {
+						dominant_province_religion = buddhism
+						any_pops_in_province = {
+							NOT = { pop_religion = buddhism }
+						}
+					}
+					AND = {
+						dominant_province_religion = hindu
+						any_pops_in_province = {
+							pop_religion = buddhism
+						}
+					}
+				}
+			}
+			save_scope_as = buddhist_province_1
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = { this = scope:buddhist_province_1 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { this = scope:buddhist_province_1 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+				save_scope_as = buddhist_province_2
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = { this = scope:buddhist_province_1 }
+					NOT = { this = scope:buddhist_province_2 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { this = scope:buddhist_province_1 }
+					NOT = { this = scope:buddhist_province_2 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+				save_scope_as = buddhist_province_3
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = { this = scope:buddhist_province_1 }
+					NOT = { this = scope:buddhist_province_2 }
+					NOT = { this = scope:buddhist_province_3 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { this = scope:buddhist_province_1 }
+					NOT = { this = scope:buddhist_province_2 }
+					NOT = { this = scope:buddhist_province_3 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+				save_scope_as = buddhist_province_4
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = { this = scope:buddhist_province_1 }
+					NOT = { this = scope:buddhist_province_2 }
+					NOT = { this = scope:buddhist_province_3 }
+					NOT = { this = scope:buddhist_province_4 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					NOT = { this = scope:buddhist_province_1 }
+					NOT = { this = scope:buddhist_province_2 }
+					NOT = { this = scope:buddhist_province_3 }
+					NOT = { this = scope:buddhist_province_4 }
+					OR = {
+						AND = {
+							dominant_province_religion = buddhism
+							any_pops_in_province = {
+								NOT = { pop_religion = buddhism }
+							}
+						}
+						AND = {
+							dominant_province_religion = hindu
+							any_pops_in_province = {
+								pop_religion = buddhism
+							}
+						}
+					}
+				}
+				save_scope_as = buddhist_province_5
+			}
+		}
+	}
+
+	option = { # Support the Buddhists # Start chain
+		name = "dhe_buddhism.2.a"
+		add_stability_effect = yes
+		add_treasury = {
+			subtract = root.has_monthly_income
+			multiply = 4
+		}
+		scope:buddhist_province_1 = {
+			if = {
+				limit = {
+					any_pops_in_province = {
+						NOT = { pop_religion = buddhism }
+					}
+				}
+				custom_tooltip = "buddhism_major.tt"
+				hidden_effect = {
+					ordered_pops_in_province = {
+						limit = {
+							NOT = { pop_religion = buddhism }
+						}
+						order_by = pop_hapiness
+						max = {
+							value = total_population
+							divide = 3
+						}
+						check_range_bounds = no
+						set_pop_religion = buddhism
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:buddhist_province_2
+			}
+			scope:buddhist_province_2 = {
+				if = {
+					limit = {
+						any_pops_in_province = {
+							NOT = { pop_religion = buddhism }
+						}
+					}
+					custom_tooltip = "buddhism_major.tt"
+					hidden_effect = {
+						ordered_pops_in_province = {
+							limit = {
+								NOT = { pop_religion = buddhism }
+							}
+							order_by = pop_hapiness
+							max = {
+								value = total_population
+								divide = 3
+							}
+							check_range_bounds = no
+							set_pop_religion = buddhism
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:buddhist_province_3
+			}
+			scope:buddhist_province_3 = {
+				if = {
+					limit = {
+						any_pops_in_province = {
+							NOT = { pop_religion = buddhism }
+						}
+					}
+					custom_tooltip = "buddhism_major.tt"
+					hidden_effect = {
+						ordered_pops_in_province = {
+							limit = {
+								NOT = { pop_religion = buddhism }
+							}
+							order_by = pop_hapiness
+							max = {
+								value = total_population
+								divide = 3
+							}
+							check_range_bounds = no
+							set_pop_religion = buddhism
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:buddhist_province_4
+			}
+			scope:buddhist_province_4 = {
+				if = {
+					limit = {
+						any_pops_in_province = {
+							NOT = { pop_religion = buddhism }
+						}
+					}
+					custom_tooltip = "buddhism_major.tt"
+					hidden_effect = {
+						ordered_pops_in_province = {
+							limit = {
+								NOT = { pop_religion = buddhism }
+							}
+							order_by = pop_hapiness
+							max = {
+								value = total_population
+								divide = 3
+							}
+							check_range_bounds = no
+							set_pop_religion = buddhism
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:buddhist_province_5
+			}
+			scope:buddhist_province_5 = {
+				if = {
+					limit = {
+						any_pops_in_province = {
+							NOT = { pop_religion = buddhism }
+						}
+					}
+					custom_tooltip = "buddhism_major.tt"
+					hidden_effect = {
+						ordered_pops_in_province = {
+							limit = {
+								NOT = { pop_religion = buddhism }
+							}
+							order_by = pop_hapiness
+							max = {
+								value = total_population
+								divide = 3
+							}
+							check_range_bounds = no
+							set_pop_religion = buddhism
+						}
+					}
+				}
+			}
+		}
+		trigger_event = {
+			id = dhe_buddhism.3
+			days = { 730 1825 }
+		}
+	}
+
+	option = { # Refrain from supporting Buddhists - End Chain
+		name = "dhe_buddhism.2.b"
+		current_ruler = {
+			add_popularity = subtract_popularity_medium
+		}
+	}
+}
+
+# Third Buddhist Council P.2 - What do we do about them fakes?
+dhe_buddhism.3 = {
+	type = country_event
+	title = "dhe_buddhism.3.t"
+	desc = "dhe_buddhism.3.desc"
+	picture = pataliputra
+
+	left_portrait = current_ruler
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			religion = buddhism
+			current_ruler = {
+				has_religion = buddhism
+			}
+		}
+		any_owned_province = {
+			dominant_province_religion = buddhism
+		}
+	}
+
+	option = { # 
+		name = "dhe_buddhism.3.a"
+		remove_stability_effect = yes
+		custom_tooltip = "dhe_buddhism.3.a.tt"
+		trigger_event = {
+			id = dhe_buddhism.4
+			days = { 180 365 }
+		}
+	}
+
+	option = { # 
+		name = "dhe_buddhism.3.b"
+		custom_tooltip = "dhe_buddhism.3.b.tt"
+		ordered_owned_province = {
+			limit = {
+				dominant_province_religion = buddhism
+			}
+			order_by = total_population
+			max = 5
+			check_range_bounds = no
+			add_province_modifier = {
+				name = province_diminishment_buddhism_religious_unrest
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Third Buddhist Council P.3 - Sending out monks to other nations
+dhe_buddhism.4 = {
+	type = country_event
+	title = "dhe_buddhism.4.t"
+	desc = "dhe_buddhism.4.desc"
+	picture = pataliputra
+
+	left_portrait = current_ruler
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			religion = buddhism
+			current_ruler = {
+				has_religion = buddhism
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = original_country
+	}
+
+	option = { # 
+		name = "dhe_buddhism.4.a"
+		add_political_influence = subtract_influence_large
+		add_treasury = {
+			subtract = has_monthly_income
+			multiply = 3
+		}
+		every_country = {
+			limit = {
+				NOR = { 
+					religion = buddhism 
+					war_with = root
+					this = root
+				}
+				OR = {
+					is_diadochi_trigger = yes
+					AND = {
+						num_of_cities > 100
+						in_diplomatic_range = root
+					}
+					AND = {
+						religion = hindu
+						num_of_cities > 50
+						in_diplomatic_range = root
+					}
+					AND = {
+						any_neighbour_country = {
+							this = root
+						}
+						num_of_cities > 30
+					}
+				}
+			}
+			save_scope_as = current_country
+			custom_tooltip = "dhe_buddhism.4.a.tt"
+			hidden_effect = {
+				root =  {
+					create_character = {
+						age = 30
+						culture = root.culture
+						religion = buddhism
+						save_scope_as = buddhist_monk
+					}
+					scope:buddhist_monk = {
+						banish = scope:current_country
+					}
+				}
+			}
+			trigger_event = {
+				id = dhe_buddhism.5
+			}
+		}
+	}
+
+	option = { # 
+		name = "dhe_buddhism.4.b"
+		ordered_owned_province = {
+			limit = {
+				dominant_province_religion = buddhism
+			}
+			order_by = total_population
+			max = 5
+			check_range_bounds = no
+			add_province_modifier = {
+				name = province_improvement_buddhist_teachers
+				duration = 3650
+			}
+		}
+	}
+}
+
+# Third Buddhist Council P.4 - Receiving a monk!
+dhe_buddhism.5 = {
+	type = country_event
+	title = "dhe_buddhism.5.t"
+	desc = "dhe_buddhism.5.desc"
+	picture = pataliputra
+
+	left_portrait = current_ruler
+	right_portrait = scope:original_country.current_ruler
+	right_portrait = scope:buddhist_monk
+
+	goto_location = scope:original_country.capital_scope
+	
+	trigger = {
+
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = "dhe_buddhism.5.a"
+		capital_scope = {
+			custom_tooltip = "buddhism_minor.tt"
+			hidden_effect = {
+				ordered_pops_in_province = {
+					limit = {
+						NOT = { pop_religion = buddhism }
+					}
+					order_by = pop_hapiness
+					max = {
+						value = total_population
+						divide = 10
+					}
+					check_range_bounds = no
+					set_pop_religion = buddhism
+				}
+			}
+			add_province_modifier = {
+				name = province_improvement_buddhist_teachers
+				duration = 3650
+			}
+		}
+		scope:original_country = {
+			add_opinion = {
+				modifier = buddhist_teacher_relations
+				target = root
+			}
+		}
+	}
+
+	option = {
+		name = "dhe_buddhism.5.b"
+		trigger = {
+			is_ai = no
+		}
+		scope:buddhist_monk = {
+			banish = scope:original_country
+		}
+		scope:original_country = {
+			add_opinion = {
+				modifier = buddhist_teacher_banished
+				target = root
+			}
+		}
+	}
+}
+
+##MRY Hijacking namespace
+
+dhe_buddhism.6 = {
+	type = country_event
+	title = "dhe_buddhism.6.t"
+	desc = "dhe_buddhism.6.desc"
+	picture = pataliputra
+
+	left_portrait = char:22
+	right_portrait = current_ruler
+
+	goto_location = scope:original_country.capital_scope
+
+	option = {
+		name = "dhe_buddhism.6.a"
+		custom_tooltip = "HERITAGE_CHANGE"
+		set_country_heritage = mauryan_abandoned_heritage
+		
+		ai_chance = {
+			modifier = {
+				factor = 80
+			}
+		}
+		
+	}
+	
+	option = {
+		name = "dhe_buddhism.6.b"
+		add_stability = -25
+		add_country_modifier = {
+			name = mauryan_decline_refused_modifier
+			duration = 1825
+		}
+	}
+	
+	option = {
+		name = "dhe_buddhism.6.c"
+		custom_tooltip = "high_stats_ruler_tt"
+		highlight = yes
+		trigger = {
+			current_ruler = {
+				combined_stats_olympics_svalue >= 30
+			}
+		}
+	}
+	
+}

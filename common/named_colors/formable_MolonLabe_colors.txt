@@ -1,0 +1,187 @@
+﻿# Colors are used for painting the map
+
+colors = {
+	glorious_olbia_color = rgb { 225 0 9 }
+	glorioushsvexample = hsv { 0 0 0.12 }
+
+	kavkasia_color = rgb { 0 102 204 }
+	
+	konkan_color = rgb { 250 281 221 }
+	
+	sakastan_color = rgb { 212 172 13 }
+
+	lanka_color = rgb { 0 139 139 }
+
+	danapris_color = rgb { 255 255 191 }
+
+	asia_color = rgb { 90 0 90 }
+
+	balhika_color = rgb { 161 74 49 }
+
+	bod_color = rgb { 115 132 189 }
+
+	eretz_yisrael_color = rgb { 21 101 192 }
+
+	hind_color = rgb { 157 100 0 }
+
+	kshaharata_color = rgb { 153 0 51 }
+
+	mahajanapada_color = rgb { 142 119 66 }
+
+	mahameghavahana_color = rgb { 241 196 15 }
+
+	malwa_color = rgb { 33 97 140 }
+
+	neo_lydia_color = rgb { 27 79 114 }
+
+	nepal_color = rgb { 206 98 59 }
+
+	nubia_color = rgb { 245 163 62 }
+
+	aethiopia_color = rgb { 58 109 128 }
+
+	satavahana_color = rgb { 65 191 181 }
+
+	shunga_color = rgb { 206 0 24 }
+
+	suren_color = rgb { 19 123 137 }
+
+	tokharia_color = rgb { 255 149 5 }
+
+	yavana_rajya_color = rgb { 98 101 107 }
+
+	euskal_herria_color = rgb { 0 105 42 }
+
+	heraklean_league_color = rgb { 252 147 3 }
+
+	italia_color = rgb { 9 11 9 }
+
+	ispania_color = rgb { 152 61 23 }
+
+	anatolia_color = rgb { 240 240 240 }
+
+	arabia_color = rgb { 0 82 33 }
+	
+	arvasthan_color = rgb { 163 111 64 }
+
+	aryana_color = rgb { 240 155 30 }
+
+	libya_color = rgb { 164 169 172 }	
+
+	erythraean_league_color = rgb { 130 67 48 }	
+
+	erythraean_empire_color = rgb { 227 84 44 }	
+
+	euxine_empire_color = rgb { 0 105 148 }	
+
+	euxine_league_color = rgb { 11 81 125 }	
+
+	neo_assyrian_color = rgb { 204 192 124 }	
+
+	india_color = rgb { 134 165 184 }	
+	
+	celtic_empire_color = rgb { 16 107 33 }	
+
+	greater_armenia_color = rgb { 205 127 50 }	
+	
+	punt_color = rgb { 201 69 0 }	
+	
+	laietania_color = rgb { 230 170 40 }
+	
+	rhodania_color = rgb { 5 134 10 }
+	
+	hibernia_magna_color = rgb { 80 120 180 }
+	
+	aengland_color = rgb { 200 70 70 }
+	
+	scandia_color = rgb { 130 130 130 }
+	
+	danmork_color = rgb { 40 70 70 }	
+	
+	germanic_empire_color = rgb { 200 190 130 }
+	
+	tyrrhenian_empire_color = rgb { 160 81 66 }
+	
+	oikumene_color = rgb { 149 164 187 }
+	
+	gangarida_color = rgb { 177 157 137 }
+
+	macrobia_color = rgb { 145 62 65 }
+	
+	greater_lepontia_color = rgb { 162 195 166 }
+	
+	#lombardy_color = rgb { 234 217 110 }
+	lombardy_color = rgb { 153.6 153.6 204.8 }
+	
+	italy_color = rgb { 244 227 160 }
+	
+	mann_color = rgb { 207 20 43 }
+	
+	#mann_empire_color = rgb { 168 32 201 }
+	mann_empire_color = rgb { 230 23 23 }
+	
+	ostrogoth_color = rgb { 120 81 225 }
+	
+	#indger_color = rgb { 99 6 206 }
+	indger_color = rgb { 140 60 60 }
+	
+	vandalia_color = rgb { 66 53 89 }
+	
+	punic_color = rgb { 102 2 60 }
+	
+	brennusovia_color = rgb { 39 206 123 }
+	
+	visigoth_color = rgb { 255 109 30 }
+	
+	alba_blue = rgb { 0 101 189 }
+	
+	alba_color = rgb { 199 171 12 }
+	
+	#ziqanmakom_color = rgb { 184 0 201 }
+	
+	ziqanmakom_color = rgb { 99 6 206 }
+	
+	graecia_occidentis_color = rgb { 137 238 243 }
+	
+	ghabataleanbar_color = rgb { 171 225 45 }
+	
+	jalabhumi_color = rgb { 65 106 60 }
+	
+	adriatica_color = rgb { 85 104 162 }
+	
+	chaldean_empire_color = rgb { 216 151 66 }
+	
+	sicsyria_color = rgb { 158 50 3 }
+	
+	baetica_color = rgb { 215 1 29 }
+
+	erreinu_atlantikoa_color = rgb { 56 39 14 }
+
+	quadia_color = rgb { 117 89 147 }
+
+	gothia_color = rgb { 74 64 47 }
+
+	boihaemia_magna_color = rgb { 125 142 62 }
+
+	brittany_color = rgb { 118 99 151 }
+
+	britannia_color = rgb { 215 13 13 }
+
+	pannonia_dacian_color = rgb { 233 121 81 }
+
+	pannonia_celtic_color = rgb { 193 137 19 }
+
+	pannonia_germanic_color = rgb { 216 108 29 }
+
+	pannonia_scythian_color = rgb { 152 46 46 }
+
+	pannonia_baltic_color = rgb { 103 113 206 }
+
+	estu_imperija_color = rgb { 107 178 178 }
+
+	nile_color = rgb { 0 0 255 }
+
+	levantine_color = rgb { 16 241 198 }
+	
+}
+

@@ -1,0 +1,897 @@
+﻿roman_5_hispanian_ambition = {
+	icon = rome_3
+	header = mission_image_rome
+
+	repeatable = no
+	
+	chance = {
+		factor = 3
+	}
+	
+	ai_chance = {
+		factor = 3
+	}
+	
+	potential = { 
+		always = no
+		NOT = { has_variable = roman_mission_05_hispanian_ambition }
+		tag = ROM
+		has_dlc = "The Punic Wars"
+		owns = 3515
+		OR = {
+			has_completed_mission = roman_4_punic_rivals
+			OR = {
+				region:baetica_region = { #Carteia/Baetica
+					any_region_province = { owned_or_subject_owned = c:ROM }
+				}
+				region:contestania_region = { #Mastia/Contestania
+					any_region_province = { 
+						NOT = { is_in_area = balearides_area }
+						owned_or_subject_owned = c:ROM
+					}
+				}
+				region:tarraconensis_region = { #Emporion/Tarraconensis
+					any_region_province = { owned_or_subject_owned = c:ROM }
+				}
+				region:lusitania_region = { #Olisipo/Lusitania
+					any_region_province = { owned_or_subject_owned = c:ROM }
+				}
+				region:gallaecia_region = { #Lancia/Gallaecia
+					any_region_province = { owned_or_subject_owned = c:ROM }
+				}
+			}
+		}
+		is_subject = no
+		has_civil_war = no
+	}
+	
+	abort = {
+		ai_mission_back_out_trigger = yes
+	}
+
+	on_start = {
+		start_mission_ai_effect = yes
+		save_scope_as = me_rome_scope
+		if = {
+    		limit = { is_ai = yes }
+    		region:baetica_region = {
+    			every_region_province = { add_claim = ROOT }
+    		}
+    		region:contestania_region = {
+    			every_region_province = { add_claim = ROOT }
+    		}
+    		region:tarraconensis_region = {
+    			every_region_province = { add_claim = ROOT }
+    		}
+    		region:lusitania_region = {
+    			every_region_province = { add_claim = ROOT }
+    		}
+    		region:gallaecia_region = {
+    			every_region_province = { add_claim = ROOT }
+    		}
+    	}
+    }
+
+	on_abort = {
+    	custom_tooltip = general_mission_cooldown_tt
+		set_variable = {
+			name = roman_mission_05_hispanian_ambition
+			days = 7300
+		}
+    }
+
+    on_completion = {
+    	complete_mission_effect = yes
+    }
+	
+	roman_5_offer_iberians_protection = {
+		icon = task_political
+		allow = {
+			custom_tooltip = {
+				text = roman_5_offer_iberians_protection_tooltip
+				any_country = {
+					any_neighbour_country = {
+						OR = {
+							tag = ROM
+							is_subject_of = c:ROM
+						}
+					}
+					capital_scope = { 
+						OR = {
+							is_in_region = tarraconensis_region
+							is_in_region = baetica_region
+							is_in_region = lusitania_region
+							is_in_region = gallaecia_region
+							AND = {
+								is_in_region = contestania_region
+								NOT = { is_in_area = balearides_area }
+							}
+						}
+					}
+					OR = {
+						country_culture_group = iberia
+						country_culture_group = celt_iberia
+						country_culture_group = proto_european
+					}
+					is_subject = no
+					num_of_cities >= 4
+					opinion = { target = c:ROM value > -50 }
+					rank < c:ROM.rank
+					NOR = {
+						alliance_with = root
+						war_with = root
+					}
+					any_countries_at_war_with = {
+						NOR = {
+							country_culture_group = iberia
+							country_culture_group = celt_iberia
+							country_culture_group = proto_european
+							alliance_with = c:ROM
+						}
+						num_of_cities > prev.num_of_cities
+					}
+					save_temporary_scope_as = ibe_temp_scope
+				}
+				trigger_if = {
+					limit = { exists = scope:ibe_temp_scope }
+					NOT = { has_truce_with = scope:ibe_temp_scope }
+				}
+			}
+		}
+		
+		on_completion = {
+			custom_tooltip = roman_5_offer_iberians_protection_rewtt
+			ordered_country = {
+				limit = {
+					any_neighbour_country = {
+						OR = {
+							tag = ROM
+							is_subject_of = c:ROM
+						}
+					}
+					capital_scope = { 
+						OR = {
+							is_in_region = tarraconensis_region
+							is_in_region = baetica_region
+							is_in_region = lusitania_region
+							is_in_region = gallaecia_region
+							AND = {
+								is_in_region = contestania_region
+								NOT = { is_in_area = balearides_area }
+							}
+						}
+					}
+					OR = {
+						country_culture_group = iberia
+						country_culture_group = celt_iberia
+						country_culture_group = proto_european
+					}
+					is_subject = no
+					num_of_cities >= 4
+					opinion = { target = c:ROM value > -50 }
+					rank < c:ROM.rank
+					NOR = {
+						alliance_with = root
+						war_with = root
+					}
+					any_countries_at_war_with = {
+						NOR = {
+							country_culture_group = iberia
+							country_culture_group = celt_iberia
+							country_culture_group = proto_european
+							alliance_with = c:ROM
+						}
+						num_of_cities > prev.num_of_cities
+					}
+					save_temporary_scope_as = ibe_temp_scope
+					root = {
+						NOT = { has_truce_with = scope:ibe_temp_scope }
+					}
+				}
+				order_by = num_of_cities
+				save_scope_as = rm_protection_scope
+				ordered_countries_at_war_with = {
+					limit = {
+						NOR = {
+							country_culture_group = iberia
+							country_culture_group = celt_iberia
+							country_culture_group = proto_european
+							alliance_with = c:ROM
+						}
+						num_of_cities > prev.num_of_cities
+					}
+					order_by = num_of_cities
+					save_scope_as = rm_protection_enemy_scope
+				}
+			}
+			trigger_event = { id = me_roman_5_hispanian_ambition.5 }
+		}
+	}
+	
+	roman_5_carthaginian_littoral = {
+		icon = task_conquest
+		allow = {
+			owns_or_subject_owns_area = contestania_septentrionalis_area
+			owns_or_subject_owns_area = contestania_meridionalis_area
+			owns_or_subject_owns_area = bastetania_area
+			owns_or_subject_owns_area = mastiania_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = contestania_septentrionalis_area
+					is_in_area = contestania_meridionalis_area
+					is_in_area = bastetania_area
+					is_in_area = mastiania_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			p:1036.governorship = {
+				every_governorship_state = {
+					limit = {
+						any_state_province = {
+							OR = {
+								is_in_area = contestania_septentrionalis_area
+								is_in_area = contestania_meridionalis_area
+								is_in_area = mastiania_area
+							}
+						}
+					}
+					custom = roman_5_carthaginian_littoral.modtt
+					add_state_modifier = {
+						name = rm_5_mines_of_mastia_smod
+						duration = 7300 # 20 years
+					}
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = { is_in_area = bastetania_area }
+					state = {
+						add_state_modifier = {
+							name = rm_5_mines_of_mastia_smod
+							duration = 7300 # 20 years
+						}
+					}
+				}
+			}
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.25
+				}
+			}
+		}
+	}
+	
+	roman_5_massalian_littoral = {
+		icon = task_conquest
+		allow = {
+			owns_or_subject_owns_area = indiketia_area
+			owns_or_subject_owns_area = cessetania_area
+			owns_or_subject_owns_area = ilercavonia_area
+			owns_or_subject_owns_area = edetania_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = edetania_area
+					is_in_area = ilercavonia_area
+					is_in_area = cessetania_area
+					is_in_area = indiketia_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			add_country_modifier = {
+				name = rm_5_iberian_trade_cmod
+				duration = 7300 # 20 years
+			}
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.26
+				}
+			}
+		}
+	}
+	
+	roman_5_pillars_of_hercules = {
+		icon = task_conquest
+		requires = { roman_5_hispanian_provincia }
+		allow = {
+			owns_or_subject_owns_area = gaditanus_area
+			owns_or_subject_owns_area = malacita_area
+			owns_or_subject_owns_area = baetica_hispalensis_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = gaditanus_area
+					is_in_area = malacita_area
+					is_in_area = baetica_hispalensis_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			add_country_modifier = {
+				name = rm_5_pillars_hercules_cmod
+				duration = 7300 # 20 years
+			}
+			custom_tooltip = roman_5_pillars_of_hercules_claims_tt
+			hidden_effect = {
+				area:baetica_cordubensis_area = { mission_area_claim_effect = yes }
+				area:turdetania_occidentalis_area = { mission_area_claim_effect = yes }
+			}
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.27
+				}
+			}
+		}
+	}
+	
+	roman_5_into_iberia = {
+		icon = task_conquest
+		requires = { roman_5_hispanian_provincia }
+		allow = {
+			owns_or_subject_owns_area = baetica_cordubensis_area
+			owns_or_subject_owns_area = turdulia_orientalis_area
+			owns_or_subject_owns_area = lobetania_area
+			owns_or_subject_owns_area = celtiberia_meridionalis_area
+			owns_or_subject_owns_area = oretania_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = baetica_cordubensis_area
+					is_in_area = turdulia_orientalis_area
+					is_in_area = lobetania_area
+					is_in_area = celtiberia_meridionalis_area
+					is_in_area = oretania_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			add_country_modifier = {
+				name = rm_5_iberian_cavalry_cmod
+				duration = 7300 # 20 years
+			}
+			custom_tooltip = roman_5_into_iberia_claims_tt
+			hidden_effect = {
+				area:turdulia_occidentalis_area = { mission_area_claim_effect = yes }
+				area:turdetania_occidentalis_area = { mission_area_claim_effect = yes }
+				area:vettonia_meridionalis_area = { mission_area_claim_effect = yes }
+				area:carpetania_area = { mission_area_claim_effect = yes }
+				area:celtiberia_centralis_area = { mission_area_claim_effect = yes }
+			}
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.29
+				}
+			}
+		}
+	}
+	
+	roman_5_secure_south_coast = {
+		icon = task_conquest
+		requires = { roman_5_pillars_of_hercules }
+		allow = {
+			owns_or_subject_owns_area = couneia_area
+			owns_or_subject_owns_area = celticia_minoris_area
+			owns_or_subject_owns_area = turdulia_occidentalis_area
+			owns_or_subject_owns_area = turdetania_occidentalis_area
+			owns_or_subject_owns_area = celticia_maoioris_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = couneia_area
+					is_in_area = celticia_minoris_area
+					is_in_area = turdulia_occidentalis_area
+					is_in_area = turdetania_occidentalis_area
+					is_in_area = celticia_maoioris_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			custom_tooltip = roman_5_secure_south_coast_claims_tt
+			hidden_effect = {
+				area:oppidania_area = { mission_area_claim_effect = yes }
+				area:lusitania_meridionalis_area = { mission_area_claim_effect = yes }
+				area:lusitania_septentrionalis_area = { mission_area_claim_effect = yes }
+			}
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.30
+				}
+			}
+		}
+	}
+	
+	roman_5_subdue_north = {
+		icon = task_conquest
+		requires = { roman_5_hispanian_provincia }
+		allow = {
+			owns_or_subject_owns_area = celtiberia_septentrionalis_area
+			owns_or_subject_owns_area = ilergetia_area
+			owns_or_subject_owns_area = vasconia_area
+			owns_or_subject_owns_area = celtiberia_centralis_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = celtiberia_septentrionalis_area
+					is_in_area = ilergetia_area
+					is_in_area = vasconia_area
+					is_in_area = celtiberia_centralis_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			custom_tooltip = roman_5_subdue_north_claims_tt
+			hidden_effect = {
+				area:vardulia_area = { mission_area_claim_effect = yes }
+				area:vaccaeia_meridionalis_area = { mission_area_claim_effect = yes }
+				area:carpetania_area = { mission_area_claim_effect = yes }
+			}
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.28
+				}
+			}
+		}
+	}
+
+	roman_5_befriend_ibero_tribe = {
+		icon = task_diplomatic
+		allow = {
+			custom_tooltip = {
+				text = roman_5_befriend_ibero_tribe_tooltip
+				any_country = {
+					any_neighbour_country = {
+						OR = {
+							tag = ROM
+							is_subject_of = c:ROM
+						}
+					}
+					capital_scope = { 
+						OR = {
+							is_in_region = tarraconensis_region
+							is_in_region = baetica_region
+							is_in_region = lusitania_region
+							is_in_region = gallaecia_region
+							AND = {
+								is_in_region = contestania_region
+								NOT = { is_in_area = balearides_area }
+							}
+						}
+					}
+					OR = {
+						country_culture_group = iberia
+						country_culture_group = celt_iberia
+						country_culture_group = proto_european
+					}
+					is_subject = no
+					num_of_cities >= 4
+					opinion = { target = c:ROM value > -50 }
+					rank < c:ROM.rank
+					NOR = {
+						alliance_with = root
+						war_with = root
+					}
+				}
+			}
+			custom_tooltip = {
+				text = roman_5_befriend_ibero_tribe_tooltip2
+				any_owned_province = {
+					count >= 1
+					OR = {
+						is_in_region = tarraconensis_region
+						is_in_region = baetica_region
+						is_in_region = lusitania_region
+						is_in_region = gallaecia_region
+						AND = {
+							is_in_region = contestania_region
+							NOT = { is_in_area = balearides_area }
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = rm_befriend_cooldown_tooltip
+				NOT = { has_variable = rm_befriend_cooldown }
+			}
+		}
+        duration = 180 # 0.5 years
+        on_start = {
+        	set_variable = {
+        		name = befriend_ibero_bypass
+        		days = 181
+        	}
+        }
+		on_completion = {
+			set_variable = {
+				name = rm_befriend_cooldown
+				days = 180
+			}
+			custom_tooltip = roman_5_befriend_ibero_tribe_rewtt
+			c:ROM = {
+				trigger_event = {
+					id = me_roman_5_hispanian_ambition.1
+				}
+			}
+		}
+		bypass = {
+			has_variable = befriend_ibero_bypass
+			NOT = {
+				any_country = {
+					any_neighbour_country = {
+						OR = {
+							tag = ROM
+							is_subject_of = c:ROM
+						}
+					}
+					capital_scope = { 
+						OR = {
+							is_in_region = tarraconensis_region
+							is_in_region = baetica_region
+							is_in_region = lusitania_region
+							is_in_region = gallaecia_region
+							AND = {
+								is_in_region = contestania_region
+								NOT = { is_in_area = balearides_area }
+							}
+						}
+					}
+					OR = {
+						country_culture_group = iberia
+						country_culture_group = celt_iberia
+						country_culture_group = proto_european
+					}
+					is_subject = no
+					num_of_cities >= 4
+					opinion = { target = c:ROM value > -50 }
+					rank < c:ROM.rank
+					NOR = {
+						alliance_with = root
+						war_with = root
+					}
+				}
+			}
+		}
+	}
+
+	roman_5_secure_west_coast = {
+		icon = task_conquest
+		requires = { roman_5_secure_celt_strongholds }
+		allow = {
+			owns_or_subject_owns_area = oppidania_area
+			owns_or_subject_owns_area = lusitania_meridionalis_area
+			owns_or_subject_owns_area = lusitania_septentrionalis_area
+			owns_or_subject_owns_area = aebocosia_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = oppidania_area
+					is_in_area = lusitania_meridionalis_area
+					is_in_area = lusitania_septentrionalis_area
+					is_in_area = aebocosia_area
+					
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.31
+				}
+			}
+		}
+	}
+	
+	roman_5_secure_cantabria = {
+		icon = task_conquest
+		requires = { roman_5_secure_celt_strongholds }
+		allow = {
+			owns_or_subject_owns_area = asturia_septentrionalis_area
+			owns_or_subject_owns_area = cantabria_area
+			owns_or_subject_owns_area = autrigonia_area
+			owns_or_subject_owns_area = vardulia_area
+			owns_or_subject_owns_area = asturia_meridionalis_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = asturia_septentrionalis_area
+					is_in_area = cantabria_area
+					is_in_area = autrigonia_area
+					is_in_area = vardulia_area
+					is_in_area = asturia_meridionalis_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.32
+				}
+			}
+		}
+	}
+	
+	roman_5_secure_celt_strongholds = {
+		icon = task_conquest
+		requires = { roman_5_into_iberia roman_5_subdue_north }
+		allow = {
+			owns_or_subject_owns_area = vettonia_septentrionalis_area
+			owns_or_subject_owns_area = vaccaeia_meridionalis_area
+			owns_or_subject_owns_area = vaccaeia_septentrionalis_area
+			owns_or_subject_owns_area = carpetania_area 
+			owns_or_subject_owns_area = vettonia_meridionalis_area
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = vettonia_septentrionalis_area
+					is_in_area = vaccaeia_meridionalis_area
+					is_in_area = vaccaeia_septentrionalis_area
+					is_in_area = carpetania_area
+					is_in_area = vettonia_meridionalis_area
+				}
+			}
+		}
+		on_completion = {
+			rome_mission_conquest_effect = yes
+			custom_tooltip = roman_5_secure_celt_strongholds_claims_tt
+			hidden_effect = {
+				area:celticia_maoioris_area = { mission_area_claim_effect = yes }
+				area:aebocosia_area = { mission_area_claim_effect = yes }
+				area:asturia_meridionalis_area = { mission_area_claim_effect = yes }
+				area:cantabria_area = { mission_area_claim_effect = yes }
+				area:autrigonia_area = { mission_area_claim_effect = yes }
+			}
+			c:ROM = {
+				trigger_event = {
+					id = roman_conquest.33
+				}
+			}
+		}
+	}
+	
+	roman_5_hispanian_provincia = {
+		icon = task_expansion
+		requires = { roman_5_carthaginian_littoral roman_5_massalian_littoral }
+		allow = {
+			custom_tooltip = {
+				text = roman_5_hispanian_provincia_tooltip
+				area:indiketia_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+				area:cessetania_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+				area:ilercavonia_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+				area:edetania_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+				area:contestania_septentrionalis_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+				area:contestania_meridionalis_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+				area:bastetania_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+				area:mastiania_area = {
+					NOT = {
+						any_area_province = {
+							NOT = { owned_or_subject_owned = root }
+						}
+					}
+				}
+			}
+		}
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = edetania_area
+					is_in_area = ilercavonia_area
+					is_in_area = cessetania_area
+					is_in_area = indiketia_area
+					is_in_area = contestania_septentrionalis_area
+					is_in_area = contestania_meridionalis_area
+					is_in_area = bastetania_area
+					is_in_area = mastiania_area
+				}
+			}
+		}
+		on_completion = {
+			custom_tooltip = roman_5_hispanian_provincia_tooltip2
+			add_country_modifier = {
+				name = rm_5_mercenary_influx_cmod
+				duration = 7300 # 20 years
+			}
+			custom_tooltip = roman_5_hispanian_provincia_claims_tt
+			hidden_effect = {
+				area:ilergetia_area = { mission_area_claim_effect = yes }
+				area:celtiberia_septentrionalis_area = { mission_area_claim_effect = yes }
+				area:celtiberia_meridionalis_area = { mission_area_claim_effect = yes }
+				area:lobetania_area = { mission_area_claim_effect = yes }
+				area:oretania_area = { mission_area_claim_effect = yes }
+				area:malacita_area = { mission_area_claim_effect = yes }
+			}
+			c:ROM = {
+				trigger_event = {
+					id = me_roman_5_hispanian_ambition.4
+				}
+			}
+		}
+	}
+	
+	roman_5_iberian_dominance = {
+		icon = task_expansion
+		requires = { roman_5_secure_south_coast roman_5_secure_celt_strongholds }
+		final = yes
+		allow = {
+			custom_tooltip = {
+				text = roman_5_iberian_dominance_tooltip
+				any_owned_province = {
+					count >= 200
+					OR = {
+						is_in_region = tarraconensis_region
+						is_in_region = baetica_region
+						is_in_region = lusitania_region
+						is_in_region = gallaecia_region
+						AND = {
+							is_in_region = contestania_region
+							NOT = { is_in_area = balearides_area }
+						}
+					}
+				}
+			}
+		}
+		on_completion = {
+			capital_scope = { rm_triumphal_arch_effect = yes }
+			if = {
+				limit = {
+					any_owned_province = {
+						OR = {
+							is_in_region = tarraconensis_region
+							is_in_region = baetica_region
+							is_in_region = lusitania_region
+							is_in_region = gallaecia_region
+							AND = {
+								is_in_region = contestania_region
+								NOT = { is_in_area = balearides_area }
+							}
+						}
+					}
+				}
+				custom_tooltip = roman_5_iberian_dominance.modtt
+				show_as_tooltip = {
+					random_country_state = {
+						limit = {
+							any_state_province = {
+								OR = {
+									is_in_region = tarraconensis_region
+									is_in_region = baetica_region
+									is_in_region = lusitania_region
+									is_in_region = gallaecia_region
+									AND = {
+										is_in_region = contestania_region
+										NOT = { is_in_area = balearides_area }
+									}
+								}
+							}
+						}
+						add_state_modifier = {
+							name = rm_5_iberian_dominance_smod
+							duration = 7300 # 20 years
+						}
+					}
+				}
+			}
+			else = { custom_tooltip = roman_5_iberian_dominance.modtt2 }
+			hidden_effect = {
+				region:tarraconensis_region = {
+					every_region_state = {
+						limit = {
+							any_state_province = { owner = root }
+						}
+						add_state_modifier = {
+							name = rm_5_iberian_dominance_smod
+							duration = 7300 # 20 years
+						}
+					}
+				}
+				region:baetica_region = {
+					every_region_state = {
+						limit = {
+							any_state_province = { owner = root }
+						}
+						add_state_modifier = {
+							name = rm_5_iberian_dominance_smod
+							duration = 7300 # 20 years
+						}
+					}
+				}
+				region:lusitania_region = {
+					every_region_state = {
+						limit = {
+							any_state_province = { owner = root }
+						}
+						add_state_modifier = {
+							name = rm_5_iberian_dominance_smod
+							duration = 7300 # 20 years
+						}
+					}
+				}
+				region:contestania_region = {
+					every_region_state = {
+						limit = {
+							any_state_province = { 
+								owner = root 
+								NOT = { is_in_area = balearides_area }
+							}
+						}
+						add_state_modifier = {
+							name = rm_5_iberian_dominance_smod
+							duration = 7300 # 20 years
+						}
+					}
+				}
+				region:gallaecia_region = {
+					every_region_state = {
+						limit = {
+							any_state_province = { owner = root }
+						}
+						add_state_modifier = {
+							name = rm_5_iberian_dominance_smod
+							duration = 7300 # 20 years
+						}
+					}
+				}
+			}
+		}
+	}
+}

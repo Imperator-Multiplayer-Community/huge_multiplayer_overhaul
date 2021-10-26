@@ -1,0 +1,137 @@
+﻿namespace = dhe_roman_warm_period
+
+# Original
+dhe_roman_warm_period.1 = {
+	type = country_event
+	title = "dhe_roman_warm_period.1.t"
+	desc = "dhe_roman_warm_period.1.desc"
+	picture = slaves_working
+
+	left_portrait = current_ruler
+
+	trigger = {
+		current_date > 465.1.1	
+		NOT = { has_global_variable = roman_warm_period_started }
+		NOT = { has_global_variable = roman_warm_period_ended }
+		any_owned_province = { 
+			city_is_in_warm_region = yes
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = dhe_roman_warm_period.4
+			days = 5475
+		}
+		set_global_variable = {
+			name = roman_warm_period_started
+		}
+
+		every_country = {
+			limit = {
+				NOT = { this = root }
+				any_owned_province = { 
+					city_is_in_warm_region = yes
+				}
+			}
+			trigger_event = {
+				id = dhe_roman_warm_period.2
+			}
+		}
+	}
+
+	option = {
+		name = "dhe_roman_warm_period.1.a"
+		every_province = {
+			limit = {
+				OR = {
+					owner = ROOT
+					has_owner = no
+				}
+				city_is_in_warm_region = yes
+			}
+			add_province_modifier = {
+				name = province_improvement_warm_period
+				duration = 5475 # 15 years
+			}
+		}
+	}
+}
+
+# Secondary
+dhe_roman_warm_period.2 = {
+	type = country_event
+	title = "dhe_roman_warm_period.1.t"
+	desc = "dhe_roman_warm_period.1.desc"
+	picture = slaves_working
+	left_portrait = current_ruler
+
+	trigger = {
+		NOT = { 
+			any_owned_province = { 
+				has_province_modifier = province_improvement_warm_period
+			}
+		}		
+	}
+
+	option = {
+		name = "dhe_roman_warm_period.1.a"
+		every_owned_province = {
+			limit = {
+				city_is_in_warm_region = yes
+			}
+			add_province_modifier = {
+				name = province_improvement_warm_period
+				duration = 5475 # 15 years
+			}
+		}
+	}
+}
+dhe_roman_warm_period.3 = {
+	type = country_event
+	hidden = yes
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = province_improvement_warm_period
+			NOT = {
+				city_is_in_warm_region = yes
+			}
+		}
+		any_owned_province = {
+			NOT = { has_province_modifier = province_improvement_warm_period }
+		}
+	}
+	immediate = {
+		every_owned_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = province_improvement_warm_period
+				}
+				city_is_in_warm_region = yes
+			}
+			add_province_modifier = {
+				name = province_improvement_warm_period
+				duration = 5475
+			}
+		}
+	}
+}
+dhe_roman_warm_period.4 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		
+	}
+	immediate = {
+		set_global_variable = {
+			name = roman_warm_period_ended
+		}
+		every_province = {
+			limit = {
+				has_province_modifier = province_improvement_warm_period
+			}
+			remove_province_modifier = province_improvement_warm_period
+		}
+	}
+}

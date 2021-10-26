@@ -1,0 +1,60 @@
+﻿namespace = invention
+
+invention.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		OR = {
+			NOT = {
+				has_variable = inv_check
+			}
+			var:inv_check <= 4
+
+		}
+		
+		mil_tech_check = 0
+		ora_tech_check = 0
+		civ_tech_check = 0
+		rel_tech_check = 0
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					NOT = {has_variable = inv_check }
+					var:inv_check < 1
+				}
+			}
+			add_innovation = 4
+		}
+
+		if = {
+			limit = {
+				has_variable = inv_check
+			}
+			change_variable = {
+				name = inv_check
+				add = 1
+			}
+		}
+		else = {
+			set_variable = {
+				name = inv_check
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				var:inv_check = 4
+				mil_tech_check = 1
+				ora_tech_check = 1
+				civ_tech_check = 1
+				rel_tech_check = 1
+			}
+			remove_variable = inv_check
+			
+		}
+	}
+}

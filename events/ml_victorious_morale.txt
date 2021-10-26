@@ -1,0 +1,371 @@
+﻿namespace = ml_victorious_morale
+
+# add victorious morale
+ml_victorious_morale.1 = { 
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_19
+				}
+
+				remove_distinction = distinction_victorious_morale_19
+				add_distinction = distinction_victorious_morale_20
+
+				if = {
+					limit = {
+						AND = {
+							has_distinction = distinction_battle_master_01
+							NOT = {
+								has_distinction = distinction_battle_master_02
+							}
+						}
+					}
+
+					remove_distinction = distinction_battle_master_01
+					add_distinction = distinction_battle_master_02
+				}
+			} 
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_18
+				}
+
+				remove_distinction = distinction_victorious_morale_18
+				add_distinction = distinction_victorious_morale_19
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_17
+				}
+
+				remove_distinction = distinction_victorious_morale_17
+				add_distinction = distinction_victorious_morale_18
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_16
+				}
+
+				remove_distinction = distinction_victorious_morale_16
+				add_distinction = distinction_victorious_morale_17
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_15
+				}
+
+				remove_distinction = distinction_victorious_morale_15
+				add_distinction = distinction_victorious_morale_16
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_14
+				}
+
+				remove_distinction = distinction_victorious_morale_14
+				add_distinction = distinction_victorious_morale_15
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_13
+				}
+
+				remove_distinction = distinction_victorious_morale_13
+				add_distinction = distinction_victorious_morale_14
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_12
+				}
+
+				remove_distinction = distinction_victorious_morale_12
+				add_distinction = distinction_victorious_morale_13
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_11
+				}
+
+				remove_distinction = distinction_victorious_morale_11
+				add_distinction = distinction_victorious_morale_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_10
+				}
+
+				remove_distinction = distinction_victorious_morale_10
+				add_distinction = distinction_victorious_morale_11
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_09
+				}
+
+				remove_distinction = distinction_victorious_morale_09
+				add_distinction = distinction_victorious_morale_10
+
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_distinction = 	distinction_battle_master_01
+								has_distinction = distinction_battle_master_02
+							}
+						}
+					}
+
+					add_distinction = distinction_battle_master_01
+				}
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_08
+				}
+
+				remove_distinction = distinction_victorious_morale_08
+
+				add_distinction = distinction_victorious_morale_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_07
+				}
+
+				remove_distinction = distinction_victorious_morale_07
+
+				add_distinction = distinction_victorious_morale_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_06
+				}
+
+				remove_distinction = distinction_victorious_morale_06
+
+				add_distinction = distinction_victorious_morale_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_05
+				}
+
+				remove_distinction = distinction_victorious_morale_05
+
+				add_distinction = distinction_victorious_morale_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_04
+				}
+
+				remove_distinction = distinction_victorious_morale_04
+
+				add_distinction = distinction_victorious_morale_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_03
+				}
+
+				remove_distinction = distinction_victorious_morale_03
+
+				add_distinction = distinction_victorious_morale_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_02
+				}
+
+				remove_distinction = distinction_victorious_morale_02
+
+				add_distinction = distinction_victorious_morale_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_01
+				}
+
+				remove_distinction = distinction_victorious_morale_01
+
+				add_distinction = distinction_victorious_morale_02
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_distinction = distinction_victorious_morale_20
+					}
+				}
+
+				add_distinction = distinction_victorious_morale_01
+			}
+		}
+	}
+}
+
+# removes victorious morale
+ml_victorious_morale.2 = { 
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_20
+				}
+
+				remove_distinction = distinction_victorious_morale_20
+			}
+			if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_19
+				}
+
+				remove_distinction = distinction_victorious_morale_19
+			} 
+			if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_18
+				}
+
+				remove_distinction = distinction_victorious_morale_18
+			} 
+			if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_17
+				}
+
+				remove_distinction = distinction_victorious_morale_17
+			} 
+			if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_16
+				}
+
+				remove_distinction = distinction_victorious_morale_16
+			} 
+			if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_15
+				}
+
+				remove_distinction = distinction_victorious_morale_15
+			} 
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_14
+				}
+
+				remove_distinction = distinction_victorious_morale_14
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_13
+				}
+
+				remove_distinction = distinction_victorious_morale_13
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_12
+				}
+
+				remove_distinction = distinction_victorious_morale_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_11
+				}
+
+				remove_distinction = distinction_victorious_morale_11
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_10
+				}
+
+				remove_distinction = distinction_victorious_morale_10
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_09
+				}
+
+				remove_distinction = distinction_victorious_morale_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_08
+				}
+
+				remove_distinction = distinction_victorious_morale_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_07
+				}
+
+				remove_distinction = distinction_victorious_morale_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_06
+				}
+
+				remove_distinction = distinction_victorious_morale_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_05
+				}
+
+				remove_distinction = distinction_victorious_morale_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_04
+				}
+
+				remove_distinction = distinction_victorious_morale_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_03
+				}
+
+				remove_distinction = distinction_victorious_morale_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_02
+				}
+
+				remove_distinction = distinction_victorious_morale_02
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_victorious_morale_01
+				}
+
+				remove_distinction = distinction_victorious_morale_01
+			}
+		}
+	}
+}

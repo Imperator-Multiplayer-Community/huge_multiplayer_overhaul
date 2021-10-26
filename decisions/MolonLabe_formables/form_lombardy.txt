@@ -1,0 +1,125 @@
+﻿country_decisions = {
+	
+	# Form the Lombard Kingdom
+	form_lombardy = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = germanic
+			is_tribal = yes
+			tag = LGB
+			NOT = {
+				tag = LOM
+			}
+			NOR = {
+				is_tier_1_formable_trigger = yes
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+			OR = {
+				is_ai = no
+				num_of_cities <= 12
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = roma_area
+					is_in_area = neapolis_area
+					is_in_area = south_etruria_area
+					is_in_area = north_etruria_area
+					is_in_area = asculum_area
+					is_in_area = aternum_area
+					is_in_area = cannae_area
+					is_in_area = heraclea_area
+					is_in_area = ariminum_area
+					is_in_area = tarentum_area
+					is_in_area = croton_area
+					is_in_area = pisae_area	
+					is_in_area = liguria_area	
+					is_in_area = transpadana_area	
+					is_in_area = west_insubria_area
+					is_in_area = east_insubria_area	
+					is_in_area = aemilla_area
+					is_in_area = ferraria_area
+					is_in_area = venetia_area
+					#province_id = 1
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = lombardy_not_exists
+				NOT = {
+					any_country = {
+						tag = LOM
+					}
+					owns_or_subject_owns_region = germania_region
+					owns_or_subject_owns_region = scandinavia_region
+					owns_or_subject_owns_region = bohemia_area
+					owns_or_subject_owns_region = belgica_region
+					owns_or_subject_owns_region = rhaetia_region
+				}
+			}
+			can_form_nation_trigger = yes
+			OR = {
+				owns_or_subject_owns_area = roma_area
+				owns_or_subject_owns_area = neapolis_area
+				owns_or_subject_owns_area = south_etruria_area
+				owns_or_subject_owns_area = north_etruria_area
+				owns_or_subject_owns_area = asculum_area
+				owns_or_subject_owns_area = aternum_area
+				owns_or_subject_owns_area = cannae_area
+				owns_or_subject_owns_area = heraclea_area
+				owns_or_subject_owns_area = ariminum_area
+				owns_or_subject_owns_area = tarentum_area
+				owns_or_subject_owns_area = croton_area	
+				owns_or_subject_owns_area = pisae_area	
+				owns_or_subject_owns_area = liguria_area	
+				owns_or_subject_owns_area = transpadana_area	
+				owns_or_subject_owns_area = west_insubria_area
+				owns_or_subject_owns_area = east_insubria_area	
+				owns_or_subject_owns_area = aemilla_area
+				owns_or_subject_owns_area = ferraria_area
+				owns_or_subject_owns_area = venetia_area
+			}
+		}
+		
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			change_country_name = LOMBARDY_NAME
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			hidden_effect = {
+				change_country_adjective = LOMBARDY_ADJECTIVE
+				change_country_tag = LOM
+				change_country_color = lombardy_color
+				change_country_flag = LOMBARDY_FLAG
+				trigger_event = {
+					id = formable_heritage.93
+				}
+			}
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_small_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			add_1_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

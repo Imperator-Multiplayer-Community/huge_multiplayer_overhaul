@@ -1,0 +1,54 @@
+﻿
+
+inspire_disloyalty = {
+	aggressive_expansion = 5
+	political_influence = 5
+	scaled_gold = 1
+}
+
+recruit_character = {
+	aggressive_expansion = 5
+	political_influence = 5
+	scaled_gold = 1
+}
+
+recruit_general = {
+	aggressive_expansion = 10
+	political_influence = 10
+	scaled_gold = 1
+}
+
+secude_governor = {
+	aggressive_expansion = 20
+	political_influence = 10
+	scaled_gold = 2
+}
+
+price_state_investment_military = {
+	political_influence = 75
+}
+price_state_investment_civic = {
+	political_influence = 75
+}
+price_state_investment_oratory = {
+	political_influence = 75
+}
+price_state_investment_religious = {
+	political_influence = 75
+}
+
+price_oaths_of_allegiance_button = {
+	political_influence = 75
+}
+
+price_patron_of_arts_button = {
+	political_influence = 75
+}
+
+price_assemble_raiding_party_button = {
+	political_influence = 75
+}
+
+create_merc_state_price = { 
+	political_influence = 40
+}

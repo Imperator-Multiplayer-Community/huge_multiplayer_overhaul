@@ -1,0 +1,105 @@
+﻿country_decisions = {
+	
+	# Form Bod
+	form_bod = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = tibetan
+			NOT = {
+				tag = BOD
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_1_formable_trigger = yes				
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = gilgit_area
+					is_in_area = suvarna_gotra_area
+					is_in_area = jangtang_area
+					is_in_area = chomolangma_area
+					is_in_area = tsang_area
+					is_in_area = lhasa_area
+					is_in_area = yarlung_area
+					is_in_area = sumpa_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = bod_not_exists
+				NOT = {
+					any_country = {
+						tag = BOD
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = gilgit_area
+			owns_or_subject_owns_area = suvarna_gotra_area
+			owns_or_subject_owns_area = jangtang_area
+			owns_or_subject_owns_area = chomolangma_area
+			owns_or_subject_owns_area = tsang_area
+			owns_or_subject_owns_area = lhasa_area
+			owns_or_subject_owns_area = yarlung_area
+			owns_or_subject_owns_area = sumpa_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			change_country_name = "BOD_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "BOD_ADJECTIVE"
+				change_country_color = "bod_color"
+				change_country_tag = BOD
+				change_country_flag = BOD_FLAG
+				trigger_event = {
+					id = formable_heritage.3
+				}					
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_large_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_bod_claims_tooltip"
+			hidden_effect = {
+				area:kamarupa_area = { formable_area_province_effect = yes }
+				area:kamata_area = { formable_area_province_effect = yes }
+				area:vrij_area = { formable_area_province_effect = yes }
+				area:ahicchatra_area = { formable_area_province_effect = yes }
+				area:malla_area = { formable_area_province_effect = yes }
+				area:sthanisvara_area = { formable_area_province_effect = yes }
+				area:tarim_area = { formable_area_province_effect = yes }
+				area:kasmira_area = { formable_area_province_effect = yes }
+				area:pamir_area = { formable_area_province_effect = yes }
+			}
+			add_2_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}
+

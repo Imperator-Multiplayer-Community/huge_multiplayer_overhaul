@@ -1,0 +1,84 @@
+﻿country_decisions = {
+	
+	# Form Scandia
+	form_scandia = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = germanic
+			NOT = {
+				tag = SCN
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {			
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = scandinavia_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = scandia_not_exists
+				NOT = {
+					any_country = {
+						tag = SCN
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = scandinavia_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "SCANDIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "SCANDIA_ADJECTIVE"
+				change_country_color = "scandia_color"
+				change_country_tag = SCN
+				change_country_flag = SCANDIA_FLAG
+				trigger_event = {
+					id = formable_heritage.34
+				}					
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_tribal_effect = yes
+					formable_capital_modifier_tribal_effect = yes
+			}
+			custom_tooltip = "form_scandia_claims_tooltip"
+			hidden_effect = {
+				area:pharodenia_area = { formable_area_province_effect = yes }
+				area:chaucia_area = { formable_area_province_effect = yes }
+				area:caledonia_septentrionalis_area = { formable_area_province_effect = yes }		
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

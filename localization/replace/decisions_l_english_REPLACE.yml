@@ -1,0 +1,6 @@
+﻿l_english:
+
+ big_religion_in_capital_tooltip:1 "At least 10% of the free people in the territory of [SCOPE.GetRootScope.GetCountry.GetCapital.GetName] (#Y [SCOPE.ScriptValue('majority_of_free_men_in_capital_svalue')|0] #! Non-Slave Pops) follow this religion."
+ big_religion_in_country_tooltip:0 "At least 10% of the people in [SCOPE.GetRootScope.GetCountry.GetName] follow this religion."
+
+ 

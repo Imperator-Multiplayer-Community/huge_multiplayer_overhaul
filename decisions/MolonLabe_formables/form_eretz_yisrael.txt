@@ -1,0 +1,119 @@
+﻿country_decisions = {
+	
+	# Form Eretz Yisrael
+	form_eretz_yisrael = {
+		
+		potential = {
+			num_of_cities >= 1
+			primary_culture = hebrew
+			religion = judaism
+			NOT = {
+				tag = EZY
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = judea_area
+					is_in_area = peraea_area
+					is_in_area = decapolis_area
+					is_in_area = samaria_area
+					is_in_area = arabia_petrea_area
+					is_in_area = sinai_area
+					is_in_area = philistia_area
+					is_in_area = galilee_area
+					is_in_area = south_phoenicia_area
+					is_in_area = syria_coele_area
+					is_in_area = eastern_delta_area
+					is_in_area = north_phoenicia_area
+					is_in_area = apamene_area
+					is_in_area = palmyra_area
+					is_in_area = syria_area
+					is_in_area = arabia_relicta_area
+					is_in_area = memphis_area					
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = eretz_yisrael_not_exists
+				NOT = {
+					any_country = {
+						tag = EZY
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = judea_area
+			owns_or_subject_owns_area = peraea_area
+			owns_or_subject_owns_area = decapolis_area
+			owns_or_subject_owns_area = samaria_area
+			owns_or_subject_owns_area = arabia_petrea_area
+			owns_or_subject_owns_area = sinai_area
+			owns_or_subject_owns_area = philistia_area
+			owns_or_subject_owns_area = galilee_area
+			owns_or_subject_owns_area = south_phoenicia_area
+			owns_or_subject_owns_area = syria_coele_area
+			owns_or_subject_owns_area = eastern_delta_area
+			owns_or_subject_owns_area = north_phoenicia_area
+			owns_or_subject_owns_area = apamene_area
+			owns_or_subject_owns_area = palmyra_area
+			owns_or_subject_owns_area = syria_area
+			owns_or_subject_owns_area = arabia_relicta_area
+			owns_or_subject_owns_area = memphis_area			
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			if = {
+				limit = {
+					NOT = { government = theocratic_monarchy }
+				}
+				change_government = theocratic_monarchy
+				switch_government_type_event_clearup_effect = yes
+			}
+			change_country_name = "ERETZ_YISRAEL_NAME"
+			hidden_effect = {
+				change_country_adjective = "ERETZ_YISRAEL_ADJECTIVE"
+				change_country_color = "eretz_yisrael_color"
+				change_country_tag = EZY
+				change_country_flag = ERETZ_YISRAEL_FLAG
+				trigger_event = {
+					id = formable_heritage.14
+				}				
+			}
+				capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_eretz_yisrael_claims_tooltip"
+			hidden_effect = {
+				area:central_delta_area = { formable_area_province_effect = yes }
+				area:western_delta_area = { formable_area_province_effect = yes }
+				area:memphis_area = { formable_area_province_effect = yes }
+				area:arabia_relicta_area = { formable_area_province_effect = yes }
+				area:euphrates_area = { formable_area_province_effect = yes }
+				area:babylonia_area = { formable_area_province_effect = yes }
+				area:dedan_area = { formable_area_province_effect = yes }
+				area:veh_kavad_area = { formable_area_province_effect = yes }
+			}	
+			add_4_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

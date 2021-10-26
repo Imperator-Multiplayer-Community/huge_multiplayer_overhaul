@@ -1,0 +1,62 @@
+﻿country_decisions = {
+	
+	# Found Tarentine Cavalry Training Complex
+	found_tarentine_cavalry_training_complex = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 56
+			NOR = {
+				has_variable = founded_tarentine_cavalry_training_complex
+			}
+			OR = { 	country_culture_group = latin
+					country_culture_group = hellenic
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:latin
+							this.culture.culture_group = culture_group:hellenic
+						}
+					}			
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 56
+			}
+		}
+		allow = {
+			treasury >= 100
+			military_experience >= 65
+			OR = {
+				is_tribal = yes
+				is_monarchy = yes
+				is_republic = yes
+			}
+			owns = 56
+		}
+		
+		effect = {
+			set_variable = founded_tarentine_cavalry_training_complex
+			add_treasury = -100
+			add_military_experience = -65
+			add_country_modifier = {
+				name = tarentine_cavalry_training_programme 
+				duration = -1
+			}
+			
+			p:56 = {
+					add_province_modifier = {
+						name = tarentine_cavalry_training_complex
+						duration = -1					
+					}
+			}
+				
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

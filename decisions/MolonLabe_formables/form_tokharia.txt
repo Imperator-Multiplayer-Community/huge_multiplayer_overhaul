@@ -1,0 +1,114 @@
+﻿country_decisions = {
+	
+	# Form Tokharia
+	form_tokharia = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				country_culture_group = bactrian
+			}
+			NOT = {
+				tag = TOK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_1_formable_trigger = yes
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = bactria_area
+					is_in_area = sogdiana_area
+					is_in_area = transoxus_area
+					is_in_area = candara_area
+					is_in_area = cyropolis_area
+					is_in_area = ferghana_area
+					is_in_area = pamir_area
+					is_in_area = tarim_area
+					is_in_area = talas_area
+					is_in_area = north_tarim_area
+					is_in_area = south_tarim_area
+					is_in_area = oxiana_area					
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = tokharia_not_exists
+				NOT = {
+					any_country = {
+						tag = TOK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = bactria_area
+			owns_or_subject_owns_area = sogdiana_area
+			owns_or_subject_owns_area = transoxus_area
+			owns_or_subject_owns_area = candara_area
+			owns_or_subject_owns_area = cyropolis_area
+			owns_or_subject_owns_area = pamir_area
+			owns_or_subject_owns_area = tarim_area
+			owns_or_subject_owns_area = talas_area
+			owns_or_subject_owns_area = north_tarim_area
+			owns_or_subject_owns_area = south_tarim_area
+			owns_or_subject_owns_area = oxiana_area			
+		}
+		
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			change_country_name = "TOKHARIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			hidden_effect = {
+				change_country_adjective = "TOKHARIA_ADJECTIVE"
+				change_country_color =  "tokharia_color"
+				change_country_tag = TOK
+				change_country_flag = TOKHARIA_FLAG
+				trigger_event = {
+					id = formable_heritage.23
+				}								
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_tokharia_claims_tooltip"
+			hidden_effect = {
+				area:margiana_area = { formable_area_province_effect = yes }
+				area:kharesmia_superior = { formable_area_province_effect = yes }
+				area:aria_area = { formable_area_province_effect = yes }
+				area:gandhara_area = { formable_area_province_effect = yes }
+				area:gilgit_area = { formable_area_province_effect = yes }
+				area:taxila_area = { formable_area_province_effect = yes }
+				area:bamyan_area = { formable_area_province_effect = yes }
+				area:margu_area = { formable_area_province_effect = yes }
+				area:sattagydia_area = { formable_area_province_effect = yes }
+			}		
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

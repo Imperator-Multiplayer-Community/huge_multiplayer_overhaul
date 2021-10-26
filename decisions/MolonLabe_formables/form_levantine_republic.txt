@@ -1,0 +1,90 @@
+﻿country_decisions = { 
+
+    #Form Levantine Republic
+    form_levantine_republic = {
+        
+        potential = {
+                num_of_cities >= 1
+        OR = {
+            country_culture_group = north_african
+            primary_culture = hebrew
+            primary_culture = nabatean
+            primary_culture = phoenician
+            primary_culture = aramaic 
+        }
+        is_republic = yes
+        NOT = { 
+            tag = EGY
+        }
+        NOT = { 
+            tag = LER
+        }
+        NOT = { 
+                is_endgame_tag_trigger = yes
+        }
+    }
+        highlight = {
+            scope:province = {
+                        OR = {
+                            province_id = 500 #Memphis  
+                            province_id = 516 #Alexandria
+                            province_id = 509 #Philousion
+                            province_id = 687 #Jerusalem
+                            province_id = 743 #Tyros
+                            province_id = 747 #Sidon
+                            province_id = 750 #Damascus
+                            province_id = 754 #Palmyra
+                            province_id = 766 #Byblos
+                            province_id = 790 #Antiochia
+                            province_id = 729 #Petra
+                            province_id = 543 #Nilopolis
+                            province_id = 659 #Gaza
+                            province_id = 331 #Salamis
+                            province_id = 334 #Paphos
+                        }
+            }
+        }
+        allow = {
+            custom_tooltip = {
+                NOT = { 
+                    any_country = { 
+                        tag = EGT
+                    }
+                }
+                NOT = { 
+                    any_country = {
+                        tag = LER
+                    }
+                }
+            }
+            can_form_nation_trigger = yes
+                        owns = 500 #Memphis  
+                        owns = 516 #Alexandria
+                        owns = 509 #Philousion
+                        owns = 687 #Jerusalem
+                        owns = 743 #Tyros
+                        owns = 747 #Sidon
+                        owns = 750 #Damascus
+                        owns = 754 #Palmyra
+                        owns = 766 #Byblos
+                        owns = 790 #Antiochia
+                        owns = 729 #Petra
+                        owns = 543 #Nilopolis
+                        owns = 659 #Gaza
+                        owns = 331 #Salamis
+                        owns = 334 #Paphos
+        }
+        
+        effect = {
+            custom_tooltip = "tier_3_formable_tooltip"
+            change_country_name = LEVANTINE_REPUBLIC
+            change_country_adjective = "LEVANTINE_ADJECTIVE"
+            change_country_color = "levantine_color"
+            change_country_tag = LER
+            trigger_event = {
+                id = formable_heritage.137
+            }
+            add_3_free_province_investments = yes
+        }
+}
+}

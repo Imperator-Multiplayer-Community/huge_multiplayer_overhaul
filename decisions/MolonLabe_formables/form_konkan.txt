@@ -1,0 +1,92 @@
+﻿country_decisions = {
+	
+	# Form Konkan
+	form_konkan = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				country_culture_group = aryan
+				country_culture_group = indian
+			}
+			NOT = {
+				tag = KNK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_1_formable_trigger = yes
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = north_sahyadri_area
+					is_in_area = south_sahyadri_area
+					is_in_area = vanavasi_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = konkan_not_exists
+				NOT = {
+					any_country = {
+						tag = KNK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = north_sahyadri_area
+			owns_or_subject_owns_area = south_sahyadri_area
+			owns_or_subject_owns_area = vanavasi_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			change_country_name = "KONKAN_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			hidden_effect = {
+				change_country_adjective = "KONKAN_ADJECTIVE"
+				change_country_color = "konkan_color"
+				change_country_tag = KNK
+				change_country_flag = KONKAN_FLAG
+				trigger_event = {
+					id = formable_heritage.9
+				}				
+			}
+				capital_scope = {
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_konkan_claims_tooltip"
+			hidden_effect = {
+				area:north_satiyaputa_area = { formable_area_province_effect = yes }
+				area:aparanta_area = { formable_area_province_effect = yes }
+				area:mulaka_area = { formable_area_province_effect = yes }
+				area:kuntala_area = { formable_area_province_effect = yes }
+			}
+			add_2_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+} 
+

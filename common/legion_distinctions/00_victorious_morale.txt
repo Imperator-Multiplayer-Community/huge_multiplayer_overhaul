@@ -1,0 +1,227 @@
+﻿#### BATTLE MASTER ####
+distinction_battle_master_01 = {
+	icon = "phalera_helmet"
+	commander = {
+		martial = 1
+		charisma = 2
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.05
+		land_morale_modifier = 0.05
+	}
+}
+
+distinction_battle_master_02 = {
+	icon = "phalera_helmet"
+	commander = {
+		martial = 2
+		charisma = 4
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.10
+		land_morale_modifier = 0.10
+	}
+}
+
+
+#### VICTORIOUS MORALE ####
+
+distinction_victorious_morale_01 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.01
+	}
+}
+
+distinction_victorious_morale_02 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.02
+	}
+}
+
+distinction_victorious_morale_03 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.03
+	}
+}
+
+distinction_victorious_morale_04 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.04
+	}
+}
+
+distinction_victorious_morale_05 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.05
+	}
+}
+
+distinction_victorious_morale_06 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.06
+	}
+}
+
+distinction_victorious_morale_07 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.07
+	}
+}
+
+distinction_victorious_morale_08 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.08
+	}
+}
+
+distinction_victorious_morale_09 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.09
+	}
+}
+
+distinction_victorious_morale_10 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.10
+	}
+}
+
+distinction_victorious_morale_11 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.11
+	}
+}
+
+distinction_victorious_morale_12 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.12
+	}
+}
+
+distinction_victorious_morale_13 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.13
+	}
+}
+
+distinction_victorious_morale_14 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.14
+	}
+}
+
+distinction_victorious_morale_15 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.15
+	}
+}
+
+distinction_victorious_morale_16 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.16
+	}
+}
+
+distinction_victorious_morale_17 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.17
+	}
+}
+
+distinction_victorious_morale_18 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.18
+	}
+}
+
+distinction_victorious_morale_19 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.19
+	}
+}
+
+distinction_victorious_morale_20 = {
+	icon = "phalera_helmet"
+	commander = {
+
+	}
+	unit = {
+		land_morale_modifier = 0.20
+	}
+}

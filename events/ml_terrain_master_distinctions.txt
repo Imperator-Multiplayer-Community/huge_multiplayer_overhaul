@@ -1,0 +1,68 @@
+﻿namespace = ml_terrain_master_distinctions
+
+## adds any terrain distinctions
+ml_terrain_master_distinctions.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        	has_variable = terrain_master
+        }
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					var:terrain_master = 1
+				}
+
+				scope:actor.legion = {
+					add_distinction = distinction_terrain_master_01
+				}
+			}
+			else_if = {
+				limit = {
+					var:terrain_master = 2
+				}
+
+				scope:actor.legion = {
+					remove_distinction = distinction_terrain_master_01
+					add_distinction = distinction_terrain_master_02
+				}
+			}
+			else_if = {
+				limit = {
+					var:terrain_master = 3
+				}
+				
+				scope:actor.legion = {
+					remove_distinction = distinction_terrain_master_02
+					add_distinction = distinction_terrain_master_03
+				}
+			}
+			else_if = {
+				limit = {
+					var:terrain_master = 4
+				}
+				
+				scope:actor.legion = {
+					remove_distinction = distinction_terrain_master_03
+					add_distinction = distinction_terrain_master_04
+				}
+			}
+			else_if = {
+				limit = {
+					var:terrain_master = 5
+				}
+
+				scope:actor.legion = {
+					remove_distinction = distinction_terrain_master_04
+					add_distinction = distinction_terrain_master_05
+				}
+			}
+		}
+	}
+}

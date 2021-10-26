@@ -1,0 +1,55 @@
+﻿country_decisions = {
+	indo_greek_decision = {
+		potential = {
+			OR = {
+				tag = PAR
+				tag = BAC
+				tag = SEL
+				tag = YRY
+				tag = ARS
+			}
+			country_culture_group = hellenic
+			NOT = {
+				has_variable = indo_greek_kingdom_formed
+			}
+		}
+		allow = {
+			owns_area = madra_area
+		}
+		highlight = {
+			scope:province = { is_in_area = madra_area }
+		}
+		effect = {
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							province_id = 4340
+						}
+					}
+				}
+				trigger_event = {
+					id = indo_greek.1
+				}
+			}
+
+			add_country_modifier = {
+				name = indo_greek_kingdom_modifier
+				duration = -1
+			}
+			set_variable = {
+				name = indo_greek_kingdom_formed
+			}
+			save_scope_as = indoscope
+		}
+		
+		ai_will_do = {
+			modifier = {
+				factor = 0
+				NOT = {
+					tag = BAC
+				}
+			}
+		}
+	}
+}

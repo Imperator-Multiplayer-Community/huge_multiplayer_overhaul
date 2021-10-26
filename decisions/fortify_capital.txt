@@ -1,0 +1,45 @@
+﻿country_decisions = {
+	
+	# Make your capital a citadel
+	fortify_capital = {
+	
+		potential = {
+			num_of_cities >= 1
+			NOR = {
+				has_country_modifier = fortified_capital
+			}
+			war = yes
+		}
+		
+		allow = {
+			treasury >= 250
+			military_experience >= 30
+			war = yes
+			stability >= 40
+			capital_scope.state = { 
+				trade_good_surplus = { target = stone value > 1 }
+			}
+			invention = global_defensive_inv_5
+
+		}
+		
+		effect = {
+						
+			capital_scope = {
+				add_province_modifier = {
+					name = fortified_capital
+					duration = 1825
+				}
+			}
+
+			add_treasury = -250
+			add_military_experience = -30
+			add_stability = -10
+			add_war_exhaustion = 5
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

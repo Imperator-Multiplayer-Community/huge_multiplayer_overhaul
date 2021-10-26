@@ -1,0 +1,9 @@
+﻿integrated_cultures = {
+	value = 0
+	every_country_culture = {
+		limit = {
+			is_integrated = yes
+		}
+		add = 1
+	}
+}

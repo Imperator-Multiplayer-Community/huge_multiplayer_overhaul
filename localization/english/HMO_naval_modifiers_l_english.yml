@@ -1,0 +1,68 @@
+﻿l_english:
+# Modifier Names
+  # Modded Units
+   # Marines
+ marines_discipline:0 "Crew Discipline"
+ marines_morale:0 "Crew Morale"
+ marines_offensive:0 "Crew Offence"
+ marines_defensive:0 "Crew Defence"
+ marines_cost:0 "Crew Cost"
+ marines_maintenance_cost:0 "Crew Maintenance Cost"
+ marines_movement_speed:0 "Crew Movement Speed"
+ marines_plains_combat_bonus:0 "Crew Plains Combat Bonus"
+ marines_mountain_combat_bonus:0 "Crew Mountain Combat Bonus"
+ marines_hills_combat_bonus:0 "Crew Hills Combat Bonus"
+ marines_desert_combat_bonus:0 "Crew Desert Combat Bonus"
+ marines_marsh_combat_bonus:0 "Crew Marsh Combat Bonus"
+ marines_jungle_combat_bonus:0 "Crew Jungle Combat Bonus"
+ marines_forest_combat_bonus:0 "Crew Forest Combat Bonus"
+ marines_farmland_combat_bonus:0 "Crew Farmland Combat Bonus"
+ marines_ocean_combat_bonus:0 "Crew Ocean Combat Bonus"
+ marines_coastal_terrain_combat_bonus:0 "Crew Coastal Combat Bonus"
+ marines_riverine_terrain_combat_bonus:0 "Crew River Combat Bonus"
+
+  # Legion Modifiers
+ marines_modifier:0 "Seasoned Crew"
+ marines_modifier_desc:0 "A fleet is only as capable as its crew."
+  
+ #Naval Modifiers
+ protect_commerce_unit:0 "Escort Fleet"
+ protect_commerce_unit_desc:0 "This fleet is guiding merchants to safe passage."
+ fishing_unit:0 "Fishing Fleet"
+ fishing_unit_desc:0 "This fleet is bringing fresh fish from the depths of the sea."
+
+ protect_merchants:0 "Protecting Maritime Trade"
+ protect_merchants_desc:0 "Keeping the sea lanes safe."
+ go_fish:0 "Fishing"
+ go_fish_desc:0 "Catching the bounty of the sea."
+
+ trading_partner:0 "Trading with Foreign Merchants"
+ trading_partner_desc:0 "This port is busy buying and selling goods from merchants who have come by sea."
+
+ getting_fished:0 "Fish Stock Depleted"
+ getting_fished_desc:0 "Intensive fishing in this area has depleted the fish stock."
+
+ naughty_mugger:0 "Sea Raiders"
+ naughty_mugger_desc:0 "Your people recently looted a foreign coastal community. Of course the tax collector will need his share..."
+ mugged_by_reality:0 "Ravaged by Sea Bandits"
+ mugged_by_reality_desc:0 "The local communities are still reeling from an attack by marauders from the sea."
+
+ supplied_by_sea:0 "Supplied by Sea"
+ supplied_by_sea_desc:0 "These people have been saved from hunger by good men on ships."
+
+ naval_supplier:0 "Naval Supplier"
+ naval_supplier_desc:0 "One of your fleets has delivered precious food and supplies to people under siege."
+
+ #Revenge CB after getting raided
+ revenge_cb.2.t:0 "Agonia!"
+ revenge_cb.2.desc:0 "You subjects on the coast cry out for help. Vile bandits have attacked local communities, killing the inhabitants and carrying captives into bondage. For the next three months, the gods will approve if we declare war on this offender, or on anyone else who has menaced us or sullied our good name."
+ revenge_cb.2.a:0 "Vengeance will be ours!"
+
+ cheap_cb:0 "Wrath of the Gods"
+ cheap_cb_desc:0 "Avenge yourself, just as the gods themselves would do!"
+
+ naval_action:0 "Naval Engagement"
+ naval_action:0 "Your navy's speed and combat readiness are temporarily compromised while it executes a naval action."
+
+ CREATE_CREW_BUTTON:0 "Enlist More Crew"
+

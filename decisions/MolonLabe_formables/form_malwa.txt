@@ -1,0 +1,95 @@
+﻿country_decisions = {
+	
+	# Form Malwa
+	form_malwa = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = aryan
+			NOT = {
+				tag = MWA
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = avanti_area
+					is_in_area = anupa_area
+					is_in_area = vindya_area
+					is_in_area = anartta_area
+					is_in_area = madhyamika_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = malwa_not_exists
+				NOT = {
+					any_country = {
+						tag = MWA
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = avanti_area
+			owns_or_subject_owns_area = anupa_area
+			owns_or_subject_owns_area = vindya_area
+			owns_or_subject_owns_area = anartta_area
+			owns_or_subject_owns_area = madhyamika_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "MALWA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes			
+			}
+			hidden_effect = {
+				change_country_adjective = "MALWA_ADJECTIVE"
+				change_country_color = "malwa_color"
+				change_country_tag = MWA
+				change_country_flag = MALWA_FLAG
+				trigger_event = {
+					id = formable_heritage.18
+				}				
+			}
+				capital_scope = {
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_malwa_claims_tooltip"
+			hidden_effect = {
+				area:dahala_area = { formable_area_province_effect = yes }
+				area:inner_saurashtra_area = { formable_area_province_effect = yes }
+				area:dasarna_area = { formable_area_province_effect = yes }
+				area:abhiria_area = { formable_area_province_effect = yes }
+				area:aparanta_area = { formable_area_province_effect = yes }
+				area:matsya_area = { formable_area_province_effect = yes }
+				area:maru_area = { formable_area_province_effect = yes }
+			}		
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

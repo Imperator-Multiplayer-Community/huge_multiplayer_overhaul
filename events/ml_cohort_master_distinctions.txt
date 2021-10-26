@@ -1,0 +1,72 @@
+﻿namespace = ml_cohort_master_distinctions
+
+# changes cohort master count
+ml_cohort_master_distinctions.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			has_legion_trigger = yes
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_variable = cohort_master
+			}
+			change_variable = {
+				name = cohort_master
+				add = 1
+			}
+		}
+		else = {
+			set_variable = {
+				name = cohort_master
+				value = 1
+			}
+		}
+
+		trigger_event = {
+			id = ml_cohort_master_distinctions.2
+		}
+	}
+}
+
+## adds any cohort_master distinctions
+ml_cohort_master_distinctions.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        	has_variable = cohort_master
+        }
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					var:cohort_master = 3
+				}
+
+				scope:actor.legion = {
+					add_distinction = distinction_cohort_master_01
+				}
+			}
+			else_if = {
+				limit = {
+					var:cohort_master = 6
+				}
+
+				scope:actor.legion = {
+					remove_distinction = distinction_cohort_master_01
+					add_distinction = distinction_cohort_master_02
+				}
+			}
+		}
+	}
+}

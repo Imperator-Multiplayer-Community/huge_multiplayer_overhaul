@@ -1,0 +1,93 @@
+﻿country_decisions = {
+	
+	# Form Ghabataleanbar
+
+	form_ghabataleanbar = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = { tag = GHB }
+			OR = {
+				country_culture_group = south_levantine
+			}
+			NOR = {
+				is_endgame_tag_trigger = yes
+				is_tier_2_formable_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = venedia_region
+					#province_id = 1
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = ghabataleanbar_not_exists
+				NOT = {
+					any_country = {
+						tag = GHB
+					}
+				}
+			}
+			custom_tooltip = {
+				text = formable_ghabataleanbar_capital
+				capital_scope = {
+						OR = {
+							is_in_region = germania_region
+							is_in_region = venedia_region
+					}
+				}
+			}
+			owns_or_subject_owns_region = venedia_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "GHABATALEANBAR_NAME"
+			change_country_flag = GHABATALEANBAR_FLAG
+			#set_primary_culture = parthian
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "GHABATALEANBAR_ADJECTIVE"
+				change_country_color =  "ghabataleanbar_color"
+				change_country_tag = GHB
+				trigger_event = {
+					id = formable_heritage.107
+				}
+			}
+			#add_country_modifier = {
+			#	name = parthia_formed
+			#	duration = 5475
+			#}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				current_date > 600.1.1
+			}
+		}
+	}
+
+} 
+

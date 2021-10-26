@@ -1,0 +1,44 @@
+﻿
+enact_holy_site = {
+	political_influence = 40
+	gold = 200
+}
+
+enact_law = {
+	political_influence = 25
+	stability = 10
+}
+
+call_omen = {
+	scaled_gold = 0.5
+}
+
+change_pantheon = {
+	stability = 10
+}
+
+change_governor_policy = {
+	political_influence = 5
+}
+
+change_diplomatic_stance = {
+	political_influence = 20
+}
+
+tribe_new_ruler = {
+	stability = 15
+}
+
+support_rebels = {
+	aggressive_expansion = 20
+	political_influence = 10
+	scaled_gold = 2
+}
+
+buy_idea = {
+	political_influence = 10
+}
+
+change_diplomatic_stance = {
+	political_influence = 15
+}

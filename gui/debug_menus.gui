@@ -1,0 +1,792 @@
+# OPEN WITH: gui.CreateDockable gui/debug_menus.gui toolbars_window§
+
+
+widget = {
+	name = "toolbars_window"
+	movable = no
+	size = { 398 106 }
+	using = editor_window
+	position = { 1 562 }
+
+	widget = {
+		#position = { 100 0 }
+		name = "background"
+		size = { 100% 100% }
+
+
+		textbox = {
+			position = { 15 2 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Toolbars"
+		}
+
+		button = {
+			using = editor_button
+			position = { 8 32 }
+			size = { 126 35 }
+			text = "Language"
+			onclick = "[ExecuteConsoleCommand('gui.createwidget gui/debug_menus.gui language_window')]"
+		}
+
+		button = {
+			using = editor_button
+			position = { 136 32 }
+			size = { 126 35 }
+			text = "2D Menu"
+			onclick = "[ExecuteConsoleCommand('gui.createwidget gui/debug_menus.gui 2d_artist_window')]"
+		}
+
+		button = {
+			using = editor_button
+			position = { 264 32 }
+			size = { 126 35 }
+			text = "Clear Menues"
+			onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets')]"
+		}
+	}
+}
+
+window = {
+	name = "language_window"
+	movable = yes
+	size = { 1000 80 }
+	using = editor_window
+	layer = top
+
+	widget = {
+		#position = { 100 0 }
+		name = "background"
+		size = { 100% 100% }
+
+
+		textbox = {
+			position = { 15 2 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Switch Languages"
+		}
+
+
+		button = {
+			name = "switch_to_english"
+			using = editor_button
+			position = { 10 34 }
+			size = { 150 35 }
+			text = "English"
+			onclick = "[ExecuteConsoleCommand('switchlanguage l_english')]"
+		}
+		button = {
+			name = "switch_to_spanish"
+			using = editor_button
+			position = { 475 34 }
+			size = { 150 35 }
+			text = "Spanish"
+			onclick = "[ExecuteConsoleCommand('switchlanguage l_spanish')]"
+		}
+		button = {
+			name = "switch_to_french"
+			using = editor_button
+			position = { 165 34 }
+			size = { 150 35 }
+			text = "French"
+			onclick = "[ExecuteConsoleCommand('switchlanguage l_french')]"
+		}
+		button = {
+			name = "switch_to_german"
+			using = editor_button
+			position = { 320 34 }
+			size = { 150 35 }
+			text = "German"
+			onclick = "[ExecuteConsoleCommand('switchlanguage l_german')]"
+		}
+		button = {
+			name = "switch_to_russian"
+			using = editor_button
+			position = { 640 34 }
+			size = { 150 35 }
+			text = "Russian"
+			onclick = "[ExecuteConsoleCommand('switchlanguage l_russian')]"
+		}
+		button = {
+			name = "switch_to_chinese"
+			using = editor_button
+			position = { 800 34 }
+			size = { 150 35 }
+			text = "Chinese"
+			onclick = "[ExecuteConsoleCommand('switchlanguage l_simp_chinese')]"
+		}
+
+		button = {
+			using = editor_button
+			position = { -5 4 }
+			size = { 20 20 }
+			text = "X"
+			onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets language_window')]"
+			parentanchor = top|right
+		}
+
+	}
+}
+
+window = {
+	name = "2d_artist_window"
+	#movable = no
+	size = { 170 200 }
+	using = editor_window
+	position = { 1 1 }
+
+	widget = {
+		#position = { 100 0 }
+		name = "background"
+		size = { 100% 100% }
+
+
+		textbox = {
+			position = { 15 2 }
+			size = { 200 20 }
+			using = editor_text
+			text = "2D Tools"
+		}
+
+
+		button = {
+			using = editor_button
+			position = { 10 34 }
+			size = { 150 30 }
+			text = "Reload textures"
+			onclick = "[ExecuteConsoleCommand('reload texture')]"
+		}
+		button = {
+			using = editor_button
+			position = { 10 65 }
+			size = { 150 30 }
+			text = "Debug gui"
+			onclick = "[ExecuteConsoleCommand('GUI.Debug')]"
+		}
+		button = {
+			using = editor_button
+			position = { 10 96 }
+			size = { 150 30 }
+			text = "GUI Editor"
+			onclick = "[ExecuteConsoleCommand('gui_editor')]"
+		}
+
+		button = {
+			using = editor_button
+			position = { -5 4 }
+			size = { 20 20 }
+			text = "X"
+			onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets 2d_artist_window')]"
+			parentanchor = top|right
+		}
+	}
+}
+
+window = {
+	name = "environment_debug_window"
+	#movable = no
+	size = { 385 105 }
+	using = editor_window
+	position = { 1 1 }
+
+	widget = {
+		#position = { 100 0 }
+		name = "background"
+		size = { 100% 100% }
+
+
+		textbox = {
+			position = { 15 2 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Environement Settings"
+		}
+
+
+		button = {
+			using = editor_button
+			position = { 10 34 }
+			size = { 180 30 }
+			text = "Standard"
+			onclick = "[ExecuteConsoleCommand('Environment.Debug.LoadEnvironment gfx/map/environment/environment.txt')]"
+		}
+		button = {
+			using = editor_button
+			position = { 10 65 }
+			size = { 180 30 }
+			text = "Neutral"
+			onclick = "[ExecuteConsoleCommand('Environment.Debug.LoadEnvironment gfx/map/environment/environment_neutral.txt')]"
+		}
+	#	button = {
+	#		using = editor_button
+	#		position = { 10 96 }
+	#		size = { 180 30 }
+	#		text = "GUI Editor"
+	#		onclick = "[ExecuteConsoleCommand('gui_editor')]"
+	#	}
+
+
+		button = {
+			using = editor_button
+			position = { 193 34 }
+			size = { 180 30 }
+			text = "Portrait Standard"
+			onclick = "[ExecuteConsoleCommand('PortraitEnv.Debug.LoadEnvironment gfx/portraits/jomini_environment.txt')]"
+		}
+		button = {
+			using = editor_button
+			position = { 193 65 }
+			size = { 180 30 }
+			text = "Portrait Neutral"
+			onclick = "[ExecuteConsoleCommand('PortraitEnv.Debug.LoadEnvironment gfx/portraits/neutral_jomini_environment.txt')]"
+		}
+
+
+		button = {
+			using = editor_button
+			position = { -5 4 }
+			size = { 20 20 }
+			text = "X"
+			onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets environment_debug_window')]"
+			parentanchor = top|right
+		}
+	}
+}
+
+@button_height = 24
+
+@row_1 = 65
+#@row_2 = 96
+@row_2 = @[row_1 + (button_height + 1) * 1]
+@row_3 = @[row_1 + (button_height + 1) * 2]
+@row_4 = @[row_1 + (button_height + 1) * 3]
+@row_5 = @[row_1 + (button_height + 1) * 4]
+@row_6 = @[row_1 + (button_height + 1) * 5]
+@row_7 = @[row_1 + (button_height + 1) * 6]
+@row_8 = @[row_1 + (button_height + 1) * 7]
+@row_9 = @[row_1 + (button_height + 1) * 8]
+@row_10= @[row_1 + (button_height + 1) * 9]
+@row_11= @[row_1 + (button_height + 1) * 10]
+@row_12= @[row_1 + (button_height + 1) * 11]
+
+
+#@row_4 = 158
+#@row_5 = 189
+#@row_6 = 220
+#@row_7 = 251
+#@row_8 = 282
+#@row_9 = 313
+#@row_10 = 344
+
+@col_1 = 10
+@col_2 = 161
+@col_3 = 312
+@col_4 = 463
+
+window = {
+	name = "map_debug_menu"
+	#movable = no
+	size = { 623 375 }
+	using = editor_window
+	position = { -5 -45 }
+	parentanchor = bottom|right
+
+	widget = {
+		#position = { 100 0 }
+		name = "background"
+		size = { 100% 100% }
+
+		textbox = {
+			position = { 15 2 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Map Debug menu"
+		}
+
+
+
+		textbox = {
+			position = { 50 35 }
+			size = { 200 20 }
+			using = editor_text
+			text = "General"
+			fontsize = 18
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_1 @row_1 }
+			size = { 150 @button_height }
+			text = "3D Stats"
+			onclick = "[ExecuteConsoleCommand('3dstats')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_1 @row_2 }
+			size = { 150 @button_height }
+			text = "Free Camera"
+			onclick = "[ExecuteConsoleCommand('Camera.Restrictions')]"
+		}
+
+
+
+
+
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_1 @row_4 }
+			size = { 150 @button_height }
+			text = "Province Data Setup"
+			onclick = "[ExecuteConsoleCommand('setup_editor')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_1 @row_5 }
+			size = { 150 @button_height }
+			text = "Add Map Objects"
+			onclick = "[ExecuteConsoleCommand('gui.createwidget gui/debug_menus.gui map_object_menu')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_1 @row_7 }
+			text = "Particle Editor"
+			size = { 150 @button_height }
+			onclick = "[ExecuteConsoleCommand('particleeditor')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_1 @row_8 }
+			text = "Compound Node Editor"
+			size = { 150 @button_height }
+			onclick = "[ExecuteConsoleCommand('compoundnodeeditor')]"
+		}
+
+
+
+
+		textbox = {
+			position = { 185 35 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Show on/off"
+			fontsize = 18
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_1 }
+			size = { 150 @button_height }
+			text = "Fog of War"
+			onclick = "[ExecuteConsoleCommand('FogOfWar.Enable')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_2 }
+			size = { 150 @button_height }
+			text = "Borders"
+			onclick = "[ExecuteConsoleCommand('Draw.Borders')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_3 }
+			size = { 150 @button_height }
+			text = "Gradient Borders"
+			onclick = "[ExecuteConsoleCommand('GradientBorders.Enable')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_4 }
+			size = { 150 @button_height }
+			text = "Rivers"
+			onclick = "[ExecuteConsoleCommand('Draw.Rivers')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_5 }
+			size = { 150 @button_height }
+			text = "Water"
+			onclick = "[ExecuteConsoleCommand('Draw.Water')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_6 }
+			size = { 150 @button_height }
+			text = "Bloom"
+			onclick = "[ExecuteConsoleCommand('Bloom.Enable')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_7 }
+			size = { 150 @button_height }
+			text = "Map names"
+			onclick = "[ExecuteConsoleCommand('Draw.MapNames')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_8 }
+			size = { 150 @button_height }
+			text = "Map Objects"
+			onclick = "[ExecuteConsoleCommand('Draw.MapObjects')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_9 }
+			size = { 150 @button_height }
+			text = "Roads"
+			onclick = "[ExecuteConsoleCommand('Draw.Roads')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_10 }
+			size = { 150 @button_height }
+			text = "Shadows"
+			onclick = "[ExecuteConsoleCommand('Mesh.DrawShadows')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_11 }
+			size = { 150 @button_height }
+			text = "Surround Mask"
+			onclick = "[ExecuteConsoleCommand('Draw.Surround')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_2 @row_12 }
+			size = { 150 @button_height }
+			text = "Post effects Volumes"
+			onclick = "[ExecuteConsoleCommand('Draw.DebugPostEffectVolumes')]"
+		}
+
+
+
+		textbox = {
+			position = { 340 35 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Show names"
+			fontsize = 18
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_3 @row_1 }
+			size = { 150 @button_height }
+			text = "Entity"
+			onclick = "[ExecuteConsoleCommand('entity.names')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_3 @row_2 }
+			size = { 150 @button_height }
+			text = "Mesh"
+			onclick = "[ExecuteConsoleCommand('mesh.names')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_3 @row_3 }
+			size = { 150 @button_height }
+			text = "Texture"
+			onclick = "[ExecuteConsoleCommand('mesh.texturenames')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_3 @row_4 }
+			size = { 150 @button_height }
+			text = "Joint"
+			onclick = "[ExecuteConsoleCommand('mesh.jointnames')]"
+		}
+	#	button = {
+	#		using = editor_button
+	#		using = editor_text
+	#		position = { @col_3 @row_5 }
+	#		size = { 150 30 }
+	#		text = "Toggle Water"
+	#		onclick = "[ExecuteConsoleCommand('Draw.Water')]"
+	#	}
+
+
+
+
+
+		textbox = {
+			position = { 360 175 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Tweak"
+			fontsize = 18
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_3 @row_7 }
+			size = { 150 @button_height }
+			text = "Water"
+			onclick = "[ExecuteConsoleCommand('tweak water')]"
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_3 @row_8 }
+			size = { 150 @button_height }
+			text = "Environment"
+			onclick = "[ExecuteConsoleCommand('tweak environment')]"
+		}
+
+
+		textbox = {
+			position = { 505 35 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Debug"
+			fontsize = 18
+		}
+
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_4 @row_1 }
+			size = { 150 @button_height }
+			text = "Collision"
+			onclick = "[ExecuteConsoleCommand('mesh.collisionmeshes')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_4 @row_2 }
+			size = { 150 @button_height }
+			text = "Normals"
+			onclick = "[ExecuteConsoleCommand('mesh.normals')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_4 @row_3 }
+			size = { 150 @button_height }
+			text = "Skeleton"
+			onclick = "[ExecuteConsoleCommand('mesh.skeleton')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_4 @row_4 }
+			size = { 150 @button_height }
+			text = "Mip levels"
+			onclick = "[ExecuteConsoleCommand('mesh.miplevels')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_4 @row_5 }
+			size = { 150 @button_height }
+			text = "LOD Levels"
+			onclick = "[ExecuteConsoleCommand('Mesh.LodLevels')]"
+		}
+		button = {
+			using = editor_button
+			using = editor_text
+			position = { @col_4 @row_6 }
+			size = { 150 @button_height }
+			text = "Lod Screen Percentage"
+			onclick = "[ExecuteConsoleCommand('Mesh.ScreenPercentage')]"
+		}
+
+
+
+
+
+
+
+		button = {
+			using = editor_button
+			position = { -5 4 }
+			size = { 20 20 }
+			text = "X"
+			onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets map_debug_menu')]"
+			parentanchor = top|right
+		}
+	}
+}
+
+widget = {
+	name = "tweak_stuff_window"
+	movable = no
+	size = { 320 14.999999% }
+	using = editor_window
+	position = { 1 1 }
+	parentanchor = top|right
+
+	widget = {
+		#position = { 100 0 }
+		name = "background"
+		size = { 100% 100% }
+
+
+		textbox = {
+			position = { 12 9 }
+			size = { 200 10 }
+			using = editor_text
+			text = "Tweak Stuff"
+		}
+
+
+		button = {
+			using = editor_button
+			position = { 8 32 }
+			size = { 149 29 }
+			text = "Rivers"
+			onclick = "[ExecuteConsoleCommand('tweak river')]"
+		}
+		button = {
+			using = editor_button
+			position = { 160 32 }
+			size = { 149 29 }
+			text = "Environment"
+			onclick = "[ExecuteConsoleCommand('tweak environment')]"
+		}
+
+		button = {
+			using = editor_button
+			position = { 8 62 }
+			size = { 149 29 }
+			text = "Borders"
+			onclick = "[ExecuteConsoleCommand('tweak border')]"
+		}
+		button = {
+			using = editor_button
+			position = { 160 62 }
+			size = { 149 29 }
+			text = "Draw"
+			onclick = "[ExecuteConsoleCommand('tweak draw')]"
+		}
+
+		button = {
+			using = editor_button
+			position = { 8 92 }
+			size = { 149 29 }
+			text = "Mesh"
+			onclick = "[ExecuteConsoleCommand('tweak mesh')]"
+		}
+		button = {
+			using = editor_button
+			position = { 160 92 }
+			size = { 149 29 }
+			text = "Terrain"
+			onclick = "[ExecuteConsoleCommand('tweak terrain')]"
+		}
+
+		button = {
+			using = editor_button
+			position = { 8 122 }
+			size = { 149 29 }
+			text = "Map objects"
+			onclick = "[ExecuteConsoleCommand('tweak MapObjects')]"
+		}
+	#	button = {
+	#		using = editor_button
+	#		position = { 160 122 }
+	#		size = { 149 29 }
+	#		text = "Test"
+	#		onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets')]"
+	#	}
+
+		button = {
+			using = editor_button
+			position = { -5 4 }
+			size = { 20 20 }
+			text = "X"
+			onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets tweak_stuff_window')]"
+			parentanchor = top|right
+		}
+	}
+}
+
+widget = {
+	name = "map_object_menu"
+	size = { 100% 100% }
+	position = { 1 1 }
+
+	textbox = {
+		position = { 0 25% }
+		size = { 100% 20 }
+		using = editor_text
+		align = center
+		text = "Click anywhere to place map objects"
+	}
+
+	button = {
+		size = { 100% 100% }
+		onclick = "[ExecuteConsoleCommand('MapObjects.Painter.AddPosition')]"
+	}
+
+	widget = {
+		name = "background"
+		size = { 170 110 }
+
+		background = {
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			texture = "gfx/editor_gui/editor_window.dds"
+			spriteType = CorneredStretched
+			spriteborder = { 6 6 }
+			spriteborder_top = 30
+		}
+
+		textbox = {
+			position = { 15 2 }
+			size = { 200 20 }
+			using = editor_text
+			text = "Placing Map Objects"
+		}
+
+		button = {
+			using = editor_button
+			position = { 10 34 }
+			size = { 150 30 }
+			text = "Config"
+			onclick = "[ExecuteConsoleCommand('tweak MapObjects.Painter')]"
+		}
+		button = {
+			using = editor_button
+			position = { 10 65 }
+			size = { 150 30 }
+			text = "Cancel"
+			onclick = "[ExecuteConsoleCommand('GUI.ClearWidgets')]"
+		}
+	}
+}

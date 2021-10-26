@@ -1,0 +1,24 @@
+﻿democracy_family_num_of_expected_jobs_plus_svalue = {
+	value = scope:democracy_family.num_of_expected_jobs
+	add = 1
+}
+democracy_family_num_of_current_jobs_plus_svalue = {
+	value = scope:democracy_family.num_of_jobs
+}
+
+unit_size_calc = {
+	value = unit_size
+
+
+
+}
+LI_assist = {
+	value = unit_size_calc
+	divide = 2
+}
+
+democracy_calc = {
+	value = {min = 2 max = 10}
+	subtract = {1 3}
+	subtract = var:olig_calc_var
+}

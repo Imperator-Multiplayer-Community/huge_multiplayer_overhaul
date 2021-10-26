@@ -1,0 +1,62 @@
+﻿boarding_tactics = {
+
+	duration = -1
+	enable = yes
+	toggle = yes
+	navy_only = yes
+
+
+	allow = {
+		is_navy = yes
+		in_combat = no
+		is_moving = no
+		has_commander = yes
+		# custom_tooltip = {
+		# 	text = marines_ratio
+		# 	num_of_marines >= num_of_ships_10
+		# }
+		
+		NOT = { unit_owner = { has_low_economic_policy = expense_navy } }
+
+		trigger_if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				loyalty > 33
+			}
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = no_marines_tt
+			}
+		}
+	}
+	modifier = {
+		ship_capture_chance = 0.1
+		naval_damage_done = -0.1
+	}
+	
+	
+	start_effect = {
+
+	}
+	
+	ai_will_do = {
+		modifier = {
+			trigger = {
+				always = yes
+			}
+			add = {
+				value = 100
+				divide = unit_size_rank
+			}
+		}
+	}
+	
+	ai_will_revoke = {
+		unit_owner = {
+			naval_dominance > inferiority
+		}
+	}
+}

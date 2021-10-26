@@ -1,0 +1,96 @@
+﻿country_decisions = {
+	
+	# Form Brennusovia
+	form_brennusovia = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				tag = BRN
+			}
+			NOT = {
+				is_endgame_tag_trigger = yes
+			}
+			OR = {
+				is_ai = no
+				num_of_cities <= 12
+			}
+			OR = {
+				country_culture_group = celto_pannonian_group
+				country_culture_group = gallic
+				country_culture_group = belgae_group
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = chalkidiki_area
+					is_in_area = thessaly_area
+					is_in_area = upper_macedonia_area
+					is_in_area = boeotia_area
+					is_in_area = central_greece_area
+					is_in_area = euboea_area
+					is_in_area = macedonia_area
+					is_in_area = macedonia_salutaris_area
+					#province_id = 1
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = brennusovia_not_exists
+				NOT = {
+					any_country = {
+						tag = BRN
+					}
+				}
+			}
+			owns_or_subject_owns_area = chalkidiki_area
+			owns_or_subject_owns_area = thessaly_area
+			owns_or_subject_owns_area = upper_macedonia_area
+			owns_or_subject_owns_area = boeotia_area
+			owns_or_subject_owns_area = central_greece_area
+			owns_or_subject_owns_area = euboea_area
+			owns_or_subject_owns_area = macedonia_area
+			owns_or_subject_owns_area = macedonia_salutaris_area
+		}
+
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = BRENNUSOVIA_NAME
+			hidden_effect = {
+				change_country_adjective = BRENNUSOVIA_ADJECTIVE
+				change_country_tag = BRN
+				trigger_event = {
+					id = formable_heritage.108
+				}
+				change_country_color = brennusovia_color
+				change_country_flag = BRENNUSOVIA_FLAG
+			}
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			add_political_influence = influence_large
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

@@ -1,0 +1,37 @@
+﻿# namespace = marines
+
+# marines.1 = {
+# 	type = country_event
+# 	hidden = yes
+
+# 	immediate = {
+# 		every_navy = {
+# 			#save_scope_as = current_navy
+# 			if = {
+# 				limit = {
+# 					in_combat = no
+# 					has_commander = yes
+# 					root = {
+# 						NOT = {
+# 							has_low_economic_policy = expense_navy
+# 						}
+# 							num_of_marines >= num_of_ships_10
+# 					}
+# 				}
+# 				add_unit_modifier = {
+# 					name = marines_modifier
+# 					duration = -1
+# 				}
+# 			}
+# 			else = {
+# 				# limit = {
+# 				# 	has_unit_modifier = marines_modifier
+# 				# }
+# 					remove_unit_modifier = marines_modifier
+# 			}
+# 		}
+
+# 	}
+# }
+
+

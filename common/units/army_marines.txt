@@ -1,0 +1,49 @@
+﻿# marines = {
+# 	army = yes
+# 	assault = no
+	
+# 	levy_tier = basic
+
+# 	allow = {
+# 		always = no
+# 	}
+
+# 	legions = no
+
+# 	maneuver = 1
+# 	movement_speed = 2
+
+# 	build_time = 30
+	
+
+# 	light_infantry = 0.9
+# 	medium_infantry = 0.6
+# 	heavy_infantry = 0.3
+
+# 	archers = 0.8
+# 	slingers = 0.8
+# 	skirmishers = 0.9
+
+# 	light_cavalry = 0.7
+# 	heavy_cavalry = 0.5
+# 	horse_archers = 0.5
+
+# 	camels = 0.6
+	
+# 	warelephant = 0.4
+# 	supply_train = 1.0
+	
+# 	attrition_weight = 0.4
+	
+# 	morale_damage_taken = 1.25
+
+# 	attrition_loss = 0.05
+# 	build_cost = {
+# 		gold = 6
+# 		manpower = 1
+# 	}
+
+# 	max_amount = crew_port_svalue 
+# 	food_consumption = 0.25
+# 	food_storage = 5
+# }

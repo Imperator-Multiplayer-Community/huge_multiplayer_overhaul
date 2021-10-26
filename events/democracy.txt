@@ -1,0 +1,439 @@
+﻿namespace = democracy
+democracy.1 = {
+	type = country_event
+}
+democracy.2 = {
+	type = country_event
+	hidden = yes
+	trigger = {
+		is_ai = no
+	}
+
+	immediate = {
+		set_variable = {
+			name = demo_civil_war
+			value = yes
+		}
+
+
+		every_family = { #Finds all chars with powerbase
+			every_family_member = {
+				limit = {
+					OR = {
+						NOT = {from_ruler_family = yes}
+						trigger_if = {
+							limit = {
+								from_ruler_family = yes
+							}
+								loyalty < 50
+						}
+					}
+					power_base > 0
+				}
+				add_to_list = power_base_list
+			}
+		}
+		ordered_in_list = {#finds most powerful character that isn't friend of ruler or above 50 loyalty
+			list = power_base_list
+			order_by = power_base
+			max = 1
+			limit = {
+				NOT = {
+					is_minor_character = yes
+					is_ruler = yes
+					scope:democratic_family = {
+						any_family_member = {
+								has_same_family = Prev.Prev
+						}
+					}
+
+				}
+				loyalty < 50
+
+			}
+			save_scope_as = highpower
+
+		}
+		start_civil_war = scope:highpower
+		scope:highpower.employer = {#scopes to new nation and finds biggest army
+		save_scope_as = rebelnation
+
+	}
+	}
+	option = {
+		
+	}
+	after = {
+		scope:rebelnation = { #conquers every province bordering the owned provinces of the civil war
+			every_area = {
+				limit = {
+					any_area_state = {
+						owner = scope:highpower.employer
+					}
+				}
+				every_neighbor_area = {
+					limit = {
+						any_area_state = {
+							owner = ROOT	
+						}
+					}
+					every_area_province = {
+						# set_owned_by = scope:highpower.employer
+					}
+				}
+			}
+
+		}
+		every_owned_province = { #Simulates all nobles rebelling against plebian democracy
+			limit = {
+				num_of_nobles > 0
+				NOT = {is_capital = yes}
+			}
+			set_owned_by = scope:highpower.employer
+		}
+
+		trigger_event = {
+			id = democracy.21
+			months = 1
+		}
+	}
+}
+democracy.21 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		scope:rebelnation = {
+			random_army = {
+				limit = {
+					unit_size_rank = 1
+				}
+				save_scope_as = bigarmy
+			}
+		}
+		create_unit = {#Summons a horde of plebs (the same size as the largest army of the enemy nation) Think I'll move this to a new event so I can have it trigger a few times depending on how the war is going and also delay it.
+		name = "Plebian assistance"
+		location = ROOT.capital_scope
+		while = {
+			count = scope:bigarmy.unit_size
+			add_subunit = light_infantry
+		}
+	}
+	}
+}
+
+democracy.3 = { #actually triggers before demo.2
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		var:democracy_trigger = 1
+	}
+	immediate = {
+
+		random_family = {
+			limit = {
+				has_variable = democracy_family_var
+			}
+			save_scope_as = democratic_family
+		}
+		scope:democracy_family = {
+			random_family_member = {
+				limit = {
+					is_head_of_family = yes
+				}
+				save_scope_as = democratic_head
+
+			}
+		}
+
+			random_family = {
+				random_family_member = {
+					limit = {
+						is_alive = yes
+						NOT = {
+							has_variable = loyaltydowndemoc
+							has_same_family = scope:democratic_head
+							
+							OR = {
+								is_minor_character = yes
+								loyalty < 40
+							}
+						}
+						
+					}
+					add_loyalty = antidemocracy_sentiment_2
+					set_variable = {
+						name = loyaltydowndemoc
+						value = yes
+						months = 60
+					
+					}
+				}
+			}
+	}
+}
+
+
+democracy.4 = { #Explanatory event to tell player what's happening
+	type = country_event
+	picture = revolt
+	title = democracy.4.t
+	desc = democracy.4.d
+	immediate = {
+		random_family = {
+			limit = {
+				has_variable = oligarchy_family_var
+			}
+			save_scope_as = oligarchy_family
+		}
+
+		save_scope_as = ROOT_nation
+		set_variable = {
+			name = olig_calc_var
+			value = 0
+		}
+	}
+	option = {
+		name = democracy.4.a
+	}
+
+}
+democracy.5 = { # for neighbour countries to opt in
+	type = country_event
+	picture = roman_trial
+	title = democracy.5.t
+	desc = democracy.5.d
+
+	trigger = {
+		NOT = {
+			OR = {
+				has_variable = oligarch_yes_revolt
+				has_variable = oligarch_no_revolt
+			}
+		}
+	}
+	immediate = {
+		
+	}
+	option = {
+		name = democracy.5.a
+		set_variable = {
+			name = oligarch_yes_revolt
+			value = yes
+		}
+	}
+	option = {
+		name = democracy.5.b
+		set_variable = {
+			name = oligarch_no_revolt
+			value = yes
+		}
+		trigger_event = {
+			id = democracy.5
+			days = 10
+		}
+	}
+}
+democracy.61 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		random_neighbour_country = {
+			limit = {
+				has_variable = oligarch_yes_revolt
+			}
+			trigger_event = {
+				id = democracy.6
+			}
+		}
+	}
+}
+democracy.6 = {
+	type = country_event
+	picture = tyre_city
+	title = democracy.6.t
+	desc = democracy.6.d
+	trigger = {
+		
+	}
+	immediate = {
+		set_variable = {
+			name = rndgx
+			value = {1 3}
+		}
+	}
+	option = {
+		
+		name = democracy.6.a
+		trigger = {
+			var:rndgx = 1
+		}
+		add_political_influence = -10
+		scope:ROOT_nation = {
+			change_variable = {
+				name = olig_calc_var
+				add = 1
+			}
+		}
+	}
+	option = {
+		
+		name = democracy.6.b
+		trigger = {
+			var:rndgx = 2
+		}
+		add_treasury = -100
+		scope:ROOT_nation = {
+			change_variable = {
+				name = olig_calc_var
+				add = 1
+			}
+		}
+	}
+	option = {
+		
+		name = democracy.6.c
+		trigger = {
+			var:rndgx = 3
+		}
+		add_manpower = -4
+		scope:ROOT_nation = {
+			change_variable = {
+				name = olig_calc_var
+				add = 1
+			}
+		}
+	}
+}
+democracy.7 = {
+	type = country_event
+	title = democracy.7.t
+	desc = democracy.7.d
+	picture = hellenistic_army
+	immediate = {
+		hidden_effect = {
+				create_character = {
+		            female = no
+		            age = 29
+		            save_scope_as = olig_merc_leader
+		            no_stats = yes
+					amazing_martial_effect = yes
+					great_charisma_effect = yes
+					average_finesse_effect = yes
+					bad_zeal_effect = yes
+					add_character_modifier = {
+						name = indisposed_charmod
+						duration = -1
+					}
+				}
+		}
+	}
+	option = {
+		name = democracy.7.a
+		add_treasury = -1000
+		set_variable = bribed_merc_yes
+		change_variable = {
+			name = olig_calc_var
+			add = 2
+		}
+	}
+	option = {
+		name = democracy.7.b
+		add_manpower = -20
+		set_variable = bribed_merc_yes
+		change_variable = {
+			name = olig_calc_var
+			add = 1
+		}
+	}
+	option = {
+		name = democracy.7.c
+	}
+}
+democracy.8 = {
+	type = country_event
+	title = democracy.8.t
+	desc = democracy.8.d
+	picture = roman_trial
+
+	immediate = {
+		scope:oligarchy_family = {
+			random_family_member = {
+				limit = {
+					is_head_of_family = yes
+				}
+			}
+			save_scope_as = oligarchy_leader
+		}
+		if = {
+			limit = {
+				democracy_calc < 0
+			}
+			current_ruler = {
+				add_popularity = 10
+			}
+			change_government = oligarchic_republic
+
+		}
+		else_if = {
+			limit = {democracy_calc > 0}
+			scope:oligarchy_family = {
+				every_family_member = {
+					death = {
+						death_reason = death_obscurity
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {democracy_calc = 0 }
+			start_civil_war = scope:oligarchy_leader
+			scope:oligarchy_leader.employer = {
+				create_unit = {
+					#commander = scope:olig_merc_leader
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = heavy_infantry
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_loyal_subunit = archers
+					add_subunit = supply_train
+					add_subunit = supply_train
+					save_scope_as = merc_army
+				}
+			}
+
+			if = {
+				limit = {
+					has_variable = bribed_merc_yes
+				}
+				scope:merc_army = {
+					set_as_commander = scope:olig_merc_leader
+				}
+			}
+
+		}
+	}
+	option = {
+		name = democracy.8.a
+		
+	}
+
+}
+democracy.9 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		scope:olig_merc_leader = {
+			death = {
+				death_reason = death_obscurity
+			}
+		}
+		remove_country_modifier = noble_rebellion
+	}
+}
+#All nobles turn against, HUGE civil war, get a bunch of LI to help

@@ -1,0 +1,35 @@
+﻿namespace = indo_greek
+
+indo_greek.1 = {
+	type = country_event
+	title = indo_greek.1.t
+	desc = indo_greek.1.d
+	picture = greek_city
+
+	trigger = {
+		
+	}
+	immediate = {
+		change_country_name = "Indo-Greek Kingdom"
+		
+	}
+	option = {
+		name = indo_greek.1.a
+			set_capital = 4340
+			hidden_effect = {
+				p:4340.state = {
+					set_state_capital = 4340
+				}
+			}
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			p:4340 = { change_province_name = "Euthymedeia" }
+			p:4340 = {
+				capital_formable_large_effect = yes
+			}
+	}
+	option = {
+		name = indo_greek.1.b
+	}
+}

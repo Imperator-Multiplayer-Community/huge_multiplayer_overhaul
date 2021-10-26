@@ -1,0 +1,98 @@
+﻿country_decisions = {
+	
+	# Form Heraklean League
+	form_heraklean_league = {
+		
+		potential = {
+			num_of_cities >= 1
+			is_republic = yes			
+			country_culture_group = hellenic
+			NOT = {
+				tag = HKL
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = mauretania_tingitana_septentrionalis_area
+					is_in_area = gaditanus_area
+					is_in_area = malacita_area
+					is_in_area = bastetania_area
+					is_in_area = mastiania_area
+					is_in_area = contestania_meridionalis_area
+					is_in_area = contestania_septentrionalis_area
+					is_in_area = edetania_area
+					is_in_area = ilercavonia_area
+					is_in_area = cessetania_area
+					is_in_area = indiketia_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = heraklean_league_not_exists
+				NOT = {
+					any_country = {
+						tag = HKL
+					}
+				}
+			}
+			is_republic = yes
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = mauretania_tingitana_septentrionalis_area
+			owns_or_subject_owns_area = gaditanus_area
+			owns_or_subject_owns_area = malacita_area
+			owns_or_subject_owns_area = bastetania_area
+			owns_or_subject_owns_area = mastiania_area
+			owns_or_subject_owns_area = contestania_meridionalis_area
+			owns_or_subject_owns_area = contestania_septentrionalis_area
+			owns_or_subject_owns_area = edetania_area
+			owns_or_subject_owns_area = ilercavonia_area
+			owns_or_subject_owns_area = indiketia_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "HERAKLEAN_LEAGUE_NAME"
+			hidden_effect = {
+				change_country_adjective = "HERAKLEAN_LEAGUE_ADJECTIVE"
+				change_country_color =  "heraklean_league_color"
+				change_country_tag = HKL
+				change_country_flag = HERAKLEAN_LEAGUE_FLAG
+				trigger_event = {
+					id = formable_heritage.26
+				}								
+			}
+				capital_scope = {
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_heraklean_league_claims_tooltip"
+			hidden_effect = {
+				area:narbonensis_centralis_area = { formable_area_province_effect = yes }
+				area:narbonensis_occidentalis_area = { formable_area_province_effect = yes }
+				area:balearides_area = { formable_area_province_effect = yes }
+				area:corsica_area = { formable_area_province_effect = yes }
+				area:couneia_area = { formable_area_province_effect = yes }
+				area:mauretania_tingitana_meridionalis_area = { formable_area_province_effect = yes }
+			}	
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

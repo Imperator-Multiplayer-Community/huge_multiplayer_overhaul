@@ -1,0 +1,52 @@
+﻿slave_movement = {
+	scope = province
+	ai_is_valid = {
+		always = no
+	}
+	is_valid = {
+		NOT = {
+			total_population >= population_cap
+		}
+		#owner = player
+	}
+	effect = {
+		owner = {
+			set_variable = {
+				name = slave_moves
+				value = yes
+			}
+		}
+		if = {
+			limit = {
+				has_province_modifier = slave_move_yes
+			}
+			remove_province_modifier = slave_move_yes
+		}
+		else = {
+			add_province_modifier = {
+				name = slave_move_yes
+				duration = -1
+			}
+		}
+	}
+}
+no_slave_movement = {
+	scope = province
+	ai_is_valid = {
+		always = no
+	}
+	effect = {
+		if = {
+			limit = {
+				has_province_modifier = no_slave_move
+			}
+			remove_province_modifier = no_slave_move
+		}
+		else = {
+			add_province_modifier = {
+				name = no_slave_move
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,247 @@
+﻿namespace = ml_jungle_distinctions
+
+## adds any jungle distinctions
+ml_jungle_distinctions.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+            unit_location = {
+            	terrain = jungle
+            }
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_jungle_09
+				}
+
+				remove_distinction = distinction_jungle_09
+				add_distinction = distinction_jungle_10
+
+				if = {
+					limit = {							
+						AND = {
+							has_distinction = distinction_jungle_master_01
+							NOT = {
+								has_distinction = distinction_jungle_master_02
+							}
+						}
+					}
+
+					remove_distinction = distinction_jungle_master_01
+					add_distinction = distinction_jungle_master_02
+				}
+
+				scope:actor = {
+					if = {
+						limit = {
+							has_variable = terrain_master
+						}
+
+						if = {
+							limit = {
+								var:terrain_master < 5
+							}
+
+							change_variable = {
+								name = terrain_master
+								add = 1
+							}
+						}
+					} else {
+						set_variable = {
+							name = terrain_master
+							value = 1
+						}
+					}
+					
+					trigger_event = ml_terrain_master_distinctions.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_08
+				}
+
+				remove_distinction = distinction_jungle_08
+				add_distinction = distinction_jungle_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_07
+				}
+
+				remove_distinction = distinction_jungle_07
+				add_distinction = distinction_jungle_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_06
+				}
+
+				remove_distinction = distinction_jungle_06
+				add_distinction = distinction_jungle_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_05
+				}
+
+				remove_distinction = distinction_jungle_05
+				add_distinction = distinction_jungle_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_04
+				}
+
+				remove_distinction = distinction_jungle_04
+				add_distinction = distinction_jungle_05
+
+				if = {
+					limit = {							
+						NOT = {
+							OR = {
+								has_distinction = distinction_jungle_master_01
+								has_distinction = distinction_jungle_master_02
+							}
+						}						
+					}
+
+					add_distinction = distinction_jungle_master_01
+
+				}
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_03
+				}
+
+				remove_distinction = distinction_jungle_03
+				add_distinction = distinction_jungle_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_02
+				}
+
+				remove_distinction = distinction_jungle_02
+				add_distinction = distinction_jungle_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_01
+				}
+
+
+				remove_distinction = distinction_jungle_01
+				add_distinction = distinction_jungle_02
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_distinction = distinction_jungle_10
+					}
+				}
+
+				add_distinction = distinction_jungle_01
+			}
+		}
+	}
+}
+
+## removes any jungle distinctions
+ml_jungle_distinctions.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			has_legion_trigger = yes
+        	unit_location = {
+            	terrain = jungle
+            }
+		}
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_jungle_10
+				}
+
+				remove_distinction = distinction_jungle_10
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_09
+				}
+
+				remove_distinction = distinction_jungle_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_08
+				}
+
+				remove_distinction = distinction_jungle_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_07
+				}
+
+				remove_distinction = distinction_jungle_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_06
+				}
+
+				remove_distinction = distinction_jungle_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_05
+				}
+
+				remove_distinction = distinction_jungle_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_04
+				}
+
+				remove_distinction = distinction_jungle_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_03
+				}
+
+				remove_distinction = distinction_jungle_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_02
+				}
+
+				remove_distinction = distinction_jungle_02
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_jungle_01
+				}
+
+				remove_distinction = distinction_jungle_01
+			}
+		}
+	}
+}

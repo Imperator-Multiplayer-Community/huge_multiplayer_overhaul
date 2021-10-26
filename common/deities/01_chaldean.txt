@@ -1,0 +1,238 @@
+﻿### General Deity Checks ###
+
+### Exclusive Deity Checks ###
+
+deity_ninurta = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_ninurta = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_war
+	passive_modifier = { land_morale_modifier = deity_land_morale_modifier_svalue }
+	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = war #This Deity uses a War slot.
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		military_apotheosis_defensive_effect = yes
+	}
+}
+
+deity_shamash = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_shamash = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
+	omen = { monthly_corruption = omen_monthly_corruption } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = economy #This Deity uses an Economy Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+	}
+}
+
+deity_ea = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_ea = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_citizen_happyness = deity_global_citizen_happiness_svalue }
+	omen = { religious_tech_investment = omen_religious_tech_investment_svalue } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = culture #This Deity uses a Culture Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		culture_apotheosis_assimilate_effect = yes
+	}
+}
+
+deity_sin = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_sin = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_love
+	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
+	omen = { global_monthly_food_modifier = omen_global_monthly_food_modifier } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = fertility #This Deity uses a Fertility Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		fertility_apotheosis_capital_effect = yes
+	}
+}
+
+deity_ishtar = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_ishtar = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_war
+	passive_modifier = { global_freemen_output = deity_global_freemen_output_svalue }
+	omen = { land_morale_modifier = omen_land_morale_modifier_svalue } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = war #This Deity uses a War slot.
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		military_apotheosis_manpower_effect = yes
+	}
+}
+
+deity_nabu = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_nabu = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { research_points_modifier = deity_research_points_modifier_svalue }
+	omen = { ruler_popularity_gain = omen_ruler_popularity_gain_svalue } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = economy #This Deity uses an Economy Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		economy_income_effect = yes
+	}
+}
+
+deity_enlil = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_enlil = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_monthly_state_loyalty = deity_global_monthly_state_loyalty_svalue }
+	omen = { agressive_expansion_monthly_change = omen_aggressive_expansion_monthly_change_svalue } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = culture #This Deity uses a Culture Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		culture_apotheosis_capital_effect = yes
+	}
+}
+
+deity_ashshur = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_culture_trigger = {
+				RELIGION = mesopotamian_religion
+				CULTURE = assyrian
+			}
+			deity:omen_ashshur = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_war
+	passive_modifier = { monthly_military_experience_modifier = deity_monthly_military_experience_modifier_svalue }
+	omen = { discipline = omen_discipline_svalue } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = war #This Deity uses a War slot.
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		military_apotheosis_military_experience_effect = yes
+	}
+}
+
+deity_marduk = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = mesopotamian_religion
+			}
+			deity:omen_marduk = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_nobles_happyness = omen_global_nobles_happiness_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
+	religion = mesopotamian_religion
+	deity_category = culture #This Deity uses a Culture Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		economy_apotheosis_capital_noble_effect = yes
+	}
+}

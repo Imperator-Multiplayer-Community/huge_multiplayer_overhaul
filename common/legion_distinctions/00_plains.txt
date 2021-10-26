@@ -1,0 +1,122 @@
+﻿### plains ###
+distinction_plains_master_01 = {
+	icon = "phalera_ox"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.05
+	}
+}
+
+
+distinction_plains_master_02 = {
+	icon = "phalera_ox"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.05
+		army_movement_speed = 0.02
+	}
+}
+
+distinction_plains_01 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.02
+	}
+}
+
+distinction_plains_02 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.04
+	}
+}
+
+distinction_plains_03 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.06
+	}
+}
+
+distinction_plains_04 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.08
+	}
+}
+
+distinction_plains_05 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.10
+	}
+}
+
+distinction_plains_06 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.12
+	}
+}
+
+distinction_plains_07 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.14
+	}
+}
+
+distinction_plains_08 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.16
+	}
+}
+
+distinction_plains_09 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.18
+	}
+}
+
+distinction_plains_10 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		plains_combat_bonus = 0.20
+	}
+}

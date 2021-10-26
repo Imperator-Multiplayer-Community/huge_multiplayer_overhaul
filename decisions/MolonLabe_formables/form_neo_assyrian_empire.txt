@@ -1,0 +1,91 @@
+﻿country_decisions = {
+	
+	# Form Neo-Assyrian Empire
+	form_neo_assyrian_empire = {
+		
+		potential = {
+			num_of_cities >= 1
+			primary_culture = assyrian
+			NOT = {
+				tag = NAE
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = assyria_region
+					is_in_region = syria_region
+					is_in_region = palestine_region
+					is_in_region = lower_egypt_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = neo_assyrian_empire_not_exists
+				NOT = {
+					any_country = {
+						tag = NAE
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = assyria_region
+			owns_or_subject_owns_region = syria_region
+			owns_or_subject_owns_region = palestine_region
+			owns_or_subject_owns_region = lower_egypt_region
+		}
+		
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "NEO_ASSYRIAN_EMPIRE_NAME"
+			if = {
+				limit = {
+					NOR = { 
+						government = imperium 
+						government = imperial_cult
+					}
+				}
+				change_government = imperium
+				switch_government_type_event_clearup_effect = yes
+			}			
+			hidden_effect = {
+				change_country_adjective = "NEO_ASSYRIAN_EMPIRE_ADJECTIVE"
+				change_country_color = "neo_assyrian_color"
+				change_country_tag = NAE
+				change_country_flag = NEO_ASSYRIAN-EMPIRE_FLAG
+				trigger_event = {
+					id = formable_heritage.46
+				}				
+			}
+			capital_scope = {
+				capital_formable_huge_effect = yes
+				formable_capital_modifier_large_effect = yes
+				create_state_pop = freemen
+				create_state_pop = freemen
+			}
+			custom_tooltip = neo_assyrian_empire_claims_tooltip
+			hidden_effect = {
+				region:mesopotamia_region = { formable_region_province_effect = yes }
+				region:cilicia_region = { formable_region_province_effect = yes }
+				region:cappadocia_region = { formable_region_province_effect = yes }
+			}			
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+	
+}

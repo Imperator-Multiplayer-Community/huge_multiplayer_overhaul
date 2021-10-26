@@ -1,0 +1,624 @@
+base_sub_window = { #This window is not amenable to change...
+	name = "create_trade_route_window"
+	size = { 960 800 }
+	parentanchor = bottom|left
+	widgetanchor = bottom|left
+	position = { 860 0 }
+	blockoverride "Title_text" { text = "TRADE_GOODS" }
+
+	blockoverride "White_buttons"
+	{
+		spacing = 4
+		button_back = {
+			onclick = "[CreateTradeWindow.Back]"
+			visible = "[Not(CreateTradeWindow.ShowTradeGoods)]"
+		}
+
+		button_close = {
+			onclick = "[CreateTradeWindow.Close]"
+			tooltip = "CLOSE"
+		}
+	}
+
+	button = {
+		tooltip = "trade_hover"
+		visible = "[GetVariableSystem.Exists('trade_hover')]"
+		using = flat_background_white
+		alpha = 0.9
+		modify_texture = {
+			name = "edge_alpha"
+			texture = "gfx/interface/base_parts/background_x60bd_alpha.dds"
+			blend_mode = alphamultiply
+			spriteType = Corneredtiled
+			spriteborder = { 60 60 }
+		}
+		size = { 183 35 }
+		position = { -70 -1 }
+		parentanchor = right
+		onclick = "[GetVariableSystem.Toggle('trade_hover')]"
+
+		check_filter = {
+			parentanchor = vcenter
+			position = { 2 0 }
+			blockoverride "On_click" {
+				alwaystransparent = yes
+			}
+			blockoverride "Frame" {
+				frame = 2
+			}
+			blockoverride "TagText" {
+				text = "select_on_hover"
+			}
+		}
+	}
+
+	button = {
+		tooltip = "trade_hover"
+		visible = "[Not(GetVariableSystem.Exists('trade_hover'))]"
+		using = flat_background_white
+		alpha = 0.9
+		modify_texture = {
+			name = "edge_alpha"
+			texture = "gfx/interface/base_parts/background_x60bd_alpha.dds"
+			blend_mode = alphamultiply
+			spriteType = Corneredtiled
+			spriteborder = { 60 60 }
+		}
+		size = { 183 35 }
+		position = { -70 -1 }
+		parentanchor = right
+		onclick = "[GetVariableSystem.Toggle('trade_hover')]"
+		onclick = "[GetVariableSystem.Set('trade_selected', 'no')]"
+
+		check_filter = {
+			parentanchor = vcenter
+			position = { 2 0 }
+			blockoverride "On_click" {
+				alwaystransparent = yes
+			}
+			blockoverride "Frame" {
+				frame = 1
+			}
+			blockoverride "TagText" {
+				text = "select_on_hover"
+			}
+		}
+	}
+
+	allow_outside = yes
+
+	container = {
+		resizeparent = yes
+		ignoreinvisible = yes
+
+		flowcontainer = {
+			position = { 0 10 }
+			direction = vertical
+			#visible = "[CreateTradeWindow.ShowTradeGoods]"
+			ignoreinvisible = yes
+
+			widget = { size = { 0 16 } }
+
+			widget = {
+				size = { 721 11 }
+			}
+
+			scrollarea = {
+				size = { 730 620 }
+				scrollbarpolicy_horizontal = always_off
+
+				scrollbar_vertical = {
+					using = VerticalScrollBar
+				}
+
+				scrollwidget = {
+					dynamicgridbox = {
+						size = { 280 200 }
+						parentanchor = hcenter
+						datamodel = "[CreateTradeWindow.GetCategories]"
+
+						item = {
+							container = {
+								sub_header = {
+									position = { 0 1 }
+									size = { 702 28 }
+
+									blockoverride "Title_text"
+									{
+										text = "[TradeGoodsCategoryGlue.GetName]"
+									}
+								}
+
+								dynamicgridbox = {
+									position = { 2 34 }
+									size = { 280 200 }
+
+									datamodel_wrap = 3
+									flipdirection = yes
+
+									datamodel = "[TradeGoodsCategoryGlue.GetTradeGoods]"
+
+									item = {
+										widget = {
+											size = { 231 34 }
+
+											widget = {
+												size = { 230 32 }
+												alpha = "[TransparentIfTrue( SelectTradeGoods.IsNoTradePossible )]"
+
+												list_button = { #hover
+													size = { 100% 100% }
+													enabled = "[And( SelectTradeGoods.IsEnabled, Not( SelectTradeGoods.IsNoTradePossible ) )]"
+
+													visible = "[And(Not(GetVariableSystem.HasValue('trade_selected', 'yes')), GetVariableSystem.Exists('trade_hover'))]"
+													onclick = "[SelectTradeGoods.OnClick]"
+													onmousehierarchyenter = "[SelectTradeGoods.OnClick]"
+													onclick = "[GetVariableSystem.Set('trade_selected', 'yes')]"
+												}
+
+												list_button = { #locked
+													size = { 100% 100% }
+													enabled = "[And( SelectTradeGoods.IsEnabled, Not( SelectTradeGoods.IsNoTradePossible ) )]"
+
+													visible = "[Or(Not(GetVariableSystem.Exists('trade_hover')), GetVariableSystem.HasValue('trade_selected', 'yes'))]"
+													onclick = "[SelectTradeGoods.OnClick]"
+												}
+
+												textbox = {
+													parentanchor = bottom|left
+													using = BaseFontS
+													using = Black_FontColor
+													autoresize = yes
+													text = "#bold [SelectTradeGoods.GetGoods.GetNameWithNoTooltip]"
+													tooltip = "[SelectTradeGoods.GetGoods.GetTooltip]"
+													position = { 39 -7 }
+												}
+
+												icon_and_text = {
+													size = { 76 0 }
+													parentanchor = bottom|right
+													blockoverride "Text" {
+														text = "[SelectTradeGoods.GetGoods.GetRoutePrice]"
+														position = { 0 4 }
+													}
+													blockoverride "Icon" {
+														using = icon_treasury
+														size = { 31 31 }
+													}
+													position = { -2 -3 }
+												}
+
+											}
+
+
+											trade_good_entry = {
+												blockoverride "Icon" {
+													texture = "[GetTradeGoodsIcon(SelectTradeGoods.GetGoods)]"
+													size = { 28 28 }
+												}
+												blockoverride "Text" {}
+												blockoverride "On_click" {
+													enabled = "[And( SelectTradeGoods.IsEnabled, Not( SelectTradeGoods.IsNoTradePossible ) )]"
+													onclick = "[SelectTradeGoods.OnClick]"
+													onmousehierarchyenter = "[SelectTradeGoods.OnClick]"
+													onclick = "[GetVariableSystem.Set('trade_selected', 'yes')]"
+												}
+												size = { 36 31 }
+												tooltip = "[SelectTradeGoods.GetGoods.GetTooltip]"
+
+												visible = "[And(Not(GetVariableSystem.HasValue('trade_selected', 'yes')), GetVariableSystem.Exists('trade_hover'))]"
+											}
+
+											trade_good_entry = {
+												visible = "[Or(Not(GetVariableSystem.Exists('trade_hover')), GetVariableSystem.HasValue('trade_selected', 'yes'))]"
+												blockoverride "Icon" {
+													texture = "[GetTradeGoodsIcon(SelectTradeGoods.GetGoods)]"
+													size = { 28 28 }
+												}
+												blockoverride "Text" {}
+												blockoverride "On_click" {
+													enabled = "[And( SelectTradeGoods.IsEnabled, Not( SelectTradeGoods.IsNoTradePossible ) )]"
+													onclick = "[SelectTradeGoods.OnClick]"
+												}
+												size = { 36 31 }
+												tooltip = "[SelectTradeGoods.GetGoods.GetTooltip]"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			secondary_header = {
+				size = { 100% 0 }
+				parentanchor = hcenter
+				blockoverride "Title_text" { text = "CURRENT_IMPORT_ROUTES" }
+				blockoverride "White_buttons" {}
+			}
+
+			scrollarea = {
+				size = { 705 -1 }
+				maximumsize = { 705 182 }
+				scrollbarpolicy_horizontal = always_off
+				parentanchor = hcenter
+				scrollbar_vertical = {
+					using = VerticalScrollBar
+				}
+
+				scrollwidget = {
+					dynamicgridbox = {
+						resizeparent = yes
+						datamodel = "[CreateTradeWindow.GetCurrentTradeRoutes]"
+
+						item = {
+							widget = {
+								size = { 705 36 }
+								widget = {
+									size = { 520 100% }
+									tooltip = "[ActiveTradeRoute.GetTooltip]"
+									list_entry = {
+										size = { 100% 100% }
+
+									}
+
+									icon_card = {
+										name = "Slot"
+										blockoverride "Icon" {
+											texture = "[GetTradeGoodsIcon(ActiveTradeRoute.GetGoods)]"
+											size = { 29 29 }
+										}
+										size = { 32 32 }
+										tooltip = "[ActiveTradeRoute.GetGoods.GetTooltip]"
+										position = { 0 1 }
+									}
+
+									textbox = {
+										text = "[ActiveTradeRoute.GetName]"
+										autoresize = yes
+										parentanchor = vcenter
+										position = { 52 -2 }
+										using = BaseFontM
+										using = Black_FontColor
+									}
+
+									icon_and_text = {
+										parentanchor = right
+										position = { -12 0 }
+										size = { 110 0 }
+										blockoverride "Icon" { using = icon_treasury }
+										blockoverride "Text" { text = "[ActiveTradeRoute.GetIncome|2]" }
+									}
+								}
+								text_button_square = {
+									size = { 166 24 }
+									position = { -12 0 }
+									parentanchor = vcenter|right
+									blockoverride "Center_text" { text = "CANCEL_ROUTE" }
+									blockoverride "On_click" { onclick = "[ActiveTradeRoute.OnClick]" }
+								}
+							}
+						}
+					}
+				}
+			}
+			widget = {
+				visible = "[IsDataModelEmpty(CreateTradeWindow.GetCurrentTradeRoutes)]"
+				size = { 100% 28 }
+
+				textbox = {
+					parentanchor = hcenter
+					autoresize = yes
+					using = BaseFontM
+					using = Black_FontColor
+					text = no_imports_right_now
+				}
+			}
+
+			widget = {
+				size = { 8 9 }
+			}
+		}
+
+		# Trade Good Info
+	}
+
+	base_sub_window = {
+		size = { 600 600 }
+		visible = "[Not(CreateTradeWindow.ShowTradeGoods)]"
+		position = { -420 0 }
+		parentanchor = bottom
+		blockoverride "White_buttons" {
+			button_close = {
+				onclick = "[CreateTradeWindow.Back]"
+				onclick = "[GetVariableSystem.Set('trade_selected', 'no')]"
+			}
+		}
+
+		icon = {
+			size = { 20 20 }
+			texture = "gfx/interface/tooltip/lock_icon_alpha_s.dds"
+			position = { -33 4 }
+			parentanchor = right
+			visible = "[GetVariableSystem.HasValue('trade_selected', 'yes')]"
+		}
+
+		flowcontainer = {
+			resizeparent = yes
+			position = { 14 10 }
+			direction = vertical
+
+			container = {
+				widget = {
+					name = "right_spacing"
+					position = { 418 0 }
+					size = { 4 4 }
+				}
+
+				margin_widget = {
+					position = { -4 24 }
+					size = { 408 40 }
+					list_entry = {
+						size = { 100% 100% }
+					}
+					icon_card = {
+						name = "Slot"
+						blockoverride "Icon" {
+							texture = "[GetTradeGoodsIcon(CreateTradeWindow.GetGoods)]"
+							size = { 34 34 }
+						}
+						size = { 37 37 }
+						tooltip = "[CreateTradeWindow.GetGoods.GetTooltip]"
+						position = { 0 2 }
+					}
+					textbox = {
+						position = { 45 -1 }
+						parentanchor = vcenter
+						using = BaseFontM
+						using = Black_FontColor
+						autoresize = yes
+						text = "[CreateTradeWindow.GetGoods.GetName]"
+						maximumsize = { 150 -1 }
+						elide = right
+					}
+					text_button_square_highlighted = {
+						size = { 200 28 }
+						position = { -5 0 }
+						parentanchor = right|vcenter
+						blockoverride "Center_text"
+						{
+							text = "CANCEL"
+						}
+						visible = "[Not(CreateTradeWindow.ShowTradeGoods)]"
+						blockoverride "On_click"
+						{
+							onclick = "[CreateTradeWindow.Back]"
+							onclick = "[GetVariableSystem.Set('trade_selected', 'no')]"
+						}
+
+						state = {
+							name = "close_trade"
+							on_start = "[CreateTradeWindow.Back]"
+						}
+					}
+				}
+			}
+			widget = { size = { 6 6 } }
+			container = {
+				scrollarea = {
+					size = { 400 400 }
+
+					scrollbar_horizontal = {
+						using = editor_horizontal_scrollbar
+					}
+
+					using = VerticalScrollAreaCutOff
+					scrollbar_vertical = {
+						using = VerticalScrollBar
+					}
+
+					scrollwidget = {
+						flowcontainer = {
+							direction = vertical
+							dynamicgridbox = {
+								size = { 320 200 }
+								ignoreinvisible = yes
+
+								datamodel = "[CreateTradeWindow.GetStates]"
+
+								item = {
+									widget = {
+										visible = "[EqualTo_int32(CreateTradeRoute.GetAcceptanceFrame, '(int32)2')]"
+										size = { 380 38 }
+										list_entry = {
+											size = { 100% 100% }
+										}
+										flowcontainer = {
+											spacing = 6
+											country_flag = {
+												datacontext = "[CreateTradeRoute.GetCountry]"
+												tooltip = "[Country.GetDescriptiveName]"
+
+												blockoverride "flag"
+												{
+													texture = "[Country.AccessCoatOfArms.GetTexture('(int32)32','(int32)32')]"
+													frame = "[Country.AccessCoatOfArms.GetFrame('(int32)32','(int32)32')]"
+													framesize = { 32 32 }
+												}
+
+												blockoverride "size"
+												{
+													size = { 32 32 }
+												}
+
+												blockoverride "click"
+												{
+													onclick = "[OpenDiplomacy(Country.Self)]"
+												}
+												parentanchor = vcenter
+											}
+											text_button_square = {
+												size = { 300 0 }
+												blockoverride "Center_text" { text = "[CreateTradeRoute.GetName]" }
+												blockoverride "On_click"
+												{
+													onclick = "[CreateTradeRoute.OnClick]"
+													enabled = "[CreateTradeRoute.CanClick]"
+													tooltip = "[CreateTradeRoute.GetTooltip]"
+													onclick = "[PdxGuiTriggerAllAnimations('add_another')]"
+													onclick = "[GetVariableSystem.Set('trade_selected', 'no')]"
+												}
+												parentanchor = vcenter
+											}
+											icon = {
+												parentanchor = vcenter
+												framesize = { 46 46 }
+												size = { 36 36 }
+												visible = "[CreateTradeRoute.RequireAcceptance]"
+												texture = "gfx/interface/diplomacy/ai_accept_decline_icon.dds"
+												frame = "[CreateTradeRoute.GetAcceptanceFrame]"
+												tooltip = "[CreateTradeRoute.GetAcceptanceTooltip]"
+											}
+										}
+									}
+								}
+							}
+
+							dynamicgridbox = {
+								size = { 320 200 }
+								ignoreinvisible = yes
+
+								datamodel = "[CreateTradeWindow.GetStates]"
+
+								item = {
+									widget = {
+										visible = "[Not(CreateTradeRoute.RequireAcceptance)]"
+										size = { 380 38 }
+										list_entry = {
+											size = { 100% 100% }
+										}
+										flowcontainer = {
+											spacing = 6
+											country_flag = {
+												datacontext = "[CreateTradeRoute.GetCountry]"
+												tooltip = "[Country.GetDescriptiveName]"
+
+												blockoverride "flag"
+												{
+													texture = "[Country.AccessCoatOfArms.GetTexture('(int32)32','(int32)32')]"
+													frame = "[Country.AccessCoatOfArms.GetFrame('(int32)32','(int32)32')]"
+													framesize = { 32 32 }
+												}
+
+												blockoverride "size"
+												{
+													size = { 32 32 }
+												}
+
+												blockoverride "click"
+												{
+													onclick = "[OpenDiplomacy(Country.Self)]"
+												}
+												parentanchor = vcenter
+											}
+											text_button_square = {
+												size = { 300 0 }
+												blockoverride "Center_text" { text = "[CreateTradeRoute.GetName]" }
+												blockoverride "On_click"
+												{
+													onclick = "[CreateTradeRoute.OnClick]"
+													enabled = "[CreateTradeRoute.CanClick]"
+													tooltip = "[CreateTradeRoute.GetTooltip]"
+													onclick = "[PdxGuiTriggerAllAnimations('add_another')]"
+												}
+												parentanchor = vcenter
+											}
+											icon = {
+												parentanchor = vcenter
+												framesize = { 46 46 }
+												size = { 36 36 }
+												visible = "[CreateTradeRoute.RequireAcceptance]"
+												texture = "gfx/interface/diplomacy/ai_accept_decline_icon.dds"
+												frame = "[CreateTradeRoute.GetAcceptanceFrame]"
+												tooltip = "[CreateTradeRoute.GetAcceptanceTooltip]"
+											}
+										}
+									}
+								}
+							}
+
+							dynamicgridbox = {
+								size = { 320 200 }
+								ignoreinvisible = yes
+
+								datamodel = "[CreateTradeWindow.GetStates]"
+
+								item = {
+									widget = {
+										visible = "[EqualTo_int32(CreateTradeRoute.GetAcceptanceFrame, '(int32)1')]"
+										size = { 380 38 }
+										list_entry = {
+											size = { 100% 100% }
+										}
+										flowcontainer = {
+											spacing = 6
+											country_flag = {
+												datacontext = "[CreateTradeRoute.GetCountry]"
+												tooltip = "[Country.GetDescriptiveName]"
+
+												blockoverride "flag"
+												{
+													texture = "[Country.AccessCoatOfArms.GetTexture('(int32)32','(int32)32')]"
+													frame = "[Country.AccessCoatOfArms.GetFrame('(int32)32','(int32)32')]"
+													framesize = { 32 32 }
+												}
+
+												blockoverride "size"
+												{
+													size = { 32 32 }
+												}
+
+												blockoverride "click"
+												{
+													onclick = "[OpenDiplomacy(Country.Self)]"
+												}
+												parentanchor = vcenter
+											}
+											text_button_square = {
+												size = { 300 0 }
+												blockoverride "Center_text" { text = "[CreateTradeRoute.GetName]" }
+												blockoverride "On_click"
+												{
+													onclick = "[CreateTradeRoute.OnClick]"
+													enabled = "[CreateTradeRoute.CanClick]"
+													tooltip = "[CreateTradeRoute.GetTooltip]"
+													onclick = "[PdxGuiTriggerAllAnimations('add_another')]"
+												}
+												parentanchor = vcenter
+											}
+											icon = {
+												parentanchor = vcenter
+												framesize = { 46 46 }
+												size = { 36 36 }
+												visible = "[CreateTradeRoute.RequireAcceptance]"
+												texture = "gfx/interface/diplomacy/ai_accept_decline_icon.dds"
+												frame = "[CreateTradeRoute.GetAcceptanceFrame]"
+												tooltip = "[CreateTradeRoute.GetAcceptanceTooltip]"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			widget = {
+				size = { 6 16 }
+			}
+		}
+	}
+}

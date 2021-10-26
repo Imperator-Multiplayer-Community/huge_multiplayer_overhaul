@@ -1,0 +1,113 @@
+﻿country_decisions = {
+	
+	# Form Aryana
+	form_aryana = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				country_culture_group = aryan
+				country_culture_group = scythia
+				country_culture_group = persia
+				country_culture_group = bactrian
+			}
+			NOT = {
+				tag = ARY
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = bactriana_region
+					is_in_region = sogdiana_region
+					is_in_region = ariana_region
+					is_in_region = gandhara_region
+					is_in_region = parthia_region
+					is_in_area = north_sindhu_area
+					is_in_area = south_sindhu_area
+					is_in_area = parecania_area
+					is_in_area = sauvira_area
+					is_in_area = patalene_area
+					is_in_area = gedrosia_area
+					is_in_area = sthanisvara_area	
+					is_in_area = kuru_area
+					is_in_area = persepolis_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = aryana_not_exists
+				NOT = {
+					any_country = {
+						tag = ARY
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = bactriana_region
+			owns_or_subject_owns_region = sogdiana_region
+			owns_or_subject_owns_region = ariana_region
+			owns_or_subject_owns_region = gandhara_region
+			owns_or_subject_owns_region = parthia_region
+			owns_or_subject_owns_area = north_sindhu_area
+			owns_or_subject_owns_area = south_sindhu_area
+			owns_or_subject_owns_area = parecania_area
+			owns_or_subject_owns_area = sauvira_area
+			owns_or_subject_owns_area = patalene_area
+			owns_or_subject_owns_area = gedrosia_area
+			owns_or_subject_owns_area = sthanisvara_area
+			owns_or_subject_owns_area = kuru_area
+			owns_or_subject_owns_area = persepolis_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "ARYANA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}						
+			hidden_effect = {
+				change_country_adjective = "ARYANA_ADJECTIVE"
+				change_country_color =  "aryana_color"
+				change_country_tag = ARY
+				change_country_flag = ARYANA_FLAG
+				trigger_event = {
+					id = formable_heritage.40
+				}				
+			}
+				capital_scope = {
+					capital_formable_huge_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_aryana_claims_tooltip"
+			hidden_effect = {
+				region:media_region = { formable_area_province_effect = yes }
+				region:persis_region = { formable_area_province_effect = yes }
+				region:madhyadesa_region = { formable_area_province_effect = yes }
+			}			
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

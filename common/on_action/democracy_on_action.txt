@@ -1,0 +1,12 @@
+﻿democratic_republic_on_action = {
+	random_events = {
+		10 = 0
+		5 = democracy.3
+	}
+}
+oligarchic_republic_on_action = {
+	random_events = {
+		1 = 0
+		1 = democracy.61
+	}
+}

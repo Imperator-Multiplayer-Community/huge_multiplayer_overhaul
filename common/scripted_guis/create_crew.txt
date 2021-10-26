@@ -1,0 +1,31 @@
+﻿# create_crew = {
+# 	scope = province
+# 	saved_scopes = {
+# 		player
+# 	}
+# 	ai_is_valid = {
+# 		always = no
+# 	}
+# 	is_valid = {
+# 		scope:player = {
+# 			treasury >= 6
+# 			manpower >= 1
+# 		#	numofports_2 < 6
+
+# 		}
+
+# 		owner = scope:player
+
+# 	}
+# 	effect = {
+# 		scope:player = {
+# 			create_unit = {
+# 				name = "Marine"
+# 				sub_unit = marines
+# 				location = ROOT
+# 			}
+# 			add_manpower = -1
+# 			add_treasury = -6
+# 		}
+# 	}
+# }

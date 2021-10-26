@@ -1,0 +1,21 @@
+﻿#### COHORT MASTER ####
+
+distinction_cohort_master_01 = {
+	icon = "phalera_helmet"
+	commander = {
+		martial = 1
+	}
+	unit = {
+		land_morale_recovery = 0.1
+	}
+}
+
+distinction_cohort_master_02 = {
+	icon = "phalera_helmet"
+	commander = {
+		martial = 2
+	}
+	unit = {
+		land_morale_recovery = 0.2
+	}
+}

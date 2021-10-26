@@ -1,0 +1,18 @@
+﻿namespace = flavor_sel
+
+flavor_sel.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		tag = SEL
+		num_of_cities >= 1
+	}
+	
+	immediate = {
+
+	}
+	
+
+}
+

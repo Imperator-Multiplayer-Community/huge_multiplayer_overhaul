@@ -1,0 +1,118 @@
+﻿country_decisions = {
+	#Modded Molon Labe	
+	# Form Chaldean Empire
+	form_chaldean_empire = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				primary_culture = babylonian
+				religion = mesopotamian_religion
+			}
+			NOT = {
+				tag = CHD
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 25
+			}
+			NOR = {
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = assyria_region
+					is_in_region = syria_region
+					is_in_region = palestine_region
+					province_id = 918  #babylon
+					province_id = 912  #Ctesiphon
+					province_id = 893  #Samarra
+					province_id = 919  #Borippa
+					province_id = 933  #Apamea
+					province_id = 939  #larsa
+					province_id = 940  #Alexandria
+					province_id = 964  #Teredon
+					province_id = 897  #Daskara
+					province_id = 4779 #Hendaian
+					province_id = 946  #Shushan
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = chaldean_empire_not_exists
+				NOT = {
+					any_country = {
+						tag = CHD
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns = 918  #babylon
+			owns = 912  #Ctesiphon
+			owns = 893  #Samarra
+			owns = 919  #Borippa
+			owns = 933  #Apamea
+			owns = 939  #larsa
+			owns = 940  #Alexandria
+			owns = 964  #Teredon
+			owns = 897  #Daskara
+			owns = 4779 #Hendaian
+			owns = 946  #Shushan			
+			owns_or_subject_owns_region = assyria_region
+			owns_or_subject_owns_region = syria_region
+			owns_or_subject_owns_region = palestine_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "CHALDEAN_EMPIRE_NAME"
+			if = {
+				limit = {
+					NOR = { 
+						government = imperium 
+						government = imperial_cult
+					}
+				}
+				change_government = imperium
+				switch_government_type_event_clearup_effect = yes
+			}						
+			set_country_religion = mesopotamian_religion			
+			hidden_effect = {
+				change_country_adjective = "CHALDEAN_EMPIRE_ADJECTIVE"
+				change_country_color =  "chaldean_empire_color"
+				change_country_tag = CHD
+				change_country_flag = CHALDEAN_EMPIRE_FLAG
+				trigger_event = {
+					id = formable_heritage.111
+				}								
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_large_effect = yes
+					formable_capital_modifier_large_effect = yes
+				}
+			custom_tooltip = "form_chaldean_empire_claims_tooltip"
+			hidden_effect = {
+				area:susiana_area = { formable_area_province_effect = yes }
+				area:pars_area = { formable_area_province_effect = yes }
+				area:eastern_delta_area = { formable_area_province_effect = yes }
+				area:sinai_area = { formable_area_province_effect = yes }	
+				area:cilicia_pedias_area = { formable_area_province_effect = yes }
+				area:cyprus_area = { formable_area_province_effect = yes }				
+				
+			}
+			add_4_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

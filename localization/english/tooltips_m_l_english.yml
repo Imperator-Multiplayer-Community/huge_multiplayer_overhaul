@@ -1,0 +1,19 @@
+﻿l_english:
+ form_aengland_claims_tooltip:0 "Aengland will gain Claims on the Region of #Y Caledonia#! and the Provinces of #Y Morinia#! and #Y Venellia#!."
+ form_aethiopia_claims_tooltip:0 "Aethiopia will gain Claims on the Provinces of #Y Saba#! , #Y Qataba#! , #Y Atbaras#! , #Y Ptolemais of the Hunt#! , #Y Arabia Felix Orientalis#! and #Y Meroe#!."
+ form_aksum_claims_tooltip:0 ""
+ form_anatolia_claims_tooltip:0 ""
+
+ ArmyMaintUp_TT:0 "@gold! Army Maintenance Cost: #r +1.00%#!"
+ NavyMaintUp_TT:0 "@gold! Navy Maintenance Cost: #r +1.00%#!"
+ slave_move_yes:0 "Slaves are moving here."
+ no_slave_move:0 "Slaves are forbidden from leaving this territory."
+ manpowercd:0 "You may not send manpower more than #Y once#! a month."
+ CREATE_CREW_BUTTON:0 "#Bold Create a crew for your ships.#!\nCreate a cohort for #y 6#! gold and #y 500#! manpower\n You currently have [SCOPE.ScriptValue('num_ofMarines')|0Y] out of   \n\n#TF Crew assist in the maintenance of your ships, increasing the effectiveness in combat as well as allowing access to a number of new abilties. "
+
+
+ dharana_tooltip:0 "You must Master Dharana before you can enact this law."
+ dhyana_tooltip:0 "You must Master Dhyana before you can enact this law."
+ samadhi_tooltip:0 "You must Master Samadhi before you can enact this law."
+
+ 

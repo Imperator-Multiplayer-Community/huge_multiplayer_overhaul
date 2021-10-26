@@ -1,0 +1,183 @@
+﻿aryan_philosophy = { #Aryan River Path
+	color = hsv { 1.72 0.64 0.7 }
+	image = mauryan_mauryas_path_3
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = aryan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = aryan
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = aryan_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_aryan"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:aryan
+					}
+				}
+			}
+		}
+	}
+
+	aryan_river_path_1 = { ###
+		modifier = { 
+			light_infantry_defensive = 0.1
+		} 
+		icon = mauryan_mauryas_path_1
+		requires = { }
+	}
+
+	aryan_river_path_2 = { ###
+		modifier = { 
+			archers_morale = 0.1
+		} 
+		icon = mauryan_coastal_path_7
+		requires = { }
+	}
+
+	aryan_river_path_3 = { ###
+		enable_ability = naval_raiding
+		modifier = { 
+			trireme_offensive = 0.1
+			enslavement_efficiency = 0.1
+		} 
+		icon = mauryan_coastal_path_end_bonus
+		requires = { aryan_river_path_1 }
+	}
+
+	aryan_river_path_4 = { ###
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = confident
+				}
+			}
+		}
+		modifier = { 
+			archers_offensive = 0.15
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = { aryan_river_path_2 }
+	}
+
+	aryan_river_path_5 = { ###
+		modifier = { 
+			light_cavalry_defensive = 0.1
+		} 
+		icon = mauryan_noble_path_5
+		requires = { aryan_river_path_3 }
+	}
+
+	aryan_river_path_6 = { ###
+		modifier = { 
+			light_infantry_morale = 0.1
+			manpower_recovery_speed = 0.05
+		} 
+		icon = mauryan_mauryas_path_6
+		requires = { aryan_river_path_3 }
+	}
+
+	aryan_river_path_7 = { ###
+		on_activate = {
+			add_3_free_province_investments = yes
+		}
+		modifier = { 
+			global_defensive = 0.1
+			fort_limit = 1
+			fort_maintenance_cost = -0.1
+			siege_ability = 0.1
+		} 
+		icon = mauryan_coastal_path_6
+		requires = { aryan_river_path_4 }
+	}
+
+	aryan_river_path_8 = { ###
+		modifier = { 
+			archers_defensive = 0.1
+			warelephant_defensive = 0.05
+		} 
+		icon = mauryan_noble_path_3
+		requires = { aryan_river_path_4 }
+	}
+
+	aryan_river_path_9 = { ###
+		modifier = { 
+			camels_offensive = 0.1
+		} 
+		icon = levantine_arabian_path_3
+		requires = { aryan_river_path_5 }
+	}
+
+	aryan_river_path_10 = { ###
+		modifier = { 
+			archers_discipline = 0.1
+		} 
+		icon = persian_achaemenid_path_6
+		requires = { aryan_river_path_6 }
+	}
+
+	aryan_river_path_11 = { ###
+		enable_tactic = padma_vyuha
+		on_activate = {
+			add_innovation = 3
+		}	
+		modifier = { 
+			global_nobles_output = 0.05
+		} 
+		icon = mauryan_noble_path_7
+		requires = { aryan_river_path_7 }
+	}
+
+	aryan_river_path_12 = { ###
+		modifier = { 
+			warelephant_morale = 0.05
+			warelephant_plains_combat_bonus = 0.1
+			warelephant_farmland_combat_bonus = 0.1
+		} 
+		icon = mauryan_noble_path_2
+		requires = { aryan_river_path_8 }
+
+	}
+
+	aryan_river_path_13 = { ###
+		modifier = { 
+			heavy_infantry_offensive = 0.1
+			heavy_cavalry_offensive = 0.05
+		} 
+		icon = greek_antigonid_path_end_bonus
+		requires = { aryan_river_path_9 }
+
+	}
+
+	aryan_river_path_14 = { ###
+		modifier = { 
+			archers_offensive = 0.15
+		} 
+		icon = greek_antigonid_path_6
+		requires = { aryan_river_path_10 }
+
+	}
+
+	aryan_river_path_15 = { ###
+		modifier = { 
+			riverine_terrain_combat_bonus = 0.25
+			global_ship_recruit_speed = 0.2
+			naval_damage_done = 0.05
+		} 
+		icon = levantine_philosophy_start_bonus
+		requires = { aryan_river_path_11 }
+
+	}	
+
+}

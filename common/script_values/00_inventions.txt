@@ -1,0 +1,16 @@
+﻿mil_tech_check = {
+	value = military_tech
+	modulo = 5
+}
+civ_tech_check = {
+	value = civic_tech
+	modulo = 5
+}
+ora_tech_check = {
+	value = oratory_tech
+	modulo = 5
+}
+rel_tech_check = {
+	value = religious_tech
+	modulo = 5
+}

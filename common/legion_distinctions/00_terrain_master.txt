@@ -1,0 +1,51 @@
+﻿#### TERRAIN ####
+
+distinction_terrain_master_01 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		army_weight_modifier = -0.1
+	}
+}
+
+distinction_terrain_master_02 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		army_weight_modifier = -0.2
+	}
+}
+
+distinction_terrain_master_03 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		army_weight_modifier = -0.3
+	}
+}
+
+distinction_terrain_master_04 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		army_weight_modifier = -0.4
+	}
+}
+
+distinction_terrain_master_05 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		army_weight_modifier = -0.5
+	}
+}

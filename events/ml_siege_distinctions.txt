@@ -1,0 +1,130 @@
+﻿namespace = ml_siege_distinctions
+
+## adds any siege distinctions
+ml_siege_distinctions.1 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+    	any_character_unit = {
+           	has_legion_trigger = yes
+           	any_sub_unit = {
+    			count >= 20
+    		}
+    		unit_location = ROOT.location
+    		unit_location = {
+    			fort_level >= 1
+    			NOT = {
+					owner = ROOT.legion.owner
+				}
+			}	
+        }
+	}
+
+	immediate = {
+		ordered_character_unit = {
+            limit = {
+                has_legion_trigger = yes
+                unit_location = ROOT.location
+                any_sub_unit = { count >= 20 }
+            }
+            save_scope_as = legion_unit
+        }
+
+		scope:legion_unit = {
+			if = {
+				limit = {
+					has_variable = siege_victories
+				}
+				
+				change_variable = {
+					name = siege_victories
+					add = 1
+				}
+			}
+			else = {
+				set_variable = {
+					name = siege_victories
+					value = 1
+				}
+			}
+
+			if = {
+				limit = {
+					has_variable = siege_victories
+				}
+				
+				if = {
+					limit = {
+						var:siege_victories = 5
+					}
+					
+					scope:legion_unit.legion = {
+						add_distinction = distinction_siege_master_01
+					}
+				}
+				else_if = {
+					limit = {
+						var:siege_victories = 10
+					}
+	
+					scope:legion_unit.legion = {
+						remove_distinction = distinction_siege_master_01
+						add_distinction = distinction_siege_master_02
+					}
+				}
+				else_if = {
+					limit = {
+						var:siege_victories = 15
+					}
+					
+					scope:legion_unit.legion = {
+						remove_distinction = distinction_siege_master_02
+						add_distinction = distinction_siege_master_03
+					}
+				}
+				else_if = {
+					limit = {
+						var:siege_victories = 20
+					}
+					
+					scope:legion_unit.legion = {
+						remove_distinction = distinction_siege_master_03
+						add_distinction = distinction_siege_master_04
+					}
+				}
+			}
+		}
+	}
+}
+
+# removes siege distinctions after fort battle loss
+ml_siege_distinctions.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+    		has_legion_trigger = yes
+    		unit_location = { # only trigger if in enemy territory and on a fort
+    			fort_level >= 1
+    			has_owner = yes
+    			NOT = {
+			    	owner = scope:actor.unit_owner
+    			}
+    		}
+    	}
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_variable siege_victories
+				}
+
+				remove_variable = siege_victories
+			}
+		}
+	}
+}

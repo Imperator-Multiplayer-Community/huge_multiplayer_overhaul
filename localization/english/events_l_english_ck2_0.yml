@@ -1,0 +1,13 @@
+﻿l_english:
+ regency_events.1.t:0 "Select a Regent to Rule in Your Stead"
+ regency_events.1.desc:0 "Duty and custom compel me to lead my men into battle. As I will be away from the capital, I must charge someone with managing my throne, sceptre and seal on my behalf.\n\nMy Consort knows my mind better than anyone. With [SCOPE.sChar('regency_consort').GetHerHim] on the throne, it would be as if I had never left.\n\nOr perhaps such grave responsibility requires the loyal head of one of our greatest families,[SCOPE.sChar('regency_family_head').GetName], a noble equally committed to national stability and order."
+ regency_events.1.a:0 "Appoint [SCOPE.sChar('regency_consort').GetName]"
+ regency_events.1.b:0 "Appoint [SCOPE.sChar('regency_family_head').GetName]"
+ regency_events.1.c:0 "Remain on the Throne"
+ regency_events.2.t:0 "The Return of the King"
+ regency_events.2.desc:0 "Having returned to the capital from the battlefield, I relieve the regent of [SCOPE.sChar('regent').GetHerHis] burden and resume my place on the throne.\n\nThe people will rejoice, for they are once again under their sovereign's watchful eye."
+ regency_events.2.a:0 "Enough of battle!"
+ regency_events.3.t:0 "Shouldering the Weight of Governance"
+ regency_events.3.desc:0 "The regent's death has plunged the country into mourning and the government wobbles on shaky ground. Mindful of duty and the fragility of the state, [SCOPE.sChar('new_regent').GetName] has stepped forward as the new regent for as long as the crown requires."
+ regency_events.3.a:0 "Our nobles are the pillars of our kingdom."
+ 

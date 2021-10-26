@@ -1,0 +1,39 @@
+texticon = {
+    icon = skirmishers
+    iconsize = {
+        texture = "gfx/interface/icons/font_icons/font_icon_skirmishers.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }	
+}
+
+texticon = {
+    icon = slingers
+    iconsize = {
+        texture = "gfx/interface/icons/font_icons/font_icon_slingers.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }	
+}
+
+texticon = {
+    icon = medium_infantry
+    iconsize = {
+        texture = "gfx/interface/icons/font_icons/font_icon_medium_infantry.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }	
+}
+
+texticon = {
+    icon = marines
+    iconsize = {
+        texture = "gfx/interface/icons/font_icons/font_icon_marines.dds"
+        size = { 25 25 }
+        offset = { 0 6 }
+        fontsize = 16
+    }   
+}

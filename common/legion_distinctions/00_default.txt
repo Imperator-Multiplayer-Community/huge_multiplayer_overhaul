@@ -1,0 +1,28 @@
+﻿#### DEFAULT ####
+
+distinction_legion_default = {
+	icon = "phalera_eagle"
+	commander = {
+		
+	}
+	## this is a very slight boost given the professional nature of the legion
+	## but ultimately unit experience (drilling) should be the thing that outclasses levies
+	## as opposted to an inherent advantage
+	unit = {
+		cohort_reinforcement_speed = 0.1 
+		army_movement_speed = 0.1
+		experience_decay  = -0.01
+	}
+}
+
+
+distinction_legio_primagena = {
+	icon = "phalera_eagle"
+	commander = {
+		
+	}
+	unit = {
+		land_morale_recovery = 0.1
+		loyalty_gain_chance_modifier = -0.1
+	}
+}

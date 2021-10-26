@@ -1,0 +1,42 @@
+﻿country_decisions = {
+	
+	# Expand Monsoon Route
+	expand_monsoon_route = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 6859
+			NOR = {
+				has_variable = founded_monsoon_route_hub
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 6859
+			}
+		}
+		allow = {
+			treasury >= 500
+			political_influence >= 20
+			owns = 6859
+			invention = commerce_inv_2
+		}
+		
+		effect = {
+			set_variable = founded_monsoon_route_hub
+			add_treasury = -500
+			add_political_influence = -20
+			
+			p:6859.state = {
+					add_state_modifier = {
+						name = monsoon_route_hub
+						duration = -1					
+					}
+				}
+			}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

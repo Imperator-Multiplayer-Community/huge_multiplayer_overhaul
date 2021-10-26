@@ -1,0 +1,1023 @@
+﻿athenian_mission_01_foreign_rulership = {
+    header = "mission_image_athens"
+    icon = "athens_1"
+
+    repeatable = no
+
+    chance = {
+    	factor = 5
+    }
+
+    potential = {
+		always = no
+    	NOT = { has_variable = athens_mission_01_foreign_rulership }
+    	OR = {
+            tag = ATH
+            has_variable = ath_unique_mech
+        }
+        has_dlc = "Magna Graecia"
+    	is_subject = yes
+    	exists = overlord
+    	num_of_families > 2
+    	is_republic = yes
+        has_civil_war = no
+    }
+
+    abort = {
+    	OR = {
+    		is_republic = no
+    		custom_tooltip = {
+    			text = athenian_mission_01_foreign_rulership_abort_tt
+	    		is_subject = no
+    		}
+    		NOT = { exists = scope:mission_overlord_scope }
+            has_variable = ath_machinations_flag
+            ai_mission_back_out_trigger = yes
+    	}
+    }
+
+    on_potential = {
+    	overlord = {
+    		save_scope_as = mission_overlord_scope
+    	}
+    }
+
+    on_start = {
+        start_mission_ai_effect = yes
+        set_variable = ath_mis_1_flag
+    	save_scope_as = mission_country
+    	if = {
+    		limit = {
+    			any_family = {
+    				has_variable = athenian_mission_01_loyalist_family
+    			}
+    		}
+    		random_family = {
+    			limit = {
+    				has_variable = athenian_mission_01_loyalist_family
+    			}
+    			save_scope_as = loyalist_family
+    		}
+    	}
+    	else = {
+    		random_family = {
+	    		limit = {
+	    			NOT = { this = root.current_ruler.family }
+	    		}
+	    		set_variable = athenian_mission_01_loyalist_family
+	    		save_scope_as = loyalist_family
+	    	}
+    	}
+    	if = {
+    		limit = {
+    			has_variable = athenian_mission_01_independence_family
+    		}
+    		random_family = {
+    			limit = {
+    				has_variable = athenian_mission_01_independence_family
+    			}
+    			save_scope_as = independence_family
+    		}
+    	}
+    	else = {
+    		random_family = {
+	    		limit = {
+	    			NOT = { this = root.current_ruler.family }
+	    			NOT = { this = scope:loyalist_family }
+	    		}
+	    		set_variable = athenian_mission_01_independence_family
+	    		save_scope_as = independence_family
+	    	}
+    	}
+    	trigger_event = me_athens_01_foreign_rulership.1
+    }
+
+    on_abort = {
+        remove_variable = ath_mis_1_flag
+    	custom_tooltip = general_mission_cooldown_tt
+        set_variable = {
+            name = athens_mission_01_foreign_rulership
+            days = 7300
+        }
+    	athenian_mission_01_variable_cleanup_effect = yes
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_01_loyalist_path
+    		}
+    		remove_country_modifier = athenian_mission_01_loyalist_path
+    	}
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_02_loyalist_path
+    		}
+    		remove_country_modifier = athenian_mission_02_loyalist_path
+    	}
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_03_loyalist_path
+    		}
+    		remove_country_modifier = athenian_mission_03_loyalist_path
+    	}
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_04_loyalist_path
+    		}
+    		remove_country_modifier = athenian_mission_04_loyalist_path
+    	}
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_01_independence_path
+    		}
+    		remove_country_modifier = athenian_mission_01_independence_path
+    	}
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_02_independence_path
+    		}
+    		remove_country_modifier = athenian_mission_02_independence_path
+    	}
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_03_independence_path
+    		}
+    		remove_country_modifier = athenian_mission_03_independence_path
+    	}
+    	if = {
+    		limit = {
+    			has_country_modifier = athenian_mission_04_independence_path
+    		}
+    		remove_country_modifier = athenian_mission_04_independence_path
+    	}
+    }
+
+    on_completion = {
+        remove_variable = ath_mis_1_flag
+    	complete_mission_effect = yes
+    	athenian_mission_01_variable_cleanup_effect = yes
+        if = {
+            limit = {
+                NOR = {
+                    has_completed_mission_task = athenian_mission_01_foreign_rulership_task_5
+                    has_completed_mission_task = athenian_mission_01_foreign_rulership_task_11
+                }
+            }
+            show_as_tooltip = {
+                custom_tooltip = "athenian_mission_01_foreign_rulership_loyalist_route_explanation"
+                if = {
+                    limit = {
+                        NOT = { is_subject_type = subject_colony }
+                    }
+                    overlord = {
+                        hidden_effect = {
+                            release_subject = root
+                        }
+                        make_subject = {
+                            target = root
+                            type = subject_colony 
+                        }
+                    }
+                }
+                add_country_modifier = {
+                    name = athenian_mission_04_loyalist_path
+                    duration = -1
+                }
+                if = {
+                    limit = {
+                        exists = overlord
+                    }
+                    custom_tooltip = "athenian_mission_01_foreign_rulership_independence_route_explanation"
+                    overlord = {
+                        release_subject = root
+                    }
+                }
+            }
+        }
+    	if = {
+    		limit = {
+    			has_completed_mission_task = athenian_mission_01_foreign_rulership_task_5
+    		}
+    		if = {
+        		limit = {
+        			NOT = { is_subject_type = subject_colony }
+        		}
+        		overlord = {
+        			hidden_effect = {
+        				release_subject = root
+        			}
+        			make_subject = {
+        				target = root
+        				type = subject_colony 
+        			}
+        		}
+        	}
+    		if = {
+        		limit = {
+        			NOT = { government = oligarchic_republic }
+        		}
+        		change_government = oligarchic_republic
+        	}
+        	if = {
+        		limit = {
+        			has_country_modifier = athenian_mission_01_loyalist_path
+        		}
+        		remove_country_modifier = athenian_mission_01_loyalist_path
+        	}
+        	if = {
+        		limit = {
+        			has_country_modifier = athenian_mission_02_loyalist_path
+        		}
+        		remove_country_modifier = athenian_mission_02_loyalist_path
+        	}
+        	if = {
+        		limit = {
+        			has_country_modifier = athenian_mission_03_loyalist_path
+        		}
+        		remove_country_modifier = athenian_mission_03_loyalist_path
+        	}
+        	if = {
+        		limit = {
+        			has_country_modifier = athenian_mission_01_independence_path
+        		}
+        		remove_country_modifier = athenian_mission_01_independence_path
+        	}
+        	if = {
+        		limit = {
+        			has_country_modifier = athenian_mission_02_independence_path
+        		}
+        		remove_country_modifier = athenian_mission_02_independence_path
+        	}
+        	if = {
+        		limit = {
+        			has_country_modifier = athenian_mission_03_independence_path
+        		}
+        		remove_country_modifier = athenian_mission_03_independence_path
+        	}
+        	add_country_modifier = {
+        		name = athenian_mission_04_loyalist_path
+        		duration = -1
+        	}
+    	}
+    	else_if = {
+    		limit = {
+    			has_completed_mission_task = athenian_mission_01_foreign_rulership_task_11
+    		}
+    		if = {
+    			limit = {
+    				exists = overlord
+    			}
+    			overlord = {
+    				trigger_event = me_athens_01_foreign_rulership.18
+        			release_subject = root
+        		}
+        	}
+    	}
+    	trigger_event = me_athens_01_foreign_rulership.19
+    }
+
+    athenian_mission_01_foreign_rulership_task_1 = { # A Subservient Delegate
+    	duration = 180
+
+        icon = "task_diplomatic"
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_11 }
+
+        highlight = {
+        	scope:province = {
+        		exists = owner
+        		exists = root.overlord
+        		owner = root.overlord
+        	}
+        }
+
+        bypass = {
+    		NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_11 }
+    		NOT = { exists = scope:loyalist_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:loyalist_family }
+        		}
+        		custom_tooltip = {
+        			text = loyalist_family_gone_tt
+        			always = no
+        		} 
+        	}
+            trigger_if = {
+                limit = {
+                    exists = scope:independence_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_independence_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:independence_family }
+                        }
+                    }
+                }
+            }
+        	treasury >= 50
+        }
+
+        on_start = {
+        	trigger_event = me_athens_01_foreign_rulership.2
+        	add_treasury = -50
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.4
+        	scope:mission_overlord_scope = {
+        		add_opinion = {
+        			target = root
+        			modifier = athenian_mission_01_foreign_rulership_subservient_subject_opinion
+        		}
+        	}
+        	athenian_mission_loyalist_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_2 = { # <Overlord Adjective> Trustee
+    	requires = { athenian_mission_01_foreign_rulership_task_1 }
+
+        icon = "task_diplomatic"
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_11 }
+
+        highlight = {
+        	scope:province = {
+        		exists = owner
+        		exists = root.overlord
+        		owner = root.overlord
+        	}
+        }
+
+        bypass = {
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_11 }
+    		NOT = { exists = scope:loyalist_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:loyalist_family }
+        		}
+        		custom_tooltip = {
+        			text = loyalist_family_gone_tt
+        			always = no
+        		} 
+        	}
+            trigger_if = {
+                limit = {
+                    exists = scope:independence_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_independence_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:independence_family }
+                        }
+                    }
+                }
+            }
+        	hidden:scope:mission_overlord_scope = {
+        		custom_tooltip = {
+        			text = athenian_mission_01_foreign_rulership_task_2_tt
+	        		opinion = {
+	        			target = root
+	        			value >= athenian_mission_01_foreign_rulership_task_2_total
+	        		}
+        		}
+        	}
+        }
+
+        on_completion = {
+        	create_character = { # General 
+        		culture = scope:mission_overlord_scope.culture
+        		religion = scope:mission_overlord_scope.religion
+        		no_stats = yes
+        		set_variable = phrygian_overseer_character
+        		hidden_effect = {
+        			amazing_martial_effect = yes
+        			good_charisma_effect = yes
+        			average_finesse_effect = yes
+        			average_zeal_effect = yes
+        		}
+        		save_scope_as = overlord_general_overseer
+        	}
+        	create_character = { # Administrator
+        		culture = scope:mission_overlord_scope.culture
+        		religion = scope:mission_overlord_scope.religion
+        		no_stats = yes
+        		set_variable = phrygian_overseer_character
+        		hidden_effect = {
+        			good_martial_effect = yes
+        			good_charisma_effect = yes
+        			amazing_finesse_effect = yes
+        			bad_zeal_effect = yes
+        		}
+        		save_scope_as = overlord_administrator_overseer
+        	}
+        	create_character = { # Politician
+        		culture = scope:mission_overlord_scope.culture
+        		religion = scope:mission_overlord_scope.religion
+        		no_stats = yes
+        		set_variable = phrygian_overseer_character
+        		hidden_effect = {
+        			average_martial_effect = yes
+        			amazing_charisma_effect = yes
+        			great_finesse_effect = yes
+        			good_zeal_effect = yes
+        		}
+        		save_scope_as = overlord_politician_overseer
+        	}
+        	trigger_event = me_athens_01_foreign_rulership.5
+        	athenian_mission_loyalist_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_3 = { # Sorting the Assembly
+    	requires = { athenian_mission_01_foreign_rulership_task_1 }
+
+        icon = "task_political"
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_11 }
+
+        highlight = {
+        	scope:province = {
+        		exists = root.capital_scope
+        		this = root.capital_scope
+        	}
+        }
+
+        bypass = {
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_11 }
+    		NOT = { exists = scope:loyalist_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:loyalist_family }
+        		}
+        		custom_tooltip = {
+        			text = loyalist_family_gone_tt
+        			always = no
+        		} 
+        	}
+        	trigger_if = {
+                limit = {
+                    exists = scope:independence_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_independence_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:independence_family }
+                        }
+                    }
+                }
+            }
+            has_senate_approval >= 0.6
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.6
+        	athenian_mission_loyalist_path_modifier_effect = yes
+        	athenian_mission_loyalist_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_4 = { # Securing Protection
+    	duration = 180
+
+    	requires = { athenian_mission_01_foreign_rulership_task_2 athenian_mission_01_foreign_rulership_task_3 }
+
+        icon = "task_expansion"
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_11 }
+
+        highlight = {
+        	scope:province = {
+        		exists = owner
+        		exists = root.overlord
+        		owner = root.overlord
+        	}
+        }
+
+        bypass = {
+        	OR = {
+        		AND = {
+        			NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_11 }
+    				NOT = { exists = scope:loyalist_family }
+    			}
+    			has_variable = athenian_mission_01_task_4_aborted
+    		}
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:loyalist_family }
+        		}
+        		custom_tooltip = {
+        			text = loyalist_family_gone_tt
+        			always = no
+        		} 
+        	}
+        	trigger_if = {
+                limit = {
+                    exists = scope:independence_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_independence_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:independence_family }
+                        }
+                    }
+                }
+            }
+        	political_influence >= 10
+        }
+
+        on_start = {
+        	trigger_event = me_athens_01_foreign_rulership.7
+        	add_political_influence = -10
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.9
+        	if = {
+        		limit = {
+        			has_completed_mission_task = athenian_mission_01_foreign_rulership_task_3
+        		}
+        		athenian_mission_loyalist_path_modifier_effect = yes
+        	}
+        	else = {
+        		custom_tooltip = athenian_mission_loyalist_path_modifier_effect_tt
+        	}
+        	athenian_mission_loyalist_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_5 = { # Finalizing the Treaty - FINAL FOR LOYALIST PATH -
+    	requires = { athenian_mission_01_foreign_rulership_task_4 }
+
+        icon = "task_political"
+
+        final = yes
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_11 }
+
+        highlight = {
+        	scope:province = {
+        		exists = owner
+        		owner = root.overlord
+        	}
+        }
+
+        bypass = {
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_11 }
+    		NOT = { exists = scope:loyalist_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:loyalist_family }
+        		}
+        		custom_tooltip = {
+        			text = loyalist_family_gone_tt
+        			always = no
+        		} 
+        	}
+        	trigger_if = {
+                limit = {
+                    exists = scope:independence_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_independence_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:independence_family }
+                        }
+                    }
+                }
+            }
+        	hidden:scope:mission_overlord_scope = {
+        		custom_tooltip = {
+        			text = athenian_mission_01_foreign_rulership_task_5_tt
+	        		opinion = {
+	        			target = root
+	        			value >= athenian_mission_01_foreign_rulership_task_5_total
+	        		}
+        		}
+        	}
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.10
+        	custom_tooltip = athenian_mission_01_foreign_rulership_task_final_tt
+        	if = {
+        		limit = {
+        			OR = {
+        				has_completed_mission_task = athenian_mission_01_foreign_rulership_task_4
+        				has_variable = athenian_mission_01_task_4_aborted
+        			}
+        		}
+        		athenian_mission_loyalist_path_modifier_effect = yes
+        	}
+        	else = {
+        		custom_tooltip = athenian_mission_loyalist_path_modifier_effect_tt
+        	}
+            if = {
+                limit = {
+                    exists = scope:loyalist_family
+                }
+                scope:loyalist_family = {
+                    add_prestige = 50
+                    custom_tooltip = athenian_mission_loyalist_family_loyalty_tt
+                    hidden_effect = {
+                        every_family_member = {
+                            add_loyalty = athenian_mission_01_appreciative_family
+                        }
+                    }
+                }
+            }
+        	custom_tooltip = athenian_mission_01_foreign_rulership_task_5_effect_tt
+        	hidden_effect = {
+	        	scope:independence_family = {
+	        		every_family_member = {
+	        			death = {
+	        				death_reason = death_obscurity
+	        				silent = yes
+	        			}
+	        		}
+	        	}
+        	}
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_6 = { # A Case for Independence
+    	duration = 90
+
+        icon = "task_political"
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_5 }
+
+        highlight = {
+        	scope:province = {
+        		this = root.capital_scope
+        	}
+        }
+
+        bypass = {
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_5 }
+    		NOT = { exists = scope:independence_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:independence_family }
+        		}
+        		custom_tooltip = {
+        			text = independence_family_gone_tt
+        			always = no
+        		} 
+        	}
+        	trigger_if = {
+                limit = {
+                    exists = scope:loyalist_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_loyalist_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:loyalist_family }
+                        }
+                    }
+                }
+            }
+        	political_influence >= 10
+        }
+
+        on_start = {
+        	trigger_event = me_athens_01_foreign_rulership.11
+        	add_political_influence = -10
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.13
+        	overlord = {
+        		add_opinion = {
+        			modifier = athenian_mission_01_foreign_rulership_case_for_independence_opinion
+        			target = root
+        		}
+        	}
+        	athenian_mission_independence_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_7 = { # Ridding Ourselves of the Overseers
+        icon = "task_expansion"
+
+        requires = { athenian_mission_01_foreign_rulership_task_6 }
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_5 }
+
+        highlight = {
+        	scope:province = {
+        		exists = scope:loyalist_family.head_of_family.location
+        		this = scope:loyalist_family.head_of_family.location
+        	}
+        }
+
+        bypass = {
+        	OR = {
+        		NOT = { exists = scope:loyalist_family }
+        		NOT = { exists = scope:independence_family }
+        	}
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_5 }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:independence_family }
+        		}
+        		custom_tooltip = {
+        			text = independence_family_gone_tt
+        			always = no
+        		} 
+        	}
+        	trigger_if = {
+                limit = {
+                    exists = scope:loyalist_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_loyalist_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:loyalist_family }
+                        }
+                    }
+                }
+            }
+        	trigger_if = {
+        		limit = {
+        			exists = scope:loyalist_family.head_of_family
+        		}
+        		hidden:scope:loyalist_family.head_of_family = {
+	        		prisoner = yes
+	        	}
+        	}
+        	trigger_else = {
+        		custom_tooltip = {
+        			text = athenian_mission_01_foreign_rulership_task_7_trigger_tt
+        			always = no 
+        		}
+        	}
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.14
+        	capital_scope = {
+                create_state_pop = freemen
+                create_state_pop = freemen
+                create_state_pop = freemen
+            }
+        	athenian_mission_independence_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_8 = { # Spiting <Overlord Name>
+    	requires = { athenian_mission_01_foreign_rulership_task_6 }
+
+        icon = "task_diplomatic"
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_5 }
+
+        highlight = {
+        	scope:province = {
+        		exists = owner
+        		owner = root.overlord
+        	}
+        }
+
+        bypass = {
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_5 }
+    		NOT = { exists = scope:independence_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:independence_family }
+        		}
+        		custom_tooltip = {
+        			text = independence_family_gone_tt
+        			always = no
+        		} 
+        	}
+        	trigger_if = {
+                limit = {
+                    exists = scope:loyalist_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_loyalist_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:loyalist_family }
+                        }
+                    }
+                }
+            }
+        	hidden:scope:mission_overlord_scope = {
+        		custom_tooltip = {
+        			text = athenian_mission_01_foreign_rulership_task_8_tt
+	        		opinion = {
+	        			target = root
+	        			value < athenian_mission_01_foreign_rulership_task_8_total
+	        		}
+        		}
+        	}
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.15
+        	athenian_mission_independence_path_modifier_effect = yes
+        	athenian_mission_independence_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_9 = { # Taking Charge
+    	requires = { athenian_mission_01_foreign_rulership_task_8 }
+
+        icon = "task_conquest"
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_5 }
+
+        highlight = {
+        	scope:province = {
+        		this = root.capital_scope
+        	}
+        }
+
+        bypass = {
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_5 }
+    		NOT = { exists = scope:independence_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:independence_family }
+        		}
+        		custom_tooltip = {
+        			text = independence_family_gone_tt
+        			always = no
+        		} 
+        	}
+        	trigger_if = {
+                limit = {
+                    exists = scope:loyalist_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_loyalist_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:loyalist_family }
+                        }
+                    }
+                }
+            }
+        	has_law = republican_recruitment_3
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.16
+        	if = {
+        		limit = {
+        			has_completed_mission_task = athenian_mission_01_foreign_rulership_task_8
+        		}
+        		athenian_mission_independence_path_modifier_effect = yes
+        	}
+        	else = {
+        		custom_tooltip = athenian_mission_independence_path_modifier_effect_tt
+        	}
+        	athenian_mission_independence_family_bonus_effect = yes
+        }
+    }
+
+    athenian_mission_01_foreign_rulership_task_11 = { # The Final Vote - FINAL FOR INDEPENDENCE PATH -
+    	requires = { athenian_mission_01_foreign_rulership_task_9 }
+
+        icon = "task_political"
+
+        final = yes
+
+        prevented_by = { athenian_mission_01_foreign_rulership_task_5 }
+
+        highlight = {
+        	scope:province = {
+        		this = root.capital_scope
+        	}
+        }
+
+        bypass = {
+        	NOT = { has_completed_mission_task = athenian_mission_01_foreign_rulership_task_5 }
+    		NOT = { exists = scope:independence_family }
+        }
+
+        allow = {
+        	trigger_if = {
+        		limit = {
+        			NOT = { exists = scope:independence_family }
+        		}
+        		custom_tooltip = {
+        			text = independence_family_gone_tt
+        			always = no
+        		} 
+        	}
+            trigger_if = {
+                limit = {
+                    exists = scope:loyalist_family
+                }
+                custom_tooltip = {
+                    text = athenian_mission_01_foreign_rulership_loyalist_family_head_trigger_tt
+                    current_ruler = {
+                        family = {
+                            NOT = { this = scope:loyalist_family }
+                        }
+                    }
+                }
+            }
+            has_senate_approval >= 0.6
+        }
+
+        on_completion = {
+        	trigger_event = me_athens_01_foreign_rulership.17
+        	custom_tooltip = athenian_mission_01_foreign_rulership_task_final_tt_2
+        	if = {
+        		limit = {
+        			has_completed_mission_task = athenian_mission_01_foreign_rulership_task_9
+        		}
+        		athenian_mission_independence_path_modifier_effect = yes
+        	}
+        	else = {
+        		custom_tooltip = athenian_mission_independence_path_modifier_effect_tt
+        	}
+            if = {
+                limit = {
+                    exists = scope:independence_family
+                }
+                scope:independence_family = {
+                    add_prestige = 50
+                    custom_tooltip = athenian_mission_independence_family_loyalty_tt
+                    hidden_effect = {
+                        every_family_member = {
+                            add_loyalty = athenian_mission_01_appreciative_family
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    exists = scope:loyalist_family
+                }
+                custom_tooltip = athenian_mission_01_foreign_rulership_task_11_effect_tt
+                hidden_effect = {
+                    scope:loyalist_family = {
+                        every_family_member = {
+                            death = {
+                                death_reason = death_obscurity
+                                silent = yes
+                            }
+                        }
+                    }
+                }
+            }
+        	if = {
+        		limit = {
+        			any_character = {
+        				has_variable = phrygian_overseer_character
+        			}
+        		}
+        		custom_tooltip = athenian_mission_01_foreign_rulership_task_11_effect_tt_2
+        		hidden_effect = {
+        			every_character = {
+        				limit = {
+        					has_variable = phrygian_overseer_character
+        				}
+        				death = {
+        					death_reason = death_stabbed_on_the_senate_floor
+        					silent = yes
+        				}
+        			}
+        		}
+        	}
+        }
+    }
+}

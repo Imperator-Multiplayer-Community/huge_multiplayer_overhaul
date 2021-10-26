@@ -1,0 +1,14 @@
+﻿patriotic = {
+	type = personality
+	opposites = {
+	}
+	monthly_oligarchic_party_conviction = 0.05
+	monthly_optimates_party_conviction = 0.1
+	character_loyalty = 10
+	country = {
+		global_freemen_output = 0.05
+	}
+	unit = {
+		loyalty_gain_chance = 0.02
+	}
+}

@@ -1,0 +1,332 @@
+﻿### ARCHER OFFENSIVE ###
+
+distinction_archer_offensive_01 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.01
+	}
+}
+
+distinction_archer_offensive_02 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.02
+	}
+}
+
+distinction_archer_offensive_03 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.03
+	}
+}
+
+
+distinction_archer_offensive_04 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.04
+	}
+}
+
+distinction_archer_offensive_05 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.05
+	}
+}
+
+distinction_archer_offensive_06 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.06
+	}
+}
+
+distinction_archer_offensive_07 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.07
+	}
+}
+
+distinction_archer_offensive_08 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.08
+	}
+}
+
+distinction_archer_offensive_09 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.09
+	}
+}
+
+distinction_archer_offensive_10 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.10
+	}
+}
+
+distinction_archer_offensive_11 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.11
+	}
+}
+
+distinction_archer_offensive_12 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.12
+	}
+}
+
+distinction_archer_offensive_13 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.13
+	}
+}
+
+distinction_archer_offensive_14 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.14
+	}
+}
+
+distinction_archer_offensive_15 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.15
+	}
+}
+
+
+### ARCHER DEFENSIVE ###
+
+distinction_archer_defensive_01 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.01
+	}
+}
+
+distinction_archer_defensive_02 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.02
+	}
+}
+
+distinction_archer_defensive_03 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.03
+	}
+}
+
+
+distinction_archer_defensive_04 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.04
+	}
+}
+
+distinction_archer_defensive_05 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.05
+	}
+}
+
+distinction_archer_defensive_06 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.06
+	}
+}
+
+distinction_archer_defensive_07 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.07
+	}
+}
+
+distinction_archer_defensive_08 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.08
+	}
+}
+
+distinction_archer_defensive_09 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.09
+	}
+}
+
+distinction_archer_defensive_10 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.10
+	}
+}
+
+distinction_archer_defensive_11 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.11
+	}
+}
+
+distinction_archer_defensive_12 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.12
+	}
+}
+
+distinction_archer_defensive_13 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.13
+	}
+}
+
+distinction_archer_defensive_14 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.14
+	}
+}
+
+distinction_archer_defensive_15 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.15
+	}
+}
+
+### ARCHER DISCIPLINE ###
+
+distinction_archer_discipline_1 = {
+	icon = "phalera_archer"
+	commander = {
+		martial = 1
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.05
+		archers_discipline = 0.05
+		archers_maintenance_cost = -0.10
+	}
+}
+
+distinction_archer_discipline_2 = {
+	icon = "phalera_archer"
+	commander = {
+		martial = 2
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.10
+		archers_discipline = 0.10
+		archers_maintenance_cost = -0.20
+	}
+}

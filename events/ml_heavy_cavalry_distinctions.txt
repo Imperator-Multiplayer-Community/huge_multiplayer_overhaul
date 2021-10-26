@@ -1,0 +1,712 @@
+﻿namespace = ml_heavy_cavalry_distinctions
+
+## adds any heavy_cavalry offensive distinctions
+ml_heavy_cavalry_distinctions.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        	any_sub_unit = {
+            	count >= 20
+            	AND = {
+	            	sub_unit_type = heavy_cavalry
+            	}
+            }
+            unit_location = {
+            	has_owner = yes
+            	NOT = {
+            		owner = scope:actor.unit_owner
+            	}
+            }
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_14
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_14
+				add_distinction = distinction_heavy_cavalry_offensive_15
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_13
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_13
+				add_distinction = distinction_heavy_cavalry_offensive_14
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_12
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_13
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_11
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_11
+				add_distinction = distinction_heavy_cavalry_offensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_10
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_10
+				add_distinction = distinction_heavy_cavalry_offensive_11
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_09
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_09
+				add_distinction = distinction_heavy_cavalry_offensive_10
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_08
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_08
+				add_distinction = distinction_heavy_cavalry_offensive_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_07
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_07
+				add_distinction = distinction_heavy_cavalry_offensive_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_06
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_06
+				add_distinction = distinction_heavy_cavalry_offensive_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_05
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_05
+				add_distinction = distinction_heavy_cavalry_offensive_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_04
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_04
+				add_distinction = distinction_heavy_cavalry_offensive_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_03
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_03
+				add_distinction = distinction_heavy_cavalry_offensive_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_02
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_02
+				add_distinction = distinction_heavy_cavalry_offensive_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_01
+				}
+
+
+				remove_distinction = distinction_heavy_cavalry_offensive_01
+				add_distinction = distinction_heavy_cavalry_offensive_02
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_distinction = distinction_heavy_cavalry_offensive_15
+					}
+				}
+
+				add_distinction = distinction_heavy_cavalry_offensive_01
+			}
+		}
+	}
+}
+
+## removes any heavy_cavalry offensive distinctions
+ml_heavy_cavalry_distinctions.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			has_legion_trigger = yes
+        	any_sub_unit = {
+            	count >= 1
+            	AND = {
+	            	sub_unit_type = heavy_cavalry
+            	}
+            }
+            unit_location = {
+            	has_owner = yes
+            	NOT = {
+            		owner = scope:actor.unit_owner
+            	}
+            }
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					has_variable = heavy_cavalry_victories
+				}
+
+				remove_variable = heavy_cavalry_victories
+			}
+		}
+
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_15
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_15 
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_14
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_14
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_13
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_13
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_12
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_11
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_11
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_10
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_10
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_09
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_08
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_07
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_06
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_05
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_04
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_03
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_02
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_02
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_offensive_01
+				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_01
+			}
+		}
+	}
+}
+
+## adds heavy_cavalry defensive distintions
+ml_heavy_cavalry_distinctions.3 = {
+type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        	any_sub_unit = {
+            	count >= 20
+            	AND = {
+	            	sub_unit_type = heavy_cavalry
+            	}
+            }
+            unit_location = {
+            	has_owner = yes
+				owner = scope:actor.unit_owner
+            }
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_14
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_14
+				add_distinction = distinction_heavy_cavalry_defensive_15
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_13
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_13
+				add_distinction = distinction_heavy_cavalry_defensive_14
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_12
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_13
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_11
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_11
+				add_distinction = distinction_heavy_cavalry_defensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_10
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_10
+				add_distinction = distinction_heavy_cavalry_defensive_11
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_09
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_09
+				add_distinction = distinction_heavy_cavalry_defensive_10
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_08
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_08
+				add_distinction = distinction_heavy_cavalry_defensive_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_07
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_07
+				add_distinction = distinction_heavy_cavalry_defensive_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_06
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_06
+				add_distinction = distinction_heavy_cavalry_defensive_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_05
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_05
+				add_distinction = distinction_heavy_cavalry_defensive_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_04
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_04
+				add_distinction = distinction_heavy_cavalry_defensive_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_03
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_03
+				add_distinction = distinction_heavy_cavalry_defensive_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_02
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_02
+				add_distinction = distinction_heavy_cavalry_defensive_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_01
+				}
+
+
+				remove_distinction = distinction_heavy_cavalry_defensive_01
+				add_distinction = distinction_heavy_cavalry_defensive_02
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_distinction = distinction_heavy_cavalry_defensive_15
+					}
+				}
+
+				add_distinction = distinction_heavy_cavalry_defensive_01
+			}
+		}
+	}
+}
+
+
+## removes heavy_cavalry defensive distinctions
+ml_heavy_cavalry_distinctions.4 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			has_legion_trigger = yes
+			any_sub_unit = {
+        		count >= 1
+        		AND = {
+	        		sub_unit_type = heavy_cavalry
+        		}
+			}
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					has_variable = heavy_cavalry_victories
+				}
+
+				remove_variable = heavy_cavalry_victories
+			}
+		}
+
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_15
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_15 
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_14
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_14
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_13
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_13
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_12
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_11
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_11
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_10
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_10
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_09
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_08
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_07
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_06
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_05
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_04
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_03
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_02
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_02
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_heavy_cavalry_defensive_01
+				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_01
+			}
+		}
+	}
+}
+
+## adds heavy_cavalry discipline distinctions
+ml_heavy_cavalry_distinctions.5 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			any_sub_unit = {
+            	count >= 20
+            	AND = {
+	            	sub_unit_type = heavy_cavalry
+            	}
+            }
+			has_legion_trigger = yes
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					NOT = {
+						has_variable = heavy_cavalry_victories
+					}
+				}
+
+				set_variable = {
+					name = heavy_cavalry_victories
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					name = heavy_cavalry_victories
+					add = 1
+				}
+			}
+
+			if = {
+				limit = {
+					var:heavy_cavalry_victories >= 10
+					## var:heavy_cavalry_victories >= 1 ## testing
+				}
+
+				if = {
+					limit = {
+						AND = { 
+							var:heavy_cavalry_victories >= 10
+							## var:heavy_cavalry_victories >= 1 ## testing
+							NOT = {
+								scope:actor.legion = {
+									OR = {
+										has_distinction = distinction_heavy_cavalry_discipline_1
+										has_distinction = distinction_heavy_cavalry_discipline_2
+									}
+								}
+							}
+						}
+						
+					}
+					
+					trigger_event = {
+						id = ml_cohort_master_distinctions.1
+					}
+
+					scope:actor.legion = {
+						add_distinction = distinction_heavy_cavalry_discipline_1
+					}
+				}
+				else_if = {
+					limit = {
+						AND = {
+							var:heavy_cavalry_victories >= 20
+							## var:heavy_cavalry_victories >= 2 ## testing
+							scope:actor.legion = {
+								has_distinction = distinction_heavy_cavalry_discipline_1
+								NOT = {
+									has_distinction = distinction_heavy_cavalry_discipline_2
+								}
+							}
+						}
+					}
+
+					trigger_event =  {
+						id= ml_cohort_master_distinctions.1
+					}
+					
+					scope:actor.legion = {
+						remove_distinction = distinction_heavy_cavalry_discipline_1
+						add_distinction = distinction_heavy_cavalry_discipline_2 
+					}
+				}
+			} 
+			
+		}
+	}
+}
+
+## removes heavy_cavalry discipline victory count
+ml_heavy_cavalry_distinctions.6 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			any_sub_unit = {
+            	count >= 1
+            	AND = {
+	            	sub_unit_type = heavy_cavalry
+            	}
+            }
+			has_legion_trigger = yes
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					has_variable = heavy_cavalry_victories
+				}
+
+				remove_variable = heavy_cavalry_victories
+			}
+		}
+	}
+}

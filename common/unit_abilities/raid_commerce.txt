@@ -1,0 +1,250 @@
+﻿raid_commerce = {
+
+	duration = 90
+	enable = yes
+	toggle = no
+	navy_only = yes
+	cancel_on_combat_end = yes
+
+	map = yes
+
+	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
+
+	allow = {
+	
+		is_navy = yes
+		unit_size >= 10
+		in_combat = no
+		is_moving = no
+		is_exiled = no
+		in_siege = no
+		has_commander = yes
+		# custom_tooltip = {
+		# 	text = marines_ratio
+		# 	num_of_marines >= num_of_ships_10
+		# }
+
+		trigger_if = {
+			limit = {
+				unit_location = {
+					NOT = {
+						any_neighbor_province = {
+							is_sea = no
+							mugged_province_trigger = yes
+						}
+					}
+					any_neighbor_province = {
+						is_sea = no
+						has_owner = yes
+						NOT = { owner = root.unit_owner }
+						NOT = {
+							OR = {
+				 				has_province_modifier = mugged_by_reality 
+								has_province_modifier = trading_partner
+				 			} 
+						}
+						trigger_if = {
+							limit = { root.unit_owner = { is_subject = yes } }
+							NOT = { root.unit_owner.overlord = this.owner }
+						}
+						owner = {
+							NOT = { alliance_with = root.unit_owner }
+							NOT = { is_subject_of = root.unit_owner }
+							NOT = { has_truce_with = root.unit_owner }
+							NOT = { exports_to = root.unit_owner }
+							NOT = { imports_from = root.unit_owner }
+						}
+						is_port = yes
+						owner = controller
+					}
+				}
+			}
+			custom_tooltip = {
+				text = raiding_commerce_only_overlord_ports_tooltip
+				always = no
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				unit_location = {
+					NOT = {
+						any_neighbor_province = {
+							is_sea = no
+							mugged_province_trigger = yes
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = explain_raiding_commerce_tooltip
+				always = no
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				unit_location = {
+					NOT = {
+						any_neighbor_province = {
+							is_sea = no
+							mugged_province_trigger = yes
+							NOT = {
+								has_province_modifier = mugged_by_reality
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = raiding_commerce_cooldown_tooltip
+				always = no
+			}
+		}
+
+		NOT = {
+			OR = {
+				unit_owner = { has_country_modifier = naughty_mugger }  
+				unit_owner = { has_low_economic_policy = expense_navy }
+			} 
+		}		
+		trigger_if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				loyalty > 33
+			}
+		}
+				unit_location = {
+					any_neighbor_province = {
+						is_sea = no
+						mugged_province_trigger = yes
+							NOT = {
+								has_province_modifier = mugged_by_reality
+							}
+					}
+				}
+
+		#trigger_else = {
+		#	custom_tooltip = {
+		#		text = no_marines_tt
+		#	}
+		#}
+
+	}
+
+
+	start_effect = {
+
+		unit_owner = {
+			while = {
+				count >= num_of_ships_svalue #This script value is not working. 
+											#A number will work, but it will not adjust to the ships in the fleet
+				add_country_modifier = {
+					name = naughty_mugger
+					duration = 90
+					mode = add
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				unit_location = {
+					any_neighbor_province = {
+						mugged_province_trigger = yes
+					}
+				}
+			}
+			custom_tooltip = raiding_commerce_ae_gain_tooltip
+			show_as_tooltip = { #All fake for the tooltips sake
+				unit_location = {
+					every_neighbor_province = {
+						limit = {
+							mugged_province_trigger = yes
+							NOT = {	has_province_modifier = mugged_by_reality }
+						}
+						custom = raiding_commerce_explain_modifier_tooltip
+						add_province_modifier = {
+							name = mugged_by_reality
+							duration = 180
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				root.unit_owner = {
+					add_aggressive_expansion = 5
+				}
+			}
+			unit_location = {
+				ordered_neighbor_province = {
+					limit = {
+						mugged_province_trigger = yes
+						NOT = {	has_province_modifier = mugged_by_reality }
+					}
+					add_city_smoke_effect = yes
+					add_city_fire_effect = yes
+					order_by = total_population
+					hidden_effect = {
+						root.unit_owner = {
+							add_aggressive_expansion = 5
+						}
+						add_province_modifier = {
+							name = mugged_by_reality
+							duration = 180
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	finished_when = {
+		OR = {
+			is_exiled = yes
+			unit_owner = { has_low_economic_policy = expense_navy }
+			is_moving = yes
+			has_commander = no
+			strength_percentage < 0.3
+			morale_percentage < 0.3
+		}
+	}
+
+	finish_effect = {
+
+	}
+	
+	ai_will_do = {
+		modifier = {
+			trigger = {
+
+				experience_percentage < 0.65
+				
+				unit_owner = {
+					treasury > 50
+					manpower > 20
+				}
+			}
+			add = {
+				value = 250
+				divide = unit_size_rank
+			}
+		}
+	}
+	
+	ai_will_revoke = {
+		OR = {
+			is_idle = no
+			unit_threat > 0.2
+			experience_percentage >= 0.95
+
+			unit_owner = {
+				treasury < 1
+			}
+			unit_owner = {
+				months_to_war < 12
+			}
+		}
+	}
+}

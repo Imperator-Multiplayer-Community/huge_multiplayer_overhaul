@@ -1,0 +1,122 @@
+﻿### jungle ###
+distinction_jungle_master_01 = {
+	icon = "phalera_ox"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.05
+	}
+}
+
+
+distinction_jungle_master_02 = {
+	icon = "phalera_ox"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.05
+		army_movement_speed = 0.02
+	}
+}
+
+distinction_jungle_01 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.02
+	}
+}
+
+distinction_jungle_02 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.04
+	}
+}
+
+distinction_jungle_03 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.06
+	}
+}
+
+distinction_jungle_04 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.08
+	}
+}
+
+distinction_jungle_05 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.10
+	}
+}
+
+distinction_jungle_06 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.12
+	}
+}
+
+distinction_jungle_07 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.14
+	}
+}
+
+distinction_jungle_08 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.16
+	}
+}
+
+distinction_jungle_09 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.18
+	}
+}
+
+distinction_jungle_10 = {
+	icon = "phalera_amphore"
+	commander = {
+
+	}
+	unit = {
+		jungle_combat_bonus = 0.20
+	}
+}

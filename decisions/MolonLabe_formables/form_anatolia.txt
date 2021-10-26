@@ -1,0 +1,97 @@
+﻿country_decisions = {
+	
+	# Form Anatolia
+	form_anatolia = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+			country_culture_group = persia
+			country_culture_group = anatolian
+			country_culture_group = caucasian
+			country_culture_group = scythia
+			country_culture_group = hellenic
+			country_culture_group = east_levantine
+			}
+			NOT = {
+				tag = ANA
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = asia_region
+					is_in_region = bithynia_region
+					is_in_region = galatia_region
+					is_in_region = cappadocia_region
+					is_in_region = cilicia_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = anatolia_not_exists
+				NOT = {
+					any_country = {
+						tag = ANA
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = asia_region
+			owns_or_subject_owns_region = bithynia_region
+			owns_or_subject_owns_region = galatia_region
+			owns_or_subject_owns_region = cappadocia_region
+			owns_or_subject_owns_region = cilicia_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "ANATOLIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ANATOLIA_ADJECTIVE"
+				change_country_color =  "anatolia_color"
+				change_country_tag = ANA
+				change_country_flag = ANATOLIA_FLAG
+				trigger_event = {
+					id = formable_heritage.38
+				}					
+			}
+				capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_anatolia_claims_tooltip"
+			hidden_effect = {
+				region:assyria_region = { formable_area_province_effect = yes }
+				region:thrace_region = { formable_area_province_effect = yes }
+				region:syria_region = { formable_area_province_effect = yes }
+			}	
+			add_4_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

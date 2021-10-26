@@ -1,0 +1,42 @@
+﻿country_decisions = {
+	
+	# Expand N Tarim Silk Road
+	expand_north_tarim_silk_road = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 7184
+			NOR = {
+				has_variable = founded_north_tarim_silk_road_hub
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 7184
+			}
+		}
+		allow = {
+			treasury >= 500
+			political_influence >= 20
+			owns = 7184
+			invention = subject_loyalty_inv
+		}
+		
+		effect = {
+			set_variable = founded_north_tarim_silk_road_hub
+			add_treasury = -500
+			add_political_influence = -20
+			
+			p:7184.state = {
+					add_state_modifier = {
+						name = north_tarim_silk_road_hub
+						duration = -1					
+					}
+				}
+			}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

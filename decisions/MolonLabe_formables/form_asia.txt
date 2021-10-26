@@ -1,0 +1,84 @@
+﻿country_decisions = {
+	
+	# Form Asia
+	form_asia = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = hellenic
+			NOT = {
+				tag = ASI
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = asia_region
+					is_in_region = bithynia_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = asia_not_exists
+				NOT = {
+					any_country = {
+						tag = ASI
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = asia_region
+			owns_or_subject_owns_region = bithynia_region	
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "ASIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ASIA_ADJECTIVE"
+				change_country_color = "asia_color"
+				change_country_tag = ASI
+				change_country_flag = ASIA_FLAG
+				trigger_event = {
+					id = formable_heritage.12
+				}				
+			}
+				capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_asia_claims_tooltip"
+			hidden_effect = {
+				region:galatia_region = { formable_area_province_effect = yes }
+				region:cilicia_region = { formable_area_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+

@@ -1,0 +1,112 @@
+﻿country_decisions = {
+	
+	# Form Neo-Lydian Kingdom
+	form_neo_lydian_kingdom = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = anatolian
+			NOT = {
+				tag = NLK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = asia_region
+					is_in_area = pisidia_area
+					is_in_area = phrygia_parorea_area
+					is_in_area = phrygia_area
+					is_in_area = phrygia_epiktetos
+					is_in_area = bithynia_inferior_area
+					is_in_area = bithynia_area
+					is_in_area = bithynia_superior_area
+					is_in_area = heracleotis_area
+					is_in_area = galatia_area
+					is_in_area = lycaonia_area
+					is_in_area = isauria_area
+					is_in_area = pamphylia_area
+					is_in_area = galatia_trocmi_area
+					is_in_area = paphlagonia_superior_area
+					is_in_area = paphlagonia_inferior_area	
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = neo_lydian_kingdom_not_exists
+				NOT = {
+					any_country = {
+						tag = NLK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = asia_region
+			owns_or_subject_owns_area = pisidia_area
+			owns_or_subject_owns_area = phrygia_parorea_area
+			owns_or_subject_owns_area = phrygia_area
+			owns_or_subject_owns_area = phrygia_epiktetos
+			owns_or_subject_owns_area = bithynia_inferior_area
+			owns_or_subject_owns_area = bithynia_area
+			owns_or_subject_owns_area = bithynia_superior_area
+			owns_or_subject_owns_area = heracleotis_area
+			owns_or_subject_owns_area = galatia_area
+			owns_or_subject_owns_area = lycaonia_area
+			owns_or_subject_owns_area = isauria_area
+			owns_or_subject_owns_area = pamphylia_area
+			owns_or_subject_owns_area = galatia_trocmi_area
+			owns_or_subject_owns_area = paphlagonia_superior_area
+			owns_or_subject_owns_area = paphlagonia_inferior_area	
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "NEO_LYDIAN_KINGDOM_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "NEO_LYDIAN_KINGDOM_ADJECTIVE"
+				change_country_color =  "neo_lydia_color"
+				change_country_tag = NLK
+				change_country_flag = NEO_LYDIAN_KINGDOM_FLAG
+				trigger_event = {
+					id = formable_heritage.19
+				}				
+			}
+				capital_scope = {
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_neo_lydian_kingdom_claims_tooltip"
+			hidden_effect = {
+				region:cappadocia_region = { formable_region_province_effect = yes }
+				region:cilicia_region = { formable_region_province_effect = yes }
+			}			
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

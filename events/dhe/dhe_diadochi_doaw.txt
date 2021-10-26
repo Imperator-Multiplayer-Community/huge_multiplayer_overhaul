@@ -1,0 +1,2851 @@
+﻿namespace = diadochi_flavor
+
+diadochi_flavor.1 = { #Antigonid
+	type = country_event
+	title = "diadochi_flavor.1.t"
+	desc = "diadochi_flavor.1.desc"
+	
+	left_portrait = root.current_ruler
+	left_portrait = C:MAC.current_ruler #Phrygia has no friends but someone needs to go here
+	right_portrait = C:SEL.current_ruler
+	right_portrait = C:EGY.current_ruler
+	right_portrait = C:TRE.current_ruler
+	
+	picture = successors
+	
+	goto_location = p:418 # Korinthos
+	
+	trigger = {
+		tag = PRY
+		NOT = {
+			has_variable = war_of_the_diadochs
+		}
+	}
+	
+	immediate = { #Does not check existance since this triggers too quickly for the tags to ever be gone.
+		set_variable = {
+			name = war_of_the_diadochs
+			value = yes
+		}
+	}
+	
+	option = {
+		name = diadochi_flavor.1.a
+		custom_tooltip = diadochi_flavor.1.a.antigonus.death
+		custom_tooltip = diadochi_flavor.1.a.tt
+		hidden_effect = {
+			diadochi_flavor_event_claim_effect = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				NOT = { has_global_variable = fourth_war_triggered }
+				c:MAC = { has_land = yes }
+			}
+		}
+	}
+}
+
+diadochi_flavor.2 = { #Macedonian
+	type = country_event
+	title = "diadochi_flavor.1.t"
+	desc = "diadochi_flavor.2.desc"
+	
+	left_portrait = root.current_ruler
+	left_portrait = C:TRE.current_ruler
+	right_portrait = C:PRY.current_ruler
+	right_portrait = C:SEL.current_ruler
+	right_portrait = C:EGY.current_ruler
+	
+	picture = successors
+	
+	goto_location = p:407 # Chalkis
+	
+	trigger = {
+		tag = MAC
+		NOT = {
+			has_variable = war_of_the_diadochs
+		}
+	}
+	
+	immediate = { #Does not check existance since this triggers too quickly for the tags to ever be gone.
+		set_variable = {
+			name = war_of_the_diadochs
+			value = yes
+		}
+	}
+	
+	option = {
+		name = diadochi_flavor.1.a
+		custom_tooltip = diadochi_flavor.2.a.tt
+		hidden_effect = {
+			diadochi_flavor_event_claim_effect = yes
+			where_in_the_world_is_polyperchon_effect = yes
+		}
+	}
+
+}
+
+diadochi_flavor.3 = { #Lysimachid
+	type = country_event
+	title = "diadochi_flavor.1.t"
+	desc = "diadochi_flavor.3.desc"
+	
+	left_portrait = root.current_ruler
+	left_portrait = C:MAC.current_ruler
+	right_portrait = C:PRY.current_ruler
+	right_portrait = C:SEL.current_ruler
+	right_portrait = C:EGY.current_ruler
+	
+	picture = successors
+	
+	trigger = {
+		tag = TRE
+		NOT = {
+			has_variable = war_of_the_diadochs
+		}
+	}
+	
+	immediate = { #Does not check existance since this triggers too quickly for the tags to ever be gone.
+		set_variable = {
+			name = war_of_the_diadochs
+			value = yes
+		}
+	}
+	
+	option = {
+		name = diadochi_flavor.1.a
+		custom_tooltip = diadochi_flavor.2.a.tt
+		hidden_effect = {
+			diadochi_flavor_event_claim_effect = yes
+		}
+	}
+
+}
+
+diadochi_flavor.4 = { #Ptolemid
+	type = country_event
+	title = "diadochi_flavor.1.t"
+	desc = "diadochi_flavor.4.desc"
+	
+	left_portrait = root.current_ruler
+	left_portrait = C:SEL.current_ruler
+	right_portrait = C:PRY.current_ruler
+	right_portrait = C:MAC.current_ruler
+	right_portrait = C:TRE.current_ruler
+	
+	picture = successors
+	
+	trigger = {
+		tag = EGY
+		NOT = {
+			has_variable = war_of_the_diadochs
+		}
+	}
+	
+	immediate = { #Does not check existance since this triggers too quickly for the tags to ever be gone.
+		set_variable = {
+			name = war_of_the_diadochs
+			value = yes
+		}
+	}
+	
+	option = {
+		name = diadochi_flavor.1.a
+		custom_tooltip = diadochi_flavor.2.a.tt
+		hidden_effect = {
+			diadochi_flavor_event_claim_effect = yes
+		}
+	}
+
+}
+
+diadochi_flavor.5  = { #Seleucid
+	type = country_event
+	title = "diadochi_flavor.1.t"
+	desc = "diadochi_flavor.5.desc"
+	
+	left_portrait = root.current_ruler
+	left_portrait = C:EGY.current_ruler
+	right_portrait = C:PRY.current_ruler
+	right_portrait = C:MAC.current_ruler
+	right_portrait = C:TRE.current_ruler
+	
+	picture = successors
+	
+	goto_location = p:790 # Antigonia
+	
+	trigger = {
+		tag = SEL
+		NOT = {
+			has_variable = war_of_the_diadochs
+		}
+	}
+	
+	immediate = { #Does not check existance since this triggers too quickly for the tags to ever be gone.
+		set_variable = {
+			name = war_of_the_diadochs
+			value = yes
+		}
+	}
+	
+	option = {
+		name = diadochi_flavor.1.a
+		custom_tooltip = diadochi_flavor.2.a.tt
+		hidden_effect = {
+			diadochi_flavor_event_claim_effect = yes
+		}
+	}
+
+}
+
+diadochi_flavor.6 = { #Epigoni
+	type = country_event
+	title = "diadochi_flavor.6.t"
+	desc = "diadochi_flavor.6.desc"
+	
+	left_portrait = root.current_ruler
+	
+	picture = throneroom
+	
+	trigger = {
+		OR = {
+			has_variable = war_of_the_diadochs
+			tag = PRY #to not upset things.
+		}
+		NOR = { 
+			has_variable = epigoni
+			tag = ALX
+			has_variable = formed_argead_empire
+		}
+		trigger_if = {
+			limit = { tag = PRY }
+			has_variable = antigonus_death
+		}
+	}
+	
+	immediate = {
+		set_variable = {
+			name = epigoni
+			value = yes
+		}
+	}
+	
+	option = {
+		name = diadochi_flavor.6.a
+		custom_tooltip = diadochi_flavor.6.a.tt
+		hidden_effect = {
+			region:greece_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:thrace_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:macedonia_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:syria_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:asia_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:cilicia_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:galatia_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:assyria_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:persis_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:palestine_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:mesopotamia_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:lower_egypt_region = { diadochi_flavor_lose_claim_effect = yes }
+			region:upper_egypt_region = { diadochi_flavor_lose_claim_effect = yes }
+		}
+		if = {
+			limit = {
+				exists = c:SEL
+				alliance_with = c:SEL
+			}
+			break_alliance = c:SEL
+		}
+		if = {
+			limit = {
+				exists = c:PRY
+				alliance_with = c:PRY
+			}
+			break_alliance = c:PRY
+		}
+		if = {
+			limit = {
+				exists = c:EGY
+				alliance_with = c:EGY
+			}
+			break_alliance = c:EGY
+		}
+		if = {
+			limit = {
+				exists = c:MAC
+				alliance_with = c:MAC
+			}
+			break_alliance = c:MAC
+		}
+		if = {
+			limit = {
+				exists = c:TRE
+				alliance_with = c:TRE
+			}
+			break_alliance = c:TRE
+		}
+	}
+
+}
+
+diadochi_flavor.7 = { #Capital for the Empire
+	type = country_event
+	title = "diadochi_flavor.7.t"
+	desc = "diadochi_flavor.7.desc"
+	
+	left_portrait = root.current_ruler
+	
+	picture = great_city
+
+	option = {
+		name = diadochi_flavor.7.a #Pella
+		trigger = {
+			owns = 379
+		}
+		if = {
+			limit = {
+				p:379 = { is_capital = no }
+			}
+			set_capital = 379
+			hidden_effect = { p:379.state = { set_state_capital = 379 } }
+			capital_scope = {
+				establish_city_effect = yes
+			}
+		}
+		p:379 = {
+			add_province_modifier = {
+				name = "re_united_argead_empire_pella_capital_modifier"
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = diadochi_flavor.7.b #Alexandria on the Nile
+		trigger = {
+			owns = 516
+		}
+		if = {
+			limit = {
+				p:516 = { is_capital = no }
+			}
+			set_capital = 516
+			hidden_effect = { p:516.state = { set_state_capital = 379 } }
+			capital_scope = {
+				establish_city_effect = yes
+			}
+		}
+		p:516 = {
+			add_province_modifier = {
+				name = "re_united_argead_empire_egypt_capital_modifier"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = diadochi_flavor.7.c #Babylon
+		trigger = {
+			owns = 918
+		}
+		if = {
+			limit = {
+				p:918 = { is_capital = no }
+			}
+			set_capital = 918
+			hidden_effect = { p:918.state = { set_state_capital = 918 } }
+			capital_scope = {
+				establish_city_effect = yes
+			}
+		}
+		p:918 = {
+			add_province_modifier = {
+				name = "re_united_argead_empire_babylon_capital_modifier"
+				duration = -1
+			}
+		}
+	}
+	option = {
+		name = diadochi_flavor.7.d #Alexandria on the Indus
+		trigger = {
+			owns = 4371
+		}
+		if = {
+			limit = {
+				p:4371 = { is_capital = no }
+			}
+			set_capital = 4371
+			hidden_effect = { p:4371.state = { set_state_capital = 4371 } }
+			capital_scope = {
+				establish_city_effect = yes
+			}
+		}
+		p:4371 = {
+			add_province_modifier = {
+				name = "re_united_argead_empire_indus_capital_modifier"
+				duration = -1
+			}
+		}
+		custom_tooltip = claims_on_trans_indus_tooltip
+		hidden_effect = {
+			region:madhyadesa_region = {
+				every_region_province = {
+					limit = {
+						NOT = { owned_or_subject_owned = root }
+					}
+					add_claim = root
+				}
+			}
+		}
+	}
+	option = {
+		name = diadochi_flavor.7.e #Keep my own
+		trigger = { #Forced to keep the one you already have if one of these is your capital
+			p:516 = { is_capital = no } #Alexandria on the Nile
+			p:379 = { is_capital = no } #Pella
+			p:4371 = { is_capital = no } #Alexandria Indus
+			p:918 = { is_capital = no } #Babylon
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = "re_united_argead_empire_dynastic_capital_modifier"
+				duration = -1
+			}
+		}
+	}
+
+}
+
+#The Antigonid Cause Wavers
+diadochi_flavor.8 = { 
+	type = country_event
+	title = "diadochi_flavor.8.t"
+	desc = "diadochi_flavor.8.desc"
+	
+	left_portrait = root.current_ruler
+	
+	picture = successors
+	
+	goto_location = scope:seceding_province
+	
+	trigger = { #Won't Happen if the war of the successors is going well.
+		tag = PRY
+		NOT = { has_variable = antigonus_death }
+		OR = {
+			NOT = { owns = 660 } #Ascalon
+			NOT = { owns = 790 } #Antigonia
+			NOT = { owns = 407 } #Chalcis
+			NOT = { owns = 331 } #Salamis
+			NOT = { owns = 418 } #Korinth
+		}
+	}
+	
+	immediate = {
+		set_variable = antigonus_death
+		if = { #If we can we prefer Pergamon
+			limit = { owns = 278 }
+			p:278 = { save_scope_as = seceding_province }
+		}
+		else = { #Otherwise largest city in Asia will do
+			ordered_owned_province = {
+				limit = { is_in_region = asia_region }
+				order_by = total_population
+				save_scope_as = seceding_province
+			}
+		}
+	}
+
+	option = {
+		name = diadochi_flavor.8.a #
+		trigger = {
+			war = no
+		}
+		ai_chance = {
+			modifier = {
+				factor = 0
+				war = yes
+			}
+		}
+		#Creating the Asian Breakaway
+		scope:seceding_province = {
+			if = {
+				limit = { province_id = 278 }
+				create_country = {
+					name = {
+						name = "PERGAMON_NAME"
+						adjective = "PERGAMON_ADJECTIVE"
+					}
+					save_scope_as = seceding_country
+				}
+			}
+			else = {
+				create_country = {
+					save_scope_as = seceding_country
+				}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { is_in_region = asia_region }
+				set_owned_by = scope:seceding_country
+				add_claim = ROOT
+			}
+			scope:seceding_country = {
+				add_manpower = 5
+				add_stability_effect = yes
+				add_treasury = 600
+				monarchy_formable_government_change_effect = yes
+				add_truce = {
+					target = root
+					duration = 3650
+				}
+			}
+			add_truce = {
+				target = scope:seceding_country
+				duration = 3650
+			}
+			reset_scoring = scope:seceding_country
+		}
+		#If the Attalids exist, we move them there.
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = char:68
+					char:68 = { 
+						is_alive = yes
+						employer = root
+						prisoner = no
+					}
+				}
+				char:68 = {
+					remove_all_positions = yes
+					move_country = scope:seceding_country
+					remove_character_modifier = foreign_citizen
+					if = {
+						limit = {
+							is_married = yes
+							spouse = {
+								employer = root
+								prisoner = no
+							}
+						}
+						spouse = {
+							remove_all_positions = yes
+							move_country = scope:seceding_country
+							remove_character_modifier = foreign_citizen
+						}
+					}
+					if = {
+						limit = {
+							num_of_children > 0
+							any_child = {
+								employer = root
+								prisoner = no
+							}
+						}
+						every_child = {
+							limit = {
+								employer = root
+								prisoner = no
+							}
+							remove_all_positions = yes
+							move_country = scope:seceding_country
+							remove_character_modifier = foreign_citizen
+						}
+					}
+				}
+				scope:seceding_country = {
+					create_family = char:68
+					set_as_ruler = char:68
+				}
+				if = {
+					limit = {
+						exists = char:67
+						char:67 = { 
+							is_alive = yes
+							employer = root
+							prisoner = no
+						}
+					}
+					char:67 = {
+						remove_all_positions = yes
+						move_country = scope:seceding_country
+						remove_character_modifier = foreign_citizen
+						if = {
+							limit = {
+								is_married = yes
+								spouse = {
+									employer = root
+									prisoner = no
+								}
+							}
+							spouse = {
+								remove_all_positions = yes
+								move_country = scope:seceding_country
+								remove_character_modifier = foreign_citizen
+							}
+						}
+						if = {
+							limit = {
+								num_of_children > 0
+								any_child = {
+									employer = root
+									prisoner = no
+								}
+							}
+							every_child = {
+								limit = {
+									employer = root
+									prisoner = no
+								}
+								remove_all_positions = yes
+								move_country = scope:seceding_country
+								remove_character_modifier = foreign_citizen
+							}
+						}
+					}
+					scope:seceding_country = { create_family = char:67 }
+				}
+			}
+		}
+		# Event for Lysimachus
+		if = {
+			limit = {
+				c:TRE = { 
+					has_land = yes
+					current_ruler = char:41 
+				}
+			}
+			c:TRE = {					
+				trigger_event = {
+					id = dhe_thrace.4
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = diadochi_flavor.8.b #
+		ai_chance = {
+			modifier = {
+				factor = 0
+				war = no
+			}
+		}
+		remove_stability_effect = yes
+		add_legitimacy = -30
+		add_country_modifier = {
+			name = "lapse_of_authority"
+			duration = 3650
+		}
+	}
+}
+
+#Coronation of Antigonos and Demetrios
+diadochi_flavor.10 = { 
+    type = country_event
+    title = diadochi_flavor.10.t
+    desc = diadochi_flavor.10.desc
+    picture = throneroom
+    
+    left_portrait = current_ruler
+    right_portrait = current_heir
+
+    trigger = {
+    	tag = PRY
+    }
+
+    immediate = {
+    	current_ruler = {
+    		add_popularity = popularity_medium
+    	}
+    	current_heir = {
+    		add_popularity = popularity_large
+    	}
+    }
+
+    option = {      
+        name = diadochi_flavor.10.a
+        ai_chance = {
+			factor = 90
+		}
+        add_country_modifier = {
+        	name = dhe_antigonid_coronation_country_modifier
+        	duration = 3650
+        }
+        C:EGY = {
+        	add_opinion = {
+        		modifier = dhe_diadochi_insulted
+        		target = PRY
+        	}
+        }
+        C:SYR = {
+        	add_opinion = {
+        		modifier = dhe_diadochi_insulted
+        		target = PRY
+        	}
+        }
+        C:SEL = {
+            add_opinion = {
+        		modifier = dhe_diadochi_insulted
+        		target = PRY
+        	}
+        }
+        C:TRE = {
+        	add_opinion = {
+				modifier = dhe_diadochi_insulted
+				target = PRY
+			}
+        }
+        hidden_effect = {
+        	C:EGY = { 
+	        	trigger_event = {
+	        		id = diadochi_flavor.11
+	        		days = { 10 20 }
+	        	}
+	        }
+	        C:SYR = { 
+	        	trigger_event = {
+	        		id = diadochi_flavor.12
+	        		days = { 10 20 }
+	        	}
+	        }
+	        C:SEL = { 
+	        	trigger_event = {
+	        		id = diadochi_flavor.13
+	        		days = { 10 20 }
+	        	}
+	        }
+	        C:TRE = { 
+	        	trigger_event = {
+	        		id = diadochi_flavor.14
+	        		days = { 10 20}
+	        	}
+	        }
+        }
+    }
+
+    option = {      
+        name = diadochi_flavor.10.b
+        ai_chance = {
+			factor = 10
+		}
+        add_country_modifier = {
+        	name = dhe_salamis_victory_country_modifier
+        	duration = 3650
+        }
+        current_heir = {
+        	add_loyalty = loyalty_disapproved_joke
+        }
+		C:EGY = {
+        	add_opinion = {
+        		modifier = dhe_diadochi_appeased
+        		target = PRY
+        	}
+        }
+        C:MAC = {
+        	add_opinion = {
+        		modifier = dhe_diadochi_appeased
+        		target = PRY
+        	}
+        }
+        C:SEL = {
+            add_opinion = {
+        		modifier = dhe_diadochi_appeased
+        		target = PRY
+        	}
+        }
+        C:TRE = {
+        	add_opinion = {
+				modifier = dhe_diadochi_appeased
+				target = PRY
+			}
+        }
+    }
+}
+
+#Egypt Coronation
+diadochi_flavor.11 = {
+    type = country_event
+    title = diadochi_flavor.11.t
+    desc = diadochi_flavor.11.desc
+    picture = greek_court
+    
+    left_portrait = current_ruler
+    right_portrait = C:PRY.current_ruler
+    right_portrait = C:PRY.current_heir
+
+    trigger = {
+    	tag = EGY
+    }
+
+    immediate = {
+    	current_ruler = {
+    		add_popularity = popularity_medium
+    	}
+    }
+
+    option = {      
+        name = diadochi_flavor.11.a
+        ai_chance = {
+			factor = 90
+		}
+        add_country_modifier = {
+        	name = dhe_king_of_egypt_country_modifier
+        	duration = 3650
+        }
+
+    }
+    option = {      
+        name = diadochi_flavor.11.b
+        ai_chance = {
+			factor = 10
+		}
+        current_ruler = {
+			add_nickname = NICKNAME_NAUTARCHOS
+		}
+        add_country_modifier = {
+        	name = dhe_nautarchos_country_modifier
+        	duration = 3650
+        }
+    }
+}
+
+#Syracuse Nickname
+diadochi_flavor.12 = {
+    type = country_event
+    title = diadochi_flavor.12.t
+    desc = diadochi_flavor.12.desc
+    picture = greek_court
+    
+    left_portrait = current_ruler
+    right_portrait = C:PRY.current_ruler
+    right_portrait = C:PRY.current_heir
+
+    trigger = {
+    	tag = SYR
+    }
+
+    immediate = {
+    	current_ruler = {
+    		add_popularity = popularity_medium
+    	}
+    }
+
+    option = {      
+        name = diadochi_flavor.12.a
+        ai_chance = {
+			factor = 90
+		}
+        add_country_modifier = {
+        	name = dhe_king_of_sicily_country_modifier
+        	duration = 3650
+        }
+    }
+    option = {      
+        name = diadochi_flavor.12.b
+        ai_chance = {
+			factor = 10
+		}
+        current_ruler = {
+			add_nickname = NICKNAME_NESIARCHOS
+		}
+        add_country_modifier = {
+        	name = dhe_nesiarchos_country_modifier
+        	duration = 3650
+        }
+    }
+}
+
+#Seleukid Coronation
+diadochi_flavor.13 = {
+    type = country_event
+    title = diadochi_flavor.13.t
+    desc = diadochi_flavor.13.desc
+    picture = greek_court
+    
+    left_portrait = current_ruler
+    right_portrait = C:PRY.current_ruler
+    right_portrait = C:PRY.current_heir
+
+    trigger = {
+    	tag = SEL
+    }
+
+    immediate = {
+    	current_ruler = {
+    		add_popularity = popularity_medium
+    	}
+    }
+
+    option = {      
+        name = diadochi_flavor.13.a
+        ai_chance = {
+			factor = 90
+		}
+        add_country_modifier = {
+        	name = dhe_king_of_persia_country_modifier
+        	duration = 3650
+        }
+    }
+    option = {      
+        name = diadochi_flavor.13.b
+        ai_chance = {
+			factor = 10
+		}
+        current_ruler = {
+			add_nickname = NICKNAME_ELEPHANTARCHOS
+		}
+        add_country_modifier = {
+        	name = dhe_elephantarchos_country_modifier
+        	duration = 3650
+        }
+    }
+}
+
+#Thrace Coronation
+diadochi_flavor.14 = {
+    type = country_event
+    title = diadochi_flavor.14.t
+    desc = diadochi_flavor.14.desc
+    picture = greek_court
+    
+    left_portrait = current_ruler
+    right_portrait = C:PRY.current_ruler
+    right_portrait = C:PRY.current_heir
+
+    trigger = {
+    	tag = TRE
+    }
+
+    option = {      
+        name = diadochi_flavor.14.a
+        ai_chance = {
+			factor = 90
+		}
+        add_country_modifier = {
+        	name = dhe_king_of_thrace_country_modifier
+        	duration = 3650
+        }
+        current_ruler = {
+    		add_popularity = subtract_popularity_medium
+    	}
+    }
+    option = {      
+        name = diadochi_flavor.14.b
+        ai_chance = {
+			factor = 10
+		}
+        add_country_modifier = {
+        	name = dhe_gazophylax_modifier
+        	duration = 3650
+        }
+        current_ruler = {
+    		add_popularity = popularity_medium
+    		add_nickname = NICKNAME_GAZOPHYLAX
+    	}
+    }
+}
+
+diadochi_flavor.17 = { #Phrygia Backs Down.
+    type = country_event
+    title = diadochi_flavor.17.t
+    desc = diadochi_flavor.17.desc
+    
+	picture = senator_conversing
+	
+	trigger = {
+		c:PRY = {
+			has_land = yes
+		}
+		c:MAC = {
+			NOT = {
+				war_with = c:PRY
+			}
+		}
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = "diadochi_flavor.17.a"
+		custom_tooltip = diadochi_flavor.17.a.tt
+		show_as_tooltip = {
+			c:PRY = {
+				add_truce = {
+					target = c:MAC
+					duration = 1825
+				}
+			}
+			add_truce = {
+				target = c:PRY
+				duration = 1825
+			}
+		}
+	}
+	
+}
+
+diadochi_flavor.18 = { #Macedon Backs down
+    type = country_event
+    title = diadochi_flavor.18.t
+    desc = diadochi_flavor.18.desc
+    
+	picture = greek_city
+	
+	trigger = {
+		c:PRY = {
+			has_land = yes
+		}
+		c:MAC = {
+			NOT = {
+				war_with = c:PRY
+			}
+		}
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = "diadochi_flavor.18.a"
+		show_as_tooltip = {
+			p:418 = {
+				set_owned_by = c:PRY
+			}
+			c:PRY = {
+				add_truce = {
+					target = c:MAC
+					duration = 1825
+				}
+			}
+			add_truce = {
+				target = c:PRY
+				duration = 1825
+			}
+		}
+	}
+	
+}
+
+diadochi_flavor.19 = { #Phrygia and Macedon are fighting.
+    type = country_event
+    title = diadochi_flavor.19.t
+    desc = diadochi_flavor.19.desc
+    
+	picture = greek_court
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = "diadochi_flavor.19.a"
+		custom_tooltip = diadochi_flavor.25.at
+	}
+	
+}
+
+diadochi_flavor.20 = { #In defence of Cassander
+    type = country_event
+    title = diadochi_flavor.20.t
+    desc = diadochi_flavor.20.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	left_portrait = c:MAC.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	trigger = {
+		tag = EGY
+		has_global_variable = fourth_war_triggered
+		NOR = {
+			war_with = c:MAC
+			war_with = c:PRY
+			has_truce_with = c:PRY
+		}
+		c:MAC = {
+			war_with = c:PRY
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.20.a"
+		declare_war_with_wargoal = {
+			war_goal = diadochi_wargoal
+			target = c:PRY
+		}
+		every_country = {
+			limit = {
+				country_culture_group = hellenic
+				NOR = {
+					tag = PRY
+					tag = EGY
+				}
+			}
+			trigger_event = {
+				id = diadochi_flavor.21
+			}
+		}
+		c:PRY = {
+			trigger_event = {
+				id = diadochi_flavor.31
+			}
+		}
+		ai_chance = {
+			modifier = {
+				factor = 40
+			}
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.20.b"
+		custom_tooltip = "offer_will_be_sent_egy"
+		show_as_tooltip = {
+			declare_war_with_wargoal = {
+				war_goal = diadochi_wargoal
+				target = c:PRY
+			}
+		}
+		c:PRY = {
+			trigger_event = {
+				id = diadochi_flavor.22
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 55
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.20.c"
+		custom_tooltip = "passive_egypt_tt"
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+diadochi_flavor.21 = { #Ptolemy Stirs
+    type = country_event
+    title = diadochi_flavor.21.t
+    desc = diadochi_flavor.21.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = c:EGY.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	option = {
+		name = "diadochi_flavor.21.a"
+		custom_tooltip = diadochi_flavor_31.at
+	}
+}
+
+diadochi_flavor.22 = { #Ptolemaic Ultimatum
+	type = country_event
+    title = diadochi_flavor.22.t
+    desc = diadochi_flavor.22.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = c:EGY.current_ruler
+	
+	trigger = {
+		NOT = {
+			war_with = c:EGY
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.22.a"
+		custom_tooltip = transfer_phrygian_lands_egy_tt
+		show_as_tooltip = {
+			c:EGY = {
+				add_truce = {
+					target = c:MAC
+					duration = 1825
+				}
+				add_truce = {
+					target = c:PRY
+					duration = 1825
+				}
+			}
+		}
+		c:EGY = {
+			trigger_event = {
+				id = diadochi_flavor.23
+			}
+		}
+		add_stability = -10
+		ai_chance = {
+			modifier = {
+				factor = 2
+			}
+			modifier = {
+				factor = 3
+				has_war_exhaustion >= 8
+			}
+			modifier = {
+				factor = 3
+				manpower <= 20
+			}
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.22.b"
+		add_stability = 20
+		add_manpower = 10
+		c:EGY = {
+			declare_war_with_wargoal = {
+				war_goal = diadochi_wargoal
+				target = c:PRY
+			}
+			trigger_event = {
+				id = diadochi_flavor.26
+			}
+		}
+		every_country = {
+			limit = {
+				country_culture_group = hellenic
+				NOR = {
+					tag = PRY
+					tag = EGY
+				}
+			}
+			trigger_event = {
+				id = diadochi_flavor.21
+			}
+		}
+		ai_chance = {
+			modifier = {
+				factor = 4
+			}
+		}
+	}
+	
+}
+
+diadochi_flavor.23 = { #Antigonids agree
+	type = country_event
+    title = diadochi_flavor.23.t
+    desc = diadochi_flavor.23.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	trigger = {
+		NOT = {
+			war_with = c:PRY
+		}
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = "diadochi_flavor.23.a"
+		custom_tooltip = "transfer_phrygian_lands_egy_tt"
+		hidden_effect = {
+			add_truce = {
+				target = c:MAC
+				duration = 1825
+			}
+			add_truce = {
+				target = c:PRY
+				duration = 1825
+			}
+			c:PRY = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							is_in_area = south_phoenicia_area
+							is_in_area = syria_coele_area
+							is_in_area = cyprus_area
+							is_in_region = palestine_region
+						}
+					}
+					set_owned_by = c:EGY
+				}
+				add_truce = {
+					target = c:EGY
+					duration = 1825
+				}
+				every_subject = {
+					limit = {
+						capital_scope = {
+							OR = {
+								is_in_area = south_phoenicia_area
+								is_in_area = syria_coele_area
+								is_in_region = palestine_region
+							}
+						}
+					}
+					c:PRY = {
+						release_subject = PREV
+					}
+					trigger_event = {
+						id = diadochi_flavor.35
+					}
+				}
+				every_subject = {
+					c:EGY = {
+						add_truce = {
+							target = PREV
+							duration = 1825
+						}
+					}
+				}
+			}
+			every_subject = {
+				c:PRY = {
+					add_truce = {
+						target = PREV
+						duration = 1825
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {   
+				country_culture_group = hellenic
+				NOR = {
+					tag = PRY
+					tag = EGY
+				}
+			}
+			trigger_event = {
+				id = diadochi_flavor.24
+			}
+		}
+	}
+	
+}
+
+diadochi_flavor.24 = { #Antigonids bend
+	type = country_event
+    title = diadochi_flavor.24.t
+    desc = diadochi_flavor.24.desc
+    
+	picture = army_desert
+	
+	left_portrait = c:EGY.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	option = {
+		name = "diadochi_flavor.24.a"
+		custom_tooltip = transfer_phrygian_lands_egy_tt
+	}
+}
+
+diadochi_flavor.25 = { #War with Macedon
+	type = country_event
+    title = diadochi_flavor.25.t
+    desc = diadochi_flavor.25.desc
+    
+	picture = greek_court
+	
+	left_portrait = c:PRY.current_ruler
+	right_portrait = c:MAC.current_ruler
+
+	immediate = {
+		hidden_effect = {
+			random_current_war = {
+				limit = {
+					any_war_participant = { tag = MAC }
+					is_war_leader = c:MAC
+				}
+				save_scope_as = antigonid_diadochi_war_scope
+			}
+			every_subject = {
+				limit = {
+					OR = {
+						is_subject_type = feudatory
+						is_subject_type = satrapy
+						is_subject_type = client_state
+					}
+					save_temporary_scope_as = temp_subject_war_scope
+					scope:antigonid_diadochi_war_scope = {
+						NOR = {
+							any_war_attacker = { this = scope:temp_subject_war_scope }
+							any_war_defender = { this = scope:temp_subject_war_scope }
+						}
+					}
+				}
+				add_to_war = {
+					target = scope:antigonid_diadochi_war_scope
+					attacker = yes
+					leader = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diadochi_flavor.25.a"
+		custom_tooltip = diadochi_flavor.25.at
+	}
+}
+
+diadochi_flavor.26 = { #War with Phrygia
+	type = country_event
+    title = diadochi_flavor.26.t
+    desc = diadochi_flavor.26.desc
+    
+	picture = army_desert
+	
+	left_portrait = current_ruler
+	left_portrait = c:MAC.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	immediate = {
+		hidden_effect = {
+			random_current_war = {
+				limit = {
+					any_war_participant = { tag = PRY }
+					is_war_leader = c:PRY
+				}
+				save_scope_as = ptolemaic_diadochi_war_scope
+			}
+			every_subject = {
+				limit = {
+					OR = {
+						is_subject_type = feudatory
+						is_subject_type = satrapy
+						is_subject_type = client_state
+					}
+					save_temporary_scope_as = temp_subject_war_scope
+					scope:ptolemaic_diadochi_war_scope = {
+						NOR = {
+							any_war_attacker = { this = scope:temp_subject_war_scope }
+							any_war_defender = { this = scope:temp_subject_war_scope }
+						}
+					}
+				}
+				add_to_war = {
+					target = scope:ptolemaic_diadochi_war_scope
+					attacker = yes
+					leader = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diadochi_flavor.26.a"
+		custom_tooltip = diadochi_flavor.25.at
+	}
+}
+
+diadochi_flavor.27 = { #A time to strike
+    type = country_event
+    title = diadochi_flavor.27.t
+    desc = diadochi_flavor.27.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	trigger = {
+		tag = SEL
+		has_global_variable = fourth_war_triggered
+		NOR = {
+			war_with = c:MAC
+			war_with = c:PRY
+			has_truce_with = c:PRY
+		}
+		c:PRY = {
+			OR = {
+				war_with = c:MAC
+				war_with = c:EGY
+			}
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.27.a" #Time for war
+		declare_war_with_wargoal = {
+			war_goal = diadochi_wargoal
+			target = c:PRY
+		}
+		every_country = {
+			limit = {
+				country_culture_group = hellenic
+				NOR = {
+					tag = PRY
+					tag = SEL
+				}
+			}
+			trigger_event = {
+				id = diadochi_flavor.29
+			}
+		}
+		c:PRY = {
+			trigger_event = {
+				id = diadochi_flavor.30
+			}
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				war_with = MRY
+				factor = 0
+			}
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.27.b" #Send Demand To Phrygia
+		custom_tooltip = "offer_will_be_sent_to_pry"
+		show_as_tooltip = {
+			declare_war_with_wargoal = {
+				war_goal = diadochi_wargoal
+				target = c:PRY
+			}
+		}
+		c:PRY = {
+			trigger_event = {
+				id = diadochi_flavor.28
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+	
+}
+
+
+diadochi_flavor.28 = { #Seleucid demands
+	type = country_event
+    title = diadochi_flavor.28.t
+    desc = diadochi_flavor.28.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = c:SEL.current_ruler
+	
+	trigger = {
+		NOT = {
+			war_with = c:SEL
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.28.a" #Surrender the land
+		trigger = { #We cannot surrender if we have no land left to give up.
+			any_owned_province = {
+				NOT = { is_in_area = osroene_area }
+				NOT = { is_in_area = palmyra_area }
+				NOT = { is_in_area = syria_cyrrestice_area }
+				NOT = { is_in_area = syria_area }
+				NOT = { is_in_area = north_phoenicia_area }
+				NOT = { is_in_area = apamene_area }
+				NOT = { is_in_area = south_phoenicia_area }
+				NOT = { is_in_area = syria_coele_area }
+				NOT = { is_in_region = palestine_region }
+				NOT = { is_in_region = greece_region }
+			}
+		}
+		custom_tooltip = transfer_phrygian_lands_sel_tt
+		show_as_tooltip = {
+			c:SEL = {
+				add_truce = {
+					target = c:PRY
+					duration = 1825
+				}
+			}
+			c:PRY = {
+				add_truce = {
+					target = c:SEL
+					duration = 1825
+				}
+			}
+		}
+		hidden_effect = { #Capital must move.
+			if = {
+				limit = {
+					p:1936 = {
+						owner = c:PRY
+						controller = C:PRY
+					}
+				}
+				set_capital = p:1936 #Celenae
+			}
+			else_if = {
+				limit = {
+					any_owned_province = {
+						is_state_capital = yes
+						controller = owner
+						NOT = { is_in_area = osroene_area }
+						NOT = { is_in_area = palmyra_area }
+						NOT = { is_in_area = syria_cyrrestice_area }
+						NOT = { is_in_area = syria_area }
+						NOT = { is_in_area = north_phoenicia_area }
+						NOT = { is_in_area = apamene_area }
+						NOT = { is_in_area = cyprus_area }
+						NOT = { is_in_area = south_phoenicia_area }
+						NOT = { is_in_area = syria_coele_area }
+						NOT = { is_in_region = palestine_region }
+						NOT = { is_in_region = greece_region }
+					}
+				}
+				ordered_owned_province = {
+					order_by = total_population
+					limit = {
+						is_state_capital = yes
+						controller = owner
+						NOT = { is_in_area = osroene_area }
+						NOT = { is_in_area = palmyra_area }
+						NOT = { is_in_area = syria_cyrrestice_area }
+						NOT = { is_in_area = syria_area }
+						NOT = { is_in_area = north_phoenicia_area }
+						NOT = { is_in_area = apamene_area }
+						NOT = { is_in_area = south_phoenicia_area }
+						NOT = { is_in_area = syria_coele_area }
+						NOT = { is_in_area = cyprus_area }
+						NOT = { is_in_region = palestine_region }
+						NOT = { is_in_region = greece_region }
+					}
+					ROOT = {
+						set_capital = PREV
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_owned_province = {
+						NOT = { is_in_area = osroene_area }
+						NOT = { is_in_area = palmyra_area }
+						NOT = { is_in_area = syria_cyrrestice_area }
+						NOT = { is_in_area = syria_area }
+						NOT = { is_in_area = north_phoenicia_area }
+						NOT = { is_in_area = apamene_area }
+						NOT = { is_in_area = cyprus_area }
+						NOT = { is_in_area = south_phoenicia_area }
+						NOT = { is_in_area = syria_coele_area }
+						NOT = { is_in_region = palestine_region }
+						NOT = { is_in_region = greece_region }
+						controller = owner
+					}
+				}
+				ordered_owned_province = {
+					order_by = total_population
+					limit = {
+						NOT = { is_in_area = osroene_area }
+						NOT = { is_in_area = palmyra_area }
+						NOT = { is_in_area = syria_cyrrestice_area }
+						NOT = { is_in_area = syria_area }
+						NOT = { is_in_area = north_phoenicia_area }
+						NOT = { is_in_area = apamene_area }
+						NOT = { is_in_area = south_phoenicia_area }
+						NOT = { is_in_area = syria_coele_area }
+						NOT = { is_in_area = cyprus_area }
+						NOT = { is_in_region = palestine_region }
+						NOT = { is_in_region = greece_region }
+						controller = owner
+					}
+					ROOT = {
+						set_capital = PREV
+					}
+				}
+			}
+			else = {
+				ordered_owned_province = {
+					order_by = total_population
+					limit = {
+						NOT = { is_in_area = osroene_area }
+						NOT = { is_in_area = palmyra_area }
+						NOT = { is_in_area = syria_cyrrestice_area }
+						NOT = { is_in_area = syria_area }
+						NOT = { is_in_area = north_phoenicia_area }
+						NOT = { is_in_area = apamene_area }
+						NOT = { is_in_area = south_phoenicia_area }
+						NOT = { is_in_area = syria_coele_area }
+						NOT = { is_in_area = cyprus_area }
+						NOT = { is_in_region = palestine_region }
+						NOT = { is_in_region = greece_region }
+					}
+				}
+				ROOT = {
+					set_capital = PREV
+				}
+			}
+		}
+		c:SEL = {
+			trigger_event = {
+				id = diadochi_flavor.33
+			}
+		}
+		add_stability = -10
+		ai_chance = {
+			modifier = {
+				factor = 2
+			}
+			modifier = {
+				factor = 3
+				has_war_exhaustion >= 8
+			}
+			modifier = {
+				factor = 3
+				manpower <= 20
+			}
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.28.b" #War on the other hand we can always choose.
+		add_stability = 20
+		add_manpower = 10
+		c:SEL = {
+			declare_war_with_wargoal = {
+				war_goal = diadochi_wargoal
+				target = c:PRY
+			}
+			trigger_event = {
+				id = diadochi_flavor.32
+			}
+		}
+		every_country = {
+			limit = {
+				country_culture_group = hellenic
+				NOR = {
+					tag = PRY
+					tag = SEL
+				}
+			}
+			trigger_event = {
+				id = diadochi_flavor.29
+			}
+		}
+		ai_chance = {
+			modifier = {
+				factor = 4
+			}
+		}
+	}
+}
+
+
+diadochi_flavor.29 = { #Antigonid-Seleucid War
+	type = country_event
+    title = diadochi_flavor.29.t
+    desc = diadochi_flavor.29.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = c:SEL.current_ruler
+	right_portrait = c:PRY.current_ruler
+
+	option = {
+		name = "diadochi_flavor.29.a"
+		custom_tooltip = diadochi_flavor_30.at
+	}
+}
+
+diadochi_flavor.30 = { # War with Seleucids
+    type = country_event
+    title = diadochi_flavor.30.t
+    desc = diadochi_flavor_30.desc
+    picture = elephant_battle
+    
+    left_portrait = c:SEL.current_ruler
+    right_portrait = c:PRY.current_ruler
+
+    immediate = {
+    	hidden_effect = {
+			c:SEL = {
+				random_current_war = {
+					limit = {
+						any_war_participant = { tag = PRY }
+						is_war_leader = c:PRY
+					}
+					save_scope_as = seleukid_diadochi_war_scope
+				}
+				every_subject = {
+					limit = {
+						OR = {
+							is_subject_type = feudatory
+							is_subject_type = satrapy
+							is_subject_type = client_state
+						}
+						save_temporary_scope_as = temp_subject_war_scope
+						scope:seleukid_diadochi_war_scope = {
+							NOR = {
+								any_war_attacker = { this = scope:temp_subject_war_scope }
+								any_war_defender = { this = scope:temp_subject_war_scope }
+							}
+						}
+					}
+					add_to_war = {
+						target = scope:seleukid_diadochi_war_scope
+						attacker = yes
+						leader = no
+					}
+				}
+			}
+		}
+    }
+
+    option = {      
+        name = diadochi_flavor_30.a
+        custom_tooltip = diadochi_flavor_30.at
+    }
+}
+
+diadochi_flavor.31 = { #War with Egypt
+	type = country_event
+    title = diadochi_flavor.31.t
+    desc = diadochi_flavor.31.desc
+    
+	picture = army_desert
+	
+	left_portrait = c:EGY.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	immediate = {
+		hidden_effect = {
+			c:EGY = {
+				random_current_war = {
+					limit = {
+						any_war_participant = { tag = PRY }
+						is_war_leader = c:PRY
+					}
+					save_scope_as = ptolemaic_diadochi_war_scope
+				}
+				every_subject = {
+					limit = {
+						OR = {
+							is_subject_type = feudatory
+							is_subject_type = satrapy
+							is_subject_type = client_state
+						}
+						save_temporary_scope_as = temp_subject_war_scope
+						scope:ptolemaic_diadochi_war_scope = {
+							NOR = {
+								any_war_attacker = { this = scope:temp_subject_war_scope }
+								any_war_defender = { this = scope:temp_subject_war_scope }
+							}
+						}
+					}
+					add_to_war = {
+						target = scope:ptolemaic_diadochi_war_scope
+						attacker = yes
+						leader = no
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diadochi_flavor.31.a"
+		custom_tooltip = diadochi_flavor_31.at
+	}
+}
+
+
+diadochi_flavor.32 = { #Seleucids Attack
+	type = country_event
+    title = diadochi_flavor.32.t
+    desc = diadochi_flavor.32.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = c:SEL.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	immediate = {
+		hidden_effect = {
+			c:SEL = {
+				random_current_war = {
+					limit = {
+						any_war_participant = { tag = PRY }
+						is_war_leader = c:PRY
+					}
+					save_scope_as = seleukid_diadochi_war_scope
+				}
+				every_subject = {
+					limit = {
+						OR = {
+							is_subject_type = feudatory
+							is_subject_type = satrapy
+							is_subject_type = client_state
+						}
+						save_temporary_scope_as = temp_subject_war_scope
+						scope:seleukid_diadochi_war_scope = {
+							NOR = {
+								any_war_attacker = { this = scope:temp_subject_war_scope }
+								any_war_defender = { this = scope:temp_subject_war_scope }
+							}
+						}
+					}
+					add_to_war = {
+						target = scope:seleukid_diadochi_war_scope
+						attacker = yes
+						leader = no
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diadochi_flavor.32.a"
+	}
+}
+
+diadochi_flavor.33 = { #Antigonids Concede Syria
+	type = country_event
+    title = diadochi_flavor.33.t
+    desc = diadochi_flavor.33.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	trigger = {
+		NOT = {
+			war_with = c:PRY
+		}
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = "diadochi_flavor.33.a"
+		custom_tooltip = "transfer_phrygian_lands_sel_tt"
+		hidden_effect = {
+			c:PRY = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							is_in_area = osroene_area
+							is_in_area = palmyra_area
+							is_in_area = syria_cyrrestice_area
+							is_in_area = syria_area
+							is_in_area = north_phoenicia_area
+							is_in_area = apamene_area
+							is_in_region = mesopotamia_region
+							is_in_region = assyria_region
+						}
+					}
+					set_owned_by = c:SEL
+				}
+				every_country = {
+					limit = {   
+						country_culture_group = hellenic
+						NOR = {
+							tag = PRY
+							tag = SEL
+							AND = {
+								is_subject_of = c:PRY
+								is_subject_type = tributary
+								capital_scope = {
+									OR = {
+										is_in_area = osroene_area
+										is_in_area = palmyra_area
+										is_in_area = syria_cyrrestice_area
+										is_in_area = syria_area
+										is_in_area = north_phoenicia_area
+										is_in_area = apamene_area
+										is_in_region = mesopotamia_region
+										is_in_region = assyria_region
+									}
+								}
+							}
+						}
+					}
+					trigger_event = {
+						id = diadochi_flavor.34
+					}
+				}
+				every_subject = {
+					limit = {
+						is_subject_type = tributary
+						capital_scope = {
+							OR = {
+								is_in_area = osroene_area
+								is_in_area = palmyra_area
+								is_in_area = syria_cyrrestice_area
+								is_in_area = syria_area
+								is_in_area = north_phoenicia_area
+								is_in_area = apamene_area
+								is_in_region = mesopotamia_region
+								is_in_region = assyria_region
+							}
+						}
+					}
+					c:PRY = {
+						release_subject = PREV
+					}
+					trigger_event = {
+						id = diadochi_flavor.35
+					}
+				}
+				c:SEL = {
+					add_truce = {
+						target = c:PRY
+						duration = 1825
+					}
+					every_subject = {
+						c:PRY = {
+							add_truce = {
+								target = PREV
+								duration = 1825
+							}
+						}
+					}
+				}
+				add_truce = {
+					target = c:SEL
+					duration = 1825
+				}
+				every_subject = {
+					c:SEL = {
+						add_truce = {
+							target = PREV
+							duration = 1825
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+diadochi_flavor.34 = { #Antigonids bow to Seleukid demands
+	type = country_event
+    title = diadochi_flavor.34.t
+    desc = diadochi_flavor.34.desc
+    
+	picture = army_desert
+	
+	left_portrait = c:SEL.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	option = {
+		name = "diadochi_flavor.34.a"
+		custom_tooltip = transfer_phrygian_lands_sel_tt
+	}
+}
+
+diadochi_flavor.35 = { #Freedom?
+	type = country_event
+    title = diadochi_flavor.35.t
+    desc = diadochi_flavor.35.desc
+    
+	picture = army_desert
+	
+	left_portrait = c:PRY.current_ruler
+	right_portrait = current_ruler
+	
+	option = {
+		name = "diadochi_flavor.35.a"
+		custom_tooltip = transfer_phrygian_lands_sel_tt
+	}
+
+	after = {
+		trigger_event = {
+			id = diadochi_flavor.34
+			days = 5
+		}
+	}
+}
+
+diadochi_flavor.36 = { #Phrygia - The protector of the Greeks?
+	type = country_event
+    title = diadochi_flavor.36.t
+    desc = diadochi_flavor.36.desc
+    
+	picture = greek_city
+	
+	left_portrait = current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	trigger = {
+		has_global_variable = phrygia_the_betrayer
+		NOT = { has_variable = reacted_to_phrygian_betrayal }
+		country_culture_group = hellenic
+		war = no
+		is_subject_of = c:PRY
+		c:PRY = {
+			NOT = { has_variable = epigoni }
+			NOT = {
+				any_owned_province = {
+					is_in_region = greece_region
+				}
+			}
+			NOT = {
+				any_owned_province = {
+					is_in_region = macedonia_region
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		save_scope_as = freedom_tag
+		set_variable = reacted_to_phrygian_betrayal
+		capital_scope = { save_scope_as = freedom_city }
+	}
+	
+	option = {
+		name = "diadochi_flavor.36.a"	
+		custom_tooltip = diadochi_flavor.36.a.tt
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 10
+				opinion = {
+					target = c:PRY
+					value > 150
+				}
+			}
+		}
+	}
+	option = {
+		name = "diadochi_flavor.36.b"
+		custom_tooltip = diadochi_flavor.36.b.tt
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 10
+				opinion = {
+					target = c:PRY
+					value < 50
+				}
+			}
+		}
+		show_as_tooltip = {
+			c:PRY = { release_subject = ROOT }
+		}
+		hidden_effect = {
+			c:PRY = {
+				trigger_event = {
+					id = diadochi_flavor.37
+				}
+			}
+		}
+	}
+}
+
+diadochi_flavor.37 = { #Phrygian response
+	type = country_event
+    title = diadochi_flavor.37.t
+    desc = diadochi_flavor.37.desc
+    
+	picture = greek_city
+	
+	left_portrait = current_ruler
+	right_portrait = scope:freedom_tag.current_ruler
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = "diadochi_flavor.37.a"
+		ai_chance = {
+			modifier = {
+				factor = 80
+			}
+		}
+		c:PRY = { release_subject = scope:freedom_tag }
+		declare_war_with_wargoal = {
+			war_goal = conquer_wargoal
+			province = scope:freedom_city
+			target = scope:freedom_tag
+		}
+		every_subject = {
+			limit = {
+				country_culture_group = hellenic
+			}
+			show_as_tooltip = {
+				add_opinion = {
+					modifier = opinion_phrygia_despotic
+					target = PRY
+				}
+				trigger_event = {
+					id = diadochi_flavor.39
+				}
+			}
+		}
+		hidden_effect = {
+			scope:freedom_tag = {
+				trigger_event = {
+					id = diadochi_flavor.38
+				}
+			}
+		}
+	}
+	option = {
+		name = "diadochi_flavor.37.b"
+		c:PRY = { release_subject = scope:freedom_tag }
+		add_stability = -2.5
+		ai_chance = {
+			modifier = {
+				factor = 20
+			}
+		}
+	}
+}
+
+diadochi_flavor.38 = { #Phrygian Attacks
+	type = country_event
+    title = diadochi_flavor.38.t
+    desc = diadochi_flavor.38.desc
+    
+	picture = greek_city
+	
+	left_portrait = c:PRY.current_ruler
+	right_portrait = current_ruler
+
+	immediate = {
+		hidden_effect = {
+			c:PRY = {
+				random_current_war = {
+					limit = {
+						any_war_participant = { this = root }
+						is_war_leader = root
+					}
+					save_scope_as = freedom_diadochi_war_scope
+				}
+				every_subject = {
+					limit = {
+						OR = {
+							is_subject_type = feudatory
+							is_subject_type = satrapy
+							is_subject_type = client_state
+						}
+						NOT = { country_culture_group = hellenic }
+						save_temporary_scope_as = temp_subject_war_scope
+						scope:freedom_diadochi_war_scope = {
+							NOR = {
+								any_war_attacker = { this = scope:temp_subject_war_scope }
+								any_war_defender = { this = scope:temp_subject_war_scope }
+							}
+						}
+					}
+					add_to_war = {
+						target = scope:freedom_diadochi_war_scope
+						attacker = yes
+						leader = no
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diadochi_flavor.38.a"
+		show_as_tooltip = {
+			c:PRY = {
+				declare_war_with_wargoal = {
+					war_goal = conquer_wargoal
+					province = scope:freedom_city
+					target = ROOT
+				}
+			}
+		}
+	}
+}
+
+diadochi_flavor.39 = { #Phrygian Attacks a subject
+	type = country_event
+    title = diadochi_flavor.39.t
+    desc = diadochi_flavor.39.desc
+    
+	picture = greek_city
+	
+	left_portrait = c:PRY.current_ruler
+	right_portrait = current_ruler
+
+	option = {
+		name = "diadochi_flavor.39.a"
+		add_opinion = {
+			modifier = opinion_phrygia_despotic
+			target = PRY
+		}
+	}
+}
+
+diadochi_flavor.41 = { #Lysimachus Makes a Move
+    type = country_event
+    title = diadochi_flavor.41.t
+    desc = diadochi_flavor.41.desc
+    
+	picture = city_siege
+	
+	left_portrait = c:TRE.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	option = {
+		name = "diadochi_flavor.41.a"
+		custom_tooltip = diadochi_flavor.42.at
+	}
+}
+
+diadochi_flavor.42 = { #War with Thrace
+	type = country_event
+    title = diadochi_flavor.42.t
+    desc = diadochi_flavor.42.desc
+    
+	picture = city_siege
+	
+	left_portrait = c:TRE.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	immediate = {
+		hidden_effect = {
+			random_current_war = {
+				limit = {
+					any_war_participant = { tag = PRY }
+					is_war_leader = c:PRY
+				}
+				save_scope_as = lysimachid_diadochi_war_scope
+			}
+			every_subject = {
+				limit = {
+					OR = {
+						is_subject_type = feudatory
+						is_subject_type = satrapy
+						is_subject_type = client_state
+					}
+					save_temporary_scope_as = temp_subject_war_scope
+					scope:lysimachid_diadochi_war_scope = {
+						NOR = {
+							any_war_attacker = { this = scope:temp_subject_war_scope }
+							any_war_defender = { this = scope:temp_subject_war_scope }
+						}
+					}
+				}
+				add_to_war = {
+					target = scope:lysimachid_diadochi_war_scope
+					attacker = yes
+					leader = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diadochi_flavor.42.a"
+		custom_tooltip = diadochi_flavor.42.at
+	}
+}
+
+diadochi_flavor.43 = { #Thracian Ultimatum
+	type = country_event
+    title = diadochi_flavor.43.t
+    desc = diadochi_flavor.43.desc
+    
+	picture = city_siege
+	
+	left_portrait = current_ruler
+	right_portrait = c:TRE.current_ruler
+	
+	trigger = {
+		NOT = {
+			war_with = c:TRE
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.43.a"
+		custom_tooltip = transfer_phrygian_lands_tre_tt
+		show_as_tooltip = {
+			c:TRE = {
+				add_truce = {
+					target = c:MAC
+					duration = 1825
+				}
+				add_truce = {
+					target = c:PRY
+					duration = 1825
+				}
+			}
+		}
+		c:TRE = {
+			trigger_event = {
+				id = diadochi_flavor.44
+			}
+		}
+		add_stability = -10
+		ai_chance = {
+			modifier = {
+				factor = 2
+			}
+			modifier = {
+				factor = 3
+				has_war_exhaustion >= 8
+			}
+			modifier = {
+				factor = 3
+				manpower <= 20
+			}
+		}
+	}
+	
+	option = {
+		name = "diadochi_flavor.43.b"
+		add_stability = 10
+		add_manpower = 5
+		c:TRE = {
+			declare_war_with_wargoal = {
+				war_goal = diadochi_wargoal
+				target = c:PRY
+			}
+			trigger_event = {
+				id = diadochi_flavor.45
+			}
+		}
+		every_country = {
+			limit = {
+				country_culture_group = hellenic
+				NOR = {
+					tag = PRY
+					tag = TRE
+				}
+			}
+			trigger_event = {
+				id = diadochi_flavor.41
+			}
+		}
+		ai_chance = {
+			modifier = {
+				factor = 4
+			}
+		}
+	}
+}
+
+diadochi_flavor.44 = { #Antigonids agree
+	type = country_event
+    title = diadochi_flavor.44.t
+    desc = diadochi_flavor.44.desc
+    
+	picture = elephant_battle
+	
+	left_portrait = current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	trigger = {
+		NOT = {
+			war_with = c:PRY
+		}
+	}
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = "diadochi_flavor.44.a"
+		custom_tooltip = "transfer_phrygian_lands_tre_tt"
+		hidden_effect = {
+			c:PRY = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							is_in_area = aeolia_area
+							is_in_area = mysia_area
+							is_in_area = lydia_area
+							is_in_area = mysia_abrettene_area
+							is_in_area = bithynia_area
+							is_in_area = bithynia_inferior_area
+							is_in_area = bithynia_superior_area
+							is_in_area = heracleotis_area
+						}
+					}
+					set_owned_by = c:TRE
+				}
+				add_truce = {
+					target = c:TRE
+					duration = 1825
+				}
+				
+				every_country = {
+					limit = {   
+						country_culture_group = hellenic
+						NOR = {
+							tag = PRY
+							tag = TRE
+							AND = {
+								tag = IOA
+								has_land = yes
+								is_subject_of = c:PRY
+								any_owned_province = {
+									NOT = { is_in_area = aeolia_area }
+								}
+							}
+							AND = {
+								is_subject_of = c:PRY
+								is_subject_type = tributary
+								capital_scope = {
+									OR = {
+										is_in_area = aeolia_area
+										is_in_area = mysia_area
+										is_in_area = lydia_area
+										is_in_area = mysia_abrettene_area
+										is_in_area = bithynia_area
+										is_in_area = bithynia_inferior_area
+										is_in_area = bithynia_superior_area
+										is_in_area = heracleotis_area
+									}
+								}
+							}
+						}
+					}
+					trigger_event = {
+						id = diadochi_flavor.47
+					}
+				}
+				if = {
+					limit = {
+						c:IOA = {
+							has_land = yes
+							is_subject_of = c:PRY
+							any_owned_province = {
+								NOT = { is_in_area = aeolia_area }
+							}
+						}
+					}
+					c:IOA = { 
+						trigger_event = { id = diadochi_flavor.48 }
+					}
+				}
+				every_subject = {
+					limit = {
+						is_subject_type = tributary
+						capital_scope = {
+							OR = {
+								is_in_area = aeolia_area
+								is_in_area = mysia_area
+								is_in_area = lydia_area
+								is_in_area = mysia_abrettene_area
+								is_in_area = bithynia_area
+								is_in_area = bithynia_inferior_area
+								is_in_area = bithynia_superior_area
+								is_in_area = heracleotis_area
+							}
+						}
+					}
+					c:PRY = {
+						release_subject = PREV
+					}
+					trigger_event = {
+						id = diadochi_flavor.46
+					}
+				}
+				c:TRE = {
+					add_truce = {
+						target = c:PRY
+						duration = 1825
+					}
+					every_subject = {
+						c:PRY = {
+							add_truce = {
+								target = PREV
+								duration = 1825
+							}
+						}
+					}
+				}
+				add_truce = {
+					target = c:TRE
+					duration = 1825
+				}
+				every_subject = {
+					c:TRE = {
+						add_truce = {
+							target = PREV
+							duration = 1825
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+diadochi_flavor.45 = { #War with Phrygia
+	type = country_event
+    title = diadochi_flavor.45.t
+    desc = diadochi_flavor.45.desc
+    
+	picture = city_siege
+	
+	left_portrait = c:PRY.current_ruler
+	right_portrait = c:TRE.current_ruler
+
+	immediate = {
+		hidden_effect = {
+			random_current_war = {
+				limit = {
+					any_war_participant = { tag = PRY }
+					is_war_leader = c:PRY
+				}
+				save_scope_as = lysimachid_diadochi_war_scope
+			}
+			every_subject = {
+				limit = {
+					OR = {
+						is_subject_type = feudatory
+						is_subject_type = satrapy
+						is_subject_type = client_state
+					}
+					save_temporary_scope_as = temp_subject_war_scope
+					scope:lysimachid_diadochi_war_scope = {
+						NOR = {
+							any_war_attacker = { this = scope:temp_subject_war_scope }
+							any_war_defender = { this = scope:temp_subject_war_scope }
+						}
+					}
+				}
+				add_to_war = {
+					target = scope:lysimachid_diadochi_war_scope
+					attacker = yes
+					leader = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "diadochi_flavor.45.a"
+		custom_tooltip = diadochi_flavor.42.at
+	}
+}
+
+diadochi_flavor.46 = { #Freedom?
+	type = country_event
+    title = diadochi_flavor.35.t
+    desc = diadochi_flavor.35.desc
+    
+	picture = city_siege
+	
+	left_portrait = c:PRY.current_ruler
+	right_portrait = current_ruler
+	
+	option = {
+		name = "diadochi_flavor.35.a"
+		custom_tooltip = transfer_phrygian_lands_tre_tt
+	}
+
+	after = {
+		trigger_event = {
+			id = diadochi_flavor.47
+			days = 5
+		}
+	}
+}
+
+diadochi_flavor.47 = { #Antigonids bend
+	type = country_event
+    title = diadochi_flavor.47.t
+    desc = diadochi_flavor.47.desc
+    
+	picture = city_siege
+	
+	left_portrait = c:TRE.current_ruler
+	right_portrait = c:PRY.current_ruler
+	
+	option = {
+		name = "diadochi_flavor.47.a"
+		custom_tooltip = transfer_phrygian_lands_tre_tt
+	}
+}
+
+diadochi_flavor.48 = { #Aiolia ping
+	type = country_event
+    title = diadochi_flavor.48.t
+    desc = diadochi_flavor.48.desc
+    
+	picture = city_siege
+	
+	left_portrait = current_ruler
+	right_portrait = c:PRY.current_ruler
+	right_portrait = c:TRE.current_ruler
+	
+	trigger = {
+		any_owned_province = { is_in_area = aeolia_area }
+	}
+
+	option = {
+		name = "diadochi_flavor.48.a"
+		every_owned_province = {
+			limit = {
+				NOT = { is_in_area = aeolia_area }
+			}
+			set_owned_by = c:TRE
+		}
+	}
+
+	after = {
+		trigger_event = {
+			id = diadochi_flavor.47
+			days = 5
+		}
+	}
+}
+
+ diadochi_flavor.100 = {#NS
+ 	type = country_event
+	 hidden = yes
+# 	title = "diadochi_flavor.100.t"
+# 	desc = "diadochi_flavor.100.desc"
+	
+# 	picture = steppe_cavalry
+	
+# 	left_portrait = root.current_ruler
+# 	right_portrait = scope:origin.current_ruler
+	
+ 	trigger = {
+		 always = no
+# 		OR = {
+# 			has_variable = horde_invasion_origin
+# 			AND = {
+# 				country_culture_group = scythia
+# 				is_ai = no
+# 				num_of_cities >= 100
+# 			}
+# 		}
+# 		war = no
+# 		exists = c:SEL
+# 		c:SEL = {
+# 			num_of_cities >= 80
+# 		}
+ 	}
+	
+# 	fire_only_once = yes
+	
+ 	immediate = {
+# 		c:SEL = {
+# 			save_scope_as = origin
+# 			current_ruler = {
+# 				save_scope_as = sel_rul
+# 			}
+# 		}
+# 		save_scope_as = target
+ 	}
+	
+# 	option = {
+# 		name = "diadochi_flavor.100.a"
+# 		declare_war_with_wargoal = {
+# 			war_goal = conquer_wargoal
+# 			province = scope:origin.capital_scope
+# 			target = scope:origin
+# 		}
+# 		scope:origin = {
+# 			scope:sel_rul = {
+# 				death = {
+# 					death_reason = death_battle
+# 					killer = scope:target.current_ruler
+# 				}
+# 			}
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				NOT = {
+# 					this = root
+# 				}
+# 			}
+# 			trigger_event = {
+# 				id = diadochi_flavor.101
+# 			}
+# 		}
+# 	}
+	
+# 	option = {
+# 		name = "diadochi_flavor.100.b"
+		
+# 		current_ruler = {
+# 			add_popularity = -25
+# 		}
+		
+# 		ai_chance = {
+# 			factor = 0
+# 		}
+		
+# 	}
+
+}
+
+diadochi_flavor.101 = {#NS
+	type = country_event
+	title = "diadochi_flavor.101.t"
+	desc = "diadochi_flavor.101.desc"
+	
+	picture = steppe_cavalry 
+	
+	left_portrait = scope:target.current_ruler
+	right_portrait = scope:sel_rul
+	
+	option = {
+		name = "diadochi_flavor.101.a"
+		show_as_tooltip = {
+			scope:target = {
+				declare_war_with_wargoal = {
+					war_goal = conquer_wargoal
+					province = scope:origin.capital_scope
+					target = scope:origin
+				}
+				scope:sel_rul = { 
+					death = {
+						death_reason = death_battle
+						killer = scope:target.current_ruler
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						this = scope:origin
+					}
+				}
+				scope:origin = {
+					add_country_modifier = {
+						name = seleucid_struggles
+						duration = 3650
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				this = scope:origin
+			}
+			add_country_modifier = {
+				name = seleucid_struggles 
+				duration = 3650
+			}
+		}
+	}
+	
+}
+
+
+

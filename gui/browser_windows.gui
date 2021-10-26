@@ -1,0 +1,22 @@
+# JominiBrowserWindow = {
+#   name = "Youtube"
+#   size = { 1024 100% }
+#
+#   blockoverride "url" {
+#     url = "reddit.com"
+#   }
+#   blockoverride "on_close" {
+#     onclick = "[PdxGuiTriggerAllAnimations('close_browser')]"
+#   }
+# }
+# JominiBrowserWindow = {
+#   name = "Wiki"
+#   size = { 1024 100% }
+#
+#   blockoverride "url" {
+#     url = "imperator.paradoxwikis.com"
+#   }
+#   blockoverride "on_close" {
+#     #onclick = "[PdxGuiTriggerAllAnimations('close_browser')]"
+#   }
+# }

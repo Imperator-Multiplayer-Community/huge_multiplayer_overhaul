@@ -1,0 +1,117 @@
+﻿country_decisions = {
+	
+	# Form Suren
+	form_suren = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = persia
+			NOT = {
+				tag = SRN
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = taxila_area
+					is_in_area = panchanada_area
+					is_in_area = north_sindhu_area
+					is_in_area = sauvira_area
+					is_in_area = madra_area
+					is_in_area = sivi_area
+					is_in_area = south_sindhu_area
+					is_in_area = patalene_area
+					is_in_area = arachosia_area
+					is_in_area = sattagydia_area
+					is_in_area = parecania_area
+					is_in_area = bamyan_area
+					is_in_area = gandhara_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = suren_not_exists
+				NOT = {
+					any_country = {
+						tag = SRN
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = taxila_area
+			owns_or_subject_owns_area = panchanada_area
+			owns_or_subject_owns_area = north_sindhu_area
+			owns_or_subject_owns_area = sauvira_area
+			owns_or_subject_owns_area = madra_area
+			owns_or_subject_owns_area = sivi_area
+			owns_or_subject_owns_area = south_sindhu_area
+			owns_or_subject_owns_area = patalene_area
+			owns_or_subject_owns_area = arachosia_area
+			owns_or_subject_owns_area = sattagydia_area
+			owns_or_subject_owns_area = parecania_area
+			owns_or_subject_owns_area = bamyan_area
+			owns_or_subject_owns_area = gandhara_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "SUREN_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "SUREN_ADJECTIVE"
+				change_country_color =  "suren_color"
+				change_country_tag = SRN
+				change_country_flag = SUREN_FLAG
+				trigger_event = {
+					id = formable_heritage.22
+				}								
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_large_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_suren_claims_tooltip"
+			hidden_effect = {
+				area:trigarta_area = { formable_area_province_effect = yes }
+				area:abhiria_area = { formable_area_province_effect = yes }
+				area:outer_saurashtra_area = { formable_area_province_effect = yes }
+				area:inner_saurashtra_area = { formable_area_province_effect = yes }
+				area:sthanisvara_area = { formable_area_province_effect = yes }
+				area:kuru_area = { formable_area_province_effect = yes }
+				area:matsya_area = { formable_area_province_effect = yes }
+				area:maru_area = { formable_area_province_effect = yes }
+				area:surasena_area = { formable_area_province_effect = yes }
+				area:kasmira_area = { formable_area_province_effect = yes }
+				area:candara_area = { formable_area_province_effect = yes }
+				area:bactria_area = { formable_area_province_effect = yes }
+			}
+			add_4_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

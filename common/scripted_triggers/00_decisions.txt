@@ -1,0 +1,275 @@
+﻿is_tier_1_formable_trigger = {
+	OR = {
+		tag = ACH #achaea
+		tag = AQI #aquitania
+		tag = ARK #arcadia
+		tag = ASX #Aremorica
+		tag = ATU #Asturia		
+		tag = CNN #Cantabria
+		tag = CPT #Carpetania
+		tag = CBR #Celtiberia
+		tag = CYP #Cyprus
+		tag = GLL #Gallaecia
+		tag = LST #Lusitania
+		tag = VTT #Vettonia
+		tag = SBN #Suebia
+		tag = AGO #Argolis
+		tag = AUA #Aestuia
+		tag = EPI #Epirus
+		tag = EPR #Epirus Formable
+		tag = BOE #Boeotia
+		tag = BOT #Boeotia Formable
+		tag = EBO #Euboea
+		tag = PRY #Antigonid Empire shouldn't go forming any of these.
+		tag = SAR #Sardinia		
+		tag = BOD #Bod		
+		tag = SAK #Sakastan
+		tag = LNK #Lanka
+		tag = DPR #Danapris
+		tag = NUB #Nubia
+		tag = ETP #Aethiopia
+		tag = DMK #Danmork	
+		tag = HND #Hind
+		tag = KNK #Konkan
+		tag = ARN #Arvasthan
+		tag = GNG #Gangarida
+		tag = LOM #Lombardy
+		tag = MNX #Isle of Mann
+		tag = TOK #Tokharia
+		tag = QUA #Quadia
+		tag = BTN #Brittany
+		tag = HIB #Hibernia
+		tag = XXS #Saxonia
+	}
+}
+
+is_tier_2_formable_trigger = {
+	OR = {
+		tag = ARI #armenia formable
+		tag = ARM #armenia
+		tag = ASR #Assyria
+		tag = BBY #Babylon
+		tag = BGG #Belgia
+		tag = BRA #Pretania
+		tag = CCC #Caledonian Confederacy
+		tag = CCI #Cilicia
+		tag = 1KR #Crete
+		tag = DAC #Dacia		
+		tag = DRA #Dravidia
+		tag = EGY #Egypt
+		tag = EGT #Egypt Formable
+		tag = GLT #Galatia
+		tag = HVL #Helvetia
+		tag = ILL #Illyria
+		tag = MAC #Macedon
+		tag = MCD #Macedon Formable
+		tag = MEE #Media
+		tag = NRM #Noricum
+		tag = NUM #Numidia
+		tag = PRG #Phrygia Formable
+		tag = PTU #Pontus Formable
+		tag = PON #Pontus
+		tag = SII #Sicily
+		tag = SYA #Syria
+		tag = YMN #Yamnat
+		tag = SEL #Seleucids
+		tag = TRE #Thrace
+		tag = YZI #Yuezhi	
+		tag = ASI #Asia
+		tag = BHK #Balhika
+		tag = EZY #Eretz Yisrael
+		tag = KST #Kshaharata
+		tag = MJL #Mahajanapada League
+		tag = MGV #Mahameghavahana
+		tag = MWA #Malwa
+		tag = NLK #Neo-Lydian Kingdom
+		tag = NPL #Nepal
+		tag = SGA #Shunga
+		tag = SRN #Suren
+		tag = YRY #Yavana Rajya
+		tag = KVK #Kavkasia
+		tag = HKL #Heraklean League
+		tag = EUS #Euskal Herria
+		tag = ISP #Ispanian League
+		tag = GLO #Glorious Olbia
+		tag = PUN #Punt
+		tag = LAI #Laietania	
+		tag = RHD #Rhodania
+		tag = AEN #Aengland
+		tag = SCN #Scandia			
+		tag = GLP #Greater Lepontia
+		tag = VAN #Vandalia
+		tag = IGK #Indo-Germanic Kingdom
+		tag = PUL #Punic League
+		tag = SCO #Alba
+		tag = GHB #Ghabataleanbar
+		tag = JAL #Jalabhumi
+		tag = ZIQ #Ziqanmak'om	
+		tag = ADX #Adriatica
+		tag = SIC #Sicsyria
+		tag = SAT #Satavahana
+		tag = BAE #Baetica
+		tag = GOT #Gothia
+		tag = RBR #Britannia
+		tag = BRY #Hibernia Magna	
+		tag = RON #Republic of the Nile	
+	}
+}
+
+is_endgame_tag_trigger = {
+	OR = {
+		tag = ROM #Rome	
+		tag = AIO #Albion
+		tag = ALX #Alexander's Empire
+		tag = BHA #Bharatavarsha		
+		tag = HLA #Hellenic League
+		tag = GAU #Gaul			
+		tag = HBR #Greater Iberia
+		tag = PER #Persia/Achaemenid
+		tag = PPN #Phoenicia
+		tag = PTH #Parthia Formable
+		tag = PAR #Parthia 
+		tag = MGG #Magna Graecia
+		tag = KHN #Kushan
+		tag = DLA #Delian League
+		tag = PLL #Peloponnesian League
+		tag = ANA #Anatolia
+		tag = ARB #Arabia
+		tag = ARY #Aryana
+		tag = ERE #Erythraean Empire
+		tag = ERL #Erythraean League
+		tag = EUE #Euxine Empire
+		tag = EUL #Euxine League
+		tag = LBA #Libya
+		tag = NEA #Neo-Assyrian Empire
+		tag = IND #India
+		tag = CEL #Celtic Empire
+		tag = GAM #Greater Armenia
+		tag = GEE #Germanic Empire	
+		tag = TEE #Tyrrhenian Empire	
+		tag = OKE #Oikumene
+		tag = OGK #Ostrogothic Kingdom
+		tag = MXE #Empire of Mann
+		tag = ITA #Italy
+		tag = VGK #Visigothic Kingdom
+		tag = GRO #Graecia Occidentis
+		tag = BRN #Brennusovia
+		tag = CHD #Chaldean Empire	
+		tag = EAT #Erreinu Atlantikoa
+		tag = BOM #Boihaemia Magna
+		tag = PAN #Pannonia
+		tag = EST #Estu Imperija
+		tag = MCB #Macrobia
+		tag = AX2 #Axum
+		tag = CAR #Carthage
+		tag = LER #Levantine Republic
+	}
+}
+
+can_form_nation_trigger = {
+	war = no
+	has_civil_war = no
+}
+
+has_food_trade_good_trigger = {
+	custom_tooltip = {
+		text = food_tradegood_required
+		OR = {
+			trade_goods = grain
+			trade_goods = fish
+			trade_goods = cattle
+			trade_goods = vegetables
+		}
+	}
+}
+
+has_non_food_trade_good_trigger = {
+	NOR = {
+		trade_goods = grain
+		trade_goods = fish
+		trade_goods = cattle
+		trade_goods = vegetables
+	}
+}
+
+has_urban_trade_good_trigger = {
+	OR = {
+		trade_goods = papyrus
+		trade_goods = cloth
+		trade_goods = earthware
+		trade_goods = dye
+		trade_goods = glass
+		trade_goods = silk
+	}
+}
+
+has_non_urban_trade_good_trigger = {
+	NOR = {
+		trade_goods = papyrus
+		trade_goods = cloth
+		trade_goods = earthware
+		trade_goods = dye
+		trade_goods = glass
+		trade_goods = silk
+	}
+}
+
+has_minable_trade_good_trigger = {
+	custom_tooltip = {
+		text = minaable_tradegood_required #Needs updating when trigger is updated.
+		OR = {
+			trade_goods = marble
+			trade_goods = stone
+			trade_goods = precious_metals
+			trade_goods = base_metals
+			trade_goods = iron
+			trade_goods = gems
+			trade_goods = amber
+		}
+	}
+}
+
+has_unminable_trade_good_trigger = {
+	NOR = {
+		trade_goods = marble
+		trade_goods = stone
+		trade_goods = precious_metals
+		trade_goods = base_metals
+		trade_goods = iron
+		trade_goods = gems
+	}
+}
+
+add_scaling_gold_cost_trigger = {
+	trigger_if = {
+		limit = {
+			scope:player = {
+				treasury < root.calc_governor_investment_fee
+				OR = {
+					NOT = {
+						has_variable = free_investments
+					}
+					var:free_investments <= 0
+				}
+			}
+		}
+		scope:player = {
+			treasury >= root.calc_governor_investment_fee
+		}
+	}
+}
+
+treasure_owned_or_altared_trigger = {
+	custom_tooltip = {
+		text = treasure_owned_or_altared_anthologie_tt
+		ROOT = {
+			OR = {
+				any_country_treasure = { THIS = $SHINY$ }
+				any_owned_holy_site = {
+					num_province_treasures > 0
+					any_province_treasure = { THIS = $SHINY$ }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,375 @@
+﻿democracy = {
+
+	header = "mission_image_general"
+	icon = "general_2"
+
+	potential = {
+		is_monarchy = yes
+		has_civil_war = no
+		NOT = {
+			has_variable = democracy_abort
+		}
+
+	}
+	repeatable = no
+	chance = {
+		factor = 100
+	}
+	on_potential = {
+
+	}
+	on_start = {
+		random_family = {
+			weight = {
+				modifier = {
+					factor = 1000
+					any_family_member = {
+						count = all
+						from_ruler_family = no
+					}
+				}
+			}
+			save_scope_as = democracy_family
+			set_variable = {
+				name = democracy_family_var
+				value = yes
+			}
+		}
+		if = {
+			limit = {
+				any_family = {
+					NOT = {
+						this = scope:democracy_family
+					}
+				}
+			}
+			random_family = {
+				limit = {
+					NOT = {
+						this = scope:democracy_family
+					}
+				}
+				weight = {
+					modifier = {
+						factor = 1000
+						any_family_member = {
+							count = all
+							from_ruler_family = no
+						}
+					}
+				}
+				set_variable = oligarchy_family_var
+				save_scope_as = oligarchy_family
+			}
+		}
+		trigger_event = {
+			id = tribal_reform.1
+		}
+	} 
+	on_completion = {
+		every_country_state = {
+			every_state_province = {
+				limit = {
+					is_state_capital = yes
+				}
+				add_state_loyalty = 20
+			}
+		}
+		root.current_ruler = {
+			add_popularity = 25
+		}
+	}
+	on_abort = {
+		set_variable = {
+			name = democracy_abort
+			days = 365
+		}
+		trigger_event = {
+			id = democracy.9
+			days = 20
+		}
+	}
+
+	democracy_1 = { #democracy chain
+		icon = "task_political"
+
+		allow = {
+			trigger_if = {
+				limit = {
+					exists = scope:democracy_family
+				}
+				hidden:scope:democracy_family = {
+					custom_tooltip = {
+						text = democracy_family_raised_up_tt 
+						num_of_jobs >= democracy_family_num_of_expected_jobs_plus_svalue
+					}
+				}
+			}
+		}
+		prevented_by = { democracy_2}
+		bypass = {
+			has_completed_mission_task = democracy_2_d
+		}
+
+		on_completion = {
+			add_country_modifier = {
+				name = democracy_reform_modifier
+				duration = 3650
+			}
+		}
+
+
+	}
+	democracy_1_b = {
+		icon = "task_political"
+		requires = { democracy_1 }
+		allow = {
+			has_civil_war = no
+			any_living_character = {
+				has_any_office = yes
+				loyalty > 33
+			}
+			political_influence >= 100
+		}
+		duration = 365
+		bypass = {
+			has_completed_mission_task = democracy_2_d
+		}
+		on_start = {
+			set_variable = {
+				name = democracy_trigger
+				value = 1
+			}
+		}
+		monthly_on_action = democratic_republic_on_action
+		on_completion = {
+			add_political_influence = -100
+			custom_tooltip = "People_speak_TT"
+			hidden_effect = {
+			every_family = {
+				every_family_member = {
+					limit = {
+						is_minor_character = no
+					}
+					add_loyalty = antidemocracy_sentiment_1
+				}
+				every_family_member = {
+					limit = {
+						is_minor_character = yes
+					}
+					add_loyalty = prodemocracy_sentiment_1
+				}
+			}
+		}
+		}
+	}
+	democracy_1_c = {
+		icon = "task_economical"
+		requires = { democracy_1 }
+		allow = {
+			capital_scope = {
+				has_building = court_building
+				has_building = forum_building
+			}
+		}
+		bypass = {
+			has_completed_mission_task = democracy_2_d
+		}
+		on_completion = {
+			current_ruler = {
+				add_popularity = 10
+			}
+			capital_scope = {
+				add_permanent_province_modifier = {
+					name = supreme_court
+					duration = -1
+				}
+			}
+		}
+	}
+
+	democracy_1_d = {
+		icon = "task_political"
+		  requires = {
+		  	democracy_1_b 
+		  	democracy_1_c
+		  }
+		  bypass = {
+			has_completed_mission_task = democracy_2_d
+		}
+
+		allow = {
+
+		}
+
+		on_completion = {
+			set_variable = {
+				name = demo_civil_war
+			}
+			add_country_modifier = {
+				name = noble_rebellion
+				duration = 365
+			}
+			trigger_event = {
+				id = democracy.2
+			}
+		}
+	}
+
+	democracy_2 = { #oligarchy chain. Nobles rising up against the leader
+		icon = "task_political"
+
+		allow = {
+			has_civil_war = no
+			tyranny > 70
+		}
+		prevented_by = { democracy_1 }
+		bypass = {
+			has_completed_mission_task = democracy_1_d
+		}
+
+		on_completion = {
+			scope:oligarchy_family = {
+				random_family_member = {
+					limit = {
+						is_head_of_family = yes
+					}
+				}
+			}
+			save_scope_as = oligarchy_leader
+			
+
+
+		}
+
+
+	}
+	democracy_2_b = {
+		icon = "task_political"
+		requires = {democracy_2}
+		allow = {
+			has_civil_war = no
+		}
+		bypass = {
+			has_completed_mission_task = democracy_1_d
+		}
+		duration = 365
+		on_start = {
+			trigger_event = {#trigger event explaining that republicans are seeking support in neighbouring countries
+				id = democracy.4
+			}
+			random_neighbour_country = {
+					if = {
+						limit = {
+							any_neighbour_country = {
+								is_ai = no
+								NOT = {OR = {has_variable = oligarch_yes_revolt has_variable = oligarch_no_revolt}}
+							}
+						}
+							trigger_event = {#triggers event for countries players first to opt in
+							id = democracy.5
+						}
+					}
+					else_if = {
+						limit = {is_ai = yes}
+						trigger_event = {#triggers event for countries ai second
+						id = democracy.5
+					}
+					}
+
+			}
+		}
+		monthly_on_action = oligarchic_republic_on_action
+		on_completion = {
+			
+		}
+	}
+	democracy_2_c = {#Event for republicans (and player? To bribe characters to support them. Similar to Syracuse mission for bribing mercs)
+		icon = "task_political"
+		requires = {democracy_2}
+		allow = {
+			 has_civil_war = no
+		}
+		on_completion = {
+			trigger_event = {
+				id = democracy.7
+
+			}
+		}
+		bypass = {
+			has_completed_mission_task = democracy_1_d
+		}
+	}
+	democracy_2_d = { #Calc everything up, %chance based on events to do shit 
+		icon = "task_political"
+		requires = {
+				democracy_2_b
+				democracy_2_c
+		}
+		allow = {
+			OR = {
+				has_completed_mission_task = democracy_2_b
+				has_completed_mission_task = democracy_2_c	
+			}
+		}
+		duration = 90
+		on_start = {}
+		on_completion = {
+			trigger_event = {
+				id = democracy.8
+			}
+		}
+		bypass = {
+			has_completed_mission_task = democracy_1_d
+		}
+	}
+	democracy_finale = {
+		icon = "task_political"
+		requires = {
+			democracy_1_d
+			democracy_2_d
+		}
+		allow = {
+			NOT = {
+				has_civil_war = yes
+			}
+			 or = {
+			 	has_completed_mission_task = democracy_1_d
+			 	has_completed_mission_task = democracy_2_d
+			 }
+		}
+		final = yes
+			on_completion = {
+				every_family = {
+					every_family_member = {
+						limit = {
+							OR = {
+								has_loyalty = antidemocracy_sentiment_1
+								has_loyalty = antidemocracy_sentiment_2
+							}
+						}
+						remove_loyalty = antidemocracy_sentiment_1
+						remove_loyalty = antidemocracy_sentiment_2 
+					}
+				}
+				if = {
+					limit = {
+						has_variable = olig_republic_complete
+					}
+					change_government = oligarchic_republic
+				}
+				else_if = {
+					limit = {
+						has_variable = demo_civil_war
+					}
+					change_government = democratic_republic
+				}
+				trigger_event = {
+					id = democracy.9
+				}
+			}
+	}
+
+}
+
+#Want a few more events on this side. Need to spend PI and gold to make it happen. Gotta make it more costly than the other side.

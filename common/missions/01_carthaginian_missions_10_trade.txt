@@ -1,0 +1,735 @@
+﻿carthage_mission_trade_investments = {
+	header = "mission_image_carthage"
+	icon = "carthage_3"
+
+	repeatable = no
+
+	chance = {
+		factor = 3
+	}
+
+	potential = {
+		always = no
+		has_variable = num_of_completed_missions
+		var:num_of_completed_missions >= 3
+		NOT = { has_variable = carthaginian_mission_10_trade }
+        has_dlc = "The Punic Wars"
+    	primary_culture = carthaginian
+		OR = {
+            rank = great_power
+            rank = major_power
+        }
+        is_subject = no
+        has_civil_war = no
+	}
+
+	abort = {
+		ai_mission_back_out_trigger = yes
+	}
+
+	on_potential = {
+		root = {
+			save_scope_as = mission_country
+		}
+	}
+
+	on_start = {
+		start_mission_ai_effect = yes
+		p:3338 = {
+			save_scope_as = altar_of_philaeni
+		}
+		if = {
+			limit = {
+				exists = c:EGY
+				in_diplomatic_range = c:EGY
+			}
+			set_variable = carthage_trade_mission_egypt_task
+		}
+		if = {
+			limit = {
+				exists = c:SEL
+				in_diplomatic_range = c:SEL
+			}
+			set_variable = carthage_trade_mission_seleucid_task
+		}
+	}
+
+	on_abort = {
+        custom_tooltip = general_mission_cooldown_tt
+        set_variable = {
+            name = carthaginian_mission_10_trade
+            days = 7300
+        }
+        if = {
+        	limit = {
+        		has_variable = carthage_trade_mission_egypt_task
+        	}
+        	remove_variable = carthage_trade_mission_egypt_task
+        }
+        if = {
+        	limit = {
+        		has_variable = carthage_trade_mission_seleucid_task
+        	}
+        	remove_variable = carthage_trade_mission_seleucid_task
+        }
+    }
+
+    on_completion = {
+    	complete_mission_effect = yes
+    	if = {
+        	limit = {
+        		has_variable = carthage_trade_mission_egypt_task
+        	}
+        	remove_variable = carthage_trade_mission_egypt_task
+        }
+        if = {
+        	limit = {
+        		has_variable = carthage_trade_mission_seleucid_task
+        	}
+        	remove_variable = carthage_trade_mission_seleucid_task
+        }
+    }
+
+	carthage_mission_trade_altar_philaeni = { # The Altar of the Philaeni
+		icon = "task_expansion"
+
+		bypass = {
+			OR = {
+				p:3338 = {
+					has_owner = yes
+					owned_or_subject_owned = root
+				}
+				p:3338.region = {
+					NOT = {
+						any_region_province = {
+							has_owner = yes
+							NOT = {
+								owned_or_subject_owned = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		duration = 730
+
+		allow = {
+			custom_tooltip = {
+				text = carthage_mission_trade_altar_philaeni_tt
+				p:3338 = {
+					has_owner = no
+				}
+			}
+			political_influence >= 50			
+		}
+
+		on_start = {
+			add_political_influence = -50
+		}
+
+		on_completion = {
+			custom_tooltip = carthage_mission_trade_altar_philaeni_tt_2
+			if = {
+				limit = {
+					p:3338 = {
+						has_owner = yes
+						NOT = {
+							owned_or_subject_owned = root
+						}
+					}
+				}
+				trigger_event = {
+					id = me_carthage_trade.1
+				}
+			}
+			else = {
+				trigger_event = {
+					id = me_carthage_trade.2
+				}
+			}
+		}
+	}
+
+	carthage_mission_trade_cyrene_relations = { # Cyrene Relations
+		icon = "task_diplomatic"
+
+		requires = {
+			carthage_mission_trade_altar_philaeni
+		}
+
+		potential = {
+			exists = c:CYR
+			in_diplomatic_range = c:CYR
+		}
+
+		allow = {
+			can_pay_price = send_gift
+		}
+
+		bypass = {
+			NOT = {
+				exists = c:CYR
+			}
+		}
+
+		on_completion = {
+			c:CYR = {
+				add_opinion = {
+					modifier = carthage_mission_trade_cyrene_relations_opinion
+					target = root
+				}
+			}
+			pay_price = send_gift
+		}
+	}
+
+	carthage_mission_trade_another_periplus = { # Another Periplus
+		icon = "task_political"
+
+		duration = 730
+
+		allow = {
+			political_influence >= 50
+		}
+
+		on_start = {
+			add_political_influence = -50
+		}
+
+		on_completion = {
+			custom_tooltip = carthage_mission_trade_another_periplus_tt
+			hidden_effect = {
+				create_character = {
+					culture = carthaginian
+					religion = carthaginian_pantheon
+					age = 30
+					no_stats = yes
+	    			amazing_martial_effect = yes
+	    			average_charisma_effect = yes
+	    			average_finesse_effect = yes
+	    			good_zeal_effect = yes
+					save_scope_as = periplus_character
+					force_add_trait = daring
+				}
+				trigger_event = {
+					id = me_carthage_trade.3
+				}
+			}
+		}
+	}
+
+	carthage_mission_trade_into_unknown = { # Into The Unknown
+		icon = "task_expansion"
+
+		requires = {
+			carthage_mission_trade_another_periplus
+		}
+
+		bypass = {
+			trigger_if = {
+				limit = {
+					exists = scope:periplus_character
+				}
+				scope:periplus_character = {
+					is_alive = no
+				}
+			}
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = carthage_mission_trade_into_unknown_tt
+				p:6301 = {
+					has_owner = yes
+					owned_or_subject_owned = root
+				}
+			}
+		}
+
+		highlight = {
+			scope:province = {
+				province_id = 6301
+				NAND = {
+					exists = scope:mission_country
+					owned_or_subject_owned = scope:mission_country
+				}
+			}
+		}
+
+		duration = 730
+
+		on_start = {
+			trigger_event = {
+				id = me_carthage_trade.4
+			}
+		}
+
+		on_completion = {
+			custom_tooltip = carthage_mission_trade_into_unknown_tt_2
+			hidden_effect = {
+				if = {
+					limit = {
+						exists = scope:periplus_character
+						scope:periplus_character = {
+							is_alive = yes
+						}
+					}
+					random_list = {
+						90 = {
+							trigger_event = {
+								id = me_carthage_trade.5
+							}
+						}
+						10 = {
+							trigger_event = {
+								id = me_carthage_trade.8
+							}
+						}
+					}
+				}
+				else = {
+					trigger_event = {
+						id = me_carthage_trade.8
+					}
+				}
+			}
+		}
+	}
+
+	carthage_mission_trade_partners_old = { # Trade Partners of Old
+		icon = "task_diplomatic"
+
+		prevented_by = { carthage_mission_trade_gateway_indus carthage_mission_opinion_fallback }
+
+		bypass = {
+			OR ={
+				has_completed_mission_task = carthage_mission_trade_gateway_indus
+				has_completed_mission_task = carthage_mission_opinion_fallback
+				any_owned_province = {
+					NOT = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					trade_goods = elephants
+				}
+				c:EGY = {
+					has_land = no
+				}
+			}
+		}
+
+		potential = {
+			OR = {
+				AND = {
+					exists = c:EGY
+					in_diplomatic_range = c:EGY
+				}
+				has_variable = carthage_trade_mission_egypt_task
+			}
+		}
+
+		allow = {
+			hidden:c:EGY = {
+				opinion = {
+					target = root
+					value >= 100
+				}
+			}
+		}
+
+		on_completion = {
+			capital_scope = {
+				while = {
+					count = 3
+					define_pop = {
+						type = freemen
+						culture = c:EGY.culture
+						religion = 	c:EGY.religion
+					}
+				}
+			}
+		}
+	}
+
+	carthage_mission_trade_gateway_indus = { # Gateway to the Indus
+		icon = "task_diplomatic"
+
+		prevented_by = { carthage_mission_trade_partners_old carthage_mission_opinion_fallback }
+
+		bypass = {
+			OR = {
+				has_completed_mission_task = carthage_mission_trade_partners_old
+				has_completed_mission_task = carthage_mission_opinion_fallback
+				any_owned_province = {
+					NOT = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					trade_goods = elephants
+				}
+				c:SEL = {
+					has_land = no
+				}
+			}
+		}
+
+		potential = {
+			OR = {
+				AND = {
+					exists = c:SEL
+					in_diplomatic_range = c:SEL
+				}
+				has_variable = carthage_trade_mission_seleucid_task
+			}
+		}
+
+		allow = {
+			hidden:c:SEL = {
+				opinion = {
+					target = root 
+					value >= 100
+				}
+			}
+		}
+
+		on_completion = {
+			capital_scope = {
+				while = {
+					count = 3
+					define_pop = {
+						type = freemen
+						culture = c:SEL.culture
+						religion = 	c:SEL.religion
+					}
+				}
+			}
+		}
+	}
+
+	carthage_mission_opinion_fallback = { # New Trade Partners
+		icon = "task_diplomatic"
+
+		prevented_by = { carthage_mission_trade_partners_old carthage_mission_trade_gateway_indus }
+
+		bypass = {
+			OR = {
+				has_completed_mission_task = carthage_mission_trade_partners_old
+				has_completed_mission_task = carthage_mission_trade_gateway_indus
+				any_owned_province = {
+					NOT = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					trade_goods = elephants
+				}
+			}
+		}
+
+		potential = {
+			OR = {
+				NAND = {
+					exists = c:SEL
+					in_diplomatic_range = c:SEL
+					has_variable = carthage_trade_mission_seleucid_task
+				}
+				NAND = {
+					exists = c:EGY
+					in_diplomatic_range = c:EGY
+					has_variable = carthage_trade_mission_egypt_task
+				}
+			}
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = carthage_mission_opinion_fallback_tt
+				any_country = {
+					NOT = {
+						THIS = root
+					}
+					root = {
+						in_diplomatic_range = PREV
+					}
+					any_owned_province = {
+						trade_goods = elephants
+						NOR = {
+							is_in_region = africa_region
+							is_in_region = numidia_region
+							is_in_region = mauretainia_region
+						}
+					}
+					opinion = {
+						target = root
+						value >= 100
+					}
+				}
+			}
+		}
+
+		on_completion = {
+			capital_scope = {
+				while = {
+					count = 3
+					create_state_pop = freemen
+				}
+			}
+		}
+	}
+
+	carthage_mission_trade_from_east = { # Trade from the East
+		icon = "task_economical"
+
+		requires = {
+			carthage_mission_trade_partners_old carthage_mission_trade_gateway_indus carthage_mission_opinion_fallback
+		}
+
+		duration = 730
+
+		bypass = {
+			OR = {
+				any_owned_province = {
+					NOT = {
+						is_in_region = africa_region
+						is_in_region = numidia_region
+						is_in_region = mauretainia_region
+					}
+					trade_goods = elephants
+				}
+				p:3261 = {
+					NOT = {
+						owned_or_subject_owned = root
+					}
+				}
+			}
+		}
+
+		on_completion = {
+			show_as_tooltip = {
+				p:3261 = {
+					set_trade_goods = elephants
+				}
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = me_carthage_trade.6
+				}
+			}
+		}
+	}
+
+	carthage_mission_trade_ancient_nemesis = { # Ancient Nemesis
+		icon = "task_diplomatic"
+
+		requires = {
+			carthage_mission_trade_from_east
+		}
+
+		allow = {
+			custom_tooltip = {
+				text = carthage_mission_trade_ancient_nemesis_tt
+				any_owned_province = {
+					OR = {
+						is_in_region = greece_region
+						is_in_region = asia_region
+					}
+					is_port = yes
+				}
+			}
+			political_influence >= 50
+		}
+
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = greece_region
+					is_in_region = asia_region
+				}
+				is_port = yes
+			}
+		}
+
+		on_completion = {
+			add_political_influence = -50
+			custom_tooltip = carthage_mission_trade_ancient_nemesis_tt_2
+			hidden_effect = {
+				every_country = {
+					limit = {
+						 country_culture_group = hellenic
+					}
+					add_opinion = {
+						modifier = carthage_mission_trade_ancient_nemesis_opinion
+						target = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_country_state = {
+						any_state_province = {
+							OR = {
+								is_in_region = greece_region
+								is_in_region = asia_region
+							}
+							is_port = yes
+						}
+					}
+				}
+				every_country_state = {
+					limit = {
+						any_state_province = {
+							OR = {
+								is_in_region = greece_region
+								is_in_region = asia_region
+							}
+							is_port = yes
+						}
+					}
+					custom = carthage_mission_trade_ancient_nemesis_tt_3
+					add_state_modifier = {
+						name = carthage_mission_trade_ancient_nemesis_modifier
+						duration = 7300
+					}
+				}
+			}
+			else = {
+				custom_tooltip = carthage_mission_trade_ancient_nemesis_tt_4
+			}
+		}
+	}
+
+	carthage_mission_trade_metropolis_west = { # Metropolis of the West
+		icon = "task_economical"
+
+		requires = { carthage_mission_trade_from_east }
+
+		final = yes
+
+		allow = {
+			capital_scope.state = {
+				incoming_trade_routes >= 10
+			}
+		}
+
+		on_completion = {
+			show_as_tooltip = {
+				add_country_modifier = {
+					name = carthage_mission_trade_metropolis_west_flourishing_trade_modifier
+					duration = -1
+				}
+				capital_scope = {
+					add_province_modifier = {
+						name = carthage_mission_trade_metropolis_west_modifier
+						duration = -1
+					}
+				}
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = me_carthage_trade.7
+				}
+			}
+		}
+	}
+
+	carthage_mission_central_sardinia = {
+		icon = "task_conquest"
+
+		allow = {
+			owns_area = sardinia_meridionalis
+			owns_area = sardinia_septentrionalis
+		}
+
+		on_completion = {
+			every_country_state = {
+				limit = {
+					any_state_province = {
+						OR = {
+							is_in_area = sardinia_meridionalis
+							is_in_area = sardinia_septentrionalis
+						}
+					}
+				}
+				add_state_modifier = {
+					name = carthaginian_mission_sardinia_assimilation_modifier
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	carthage_mission_securing_the_island = {
+		requires = { carthage_mission_central_sardinia }
+
+		allow = {
+			custom_tooltip = {
+				text = carthage_mission_securing_the_island_trigger_tt
+				any_owned_province = {
+					count >= 4
+					OR = {
+						is_in_area = sardinia_meridionalis
+						is_in_area = sardinia_septentrionalis
+					}
+					has_building = fortress_building
+				}
+			}
+		}
+
+		on_completion = {
+			ordered_owned_province = {
+				order_by = total_population
+				limit = {
+					OR = {
+						is_in_area = sardinia_meridionalis
+						is_in_area = sardinia_septentrionalis
+					}
+					has_building = fortress_building
+				}
+				max = 3
+				add_province_modifier = {
+					name = carthaginian_mission_fortified_sardinia_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+
+	carthage_mission_sardinian_mines = {
+		requires = { carthage_mission_securing_the_island }
+
+		allow = {
+			custom_tooltip = {
+				text = carthage_mission_sardinian_mines_trigger_tt
+				any_owned_province = {
+					count >= 3
+					OR = {
+						is_in_area = sardinia_meridionalis
+						is_in_area = sardinia_septentrionalis
+					}
+					has_building = slave_mine_building
+				}
+			}
+		}
+
+		on_completion = {
+			ordered_owned_province = {
+				order_by = total_population
+				limit = {
+					OR = {
+						is_in_area = sardinia_meridionalis
+						is_in_area = sardinia_septentrionalis
+					}
+					has_building = slave_mine_building
+				}
+				max = 2
+				add_province_modifier = {
+					name = carthaginian_mission_sardinian_mines_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}

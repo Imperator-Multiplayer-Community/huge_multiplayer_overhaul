@@ -1,0 +1,107 @@
+﻿country_decisions = {
+	#Modded Molon Labe		
+	# Form Quadia
+	form_quadia = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				primary_culture = suebian
+				primary_culture = irminonic
+			}
+			is_tribal = yes
+			NOT = {
+				tag = QUA
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 6
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = carnuntia_area
+					is_in_area = transcarpathia_occidentalis_area
+					is_in_area = transcarpathia_centralis_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = formable_not_quadia_exists
+				NOT = {
+					any_country = {
+						num_of_cities >= 1
+						tag = QUA
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = carnuntia_area
+			owns_or_subject_owns_area = transcarpathia_occidentalis_area
+			owns_or_subject_owns_area = transcarpathia_centralis_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "QUADIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}		
+			hidden_effect = {
+				change_country_adjective = "QUADIA_ADJECTIVE"
+				change_country_color =  "quadia_color"
+				change_country_tag = QUA
+				change_country_flag = QUADIA_FLAG
+				trigger_event = {
+					id = formable_heritage.125
+				}					
+			}
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_tribal_effect = yes
+				formable_capital_modifier_tribal_effect = yes
+			}
+			area:boioa_meridionalis_area = {
+				every_area_province = {
+					limit = {
+						NOT = {
+							owner = root
+						}
+					}
+					add_claim = root
+				}
+			}
+			area:marcomannia_minores_area = {
+				every_area_province = {
+					limit = {
+						NOT = {
+							owner = root
+						}
+					}
+					add_claim = root
+				}
+			}
+			add_2_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

@@ -1,0 +1,155 @@
+﻿country_decisions = {
+	looting_policy_decision = {
+		potential = {
+		}
+		allow = {
+			war = yes
+			not = {
+				or = { 
+					has_country_modifier = heavy_looting_policy
+					has_country_modifier = medium_looting_policy
+					has_country_modifier = nothing_looting_policy
+					has_country_modifier = restricted_looting_policy
+					has_country_modifier = no_looting_policy 
+				} 
+			}
+		}
+		effect = { trigger_event = { id = looting_policy.1 } }
+	}
+}
+
+
+country_decisions = {
+	better_armour_decision = {
+		potential = {
+			not = { has_country_modifier = better_armour }
+		}
+		allow = {
+			treasury >= 100
+			military_experience >= 20
+		}
+	effect = {
+		add_treasury = -100
+		add_military_experience = -20
+
+		add_country_modifier = { 
+			name = better_armour 
+			duration = 3650
+
+		}
+
+	}
+
+		}
+}
+
+
+country_decisions = {
+	better_weapons_decision = {
+		potential = {
+			not = { has_country_modifier = better_weapons }
+		}
+		allow = {
+			treasury >= 100
+			military_experience >= 20
+		}
+	effect = {
+		add_treasury = -100
+		add_military_experience = -20
+
+		add_country_modifier = { 
+			name = better_weapons 
+			duration = 3650
+
+		}
+
+	}
+
+		}
+}
+
+
+country_decisions = {
+	routine_drill = {
+		potential = {
+			not = { has_country_modifier = routine_drill }
+		}
+		allow = {
+			treasury >= 100
+			military_experience >= 20
+		}
+	effect = {
+		add_treasury = -100
+		add_military_experience = -20
+
+		add_country_modifier = { 
+			name = routine_drill
+			duration = 3650
+
+		}
+
+	}
+
+		}
+}
+
+country_decisions = {
+	defend_coast = {
+		potential = {
+			NOT = {
+				OR = { 
+					has_country_modifier = coastal_defence
+					has_country_modifier = sea_offence 
+				}
+			}
+		}	
+		allow = {
+			treasury >= 150
+			military_experience >= 25
+			invention = naval_tactic_inv_1
+			capital_scope.state = { 
+				trade_good_surplus = { target = wood value > 0 }
+			}
+		}
+		effect = {
+			add_treasury = -150
+			add_military_experience = -25
+
+			add_country_modifier = { 
+				name = coastal_defence
+				duration = 3650
+			}
+		}
+	}
+}
+
+country_decisions = {
+	raid_the_sea = {
+		potential = {
+			NOT = {
+				OR = { 
+					has_country_modifier = coastal_defence
+					has_country_modifier = sea_offence 
+				}
+			}
+		}		
+		allow = {
+			treasury >= 150
+			military_experience >= 25
+			invention = navy_maintenance_cost_inv_1
+			capital_scope.state = { 
+				trade_good_surplus = { target = wood value > 0 }
+			}
+		}
+		effect = {
+			add_treasury = -150
+			add_military_experience = -25
+
+			add_country_modifier = { 
+				name = sea_offence
+				duration = 3650
+			}
+		}
+	}
+}
+

@@ -1,0 +1,515 @@
+types CreditsWindow {
+	type JominiWebView = webwindow {
+		name = "webwindow"#
+		minimumsize = { 900 300 }
+
+		block "webstyle" {
+			shaderfile = "gfx/FX/pdxgui_default.shader"
+			#texture = "gfx/browser/background.png"
+			alwaystransparent = no
+			focuspolicy = all
+			size = { 100% 100% }
+		}
+
+		state = {
+			name = on_appear
+			trigger_on_create = yes
+			on_start = "[BrowserWindow.GoHome]"
+		}
+
+		block "url" {
+			url = "https://imperator.paradoxwikis.com/"
+			useragent = "OurGame"
+		}
+	}
+
+	type JominiWebViewButton = button {
+		block "buttonstyle" {
+			size = { 28 28 }
+		}
+		using = flat_background_white
+		modify_texture = {
+			name = "Alpha"
+			blend_mode = alphamultiply
+			block "icon" {
+				texture = "gfx/icons/browser/arrow_back.dds"
+			}
+		}
+	}
+
+	type bookmark = icon {
+		layoutpolicy_horizontal = expanding
+		using = flat_background_black
+		size = { 0 30 }
+
+		editbox = {
+			using = flat_background_black
+			margin_left = 10
+			position = { 0 -4 }
+			size = { 100% 100% }
+			oneditingfinished = "[BrowserWindow.SetUrl]"
+			oneditingfinished = "[GetVariableSystem.Clear('bookmarks')]"
+			oneditingfinished = "[PdxGuiTriggerAllAnimations('loading')]"
+			using = WhiteFont
+			alwaystransparent = no
+			block "link" {
+				text = "https://www.youtube.com/watch?v=Q5IGzCnvyzk"
+				tooltip = "rome2_ost"
+			}
+		}
+	}
+
+
+	type JominiWebViewAddressBox = editbox {
+		text = "[BrowserWindow.GetUrl]"
+		oneditingfinished = [BrowserWindow.SetUrl];
+		oneditingfinished = "[PdxGuiTriggerAllAnimations('loading')]"
+		using = MarbleButtonFont
+
+		block "addressstyle" {
+			alwaystransparent = no
+			focuspolicy = all
+
+			cursorcolor = { 1 1 1 1 }
+			selectioncolor = { 0.45 0.45 0.45 0.7 }
+
+			background = {
+				margin_left = 5
+				margin_top = 0
+				texture = "gfx/interface/tiles/list_slot_corner_tiles.dds"
+				spriteType = CorneredTiled
+				spriteborder = { 12 12 }
+				shaderfile = "gfx/FX/pdxgui_default.shader"
+			}
+		}
+	}
+
+	type JominiBrowserWindowBackwardButton = JominiWebViewButton {
+		alpha = "[TransparentIfFalse(BrowserWindow.CanGoBack)]"
+		enabled = "[BrowserWindow.CanGoBack]"
+		onclick = "[BrowserWindow.GoBack]"
+		blockoverride "icon" {
+			texture = "gfx/icons/browser/arrow_back.dds"
+		}
+	}
+
+	type JominiBrowserWindowForwardButton = JominiWebViewButton {
+		blockoverride "icon" {
+			texture = "gfx/icons/browser/arrow_forward.dds"
+		}
+		enabled = "[BrowserWindow.CanGoForward]"
+		onclick = "[BrowserWindow.GoForward]"
+		alpha = "[TransparentIfFalse(BrowserWindow.CanGoForward)]"
+	}
+
+	type JominiBrowserWindowReloadButton = JominiWebViewButton {
+		name = "reload_button"
+		blockoverride "icon" {
+			texture = "gfx/icons/browser/refresh.dds"
+		}
+		onclick = "[BrowserWindow.ReloadPage]"
+	}
+
+	type JominiBrowserWindowHomeButton = JominiWebViewButton {
+		name = "home_button"
+		blockoverride "icon" {
+			texture = "gfx/icons/browser/pdx_logo.dds"
+		}
+		onclick = "[ExecuteConsoleCommand('gui.createwidget gui/browser_windows.gui Youtube')]"
+	}
+
+	# type JominiBrowserWindowCloseButton = JominiWebViewButton {
+	# 	name = "close_button"
+	# 	block "buttontexture" {
+	# 		texture = "gfx/interface/buttons/button_close.dds"
+	# 	}
+	# 	onclick = "[BrowserWindow.Close]"
+	# }
+
+	type JominiBrowserWindowAddressBox = JominiWebViewAddressBox {
+		layoutpolicy_horizontal = expanding
+	}
+
+	type JominiBrowserWindow = window {
+		name = "JominiBrowserWindow"
+		alwaystransparent = yes
+		visible = "[GetVariableSystem.Exists('browser')]"
+		size = { 1024 100% }
+		layer = top
+		position = { 60 -4 }
+
+		state = {
+			name = close_browser
+			on_start = "[BrowserWindow.GoHome]"
+		}
+
+		alpha = "[TransparentIfTrue(GetVariableSystem.Exists('browser_alpha'))]"
+
+		allow_outside = yes
+
+
+		base_window = {
+
+			state = {
+				name = reset_browser
+				position = { 0 0 }
+			}
+
+			parentanchor = bottom|left
+			focuspolicy = all
+			movable = yes
+			minimumsize = { 425 300 }
+			size = { 100% 100% }
+			resizable = yes
+			allow_outside = yes
+
+
+			sub_header = {
+				size = { 100% 0 }
+				position = { 0 4 }
+				blockoverride "HeaderAlpha" {
+					margin = { -4 0 }
+				}
+				blockoverride "Title_text" {}
+				blockoverride "White_buttons" {}
+				blockoverride "OrnamentTexture" {}
+			}
+
+			# sub_header = {
+			# 	size = { 100% 0 }
+			# 	position = { 0 -30 }
+			# 	parentanchor = bottom
+			# 	blockoverride "HeaderAlpha" {
+			# 		margin = { -4 0 }
+			# 	}
+			# 	blockoverride "Title_text" {}
+			# 	blockoverride "White_buttons" {}
+			# 	blockoverride "OrnamentTexture" {}
+			# }
+
+			widget = {
+				size = { 100% 100% }
+
+				margin_widget = {
+					size = { 100% 100% }
+					margin = { 10 10 }
+					margin_top = 36
+					margin_bottom = 10
+
+					scrollarea = {
+						position = { 0 0 }
+						size = { 100% 100% }
+
+						scrollbar_vertical = {
+							using = VerticalScrollBar
+						}
+
+						scrollbar_horizontal = {
+							using = HorizontalScrollBar
+						}
+
+						scrollwidget = {
+							JominiWebView = {}
+
+						}
+					}
+				}
+
+							scrollarea = {
+								size = { 100% 5 }
+								scrollbarpolicy_vertical = always_off
+								scrollbarpolicy_horizontal = always_off
+								position = { 0 35 }
+
+								scrollwidget = {
+									icon = {
+										using = selected_color_texture
+										size = { 30% 4 }
+
+										state = {
+											name = loading_homepage
+
+											on_start = "[PdxGuiWidget.Show]"
+
+											animation = {
+												position = { 600 0 }
+											}
+											next = loading_reset
+
+											on_finish = "[PdxGuiWidget.Hide]"
+
+											duration = 2
+											trigger_on_create = yes
+										}
+
+										state = {
+											name = loading
+
+											on_start = "[PdxGuiWidget.Show]"
+
+											animation = {
+												position = { 800 0 }
+											}
+											next = loading_reset
+
+											on_finish = "[PdxGuiWidget.Hide]"
+
+											duration = 3.5
+											trigger_on_create = yes
+										}
+
+										state = {
+											name = loading_reset
+											position = { 0 0 }
+										}
+									}
+
+								}
+							}
+
+				widget = {
+					position = { 0 4 }
+					size = { 100% 30 }
+					allow_outside = yes
+
+					hbox = {
+						allow_outside = yes
+
+						widget = {
+							size = { 10 0 }
+						}
+
+						flowcontainer = {
+							margin_top = 1
+
+							JominiWebViewButton = {
+								alpha = "[TransparentIfFalse(BrowserWindow.CanGoBack)]"
+								enabled = "[BrowserWindow.CanGoBack]"
+								onclick = "[BrowserWindow.GoBack]"
+								tooltip = "go_back"
+								blockoverride "icon" {
+									texture = "gfx/icons/browser/arrow_back.dds"
+								}
+							}
+
+							JominiWebViewButton = {
+								tooltip = "go_forward"
+								blockoverride "icon" {
+									texture = "gfx/icons/browser/arrow_forward.dds"
+								}
+								enabled = "[BrowserWindow.CanGoForward]"
+								onclick = "[BrowserWindow.GoForward]"
+								alpha = "[TransparentIfFalse(BrowserWindow.CanGoForward)]"
+							}
+
+							JominiWebViewButton = {
+								tooltip = "reload"
+								blockoverride "icon" {
+									texture = "gfx/icons/browser/refresh.dds"
+								}
+								onclick = "[BrowserWindow.ReloadPage]"
+							}
+
+							JominiWebViewButton = {
+								tooltip = "homepage"
+								blockoverride "icon" {
+									texture = "gfx/icons/browser/pdx_logo.dds"
+								}
+								onclick = "[BrowserWindow.GoHome]"
+								onclick = "[PdxGuiTriggerAllAnimations('loading_homepage')]"
+							}
+						}
+
+						widget = {
+							size = { 5 0 }
+						}
+
+						icon = {
+							layoutpolicy_horizontal = expanding
+
+							size = { 0 30 }
+							minimumsize = { 175 30 }
+							allow_outside = yes
+
+							icon = {
+								size = { 100% 100% }
+								using = header_s
+								visible = "[Not(GetVariableSystem.Exists('browser_alpha'))]"
+							}
+
+							margin_widget = {
+								size = { 100% 100% }
+								margin_right = 35
+
+								scrollarea = {
+									size = { 100% 100% }
+
+									scrollbarpolicy_horizontal = always_off
+									scrollbarpolicy_vertical = always_off
+
+									scrollwidget = {
+										editbox = {
+											margin_left = 10
+											position = { 0 -4 }
+											size = { 100% 100% }
+											text = "[BrowserWindow.GetUrl]"
+											oneditingfinished = "[BrowserWindow.SetUrl]"
+											oneditingfinished = "[PdxGuiTriggerAllAnimations('loading')]"
+											using = WhiteFont
+											alwaystransparent = no
+											tooltip = "url_box_tt"
+										}
+									}
+								}
+							}
+
+
+							icon_button = {
+								blockoverride "color" {
+									using = flat_background_white
+								}
+								tooltip = "bookmarks"
+								blockoverride "icon" {
+									texture = "gfx/interface/base_parts/down_arrow.dds"
+								}
+								parentanchor = right|vcenter
+
+								onclick = "[GetVariableSystem.Toggle('bookmarks')]"
+							}
+
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								position = { 0 30 }
+								visible = "[GetVariableSystem.Exists('bookmarks')]"
+
+								bookmark = {
+									blockoverride "link" {
+										text = "https://imperator.paradoxwikis.com/"
+										tooltip = "wiki"
+									}
+								}
+
+								bookmark = {
+									blockoverride "link" {
+										text = "https://ir.pdxsimulator.com/"
+										tooltip = "ir_simulator"
+									}
+								}
+
+								bookmark = {
+									blockoverride "link" {
+										text = "https://discord.com/app"
+										tooltip = "discord"
+									}
+								}
+
+								bookmark = {
+									blockoverride "link" {
+										text = "https://www.reddit.com/r/Imperator/"
+										tooltip = "reddit"
+									}
+								}
+
+								bookmark = {
+									blockoverride "link" {
+										text = "https://www.youtube.com/watch?v=12HXnYNA6Cg"
+										tooltip = "rome_ost"
+									}
+								}
+
+								bookmark = {
+									blockoverride "link" {
+										text = "https://www.youtube.com/watch?v=Q5IGzCnvyzk"
+										tooltip = "rome2_ost"
+									}
+								}
+
+								bookmark = {
+									blockoverride "link" {
+										text = "https://www.youtube.com/watch?v=-Cz-KgXj3aw"
+										tooltip = "eu_rome_ost"
+									}
+								}
+							}
+						}
+
+						icon = {
+							alpha = 0.2
+							block "OrnamentTexture" { using = flat_background_white }
+							size = { 0 32 }
+							spriteType = Corneredtiled
+							layoutpolicy_vertical = fixed
+							layoutpolicy_horizontal = expanding
+
+							modify_texture = {
+								name = "Alpha"
+								using = header_s_pattern
+								blend_mode = alphamultiply
+								spriteType = Corneredtiled
+								spriteborder = { 0 20 }
+							}
+
+							modify_texture = {
+								name = "Alpha"
+								texture = "gfx/interface/base_parts/header_s_x104bd_right_cut_alpha.dds"
+								blend_mode = alphamultiply
+								spriteType = Corneredtiled
+								spriteborder = { 60 40 }
+							}
+						}
+
+						flowcontainer = {
+							ignoreinvisible = yes
+							spacing = 1
+
+							white_button_round = {
+								parentanchor = vcenter
+								size = { 26 26 }
+								blockoverride "On_click" {
+									onclick = "[GetVariableSystem.Toggle('browser_alpha')]"
+								}
+								blockoverride "Icon" {
+									texture = "gfx/interface/base_parts/eye.dds"
+								}
+								tooltip = "browser_alpha"
+							}
+
+							button_reset = {
+								blockoverride "On_click" {
+									onclick = "[PdxGuiTriggerAllAnimations('reset_browser')]"
+								}
+							}
+
+							white_button_round = {
+								size = { 26 26 }
+								blockoverride "Icon" { texture = "gfx/interface/base_parts/down_arrow.dds" }
+								blockoverride "On_click"
+								{
+									onclick = "[GetVariableSystem.Clear('browser')]"
+									shortcut = "top_bar_13"
+									tooltip = "minimize"
+								}
+							}
+						}
+
+						icon = {
+							using = flat_background_white
+							size = { 30 30 }
+
+							modify_texture = {
+								name = "Alpha"
+								texture = "gfx/icons/browser/resize_corner.dds"
+								blend_mode = alphamultiply
+							}
+							tooltip = "resize_corner"
+						}
+
+						widget = {
+							size = { 3 0 }
+						}
+					}
+				}
+			}
+		}
+	}
+}

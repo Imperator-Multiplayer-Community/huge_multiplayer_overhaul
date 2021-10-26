@@ -1,0 +1,83 @@
+﻿# holding_char = {
+# 	scope = country
+
+# 	ai_is_valid = {
+# 		always = no
+# 	}
+
+# 	effect = {
+
+# 		every_family = {
+# 			every_family_member = {
+# 				limit = {
+# 					is_head_of_family = yes
+# 				}
+# 				root = {
+# 					add_to_variable_list = {
+# 						name = heads_of_family
+# 						target = prev
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+
+# }
+# select_holding_chars = {
+# 	scope = province
+
+	
+# 	effect = {
+# 		owner = {
+# 		every_family = {
+# 			every_family_member = {
+# 				limit = {
+# 					is_head_of_family = yes
+# 				}
+# 				save_scope_as = family_head
+# 			}
+# 		}
+# 	}
+
+# 		if = {
+# 			limit = {
+# 				is_target_in_variable_list = {
+# 					name = family_heads
+# 					target = scope:family_head
+# 				}
+# 			}
+# 			remove_list_variable = {
+# 				name = family_heads
+# 				target = scope:family_head
+# 			}
+
+# 		}
+# 		else = {
+# 			add_to_variable_list = {
+# 				name = family_heads
+# 				target = scope:family_head
+# 			}
+# 		}
+
+
+# 		scope:family_head = {
+# 			add_holding = scope:province
+# 		}
+
+		
+# 	}
+# }
+# select_holding_char = {
+# 	scope = country
+# 	saved_scopes = {
+# 		province
+# 	}
+
+# 	effect = {
+# 		random_family = {
+# 			head_of_family = {
+# 				add_holding = scope:province
+# 			}
+# 		}
+# 	}
+# }

@@ -1,0 +1,42 @@
+﻿country_decisions = {
+	
+	# Bactrian Silk Road Hub
+	expand_sogdian_silk_road = {
+	
+		potential = {
+			num_of_cities >= 1
+			owns = 6682
+			NOR = {
+				has_variable = founded_sogdian_silk_road_hub
+			}
+		}
+		highlight = {
+			scope:province = {
+				province_id = 6682
+			}
+		}
+		allow = {
+			treasury >= 500
+			political_influence >= 20
+			owns = 6682
+			invention = subject_loyalty_inv
+		}
+		
+		effect = {
+			set_variable = founded_sogdian_silk_road_hub
+			add_treasury = -500
+			add_political_influence = -20
+			
+			p:6682.state = {
+					add_state_modifier = {
+						name = sogdian_silk_road_hub
+						duration = -1					
+					}
+				}
+			}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+}

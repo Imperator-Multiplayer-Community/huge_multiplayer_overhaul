@@ -1,0 +1,97 @@
+﻿frontal_assault = {
+	use_as_default = yes
+	navy = yes
+
+	enable = yes
+
+	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
+
+	harassment = 0.2
+	close_ranks = -0.1
+
+	effective_composition = {
+		liburnian = 0.5
+		trireme = 1.0
+		tetrere = 0.0
+		hexere = 0.0
+		octere = 1.0
+		mega_galley = 2.0
+	}
+}
+
+naval_envelopment = {
+	enable = yes
+	navy = yes
+
+	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
+
+	close_ranks = 0.2
+	probing_attack = -0.1
+	
+	effective_composition = {
+		liburnian = 0.0
+		trireme = 1.0
+		tetrere = 0.0
+		hexere = 1.0
+		octere = 0.0
+		mega_galley = 1.0
+	}
+}
+
+close_ranks = {
+	enable = yes
+	navy = yes
+
+	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
+
+	frontal_assault = 0.2
+	naval_envelopment = -0.1
+	
+	effective_composition = {
+		liburnian = 0.0
+		trireme = 0.5
+		tetrere = 0.0
+		hexere = 1.0
+		octere = 1.0
+		mega_galley = 1.0
+	}
+}
+
+harassment = {
+	enable = yes
+	navy = yes
+
+	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
+
+	probing_attack = 0.2
+	frontal_assault = -0.1
+	
+	effective_composition = {
+		liburnian = 1.0
+		trireme = 1.0
+		tetrere = 0.0
+		hexere = 0.0
+		octere = 1.0
+		mega_galley = 0.0
+	}
+}
+
+
+probing_attack = {
+	enable = yes
+	navy = yes
+
+	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
+
+	naval_envelopment = 0.2
+	harassment = -0.1
+	
+	effective_composition = {
+		liburnian = 1.0
+		trireme = 0.0
+		tetrere = 1.0
+		hexere = 1.0
+		octere = 0.0
+		mega_galley = 0.0
+	}
+}

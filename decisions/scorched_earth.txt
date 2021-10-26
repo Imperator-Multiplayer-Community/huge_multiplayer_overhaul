@@ -1,0 +1,60 @@
+﻿country_decisions = {
+	
+	# Another one for the roaches
+	scorched_ground = {
+	
+		potential = {
+			num_of_cities >= 1
+			NOR = {
+				has_country_modifier = burnt_ground
+			}
+			war = yes
+			has_war_exhaustion >= 5
+		}
+		
+		allow = {
+			has_war_exhaustion >= 5
+			treasury >= 150
+			military_experience >= 50
+			war = yes
+			stability >= 40
+			invention = hostile_attrition_inv
+		}
+		
+		effect = {
+			while = {
+				count = veterans_fight_svalue_slaves
+				random_owned_province = {
+					random_pops_in_province = {
+						limit = {
+							pop_type = freemen
+						}
+						kill_pop = yes
+					}
+				}
+			}
+
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 6
+					add_trait = brave
+				}
+			}
+			
+			add_treasury = -150
+			add_tyranny = 10
+			add_military_experience = -50
+			add_stability = -20
+			add_country_modifier = {
+				name = burnt_ground
+				duration = 1095
+			}
+
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
