@@ -28,8 +28,10 @@ ml_cohort_master_distinctions.1 = {
 			}
 		}
 
-		trigger_event = {
-			id = ml_cohort_master_distinctions.2
+		ROOT = {
+			trigger_event = {
+				id = ml_cohort_master_distinctions.2
+			}
 		}
 	}
 }
@@ -51,15 +53,35 @@ ml_cohort_master_distinctions.2 = {
 			if = {
 				limit = {
 					var:cohort_master = 3
+					legion = {
+						NOT = {
+							has_distinction = distinction_cohort_master_01
+							has_distinction = distinction_cohort_master_02
+						}
+					}
 				}
 
 				scope:actor.legion = {
 					add_distinction = distinction_cohort_master_01
 				}
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
 			}
 			else_if = {
 				limit = {
 					var:cohort_master = 6
+					legion = {
+						has_distinction = distinction_cohort_master_01
+					}
+					NOT = {
+						legion = {
+							has_distinction = distinction_cohort_master_02
+						}
+					}
 				}
 
 				scope:actor.legion = {

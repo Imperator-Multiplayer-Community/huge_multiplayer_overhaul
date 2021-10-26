@@ -1,0 +1,14 @@
+﻿### expeditionary ###
+
+distinction_expeditionary_01 = {
+	icon = "phalera_helmet"
+	commander = {
+		martial = 1
+	}
+	unit = {
+		land_morale_recovery = 0.1
+		experience_decay  = -0.01
+		cohort_reinforcement_speed = 0.1
+		loyalty_gain_chance_modifier = 0.1
+	}
+}

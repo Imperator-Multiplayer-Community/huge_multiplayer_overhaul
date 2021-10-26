@@ -20,20 +20,6 @@ ml_victorious_morale.1 = {
 
 				remove_distinction = distinction_victorious_morale_19
 				add_distinction = distinction_victorious_morale_20
-
-				if = {
-					limit = {
-						AND = {
-							has_distinction = distinction_battle_master_01
-							NOT = {
-								has_distinction = distinction_battle_master_02
-							}
-						}
-					}
-
-					remove_distinction = distinction_battle_master_01
-					add_distinction = distinction_battle_master_02
-				}
 			} 
 			else_if = {
 				limit = {
@@ -114,19 +100,6 @@ ml_victorious_morale.1 = {
 
 				remove_distinction = distinction_victorious_morale_09
 				add_distinction = distinction_victorious_morale_10
-
-				if = {
-					limit = {
-						NOT = {
-							OR = {
-								has_distinction = 	distinction_battle_master_01
-								has_distinction = distinction_battle_master_02
-							}
-						}
-					}
-
-					add_distinction = distinction_battle_master_01
-				}
 			}
 			else_if = {
 				limit = {
@@ -208,6 +181,12 @@ ml_victorious_morale.1 = {
 				}
 
 				add_distinction = distinction_victorious_morale_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
 			}
 		}
 	}
@@ -366,6 +345,13 @@ ml_victorious_morale.2 = {
 
 				remove_distinction = distinction_victorious_morale_01
 			}
+
+			ROOT = {
+				trigger_event = {
+					id = ml_expeditionary_distinctions.2
+				}
+			}
 		}
 	}
 }
+

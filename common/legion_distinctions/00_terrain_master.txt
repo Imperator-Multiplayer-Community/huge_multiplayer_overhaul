@@ -6,7 +6,7 @@ distinction_terrain_master_01 = {
 
 	}
 	unit = {
-		army_weight_modifier = -0.1
+		army_weight_modifier = -0.05
 	}
 }
 
@@ -16,7 +16,7 @@ distinction_terrain_master_02 = {
 
 	}
 	unit = {
-		army_weight_modifier = -0.2
+		army_weight_modifier = -0.1
 	}
 }
 
@@ -26,7 +26,7 @@ distinction_terrain_master_03 = {
 
 	}
 	unit = {
-		army_weight_modifier = -0.3
+		army_weight_modifier = -0.2
 	}
 }
 
@@ -36,7 +36,7 @@ distinction_terrain_master_04 = {
 
 	}
 	unit = {
-		army_weight_modifier = -0.4
+		army_weight_modifier = -0.3
 	}
 }
 
@@ -46,6 +46,6 @@ distinction_terrain_master_05 = {
 
 	}
 	unit = {
-		army_weight_modifier = -0.5
+		army_weight_modifier = -0.4
 	}
 }

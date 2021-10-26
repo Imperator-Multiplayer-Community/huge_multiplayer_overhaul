@@ -11,6 +11,7 @@ distinction_legion_default = {
 	unit = {
 		cohort_reinforcement_speed = 0.1 
 		army_movement_speed = 0.1
+		army_weight_modifier = -0.1
 		experience_decay  = -0.01
 	}
 }

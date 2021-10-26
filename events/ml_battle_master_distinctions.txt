@@ -1,0 +1,210 @@
+﻿namespace = ml_battle_master
+
+
+## adds battle master distinctions
+ml_battle_master.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			any_sub_unit = {
+            	count >= 20
+            }
+			has_legion_trigger = yes
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					NOT = {
+						has_variable = legion_victories
+					}
+				}
+
+				set_variable = {
+					name = legion_victories
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					name = legion_victories
+					add = 1
+				}
+			}
+
+			if = {
+				limit = {
+					var:legion_victories >= 2
+					## var:legion_victories >= 1 ## testing
+				}
+
+				if = {
+					limit = {
+						AND = { 
+							var:legion_victories >= 2
+							var:legion_victories < 6
+							NOT = {
+								scope:actor.legion = {
+									OR = {
+										has_distinction = distinction_battle_master_01
+									}
+								}
+							}
+						}
+						
+					}
+
+					scope:actor.legion = {
+						add_distinction = distinction_battle_master_01
+					}
+
+					ROOT = {
+						trigger_event = {
+							id = ml_expeditionary_distinctions.1
+						}
+					}
+					
+				}
+				else_if = {
+					limit = {
+						AND = { 
+							var:legion_victories >= 6
+							var:legion_victories < 12
+							has_distinction = distinction_battle_master_01
+							NOT = {
+								scope:actor.legion = {
+									OR = {
+										has_distinction = distinction_battle_master_02
+									}
+								}
+							}
+						}
+						
+					}
+
+					scope:actor.legion = {
+						remove_distinction = distinction_battle_master_01
+						add_distinction = distinction_battle_master_02
+					}
+				}
+				else_if = {
+					limit = {
+						AND = { 
+							var:legion_victories >= 12
+							var:legion_victories < 20
+							has_distinction = distinction_battle_master_02
+							NOT = {
+								scope:actor.legion = {
+									OR = {
+										has_distinction = distinction_battle_master_03
+									}
+								}
+							}
+						}
+						
+					}
+
+					scope:actor.legion = {
+						remove_distinction = distinction_battle_master_02
+						add_distinction = distinction_battle_master_03
+					}
+				}
+				else_if = {
+					limit = {
+						AND = { 
+							var:legion_victories >= 20
+							has_distinction = distinction_battle_master_03
+							NOT = {
+								scope:actor.legion = {
+									OR = {
+										has_distinction = distinction_battle_master_04
+									}
+								}
+							}
+						}
+						
+					}
+
+					scope:actor.legion = {
+						remove_distinction = distinction_battle_master_03
+						add_distinction = distinction_battle_master_04
+					}
+				}
+			} 
+			
+		}
+	}
+}
+
+## removes victory count
+ml_battle_master.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			any_sub_unit = {
+            	count >= 1
+            }
+			has_legion_trigger = yes
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					has_variable = legion_victories
+				}
+
+				if = {
+					limit = {
+						var:legion_victories >= 20
+					}
+
+					set_variable = {
+						name = legion_victories
+						value = 20
+					}
+				}
+				else_if = {
+					limit = {
+						var:legion_victories >= 12
+					}
+
+					set_variable = {
+						name = legion_victories
+						value = 12
+					}
+				}
+				else_if = {
+					limit = {
+						var:legion_victories >= 6
+					}
+
+					set_variable = {
+						name = legion_victories
+						value = 6
+					}
+				}
+				else_if = {
+					limit = {
+						var:legion_victories >= 2
+					}
+
+					set_variable = {
+						name = legion_victories
+						value = 2
+					}
+				}
+				else = {
+					remove_variable = legion_victories
+				}
+			}
+		}
+	}
+}

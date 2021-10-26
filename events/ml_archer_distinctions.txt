@@ -27,6 +27,47 @@ ml_archer_distinctions.1 = {
 		scope:actor.legion = {
 			if = {
 				limit = {
+					has_distinction = distinction_archer_offensive_19
+				}
+
+				remove_distinction = distinction_archer_offensive_19
+				add_distinction = distinction_archer_offensive_20
+				## add a cool distinction for reaching this goal
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_18
+				}
+
+				remove_distinction = distinction_archer_offensive_18
+				add_distinction = distinction_archer_offensive_19
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_17
+				}
+
+				remove_distinction = distinction_archer_offensive_17
+				add_distinction = distinction_archer_offensive_18
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_16
+				}
+
+				remove_distinction = distinction_archer_offensive_16
+				add_distinction = distinction_archer_offensive_17
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_15
+				}
+
+				remove_distinction = distinction_archer_offensive_15
+				add_distinction = distinction_archer_offensive_16
+			}
+			else_if = {
+				limit = {
 					has_distinction = distinction_archer_offensive_14
 				}
 
@@ -141,11 +182,17 @@ ml_archer_distinctions.1 = {
 			else_if = {
 				limit = {
 					NOT = {
-						has_distinction = distinction_archer_offensive_15
+						has_distinction = distinction_archer_offensive_20
 					}
 				}
 
 				add_distinction = distinction_archer_offensive_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
 			}
 		}
 	}
@@ -175,23 +222,54 @@ ml_archer_distinctions.2 = {
 	}
 
 	immediate = {
-		scope:actor = {
-			if = {
-				limit = {
-					has_variable = archers_victories
-				}
-
-				remove_variable = archers_victories
-			}
-		}
-
 		scope:actor.legion = {
 			if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_20
+				}
+
+				remove_distinction = distinction_archer_offensive_20
+				add_distinction = distinction_archer_offensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_19
+				}
+
+				remove_distinction = distinction_archer_offensive_19
+				add_distinction = distinction_archer_offensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_18
+				}
+
+				remove_distinction = distinction_archer_offensive_18
+				add_distinction = distinction_archer_offensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_17
+				}
+
+				remove_distinction = distinction_archer_offensive_17
+				add_distinction = distinction_archer_offensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_offensive_16
+				}
+
+				remove_distinction = distinction_archer_offensive_16
+				add_distinction = distinction_archer_offensive_12
+			}
+			else_if = {
 				limit = {
 					has_distinction = distinction_archer_offensive_15
 				}
 
-				remove_distinction = distinction_archer_offensive_15 
+				remove_distinction = distinction_archer_offensive_15
+				add_distinction = distinction_archer_offensive_12
 			}
 			else_if = {
 				limit = {
@@ -199,6 +277,7 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_14
+				add_distinction = distinction_archer_offensive_12
 			}
 			else_if = {
 				limit = {
@@ -206,13 +285,12 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_13
+				add_distinction = distinction_archer_offensive_12
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_archer_offensive_12
 				}
-
-				remove_distinction = distinction_archer_offensive_12
 			}
 			else_if = {
 				limit = {
@@ -220,6 +298,7 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_11
+				add_distinction = distinction_archer_offensive_06
 			}
 			else_if = {
 				limit = {
@@ -227,6 +306,7 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_10
+				add_distinction = distinction_archer_offensive_06
 			}
 			else_if = {
 				limit = {
@@ -234,6 +314,7 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_09
+				add_distinction = distinction_archer_offensive_06
 			}
 			else_if = {
 				limit = {
@@ -241,6 +322,7 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_08
+				add_distinction = distinction_archer_offensive_06
 			}
 			else_if = {
 				limit = {
@@ -248,13 +330,12 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_07
+				add_distinction = distinction_archer_offensive_06
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_archer_offensive_06
 				}
-
-				remove_distinction = distinction_archer_offensive_06
 			}
 			else_if = {
 				limit = {
@@ -262,6 +343,7 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_05
+				add_distinction = distinction_archer_offensive_02
 			}
 			else_if = {
 				limit = {
@@ -269,6 +351,7 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_04
+				add_distinction = distinction_archer_offensive_02
 			}
 			else_if = {
 				limit = {
@@ -276,13 +359,12 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_03
+				add_distinction = distinction_archer_offensive_02
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_archer_offensive_02
 				}
-
-				remove_distinction = distinction_archer_offensive_02
 			}
 			else_if = {
 				limit = {
@@ -290,6 +372,12 @@ ml_archer_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_archer_offensive_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.2
+					}
+				}
 			}
 		}
 	}
@@ -319,6 +407,46 @@ type = country_event
 	immediate = {
 		scope:actor.legion = {
 			if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_19
+				}
+
+				remove_distinction = distinction_archer_defensive_19
+				add_distinction = distinction_archer_defensive_20
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_18
+				}
+
+				remove_distinction = distinction_archer_defensive_18
+				add_distinction = distinction_archer_defensive_19
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_17
+				}
+
+				remove_distinction = distinction_archer_defensive_17
+				add_distinction = distinction_archer_defensive_18
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_16
+				}
+
+				remove_distinction = distinction_archer_defensive_16
+				add_distinction = distinction_archer_defensive_17
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_15
+				}
+
+				remove_distinction = distinction_archer_defensive_15
+				add_distinction = distinction_archer_defensive_16
+			}
+			else_if = {
 				limit = {
 					has_distinction = distinction_archer_defensive_14
 				}
@@ -434,11 +562,17 @@ type = country_event
 			else_if = {
 				limit = {
 					NOT = {
-						has_distinction = distinction_archer_defensive_15
+						has_distinction = distinction_archer_defensive_20
 					}
 				}
 
 				add_distinction = distinction_archer_defensive_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
 			}
 		}
 	}
@@ -463,23 +597,55 @@ ml_archer_distinctions.4 = {
 	}
 
 	immediate = {
-		scope:actor = {
-			if = {
-				limit = {
-					has_variable = archers_victories
-				}
-
-				remove_variable = archers_victories
-			}
-		}
-
 		scope:actor.legion = {
 			if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_20
+				}
+
+				remove_distinction = distinction_archer_defensive_20
+				add_distinction = distinction_archer_defensive_12
+				## add a cool distinction for reaching this goal
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_19
+				}
+
+				remove_distinction = distinction_archer_defensive_19
+				add_distinction = distinction_archer_defensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_18
+				}
+
+				remove_distinction = distinction_archer_defensive_18
+				add_distinction = distinction_archer_defensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_17
+				}
+
+				remove_distinction = distinction_archer_defensive_17
+				add_distinction = distinction_archer_defensive_12
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_archer_defensive_16
+				}
+
+				remove_distinction = distinction_archer_defensive_16
+				add_distinction = distinction_archer_defensive_12
+			}
+			else_if = {
 				limit = {
 					has_distinction = distinction_archer_defensive_15
 				}
 
-				remove_distinction = distinction_archer_defensive_15 
+				remove_distinction = distinction_archer_defensive_15
+				add_distinction = distinction_archer_defensive_12
 			}
 			else_if = {
 				limit = {
@@ -487,6 +653,7 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_14
+				add_distinction = distinction_archer_defensive_12
 			}
 			else_if = {
 				limit = {
@@ -494,13 +661,13 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_13
+				add_distinction = distinction_archer_defensive_12
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_archer_defensive_12
 				}
-
-				remove_distinction = distinction_archer_defensive_12
+				## 12 is a floor
 			}
 			else_if = {
 				limit = {
@@ -508,6 +675,7 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_11
+				add_distinction = distinction_archer_defensive_06
 			}
 			else_if = {
 				limit = {
@@ -515,6 +683,7 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_10
+				add_distinction = distinction_archer_defensive_06
 			}
 			else_if = {
 				limit = {
@@ -522,6 +691,7 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_09
+				add_distinction = distinction_archer_defensive_06
 			}
 			else_if = {
 				limit = {
@@ -529,6 +699,7 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_08
+				add_distinction = distinction_archer_defensive_06
 			}
 			else_if = {
 				limit = {
@@ -536,13 +707,13 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_07
+				add_distinction = distinction_archer_defensive_06
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_archer_defensive_06
 				}
-
-				remove_distinction = distinction_archer_defensive_06
+				## 6 is a floor
 			}
 			else_if = {
 				limit = {
@@ -550,6 +721,7 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_05
+				add_distinction = distinction_archer_defensive_02
 			}
 			else_if = {
 				limit = {
@@ -557,6 +729,7 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_04
+				add_distinction = distinction_archer_defensive_02
 			}
 			else_if = {
 				limit = {
@@ -564,13 +737,13 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_03
+				add_distinction = distinction_archer_defensive_02
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_archer_defensive_02
 				}
-
-				remove_distinction = distinction_archer_defensive_02
+				# 2 is a floor
 			}
 			else_if = {
 				limit = {
@@ -578,6 +751,12 @@ ml_archer_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_archer_defensive_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.2
+					}
+				}
 			}
 		}
 	}
@@ -623,14 +802,15 @@ ml_archer_distinctions.5 = {
 
 			if = {
 				limit = {
-					var:archers_victories >= 10
+					var:archers_victories >= 4
 					## var:archers_victories >= 1 ## testing
 				}
 
 				if = {
 					limit = {
 						AND = { 
-							var:archers_victories >= 10
+							var:archers_victories >= 4
+							var:archers_victories < 10
 							## var:archers_victories >= 1 ## testing
 							NOT = {
 								scope:actor.legion = {
@@ -643,13 +823,42 @@ ml_archer_distinctions.5 = {
 						}
 						
 					}
-					
-					trigger_event = {
-						id = ml_cohort_master_distinctions.1
-					}
 
 					scope:actor.legion = {
 						add_distinction = distinction_archer_discipline_1
+					}
+
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
+				else_if = {
+					limit = {
+						AND = { 
+							var:archers_victories >= 10
+							var:archers_victories < 20
+							## var:archers_victories >= 1 ## testing
+							NOT = {
+								scope:actor.legion = {
+									OR = {
+										has_distinction = distinction_archer_discipline_2
+										has_distinction = distinction_archer_discipline_3
+									}
+								}
+							}
+						}
+						
+					}
+
+					scope:actor.legion = {
+						remove_distinction = distinction_archer_discipline_1
+						add_distinction = distinction_archer_discipline_2
+					}
+
+					ROOT = {
+						trigger_event =  {
+							id = ml_cohort_master_distinctions.1
+						}
 					}
 				}
 				else_if = {
@@ -658,25 +867,26 @@ ml_archer_distinctions.5 = {
 							var:archers_victories >= 20
 							## var:archers_victories >= 2 ## testing
 							scope:actor.legion = {
-								has_distinction = distinction_archer_discipline_1
+								has_distinction = distinction_archer_discipline_2
 								NOT = {
-									has_distinction = distinction_archer_discipline_2
+									has_distinction = distinction_archer_discipline_3
 								}
 							}
 						}
 					}
-
-					trigger_event =  {
-						id= ml_cohort_master_distinctions.1
-					}
 					
 					scope:actor.legion = {
-						remove_distinction = distinction_archer_discipline_1
-						add_distinction = distinction_archer_discipline_2 
+						remove_distinction = distinction_archer_discipline_2
+						add_distinction = distinction_archer_discipline_3
+					}
+
+					ROOT = {
+						trigger_event =  {
+							id = ml_cohort_master_distinctions.1
+						}
 					}
 				}
-			} 
-			
+			}
 		}
 	}
 }
@@ -705,7 +915,39 @@ ml_archer_distinctions.6 = {
 					has_variable = archers_victories
 				}
 
-				remove_variable = archers_victories
+				if = {
+					limit = {
+						var:archers_victories >= 20
+					}
+
+					set_variable = {
+						name = archers_victories
+						value = 20
+					}
+				}
+				else_if = {
+					limit = {
+						var:archers_victories >= 10
+					}
+
+					set_variable = {
+						name = archers_victories
+						value = 10
+					}
+				}
+				else_if = {
+					limit = {
+						var:archers_victories >= 4
+					}
+
+					set_variable = {
+						name = archers_victories
+						value = 4
+					}
+				}
+				else = {
+					remove_variable = archers_victories
+				}
 			}
 		}
 	}

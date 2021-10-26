@@ -151,6 +151,56 @@ distinction_warelephant_offensive_15 = {
 	}
 }
 
+distinction_warelephant_offensive_16 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_offensive = 0.16
+	}
+}
+
+distinction_warelephant_offensive_17 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_offensive = 0.17
+	}
+}
+
+distinction_warelephant_offensive_18 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_offensive = 0.18
+	}
+}
+
+distinction_warelephant_offensive_19 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_offensive = 0.19
+	}
+}
+
+distinction_warelephant_offensive_20 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_offensive = 0.20
+	}
+}
+
 
 ### warelephant DEFENSIVE ###
 
@@ -305,9 +355,71 @@ distinction_warelephant_defensive_15 = {
 	}
 }
 
+distinction_warelephant_defensive_16 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_defensive = 0.16
+	}
+}
+
+distinction_warelephant_defensive_17 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_defensive = 0.17
+	}
+}
+
+distinction_warelephant_defensive_18 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_defensive = 0.18
+	}
+}
+
+distinction_warelephant_defensive_19 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_defensive = 0.19
+	}
+}
+
+distinction_warelephant_defensive_20 = {
+	icon = "phalera_zeus"
+	commander = {
+
+	}
+	unit = {
+		warelephant_defensive = 0.20
+	}
+}
+
 ### warelephant DISCIPLINE ###
 
 distinction_warelephant_discipline_1 = {
+	icon = "phalera_zeus"
+	commander = {
+		martial = 0
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.025
+		warelephant_discipline = 0.025
+		warelephant_maintenance_cost = -0.05
+	}
+}
+
+distinction_warelephant_discipline_2 = {
 	icon = "phalera_zeus"
 	commander = {
 		martial = 1
@@ -319,7 +431,7 @@ distinction_warelephant_discipline_1 = {
 	}
 }
 
-distinction_warelephant_discipline_2 = {
+distinction_warelephant_discipline_3 = {
 	icon = "phalera_zeus"
 	commander = {
 		martial = 2

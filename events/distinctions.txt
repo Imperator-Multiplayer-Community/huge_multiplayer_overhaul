@@ -1,1 +1,38 @@
 ﻿namespace = distinction
+
+distinction.7 = { # Primigenia
+    type = country_event
+    title = distinction.7.t
+    desc = distinction.7.desc
+    picture = diadochi_legion_carrying_standard_honor
+    left_portrait = current_ruler
+    right_portrait = scope:primagena_legion_leader
+
+    trigger = {
+    	has_dlc = "Heirs of Alexander"
+        exists = scope:primagena_legion
+    }
+
+    option = {      
+        name = distinction.7.a
+        scope:primagena_legion = {
+            ordered_legion_unit = {
+                order_by = unit_size
+                save_scope_as = primagena_legion_leader
+            }
+    		add_distinction = distinction_legio_primagena
+            ROOT = {
+                trigger_event = {
+                    id = ml_expeditionary_distinctions.1
+                }
+            }
+    		hidden_effect = {
+                add_legion_history = {
+        			key = legion_history_legio_primagena
+                    commander = owner.current_ruler
+        			province = scope:primagena_legion.owner.capital_scope
+    			}
+            }
+    	}
+    }
+}

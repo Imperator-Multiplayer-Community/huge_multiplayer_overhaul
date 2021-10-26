@@ -1,30 +1,4 @@
-﻿#### BATTLE MASTER ####
-distinction_battle_master_01 = {
-	icon = "phalera_helmet"
-	commander = {
-		martial = 1
-		charisma = 2
-	}
-	unit = {
-		loyalty_gain_chance_modifier = 0.05
-		land_morale_modifier = 0.05
-	}
-}
-
-distinction_battle_master_02 = {
-	icon = "phalera_helmet"
-	commander = {
-		martial = 2
-		charisma = 4
-	}
-	unit = {
-		loyalty_gain_chance_modifier = 0.10
-		land_morale_modifier = 0.10
-	}
-}
-
-
-#### VICTORIOUS MORALE ####
+﻿#### VICTORIOUS MORALE ####
 
 distinction_victorious_morale_01 = {
 	icon = "phalera_helmet"

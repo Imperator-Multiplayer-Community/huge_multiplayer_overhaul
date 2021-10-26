@@ -28,10 +28,10 @@ ml_siege_distinctions.1 = {
                 unit_location = ROOT.location
                 any_sub_unit = { count >= 20 }
             }
-            save_scope_as = legion_unit
+            save_scope_as = actor
         }
 
-		scope:legion_unit = {
+		scope:actor = {
 			if = {
 				limit = {
 					has_variable = siege_victories
@@ -56,29 +56,44 @@ ml_siege_distinctions.1 = {
 				
 				if = {
 					limit = {
-						var:siege_victories = 5
+						var:siege_victories = 2
+						NOT = {
+							has_distinction = distinction_siege_master_01						
+						}
 					}
 					
-					scope:legion_unit.legion = {
+					scope:actor.legion = {
 						add_distinction = distinction_siege_master_01
+					}
+
+					scope:actor.country = {
+						trigger_event = {
+							id = ml_expeditionary_distinctions.1
+						}
 					}
 				}
 				else_if = {
 					limit = {
-						var:siege_victories = 10
+						var:siege_victories = 6
+						NOT = {
+							has_distinction = distinction_siege_master_02						
+						}
 					}
 	
-					scope:legion_unit.legion = {
+					scope:actor.legion = {
 						remove_distinction = distinction_siege_master_01
 						add_distinction = distinction_siege_master_02
 					}
 				}
 				else_if = {
 					limit = {
-						var:siege_victories = 15
+						var:siege_victories = 12
+						NOT = {
+							has_distinction = distinction_siege_master_03						
+						}
 					}
 					
-					scope:legion_unit.legion = {
+					scope:actor.legion = {
 						remove_distinction = distinction_siege_master_02
 						add_distinction = distinction_siege_master_03
 					}
@@ -86,9 +101,12 @@ ml_siege_distinctions.1 = {
 				else_if = {
 					limit = {
 						var:siege_victories = 20
+						NOT = {
+							has_distinction = distinction_siege_master_03						
+						}
 					}
 					
-					scope:legion_unit.legion = {
+					scope:actor.legion = {
 						remove_distinction = distinction_siege_master_03
 						add_distinction = distinction_siege_master_04
 					}
@@ -123,7 +141,49 @@ ml_siege_distinctions.2 = {
 					has_variable siege_victories
 				}
 
-				remove_variable = siege_victories
+				if = {
+					limit = {
+						var:siege_victories >= 20
+					}
+
+					set_variable = {
+						name = siege_victories
+						value = 20
+					}
+				}
+				else_if = {
+					limit = {
+						var:siege_victories >= 12
+					}
+
+					set_variable = {
+						name = siege_victories
+						value = 12
+					}
+				}
+				else_if = {
+					limit = {
+						var:siege_victories >= 6
+					}
+
+					set_variable = {
+						name = siege_victories
+						value = 6
+					}
+				}
+				else_if = {
+					limit = {
+						var:siege_victories >= 2
+					}
+
+					set_variable = {
+						name = siege_victories
+						value = 2
+					}
+				}
+				else = {
+					remove_variable = siege_victories
+				}
 			}
 		}
 	}

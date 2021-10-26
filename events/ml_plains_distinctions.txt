@@ -37,6 +37,22 @@ ml_plains_distinctions.1 = {
 					remove_distinction = distinction_plains_master_01
 					add_distinction = distinction_plains_master_02
 				}
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_plains_08
+				}
+
+				remove_distinction = distinction_plains_08
+				add_distinction = distinction_plains_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_plains_07
+				}
+
+				remove_distinction = distinction_plains_07
+				add_distinction = distinction_plains_08
 
 				scope:actor = {
 					if = {
@@ -61,24 +77,12 @@ ml_plains_distinctions.1 = {
 						}
 					}
 					
-					trigger_event = ml_terrain_master_distinctions.1
+					ROOT = {
+						trigger_event = {
+							id = ml_terrain_master_distinctions.1
+						}
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_distinction = distinction_plains_08
-				}
-
-				remove_distinction = distinction_plains_08
-				add_distinction = distinction_plains_09
-			}
-			else_if = {
-				limit = {
-					has_distinction = distinction_plains_07
-				}
-
-				remove_distinction = distinction_plains_07
-				add_distinction = distinction_plains_08
 			}
 			else_if = {
 				limit = {
@@ -116,6 +120,11 @@ ml_plains_distinctions.1 = {
 
 					add_distinction = distinction_plains_master_01
 
+					ROOT = {
+						trigger_event = {
+							id = ml_expeditionary_distinctions.1
+						}
+					}
 				}
 			}
 			else_if = {
@@ -151,6 +160,12 @@ ml_plains_distinctions.1 = {
 				}
 
 				add_distinction = distinction_plains_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
 			}
 		}
 	}
@@ -178,6 +193,7 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_10
+				add_distinction = distinction_plains_05
 			}
 			else_if = {
 				limit = {
@@ -185,6 +201,7 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_09
+				add_distinction = distinction_plains_05
 			}
 			else_if = {
 				limit = {
@@ -192,6 +209,7 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_08
+				add_distinction = distinction_plains_05
 			}
 			else_if = {
 				limit = {
@@ -199,6 +217,7 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_07
+				add_distinction = distinction_plains_05
 			}
 			else_if = {
 				limit = {
@@ -206,13 +225,12 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_06
+				add_distinction = distinction_plains_05
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_plains_05
 				}
-
-				remove_distinction = distinction_plains_05
 			}
 			else_if = {
 				limit = {
@@ -220,6 +238,10 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_04
+
+				trigger_event = {
+					id = ml_expeditionary_distinctions.2
+				}
 			}
 			else_if = {
 				limit = {
@@ -227,6 +249,10 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_03
+
+				trigger_event = {
+					id = ml_expeditionary_distinctions.2
+				}
 			}
 			else_if = {
 				limit = {
@@ -234,6 +260,10 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_02
+
+				trigger_event = {
+					id = ml_expeditionary_distinctions.2
+				}
 			}
 			else_if = {
 				limit = {
@@ -241,6 +271,12 @@ ml_plains_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_plains_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.2
+					}
+				}
 			}
 		}
 	}
