@@ -1,0 +1,55 @@
+﻿####################################################
+#
+# honor expeditionaries
+#
+####################################################
+
+gw_effect_honor_expeditionaries = {
+	icon = "gw_effect_honor_expeditionaries"
+
+	flags = {
+		"military"
+		"offense"
+	}
+	allow = {
+		any_unit = {
+			is_army = yes
+			AND = {
+				has_legion_trigger = yes
+				legion = {
+					has_distinction = distinction_expeditionary_01
+				}
+			}
+		}
+	}
+	great_work_tier_effect_modifiers = {
+		gw_effect_honor_expeditionaries_tier_1 = {
+			great_work_effect_tier = gw_effect_tier_1
+
+			country_modifier = {
+				land_unit_attrition = -0.05
+			}
+		}
+		gw_effect_honor_expeditionaries_tier_2 = {
+			great_work_effect_tier = gw_effect_tier_2
+
+			country_modifier = {
+				land_unit_attrition = -0.10
+			}
+		} 
+		gw_effect_honor_expeditionaries_tier_3 = {
+			great_work_effect_tier = gw_effect_tier_3
+
+			country_modifier = {
+				land_unit_attrition = -0.15
+			}
+		} 
+		gw_effect_honor_expeditionaries_tier_4 = {
+			great_work_effect_tier = gw_effect_tier_4
+
+			country_modifier = {
+				land_unit_attrition = -0.20
+			}
+		}
+	}
+}

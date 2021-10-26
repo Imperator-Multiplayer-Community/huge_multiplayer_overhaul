@@ -17,15 +17,39 @@ ml_terrain_master_distinctions.1 = {
 			if = {
 				limit = {
 					var:terrain_master = 1
+					NOT = {
+						legion = {
+							has_distinction = distinction_terrain_master_01
+							has_distinction = distinction_terrain_master_02
+							has_distinction = distinction_terrain_master_03
+							has_distinction = distinction_terrain_master_04
+							has_distinction = distinction_terrain_master_05
+						}
+					}
 				}
 
 				scope:actor.legion = {
 					add_distinction = distinction_terrain_master_01
 				}
+
+				trigger_event = {
+					id = ml_expeditionary_distinctions.1
+				}
 			}
 			else_if = {
 				limit = {
 					var:terrain_master = 2
+					legion = {
+						has_distinction = distinction_terrain_master_01
+					}
+					NOT = {
+						legion = {
+							has_distinction = distinction_terrain_master_02
+							has_distinction = distinction_terrain_master_03
+							has_distinction = distinction_terrain_master_04
+							has_distinction = distinction_terrain_master_05
+						}
+					}
 				}
 
 				scope:actor.legion = {
@@ -36,6 +60,17 @@ ml_terrain_master_distinctions.1 = {
 			else_if = {
 				limit = {
 					var:terrain_master = 3
+
+					legion = {
+						has_distinction = distinction_terrain_master_02
+					}
+					NOT = {
+						legion = {
+							has_distinction = distinction_terrain_master_03
+							has_distinction = distinction_terrain_master_04
+							has_distinction = distinction_terrain_master_05
+						}
+					}
 				}
 				
 				scope:actor.legion = {
@@ -46,6 +81,16 @@ ml_terrain_master_distinctions.1 = {
 			else_if = {
 				limit = {
 					var:terrain_master = 4
+
+					legion = {
+						has_distinction = distinction_terrain_master_03
+					}
+					NOT = {
+						legion = {
+							has_distinction = distinction_terrain_master_04
+							has_distinction = distinction_terrain_master_05
+						}
+					}
 				}
 				
 				scope:actor.legion = {
@@ -56,6 +101,15 @@ ml_terrain_master_distinctions.1 = {
 			else_if = {
 				limit = {
 					var:terrain_master = 5
+
+					legion = {
+						has_distinction = distinction_terrain_master_04
+					}
+					NOT = {
+						legion = {
+							has_distinction = distinction_terrain_master_05
+						}
+					}
 				}
 
 				scope:actor.legion = {

@@ -6,6 +6,7 @@ distinction_forest_master_01 = {
 	}
 	unit = {
 		forest_combat_bonus = 0.05
+		army_movement_speed = 0.01
 	}
 }
 
@@ -16,7 +17,7 @@ distinction_forest_master_02 = {
 
 	}
 	unit = {
-		forest_combat_bonus = 0.05
+		forest_combat_bonus = 0.10
 		army_movement_speed = 0.02
 	}
 }

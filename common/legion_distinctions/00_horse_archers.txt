@@ -151,6 +151,56 @@ distinction_horse_archers_offensive_15 = {
 	}
 }
 
+distinction_horse_archers_offensive_16 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_offensive = 0.16
+	}
+}
+
+distinction_horse_archers_offensive_17 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_offensive = 0.17
+	}
+}
+
+distinction_horse_archers_offensive_18 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_offensive = 0.18
+	}
+}
+
+distinction_horse_archers_offensive_19 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_offensive = 0.19
+	}
+}
+
+distinction_horse_archers_offensive_20 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_offensive = 0.20
+	}
+}
+
 
 ### horse_archers DEFENSIVE ###
 
@@ -305,9 +355,71 @@ distinction_horse_archers_defensive_15 = {
 	}
 }
 
+distinction_horse_archers_defensive_16 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_defensive = 0.16
+	}
+}
+
+distinction_horse_archers_defensive_17 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_defensive = 0.17
+	}
+}
+
+distinction_horse_archers_defensive_18 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_defensive = 0.18
+	}
+}
+
+distinction_horse_archers_defensive_19 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_defensive = 0.19
+	}
+}
+
+distinction_horse_archers_defensive_20 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		horse_archers_defensive = 0.20
+	}
+}
+
 ### horse_archers DISCIPLINE ###
 
 distinction_horse_archers_discipline_1 = {
+	icon = "phalera_horse"
+	commander = {
+		martial = 0
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.025
+		horse_archers_discipline = 0.025
+		horse_archers_maintenance_cost = -0.05
+	}
+}
+
+distinction_horse_archers_discipline_2 = {
 	icon = "phalera_horse"
 	commander = {
 		martial = 1
@@ -319,7 +431,7 @@ distinction_horse_archers_discipline_1 = {
 	}
 }
 
-distinction_horse_archers_discipline_2 = {
+distinction_horse_archers_discipline_3 = {
 	icon = "phalera_horse"
 	commander = {
 		martial = 2

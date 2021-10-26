@@ -151,6 +151,56 @@ distinction_light_infantry_offensive_15 = {
 	}
 }
 
+distinction_light_infantry_offensive_16 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_offensive = 0.16
+	}
+}
+
+distinction_light_infantry_offensive_17 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_offensive = 0.17
+	}
+}
+
+distinction_light_infantry_offensive_18 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_offensive = 0.18
+	}
+}
+
+distinction_light_infantry_offensive_19 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_offensive = 0.19
+	}
+}
+
+distinction_light_infantry_offensive_20 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_offensive = 0.20
+	}
+}
+
 
 ### light_infantry DEFENSIVE ###
 
@@ -305,9 +355,71 @@ distinction_light_infantry_defensive_15 = {
 	}
 }
 
+distinction_light_infantry_defensive_16 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_defensive = 0.16
+	}
+}
+
+distinction_light_infantry_defensive_17 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_defensive = 0.17
+	}
+}
+
+distinction_light_infantry_defensive_18 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_defensive = 0.18
+	}
+}
+
+distinction_light_infantry_defensive_19 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_defensive = 0.19
+	}
+}
+
+distinction_light_infantry_defensive_20 = {
+	icon = "phalera_swords"
+	commander = {
+
+	}
+	unit = {
+		light_infantry_defensive = 0.20
+	}
+}
+
 ### light_infantry DISCIPLINE ###
 
 distinction_light_infantry_discipline_1 = {
+	icon = "phalera_swords"
+	commander = {
+		martial = 0
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.025
+		light_infantry_discipline = 0.025
+		light_infantry_maintenance_cost = -0.05
+	}
+}
+
+distinction_light_infantry_discipline_2 = {
 	icon = "phalera_swords"
 	commander = {
 		martial = 1
@@ -319,7 +431,7 @@ distinction_light_infantry_discipline_1 = {
 	}
 }
 
-distinction_light_infantry_discipline_2 = {
+distinction_light_infantry_discipline_3 = {
 	icon = "phalera_swords"
 	commander = {
 		martial = 2

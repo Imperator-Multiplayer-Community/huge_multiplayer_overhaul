@@ -6,6 +6,7 @@ distinction_mountains_master_01 = {
 	}
 	unit = {
 		mountain_combat_bonus = 0.05
+		army_movement_speed = 0.01
 	}
 }
 
@@ -16,7 +17,7 @@ distinction_mountains_master_02 = {
 
 	}
 	unit = {
-		mountain_combat_bonus = 0.05
+		mountain_combat_bonus = 0.10
 		army_movement_speed = 0.02
 	}
 }

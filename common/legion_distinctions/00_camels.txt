@@ -151,6 +151,56 @@ distinction_camels_offensive_15 = {
 	}
 }
 
+distinction_camels_offensive_16 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_offensive = 0.16
+	}
+}
+
+distinction_camels_offensive_17 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_offensive = 0.17
+	}
+}
+
+distinction_camels_offensive_18 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_offensive = 0.18
+	}
+}
+
+distinction_camels_offensive_19 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_offensive = 0.19
+	}
+}
+
+distinction_camels_offensive_20 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_offensive = 0.20
+	}
+}
+
 
 ### camels DEFENSIVE ###
 
@@ -305,12 +355,74 @@ distinction_camels_defensive_15 = {
 	}
 }
 
+distinction_camels_defensive_16 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_defensive = 0.16
+	}
+}
+
+distinction_camels_defensive_17 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_defensive = 0.17
+	}
+}
+
+distinction_camels_defensive_18 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_defensive = 0.18
+	}
+}
+
+distinction_camels_defensive_19 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_defensive = 0.19
+	}
+}
+
+distinction_camels_defensive_20 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		camels_defensive = 0.20
+	}
+}
+
 ### camels DISCIPLINE ###
 
 distinction_camels_discipline_1 = {
 	icon = "phalera_horse"
 	commander = {
-		martial = 1
+		martial = 0
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.025
+		camels_discipline = 0.025
+		camels_maintenance_cost = -0.05
+	}
+}
+
+distinction_camels_discipline_2 = {
+	icon = "phalera_horse"
+	commander = {
+		martial = 2
 	}
 	unit = {
 		loyalty_gain_chance_modifier = 0.05
@@ -319,7 +431,7 @@ distinction_camels_discipline_1 = {
 	}
 }
 
-distinction_camels_discipline_2 = {
+distinction_camels_discipline_3 = {
 	icon = "phalera_horse"
 	commander = {
 		martial = 2

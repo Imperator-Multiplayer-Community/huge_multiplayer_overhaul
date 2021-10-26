@@ -151,6 +151,55 @@ distinction_light_cavalry_offensive_15 = {
 	}
 }
 
+distinction_light_cavalry_offensive_16 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_offensive = 0.16
+	}
+}
+
+distinction_light_cavalry_offensive_17 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_offensive = 0.17
+	}
+}
+
+distinction_light_cavalry_offensive_18 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_offensive = 0.18
+	}
+}
+
+distinction_light_cavalry_offensive_19 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_offensive = 0.19
+	}
+}
+
+distinction_light_cavalry_offensive_20 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_offensive = 0.20
+	}
+}
 
 ### light_cavalry DEFENSIVE ###
 
@@ -305,9 +354,71 @@ distinction_light_cavalry_defensive_15 = {
 	}
 }
 
+distinction_light_cavalry_defensive_16 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_defensive = 0.16
+	}
+}
+
+distinction_light_cavalry_defensive_17 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_defensive = 0.17
+	}
+}
+
+distinction_light_cavalry_defensive_18 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_defensive = 0.18
+	}
+}
+
+distinction_light_cavalry_defensive_19 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_defensive = 0.19
+	}
+}
+
+distinction_light_cavalry_defensive_20 = {
+	icon = "phalera_horse"
+	commander = {
+
+	}
+	unit = {
+		light_cavalry_defensive = 0.20
+	}
+}
+
 ### light_cavalry DISCIPLINE ###
 
 distinction_light_cavalry_discipline_1 = {
+	icon = "phalera_horse"
+	commander = {
+		martial = 0
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.025
+		light_cavalry_discipline = 0.025
+		light_cavalry_maintenance_cost = -0.05
+	}
+}
+
+distinction_light_cavalry_discipline_2 = {
 	icon = "phalera_horse"
 	commander = {
 		martial = 1
@@ -319,7 +430,7 @@ distinction_light_cavalry_discipline_1 = {
 	}
 }
 
-distinction_light_cavalry_discipline_2 = {
+distinction_light_cavalry_discipline_3 = {
 	icon = "phalera_horse"
 	commander = {
 		martial = 2

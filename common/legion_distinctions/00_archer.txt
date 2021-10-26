@@ -150,6 +150,51 @@ distinction_archer_offensive_15 = {
 		archers_offensive = 0.15
 	}
 }
+distinction_archer_offensive_16 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.16
+	}
+}
+distinction_archer_offensive_17 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.17
+	}
+}
+distinction_archer_offensive_18 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.18
+	}
+}
+distinction_archer_offensive_19 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.19
+	}
+}
+distinction_archer_offensive_20 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_offensive = 0.20
+	}
+}
 
 
 ### ARCHER DEFENSIVE ###
@@ -305,9 +350,71 @@ distinction_archer_defensive_15 = {
 	}
 }
 
+distinction_archer_defensive_16 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.16
+	}
+}
+
+distinction_archer_defensive_17 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.17
+	}
+}
+
+distinction_archer_defensive_18 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.18
+	}
+}
+
+distinction_archer_defensive_19 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.19
+	}
+}
+
+distinction_archer_defensive_20 = {
+	icon = "phalera_archer"
+	commander = {
+
+	}
+	unit = {
+		archers_defensive = 0.20
+	}
+}
+
 ### ARCHER DISCIPLINE ###
 
 distinction_archer_discipline_1 = {
+	icon = "phalera_archer"
+	commander = {
+		martial = 0
+	}
+	unit = {
+		loyalty_gain_chance_modifier = 0.025
+		archers_discipline = 0.025
+		archers_maintenance_cost = -0.05
+	}
+}
+
+distinction_archer_discipline_2 = {
 	icon = "phalera_archer"
 	commander = {
 		martial = 1
@@ -319,7 +426,7 @@ distinction_archer_discipline_1 = {
 	}
 }
 
-distinction_archer_discipline_2 = {
+distinction_archer_discipline_3 = {
 	icon = "phalera_archer"
 	commander = {
 		martial = 2
