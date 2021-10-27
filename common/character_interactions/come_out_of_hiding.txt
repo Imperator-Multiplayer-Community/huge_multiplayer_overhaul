@@ -12,6 +12,7 @@
 
 		hidden:scope:target = {
 			has_character_modifier = spy_recruit_character
+			has_character_modifier = in_hiding
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
 		}

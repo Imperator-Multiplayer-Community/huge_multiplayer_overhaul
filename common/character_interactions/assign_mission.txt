@@ -38,7 +38,7 @@
 	
 	allowed_trigger = {
 		scope:target = {
-			loyalty >= 40
+			loyalty >= 35
 			NOT = {
 				has_character_modifier = getting_oriented
  				has_character_modifier = in_hiding
@@ -53,6 +53,11 @@
 		}
 		scope:actor = {
 			treasury >= 25
+		}
+		scope:actor = {
+			NOT = { 
+				has_variable = ongoing_assassination
+			}
 		}
 
 		custom_tooltip = {
@@ -74,31 +79,31 @@
 	effect = {
 		
 		scope:actor = {
-			hidden_effect = {
-				set_variable = {
-					name = mission_origin_nation
-					days = 180
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = mission_origin_nation
+			#		days = 180
+			#	}
+			#}
 		save_scope_as = mission_origin_country
 		}
 		
 		scope:target = {
-			hidden_effect = {
-				set_variable = {
-					name = spy_with_mission
-					days = 180
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = spy_with_mission
+			#		days = 180
+			#	}
+			#}
 		save_scope_as = mission_spy
 		}
 		scope:target.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = mission_target_nation
-					days = 180
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = mission_target_nation
+			#		days = 180
+			#	}
+			#}
 		save_scope_as = mission_target_country
 		}
 

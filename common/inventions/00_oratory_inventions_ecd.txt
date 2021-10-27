@@ -825,12 +825,6 @@
 	}
 
 	# Level 7 Specific
-	assemble_raiding_inv = {
-		allow = { is_tribal = yes }
-		
-		requires = { mercenary_maintenance_cost_inv }
-		modifier = { price_assemble_raiding_party_button_cost_modifier = -0.2 }
-	}
 
 	# Level 8
 	recruit_general_inv = { 
@@ -1900,7 +1894,7 @@ oratory_2 = {
 
 	# Level 5
 	inspire_disloyalty_cost_modifier_inv = { 
-		modifier = { inspire_disloyalty_cost_modifier = -0.25   }
+		modifier = { character_loyalty = 2  }
 		
 		requires_or = { assassinate_attempt_cost_modifier_inv control_range_modifier_inv }
 		on_activate = { custom_tooltip = "allows_espionage_character_interaction" }
@@ -1928,8 +1922,10 @@ oratory_2 = {
 	}
 
 	diplomatic_relations_inv_2 = { 
-		modifier = { diplomatic_relations = 1 }
-		
+		modifier = { 
+			diplomatic_relations = 1
+			inspire_disloyalty_cost_modifier = -0.25
+		}
 		requires = { diplo_range_inv_1 }
 		on_activate = {
 			
@@ -1938,7 +1934,10 @@ oratory_2 = {
 
 	# Level 6
 	diplo_range_inv_3 = {
-		modifier = { diplomatic_range_modifier = 0.15 }
+		modifier = { 
+			diplomatic_range_modifier = 0.15
+			assassinate_attempt_foreign_cost_modifier = -0.25
+		 }
 		
 		requires = { inspire_disloyalty_cost_modifier_inv }
 	}

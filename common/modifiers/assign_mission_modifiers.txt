@@ -25,11 +25,11 @@ good_merc_reputation = {
 }
 
 war_effort_criticised = {
-	manpower_recovery_speed = -0.04
+	manpower_recovery_speed = -0.02
 }
 
 poisoned_wells = {
-	global_monthly_food_modifier = -0.65
+	global_monthly_food_modifier = -0.5
 	global_food_capacity = -400
 }
 
@@ -38,13 +38,22 @@ supplies_revealed = {
 	land_unit_attrition = -2
 }
 
+weak_forts = {
+	global_defensive = -0.25
+	garrison_size = -0.2
+}
+
+strong_assault = {
+	assault_ability = 0.15
+}
+
 damaged_shipyards = {
 	global_ship_recruit_speed = -0.4
-	ship_cost = 0.2
+	ship_cost = 0.25
 }
 
 falsified_maps = {
-	naval_range = -0.5
+	naval_range = -0.4
 }
 
 looted_treasury = {
@@ -104,7 +113,7 @@ rocky_stability = {
 }
 
 poorly_taught = {
-	research_points_modifier = -0.4
+	research_points_modifier = -0.35
 }
 
 stealing_tech = {

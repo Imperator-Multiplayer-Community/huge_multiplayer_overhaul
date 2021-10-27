@@ -26,9 +26,19 @@
 		hidden:scope:actor = {
 			can_pay_price = assassinate_attempt_foreign
 		}
+		scope:actor = {
+			in_diplomatic_range = scope:target.employer
+			has_country_modifier = foreign_intel_ops
+			invention = inspire_disloyalty_cost_modifier_inv
+		}
 		scope:target = {
 			NOT = {
 				is_friend = scope:actor.current_ruler
+			}
+		}
+		scope:target = {
+			NOT = {
+				has_variable = assassination_target
 			}
 		}
 		scope:target = {
@@ -91,6 +101,14 @@
 			scope:actor = {
 				NOT = {
 					has_variable = ongoing_assassination
+				}
+			}
+		}
+		custom_tooltip = {
+			text = "too_much_assassination_tt"
+			scope:target.employer = {
+				NOT = {
+					has_variable = assassination_chill
 				}
 			}
 		}
@@ -177,9 +195,9 @@
 	 		}
 
 	 		scope:actor = {
-				limit = {
-					has_variable = ongoing_assassination
-					}
+				#limit = {
+				#	has_variable = ongoing_assassination
+				#	}
 				save_scope_as = terminator
 			}
 

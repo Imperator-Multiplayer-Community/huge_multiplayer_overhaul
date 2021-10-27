@@ -18,6 +18,9 @@
 
 			employer = scope:actor
 		}
+		hidden:scope:actor = {
+			is_tribal = yes
+		}
 	}
 	
 	
@@ -25,7 +28,6 @@
 		
 		scope:actor = {
 			can_pay_price = price_tribal_duel
-			is_tribal = yes
 		}
 
 		scope:target = {
@@ -36,7 +38,13 @@
 				has_triggered_character_modifier = free_hands_cmod
 				has_character_modifier = on_espionage_mission_cmod
 			}
-			is_rival = scope:actor.current_ruler
+			custom_tooltip = {
+				text = "challenge_duel_tt"
+				OR = {
+					is_clan_chief = yes
+					is_rival = scope:actor.current_ruler
+				}
+			}
 			trigger_if = {
 				limit = {
 					has_variable = duel_challenged

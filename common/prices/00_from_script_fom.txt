@@ -73,7 +73,11 @@ price_test_loyalty = {
 	tyranny = 4
 }
 
+create_merc_state_price = { 
+	political_influence = 35
+}
 
-#create_merc_state_price = { 
-#	political_influence = 40
-#}
+assassinate_attempt_foreign = {
+	aggressive_expansion = 20
+	scaled_gold = 1
+}

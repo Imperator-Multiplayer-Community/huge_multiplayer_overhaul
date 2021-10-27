@@ -717,13 +717,9 @@ temptress.13 = { # Make enemy king's people unhappy success
 	
 	immediate = {
 		scope:manipulated = {
-			any_owned_area = {
+			random_country_state = {
 				limit = {
 					state_loyalty <= 60
-					NOT = { primary_culture = scope:target_culture.culture }
-					#any_owned_province = {
-					#	NOT = { dominant_province_culture = primary_culture }
-					#}
 				}
 				save_scope_as = unhappy_place
 			}
@@ -759,13 +755,9 @@ temptress.14 = {  # Make enemy king's people unhappy success but rekt
 	
 	immediate = {
 		scope:manipulated = {
-			any_owned_area = {
+			random_country_state = {
 				limit = {
 					state_loyalty <= 60
-					NOT = { primary_culture = scope:target_culture.culture }
-					#any_owned_province = {
-					#	NOT = { dominant_province_culture = primary_culture }
-					#}
 				}
 				save_scope_as = unhappy_place
 			}
@@ -1085,12 +1077,9 @@ temptress.21 = {  # Make enemy king's people unhappy failure
 	
 	immediate = {
 		scope:manipulated = {
-			any_owned_area = {
+			random_country_state = {
 				limit = {
 					state_loyalty <= 60
-					#any_owned_province = {
-					#	NOT = { dominant_province_culture = primary_culture }
-					#}
 				}
 				save_scope_as = unhappy_place
 			}
@@ -1137,7 +1126,7 @@ temptress.22 = {  # Make enemy king's people unhappy failure and rekt
 	
 	immediate = {
 		scope:manipulated = {
-			any_owned_area = {
+			random_country_state = {
 				limit = {
 					state_loyalty <= 60
 				}

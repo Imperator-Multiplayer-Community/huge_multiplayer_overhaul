@@ -140,22 +140,22 @@
 	
 	effect = {
 		scope:actor.current_ruler = {
-			hidden_effect = {
-				set_variable = {
-					name = manipulator_queen
-					days = 365
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = manipulator_queen
+			#		days = 365
+			#	}
+			#}
 		save_scope_as = manipulating_queen	
 		}
 		
 		scope:actor.current_ruler.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = manipulating_nation
-					days = 365
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = manipulating_nation
+			#		days = 365
+			#	}
+			#}
 		save_scope_as = manipulator	
 		}
 		
@@ -169,12 +169,12 @@
 		save_scope_as = manipulated_character
 		}
 		scope:target.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = manipulated_nation
-					days = 365
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = manipulated_nation
+			#		days = 365
+			#	}
+			#}
 		save_scope_as = manipulated
 		}
 

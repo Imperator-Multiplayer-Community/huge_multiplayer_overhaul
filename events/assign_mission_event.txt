@@ -3404,27 +3404,25 @@ assign_mission.94 = { #GREAT OPEN GATES
 	#interface_lock = no
 
  	trigger = {
-		scope:mission_target_country = {
-			any_province = { has_siege = yes }
-		} 
+		
 	}
 
 	immediate = {
-		scope:mission_target_country = {
-			ordered_owned_province = {
-				limit = { 
-					has_siege = yes 
-					siege = {
-						has_breach = no
-					}
-					has_owner = yes
-					has_enemy_army = yes
-					#NOT = { controller = root.unit_owner }	
-				}
-				order_by = fort_level
-				save_scope_as = opening_gates
-			}
-		}
+	#	scope:mission_target_country = {
+	#		ordered_owned_province = {
+	#			limit = { 
+	#				has_siege = yes 
+	#				siege = {
+	#					has_breach = no
+	#				}
+	#				has_owner = yes
+	#				has_enemy_army = yes
+	#				#NOT = { controller = root.unit_owner }	
+	#			}
+	#			order_by = fort_level
+	#			save_scope_as = opening_gates
+	#		}
+	#	}
 	}
 
 	option = { 
@@ -3435,8 +3433,40 @@ assign_mission.94 = { #GREAT OPEN GATES
 			multiply = -0.5
 			max = 30
 		}
-		scope:opening_gates = {
-			siege = { add_breach = 1 }
+		scope:mission_target_country = {
+	#		if = {
+	#			any_owned_province = {
+	#				limit = {
+	#					exists = scope:opening gates 
+	#				}
+	#				scope:opening_gates = {
+	#					siege = { 
+	#						add_breach = 1 
+	#					}
+	#				}
+	#			}	
+	#		}
+	#		else_if = {
+	#			any_owned_province = {
+	#				limit = {
+	#					NOT = {
+	#						exists = scope:opening gates  
+	#					}
+	#				}
+	#			}
+				add_country_modifier = {
+					name = "weak_forts"
+					duration = 60
+					mode = add
+				}
+			#}
+		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "strong_assault"
+				duration = 60
+				mode = add
+			}
 		}
 	}
 
@@ -3465,21 +3495,21 @@ assign_mission.95 = { #GOOD
 	}
 
 	immediate = {
-		scope:mission_target_country = {
-			ordered_owned_province = {
-				limit = { 
-					has_siege = yes 
-					siege = {
-						has_breach = no
-					}
-					has_owner = yes
-					has_enemy_army = yes
-					#NOT = { controller = root.unit_owner }	
-				}
-				order_by = fort_level
-				save_scope_as = opening_gates
-			}
-		}
+	#	scope:mission_target_country = {
+	#		ordered_owned_province = {
+	#			limit = { 
+	#				has_siege = yes 
+	#				siege = {
+	#					has_breach = no
+	#				}
+	#				has_owner = yes
+	#				has_enemy_army = yes
+	#				#NOT = { controller = root.unit_owner }	
+	#			}
+	#			order_by = fort_level
+	#			save_scope_as = opening_gates
+	#		}
+	#	}
 	}
 
 	option = { 
@@ -3490,10 +3520,42 @@ assign_mission.95 = { #GOOD
 			multiply = -0.5
 			max = 30
 		}
-
-		scope:opening_gates = {
-			siege = { add_breach = 1 }
+		scope:mission_target_country = {
+	#		if = {
+	#			any_owned_province = {
+	#				limit = {
+	#					exists = scope:opening gates 
+	#				}
+	#				scope:opening_gates = {
+	#					siege = { 
+	#						add_breach = 1 
+	#					}
+	#				}
+	#			}	
+	#		}
+	#		else_if = {
+	#			any_owned_province = {
+	#				limit = {
+	#					NOT = {
+	#						exists = scope:opening gates  
+	#					}
+	#				}
+	#			}
+				add_country_modifier = {
+					name = "weak_forts"
+					duration = 45
+					mode = add
+				}
+			#}
 		}
+		scope:mission_origin_country = {
+			add_country_modifier = {
+				name = "strong_assault"
+				duration = 45
+				mode = add
+			}
+		}
+
 		hidden_effect = {
 			random_list = {
 				10 = {

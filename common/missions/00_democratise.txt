@@ -6,6 +6,7 @@
 	potential = {
 		is_monarchy = yes
 		has_civil_war = no
+		is_ai = no
 		NOT = {
 			has_variable = democracy_abort
 		}

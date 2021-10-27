@@ -68,6 +68,25 @@
 			NOR = {
 				has_triggered_character_modifier = free_hands_cmod
 				has_character_modifier = on_espionage_mission_cmod
+				has_character_modifier = inspire_disloyalty_modifier
+			}
+		}
+		scope:target = {
+			trigger_if = {
+				limit = {
+					OR = { 
+						has_variable = inspire_cooldown_black_widow
+						has_variable = inspire_cooldown
+					}
+				}
+				custom_tooltip = {
+					text = "inspire_cooldown_black_widow_recently"
+			
+					NOR = { 
+						has_variable = inspire_cooldown_black_widow
+						has_variable = inspire_cooldown
+					}
+				}
 			}
 		}
 	}
@@ -80,30 +99,30 @@
 		}
 
 		scope:actor.current_ruler.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = inspiring_country
-					days = 45
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = inspiring_country
+			#		days = 45
+			#	}
+			#}
 		save_scope_as = inspiring	
 		}
 		scope:actor.current_ruler = {
-			hidden_effect = {
-				set_variable = {
-					name = inspiring_ruler
-					days = 45
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = inspiring_ruler
+			#		days = 45
+			#	}
+			#}
 		save_scope_as = inspirer	
 		}
 		
 		scope:target = {
 			hidden_effect = {
-				set_variable = {
-					name = character_inspired
-					days = 45
-				}
+				#set_variable = {
+				#	name = character_inspired
+				#	days = 45
+				#}
 
 				set_variable = {
 					name = inspire_cooldown
@@ -113,12 +132,12 @@
 		save_scope_as = inspired_character
 		}
 		scope:target.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = country_inspired
-					days = 45
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = country_inspired
+			#		days = 45
+			#	}
+			#}
 		save_scope_as = inspired
 		}
 
@@ -152,24 +171,24 @@
 						var:roll <= scope:spy.charisma
 					}
 			
-					scope:actor.current_ruler.employer = {
+					scope:actor = {
 						trigger_event = { 
 							id = counterintel.34
-							days = 3
+							days = 2
 						}
 					}
 					scope:target.employer = {
 						trigger_event = { 
 							id = counterintel.35
-							days = 3
+							days = 2
 						}
 					}
 				}	
 				else = {
-					scope:actor.current_ruler.employer = {
+					scope:actor = {
 						trigger_event = { 
 							id = counterintel.36
-							days = 3
+							days = 2
 						}
 					}
 				}

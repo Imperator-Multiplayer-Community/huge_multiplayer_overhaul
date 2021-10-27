@@ -9,6 +9,7 @@
 		hidden:scope:target = {
 			is_alive = yes
 			is_mercenary = no
+			is_adult = yes
 			employer = {
 				NOT = { tag = MER }
 				NOT = { tag = BAR }
@@ -28,9 +29,11 @@
 				has_country_modifier = unloved_by_the_gods
 			}
 		}
-		hidden:scope:target = {
-			is_adult = yes
-			is_rival = scope:actor.current_ruler
+		custom_tooltip = {
+			text = "humiliate_rival_tt"
+			scope:target = {
+				is_rival = scope:actor.current_ruler
+			}
 		}
 		scope:target = {
 			NOR = {

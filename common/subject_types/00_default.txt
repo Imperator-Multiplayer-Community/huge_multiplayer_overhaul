@@ -477,9 +477,10 @@ subject_mercenary_city_state = {
 	
 	overlord_modifier = {
 		mercenary_land_maintenance_cost = -0.05 # Was 0.03
+		mercenary_naval_maintenance_cost = -0.05
 	}
 	subject_modifier = {
-		global_manpower = 0.2 # Was 0.125
+		global_manpower = 0.25 # Was 0.125
 		army_maintenance_cost = -0.2
 	}
 	
@@ -536,7 +537,7 @@ subject_league_city_state = {
 	only_trade_with_overlord = yes
 	
 	overlord_modifier = {
-
+		global_import_commerce_modifier = 0.05
 	}
 	subject_modifier = {
 		global_capital_trade_routes = 4 # Was 2

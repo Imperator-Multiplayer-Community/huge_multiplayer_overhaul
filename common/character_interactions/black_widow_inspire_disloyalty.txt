@@ -118,17 +118,25 @@
 				has_trait = hemorrhagic_fever
 				has_trait = pneumonia
 				has_character_modifier = on_espionage_mission_cmod
+				has_variable = inspire_cooldown
+				has_character_modifier = inspire_disloyalty_modifier
 			}			
 		}
 		scope:target = {
 			trigger_if = {
 				limit = {
-					has_variable = inspire_cooldown_black_widow
+					OR = { 
+						has_variable = inspire_cooldown_black_widow
+						has_variable = inspire_cooldown
+					}
 				}
 				custom_tooltip = {
 					text = "inspire_cooldown_black_widow_recently"
 			
-					NOT = { has_variable = inspire_cooldown_black_widow }
+					NOR = { 
+						has_variable = inspire_cooldown_black_widow
+						has_variable = inspire_cooldown
+					}
 				}
 			}
 		}
@@ -138,22 +146,22 @@
 	
 	effect = {
 		scope:actor.current_ruler = {
-			hidden_effect = {
-				set_variable = {
-					name = disloyal_inspirer_queen
-					days = 730
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = disloyal_inspirer_queen
+			#		days = 730
+			#	}
+			#}
 		save_scope_as = disloyal_inspiring_queen	
 		}
 		
 		scope:actor.current_ruler.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = disloyal_inspirer_nation
-					days = 730
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = disloyal_inspirer_nation
+			#		days = 730
+			#	}
+			#}
 		save_scope_as = disloyal_inspirer	
 		}
 		
@@ -171,12 +179,12 @@
 		save_scope_as = disloyal_inspired_character
 		}
 		scope:target.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = disloyal_inspired_nation
-					days = 730
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = disloyal_inspired_nation
+			#		days = 730
+			#	}
+			#}
 		save_scope_as = disloyal_inspired
 		}
 

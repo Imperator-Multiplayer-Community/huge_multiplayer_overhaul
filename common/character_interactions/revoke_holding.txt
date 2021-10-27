@@ -32,6 +32,7 @@
 				NOT = { has_province_modifier = family_estate_modifier }
 				NOT = { has_province_modifier = family_estates_being_expanded_modifier }
 			}
+			loyalty >= 35
 		}
 	}
 	

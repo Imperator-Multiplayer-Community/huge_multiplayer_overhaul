@@ -206,12 +206,6 @@
 						}
 					}
 				}
-				scope:raided_province.owner = {
-					trigger_event = {
-						id = revenge_cb.1
-						days = 1
-					}
-				}
 			}
 			unit_location = {
 				ordered_neighbor_province = {
