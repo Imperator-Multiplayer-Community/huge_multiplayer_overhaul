@@ -22,6 +22,7 @@
 
  send_envoy:0 "Send Envoy"
  send_envoy_act:0 "Tell this player to check his Discord messages"
+ send_envoy_act_past:0 "Tell this player to check his Discord messages"
  send_envoy.1.t:0 "Message Received"
  send_envoy.1.desc:0 "I sent you a messaage on Discord. Would you respond to me, please?"
  send_envoy.1.a:0 "Thanks, I'll go read it now"

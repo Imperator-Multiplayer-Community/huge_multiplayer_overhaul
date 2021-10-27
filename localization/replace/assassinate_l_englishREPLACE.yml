@@ -132,7 +132,8 @@
  assassinate.31.desc:0 "Your bodyguard [SCOPE.sChar('bodyguard').GetName] has foiled an assassination attempt, improving [SCOPE.sChar('bodyguard').GetHerHis] craft."
  assassinate.31.a:0 "Ever the better hunter"
 
- assassinate.40.t:0 "Those Left behind"
+ assassinate.40.t:0 "Those Left Behind"
+ assassinate.40.desc:0 "We should not forget those who helped us eliminate threats to our ambition... right?"
  assassinate.40.a:0 "Give [SCOPE.sChar('foreign_agent').GetPraenomen] a hero's welcome!"
  assassinate.40.b:0 "Excellent! But, about that matter of asylum..."
  assassinate.40.c:1 "Interesting."
