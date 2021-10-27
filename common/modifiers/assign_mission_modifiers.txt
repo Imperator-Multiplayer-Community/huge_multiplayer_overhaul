@@ -12,24 +12,24 @@
 
 bad_merc_reputation = {
 	max_mercenary_stacks = -1	
-	recruit_mercenary_cost_modifier = 2
-	mercenary_land_maintenance_cost = 2
-	mercenary_naval_maintenance_cost = 2
+	recruit_mercenary_cost_modifier = 1.5
+	mercenary_land_maintenance_cost = 1.5
+	mercenary_naval_maintenance_cost = 1.5
 }
 
 good_merc_reputation = {
 	max_mercenary_stacks = 1
-	recruit_mercenary_cost_modifier = 0.2
-	mercenary_land_maintenance_cost = 0.2
-	mercenary_naval_maintenance_cost = 0.2
+	recruit_mercenary_cost_modifier = 0.1
+	mercenary_land_maintenance_cost = 0.1
+	mercenary_naval_maintenance_cost = 0.1
 }
 
 war_effort_criticised = {
-	manpower_recovery_speed = -0.05
+	manpower_recovery_speed = -0.04
 }
 
 poisoned_wells = {
-	global_monthly_food_modifier = -0.7
+	global_monthly_food_modifier = -0.65
 	global_food_capacity = -400
 }
 
@@ -39,12 +39,12 @@ supplies_revealed = {
 }
 
 damaged_shipyards = {
-	global_ship_recruit_speed = -0.5
+	global_ship_recruit_speed = -0.4
 	ship_cost = 0.2
 }
 
 falsified_maps = {
-	naval_range = -0.4
+	naval_range = -0.5
 }
 
 looted_treasury = {
@@ -62,7 +62,7 @@ harassed_merchants = {
 
 spreading_corruption = {
 	character_loyalty = -5
-	monthly_corruption = 0.12
+	monthly_corruption = 0.15
 }
 
 civil_disobedience = {
@@ -74,9 +74,9 @@ civil_disobedience = {
 }
 
 legal_challenges = {
-	monthly_political_influence_modifier = -0.5
+	monthly_political_influence_modifier = -0.35
 	monthly_tyranny = 0.25
-	research_points_modifier = -0.3
+	research_points_modifier = -0.35
 	stability_cost_modifier = 2
 }
 
@@ -87,13 +87,13 @@ social_division = {
 }
 
 gods_insulted = {
-	omen_power = -1.5
+	omen_power = -1
 	global_pop_conversion_speed_modifier = -2
 }
 
 promote_local_government = {
 	global_monthly_state_loyalty = -0.2
-	monthly_political_influence_modifier = -0.3
+	monthly_political_influence_modifier = -0.25
 	governor_loyalty = -10
 }
 
@@ -104,7 +104,7 @@ rocky_stability = {
 }
 
 poorly_taught = {
-	research_points_modifier = -0.5
+	research_points_modifier = -0.4
 }
 
 stealing_tech = {

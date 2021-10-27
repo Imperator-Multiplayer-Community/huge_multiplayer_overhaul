@@ -9610,7 +9610,7 @@ assign_mission.162 = { # SPY STRIKES BACK
 				has_variable = roll
 				var:roll <= scope:mission_spy.martial
 			}
-			scope:mission_spy = { #Spy wins
+			scope:mission_origin_country = { #Spy wins
 				trigger_event = { 
 					id = assign_mission.163
 					days = 5
@@ -9634,7 +9634,13 @@ assign_mission.162 = { # SPY STRIKES BACK
 
 assign_mission.163 = { # SPY WINS, ASSESS THE DAMAGE
 	type = character_event
-	hidden = yes
+	title = assign_mission.163.t
+	desc = assign_mission.163.desc
+	left_portrait = scope:mission_origin_country.current_ruler
+	left_portrait = scope:mission_spy
+	right_portrait = scope:mission_target_country
+	right_portrait = scope:mission_target_country.current_ruler
+	picture = dagger_behind_back
 	
 
  	trigger = {

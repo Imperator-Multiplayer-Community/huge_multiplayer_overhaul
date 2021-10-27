@@ -115,6 +115,10 @@
 				name = "on_espionage_mission_cmod"
 				duration = -1
 			}
+			add_character_modifier = {
+				name = getting_oriented #The spy will not be able to take any action with this modifier active, except go into hiding
+				duration = 180
+			}
 			remove_character_modifier = counterintelligence
 			hidden_effect = {
 				set_as_minor_character = THIS

@@ -186,6 +186,7 @@
 							name = port_province_raided
 							duration = 3650
 						}
+						save_scope_as = raided_province
 					}
 				}
 			}
@@ -205,12 +206,12 @@
 						}
 					}
 				}
-			#	scope:target = {
-			#		trigger_event = {
-			#			id = revenge_cb.1
-			#			days = 5
-			#		}
-			#	}
+				scope:raided_province.owner = {
+					trigger_event = {
+						id = revenge_cb.1
+						days = 1
+					}
+				}
 			}
 			unit_location = {
 				ordered_neighbor_province = {
