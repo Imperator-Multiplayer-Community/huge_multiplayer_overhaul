@@ -74,6 +74,7 @@
 		modifier = { 
 			agressive_expansion_impact = -0.1
 			diplomatic_relations = 1
+			monthly_political_influence_modifier = 0.025
 		}
 		keystone = yes
 		requires_or = { agressive_expansion_monthly_decay_inv_1 hold_triumph_cost_modifier_inv }
@@ -128,6 +129,7 @@
 			fabricate_claim_speed = 0.25 
 			subject_opinions = 10
 			tribute_income_modifier = 0.1
+			monthly_political_influence_modifier = 0.025
 		}
 		keystone = yes
 		requires_or = { tribute_income_modifier_inv_1 subject_opinions_inv_2 }
@@ -836,6 +838,8 @@
 			recruit_general_cost_modifier = -0.35  
 			improve_relation_impact = 0.2
 			max_rivals = 1
+			monthly_political_influence_modifier = 0.025
+			general_loyalty = 4
 		}
 		keystone = yes
 		requires = { relation_inv_3 }
@@ -932,7 +936,10 @@
 
 	# Level 11
 	agressive_expansion_monthly_decay_inv_5 = {
-		modifier = { agressive_expansion_monthly_change = -0.01 }
+		modifier = { 
+			agressive_expansion_monthly_change = -0.01
+			monthly_political_influence_modifier = 0.05
+		}
 		
 		requires = { relation_inv_5 }
 	}
@@ -1937,7 +1944,10 @@ oratory_2 = {
 	}
 
 	diplomatic_reputation_inv_3 = {
-		modifier = { diplomatic_reputation = 1   }
+		modifier = { 
+			diplomatic_reputation = 1
+			monthly_political_influence_modifier = 0.025
+		}
 		
 		requires = { inspire_disloyalty_cost_modifier_inv }
 	}
@@ -2175,7 +2185,10 @@ oratory_2 = {
 
 	# Level 9
 	diplomatic_reputation_inv_4 = {
-		modifier = { diplomatic_reputation = 2   }
+		modifier = { 
+			diplomatic_reputation = 2   
+			monthly_political_influence_modifier = 0.05
+		}
 		on_activate = {
 			if = {
 				limit = { is_monarchy = yes }
@@ -2193,7 +2206,7 @@ oratory_2 = {
 		
 		modifier = { research_points_modifier = 0.1 }
 		on_activate = {
-			add_innovation = 2
+			add_innovation = 3
 		}
 	}
 
@@ -2223,6 +2236,9 @@ oratory_2 = {
 		
 		requires = { scientific_patronage_inv }
 		modifier = { research_points_modifier = 0.1 }
+		on_activate = {
+			add_innovation = 2
+		}
 	}
 
 	#New Invictus invention

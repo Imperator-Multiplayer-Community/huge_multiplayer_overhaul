@@ -193,10 +193,10 @@
 			hidden_effect = {
 				root.unit_owner = {
 					add_aggressive_expansion = 1
-					set_variable = {
-						name = slavers
-						days = 180
-					}
+					#set_variable = {
+					#	name = slavers
+					#	days = 180
+					#}
 					while = {
 						count >= num_of_ships_svalue
 						add_country_modifier = {
@@ -227,10 +227,10 @@
 					hidden_effect = {
 						root.unit_owner = {
 							add_aggressive_expansion = 1
-							set_variable = {
-								name = slavers
-								days = 180
-							}
+							#set_variable = {
+							#	name = slavers
+							#	days = 180
+							#}
 						}
 						add_province_modifier = {
 							name = port_province_raided
