@@ -719,7 +719,7 @@ temptress.13 = { # Make enemy king's people unhappy success
 		scope:manipulated = {
 			random_country_state = {
 				limit = {
-					state_loyalty <= 60
+					state_level_loyalty <= 60
 				}
 				save_scope_as = unhappy_place
 			}
@@ -757,7 +757,7 @@ temptress.14 = {  # Make enemy king's people unhappy success but rekt
 		scope:manipulated = {
 			random_country_state = {
 				limit = {
-					state_loyalty <= 60
+					state_level_loyalty <= 60
 				}
 				save_scope_as = unhappy_place
 			}
@@ -1079,7 +1079,7 @@ temptress.21 = {  # Make enemy king's people unhappy failure
 		scope:manipulated = {
 			random_country_state = {
 				limit = {
-					state_loyalty <= 60
+					state_level_loyalty <= 60
 				}
 				save_scope_as = unhappy_place
 			}
@@ -1128,7 +1128,7 @@ temptress.22 = {  # Make enemy king's people unhappy failure and rekt
 		scope:manipulated = {
 			random_country_state = {
 				limit = {
-					state_loyalty <= 60
+					state_level_loyalty <= 60
 				}
 				save_scope_as = unhappy_place
 			}
