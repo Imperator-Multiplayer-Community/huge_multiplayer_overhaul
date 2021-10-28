@@ -3649,3 +3649,108 @@ levantine_republic_heritage = {
 
 	}
 }
+
+thrace_thracian_heritage = {
+	modifier = {
+		#good
+		price_found_city_cost_modifier = -0.1
+		fort_maintenance_cost = -0.10
+		
+		#bad
+		global_citizen_happyness = negative_happiness_small_svalue
+	}
+	
+	trigger = {
+		tag = THR
+	}
+}
+
+meshwesh_heritage = {
+	modifier = {
+		#good
+		enslavement_efficiency = 0.05
+		light_infantry_morale = 0.10
+		
+		#bad
+		naval_damage_done = -0.05
+	}
+	
+	trigger = {
+		tag = MSW
+	}
+}
+
+hellenic_kingdom_heritage = {
+	modifier = {
+		#good
+		mercenary_land_maintenance_cost = -0.05
+		heavy_infantry_offensive = 0.1
+		
+		#bad
+		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
+	}
+	
+	trigger = {
+		tag = HLK
+	}
+}
+
+nemedia_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.05
+		omen_power = 0.05
+		
+		#bad
+		siege_ability = -0.05
+	}
+	
+	trigger = {
+		tag = NEM
+	}
+}
+
+arfordir_chwal_heritage = {
+	modifier = {
+		#good
+		global_population_capacity_modifier = 0.1
+		global_pop_conversion_speed_modifier = 0.05
+		
+		#bad
+		recruit_mercenary_cost_modifier = 0.05
+	}
+	
+	trigger = {
+		tag = ARF
+	}
+}
+
+ishkuza_heritage = {
+	modifier = {
+		#good
+		siege_ability = 0.05
+		enslavement_efficiency = 0.10
+		
+		#bad
+		global_population_happiness = negative_output_small_svalue
+	}
+	
+	trigger = {
+		tag = ISH
+	}
+}
+
+liguria_heritage = {
+	modifier = {
+		#good
+		global_pop_promotion_speed_modifier = 0.05
+		land_morale_modifier = 0.05
+		
+		#bad
+		global_pop_assimilation_speed_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = LIG
+	}
+}
