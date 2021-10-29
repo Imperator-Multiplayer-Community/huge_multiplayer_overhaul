@@ -34,7 +34,7 @@
 			}
 			custom_tooltip = {
 				text = "revoke_holding_loyalty_tt" 
-				loyalty >= 30
+				loyalty >= 35
 			}
 		}
 	}
