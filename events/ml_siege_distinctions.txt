@@ -57,16 +57,19 @@ ml_siege_distinctions.1 = {
 				if = {
 					limit = {
 						var:siege_victories = 2
-						NOT = {
-							has_distinction = distinction_siege_master_01						
+						legion = {
+							NOT = {
+								has_distinction = distinction_siege_master_01						
+							}
 						}
+						
 					}
 					
 					scope:actor.legion = {
 						add_distinction = distinction_siege_master_01
 					}
 
-					scope:actor.country = {
+					scope:actor.unit_owner = {
 						trigger_event = {
 							id = ml_expeditionary_distinctions.1
 						}
@@ -75,8 +78,10 @@ ml_siege_distinctions.1 = {
 				else_if = {
 					limit = {
 						var:siege_victories = 6
-						NOT = {
-							has_distinction = distinction_siege_master_02						
+						legion = {
+							NOT = {
+								has_distinction = distinction_siege_master_02						
+							}
 						}
 					}
 	
@@ -88,8 +93,10 @@ ml_siege_distinctions.1 = {
 				else_if = {
 					limit = {
 						var:siege_victories = 12
-						NOT = {
-							has_distinction = distinction_siege_master_03						
+						legion = {
+							NOT = {
+								has_distinction = distinction_siege_master_03						
+							}
 						}
 					}
 					
@@ -101,8 +108,10 @@ ml_siege_distinctions.1 = {
 				else_if = {
 					limit = {
 						var:siege_victories = 20
-						NOT = {
-							has_distinction = distinction_siege_master_03						
+						legion = {
+							NOT = {
+								has_distinction = distinction_siege_master_03						
+							}
 						}
 					}
 					
