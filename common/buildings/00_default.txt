@@ -282,6 +282,8 @@ population_building = { #Improved granary food capacity
 	cost = 75
 	time = 180
 
+	max_amount = 10
+
 	potential = {
 		has_city_status = yes
 	}

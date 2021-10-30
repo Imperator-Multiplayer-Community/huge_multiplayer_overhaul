@@ -47,7 +47,10 @@
 			is_married = yes
 			is_adult = yes
 			prisoner = no
+			custom_tooltip = {
+			text = "force_divorce_loyalty_tt"
 			loyalty >= 45
+			}
 		}
 	}
 	

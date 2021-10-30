@@ -3546,12 +3546,12 @@ country_diplomacy.42 = { #SPY SUCCESSFULLY ESTABLISHED IN TARGET COUNTRY #######
 	}
 	
 	immediate = {
-		scope:spy = {
-			add_character_modifier = {
-				name = getting_oriented #The spy will not be able to take any action with this modifier active, except go into hiding
-				duration = 180
-			}
-		}
+		#scope:spy = {
+		#	add_character_modifier = {
+		#		name = getting_oriented #This is now in the character interaction to prevent Assign mission from being used
+		#		duration = 180
+		#	}
+		#}
 		scope:spier = {
 			add_country_modifier = {
 				name = foreign_intel_ops

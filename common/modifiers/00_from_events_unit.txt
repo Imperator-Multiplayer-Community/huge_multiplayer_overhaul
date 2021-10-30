@@ -28,21 +28,21 @@ seleucus_big_day_out = {
 }
 
 espionage_army_sabotage_modifier = {
-	army_movement_speed = -0.5
+	army_movement_speed = -0.4
 }
 
 demoralised_army_sabotage_modifier = {
-	land_morale = -0.2
+	land_morale = -0.15
 }
 
 undisciplined_army_sabotage_modifier = {
-	discipline = -0.2
+	discipline = -0.15
 }
 
 demoralised_crew = {
-	naval_morale = -0.2
+	naval_morale = -0.15
 }
 
 misdirected_fleet = {
-	navy_movement_speed = -0.5
+	navy_movement_speed = -0.4
 }

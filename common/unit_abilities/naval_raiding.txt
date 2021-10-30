@@ -186,16 +186,17 @@
 							name = port_province_raided
 							duration = 3650
 						}
+						save_scope_as = raided_province
 					}
 				}
 			}
 			hidden_effect = {
 				root.unit_owner = {
 					add_aggressive_expansion = 1
-					set_variable = {
-						name = slavers
-						days = 180
-					}
+					#set_variable = {
+					#	name = slavers
+					#	days = 180
+					#}
 					while = {
 						count >= num_of_ships_svalue
 						add_country_modifier = {
@@ -205,12 +206,6 @@
 						}
 					}
 				}
-			#	scope:target = {
-			#		trigger_event = {
-			#			id = revenge_cb.1
-			#			days = 5
-			#		}
-			#	}
 			}
 			unit_location = {
 				ordered_neighbor_province = {
@@ -226,10 +221,10 @@
 					hidden_effect = {
 						root.unit_owner = {
 							add_aggressive_expansion = 1
-							set_variable = {
-								name = slavers
-								days = 180
-							}
+							#set_variable = {
+							#	name = slavers
+							#	days = 180
+							#}
 						}
 						add_province_modifier = {
 							name = port_province_raided

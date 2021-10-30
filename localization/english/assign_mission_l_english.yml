@@ -145,6 +145,8 @@
  rocky_stability:0 "Social Turmoil"
  stealing_tech:0 "Copying Foreign Techniques"
  poorly_taught:0 "Studying Obsolete Ideas"
+ weak_forts:0 "Bribed Garrisons"
+ strong_assault:0 "Bloodthirst"
 
 
  #UNIT MODIFIERS##
@@ -493,6 +495,10 @@
  assign_mission.160.t:0 "Infiltrated"
  assign_mission.160.desc:0 "A foreign spy has been operating in the capital. Though [target.GetSheHe] has thus far been unable to cause any known harm, we must track [target.GetHerHim] down at once."
  assign_mission.160.a:0 "Bring [target.GetHerHim] dead or alive!" 
+
+ assign_mission.163.t:0 "Dealing in Death"
+ assign_mission.163.desc:0 "Your capable spy kills the counterintelligence agent and escapes into the night."
+ assign_mission.163.a:0 "Why can't all my servants be so skilled?"
 
  assign_mission.164.t:0 "Fight or Flight"
  assign_mission.164.desc:0 "Your spy clashes with the counterintelligence agent, but neither is able to gain the upper hand. After delivering a quick blow to the head that stuns [target.GetHerHis] opponent, your spy realises [target.GetSheHe] has a chance to escape."

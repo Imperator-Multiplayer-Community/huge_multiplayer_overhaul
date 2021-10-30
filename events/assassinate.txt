@@ -1797,6 +1797,10 @@ assassinate.30 = { # Assassination success ###
 			trigger_event = {
 				id = assassinate.9 #inform of murder, check local_var implication_discovered > 5 to see if they realise who didit.
 			}
+			set_variable = {
+				name = assassination_chill
+				days = 1096
+			}
 		}
 		scope:actor = {
 			trigger_event = {

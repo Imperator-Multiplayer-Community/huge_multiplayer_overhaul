@@ -23,16 +23,19 @@
 	}
 	
 	allowed_trigger = {
-		hidden:scope:actor = {
-			can_pay_price = price_test_loyalty
-		}
+	
 		scope:actor = {
+			can_pay_price = price_test_loyalty
+			custom_tooltip = {
+			text = "test_loyalty_tt"
 			has_country_modifier = spy_recruited
+			}
 		}
-		hidden:scope:target = {
+
+		scope:target = {
+			loyalty >= 30
 			is_adult = yes
 			is_ruler = no
-			loyalty >= 30
 		}
 		scope:target = {
 			NOR = {

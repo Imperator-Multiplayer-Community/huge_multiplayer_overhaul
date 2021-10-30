@@ -59,7 +59,7 @@ crafty = { #
 	opposites = {
 		guileless
 	}
-	monthly_corruption = 0.1
+	current_corruption = 20
 	finesse = 2
 	senate_influence = 0.1
 	monthly_character_experience = 0.05
@@ -249,7 +249,7 @@ righteous = { #
 	}
 	monthly_boni_party_conviction = 0.15
 	monthly_traditionalist_party_conviction = 0.15
-	monthly_corruption = -0.5
+	current_corruption = -10
 	support_for_character_as_heir = 1
 	country = {
 		agressive_expansion_monthly_decay = 0.002
@@ -264,7 +264,7 @@ corrupt = { #
 	monthly_populares_party_conviction = 0.1
 	monthly_oligarchic_party_conviction = 0.1
 	monthly_boni_party_conviction = -0.15
-	monthly_corruption = 0.5
+	current_corruption = 10
 	
 	country = {
 		global_tax_modifier = 0.1

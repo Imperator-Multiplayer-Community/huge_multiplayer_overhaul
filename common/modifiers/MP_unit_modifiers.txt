@@ -47,8 +47,4 @@ naval_action = {
  naval_morale_recovery = -0.0015
 }
 
-#Raiding victim revenge event
-cheap_cb = {
- war_no_cb_cost_modifier = -0.75            
-}
 

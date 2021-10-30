@@ -60,31 +60,31 @@
 	
 	effect = {
 		scope:actor.current_ruler.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = enticing_nation
-					days = 45
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = enticing_nation
+			#		days = 45
+			#	}
+			#}
 		save_scope_as = enticer	
 		}
 		
 		scope:target = {
-			hidden_effect = {
-				set_variable = {
-					name = character_enticed
-					days = 180
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = character_enticed
+			#		days = 180
+			#	}
+			#}
 		save_scope_as = enticed_govnah
 		}
 		scope:target.employer = {
-			hidden_effect = {
-				set_variable = {
-					name = nation_enticed
-					days = 45
-				}
-			}
+			#hidden_effect = {
+			#	set_variable = {
+			#		name = nation_enticed
+			#		days = 45
+			#	}
+			#}
 		save_scope_as = enticed_nation
 		}
 

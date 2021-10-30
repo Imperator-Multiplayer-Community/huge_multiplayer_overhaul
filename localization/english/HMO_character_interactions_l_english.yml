@@ -14,6 +14,21 @@
  anti_spam_hunt_recently:0 "[SCOPE.sChar('target').GetName] has recently gone hunting with someone, and will be unable to do so again until [SCOPE.sChar('target').GetVariableExpiry('anti_spam_hunt')|Y]\n"
  humiliate_rival_cooldown_recently:0 "You recently attempted to humiliate [SCOPE.sChar('target').GetName], and will be unable to do so again until [SCOPE.sChar('target').GetVariableExpiry('humiliate_rival_cooldown')|Y]\n"
  loving_cooldown_recently:0 "You recently seduced [SCOPE.sChar('target').GetName] and will be unable to do so again until [SCOPE.sChar('target').GetVariableExpiry('loving_cooldown')|Y]\n"
+ too_much_assassination_tt:0 "A character from this nation was recently assassinated from abroad. They will be on high alert until [SCOPE.sChar('target').GetVariableExpiry('assassination_chill')|Y]\n"
+ 
+ revoke_holding_loyalty_tt:0 "This character is too disloyal to surrender landed property to the state."
+ convert_religion_loyalty_tt:0 "This character is too disloyal to profess a new faith by order of the state."
+ force_divorce_loyalty_tt:0 "This character is too disloyal to divorce their spouse by order of the state."
+ force_divorce_spy_loyalty_tt:0 "This character is too disloyal to divorce their spouse by order of the state."
+
+ task_character_skill_tt:0 "This character is too disloyal or too skilled to take on one of your simple tasks."
+ letter_friend_skill_tt:0 "This character is too skilled to correspond with the likes of you."
+ hunting_friend_skill_tt:0 "This character is too skilled to go hunting with the likes of you."
+
+ humiliate_rival_tt:0 "Rub your rival's nose in their own excrement and luxuriate in the moment. Your leader's zeal will be used as the basis for determining whether you win the gods' favour... or scorn."
+ test_loyalty_tt:0 "Make this person swear fealty to you, or face backlash by overplaying your hand. Your most zealous secret police agent will enforce pledges and demonstrations of allegiance."
+ challenge_duel_tt:0 "Challenge a rival for dominance or attempt to remove senile successors to leadership of the tribe. Your leader's martial skill will be the basis for determining success... or failure."
+
 
  paradisial_garden:0 "Build a Garden"
  paradisial_garden_past:0 "Built a Garden"
@@ -22,15 +37,16 @@
 
  send_envoy:0 "Send Envoy"
  send_envoy_act:0 "Tell this player to check his Discord messages"
+ send_envoy_act_past:0 "You have told the player to check his Discord messages"
+ send_envoy_past:0 "Envoy Sent"
  send_envoy.1.t:0 "Message Received"
  send_envoy.1.desc:0 "I sent you a messaage on Discord. Would you respond to me, please?"
  send_envoy.1.a:0 "Thanks, I'll go read it now"
 
  test_loyalty:0 "Test Loyalty"
- test_loyalty_past:0 "Put to the Test"
+ test_loyalty_past:0 "Put to the test"
  test_loyalty_act:0 "Ask this person, with the gods watching, if they plan to remain true to your cause"
  test_loyalty_act_past:0 "We must remember who's in charge here"
- test_loyalty_tt:0 "Make this person swear fealty to you, or face backlash by overplaying your hand."
 
  loyalty_test.4.t:0 "Loyal as a Hound"
  loyalty_test.4.desc:0 "This individual has really come around and is now wholly convinced of the importance of loyalty to the state."
@@ -44,7 +60,6 @@
  humiliate_rival_past:0 "Find out who the gods love best"
  humiliate_rival_act:0 "Challenge this person directly and in public to a contest for dominance, in accordance with tradition and in honour of the gods, such as the footrace between Odysseus and Ajax, in which Athena intervened."
  humiliate_rival_act_past:0 "The gods will smile upon me"
- humiliate_rival_tt:0 "Rub your rival's nose in their own excrement and luxuriate in the moment."
 
  rival_challenge.4.t:0 "Life is Sweet"
  rival_challenge.4.desc:0 "The gods chuckle as your rival struggles to compete against you. Performing like a sickly dullard, your rival elicits mockery, jeers and outrage."
@@ -56,7 +71,9 @@
 
  challenge_duel:0 "Challenge to a Duel"
  challenge_duel_act:0 "Challenge your rival to a duel for honour and glory"
- challenge_duel_act_past:0 "Challenge your rival to a duel for honour and glory"
+ challenge_duel_act_past:0 "You have naturally taken up the challenge"
+ challenge_duel_past:0 "There can only be one"
+ 
  tribal_duel.1.t:0 "Trial by Combat"
  tribal_duel.1.desc:0 "Your rival's continued existence is an insult against you that demands satisfaction. Will you challenge your rival in the field, personally, sword in hand, or appoint a champion to fight on your behalf?"
  tribal_duel.1.a:0 "I will fight in person, with all my honour"
@@ -98,7 +115,7 @@
  black_widow_inspire_disloyalty_past:0 "Strained Loyalties"
  black_widow_inspire_disloyalty_act:0 "Excite your friend's passions beyond the point of reason"
  black_widow_inspire_disloyalty_act_past:0 "Capture his attentions and the rest will follow"
- black_widow_inspire_disloyalty_tt:0 "Turn this man against his own country with the gift of your intimate attention."
+ black_widow_inspire_disloyalty_tt:0 "Turn this man against his own country with the gift of your intimate attention. Success will depend on your ruler's charisma."
 
  black_widow_stop_inspire_disloyalty:0 "Stop Tempting"
  black_widow_stop_inspire_disloyalty_past:0 "Attention Withheld"
@@ -116,13 +133,13 @@
  black_widow_secude_governor_past:0 "Offer your hand in marriage to this man if he defects to your side"
  black_widow_secude_governor_act:0 "Tell him to make his true loyalties known"
  black_widow_secude_governor_act_past:0 "A strong woman needs a strong man"
- black_widow_secude_governor_tt:0 "Inspire this man to leave behind his position, family, home and country, a defector and a fugitive, for the promise of marriage and alliance with him."
+ black_widow_secude_governor_tt:0 "Inspire this man to leave behind his position, family, home and country, a defector and a fugitive, for the promise of marriage and alliance with him. Success will depend on your ruler's charisma."
 
  black_widow_manipulate:0 "Manipulate"
  black_widow_manipulate_past:0 "Trick this fool into doing serious harm to himself... or others"
  black_widow_manipulate_act:0 "Make him dread the thought of disappointing you"
  black_widow_manipulate_act_past:0 "He will be eating out of the palm of your hand"
- black_widow_manipulate_tt:0 "Overwhelm this man with excitement and yearning, driving him to do the unthinkable."
+ black_widow_manipulate_tt:0 "Overwhelm this man with excitement and yearning, driving him to do the unthinkable. Success will depend on your ruler's charisma."
 
  get_divorced:0 "Divorce Spouse"
  get_divorced_act:0 "It's time to be rid of the old ball and chain"
@@ -948,7 +965,7 @@
  relic_gift_event.21.t:0 "Great Rock of Multiplayer Salt"
  relic_gift_event.21.desc:0 "This colossal body of salt is the accumulation of untold tonnes of multiplayer salt stretching back so far into the past as to make carbon dating impossible."
  relic_gift_event.21.a:0 "What a gift! What a friend!"
- relic_gift_event.22.t:0 "Pet Honey Bagder"
+ relic_gift_event.22.t:0 "Pet Honey Badger"
  relic_gift_event.22.desc:0 "It has no regard for any other animal whatsoever."
  relic_gift_event.22.a:0 "What a gift! What a friend!"
  relic_gift_event.23.t:0 "Hector's Spear"
@@ -969,8 +986,8 @@
  relic_gift_event.28.t:0 "Nakama Server"
  relic_gift_event.28.desc:0 "This relic once aroused strong feelings, as it was created with great expectation but sometimes seemed to have been designed by its enemies. Its stated function having since faded from memory, it is now mostly valuable as a device for cultivating patience."
  relic_gift_event.28.a:0 "What a gift! What a friend!"
- relic_gift_event.29.t:0 "DaFoogle's Stash"
- relic_gift_event.29.desc:0 "This will slow you down but you'll feel great about it."
+ relic_gift_event.29.t:0 "Meditation Guide"
+ relic_gift_event.29.desc:0 "This will slow you down but you'll feel better."
  relic_gift_event.29.a:0 "What a gift! What a friend!"
  relic_gift_event.30.t:0 "Pope's Stock Tips"
  relic_gift_event.30.desc:0 "It goes up, it goes down, it goes up."
@@ -1024,7 +1041,8 @@
  relic_gift_event.46.desc:0 "This magic talisman guarantees success for players who need to hotjoin. Of course it only works if the player does not click anything and tells the host when they are in the game."
  relic_gift_event.46.a:0 "What a gift! What a friend!"
  relic_gift_event.47.t:0 "Wine Cellar"
- relic_gift_event.47.a:0 "This collection of world-class wines fills the mouth and stirs the soul." 
+ relic_gift_event.47.desc:0 "This collection of world-class wines fills the mouth and stirs the soul."
+ relic_gift_event.47.a:0 "What a gift! What a friend!"
  relic_gift_event.48.t:0 "Push-to-Talk Microphone"
  relic_gift_event.48.desc:0 "This incredible device allows players to eat, slurp, snort, snore, belch, breathe and wheeze to their heart's delight while engaging in intense conversation with fellow players... 10/10."
  relic_gift_event.48.a:0 "What a gift! What a friend!"
@@ -1044,3 +1062,4 @@
  #Assassination
 
  need_assassin_in_place_tt:0 "You must have a #Y Spy#! operating in the country."
+

@@ -12,7 +12,7 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 		name = "letter_friend.1.a"
 		scope:target = {
 			set_variable = {
-				name = received_letter
+				name = letter_recipient
 				value = scope:actor.current_ruler
 				days = 1460
 			}
@@ -20,7 +20,7 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 		}
 		scope:actor.current_ruler = {
 			set_variable = {
-				name = wrote_letter
+				name = letter_writer
 				value = scope:target
 				days = 1460
 			}

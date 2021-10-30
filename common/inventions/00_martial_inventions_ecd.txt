@@ -89,6 +89,13 @@
 		keystone = yes
 	}
 
+	assemble_raiding_inv = {
+		allow = { is_tribal = yes }
+		
+		requires = { global_start_experience_inv_3 }
+		modifier = { price_assemble_raiding_party_button_cost_modifier = -0.25 }
+	}
+
 	experience_decay_inv_1 = { 
 		modifier = { 
 			discipline = 0.05
