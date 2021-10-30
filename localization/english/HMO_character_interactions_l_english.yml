@@ -19,13 +19,11 @@
  revoke_holding_loyalty_tt:0 "This character is too disloyal to surrender landed property to the state."
  convert_religion_loyalty_tt:0 "This character is too disloyal to profess a new faith by order of the state."
  force_divorce_loyalty_tt:0 "This character is too disloyal to divorce their spouse by order of the state."
- force_divorce_spy_loyalty_tt:0 "This character is too disloyal to surrender landed property to the state."
+ force_divorce_spy_loyalty_tt:0 "This character is too disloyal to divorce their spouse by order of the state."
 
- task_character_skill_tt:0 ""
- letter_friend_skill_tt:0 ""
- hunting_friend_skill_tt:0 ""
- gift_relic_friend_skill_tt:0 ""
- gift_slave_friend_skill_tt:0 ""
+ task_character_skill_tt:0 "This character is too disloyal or too skilled to take on one of your simple tasks."
+ letter_friend_skill_tt:0 "This character is too skilled to correspond with the likes of you."
+ hunting_friend_skill_tt:0 "This character is too skilled to go hunting with the likes of you."
 
  humiliate_rival_tt:0 "Rub your rival's nose in their own excrement and luxuriate in the moment. Your leader's zeal will be used as the basis for determining whether you win the gods' favour... or scorn."
  test_loyalty_tt:0 "Make this person swear fealty to you, or face backlash by overplaying your hand. Your most zealous secret police agent will enforce pledges and demonstrations of allegiance."

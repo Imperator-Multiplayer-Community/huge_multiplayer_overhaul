@@ -46,7 +46,10 @@
 		#			is_ai = yes
 		#		}
 		#	}
+			custom_tooltip = {
+			text = "hunting_friend_skill_tt"
 			martial <= 16
+			}
 			trigger_if = {
 				limit = {
 					has_variable = anti_spam_hunt

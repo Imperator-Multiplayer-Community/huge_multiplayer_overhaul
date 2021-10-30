@@ -53,11 +53,14 @@
 	
 	allowed_trigger = {
 		scope:target = {
-			loyalty >= 50
-			martial <= 16
-			finesse <= 16
-			charisma <= 16
-			zeal <= 16
+			custom_tooltip = {
+			text = "task_character_skill_tt"
+				loyalty >= 50
+				martial <= 16
+				finesse <= 16
+				charisma <= 16
+				zeal <= 16
+			}
 		}
 
 		scope:target.employer = {

@@ -34,7 +34,10 @@
 		}
 		scope:target = {
 			exists = employer
+			custom_tooltip = {
+			text = "convert_religion_loyalty_tt"
 			loyalty >= 60
+			}
 			NOT = {
 				has_religion = employer.religion
 			}

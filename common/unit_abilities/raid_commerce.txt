@@ -94,10 +94,10 @@
 					}
 				}
 			}
-			custom_tooltip = {
-				text = raiding_commerce_cooldown_tooltip
-				always = no
-			}
+			#custom_tooltip = {
+			#	text = raiding_commerce_cooldown_tooltip
+			#	always = no
+			#}
 		}
 
 		NOT = {

@@ -28,7 +28,7 @@
 	}
 	
 	allowed_trigger = {
-		hidden:scope:actor.current_ruler = {
+		scope:actor.current_ruler = {
 			is_friend = scope:target
 		}
 		scope:actor = {
@@ -38,10 +38,16 @@
 			is_alive = yes
 			is_adult = yes
 			prisoner = no
+		}
+		scope:target = {
+			custom_tooltip = {
+			text = "letter_friend_skill_tt"
 			martial <= 16
 			finesse <= 16
 			charisma <= 16
 			zeal <= 16
+			}
+		
 		#	NOT = { #
 		#		employer = {
 		#			is_ai = yes
