@@ -395,7 +395,7 @@ task.4 = {
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
 	#Finesse
-	picture = scribe_writing
+	picture = scribe_tools
 	
 	option = {
 		name = "task.4.a"
@@ -999,7 +999,7 @@ task.11 = { # Final resolution
 	desc = task.11.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = farmer_in_latin_countryside
+	picture = interesting_histories_purple_soldier
 	interface_lock = no
 	
 	option = {
@@ -1124,7 +1124,7 @@ task.13 = { # Final resolution
 	desc = task.13.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = fire_city
+	picture = Event_fire_city
 	interface_lock = no
 	
 	option = {
@@ -1201,7 +1201,7 @@ task.14 = { # Final resolution
 	desc = task.14.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = greek_philosopher_talking
+	picture = interesting_histories_greek_debate
 	interface_lock = no
 	
 	option = {
@@ -1248,7 +1248,7 @@ task.15 = { # Final resolution
 	desc = task.15.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = senator_talking_to_commoner
+	picture = interesting_histories_hellenic_town_man
 	interface_lock = no
 	
 	option = {
@@ -1373,7 +1373,7 @@ task.17 = { # Final resolution
 	desc = task.17.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = street_view_at_pataliputra
+	picture = interesting_histories_punic_city_purple
 	interface_lock = no
 	
 	option = {
@@ -1449,7 +1449,7 @@ task.18 = { # Final resolution
 	desc = task.18.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = court_scene_in_macedonian_court
+	picture = interesting_histories_ship_port_africa
 	interface_lock = no
 	
 	option = {
@@ -1497,7 +1497,7 @@ task.19 = { # Final resolution
 	desc = task.19.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = local_life
+	picture = interesting_histories_southern_india
 	interface_lock = no
 	
 	option = {
@@ -1574,7 +1574,7 @@ task.20 = { # Final resolution
 	desc = task.20.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = hanging_gardens_of_babylon
+	picture = interesting_histories_hellenic_city_rebuild
 	interface_lock = no
 	
 	option = {
@@ -1620,7 +1620,7 @@ task.21 = { # Final resolution
 	desc = task.21.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = bakery_with_street_outside_showing_as_well
+	picture = interesting_histories_city_mountains
 	interface_lock = no
 	
 	option = {
@@ -1744,7 +1744,7 @@ task.23 = { # Final resolution
 	desc = task.23.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = open_chest
+	picture = interesting_histories_greek_city_man
 	interface_lock = no
 	
 	option = {
@@ -1821,7 +1821,7 @@ task.24 = { # Final resolution
 	desc = task.24.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = roman_soldier_pinning_a_proscription_list
+	picture = interesting_histories_eastern_tribes
 	interface_lock = no
 	
 	option = {
@@ -2117,7 +2117,7 @@ task.29 = { # Final resolution
 	desc = task.29.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = construction_work_roman_city_under_construction
+	picture = great_work_supplies
 	interface_lock = no
 	
 	option = {
@@ -2193,7 +2193,7 @@ task.30 = { # Final resolution
 	desc = task.30.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = temple_with_augur_in_front
+	picture = interesting_histories_italic_hilltop
 	interface_lock = no
 	
 	option = {
@@ -2318,7 +2318,7 @@ task.32 = { # Final resolution
 	desc = task.32.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = close_up_of_altar_with_ongoing_religious_ceremony
+	picture = interesting_histories_norse_tribes
 	interface_lock = no
 	
 	option = {
@@ -2366,7 +2366,7 @@ task.33 = { # Final resolution
 	desc = task.33.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = sacrifice
+	picture = interesting_histories_greek_city_temple
 	interface_lock = no
 	
 	option = {
@@ -2443,7 +2443,7 @@ task.34 = { # Final resolution
 	desc = task.34.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = ascetic_sitting_by_a_pillar
+	picture = interesting_histories_greek_city_temple
 	interface_lock = no
 	
 	option = {
@@ -2490,7 +2490,7 @@ task.35 = { # Final resolution
 	desc = task.35.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = local_life
+	picture = interesting_histories_kush_capital
 	interface_lock = no
 	
 	option = {
@@ -2568,7 +2568,7 @@ task.36 = { # Final resolution
 	desc = task.36.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = greek_house
+	picture = interesting_histories_kush_capital
 	interface_lock = no
 	
 	option = {
@@ -2616,7 +2616,7 @@ task.37 = { # Final resolution
 	desc = task.37.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = fire_fiddle
+	picture = interesting_histories_kush_capital
 	interface_lock = no
 	
 	option = {
@@ -2696,7 +2696,7 @@ task.38 = { # Final resolution - original thinker
 	desc = task.38.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = roman_legions_marching_in_formation #################################PAY ATTENTION TO PICTURES###################
+	picture = great_library
 	interface_lock = no
 	
 	option = {
@@ -2710,7 +2710,7 @@ task.39 = { # Final resolution - brave
 	desc = task.39.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = roman_legions_marching_in_formation
+	picture = great_library
 	interface_lock = no
 	
 	option = {
@@ -2724,7 +2724,7 @@ task.40 = { # Final resolution - tactically_inflexible
 	desc = task.40.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = roman_legions_marching_in_formation
+	picture = great_library
 	interface_lock = no
 	
 	option = {
@@ -2738,7 +2738,7 @@ task.41 = { # Final resolution - coward
 	desc = task.41.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = roman_legions_marching_in_formation
+	picture = great_library
 	interface_lock = no
 	
 	option = {
@@ -2752,7 +2752,7 @@ task.42 = { # Final resolution
 	desc = task.42.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = roman_legions_marching_in_formation
+	picture = great_library
 	interface_lock = no
 	
 	option = {
@@ -2766,7 +2766,7 @@ task.43 = { # Final resolution
 	desc = task.43.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = roman_legions_marching_in_formation
+	picture = great_library
 	interface_lock = no
 	
 	option = {

@@ -864,36 +864,9 @@ counterintel.9 = { # Spy is physically restrained
 			}
 		}
 	} 		
-	
-	option = { #
-		name = "counterintel.9.c" #Make a double agent (if it succeeds, send spy back and gain foreign_intel variable; if it fails, spy goes back and stays)
-		scope:spy = {
-			remove_character_modifier = foreign_citizen
-			remove_character_modifier = on_espionage_mission_cmod #NEW ######################
-			remove_character_modifier = spy_recruit_character
-			add_loyalty = granted_citizenship
-			set_as_minor_character = THIS
-			set_home_country = employer
-			if = {
-				limit = {
-					has_variable = came_from
-				}
-				remove_variable = came_from
-			}
-			set_variable = {
-				name = spy_amnesty
-				value = scope:actor
-				days = -1
-			}
-		}
-		scope:spied_upon.current_ruler = {
-			add_popularity = subtract_popularity_small
-		}
-	}
-
 
 	option = { #
-		name = "counterintel.9.d"
+		name = "counterintel.9.c"
 		scope:spy = {
 			remove_all_positions = yes
 			move_country = scope:esp_o # NOT WORKING #################
@@ -1986,35 +1959,8 @@ counterintel.18 = { # Spy caught like a fish on a hook
 	}
 
 
-	option = { #
-		name = "counterintel.18.c" #Make a double agent (if it succeeds, send spy back and gain foreign_intel variable; if it fails, spy goes back and stays)
-		scope:spy = {
-			remove_espionage_variables_effect = yes
-			remove_character_modifier = foreign_citizen
-			remove_character_modifier = on_espionage_mission_cmod #NEW ######################
-			remove_character_modifier = spy_recruit_character
-			add_loyalty = granted_citizenship
-			set_as_minor_character = THIS
-			set_home_country = employer
-			if = {
-				limit = {
-					has_variable = came_from
-				}
-				remove_variable = came_from
-			}
-			set_variable = {
-				name = spy_amnesty
-				value = scope:actor
-				days = -1
-			}
-		}
-		scope:spied_upon.current_ruler = {
-			add_popularity = subtract_popularity_small
-		}
-	}
-
 	option = { # 
-		name = "counterintel.18.d"
+		name = "counterintel.18.c"
 		scope:spy = { #tracked_spy
 			remove_all_positions = yes
 			move_country = scope:esp_o # NOT WORKING #################
