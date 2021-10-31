@@ -147,7 +147,7 @@ rival_challenge.4 = { #Report results YOU WIN
 		scope:actor.current_ruler.employer = {
 			add_country_modifier = {
 				name = "loved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}
 		}
@@ -157,7 +157,7 @@ rival_challenge.4 = { #Report results YOU WIN
 		scope:target.employer = {
 			add_country_modifier = {
 				name = "unloved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}	
 		}		
@@ -206,14 +206,14 @@ rival_challenge.5 = { #Report results YOU LOSE
 		scope:actor.current_ruler.employer = {
 			add_country_modifier = {
 				name = "unloved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}
 		}
 		scope:target.employer = {
 			add_country_modifier = {
 				name = "loved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}	
 		}		

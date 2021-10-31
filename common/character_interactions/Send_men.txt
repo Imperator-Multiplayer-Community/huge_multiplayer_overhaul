@@ -105,6 +105,9 @@ send_men_5k = {
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
 		}
+		scope:target = {
+			is_friend = scope:actor.current_ruler
+		}
 	}
 
 	effect = {
@@ -161,6 +164,9 @@ send_men_10k = {
 		}
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
+		}
+		scope:target = {
+			is_friend = scope:actor.current_ruler
 		}
 	}
 

@@ -49,7 +49,7 @@
 	
 	effect = {
 
-		scope:target.employer = {
+		scope:target = {
 			save_scope_as = envoy_received
 			trigger_event = {
 				id = send_envoy.1 
@@ -58,7 +58,7 @@
 		}
 
 
-		scope:actor = {
+		scope:actor.current_ruler = {
 			save_scope_as = envoy_sender
 			set_variable = {
 				name = anti_spam_envoy

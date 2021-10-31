@@ -480,7 +480,7 @@ subject_mercenary_city_state = {
 		mercenary_naval_maintenance_cost = -0.05
 	}
 	subject_modifier = {
-		global_manpower = 0.25 # Was 0.125
+		global_manpower = 0.3 # Was 0.125
 		army_maintenance_cost = -0.2
 	}
 	
@@ -540,7 +540,7 @@ subject_league_city_state = {
 		global_import_commerce_modifier = 0.05
 	}
 	subject_modifier = {
-		global_capital_trade_routes = 4 # Was 2
+		global_capital_trade_routes = 5 # Was 2
 		global_goods_from_slaves = -4
 		country_civilization_value = 5
 		global_population_growth = 0.1
