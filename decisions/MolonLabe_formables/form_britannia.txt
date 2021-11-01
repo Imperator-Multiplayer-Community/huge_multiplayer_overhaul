@@ -1,6 +1,7 @@
 ﻿country_decisions = {
 	
 	# Form Britannia
+	# Created by Shinymewtwo99
 	form_britannia = {
 		
 		potential = {
@@ -32,7 +33,16 @@
 		highlight = {
 			scope:province = {
 				OR = {
-					is_in_region = britain_region
+					is_in_area = cantiacia_area
+					is_in_area = durotrigia_area
+					is_in_area = dumnonia_area
+					is_in_area = icenia_area
+					is_in_area = dobunnia_area
+					is_in_area = britannia_secunda_meridionalis_area
+					is_in_area = britannia_secunda_septentrionalis_area
+					is_in_area = cornovia_area
+					is_in_area = coritania_area
+					is_in_area = brigantia_area
 				}
 			}
 		}
@@ -47,7 +57,16 @@
 				}
 			}
 			can_form_nation_trigger = yes
-			owns_or_subject_owns_region = britain_region
+			owns_or_subject_owns_area = cantiacia_area
+			owns_or_subject_owns_area = durotrigia_area
+			owns_or_subject_owns_area = dumnonia_area
+			owns_or_subject_owns_area = icenia_area
+			owns_or_subject_owns_area = dobunnia_area
+			owns_or_subject_owns_area = britannia_secunda_meridionalis_area
+			owns_or_subject_owns_area = britannia_secunda_septentrionalis_area
+			owns_or_subject_owns_area = cornovia_area
+			owns_or_subject_owns_area = coritania_area
+			owns_or_subject_owns_area = brigantia_area
 
 			custom_tooltip = {
 				text = formable_britannia_does_not_own_italy

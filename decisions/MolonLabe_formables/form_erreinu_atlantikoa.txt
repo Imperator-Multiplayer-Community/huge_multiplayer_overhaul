@@ -1,13 +1,18 @@
 ﻿country_decisions = {
 	
 	# Form Erreinu Atlantikoa
+	# Created by Shinymewtwo99
 
 	form_erreinu_atlantikoa = {
 		
 		potential = {
 			num_of_cities >= 1
 			NOT = { tag = EAT }
-			country_culture_group = proto_european
+			OR = {
+				country_culture_group = proto_european
+				primary_culture = vasconian
+				primary_culture = aquitani
+			}
 			NOT = {
 				is_endgame_tag_trigger = yes
 			}
@@ -21,7 +26,18 @@
 					is_in_area = vardulia_area
 					is_in_area = vasconia_area
 					is_in_area = ilergetia_area
-					is_in_region = britain_region
+					is_in_area = brigantia_area
+					is_in_area = cornovia_area
+					is_in_area = coritania_area
+					is_in_area = icenia_area
+					is_in_area = cantiacia_area
+					#is_in_area = dubunnia_area
+					is_in_area = britannia_secunda_septentrionalis_area
+					is_in_area = britannia_secunda_meridionalis_area
+					is_in_area = durotrigia_area
+					is_in_area = dumnonia_area
+					is_in_area = dobunnia_area
+					#is_in_region = britain_region
 					is_in_region = aquitaine_region
 					is_in_region = armorica_region
 				}
@@ -43,7 +59,18 @@
 			owns_or_subject_owns_area = vardulia_area
 			owns_or_subject_owns_area = vasconia_area
 			owns_or_subject_owns_area = ilergetia_area
-			owns_or_subject_owns_region = britain_region
+			owns_or_subject_owns_area = brigantia_area
+			owns_or_subject_owns_area = cornovia_area
+			owns_or_subject_owns_area = coritania_area
+			owns_or_subject_owns_area = icenia_area
+			owns_or_subject_owns_area = cantiacia_area
+			#owns_or_subject_owns_area = dubunnia_area
+			owns_or_subject_owns_area = dobunnia_area
+			owns_or_subject_owns_area = britannia_secunda_septentrionalis_area
+			owns_or_subject_owns_area = britannia_secunda_meridionalis_area
+			owns_or_subject_owns_area = durotrigia_area
+			owns_or_subject_owns_area = dumnonia_area
+			#owns_or_subject_owns_region = britain_region
 			owns_or_subject_owns_region = aquitaine_region
 			owns_or_subject_owns_region = armorica_region
 		}
