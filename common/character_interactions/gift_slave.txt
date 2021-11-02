@@ -16,9 +16,6 @@
 					tag = BAR
 				}
 			}
-			employer = {
-				is_ai = no
-			} ##########################################################
 			is_alive = yes
 			is_friend = scope:actor.current_ruler
 			NOT = {
