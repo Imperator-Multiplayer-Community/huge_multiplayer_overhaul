@@ -5,7 +5,11 @@
 		
 		potential = {
 			num_of_cities >= 1
-			country_culture_group = proto_european
+			OR = {
+				country_culture_group = proto_european
+				primary_culture = vasconian
+				primary_culture = aquitani
+			}
 			NOT = {
 				tag = EUS
 			}

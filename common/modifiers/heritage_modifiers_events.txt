@@ -1041,3 +1041,45 @@ levantine_republic_modifier = {
 	naval_damage_taken = -0.1
 	character_loyalty = -5 
 }
+
+thrace_thracian_modifier = {
+		price_found_city_cost_modifier = -0.1
+		fort_maintenance_cost = -0.10
+		global_citizen_happyness = negative_happiness_small_svalue
+}
+
+meshwesh_modifier = {
+		enslavement_efficiency = 0.05
+		light_infantry_morale = 0.10
+		naval_damage_done = -0.05
+}
+
+hellenic_kingdom_modifier = {
+		mercenary_land_maintenance_cost = -0.05
+		heavy_infantry_offensive = 0.1
+		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
+}
+
+nemedia_modifier = {
+		horse_archers_offensive = 0.05
+		omen_power = 0.05
+		siege_ability = -0.05
+}
+
+arfordir_chwal_modifier = {
+		global_population_capacity_modifier = 0.1
+		global_pop_conversion_speed_modifier = 0.05
+		recruit_mercenary_cost_modifier = 0.05
+}
+
+ishkuza_modifier = {
+		siege_ability = 0.05
+		enslavement_efficiency = 0.10
+		global_population_happiness = negative_output_small_svalue
+}
+
+liguria_modifier = {
+		global_pop_promotion_speed_modifier = 0.05
+		land_morale_modifier = 0.05
+		global_pop_assimilation_speed_modifier = -0.05
+}

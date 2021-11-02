@@ -639,7 +639,7 @@
  ESTU_IMPERIJA_ADJECTIVE:0 "Estu"
  estu_imperija_not_exists:0 "#Y Estu Imperija#! must NOT exist."
 
- #Levantine Republic
+ #levantine Republic
  form_levantine_republic:0 "Form Levantine Republic"
  form_levantine_republic_desc:0 "The Levant shall band together to defend it's peoples."
  LEVANTINE_REPUBLIC:0 "Levantine Republic"
@@ -654,17 +654,66 @@
  create_grand_republic:0 "Create Grand Republic"
  create_grand_republic_desc:0 "Our Republic has grown to dominate a massive amount of land prompting a need to restructure our government's foundations to accommodate the logistical needs of this grand amount of land."
 
-#Lower Egypt
-form_lower_egypt:0 "Unite Lower Egypt"
-form_lower_egypt_desc:0 "If we are to bring the Kemetic people back to glory we must first unite the people of Lower Egypt."
-LOWER_EGYPT:0 "Lower Egypt"
+ #Lower Egypt
+ form_lower_egypt:0 "Unite Lower Egypt"
+ form_lower_egypt_desc:0 "If we are to bring the Kemetic people back to glory we must first unite the people of Lower Egypt."
+ LOWER_EGYPT:0 "Lower Egypt"
 
-#Upper Egypt
-form_upper_egypt:0 "Unite Upper Egypt"
-form_upper_egypt_desc:0 "If we are to bring the Kemetic people back to glory we must first unite the people of Upper Egypt."
-UPPER_EGYPT:0 "Upper Egypt"
+ #Upper Egypt
+ form_upper_egypt:0 "Unite Upper Egypt"
+ form_upper_egypt_desc:0 "If we are to bring the Kemetic people back to glory we must first unite the people of Upper Egypt."
+ UPPER_EGYPT:0 "Upper Egypt"
 
-#Kemet
-form_kemet:0 "Unite the People of Kemet"
-form_kemet:0 "We can once again unite the corwns of upper and lower Egypt after centeruies of occupation. The people of Kemet will rise once more!"
-KEMET_NAME:0 "Kemet"
+ #Kemet
+ form_kemet:0 "Unite the People of Kemet"
+ form_kemet:0 "We can once again unite the corwns of upper and lower Egypt after centeruies of occupation. The people of Kemet will rise once more!"
+ KEMET_NAME:0 "Kemet"
+
+ #Thrace
+ form_thrace:0 "Form Thrace"
+ form_thrace_desc:0 "Our people have a proud warrior tradition, where we have long resisted attempts by outsiders to subjugate our lands, from the Achaemenids to the Macedonians. However, the Thracians are split among countless tribes and kingdoms, emboldening our foes. If we can unite the disparate polities under our banner, the labrys shall slice the way toward a future dominated by Thracians."
+ THRACE_THRACIAN_NAME:0 "Thrace"
+ THRACE_THRACIAN_ADJECTIVE:0 "Thracian"
+ thrace_not_exists:0 "#Y Thrace#! must NOT exist."
+
+ #Meshwesh
+ form_meshwesh:0 "Form Meshwesh"
+ form_meshwesh_desc:0 "For as long as the sands have flowed in the desert, we have lived in the shadow of our Egyptian neighbors, scavenging for scraps while they feast like kings and erect exorbitant tombs. No more! We shall be the Pharaohs now and take what is rightfully ours!"
+ MESHWESH_NAME:0 "Meshwesh"
+ MESHWESH_ADJECTIVE:0 "Meshweshi"
+ meshwesh_not_exists:0 "#Y Meshwesh#! must NOT exist."
+
+ #Hellenic Kingdom
+ form_hellenic_kingdom:0 "Form Hellenic Kingdom"
+ form_hellenic_kingdom_desc:0 "Hellas is fractured and weak, divided between city states who fight amongst themselves and stand for nothing but their own petty self-interests. Alexander showed us that true leadership must come from a centralized power in the hands of a strong king fit to rule; In order to restore strength, prosperity, and glory for the people of Greece, we must follow Alexander's example and forge a new pan-Hellenic kingdom from the ashes of his empire."
+ HELLENIC_KINGDOM_NAME:0 "Hellenic Kingdom"
+ HELLENIC_KINGDOM_ADJECTIVE:0 "Hellenic"
+ hellenic_kingdom_not_exists:0 "#Y Hellenic Kingdom#! must NOT exist."
+
+ #Nemedia
+ form_nemedia:0 "Form Nemedia"
+ form_nemedia_desc:0 "Left virtually deserted from years of plague and famine, the Emerald Isle beacons for more people to till it's rich soil, reap it's crops, and establish settlements. While the great journey across the sea will be both perilous and treacherous, as long as we have faith in Thagimasadas, we will survive and then thrive in our new homeland, Nemedia."
+ NEMEDIA_NAME:0 "Nemedia"
+ NEMEDIA_ADJECTIVE:0 "Nemedian"
+ nemedia_not_exists:0 "#Y Nemedia#! must NOT exist."
+
+ #Arfordir Chwal
+ form_arfordir_chwal:0 "Form Arfordir Chwal"
+ form_arfordir_chwal_desc:0 "Britain is a land of constant strife, where the struggles between kings make every day life an uncertainty. Over across the eastern sea lies a land of anglers, where surely schools of fish must be teeming along their coasts, ready to feed a hungry people. Let us raise a host of our finest, most battle-hardened warriors and leave this forsaken island, never to return; for we shall take a new one along the coasts of Arfordir Chwal!"
+ ARFORDIR_CHWAL_NAME:0 "Arfordir Chwal"
+ ARFORDIR_CHWAL_ADJECTIVE:0 "Arfordir Chwalian"
+ arfordir_chwal_not_exists:0 "#Y Arfordir Chwal#! must NOT exist."
+
+ #Ishkuza
+ form_ishkuza:0 "Form Ishkuza"
+ form_ishkuza_desc:0 "Centuries ago, the Mesopotamians regarded the warriors of the Steppe with terror and horror, where the very mention of our names was enough to send shivers down their spines. Now we have been forgotten, neglected and overshadowed by other powers; civilized men give us not even a second thought, if they are at all aware of our existance. For too long we have been passive and soft, content to sit and watch the world go by; let us once again raise a host of warriors and penetrate beyond the mountain passes, where we shall sack and lay ruin to the wealthy and pretentious cities of the world. Only then shall the name Ishkuza once again strike the fear into our enemies that it deserves."
+ ISHKUZA_NAME:0 "Ishkuza"
+ ISHKUZA_ADJECTIVE:0 "Ishkuzan"
+ ishkuza_not_exists:0 "#Y Ishkuza#! must NOT exist."
+
+ #Liguria
+ form_liguria:0 "Form Liguria"
+ form_liguria_desc:0 "The Ligurians have persisted in Cisalpine Gaul for millenia, living divided among small tribes and toiling in the fields. However, a new power to the south is rising which, if left unchecked, could threaten our very existance. In order to counteract this threat, we must band together into a pan-Ligurian federation capable of fighting those who would subjugate us."
+ LIGURIA_NAME:0 "Liguria"
+ LIGURIA_ADJECTIVE:0 "Ligurian"
+ liguria_not_exists:0 "#Y Liguria#! must NOT exist."

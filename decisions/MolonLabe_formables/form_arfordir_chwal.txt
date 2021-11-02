@@ -1,0 +1,98 @@
+﻿country_decisions = {
+	
+	# Form Arfordir Chwal
+	# Suggested by x8, created by Shinymewtwo99
+	form_arfordir_chwal = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = britannic
+			NOT = {
+				tag = ARF
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = chasuaria_area
+					is_in_area = chaucia_area
+					is_in_area = cimbrica_inferioris_area
+					is_in_area = cimbrica_superioris_area
+					is_in_area = ultima_thule_area
+					is_in_area = west_gothia_area
+					is_in_area = herulia_area
+					is_in_area = scandia_insula_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = arfordir_chwal_not_exists
+				NOT = {
+					any_country = {
+						tag = ARF
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = chasuaria_area
+			owns_or_subject_owns_area = chaucia_area
+			owns_or_subject_owns_area = cimbrica_inferioris_area
+			owns_or_subject_owns_area = cimbrica_superioris_area
+			owns_or_subject_owns_area = ultima_thule_area
+			owns_or_subject_owns_area = west_gothia_area
+			owns_or_subject_owns_area = herulia_area
+			owns_or_subject_owns_area = scandia_insula_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "ARFORDIR_CHWAL_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ARFORDIR_CHWAL_ADJECTIVE"
+				change_country_color = "arfordir_chwal_color"
+				change_country_tag = ARF
+				change_country_flag = ARFORDIR_CHWAL_FLAG
+				trigger_event = {
+					id = formable_heritage.142
+				}					
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_arfordir_chwal_claims_tooltip"
+			hidden_effect = {
+				area:morinia_area = { formable_area_province_effect = yes }
+				area:armorica_maioris_area = { formable_area_province_effect = yes }				
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+
