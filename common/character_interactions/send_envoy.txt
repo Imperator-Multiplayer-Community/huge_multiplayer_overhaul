@@ -21,6 +21,7 @@
 			is_alive = yes
 			is_mercenary = no
 			is_ruler = yes
+			is_ai = no ##########################################################
 			employer = {
 				NOR = {
 					tag = PIR

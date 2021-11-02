@@ -24,6 +24,9 @@
 					tag = BAR
 				}
 			}
+			employer = {
+				is_ai = no
+			} ##########################################################	
 			NOT = {
 				this = scope:actor.current_ruler
 			}

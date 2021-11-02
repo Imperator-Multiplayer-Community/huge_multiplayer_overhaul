@@ -8,6 +8,9 @@
 	potential_trigger = {
 		hidden:scope:target = {
 			employer = scope:actor
+			employer = {
+				is_ai = no
+			} ##########################################################	
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
 			is_mercenary = no
