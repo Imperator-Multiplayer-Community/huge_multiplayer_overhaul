@@ -4,8 +4,7 @@
 	form_cyprus = {
 		
 		potential = {
-			num_of_cities >= 1
-			num_of_cities < 12
+			num_of_cities >= 12
 			capital_scope = {
 				is_in_area = cyprus_area
 			}

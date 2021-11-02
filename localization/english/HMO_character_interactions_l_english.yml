@@ -16,6 +16,9 @@
  loving_cooldown_recently:0 "You recently seduced [SCOPE.sChar('target').GetName] and will be unable to do so again until [SCOPE.sChar('target').GetVariableExpiry('loving_cooldown')|Y]\n"
  too_much_assassination_tt:0 "A character from this nation was recently assassinated from abroad. They will be on high alert until [SCOPE.sChar('target').GetVariableExpiry('assassination_chill')|Y]\n"
  
+ spy_recruit_cooldown:0 "You may only recruit one Intelligence Agent every 18 months."
+ aryan_spy_recruit_cooldown:0 "You may only recruit one Intelligence Agent every 12 months."
+
  revoke_holding_loyalty_tt:0 "This character is too disloyal to surrender landed property to the state."
  convert_religion_loyalty_tt:0 "This character is too disloyal to profess a new faith by order of the state."
  force_divorce_loyalty_tt:0 "This character is too disloyal to divorce their spouse by order of the state."

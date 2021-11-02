@@ -5,11 +5,10 @@
 	
 		potential = {
 			num_of_cities >= 1
+			invention = hostile_attrition_inv
 			NOR = {
 				has_country_modifier = burnt_ground
 			}
-			war = yes
-			has_war_exhaustion >= 5
 		}
 		
 		allow = {
@@ -18,7 +17,6 @@
 			military_experience >= 25
 			war = yes
 			stability >= 40
-			invention = hostile_attrition_inv
 		}
 		
 		effect = {

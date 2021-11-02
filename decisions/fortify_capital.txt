@@ -8,7 +8,7 @@
 			NOR = {
 				has_country_modifier = fortified_capital
 			}
-			war = yes
+			invention = global_defensive_inv_5
 		}
 		
 		allow = {
@@ -19,7 +19,6 @@
 			capital_scope.state = { 
 				trade_good_surplus = { target = stone value > 1 }
 			}
-			invention = global_defensive_inv_5
 
 		}
 		
