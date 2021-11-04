@@ -758,8 +758,12 @@ base_window = {
 					text_button_square = {
 						size = { 200 0 }
 						parentanchor = right
+						datacontext = "[GetScriptedGui('levy_xp_to_military_xp')]"
 						blockoverride "Center_text" { text = "DISBAND_ALL_LEVIES" }
-						blockoverride "On_click" { onclick = "[MilitaryView.DisbandAllLevies]" }
+						blockoverride "On_click" { 
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							onclick = "[MilitaryView.DisbandAllLevies]" 
+						}
 						enabled = "[MilitaryView.CanDisbandAllLevies]"
 						tooltip = "[MilitaryView.CanDisbandAllLeviesTooltip]"
 						position = { -12 46 }

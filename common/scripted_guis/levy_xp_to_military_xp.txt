@@ -1,0 +1,28 @@
+levy_xp_to_military_xp = {
+	scope = country
+
+	saved_scopes = {
+	}
+
+	effect = {
+		every_unit = {
+			limit = {
+				NOT = {
+					has_legion_trigger = yes
+				}
+			}
+
+			save_scope_as = levy_unit
+
+			ROOT = {
+				add_military_experience = {
+					value = scope:levy_unit.experience_percentage
+					multiply = 10
+					subtract = global_start_experience
+					multiply = 0.05
+					min = 0
+				}
+			} 
+		}
+	}
+}
