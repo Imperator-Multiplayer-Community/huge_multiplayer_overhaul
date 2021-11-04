@@ -16,6 +16,9 @@
  loving_cooldown_recently:0 "You recently seduced [SCOPE.sChar('target').GetName] and will be unable to do so again until [SCOPE.sChar('target').GetVariableExpiry('loving_cooldown')|Y]\n"
  too_much_assassination_tt:0 "A character from this nation was recently assassinated from abroad. They will be on high alert until [SCOPE.sChar('target').GetVariableExpiry('assassination_chill')|Y]\n"
  
+ spy_recruit_cooldown:0 "You may only recruit one Intelligence Agent every 18 months."
+ aryan_spy_recruit_cooldown:0 "You may only recruit one Intelligence Agent every 12 months."
+
  revoke_holding_loyalty_tt:0 "This character is too disloyal to surrender landed property to the state."
  convert_religion_loyalty_tt:0 "This character is too disloyal to profess a new faith by order of the state."
  force_divorce_loyalty_tt:0 "This character is too disloyal to divorce their spouse by order of the state."
@@ -225,8 +228,7 @@
  counterintel.9.desc:0 "A foreign spy was captured by your men. How do you wish to proceed?"
  counterintel.9.a:0 "Execute" #Execute
  counterintel.9.b:0 "Imprison" #Imprison
- counterintel.9.c:0 "Offer Amnesty" #
- counterintel.9.d:0 "Send home" #Send home
+ counterintel.9.c:0 "Send home" #Send home
 
  counterintel.10.t:0 "Cat and Mouse" #They spy was killed when apprehended
  counterintel.10.desc:0 "Cornered by your counterintelligence agents, a foreign spy will do anything to escape."
@@ -249,8 +251,7 @@
  counterintel.18.desc:0 "Your guards have captured a foreign spy. How do you wish to proceed?"
  counterintel.18.a:0 "Execute" #Execute
  counterintel.18.b:0 "Imprison" #Imprison
- counterintel.18.c:0 "Offer Amnesty" #
- counterintel.18.d:0 "Send home" #Send home
+ counterintel.18.c:0 "Send home" #
 
  counterintel.20.t:0 "Foreign Spy Killed" #They spy was killed when apprehended
  counterintel.20.desc:0 "Your guards attempted to arrest the spy, who fought back to avoid capture and was killed. We regret that we were unable to capture the spy alive."

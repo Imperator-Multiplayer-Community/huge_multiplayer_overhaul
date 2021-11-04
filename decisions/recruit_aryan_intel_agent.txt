@@ -6,9 +6,12 @@
 		}
 
 		allow = {
-			NOR = { 
-				has_variable = aryan_spy_recruit_cooldown
-				has_variable = spy_recruit_cooldown
+			custom_tooltip = {
+				text = "aryan_spy_recruit_cooldown_tt"
+				NOR = { 
+					has_variable = spy_recruit_cooldown
+					has_variable = aryan_spy_recruit_cooldown
+				}
 			}	
 			stability > 10
 			treasury >= 40

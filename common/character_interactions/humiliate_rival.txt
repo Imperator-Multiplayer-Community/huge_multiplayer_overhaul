@@ -29,9 +29,9 @@
 				has_country_modifier = unloved_by_the_gods
 			}
 		}
-		custom_tooltip = {
+		scope:target = {
+			custom_tooltip = {
 			text = "humiliate_rival_tt"
-			scope:target = {
 				is_rival = scope:actor.current_ruler
 			}
 		}
@@ -63,7 +63,7 @@
 			hidden_effect = {
 				set_variable = {
 					name = humiliate_rival_cooldown
-					days = 1095
+					days = 730
 				}
 			}
 		}

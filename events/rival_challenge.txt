@@ -114,7 +114,7 @@ rival_challenge.4 = { #Report results YOU WIN
 	type = country_event
 	title = "rival_challenge.4.t"
 	desc = "rival_challenge.4.desc"
-	picture = court_scene_in_macedonian_court
+	picture = interesting_histories_greek_city_temple
 	left_portrait = scope:actor.current_ruler
 	right_portrait = scope:target
 
@@ -147,7 +147,7 @@ rival_challenge.4 = { #Report results YOU WIN
 		scope:actor.current_ruler.employer = {
 			add_country_modifier = {
 				name = "loved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}
 		}
@@ -157,7 +157,7 @@ rival_challenge.4 = { #Report results YOU WIN
 		scope:target.employer = {
 			add_country_modifier = {
 				name = "unloved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}	
 		}		
@@ -170,7 +170,7 @@ rival_challenge.5 = { #Report results YOU LOSE
 	type = country_event
 	title = "rival_challenge.5.t"
 	desc = "rival_challenge.5.desc"
-	picture = court_scene_in_macedonian_court
+	picture = interesting_histories_greek_city_temple
 	left_portrait = scope:actor.current_ruler
 	right_portrait = scope:target
 
@@ -206,14 +206,14 @@ rival_challenge.5 = { #Report results YOU LOSE
 		scope:actor.current_ruler.employer = {
 			add_country_modifier = {
 				name = "unloved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}
 		}
 		scope:target.employer = {
 			add_country_modifier = {
 				name = "loved_by_the_gods"
-				duration = 1095
+				duration = 730
 				mode = add
 			}	
 		}		

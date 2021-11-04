@@ -3,6 +3,7 @@
 	reform_bureaucracy = {
 		potential = {
 			num_of_cities >= 1
+			invention = tyranny_inv_2
 			NOR = {
 				has_country_modifier = purging_bureaucrats
 				has_country_modifier = reforming_bureaucracy
@@ -11,7 +12,6 @@
 		
 		allow = {
 			political_influence >= 25
-			invention = tyranny_inv_2
 		}
 		
 		effect = {
@@ -38,6 +38,7 @@
 	purge_bureaucrats = {
 		potential = {
 			num_of_cities >= 1
+			invention = monthly_character_loyalty_inv_5
 			NOR = {
 				has_country_modifier = purging_bureaucrats
 				has_country_modifier = reforming_bureaucracy
@@ -46,7 +47,6 @@
 		
 		allow = {
 			political_influence >= 25
-			invention = monthly_character_loyalty_inv_5
 		}
 		
 		effect = {
