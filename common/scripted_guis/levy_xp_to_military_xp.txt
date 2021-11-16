@@ -1,28 +1,107 @@
-levy_xp_to_military_xp = {
+﻿country_lexy_xp_set_start_value_event = {
 	scope = country
 
 	saved_scopes = {
 	}
 
 	effect = {
-		every_unit = {
+		every_army = {
 			limit = {
 				NOT = {
 					has_legion_trigger = yes
 				}
 			}
 
+			if = {
+				limit = {
+					has_variable = levy_start_xp
+				}
+
+				remove_variable = levy_start_xp
+			}
+
+			set_variable = {
+				name = levy_start_xp
+				value = experience_percentage
+			}
+
+			change_variable = {
+				name = levy_start_xp
+				multiply = 100
+			}
+		}
+	}
+}
+
+country_levy_xp_to_military_xp_event = {
+	scope = country
+
+	saved_scopes = {
+	}
+
+	effect = {
+		every_army = {
+			limit = {
+				NOT = {
+					has_legion_trigger = yes
+				}
+			}
+
+			set_variable = {
+				name = normalized_xp_percentage
+				value = experience_percentage
+			}
+
+			change_variable = {
+				name = normalized_xp_percentage
+				multiply = 100
+			}
+
 			save_scope_as = levy_unit
+
+			debug_log = "levy [THIS.Var('normalized_xp_percentage').GetValue]"
+
+			if = {
+				limit = {
+					has_variable = levy_start_xp
+				}
+
+				ROOT = {
+					set_variable = {
+						name = country_levy_start_xp
+						value = scope:levy_unit.var:levy_start_xp
+					}
+				}
+			}
+			else = {
+				ROOT = {
+					set_variable = {
+						name = country_levy_start_xp
+						value = 10
+					}
+				}
+			}
+
+			debug_log = "country [ROOT.Var('country_levy_start_xp').GetValue]"
 
 			ROOT = {
 				add_military_experience = {
-					value = scope:levy_unit.experience_percentage
-					multiply = 10
-					subtract = global_start_experience
-					multiply = 0.05
+					value = scope:levy_unit.var:normalized_xp_percentage
+					subtract = var:country_levy_start_xp
+					multiply = 0.055
 					min = 0
+					max = 5
 				}
-			} 
+			}
+
+			scope:levy_unit = {
+				remove_variable = normalized_xp_percentage
+				destroy_unit = yes
+			}
+
+			ROOT = {
+				remove_variable = country_levy_start_xp
+			}
 		}
 	}
 }
