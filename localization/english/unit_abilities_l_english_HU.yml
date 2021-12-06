@@ -42,3 +42,6 @@
  naval_supply_cooldown_tooltip:0 "This Territory has just received a bounty in food and supplies. You will not be able to send fresh supplies for some time."
  naval_supply_explain_modifier_tooltip:0 "All Provinces receiving supplies will gain the following Modifiers" 
  naval_supply_explain_tt:0 "Navy must contain at least 1 Heavy Ship at 95% Health or more."
+
+ disband_levy:0 "Disband Levy"
+ disband_levydesc:0 "Send levy troops home and gain experience from their campaigns. Only levies commanded by governors will yield military experience."

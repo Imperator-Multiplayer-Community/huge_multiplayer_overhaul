@@ -1,0 +1,100 @@
+﻿disband_levy = {
+	enable = yes
+	toggle = no
+	army_only = yes
+
+	hidden = {
+		has_legion_trigger = yes
+	}
+
+	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
+
+	allow = {
+		is_army = yes
+		in_combat = no
+		is_moving = no
+		is_exiled = no
+		in_siege = no
+		has_commander = yes
+		has_legion_trigger = no
+		unit_owner = {
+			war = no
+			has_civil_war = no
+		}
+
+		trigger_if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				loyalty > 33
+			}
+		}
+	}
+
+	start_effect = {
+		set_variable = {
+			name = normalized_xp_percentage
+			value = experience_percentage
+		}
+		
+		save_scope_as = levy_unit
+
+		if = {
+			# only the governors unit gets levy xp otherwise it would be OP for tribes
+			limit = {
+				AND = {
+					exists = commander
+					commander = {
+						is_governor = yes
+					}
+				}
+			}
+
+			change_variable = {
+				name = normalized_xp_percentage
+				multiply = 100
+			}
+
+
+			if = {
+				limit = {
+					has_variable = levy_start_xp
+				}
+
+				scope:levy_unit.unit_owner = {
+					set_variable = {
+						name = country_levy_start_xp
+						value = scope:levy_unit.var:levy_start_xp
+					}
+				}
+			}
+			else = {
+				scope:levy_unit.unit_owner = {
+					set_variable = {
+						name = country_levy_start_xp
+						value = 10
+					}
+				}
+			}
+
+			debug_log = "levy [THIS.Var('country_levy_start_xp').GetValue]"
+
+			scope:levy_unit.unit_owner = {
+				add_military_experience = {
+					value = scope:levy_unit.var:normalized_xp_percentage
+					subtract = var:country_levy_start_xp
+					multiply = 0.055
+					min = 0
+					max = 5
+				}
+				remove_variable = country_levy_start_xp
+			}
+		}
+
+		scope:levy_unit = {
+			remove_variable = normalized_xp_percentage
+			destroy_unit = yes
+		}
+	}
+}
