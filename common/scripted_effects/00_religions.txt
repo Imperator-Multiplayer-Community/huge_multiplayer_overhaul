@@ -69,7 +69,7 @@ change_religion_effect = {
 			is_ruler = no
 			from_ruler_family = no
 		}
-		max = 6
+		max = 10
 		order_by = prominence
 		check_range_bounds = no
 		set_character_religion = $RELIGION$
