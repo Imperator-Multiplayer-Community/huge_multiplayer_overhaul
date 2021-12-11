@@ -1,4 +1,12 @@
-﻿
+﻿NGame = {
+
+	#MERCENARY_BASE_AMOUNT = 0 #Changes the base A 'minimum' of sorts.
+	#MERCENARY_PER_POP_SCALE = 0.0 #Adds x amount of cohorts per pop
+	#MERCENARY_AMOUNT_DEVIATION = 10	 #Not sure, assuming it's some kind of 'fuzz' value
+	STARTING_SHIPS_PER_PORT_POPULATION = 0.06 #was 0.06
+	AUTOPEACE_DAYS_SINCE_LAST_BATTLE = 720 #Was 1080
+}
+
 NCountry = {
 
 	BASE_NAVAL_RANGE = 500
@@ -28,10 +36,18 @@ NUnit = {
 	NAVAL_ATTRITION_CHANCE = 1 #Was 0.4
 }
 
+NPolitics = {
+
+	STAB_HIT_GOOD_PEACE = 15 #Was 5
+}
+
 NDiplomacy = {
 	
-	DEFAULT_WARGOAL_BATTLESCORE_BONUS = 10 #Was 3
+	DEFAULT_WARGOAL_BATTLESCORE_BONUS = 8 #Was 3
 	WARSCORE_MAX_FROM_BATTLES = 80 #Was 40	
+	WARGOAL_MAX_BONUS = 35 #Was 25
+	TRUCE_YEARS = 4 #Was 3
+	SCALED_TRUCE_YEARS = 6 #Was 5
 }
 
 NTrade = {
@@ -40,15 +56,11 @@ NTrade = {
 }
 
 NLevy = {
+
 	DISBAND_MILITARY_EXP_MULT = 0 # when disbanding a levy military experience will be added to the country
 }
-NGame = {
-#MERCENARY_BASE_AMOUNT = 0 #Changes the base A 'minimum' of sorts.
-#MERCENARY_PER_POP_SCALE = 0.0 #Adds x amount of cohorts per pop
-#MERCENARY_AMOUNT_DEVIATION = 10	 #Not sure, assuming it's some kind of 'fuzz' value
-STARTING_SHIPS_PER_PORT_POPULATION = 0.06 #was 0.06
 
-}
 NAI = {
+
 	NAVY_BUDGET = 25 #was 25
 }

@@ -21,7 +21,9 @@
 			is_alive = yes
 			is_mercenary = no
 			is_ruler = yes
-			is_ai = no ##########################################################
+			employer = {
+				is_ai = no # this is wrong scope, fix
+			}
 			employer = {
 				NOR = {
 					tag = PIR
