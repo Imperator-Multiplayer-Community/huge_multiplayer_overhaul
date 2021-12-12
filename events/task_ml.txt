@@ -17,6 +17,7 @@ task.1 = {
 	
 	option = {
 		name = "task.1.a" #Military
+		custom_tooltip = "task.1.a.tt"
 		hidden_effect = { 
 			scope:target = {
 				clear_ambition_effect = yes
@@ -32,7 +33,8 @@ task.1 = {
 	}
 
 	option = {
-		name = "task.1.b" #Oratory		
+		name = "task.1.b" #Oratory
+		custom_tooltip = "task.1.b.tt"
 		hidden_effect = { 
 			scope:target = {
 				clear_ambition_effect = yes
@@ -49,6 +51,7 @@ task.1 = {
 
 	option = {
 		name = "task.1.c" #Finesse		
+		custom_tooltip = "task.1.c.tt"
 		hidden_effect = { 
 			scope:target = {
 				clear_ambition_effect = yes
@@ -65,7 +68,7 @@ task.1 = {
 	
 	option = {
 		name = "task.1.d" #Religious
-	
+		custom_tooltip = "task.1.d.tt"
 		hidden_effect = { 
 			scope:target = {
 				clear_ambition_effect = yes
@@ -96,6 +99,7 @@ task.2 = {
 	
 	option = {
 		name = "task.2.a"
+		custom_tooltip = "task.2.a.tt"
 		#Kill bandits	
 		scope:target = {
 			#custom_tooltip = military_task_2a
@@ -131,6 +135,7 @@ task.2 = {
 	
 	option = {
 		name = "task.2.b"
+		custom_tooltip = "task.2.b.tt"
 		#Travel with the fleet
 	
 		scope:target = {
@@ -167,6 +172,7 @@ task.2 = {
 
 	option = {
 		name = "task.2.c"
+		custom_tooltip = "task.2.c.tt"
 		#Drill with the soldiers		
 		scope:target = {
 			#custom_tooltip = military_task_2c
@@ -202,6 +208,7 @@ task.2 = {
 	
 	option = {
 		name = "task.2.d"
+		custom_tooltip = "task.2.d.tt"
 		#Study the battles of the past
 		
 		scope:target = {
@@ -248,6 +255,7 @@ task.3 = {
 	
 	option = {
 		name = "task.3.a"
+		custom_tooltip = "task.3.a.tt"
 		#Practice rhetoric		
 		scope:target = {
 			#custom_tooltip = oratory_task_3a
@@ -283,6 +291,7 @@ task.3 = {
 	
 	option = {
 		name = "task.3.b"
+		custom_tooltip = "task.3.b.tt"
 		#Spread gossip		
 		scope:target = {
 			#custom_tooltip = oratory_task_3b
@@ -318,6 +327,7 @@ task.3 = {
 
 	option = {
 		name = "task.3.c"
+		custom_tooltip = "task.3.c.tt"
 		#Write annals		
 		scope:target = {
 			#custom_tooltip = oratory_task_3c
@@ -353,6 +363,7 @@ task.3 = {
 	
 	option = {
 		name = "task.3.d"
+		custom_tooltip = "task.3.d.tt"
 		#Meet with merchants
 		
 		scope:target = {
@@ -399,6 +410,7 @@ task.4 = {
 	
 	option = {
 		name = "task.4.a"
+		custom_tooltip = "task.4.a.tt"
 		#Audit state accounts
 		
 		scope:target = {
@@ -435,6 +447,7 @@ task.4 = {
 	
 	option = {
 		name = "task.4.b"
+		custom_tooltip = "task.4.b.tt"
 		#Purge corrupt bureaucrats
 	
 		scope:target = {
@@ -471,6 +484,7 @@ task.4 = {
 
 	option = {
 		name = "task.4.c"
+		custom_tooltip = "task.4.c.tt"
 		#Expand the administration		
 
 		scope:target = {
@@ -507,6 +521,7 @@ task.4 = {
 	
 	option = {
 		name = "task.4.d"
+		custom_tooltip = "task.4.d.tt"
 		#Inspect state inventories
 		
 		scope:target = {
