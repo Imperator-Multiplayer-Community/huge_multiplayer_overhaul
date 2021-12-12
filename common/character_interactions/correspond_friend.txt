@@ -41,11 +41,11 @@
 		}
 		scope:target = {
 			custom_tooltip = {
-			text = "letter_friend_skill_tt"
-			martial <= 16
-			finesse <= 16
-			charisma <= 16
-			zeal <= 16
+				text = "letter_friend_skill_tt"
+				martial <= 16
+				finesse <= 16
+				charisma <= 16
+				zeal <= 16
 			}
 		
 		#	NOT = { #

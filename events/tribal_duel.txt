@@ -18,6 +18,7 @@ tribal_duel.1 = {
 
  	option = {
 		name = "tribal_duel.1.a"
+		custom_tooltip = tribal_duel.1.a.tt
 		scope:actor.current_ruler = { # Ruler
 			trigger_event = { 
 				id = tribal_duel.2
@@ -34,6 +35,10 @@ tribal_duel.1 = {
 				days = 7
 			}
 		}
+	}
+
+	option = {
+		name = "tribal_duel.1.c"
 	}
 }
 
