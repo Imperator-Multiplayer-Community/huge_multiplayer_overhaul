@@ -33,7 +33,7 @@
 
 		allow = {
 			custom_tooltip = {
-				text = formable_not_nemedia_exists
+				text = nemedia_not_exists
 				NOT = {
 					any_country = {
 						tag = NEM

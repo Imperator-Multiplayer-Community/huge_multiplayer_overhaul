@@ -76,12 +76,12 @@
 					id = formable_heritage.142
 				}					
 			}
-				capital_scope = {
+			capital_scope = {
 					establish_city_effect = yes
 					capital_formable_medium_effect = yes
 					formable_capital_modifier_normal_effect = yes
 			}
-			custom_tooltip = "form_arfordir_chwal_claims_tooltip"
+			# custom_tooltip = "form_arfordir_chwal_claims_tooltip"
 			hidden_effect = {
 				area:morinia_area = { formable_area_province_effect = yes }
 				area:armorica_maioris_area = { formable_area_province_effect = yes }				

@@ -35,7 +35,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				text = formable_not_gothia_exists
+				text = gothia_not_exists
 				NOT = {
 					any_country = {
 						num_of_cities >= 1

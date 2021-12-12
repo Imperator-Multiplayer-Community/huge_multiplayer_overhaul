@@ -205,7 +205,8 @@
  recruit_aryan_agent_act:0 "Recruit this talented person to be a spy in your service"
  recruit_aryan_agent_act_past:0 "They will never be able to tell anyone about their work for us"
  recruit_aryan_agent_tt:0 "Recruit this cunning individual to strengthen your intelligence networks. Of course the more spies we hire, the more it will erode the public trust."
-
+ aryan_spy_recruit_cooldown_tt:0 "Cannot do this action again so soon."
+ spy_recruit_cooldown_tt:0 "Cannot do this action again so soon."
 
  arrest_spy:0 "Arrest Spy"
  arrest_spy_past:0 "Put an End to Foreign Meddling"

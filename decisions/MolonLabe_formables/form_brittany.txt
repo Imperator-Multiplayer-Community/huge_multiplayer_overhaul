@@ -39,7 +39,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				text = formable_not_brittany_exists
+				text = brittany_not_exists
 				NOT = {
 					any_country = {
 						num_of_cities >= 1

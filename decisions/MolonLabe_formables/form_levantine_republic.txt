@@ -46,6 +46,7 @@
         }
         allow = {
             custom_tooltip = {
+                text = levantine_not_exists
                 NOT = { 
                     any_country = { 
                         tag = EGT
