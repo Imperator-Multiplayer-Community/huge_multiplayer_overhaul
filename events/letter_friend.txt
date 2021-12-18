@@ -42,6 +42,7 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 				}
 			}
 		}
+		# ai always should accept
 		ai_chance = {
 			factor = 100
 		}

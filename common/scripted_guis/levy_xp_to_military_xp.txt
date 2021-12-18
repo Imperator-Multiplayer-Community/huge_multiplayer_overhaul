@@ -39,6 +39,10 @@ country_all_levy_xp_to_military_xp_event = {
 	saved_scopes = {
 	}
 
+	ai_is_valid = {
+		always = no
+	}
+
 	effect = {
 		every_army = {
 			limit = {

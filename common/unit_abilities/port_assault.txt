@@ -3,13 +3,11 @@
 	enable = yes
 	toggle = no
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_assualt"
-
 	map = yes
-
 	navy_only = yes
 
 
-	#allow = {
+	allow = {
 		is_navy = yes
 		in_combat = no
 		is_moving = no
@@ -18,7 +16,6 @@
 			text = port_assault_explain_tt
 			any_sub_unit = {
 				sub_unit_type = mega_galley
-				count >= 1
 				subunit_strength_percentage >= 0.95
 			}
 			#text = marines_ratio

@@ -4,9 +4,14 @@
 	army_only = yes
 
 	hidden = {
-		has_legion_trigger = yes
-		commander = {
-			is_mercenary = yes
+		OR = {
+			has_legion_trigger = yes
+			AND = {
+				exists = commander
+				commander = {
+					is_mercenary = yes
+				}
+			}
 		}
 	}
 
