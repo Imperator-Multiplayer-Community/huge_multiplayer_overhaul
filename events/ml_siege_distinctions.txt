@@ -59,7 +59,10 @@ ml_siege_distinctions.1 = {
 						var:siege_victories = 2
 						legion = {
 							NOT = {
-								has_distinction = distinction_siege_master_01						
+								has_distinction = distinction_siege_master_01
+								has_distinction = distinction_siege_master_02
+								has_distinction = distinction_siege_master_03
+								has_distinction = distinction_siege_master_04						
 							}
 						}
 						
@@ -80,7 +83,9 @@ ml_siege_distinctions.1 = {
 						var:siege_victories = 6
 						legion = {
 							NOT = {
-								has_distinction = distinction_siege_master_02						
+								has_distinction = distinction_siege_master_02
+								has_distinction = distinction_siege_master_03
+								has_distinction = distinction_siege_master_04						
 							}
 						}
 					}
@@ -95,7 +100,8 @@ ml_siege_distinctions.1 = {
 						var:siege_victories = 12
 						legion = {
 							NOT = {
-								has_distinction = distinction_siege_master_03						
+								has_distinction = distinction_siege_master_03
+								has_distinction = distinction_siege_master_04						
 							}
 						}
 					}
@@ -110,7 +116,7 @@ ml_siege_distinctions.1 = {
 						var:siege_victories = 20
 						legion = {
 							NOT = {
-								has_distinction = distinction_siege_master_03						
+								has_distinction = distinction_siege_master_04						
 							}
 						}
 					}

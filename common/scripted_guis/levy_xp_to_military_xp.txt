@@ -44,15 +44,12 @@ country_all_levy_xp_to_military_xp_event = {
 			limit = {
 				NOT = {
 					has_legion_trigger = yes
-					if = {
-						limit = {
-							exists = commander
-						}
-
+					AND = {
+						exists = commander
 						commander = {
 							is_mercenary = yes
 						}
-					}	
+					}
 				}
 			}
 

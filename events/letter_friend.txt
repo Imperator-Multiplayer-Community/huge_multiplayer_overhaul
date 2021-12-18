@@ -42,6 +42,9 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 				}
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 	
 	option = { #Option for recipient to decline
@@ -61,6 +64,9 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 					}
 				}
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 	
@@ -164,6 +170,14 @@ letter_friend.4 = {
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
+		# modify the ai chances by their skill
+		ai_chance = {
+			factor = scope:letter_recipient.martial
+			modifier = {
+				factor = 2
+				scope:letter_recipient.martial > 10
+			}
+		}
 	}
 
 	option = {
@@ -207,6 +221,14 @@ letter_friend.4 = {
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
+		# modify the ai chances by their skill
+		ai_chance = {
+			factor = scope:letter_recipient.finesse
+			modifier = {
+				factor = 2
+				scope:letter_recipient.finesse > 10
+			}
+		}
 	}
 
 	option = {
@@ -249,6 +271,14 @@ letter_friend.4 = {
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
+		# modify the ai chances by their skill
+		ai_chance = {
+			factor = scope:letter_recipient.zeal
+			modifier = {
+				factor = 2
+				scope:letter_recipient.zeal > 10
+			}
+		}
 	}
 
 	option = {
@@ -291,6 +321,13 @@ letter_friend.4 = {
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
+		ai_chance = {
+			factor = scope:letter_recipient.charisma
+			modifier = {
+				factor = 2
+				scope:letter_recipient.charisma > 10
+			}
+		}
 	}
 	option = {
 		name = "letter_friend.4.e"
@@ -309,6 +346,9 @@ letter_friend.4 = {
 					}
 				}
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
