@@ -128,8 +128,11 @@ letter_friend.4 = {
 		name = "letter_friend.4.a"
 		custom_tooltip = letter_friend.4.a.tt
 		trigger = {
-			scope:letter_writer = {
-				has_character_modifier = quite_better_martial
+			## if the character already has the best traits then dont offer the option
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = quite_better_martial
+				}
 			}
 		}
 		scope:actor = {
@@ -167,8 +170,11 @@ letter_friend.4 = {
 		name = "letter_friend.4.b"
 		custom_tooltip = letter_friend.4.b.tt
 		trigger = {
-			scope:letter_writer = {
-				has_character_modifier = quite_better_finesse
+			## if the character already has the best traits then dont offer the option
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = quite_better_finesse
+				}
 			}
 		}
 		scope:actor = {
@@ -206,9 +212,12 @@ letter_friend.4 = {
 	option = {
 		name = "letter_friend.4.c"
 		custom_tooltip = letter_friend.4.c.tt
+		## if the character already has the best traits then dont offer the option
 		trigger = {
-			scope:letter_writer = {
-				has_character_modifier = quite_better_zeal
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = quite_better_zeal
+				}
 			}
 		}
 		scope:actor = {
@@ -245,9 +254,12 @@ letter_friend.4 = {
 	option = {
 		name = "letter_friend.4.d"
 		custom_tooltip = letter_friend.4.d.tt
+		## if the character already has the best traits then dont offer the option
 		trigger = {
-			scope:letter_writer = {
-				has_character_modifier = quite_better_charisma
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = quite_better_charisma
+				}
 			}
 		}
 		scope:actor = {
@@ -282,6 +294,22 @@ letter_friend.4 = {
 	}
 	option = {
 		name = "letter_friend.4.e"
+		# cancel the chain
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = letter_friend.2
+						days = 5
+					}
+				}
+			}
+		}
 	}
 }
 

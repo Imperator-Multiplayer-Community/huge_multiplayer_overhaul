@@ -5,6 +5,9 @@
 
 	hidden = {
 		has_legion_trigger = yes
+		commander = {
+			is_mercenary = yes
+		}
 	}
 
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"

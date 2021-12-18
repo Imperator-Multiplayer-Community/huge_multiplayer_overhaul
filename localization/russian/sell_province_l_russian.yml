@@ -1,0 +1,13 @@
+﻿l_russian:
+	sell_province: "Продавать провинции"
+	select_provinces_to_sell: "Выберите провинции для продажи"
+	sell_selected_provinces: "Продать [GuiScope.SetRoot( Player.MakeScope ).ScriptValue('amount_of_provinces_to_sell')|0] провинции:"
+	RESET: "Сбросить"
+	sell_province_title: "[sender.GetName] отправляет предложение"
+	sell_province_desc: "[sender.GetName] предлагает купить [GuiScope.SetRoot( sender.MakeScope ).ScriptValue('amount_of_provinces_to_sell')|0] провинций для [sender.MakeScope.Var('province_price_offer').GetValue|0] @gold!\nНажмите на кнопку ниже, чтобы увидеть список территорий"
+	sell_province.agree: "Согласитесь, платите [sender.MakeScope.Var('province_price_offer').GetValue|0] @gold!"
+	sell_province.refuse: "Отказаться"
+	sell_province_refused_title: "[buyer.GetName] отказался от сделки"
+	sell_province_refused_desc: "[buyer.GetName] отказался покупать наши провинции"
+	provinces_sold: "Провинции проданы"
+	provinces_sold_desc: "[buyer.GetName] купил наши провинции"
