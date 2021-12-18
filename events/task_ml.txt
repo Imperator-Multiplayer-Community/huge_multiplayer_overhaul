@@ -568,10 +568,10 @@ task.5 = {
 	
 	option = {
 		name = "task.5.a"
+		custom_tooltip = "task.5.a.tt"
 		#Consult oracle
 		
 		scope:target = {
-			#custom_tooltip = religious_task_5a
 			hidden_effect = {
 				set_variable = {
 					name = roll
@@ -604,10 +604,10 @@ task.5 = {
 	
 	option = {
 		name = "task.5.b"
+		custom_tooltip = "task.5.b.tt"
 		#Inspect animal entrails
 	
 		scope:target = {
-			#custom_tooltip = religious_task_5b
 			hidden_effect = {
 				set_variable = {
 					name = roll
@@ -640,6 +640,7 @@ task.5 = {
 
 	option = {
 		name = "task.5.c"
+		custom_tooltip = "task.5.c.tt"
 		#Interpret dreams
 		
 		scope:target = {
@@ -676,6 +677,7 @@ task.5 = {
 	
 	option = {
 		name = "task.5.d"
+		custom_tooltip = "task.5.d.tt"
 		#Observe bird flight
 		
 		scope:target = {
