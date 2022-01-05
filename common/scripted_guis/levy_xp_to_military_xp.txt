@@ -54,6 +54,7 @@ country_all_levy_xp_to_military_xp_event = {
 							is_mercenary = yes
 						}
 					}
+					is_migration = yes
 				}
 			}
 
