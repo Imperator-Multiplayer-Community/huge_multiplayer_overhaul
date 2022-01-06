@@ -136,11 +136,11 @@
  black_widow_stop_inspire_disloyalty_ruler_act_past:0 "We can always pick up again where we left off... Or not..."
  black_widow_stop_inspire_disloyalty_ruler_tt:0 "Stop stringing this man along... for now."
 
- black_widow_secude_governor:0 "Bewitch Governor"
- black_widow_secude_governor_past:0 "Offer your hand in marriage to this man if he defects to your side"
- black_widow_secude_governor_act:0 "Tell him to make his true loyalties known"
- black_widow_secude_governor_act_past:0 "A strong woman needs a strong man"
- black_widow_secude_governor_tt:0 "Inspire this man to leave behind his position, family, home and country, a defector and a fugitive, for the promise of marriage and alliance with him. Success will depend on your ruler's charisma."
+ black_widow_seduce_governor:0 "Bewitch Governor"
+ black_widow_seduce_governor_past:0 "Offer your hand in marriage to this man if he defects to your side"
+ black_widow_seduce_governor_act:0 "Tell him to make his true loyalties known"
+ black_widow_seduce_governor_act_past:0 "A strong woman needs a strong man"
+ black_widow_seduce_governor_tt:0 "Inspire this man to leave behind his position, family, home and country, a defector and a fugitive, for the promise of marriage and alliance with him. Success will depend on your ruler's charisma."
 
  black_widow_manipulate:0 "Manipulate"
  black_widow_manipulate_past:0 "Trick this fool into doing serious harm to himself... or others"
@@ -538,6 +538,9 @@
  letter_friend.28.desc:0 "Your eagerness to engage your friend in what you indulgently like to think of as 'elevated conversation' is straining your friendship and driving you to error."
  letter_friend.28.a:0 "You do feel like a bit of a pest."
  letter_friend.28.b:0 "You don't even know this person anymore. They are nothing to you."
+ letter_friend.29.t:0 "A Pleasent Exchange"
+ letter_friend.29.desc:0 "You had a pleasant exchange of letters but gleaned nothing of value from your friend."
+ letter_friend.29.a:0 "We shall stay in touch."
 
 
 ####################################################################

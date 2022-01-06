@@ -32,6 +32,11 @@ gift_slave = {
 	scaled_gold = 5
 }
 
+sent_letter = {
+	gold = 50
+	political_influence = 25
+}
+
 price_force_divorce = {
 	political_influence = 12
 }

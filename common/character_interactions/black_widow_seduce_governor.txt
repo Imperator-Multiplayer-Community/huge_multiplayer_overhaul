@@ -1,4 +1,4 @@
-﻿black_widow_secude_governor = { #Female entice gov, dont need spy and must marry
+﻿black_widow_seduce_governor = { #Female entice gov, dont need spy and must marry
 
 	on_other_nation = yes
 	on_own_nation = no
@@ -77,7 +77,7 @@
 	
 	allowed_trigger = {
 		hidden:scope:actor = {
-			can_pay_price = secude_governor #black_widow
+			can_pay_price = seduce_governor #black_widow
 		}
 		scope:actor.current_ruler = {
 			is_married = no
@@ -167,7 +167,7 @@
 						var:roll <= scope:actor.current_ruler.charisma
 					}
 					scope:actor = {
-						pay_price = secude_governor #black_widow ################ Must divorce husband and marry him ####### CHECK INSPIRE DISLOYALTY
+						pay_price = seduce_governor #black_widow ################ Must divorce husband and marry him ####### CHECK INSPIRE DISLOYALTY
 					}
 					scope:target = {
 						if = {

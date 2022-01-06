@@ -63,7 +63,7 @@
 		scope:actor.current_ruler = {
 			change_variable = {
 				name = manpoweropen
-				value = 0
+				value = 1
 			}
 		}
 	}
@@ -132,7 +132,7 @@ send_men_5k = {
 		scope:actor.current_ruler = {
 			change_variable = {
 				name = manpoweropen
-				value = 0
+				value = 1
 			}
 		}
 	}
@@ -199,7 +199,7 @@ send_men_10k = {
 		scope:actor.current_ruler = {
 			change_variable = {
 				name = manpoweropen
-				value = 0
+				value = 1
 			}
 		}
 	}
@@ -264,7 +264,7 @@ send_men_50k = {
 		scope:actor.current_ruler = {
 			change_variable = {
 				name = manpoweropen
-				value = 0
+				value = 1
 			}
 		}
 	}

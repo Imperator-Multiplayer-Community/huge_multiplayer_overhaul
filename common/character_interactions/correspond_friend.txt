@@ -1,5 +1,4 @@
 ﻿correspond_friend = { #Send your friend a letter, hoping to start corresponding
-
 	on_other_nation = no
 	on_own_nation = no
 	close_ui = yes
@@ -33,6 +32,7 @@
 		}
 		scope:actor = {
 			in_diplomatic_range = scope:target.employer
+			can_pay_price = send_letter
 		}
 		scope:target = {
 			is_alive = yes
@@ -47,12 +47,6 @@
 				charisma <= 16
 				zeal <= 16
 			}
-		
-		#	NOT = { #
-		#		employer = {
-		#			is_ai = yes
-		#		}
-		#	}
 			NOR = {
 				has_variable = letter_recipient
 				is_rival = scope:actor.current_ruler
