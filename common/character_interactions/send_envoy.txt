@@ -12,9 +12,7 @@
 				is_tribal = yes
 				is_republic = yes
 			}
-			NOT = { 
-				has_variable = anti_spam_envoy
-			}
+			
 		}
 		hidden:scope:target = {
 			is_alive = yes
@@ -35,9 +33,11 @@
 	}
 	
 	allowed_trigger = {
-
-		scope:actor = {
-			in_diplomatic_range = scope:target.employer
+		custom_tooltip = {
+			text = send_envoy_cd_tt
+			NOT = {
+				has_variable = anti_spam_envoy
+			}
 		}
 		scope:actor.current_ruler = {
 			is_alive = yes
@@ -48,7 +48,6 @@
 	}
 	
 	effect = {
-
 		scope:target = {
 			save_scope_as = envoy_received
 			trigger_event = {
