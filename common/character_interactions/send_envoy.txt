@@ -1,5 +1,4 @@
 ﻿send_envoy = { 
-
 	on_other_nation = yes 
 	on_own_nation = no 
 	close_ui = yes
@@ -21,9 +20,7 @@
 			is_alive = yes
 			is_mercenary = no
 			is_ruler = yes
-			employer = {
-				is_ai = no # this is wrong scope, fix
-			}
+			is_ai = no
 			employer = {
 				NOR = {
 					tag = PIR

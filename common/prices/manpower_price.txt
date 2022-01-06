@@ -1,12 +1,20 @@
 ﻿onekman = {
 	manpower = 2
+	gold = 50
+	political_influence = 10
 }
 fivekman = {
 	manpower = 10
+	gold = 100
+	political_influence = 25
 }
 tenkman = {
 	manpower = 20
+	gold = 200
+	political_influence = 50
 }
 fiftykman = {
 	manpower = 100
+	gold = 1000
+	political_influence = 250
 }
