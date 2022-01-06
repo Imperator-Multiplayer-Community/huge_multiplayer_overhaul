@@ -7,14 +7,17 @@ fivekman = {
 	manpower = 10
 	gold = 100
 	political_influence = 25
+	stability = 5
 }
 tenkman = {
 	manpower = 20
 	gold = 200
 	political_influence = 50
+	stability = 10
 }
 fiftykman = {
 	manpower = 100
 	gold = 1000
 	political_influence = 250
+	stability = 15
 }

@@ -69,6 +69,7 @@
 	}
 
 }
+
 send_men_5k = {
 	on_other_nation = yes
 	on_own_nation = no
@@ -137,6 +138,7 @@ send_men_5k = {
 	}
 
 }
+
 send_men_10k = {
 	on_other_nation = yes
 	on_own_nation = no
@@ -317,6 +319,7 @@ send_men_open = {
 		}
 	}
 }
+
 send_men_close = {
 	on_other_nation = yes
 	on_own_nation = no
