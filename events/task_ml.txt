@@ -9,19 +9,12 @@ task.1 = {
 	
 	picture = great_library
 	
-	immediate = {
-	#	var:tasked_character = {
-	#		save_scope_as = tasked_character
-	#	}
-	}
-	
 	option = {
 		name = "task.1.a" #Military
 		custom_tooltip = "task.1.a.tt"
 		hidden_effect = { 
 			scope:target = {
 				clear_ambition_effect = yes
-				#martial < 16                    ######################### TRY THIS #############################
 			}
 			scope:target.employer = {
 				trigger_event = {
@@ -38,7 +31,6 @@ task.1 = {
 		hidden_effect = { 
 			scope:target = {
 				clear_ambition_effect = yes
-				#charisma < 16                    ######################### TRY THIS #############################
 			}
 			scope:target.employer = {
 				trigger_event = {
@@ -56,7 +48,6 @@ task.1 = {
 			scope:target = {
 				clear_ambition_effect = yes
 			}
-				#finesse < 16                    ######################### TRY THIS #############################
 			scope:target.employer = {
 				trigger_event = {
 					id = task.4
@@ -72,7 +63,6 @@ task.1 = {
 		hidden_effect = { 
 			scope:target = {
 				clear_ambition_effect = yes
-				#zeal < 16                    ######################### TRY THIS #############################
 			}
 			scope:target.employer = {
 				trigger_event = {

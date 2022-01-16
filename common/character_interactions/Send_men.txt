@@ -38,9 +38,17 @@
 					NOT = {var:manpowercooldown = 1}
 				}
 			}
+			opinion = {
+        		target = root
+        		value >= 25
+        	}
 		}
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
+			opinion = {
+        		target = scope:actor
+        		value >= 100
+        	}
 		}
 		scope:target = {
 			is_friend = scope:actor.current_ruler
@@ -111,6 +119,10 @@ send_men_5k = {
 		}
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
+			opinion = {
+        		target = scope:actor
+        		value >= 100
+        	}
 		}
 		scope:target = {
 			is_friend = scope:actor.current_ruler
@@ -178,6 +190,10 @@ send_men_10k = {
 		}
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
+			opinion = {
+        		target = scope:actor
+        		value >= 100
+        	}
 		}
 		scope:target = {
 			is_friend = scope:actor.current_ruler
@@ -246,6 +262,13 @@ send_men_50k = {
 		}
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
+			opinion = {
+        		target = scope:actor
+        		value >= 100
+        	}
+		}
+		scope:target = {
+			is_friend = scope:actor.current_ruler
 		}
 	}
 
