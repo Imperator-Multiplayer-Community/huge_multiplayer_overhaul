@@ -608,7 +608,7 @@ tribal_duel.14 = { # Rival wins vs champion
 
 				scope:champion = {
 					death = {
- 						reason = death_execution
+ 						death_reason = death_execution
  						killer = scope:target
  					}
 				}
@@ -735,36 +735,36 @@ tribal_duel.17 = { # champion loses yet lives
 						NOT = {
 							has_trait = submissive
 						}
-
-						add_trait = submissive
 					}
+
+					add_trait = submissive
 				}
 				25 = {
 					trigger = {
 						NOT = {
 							has_trait = weak_willed
 						}
-
-						add_trait = weak_willed
 					}
+
+					add_trait = weak_willed
 				}
 				25 = {
 					trigger = {
 						NOT = {
 							has_trait = coward
 						}
-
-						add_trait = coward
 					}
+
+					add_trait = coward
 				}
 				25 = {
 					trigger = {
 						NOT = {
 							has_trait = incapable
 						}
-
-						add_trait = incapable
 					}
+					
+					add_trait = incapable
 				}
 			}
 		}

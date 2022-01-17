@@ -154,20 +154,40 @@ letter_friend.4 = {
 				has_variable = roll
 				var:roll <= scope:letter_recipient.martial
 			}
-			scope:actor = {
-				random_events = { 
-					90 = letter_friend.13
-					10 = letter_friend.29
+			random_list = { 
+				90 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.13
+						}
+					}
 				}
+				10 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.29
+						}
+					}
+				} 
 			}
 		}
 		else = {
-			scope:actor = {
-				random_events = { 
-					40 = letter_friend.14
-					60 = letter_friend.29
-				 }
-			}
+			random_events = { 
+				40 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.14
+						}
+					}
+				} 
+				60 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.29
+						}
+					}
+				} 
+			 }
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
