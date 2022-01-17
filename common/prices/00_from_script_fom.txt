@@ -37,6 +37,11 @@ send_letter = {
 	political_influence = 25
 }
 
+go_hunting = {
+	gold = 100
+	political_influence = 10
+}
+
 price_force_divorce = {
 	political_influence = 12
 }

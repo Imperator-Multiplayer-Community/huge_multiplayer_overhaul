@@ -41,11 +41,6 @@
 			NOT = {
 				is_rival = scope:actor.current_ruler
 			}
-		#	NOT = { #
-		#		employer = {
-		#			is_ai = yes
-		#		}
-		#	}
 			custom_tooltip = {
 			text = "hunting_friend_skill_tt"
 			martial <= 16
@@ -66,7 +61,7 @@
 		}
 		scope:actor = {
 			in_diplomatic_range = scope:target.employer
-			can_pay_price = gift_slave
+			can_pay_price = go_hunting
 		}
 		scope:actor.current_ruler = {
 			NOT = { 

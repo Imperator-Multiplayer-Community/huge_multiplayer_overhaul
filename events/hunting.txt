@@ -37,7 +37,7 @@ hunting.1 = { #You send the invite to a player. Does he accept to correspond? Re
 				scope:actor = {
 					trigger_event = {
 						id = hunting.3
-						days = 5 
+						days = 1
 					}
 				}
 			}
@@ -57,7 +57,7 @@ hunting.1 = { #You send the invite to a player. Does he accept to correspond? Re
 				scope:actor = {
 					trigger_event = {
 						id = hunting.2
-						days = 5
+						days = 1
 					}
 				}
 			}
@@ -90,7 +90,7 @@ hunting.3 = { #accepted with pleasure
 	option = {
 		name = "hunting.3.a"
 		scope:actor = {
-			pay_price = gift_slave
+			pay_price = go_hunting
 		}
 		scope:hunting_friend.employer = {
 			trigger_event = { 
@@ -128,6 +128,8 @@ hunting.4 = {
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
+			add = -2 # making this a little easier
+			min = 1
 		}
 		if = { 
 			limit = {
@@ -160,6 +162,8 @@ hunting.4 = {
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
+			add = -2 # making this a little easier
+			min = 1
 		}
 		if = { 
 			limit = {
@@ -192,6 +196,8 @@ hunting.4 = {
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
+			add = -2 # making this a little easier
+			min = 1
 		}
 		if = { 
 			limit = {
@@ -224,6 +230,8 @@ hunting.4 = {
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
+			add = -2 # making this a little easier
+			min = 1
 		}
 		if = { 
 			limit = {
