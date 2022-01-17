@@ -657,28 +657,7 @@ player_client_state = {
 	
 	diplo_chance = {
 		base = {
-			offset = -800
-		}
-		in_debt = {
-			scale = -1
-		}
-		negative_stability = {
-			scale = 20
-		}
-		current_strength = {
-			scale = 0.5
-		}
-		potential_strength = {
-			scale = 0.5
-		}
-		border_distance = {
-			scale = 3
-		}
-		rank = {
-			scale = -10
-		}
-		junior_to = {
-			scale = -40
+			offset = 200
 		}
 	}
 }
