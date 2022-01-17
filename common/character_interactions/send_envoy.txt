@@ -1,4 +1,5 @@
 ﻿send_envoy = { 
+
 	on_other_nation = yes 
 	on_own_nation = no 
 	close_ui = yes
@@ -12,14 +13,16 @@
 				is_tribal = yes
 				is_republic = yes
 			}
-			
+			is_ai = no ##########################################################
+			NOT = { 
+				has_variable = anti_spam_envoy
+			}
 		}
 		hidden:scope:target = {
 			is_alive = yes
 			is_mercenary = no
 			is_ruler = yes
-			is_ai = no
-			employer = {
+			employer = { is_ai = no ##########################################################
 				NOR = {
 					tag = PIR
 					tag = REB
@@ -33,11 +36,9 @@
 	}
 	
 	allowed_trigger = {
-		custom_tooltip = {
-			text = send_envoy_cd_tt
-			NOT = {
-				has_variable = anti_spam_envoy
-			}
+
+		scope:actor = {
+			in_diplomatic_range = scope:target.employer
 		}
 		scope:actor.current_ruler = {
 			is_alive = yes
@@ -48,6 +49,7 @@
 	}
 	
 	effect = {
+
 		scope:target = {
 			save_scope_as = envoy_received
 			trigger_event = {
@@ -67,4 +69,5 @@
 		}
 	}
 }	
+
 

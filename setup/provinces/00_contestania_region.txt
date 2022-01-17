@@ -252,10 +252,10 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="contestanian"
+	culture="carthaginian"
 	port_building=1
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="hills"
 	trade_goods="wood"
 	citizen=
@@ -266,7 +266,7 @@
 	{
 		amount=3
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=4
 	}
@@ -276,16 +276,16 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="bastetanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="wine"
 	freemen=
 	{
-		amount=1
+		amount=5
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=4
 	}
@@ -295,16 +295,16 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="bastetanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="wood"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=5
 	}
@@ -330,11 +330,11 @@
 	}
 	freemen=
 	{
-		amount=14
+		amount=19
 	}
 	slaves=
 	{
-		amount=2
+		amount=19
 	}
 }
 #Alonis
@@ -342,16 +342,16 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="contestanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="hills"
 	trade_goods="fish"
 	freemen=
 	{
 		amount=1
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=4
 	}
@@ -361,16 +361,16 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="contestanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="hemp"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=3
 	}
@@ -1036,16 +1036,16 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="contestanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="hills"
 	trade_goods="dye"
 	freemen=
 	{
 		amount=1
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=4
 	}
@@ -1055,16 +1055,16 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="contestanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="hills"
 	trade_goods="wine"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=3
 	}
@@ -1318,16 +1318,16 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="bastetanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="iron"
 	freemen=
 	{
-		amount=2
+		amount=4
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=6
 	}
@@ -1337,10 +1337,10 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="bastetanian"
+	culture="carthaginian"
 	port_building=1
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="base_metals"
 	freemen=
@@ -1349,11 +1349,7 @@
 	}
 	slaves=
 	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=4
+		amount=10
 	}
 }
 #Elioucroca
@@ -1361,18 +1357,18 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="bastetanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="animism"
+	religion="carthaginian_pantheon"
 	terrain="hills"
 	trade_goods="wood"
 	freemen=
 	{
-		amount=1
+		amount=5
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=4
+		amount=10
 	}
 }
 #Ad Morum
@@ -1582,20 +1578,17 @@
 	trade_goods="fish"
 	citizen=
 	{
-		amount=2
+		amount=10
 	}
 	freemen=
 	{
-		amount=4
+		amount=10
 	}
 	slaves=
 	{
-		amount=3
+		amount=8
 	}
-	tribesmen=
-	{
-		amount=2
-	}
+
 }
 #Palma
 1465=

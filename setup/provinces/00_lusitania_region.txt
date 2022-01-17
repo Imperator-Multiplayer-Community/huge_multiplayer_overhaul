@@ -1103,9 +1103,9 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="oppidanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="base_metals"
 	citizen=
@@ -1145,16 +1145,16 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="oppidanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="salt"
 	freemen=
 	{
 		amount=1
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=5
 	}
@@ -1164,18 +1164,18 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="oppidanian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="base_metals"
 	freemen=
 	{
 		amount=1
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=3
+		amount=8
 	}
 }
 #Barbarion
@@ -1211,7 +1211,7 @@
 	trade_goods="fish"
 	nobles=
 	{
-		amount=5
+		amount=8
 	}
 	citizen=
 	{
@@ -1219,11 +1219,11 @@
 	}
 	freemen=
 	{
-		amount=7
+		amount=24
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=1
+		amount=10
 	}
 }
 #Malateca

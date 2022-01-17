@@ -769,15 +769,15 @@
 	}
 	citizen=
 	{
-		amount=16
+		amount=12
 	}
 	freemen=
 	{
-		amount=14
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=1
+		amount=10
 	}
 }
 #Varina Marinia
@@ -804,9 +804,9 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="callaecian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="base_metals"
 	citizen=
@@ -817,7 +817,7 @@
 	{
 		amount=1
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=6
 	}

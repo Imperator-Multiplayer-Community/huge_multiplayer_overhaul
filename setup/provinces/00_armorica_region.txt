@@ -271,16 +271,16 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aulercian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="base_metals"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=4
 	}
@@ -290,17 +290,17 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="carthaginian"
 	port_building=1
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="fish"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=4
 	}
@@ -399,19 +399,19 @@
 	trade_goods="precious_metals"
 	nobles=
 	{
-		amount=6
+		amount=8
 	}
 	citizen=
 	{
-		amount=10
+		amount=13
 	}
 	freemen=
 	{
-		amount=5
+		amount=15
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=1
+		amount=10
 	}
 }
 #Pollicum
@@ -622,17 +622,17 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aulercian"
+	culture="carthaginian"
 	port_building=1
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="hemp"
 	freemen=
 	{
 		amount=2
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=4
 	}

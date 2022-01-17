@@ -56,8 +56,8 @@ idea_military_society = {
 	trigger = {
 		military_tech >= idea_tier_3
 	}
-	army_maintenance_cost = -0.15
-	navy_maintenance_cost = -0.15
+	army_maintenance_cost = -0.20
+	navy_maintenance_cost = -0.20
 	group = military_ideas
 	soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_military"
 }

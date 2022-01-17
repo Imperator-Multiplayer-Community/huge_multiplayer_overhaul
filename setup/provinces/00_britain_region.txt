@@ -906,7 +906,7 @@
 	trade_goods="precious_metals"
 	nobles=
 	{
-		amount=4
+		amount=8
 	}
 	citizen=
 	{
@@ -914,11 +914,11 @@
 	}
 	freemen=
 	{
-		amount=6
+		amount=16
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=1
+		amount=10
 	}
 }
 #Alavna
@@ -1852,16 +1852,16 @@
 {
 	barbarian_power=0
 	civilization_value=8.5
-	culture="demetian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="forest"
 	trade_goods="base_metals"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
 		amount=2
 	}
@@ -1967,18 +1967,18 @@
 {
 	barbarian_power=0
 	civilization_value=10.5
-	culture="demetian"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="wood"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=2
+		amount=5
 	}
 }
 #Oktapitaron Akron
