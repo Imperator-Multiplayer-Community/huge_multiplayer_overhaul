@@ -499,7 +499,7 @@
  letter_friend.3.a:0 "What a delight"
  
  letter_friend.4.t:0 "Royal Correspondence"
- letter_friend.4.desc:0 "A few months after sending your letter, you are delighted to receive a lengthy response from [CHARACTER.GetName]. [CHARACTER.GetSheHe] shows a great depth of knowledge about areas of keen interest to you. You begin writing your next letter immediately, hoping to learn all you can from this learned soul."
+ letter_friend.4.desc:0 "A few months after sending your letter, you are delighted to receive a lengthy response from [target.GetName]. [target.GetSheHe] shows a great depth of knowledge about areas of keen interest to you. You begin writing your next letter immediately, hoping to learn all you can from this learned soul."
  letter_friend.4.a:0 "Express an interest in military matters"
  letter_friend.4.a.tt:0 "The higher the target's martial ability, the better chance improving your own martial skill."
  letter_friend.4.b:0 "Inquire into how to best manage one's affairs"

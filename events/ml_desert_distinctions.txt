@@ -161,8 +161,10 @@ ml_desert_distinctions.1 = {
 
 				add_distinction = distinction_desert_01
 
-				trigger_event = {
-					id = ml_expeditionary_distinctions.1
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
 				}
 			}
 		}
