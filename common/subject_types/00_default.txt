@@ -1,7 +1,4 @@
-﻿
-
-
-vassal_tribe = { #Tribal Vassal
+﻿vassal_tribe = { #Tribal Vassal
 	subject_pays = subject_pays_vassal
 	
 	joins_overlord_in_war = no
@@ -595,7 +592,7 @@ player_client_state = {
 	costs_diplomatic_slot = yes
 	subject_can_cancel = yes
 	
-	has_limited_diplomacy = yes
+	has_limited_diplomacy = no
 	only_trade_with_overlord = yes
 	
 	overlord_modifier = {
@@ -627,13 +624,8 @@ player_client_state = {
 		}
 	}
 	on_disable = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_country_modifier = carthage_mission_broken_roman_spirit_modifier
-				}
-				remove_country_modifier = carthage_mission_broken_roman_spirit_modifier
-			}
+		overlord = {
+			add_guarantee = root
 		}
 	}
 	on_monthly = {
@@ -657,7 +649,7 @@ player_client_state = {
 	
 	diplo_chance = {
 		base = {
-			offset = 200
+			offset = 1000
 		}
 	}
 }

@@ -1082,3 +1082,12 @@
 
  need_assassin_in_place_tt:0 "You must have a #Y Spy#! operating in the country."
 
+# Vassalage
+recently_offered_vassalage_tt:0 "This player was recently offered vassalage."
+
+player_client_state:0 "Player Client State"
+offer_player_vassalage:0 "Offer Vassalage to Player"
+offer_vassalage.1.t:0 "Vassalage Offered"
+offer_vassalage.1.desc:0 "[actor.GetName] has offered you vassalage. Will you accept?"
+offer_vassalage.1.a:0 "I recognize [actor.GetRuler] as my overlord."
+offer_vassalage.1.b:0 "This arrangement does not work for us."

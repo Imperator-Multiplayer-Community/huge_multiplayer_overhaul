@@ -81,19 +81,16 @@
 				change_country_adjective = "EGYPT_ADJECTIVE"
 				change_country_color = "pitch_black"
 				change_country_tag = KEM
-				#trigger_event = {
-					
-				}				
-			}
-			hidden_effect = {
 				set_variable = {
 					name = ach_new_kingdom_var
-				}
+				}				
 			}
+			
 			add_3_free_province_investments = yes
 		
-		ai_will_do = {
-			base = 1
+			ai_will_do = {
+				base = 1
+			}
 		}
 	}
 }

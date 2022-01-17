@@ -1331,7 +1331,7 @@ task.13 = { # Final resolution
 	desc = task.13.desc
 	left_portrait = root.current_ruler
 	right_portrait = scope:target
-	picture = Event_fire_city
+	picture = looting
 	interface_lock = no
 	
 	option = {
@@ -4504,23 +4504,6 @@ task.103 = { # Final resolution, grant gold
 	}
 }
 
-task.103 = { # Final resolution, grant gold
-	type = country_event
-	title = task.103.t
-	desc = task.103.desc
-	left_portrait = root.current_ruler
-	right_portrait = scope:target
-	picture = great_library
-	interface_lock = no
-	
-	option = {
-		name = "task.103.a"
-		add_treasury = {
-			value = { integer_range = { min = 20 max = 200 } }
-		}
-	}
-}
-
 task.104 = { # Final resolution, grant political influence
 	type = country_event
 	title = task.104.t
@@ -4550,7 +4533,11 @@ task.105 = { # Final resolution, lose loyalty
 	option = {
 		name = "task.105.a"
 		scope:target = {
-			add_loyalty = -10
+			add_loyalty = {
+				value = -10
+				months = 120
+				min = -10
+			}
 		}
 	}
 }
@@ -4572,6 +4559,7 @@ task.106 = { # Final resolution, neutral
 ### Common Result Paths
 task.190 = { # average good result
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		random_list = {
@@ -4613,6 +4601,7 @@ task.190 = { # average good result
 
 task.191 = { # average bad result
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		random_list = {
@@ -4642,6 +4631,7 @@ task.191 = { # average bad result
 
 task.192 = { # special bad result martial
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		random_list = {
@@ -4702,6 +4692,7 @@ task.192 = { # special bad result martial
 
 task.193 = { # special bad result charisma
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		random_list = {
@@ -4762,6 +4753,7 @@ task.193 = { # special bad result charisma
 
 task.194 = { # special bad result finesse
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		random_list = {
@@ -4822,6 +4814,7 @@ task.194 = { # special bad result finesse
 
 task.195 = { # special bad result zeal
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		random_list = {

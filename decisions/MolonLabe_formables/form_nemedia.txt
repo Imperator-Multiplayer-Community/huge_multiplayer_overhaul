@@ -69,20 +69,20 @@
 				}					
 			}
 			custom_tooltip = inherit_hib_provinces_tooltip
-			hidden_effect = {
-				area:nemedia_orientalis_area = {
-					nemedia_owner_check_effect = yes
-				}
-				area:nemedia_meridionalis_area = {
-					nemedia_owner_check_effect = yes
-				}
-				area:nemedia_occidentalis_area = {
-					nemedia_owner_check_effect = yes
-				}
-				area:nemedia_septentrionalis_area = {
-					nemedia_owner_check_effect = yes
-				}
-			}
+			#hidden_effect = {
+			#	area:nemedia_orientalis_area = {
+			#		nemedia_owner_check_effect = yes
+			#	}
+			#	area:nemedia_meridionalis_area = {
+			#		nemedia_owner_check_effect = yes
+			#	}
+			#	area:nemedia_occidentalis_area = {
+			#		nemedia_owner_check_effect = yes
+			#	}
+			#	area:nemedia_septentrionalis_area = {
+			#		nemedia_owner_check_effect = yes
+			#	}
+			#}
 			capital_scope = {
 				establish_city_effect = yes
 				capital_formable_medium_effect = yes

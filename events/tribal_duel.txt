@@ -141,7 +141,7 @@ tribal_duel.4 = { # Ruler win
 	type = country_event
 	title = "tribal_duel.4.t"
 	desc = "tribal_duel.4.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	right_portrait = scope:target
 
@@ -192,7 +192,11 @@ tribal_duel.4 = { # Ruler win
  			}
  		}
  		scope:target = {
- 			add_loyalty = 100
+ 			add_loyalty = {
+				value = 50
+				months = 240
+				min = 50
+			}
  			remove_rival = scope:actor.current_ruler
  		}
  	}
@@ -245,7 +249,7 @@ tribal_duel.4 = { # Ruler win
  		}
  		scope:target = {
  			death = {
- 				reason = death_execution
+ 				death_reason = death_execution
  				killer = scope:actor.current_ruler
  			}
  		}
@@ -258,7 +262,7 @@ tribal_duel.5 = { # Ruler miss
 	type = country_event
 	title = "tribal_duel.5.t"
 	desc = "tribal_duel.5.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	right_portrait = scope:target
 
@@ -290,7 +294,7 @@ tribal_duel.6 = { # Champion win
 	type = country_event
 	title = "tribal_duel.6.t"
 	desc = "tribal_duel.6.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	left_portrait = scope:champion
 	right_portrait = scope:target
@@ -342,7 +346,11 @@ tribal_duel.6 = { # Champion win
  			}
  		}
  		scope:target = {
- 			add_loyalty = 100
+ 			add_loyalty = {
+				value = 50
+				months = 240
+				min = 50
+			}
  			remove_rival = scope:actor.current_ruler
  		}
  	}
@@ -395,7 +403,7 @@ tribal_duel.6 = { # Champion win
  		}
  		scope:target = {
  			death = {
- 				reason = death_execution
+ 				death_reason = death_execution
  				killer = scope:champion
  			}
  		}
@@ -408,7 +416,7 @@ tribal_duel.7 = { # Champion miss
 	type = country_event
 	title = "tribal_duel.7.t"
 	desc = "tribal_duel.7.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	left_portrait = scope:champion
 	right_portrait = scope:target
@@ -472,6 +480,7 @@ tribal_duel.10 = {
 
 tribal_duel.11 = { # Rival win vs ruler
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		scope:actor.current_ruler = {
@@ -495,7 +504,7 @@ tribal_duel.11 = { # Rival win vs ruler
 
 				scope:actor.current_ruler = {
 					death = {
- 						reason = death_execution
+ 						death_reason = death_execution
  						killer = scope:target
  					}
 				}
@@ -516,7 +525,7 @@ tribal_duel.12 = { # Rival misses vs ruler
 	type = country_event
 	title = "tribal_duel.12.t"
 	desc = "tribal_duel.12.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	#left_portrait = scope:champion
 	right_portrait = scope:target
@@ -582,6 +591,7 @@ tribal_duel.13 = {
 
 tribal_duel.14 = { # Rival wins vs champion
 	type = country_event
+	hidden = yes
 
 	immediate = {
 		scope:champion = {
@@ -623,7 +633,7 @@ tribal_duel.15 = { # Rival misses vs chapmion
 	type = country_event
 	title = "tribal_duel.15.t"
 	desc = "tribal_duel.15.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	left_portrait = scope:champion
 	right_portrait = scope:target
@@ -654,7 +664,7 @@ tribal_duel.16 = { # ruler loses yet lives
 	type = country_event
 	title = "tribal_duel.16.t"
 	desc = "tribal_duel.16.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	right_portrait = scope:target
 
@@ -672,36 +682,36 @@ tribal_duel.16 = { # ruler loses yet lives
 						NOT = {
 							has_trait = submissive
 						}
-
-						add_trait = submissive
 					}
+
+					add_trait = submissive
 				}
 				25 = {
 					trigger = {
 						NOT = {
 							has_trait = weak_willed
 						}
-
-						add_trait = weak_willed
 					}
+
+					add_trait = weak_willed
 				}
 				25 = {
 					trigger = {
 						NOT = {
 							has_trait = coward
 						}
-
-						add_trait = coward
 					}
+
+					add_trait = coward
 				}
 				25 = {
 					trigger = {
 						NOT = {
 							has_trait = incapable
 						}
-
-						add_trait = incapable
 					}
+					
+					add_trait = incapable
 				}
 			}
 		}
@@ -712,7 +722,7 @@ tribal_duel.17 = { # champion loses yet lives
 	type = country_event
 	title = "tribal_duel.17.t"
 	desc = "tribal_duel.17.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	left_portrait = scope:champion
 	right_portrait = scope:target
@@ -771,7 +781,7 @@ tribal_duel.18 = { # ruler loses and has been killed
 	type = country_event
 	title = "tribal_duel.18.t"
 	desc = "tribal_duel.18.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	right_portrait = scope:target
 
@@ -784,7 +794,7 @@ tribal_duel.19 = { # champion loses and has been killed
 	type = country_event
 	title = "tribal_duel.19.t"
 	desc = "tribal_duel.19.desc"
-	picture = games_in_an_arena_gladiators_or_athletes
+	picture = gladiators
 	left_portrait = scope:actor.current_ruler
 	left_portrait = scope:champion
 	right_portrait = scope:target

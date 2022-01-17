@@ -138,7 +138,7 @@ letter_friend.4 = {
 			## if the character already has the best traits then dont offer the option
 			NOT = {
 				scope:letter_writer = {
-					has_character_modifier = better_martial_04
+					has_character_modifier = better_martial_05
 				}
 			}
 		}
@@ -171,14 +171,6 @@ letter_friend.4 = {
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
-		# modify the ai chances by their skill
-		ai_chance = {
-			factor = scope:letter_recipient.martial
-			modifier = {
-				factor = 2
-				scope:letter_recipient.martial > 10
-			}
-		}
 	}
 
 	option = {
@@ -222,14 +214,6 @@ letter_friend.4 = {
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
-		# modify the ai chances by their skill
-		ai_chance = {
-			factor = scope:letter_recipient.finesse
-			modifier = {
-				factor = 2
-				scope:letter_recipient.finesse > 10
-			}
-		}
 	}
 
 	option = {
@@ -272,14 +256,6 @@ letter_friend.4 = {
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
-		# modify the ai chances by their skill
-		ai_chance = {
-			factor = scope:letter_recipient.zeal
-			modifier = {
-				factor = 2
-				scope:letter_recipient.zeal > 10
-			}
-		}
 	}
 
 	option = {
@@ -321,14 +297,6 @@ letter_friend.4 = {
 			}
 		}
 		remove_variable = roll
-		#fire_next_letter_event_effect = yes
-		ai_chance = {
-			factor = scope:letter_recipient.charisma
-			modifier = {
-				factor = 2
-				scope:letter_recipient.charisma > 10
-			}
-		}
 	}
 	option = {
 		name = "letter_friend.4.e"

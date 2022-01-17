@@ -15,6 +15,9 @@
 			is_alive = yes
 			is_mercenary = no
 		}
+		hidden:scope:actor = {
+			has_country_modifier = foreign_intel_ops
+		}
 	}
 	
 	

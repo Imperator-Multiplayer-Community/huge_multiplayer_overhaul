@@ -1,4 +1,6 @@
-﻿ip_generic.15 = { 
+﻿namespace = ip_generic
+
+ip_generic.15 = { 
 	type = country_event
 	title = "ip_generic.15.t"
 	desc = "ip_generic.15.desc"
