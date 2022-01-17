@@ -172,7 +172,7 @@ letter_friend.4 = {
 			}
 		}
 		else = {
-			random_events = { 
+			random_list = { 
 				40 = {
 					scope:actor = {
 						trigger_event = {
