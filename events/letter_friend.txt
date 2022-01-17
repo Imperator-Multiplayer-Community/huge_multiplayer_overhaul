@@ -5,7 +5,7 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 	title = "letter_friend.1.t"
 	desc = "letter_friend.1.desc"
 	left_portrait = current_ruler
-	right_portrait = scope:actor.current_ruler
+	right_portrait = scope:target
 	picture = greek_philosophers
 	
 	option = { #Option for recipient to accept

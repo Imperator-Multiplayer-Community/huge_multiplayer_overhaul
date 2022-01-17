@@ -774,7 +774,7 @@ task.6 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -952,7 +952,7 @@ task.8 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -1132,7 +1132,7 @@ task.10 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -1311,7 +1311,7 @@ task.12 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -1491,7 +1491,7 @@ task.14 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -1670,7 +1670,7 @@ task.16 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -1849,7 +1849,7 @@ task.18 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -2028,7 +2028,7 @@ task.20 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -2207,7 +2207,7 @@ task.22 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -2386,7 +2386,7 @@ task.24 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -2565,7 +2565,7 @@ task.26 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -2744,7 +2744,7 @@ task.28 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -2923,7 +2923,7 @@ task.30 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -3103,7 +3103,7 @@ task.32 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -3282,7 +3282,7 @@ task.34 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
@@ -3463,7 +3463,7 @@ task.36 = { # Final resolution
 						}
 					}
 					15 = {
-						scope:target = {
+						scope:target.employer = {
 							trigger_event = {
 								id = task.190
 								days = 3
