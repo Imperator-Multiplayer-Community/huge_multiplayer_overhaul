@@ -159,18 +159,18 @@
 {
 	barbarian_power=0
 	civilization_value=7
-	culture="biturigan"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="marsh"
 	trade_goods="fish"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=3
+		amount=7
 	}
 }
 #Burgus
@@ -236,11 +236,11 @@
 	}
 	freemen=
 	{
-		amount=1
+		amount=19
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=4
+		amount=8
 	}
 }
 #Losa
