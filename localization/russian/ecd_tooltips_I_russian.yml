@@ -1,0 +1,12 @@
+﻿l_russian:
+
+ # Misc Military Traditions
+ unlocks_iberian_traditions_tt:0 "Открывает #Y Иберский#! Традиционные группы"
+ tradition_unlock_requirement_celtic_alt:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('gallic').GetName|Y] Культурная Группа\n   @trigger_no! [GetCultureGroup('celto_pannonian_group').GetName|Y] Культурная Группа\n   @trigger_no! [GetCultureGroup('belgae_group').GetName|Y] Культурная Группа\n   @trigger_no! [GetCultureGroup('britannic').GetName|Y] Культурная Группа\n    @trigger_no![GetCultureGroup('germanic').GetName|Y] Культурная Группа\n    @trigger_no![GetCultureGroup('baltic').GetName|Y] Культурная Группа\n    @trigger_no![GetCultureGroup('gaelic').GetName|Y] Культурная Группа\n    @trigger_no![GetCultureGroup('proto_european').GetName|Y] Культурная Группа"
+ tradition_unlock_requirement_iberian:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('celt_iberia').GetName|Y] Культурная Группа\n    @trigger_no![GetCultureGroup('iberia').GetName|Y] Культурная Группа"
+ 
+ #Random
+ tradition_unlock_requirement_greek:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('hellenic').GetName|Y] Культурная Группа\n   @trigger_no! [GetCultureGroup('dacia_group').GetName|Y] Культурная Группа\n    @trigger_no![GetCultureGroup('illyrian_group').GetName|Y] Культурная Группа"
+ tradition_unlock_requirement_greek_ecd:0 "Мы должны "Изучить греческие способы ведения войны", чтобы разблокировать это дерево. [THIS.CountryCulture.GetCulture.GetName] - это интегрированная культура, в которой по меньшей мере [SCOPE.ScriptValue('percent_size_culture_group_comparison')|Y0] населения в стране, и она принадлежит к культурной группе [THIS.CountryCulture.GetCulture.GetCultureGroup.GetName]."
+
+#Tooltips

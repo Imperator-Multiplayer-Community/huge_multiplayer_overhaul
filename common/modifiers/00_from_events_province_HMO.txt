@@ -55,3 +55,11 @@ exiled_community = {
 	local_unrest = 1
 	local_population_capacity_modifier = 0.2
 }
+
+recent_convert_modifier = { #Country Modifier
+	global_pop_conversion_speed_modifier = 0.50
+	change_pantheon_cost_modifier = -0.75
+	stability_monthly_change = -0.05
+	local_unrest = 1
+	omen_power = -0.2
+}

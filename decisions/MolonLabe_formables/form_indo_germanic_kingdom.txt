@@ -47,7 +47,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				#text = lombardy_not_exists
+				text = indger_not_exists
 				NOT = {
 					any_country = {
 						tag = IGK

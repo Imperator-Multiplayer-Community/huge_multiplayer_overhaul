@@ -14,7 +14,7 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 			set_variable = {
 				name = letter_recipient
 				value = scope:actor.current_ruler
-				days = 1460
+				days = 1080
 			}
 			save_scope_as = letter_recipient
 		}
@@ -22,7 +22,7 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 			set_variable = {
 				name = letter_writer
 				value = scope:target
-				days = 1460
+				days = 180
 			}
 			save_scope_as = letter_writer
 		}
@@ -41,6 +41,10 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 					}
 				}
 			}
+		}
+		# ai always should accept
+		ai_chance = {
+			factor = 100
 		}
 	}
 	
@@ -61,6 +65,9 @@ letter_friend.1 = { #You send the letter to a player. Does he accept to correspo
 					}
 				}
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 	
@@ -95,12 +102,12 @@ letter_friend.3 = { #accepted with pleasure
 	option = {
 		name = "letter_friend.3.a"
 		scope:actor = {
-			pay_price = gift_slave
+			pay_price = send_letter
 		}
 		scope:actor = {
 			trigger_event = { 
 				id = letter_friend.4
-				days = 7
+				days = 90
 			}
 		}
 	}
@@ -126,10 +133,18 @@ letter_friend.4 = {
 	
 	option = {
 		name = "letter_friend.4.a"
+		custom_tooltip = letter_friend.4.a.tt
+		trigger = {
+			## if the character already has the best traits then dont offer the option
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = better_martial_05
+				}
+			}
+		}
 		scope:actor = {
 			add_political_influence = subtract_influence_small
 		}		
-		#custom_tooltip = espionage_suspicion_tooltip
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
@@ -139,20 +154,40 @@ letter_friend.4 = {
 				has_variable = roll
 				var:roll <= scope:letter_recipient.martial
 			}
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.13
-					days = 90
+			random_list = { 
+				90 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.13
+						}
+					}
 				}
+				10 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.29
+						}
+					}
+				} 
 			}
 		}
 		else = {
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.14
-					days = 90
-				 }
-			}
+			random_list = { 
+				40 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.14
+						}
+					}
+				} 
+				60 = {
+					scope:actor = {
+						trigger_event = {
+							id = letter_friend.29
+						}
+					}
+				} 
+			 }
 		}
 		remove_variable = roll
 		#fire_next_letter_event_effect = yes
@@ -160,6 +195,15 @@ letter_friend.4 = {
 
 	option = {
 		name = "letter_friend.4.b"
+		custom_tooltip = letter_friend.4.b.tt
+		trigger = {
+			## if the character already has the best traits then dont offer the option
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = better_finesse_05
+				}
+			}
+		}
 		scope:actor = {
 			add_political_influence = subtract_influence_small
 		}		
@@ -194,10 +238,18 @@ letter_friend.4 = {
 
 	option = {
 		name = "letter_friend.4.c"
+		custom_tooltip = letter_friend.4.c.tt
+		## if the character already has the best traits then dont offer the option
+		trigger = {
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = better_zeal_05
+				}
+			}
+		}
 		scope:actor = {
 			add_political_influence = subtract_influence_small
 		}		
-		#custom_tooltip = espionage_suspicion_tooltip
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
@@ -228,10 +280,18 @@ letter_friend.4 = {
 
 	option = {
 		name = "letter_friend.4.d"
+		custom_tooltip = letter_friend.4.d.tt
+		## if the character already has the best traits then dont offer the option
+		trigger = {
+			NOT = {
+				scope:letter_writer = {
+					has_character_modifier = better_charisma_05
+				}
+			}
+		}
 		scope:actor = {
 			add_political_influence = subtract_influence_small
 		}		
-		#custom_tooltip = espionage_suspicion_tooltip
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
@@ -257,9 +317,29 @@ letter_friend.4 = {
 			}
 		}
 		remove_variable = roll
-		#fire_next_letter_event_effect = yes
 	}
-
+	option = {
+		name = "letter_friend.4.e"
+		# cancel the chain
+		hidden_effect = {
+			if = {
+				limit = {
+					scope:actor = {
+						has_land = yes
+					}
+				}
+				scope:actor = {
+					trigger_event = {
+						id = letter_friend.2
+						days = 5
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
 }
 
 
@@ -281,52 +361,52 @@ letter_friend.13 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = better_martial
-	 				}
-	 			remove_character_modifier = better_martial
+					has_character_modifier = better_martial_01
+	 			}
+	 			remove_character_modifier = better_martial_01
 				add_character_modifier = {
-					name = "really_better_martial"
+					name = "better_martial_02"
 					duration = -1
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = really_better_martial
-	 				}
-				remove_character_modifier = really_better_martial
+					has_character_modifier = better_martial_02
+	 			}
+				remove_character_modifier = better_martial_02
 				add_character_modifier = {
-					name = "earnestly_better_martial"
+					name = "better_martial_03"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = earnestly_better_martial
-	 				}
-				remove_character_modifier = earnestly_better_martial
+					has_character_modifier = better_martial_03
+	 			}
+				remove_character_modifier = better_martial_03
 				add_character_modifier = {
-					name = "much_better_martial"
+					name = "better_martial_04"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = much_better_martial
-	 				}
-				remove_character_modifier = much_better_martial
+					has_character_modifier = better_martial_04
+	 			}
+				remove_character_modifier = better_martial_04
 				add_character_modifier = {
-					name = "quite_better_martial"
+					name = "better_martial_05"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = quite_better_martial
+						has_character_modifier = better_martial_05
 						}
 					}
 				add_character_modifier = {
-					name = "better_martial"
+					name = "better_martial_01"
 					duration = -1
 	 			}
 			}
@@ -347,53 +427,53 @@ letter_friend.14 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = schooled_in_martial
+					has_character_modifier = worse_martial_01
 	 				}
-	 			remove_character_modifier = schooled_in_martial
+	 			remove_character_modifier = worse_martial_01
 				add_character_modifier = {
-					name = "very_schooled_in_martial"
-					duration = -1
+					name = "worse_martial_02"
+					duration = 1080
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = very_schooled_in_martial
+					has_character_modifier = worse_martial_02
 	 				}
-				remove_character_modifier = very_schooled_in_martial
+				remove_character_modifier = worse_martial_02
 				add_character_modifier = {
-					name = "quite_schooled_in_martial"
-					duration = -1
+					name = "worse_martial_03"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = quite_schooled_in_martial
+					has_character_modifier = worse_martial_03
 	 				}
-				remove_character_modifier = quite_schooled_in_martial
+				remove_character_modifier = worse_martial_03
 				add_character_modifier = {
-					name = "fooled_in_martial"
-					duration = -1
+					name = "worse_martial_04"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = fooled_in_martial
+					has_character_modifier = worse_martial_04
 	 				}
-				remove_character_modifier = fooled_in_martial
+				remove_character_modifier = worse_martial_04
 				add_character_modifier = {
-					name = "rekt_in_martial"
-					duration = -1
+					name = "worse_martial_05"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = rekt_in_martial
+						has_character_modifier = worse_martial_05
 						}
 					}
 				add_character_modifier = {
-					name = "schooled_in_martial"
-					duration = -1
+					name = "worse_martial_01"
+					duration = 1080
 	 			}
 			}
 		}
@@ -411,52 +491,52 @@ letter_friend.15 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = better_finesse
+					has_character_modifier = better_finesse_01
 	 				}
-	 			remove_character_modifier = better_finesse
+	 			remove_character_modifier = better_finesse_01
 				add_character_modifier = {
-					name = "really_better_finesse"
+					name = "better_finesse_02"
 					duration = -1
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = really_better_finesse
+					has_character_modifier = better_finesse_02
 	 				}
-				remove_character_modifier = really_better_finesse
+				remove_character_modifier = better_finesse_02
 				add_character_modifier = {
-					name = "earnestly_better_finesse"
+					name = "better_finesse_03"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = earnestly_better_finesse
+					has_character_modifier = better_finesse_03
 	 				}
-				remove_character_modifier = earnestly_better_finesse
+				remove_character_modifier = better_finesse_03
 				add_character_modifier = {
-					name = "much_better_finesse"
+					name = "better_finesse_04"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = much_better_finesse
+					has_character_modifier = better_finesse_04
 	 				}
-				remove_character_modifier = much_better_finesse
+				remove_character_modifier = better_finesse_04
 				add_character_modifier = {
-					name = "quite_better_finesse"
+					name = "better_finesse_05"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = quite_better_finesse
+						has_character_modifier = better_finesse_05
 						}
 					}
 				add_character_modifier = {
-					name = "better_finesse"
+					name = "better_finesse_01"
 					duration = -1
 	 			}
 			}
@@ -477,53 +557,53 @@ letter_friend.16 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = schooled_in_finesse
-	 				}
-	 			remove_character_modifier = schooled_in_finesse
+					has_character_modifier = worse_finesse_01
+	 			}
+	 			remove_character_modifier = worse_finesse_01
 				add_character_modifier = {
-					name = "very_schooled_in_finesse"
-					duration = -1
+					name = "worse_finesse_02"
+					duration = 1080
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = very_schooled_in_finesse
-	 				}
-				remove_character_modifier = very_schooled_in_finesse
+					has_character_modifier = worse_finesse_02
+	 			}
+				remove_character_modifier = worse_finesse_02
 				add_character_modifier = {
-					name = "quite_schooled_in_finesse"
-					duration = -1
+					name = "worse_finesse_03"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = quite_schooled_in_finesse
-	 				}
-				remove_character_modifier = quite_schooled_in_finesse
+					has_character_modifier = worse_finesse_03
+	 			}
+				remove_character_modifier = worse_finesse_03
 				add_character_modifier = {
-					name = "fooled_in_finesse"
-					duration = -1
+					name = "worse_finesse_04"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = fooled_in_finesse
-	 				}
-				remove_character_modifier = fooled_in_finesse
+					has_character_modifier = worse_finesse_04
+	 			}
+				remove_character_modifier = worse_finesse_04
 				add_character_modifier = {
-					name = "rekt_in_finesse"
-					duration = -1
+					name = "worse_finesse_05"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = rekt_in_finesse
-						}
+						has_character_modifier = worse_finesse_05
 					}
+				}
 				add_character_modifier = {
-					name = "schooled_in_finesse"
-					duration = -1
+					name = "worse_finesse_01"
+					duration = 1080
 	 			}
 			}
 		}
@@ -541,52 +621,52 @@ letter_friend.17 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = better_zeal
-	 				}
-	 			remove_character_modifier = better_zeal
+					has_character_modifier = better_zeal_01
+	 			}
+	 			remove_character_modifier = better_zeal_01
 				add_character_modifier = {
-					name = "really_better_zeal"
+					name = "better_zeal_02"
 					duration = -1
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = really_better_zeal
-	 				}
-				remove_character_modifier = really_better_zeal
+					has_character_modifier = better_zeal_02
+	 			}
+				remove_character_modifier = better_zeal_02
 				add_character_modifier = {
-					name = "earnestly_better_zeal"
+					name = "better_zeal_03"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = earnestly_better_zeal
-	 				}
-				remove_character_modifier = earnestly_better_zeal
+					has_character_modifier = better_zeal_03
+	 			}
+				remove_character_modifier = better_zeal_03
 				add_character_modifier = {
-					name = "much_better_zeal"
+					name = "better_zeal_04"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = much_better_zeal
-	 				}
-				remove_character_modifier = much_better_zeal
+					has_character_modifier = better_zeal_04
+	 			}
+				remove_character_modifier = better_zeal_04
 				add_character_modifier = {
-					name = "quite_better_zeal"
+					name = "better_zeal_05"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = quite_better_zeal
-						}
+						has_character_modifier = better_zeal_05
 					}
+				}
 				add_character_modifier = {
-					name = "better_zeal"
+					name = "better_zeal_01"
 					duration = -1
 	 			}
 			}
@@ -607,53 +687,53 @@ letter_friend.18 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = schooled_in_zeal
-	 				}
-	 			remove_character_modifier = schooled_in_zeal
+					has_character_modifier = worse_zeal_01
+	 			}
+	 			remove_character_modifier = worse_zeal_01
 				add_character_modifier = {
-					name = "very_schooled_in_zeal"
-					duration = -1
+					name = "worse_zeal_02"
+					duration = 1080
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = very_schooled_in_zeal
-	 				}
-				remove_character_modifier = very_schooled_in_zeal
+					has_character_modifier = worse_zeal_02
+	 			}
+				remove_character_modifier = worse_zeal_02
 				add_character_modifier = {
-					name = "quite_schooled_in_zeal"
-					duration = -1
+					name = "worse_zeal_03"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = quite_schooled_in_zeal
-	 				}
-				remove_character_modifier = quite_schooled_in_zeal
+					has_character_modifier = worse_zeal_03
+	 			}
+				remove_character_modifier = worse_zeal_03
 				add_character_modifier = {
-					name = "fooled_in_zeal"
-					duration = -1
+					name = "worse_zeal_04"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = fooled_in_zeal
-	 				}
-				remove_character_modifier = fooled_in_zeal
+					has_character_modifier = worse_zeal_04
+	 			}
+				remove_character_modifier = worse_zeal_04
 				add_character_modifier = {
-					name = "rekt_in_zeal"
-					duration = -1
+					name = "worse_zeal_05"
+					duration = 1080
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = rekt_in_zeal
-						}
+						has_character_modifier = worse_zeal_05
 					}
+				}
 				add_character_modifier = {
-					name = "schooled_in_zeal"
-					duration = -1
+					name = "worse_zeal_01"
+					duration = 1080
 	 			}
 			}
 		}
@@ -671,52 +751,52 @@ letter_friend.19 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = better_charisma
-	 				}
-	 			remove_character_modifier = better_charisma
+					has_character_modifier = better_charisma_01
+	 			}
+	 			remove_character_modifier = better_charisma_01
 				add_character_modifier = {
-					name = "really_better_charisma"
+					name = "better_charisma_02"
 					duration = -1
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = really_better_charisma
-	 				}
-				remove_character_modifier = really_better_charisma
+					has_character_modifier = better_charisma_02
+	 			}
+				remove_character_modifier = better_charisma_02
 				add_character_modifier = {
-					name = "earnestly_better_charisma"
+					name = "better_charisma_03"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = earnestly_better_charisma
-	 				}
-				remove_character_modifier = earnestly_better_charisma
+					has_character_modifier = better_charisma_03
+	 			}
+				remove_character_modifier = better_charisma_03
 				add_character_modifier = {
-					name = "much_better_charisma"
+					name = "better_charisma_04"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = much_better_charisma
-	 				}
-				remove_character_modifier = much_better_charisma
+					has_character_modifier = better_charisma_04
+	 			}
+				remove_character_modifier = better_charisma_04
 				add_character_modifier = {
-					name = "quite_better_charisma"
+					name = "better_charisma_05"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = quite_better_charisma
-						}
+						has_character_modifier = better_charisma_05
 					}
+				}
 				add_character_modifier = {
-					name = "better_charisma"
+					name = "better_charisma_01"
 					duration = -1
 	 			}
 			}
@@ -737,52 +817,52 @@ letter_friend.20 = {
 		scope:letter_writer = {
 			if = {
 				limit = {
-					has_character_modifier = schooled_in_charisma
-	 				}
-	 			remove_character_modifier = schooled_in_charisma
+					has_character_modifier = worse_charisma_01
+	 			}
+	 			remove_character_modifier = worse_charisma_01
 				add_character_modifier = {
-					name = "very_schooled_in_charisma"
+					name = "worse_charisma_02"
 					duration = -1
 	 			}
 	 		}
 			else_if = {
 				limit = {
-					has_character_modifier = very_schooled_in_charisma
-	 				}
-				remove_character_modifier = very_schooled_in_charisma
+					has_character_modifier = worse_charisma_02
+	 			}
+				remove_character_modifier = worse_charisma_02
 				add_character_modifier = {
-					name = "quite_schooled_in_charisma"
+					name = "worse_charisma_03"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = quite_schooled_in_charisma
-	 				}
-				remove_character_modifier = quite_schooled_in_charisma
+					has_character_modifier = worse_charisma_03
+	 			}
+				remove_character_modifier = worse_charisma_03
 				add_character_modifier = {
-					name = "fooled_in_charisma"
+					name = "worse_charisma_04"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
-					has_character_modifier = fooled_in_charisma
-	 				}
-				remove_character_modifier = fooled_in_charisma
+					has_character_modifier = worse_charisma_04
+	 			}
+				remove_character_modifier = worse_charisma_04
 				add_character_modifier = {
-					name = "rekt_in_charisma"
+					name = "worse_charisma_05"
 					duration = -1
 				}		
 			}
 			else_if = {
 				limit = {
 					NOT = {
-						has_character_modifier = rekt_in_charisma
-						}
+						has_character_modifier = worse_charisma_05
 					}
+				}
 				add_character_modifier = {
-					name = "schooled_in_charisma"
+					name = "worse_charisma_01"
 					duration = -1
 	 			}
 			}
@@ -980,4 +1060,22 @@ letter_friend.28 = { # Final resolution Charisma failure
 		add_political_influence = -25
 	}
 
+}
+
+letter_friend.29 = {
+	type = country_event
+	title = letter_friend.29.t
+	desc = letter_friend.29.desc
+	left_portrait = scope:letter_writer
+	right_portrait = scope:letter_recipient
+	picture = great_library
+	interface_lock = no
+	
+	immediate = {
+		#remove_letter_variables = yes
+	}
+
+	option = {
+		name = "letter_friend.29.a"
+	}
 }

@@ -30,7 +30,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				text = formable_not_ishkuza_exists
+				text = ishkuza_not_exists
 				NOT = {
 					any_country = {
 						tag = ISH

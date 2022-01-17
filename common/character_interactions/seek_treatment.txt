@@ -23,7 +23,6 @@ seek_treatment = {
 	allowed_trigger = {
 		scope:target = {
 			is_friend = scope:actor.current_ruler
-			has_character_modifier = spy_recruit_character
 			is_general = yes
 			is_admiral = yes
 			is_governor = yes

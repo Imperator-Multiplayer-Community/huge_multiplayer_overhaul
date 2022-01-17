@@ -3,13 +3,11 @@
 	enable = yes
 	toggle = no
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_assualt"
-
 	map = yes
-
 	navy_only = yes
 
 
-	#allow = {
+	allow = {
 		is_navy = yes
 		in_combat = no
 		is_moving = no

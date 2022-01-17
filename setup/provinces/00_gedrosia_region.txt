@@ -1901,6 +1901,18 @@
 	religion="arabian_pantheon"
 	terrain="desert"
 	trade_goods="fish"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
 #Jiddat al-Harasis
 7573=
@@ -1912,4 +1924,16 @@
 	religion="arabian_pantheon"
 	terrain="desert"
 	trade_goods="grain"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }

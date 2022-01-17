@@ -1,0 +1,32 @@
+﻿namespace = offer_vassalage
+
+offer_vassalage.1 = {
+	type = country_event
+	title = "offer_vassalage.1.t"
+	desc = "offer_vassalage.1.desc"
+	left_portrait = root.current_ruler
+	right_portrait = scope:actor.current_ruler
+
+	picture = throneroom
+
+	option = { # Accept
+		name = offer_vassalage.1.a
+
+		scope:actor = {
+			make_subject = {
+				target = root
+				type = player_client_state
+			}
+		}	
+
+		hidden_effect = {
+			root.current_ruler = {
+				remove_variable = recently_offered_vassalage
+			}
+		}
+	}
+
+	option = { # Decline
+		name = offer_vassalage.1.b
+	}
+}

@@ -34,7 +34,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				text = formable_not_liguria_exists
+				text = liguria_not_exists
 				NOT = {
 					any_country = {
 						num_of_cities >= 1

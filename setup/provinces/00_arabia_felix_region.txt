@@ -1844,6 +1844,18 @@
 	religion="arabian_pantheon"
 	terrain="desert"
 	trade_goods="incense"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
 #Arabia Relicta
 7569=
@@ -1855,6 +1867,18 @@
 	religion="arabian_pantheon"
 	terrain="desert"
 	trade_goods="gems"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
 #Arabia Relicta
 7570=
@@ -1866,6 +1890,18 @@
 	religion="arabian_pantheon"
 	terrain="desert"
 	trade_goods="stone"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
 #Arabia Relicta
 7571=
@@ -1877,4 +1913,16 @@
 	religion="arabian_pantheon"
 	terrain="desert"
 	trade_goods="precious_metals"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }

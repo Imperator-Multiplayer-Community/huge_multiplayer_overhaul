@@ -295,163 +295,171 @@ base_window = {
 						visible = "[GovernmentView.GetPlayer.GetGovernment.IsTribal]"
 					}
 				}
-				
-				scrollarea = {
-					layoutpolicy_horizontal = expanding
+
+				margin_widget = {
+					size = { 620 0 }
+					margin = { 4 4 }
 					layoutpolicy_vertical = expanding
-					scrollbarpolicy_horizontal = always_off
-					
-					scrollbar_vertical = {
-						using = VerticalScrollBar
-					}
-					
-					scrollwidget = {
-						dynamicgridbox = {
-							name = "possible_laws_grid"
-							layoutpolicy_horizontal = expanding
-							layoutpolicy_vertical = expanding
-							flipdirection = yes
-							datamodel_wrap = 2
-							datamodel = "[GovernmentView.GetCurrentLaws]"
-							parentanchor = center
-							item = {
-								container = {
-									margin_widget = {
-										size = { 306 32 }
-										hbox = {
-											layoutpolicy_horizontal = expanding
-											sub_header = {
-												name = "law_header"
-												size = { 0 32 }
+					parentanchor = center
+						
+					scrollarea = {
+						position = { 0 4 }
+						size = { 612 650 }
+
+						scrollbarpolicy_horizontal = always_off
+						
+						using = VerticalScrollAreaCutOff
+						scrollbar_vertical = {
+							using = VerticalScrollBar
+						}
+						
+						scrollwidget = {
+							dynamicgridbox = {
+								name = "possible_laws_grid"
+								flipdirection = yes
+								position = { 0 4 }
+								datamodel = "[GovernmentView.GetCurrentLaws]"
+								datamodel_wrap = 2
+
+								item = {
+									container = {
+										margin_widget = {
+											size = { 306 32 }
+											hbox = {
 												layoutpolicy_horizontal = expanding
-												blockoverride "Title_text"
-												{
-													datacontext = "[GovernmentView.GetPlayer]"
-													text = "[LawGroupItem.GetName]"
+												sub_header = {
+													name = "law_header"
+													size = { 0 32 }
+													layoutpolicy_horizontal = expanding
+													blockoverride "Title_text"
+													{
+														datacontext = "[GovernmentView.GetPlayer]"
+														text = "[LawGroupItem.GetName]"
+													}
 												}
-											}
-											
-											flowcontainer = {
-												tooltip = [LawGroupItem.GetClansTooltip]
-												visible = "[LawGroupItem.HasClans]"
-												icon = {											
-													name = "clans_icon"
-													texture = "gfx/interface/icons/shared_icons/clan_chiefs.dds"
-													size = { 32 32 }	
+												
+												flowcontainer = {
 													tooltip = [LawGroupItem.GetClansTooltip]
+													visible = "[LawGroupItem.HasClans]"
+													icon = {											
+														name = "clans_icon"
+														texture = "gfx/interface/icons/shared_icons/clan_chiefs.dds"
+														size = { 32 32 }	
+														tooltip = [LawGroupItem.GetClansTooltip]
+													}
+													icon = {
+														parentanchor = right
+														name = "clans_yesno"
+														texture = "gfx/interface/icons/shared_icons/tick_cross.dds"
+														frame = "[LawGroupItem.GetClansFrame]"
+														size = { 30 30 }
+														framesize = { 25 25 }
+													}
 												}
-												icon = {
-													parentanchor = right
-													name = "clans_yesno"
-													texture = "gfx/interface/icons/shared_icons/tick_cross.dds"
-													frame = "[LawGroupItem.GetClansFrame]"
-													size = { 30 30 }
-													framesize = { 25 25 }
+												widget = {
+													size = { 8 0 }
+													visible = "[Not( LawGroupItem.HasClans )]"
 												}
-											}
-											widget = {
-												size = { 8 0 }
-												visible = "[Not( LawGroupItem.HasClans )]"
 											}
 										}
-									}
-									flowcontainer = {
-										position = { 0 36 }
-										
-										dynamicgridbox = {
-											datamodel = "[LawGroupItem.GetLaws]"
+										flowcontainer = {
+											position = { 0 36 }
 											
-											item = {
-												widget = {
-													size = { 280 32 }
-
-													
-													alpha = "[TransparentIfFalse(LawItem.IsAllowed)]"
-
-													button_radial = {
-														position = { 4 0 }
-														enabled = "[And( LawItem.CanEnact, LawItem.IsAllowed )]"
-														scale = 0.9
-														
-														blockoverride "On_click" 
-														{
-															onclick = "[LawItem.Enact]"
-															inherit_visual_state = no
-															enabled = yes
-														}
-														blockoverride "ShowDot"
-														{
-															trigger_when = "[LawItem.HasLaw]"
-														} 
-														
-														blockoverride "HideDot" 
-														{
-															trigger_when = "[Not(LawItem.HasLaw)]"
-														}
-														tooltip = "[LawItem.GetCanSetLawDescription]"
-													}
-													tooltipwidget = player_law_item_tooltip
+											dynamicgridbox = {
+												datamodel = "[LawGroupItem.GetLaws]"
+												
+												item = {
 													widget = {
-														position = { 34 0 }
-														size = { 260 24 }
-														using = NoninteractableBG
-														blockoverride "Margins" { margin = { 4 6 } }
-														textbox = {
-															position = { 8 3 }
-															autoresize = yes
-															align = nobaseline|left
-															using = BaseFontS
-															using = Black_FontColor
-															text = "[LawItem.GetName]"
-															max_width = 280
-															elide = right
+														size = { 280 32 }
+
+														
+														alpha = "[TransparentIfFalse(LawItem.IsAllowed)]"
+
+														button_radial = {
+															position = { 4 0 }
+															enabled = "[And( LawItem.CanEnact, LawItem.IsAllowed )]"
+															scale = 0.9
+															
+															blockoverride "On_click" 
+															{
+																onclick = "[LawItem.Enact]"
+																inherit_visual_state = no
+																enabled = yes
+															}
+															blockoverride "ShowDot"
+															{
+																trigger_when = "[LawItem.HasLaw]"
+															} 
+															
+															blockoverride "HideDot" 
+															{
+																trigger_when = "[Not(LawItem.HasLaw)]"
+															}
+															tooltip = "[LawItem.GetCanSetLawDescription]"
 														}
+														tooltipwidget = player_law_item_tooltip
+														widget = {
+															position = { 34 0 }
+															size = { 260 24 }
+															using = NoninteractableBG
+															blockoverride "Margins" { margin = { 4 6 } }
+															textbox = {
+																position = { 8 3 }
+																autoresize = yes
+																align = nobaseline|left
+																using = BaseFontS
+																using = Black_FontColor
+																text = "[LawItem.GetName]"
+																max_width = 280
+																elide = right
+															}
+														}
+														
+														widget = {
+															parentanchor = top|right
+															widgetanchor = top|right
+															position = { 5 -6 }
+															size = { 32 32 }
+															
+															
+															icon = {
+																texture = "[LawItem.GetLaw.GetModifier.GetIcon]"
+																size = { 32 32 }
+															}
+															
+															icon = {
+																texture = "gfx/interface/icons/laws/law_agnatic.dds"
+																visible = "[LawItem.GetLaw.IsSuccession('agnatic')]"
+																size = { 32 32 }
+																position = { 6 0 }
+															}
+															icon = {
+																texture = "gfx/interface/icons/laws/law_agnatic_cognatic.dds"
+																visible = "[LawItem.GetLaw.IsSuccession('cognatic')]"
+																size = { 32 32 }
+																position = { 6 0 }
+															}
+															icon = {
+																texture = "gfx/interface/icons/laws/law_agnatic_seniority.dds"
+																visible = "[LawItem.GetLaw.IsSuccession('agnatic_seniority')]"
+																size = { 32 32 }
+																position = { 6 0 }
+															}
+															icon = {
+																texture = "gfx/interface/icons/laws/law_elective.dds"
+																visible = "[LawItem.GetLaw.IsSuccession('elective_monarchy')]"
+																size = { 32 32 }
+																position = { 6 0 }
+															}
+															icon = {
+																texture = "gfx/interface/icons/laws/law_familial_marriage.dds"
+																visible = "[LawItem.GetLaw.IsSuccession('old_egyptian_succession')]"
+																size = { 32 32 }
+																position = { 7 0 }
+															}
+														}
+														
 													}
-													
-													widget = {
-														parentanchor = top|right
-														widgetanchor = top|right
-														position = { 5 -6 }
-														size = { 32 32 }
-														
-														
-														icon = {
-															texture = "[LawItem.GetLaw.GetModifier.GetIcon]"
-															size = { 32 32 }
-														}
-														
-														icon = {
-															texture = "gfx/interface/icons/laws/law_agnatic.dds"
-															visible = "[LawItem.GetLaw.IsSuccession('agnatic')]"
-															size = { 32 32 }
-															position = { 6 0 }
-														}
-														icon = {
-															texture = "gfx/interface/icons/laws/law_agnatic_cognatic.dds"
-															visible = "[LawItem.GetLaw.IsSuccession('cognatic')]"
-															size = { 32 32 }
-															position = { 6 0 }
-														}
-														icon = {
-															texture = "gfx/interface/icons/laws/law_agnatic_seniority.dds"
-															visible = "[LawItem.GetLaw.IsSuccession('agnatic_seniority')]"
-															size = { 32 32 }
-															position = { 6 0 }
-														}
-														icon = {
-															texture = "gfx/interface/icons/laws/law_elective.dds"
-															visible = "[LawItem.GetLaw.IsSuccession('elective_monarchy')]"
-															size = { 32 32 }
-															position = { 6 0 }
-														}
-														icon = {
-															texture = "gfx/interface/icons/laws/law_familial_marriage.dds"
-															visible = "[LawItem.GetLaw.IsSuccession('old_egyptian_succession')]"
-															size = { 32 32 }
-															position = { 7 0 }
-														}
-													}
-													
 												}
 											}
 										}

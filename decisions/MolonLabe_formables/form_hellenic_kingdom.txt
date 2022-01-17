@@ -31,7 +31,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				text = formable_not_hellenic_kingdom_exists
+				text = hellenic_kingdom_not_exists
 				NOT = {
 					any_country = {
 						tag = HLK

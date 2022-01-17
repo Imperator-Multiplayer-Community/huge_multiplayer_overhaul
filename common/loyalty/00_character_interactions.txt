@@ -267,3 +267,15 @@ corruption_probe = {
 	value = -8
 	yearly_decay = 1
 }
+
+task_average_loyalty_failed = {
+	value = -30
+	yearly_decary = 1
+	min = -30
+}
+
+tribal_duel_mercy = {
+	value = 50
+	months = 240
+	min = 50
+}

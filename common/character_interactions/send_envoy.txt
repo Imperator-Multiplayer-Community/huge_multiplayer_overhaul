@@ -13,6 +13,7 @@
 				is_tribal = yes
 				is_republic = yes
 			}
+			is_ai = no
 			NOT = { 
 				has_variable = anti_spam_envoy
 			}
@@ -21,8 +22,8 @@
 			is_alive = yes
 			is_mercenary = no
 			is_ruler = yes
-			is_ai = no ##########################################################
-			employer = {
+			employer = { 
+				is_ai = no
 				NOR = {
 					tag = PIR
 					tag = REB
@@ -69,4 +70,5 @@
 		}
 	}
 }	
+
 

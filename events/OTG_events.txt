@@ -69,8 +69,12 @@ OTG.1 = {
 						#		add = cohort_food_consumption
 						#	}
 						#}
+					set_variable = {
+						name = current_unit_size
+						value = unit_size
+					}	
 					switch = {
-						trigger = unit_size
+						trigger = var:current_unit_size
 						1 = {
 							add_food = 1
 							scope:food_soldier_state = {
@@ -198,6 +202,7 @@ OTG.1 = {
 							}
 						}
 					}
+					remove_variable =  current_unit_size
 				}
 			}
 		}

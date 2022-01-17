@@ -1607,7 +1607,6 @@ civic_2 = {
         modifier = { 
 			recruit_mercenary_cost_modifier = -0.25 
 			max_mercenary_stacks = 1
-			army_maintenance_cost = 0.01
 		}
         keystone = yes
 		on_activate = {
@@ -1620,7 +1619,6 @@ civic_2 = {
         modifier = { 
 			loyalty_gain_chance_modifier = -0.05 
 			land_morale = 0.25
-			army_maintenance_cost = 0.01
 		}
 		on_activate = {
 			current_ruler = {

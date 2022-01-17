@@ -790,8 +790,12 @@ base_window = {
 					text_button_square = {
 						size = { 200 0 }
 						parentanchor = right
+						datacontext = "[GetScriptedGui('country_lexy_xp_set_start_value_event')]"
 						blockoverride "Center_text" { text = "RAISE_ALL_LEVIES" }
-						blockoverride "On_click" { onclick = "[MilitaryView.RaiseAllLevies]" }
+						blockoverride "On_click" { 
+							onclick = "[MilitaryView.RaiseAllLevies]" 
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						}
 						enabled = "[MilitaryView.CanRaiseAllLevies]"
 						tooltip = "[MilitaryView.CanRaiseAllLeviesTooltip]"
 						position = { -12 10 }
@@ -799,8 +803,11 @@ base_window = {
 					text_button_square = {
 						size = { 200 0 }
 						parentanchor = right
+						datacontext = "[GetScriptedGui('country_all_levy_xp_to_military_xp_event')]"
 						blockoverride "Center_text" { text = "DISBAND_ALL_LEVIES" }
-						blockoverride "On_click" { onclick = "[MilitaryView.DisbandAllLevies]" }
+						blockoverride "On_click" { 
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+						}
 						enabled = "[MilitaryView.CanDisbandAllLevies]"
 						tooltip = "[MilitaryView.CanDisbandAllLeviesTooltip]"
 						position = { -12 46 }
@@ -1064,17 +1071,6 @@ base_window = {
 												position = { 0 -6 }
 												spacing = 6
 												ignoreinvisible = yes
-												
-												button_delete_item = {
-													parentanchor = vcenter
-													size = { 32 32 }
-													enabled = "[GovernorshipItem.CanDisbandLevy]"
-													blockoverride "On_click"
-													{
-														onclick = "[GovernorshipItem.OnDisbandLevy]"
-													}
-													tooltip = "[GovernorshipItem.CanDisbandLevyTooltip]"
-												}
 
 												text_button_square = {
 													parentanchor = vcenter

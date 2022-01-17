@@ -645,6 +645,7 @@
  LEVANTINE_REPUBLIC:0 "Levantine Republic"
  LEVANTINE_ADJECTIVE:0 "Levantine"
  levantine_color:0 "Levantine Purple"
+ levantine_not_exists:0 "#Y Levantine Republic#! must NOT exist."
 
  #Republic Of Nile
  form_republic_of_nile:0 "Republic Of Nile"
@@ -717,3 +718,9 @@
  LIGURIA_NAME:0 "Liguria"
  LIGURIA_ADJECTIVE:0 "Ligurian"
  liguria_not_exists:0 "#Y Liguria#! must NOT exist."
+
+ grand_republic:0 "Grand Republic"
+ grand_republic_desc:0 "By rebuilding the very foundation our Republic stands on we are now more capable than ever to manage our new lands."
+ 
+ nile_republic_heritage "Nile Republic Heritage"
+ nile_republic_heritage_desc:0 "Placeholder"

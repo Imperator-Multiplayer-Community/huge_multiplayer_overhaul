@@ -1,4 +1,4 @@
-﻿secude_governor = {
+﻿seduce_governor = {
 
 	on_other_nation = yes
 	on_own_nation = no
@@ -15,12 +15,15 @@
 			is_alive = yes
 			is_mercenary = no
 		}
+		hidden:scope:actor = {
+			has_country_modifier = foreign_intel_ops
+		}
 	}
 	
 	
 	allowed_trigger = {
 		hidden:scope:actor = {
-			can_pay_price = secude_governor
+			can_pay_price = seduce_governor
 			has_country_modifier = foreign_intel_ops
 		}
 		scope:target.employer = {
@@ -118,7 +121,7 @@
 						var:roll <= scope:spy.charisma
 					}
 					scope:actor = {
-						pay_price = secude_governor
+						pay_price = seduce_governor
 					}
 					scope:target = {
 						if = {

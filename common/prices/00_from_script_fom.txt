@@ -1,6 +1,4 @@
-﻿
-
-inspire_disloyalty = {
+﻿inspire_disloyalty = {
 	aggressive_expansion = 5
 	political_influence = 10
 	scaled_gold = 1
@@ -24,7 +22,7 @@ recruit_general = {
 	scaled_gold = 1
 }
 
-secude_governor = {
+seduce_governor = {
 	aggressive_expansion = 15
 	political_influence = 25
 	scaled_gold = 1
@@ -32,6 +30,16 @@ secude_governor = {
 
 gift_slave = {
 	scaled_gold = 5
+}
+
+send_letter = {
+	gold = 50
+	political_influence = 25
+}
+
+go_hunting = {
+	gold = 100
+	political_influence = 10
 }
 
 price_force_divorce = {
@@ -80,4 +88,9 @@ create_merc_state_price = {
 assassinate_attempt_foreign = {
 	aggressive_expansion = 20
 	scaled_gold = 1
+}
+
+subject_player_client_state_pays = {
+	scaled_gold = 0.15
+	scaled_manpower = 0.10
 }

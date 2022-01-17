@@ -64,8 +64,8 @@
 		}
 
 		scope:target.employer = {
-			political_influence >= 10
-			treasury >= 25
+			political_influence >= 15
+			treasury >= 35
 		}
 
 		custom_tooltip = {
@@ -95,8 +95,8 @@
 		}
 	
 		scope:target.employer = {
-			add_political_influence = -10
-			add_treasury = -25
+			add_political_influence = -15
+			add_treasury = -35
 			trigger_event = {
 				id = task.1
 				days = 3

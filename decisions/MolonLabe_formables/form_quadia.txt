@@ -36,7 +36,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				text = formable_not_quadia_exists
+				text = quadia_not_exists
 				NOT = {
 					any_country = {
 						num_of_cities >= 1

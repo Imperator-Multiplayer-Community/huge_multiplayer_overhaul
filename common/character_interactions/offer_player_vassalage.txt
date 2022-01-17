@@ -1,0 +1,76 @@
+﻿offer_player_vassalage = {
+	on_other_nation = yes 
+	on_own_nation = no 
+	close_ui = yes
+
+	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_befriend"
+
+	potential_trigger = {
+		scope:actor = {
+			OR = {
+				is_monarchy = yes 
+				is_tribal = yes
+				is_republic = yes
+			}
+			is_ai = no
+			NOT = { 
+				has_variable = anti_vassal_spam
+			}
+		}
+		hidden:scope:target = {
+			is_alive = yes
+			is_mercenary = no
+			is_ruler = yes
+			employer = { 
+				is_ai = no
+				NOR = {
+					tag = PIR
+					tag = REB
+					tag = BAR
+				}
+			}
+			NOT = {
+				this = scope:actor.current_ruler
+			}
+		}
+	}
+
+	allowed_trigger = {
+		scope:actor = {
+			in_diplomatic_range = scope:target.employer
+		}
+		scope:actor.current_ruler = {
+			is_alive = yes
+		}
+		scope:target = {
+			is_alive = yes
+			custom_tooltip = {
+				text = recently_offered_vassalage_tt
+				NOT = {
+					has_variable = recently_offered_vassalage
+				}
+			}
+			
+		}
+		scope:target.employer = {
+			num_of_cities < 150
+			is_subject = no
+		}
+	}
+
+	effect = {
+		scope:target = {
+			set_variable = {
+				name = recently_offered_vassalage
+				days = 180
+			}
+		}
+
+		scope:target.employer = {
+			trigger_event = {
+				id = player_vassal.1
+				days = 3
+			}
+		}
+	}
+}
