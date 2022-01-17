@@ -5,7 +5,7 @@ offer_vassalage.1 = {
 	title = "offer_vassalage.1.t"
 	desc = "offer_vassalage.1.desc"
 	left_portrait = root.current_ruler
-	right_portrait = scope:actor:current_ruler
+	right_portrait = scope:actor.current_ruler
 
 	picture = throneroom
 

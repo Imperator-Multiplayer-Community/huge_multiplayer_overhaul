@@ -4533,11 +4533,7 @@ task.105 = { # Final resolution, lose loyalty
 	option = {
 		name = "task.105.a"
 		scope:target = {
-			add_loyalty = {
-				value = -10
-				months = 120
-				min = -10
-			}
+			add_loyalty = task_average_loyalty_failed
 		}
 	}
 }

@@ -87,10 +87,10 @@
 			}
 			
 			add_3_free_province_investments = yes
-		
-			ai_will_do = {
-				base = 1
-			}
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 }

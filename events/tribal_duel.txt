@@ -153,7 +153,8 @@ tribal_duel.4 = { # Ruler win
  	}
 
 	option = { # Let them live
- 		name = "tribal_duel.6.a"
+ 		name = "tribal_duel.4.a"
+
  		scope:actor.current_ruler = {
  			add_popularity = 15
  			random_list = {
@@ -192,17 +193,14 @@ tribal_duel.4 = { # Ruler win
  			}
  		}
  		scope:target = {
- 			add_loyalty = {
-				value = 50
-				months = 240
-				min = 50
-			}
+ 			add_loyalty = tribal_duel_mercy
  			remove_rival = scope:actor.current_ruler
  		}
  	}
 
  	option = { # Finish them
- 		name = "tribal_duel.6.b"
+ 		name = "tribal_duel.4.b"
+
  		scope:actor = {
 			add_political_influence = 15
  			add_tyranny = 15
@@ -346,11 +344,7 @@ tribal_duel.6 = { # Champion win
  			}
  		}
  		scope:target = {
- 			add_loyalty = {
-				value = 50
-				months = 240
-				min = 50
-			}
+ 			add_loyalty = tribal_duel_mercy
  			remove_rival = scope:actor.current_ruler
  		}
  	}

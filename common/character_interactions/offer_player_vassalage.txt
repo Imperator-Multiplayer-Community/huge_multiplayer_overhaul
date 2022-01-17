@@ -62,7 +62,7 @@
 		scope:target = {
 			set_variable = {
 				name = recently_offered_vassalage
-				duration = 180
+				days = 180
 			}
 		}
 
