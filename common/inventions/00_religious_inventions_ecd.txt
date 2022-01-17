@@ -988,7 +988,6 @@ religious_1 = {
 			global_manpower_modifier = 0.05
 			max_mercenary_stacks = 1
 			levy_size_multiplier = 0.02
-			army_maintenance_cost = 0.03
 
 		}
 		keystone = yes
@@ -1164,7 +1163,6 @@ religious_1 = {
 			happiness_for_same_religion_modifier = 0.06
 			global_citizen_output = 0.06
 			global_manpower_modifier = 0.1
-			army_maintenance_cost = 0.03
 
 		}
 		keystone = yes

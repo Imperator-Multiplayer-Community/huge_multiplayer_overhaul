@@ -199,7 +199,7 @@
 	}
 
 	army_maintenance_cost_inv_2 = { 
-		modifier = { army_maintenance_cost = -0.05  }
+		modifier = { army_maintenance_cost = -0.075  }
 		requires = { global_cohort_recruit_speed_inv }
 		ai_will_do = {
 			modifier = {
@@ -527,7 +527,7 @@
 
 
 	army_maintenance_cost_inv_1 = { 
-		modifier = { army_maintenance_cost = -0.05  }
+		modifier = { army_maintenance_cost = -0.075  }
 		requires = { global_supply_limit_modifier_inv_4 }
 	}
 
@@ -900,7 +900,7 @@ military_inventions = {
 
 	#Changed for HMO
 	heavy_infantry_cost_inv = {
-		modifier = { heavy_infantry_cost = -0.1 }
+		modifier = { army_maintenance_cost = -0.05 }
 		requires = { heavy_cavalry_discipline_inv }
 	}	
 
