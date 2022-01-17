@@ -66,7 +66,7 @@ in_siege = {
 
 
 defensive_war = {
-	max_war_exhaustion = 30
+	max_war_exhaustion = 20
 	war_exhaustion = -0.03
 	global_migration_speed_modifier = 0.1
 	#levy_size_multiplier = 0.01

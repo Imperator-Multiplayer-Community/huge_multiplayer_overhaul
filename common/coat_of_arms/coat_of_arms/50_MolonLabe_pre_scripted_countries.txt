@@ -1821,3 +1821,43 @@ LIGURIA_FLAG = {
 
 	}
 }
+
+C74 = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_purple"
+    color2 = "offwhite"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "offwhite"
+        color2 = "ck2_purple"
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = "offwhite"
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+MAT = {
+    pattern = "pattern_solid.tga"
+    color1 = "navy_blue"
+    color2 = "offwhite"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "offwhite"
+        color2 = "navy_blue"
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = "offwhite"
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
