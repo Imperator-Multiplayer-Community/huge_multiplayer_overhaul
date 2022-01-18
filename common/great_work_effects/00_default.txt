@@ -646,6 +646,7 @@ gw_effect_oratory_science_doctrine = {
 			country_modifier = {
 				#research_points_modifier = 0.05
 				oratory_tech_investment = 0.05
+				monthly_tyranny = -0.01
 			}
 		}
 		gw_effect_oratory_science_doctrine_tier_2 = {
@@ -654,6 +655,7 @@ gw_effect_oratory_science_doctrine = {
 			country_modifier = {
 				#research_points_modifier = 0.1
 				oratory_tech_investment = 0.1
+				monthly_tyranny = -0.05
 			}
 		} 
 		gw_effect_oratory_science_doctrine_tier_3 = {
@@ -662,6 +664,7 @@ gw_effect_oratory_science_doctrine = {
 			country_modifier = {
 				#research_points_modifier = 0.15
 				oratory_tech_investment = 0.15
+				monthly_tyranny = -0.08
 			}
 		} 
 		gw_effect_oratory_science_doctrine_tier_4 = {
@@ -670,6 +673,7 @@ gw_effect_oratory_science_doctrine = {
 			country_modifier = {
 				#research_points_modifier = 0.2
 				oratory_tech_investment = 0.25
+				monthly_tyranny = -0.10
 			}
 		}	
 	}
@@ -697,7 +701,6 @@ gw_effect_religious_science_doctrine = {
 				#research_points_modifier = 0.05
 				religious_tech_investment = 0.05
 				stability_monthly_change = 0.02
-
 			}
 		}
 		gw_effect_religious_science_doctrine_tier_2 = {
@@ -707,8 +710,6 @@ gw_effect_religious_science_doctrine = {
 				#research_points_modifier = 0.1
 				religious_tech_investment = 0.1
 				stability_monthly_change = 0.04
-
-
 			}
 		} 
 		gw_effect_religious_science_doctrine_tier_3 = {
@@ -1011,7 +1012,7 @@ gw_effect_slaves_pop_doctrine = {
 
 			country_modifier = {
 				global_slaves_output = 0.1
-				#global_slaves_happyness = 0.04
+				global_slaves_happyness = 0.02
 			}
 		}
 		gw_effect_slaves_pop_doctrine_tier_2 = {
@@ -1019,7 +1020,7 @@ gw_effect_slaves_pop_doctrine = {
 
 			country_modifier = {
 				global_slaves_output = 0.15
-				#global_slaves_happyness = 0.08
+				global_slaves_happyness = 0.04
 			}
 		} 
 		gw_effect_slaves_pop_doctrine_tier_3 = {
@@ -1027,7 +1028,7 @@ gw_effect_slaves_pop_doctrine = {
 
 			country_modifier = {
 				global_slaves_output = 0.2
-				#global_slaves_happyness = 0.12
+				global_slaves_happyness = 0.06
 			}
 		} 
 		gw_effect_slaves_pop_doctrine_tier_4 = {
@@ -1035,7 +1036,7 @@ gw_effect_slaves_pop_doctrine = {
 
 			country_modifier = {
 				global_slaves_output = 0.25
-				#global_slaves_happyness = 0.16
+				global_slaves_happyness = 0.1
 			}
 		}
 	}
@@ -1062,28 +1063,32 @@ gw_effect_expanding_population = {
 
 			state_modifier = {
 				local_population_capacity_modifier = 0.05
-				local_population_growth = 0.025
+				local_food_capacity = 100
+				global_population_growth = 0.025
 			}
 		}
 		gw_effect_expanding_population_tier_2 = {
 			great_work_effect_tier = gw_effect_tier_2
 			state_modifier = {
 				local_population_capacity_modifier = 0.075
-				local_population_growth = 0.05
+				local_food_capacity = 300
+				global_population_growth = 0.05
 			}
 		} 
 		gw_effect_expanding_population_tier_3 = {
 			great_work_effect_tier = gw_effect_tier_3
 			state_modifier = {
 				local_population_capacity_modifier = 0.1
-				local_population_growth = 0.075
+				local_food_capacity = 500
+				global_population_growth = 0.075
 			}
 		} 
 		gw_effect_expanding_population_tier_4 = {
 			great_work_effect_tier = gw_effect_tier_4
 			state_modifier = {
 				local_population_capacity_modifier = 0.15
-				local_population_growth = 0.1
+				local_food_capacity = 1000
+				global_population_growth = 0.1
 
 			}
 		}
@@ -1636,6 +1641,7 @@ gw_effect_cohort_drill_doctrine = {
 			country_modifier = {
 				army_maintenance_cost = -0.025
 				global_cohort_start_experience = 2.5
+				monthly_experience_gain = 0.01
 				#experience_decay = -0.01
 			}
 		}
@@ -1645,6 +1651,7 @@ gw_effect_cohort_drill_doctrine = {
 			country_modifier = {
 				army_maintenance_cost = -0.05
 				global_cohort_start_experience = 5
+				monthly_experience_gain = 0.02
 				#experience_decay = -0.02
 			}
 		} 
@@ -1654,6 +1661,7 @@ gw_effect_cohort_drill_doctrine = {
 			country_modifier = {
 				army_maintenance_cost = -0.075
 				global_cohort_start_experience = 5
+				monthly_experience_gain = 0.05
 				#experience_decay = -0.03
 			}
 		} 
@@ -1952,6 +1960,7 @@ gw_effect_efficient_forts = {
 
 			country_modifier = {
 				fort_limit = 1
+				global_defensive = 0.05
 				garrison_size = 0.05
 				garrison_growth = 0.05
 			}
@@ -1961,6 +1970,7 @@ gw_effect_efficient_forts = {
 
 			country_modifier = {
 				fort_limit = 2
+				global_defensive = 0.10
 				garrison_size = 0.1
 				garrison_growth = 0.1
 			}
@@ -1979,6 +1989,7 @@ gw_effect_efficient_forts = {
 
 			country_modifier = {
 				fort_limit = 3
+				global_defensive = 0.2
 				garrison_size = 0.2
 				garrison_growth = 0.2
 			}
@@ -2006,28 +2017,28 @@ gw_effect_omen_doctrine = {
 			great_work_effect_tier = gw_effect_tier_1
 
 			country_modifier = {
-				omen_power = 0.05
+				omen_power = 0.1
 			}
 		}
 		gw_effect_omen_doctrine_tier_2 = {
 			great_work_effect_tier = gw_effect_tier_2
 
 			country_modifier = {
-				omen_power = 0.1
+				omen_power = 0.15
 			}
 		} 
 		gw_effect_omen_doctrine_tier_3 = {
 			great_work_effect_tier = gw_effect_tier_3
 
 			country_modifier = {
-				omen_power = 0.15
+				omen_power = 0.20
 			}
 		} 
 		gw_effect_omen_doctrine_tier_4 = {
 			great_work_effect_tier = gw_effect_tier_4
 
 			country_modifier = {
-				omen_power = 0.2
+				omen_power = 0.25
 			}
 		}
 	}
