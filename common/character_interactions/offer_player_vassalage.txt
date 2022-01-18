@@ -68,7 +68,7 @@
 
 		scope:target.employer = {
 			trigger_event = {
-				id = player_vassal.1
+				id = offer_vassalage.1
 				days = 3
 			}
 		}
