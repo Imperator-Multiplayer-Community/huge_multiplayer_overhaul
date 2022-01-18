@@ -13,9 +13,6 @@
 				is_republic = yes
 			}
 			is_ai = no
-			NOT = { 
-				has_variable = anti_vassal_spam
-			}
 		}
 		hidden:scope:target = {
 			is_alive = yes
@@ -53,7 +50,7 @@
 			
 		}
 		scope:target.employer = {
-			num_of_cities < 150
+			num_of_cities <= 150
 			is_subject = no
 		}
 	}
