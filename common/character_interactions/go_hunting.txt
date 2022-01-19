@@ -62,6 +62,7 @@
 		scope:actor = {
 			in_diplomatic_range = scope:target.employer
 			can_pay_price = go_hunting
+			has_land = yes
 		}
 		scope:actor.current_ruler = {
 			NOT = { 

@@ -1,6 +1,6 @@
 ﻿namespace = letter_friend
 
-letter_friend.1 = { #You send the letter to a player. Does he accept to correspond? Received by target
+letter_friend.1 = { #You send the letter to a ruler. Does he accept to correspond? Received by target ruler
 	type = country_event
 	title = "letter_friend.1.t"
 	desc = "letter_friend.1.desc"
@@ -1151,4 +1151,37 @@ letter_friend.29 = {
 	option = {
 		name = "letter_friend.29.a"
 	}
+}
+
+letter_friend.90 = { #You send the letter to a friend. They accept
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:target = {
+			set_variable = {
+				name = letter_recipient
+				value = scope:actor.current_ruler
+				days = 1080
+			}
+			save_scope_as = letter_recipient
+		}
+
+		scope:actor.current_ruler = {
+			set_variable = {
+				name = letter_writer
+				value = scope:target
+				days = 180
+			}
+			save_scope_as = letter_writer
+		}
+
+		scope:actor = {
+			trigger_event = {
+				id = letter_friend.3
+				days = 2
+			}
+		}
+	}
+
 }

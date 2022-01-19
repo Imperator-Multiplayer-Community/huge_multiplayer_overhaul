@@ -54,7 +54,10 @@
 			NOT = { has_character_modifier = disloyal_successor_cmod }
 			trigger_if = {
 				limit = {
-					has_variable = anti_spam
+					AND = {
+						has_variable = anti_spam
+						var:anti_spam = scope:actor.current_ruler
+					}
 				}
 				custom_tooltip = {
 					text = "anti_spam_recently"
@@ -75,7 +78,21 @@
 	
 	effect = {
 		custom_tooltip = "letter_cost_tt" 
-		scope:target = {
+		if = {
+			limit = {
+				scope:target = {
+					is_ruler = no
+				}
+			}
+
+			trigger_event = {
+				id = letter_friend.1
+				days = 5
+			}
+			
+		}
+
+		scope:target.employer = {
 			trigger_event = {
 				id = letter_friend.1
 				days = 5

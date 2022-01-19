@@ -1,6 +1,6 @@
 ﻿namespace = hunting
 
-hunting.1 = { #You send the invite to a player. Does he accept to correspond? Received by target employer
+hunting.1 = { #You send the invite to a ruler. Does he accept to correspond? Received by target employer
 	type = country_event
 	title = "hunting.1.t"
 	desc = "hunting.1.desc"
@@ -42,6 +42,10 @@ hunting.1 = { #You send the invite to a player. Does he accept to correspond? Re
 				}
 			}
 		}
+		# ai always should accept
+		ai_chance = {
+			factor = 100
+		}
 	}
 	
 	option = { #Option for recipient to decline
@@ -61,6 +65,9 @@ hunting.1 = { #You send the invite to a player. Does he accept to correspond? Re
 					}
 				}
 			}
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
@@ -142,7 +149,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.13
-					days = 90
+					days = 30
 				}
 			}
 		}
@@ -150,7 +157,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.14
-					days = 90
+					days = 30
 				 }
 			}
 		}
@@ -179,7 +186,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.15
-					days = 90
+					days = 30
 				}
 			}
 		}
@@ -187,7 +194,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.16 
-					days = 90
+					days = 30
 				}
 			}
 		}
@@ -216,7 +223,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.17 
-					days = 90
+					days = 30
 				}
 			}
 		}
@@ -224,7 +231,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.18 
-					days = 90
+					days = 30
 				}
 			}
 		}
@@ -253,7 +260,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.19 
-					days = 90
+					days = 30
 				}
 			}
 		}
@@ -261,7 +268,7 @@ hunting.4 = {
 			scope:actor = {
 				trigger_event = { 
 					id = hunting.20 
-					days = 90
+					days = 30
 				}
 			}
 		}
@@ -308,12 +315,20 @@ hunting.13 = { # Success mountain An 18 Point Buck
 								}
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.29
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.29
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = {
@@ -323,45 +338,77 @@ hunting.13 = { # Success mountain An 18 Point Buck
 								}
 								#add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.30
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.30
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = {
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.31
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.31
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = {
 								add_trait = tactician
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.93 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.93
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = {
 								add_martial = 1 ########## GIVE THE RELIC IN THE EVENT ######################
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.32 
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.32
+									days = 3
+								}
+							}		
 						}						
 					}
 				}	
@@ -471,12 +518,20 @@ hunting.14 = { # Failure mountain Alpine Disaster
 								}
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.37
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.37
+									days = 3
+								}
+							}		
+						}					
 					}
 					5 = { 
 						scope:hunting_friend = {
@@ -486,11 +541,19 @@ hunting.14 = { # Failure mountain Alpine Disaster
 								}
 								#add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.38
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.38
+									days = 3
+								}
+							}		
 						}						
 					}
 					40 = { 
@@ -498,11 +561,19 @@ hunting.14 = { # Failure mountain Alpine Disaster
 								add_trait = pneumonia
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.39
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.39
+									days = 3
+								}
+							}		
 						}						
 					}
 					40 = { 
@@ -510,12 +581,20 @@ hunting.14 = { # Failure mountain Alpine Disaster
 								add_trait = coward
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.95 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.95
+									days = 3
+								}
+							}		
+						}					
 					}
 					5 = { 
 						scope:hunting_friend = {
@@ -523,11 +602,19 @@ hunting.14 = { # Failure mountain Alpine Disaster
 								death_reason = death_hunting_accident
 							}
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.40
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.40
+									days = 3
+								}
+							}		
 						}						
 					}
 				}	
@@ -640,11 +727,19 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 								}
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.45
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.45
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
@@ -655,22 +750,38 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 								}
 								#add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.46
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.46
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
 						scope:hunting_friend = {
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.47
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.47
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
@@ -678,22 +789,38 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 								add_trait = brave
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.97 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.97
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
 						scope:hunting_friend = { ########## GIVE THE RELIC IN THE EVENT ######################
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.48
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.48
+									days = 3
+								}
+							}		
 						}						
 					}
 				}	
@@ -803,11 +930,19 @@ hunting.16 = { # Failure forest Bear Attack
 								}
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.53
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.53
+									days = 3
+								}
+							}		
 						}						
 					}
 					5 = { 
@@ -818,11 +953,19 @@ hunting.16 = { # Failure forest Bear Attack
 								}
 								#add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.54
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.54
+									days = 3
+								}
+							}		
 						}						
 					}
 					40 = { 
@@ -830,23 +973,39 @@ hunting.16 = { # Failure forest Bear Attack
 							add_trait = wounded
 							add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.55
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.55
+									days = 3
+								}
+							}		
+						}					
 					}
 					40 = { 
 						scope:hunting_friend = {
 								add_trait = coward
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.99 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.99
+									days = 3
+								}
+							}		
 						}						
 					}
 					5 = { 
@@ -855,11 +1014,19 @@ hunting.16 = { # Failure forest Bear Attack
 								death_reason = death_hunting_accident
 							}
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.56
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.56
+									days = 3
+								}
+							}		
 						}						
 					}
 				}	
@@ -973,11 +1140,19 @@ hunting.17 = { # Success hills The Joys of Falconry
 								}
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.61
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.61
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
@@ -988,22 +1163,38 @@ hunting.17 = { # Success hills The Joys of Falconry
 								}
 								#add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.62
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.62
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
 						scope:hunting_friend = {
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.63
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.63
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
@@ -1011,22 +1202,38 @@ hunting.17 = { # Success hills The Joys of Falconry
 								add_trait = disciplined
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.101 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.101
+									days = 3
+								}
+							}		
 						}						
 					}
 					10 = { 
 						scope:hunting_friend = { ########## GIVE THE RELIC IN THE EVENT ######################
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.64
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.64
+									days = 3
+								}
+							}		
 						}						
 					}
 				}	
@@ -1137,12 +1344,20 @@ hunting.18 = { # Failure hills Boar Attack
 								}
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.69
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.69
+									days = 3
+								}
+							}		
+						}					
 					}
 					5 = { 
 						scope:hunting_friend = {
@@ -1152,11 +1367,19 @@ hunting.18 = { # Failure hills Boar Attack
 								}
 								#add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.70
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.70
+									days = 3
+								}
+							}		
 						}						
 					}
 					40 = { 
@@ -1164,11 +1387,19 @@ hunting.18 = { # Failure hills Boar Attack
 							add_trait = maimed
 							add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.71
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.71
+									days = 3
+								}
+							}		
 						}						
 					}
 					40 = { 
@@ -1176,11 +1407,19 @@ hunting.18 = { # Failure hills Boar Attack
 								add_trait = limp
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.103 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.103
+									days = 3
+								}
+							}		
 						}						
 					}
 					5 = { 
@@ -1189,12 +1428,20 @@ hunting.18 = { # Failure hills Boar Attack
 								death_reason = death_hunting_accident
 							}
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.72
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.72
+									days = 3
+								}
+							}		
+						}					
 					}
 				}	
 			}
@@ -1306,12 +1553,20 @@ hunting.19 = { # Success whaling at sea
 								}
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.77
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.77
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = {
@@ -1321,46 +1576,78 @@ hunting.19 = { # Success whaling at sea
 								}
 								#add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.78
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.78
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = {
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.79
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.79
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = {
 								add_trait = oarmaster
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.105 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.105
+									days = 3
+								}
+							}		
+						}					
 					}
 					10 = { 
 						scope:hunting_friend = { ########## GIVE THE RELIC IN THE EVENT ######################
 								add_martial = 1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.80
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.80
+									days = 3
+								}
+							}		
+						}					
 					}
 				}	
 			}
@@ -1470,12 +1757,21 @@ hunting.20 = { # Failure whaling at sea
 								}
 								add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.85
-								days = 3
+
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.85
+									days = 3
+								}
+							}	
+						}
 					}
 					5 = { 
 						scope:hunting_friend = {
@@ -1485,36 +1781,62 @@ hunting.20 = { # Failure whaling at sea
 								}
 								#add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.86
-								days = 3
+
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.86
+									days = 3
+								}
+							}		
+						}
+											
 					}
 					40 = { 
 						scope:hunting_friend = {
 							add_trait = pneumonia
 							add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.87
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.87
+									days = 3
+								}
+							}		
+						}					
 					}
 					40 = { 
 						scope:hunting_friend = {
 							add_trait = coward
 							add_martial = -1
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.107 ######################
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.107
+									days = 3
+								}
+							}		
+						}					
 					}
 					5 = { 
 						scope:hunting_friend = {
@@ -1522,12 +1844,20 @@ hunting.20 = { # Failure whaling at sea
 								death_reason = death_hunting_accident
 							}
 						}
-						scope:hunting_friend.employer = {
-							trigger_event = {
-								id = hunting.88
-								days = 3
+						if = {
+							limit = {
+								NOT = {
+									scope:hunting_friend.employer = scope:hunter.employer
+								}
 							}
-						}						
+
+							scope:hunting_friend.employer = {
+								trigger_event = {
+									id = hunting.88
+									days = 3
+								}
+							}		
+						}					
 					}
 				}	
 			}
@@ -1613,7 +1943,7 @@ hunting.20 = { # Failure whaling at sea
 
 ####EVENTS 21 to 28 DO NOT EXIST #####################################
 
-
+# hunting partnet results
 hunting.29 = { # Final resolution Martial success
 	type = country_event
 	title = hunting.29.t
@@ -1648,9 +1978,6 @@ hunting.30 = { # Final resolution Martial failure
 	option = {
 		name = "hunting.31.a"
 	}
-
-
-
 }
 
 hunting.31 = { # Final resolution Finesse success
@@ -1670,17 +1997,6 @@ hunting.31 = { # Final resolution Finesse success
 		name = "hunting.31.a"
 	}
 }
-
-
-
-##########################################################################################################################################
-##########################################################################################################################################
-##########################################################################################################################################
-##########################################################################################################################################
-##########################################################################################################################################
-##########################################################################################################################################
-##########################################################################################################################################
-
 
 hunting.32 = { # Final resolution Finesse failure
 	type = country_event
@@ -1720,6 +2036,8 @@ hunting.32 = { # Final resolution Finesse failure
 	}	
 }
 
+
+### hunter results
 hunting.33 = { # Final resolution Zeal success
 	type = country_event
 	title = hunting.33.t
@@ -3305,4 +3623,36 @@ hunting.108 = { # Final resolution Charisma failure
 		name = "hunting.108.a"
 	}
 
+}
+
+hunting.200 = {  #You send the invite to a friend. They accept
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		scope:target = {
+			set_variable = {
+				name = hunting_friend
+				value = scope:actor.current_ruler
+				days = 365
+			}
+			save_scope_as = hunting_friend
+		}
+		scope:actor.current_ruler = {
+			set_variable = {
+				name = hunter
+				value = scope:target
+				days = 365
+			}
+			save_scope_as = hunter
+		}
+
+		scope:actor = {
+			trigger_event = {
+				id = hunting.3
+				days = 1
+			}
+		}
+	}
+	
 }
