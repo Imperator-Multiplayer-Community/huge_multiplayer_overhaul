@@ -73,10 +73,26 @@
 	
 	effect = {
 		custom_tooltip = "letter_cost_tt" 
-		scope:target.employer = {
-			trigger_event = {
-				id = hunting.1 
-				days = 5
+		if = {
+			limit = {
+				scope:target = {
+					is_ruler = no
+				}
+			}
+
+			scope:target.employer = {
+				trigger_event = {
+					id = hunting.200
+					days = 5
+				}
+			}
+		}
+		else = { 
+			scope:target.employer = {
+				trigger_event = {
+					id = hunting.1 
+					days = 5
+				}
 			}
 		}
 

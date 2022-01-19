@@ -1153,7 +1153,7 @@ letter_friend.29 = {
 	}
 }
 
-letter_friend.90 = { #You send the letter to a friend. They accept
+letter_friend.200 = { #You send the letter to a friend. They accept
 	type = country_event
 	hidden = yes
 

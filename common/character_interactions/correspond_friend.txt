@@ -86,19 +86,20 @@
 			}
 
 			trigger_event = {
-				id = letter_friend.1
+				id = letter_friend.200
 				days = 5
 			}
 			
 		}
-
-		scope:target.employer = {
-			trigger_event = {
-				id = letter_friend.1
-				days = 5
+		else = {
+			scope:target.employer = {
+				trigger_event = {
+					id = letter_friend.1
+					days = 5
+				}
 			}
 		}
-
+		
 		scope:target = {
 			set_variable = {
 				name = anti_spam
