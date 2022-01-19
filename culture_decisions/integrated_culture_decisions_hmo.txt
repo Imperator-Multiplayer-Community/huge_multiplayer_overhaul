@@ -29,7 +29,7 @@
 				}
 			}
 			stability > 40
-			political_influence > 50
+			political_influence > 30
 			invention = happiness_for_wrong_culture_modifier_inv_2
 		}
 		
@@ -47,7 +47,7 @@
 				state = {
 					add_state_modifier = {
 						name = "baby_boom"
-						duration = 1826
+						duration = 3650
 					}
 				}
 				add_state_loyalty = 10
@@ -58,7 +58,7 @@
 					duration = 9131
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
 			add_stability = -10
 			add_country_modifier = {
 				name = "pandered_project"
