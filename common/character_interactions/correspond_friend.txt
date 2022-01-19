@@ -73,10 +73,9 @@
 		}
 	}
 	
-	
 	effect = {
 		custom_tooltip = "letter_cost_tt" 
-		scope:target.employer = {
+		scope:target = {
 			trigger_event = {
 				id = letter_friend.1
 				days = 5

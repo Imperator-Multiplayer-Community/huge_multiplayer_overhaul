@@ -14,23 +14,22 @@ seek_treatment = {
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
 			recoverable_ailments_trigger = yes
-			NOT = {
-				this = scope:actor.current_ruler
-			}
 		}
-	}
+	}	
 	
 	allowed_trigger = {
 		scope:target = {
-			is_friend = scope:actor.current_ruler
-			is_general = yes
-			is_admiral = yes
-			is_governor = yes
-			has_any_office = yes
-			has_tech_office = yes
-			is_co_ruler = yes
-			is_head_of_family = yes
-
+			OR = {
+			 is_friend = scope:actor.current_ruler
+			 is_general = yes
+			 is_admiral = yes
+			 is_governor = yes
+			 has_any_office = yes
+			 has_tech_office = yes
+			 from_ruler_family = yes
+			 is_co_ruler = yes
+			 is_head_of_family = yes
+		    }
 			recoverable_ailments_trigger = yes
 			NOR = {
 				trigger_if = {

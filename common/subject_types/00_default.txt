@@ -604,12 +604,8 @@ player_client_state = {
 		stability_monthly_change = 0.01
 	}
 	
-	allow = {
-		num_of_cities < 150
-		scope:future_overlord = {
-			is_subject = no
-		}
-		is_ai = no
+	allow = { # dont show this as an option. only through character interactions
+		always = no
 	}
 	
 	on_enable = {

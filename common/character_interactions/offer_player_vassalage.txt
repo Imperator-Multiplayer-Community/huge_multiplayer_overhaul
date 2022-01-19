@@ -6,6 +6,7 @@
 	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_befriend"
 
 	potential_trigger = {
+		always = no
 		scope:actor = {
 			OR = {
 				is_monarchy = yes 

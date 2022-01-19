@@ -1,6 +1,6 @@
 ﻿namespace = letter_friend
 
-letter_friend.1 = { #You send the letter to a player. Does he accept to correspond? Received by target employer
+letter_friend.1 = { #You send the letter to a player. Does he accept to correspond? Received by target
 	type = country_event
 	title = "letter_friend.1.t"
 	desc = "letter_friend.1.desc"
@@ -123,14 +123,6 @@ letter_friend.4 = {
 	picture = council_country
 	goto_location = scope:letter_recipient
 	
-
-	trigger = {
-	}
-	
-	immediate = {
-	}
-
-	
 	option = {
 		name = "letter_friend.4.a"
 		custom_tooltip = letter_friend.4.a.tt
@@ -144,52 +136,56 @@ letter_friend.4 = {
 		}
 		scope:actor = {
 			add_political_influence = subtract_influence_small
-		}		
-		set_variable = {
-			name = roll
-			value = { integer_range = { min = 1 max = 20 } }
 		}
-		if = { 
-			limit = {
-				has_variable = roll
-				var:roll <= scope:letter_recipient.martial
+
+		hidden_effect = {
+			set_variable = {
+				name = roll
+				value = { integer_range = { min = 1 max = 20 } }
 			}
-			random_list = { 
-				90 = {
-					scope:actor = {
-						trigger_event = {
-							id = letter_friend.13
-						}
-					}
+			if = { 
+				limit = {
+					has_variable = roll
+					var:roll <= scope:letter_recipient.martial
 				}
-				10 = {
-					scope:actor = {
-						trigger_event = {
-							id = letter_friend.29
+				random_list = { 
+					90 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.13
+							}
 						}
 					}
-				} 
+					10 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
+						}
+					} 
+				}
 			}
-		}
-		else = {
-			random_list = { 
-				40 = {
-					scope:actor = {
-						trigger_event = {
-							id = letter_friend.14
+			else = {
+				random_list = { 
+					40 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.14
+							}
 						}
-					}
-				} 
-				60 = {
-					scope:actor = {
-						trigger_event = {
-							id = letter_friend.29
+					} 
+					60 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
 						}
-					}
-				} 
-			 }
-		}
-		remove_variable = roll
+					} 
+				 }
+			}
+			remove_variable = roll
+		}	
+		
 		#fire_next_letter_event_effect = yes
 	}
 
@@ -208,31 +204,55 @@ letter_friend.4 = {
 			add_political_influence = subtract_influence_small
 		}		
 		#custom_tooltip = espionage_suspicion_tooltip
-		set_variable = {
-			name = roll
-			value = { integer_range = { min = 1 max = 20 } }
-		}
-		if = { 
-			limit = {
-				has_variable = roll
-				var:roll <= scope:letter_recipient.finesse
+		hidden_effect = {
+			set_variable = {
+				name = roll
+				value = { integer_range = { min = 1 max = 20 } }
 			}
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.15
-					days = 90
+			if = { 
+				limit = {
+					has_variable = roll
+					var:roll <= scope:letter_recipient.finesse
+				}
+
+				random_list = { 
+					90 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.15
+							}
+						}
+					}
+					10 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
+						}
+					} 
 				}
 			}
-		}
-		else = {
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.16 
-					days = 90
-				}
+			else = {
+				random_list = { 
+					40 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.16
+							}
+						}
+					} 
+					60 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
+						}
+					} 
+				 }
 			}
+			remove_variable = roll
 		}
-		remove_variable = roll
+		
 		#fire_next_letter_event_effect = yes
 	}
 
@@ -249,32 +269,56 @@ letter_friend.4 = {
 		}
 		scope:actor = {
 			add_political_influence = subtract_influence_small
-		}		
-		set_variable = {
-			name = roll
-			value = { integer_range = { min = 1 max = 20 } }
 		}
-		if = { 
-			limit = {
-				has_variable = roll
-				var:roll <= scope:letter_recipient.zeal
+
+		hidden_effect = {
+			set_variable = {
+				name = roll
+				value = { integer_range = { min = 1 max = 20 } }
 			}
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.17 
-					days = 90
+			if = { 
+				limit = {
+					has_variable = roll
+					var:roll <= scope:letter_recipient.zeal
+				}
+				random_list = { 
+					90 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.17
+							}
+						}
+					}
+					10 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
+						}
+					} 
 				}
 			}
-		}
-		else = {
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.18 
-					days = 90
-				}
+			else = {
+				random_list = { 
+					40 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.18
+							}
+						}
+					} 
+					60 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
+						}
+					} 
+				 }
 			}
+			remove_variable = roll
 		}
-		remove_variable = roll
+
 		#fire_next_letter_event_effect = yes
 	}
 
@@ -291,32 +335,56 @@ letter_friend.4 = {
 		}
 		scope:actor = {
 			add_political_influence = subtract_influence_small
-		}		
-		set_variable = {
-			name = roll
-			value = { integer_range = { min = 1 max = 20 } }
 		}
-		if = { 
-			limit = {
-				has_variable = roll
-				var:roll <= scope:letter_recipient.charisma
+
+		hidden_effect = {
+			set_variable = {
+				name = roll
+				value = { integer_range = { min = 1 max = 20 } }
 			}
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.19 
-					days = 90
+			if = { 
+				limit = {
+					has_variable = roll
+					var:roll <= scope:letter_recipient.charisma
+				}
+				random_list = { 
+					90 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.19
+							}
+						}
+					}
+					10 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
+						}
+					} 
 				}
 			}
-		}
-		else = {
-			scope:actor = {
-				trigger_event = { 
-					id = letter_friend.20 
-					days = 90
-				}
+			else = {
+				random_list = { 
+					40 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.20
+							}
+						}
+					} 
+					60 = {
+						scope:actor = {
+							trigger_event = {
+								id = letter_friend.29
+							}
+						}
+					} 
+				 }
 			}
-		}
-		remove_variable = roll
+			remove_variable = roll
+		}	
+
 	}
 	option = {
 		name = "letter_friend.4.e"
@@ -335,9 +403,6 @@ letter_friend.4 = {
 					}
 				}
 			}
-		}
-		ai_chance = {
-			factor = 0
 		}
 	}
 }
@@ -923,7 +988,9 @@ letter_friend.22 = { # Final resolution Martial failure
 		scope:letter_recipient = {
 			remove_friend = scope:letter_writer
 		}
-		add_political_influence = -25
+		scope:letter_writer.employer = {
+			add_political_influence = -25
+		}
 	}
 
 }
@@ -968,7 +1035,9 @@ letter_friend.24 = { # Final resolution Finesse failure
 		scope:letter_recipient = {
 			remove_friend = scope:letter_writer
 		}
-		add_political_influence = -25
+		scope:letter_writer.employer = {
+			add_political_influence = -25
+		}
 	}
 
 }
@@ -1013,7 +1082,9 @@ letter_friend.26 = { # Final resolution Zeal failure
 		scope:letter_recipient = {
 			remove_friend = scope:letter_writer
 		}
-		add_political_influence = -25
+		scope:letter_writer.employer = {
+			add_political_influence = -25
+		}
 	}
 }
 
@@ -1057,7 +1128,9 @@ letter_friend.28 = { # Final resolution Charisma failure
 		scope:letter_recipient = {
 			remove_friend = scope:letter_writer
 		}
-		add_political_influence = -25
+		scope:letter_writer.employer = {
+			add_political_influence = -25
+		}
 	}
 
 }
