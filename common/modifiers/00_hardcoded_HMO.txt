@@ -51,7 +51,8 @@ civilization_value = {
 ##########################################################################
 
 in_combat = {
-	experience_decay = -0.50
+	experience_decay = -0.05
+	monthly_experience_gain = 0.10
 }
 
 in_siege = {
