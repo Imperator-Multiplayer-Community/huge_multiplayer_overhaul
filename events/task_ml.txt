@@ -718,72 +718,70 @@ task.6 = { # Final resolution
 		name = "task.6.a"
 		#Kill Bandits Success
 	
-		scope:target = {
-			#custom_tooltip = military_task_6a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = original_thinker
-									has_trait = brave
-								}
+		#custom_tooltip = military_task_6a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = original_thinker
+								has_trait = brave
 							}
 						}
+					}
 
-						random_list = {
-							50 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = original_thinker
-										}
-									}
-								}
+					random_list = {
+						50 = {
+							trigger = {
 								scope:target = {
-										add_trait = original_thinker
-										add_martial = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.38
-										days = 3
+									NOT = {
+										has_trait = original_thinker
 									}
-								}						
+								}
 							}
-							50 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = brave
-										}
-									}
+							scope:target = {
+									add_trait = original_thinker
+									add_martial = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.38
+									days = 3
 								}
+							}						
+						}
+						50 = {
+							trigger = {
 								scope:target = {
-										add_trait = brave
-										add_martial = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.39
-										days = 3
+									NOT = {
+										has_trait = brave
 									}
-								}						
+								}
 							}
+							scope:target = {
+									add_trait = brave
+									add_martial = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.39
+									days = 3
+								}
+							}						
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
-							}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
-				}	
+				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -800,86 +798,84 @@ task.7 = { # Final resolution
 		name = "task.7.a"
 		#Kill Bandits Failure
 	
-		scope:target = {
-			#custom_tooltip = military_task_7a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.192 # special bad martial
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = tactically_inflexible
-									has_trait = coward
-								}
-							}
+		#custom_tooltip = military_task_7a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.192 # special bad martial
+							days = 3
 						}
-
-						random_list = {
-							50 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = tactically_inflexible
-										}
-									}
-								}
-								scope:target = {
-									add_trait = tactically_inflexible
-									add_character_modifier = {
-										name = "worse_martial_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.40
-										days = 3
-									}
-								}	
-							}
-							50 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = coward
-										}
-									}
-								}
-								scope:target = {
-									add_trait = coward
-									add_character_modifier = {
-										name = "worse_martial_02"
-										duration = 1825
-									}	
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.41
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = tactically_inflexible
+								has_trait = coward
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						50 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = tactically_inflexible
+									}
+								}
+							}
+							scope:target = {
+								add_trait = tactically_inflexible
+								add_character_modifier = {
+									name = "worse_martial_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.40
+									days = 3
+								}
+							}	
+						}
+						50 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = coward
+									}
+								}
+							}
+							scope:target = {
+								add_trait = coward
+								add_character_modifier = {
+									name = "worse_martial_02"
+									duration = 1825
+								}	
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.41
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
-		}	
+		}			
 	}	
 }
 
@@ -896,72 +892,71 @@ task.8 = { # Final resolution
 		name = "task.8.a"
 		#Travel with the fleet success
 	
-		scope:target = {
-			#custom_tooltip = military_task_8a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = improviser
-									has_trait = oarmaster
-								}
-							}
-						}
-
-						random_list = {
-							10 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = improviser
-										}
-									}
-								}
-								scope:target = {
-										add_trait = improviser
-										add_martial = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.42
-										days = 1
-									}
-								}						
-							}
-							10 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = oarmaster
-										}
-									}
-								}
-								scope:target = {
-										add_trait = oarmaster
-										add_martial = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.43
-										days = 1
-									}
-								}						
+		#custom_tooltip = military_task_8a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = improviser
+								has_trait = oarmaster
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = improviser
+									}
+								}
 							}
+							scope:target = {
+									add_trait = improviser
+									add_martial = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.42
+									days = 3
+								}
+							}						
+						}
+						10 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = oarmaster
+									}
+								}
+							}
+							scope:target = {
+									add_trait = oarmaster
+									add_martial = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.43
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
+		
 	}	
 }
 
@@ -979,86 +974,84 @@ task.9 = { # Final resolution
 		name = "task.9.a"
 		#Travel with the fleet failure
 	
-		scope:target = {
-			#custom_tooltip = military_task_9a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
+		#custom_tooltip = military_task_9a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.192 # special bad martial
+							days = 3
+						}
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.192 # special bad martial
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = cautious
-									has_trait = paralysis
-								}
+							NOT = {
+								has_trait = cautious
+								has_trait = paralysis
 							}
 						}
+					}
 
-						random_list = {
-							45 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = cautious
-										}
-									}
-								}
+					random_list = {
+						45 = { 
+							trigger = {
 								scope:target = {
-									add_trait = cautious
-									add_character_modifier = {
-										name = "worse_martial_01"
-										duration = 1825
+									NOT = {
+										has_trait = cautious
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.44
-										days = 1
-									}
-								}						
 							}
-							45 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = paralysis
-										}
-									}
+							scope:target = {
+								add_trait = cautious
+								add_character_modifier = {
+									name = "worse_martial_01"
+									duration = 1825
 								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.44
+									days = 3
+								}
+							}						
+						}
+						45 = { 
+							trigger = {
 								scope:target = {
-									add_trait = paralysis
-									add_character_modifier = {
-										name = "worse_martial_02"
-										duration = 1825
+									NOT = {
+										has_trait = paralysis
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.45
-										days = 1
-									}
-								}						
 							}
-						}	
-					}					
-					60 = { # average result
-						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							scope:target = {
+								add_trait = paralysis
+								add_character_modifier = {
+									name = "worse_martial_02"
+									duration = 1825
+								}
 							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.45
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1076,72 +1069,70 @@ task.10 = { # Final resolution
 		name = "task.10.a"
 		##Drill with the soldiers - success
 	
-		scope:target = {
-			#custom_tooltip = military_task_10a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = aggressive
-									has_trait = disciplined
-								}
-							}
-						}
-
-						random_list = {
-							10 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = aggressive
-										}
-									}
-								}
-								scope:target = {
-										add_trait = aggressive
-										add_martial = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.46
-										days = 1
-									}
-								}						
-							}
-							10 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = disciplined
-										}
-									}
-								}
-								scope:target = {
-										add_trait = disciplined
-										add_martial = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.47
-										days = 1
-									}
-								}						
+		#custom_tooltip = military_task_10a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = aggressive
+								has_trait = disciplined
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = aggressive
+									}
+								}
 							}
+							scope:target = {
+									add_trait = aggressive
+									add_martial = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.46
+									days = 3
+								}
+							}						
+						}
+						10 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = disciplined
+									}
+								}
+							}
+							scope:target = {
+									add_trait = disciplined
+									add_martial = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.47
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1158,81 +1149,79 @@ task.11 = { # Final resolution
 		name = "task.11.a"
 		##Drill with the soldiers - failure
 	
-		scope:target = {
-			#custom_tooltip = military_task_11a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
+		#custom_tooltip = military_task_11a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.192 # special bad martial
+							days = 3
+						}
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.192 # special bad martial
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = arrogant
-									has_trait = maimed
-								}
+							NOT = {
+								has_trait = arrogant
+								has_trait = maimed
 							}
 						}
+					}
 
-						random_list = {
-							45 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = arrogant
-										}
-									}
-								}
+					random_list = {
+						45 = { 
+							trigger = {
 								scope:target = {
-									add_trait = arrogant
-									add_character_modifier = {
-										name = "worse_martial_01"
-										duration = 1825
+									NOT = {
+										has_trait = arrogant
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.48
-										days = 1
-									}
-								}						
 							}
-							45 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = maimed
-										}
-									}
+							scope:target = {
+								add_trait = arrogant
+								add_character_modifier = {
+									name = "worse_martial_01"
+									duration = 1825
 								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.48
+									days = 3
+								}
+							}						
+						}
+						45 = { 
+							trigger = {
 								scope:target = {
-									add_trait = maimed
-									add_character_modifier = {
-										name = "worse_martial_02"
-										duration = 1825
+									NOT = {
+										has_trait = maimed
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.49
-										days = 1
-									}
-								}						
 							}
-						}	
-					}					
-					60 = { # average result
-						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							scope:target = {
+								add_trait = maimed
+								add_character_modifier = {
+									name = "worse_martial_02"
+									duration = 1825
+								}
 							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.49
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
 						}
 					}
 				}
@@ -1255,72 +1244,70 @@ task.12 = { # Final resolution
 		name = "task.12.a"
 		###Study the battles of the past - success
 	
-		scope:target = {
-			#custom_tooltip = military_task_12a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = tactician
-									has_trait = steadfast
-								}
-							}
-						}
-
-						random_list = {
-							10 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = tactician
-										}
-									}
-								}
-								scope:target = {
-										add_trait = tactician
-										add_martial = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.50
-										days = 1
-									}
-								}						
-							}
-							10 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = steadfast
-										}
-									}
-								}
-								scope:target = {
-										add_trait = steadfast
-										add_martial = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.51
-										days = 1
-									}
-								}						
+		#custom_tooltip = military_task_12a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = tactician
+								has_trait = steadfast
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = tactician
+									}
+								}
 							}
+							scope:target = {
+									add_trait = tactician
+									add_martial = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.50
+									days = 3
+								}
+							}						
+						}
+						10 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = steadfast
+									}
+								}
+							}
+							scope:target = {
+									add_trait = steadfast
+									add_martial = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.51
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1338,86 +1325,84 @@ task.13 = { # Final resolution
 		name = "task.13.a"
 		#Study the battles of the past - failure
 	
-		scope:target = {
-			#custom_tooltip = military_task_13a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
+		#custom_tooltip = military_task_13a
+		hidden_effect =  {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.192 # special bad martial
+							days = 3
+						}
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.192 # special bad martial
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = weak_willed
-									has_trait = cancer
-								}
+							NOT = {
+								has_trait = weak_willed
+								has_trait = cancer
 							}
 						}
+					}
 
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = weak_willed
-										}
-									}
-								}
+					random_list = {
+						45 = {
+							trigger = {
 								scope:target = {
-										add_trait = weak_willed
-										add_character_modifier = {
-											name = "worse_martial_01"
-											duration = 1825
-										}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.52
-										days = 1
+									NOT = {
+										has_trait = weak_willed
 									}
-								}						
+								}
 							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = cancer
-										}
+							scope:target = {
+									add_trait = weak_willed
+									add_character_modifier = {
+										name = "worse_martial_01"
+										duration = 1825
 									}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.52
+									days = 3
 								}
+							}						
+						}
+						45 = {
+							trigger = {
 								scope:target = {
-										add_trait = cancer
-										add_character_modifier = {
-											name = "worse_martial_02"
-											duration = 1825
-										}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.53
-										days = 1
+									NOT = {
+										has_trait = cancer
 									}
-								}						
+								}
 							}
-						}	
-					}					
-					60 = { # average result
-						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							scope:target = {
+									add_trait = cancer
+									add_character_modifier = {
+										name = "worse_martial_02"
+										duration = 1825
+									}
 							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.53
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1435,72 +1420,70 @@ task.14 = { # Final resolution
 		name = "task.14.a"
 		##Practice rhetoric - success
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_14a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = orator
-									has_trait = secure
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = orator
-										}
-									}
-								}
-								scope:target = {
-										add_trait = orator
-										add_charisma = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.54
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = secure
-										}
-									}
-								}
-								scope:target = {
-										add_trait = secure
-										add_charisma = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.55
-										days = 1
-									}
-								}						
+		#custom_tooltip = oratory_task_14a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = orator
+								has_trait = secure
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = orator
+									}
+								}
 							}
+							scope:target = {
+									add_trait = orator
+									add_charisma = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.54
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = secure
+									}
+								}
+							}
+							scope:target = {
+									add_trait = secure
+									add_charisma = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.55
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1517,86 +1500,84 @@ task.15 = { # Final resolution
 		name = "task.15.a"
 		##Practice rhetoric - failure
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_15a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
+		#custom_tooltip = oratory_task_15a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.193 # special bad charisma
+							days = 3
+						}
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.193 # special bad charisma
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = cold
-									has_trait = one_eyed
-								}
+							NOT = {
+								has_trait = cold
+								has_trait = one_eyed
 							}
 						}
+					}
 
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = cold
-										}
-									}
-								}
+					random_list = {
+						45 = {
+							trigger = {
 								scope:target = {
-									add_trait = cold
-									add_character_modifier = {
-										name = "worse_charisma_01"
-										duration = 1825
+									NOT = {
+										has_trait = cold
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.56
-										days = 1
-									}
-								}						
 							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = one_eyed
-										}
-									}
+							scope:target = {
+								add_trait = cold
+								add_character_modifier = {
+									name = "worse_charisma_01"
+									duration = 1825
 								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.56
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
 								scope:target = {
-									add_trait = one_eyed
-									add_character_modifier = {
-										name = "worse_charisma_02"
-										duration = 1825
+									NOT = {
+										has_trait = one_eyed
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.57
-										days = 1
-									}
-								}						
 							}
-						}	
-					}					
-					60 = { # average result
-						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							scope:target = {
+								add_trait = one_eyed
+								add_character_modifier = {
+									name = "worse_charisma_02"
+									duration = 1825
+								}
 							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.57
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1614,72 +1595,70 @@ task.16 = { # Final resolution
 		name = "task.16.a"
 		##Spread gossip - success
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_16a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = orator
-									has_trait = secure
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = crafty
-										}
-									}
-								}
-								scope:target = {
-										add_trait = crafty
-										add_charisma = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.58
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = silver_tongued
-										}
-									}
-								}
-								scope:target = {
-										add_trait = silver_tongued
-										add_charisma = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.59
-										days = 1
-									}
-								}						
+		#custom_tooltip = oratory_task_16a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = orator
+								has_trait = secure
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = crafty
+									}
+								}
 							}
+							scope:target = {
+									add_trait = crafty
+									add_charisma = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.58
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = silver_tongued
+									}
+								}
+							}
+							scope:target = {
+									add_trait = silver_tongued
+									add_charisma = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.59
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}		
 	}	
 }
 
@@ -1697,86 +1676,84 @@ task.17 = { # Final resolution
 		name = "task.17.a"
 		##Spread gossip - failure
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_17a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
+		#custom_tooltip = oratory_task_17a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.193 # special bad charisma
+							days = 3
+						}
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.193 # special bad charisma
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = deceitful
-									has_trait = brain_damaged
-								}
+							NOT = {
+								has_trait = deceitful
+								has_trait = brain_damaged
 							}
 						}
+					}
 
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = deceitful
-										}
-									}
-								} 
+					random_list = {
+						45 = {
+							trigger = {
 								scope:target = {
-									add_trait = deceitful
-									add_character_modifier = {
-										name = "worse_charisma_01"
-										duration = 1825
+									NOT = {
+										has_trait = deceitful
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.60
-										days = 1
-									}
-								}						
+							} 
+							scope:target = {
+								add_trait = deceitful
+								add_character_modifier = {
+									name = "worse_charisma_01"
+									duration = 1825
+								}
 							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = brain_damaged
-										}
-									}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.60
+									days = 3
 								}
+							}						
+						}
+						45 = {
+							trigger = {
 								scope:target = {
-									add_trait = brain_damaged
-									add_character_modifier = {
-										name = "worse_charisma_02"
-										duration = 1825
+									NOT = {
+										has_trait = brain_damaged
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.61
-										days = 1
-									}
-								}						
 							}
-						}	
-					}					
-					60 = { # average result
-						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							scope:target = {
+								add_trait = brain_damaged
+								add_character_modifier = {
+									name = "worse_charisma_02"
+									duration = 1825
+								}
 							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.61
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1793,72 +1770,70 @@ task.18 = { # Final resolution
 		name = "task.18.a"
 		##Write annals - success
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_18a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = poet
-									has_trait = intelligent
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = poet
-										}
-									}
-								}
-								scope:target = {
-										add_trait = poet
-										add_charisma = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.62
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = intelligent
-										}
-									}
-								} 
-								scope:target = {
-										add_trait = intelligent
-										add_charisma = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.63
-										days = 1
-									}
-								}						
+		#custom_tooltip = oratory_task_18a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = poet
+								has_trait = intelligent
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = poet
+									}
+								}
 							}
+							scope:target = {
+									add_trait = poet
+									add_charisma = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.62
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = intelligent
+									}
+								}
+							} 
+							scope:target = {
+									add_trait = intelligent
+									add_charisma = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.63
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -1876,84 +1851,82 @@ task.19 = { # Final resolution
 		name = "task.19.a"
 		##Write annals - failure
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_19a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.193 # special bad charisma
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = depressed
-									has_trait = lunatic
-								}
-							}
+		#custom_tooltip = oratory_task_19a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.193 # special bad charisma
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = depressed
-										}
-									}
-								}
-								scope:target = {
-									add_trait = depressed
-									add_character_modifier = {
-										name = "worse_charisma_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.64
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = lunatic
-										}
-									}
-								}
-								scope:target = {
-									add_trait = lunatic
-									add_character_modifier = {
-										name = "worse_charisma_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.65
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = depressed
+								has_trait = lunatic
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = depressed
+									}
+								}
+							}
+							scope:target = {
+								add_trait = depressed
+								add_character_modifier = {
+									name = "worse_charisma_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.64
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = lunatic
+									}
+								}
+							}
+							scope:target = {
+								add_trait = lunatic
+								add_character_modifier = {
+									name = "worse_charisma_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.65
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
 		}	
 	}	
@@ -1973,71 +1946,69 @@ task.20 = { # Final resolution
 		name = "task.20.a"
 		###Mingle with high society - success
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_20a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = ambitious
-									has_trait = lustful
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = ambitious
-										}
-									}
-								}
-								scope:target = {
-									add_trait = ambitious
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.66
-										days = 1
-									}
-								}						
-							}
-							10 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = lustful
-										}
-									}
-								}
-								scope:target = {
-										add_trait = lustful
-										add_charisma = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.67
-										days = 1
-									}
-								}						
+		#custom_tooltip = oratory_task_20a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = ambitious
+								has_trait = lustful
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = ambitious
+									}
+								}
 							}
+							scope:target = {
+								add_trait = ambitious
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.66
+									days = 3
+								}
+							}						
+						}
+						10 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = lustful
+									}
+								}
+							}
+							scope:target = {
+									add_trait = lustful
+									add_charisma = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.67
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -2054,84 +2025,82 @@ task.21 = { # Final resolution
 		name = "task.21.a"
 		###Mingle with high society - failure
 	
-		scope:target = {
-			#custom_tooltip = oratory_task_21a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.193 # special bad charisma
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = miserly
-									has_trait = gluttonous
-								}
-							}
+		#custom_tooltip = oratory_task_21a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.193 # special bad charisma
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = miserly
-										}
-									}
-								}
-								scope:target = {
-									add_trait = miserly
-									add_character_modifier = {
-										name = "worse_charisma_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.68
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = gluttonous
-										}
-									}
-								} 
-								scope:target = {
-									add_trait = gluttonous
-									add_character_modifier = {
-										name = "worse_charisma_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.69
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = miserly
+								has_trait = gluttonous
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = miserly
+									}
+								}
+							}
+							scope:target = {
+								add_trait = miserly
+								add_character_modifier = {
+									name = "worse_charisma_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.68
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = gluttonous
+									}
+								}
+							} 
+							scope:target = {
+								add_trait = gluttonous
+								add_character_modifier = {
+									name = "worse_charisma_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.69
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
 		}	
 	}	
@@ -2151,72 +2120,70 @@ task.22 = { # Final resolution
 		name = "task.22.a"
 		####Audit state accounts - success
 	
-		scope:target = {
-			#custom_tooltip = finesse_task_22a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = shrewd
-									has_trait = obsessive
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = shrewd
-										}
-									}
-								}
-								scope:target = {
-										add_trait = shrewd
-										add_finesse = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.70
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = obsessive
-										}
-									}
-								}
-								scope:target = {
-										add_trait = obsessive
-										add_finesse = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.71
-										days = 1
-									}
-								}						
+		#custom_tooltip = finesse_task_22a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = shrewd
+								has_trait = obsessive
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = shrewd
+									}
+								}
 							}
+							scope:target = {
+									add_trait = shrewd
+									add_finesse = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.70
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = obsessive
+									}
+								}
+							}
+							scope:target = {
+									add_trait = obsessive
+									add_finesse = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.71
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -2233,84 +2200,82 @@ task.23 = { # Final resolution
 		name = "task.23.a"
 		####Audit state accounts - failure
 	
-		scope:target = {
-			#custom_tooltip = finesse_task_23a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.194 # special bad finesse
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = lazy
-									has_trait = corrupt
-								}
-							}
+		#custom_tooltip = finesse_task_23a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.194 # special bad finesse
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = lazy
-										}
-									}
-								}
-								scope:target = {
-									add_trait = lazy
-									add_character_modifier = {
-										name = "worse_finesse_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.72
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = corrupt
-										}
-									}
-								}
-								scope:target = {
-									add_trait = corrupt
-									add_character_modifier = {
-										name = "worse_finesse_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.73
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = lazy
+								has_trait = corrupt
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = lazy
+									}
+								}
+							}
+							scope:target = {
+								add_trait = lazy
+								add_character_modifier = {
+									name = "worse_finesse_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.72
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = corrupt
+									}
+								}
+							}
+							scope:target = {
+								add_trait = corrupt
+								add_character_modifier = {
+									name = "worse_finesse_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.73
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
 		}	
 	}	
@@ -2330,70 +2295,68 @@ task.24 = { # Final resolution
 		name = "task.24.a"
 		#####Purge corrupt bureaucrats - success
 	
-		scope:target = {
-			#custom_tooltip = finesse_task_24a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = shrewd
-									has_trait = obsessive
-								}
+		#custom_tooltip = finesse_task_24a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = shrewd
+								has_trait = obsessive
 							}
 						}
+					}
 
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = energetic
-										}
-									}
-								}
+					random_list = {
+						10 = {
+							trigger = {
 								scope:target = {
-										add_trait = energetic
-										add_finesse = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.74
-										days = 1
+									NOT = {
+										has_trait = energetic
 									}
-								}						
+								}
 							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = just
-										}
-									}
+							scope:target = {
+									add_trait = energetic
+									add_finesse = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.74
+									days = 3
 								}
+							}						
+						}
+						10 = {
+							trigger = {
 								scope:target = {
-										add_trait = just
-										add_finesse = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.75
-										days = 1
+									NOT = {
+										has_trait = just
 									}
-								}						
+								}
 							}
+							scope:target = {
+									add_trait = just
+									add_finesse = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.75
+									days = 3
+								}
+							}						
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
-							}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
-				}	
+				}
 			}
 		}	
 	}	
@@ -2412,85 +2375,82 @@ task.25 = { # Final resolution
 	option = {
 		name = "task.25.a"
 		#####Purge corrupt bureaucrats - failure
-	
-		scope:target = {
-			#custom_tooltip = finesse_task_25a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.194 # special bad finesse
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = wounded
-									has_trait = guileless
-								}
-							}
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.194 # special bad finesse
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = wounded
-										}
-									}
-								}
-								scope:target = {
-									add_trait = wounded
-									add_character_modifier = {
-										name = "worse_finesse_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.76
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = guileless
-										}
-									}
-								}
-								scope:target = {
-									add_trait = guileless
-									add_character_modifier = {
-										name = "worse_finesse_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.77
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = wounded
+								has_trait = guileless
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = wounded
+									}
+								}
+							}
+							scope:target = {
+								add_trait = wounded
+								add_character_modifier = {
+									name = "worse_finesse_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.76
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = guileless
+									}
+								}
+							}
+							scope:target = {
+								add_trait = guileless
+								add_character_modifier = {
+									name = "worse_finesse_02"
+									duration = 1825
+								}
+							}
+
+							scope:target.employer = {
+								trigger_event = {
+									id = task.77
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
 		}	
 	}	
@@ -2509,67 +2469,65 @@ task.26 = { # Final resolution
 		name = "task.26.a"
 		######Expand the administration -  success
 	
-		scope:target = {
-			#custom_tooltip = finesse_task_26a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = wise
-									has_trait = polymath
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = wise
-										}
-									}
-								}
-								scope:target = {
-										add_trait = wise
-										add_finesse = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.78
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = polymath
-										}
-									}
-								}
-								scope:target = {
-										add_trait = polymath
-										add_finesse = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.79
-										days = 1
-									}
-								}						
+		#custom_tooltip = finesse_task_26a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = wise
+								has_trait = polymath
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = wise
+									}
+								}
 							}
+							scope:target = {
+									add_trait = wise
+									add_finesse = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.78
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = polymath
+									}
+								}
+							}
+							scope:target = {
+									add_trait = polymath
+									add_finesse = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.79
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
@@ -2591,87 +2549,83 @@ task.27 = { # Final resolution
 	option = {
 		name = "task.27.a"
 		######Expand the administration - failure
-	
-		scope:target = {
-			#custom_tooltip = finesse_task_27a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.194 # special bad finesse
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = arbitrary
-									has_trait = pox
-								}
-							}
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.194 # special bad finesse
+							days = 3
 						}
-
-						random_list = {
-							45 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = arbitrary
-										}
-									}
-								}
-								scope:target = {
-									add_trait = arbitrary
-									add_character_modifier = {
-										name = "worse_finesse_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.80
-										days = 1
-									}
-								}						
-							}
-							45 = { 
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = pox
-										}
-									}
-								}
-								scope:target = {
-									add_trait = pox
-									add_character_modifier = {
-										name = "worse_finesse_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.81
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = arbitrary
+								has_trait = pox
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = arbitrary
+									}
+								}
+							}
+							scope:target = {
+								add_trait = arbitrary
+								add_character_modifier = {
+									name = "worse_finesse_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.80
+									days = 3
+								}
+							}						
+						}
+						45 = { 
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = pox
+									}
+								}
+							}
+							scope:target = {
+								add_trait = pox
+								add_character_modifier = {
+									name = "worse_finesse_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.81
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
-		}	
+		}		
 	}	
 }
 
@@ -2688,72 +2642,70 @@ task.28 = { # Final resolution
 		name = "task.28.a"
 		#######Inspect state inventories -  success
 	
-		scope:target = {
-			#custom_tooltip = finesse_task_28a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = scholar
-									has_trait = honest
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = scholar
-										}
-									}
-								}
-								scope:target = {
-										add_trait = scholar
-										add_finesse = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.82
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = honest
-										}
-									}
-								}
-								scope:target = {
-										add_trait = honest
-										add_finesse = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.83
-										days = 1
-									}
-								}						
+		#custom_tooltip = finesse_task_28a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = scholar
+								has_trait = honest
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = scholar
+									}
+								}
 							}
+							scope:target = {
+									add_trait = scholar
+									add_finesse = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.82
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = honest
+									}
+								}
+							}
+							scope:target = {
+									add_trait = honest
+									add_finesse = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.83
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -2771,86 +2723,84 @@ task.29 = { # Final resolution
 		name = "task.29.a"
 		#######Inspect state inventories - failure
 	
-		scope:target = {
-			#custom_tooltip = finesse_task_29a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.194 # special bad finesse
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = abrasive
-									has_trait = incapable
-								}
-							}
+		#custom_tooltip = finesse_task_29a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.194 # special bad finesse
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = abrasive
-										}
-									}
-								}
-								scope:target = {
-									add_trait = abrasive
-									add_character_modifier = {
-										name = "worse_finesse_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.84
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = incapable
-										}
-									}
-								}
-								scope:target = {
-									add_trait = incapable
-									add_character_modifier = {
-										name = "worse_finesse_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.85
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = abrasive
+								has_trait = incapable
 							}
 						}
 					}
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = abrasive
+									}
+								}
+							}
+							scope:target = {
+								add_trait = abrasive
+								add_character_modifier = {
+									name = "worse_finesse_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.84
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = incapable
+									}
+								}
+							}
+							scope:target = {
+								add_trait = incapable
+								add_character_modifier = {
+									name = "worse_finesse_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.85
+									days = 3
+								}
+							}						
+						}
+					}	
 				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
-		}	
+		}					
 	}	
 }
 
@@ -2867,67 +2817,65 @@ task.30 = { # Final resolution
 		name = "task.30.a"
 		#######Consult oracle - success
 	
-		scope:target = {
-			#custom_tooltip = religious_task_30a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = zealous
-									has_trait = righteous
-								}
+		#custom_tooltip = religious_task_30a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = zealous
+								has_trait = righteous
 							}
 						}
+					}
 
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = zealous
-										}
-									}
-								}
+					random_list = {
+						10 = {
+							trigger = {
 								scope:target = {
-										add_trait = zealous
-										add_zeal = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.86
-										days = 1
+									NOT = {
+										has_trait = zealous
 									}
-								}						
+								}
 							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = righteous
-										}
-									}
+							scope:target = {
+									add_trait = zealous
+									add_zeal = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.86
+									days = 3
 								}
+							}						
+						}
+						10 = {
+							trigger = {
 								scope:target = {
-										add_trait = righteous
-										add_zeal = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.87
-										days = 1
+									NOT = {
+										has_trait = righteous
 									}
+								}
+							}
+							scope:target = {
+									add_trait = righteous
+									add_zeal = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.87
+									days = 3
 								}
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
-							}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
@@ -2950,84 +2898,82 @@ task.31 = { # Final resolution
 		name = "task.31.a"
 		#######Consult oracle - failure
 	
-		scope:target = {
-			#custom_tooltip = religious_task_31a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.195 # special bad zeal
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = lapsed
-									has_trait = epileptic
-								}
-							}
+		#custom_tooltip = religious_task_31a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.195 # special bad zeal
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = lapsed
-										}
-									}
-								}
-								scope:target = {
-									add_trait = lapsed
-									add_character_modifier = {
-										name = "worse_zeal_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.88
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = epileptic
-										}
-									}
-								}
-								scope:target = {
-									add_trait = epileptic
-									add_character_modifier = {
-										name = "worse_zeal_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.89
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = lapsed
+								has_trait = epileptic
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = lapsed
+									}
+								}
+							}
+							scope:target = {
+								add_trait = lapsed
+								add_character_modifier = {
+									name = "worse_zeal_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.88
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = epileptic
+									}
+								}
+							}
+							scope:target = {
+								add_trait = epileptic
+								add_character_modifier = {
+									name = "worse_zeal_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.89
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
 		}	
 	}	
@@ -3047,72 +2993,70 @@ task.32 = { # Final resolution
 		name = "task.32.a"
 		####Inspect animal entrails - success
 	
-		scope:target = {
-			#custom_tooltip = religious_task_32a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = pious
-									has_trait = self_controlled
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = pious
-										}
-									}
-								}
-								scope:target = {
-										add_trait = pious
-										add_zeal = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.90
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = self_controlled
-										}
-									}
-								}
-								scope:target = {
-										add_trait = self_controlled
-										add_zeal = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.91
-										days = 1
-									}
-								}						
+		#custom_tooltip = religious_task_32a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = pious
+								has_trait = self_controlled
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = pious
+									}
+								}
 							}
+							scope:target = {
+									add_trait = pious
+									add_zeal = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.90
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = self_controlled
+									}
+								}
+							}
+							scope:target = {
+									add_trait = self_controlled
+									add_zeal = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.91
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -3130,84 +3074,82 @@ task.33 = { # Final resolution
 		name = "task.33.a"
 		####Inspect animal entrails - failure
 	
-		scope:target = {
-			#custom_tooltip = religious_task_33a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.195 # special bad zeal
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = jealous
-									has_trait = plague
-								}
-							}
+		#custom_tooltip = religious_task_33a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.195 # special bad zeal
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = jealous
-										}
-									}
-								}
-								scope:target = {
-									add_trait = jealous
-									add_character_modifier = {
-										name = "worse_zeal_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.92
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = plague
-										}
-									}
-								}
-								scope:target = {
-									add_trait = plague
-									add_character_modifier = {
-										name = "worse_zeal_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.93
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = jealous
+								has_trait = plague
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = jealous
+									}
+								}
+							}
+							scope:target = {
+								add_trait = jealous
+								add_character_modifier = {
+									name = "worse_zeal_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.92
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = plague
+									}
+								}
+							}
+							scope:target = {
+								add_trait = plague
+								add_character_modifier = {
+									name = "worse_zeal_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.93
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
 		}	
 	}	
@@ -3227,71 +3169,69 @@ task.34 = { # Final resolution
 		name = "task.34.a"
 		####Interpret dreams - success
 	
-		scope:target = {
-			#custom_tooltip = religious_task_34a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = good_natured
-									has_trait = ambitious
-								}
-							}
-						}
-
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = good_natured
-										}
-									}
-								}
-								scope:target = {
-										add_trait = good_natured
-										add_zeal = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.94
-										days = 1
-									}
-								}						
-							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = ambitious
-										}
-									}
-								}
-								scope:target = {
-										add_trait = ambitious
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.95
-										days = 1
-									}
-								}						
+		#custom_tooltip = religious_task_34a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = good_natured
+								has_trait = ambitious
 							}
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
+
+					random_list = {
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = good_natured
+									}
+								}
 							}
+							scope:target = {
+									add_trait = good_natured
+									add_zeal = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.94
+									days = 3
+								}
+							}						
+						}
+						10 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = ambitious
+									}
+								}
+							}
+							scope:target = {
+									add_trait = ambitious
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.95
+									days = 3
+								}
+							}						
+						}
+					}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -3309,84 +3249,82 @@ task.35 = { # Final resolution
 		name = "task.35.a"
 		####Interpret dreams - failure
 	
-		scope:target = {
-			#custom_tooltip = religious_task_35a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
-						scope:target = {
-							trigger_event = {
-								id = task.195 # special bad zeal
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = sceptical
-									has_trait = dementia
-								}
-							}
+		#custom_tooltip = religious_task_35a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.195 # special bad zeal
+							days = 3
 						}
-
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = sceptical
-										}
-									}
-								}
-								scope:target = {
-									add_trait = sceptical
-									add_character_modifier = {
-										name = "worse_zeal_01"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.96
-										days = 1
-									}
-								}						
-							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = dementia
-										}
-									}
-								}
-								scope:target = {
-									add_trait = dementia
-									add_character_modifier = {
-										name = "worse_zeal_02"
-										duration = 1825
-									}
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.97
-										days = 1
-									}
-								}						
-							}
-						}	
-					}					
-					60 = { # average result
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							NOT = {
+								has_trait = sceptical
+								has_trait = dementia
 							}
 						}
 					}
-				}	
+
+					random_list = {
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = sceptical
+									}
+								}
+							}
+							scope:target = {
+								add_trait = sceptical
+								add_character_modifier = {
+									name = "worse_zeal_01"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.96
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
+								scope:target = {
+									NOT = {
+										has_trait = dementia
+									}
+								}
+							}
+							scope:target = {
+								add_trait = dementia
+								add_character_modifier = {
+									name = "worse_zeal_02"
+									duration = 1825
+								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.97
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
+						}
+					}
+				}
 			}
 		}	
 	}	
@@ -3407,72 +3345,70 @@ task.36 = { # Final resolution
 		name = "task.36.a"
 		#####Observe bird flight - success
 	
-		scope:target = {
-			#custom_tooltip = religious_task_36a
-			hidden_effect = {
-				random_list = {
-					85 = {
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = devout
-									has_trait = trusting
-								}
+		#custom_tooltip = religious_task_36a
+		hidden_effect = {
+			random_list = {
+				85 = {
+					trigger = {
+						scope:target = {
+							NOT = {
+								has_trait = devout
+								has_trait = trusting
 							}
 						}
+					}
 
-						random_list = {
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = devout
-										}
-									}
-								}
+					random_list = {
+						10 = {
+							trigger = {
 								scope:target = {
-										add_trait = devout
-										add_zeal = 2
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.98
-										days = 1
+									NOT = {
+										has_trait = devout
 									}
-								}						
+								}
 							}
-							10 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = trusting
-										}
-									}
+							scope:target = {
+									add_trait = devout
+									add_zeal = 2
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.98
+									days = 3
 								}
+							}						
+						}
+						10 = {
+							trigger = {
 								scope:target = {
-										add_trait = trusting
-										add_zeal = 1
-								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.99
-										days = 1
+									NOT = {
+										has_trait = trusting
 									}
-								}						
+								}
 							}
+							scope:target = {
+									add_trait = trusting
+									add_zeal = 1
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.99
+									days = 3
+								}
+							}						
 						}
 					}
-					15 = {
-						scope:target.employer = {
-							trigger_event = {
-								id = task.190
-								days = 3
-							}
+				}
+				15 = {
+					scope:target.employer = {
+						trigger_event = {
+							id = task.190
+							days = 3
 						}
 					}
-				}	
+				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -3490,86 +3426,84 @@ task.37 = { # Final resolution
 		name = "task.37.a"
 		#####Observe bird flight - failure
 	
-		scope:target = {
-			#custom_tooltip = religious_task_37a
-			hidden_effect = {
-				random_list = {
-					5 = { # special result
+		#custom_tooltip = religious_task_37a
+		hidden_effect = {
+			random_list = {
+				5 = { # special result
+					scope:target = {
+						trigger_event = {
+							id = task.195 # special bad zeal
+							days = 3
+						}
+					}						
+				}				
+				35 = { # awful result
+					trigger = {
 						scope:target = {
-							trigger_event = {
-								id = task.195 # special bad zeal
-								days = 3
-							}
-						}						
-					}				
-					35 = { # awful result
-						trigger = {
-							scope:target = {
-								NOT = {
-									has_trait = foolish
-									has_trait = schizophrenic
-								}
+							NOT = {
+								has_trait = foolish
+								has_trait = schizophrenic
 							}
 						}
+					}
 
-						random_list = {
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = foolish
-										}
-									}
-								}
+					random_list = {
+						45 = {
+							trigger = {
 								scope:target = {
-									add_trait = foolish
-									add_character_modifier = {
-										name = "worse_zeal_01"
-										duration = 1825
+									NOT = {
+										has_trait = foolish
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.100
-										days = 1
-									}
-								}						
 							}
-							45 = {
-								trigger = {
-									scope:target = {
-										NOT = {
-											has_trait = schizophrenic
-										}
-									}
+							scope:target = {
+								add_trait = foolish
+								add_character_modifier = {
+									name = "worse_zeal_01"
+									duration = 1825
 								}
+							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.100
+									days = 3
+								}
+							}						
+						}
+						45 = {
+							trigger = {
 								scope:target = {
-									add_trait = schizophrenic
-									add_character_modifier = {
-										name = "worse_zeal_02"
-										duration = 1825
+									NOT = {
+										has_trait = schizophrenic
 									}
 								}
-								scope:target.employer = {
-									trigger_event = {
-										id = task.101
-										days = 1
-									}
-								}						
 							}
-						}	
-					}					
-					60 = { # average result
-						scope:target = {
-							trigger_event = {
-								id = task.191
-								days = 3
+							scope:target = {
+								add_trait = schizophrenic
+								add_character_modifier = {
+									name = "worse_zeal_02"
+									duration = 1825
+								}
 							}
+							scope:target.employer = {
+								trigger_event = {
+									id = task.101
+									days = 3
+								}
+							}						
+						}
+					}	
+				}					
+				60 = { # average result
+					scope:target = {
+						trigger_event = {
+							id = task.191
+							days = 3
 						}
 					}
 				}
 			}
-		}	
+		}
 	}	
 }
 
@@ -4567,7 +4501,6 @@ task.190 = { # average good result
 				scope:target.employer = {
 					trigger_event = {
 						id = task.103
-						days = 3
 					}
 				}
 			}
@@ -4579,7 +4512,6 @@ task.190 = { # average good result
 				scope:target.employer = {
 					trigger_event = {
 						id = task.104
-						days = 3
 					}
 				}
 			}
@@ -4587,7 +4519,6 @@ task.190 = { # average good result
 				scope:target.employer = {
 					trigger_event = {
 						id = task.106
-						days = 3
 					}
 				}
 			}
@@ -4609,7 +4540,6 @@ task.191 = { # average bad result
 				scope:target.employer = {
 					trigger_event = {
 						id = task.105
-						days = 3
 					}
 				}
 			}
@@ -4617,7 +4547,6 @@ task.191 = { # average bad result
 				scope:target.employer = {
 					trigger_event = {
 						id = task.106
-						days = 3
 					}
 				}
 			}
@@ -4649,7 +4578,6 @@ task.192 = { # special bad result martial
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4670,7 +4598,6 @@ task.192 = { # special bad result martial
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4678,7 +4605,6 @@ task.192 = { # special bad result martial
 				scope:target.employer = {
 					trigger_event = {
 						id = task.106
-						days = 3
 					}
 				}
 			}
@@ -4710,7 +4636,6 @@ task.193 = { # special bad result charisma
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4731,7 +4656,6 @@ task.193 = { # special bad result charisma
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4739,7 +4663,6 @@ task.193 = { # special bad result charisma
 				scope:target.employer = {
 					trigger_event = {
 						id = task.106
-						days = 3
 					}
 				}
 			}
@@ -4771,7 +4694,6 @@ task.194 = { # special bad result finesse
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4792,7 +4714,6 @@ task.194 = { # special bad result finesse
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4800,7 +4721,6 @@ task.194 = { # special bad result finesse
 				scope:target.employer = {
 					trigger_event = {
 						id = task.106
-						days = 3
 					}
 				}
 			}
@@ -4832,7 +4752,6 @@ task.195 = { # special bad result zeal
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4853,7 +4772,6 @@ task.195 = { # special bad result zeal
 				scope:target.employer = {
 					trigger_event = {
 						id = task.102
-						days = 3
 					}
 				}						
 			}
@@ -4861,7 +4779,6 @@ task.195 = { # special bad result zeal
 				scope:target.employer = {
 					trigger_event = {
 						id = task.106
-						days = 3
 					}
 				}
 			}

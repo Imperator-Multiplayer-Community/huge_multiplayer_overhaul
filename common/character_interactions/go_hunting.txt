@@ -11,6 +11,7 @@
 			OR = {
 				is_monarchy = yes 
 				is_tribal = yes
+				is_republic = yes # maybe if we add republic only events we can make this just monarchy
 			}
 			tyranny <= 99
 		}
@@ -62,6 +63,7 @@
 		scope:actor = {
 			in_diplomatic_range = scope:target.employer
 			can_pay_price = go_hunting
+			has_land = yes
 		}
 		scope:actor.current_ruler = {
 			NOT = { 
@@ -72,10 +74,26 @@
 	
 	effect = {
 		custom_tooltip = "letter_cost_tt" 
-		scope:target.employer = {
-			trigger_event = {
-				id = hunting.1 
-				days = 5
+		if = {
+			limit = {
+				scope:target = {
+					is_ruler = no
+				}
+			}
+
+			scope:target.employer = {
+				trigger_event = {
+					id = hunting.200
+					days = 5
+				}
+			}
+		}
+		else = { 
+			scope:target.employer = {
+				trigger_event = {
+					id = hunting.1 
+					days = 5
+				}
 			}
 		}
 

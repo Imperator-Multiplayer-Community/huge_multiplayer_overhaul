@@ -50,10 +50,14 @@ civilization_value = {
 # Unit Static Modifiers
 ##########################################################################
 
+in_combat = {
+	experience_decay = -0.05
+	monthly_experience_gain = 0.10
+}
 
 in_siege = {
 	experience_decay = -0.05
-	monthly_experience_gain = 0.10
+	monthly_experience_gain = 0.20
 }
 
 ##########################################################################
@@ -73,20 +77,16 @@ defensive_war = {
 	#monthly_military_experience_modifier = 0.10
 }
 
-
 total_blockaded = {
 	war_exhaustion = 0.20				#increases exhaustion.
 }
 
-
 war_exhaustion = {
 	global_population_happiness = -0.02
 	ruler_popularity_gain = -0.02
-	#monthly_military_experience_modifier = 0.0125
+	monthly_military_experience_modifier = 0.0125
 	character_loyalty = -1
 }
-
-
 
 nation_rank_1 = {
 	global_commerce_modifier = 0.2	
