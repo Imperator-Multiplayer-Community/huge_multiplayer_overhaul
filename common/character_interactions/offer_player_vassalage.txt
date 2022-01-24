@@ -6,21 +6,23 @@
 	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_befriend"
 
 	potential_trigger = {
-		always = no
-		scope:actor = {
+		hidden:scope:actor = {
 			OR = {
 				is_monarchy = yes 
 				is_tribal = yes
 				is_republic = yes
 			}
-			is_ai = no
+
+			NOT = {
+				is_ai = yes
+			}
 		}
 		hidden:scope:target = {
 			is_alive = yes
 			is_mercenary = no
 			is_ruler = yes
+			is_ai = no
 			employer = { 
-				is_ai = no
 				NOR = {
 					tag = PIR
 					tag = REB
@@ -37,7 +39,7 @@
 		scope:actor = {
 			in_diplomatic_range = scope:target.employer
 		}
-		scope:actor.current_ruler = {
+		hidden:scope:actor.current_ruler = {
 			is_alive = yes
 		}
 		scope:target = {
@@ -70,5 +72,9 @@
 				days = 3
 			}
 		}
+	}
+
+	ai_will_do = {
+		factor = 0
 	}
 }
