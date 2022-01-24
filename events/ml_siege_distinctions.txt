@@ -150,7 +150,7 @@ ml_siege_distinctions.2 = {
 	}
 
 	immediate = {
-		scope:actor.legion = {
+		scope:actor = {
 			if = {
 				limit = {
 					has_variable siege_victories
