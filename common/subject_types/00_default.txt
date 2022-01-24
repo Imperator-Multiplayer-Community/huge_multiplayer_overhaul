@@ -611,18 +611,19 @@ player_client_state = {
 	
 	on_enable = {
 		# add military access to all other subjects
-		overlord = {
-			every_subject = {
-				add_military_access = root
-				root = {
-					add_military_access = this
-				}
-			}
-		}
+		# this just crashes the game. not sure add_military_access is functional
+		#scope:future_overlord = {
+		#	every_subject = {
+		#		add_military_access = ROOT
+		#		ROOT = {
+		#			add_military_access = this
+		#		}
+		#	}
+		#}
 	}
 	on_disable = {
 		overlord = {
-			add_guarantee = root
+			add_guarantee = ROOT
 		}
 	}
 	on_monthly = {
@@ -633,13 +634,12 @@ player_client_state = {
 				is_subject = yes
 			}
 
-			overlord = {
-				save_scope_as = current_overlord
-				release_subject = root
+			scope:former_overlord = {
+				release_subject = ROOT
 			}
 
-			scope:current_overlord = {
-				add_guarantee = root
+			scope:former_overlord = {
+				add_guarantee = ROOT
 			}
 		}
 	}
