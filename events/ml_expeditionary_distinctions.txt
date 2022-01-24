@@ -81,7 +81,7 @@ ml_expeditionary_distinctions.3 = {
             has_legion_trigger = yes
         	has_variable = expeditionary
         	NOT = {
-        		legion = {
+        		scope:actor.legion = {
 					has_distinction = distinction_expeditionary_01
         		}
 			}

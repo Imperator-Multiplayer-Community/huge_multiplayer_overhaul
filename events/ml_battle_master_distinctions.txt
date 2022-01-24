@@ -46,7 +46,6 @@ ml_battle_master.1 = {
 					limit = {
 						AND = { 
 							var:legion_victories >= 2
-							var:legion_victories < 6
 							NOT = {
 								scope:actor.legion = {
 									OR = {
@@ -73,8 +72,9 @@ ml_battle_master.1 = {
 					limit = {
 						AND = { 
 							var:legion_victories >= 6
-							var:legion_victories < 12
-							has_distinction = distinction_battle_master_01
+							scope:actor.legion = {
+								has_distinction = distinction_battle_master_01
+							}
 							NOT = {
 								scope:actor.legion = {
 									OR = {
@@ -95,8 +95,9 @@ ml_battle_master.1 = {
 					limit = {
 						AND = { 
 							var:legion_victories >= 12
-							var:legion_victories < 20
-							has_distinction = distinction_battle_master_02
+							scope:actor.legion = {
+								has_distinction = distinction_battle_master_02
+							}
 							NOT = {
 								scope:actor.legion = {
 									OR = {
@@ -117,7 +118,9 @@ ml_battle_master.1 = {
 					limit = {
 						AND = { 
 							var:legion_victories >= 20
-							has_distinction = distinction_battle_master_03
+							scope:actor.legion = {
+								has_distinction = distinction_battle_master_03
+							}
 							NOT = {
 								scope:actor.legion = {
 									OR = {

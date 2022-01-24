@@ -828,8 +828,10 @@ ml_archer_distinctions.5 = {
 						add_distinction = distinction_archer_discipline_1
 					}
 
-					trigger_event = {
-						id = ml_expeditionary_distinctions.1
+					ROOT = {
+						trigger_event = {
+							id = ml_expeditionary_distinctions.1
+						}
 					}
 				}
 				else_if = {

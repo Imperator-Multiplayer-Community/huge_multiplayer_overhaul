@@ -17,6 +17,9 @@
 				is_ai = no
 				num_of_cities >= 50
 			}
+			NOT = {
+				is_endgame_tag_trigger = yes
+			}
 		}
 		
 		highlight = {
