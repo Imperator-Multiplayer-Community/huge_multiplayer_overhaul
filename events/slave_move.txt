@@ -23,6 +23,7 @@ slave_move.1 = {
 
 			save_scope_as = target_province
 
+			#check neighbors first for slaves
 			every_neighbor_province = {
 				limit = {
 					NOT = {
@@ -39,6 +40,7 @@ slave_move.1 = {
 				save_scope_as = slave_move_province
 			}
 
+			#if no slaves in neighbors, check whole province
 			if = {
 				limit = {
 					NOT = {
@@ -65,6 +67,7 @@ slave_move.1 = {
 				}
 			}
 
+			#move found slaves
 			if = {
 				limit = {
 					exists = scope:slave_move_province 
@@ -78,6 +81,7 @@ slave_move.1 = {
 						}
 
 						ROOT = {
+							# check for vegetable surplus bonus
 							if = {
 								limit = {
 									capital_scope.state = {
@@ -103,7 +107,14 @@ slave_move.1 = {
 
 				clear_saved_scope = slave_move_province
 			}
+			else = {
+				# if no available slaves turn this off to save performance
+				scope:target_province = {
+					remove_province_modifier = slave_move_yes
+				}
+			}
 
+			# if at the pop cap, turn slave move off
 			scope:target_province = {
 				if = {
 					limit = {
