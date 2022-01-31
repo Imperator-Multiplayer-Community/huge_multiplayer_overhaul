@@ -5,11 +5,8 @@ invention.1 = {
 	hidden = yes
 
 	trigger = {
-		NOT = {
-			has_variable = inv_check
-		}
-		
 		OR = {
+			military_tech = 0
 			mil_tech_check = 0
 			ora_tech_check = 0
 			civ_tech_check = 0
@@ -30,7 +27,6 @@ invention.1 = {
 						religious_tech >= 5
 					}
 				}
-
 			}
 
 			add_innovation = 4
