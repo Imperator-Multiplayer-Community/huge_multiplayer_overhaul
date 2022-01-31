@@ -1,8 +1,10 @@
-﻿slave_movement = {
+﻿allow_slave_movement = {
 	scope = province
+
 	ai_is_valid = {
 		always = no
 	}
+
 	is_valid = {
 		NOT = {
 			total_population >= population_cap
@@ -16,6 +18,7 @@
 				value = yes
 			}
 		}
+
 		if = {
 			limit = {
 				has_province_modifier = slave_move_yes
@@ -30,21 +33,25 @@
 		}
 	}
 }
-no_slave_movement = {
+
+forbid_slave_movement = {
 	scope = province
+
 	ai_is_valid = {
 		always = no
 	}
+
 	effect = {
 		if = {
 			limit = {
-				has_province_modifier = no_slave_move
+				has_province_modifier = slave_move_no
 			}
-			remove_province_modifier = no_slave_move
+
+			remove_province_modifier = slave_move_no
 		}
 		else = {
 			add_province_modifier = {
-				name = no_slave_move
+				name = slave_move_no
 				duration = -1
 			}
 		}

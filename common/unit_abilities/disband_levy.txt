@@ -86,7 +86,7 @@
 				}
 			}
 
-			debug_log = "levy [THIS.Var('country_levy_start_xp').GetValue]"
+			# debug_log = "levy [THIS.Var('country_levy_start_xp').GetValue]"
 
 			scope:levy_unit.unit_owner = {
 				add_military_experience = {

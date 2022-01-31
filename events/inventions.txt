@@ -5,14 +5,11 @@ invention.1 = {
 	hidden = yes
 
 	trigger = {
-		OR = {
-			NOT = {
-				has_variable = inv_check
-			}
-			var:inv_check <= 4
+		NOT = {
+			has_variable = inv_check
 		}
-		
 		OR = {
+			military_tech = 0
 			mil_tech_check = 0
 			ora_tech_check = 0
 			civ_tech_check = 0
@@ -24,39 +21,42 @@ invention.1 = {
 		if = {
 			limit = {
 				OR = {
-					NOT = { has_variable = inv_check }
+					military_tech = 0
+					OR = {
+						military_tech >= 5
+						oratory_tech >= 5
+						civic_tech >= 5
+						religious_tech >= 5
+					}
 				}
 			}
 
-			add_innovation = 4
-		}
+			#debug_log = "add inventions"
 
-		if = {
-			limit = {
-				has_variable = inv_check
-			}
-			change_variable = {
-				name = inv_check
-				add = 1
-			}
-		}
-		else = {
+			add_innovation = 4
+
 			set_variable = {
 				name = inv_check
 				value = 1
 			}
 		}
-		
-		if = {
-			limit = {
-				var:inv_check = 4
-				mil_tech_check >= 1
-				ora_tech_check >= 1
-				civ_tech_check >= 1
-				rel_tech_check >= 1
-			}
+	}
+}
 
-			remove_variable = inv_check
-		}
+invention.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_variable = inv_check
+		mil_tech_check > 0
+		ora_tech_check > 0
+		civ_tech_check > 0
+		rel_tech_check > 0
+	}
+
+	immediate = {
+		#debug_log = "remove inventions"
+		remove_variable = inv_check
 	}
 }
