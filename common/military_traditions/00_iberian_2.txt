@@ -158,7 +158,7 @@
 	celt_iberian_path_d_1 = { ###Celt-Iberian 4A Just the best Horses
 		modifier = {
 			light_cavalry_cost = -0.15
-			light_cavalry_defensive = 0.15
+			light_cavalry_defensive = 0.1
 		}
 		icon = persian_scythian_path_end_bonus
 		requires = { celt_iberian_path_8 }

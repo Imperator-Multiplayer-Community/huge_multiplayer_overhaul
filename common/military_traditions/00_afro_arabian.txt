@@ -180,7 +180,7 @@
 
 	nubian_path_12 = { ###
 		modifier = { 
-			archers_defensive = 0.15
+			archers_defensive = 0.1
 			light_infantry_defensive = 0.1
 			army_maintenance_cost = 0.01
 		} 
@@ -217,7 +217,7 @@
 
 	nubian_path_14 = { ###
 		modifier = { 
-			archers_offensive = 0.2
+			archers_offensive = 0.1
 			manpower_recovery_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 

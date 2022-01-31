@@ -722,11 +722,11 @@ eretrian_heritage = {
 byzantine_heritage = {
 	modifier = {
 		#good
-		global_nobles_happyness = 0.03
-		ship_cost = -0.1
+		heavy_cavalry_offensive = 0.10
+		global_tax_modifier = 0.05
 
 		#bad
-		army_maintenance_cost = 0.05
+		character_loyalty = -5.00
 	}
 	trigger = {
 		tag = BYZ

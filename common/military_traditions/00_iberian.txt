@@ -142,7 +142,7 @@
 	
 	iberian_central_path_4 = { ###Iberian 4B Talaiotic Slingers
 		modifier = { 
-			archers_offensive = 0.15
+			archers_offensive = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_7
@@ -162,7 +162,7 @@
 
 	iberian_left_2_path_1 = { ###Iberian 2C Fine Metalworks
 		modifier = {
-			light_infantry_defensive  = 0.15
+			light_infantry_defensive  = 0.1
 			light_cavalry_defensive = 0.15
 			army_maintenance_cost = 0.01
 		}

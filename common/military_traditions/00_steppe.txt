@@ -189,8 +189,7 @@
 
 	scythian_path_8 = { ###
 		modifier = { 
-			horse_archers_cost = -0.1
-			light_cavalry_discipline = 0.1
+			horse_archers_cost = -0.2
 			heavy_cavalry_discipline = 0.1
 		} 
 		icon = persian_bactrian_path_end_bonus
@@ -208,7 +207,7 @@
 
 	scythian_path_10 = { ###
 		modifier = { 
-			horse_archers_discipline = 0.1
+			horse_archers_discipline = 0.15
 			horse_archers_morale = 0.1
 			army_maintenance_cost = 0.01
 		} 
@@ -254,7 +253,7 @@
 			}	
 		}
 		modifier = { 
-			heavy_cavalry_offensive = 0.15
+			heavy_cavalry_offensive = 0.1
 			global_nobles_output = 0.1 
 			army_maintenance_cost = 0.01
 		} 

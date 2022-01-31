@@ -58,7 +58,7 @@
 
 	andhra_path_4 = { ###
 		modifier = { 
-			light_infantry_offensive = 0.15
+			light_infantry_offensive = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_1
@@ -88,7 +88,7 @@
 
 	andhra_path_7 = { ###
 		modifier = { 
-			light_infantry_defensive = 0.15
+			light_infantry_defensive = 0.1
 			light_infantry_jungle_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		} 

@@ -62,24 +62,24 @@
 341=
 {
 	barbarian_power=0
-	civilization_value=24
+	civilization_value=40
 	culture="thracian"
 	port_building=1
-	province_rank="settlement"
+	province_rank="city"
 	religion="roman_pantheon"
-	terrain="forest"
-	trade_goods="fish"
+	terrain="farmland"
+	trade_goods="precious_metals"
 	citizen=
 	{
-		amount=1
+		amount=10
 	}
 	freemen=
 	{
-		amount=2
+		amount=24
 	}
 	slaves=
 	{
-		amount=2
+		amount=8
 	}
 }
 #Salmydessos
@@ -98,11 +98,11 @@
 	}
 	freemen=
 	{
-		amount=1
+		amount=9
 	}
 	slaves=
 	{
-		amount=3
+		amount=1
 	}
 	tribesmen=
 	{
@@ -143,15 +143,15 @@
 345=
 {
 	barbarian_power=0
-	civilization_value=24
+	civilization_value=40
 	culture="thracian"
-	province_rank="settlement"
+	province_rank="city"
 	religion="roman_pantheon"
-	terrain="forest"
+	terrain="farmland"
 	trade_goods="cloth"
 	freemen=
 	{
-		amount=2
+		amount=25
 	}
 	freemen=
 	{
@@ -160,7 +160,7 @@
 	}
 	slaves=
 	{
-		amount=1
+		amount=9
 	}
 	tribesmen=
 	{
@@ -186,11 +186,11 @@
 	trade_goods="fish"
 	freemen=
 	{
-		amount=2
+		amount=11
 	}
 	slaves=
 	{
-		amount=3
+		amount=1
 	}
 }
 #Bisanthe
@@ -1026,24 +1026,24 @@
 1453=
 {
 	barbarian_power=0
-	civilization_value=29
+	civilization_value=45
 	culture="thracian"
-	port_building=1
+	port_building=3
 	province_rank="city"
 	religion="roman_pantheon"
-	terrain="forest"
+	terrain="farmland"
 	trade_goods="earthware"
 	nobles=
 	{
-		amount=1
+		amount=12
 	}
 	citizen=
 	{
-		amount=3
+		amount=10
 	}
 	freemen=
 	{
-		amount=4
+		amount=20
 	}
 	freemen=
 	{
@@ -1052,7 +1052,7 @@
 	}
 	slaves=
 	{
-		amount=5
+		amount=10
 	}
 	slaves=
 	{

@@ -369,16 +369,12 @@ SWE = {
 
 BYZ = {
 	pattern = "pattern_solid.tga"
-	color1= "roman_red"
-	color2= "ck2_yellow"
-	
+	color1 = "ck2_purple"
+	color2 = "roman_gold"
+
 	colored_emblem = {
-		texture = "ce_writing_greek_beta.dds"
-		color1 = "ck2_yellow"
-		instance = { position = { 0.3 0.3 } scale = { -0.35  0.35 } }
-		instance = { position = { 0.7 0.3 } scale = {  0.35  0.35 } }
-		instance = { position = { 0.3 0.7 } scale = { -0.35 -0.35 } }
-		instance = { position = { 0.7 0.7 } scale = {  0.35 -0.35 } }
+		texture = "ce_roman_eagle.dds"
+		color1 = "roman_gold"
 	}
 }
 

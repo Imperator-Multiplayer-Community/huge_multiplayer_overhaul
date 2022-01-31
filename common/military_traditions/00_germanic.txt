@@ -40,7 +40,7 @@
 
 	germanic_path_1 = { ###
 		modifier = { 
-			archers_offensive = 0.15
+			archers_offensive = 0.10
 			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_6
@@ -61,7 +61,7 @@
 
 	germanic_path_3 = { ###
 		modifier = { 
-			archers_offensive = 0.15
+			archers_offensive = 0.10
 			archers_forest_combat_bonus = 0.2
 			army_maintenance_cost = 0.01
 		} 
@@ -73,7 +73,6 @@
 	germanic_path_4 = { ###
 		modifier = { 
 			archers_cost = -0.2
-			archers_offensive = 0.05
 		} 
 		icon = celtic_britannic_path_7
 		requires = {germanic_path_3}

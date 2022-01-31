@@ -99,7 +99,6 @@
 	iranian_path_8 = { #
 		enable_tactic = cavalry_skirmish
 		modifier = { 
-			light_cavalry_offensive = 0.1
 			camels_offensive = 0.15
 			army_maintenance_cost = 0.01
 		}
@@ -226,7 +225,7 @@
 		}
 		modifier = { 
 			horse_archers_defensive = 0.15
-			heavy_cavalry_defensive = 0.15
+			heavy_cavalry_defensive = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = persian_scythian_path_3

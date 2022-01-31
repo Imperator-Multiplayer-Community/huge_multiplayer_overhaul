@@ -298,7 +298,7 @@
 	arabian_path_15 = { ###
 		modifier = { 
 			camels_discipline = 0.15
-			light_cavalry_discipline = 0.15
+			light_cavalry_discipline = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_7

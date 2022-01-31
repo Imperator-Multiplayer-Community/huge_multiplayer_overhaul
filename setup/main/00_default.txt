@@ -8703,7 +8703,7 @@ country = {
 		#Greece, Macedonia & Thrace
 		
 		BYZ = {
-			government = plutocratic_republic
+			government = aristocratic_republic
 			primary_culture = thracian
 			religion = roman_pantheon
 			diplomatic_stance=trading_stance
@@ -8717,7 +8717,7 @@ country = {
 			}
 			
 			own_control_core = {
-				341 345 1453 
+				341 345 1453 346 342
 			}
 			
 		}
@@ -8741,11 +8741,11 @@ country = {
 			capital = 350 #Lysimachea
 
 			own_control_core = {
-				342 346 347 348 349 350 352 353 354 #Europa
-				496
-				479 491 343 4312 4307 4314 4154 489 495 #Haemimontus
+				347 348 349 350 352 353 354 #Europa
+				496 343
+				479 491 4312 4307 4314 4154 489 495 #Haemimontus
 
-			}
+			}    
 
 			pantheon = {
 				{ deity = 110 }
@@ -14706,7 +14706,7 @@ country = {
 				3441 6728 6729 3445 3448 6656 3447 3446 3450 3454 #parthia
 				3440 3449 3455 3469 3456 3457 3439 4995 3458 3459
 				3468 3467 3462 3444 3465 3466 3451 3464 
-			}
+			} 
 			
 		}
 		
