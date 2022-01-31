@@ -50,6 +50,9 @@ ml_battle_master.1 = {
 								scope:actor.legion = {
 									OR = {
 										has_distinction = distinction_battle_master_01
+										has_distinction = distinction_battle_master_02
+										has_distinction = distinction_battle_master_03
+										has_distinction = distinction_battle_master_04
 									}
 								}
 							}
@@ -79,6 +82,8 @@ ml_battle_master.1 = {
 								scope:actor.legion = {
 									OR = {
 										has_distinction = distinction_battle_master_02
+										has_distinction = distinction_battle_master_03
+										has_distinction = distinction_battle_master_04
 									}
 								}
 							}
@@ -102,6 +107,7 @@ ml_battle_master.1 = {
 								scope:actor.legion = {
 									OR = {
 										has_distinction = distinction_battle_master_03
+										has_distinction = distinction_battle_master_04
 									}
 								}
 							}

@@ -21,13 +21,14 @@
 			is_alive = yes
 			is_mercenary = no
 			is_ruler = yes
-			is_ai = no
+			
 			employer = { 
 				NOR = {
 					tag = PIR
 					tag = REB
 					tag = BAR
 				}
+				is_ai = no
 			}
 			NOT = {
 				this = scope:actor.current_ruler
