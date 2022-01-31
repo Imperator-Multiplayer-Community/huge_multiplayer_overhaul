@@ -5,6 +5,9 @@ invention.1 = {
 	hidden = yes
 
 	trigger = {
+		NOT = {
+			has_variable = inv_check
+		}
 		OR = {
 			military_tech = 0
 			mil_tech_check = 0
@@ -17,7 +20,6 @@ invention.1 = {
 	immediate = {
 		if = {
 			limit = {
-				NOT = { has_variable = inv_check }
 				OR = {
 					military_tech = 0
 					OR = {
@@ -29,6 +31,8 @@ invention.1 = {
 				}
 			}
 
+			#debug_log = "add inventions"
+
 			add_innovation = 4
 
 			set_variable = {
@@ -36,16 +40,23 @@ invention.1 = {
 				value = 1
 			}
 		}
-		
-		if = {
-			limit = {
-				mil_tech_check > 0
-				ora_tech_check > 0
-				civ_tech_check > 0
-				rel_tech_check > 0
-			}
+	}
+}
 
-			remove_variable = inv_check
-		}
+invention.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_variable = inv_check
+		mil_tech_check > 0
+		ora_tech_check > 0
+		civ_tech_check > 0
+		rel_tech_check > 0
+	}
+
+	immediate = {
+		#debug_log = "remove inventions"
+		remove_variable = inv_check
 	}
 }

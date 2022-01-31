@@ -7,7 +7,7 @@
  ArmyMaintUp_TT:0 "@gold! Army Maintenance Cost: #r +1.00%#!"
  NavyMaintUp_TT:0 "@gold! Navy Maintenance Cost: #r +1.00%#!"
  slave_move_yes:0 "Slaves are moving here."
- no_slave_move:0 "Slaves are forbidden from leaving this territory."
+ slave_move_no:0 "Slaves are forbidden from leaving this territory."
  manpowercd:0 "You may not send manpower more than #Y once#! a month."
  CREATE_CREW_BUTTON:0 "#Bold Create a crew for your ships.#!\nCreate a cohort for #y 6#! gold and #y 500#! manpower\n You currently have [SCOPE.ScriptValue('num_ofMarines')|0Y] out of   \n\n#TF Crew assist in the maintenance of your ships, increasing the effectiveness in combat as well as allowing access to a number of new abilties. "
 

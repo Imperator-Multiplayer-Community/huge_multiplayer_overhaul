@@ -26,8 +26,9 @@ slave_move.1 = {
 			every_neighbor_province = {
 				limit = {
 					NOT = {
-						has_province_modifier = no_slave_move
+						has_province_modifier = slave_move_no
 					}
+					owner = ROOT
 					total_population > 1
 					any_pops_in_province = {
 						pop_type = slaves
@@ -48,10 +49,10 @@ slave_move.1 = {
 				scope:target_province = {
 					random_state_province = {
 						limit = {
-							NOR = {
-								has_province_modifier = slave_move_yes
-								has_province_modifier = no_slave_move
+							NOT = {
+								has_province_modifier = slave_move_no
 							}
+							owner = ROOT
 							total_population > 1
 							any_pops_in_province = {
 								pop_type = slaves
@@ -77,9 +78,22 @@ slave_move.1 = {
 						}
 
 						ROOT = {
-							add_treasury = {
-								value = -5
-								multiply = slaves_move_cost_modifier
+							if = {
+								limit = {
+									capital_scope.state = {
+										trade_good_surplus = { target = vegetables >= 2 }
+									}
+								}
+
+								add_treasury = {
+									value = -5
+									multiply = 0.75
+								}
+							}
+							else = {
+								add_treasury = {
+									value = -5
+								}
 							}
 						}
 
