@@ -21,9 +21,6 @@ number_of_prisoners_abroad = {
 corruption = {
 	local_monthly_state_loyalty = -0.25
 	monthly_local_governor_wage = 0.5
-	local_manpower_modifier = -1.5
-	local_tax_modifier = -1.5
-	#local_output_modifier = -1
 }
 
 ##########################################################################

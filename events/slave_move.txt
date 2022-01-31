@@ -8,53 +8,99 @@ slave_move.1 = {
 		treasury > 5
 		exists = var:slave_moves
 		any_owned_province = {
-			OR = {
+			AND = {
 				has_province_modifier = slave_move_yes
-				NOT = {has_province_modifier = no_slave_move}
 				total_population < population_cap
 			}
 		}
 	}
 
 	immediate = {
-		random_owned_province = {
+		every_owned_province = {
 			limit = {
-				OR = {
-					has_province_modifier = slave_move_yes
-				}
+				has_province_modifier = slave_move_yes
 			}
-			ROOT = {
-				add_treasury = -5
-			}
-			save_scope_as = slave_move_province
-		}
 
-		random_owned_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = slave_move_yes
-					has_province_modifier = no_slave_move
-				}
-				total_population > 1
-				any_pops_in_province = {
-					pop_type = slaves
-				}
-			}
-			random_pops_in_province = {
+			save_scope_as = target_province
+
+			every_neighbor_province = {
 				limit = {
-					pop_type = slaves
-					pop_can_move = yes
+					NOT = {
+						has_province_modifier = no_slave_move
+					}
+					total_population > 1
+					any_pops_in_province = {
+						pop_type = slaves
+						pop_can_move = yes
+					}
 				}
-				move_pop = scope:slave_move_province
+
+				save_scope_as = slave_move_province
 			}
-			scope:slave_move_province = {
+
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:slave_move_province 
+					}
+				}
+
+				scope:target_province = {
+					random_state_province = {
+						limit = {
+							NOR = {
+								has_province_modifier = slave_move_yes
+								has_province_modifier = no_slave_move
+							}
+							total_population > 1
+							any_pops_in_province = {
+								pop_type = slaves
+								pop_can_move = yes
+							}
+						}
+
+						save_scope_as = slave_move_province
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					exists = scope:slave_move_province 
+				}
+
+				scope:slave_move_province = {
+					random_pops_in_province = {
+						limit = {
+							pop_type = slaves
+							pop_can_move = yes
+						}
+
+						ROOT = {
+							add_treasury = {
+								value = -5
+								multiply = slaves_move_cost_modifier
+							}
+						}
+
+						move_pop = scope:target_province
+					}
+				}
+
+				clear_saved_scope = slave_move_province
+			}
+
+			scope:target_province = {
 				if = {
 					limit = {
 						total_population >= population_cap
 					}
+
 					remove_province_modifier = slave_move_yes
 				}
 			}
+
+			clear_saved_scope = target_province
 		}
 	}
 }
