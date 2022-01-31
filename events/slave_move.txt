@@ -16,116 +16,181 @@ slave_move.1 = {
 	}
 
 	immediate = {
+		# spread out event to avoid performance bottleneck
 		every_owned_province = {
 			limit = {
 				has_province_modifier = slave_move_yes
 			}
+	
+			trigger_event = {
+				id = slave_move.2
+				days = 9
+			}
+		}
+	}
+}
 
-			save_scope_as = target_province
+slave_move.2 = {
+	type = province_event
+	hidden = yes
 
-			#check neighbors first for slaves
-			every_neighbor_province = {
+	immediate = {
+		#check neighbors first for slaves
+		random_neighbor_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = slave_move_no
+				}
+				owner = ROOT.owner
+				total_population > 1
+				any_pops_in_province = {
+					pop_type = slaves
+					pop_can_move = yes
+				}
+			}
+
+			if = {
 				limit = {
-					NOT = {
-						has_province_modifier = slave_move_no
-					}
-					owner = ROOT
-					total_population > 1
-					any_pops_in_province = {
-						pop_type = slaves
-						pop_can_move = yes
-					}
+					exists = this
 				}
 
 				save_scope_as = slave_move_province
 			}
+		}
 
-			#if no slaves in neighbors, check whole province
-			if = {
-				limit = {
-					NOT = {
-						exists = scope:slave_move_province 
-					}
+		#if no slaves in neighbors, check whole province
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:slave_move_province 
 				}
+			}
 
-				scope:target_province = {
-					random_state_province = {
+			ROOT.state = {
+				random_state_province = {
+					limit = {
+						NOR = {
+							has_province_modifier = slave_move_no
+							this = ROOT
+						}
+						owner = ROOT.owner
+						total_population > 1
+						any_pops_in_province = {
+							pop_type = slaves
+							pop_can_move = yes
+						}
+					}
+
+					if = {
 						limit = {
-							NOT = {
-								has_province_modifier = slave_move_no
-							}
-							owner = ROOT
-							total_population > 1
-							any_pops_in_province = {
-								pop_type = slaves
-								pop_can_move = yes
-							}
+					 		exists = this
 						}
 
 						save_scope_as = slave_move_province
 					}
 				}
 			}
+		}
 
-			#move found slaves
+		# if no available provinces with slaves turn move off to save performance
+		# allow 3 retries
+		if = { 
+			limit = {
+				NOT = {
+					exists = scope:slave_move_province
+				}
+			}
+
 			if = {
 				limit = {
-					exists = scope:slave_move_province 
+					has_variable = slave_move_fail_count
 				}
 
-				scope:slave_move_province = {
-					random_pops_in_province = {
-						limit = {
-							pop_type = slaves
-							pop_can_move = yes
-						}
-
-						ROOT = {
-							# check for vegetable surplus bonus
-							if = {
-								limit = {
-									capital_scope.state = {
-										trade_good_surplus = { target = vegetables >= 2 }
-									}
-								}
-
-								add_treasury = {
-									value = -5
-									multiply = 0.75
-								}
-							}
-							else = {
-								add_treasury = {
-									value = -5
-								}
-							}
-						}
-
-						move_pop = scope:target_province
-					}
+				change_variable = {
+					name = slave_move_fail_count
+					add = 1
 				}
-
-				clear_saved_scope = slave_move_province
 			}
 			else = {
-				# if no available slaves turn this off to save performance
-				scope:target_province = {
+				set_variable = {
+					name = slave_move_fail_count
+					value = 1
+				} 
+			}
+
+			if = {
+				limit = {
+					var:slave_move_fail_count >= 3
+				}
+
+				debug_log = "failed count"
+
+				ROOT = {
 					remove_province_modifier = slave_move_yes
 				}
 			}
+		}
 
-			# if at the pop cap, turn slave move off
-			scope:target_province = {
-				if = {
+		#move found slaves
+		if = {
+			limit = {
+				exists = scope:slave_move_province 
+			}
+
+			scope:slave_move_province = {
+				random_pops_in_province = {
 					limit = {
-						total_population >= population_cap
+						pop_type = slaves
+						pop_can_move = yes
 					}
 
-					remove_province_modifier = slave_move_yes
+					ROOT.owner = {
+						# check for vegetable surplus bonus
+						if = {
+							limit = {
+								capital_scope.state = {
+									trade_good_surplus = { 
+										target = vegetables 
+										value >= 2 
+									}
+								}
+							}
+
+							add_treasury = {
+								value = -5
+								multiply = 0.75
+							}
+						}
+						else = {
+							add_treasury = {
+								value = -5
+							}
+						}
+					}
+
+					move_pop = ROOT
 				}
 			}
+		}
 
-			clear_saved_scope = target_province
+		# if at the pop cap, turn slave move off
+		ROOT = {
+			if = {
+				limit = {
+					total_population >= population_cap
+				}
+
+				remove_province_modifier = slave_move_yes
+			}
+		}
+
+		# clean up
+		if = {
+			limit = {
+				exists = scope:slave_move_province
+			}
+
+			clear_saved_scope = slave_move_province
 		}
 	}
 }
