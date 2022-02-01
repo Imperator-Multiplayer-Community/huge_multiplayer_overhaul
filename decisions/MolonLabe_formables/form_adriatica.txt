@@ -7,10 +7,7 @@
 			num_of_cities >= 1
 			OR = {
 				country_culture_group = latin
-				country_culture_group = illyrian_group
-				country_culture_group = gallic
 				country_culture_group = celto_pannonian_group
-				country_culture_group = hellenic
 			}
 			NOT = {
 				tag = ADX

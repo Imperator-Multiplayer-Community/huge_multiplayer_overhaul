@@ -6,7 +6,6 @@
 			num_of_cities >= 1
 			OR = {
 				primary_culture = nuragic
-				country_culture_group = hellenic
 				country_culture_group = west_levantine
 			}
 			NOT = {
