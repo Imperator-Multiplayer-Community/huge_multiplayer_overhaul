@@ -180,8 +180,10 @@
 	celtic_germanic_path_3 = { ###Celtic 4A
 		enable_tactic = hit_and_run_tactics
 		modifier = { 
-			forest_combat_bonus = 0.15
-			marsh_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
+			archers_hills_combat_bonus = 0.1
+			archers_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_3
@@ -190,9 +192,10 @@
 
 	celtic_gallic_path_3 = { ###Celtic 4B
 		modifier = { 
-			forest_combat_bonus = 0.15
-			marsh_combat_bonus = 0.15
-			hills_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
+			archers_hills_combat_bonus = 0.1
+			archers_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_3
