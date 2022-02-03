@@ -722,7 +722,7 @@ eretrian_heritage = {
 byzantine_heritage = {
 	modifier = {
 		#good
-		heavy_cavalry_offensive = 0.10
+		global_population_growth = 0.03
 		global_tax_modifier = 0.05
 
 		#bad
@@ -730,6 +730,20 @@ byzantine_heritage = {
 	}
 	trigger = {
 		tag = BYZ
+	}
+}
+
+byzantineEmpire_heritage = {
+	modifier = {
+		#good
+		discipline = 0.05
+		global_commerce_modifier = 0.1
+
+		#bad
+		character_loyalty = -5.00
+	}
+	trigger = {
+		tag = BYT
 	}
 }
 
@@ -3759,3 +3773,17 @@ liguria_heritage = {
 		tag = LIG
 	}
 }
+
+Cimmeria_heritage = {
+    modifier = {
+        #good
+		price_found_city_cost_modifier = -0.15
+        global_population_growth = 0.1
+
+        #bad
+        global_tribesmen_happyness = negative_happiness_small_svalue
+    }
+
+    trigger = {
+        tag = CMM
+    }

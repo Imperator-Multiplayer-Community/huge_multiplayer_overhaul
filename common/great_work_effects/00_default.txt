@@ -1421,7 +1421,7 @@ gw_effect_conquerer_doctrine = {
 		"military"
 	}
 	allow = {
-		invention = agressive_expansion_impact_inv_2
+		invention = subject_opinions_inv_3
 	}
 	great_work_tier_effect_modifiers = {
 		gw_effect_conquerer_doctrine_tier_1 = {
