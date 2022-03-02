@@ -33,14 +33,7 @@
 					is_in_region = avanti_region
 					is_in_region = maru_region
 					is_in_region = gandhara_region
-					is_in_region = lanka_region
-					is_in_region = askia_region
-					is_in_region = andhra_region
-					is_in_region = magadha_region
-					is_in_region = cedi_region
-					is_in_region = kuru_region
 					is_in_region = indus_region
-					is_in_region = satiyaputa_region
 				}
 			}
 		}
@@ -69,15 +62,8 @@
 				owns_or_subject_owns_region = karnata_region
 				owns_or_subject_owns_region = avanti_region
 				owns_or_subject_owns_region = maru_region
-				owns_or_subject_owns_region = gandhara_region
-				owns_or_subject_owns_region = lanka_region
-				owns_or_subject_owns_region = askia_region
-				owns_or_subject_owns_region = andhra_region
-				owns_or_subject_owns_region = magadha_region
-				owns_or_subject_owns_region = cedi_region
-				owns_or_subject_owns_region = kuru_region
+				owns_or_subject_owns_region = gandhara_regions
 				owns_or_subject_owns_region = indus_region
-				owns_or_subject_owns_region = satiyaputa_region
 			}
 		}
 		

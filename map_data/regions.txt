@@ -138,6 +138,7 @@ assyria_region = {		#7 areas
 		adiabene_area
 		garamig_area
 		osroene_area
+		tigris_area
 	}
 }
 
@@ -148,7 +149,6 @@ mesopotamia_region = {	#8 areas (Lower Mesopotamia)
 		beth_daraye_area
 		meshan_area
 		asoristan_area
-		tigris_area
 		euphrates_area
 		susiana_area
 	}
@@ -324,11 +324,14 @@ maru_region = { #7
 		outer_saurashtra_area
 		inner_saurashtra_area
 		maru_area
+		anartta_area
 	}
 }
 
-cedi_region = {
+avanti_region = { #8
 	areas = {
+		madhyamika_area
+		avanti_area
 		surasena_area
 		west_cedi_area
 		east_cedi_area
@@ -336,36 +339,16 @@ cedi_region = {
 		matsya_area
 	}
 }
-avanti_region = { #8
-	areas = {
-		madhyamika_area
-		avanti_area
-		anartta_area
-	}
-}
 
-kuru_region = {
-	areas = {
-		sthanisvara_area
-		kuru_area
-		ahicchatra_area
-		pancala_area
-	}
-}
-
-madhyadesa_region = { #9
+madhyadesa_region = { #
 	areas = {
 		kosala_area
 		kasi_area
 		malla_area
-	}
-}
-
-magadha_region = { 
-	areas = {
-		magadha_area
-		anga_area
-		radha_area
+		sthanisvara_area
+		kuru_area
+		ahicchatra_area
+		pancala_area
 	}
 }
 
@@ -377,16 +360,12 @@ pracya_region = { #8
 		kamarupa_area
 		vanga_area
 		vrji_area
+		magadha_area
+		anga_area
+		radha_area
 	}
 }
 
-andhra_region = {
-	areas = {
-		kalinga_area
-		mahendragiri_area
-		andhra_area
-	}
-}
 vindhyaprstha_region = { #8
 	areas = {
 		dakshina_kosala_area
@@ -394,6 +373,9 @@ vindhyaprstha_region = { #8
 		asmaka_area
 		vidarbha_area
 		dahala_area
+		kalinga_area
+		mahendragiri_area
+		andhra_area
 	}
 }
 
@@ -403,11 +385,6 @@ dravida_region = { #8
 		south_tondainadu_area
 		north_tondainadu_area
 		sriparvata_area
-	}
-}
-
-lanka_region = {
-	areas = {
 		north_tambapamni_area
 		south_tambapamni_area
 		malayas_area
@@ -415,20 +392,16 @@ lanka_region = {
 	}
 }
 
-askia_region = { 
-	areas = {
-		asika_area
-		kuntala_area
-		south_sahyadri_area
-		north_sahyadri_area		
-	}
-}
 aparanta_region = { #8
 	areas = {
 		mulaka_area
 		vindya_area
 		aparanta_area
 		anupa_area
+		asika_area
+		kuntala_area
+		south_sahyadri_area
+		north_sahyadri_area	
 	}
 }
 
@@ -437,16 +410,12 @@ karnata_region = { #6
 		vanavasi_area
 		north_mahishamandala_area
 		south_mahishamandala_area
-	}
-}
-
-satiyaputa_region = {
-	areas = {
 		south_satiyaputa_area
 		keralaputa_area
 		north_satiyaputa_area
 	}
 }
+
 tibet_region = { #6 !
 	areas = {
 		sumpa_area
@@ -582,7 +551,13 @@ gallaecia_region = {				#7 areas
 
 caledonia_region = {		#7 areas
 	areas = {
-
+		caledonia_meridionalis_area
+		caledonia_occidentalis_area
+		caledonia_septentrionalis_area
+		hibernia_septentrionalis_area
+		hibernia_orientalis_area
+		hibernia_occidentalis_area
+		hibernia_meridionalis_area
 	}
 }
 
@@ -913,13 +888,6 @@ britain_region = {			#10 areas
 		britannia_secunda_septentrionalis_area
 		britannia_secunda_meridionalis_area
 		brigantia_area
-		caledonia_meridionalis_area
-		caledonia_occidentalis_area
-		caledonia_septentrionalis_area
-		hibernia_septentrionalis_area
-		hibernia_orientalis_area
-		hibernia_occidentalis_area
-		hibernia_meridionalis_area
 	}
 }
 
