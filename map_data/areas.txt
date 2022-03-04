@@ -1048,7 +1048,7 @@ olbia_area = { # 10
 } 
 
 maeotia_area = { 
-	provinces = { 4533 4551 4552 4553 4545 4535 4546 4534 4554 4555 4556 4557 } 
+	provinces = { 4533 4551 4552 4553 4545 4535 4546 4534 4554 4555 4556 } 
 } 
 
 bosproranum_area = { #feel free to reassign or remove 
@@ -2261,7 +2261,7 @@ borysthenia_minor_area = { #
 } 
 
 tanassa_area = { #12 
-	provinces = { 6154 6155 6157 6163 6165 6178 6177 6170 6189 6187 6180 6164 } 
+	provinces = { 6154 6155 6157 6163 6165 6178 6177 6170 6189 6187 6180 6164 4557 } 
 } 
 
 danaia_area = { #12 

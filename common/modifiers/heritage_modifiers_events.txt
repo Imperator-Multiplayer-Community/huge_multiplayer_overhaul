@@ -1089,3 +1089,9 @@ ByzantineEmpire_modifier = {
 		global_commerce_modifier = 0.1
 		character_loyalty = -5.00
 }
+
+GreaterScyhtia_modifier = {
+	horse_archers_offensive = 0.1
+	global_tax_modifier = 0.05
+	character_loyalty = -5.00
+}

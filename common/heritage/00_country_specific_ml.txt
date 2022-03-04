@@ -747,6 +747,20 @@ byzantineEmpire_heritage = {
 	}
 }
 
+greaterscythia_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		global_tax_modifier = 0.05
+
+		#bad
+		character_loyalty = -5.00
+	}
+	trigger = {
+		tag = GCS
+	}
+}
+
 bithynia_heritage = {
 	modifier = {
 		#good
@@ -1330,7 +1344,7 @@ heritage_of_the_nile = {
 sarmatian_heritage = {
 	modifier = {
 		#good
-		heavy_cavalry_offensive = 0.05
+		horse_archers_offensive = 0.10
 		agressive_expansion_impact = -0.05
 		
 		#bad
