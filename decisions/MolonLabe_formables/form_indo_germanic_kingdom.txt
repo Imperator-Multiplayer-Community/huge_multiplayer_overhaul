@@ -54,15 +54,7 @@
 			}
 			can_form_nation_trigger = yes
 			OR = {
-				owns_or_subject_owns_region = pracya_region
-				owns_or_subject_owns_region = madhyadesa_region
-				owns_or_subject_owns_region = vindhyaprstha_region
-				owns_or_subject_owns_region = dravida_region
-				owns_or_subject_owns_region = aparanta_region
-				owns_or_subject_owns_region = karnata_region
-				owns_or_subject_owns_region = avanti_region
 				owns_or_subject_owns_region = maru_region
-				owns_or_subject_owns_region = gandhara_regions
 				owns_or_subject_owns_region = indus_region
 			}
 		}
