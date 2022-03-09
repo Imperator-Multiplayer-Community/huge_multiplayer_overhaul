@@ -1272,6 +1272,7 @@ zalmoxian_heritage = {
 		OR = {
 			tag = GTE
 			tag = TYG
+			tag = C94
 		}	
 	}
 }
@@ -1355,6 +1356,10 @@ sarmatian_heritage = {
 		OR = {
 			tag = SRM
 			tag = SCY
+			tag = C92
+			tag = C93
+			tag = C95
+			tag = C96
 		}					
 	}
 }

@@ -6975,6 +6975,59 @@ country = {
 				7187 7188 7191 7190 7192 7193 6124
 			}
 		}
+
+		C92 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 7189 
+			
+			own_control_core = {
+				6086 6085 6088 7194 6097 7195 7189 7186 7185
+			}
+		}
+
+		C93 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 6142
+			
+			own_control_core = {
+				6098 6100 6102 6103 6119 6118 6108 6122 6123 6141 6129 6139 6142 6145 
+			}
+		}
+
+		C95 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 6154
+			
+			own_control_core = {
+				6144 6146 6147 6148 6149 6154 6153 6155 6157 6156 6152 6143 6163 
+				6165 6170 6164 
+			}
+		}
+
+		C96 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 6178
+			
+			own_control_core = {
+				6173 6175 6176 6179 6177 6180 6178 6189 6187 
+			}
+		}
 		
 		ZGY = {
 			family = 65
@@ -7098,6 +7151,18 @@ country = {
 			
 			own_control_core = {
 				4800 4521 4919 4522 4523 4524 4918 4920 4917 4922 4921 4925 4916 4929 4915
+			}
+		}
+
+		C94 = {
+			government = tribal_chiefdom
+			primary_culture = harpii
+			religion = shamanism
+			
+			capital = 4914
+			
+			own_control_core = {
+				4940 4939 4938 4914 4935 4933 4934 4936 4937 4928 4932 4931 4930
 			}
 		}
 
@@ -12181,6 +12246,18 @@ country = {
 
 			own_control_core = 	{
 				4850 4855 4854 4849 4844 4848 4847 4846 4842 4843 4845
+			}
+		}
+
+		C91 = {
+			government = tribal_kingdom
+			primary_culture = dacian
+			religion = shamanism
+
+			capital = 4840
+
+			own_control_core = 	{
+				4857 4858 4859 4856 4851 4860 4840 4841 4836 4839 4861 
 			}
 		}
 

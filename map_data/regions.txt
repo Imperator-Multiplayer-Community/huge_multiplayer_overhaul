@@ -52,7 +52,7 @@ greece_region = {	#9 areas
 		boeotia_area
 		arcadia_area
 		euboea_area
-		sporades_area
+		crete_area
 	}
 }
 
@@ -67,6 +67,7 @@ asia_region = {		#8 areas
 		mysia_abrettene_area
 		inland_caria_area
 		coastal_caria_area
+		sporades_area
 	}
 }
 
@@ -277,7 +278,6 @@ arabia_region = {		#6 areas !
 		arabia_deserta_area
 		dedan_area
 		arabia_maritimae_area
-		arabia_nova_area
 		arabia_felix_centralis_area
 		arabia_felix_occidentalis_area
 		sheba_area
@@ -480,7 +480,6 @@ cyrenaica_region = {		#7 areas
 		marmarica_occidentalis_area
 		marmarica_orientalis_area
 		ammon_area
-		crete_area
 	}
 }
 
@@ -664,7 +663,7 @@ dacia_region = {				#7 areas
 
 colchis_region = { #7
 	areas = {
-
+		arabia_nova_area
 	}
 }
 
