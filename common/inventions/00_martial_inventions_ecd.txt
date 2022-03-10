@@ -58,7 +58,7 @@
 	# Level 2
 	heavy_infantry_discipline_inv = {
 		modifier = { 
-			heavy_infantry_discipline = 0.05}
+			monthly_military_experience_modifier = 0.05}
 			on_activate = {
 				trigger_event = {
 					id = maintenance_event.6
