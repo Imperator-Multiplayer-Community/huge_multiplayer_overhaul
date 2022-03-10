@@ -64,6 +64,7 @@ monarchy_military_reforms = {
 		modifier = {
 			levy_size_multiplier = 0.05
 			global_cohort_start_experience = 5
+			monthly_military_experience = 0.15
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -76,6 +77,7 @@ monarchy_military_reforms = {
 			levy_size_multiplier = 0.1
 			happiness_for_same_culture_modifier = 0.05
 			happiness_for_wrong_culture_modifier = -0.04
+			monthly_military_experience = 0.20
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -102,6 +104,7 @@ monarchy_military_reforms = {
 		modifier = {
 			discipline = 0.05
 			levy_size_multiplier = 0.025
+			monthly_military_experience = 0.20
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
@@ -116,6 +119,7 @@ monarchy_military_reforms = {
 		}
 		modifier = {
 			army_maintenance_cost = -0.15
+			monthly_military_experience = 0.15
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region

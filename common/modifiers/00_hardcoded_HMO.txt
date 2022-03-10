@@ -169,12 +169,11 @@ is_tribe = {
 	change_governor_policy_cost_modifier = 0.1
 	army_maintenance_cost = 0.5
 	global_tribesmen_desired_pop_ratio = 0.1
-	research_points_modifier = -0.5
 	price_found_city_cost_modifier = 0.10
 	price_revoke_city_status_cost_modifier = -0.5
     price_revoke_metropolis_status_cost_modifier = -0.5
 	global_population_capacity_modifier = -0.1 
-	monthly_military_experience = 0.1 
+	monthly_military_experience = 0.30
 	global_defensive = -0.25
 	#buy_military_tradition_cost_modifer = -0.1
 
@@ -230,7 +229,6 @@ ruler_charisma_mod = {
 ruler_martial_mod = {
 	manpower_recovery_speed = 0.01
 	land_morale_recovery = 0.01
-	monthly_military_experience = 0.05
 }
 
 ruler_zeal_mod = {

@@ -114,7 +114,6 @@ agiad = {
 	prominence = 20
 	country = {
 		military_tech_investment = 0.05
-		monthly_military_experience_modifier = 0.05
 	}
 	province = {
 		 local_manpower_modifier = 0.1
@@ -249,7 +248,6 @@ barca = {
 	prominence = 20
 	country = {
 		siege_ability = 0.1
-		monthly_military_experience_modifier = 0.05
 	}
 	province = {
 		supply_limit_modifier = 0.1

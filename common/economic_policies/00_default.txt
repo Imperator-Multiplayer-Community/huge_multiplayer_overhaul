@@ -184,9 +184,9 @@ expense_wages = {
 	default = {
 	}
 	high = {
-		monthly_wage_modifier = 0.5
+		monthly_wage_modifier = 0.25
 		monthly_local_governor_wage = 0.5
-		monthly_corruption = -0.10
+		monthly_corruption = -0.15
 	}
 	
 	ai_will_do_low = {

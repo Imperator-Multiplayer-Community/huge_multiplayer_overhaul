@@ -17,7 +17,7 @@
 			}
 			OR = {
 				is_ai = no
-				num_of_cities >= 10
+				num_of_cities >= 50
 			}
 		}
 		
@@ -28,24 +28,6 @@
 					is_in_region = palestine_region
 				}
 			}
-		}
-		
-		allow = {
-			custom_tooltip = {
-				text = formable_not_phoenicia_exists
-				NOT = {
-					any_country = {
-						tag = PPN
-					}
-				}
-			}
-			can_form_nation_trigger = yes
-			owns = 788  #Poseidion
-			owns = 769  #Tripolis
-			owns = 766  #Byblos
-			owns = 747  #Sidon
-			owns = 743  #Tyrus
-			owns = 742  #Kadasa
 		}
 		
 		effect = {
