@@ -9,7 +9,7 @@ country_decisions = {
 			NOT = {
 				tag = GSC
 			}
-			NOR = {
+			NOT = {
 				is_endgame_tag_trigger = yes
 			}
 			OR = {
