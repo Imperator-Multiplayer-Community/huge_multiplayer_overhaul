@@ -14,7 +14,7 @@ country_decisions = {
 			NOT = {
 				tag = BYT
 			}
-			NOT = {
+			NOR = {
 				is_endgame_tag_trigger = yes
 			}
 			OR = {
