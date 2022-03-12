@@ -524,7 +524,7 @@ religious_enclave_heritage = {
 cyrenaican_heritage = {
 	modifier = {
 		#good
-		happiness_for_same_religion_modifier = 0.1
+		global_pop_promotion_speed_modifier = 0.15
 		build_cost = -0.05
 
 		#bad

@@ -639,18 +639,18 @@
 	barbarian_power=0
 	civilization_value=23
 	culture="cyrenaican"
-	port_building=1
+	port_building=3
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="desert"
 	trade_goods="olive"
 	citizen=
 	{
-		amount=9
+		amount=16
 	}
 	freemen=
 	{
-		amount=2
+		amount=16
 	}
 	slaves=
 	{
@@ -836,18 +836,18 @@
 	barbarian_power=0
 	civilization_value=26
 	culture="cyrenaican"
-	port_building=1
+	port_building=3
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="plains"
 	trade_goods="leather"
 	citizen=
 	{
-		amount=6
+		amount=11
 	}
 	freemen=
 	{
-		amount=9
+		amount=16
 	}
 	slaves=
 	{
@@ -883,18 +883,18 @@
 	barbarian_power=0
 	civilization_value=26
 	culture="cyrenaican"
-	port_building=1
+	port_building=3
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="plains"
 	trade_goods="olive"
 	citizen=
 	{
-		amount=10
+		amount=19
 	}
 	freemen=
 	{
-		amount=10
+		amount=20
 	}
 	slaves=
 	{
@@ -986,7 +986,7 @@
 	barbarian_power=0
 	civilization_value=26
 	culture="cyrenaican"
-	port_building=1
+	port_building=3
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="plains"
@@ -1001,11 +1001,11 @@
 	}
 	freemen=
 	{
-		amount=8
+		amount=20
 	}
 	slaves=
 	{
-		amount=6
+		amount=10
 	}
 	tribesmen=
 	{
@@ -1137,22 +1137,22 @@
 	barbarian_power=0
 	civilization_value=26
 	culture="cyrenaican"
-	port_building=1
+	port_building=3
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="plains"
 	trade_goods="olive"
 	citizen=
 	{
-		amount=6
+		amount=16
 	}
 	freemen=
 	{
-		amount=7
+		amount=17
 	}
 	slaves=
 	{
-		amount=3
+		amount=6
 	}
 }
 #Petras Mikros
