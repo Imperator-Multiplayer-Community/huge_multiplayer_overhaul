@@ -1073,17 +1073,19 @@ babylonian_heritage = {
 heritage_of_assur = {
 	modifier = {
 		#good
-		heavy_cavalry_maintenance_cost = -0.05
-		global_freemen_happyness = happiness_small_svalue
-		
+		land_morale_modifier = 0.05
+		discipline = 0.05
 		#bad
-		global_citizen_happyness = negative_happiness_small_svalue
+		monthly_political_influence_modifier = 0.05
 	}
 	
 	trigger = {
 		OR = {
 			tag = ADI
 			tag = A53
+			tag = B17 
+			tag = B19
+
 		}	
 	}
 }

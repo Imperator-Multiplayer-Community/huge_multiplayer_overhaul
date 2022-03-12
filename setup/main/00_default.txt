@@ -14795,7 +14795,7 @@ country = {
 			
 			government = despotic_monarchy
 			primary_culture = assyrian
-			religion = zoroaster
+			religion = mesopotamian_religion
 			
 			capital = 981
 			
@@ -16232,7 +16232,7 @@ country = {
 		B17 = { #OSROENE
 			government = despotic_monarchy
 			primary_culture = aramaic
-			religion = carthaginian_pantheon
+			religion = mesopotamian_religion
 		
 			technology={
 				military_tech={ level=2 progress=0 }
@@ -16253,7 +16253,7 @@ country = {
 		B19 = { #DAMASCUS
 			government = despotic_monarchy
 			primary_culture = aramaic
-			religion = carthaginian_pantheon
+			religion = mesopotamian_religion
 		
 			technology={
 				military_tech={ level=2 progress=0 }
