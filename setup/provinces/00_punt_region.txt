@@ -1409,89 +1409,153 @@
 7546=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="puntic"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="wood"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Punt Desert
 7547=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="puntic"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="fish"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Punt Desert
 7548=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="puntic"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="fish"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Punt Desert
 7549=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="aksumite"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="camel"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Punt Desert
 7550=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="aksumite"
-	province_rank=""
+	province_rank="settlement"
 	religion="egyptian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="camel"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Punt Desert
 7551=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="blemmyan"
-	province_rank=""
+	province_rank="settlement"
 	religion="egyptian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="wood"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Punt Desert
 7552=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="blemmyan"
-	province_rank=""
+	province_rank="settlement"
 	religion="egyptian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="fish"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Punt Desert
 7553=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=10
 	culture="blemmyan"
-	province_rank=""
+	province_rank="settlement"
 	religion="egyptian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="camel"
+	freemen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
 }
 #Dmut
 7588=

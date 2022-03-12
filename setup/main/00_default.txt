@@ -6158,7 +6158,7 @@ country = {
 		B70 = { #Phyrgia
 			government = despotic_monarchy
 			primary_culture = phrygian
-			religion = roman_pantheon
+			religion = anatolian_religion
 		
 			technology={
 				military_tech={ level=2 progress=0 }
@@ -15879,7 +15879,7 @@ country = {
 			capital = 7506
 			
 			own_control_core = {
-				7506 7509 7515 7540 7508 7593 651
+				7506 7509 7515 7540 7508 7593 651 7550 7551 
 			}
 		}
 		
@@ -15904,7 +15904,7 @@ country = {
 			
 			own_control_core = {
 				7599 7501 7500 7596 7595 7594 7598 7597 583 584 585 590 589 586 587 580 588 578
-                                582 579 566 564 565 581 647 649 650
+                                582 579 566 564 565 581 647 649 650 7552 7553
 			}
 		} 
 		
@@ -15954,7 +15954,7 @@ country = {
 			capital = 7503
 			
 			own_control_core = {
-				7503 7504 7507 7513
+				7503 7504 7507 7513 7502 7549 7548 7547 7546
 			}
 		} 
 		
@@ -15973,7 +15973,7 @@ country = {
 			capital = 7505
 			
 			own_control_core = {
-				7505 7510 7514 7511
+				7505 7510 7514 7511 7545 7544 7543 7542 7541 
 			}
 		} 
 		

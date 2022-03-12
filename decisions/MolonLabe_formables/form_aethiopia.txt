@@ -22,9 +22,6 @@
 		highlight = {
 			scope:province = {
 				OR = {
-					province_id = 7528
-					province_id = 7524
-					province_id = 7527
 					province_id = 7521
 					province_id = 7520
 					province_id = 7519
@@ -62,9 +59,6 @@
 					}
 				}
 			}
-			owns = 7528
-			owns = 7524
-			owns = 7527
 			owns = 7521
 			owns = 7520
 			owns = 7519

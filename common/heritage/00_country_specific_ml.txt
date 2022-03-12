@@ -2487,7 +2487,7 @@ proto_tibetan_heritage = {
 abyssinian_heritage = {
 	modifier = {
 		#good
-		experience_decay = -0.005
+		discipline = 0.05
 		global_commerce_modifier = 0.05
 		
 		#bad
