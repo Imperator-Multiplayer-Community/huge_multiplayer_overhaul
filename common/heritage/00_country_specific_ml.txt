@@ -1076,7 +1076,7 @@ heritage_of_assur = {
 		land_morale_modifier = 0.05
 		discipline = 0.05
 		#bad
-		monthly_political_influence_modifier = 0.05
+		monthly_political_influence_modifier = -0.05
 	}
 	
 	trigger = {
