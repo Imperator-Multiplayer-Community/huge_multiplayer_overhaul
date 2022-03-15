@@ -30,8 +30,8 @@ distinction_battle_master_03 = {
 		charisma = 2
 	}
 	unit = {
-		loyalty_gain_chance_modifier = 0.10
-		land_morale_modifier = 0.10
+		loyalty_gain_chance_modifier = 0.075
+		land_morale_modifier = 0.075
 	}
 }
 
@@ -42,7 +42,7 @@ distinction_battle_master_04 = {
 		charisma = 4
 	}
 	unit = {
-		loyalty_gain_chance_modifier = 0.15
-		land_morale_modifier = 0.15
+		loyalty_gain_chance_modifier = 0.10
+		land_morale_modifier = 0.10
 	}
 }

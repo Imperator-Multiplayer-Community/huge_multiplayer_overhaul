@@ -14,10 +14,13 @@ ml_heavy_cavalry_distinctions.1 = {
 	            	sub_unit_type = heavy_cavalry
             	}
             }
-            unit_location = {
-            	has_owner = yes
-            	NOT = {
-            		owner = scope:actor.unit_owner
+            OR = {
+            	has_variable = is_drilling
+            	unit_location = {
+            		has_owner = yes
+            		NOT = {
+            			owner = scope:actor.unit_owner
+            		}
             	}
             }
         }
@@ -28,6 +31,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_19
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_19
@@ -36,6 +44,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_18
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_18
@@ -44,6 +57,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_17
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_17
@@ -52,6 +70,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_16
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_16
@@ -60,6 +83,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_15
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_15
@@ -68,6 +96,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_14
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_14
@@ -76,6 +109,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_13
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_13
@@ -84,6 +122,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_12
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_12
@@ -92,6 +135,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_11
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_11
@@ -100,6 +148,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_10
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_10
@@ -108,6 +161,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_09
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_09
@@ -116,6 +174,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_08
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_08
@@ -124,6 +187,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_07
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_07
@@ -132,6 +200,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_06
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_06
@@ -140,6 +213,11 @@ ml_heavy_cavalry_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_05
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_05
@@ -228,7 +306,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_20
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -236,7 +314,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_19
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -244,7 +322,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_18
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -252,7 +330,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_17
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -260,7 +338,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_16
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -268,7 +346,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_15
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -276,7 +354,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_14
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -284,12 +362,15 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_13
-				add_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_12
 				}
+
+				remove_distinction = distinction_heavy_cavalry_offensive_12
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
@@ -297,15 +378,12 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_11
-				add_distinction = distinction_heavy_cavalry_offensive_06
+				add_distinction = distinction_heavy_cavalry_offensive_10
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_10
 				}
-
-				remove_distinction = distinction_heavy_cavalry_offensive_10
-				add_distinction = distinction_heavy_cavalry_offensive_06
 			}
 			else_if = {
 				limit = {
@@ -313,7 +391,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_09
-				add_distinction = distinction_heavy_cavalry_offensive_06
+				add_distinction = distinction_heavy_cavalry_offensive_05
 			}
 			else_if = {
 				limit = {
@@ -321,7 +399,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_08
-				add_distinction = distinction_heavy_cavalry_offensive_06
+				add_distinction = distinction_heavy_cavalry_offensive_05
 			}
 			else_if = {
 				limit = {
@@ -329,20 +407,19 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_07
-				add_distinction = distinction_heavy_cavalry_offensive_06
+				add_distinction = distinction_heavy_cavalry_offensive_05
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_06
 				}
+				remove_distinction = distinction_heavy_cavalry_offensive_06
+				add_distinction = distinction_heavy_cavalry_offensive_05
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_05
 				}
-
-				remove_distinction = distinction_heavy_cavalry_offensive_05
-				add_distinction = distinction_heavy_cavalry_offensive_02
 			}
 			else_if = {
 				limit = {
@@ -350,7 +427,7 @@ ml_heavy_cavalry_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_offensive_04
-				add_distinction = distinction_heavy_cavalry_offensive_02
+				add_distinction = distinction_heavy_cavalry_offensive_03
 			}
 			else_if = {
 				limit = {
@@ -364,6 +441,8 @@ ml_heavy_cavalry_distinctions.2 = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_offensive_02
 				}
+				remove_distinction = distinction_heavy_cavalry_offensive_02
+				add_distinction = distinction_heavy_cavalry_offensive_01
 			}
 			else_if = {
 				limit = {
@@ -396,9 +475,12 @@ type = country_event
 	            	sub_unit_type = heavy_cavalry
             	}
             }
-            unit_location = {
-            	has_owner = yes
-				owner = scope:actor.unit_owner
+            OR = {
+            	has_variable = is_drilling
+            	unit_location = {
+            		has_owner = yes
+            		owner = scope:actor.unit_owner
+            	}
             }
         }
 	}
@@ -408,6 +490,11 @@ type = country_event
 			if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_19
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_19
@@ -416,6 +503,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_18
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_18
@@ -424,6 +516,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_17
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_17
@@ -432,6 +529,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_16
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_16
@@ -440,6 +542,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_15
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_15
@@ -448,6 +555,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_14
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_14
@@ -456,6 +568,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_13
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_13
@@ -464,6 +581,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_12
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_12
@@ -472,6 +594,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_11
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_11
@@ -480,6 +607,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_10
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_10
@@ -488,6 +620,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_09
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_09
@@ -496,6 +633,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_08
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_08
@@ -504,6 +646,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_07
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_07
@@ -512,6 +659,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_06
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_06
@@ -520,6 +672,11 @@ type = country_event
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_05
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_05
@@ -603,7 +760,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_20
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -611,7 +768,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_19
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -619,7 +776,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_18
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -627,7 +784,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_17
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -635,7 +792,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_16
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -643,7 +800,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_15
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -651,7 +808,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_14
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -659,12 +816,15 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_13
-				add_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_12
 				}
+
+				remove_distinction = distinction_heavy_cavalry_defensive_12
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
@@ -672,15 +832,12 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_11
-				add_distinction = distinction_heavy_cavalry_defensive_06
+				add_distinction = distinction_heavy_cavalry_defensive_10
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_10
 				}
-
-				remove_distinction = distinction_heavy_cavalry_defensive_10
-				add_distinction = distinction_heavy_cavalry_defensive_06
 			}
 			else_if = {
 				limit = {
@@ -688,7 +845,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_09
-				add_distinction = distinction_heavy_cavalry_defensive_06
+				add_distinction = distinction_heavy_cavalry_defensive_05
 			}
 			else_if = {
 				limit = {
@@ -696,7 +853,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_08
-				add_distinction = distinction_heavy_cavalry_defensive_06
+				add_distinction = distinction_heavy_cavalry_defensive_05
 			}
 			else_if = {
 				limit = {
@@ -704,20 +861,19 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_07
-				add_distinction = distinction_heavy_cavalry_defensive_06
+				add_distinction = distinction_heavy_cavalry_defensive_05
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_06
 				}
+				remove_distinction = distinction_heavy_cavalry_defensive_06
+				add_distinction = distinction_heavy_cavalry_defensive_05
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_05
 				}
-
-				remove_distinction = distinction_heavy_cavalry_defensive_05
-				add_distinction = distinction_heavy_cavalry_defensive_02
 			}
 			else_if = {
 				limit = {
@@ -725,7 +881,7 @@ ml_heavy_cavalry_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_heavy_cavalry_defensive_04
-				add_distinction = distinction_heavy_cavalry_defensive_02
+				add_distinction = distinction_heavy_cavalry_defensive_03
 			}
 			else_if = {
 				limit = {
@@ -739,6 +895,8 @@ ml_heavy_cavalry_distinctions.4 = {
 				limit = {
 					has_distinction = distinction_heavy_cavalry_defensive_02
 				}
+				remove_distinction = distinction_heavy_cavalry_defensive_02
+				add_distinction = distinction_heavy_cavalry_defensive_01
 			}
 			else_if = {
 				limit = {

@@ -11,9 +11,6 @@
 
 
 	allow = {
-			unit_location = {
-				is_sea = no
-			}
 		is_army = yes
 		in_combat = no
 		is_moving = no
@@ -33,23 +30,26 @@
 			}
 		}
 	}
+	
 	modifier = {
 		monthly_experience_gain = 2.5
 		loyalty_gain_chance = 1.0
 		army_maintenance_cost = 0.33
 	}
 	
-	
 	start_effect = {
+		set_variable = {
+			name = is_drilling
+			value = 1
+		}
 	}
 	
-	
+	finish_effect = {
+		remove_variable = is_drilling
+	}
 	
 	finished_when = {
 		OR = {
-			unit_location = {
-				is_sea = yes
-			}
 			in_combat = yes
 			is_moving = yes
 			is_exiled = yes

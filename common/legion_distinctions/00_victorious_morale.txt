@@ -6,7 +6,7 @@ distinction_victorious_morale_01 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.01
+		land_morale_modifier = 0.005
 	}
 }
 
@@ -16,7 +16,7 @@ distinction_victorious_morale_02 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.02
+		land_morale_modifier = 0.01
 	}
 }
 
@@ -26,7 +26,7 @@ distinction_victorious_morale_03 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.03
+		land_morale_modifier = 0.015
 	}
 }
 
@@ -36,7 +36,7 @@ distinction_victorious_morale_04 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.04
+		land_morale_modifier = 0.02
 	}
 }
 
@@ -46,7 +46,7 @@ distinction_victorious_morale_05 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.05
+		land_morale_modifier = 0.025
 	}
 }
 
@@ -56,7 +56,7 @@ distinction_victorious_morale_06 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.06
+		land_morale_modifier = 0.03
 	}
 }
 
@@ -66,7 +66,7 @@ distinction_victorious_morale_07 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.07
+		land_morale_modifier = 0.035
 	}
 }
 
@@ -76,7 +76,7 @@ distinction_victorious_morale_08 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.08
+		land_morale_modifier = 0.04
 	}
 }
 
@@ -86,7 +86,7 @@ distinction_victorious_morale_09 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.09
+		land_morale_modifier = 0.045
 	}
 }
 
@@ -96,7 +96,7 @@ distinction_victorious_morale_10 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.10
+		land_morale_modifier = 0.05
 	}
 }
 
@@ -106,7 +106,7 @@ distinction_victorious_morale_11 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.11
+		land_morale_modifier = 0.055
 	}
 }
 
@@ -116,7 +116,7 @@ distinction_victorious_morale_12 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.12
+		land_morale_modifier = 0.06
 	}
 }
 
@@ -126,7 +126,7 @@ distinction_victorious_morale_13 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.13
+		land_morale_modifier = 0.065
 	}
 }
 
@@ -136,7 +136,7 @@ distinction_victorious_morale_14 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.14
+		land_morale_modifier = 0.07
 	}
 }
 
@@ -146,7 +146,7 @@ distinction_victorious_morale_15 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.15
+		land_morale_modifier = 0.075
 	}
 }
 
@@ -156,7 +156,7 @@ distinction_victorious_morale_16 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.16
+		land_morale_modifier = 0.08
 	}
 }
 
@@ -166,7 +166,7 @@ distinction_victorious_morale_17 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.17
+		land_morale_modifier = 0.085
 	}
 }
 
@@ -176,7 +176,7 @@ distinction_victorious_morale_18 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.18
+		land_morale_modifier = 0.09
 	}
 }
 
@@ -186,7 +186,7 @@ distinction_victorious_morale_19 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.19
+		land_morale_modifier = 0.095
 	}
 }
 
@@ -196,6 +196,6 @@ distinction_victorious_morale_20 = {
 
 	}
 	unit = {
-		land_morale_modifier = 0.20
+		land_morale_modifier = 0.10
 	}
 }

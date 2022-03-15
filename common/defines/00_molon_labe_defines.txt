@@ -25,7 +25,6 @@ NCombat = {
 	#WAR_EXHAUTION_FROM_LOSSES = 1.8 #Multiplier on losses
 	MAX_WAR_EXHAUSTION_FROM_BATTLE = 5 #Was 3.5
 	#ASSAULT_ATTACKER_LOSS = 1.0 - This could be 1.25 and we could remove the Realistic Assault modifier	
-	GREAT_BATTLE_SIZE_THRESHOLD = 10000 # Legion Distinctions Overhaul: default is 8000
 }
 
 NUnit = {

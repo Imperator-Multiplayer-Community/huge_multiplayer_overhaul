@@ -1,0 +1,79 @@
+﻿namespace = ml_victories_defeats_count
+
+# add victory count
+ml_victories_defeats_count.1 = { 
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_variable = total_victory_count
+				}
+
+				change_variable = {
+					name = total_victory_count
+					add = 1
+				}
+			}
+			else = {
+				set_variable = {
+					name = total_victory_count
+					value = 1
+				}
+			}
+
+			add_legion_history = {
+				key = victories_defeats_history
+				province = scope:actor.unit_location
+				commander = scope:actor.commander
+			}
+		}
+	}
+}
+
+# add defeat count
+ml_victories_defeats_count.2 = { 
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_variable = total_defeat_count
+				}
+
+				change_variable = {
+					name = total_defeat_count
+					add = 1
+				}
+			}
+			else = {
+				set_variable = {
+					name = total_defeat_count
+					value = 1
+				}
+			}
+
+			add_legion_history = {
+				key = victories_defeats_history
+				province = scope:actor.unit_location
+				commander = scope:actor.commander
+			}
+		}
+	}
+}

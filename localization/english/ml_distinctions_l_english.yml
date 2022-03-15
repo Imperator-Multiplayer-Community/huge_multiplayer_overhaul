@@ -1038,3 +1038,5 @@ distinction_warelephant_discipline_3:0 "War Elephant Discipline"
 distinction_warelephant_discipline_3_desc:0 "When this legion's war elephants take the field, victory is nearly assured."distinction_horse_archers_offensive_01:0 "Horse Archers Offense"
 gw_effect_honor_expeditionaries:0 "Honor Expeditionaries"
 gw_effect_honor_expeditionaries_DESC:0 "In honor of our heroic expeditionary legion."
+
+victories_defeats_history:0 "[LEGION.GetVariable('total_victory_count')] victories ... [LEGION.GetVariable('total_defeat_count')] defeats."
