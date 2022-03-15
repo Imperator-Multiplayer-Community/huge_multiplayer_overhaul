@@ -845,7 +845,7 @@ base_sub_window = {
 	widgetanchor = bottom|right
 	parentanchor = bottom|right
 	size = { 30 30 }
-	datacontext = "[GetScriptedGui('no_slave_movement')]"
+	datacontext = "[GetScriptedGui('forbid_slave_movement')]"
 	blockoverride "Icon" { texture = "gfx/interface/base_parts/button_alpha_close.dds" }
 	blockoverride "On_click" { 
 		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
@@ -858,7 +858,7 @@ base_sub_window = {
 		widgetanchor = bottom|right
 		parentanchor = bottom|right
 		size = { 30 30 }
-		datacontext = "[GetScriptedGui('slave_movement')]"
+		datacontext = "[GetScriptedGui('allow_slave_movement')]"
 		blockoverride "Icon" { texture = "gfx/interface/base_parts/button_alpha_tick.dds" }
 		blockoverride "On_click" { 
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"

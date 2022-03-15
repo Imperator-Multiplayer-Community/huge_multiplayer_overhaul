@@ -19,6 +19,7 @@ distinction.7 = { # Primigenia
             ordered_legion_unit = {
                 order_by = unit_size
                 save_scope_as = primagena_legion_leader
+                save_scope_as = actor
             }
     		add_distinction = distinction_legio_primagena
             ROOT = {
