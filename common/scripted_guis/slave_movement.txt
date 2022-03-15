@@ -28,6 +28,7 @@
 		else = {
 			add_province_modifier = {
 				name = slave_move_yes
+				value = 1
 				duration = -1
 			}
 		}
@@ -52,6 +53,7 @@ forbid_slave_movement = {
 		else = {
 			add_province_modifier = {
 				name = slave_move_no
+				value = 1
 				duration = -1
 			}
 		}
@@ -74,6 +76,7 @@ forbid_slave_hub_movement = {
 		else = {
 			add_province_modifier = {
 				name = slave_hub_move_no
+				value = 1
 				duration = -1
 			}
 		}

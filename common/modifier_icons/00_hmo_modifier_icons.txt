@@ -21,7 +21,9 @@ slave_move_yes = {
 slave_move_no = {
     positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
 }
-
+slave_hub_move_no = {
+    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
+}
 
 
 ### not having these causes errors
