@@ -10,7 +10,8 @@
 			NOT = {
 				tag = CMM
 			}
-			NOT = {
+			NOR = {
+				is_tier_2_formable_trigger = yes
 				is_endgame_tag_trigger = yes
 			}
 			OR = {
@@ -29,7 +30,7 @@
 		
 		allow = {
 			custom_tooltip = {
-				text = cimmeria_exists
+				text = cimmeria_not_exists
 				NOT = {
 					any_country = {
 						tag = CMM
