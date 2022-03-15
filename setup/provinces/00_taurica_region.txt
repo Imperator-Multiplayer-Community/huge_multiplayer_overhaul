@@ -66,17 +66,17 @@
 	civilization_value=9
 	culture="scythian"
 	port_building=1
-	province_rank="settlement"
+	province_rank="city"
 	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="salt"
 	citizen=
 	{
-		amount=2
+		amount=15
 	}
 	freemen=
 	{
-		amount=3
+		amount=17
 	}
 	slaves=
 	{
@@ -156,11 +156,11 @@
 	trade_goods="wine"
 	citizen=
 	{
-		amount=4
+		amount=14
 	}
 	freemen=
 	{
-		amount=6
+		amount=16
 	}
 	slaves=
 	{
@@ -215,11 +215,11 @@
 	trade_goods="earthware"
 	citizen=
 	{
-		amount=10
+		amount=18
 	}
 	freemen=
 	{
-		amount=9
+		amount=19
 	}
 	slaves=
 	{
@@ -525,11 +525,11 @@
 	trade_goods="earthware"
 	citizen=
 	{
-		amount=10
+		amount=19
 	}
 	freemen=
 	{
-		amount=8
+		amount=18
 	}
 	slaves=
 	{
@@ -733,21 +733,21 @@
 4557=
 {
 	barbarian_power=0
-	civilization_value=12
+	civilization_value=18
 	culture="scythian"
 	holy_site="omen_thagimasadas"
 	port_building=1
 	province_rank="city"
 	religion="indo_iranian_religion"
-	terrain="marsh"
+	terrain="plains"
 	trade_goods="steppe_horses"
 	citizen=
 	{
-		amount=2
+		amount=18
 	}
 	freemen=
 	{
-		amount=2
+		amount=15
 	}
 	tribesmen=
 	{
@@ -856,11 +856,11 @@
 	trade_goods="cloth"
 	citizen=
 	{
-		amount=3
+		amount=15
 	}
 	freemen=
 	{
-		amount=2
+		amount=20
 	}
 	tribesmen=
 	{
@@ -897,15 +897,11 @@
 	trade_goods="wild_game"
 	citizen=
 	{
-		amount=1
-		culture="hebrew"
-		religion="judaism"
+		amount=15
 	}
 	freemen=
 	{
-		amount=1
-		culture="hebrew"
-		religion="judaism"
+		amount=15
 	}
 	tribesmen=
 	{
@@ -1439,17 +1435,17 @@
 	barbarian_power=0
 	civilization_value=9
 	culture="scythian"
-	province_rank="settlement"
+	province_rank="city"
 	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="wood"
 	citizen=
 	{
-		amount=1
+		amount=5
 	}
 	freemen=
 	{
-		amount=1
+		amount=19
 	}
 	slaves=
 	{

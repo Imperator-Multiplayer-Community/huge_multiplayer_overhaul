@@ -662,19 +662,19 @@
 6178=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=15
 	culture="scythian"
-	province_rank="settlement"
+	province_rank="city"
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="cloth"
 	freemen=
 	{
-		amount=1
+		amount=29
 	}
 	tribesmen=
 	{
-		amount=2
+		amount=10
 	}
 }
 #Yoro
