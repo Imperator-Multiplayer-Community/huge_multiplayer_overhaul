@@ -193,12 +193,16 @@
 	}
 
 	babylonian_path_14 = { ###
-		modifier = { 
+	    on_activate = {
+		    add_innovation = 4
+	    }
+		icon = persian_achaemenid_path_end_bonus
+	    modifier = { 
 			levy_size_multiplier = 0.025
 			happiness_for_wrong_culture_group_modifier = 0.05
 			army_maintenance_cost = 0.01
 		} 
-		icon = persian_achaemenid_path_end_bonus
+		
 		requires = { babylonian_path_13 }
 	}
 }
