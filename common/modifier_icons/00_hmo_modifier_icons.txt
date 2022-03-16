@@ -51,6 +51,17 @@ great_power_ae = {
     positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
 }
 
+high_tyranny = {
+    positive = "gfx/interface/icons/modifiers/monthly_tyranny.dds"
+}
+
+low_tyranny = {
+    positive = "gfx/interface/icons/modifiers/local_citizen_output.dds"
+}
+
+aqueduct_maintenance = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
 
 ### not having these causes errors
 archers_tributary_terrain_combat_bonus = {

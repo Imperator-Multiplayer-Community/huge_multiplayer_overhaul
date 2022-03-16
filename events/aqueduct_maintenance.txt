@@ -1,0 +1,71 @@
+﻿namespace = aqueduct_maintenance.1
+
+aqueduct_maintenance.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_owned_province = {
+			has_city_status = yes
+			OR = {
+				NOT = {
+					has_variable = previous_total_aqueduct_buildings
+				}
+				NOT = {
+					var:previous_total_aqueduct_buildings = num_of_aqueduct_building
+				}
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_province = {
+			limit = {
+				has_city_status = yes
+				num_of_aqueduct_building > 0
+				OR = {
+					NOT = {
+						has_variable = previous_total_aqueduct_buildings
+					}
+					NOT = {
+						var:previous_total_aqueduct_buildings = num_of_aqueduct_building
+					}
+				}
+			}
+
+			trigger_event = {
+				id = aqueduct_maintenance.2
+				days = 13
+			}
+		}
+	}
+}
+
+aqueduct_maintenance.2 = {
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_variable = previous_total_aqueduct_buildings
+			}
+
+			remove_variable = previous_total_aqueduct_buildings
+		}
+
+		set_variable = {
+			name = previous_total_aqueduct_buildings
+			value = num_of_aqueduct_building
+		}
+
+		while = {
+			count = num_of_aqueduct_building
+			add_country_modifier = {
+				name = aqueduct_maintenance
+				mode = add
+				duration = -1
+			}
+		}
+	}
+}
