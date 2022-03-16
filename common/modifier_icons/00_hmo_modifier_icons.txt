@@ -27,6 +27,29 @@ slave_hub_move_no = {
 civil_war_unrest = {
     positive = "gfx/interface/icons/modifiers/local_unrest.dds"
 }
+migrant_horde_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+city_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+local_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+regional_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+major_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+great_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
 
 
 ### not having these causes errors
