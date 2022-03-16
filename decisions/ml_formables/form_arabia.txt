@@ -9,14 +9,11 @@
 				country_culture_group = south_levantine
 				primary_culture = nabatean
 			}	
-			NOT = {
-				tag = ARB
-			}
 			OR = {
 				is_ai = no
 				num_of_cities >= 12
 			}
-			NOR = {
+			NOT = {
 				is_endgame_tag_trigger = yes
 			}
 		}
@@ -71,10 +68,10 @@
 					id = formable_heritage.39
 				}				
 			}
-				capital_scope = {
-					establish_city_effect = yes
-					capital_formable_huge_effect = yes
-					formable_capital_modifier_large_effect = yes
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_huge_effect = yes
+				formable_capital_modifier_large_effect = yes
 			}
 			custom_tooltip = "form_arabia_claims_tooltip"
 			hidden_effect = {
