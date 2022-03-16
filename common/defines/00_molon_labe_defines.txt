@@ -8,8 +8,9 @@
 }
 
 NCountry = {
-
+	PIG_STAB_DURATION = 3650
 	BASE_NAVAL_RANGE = 650
+	FORT_MAINTENANCE = 0.6
 }
 
 NPop = {
