@@ -15,6 +15,24 @@ distinction.7 = { # Primigenia
 
     option = {      
         name = distinction.7.a
+        scope:primagena_legion = {
+            ordered_legion_unit = {
+                order_by = unit_size
+                save_scope_as = primagena_legion_leader
+            }
+            add_distinction = distinction_legio_primagena
+            
+            hidden_effect = {
+                add_legion_history = {
+                    key = legion_history_legio_primagena
+                    commander = owner.current_ruler
+                    province = scope:primagena_legion.owner.capital_scope
+                }
+            }
+        }
+    }
+
+    immediate = {
         if = {
             limit = {
                 exists = scope:actor
@@ -23,26 +41,19 @@ distinction.7 = { # Primigenia
             clear_saved_scope = actor
         }
 
-        scope:primagena_legion = {
-            ordered_legion_unit = {
-                order_by = unit_size
-                save_scope_as = primagena_legion_leader
+        scope:primagena_legion.owner = {
+            random_legion = {
+                limit = {
+                    NOT = { has_distinction = distinction_legio_primagena }
+                }
+
                 save_scope_as = actor
             }
+        }
 
-            add_distinction = distinction_legio_primagena
-            
-            ROOT = {
-                trigger_event = {
-                    id = ml_expeditionary_distinctions.1
-                }
-            }
-            hidden_effect = {
-                add_legion_history = {
-                    key = legion_history_legio_primagena
-                    commander = owner.current_ruler
-                    province = scope:primagena_legion.owner.capital_scope
-                }
+        ROOT = {
+            trigger_event = {
+                id = ml_expeditionary_distinctions.1
             }
         }
     }

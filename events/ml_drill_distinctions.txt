@@ -24,7 +24,11 @@ ml_drill_distinctions.1 = {
 
 		random_list = {
 			95 = { }
-			5 = { 
+			5 = {
+				trigger = {
+					exists = scope:actor #dont trigger unless there is scope
+				}
+
 				ROOT = {
 					trigger_event = {
 						id = ml_drill_distinctions.2
@@ -193,6 +197,38 @@ ml_drill_distinctions.2 = {
 
 					trigger_event = {
 						id = ml_camels_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = chariots
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_chariots_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = chariots
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_chariots_distinctions.3
 					}
 				}
 			1 = {

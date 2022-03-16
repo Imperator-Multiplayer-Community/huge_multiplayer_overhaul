@@ -6,6 +6,7 @@ ml_expeditionary_distinctions.1 = {
 	hidden = yes
 
 	trigger = {
+		exists = scope:actor
 		scope:actor = {
 			has_legion_trigger = yes
 		}
@@ -44,6 +45,7 @@ ml_expeditionary_distinctions.2 = {
 	hidden = yes
 
 	trigger = {
+		exists = scope:actor
 		scope:actor = {
 			has_legion_trigger = yes
 		}
@@ -77,6 +79,7 @@ ml_expeditionary_distinctions.3 = {
 	hidden = yes
 
 	trigger = {
+		exists = scope:actor
     	scope:actor = {
             has_legion_trigger = yes
         	has_variable = expeditionary
