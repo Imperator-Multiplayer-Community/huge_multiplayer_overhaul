@@ -2067,6 +2067,13 @@ on_legion_raised = {
 				}
 			}
 	    }
+
+	    add_country_modifier = {
+	    	name = legion_ae
+	    	duration = -1
+	    	mode = add
+	    }
+
 		add_distinction = distinction_legion_default
 	}
 }
