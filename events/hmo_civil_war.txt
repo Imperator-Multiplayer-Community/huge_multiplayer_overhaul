@@ -18,7 +18,11 @@ hmo_civil_war.1 = {
 				}
 			}
 
-			add_state_loyalty = -25
+			#state scope
+			add_state_modifier = {
+				name = civil_war_unrest
+				duration = 720
+			}
 
 			random_state_province = {
 				if = {
@@ -28,10 +32,8 @@ hmo_civil_war.1 = {
 					}
 				}
 
-				add_province_modifier = {
-					name = civil_war_unrest
-					duration = 720
-				}
+				#for some reason this is province scope
+				add_state_loyalty = -25
 			}
 		}
 	}

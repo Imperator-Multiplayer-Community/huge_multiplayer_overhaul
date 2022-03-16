@@ -841,7 +841,7 @@ base_sub_window = {
 		}
 	}
 	button_round_inverted = { ###############################################################
-		position = { -60 -130 }
+		position = { -90 -130 }
 		widgetanchor = bottom|right
 		parentanchor = bottom|right
 		size = { 30 30 }

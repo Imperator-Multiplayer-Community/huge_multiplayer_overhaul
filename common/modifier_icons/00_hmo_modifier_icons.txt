@@ -93,3 +93,12 @@ vineyard_building_cost = {
 industry_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
+send_letter_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+go_hunting_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+subject_player_client_state_pays_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}

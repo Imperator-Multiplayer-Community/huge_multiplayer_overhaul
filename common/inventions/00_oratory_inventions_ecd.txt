@@ -1326,7 +1326,7 @@ oratory_2 = {
 	}
 
 	diplomatic_reputation_inv_1 = {
-		modifier = { diplomatic_reputation = 1 }
+		modifier = { monthly_tyranny = -0.02 }
 	}
 
 	# Level 1
@@ -1342,7 +1342,10 @@ oratory_2 = {
 	}
 
 	tyranny_inv_1 = {
-		modifier = { monthly_tyranny = -0.01 }
+		modifier = { 
+			monthly_legitimacy = 0.02
+			force_through_senate_cost_modifier = 0.05
+		}
 		
 		requires_or = { monthly_character_loyalty_inv_1 diplomatic_reputation_inv_1 }
 	}
@@ -1873,15 +1876,6 @@ oratory_2 = {
 		requires = { oratory_tech_investment_inv_1 }
 	}
 
-	diplomatic_reputation_inv_2 = {
-		modifier = { 
-			diplomatic_reputation = 1
-			max_friends = 1
-		}
-		
-		requires_or = { oratory_tech_investment_inv_1 smear_character_cost_modifier_inv }
-	}
-
 	diplo_range_inv_1 = {
 		modifier = { diplomatic_range_modifier = 0.15 }
 		
@@ -1952,7 +1946,7 @@ oratory_2 = {
 	diplo_range_inv_2 = {
 		modifier = { diplomatic_range_modifier = 0.05 }
 		
-		requires = { diplomatic_reputation_inv_2 }
+		requires_or = { smear_character_cost_modifier_inv oratory_tech_investment_inv_1}
 	}
 
 	#New Invictus invention
@@ -2004,7 +1998,7 @@ oratory_2 = {
 	}
 
 	tyranny_inv_3 = {
-		modifier = { monthly_tyranny = -0.01 }
+		modifier = { global_unrest = -0.25 }
 		
 		requires =  { diplo_range_inv_2 }
 	}
@@ -2058,7 +2052,10 @@ oratory_2 = {
 	}	
 
 	oratory_tech_investment_inv_2 = { 
-		modifier = { price_state_investment_oratory_cost_modifier = -0.1  }
+		modifier = { 
+			price_state_investment_oratory_cost_modifier = -0.1
+			global_population_growth = 0.01
+		}
 		requires_or = { tyranny_inv_3 diplomatic_relations_inv_2 }
 		on_activate = {
 			custom_tooltip = "counterespionage_defence"
@@ -2231,8 +2228,8 @@ oratory_2 = {
 
 	tyranny_inv_4 = {
 		modifier = { 
-			monthly_tyranny = -0.01
-			character_loyalty = 1
+			monthly_tyranny = -0.03
+			character_loyalty = 2
 		}
 		
 		requires = { monthly_character_loyalty_inv_2  }
@@ -2273,7 +2270,7 @@ oratory_2 = {
 	# Level 9
 	diplomatic_reputation_inv_4 = {
 		modifier = { 
-			diplomatic_reputation = 2   
+			global_nobles_output = 0.05   
 			monthly_political_influence_modifier = 0.05
 		}
 		on_activate = {
@@ -2305,16 +2302,6 @@ oratory_2 = {
 		}
 		
 		requires_or = { monthly_character_loyalty_inv_5 diplomatic_reputation_inv_4 }
-	}
-
-	diplomatic_reputation_inv_5 = {
-		modifier = { 
-			diplomatic_reputation = 1
-			max_friends = 1
-		}
-		
-		requires = { diplomatic_reputation_inv_4 }
-		
 	}
 
 	# Level 10 Specific
@@ -2360,11 +2347,11 @@ oratory_2 = {
 
 	diplo_range_inv_4 = {
 		modifier = { 
-			diplomatic_range_modifier = 0.15 
-			diplomatic_reputation = 3
+			diplomatic_range_modifier = 0.25 
+			diplomatic_relations = 3
 		}
 		keystone = yes
-		requires_or = { tyranny_inv_5 diplomatic_reputation_inv_5 }
+		requires_or = { tyranny_inv_5 }
 		on_activate = {
 			every_character = {
 				limit = {
@@ -2373,6 +2360,23 @@ oratory_2 = {
 				add_finesse = 1
 				add_zeal = 1
 			}
+		}
+	}
+
+	# Level 12
+	scientific_patronage_3_inv = {
+		allow = { 
+			rank >= major_power 
+			capital_scope = {
+				civilization_value >= 95
+			}
+		}
+		
+		requires = { scientific_patronage_2_inv }
+		requires_or = { monthly_character_loyalty_inv_4 diplo_range_inv_4 }
+		modifier = { max_research_efficiency = 0.25 }
+		on_activate = {
+			add_innovation = 2
 		}
 	}
 
