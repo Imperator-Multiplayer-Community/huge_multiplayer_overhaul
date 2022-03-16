@@ -1,0 +1,183 @@
+﻿namespace = country_rank
+
+# sets migrant horde modifiers
+country_rank.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		rank = migrant_horde
+		NOT = {
+			has_country_modifier = migrant_horde_ae
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = country_rank.7
+		}
+
+		add_country_modifier = migrant_horde_ae
+	}
+}
+
+# sets city power modifiers
+country_rank.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		rank = city_power
+		NOT = {
+			has_country_modifier = city_power_ae
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = country_rank.7
+		}
+
+		add_country_modifier = city_power_ae
+	}
+}
+
+# sets local_power modifiers
+country_rank.3 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		rank = local_power
+		NOT = {
+			has_country_modifier = local_power_ae
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = country_rank.7
+		}
+
+		add_country_modifier = local_power_ae
+	}
+}
+
+# sets regional_power modifiers
+country_rank.4 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		rank = regional_power
+		NOT = {
+			has_country_modifier = regional_power_ae
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = country_rank.7
+		}
+
+		add_country_modifier = regional_power_ae
+	}
+}
+
+# sets major_power modifiers
+country_rank.5 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		rank = major_power
+		NOT = {
+			has_country_modifier = major_power_ae
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = country_rank.7
+		}
+
+		add_country_modifier = major_power_ae
+	}
+}
+
+# sets great_power modifiers
+country_rank.6 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		rank = great_power
+		NOT = {
+			has_country_modifier = great_power_ae
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = country_rank.7
+		}
+
+		add_country_modifier = great_power_ae
+	}
+}
+
+# remove all modifiers common
+country_rank.7 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_modifier = migrant_horde_ae
+			}
+
+			remove_country_modifier = migrant_horde_ae
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = city_power_ae
+			}
+
+			remove_country_modifier = city_power_ae
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = local_power_ae
+			}
+
+			remove_country_modifier = local_power_ae
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = regional_power_ae
+			}
+
+			remove_country_modifier = regional_power_ae
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = major_power_ae
+			}
+
+			remove_country_modifier = major_power_ae
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = great_power_ae
+			}
+
+			remove_country_modifier = great_power_ae
+		}
+	}
+}
