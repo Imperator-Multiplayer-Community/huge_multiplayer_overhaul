@@ -107,7 +107,7 @@ navy_maint.1 = {
 	while = {
 		count = var:previous_navy_rank
 		add_country_modifier = {
-			name = navy_maint_cost
+			name = navy_maint_cost_scaling
 			mode = add
 			duration = -1
 		}

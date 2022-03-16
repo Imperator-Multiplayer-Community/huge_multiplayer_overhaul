@@ -1,6 +1,9 @@
 ﻿navy_maint_cost = {
 	navy_maintenance_cost = 0.01
 }
+navy_maint_cost_scaling = {
+	navy_maintenance_cost = 0.1
+}
 army_maint_cost = {
 	army_maintenance_cost = 0.01
 }
