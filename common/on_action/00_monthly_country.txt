@@ -22,7 +22,11 @@
 		OTG.1
 		slave_move.1
 		counterintel.1
-		hmo_civil_war.1
+		hmo_civil_war.1 # civil war
+		high_tyranny.1 # adds high tyranny
+		high_tyranny.2 # removed high tyranny
+		high_tyranny.3 # adds low tyranny
+		high_tyranny.5 # removes low tyranny
 	}
 	
 	random_events = {

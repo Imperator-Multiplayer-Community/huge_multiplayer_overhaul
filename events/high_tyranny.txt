@@ -1,0 +1,153 @@
+﻿namespace = high_tyranny
+
+# adds high tyranny modifier
+high_tyranny.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		tyranny > 50
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_modifier = high_tyranny
+			}
+
+			remove_country_modifier = high_tyranny
+		}
+
+		set_variable = {
+			name = excess_tyranny
+			value = tyranny
+		}
+
+		change_variable = {
+			name = excess_tyranny
+			add = -50
+		}
+
+		while = {
+			count = var:excess_tyranny
+			add_country_modifier = {
+				name = high_tyranny
+				mode = add
+				duration = -1
+			}
+		}
+	}
+}
+
+#removes high tyranny modifier
+high_tyranny.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		tyranny <= 50
+		has_country_modifier = high_tyranny
+	}
+
+	immediate = {
+		remove_country_modifier = high_tyranny
+	}
+}
+
+# triggers low tyranny modifier event
+high_tyranny.3 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		tyranny < 10
+		NOT = {
+			has_country_modifier = low_tyranny
+			has_variable = trending_low_tyranny
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = trending_low_tyranny
+		}
+
+		trigger_event = {
+			id = high_tyranny.4
+			days = 365
+		}
+	}
+}
+
+# adds low tyranny modifier and pops up event
+high_tyranny.4 = {
+	type = country_event
+	title = "high_tyranny.4.t"
+	desc = "high_tyranny.4.desc"
+	left_portrait = current_ruler
+	picture = senate_debate
+
+	trigger = {
+		tyranny < 10
+		has_variable = trending_low_tyranny
+		NOT = {
+			has_country_modifier = low_tyranny
+		} 
+	}
+	
+	option = {
+		name = "high_tyranny.4.a"
+		add_country_modifier = low_tyranny
+		hidden_effect = {
+			remove_variable = trending_low_tyranny
+		}
+	}
+}
+
+# triggers remove low tyranny modifier
+high_tyranny.5 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		tyranny >= 10
+		has_country_modifier = low_tyranny
+		NOT = {
+			has_variable = trending_high_tyranny
+		}
+	}
+
+	immediate = {
+		set_variable = {
+			name = trending_high_tyranny
+		}
+
+		trigger_event = {
+			id = high_tyranny.6
+			days = 365
+		}
+	} 
+}
+
+# removes low tyranny modifier and pops up event
+high_tyranny.6 = {
+	type = country_event
+	title = "high_tyranny.6.t"
+	desc = "high_tyranny.6.desc"
+	left_portrait = current_ruler
+	picture = senate_debate
+
+	trigger = {
+		tyranny >= 10
+		has_country_modifier = low_tyranny
+		has_variable = trending_high_tyranny
+	}
+	
+	option = {
+		name = "high_tyranny.6.a"
+		remove_country_modifier = low_tyranny
+		hidden_effect = {
+			remove_variable = trending_high_tyranny
+		}
+	}
+}
