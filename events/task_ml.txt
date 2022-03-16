@@ -867,7 +867,7 @@ task.7 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -1043,7 +1043,7 @@ task.9 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -1218,7 +1218,7 @@ task.11 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -1394,7 +1394,7 @@ task.13 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -1569,7 +1569,7 @@ task.15 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -1745,7 +1745,7 @@ task.17 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -1920,7 +1920,7 @@ task.19 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -2094,7 +2094,7 @@ task.21 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -2269,7 +2269,7 @@ task.23 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -2444,7 +2444,7 @@ task.25 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -2617,7 +2617,7 @@ task.27 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -2792,7 +2792,7 @@ task.29 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -2967,7 +2967,7 @@ task.31 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -3143,7 +3143,7 @@ task.33 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -3318,7 +3318,7 @@ task.35 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
@@ -3495,7 +3495,7 @@ task.37 = { # Final resolution
 					}	
 				}					
 				60 = { # average result
-					scope:target = {
+					scope:target.employer = {
 						trigger_event = {
 							id = task.191
 							days = 3
