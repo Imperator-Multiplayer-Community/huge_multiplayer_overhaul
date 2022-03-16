@@ -1,0 +1,48 @@
+﻿namespace = state_improvement
+
+state_improvement.8 = { #Toggles Metropolis Status
+	type = country_event
+	hidden = yes
+	
+	trigger = {
+        is_ai = yes
+		any_owned_province = {
+			has_city_status = yes
+			total_population >= 80
+			OR = {
+				is_state_capital = yes
+                any_neighbor_province = { has_province_rank = city_metropolis }
+			}
+			NOT = { has_province_rank = city_metropolis }
+			NOT = {
+				has_province_modifier = founding_metropolis_in_progress
+			}
+		}
+	}
+	
+	immediate = {
+		pay_price = price_found_metropolis
+		random_owned_province = {
+			limit = {
+				has_city_status = yes
+				total_population >= 80
+				OR = {
+					is_state_capital = yes
+                	any_neighbor_province = { has_province_rank = city_metropolis }
+				}
+				NOT = { has_province_rank = city_metropolis }
+				NOT = {
+					has_province_modifier = founding_metropolis_in_progress
+				}
+			}
+			add_province_modifier = {
+				name = founding_metropolis_in_progress
+				duration = 730
+			}
+			trigger_event = {
+				id = state_improvement.7
+				days = 730
+			}
+		}
+	}
+}
