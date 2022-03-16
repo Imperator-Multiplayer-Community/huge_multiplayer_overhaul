@@ -104,6 +104,18 @@ letter_friend.3 = { #accepted with pleasure
 		scope:actor = {
 			pay_price = send_letter
 		}
+		scope:letter_recipient = {
+			if = {
+				limit = {
+					is_ruler = yes
+					NOT = {
+						this = ROOT.current_ruler
+					}
+				}
+
+				add_treasury = 50
+			}
+		}
 		scope:actor = {
 			trigger_event = { 
 				id = letter_friend.4
@@ -133,9 +145,6 @@ letter_friend.4 = {
 					has_character_modifier = better_martial_05
 				}
 			}
-		}
-		scope:actor = {
-			add_political_influence = subtract_influence_small
 		}
 
 		hidden_effect = {
@@ -204,9 +213,7 @@ letter_friend.4 = {
 				}
 			}
 		}
-		scope:actor = {
-			add_political_influence = subtract_influence_small
-		}		
+		
 		#custom_tooltip = espionage_suspicion_tooltip
 		hidden_effect = {
 			set_variable = {
@@ -275,9 +282,6 @@ letter_friend.4 = {
 				}
 			}
 		}
-		scope:actor = {
-			add_political_influence = subtract_influence_small
-		}
 
 		hidden_effect = {
 			set_variable = {
@@ -344,9 +348,6 @@ letter_friend.4 = {
 					has_character_modifier = better_charisma_05
 				}
 			}
-		}
-		scope:actor = {
-			add_political_influence = subtract_influence_small
 		}
 
 		hidden_effect = {
