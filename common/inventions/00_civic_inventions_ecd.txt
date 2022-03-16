@@ -750,7 +750,7 @@
     }
 
     # Level 10
-     = { 
+    research_points_modifier_inv_5 = { 
         modifier = { 
 			change_diplomatic_stance_cost_modifier = -0.2 
 			max_research_efficiency = 0.25

@@ -1344,7 +1344,7 @@ oratory_2 = {
 	tyranny_inv_1 = {
 		modifier = { 
 			monthly_legitimacy = 0.02
-			force_through_senate_cost_modifier = 0.05
+			force_through_senate_cost_modifier = -0.05
 		}
 		
 		requires_or = { monthly_character_loyalty_inv_1 diplomatic_reputation_inv_1 }

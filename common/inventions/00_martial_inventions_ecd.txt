@@ -1344,7 +1344,7 @@ military_inventions = {
 			}
 			custom_tooltip = "ArmyMaintUp_TT"
 		}
-		requires = { gallic_celtic_plough_inv gallic_chainmail_inv }
+		requires_or = { gallic_celtic_plough_inv gallic_chainmail_inv }
 		allow = {
 			OR = {
 				country_culture_group = gallic
@@ -1406,7 +1406,7 @@ military_inventions = {
     gallic_timbered_roads_inv = {
     	modifier = { Army_maintenance_cost = -0.1
     				 Army_movement_speed = 0.1 }
-        requires = { gallic_montefortino_helmet_inv gallic_trimarcisia_inv }
+        requires_or = { gallic_montefortino_helmet_inv gallic_trimarcisia_inv }
         allow = {
 			OR = {
 				country_culture_group = gallic
