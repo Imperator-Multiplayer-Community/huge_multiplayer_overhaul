@@ -431,66 +431,14 @@ letter_friend.4 = {
 
 ###############################################################
 
-
-
-
+# gain martial
 letter_friend.13 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = better_martial_01
-	 			}
-	 			remove_character_modifier = better_martial_01
-				add_character_modifier = {
-					name = "better_martial_02"
-					duration = -1
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = better_martial_02
-	 			}
-				remove_character_modifier = better_martial_02
-				add_character_modifier = {
-					name = "better_martial_03"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_martial_03
-	 			}
-				remove_character_modifier = better_martial_03
-				add_character_modifier = {
-					name = "better_martial_04"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_martial_04
-	 			}
-				remove_character_modifier = better_martial_04
-				add_character_modifier = {
-					name = "better_martial_05"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = better_martial_05
-						}
-					}
-				add_character_modifier = {
-					name = "better_martial_01"
-					duration = -1
-	 			}
-			}
+			trigger_event = { id = hmo_improve_martial.1 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.21 }
@@ -498,65 +446,14 @@ letter_friend.13 = {
 	}
 }
 
-
-
+# lose martial
 letter_friend.14 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = worse_martial_01
-	 				}
-	 			remove_character_modifier = worse_martial_01
-				add_character_modifier = {
-					name = "worse_martial_02"
-					duration = 1080
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_martial_02
-	 				}
-				remove_character_modifier = worse_martial_02
-				add_character_modifier = {
-					name = "worse_martial_03"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_martial_03
-	 				}
-				remove_character_modifier = worse_martial_03
-				add_character_modifier = {
-					name = "worse_martial_04"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_martial_04
-	 				}
-				remove_character_modifier = worse_martial_04
-				add_character_modifier = {
-					name = "worse_martial_05"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = worse_martial_05
-						}
-					}
-				add_character_modifier = {
-					name = "worse_martial_01"
-					duration = 1080
-	 			}
-			}
+			trigger_event = { id = hmo_improve_martial.2 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.22 }
@@ -564,63 +461,14 @@ letter_friend.14 = {
 	}
 }
 
+# gain finesse
 letter_friend.15 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = better_finesse_01
-	 				}
-	 			remove_character_modifier = better_finesse_01
-				add_character_modifier = {
-					name = "better_finesse_02"
-					duration = -1
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = better_finesse_02
-	 				}
-				remove_character_modifier = better_finesse_02
-				add_character_modifier = {
-					name = "better_finesse_03"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_finesse_03
-	 				}
-				remove_character_modifier = better_finesse_03
-				add_character_modifier = {
-					name = "better_finesse_04"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_finesse_04
-	 				}
-				remove_character_modifier = better_finesse_04
-				add_character_modifier = {
-					name = "better_finesse_05"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = better_finesse_05
-						}
-					}
-				add_character_modifier = {
-					name = "better_finesse_01"
-					duration = -1
-	 			}
-			}
+			trigger_event = { id = hmo_improve_finesse.1 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.23 }
@@ -629,64 +477,14 @@ letter_friend.15 = {
 }
 
 
-
+# lose finesse
 letter_friend.16 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = worse_finesse_01
-	 			}
-	 			remove_character_modifier = worse_finesse_01
-				add_character_modifier = {
-					name = "worse_finesse_02"
-					duration = 1080
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_finesse_02
-	 			}
-				remove_character_modifier = worse_finesse_02
-				add_character_modifier = {
-					name = "worse_finesse_03"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_finesse_03
-	 			}
-				remove_character_modifier = worse_finesse_03
-				add_character_modifier = {
-					name = "worse_finesse_04"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_finesse_04
-	 			}
-				remove_character_modifier = worse_finesse_04
-				add_character_modifier = {
-					name = "worse_finesse_05"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = worse_finesse_05
-					}
-				}
-				add_character_modifier = {
-					name = "worse_finesse_01"
-					duration = 1080
-	 			}
-			}
+			trigger_event = { id = hmo_improve_finesse.2 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.24 }
@@ -694,63 +492,14 @@ letter_friend.16 = {
 	}
 }
 
+# gain zeal
 letter_friend.17 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = better_zeal_01
-	 			}
-	 			remove_character_modifier = better_zeal_01
-				add_character_modifier = {
-					name = "better_zeal_02"
-					duration = -1
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = better_zeal_02
-	 			}
-				remove_character_modifier = better_zeal_02
-				add_character_modifier = {
-					name = "better_zeal_03"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_zeal_03
-	 			}
-				remove_character_modifier = better_zeal_03
-				add_character_modifier = {
-					name = "better_zeal_04"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_zeal_04
-	 			}
-				remove_character_modifier = better_zeal_04
-				add_character_modifier = {
-					name = "better_zeal_05"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = better_zeal_05
-					}
-				}
-				add_character_modifier = {
-					name = "better_zeal_01"
-					duration = -1
-	 			}
-			}
+			trigger_event = { id = hmo_improve_zeal.1 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.25 }
@@ -759,64 +508,14 @@ letter_friend.17 = {
 }
 
 
-
+# lose zeal
 letter_friend.18 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = worse_zeal_01
-	 			}
-	 			remove_character_modifier = worse_zeal_01
-				add_character_modifier = {
-					name = "worse_zeal_02"
-					duration = 1080
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_zeal_02
-	 			}
-				remove_character_modifier = worse_zeal_02
-				add_character_modifier = {
-					name = "worse_zeal_03"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_zeal_03
-	 			}
-				remove_character_modifier = worse_zeal_03
-				add_character_modifier = {
-					name = "worse_zeal_04"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_zeal_04
-	 			}
-				remove_character_modifier = worse_zeal_04
-				add_character_modifier = {
-					name = "worse_zeal_05"
-					duration = 1080
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = worse_zeal_05
-					}
-				}
-				add_character_modifier = {
-					name = "worse_zeal_01"
-					duration = 1080
-	 			}
-			}
+			trigger_event = { id = hmo_improve_zeal.2 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.26 }
@@ -824,63 +523,14 @@ letter_friend.18 = {
 	}
 }
 
+# gain charisma
 letter_friend.19 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = better_charisma_01
-	 			}
-	 			remove_character_modifier = better_charisma_01
-				add_character_modifier = {
-					name = "better_charisma_02"
-					duration = -1
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = better_charisma_02
-	 			}
-				remove_character_modifier = better_charisma_02
-				add_character_modifier = {
-					name = "better_charisma_03"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_charisma_03
-	 			}
-				remove_character_modifier = better_charisma_03
-				add_character_modifier = {
-					name = "better_charisma_04"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = better_charisma_04
-	 			}
-				remove_character_modifier = better_charisma_04
-				add_character_modifier = {
-					name = "better_charisma_05"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = better_charisma_05
-					}
-				}
-				add_character_modifier = {
-					name = "better_charisma_01"
-					duration = -1
-	 			}
-			}
+			trigger_event = { id = hmo_improve_charisma.1 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.27 }
@@ -888,75 +538,20 @@ letter_friend.19 = {
 	}
 }
 
-
-
+# lose charisma
 letter_friend.20 = {
 	type = country_event
 	hidden = yes
 
 	immediate = {
 		scope:letter_writer = {
-			if = {
-				limit = {
-					has_character_modifier = worse_charisma_01
-	 			}
-	 			remove_character_modifier = worse_charisma_01
-				add_character_modifier = {
-					name = "worse_charisma_02"
-					duration = -1
-	 			}
-	 		}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_charisma_02
-	 			}
-				remove_character_modifier = worse_charisma_02
-				add_character_modifier = {
-					name = "worse_charisma_03"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_charisma_03
-	 			}
-				remove_character_modifier = worse_charisma_03
-				add_character_modifier = {
-					name = "worse_charisma_04"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					has_character_modifier = worse_charisma_04
-	 			}
-				remove_character_modifier = worse_charisma_04
-				add_character_modifier = {
-					name = "worse_charisma_05"
-					duration = -1
-				}		
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						has_character_modifier = worse_charisma_05
-					}
-				}
-				add_character_modifier = {
-					name = "worse_charisma_01"
-					duration = -1
-	 			}
-			}
+			trigger_event = { id = hmo_improve_charisma.2 }
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.28 }
 		}
 	}
 }
-
-
-
-
 
 
 ############THE RESULTS OF THE LETTER WRITING ARE REVEALED#########################

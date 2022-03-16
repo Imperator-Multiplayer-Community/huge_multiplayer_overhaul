@@ -34,12 +34,12 @@ gift_slave = {
 
 send_letter = {
 	gold = 50
-	political_influence = 25
+	political_influence = 30
 }
 
 go_hunting = {
 	gold = 100
-	political_influence = 10
+	political_influence = 20
 }
 
 price_force_divorce = {

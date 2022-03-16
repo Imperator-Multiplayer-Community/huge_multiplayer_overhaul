@@ -128,10 +128,7 @@ hunting.4 = {
 	}
 	
 	option = {
-		name = "hunting.4.a"
-		scope:actor = {
-			add_political_influence = subtract_influence_small 
-		}		
+		name = "hunting.4.a"	
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
@@ -165,10 +162,7 @@ hunting.4 = {
 	}
 
 	option = {
-		name = "hunting.4.b"
-		scope:actor = {
-			add_political_influence = subtract_influence_small
-		}		
+		name = "hunting.4.b"	
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
@@ -202,10 +196,7 @@ hunting.4 = {
 	}
 
 	option = {
-		name = "hunting.4.c"
-		scope:actor = {
-			add_political_influence = subtract_influence_small
-		}		
+		name = "hunting.4.c"		
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
@@ -239,10 +230,7 @@ hunting.4 = {
 	}
 
 	option = {
-		name = "hunting.4.d"
-		scope:actor = {
-			add_political_influence = subtract_influence_small
-		}		
+		name = "hunting.4.d"	
 		set_variable = {
 			name = roll
 			value = { integer_range = { min = 1 max = 20 } }
@@ -308,13 +296,21 @@ hunting.13 = { # Success mountain An 18 Point Buck
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "marksman"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = marksman
 								}
-								add_martial = 1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "marksman"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -331,13 +327,21 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}					
 					}
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "master_hunter"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = master_hunter
 								}
-								#add_martial = 1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "master_hunter"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -355,8 +359,9 @@ hunting.13 = { # Success mountain An 18 Point Buck
 					}
 					10 = { 
 						scope:hunting_friend = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -373,10 +378,18 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}					
 					}
 					10 = { 
-						scope:hunting_friend = {
-								add_trait = tactician
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = tactician
+								}
+							}
 						}
+
+						scope:hunting_friend = {
+							add_trait = tactician
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -393,9 +406,14 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}					
 					}
 					10 = { 
-						scope:hunting_friend = {
-								add_martial = 1 ########## GIVE THE RELIC IN THE EVENT ######################
+						trigger = {
+							NOT = {
+								scope:hunting_friend.employer = {
+									has_global_variable = 18_point_buck
+								}
+							}
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -419,13 +437,21 @@ hunting.13 = { # Success mountain An 18 Point Buck
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "marksman"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = marksman
 								}
-								add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "marksman"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.33
@@ -434,13 +460,21 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}						
 					}
 					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "master_hunter"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = master_hunter
 								}
-								#add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "master_hunter"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.34
@@ -450,8 +484,9 @@ hunting.13 = { # Success mountain An 18 Point Buck
 					}
 					10 = { 
 						scope:hunter = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.35
@@ -460,10 +495,18 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}						
 					}
 					10 = { 
-						scope:hunter = {
-								add_trait = aggressive
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = aggressive
+								}
+							}
 						}
+
+						scope:hunter = {
+							add_trait = aggressive
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.94 ######################
@@ -472,9 +515,14 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}						
 					}
 					10 = { 
-						scope:hunter = { ########## GIVE THE RELIC IN THE EVENT ######################
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunter.employer = {
+									has_global_variable = 18_point_buck
+								}
+							}
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.36
@@ -510,14 +558,22 @@ hunting.14 = { # Failure mountain Alpine Disaster
 			#custom_tooltip = oratory_task_15a
 			hidden_effect = {
 				random_list = {
-					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "city_slicker"
-									duration = -1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = city_slicker
 								}
-								add_martial = -1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "city_slicker"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -533,14 +589,23 @@ hunting.14 = { # Failure mountain Alpine Disaster
 							}		
 						}					
 					}
-					5 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "vegetarian"
-									duration = -1
+
+					10 = { 
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = vegetarian
 								}
-								#add_martial = -1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "vegetarian"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -556,11 +621,20 @@ hunting.14 = { # Failure mountain Alpine Disaster
 							}		
 						}						
 					}
+
 					40 = { 
-						scope:hunting_friend = {
-								add_trait = pneumonia
-								add_martial = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = pneumonia
+								}
+							}
 						}
+
+						scope:hunting_friend = {
+							add_trait = pneumonia
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -576,11 +650,20 @@ hunting.14 = { # Failure mountain Alpine Disaster
 							}		
 						}						
 					}
+
 					40 = { 
-						scope:hunting_friend = {
-								add_trait = coward
-								add_martial = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = coward
+								}
+							}
 						}
+
+						scope:hunting_friend = {
+							add_trait = coward
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -596,12 +679,14 @@ hunting.14 = { # Failure mountain Alpine Disaster
 							}		
 						}					
 					}
+
 					5 = { 
 						scope:hunting_friend = {
 							death = {
 								death_reason = death_hunting_accident
 							}
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -626,6 +711,14 @@ hunting.14 = { # Failure mountain Alpine Disaster
 			hidden_effect = {
 				random_list = {
 					10 = { 
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = city_slicker
+								}
+							}
+						}
+
 						scope:hunter = {
 								add_character_modifier = {
 									name = "city_slicker"
@@ -633,6 +726,7 @@ hunting.14 = { # Failure mountain Alpine Disaster
 								}
 								add_martial = -1
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.41
@@ -641,13 +735,21 @@ hunting.14 = { # Failure mountain Alpine Disaster
 						}						
 					}
 					5 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "vegetarian"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = vegetarian
 								}
-								#add_martial = -1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "vegetarian"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.42
@@ -655,11 +757,20 @@ hunting.14 = { # Failure mountain Alpine Disaster
 							}
 						}						
 					}
-					40 = { 
+					40 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = pneumonia
+								}
+							}
+						}
+
 						scope:hunter = {
 								add_trait = pneumonia
 								add_martial = -1
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.43
@@ -668,10 +779,19 @@ hunting.14 = { # Failure mountain Alpine Disaster
 						}						
 					}
 					40 = { 
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = coward
+								}
+							}
+						}
+
 						scope:hunter = {
 								add_trait = coward
 								add_martial = -1
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.96 ######################
@@ -685,6 +805,7 @@ hunting.14 = { # Failure mountain Alpine Disaster
 								death_reason = death_hunting_accident
 							}
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.44
@@ -719,13 +840,20 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 			#custom_tooltip = oratory_task_15a
 			hidden_effect = {
 				random_list = {
-					10 = { 
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = marksman
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 								add_character_modifier = {
 									name = "marksman"
 									duration = -1
 								}
-								add_martial = 1
 						}
 						if = {
 							limit = {
@@ -743,13 +871,21 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}						
 					}
 					10 = { 
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = master_hunter
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 								add_character_modifier = {
 									name = "master_hunter"
 									duration = -1
 								}
-								#add_martial = 1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -767,8 +903,9 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 					}
 					10 = { 
 						scope:hunting_friend = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -784,11 +921,19 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 							}		
 						}						
 					}
-					10 = { 
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = brave
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 								add_trait = brave
-								add_martial = 1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -805,9 +950,14 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}						
 					}
 					10 = { 
-						scope:hunting_friend = { ########## GIVE THE RELIC IN THE EVENT ######################
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunting_friend.employer = {
+									has_global_variable = bear_trophy
+								}
+							}
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -832,13 +982,21 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "marksman"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = marksman
 								}
-								add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "marksman"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.49
@@ -847,13 +1005,21 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}						
 					}
 					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "master_hunter"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = master_hunter
 								}
-								#add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "master_hunter"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.50
@@ -863,8 +1029,9 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 					}
 					10 = { 
 						scope:hunter = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.51
@@ -873,9 +1040,16 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}						
 					}
 					10 = { 
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = disciplined
+								}
+							}
+						}
+
 						scope:hunter = {
-								add_trait = disciplined
-								add_martial = 1
+							add_trait = disciplined
 						}
 						scope:hunter.employer = {
 							trigger_event = {
@@ -885,9 +1059,14 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}						
 					}
 					10 = { 
-						scope:hunter = { ########## GIVE THE RELIC IN THE EVENT ######################
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunter.employer = {
+									has_global_variable = peacock_trophy
+								}
+							}
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.52
@@ -923,13 +1102,21 @@ hunting.16 = { # Failure forest Bear Attack
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "city_slicker"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = city_slicker
 								}
-								add_martial = -1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "city_slicker"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -946,13 +1133,21 @@ hunting.16 = { # Failure forest Bear Attack
 						}						
 					}
 					5 = { 
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = vegetarian
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 								add_character_modifier = {
 									name = "vegetarian"
 									duration = -1
 								}
-								#add_martial = -1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -969,10 +1164,19 @@ hunting.16 = { # Failure forest Bear Attack
 						}						
 					}
 					40 = { 
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = wounded
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 							add_trait = wounded
 							add_martial = -1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -989,10 +1193,18 @@ hunting.16 = { # Failure forest Bear Attack
 						}					
 					}
 					40 = { 
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = coward
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 								add_trait = coward
-								add_martial = -1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1014,6 +1226,7 @@ hunting.16 = { # Failure forest Bear Attack
 								death_reason = death_hunting_accident
 							}
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1038,13 +1251,21 @@ hunting.16 = { # Failure forest Bear Attack
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "city_slicker"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = city_slicker
 								}
-								add_martial = -1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "city_slicker"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.57
@@ -1053,13 +1274,21 @@ hunting.16 = { # Failure forest Bear Attack
 						}						
 					}
 					5 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "vegetarian"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = vegetarian
 								}
-								#add_martial = -1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "vegetarian"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.58
@@ -1068,10 +1297,18 @@ hunting.16 = { # Failure forest Bear Attack
 						}						
 					}
 					40 = { 
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = maimed
+								}
+							}
+						}
+
 						scope:hunter = {
 							add_trait = maimed
-							add_martial = -1
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.59
@@ -1080,10 +1317,18 @@ hunting.16 = { # Failure forest Bear Attack
 						}						
 					}
 					40 = { 
-						scope:hunter = {
-								add_trait = one_eyed
-								add_martial = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = one_eyed
+								}
+							}
 						}
+
+						scope:hunter = {
+							add_trait = one_eyed
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.100 ######################
@@ -1133,12 +1378,19 @@ hunting.17 = { # Success hills The Joys of Falconry
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "marksman"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = marksman
 								}
-								add_martial = 1
+							}
+						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "marksman"
+								duration = -1
+							}
 						}
 						if = {
 							limit = {
@@ -1155,13 +1407,20 @@ hunting.17 = { # Success hills The Joys of Falconry
 							}		
 						}						
 					}
-					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "master_hunter"
-									duration = -1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = master_hunter
 								}
-								#add_martial = 1
+							}
+						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "master_hunter"
+								duration = -1
+							}
 						}
 						if = {
 							limit = {
@@ -1180,8 +1439,9 @@ hunting.17 = { # Success hills The Joys of Falconry
 					}
 					10 = { 
 						scope:hunting_friend = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1198,9 +1458,17 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}						
 					}
 					10 = { 
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = disciplined
+								}
+							}
+						}
+
 						scope:hunting_friend = {
-								add_trait = disciplined
-								add_martial = 1
+							add_trait = disciplined
+							add_martial = 1
 						}
 						if = {
 							limit = {
@@ -1218,9 +1486,14 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}						
 					}
 					10 = { 
-						scope:hunting_friend = { ########## GIVE THE RELIC IN THE EVENT ######################
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunting_friend.employer = {
+									has_global_variable = boar_trophy
+								}
+							}
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1245,13 +1518,21 @@ hunting.17 = { # Success hills The Joys of Falconry
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "marksman"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = marksman
 								}
-								add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "marksman"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.65
@@ -1260,13 +1541,21 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}						
 					}
 					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "master_hunter"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = master_hunter
 								}
-								#add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "master_hunter"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.66
@@ -1276,8 +1565,9 @@ hunting.17 = { # Success hills The Joys of Falconry
 					}
 					10 = { 
 						scope:hunter = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.67
@@ -1286,10 +1576,19 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}						
 					}
 					10 = { 
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = brave
+								}
+							}
+						}
+
 						scope:hunter = {
 								add_trait = brave
 								add_martial = 1
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.102 ######################
@@ -1298,9 +1597,14 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}						
 					}
 					10 = { 
-						scope:hunter = { ########### GIVE THE RELIC IN THE EVENT ######################
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunter.employer = {
+									has_global_variable = boar_trophy
+								}
+							}
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.68
@@ -1337,13 +1641,21 @@ hunting.18 = { # Failure hills Boar Attack
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "city_slicker"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = city_slicker
 								}
-								add_martial = -1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "city_slicker"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1360,13 +1672,21 @@ hunting.18 = { # Failure hills Boar Attack
 						}					
 					}
 					5 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "vegetarian"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = vegetarian
 								}
-								#add_martial = -1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "vegetarian"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1382,11 +1702,19 @@ hunting.18 = { # Failure hills Boar Attack
 							}		
 						}						
 					}
-					40 = { 
+					40 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = maimed
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 							add_trait = maimed
-							add_martial = -1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1403,10 +1731,18 @@ hunting.18 = { # Failure hills Boar Attack
 						}						
 					}
 					40 = { 
-						scope:hunting_friend = {
-								add_trait = limp
-								add_martial = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = limp
+								}
+							}
 						}
+
+						scope:hunting_friend = {
+							add_trait = limp
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1451,13 +1787,20 @@ hunting.18 = { # Failure hills Boar Attack
 			#custom_tooltip = oratory_task_15a
 			hidden_effect = {
 				random_list = {
-					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "city_slicker"
-									duration = -1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = city_slicker
 								}
-								add_martial = -1
+							}
+						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "city_slicker"
+								duration = -1
+							}
 						}
 						scope:hunter.employer = {
 							trigger_event = {
@@ -1467,13 +1810,21 @@ hunting.18 = { # Failure hills Boar Attack
 						}						
 					}
 					5 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "vegetarian"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = vegetarian
 								}
-								#add_martial = -1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "vegetarian"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.74
@@ -1481,11 +1832,19 @@ hunting.18 = { # Failure hills Boar Attack
 							}
 						}						
 					}
-					40 = { 
+					40 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = wounded
+								}
+							}
+						}
+
 						scope:hunter = {
 							add_trait = wounded
-							add_martial = -1
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.75
@@ -1494,10 +1853,18 @@ hunting.18 = { # Failure hills Boar Attack
 						}						
 					}
 					40 = { 
-						scope:hunter = {
-								add_trait = coward
-								add_martial = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = coward
+								}
+							}
 						}
+
+						scope:hunter = {
+							add_trait = coward
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.104 ######################
@@ -1546,12 +1913,19 @@ hunting.19 = { # Success whaling at sea
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "marksman"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = marksman
 								}
-								add_martial = 1
+							}
+						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "marksman"
+								duration = -1
+							}
 						}
 						if = {
 							limit = {
@@ -1569,13 +1943,21 @@ hunting.19 = { # Success whaling at sea
 						}					
 					}
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "master_hunter"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = marksman
 								}
-								#add_martial = 1
+							}
 						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "master_hunter"
+								duration = -1
+							}
+						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1593,7 +1975,7 @@ hunting.19 = { # Success whaling at sea
 					}
 					10 = { 
 						scope:hunting_friend = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 						if = {
 							limit = {
@@ -1611,9 +1993,16 @@ hunting.19 = { # Success whaling at sea
 						}					
 					}
 					10 = { 
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = oarmaster
+								}
+							}
+						}
+
 						scope:hunting_friend = {
-								add_trait = oarmaster
-								add_martial = 1
+							add_trait = oarmaster
 						}
 						if = {
 							limit = {
@@ -1630,10 +2019,15 @@ hunting.19 = { # Success whaling at sea
 							}		
 						}					
 					}
-					10 = { 
-						scope:hunting_friend = { ########## GIVE THE RELIC IN THE EVENT ######################
-								add_martial = 1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend.employer = {
+									has_global_variable = marlin_trophy
+								}
+							}
 						}
+						
 						if = {
 							limit = {
 								NOT = {
@@ -1657,14 +2051,22 @@ hunting.19 = { # Success whaling at sea
 			#custom_tooltip = oratory_task_15a
 			hidden_effect = {
 				random_list = {
-					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "marksman"
-									duration = -1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = marksman
 								}
-								add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "marksman"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.81
@@ -1672,14 +2074,22 @@ hunting.19 = { # Success whaling at sea
 							}
 						}						
 					}
-					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "master_hunter"
-									duration = -1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = master_hunter
 								}
-								#add_martial = 1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "master_hunter"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.82
@@ -1689,8 +2099,9 @@ hunting.19 = { # Success whaling at sea
 					}
 					10 = { 
 						scope:hunter = {
-								add_martial = 1
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.83
@@ -1698,11 +2109,19 @@ hunting.19 = { # Success whaling at sea
 							}
 						}						
 					}
-					10 = { 
-						scope:hunter = {
-								add_trait = squadron_leader
-								add_martial = 1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = squadron_leader
+								}
+							}
 						}
+
+						scope:hunter = {
+							add_trait = squadron_leader
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.106 ######################
@@ -1711,9 +2130,14 @@ hunting.19 = { # Success whaling at sea
 						}						
 					}
 					10 = { 
-						scope:hunter = { ########## GIVE THE RELIC IN THE EVENT ######################
-								add_martial = 1
+						trigger = {
+							NOT = {
+								scope:hunter.employer = {
+									has_global_variable = marlin_trophy
+								}
+							}
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.84
@@ -1750,12 +2174,19 @@ hunting.20 = { # Failure whaling at sea
 			hidden_effect = {
 				random_list = {
 					10 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "city_slicker"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = city_slicker
 								}
-								add_martial = -1
+							}
+						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "city_slicker"
+								duration = -1
+							}
 						}
 
 						if = {
@@ -1774,12 +2205,19 @@ hunting.20 = { # Failure whaling at sea
 						}
 					}
 					5 = { 
-						scope:hunting_friend = {
-								add_character_modifier = {
-									name = "vegetarian"
-									duration = -1
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_character_modifier = vegetarian
 								}
-								#add_martial = -1
+							}
+						}
+
+						scope:hunting_friend = {
+							add_character_modifier = {
+								name = "vegetarian"
+								duration = -1
+							}
 						}
 
 						if = {
@@ -1798,11 +2236,19 @@ hunting.20 = { # Failure whaling at sea
 						}
 											
 					}
-					40 = { 
+					40 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = pneumonia
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 							add_trait = pneumonia
-							add_martial = -1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1818,11 +2264,19 @@ hunting.20 = { # Failure whaling at sea
 							}		
 						}					
 					}
-					40 = { 
+					40 = {
+						trigger = {
+							NOT = {
+								scope:hunting_friend = {
+									has_trait = coward
+								}
+							}
+						}
+
 						scope:hunting_friend = {
 							add_trait = coward
-							add_martial = -1
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1844,6 +2298,7 @@ hunting.20 = { # Failure whaling at sea
 								death_reason = death_hunting_accident
 							}
 						}
+
 						if = {
 							limit = {
 								NOT = {
@@ -1867,13 +2322,20 @@ hunting.20 = { # Failure whaling at sea
 			#custom_tooltip = oratory_task_15a
 			hidden_effect = {
 				random_list = {
-					10 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "city_slicker"
-									duration = -1
+					10 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = city_slicker
 								}
-								add_martial = -1
+							}
+						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "city_slicker"
+								duration = -1
+							}
 						}
 						scope:hunter.employer = {
 							trigger_event = {
@@ -1882,14 +2344,22 @@ hunting.20 = { # Failure whaling at sea
 							}
 						}						
 					}
-					5 = { 
-						scope:hunter = {
-								add_character_modifier = {
-									name = "vegetarian"
-									duration = -1
+					5 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_character_modifier = vegetarian
 								}
-								#add_martial = -1
+							}
 						}
+
+						scope:hunter = {
+							add_character_modifier = {
+								name = "vegetarian"
+								duration = -1
+							}
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.90
@@ -1897,11 +2367,19 @@ hunting.20 = { # Failure whaling at sea
 							}
 						}						
 					}
-					40 = { 
+					40 = {
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = pneumonia
+								}
+							}
+						}
+
 						scope:hunter = {
 							add_trait = pneumonia
-							add_martial = -1
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.91
@@ -1910,10 +2388,18 @@ hunting.20 = { # Failure whaling at sea
 						}						
 					}
 					40 = { 
-						scope:hunter = {
-								add_trait = coward
-								add_martial = -1
+						trigger = {
+							NOT = {
+								scope:hunter = {
+									has_trait = coward
+								}
+							}
 						}
+
+						scope:hunter = {
+							add_trait = coward
+						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.108 ######################
@@ -1927,6 +2413,7 @@ hunting.20 = { # Failure whaling at sea
 								death_reason = death_hunting_accident
 							}
 						}
+
 						scope:hunter.employer = {
 							trigger_event = {
 								id = hunting.92
@@ -2019,6 +2506,7 @@ hunting.32 = { # Final resolution Finesse failure
 					has_global_variable = 18_point_buck
 				}
 			}
+
 			set_global_variable = {
 				name = 18_point_buck
 			}
