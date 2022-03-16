@@ -907,6 +907,7 @@ military_inventions = {
 	global_defensive_inv_3 = { 
 		modifier = { 
 			global_defensive = 0.05
+			garrison_size = 0.25
 			fort_maintenance_cost = 0.01  }
 		keystone = yes
 		requires = { global_defensive_inv_2 }

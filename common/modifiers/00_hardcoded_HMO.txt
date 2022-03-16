@@ -23,6 +23,12 @@ corruption = {
 	monthly_local_governor_wage = 0.5
 }
 
+land_province = {
+	max_attrition = 5
+	supply_limit = 10
+	garrison_growth = 0.05	#was 0.1
+}
+
 ##########################################################################
 # City Static Modifiers
 ##########################################################################
@@ -40,6 +46,10 @@ civilization_value = {
 	local_migration_attraction = 0.05
 	local_population_growth = 0.001
 	local_pop_assimilation_speed = 0.01
+}
+
+manpower = {
+	garrison_growth = 0.005	# was 0.01
 }
 
 

@@ -7,9 +7,8 @@ fortress_building = {
 	local_defensive = 0.05
 	local_manpower_modifier = -0.05
 	local_country_civilization_value = 1
-	garrison_size = 500
-	cost = 150
-	time = 720
+	cost = 200
+	time = 1825
 	
 	potential = {
 		OR = {
@@ -24,7 +23,6 @@ fortress_building = {
 		0 = fort_level
 		1 = value_manpower
 		2 = local_defensive
-		3 = garrison_size
 	}
 #AI handles fort building in code. It's too complicated to script this
 }
@@ -35,8 +33,8 @@ fortress_ramparts_building = {
 	local_defensive = 0.6
 	local_hostile_attrition = 1
 	local_population_capacity_modifier = -0.1
-	cost = 150
-	time = 720
+	cost = 350
+	time = 1825
 	
 	max_amount = 1
 	
