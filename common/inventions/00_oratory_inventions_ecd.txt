@@ -2026,7 +2026,7 @@ oratory_2 = {
 
 	diplomatic_reputation_inv_3 = {
 		modifier = { 
-			diplomatic_reputation = 1
+			global_nobles_happyness = 0.05
 			monthly_political_influence_modifier = 0.025
 		}
 		
@@ -2228,8 +2228,8 @@ oratory_2 = {
 
 	tyranny_inv_4 = {
 		modifier = { 
-			monthly_tyranny = -0.03
-			character_loyalty = 2
+			monthly_tyranny = -0.01
+			character_loyalty = 1
 		}
 		
 		requires = { monthly_character_loyalty_inv_2  }
@@ -2297,8 +2297,8 @@ oratory_2 = {
 	# Level 10
 	tyranny_inv_5 = {
 		modifier = { 
-			monthly_tyranny = -0.01
-			character_loyalty = 1
+			monthly_tyranny = -0.03
+			character_loyalty = 2
 		}
 		
 		requires_or = { monthly_character_loyalty_inv_5 diplomatic_reputation_inv_4 }

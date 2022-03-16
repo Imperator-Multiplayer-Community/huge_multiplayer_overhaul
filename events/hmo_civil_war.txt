@@ -7,14 +7,30 @@ hmo_civil_war.1 = {
 	trigger = {
 		is_ai = no
 		has_civil_war = yes
+		NOT = {
+			has_variable = civil_war_ongoing
+		}
 	}
 
 	immediate = {
+		# after 5 years run this again
+		set_variable = {
+			name = civil_war_ongoing
+			days = 1825
+		}
+
 		every_country_state = {
 			if = {
 				limit = {
 					owner = ROOT
-					state_loyalty < 50
+
+					any_state_province = {
+						state_loyalty < 50
+					}
+
+					NOT = {
+						has_state_modifier = civil_war_unrest
+					}
 				}
 			}
 

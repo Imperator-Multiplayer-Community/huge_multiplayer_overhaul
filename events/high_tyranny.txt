@@ -97,7 +97,10 @@ high_tyranny.4 = {
 	
 	option = {
 		name = "high_tyranny.4.a"
-		add_country_modifier = low_tyranny
+		add_country_modifier = {
+			name = low_tyranny
+			duration = -1
+		}
 		hidden_effect = {
 			remove_variable = trending_low_tyranny
 		}

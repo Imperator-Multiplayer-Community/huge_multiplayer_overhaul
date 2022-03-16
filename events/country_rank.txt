@@ -17,7 +17,10 @@ country_rank.1 = {
 			id = country_rank.7
 		}
 
-		add_country_modifier = migrant_horde_ae
+		add_country_modifier = {
+			name = migrant_horde_ae
+			duration = -1
+		}
 	}
 }
 
@@ -38,7 +41,10 @@ country_rank.2 = {
 			id = country_rank.7
 		}
 
-		add_country_modifier = city_power_ae
+		add_country_modifier = {
+			name = city_power_ae
+			duration = -1
+		}
 	}
 }
 
@@ -59,7 +65,10 @@ country_rank.3 = {
 			id = country_rank.7
 		}
 
-		add_country_modifier = local_power_ae
+		add_country_modifier = {
+			name = local_power_ae
+			duration = -1
+		}
 	}
 }
 
@@ -80,7 +89,10 @@ country_rank.4 = {
 			id = country_rank.7
 		}
 
-		add_country_modifier = regional_power_ae
+		add_country_modifier = {
+			name = regional_power_ae
+			duration = -1
+		}
 	}
 }
 
@@ -101,7 +113,10 @@ country_rank.5 = {
 			id = country_rank.7
 		}
 
-		add_country_modifier = major_power_ae
+		add_country_modifier = {
+			name = major_power_ae
+			duration = -1
+		}
 	}
 }
 
@@ -122,7 +137,10 @@ country_rank.6 = {
 			id = country_rank.7
 		}
 
-		add_country_modifier = great_power_ae
+		add_country_modifier = {
+			name = great_power_ae
+			duration = -1
+		}
 	}
 }
 
