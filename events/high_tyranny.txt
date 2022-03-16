@@ -70,6 +70,7 @@ high_tyranny.3 = {
 	immediate = {
 		set_variable = {
 			name = trending_low_tyranny
+			days = 400 # this will eventually expire if the window is missed
 		}
 
 		trigger_event = {
@@ -123,6 +124,7 @@ high_tyranny.5 = {
 	immediate = {
 		set_variable = {
 			name = trending_high_tyranny
+			days = 400 # this will eventually expire if the window is missed
 		}
 
 		trigger_event = {
