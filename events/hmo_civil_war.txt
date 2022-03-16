@@ -1,0 +1,38 @@
+﻿namespace = hmo_civil_war
+
+hmo_civil_war.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+		has_civil_war = yes
+	}
+
+	immediate = {
+		every_country_state = {
+			if = {
+				limit = {
+					owner = ROOT
+					state_loyalty < 50
+				}
+			}
+
+			add_state_loyalty = -25
+
+			random_state_province = {
+				if = {
+					limit = {
+						owner = ROOT
+						is_state_capital = yes
+					}
+				}
+
+				add_province_modifier = {
+					name = civil_war_unrest
+					duration = 720
+				}
+			}
+		}
+	}
+}

@@ -15,13 +15,23 @@ distinction.7 = { # Primigenia
 
     option = {      
         name = distinction.7.a
+        if = {
+            limit = {
+                exists = scope:actor
+            }
+
+            clear_saved_scope = actor
+        }
+
         scope:primagena_legion = {
             ordered_legion_unit = {
                 order_by = unit_size
                 save_scope_as = primagena_legion_leader
                 save_scope_as = actor
             }
+
             add_distinction = distinction_legio_primagena
+            
             ROOT = {
                 trigger_event = {
                     id = ml_expeditionary_distinctions.1

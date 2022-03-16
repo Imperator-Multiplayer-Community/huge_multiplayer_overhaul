@@ -24,6 +24,9 @@ slave_move_no = {
 slave_hub_move_no = {
     positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
 }
+civil_war_unrest = {
+    positive = "gfx/interface/icons/modifiers/local_unrest.dds"
+}
 
 
 ### not having these causes errors
