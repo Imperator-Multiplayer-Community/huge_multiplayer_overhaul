@@ -61,6 +61,7 @@ NTrade = {
 NLevy = {
 
 	DISBAND_MILITARY_EXP_MULT = 0 # when disbanding a levy military experience will be added to the country
+	WAR_EXHAUSTION_ON_RAISE = 0 # set to 0 to avoid exploiting
 }
 
 NAI = {

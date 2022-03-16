@@ -31,7 +31,7 @@
 			}
 
 			# every raise levy causes ae
-			owner = {
+			unit_owner = {
 				add_aggressive_expansion = 1
 			}
 		}

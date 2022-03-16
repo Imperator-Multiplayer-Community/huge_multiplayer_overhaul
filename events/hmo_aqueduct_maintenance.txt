@@ -1,4 +1,4 @@
-﻿namespace = aqueduct_maintenance.1
+﻿namespace = aqueduct_maintenance
 
 aqueduct_maintenance.1 = {
 	type = country_event
@@ -11,31 +11,43 @@ aqueduct_maintenance.1 = {
 				NOT = {
 					has_variable = previous_total_aqueduct_buildings
 				}
-				NOT = {
-					var:previous_total_aqueduct_buildings = num_of_aqueduct_building
+				trigger_if = {
+					limit = {
+						has_variable = previous_total_aqueduct_buildings
+					}
+
+					NOT = {
+						var:previous_total_aqueduct_buildings = num_of_aqueduct_building
+					}
 				}
 			}
 		}
 	}
 
 	immediate = {
-		every_owned_province = {
+		random_owned_province = { # dont need to do everything all at once
 			limit = {
 				has_city_status = yes
-				num_of_aqueduct_building > 0
+				num_of_aqueduct_building > 4 # allow 4 free aqueducts 
 				OR = {
 					NOT = {
 						has_variable = previous_total_aqueduct_buildings
 					}
-					NOT = {
-						var:previous_total_aqueduct_buildings = num_of_aqueduct_building
+					trigger_if = {
+						limit = {
+							has_variable = previous_total_aqueduct_buildings
+						}
+
+						NOT = {
+							var:previous_total_aqueduct_buildings = num_of_aqueduct_building
+						}
 					}
 				}
 			}
 
 			trigger_event = {
 				id = aqueduct_maintenance.2
-				days = 13
+				days = 3
 			}
 		}
 	}
@@ -59,13 +71,26 @@ aqueduct_maintenance.2 = {
 			value = num_of_aqueduct_building
 		}
 
+		set_variable = {
+			name = aqueduct_count
+			value = num_of_aqueduct_building
+		}
+
+		change_variable = {
+			name = aqueduct_count
+			add = -4
+			min = 0
+		}
+
 		while = {
-			count = num_of_aqueduct_building
-			add_country_modifier = {
+			count = aqueduct_count
+			add_province_modifier = {
 				name = aqueduct_maintenance
 				mode = add
 				duration = -1
 			}
 		}
+
+		remove_variable = aqueduct_count
 	}
 }
