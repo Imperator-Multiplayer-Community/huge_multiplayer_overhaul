@@ -63,6 +63,10 @@ aqueduct_maintenance = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
 
+navy_maint_cost = {
+    positive = "gfx/interface/icons/modifiers/mercenary_naval_maintenance_cost.dds"
+}
+
 ### not having these causes errors
 archers_tributary_terrain_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
