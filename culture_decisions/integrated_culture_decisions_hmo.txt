@@ -357,6 +357,7 @@
 								name = "counterintelligence"
 								duration = -1
 							}
+							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}
@@ -372,7 +373,7 @@
 		}
 	}
 
-		recruit_aryan_integrated_spy = {
+	recruit_aryan_integrated_spy = {
 		potential = {
 			NOT = { primary_culture = scope:target_culture.culture }
 			scope:target_culture = {
@@ -452,6 +453,7 @@
 								name = "counterintelligence"
 								duration = -1
 							}
+							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}
