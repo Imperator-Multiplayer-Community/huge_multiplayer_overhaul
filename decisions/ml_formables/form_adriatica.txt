@@ -9,14 +9,10 @@
 				country_culture_group = latin
 				country_culture_group = celto_pannonian_group
 			}
-			NOT = {
+			NOR = {
 				tag = ADX
-			}
-			NOT = {
-				tag = ROM
-			}	
-			NOT = {
 				tag = ILL
+				tag = ROM
 			}			
 			OR = {
 				is_ai = no
@@ -96,10 +92,10 @@
 					id = formable_heritage.112
 				}									
 			}
-				capital_scope = {
-					establish_city_effect = yes
-					capital_formable_medium_effect = yes
-					formable_capital_modifier_large_effect = yes
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_large_effect = yes
 			}
 			custom_tooltip = "form_adriatica_claims_tooltip"
 			hidden_effect = {

@@ -64,14 +64,14 @@
 			change_country_name = "ALBA_NAME"
 			change_country_flag = ALBA_FLAG
 			if = {
-                limit = { is_tribal = yes }
-                add_country_modifier = {
-                    name = civilized_tribe
-                    duration = 5475
-                }
-                change_government = tribal_federation
-                switch_government_type_event_clearup_effect = yes
-            }
+                		limit = { is_tribal = yes }
+				add_country_modifier = {
+				    name = civilized_tribe
+				    duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+		    	}
 			hidden_effect = {
 				change_country_adjective = "ALBA_ADJECTIVE"
 				change_country_color =  "alba_color"
