@@ -84,7 +84,7 @@ aqueduct_maintenance.2 = {
 		}
 
 		while = {
-			count = aqueduct_count
+			count = var:aqueduct_count
 			add_province_modifier = {
 				name = aqueduct_maintenance
 				mode = add
