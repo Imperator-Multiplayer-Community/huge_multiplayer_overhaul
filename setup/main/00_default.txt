@@ -11919,7 +11919,7 @@ country = {
 			capital = 4066
 
 			own_control_core = 	{
-				4066 4063 4067 4081 4062 4064 4059 4060 4058 4057
+				4066 4063 4067 4062 4064 4059 4057
 			}
 		}
 		
@@ -12405,7 +12405,7 @@ country = {
 		}
 
 		PHA = { # Issa
-			government = oligarchic_republic
+			government = despotic_monarchy
 			primary_culture = italiotian
 			religion = roman_pantheon
 
@@ -12419,7 +12419,7 @@ country = {
 			capital = 8026
 
 			own_control_core = 	{
-				4084 8026 8027
+				4084 8026 8027 4058 4060 4081
 			}
 		}
 

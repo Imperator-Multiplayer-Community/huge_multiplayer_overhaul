@@ -416,7 +416,7 @@
 		requires = { army_maintenance_cost_inv_2 }
 		modifier = { 
 			global_start_experience = 5
-			heavy_infantry_discipline = 0.05
+			supply_limit_modifier = 0.20
 		}
 		on_activate = {
 			trigger_event = {

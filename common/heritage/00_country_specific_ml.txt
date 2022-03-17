@@ -2629,7 +2629,7 @@ gallic_heritage = {
 illyrian_heritage = {
 	modifier = {
 		#good
-		liburnian_coastal_terrain_combat_bonus = 0.1
+		forest_combat_bonus = 0.10
 		enslavement_efficiency = 0.05
 		
 		#bad
