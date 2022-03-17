@@ -5,6 +5,7 @@ slave_move.1 = {
 	hidden = yes
 
 	trigger = {
+		is_ai = no
 		treasury > 5
 		exists = var:slave_moves
 		any_owned_province = {

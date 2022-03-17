@@ -20,13 +20,20 @@
 		}
 		trigger_if = {
 			limit = {
-                        is_state_capital = no
-                        any_neighbor_province = { NOT = { has_province_rank = city_metropolis } }
+                is_state_capital = no
+                any_neighbor_province = { 
+                	owner = ROOT.owner
+                	NOT = { has_province_rank = city_metropolis } 
+                }
 			}
-                        OR = {
-			is_state_capital = yes 
-                        any_neighbor_province = { has_province_rank = city_metropolis }
-                        }
+
+            OR = {
+				is_state_capital = yes 
+                any_neighbor_province = { 
+                	owner = ROOT.owner
+                	has_province_rank = city_metropolis 
+				}
+			}
 		}
 		trigger_if = {
 			limit = {

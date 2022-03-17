@@ -30,6 +30,8 @@ The latest and greatest from the Imperator: Rome multiplayer community.
 
 * Added aqueduct maintenance. The first 4 aqueducts are free and then each addition aqueduct will reduce the province's taxes. Public works maintenance isn't free!
 
+* Capture stance now gives -10% naval movement speed and Ramming gives +10% movement speed
+ -- Trying to buff ramming over capture to offer other options for players
 * Added scaling naval maintenance. Every 100 ships will add 10% more naval maintenance due to increased maintenance scale (up to 50%).
 * Ports now have a small reduction in naval maintenance. Build lots of ports to offset the costs of maintaining a large fleet.
  -- Players were able to build huge fleets for little cost or draw back. Now there might be something to be said for quality over quantity. Or at least a naval power will need the ports to maintain its fleet...

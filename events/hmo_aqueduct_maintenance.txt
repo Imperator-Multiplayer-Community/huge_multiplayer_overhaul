@@ -5,6 +5,7 @@ aqueduct_maintenance.1 = {
 	hidden = yes
 
 	trigger = {
+		is_ai = no
 		any_owned_province = {
 			has_city_status = yes
 			OR = {

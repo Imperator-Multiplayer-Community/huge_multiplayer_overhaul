@@ -5,13 +5,16 @@ state_improvement.8 = { #Toggles Metropolis Status
 	hidden = yes
 	
 	trigger = {
-        is_ai = yes
+		is_ai = yes
 		any_owned_province = {
 			has_city_status = yes
 			total_population >= 80
 			OR = {
 				is_state_capital = yes
-                any_neighbor_province = { has_province_rank = city_metropolis }
+                any_neighbor_province = { 
+                	owner = ROOT
+                	has_province_rank = city_metropolis 
+                }
 			}
 			NOT = { has_province_rank = city_metropolis }
 			NOT = {
@@ -28,7 +31,10 @@ state_improvement.8 = { #Toggles Metropolis Status
 				total_population >= 80
 				OR = {
 					is_state_capital = yes
-                	any_neighbor_province = { has_province_rank = city_metropolis }
+                	any_neighbor_province = { 
+                		owner = ROOT
+                		has_province_rank = city_metropolis 
+                	}
 				}
 				NOT = { has_province_rank = city_metropolis }
 				NOT = {

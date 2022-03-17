@@ -5,6 +5,7 @@ navy_maint.1 = {
 	hidden = yes
 
 	trigger = {
+		is_ai = no
 		num_of_ships >= 100
 		trigger_if = {
 			limit = {
