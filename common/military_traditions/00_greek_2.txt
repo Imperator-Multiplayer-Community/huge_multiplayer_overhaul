@@ -89,7 +89,7 @@
 	
 	greek_antigonid_path_3 = {
 		modifier = {
-			light_cavalry_morale = 0.1
+			light_infantry_discipline = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = { }
