@@ -47,7 +47,8 @@
 	
 	greek_persian_enable = {
 		modifier = {
-			plains_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = { greek_seleucid_path_5 }

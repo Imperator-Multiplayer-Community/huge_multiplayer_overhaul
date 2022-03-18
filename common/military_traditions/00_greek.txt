@@ -223,7 +223,7 @@
 	
 	greek_states_path_7 = {
 		modifier = { 
-			light_infantry_defensive = 10
+			light_infantry_defensive = 0.1
 		}
 		requires = { greek_seleucid_path_6 }
 		icon = greek_states_path_7
@@ -249,8 +249,8 @@
 	
 	greek_antigonid_path_7 = {
 		modifier = {
-			farmland_combat_bonus = 0.1
-			plains_combat_bonus = 0.1
+			heavy_infantry_farmland_combat_bonus = 0.1
+			heavy_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = { greek_states_path_7 }
