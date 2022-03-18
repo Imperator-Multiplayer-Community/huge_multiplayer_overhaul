@@ -223,8 +223,8 @@
 	
 	greek_states_path_7 = {
 		modifier = { 
-			light_infantry_cost = 0.15
-			heavy_infantry_cost = 0.1
+			light_infantry_cost = -0.15
+			heavy_infantry_cost = -0.1
 			heavy_infantry_discipline = 0.05
 		}
 		requires = { greek_seleucid_path_6 }
