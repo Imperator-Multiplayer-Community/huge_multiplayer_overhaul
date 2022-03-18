@@ -53,7 +53,8 @@
 	
 	greek_philosophy_start_bonus = {
 		modifier = { 
-			heavy_infantry_defensive = 0.1
+			heavy_infantry_defensive = 0.05
+			light_infantry_defensive = 0.10
 			army_maintenance_cost = 0.01
 	 }
 		enable_tactic = greek_phalanx

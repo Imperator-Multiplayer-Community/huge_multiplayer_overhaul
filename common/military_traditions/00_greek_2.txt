@@ -70,7 +70,7 @@
 	
 	greek_antigonid_path_1 = {
 		modifier = { 
-			global_cohort_start_experience = 5
+			light_infantry_defensive = 0.05
 			experience_decay = -0.005
 			army_maintenance_cost = 0.01
 		}
@@ -209,7 +209,6 @@
 	greek_states_path_end_bonus = {
 		modifier = { 
 			heavy_infantry_defensive = 0.1
-			heavy_infantry_discipline = 0.05
 			army_maintenance_cost = 0.01
 		}
 		requires = { greek_states_path_1 } 
