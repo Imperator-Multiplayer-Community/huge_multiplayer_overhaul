@@ -53,7 +53,8 @@
 	
 	greek_philosophy_start_bonus = {
 		modifier = { 
-			heavy_infantry_defensive = 0.1
+			heavy_infantry_defensive = 0.05
+			light_infantry_defensive = 0.10
 			army_maintenance_cost = 0.01
 	 }
 		enable_tactic = greek_phalanx
@@ -222,7 +223,9 @@
 	
 	greek_states_path_7 = {
 		modifier = { 
-			heavy_infantry_maintenance_cost = -0.1
+			light_infantry_cost = -0.15
+			heavy_infantry_cost = -0.1
+			heavy_infantry_discipline = 0.05
 		}
 		requires = { greek_seleucid_path_6 }
 		icon = greek_states_path_7
@@ -248,8 +251,8 @@
 	
 	greek_antigonid_path_7 = {
 		modifier = {
-			farmland_combat_bonus = 0.1
-			plains_combat_bonus = 0.1
+			heavy_infantry_farmland_combat_bonus = 0.1
+			heavy_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = { greek_states_path_7 }

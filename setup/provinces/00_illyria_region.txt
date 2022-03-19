@@ -998,20 +998,20 @@
 4060=
 {
 	barbarian_power=0
-	civilization_value=12
-	culture="greco_illyrian"
-	port_building=1
-	province_rank="settlement"
+	civilization_value=20
+	culture="italiotian"
+	port_building=3
+	province_rank="city"
 	religion="roman_pantheon"
 	terrain="farmland"
 	trade_goods="hemp"
 	freemen=
 	{
-		amount=1
+		amount=25
 	}
 	tribesmen=
 	{
-		amount=3
+		amount=5
 	}
 }
 #Splonum
@@ -1960,18 +1960,18 @@
 	barbarian_power=0
 	civilization_value=29
 	culture="italiotian"
-	port_building=1
+	port_building=3
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="hills"
 	trade_goods="wine"
 	citizen=
 	{
-		amount=2
+		amount=12
 	}
 	freemen=
 	{
-		amount=3
+		amount=18
 	}
 	tribesmen=
 	{
@@ -1990,18 +1990,18 @@
 	barbarian_power=0
 	civilization_value=24
 	culture="italiotian"
-	port_building=1
-	province_rank="settlement"
+	port_building=3
+	province_rank="city"
 	religion="roman_pantheon"
 	terrain="hills"
 	trade_goods="olive"
 	citizen=
 	{
-		amount=1
+		amount=15
 	}
 	freemen=
 	{
-		amount=2
+		amount=20
 	}
 	tribesmen=
 	{

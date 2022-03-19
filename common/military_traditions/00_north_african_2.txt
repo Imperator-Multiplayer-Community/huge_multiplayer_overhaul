@@ -74,9 +74,8 @@
 
 	north_african_army_path_4 = { ###North Aftica 3A
 		modifier = { 
-			tribute_income_modifier = 0.2
-			subject_loyalty = 20
-			diplomatic_relations = 2
+			warelephant_desert_combat_bonus = 0.1
+			warelephant_discipline = 0.1
 		}
 		icon = north_african_army_path_4
 		requires = { north_african_tribal_path_5 north_african_latin_enable }

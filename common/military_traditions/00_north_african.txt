@@ -77,7 +77,8 @@
 
 	north_african_army_path_3 = { ###North Aftica 2AB
 		modifier = { 
-			heavy_infantry_offensive = 0.1
+			warelephant_cost = -0.2
+			warelephant_morale = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_3

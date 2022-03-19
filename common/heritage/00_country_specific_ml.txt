@@ -1885,8 +1885,8 @@ balhikan_heritage = {
 israelite_heritage = {
 	modifier = {
 		#good
-		happiness_for_same_religion_modifier = 0.1
-		archers_offensive = 0.1
+		land_morale_modifier = 0.05
+		global_tax_modifier = 0.1
 		
 		#bad
 		global_pop_conversion_speed_modifier = -0.1
@@ -2629,7 +2629,7 @@ gallic_heritage = {
 illyrian_heritage = {
 	modifier = {
 		#good
-		liburnian_coastal_terrain_combat_bonus = 0.1
+		forest_combat_bonus = 0.10
 		enslavement_efficiency = 0.05
 		
 		#bad

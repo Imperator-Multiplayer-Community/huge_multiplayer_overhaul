@@ -5,7 +5,10 @@
 		
 		potential = {
 			num_of_cities >= 1
-			country_culture_group = illyrian_group
+			OR = {
+			    country_culture_group = illyrian_group
+			    tag = PHA
+			}
 			NOT = {
 				tag = ILL
 			}
