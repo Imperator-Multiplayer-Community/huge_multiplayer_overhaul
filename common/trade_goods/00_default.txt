@@ -441,7 +441,7 @@ vegetables = { #441 territories - ML 439#
 	}
 	country = {
 		slaves_move_cost_modifier = -0.25
-        tribesmen_move_cost_modifier = -0.25
+		tribesmen_move_cost_modifier = -0.25
 	}
 	
 	color = hsv { 0.3 0.9 0.3 }
