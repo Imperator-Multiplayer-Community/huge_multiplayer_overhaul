@@ -5,8 +5,8 @@ distinction_plains_master_01 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.05
-		army_movement_speed = 0.01
+		plains_combat_bonus = 0.025
+		army_movement_speed = 0.005
 	}
 }
 
@@ -17,8 +17,8 @@ distinction_plains_master_02 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.10
-		army_movement_speed = 0.02
+		plains_combat_bonus = 0.05
+		army_movement_speed = 0.01
 	}
 }
 
@@ -28,7 +28,7 @@ distinction_plains_01 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.02
+		plains_combat_bonus = 0.01
 	}
 }
 
@@ -38,7 +38,7 @@ distinction_plains_02 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.04
+		plains_combat_bonus = 0.02
 	}
 }
 
@@ -48,7 +48,7 @@ distinction_plains_03 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.06
+		plains_combat_bonus = 0.03
 	}
 }
 
@@ -58,7 +58,7 @@ distinction_plains_04 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.08
+		plains_combat_bonus = 0.04
 	}
 }
 
@@ -68,7 +68,7 @@ distinction_plains_05 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.10
+		plains_combat_bonus = 0.05
 	}
 }
 
@@ -78,7 +78,7 @@ distinction_plains_06 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.12
+		plains_combat_bonus = 0.06
 	}
 }
 
@@ -88,7 +88,7 @@ distinction_plains_07 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.14
+		plains_combat_bonus = 0.07
 	}
 }
 
@@ -98,7 +98,7 @@ distinction_plains_08 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.16
+		plains_combat_bonus = 0.08
 	}
 }
 
@@ -108,7 +108,7 @@ distinction_plains_09 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.18
+		plains_combat_bonus = 0.09
 	}
 }
 
@@ -118,6 +118,6 @@ distinction_plains_10 = {
 
 	}
 	unit = {
-		plains_combat_bonus = 0.20
+		plains_combat_bonus = 0.10
 	}
 }

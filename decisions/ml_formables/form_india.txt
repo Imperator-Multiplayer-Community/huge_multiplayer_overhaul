@@ -1,0 +1,77 @@
+﻿country_decisions = {
+	
+	# Form India
+	form_india = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = hellenic
+			NOT = {
+				tag = IND
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {		
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = gandhara_region
+					is_in_region = indus_region
+					is_in_region = madhyadesa_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = india_not_exists
+				NOT = {
+					any_country = {
+						tag = IND
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = gandhara_region
+			owns_or_subject_owns_region = indus_region
+			owns_or_subject_owns_region = madhyadesa_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "INDIA_NAME"			
+			hidden_effect = {
+				change_country_adjective = "INDIA_ADJECTIVE"
+				change_country_color =  "india_color"
+				change_country_tag = IND
+				change_country_flag = INDIA_FLAG
+				trigger_event = {
+					id = formable_heritage.47
+				}				
+			}
+				capital_scope = {
+					capital_formable_huge_effect = yes
+					formable_capital_modifier_large_effect = yes
+			}
+			custom_tooltip = "form_india_claims_tooltip"
+			hidden_effect = {
+				region:avanti_region = { formable_area_province_effect = yes }
+				area:magadha_area = { formable_area_province_effect = yes }
+				area:vrji_area = { formable_area_province_effect = yes }
+			}
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

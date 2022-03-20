@@ -74,9 +74,8 @@
 
 	north_african_army_path_4 = { ###North Aftica 3A
 		modifier = { 
-			tribute_income_modifier = 0.2
-			subject_loyalty = 20
-			diplomatic_relations = 2
+			warelephant_desert_combat_bonus = 0.1
+			warelephant_discipline = 0.1
 		}
 		icon = north_african_army_path_4
 		requires = { north_african_tribal_path_5 north_african_latin_enable }
@@ -120,7 +119,7 @@
 
 	north_african_tribal_path_7 = { ###North Aftica 2CA
 		modifier = { 
-			light_cavalry_discipline = 0.15
+			light_cavalry_discipline = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_7
@@ -129,7 +128,7 @@
 
 	north_african_army_path_6 = { ###North Aftica 2CB
 		modifier = { 
-			light_cavalry_offensive = 0.2
+			light_cavalry_offensive = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_6
@@ -139,7 +138,7 @@
 	north_african_tribal_path_3 = { ###North Aftica 3CA
 		modifier = { 
 			light_cavalry_cost = -0.15
-			light_cavalry_defensive = 0.15
+			light_cavalry_defensive = 0.1
 		}
 		icon = north_african_tribal_path_3
 		requires = {north_african_tribal_path_7}

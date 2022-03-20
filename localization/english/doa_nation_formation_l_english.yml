@@ -722,5 +722,26 @@
  grand_republic:0 "Grand Republic"
  grand_republic_desc:0 "By rebuilding the very foundation our Republic stands on we are now more capable than ever to manage our new lands."
  
- nile_republic_heritage "Nile Republic Heritage"
+ nile_republic_heritage:0 "Nile Republic Heritage"
  nile_republic_heritage_desc:0 "Placeholder"
+
+
+ # Form Cimmeria
+ CIMMERIA_NAME:0 "Cimmeria"
+ form_cimmeria:0 "Form Cimmeria"
+ form_cimmeria_desc:0 "North of the black sea lays in our control next the world."
+ cimmeria_not_exists:0 "#Y Cimmeria#! must NOT exist."
+
+ # Form Byzantine Empire
+ form_byzantine_empire:0 "Form Byzantine Empire"
+ form_byzantine_empire_desc:0 "A title which will strike fear to all but all create many enemies "
+ BYZANTINE_EMPIRE_NAME:0 "Byzantine Empire"
+ BYZANTINE_EMPIRE_ADJECTIVE:0 "Byzantines"
+ Byzantine_Empire_not_exists:0 "Byzantine Empire Must Not Exist"
+
+ # Form Greater Scythia
+ form_greater_scythia:0 "Form Greater Scythia"
+ form_greater_scythia_desc:0 "The time of the horse lords has came"
+ Greater_Scythia_not_exists:0 "Greater Scythia Must Not Exist"
+ GREATER_SCYTHIA_NAME:0 "Greater Scythia"
+ GREATER_SCYTHIA_ADJECTIVE:0 "Scythians"

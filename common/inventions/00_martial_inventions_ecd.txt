@@ -58,7 +58,7 @@
 	# Level 2
 	heavy_infantry_discipline_inv = {
 		modifier = { 
-			heavy_infantry_discipline = 0.05}
+			monthly_military_experience_modifier = 0.05}
 			on_activate = {
 				trigger_event = {
 					id = maintenance_event.6
@@ -416,7 +416,7 @@
 		requires = { army_maintenance_cost_inv_2 }
 		modifier = { 
 			global_start_experience = 5
-			heavy_infantry_discipline = 0.05
+			supply_limit_modifier = 0.20
 		}
 		on_activate = {
 			trigger_event = {
@@ -907,6 +907,7 @@ military_inventions = {
 	global_defensive_inv_3 = { 
 		modifier = { 
 			global_defensive = 0.05
+			garrison_size = 0.25
 			fort_maintenance_cost = 0.01  }
 		keystone = yes
 		requires = { global_defensive_inv_2 }
@@ -1344,7 +1345,7 @@ military_inventions = {
 			}
 			custom_tooltip = "ArmyMaintUp_TT"
 		}
-		requires = { gallic_celtic_plough_inv gallic_chainmail_inv }
+		requires_or = { gallic_celtic_plough_inv gallic_chainmail_inv }
 		allow = {
 			OR = {
 				country_culture_group = gallic
@@ -1406,7 +1407,7 @@ military_inventions = {
     gallic_timbered_roads_inv = {
     	modifier = { Army_maintenance_cost = -0.1
     				 Army_movement_speed = 0.1 }
-        requires = { gallic_montefortino_helmet_inv gallic_trimarcisia_inv }
+        requires_or = { gallic_montefortino_helmet_inv gallic_trimarcisia_inv }
         allow = {
 			OR = {
 				country_culture_group = gallic

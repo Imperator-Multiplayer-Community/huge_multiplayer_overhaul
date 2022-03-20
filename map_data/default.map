@@ -66,7 +66,7 @@ impassable_terrain = LIST { 768 783 3138 3316 5962 5963 5968 6045 6483 6488 6493
 
 
 #Uninhabitables, Ranges:
-uninhabitable = RANGE { 7546 7558 }
+uninhabitable = RANGE { 7554 7558 }
 uninhabitable = RANGE { 7561 7565 }
 uninhabitable = RANGE { 5602 5604 }
 uninhabitable = RANGE { 5399 5407 }
@@ -77,7 +77,7 @@ uninhabitable = RANGE { 5665 5669 }
 uninhabitable = RANGE { 8021 8025 }
 uninhabitable = RANGE { 8567 8573 }
 #Uninhabitables, List:
-uninhabitable = LIST { 1673 1749 1750 1870 4992 5436 5443 5444 5446 7566 7567 7763 7914 7986 }
+uninhabitable = LIST { 1870 4992 5436 5443 5444 5446 7566 7567 7763 7914 7986 }
 
 #Lakes, Ranges:
 lakes = RANGE { 5982 5983 }

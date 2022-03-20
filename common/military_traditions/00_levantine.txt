@@ -72,7 +72,7 @@
 	egyptian_path_2 = { #
 		icon = levantine_egyptian_path_6
 		modifier = {
-			camels_discipline = 0.1
+			heavy_cavalry_defensive = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = { }
@@ -108,7 +108,8 @@
 	egyptian_path_5 = { #
 		icon = levantine_arabian_path_end_bonus
 		modifier = {
-			camels_morale = 0.15
+			heavy_cavalry_discipline = 0.10
+			heavy_cavalry_desert_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
 		}
 		requires = { egyptian_path_2 }
@@ -135,9 +136,7 @@
 	egyptian_path_8 = { #
 		icon = north_african_army_path_6
 		modifier = {
-			light_cavalry_cost = -0.1
-			light_cavalry_offensive = 0.15
-			light_cavalry_movement_speed = 0.1
+			camels_morale = 0.15
 		}
 		requires = { egyptian_path_5 }
 	}
@@ -145,7 +144,7 @@
 	egyptian_path_9 = { #
 		icon = north_african_army_path_end_bonus
 		modifier = {
-			light_infantry_defensive = 0.15
+			light_infantry_defensive = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = { egyptian_path_6 }
@@ -173,7 +172,7 @@
 		}
 		icon = greek_seleucid_path_1
 		modifier = {
-			heavy_cavalry_defensive = 0.1
+			camels_discipline = 0.15
 			experience_decay = -0.005
 			army_maintenance_cost = 0.01
 		}

@@ -1,0 +1,56 @@
+﻿namespace = hmo_civil_war
+
+hmo_civil_war.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+		has_civil_war = yes
+		NOT = {
+			has_variable = civil_war_ongoing
+		}
+	}
+
+	immediate = {
+		# after 5 years run this again
+		set_variable = {
+			name = civil_war_ongoing
+			days = 1825
+		}
+
+		every_country_state = {
+			if = {
+				limit = {
+					owner = ROOT
+
+					any_state_province = {
+						state_loyalty < 50
+					}
+
+					NOT = {
+						has_state_modifier = civil_war_unrest
+					}
+				}
+			}
+
+			#state scope
+			add_state_modifier = {
+				name = civil_war_unrest
+				duration = 720
+			}
+
+			random_state_province = {
+				if = {
+					limit = {
+						owner = ROOT
+						is_state_capital = yes
+					}
+				}
+
+				#for some reason this is province scope
+				add_state_loyalty = -25
+			}
+		}
+	}
+}

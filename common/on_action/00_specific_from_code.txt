@@ -2040,7 +2040,15 @@ on_legion_raised = {
 					}
 					owner = {
 						save_scope_as = mutineer_revolting_country
-						trigger_event = distinction.40
+						
+						scope:mutineer_revolting_country = {
+							add_country_modifier = {
+								name = civil_war_buff_ai
+								duration = 3650
+							}
+						}
+
+						trigger_event = distinction.7
 					}
 				}
 				else_if = {
@@ -2059,6 +2067,15 @@ on_legion_raised = {
 				}
 			}
 	    }
+
+	    owner = {
+	    	add_country_modifier = {
+	    		name = legion_ae
+	    		duration = -1
+	    		mode = add
+	    	}
+	    }
+
 		add_distinction = distinction_legion_default
 	}
 }

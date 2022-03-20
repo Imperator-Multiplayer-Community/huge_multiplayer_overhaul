@@ -287,7 +287,7 @@
 
 	celtic_north_african_enable = { ###Celtic 4BB
 		modifier = { 
-			light_cavalry_defensive = 0.15
+			light_cavalry_defensive = 0.1
 			land_morale_modifier = 0.025
 			army_maintenance_cost = 0.01
 		}

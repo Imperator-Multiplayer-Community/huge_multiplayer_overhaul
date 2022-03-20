@@ -21,8 +21,51 @@ slave_move_yes = {
 slave_move_no = {
     positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
 }
+slave_hub_move_no = {
+    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
+}
+civil_war_unrest = {
+    positive = "gfx/interface/icons/modifiers/local_unrest.dds"
+}
+migrant_horde_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
 
+city_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
 
+local_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+regional_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+major_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+great_power_ae = {
+    positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+high_tyranny = {
+    positive = "gfx/interface/icons/modifiers/monthly_tyranny.dds"
+}
+
+low_tyranny = {
+    positive = "gfx/interface/icons/modifiers/local_citizen_output.dds"
+}
+
+aqueduct_maintenance = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+
+navy_maint_cost = {
+    positive = "gfx/interface/icons/modifiers/mercenary_naval_maintenance_cost.dds"
+}
 
 ### not having these causes errors
 archers_tributary_terrain_combat_bonus = {
@@ -61,30 +104,39 @@ warelephant_tributary_terrain_combat_bonus = {
 large_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Market_Town_Building_cost = {
+market_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Farming_Town_building_cost = {
+farming_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Mining_Town_Building_cost = {
+mining_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Horse_Ranch_building_cost = {
+horse_ranch_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Steppe_Horse_Ranch_building_cost = {
+steppe_horse_ranch_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Elephant_Ranch_building_cost = {
+elephant_ranch_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
 camel_ranch_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Vineyard_building_cost = {
+vineyard_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-Industry_Town_building_cost = {
+industry_town_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+send_letter_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+go_hunting_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+subject_player_client_state_pays_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }

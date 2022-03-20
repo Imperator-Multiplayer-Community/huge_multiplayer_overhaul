@@ -1391,7 +1391,7 @@
 1885=
 {
 	barbarian_power=0
-	civilization_value=18
+	civilization_value=30
 	culture="pisidian"
 	province_rank="city"
 	religion="anatolian_religion"
@@ -1399,11 +1399,11 @@
 	trade_goods="incense"
 	citizen=
 	{
-		amount=2
+		amount=15
 	}
 	freemen=
 	{
-		amount=2
+		amount=20
 	}
 	freemen=
 	{
@@ -1419,7 +1419,7 @@
 	}
 	slaves=
 	{
-		amount=1
+		amount=4
 	}
 	tribesmen=
 	{

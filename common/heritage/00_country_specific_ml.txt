@@ -524,7 +524,7 @@ religious_enclave_heritage = {
 cyrenaican_heritage = {
 	modifier = {
 		#good
-		happiness_for_same_religion_modifier = 0.1
+		global_pop_promotion_speed_modifier = 0.15
 		build_cost = -0.05
 
 		#bad
@@ -722,14 +722,42 @@ eretrian_heritage = {
 byzantine_heritage = {
 	modifier = {
 		#good
-		global_nobles_happyness = 0.03
-		ship_cost = -0.1
+		global_population_growth = 0.03
+		global_tax_modifier = 0.05
 
 		#bad
-		army_maintenance_cost = 0.05
+		character_loyalty = -5.00
 	}
 	trigger = {
 		tag = BYZ
+	}
+}
+
+byzantineEmpire_heritage = {
+	modifier = {
+		#good
+		discipline = 0.05
+		global_commerce_modifier = 0.1
+
+		#bad
+		character_loyalty = -5.00
+	}
+	trigger = {
+		tag = BYT
+	}
+}
+
+greaterscythia_heritage = {
+	modifier = {
+		#good
+		horse_archers_offensive = 0.1
+		global_tax_modifier = 0.05
+
+		#bad
+		character_loyalty = -5.00
+	}
+	trigger = {
+		tag = GCS
 	}
 }
 
@@ -1045,17 +1073,19 @@ babylonian_heritage = {
 heritage_of_assur = {
 	modifier = {
 		#good
-		heavy_cavalry_maintenance_cost = -0.05
-		global_freemen_happyness = happiness_small_svalue
-		
+		land_morale_modifier = 0.05
+		discipline = 0.05
 		#bad
-		global_citizen_happyness = negative_happiness_small_svalue
+		monthly_political_influence_modifier = -0.05
 	}
 	
 	trigger = {
 		OR = {
 			tag = ADI
 			tag = A53
+			tag = B17 
+			tag = B19
+
 		}	
 	}
 }
@@ -1244,6 +1274,7 @@ zalmoxian_heritage = {
 		OR = {
 			tag = GTE
 			tag = TYG
+			tag = C94
 		}	
 	}
 }
@@ -1316,7 +1347,7 @@ heritage_of_the_nile = {
 sarmatian_heritage = {
 	modifier = {
 		#good
-		heavy_cavalry_offensive = 0.05
+		horse_archers_offensive = 0.10
 		agressive_expansion_impact = -0.05
 		
 		#bad
@@ -1327,6 +1358,10 @@ sarmatian_heritage = {
 		OR = {
 			tag = SRM
 			tag = SCY
+			tag = C92
+			tag = C93
+			tag = C95
+			tag = C96
 		}					
 	}
 }
@@ -1850,8 +1885,8 @@ balhikan_heritage = {
 israelite_heritage = {
 	modifier = {
 		#good
-		happiness_for_same_religion_modifier = 0.1
-		archers_offensive = 0.1
+		land_morale_modifier = 0.05
+		global_tax_modifier = 0.1
 		
 		#bad
 		global_pop_conversion_speed_modifier = -0.1
@@ -2454,7 +2489,7 @@ proto_tibetan_heritage = {
 abyssinian_heritage = {
 	modifier = {
 		#good
-		experience_decay = -0.005
+		discipline = 0.05
 		global_commerce_modifier = 0.05
 		
 		#bad
@@ -2594,7 +2629,7 @@ gallic_heritage = {
 illyrian_heritage = {
 	modifier = {
 		#good
-		liburnian_coastal_terrain_combat_bonus = 0.1
+		forest_combat_bonus = 0.10
 		enslavement_efficiency = 0.05
 		
 		#bad
@@ -3759,3 +3794,17 @@ liguria_heritage = {
 		tag = LIG
 	}
 }
+
+Cimmeria_heritage = {
+    modifier = {
+        #good
+		price_found_city_cost_modifier = -0.15
+        global_population_growth = 0.1
+
+        #bad
+        global_tribesmen_happyness = negative_happiness_small_svalue
+    }
+
+    trigger = {
+        tag = CMM
+    }

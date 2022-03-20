@@ -6,7 +6,7 @@ distinction_cohort_master_01 = {
 		martial = 1
 	}
 	unit = {
-		land_morale_recovery = 0.1
+		land_morale_recovery = 0.05
 	}
 }
 
@@ -16,6 +16,6 @@ distinction_cohort_master_02 = {
 		martial = 2
 	}
 	unit = {
-		land_morale_recovery = 0.2
+		land_morale_recovery = 0.10
 	}
 }

@@ -57,3 +57,25 @@ forbid_slave_movement = {
 		}
 	}
 }
+
+forbid_slave_hub_movement = {
+	ai_is_valid = {
+		always = no
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_province_modifier = slave_hub_move_no
+			}
+
+			remove_province_modifier = slave_hub_move_no
+		}
+		else = {
+			add_province_modifier = {
+				name = slave_hub_move_no
+				duration = -1
+			}
+		}
+	}
+}

@@ -5740,12 +5740,18 @@ country = {
 		}
 		
 		PON = {
-			government = tribal_kingdom
+			government = despotic_monarchy
 			primary_culture = cappadocian
-			religion = zoroaster
+			religion = anatolian_religion
+
+			technology={
+				military_tech={ level=2 progress=0 }
+				civic_tech={ level=2 progress=0 }
+				oratory_tech={ level=2 progress=0 }
+				religious_tech= { level=2 progress=0  }
+			}
 			
 			capital = 1819
-			centralization=30
 			
 			own_control_core = 	{
 				1789 1790 1833 1834 1838 1839 1840 1845 1846 #pontus_colopene_region
@@ -5772,9 +5778,17 @@ country = {
 		}
 		
 		SLG = { # Selgia
-			government = tribal_federation
+			government = despotic_monarchy
 			primary_culture = pisidian
 			religion = anatolian_religion
+
+			technology={
+				military_tech={ level=2 progress=0 }
+				civic_tech={ level=2 progress=0 }
+				oratory_tech={ level=2 progress=0 }
+				religious_tech= { level=2 progress=0  }
+			}
+			
 
 			capital = 1885
 
@@ -6158,7 +6172,7 @@ country = {
 		B70 = { #Phyrgia
 			government = despotic_monarchy
 			primary_culture = phrygian
-			religion = roman_pantheon
+			religion = anatolian_religion
 		
 			technology={
 				military_tech={ level=2 progress=0 }
@@ -6975,6 +6989,59 @@ country = {
 				7187 7188 7191 7190 7192 7193 6124
 			}
 		}
+
+		C92 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 7189 
+			
+			own_control_core = {
+				6086 6085 6088 7194 6097 7195 7189 7186 7185
+			}
+		}
+
+		C93 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 6142
+			
+			own_control_core = {
+				6098 6100 6102 6103 6119 6118 6108 6122 6123 6141 6129 6139 6142 6145 
+			}
+		}
+
+		C95 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 6154
+			
+			own_control_core = {
+				6144 6146 6147 6148 6149 6154 6153 6155 6157 6156 6152 6143 6163 
+				6165 6170 6164 
+			}
+		}
+
+		C96 = {
+			government = tribal_kingdom
+			primary_culture = scythian
+			religion = indo_iranian_religion
+			centralization=10
+			
+			capital = 6178
+			
+			own_control_core = {
+				6173 6175 6176 6179 6177 6180 6178 6189 6187 
+			}
+		}
 		
 		ZGY = {
 			family = 65
@@ -7098,6 +7165,18 @@ country = {
 			
 			own_control_core = {
 				4800 4521 4919 4522 4523 4524 4918 4920 4917 4922 4921 4925 4916 4929 4915
+			}
+		}
+
+		C94 = {
+			government = tribal_chiefdom
+			primary_culture = harpii
+			religion = shamanism
+			
+			capital = 4914
+			
+			own_control_core = {
+				4940 4939 4938 4914 4935 4933 4934 4936 4937 4928 4932 4931 4930
 			}
 		}
 
@@ -8703,7 +8782,7 @@ country = {
 		#Greece, Macedonia & Thrace
 		
 		BYZ = {
-			government = plutocratic_republic
+			government = aristocratic_republic
 			primary_culture = thracian
 			religion = roman_pantheon
 			diplomatic_stance=trading_stance
@@ -8717,7 +8796,7 @@ country = {
 			}
 			
 			own_control_core = {
-				341 345 1453 
+				341 345 1453 346 342
 			}
 			
 		}
@@ -8741,11 +8820,11 @@ country = {
 			capital = 350 #Lysimachea
 
 			own_control_core = {
-				342 346 347 348 349 350 352 353 354 #Europa
-				496
-				479 491 343 4312 4307 4314 4154 489 495 #Haemimontus
+				347 348 349 350 352 353 354 #Europa
+				496 343
+				479 491 4312 4307 4314 4154 489 495 #Haemimontus
 
-			}
+			}    
 
 			pantheon = {
 				{ deity = 110 }
@@ -11840,7 +11919,7 @@ country = {
 			capital = 4066
 
 			own_control_core = 	{
-				4066 4063 4067 4081 4062 4064 4059 4060 4058 4057
+				4066 4063 4067 4062 4064 4059 4057
 			}
 		}
 		
@@ -12184,6 +12263,18 @@ country = {
 			}
 		}
 
+		C91 = {
+			government = tribal_kingdom
+			primary_culture = dacian
+			religion = shamanism
+
+			capital = 4840
+
+			own_control_core = 	{
+				4857 4858 4859 4856 4851 4860 4840 4841 4836 4839 4861 
+			}
+		}
+
 		C73 = {
 			government = tribal_kingdom
 			primary_culture = dacian
@@ -12314,7 +12405,7 @@ country = {
 		}
 
 		PHA = { # Issa
-			government = oligarchic_republic
+			government = despotic_monarchy
 			primary_culture = italiotian
 			religion = roman_pantheon
 
@@ -12328,7 +12419,7 @@ country = {
 			capital = 8026
 
 			own_control_core = 	{
-				4084 8026 8027
+				4084 8026 8027 4058 4060 4081
 			}
 		}
 
@@ -13066,7 +13157,7 @@ country = {
 			}
 			
 			own_control_core = {
-				4440 4442 4443 4444 4445 4462 4463 7367 7338 7400 7659 7480 #magadha_region
+				4440 4442 4443 4444 4445 4462 4463 7367 7338 7400 7659 7480 #
 
 			}
 			
@@ -14706,7 +14797,7 @@ country = {
 				3441 6728 6729 3445 3448 6656 3447 3446 3450 3454 #parthia
 				3440 3449 3455 3469 3456 3457 3439 4995 3458 3459
 				3468 3467 3462 3444 3465 3466 3451 3464 
-			}
+			} 
 			
 		}
 		
@@ -14718,7 +14809,7 @@ country = {
 			
 			government = despotic_monarchy
 			primary_culture = assyrian
-			religion = zoroaster
+			religion = mesopotamian_religion
 			
 			capital = 981
 			
@@ -15104,11 +15195,17 @@ country = {
 		}
 		
 		A69 = { #CARMANIA
-		    government = tribal_chiefdom
+		    government = despotic_monarchy
 			primary_culture = carmanian
 			religion = zoroaster
-			centralization=-50
-		
+
+			technology={
+				military_tech={ level=2 progress=0 }
+				civic_tech={ level=2 progress=0 }
+				oratory_tech={ level=2 progress=0 }
+				religious_tech= { level=2 progress=0  }
+			}
+			
 			capital = 4959
 		
 			own_control_core =  {
@@ -15802,7 +15899,7 @@ country = {
 			capital = 7506
 			
 			own_control_core = {
-				7506 7509 7515 7540 7508 7593 651
+				7506 7509 7515 7540 7508 7593 651 7550 7551 
 			}
 		}
 		
@@ -15827,7 +15924,7 @@ country = {
 			
 			own_control_core = {
 				7599 7501 7500 7596 7595 7594 7598 7597 583 584 585 590 589 586 587 580 588 578
-                                582 579 566 564 565 581 647 649 650
+                                582 579 566 564 565 581 647 649 650 7552 7553
 			}
 		} 
 		
@@ -15877,7 +15974,7 @@ country = {
 			capital = 7503
 			
 			own_control_core = {
-				7503 7504 7507 7513
+				7503 7504 7507 7513 7502 7549 7548 7547 7546
 			}
 		} 
 		
@@ -15896,7 +15993,7 @@ country = {
 			capital = 7505
 			
 			own_control_core = {
-				7505 7510 7514 7511
+				7505 7510 7514 7511 7545 7544 7543 7542 7541 
 			}
 		} 
 		
@@ -16155,7 +16252,7 @@ country = {
 		B17 = { #OSROENE
 			government = despotic_monarchy
 			primary_culture = aramaic
-			religion = carthaginian_pantheon
+			religion = mesopotamian_religion
 		
 			technology={
 				military_tech={ level=2 progress=0 }
@@ -16176,7 +16273,7 @@ country = {
 		B19 = { #DAMASCUS
 			government = despotic_monarchy
 			primary_culture = aramaic
-			religion = carthaginian_pantheon
+			religion = mesopotamian_religion
 		
 			technology={
 				military_tech={ level=2 progress=0 }

@@ -6,7 +6,7 @@ distinction_archer_offensive_01 = {
 
 	}
 	unit = {
-		archers_offensive = 0.01
+		archers_offensive = 0.005
 	}
 }
 
@@ -16,7 +16,7 @@ distinction_archer_offensive_02 = {
 
 	}
 	unit = {
-		archers_offensive = 0.02
+		archers_offensive = 0.01
 	}
 }
 
@@ -26,7 +26,7 @@ distinction_archer_offensive_03 = {
 
 	}
 	unit = {
-		archers_offensive = 0.03
+		archers_offensive = 0.015
 	}
 }
 
@@ -37,7 +37,7 @@ distinction_archer_offensive_04 = {
 
 	}
 	unit = {
-		archers_offensive = 0.04
+		archers_offensive = 0.02
 	}
 }
 
@@ -47,7 +47,7 @@ distinction_archer_offensive_05 = {
 
 	}
 	unit = {
-		archers_offensive = 0.05
+		archers_offensive = 0.025
 	}
 }
 
@@ -57,7 +57,7 @@ distinction_archer_offensive_06 = {
 
 	}
 	unit = {
-		archers_offensive = 0.06
+		archers_offensive = 0.03
 	}
 }
 
@@ -67,7 +67,7 @@ distinction_archer_offensive_07 = {
 
 	}
 	unit = {
-		archers_offensive = 0.07
+		archers_offensive = 0.035
 	}
 }
 
@@ -77,7 +77,7 @@ distinction_archer_offensive_08 = {
 
 	}
 	unit = {
-		archers_offensive = 0.08
+		archers_offensive = 0.04
 	}
 }
 
@@ -87,7 +87,7 @@ distinction_archer_offensive_09 = {
 
 	}
 	unit = {
-		archers_offensive = 0.09
+		archers_offensive = 0.045
 	}
 }
 
@@ -97,7 +97,7 @@ distinction_archer_offensive_10 = {
 
 	}
 	unit = {
-		archers_offensive = 0.10
+		archers_offensive = 0.05
 	}
 }
 
@@ -107,7 +107,7 @@ distinction_archer_offensive_11 = {
 
 	}
 	unit = {
-		archers_offensive = 0.11
+		archers_offensive = 0.055
 	}
 }
 
@@ -117,7 +117,7 @@ distinction_archer_offensive_12 = {
 
 	}
 	unit = {
-		archers_offensive = 0.12
+		archers_offensive = 0.06
 	}
 }
 
@@ -127,7 +127,7 @@ distinction_archer_offensive_13 = {
 
 	}
 	unit = {
-		archers_offensive = 0.13
+		archers_offensive = 0.065
 	}
 }
 
@@ -137,7 +137,7 @@ distinction_archer_offensive_14 = {
 
 	}
 	unit = {
-		archers_offensive = 0.14
+		archers_offensive = 0.07
 	}
 }
 
@@ -147,7 +147,7 @@ distinction_archer_offensive_15 = {
 
 	}
 	unit = {
-		archers_offensive = 0.15
+		archers_offensive = 0.075
 	}
 }
 distinction_archer_offensive_16 = {
@@ -156,7 +156,7 @@ distinction_archer_offensive_16 = {
 
 	}
 	unit = {
-		archers_offensive = 0.16
+		archers_offensive = 0.08
 	}
 }
 distinction_archer_offensive_17 = {
@@ -165,7 +165,7 @@ distinction_archer_offensive_17 = {
 
 	}
 	unit = {
-		archers_offensive = 0.17
+		archers_offensive = 0.085
 	}
 }
 distinction_archer_offensive_18 = {
@@ -174,7 +174,7 @@ distinction_archer_offensive_18 = {
 
 	}
 	unit = {
-		archers_offensive = 0.18
+		archers_offensive = 0.09
 	}
 }
 distinction_archer_offensive_19 = {
@@ -183,7 +183,7 @@ distinction_archer_offensive_19 = {
 
 	}
 	unit = {
-		archers_offensive = 0.19
+		archers_offensive = 0.095
 	}
 }
 distinction_archer_offensive_20 = {
@@ -192,7 +192,7 @@ distinction_archer_offensive_20 = {
 
 	}
 	unit = {
-		archers_offensive = 0.20
+		archers_offensive = 0.10
 	}
 }
 
@@ -205,7 +205,7 @@ distinction_archer_defensive_01 = {
 
 	}
 	unit = {
-		archers_defensive = 0.01
+		archers_defensive = 0.005
 	}
 }
 
@@ -215,7 +215,7 @@ distinction_archer_defensive_02 = {
 
 	}
 	unit = {
-		archers_defensive = 0.02
+		archers_defensive = 0.01
 	}
 }
 
@@ -225,7 +225,7 @@ distinction_archer_defensive_03 = {
 
 	}
 	unit = {
-		archers_defensive = 0.03
+		archers_defensive = 0.015
 	}
 }
 
@@ -236,7 +236,7 @@ distinction_archer_defensive_04 = {
 
 	}
 	unit = {
-		archers_defensive = 0.04
+		archers_defensive = 0.02
 	}
 }
 
@@ -246,7 +246,7 @@ distinction_archer_defensive_05 = {
 
 	}
 	unit = {
-		archers_defensive = 0.05
+		archers_defensive = 0.025
 	}
 }
 
@@ -256,7 +256,7 @@ distinction_archer_defensive_06 = {
 
 	}
 	unit = {
-		archers_defensive = 0.06
+		archers_defensive = 0.03
 	}
 }
 
@@ -266,7 +266,7 @@ distinction_archer_defensive_07 = {
 
 	}
 	unit = {
-		archers_defensive = 0.07
+		archers_defensive = 0.035
 	}
 }
 
@@ -276,7 +276,7 @@ distinction_archer_defensive_08 = {
 
 	}
 	unit = {
-		archers_defensive = 0.08
+		archers_defensive = 0.04
 	}
 }
 
@@ -286,7 +286,7 @@ distinction_archer_defensive_09 = {
 
 	}
 	unit = {
-		archers_defensive = 0.09
+		archers_defensive = 0.045
 	}
 }
 
@@ -296,7 +296,7 @@ distinction_archer_defensive_10 = {
 
 	}
 	unit = {
-		archers_defensive = 0.10
+		archers_defensive = 0.05
 	}
 }
 
@@ -306,7 +306,7 @@ distinction_archer_defensive_11 = {
 
 	}
 	unit = {
-		archers_defensive = 0.11
+		archers_defensive = 0.055
 	}
 }
 
@@ -316,7 +316,7 @@ distinction_archer_defensive_12 = {
 
 	}
 	unit = {
-		archers_defensive = 0.12
+		archers_defensive = 0.06
 	}
 }
 
@@ -326,7 +326,7 @@ distinction_archer_defensive_13 = {
 
 	}
 	unit = {
-		archers_defensive = 0.13
+		archers_defensive = 0.065
 	}
 }
 
@@ -336,7 +336,7 @@ distinction_archer_defensive_14 = {
 
 	}
 	unit = {
-		archers_defensive = 0.14
+		archers_defensive = 0.07
 	}
 }
 
@@ -346,7 +346,7 @@ distinction_archer_defensive_15 = {
 
 	}
 	unit = {
-		archers_defensive = 0.15
+		archers_defensive = 0.075
 	}
 }
 
@@ -356,7 +356,7 @@ distinction_archer_defensive_16 = {
 
 	}
 	unit = {
-		archers_defensive = 0.16
+		archers_defensive = 0.08
 	}
 }
 
@@ -366,7 +366,7 @@ distinction_archer_defensive_17 = {
 
 	}
 	unit = {
-		archers_defensive = 0.17
+		archers_defensive = 0.085
 	}
 }
 
@@ -376,7 +376,7 @@ distinction_archer_defensive_18 = {
 
 	}
 	unit = {
-		archers_defensive = 0.18
+		archers_defensive = 0.09
 	}
 }
 
@@ -386,7 +386,7 @@ distinction_archer_defensive_19 = {
 
 	}
 	unit = {
-		archers_defensive = 0.19
+		archers_defensive = 0.095
 	}
 }
 
@@ -396,7 +396,7 @@ distinction_archer_defensive_20 = {
 
 	}
 	unit = {
-		archers_defensive = 0.20
+		archers_defensive = 0.10
 	}
 }
 
@@ -422,7 +422,7 @@ distinction_archer_discipline_2 = {
 	unit = {
 		loyalty_gain_chance_modifier = 0.05
 		archers_discipline = 0.05
-		archers_maintenance_cost = -0.10
+		archers_maintenance_cost = -0.075
 	}
 }
 
@@ -434,6 +434,6 @@ distinction_archer_discipline_3 = {
 	unit = {
 		loyalty_gain_chance_modifier = 0.10
 		archers_discipline = 0.10
-		archers_maintenance_cost = -0.20
+		archers_maintenance_cost = -0.10
 	}
 }

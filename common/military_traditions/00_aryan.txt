@@ -68,7 +68,7 @@
 			}
 		}
 		modifier = { 
-			archers_offensive = 0.15
+			archers_offensive = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
@@ -120,7 +120,7 @@
 
 	aryan_river_path_9 = { ###
 		modifier = { 
-			camels_offensive = 0.1
+			camels_offensive = 0.15
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_3

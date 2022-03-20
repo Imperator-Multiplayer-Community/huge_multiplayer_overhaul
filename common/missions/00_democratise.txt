@@ -130,7 +130,7 @@
 				has_any_office = yes
 				loyalty > 33
 			}
-			political_influence >= 100
+			political_influence >= 50
 		}
 		duration = 365
 		bypass = {
@@ -144,7 +144,7 @@
 		}
 		monthly_on_action = democratic_republic_on_action
 		on_completion = {
-			add_political_influence = -100
+			add_political_influence = -50
 			custom_tooltip = "People_speak_TT"
 			hidden_effect = {
 			every_family = {

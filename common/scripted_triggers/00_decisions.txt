@@ -121,6 +121,7 @@ is_tier_2_formable_trigger = {
 		tag = BRY #Hibernia Magna	
 		tag = RON #Republic of the Nile	
 		tag = KEM #Kemet 
+		tag = CMM #Cimmeria
 	}
 }
 
@@ -173,6 +174,8 @@ is_endgame_tag_trigger = {
 		tag = AX2 #Axum
 		tag = CAR #Carthage
 		tag = LER #Levantine Republic
+		tag = BYT #Byzantine Empire
+		tag = GSC #Greater Scythia
 	}
 }
 

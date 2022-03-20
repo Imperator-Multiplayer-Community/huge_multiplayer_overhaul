@@ -19,6 +19,11 @@ ml_marsh_distinctions.1 = {
 			if = {
 				limit = {
 					has_distinction = distinction_marsh_09
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_marsh_09
@@ -41,6 +46,11 @@ ml_marsh_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_marsh_08
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_marsh_08
@@ -49,44 +59,24 @@ ml_marsh_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_marsh_07
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_marsh_07
 				add_distinction = distinction_marsh_08
-
-				scope:actor = {
-					if = {
-						limit = {
-							has_variable = terrain_master
-						}
-
-						if = {
-							limit = {
-								var:terrain_master < 5
-							}
-
-							change_variable = {
-								name = terrain_master
-								add = 1
-							}
-						}
-					} else {
-						set_variable = {
-							name = terrain_master
-							value = 1
-						}
-					}
-					
-					ROOT = {
-						trigger_event = {
-							id = ml_terrain_master_distinctions.1
-						}
-					}
-				}
 			}
 			else_if = {
 				limit = {
 					has_distinction = distinction_marsh_06
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_marsh_06
@@ -95,6 +85,11 @@ ml_marsh_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_marsh_05
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_marsh_05
@@ -103,6 +98,11 @@ ml_marsh_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_marsh_04
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_marsh_04
@@ -120,6 +120,36 @@ ml_marsh_distinctions.1 = {
 
 					add_distinction = distinction_marsh_master_01
 
+					scope:actor = {
+						if = {
+							limit = {
+								has_variable = terrain_master
+							}
+
+							if = {
+								limit = {
+									var:terrain_master < 5
+								}
+
+								change_variable = {
+									name = terrain_master
+									add = 1
+								}
+							}
+						} else {
+							set_variable = {
+								name = terrain_master
+								value = 1
+							}
+						}
+						
+						ROOT = {
+							trigger_event = {
+								id = ml_terrain_master_distinctions.1
+							}
+						}
+					}
+
 					ROOT = {
 						trigger_event = {
 							id = ml_expeditionary_distinctions.1
@@ -130,6 +160,11 @@ ml_marsh_distinctions.1 = {
 			else_if = {
 				limit = {
 					has_distinction = distinction_marsh_03
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
 				}
 
 				remove_distinction = distinction_marsh_03
@@ -156,6 +191,15 @@ ml_marsh_distinctions.1 = {
 				limit = {
 					NOT = {
 						has_distinction = distinction_marsh_10
+						has_distinction = distinction_marsh_09
+						has_distinction = distinction_marsh_08
+						has_distinction = distinction_marsh_07
+						has_distinction = distinction_marsh_06
+						has_distinction = distinction_marsh_05
+						has_distinction = distinction_marsh_04
+						has_distinction = distinction_marsh_03
+						has_distinction = distinction_marsh_02
+						has_distinction = distinction_marsh_01
 					}
 				}
 

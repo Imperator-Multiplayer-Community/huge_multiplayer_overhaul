@@ -1,0 +1,84 @@
+﻿country_decisions = {	
+	
+	
+	form_byzantine_empire = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				capital_scope = {
+						province_id = 1453
+					}
+				}
+
+			NOT = {
+				tag = BYT
+			}
+			NOT = {
+				is_endgame_tag_trigger = yes
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 100
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = thrace_region
+					is_in_region = macedonia_region
+					is_in_region = asia_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = Byzantine_Empire_not_exists
+				NOT = {
+					any_country = {
+						tag = BYT
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = thrace_region
+			owns_or_subject_owns_region = macedonia_region
+			owns_or_subject_owns_region = asia_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "BYZANTINE_EMPIRE_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			hidden_effect = {
+				change_country_adjective = "BYZANTINE_EMPIRE_ADJECTIVE"
+				change_country_tag = BYT
+				change_country_flag = EASTERN_ROME_FLAG
+				trigger_event = {
+					id = formable_heritage.149
+				}				
+			}
+			capital_scope = {
+				capital_formable_large_effect = yes
+				formable_capital_modifier_large_effect = yes
+			}
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

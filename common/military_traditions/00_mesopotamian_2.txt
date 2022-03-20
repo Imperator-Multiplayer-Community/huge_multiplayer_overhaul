@@ -40,8 +40,8 @@
 
 	assyrian_path_2 = { ###
 		modifier = {
-			archers_cost = -0.15
-			light_infantry_discipline = 0.1
+			heavy_cavalry_cost = -0.15
+			heavy_cavalry_defensive = 0.05
 		} 
 		icon = north_african_tribal_path_7
 		requires = { }
@@ -105,8 +105,8 @@
 
 	assyrian_path_8 = { ###
 		modifier = { 
-			heavy_infantry_offensive = 0.1
-			camels_defensive = 0.1
+			heavy_cavalry_defensive = 0.05
+			heavy_cavalry_morale = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_end_bonus

@@ -1,0 +1,407 @@
+﻿namespace = ml_drill_distinctions
+
+ml_drill_distinctions.1 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				exists = scope:actor
+			}
+
+			clear_saved_scope = actor
+		}
+
+		random_army = {
+			limit = {
+				has_legion_trigger = yes
+		    	has_variable = is_drilling
+			}
+
+			save_scope_as = actor
+		}
+
+		random_list = {
+			95 = { }
+			5 = {
+				trigger = {
+				exists = scope:actor #dont trigger unless there is scope
+					trigger_if = {
+						limit = {
+							exists = scope:actor
+						}
+
+						scope:actor = { #dont trigger unless 20 cohorts
+							any_sub_unit = {
+								count >= 20
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					trigger_event = {
+						id = ml_drill_distinctions.2
+					}
+				}
+			}
+		}
+	}
+}
+
+ml_drill_distinctions.2 = {
+	type = country_event 
+	hidden = yes
+
+	immediate = {
+		random_list = {
+		    ## terrain
+			1 = {
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = desert
+						}
+					}
+
+					trigger_event = {
+							id = ml_desert_distinctions.1
+					} 
+				}
+			1 = { 
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = farmland
+						}
+					}
+
+					trigger_event = {
+							id = ml_farmland_distinctions.1
+					} 
+				}
+			1 = {
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = forest
+						}
+					}
+
+					trigger_event = {
+						id = ml_forest_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = hills
+						}
+					}
+
+					trigger_event = {
+						id = ml_hills_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = jungle
+						}
+					}
+
+					trigger_event = {
+						id = ml_jungle_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = marsh
+						}
+					}
+
+					trigger_event = {
+						id = ml_marsh_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = mountains
+						}
+					}
+
+					trigger_event = {
+						id = ml_mountains_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor.unit_location = {
+							terrain = plains
+						}
+					}
+
+					trigger_event = {
+						id = ml_plains_distinctions.1
+					}
+				}
+			## units
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = archers
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_archer_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = archers
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_archer_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = camels
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_camels_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = camels
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_camels_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = heavy_cavalry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_heavy_cavalry_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = heavy_cavalry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_heavy_cavalry_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = heavy_infantry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_heavy_infantry_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = heavy_infantry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_heavy_infantry_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = horse_archers
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_horse_archers_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = horse_archers
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_horse_archers_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = light_cavalry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_light_cavalry_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = light_cavalry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_light_cavalry_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = light_infantry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_light_infantry_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = light_infantry
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_light_infantry_distinctions.3
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = warelephant
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_warelephant_distinctions.1
+					}
+				}
+			1 = {
+					trigger = {
+						scope:actor = {
+							any_sub_unit = {
+								count >= 20
+								AND = {
+							    	sub_unit_type = warelephant
+								}
+							}
+						}
+					}
+
+					trigger_event = {
+						id = ml_warelephant_distinctions.3
+					}
+				}
+		}
+	}
+}

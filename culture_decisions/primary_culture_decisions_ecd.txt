@@ -328,6 +328,9 @@
 			any_owned_province = {
 				dominant_province_culture = scope:target_culture.culture
 			}
+			NOT = {
+				has_variable = recently_promoted_talent
+			}
 			trigger_if = {
 				limit = {
 					any_country_culture = {
@@ -340,7 +343,7 @@
 			}
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			custom_tooltip = recruit_talent_tt
 			ordered_owned_province = {
 				limit = { dominant_province_culture = scope:target_culture.culture }
@@ -395,6 +398,10 @@
 				id = character_introductions.2
 				days = 5
 			}
+			set_variable = {
+				name = recently_promoted_talent
+				days = 730
+			}
         }	
 			
 		ai_will_do = {
@@ -411,6 +418,9 @@
 			any_owned_province = {
 				dominant_province_culture = scope:target_culture.culture
 			}
+			NOT = {
+				has_variable = recently_presented_debutante
+			}
 			trigger_if = {
 				limit = {
 					any_country_culture = {
@@ -423,7 +433,7 @@
 			}
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			custom_tooltip = present_debutante_tt
 			ordered_owned_province = {
 				limit = { dominant_province_culture = scope:target_culture.culture }
@@ -485,6 +495,10 @@
             trigger_event = {
 				id = character_introductions.1
 				days = 5
+			}
+			set_variable = {
+				name = recently_presented_debutante
+				days = 365
 			}
         }	
 			

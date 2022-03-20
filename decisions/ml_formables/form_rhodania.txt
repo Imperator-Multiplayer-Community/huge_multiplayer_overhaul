@@ -1,0 +1,92 @@
+﻿country_decisions = {
+	
+	# Form Rhodania
+	form_rhodania = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = gallic
+			NOT = {
+				tag = RHD
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = narbonensis_centralis_area
+					is_in_area = narbonensis_occidentalis_area
+					is_in_area = narbonensis_orientalis_area
+					is_in_area = alpes_maritimae_area
+					is_in_area = alpes_maritimae_two_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = rhodania_not_exists
+				NOT = {
+					any_country = {
+						tag = RHD
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = narbonensis_centralis_area
+			owns_or_subject_owns_area = narbonensis_occidentalis_area
+			owns_or_subject_owns_area = narbonensis_orientalis_area			
+			owns_or_subject_owns_area = alpes_maritimae_area
+			owns_or_subject_owns_area = alpes_maritimae_two_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "RHODANIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "RHODANIA_ADJECTIVE"
+				change_country_color = "rhodania_color"
+				change_country_tag = RHD
+				change_country_flag = RHODANIA_FLAG
+				trigger_event = {
+					id = formable_heritage.31
+				}					
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_rhodania_claims_tooltip"
+			hidden_effect = {
+				area:cessetania_area = { formable_area_province_effect = yes }
+				area:liguria_area = { formable_area_province_effect = yes }
+				area:allobrogia_area = { formable_area_province_effect = yes }
+			}	
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

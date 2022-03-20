@@ -79,7 +79,7 @@ idea_siege_training = {
 		military_tech >= idea_tier_2
 	}
 	siege_ability = 0.15
-	assault_ability = 0.10
+	assault_ability = 0.15
 	group = military_ideas
 	soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_military"
 }
@@ -89,6 +89,7 @@ idea_triumph = {
 		military_tech >= idea_tier_3
 	}
 	experience_decay = -0.015
+	monthly_military_experience_modifier = 0.05
 	group = military_ideas
 	soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_military"
 }
@@ -261,7 +262,7 @@ idea_casus_belli = {
 	trigger = {
 		oratory_tech >= idea_tier_2
 	}
-	war_score_cost = -0.15
+	war_score_cost = -0.20
 	group = oratory_ideas
 	soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_oratory"
 }
@@ -350,7 +351,7 @@ idea_divine_mandate = {
 	trigger = {
 		religious_tech >= idea_tier_2
 	}
-	monthly_tyranny = -0.06
+	monthly_tyranny = -0.08
 	group = religious_ideas
 	soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_religious"
 }

@@ -203,8 +203,8 @@
 	illyrian_path_8 = { #Dardanian hoplites
 		requires = { illyrian_path_6 illyrian_path_7 }		
 		modifier = {
-			heavy_infantry_cost = -0.15
-			heavy_infantry_defensive = 0.05 
+			heavy_cavalry_cost = -0.15
+			heavy_cavalry_defensive = 0.075
 		}
 		icon = greek_seleucid_path_2
 	}

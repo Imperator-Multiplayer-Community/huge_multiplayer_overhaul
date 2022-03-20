@@ -841,18 +841,31 @@ base_sub_window = {
 		}
 	}
 	button_round_inverted = { ###############################################################
-	position = { -60 -130 }
-	widgetanchor = bottom|right
-	parentanchor = bottom|right
-	size = { 30 30 }
-	datacontext = "[GetScriptedGui('forbid_slave_movement')]"
-	blockoverride "Icon" { texture = "gfx/interface/base_parts/button_alpha_close.dds" }
-	blockoverride "On_click" { 
-		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
-		enabled = "[ViewPopsWindow.IsPlayerProvince]"
+		position = { -90 -130 }
+		widgetanchor = bottom|right
+		parentanchor = bottom|right
+		size = { 30 30 }
+		datacontext = "[GetScriptedGui('forbid_slave_movement')]"
+		blockoverride "Icon" { texture = "gfx/interface/base_parts/button_alpha_close.dds" }
+		blockoverride "On_click" { 
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
+			enabled = "[ViewPopsWindow.IsPlayerProvince]"
+		}
+		tooltip = "Slave Movement Forbidden"
 	}
-	tooltip = "Slave Movement Forbidden"
-}
+	button_round_inverted = { ###############################################################
+		position = { -60 -130 }
+		widgetanchor = bottom|right
+		parentanchor = bottom|right
+		size = { 30 30 }
+		datacontext = "[GetScriptedGui('forbid_slave_hub_movement')]"
+		blockoverride "Icon" { texture = "gfx/interface/base_parts/button_alpha_close.dds" }
+		blockoverride "On_click" { 
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
+			enabled = "[ViewPopsWindow.IsPlayerProvince]"
+		}
+		tooltip = "Slave Movement Forbidden From Province Accepting Slaves"
+	}
 	button_round_inverted = { ###############################################################
 		position = { -30 -130 }
 		widgetanchor = bottom|right

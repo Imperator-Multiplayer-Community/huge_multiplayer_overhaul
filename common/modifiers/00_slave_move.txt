@@ -1,6 +1,9 @@
 ﻿slave_move_yes = {
-
+	slaves_move_cost_modifier = -0.0001
 }
 slave_move_no = {
-	
+	local_slaves_output = 0.0001
+}
+slave_hub_move_no = {
+	local_slaves_output = 0.0001
 }

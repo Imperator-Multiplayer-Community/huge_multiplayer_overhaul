@@ -9,6 +9,7 @@
 		modifier = {
 			levy_size_multiplier = 0.05
 			manpower_recovery_speed = 0.1
+			monthly_military_experience = 0.15
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -19,6 +20,7 @@
 		modifier = {
 			levy_size_multiplier = 0.075
 			war_exhaustion = -0.04
+			monthly_military_experience = 0.20
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -33,6 +35,7 @@
 		modifier = {
 			global_manpower_modifier = 0.10
 			levy_size_multiplier = 0.025
+			monthly_military_experience = 0.20
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
@@ -49,6 +52,7 @@
 		}
 		modifier = {
 			discipline = 0.05
+			monthly_military_experience = 0.15
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region

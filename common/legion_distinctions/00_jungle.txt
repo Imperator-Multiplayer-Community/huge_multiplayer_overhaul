@@ -5,8 +5,8 @@ distinction_jungle_master_01 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.05
-		army_movement_speed = 0.01
+		jungle_combat_bonus = 0.025
+		army_movement_speed = 0.005
 	}
 }
 
@@ -17,8 +17,8 @@ distinction_jungle_master_02 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.10
-		army_movement_speed = 0.02
+		jungle_combat_bonus = 0.05
+		army_movement_speed = 0.01
 	}
 }
 
@@ -28,7 +28,7 @@ distinction_jungle_01 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.02
+		jungle_combat_bonus = 0.01
 	}
 }
 
@@ -38,7 +38,7 @@ distinction_jungle_02 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.04
+		jungle_combat_bonus = 0.02
 	}
 }
 
@@ -48,7 +48,7 @@ distinction_jungle_03 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.06
+		jungle_combat_bonus = 0.03
 	}
 }
 
@@ -58,7 +58,7 @@ distinction_jungle_04 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.08
+		jungle_combat_bonus = 0.04
 	}
 }
 
@@ -68,7 +68,7 @@ distinction_jungle_05 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.10
+		jungle_combat_bonus = 0.05
 	}
 }
 
@@ -78,7 +78,7 @@ distinction_jungle_06 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.12
+		jungle_combat_bonus = 0.06
 	}
 }
 
@@ -88,7 +88,7 @@ distinction_jungle_07 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.14
+		jungle_combat_bonus = 0.07
 	}
 }
 
@@ -98,7 +98,7 @@ distinction_jungle_08 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.16
+		jungle_combat_bonus = 0.08
 	}
 }
 
@@ -108,7 +108,7 @@ distinction_jungle_09 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.18
+		jungle_combat_bonus = 0.09
 	}
 }
 
@@ -118,6 +118,6 @@ distinction_jungle_10 = {
 
 	}
 	unit = {
-		jungle_combat_bonus = 0.20
+		jungle_combat_bonus = 0.10
 	}
 }

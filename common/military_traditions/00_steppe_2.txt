@@ -95,7 +95,7 @@
 
 	bactrian_path_1 = { ###
 		modifier = { 
-			horse_archers_morale = 0.1
+			horse_archers_morale = 0.15
 			army_maintenance_cost = 0.01
 		}
 		icon = persian_scythian_path_1
@@ -115,7 +115,7 @@
 	bactrian_path_3 = { ###
 		modifier = { 
 			light_infantry_cost = -0.2
-			light_infantry_discipline = 0.15
+			light_infantry_discipline = 0.1
 		} 
 		icon = persian_achaemenid_path_1
 		requires = { }
@@ -136,7 +136,6 @@
 		modifier = { 
 			manpower_recovery_speed = 0.05
 			global_freemen_output = 0.05
-			archers_offensive = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_4
@@ -145,7 +144,8 @@
 
 	bactrian_path_6 = { ###
 		modifier = { 
-			archers_defensive = 0.15
+			horse_archers_farmland_combat_bonus = 0.15
+			horse_archers_plains_combat_bonus = 0.15
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_7
@@ -163,8 +163,7 @@
 			}
 		}
 		modifier = { 
-			horse_archers_defensive = 0.1
-			heavy_cavalry_defensive = 0.1
+			horse_archers_defensive = 0.15
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_scythian_path_3
@@ -205,7 +204,7 @@
 
 	bactrian_path_11 = { ###
 		modifier = { 
-			light_infantry_defensive = 0.15
+			light_infantry_defensive = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_scythian_path_7
@@ -272,6 +271,7 @@
 		modifier = { 
 			price_found_city_cost_modifier = -0.1
 			local_forum_building_cost = -0.1
+			horse_archers_offensive = 0.15
 		} 
 		icon = levantine_egyptian_path_4
 		requires = { bactrian_path_12 }

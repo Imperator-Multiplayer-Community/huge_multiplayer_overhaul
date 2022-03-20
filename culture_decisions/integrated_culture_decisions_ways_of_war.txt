@@ -1594,6 +1594,9 @@
 			any_owned_province = {
 				dominant_province_culture = scope:target_culture.culture
 			}
+			NOT = {
+				has_variable = recently_promoted_talent
+			}
 			trigger_if = {
 				limit = {
 					any_country_culture = {
@@ -1616,6 +1619,10 @@
 						religion = prev.prev.religion
 					}
 				}
+			}
+			set_variable = {
+				name = recently_promoted_talent
+				days = 730
 			}
 		}
 			

@@ -811,6 +811,17 @@
         keystone = yes
         requires_or = { create_trade_route_inv global_tax_modifier_inv_5 }
     }
+
+    # Level 11
+    metropolis_inv_1 = {
+    	modifier = {
+    		price_found_metropolis_cost_modifier = -0.25
+    		global_commerce_modifier = 0.025
+    		global_tax_modifier = 0.025
+    	}
+
+        requires = { research_points_modifier_inv_5 capital_trade_inv_3 }
+    }
 	
 	#### Latin Specific Invention Tree ####
     ## Latin Specific - Level 0

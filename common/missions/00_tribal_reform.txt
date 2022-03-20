@@ -134,7 +134,7 @@
 			NOT = {
 				has_law = increased_council_powers
 			}
-			political_influence >= 100
+			political_influence >= 50
 		} 
 		
 		bypass = {
@@ -142,7 +142,7 @@
 		} 
 
 		on_completion = {
-			add_political_influence = -100
+			add_political_influence = -50
 			if = {
 				limit = {
 					exists = scope:republic_family
@@ -181,7 +181,7 @@
 
 		allow = {
 			capital_scope = {
-				civilization_value >= 40
+				civilization_value >= 35
 				trigger_if = {
 					limit = {
 						has_city_status = no
@@ -261,7 +261,7 @@
 			NOT = {
 				has_law = absolute_authority
 			}
-			political_influence >= 100
+			political_influence >= 50
 		} 
 		
 		bypass = {
@@ -269,7 +269,7 @@
 		} 
 
 		on_completion = {
-			add_political_influence = -100
+			add_political_influence = -50
 			if = {
 				limit = {
 					exists = scope:monarchy_family
@@ -308,7 +308,7 @@
 
 		allow = {
 			capital_scope = {
-				civilization_value >= 40
+				civilization_value >= 35
 				trigger_if = {
 					limit = {
 						has_city_status = no

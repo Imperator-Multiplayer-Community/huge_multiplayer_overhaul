@@ -22,12 +22,21 @@ ml_siege_distinctions.1 = {
 	}
 
 	immediate = {
+		if = {
+			limit = {
+				exists = scope:actor
+			}
+
+			clear_saved_scope = actor
+		}
+
 		ordered_character_unit = {
             limit = {
                 has_legion_trigger = yes
                 unit_location = ROOT.location
                 any_sub_unit = { count >= 20 }
             }
+
             save_scope_as = actor
         }
 

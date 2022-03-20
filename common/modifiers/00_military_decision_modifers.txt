@@ -59,8 +59,8 @@ sea_offence = {
 
 burnt_ground = {
  max_attrition = 1
- hostile_attrition = 4
- global_defensive = 1
+ hostile_attrition = 0.4
+ global_defensive = 0.25
  garrison_size = 0.2
  max_war_exhaustion = 10
  global_tax_modifier = -0.3
@@ -70,11 +70,11 @@ burnt_ground = {
 
 fortified_capital = {
  max_attrition = 5
- local_hostile_attrition = 5
- local_defensive = 3
+ local_hostile_attrition = 2
+ local_defensive = 0.3
  garrison_growth = 0.3
- local_monthly_food_modifier = 3
- local_tax_modifier = -1
- local_manpower_modifier = 2
+ local_monthly_food_modifier = 0.3
+ local_tax_modifier = -0.1
+ local_manpower_modifier = 0.25
 }
 

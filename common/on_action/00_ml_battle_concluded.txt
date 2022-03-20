@@ -36,6 +36,8 @@
 		ml_warelephant_distinctions.1
 		ml_warelephant_distinctions.3
 		ml_warelephant_distinctions.5
+		#flavor
+		ml_victories_defeats_count.1
 	}
 }
 
@@ -78,6 +80,8 @@ on_great_battle_lost_country = { #root = country scope of the main unit on the l
 		ml_warelephant_distinctions.2
 		ml_warelephant_distinctions.4
 		ml_warelephant_distinctions.6
+		#flavor
+		ml_victories_defeats_count.2
 	}
 }
 

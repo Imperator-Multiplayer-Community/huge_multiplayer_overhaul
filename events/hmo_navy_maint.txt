@@ -1,0 +1,117 @@
+﻿namespace = navy_maint
+
+navy_maint.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+		num_of_ships >= 100
+		trigger_if = {
+			limit = {
+				has_variable = previous_navy_rank
+			}
+
+			OR = {
+				NOT = {
+					var:previous_navy_rank = 1
+					num_of_ships >= 100
+					num_of_ships < 200
+				}
+				NOT = {
+					var:previous_navy_rank = 2
+					num_of_ships >= 200
+					num_of_ships < 300
+				}
+				NOT = {
+					var:previous_navy_rank = 3
+					num_of_ships >= 300
+					num_of_ships < 400
+				}
+				NOT = {
+					var:previous_navy_rank = 4
+					num_of_ships >= 400
+					num_of_ships < 500
+				}
+				NOT = {
+					var:previous_navy_rank = 5
+					num_of_ships >= 500
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_variable = previous_navy_rank
+			}
+
+			remove_variable = previous_navy_rank
+		}
+
+		if = {
+			limit = {
+				num_of_ships >= 100
+				num_of_ships < 200
+			}
+
+			set_variable = {
+				name = previous_navy_rank
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_ships >= 200
+				num_of_ships < 300
+			}
+
+			set_variable = {
+				name = previous_navy_rank
+				value = 2
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_ships >= 300
+				num_of_ships < 400
+			}
+
+			set_variable = {
+				name = previous_navy_rank
+				value = 3
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_ships >= 400
+				num_of_ships < 500
+			}
+
+			set_variable = {
+				name = previous_navy_rank
+				value = 4
+			}
+		}
+		else_if = {
+			limit = {
+				num_of_ships >= 500
+			}
+
+			set_variable = {
+				name = previous_navy_rank
+				value = 5
+			}
+		}
+
+		while = {
+			count = var:previous_navy_rank
+			add_country_modifier = {
+				name = navy_maint_cost_scaling
+				mode = add
+				duration = -1
+			}
+		}
+	}
+}

@@ -46,8 +46,8 @@
 	
 	thracian_path_1 = { #Falx and sica
 		modifier = {
-			heavy_infantry_offensive = 0.1
-			light_infantry_offensive = 0.15
+			heavy_cavalry_discipline = 0.05
+			light_infantry_discipline = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = greek_seleucid_path_6
@@ -96,6 +96,7 @@
 	thracian_path_10 = { #Thracian Cavalry
 		requires = { thracian_path_7 }
 		modifier = {
+			heavy_cavalry_offensive = 0.1
 			heavy_cavalry_plains_combat_bonus = 0.1
 			heavy_cavalry_farmland_combat_bonus = 0.1
 			light_cavalry_plains_combat_bonus = 0.2
@@ -119,7 +120,7 @@
 		requires = { thracian_path_1 }
 		modifier = {
 			heavy_cavalry_discipline = 0.1
-			light_cavalry_defensive = 0.15
+			light_cavalry_defensive = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = greek_states_path_2
@@ -155,6 +156,7 @@
 		requires = { thracian_path_4 }
 		modifier = {
 			price_found_city_cost_modifier = -0.1
+			heavy_infantry_discipline = 0.1
 		}
 		icon = greek_states_path_4
 	}		

@@ -1,0 +1,76 @@
+﻿country_decisions = {	
+	
+	
+	form_greater_scythia = {
+		
+		potential = {
+			num_of_cities >= 1
+			primary_culture = scythian
+			NOT = {
+				tag = GSC
+			}
+			NOR = {
+				is_endgame_tag_trigger = yes
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 100
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = sarmatia_europea_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = Greater_Scythia_not_exists
+				NOT = {
+					any_country = {
+						tag = GSC
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = sarmatia_europea_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "GREATER_SCYTHIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			hidden_effect = {
+				change_country_adjective = "GREATER_SCYTHIA_ADJECTIVE"
+				change_country_color =  "Greater_Scythia_color"
+				change_country_tag = GCS
+				change_country_flag = ISI
+				trigger_event = {
+					id = formable_heritage.150
+				}				
+			}
+			capital_scope = {
+				capital_formable_large_effect = yes
+				formable_capital_modifier_large_effect = yes
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

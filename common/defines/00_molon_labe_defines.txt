@@ -8,8 +8,9 @@
 }
 
 NCountry = {
-
+	PIG_STAB_DURATION = 3650 # was 1825
 	BASE_NAVAL_RANGE = 650
+	FORT_MAINTENANCE = 0.8 # was .4
 }
 
 NPop = {
@@ -24,8 +25,9 @@ NCombat = {
 	
 	#WAR_EXHAUTION_FROM_LOSSES = 1.8 #Multiplier on losses
 	MAX_WAR_EXHAUSTION_FROM_BATTLE = 5 #Was 3.5
-	#ASSAULT_ATTACKER_LOSS = 1.0 - This could be 1.25 and we could remove the Realistic Assault modifier	
-	GREAT_BATTLE_SIZE_THRESHOLD = 10000 # Legion Distinctions Overhaul: default is 8000
+	#ASSAULT_ATTACKER_LOSS = 1.0 - This could be 1.25 and we could remove the Realistic Assault modifier
+	DAYS_PER_SIEGE_PHASE = 20 # Was 25
+	GARRISON_SIZE = 2 # Was 1
 }
 
 NUnit = {
@@ -59,6 +61,7 @@ NTrade = {
 NLevy = {
 
 	DISBAND_MILITARY_EXP_MULT = 0 # when disbanding a levy military experience will be added to the country
+	WAR_EXHAUSTION_ON_RAISE = 0 # set to 0 to avoid exploiting
 }
 
 NAI = {

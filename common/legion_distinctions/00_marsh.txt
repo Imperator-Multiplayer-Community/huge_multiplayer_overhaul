@@ -5,8 +5,8 @@ distinction_marsh_master_01 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.05
-		army_movement_speed = 0.01
+		marsh_combat_bonus = 0.025
+		army_movement_speed = 0.005
 	}
 }
 
@@ -17,8 +17,8 @@ distinction_marsh_master_02 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.10
-		army_movement_speed = 0.02
+		marsh_combat_bonus = 0.05
+		army_movement_speed = 0.01
 	}
 }
 
@@ -28,7 +28,7 @@ distinction_marsh_01 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.02
+		marsh_combat_bonus = 0.01
 	}
 }
 
@@ -38,7 +38,7 @@ distinction_marsh_02 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.04
+		marsh_combat_bonus = 0.02
 	}
 }
 
@@ -48,7 +48,7 @@ distinction_marsh_03 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.06
+		marsh_combat_bonus = 0.03
 	}
 }
 
@@ -58,7 +58,7 @@ distinction_marsh_04 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.08
+		marsh_combat_bonus = 0.04
 	}
 }
 
@@ -68,7 +68,7 @@ distinction_marsh_05 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.10
+		marsh_combat_bonus = 0.05
 	}
 }
 
@@ -78,7 +78,7 @@ distinction_marsh_06 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.12
+		marsh_combat_bonus = 0.06
 	}
 }
 
@@ -88,7 +88,7 @@ distinction_marsh_07 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.14
+		marsh_combat_bonus = 0.07
 	}
 }
 
@@ -98,7 +98,7 @@ distinction_marsh_08 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.16
+		marsh_combat_bonus = 0.08
 	}
 }
 
@@ -108,7 +108,7 @@ distinction_marsh_09 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.18
+		marsh_combat_bonus = 0.09
 	}
 }
 
@@ -118,6 +118,6 @@ distinction_marsh_10 = {
 
 	}
 	unit = {
-		marsh_combat_bonus = 0.20
+		marsh_combat_bonus = 0.10
 	}
 }

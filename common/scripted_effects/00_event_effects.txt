@@ -2390,9 +2390,6 @@ add_relevant_subunit_effect = {
 				}
 				add_subunit = warelephant
 			}
-			20 = {
-				add_subunit = chariots
-			}
 		}
 	}
 	else_if = {
@@ -2454,9 +2451,6 @@ add_relevant_subunit_effect = {
 			add_gold = -20
 		}
 		random_list = {
-			20 = {
-				add_subunit = chariots
-			}
 			20 = {
 				add_subunit = light_infantry
 			}
@@ -2663,9 +2657,6 @@ add_relevant_loyal_subunit_effect = {
 				}
 				add_loyal_subunit = warelephant
 			}
-			20 = {
-				add_loyal_subunit = chariots
-			}
 		}
 	}
 	else_if = {
@@ -2729,9 +2720,6 @@ add_relevant_loyal_subunit_effect = {
 			add_gold = -20
 		}
 		random_list = {
-			20 = {
-				add_loyal_subunit = chariots
-			}
 			20 = {
 				add_loyal_subunit = light_infantry
 			}
