@@ -42,11 +42,16 @@ slave_move.2 = {
 				NOT = {
 					has_province_modifier = slave_move_no
 				}
-				NOT = {
-					ROOT = {
-						has_province_modifier = slave_hub_move_no
+				trigger_if = {
+					limit = {
+						ROOT = {
+							has_province_modifier = slave_hub_move_no
+						}
 					}
-					has_province_modifier = slave_move_yes
+
+					NOT = {
+						has_province_modifier = slave_move_yes
+					}
 				}
 				owner = ROOT.owner
 				total_population > 1
@@ -80,11 +85,16 @@ slave_move.2 = {
 							has_province_modifier = slave_move_no
 							this = ROOT
 						}
-						NOT = {
-							ROOT = {
-								has_province_modifier = slave_hub_move_no
+						trigger_if = {
+							limit = {
+								ROOT = {
+									has_province_modifier = slave_hub_move_no
+								}
 							}
-							has_province_modifier = slave_move_yes
+
+							NOT = {
+								has_province_modifier = slave_move_yes
+							}
 						}
 						owner = ROOT.owner
 						total_population > 1
