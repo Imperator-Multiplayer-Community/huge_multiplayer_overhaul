@@ -258,8 +258,27 @@ ml_heavy_cavalry_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_heavy_cavalry_offensive_20
+						has_distinction = distinction_heavy_cavalry_offensive_19
+						has_distinction = distinction_heavy_cavalry_offensive_18
+						has_distinction = distinction_heavy_cavalry_offensive_17
+						has_distinction = distinction_heavy_cavalry_offensive_16
+						has_distinction = distinction_heavy_cavalry_offensive_15
+						has_distinction = distinction_heavy_cavalry_offensive_14
+						has_distinction = distinction_heavy_cavalry_offensive_13
+						has_distinction = distinction_heavy_cavalry_offensive_12
+						has_distinction = distinction_heavy_cavalry_offensive_11
+						has_distinction = distinction_heavy_cavalry_offensive_10
+						has_distinction = distinction_heavy_cavalry_offensive_09
+						has_distinction = distinction_heavy_cavalry_offensive_08
+						has_distinction = distinction_heavy_cavalry_offensive_07
+						has_distinction = distinction_heavy_cavalry_offensive_06
+						has_distinction = distinction_heavy_cavalry_offensive_05
+						has_distinction = distinction_heavy_cavalry_offensive_04
+						has_distinction = distinction_heavy_cavalry_offensive_03
+						has_distinction = distinction_heavy_cavalry_offensive_02
+						has_distinction = distinction_heavy_cavalry_offensive_01
 					}
 				}
 
@@ -717,8 +736,27 @@ type = country_event
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_heavy_cavalry_defensive_20
+						has_distinction = distinction_heavy_cavalry_defensive_19
+						has_distinction = distinction_heavy_cavalry_defensive_18
+						has_distinction = distinction_heavy_cavalry_defensive_17
+						has_distinction = distinction_heavy_cavalry_defensive_16
+						has_distinction = distinction_heavy_cavalry_defensive_15
+						has_distinction = distinction_heavy_cavalry_defensive_14
+						has_distinction = distinction_heavy_cavalry_defensive_13
+						has_distinction = distinction_heavy_cavalry_defensive_12
+						has_distinction = distinction_heavy_cavalry_defensive_11
+						has_distinction = distinction_heavy_cavalry_defensive_10
+						has_distinction = distinction_heavy_cavalry_defensive_09
+						has_distinction = distinction_heavy_cavalry_defensive_08
+						has_distinction = distinction_heavy_cavalry_defensive_07
+						has_distinction = distinction_heavy_cavalry_defensive_06
+						has_distinction = distinction_heavy_cavalry_defensive_05
+						has_distinction = distinction_heavy_cavalry_defensive_04
+						has_distinction = distinction_heavy_cavalry_defensive_03
+						has_distinction = distinction_heavy_cavalry_defensive_02
+						has_distinction = distinction_heavy_cavalry_defensive_01
 					}
 				}
 

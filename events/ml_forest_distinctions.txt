@@ -189,8 +189,17 @@ ml_forest_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_forest_10
+						has_distinction = distinction_forest_09
+						has_distinction = distinction_forest_08
+						has_distinction = distinction_forest_07
+						has_distinction = distinction_forest_06
+						has_distinction = distinction_forest_05
+						has_distinction = distinction_forest_04
+						has_distinction = distinction_forest_03
+						has_distinction = distinction_forest_02
+						has_distinction = distinction_forest_01
 					}
 				}
 

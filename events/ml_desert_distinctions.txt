@@ -189,8 +189,17 @@ ml_desert_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_desert_10
+						has_distinction = distinction_desert_09
+						has_distinction = distinction_desert_08
+						has_distinction = distinction_desert_07
+						has_distinction = distinction_desert_06
+						has_distinction = distinction_desert_05
+						has_distinction = distinction_desert_04
+						has_distinction = distinction_desert_03
+						has_distinction = distinction_desert_02
+						has_distinction = distinction_desert_01
 					}
 				}
 

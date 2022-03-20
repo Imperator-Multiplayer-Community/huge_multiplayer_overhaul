@@ -7,10 +7,17 @@ ml_expeditionary_distinctions.1 = {
 
 	trigger = {
 		exists = scope:actor
-		scope:actor = {
-			has_legion_trigger = yes
+		trigger_if = {
+			limit = {
+				exists = scope:actor
+			}
+
+			scope:actor = {
+				has_legion_trigger = yes
+			}
 		}
 	}
+
 
 	immediate = {
 		scope:actor = {

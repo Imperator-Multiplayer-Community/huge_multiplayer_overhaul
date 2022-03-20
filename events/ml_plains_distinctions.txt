@@ -189,8 +189,17 @@ ml_plains_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_plains_10
+						has_distinction = distinction_plains_09
+						has_distinction = distinction_plains_08
+						has_distinction = distinction_plains_07
+						has_distinction = distinction_plains_06
+						has_distinction = distinction_plains_05
+						has_distinction = distinction_plains_04
+						has_distinction = distinction_plains_03
+						has_distinction = distinction_plains_02
+						has_distinction = distinction_plains_01
 					}
 				}
 

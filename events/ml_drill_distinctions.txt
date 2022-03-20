@@ -26,7 +26,18 @@ ml_drill_distinctions.1 = {
 			95 = { }
 			5 = {
 				trigger = {
-					exists = scope:actor #dont trigger unless there is scope
+				exists = scope:actor #dont trigger unless there is scope
+					trigger_if = {
+						limit = {
+							exists = scope:actor
+						}
+
+						scope:actor = { #dont trigger unless 20 cohorts
+							any_sub_unit = {
+								count >= 20
+							}
+						}
+					}
 				}
 
 				ROOT = {

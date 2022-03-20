@@ -189,8 +189,17 @@ ml_marsh_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_marsh_10
+						has_distinction = distinction_marsh_09
+						has_distinction = distinction_marsh_08
+						has_distinction = distinction_marsh_07
+						has_distinction = distinction_marsh_06
+						has_distinction = distinction_marsh_05
+						has_distinction = distinction_marsh_04
+						has_distinction = distinction_marsh_03
+						has_distinction = distinction_marsh_02
+						has_distinction = distinction_marsh_01
 					}
 				}
 

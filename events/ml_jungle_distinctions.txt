@@ -189,8 +189,17 @@ ml_jungle_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_jungle_10
+						has_distinction = distinction_jungle_09
+						has_distinction = distinction_jungle_08
+						has_distinction = distinction_jungle_07
+						has_distinction = distinction_jungle_06
+						has_distinction = distinction_jungle_05
+						has_distinction = distinction_jungle_04
+						has_distinction = distinction_jungle_03
+						has_distinction = distinction_jungle_02
+						has_distinction = distinction_jungle_01
 					}
 				}
 

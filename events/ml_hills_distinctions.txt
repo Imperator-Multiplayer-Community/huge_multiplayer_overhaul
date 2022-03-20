@@ -190,8 +190,17 @@ ml_hills_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_distinction = distinction_hills_10
+						has_distinction = distinction_hills_09
+						has_distinction = distinction_hills_08
+						has_distinction = distinction_hills_07
+						has_distinction = distinction_hills_06
+						has_distinction = distinction_hills_05
+						has_distinction = distinction_hills_04
+						has_distinction = distinction_hills_03
+						has_distinction = distinction_hills_02
+						has_distinction = distinction_hills_01
 					}
 				}
 

@@ -42,8 +42,9 @@ distinction.7 = { # Primigenia
         }
 
         scope:primagena_legion.owner = {
-            random_legion = {
+            random_army = {
                 limit = {
+                    has_legion_trigger = yes
                     NOT = { has_distinction = distinction_legio_primagena }
                 }
 
