@@ -189,7 +189,7 @@ ml_mountains_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_mountains_10
 						has_distinction = distinction_mountains_09
 						has_distinction = distinction_mountains_08

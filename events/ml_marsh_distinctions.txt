@@ -189,7 +189,7 @@ ml_marsh_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_marsh_10
 						has_distinction = distinction_marsh_09
 						has_distinction = distinction_marsh_08

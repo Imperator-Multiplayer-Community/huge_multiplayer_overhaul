@@ -258,7 +258,7 @@ ml_camels_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_camels_offensive_20
 						has_distinction = distinction_camels_offensive_19
 						has_distinction = distinction_camels_offensive_18
@@ -736,7 +736,7 @@ type = country_event
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_camels_defensive_20
 						has_distinction = distinction_camels_defensive_19
 						has_distinction = distinction_camels_defensive_18

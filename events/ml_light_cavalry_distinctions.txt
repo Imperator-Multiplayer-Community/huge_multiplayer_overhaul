@@ -258,7 +258,7 @@ ml_light_cavalry_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_light_cavalry_offensive_20
 						has_distinction = distinction_light_cavalry_offensive_19
 						has_distinction = distinction_light_cavalry_offensive_18
@@ -736,7 +736,7 @@ type = country_event
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_light_cavalry_defensive_20
 						has_distinction = distinction_light_cavalry_defensive_19
 						has_distinction = distinction_light_cavalry_defensive_18

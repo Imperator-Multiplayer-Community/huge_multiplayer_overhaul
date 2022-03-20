@@ -253,7 +253,7 @@ ml_warelephant_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_warelephant_offensive_20
 						has_distinction = distinction_warelephant_offensive_19
 						has_distinction = distinction_warelephant_offensive_18
@@ -731,7 +731,7 @@ type = country_event
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_warelephant_offensive_20
 						has_distinction = distinction_warelephant_offensive_19
 						has_distinction = distinction_warelephant_offensive_18

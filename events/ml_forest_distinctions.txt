@@ -189,7 +189,7 @@ ml_forest_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_forest_10
 						has_distinction = distinction_forest_09
 						has_distinction = distinction_forest_08

@@ -189,7 +189,7 @@ ml_desert_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_desert_10
 						has_distinction = distinction_desert_09
 						has_distinction = distinction_desert_08

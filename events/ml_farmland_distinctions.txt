@@ -189,7 +189,7 @@ ml_farmland_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_farmland_10
 						has_distinction = distinction_farmland_09
 						has_distinction = distinction_farmland_08

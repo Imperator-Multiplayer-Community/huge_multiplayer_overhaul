@@ -189,7 +189,7 @@ ml_jungle_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_jungle_10
 						has_distinction = distinction_jungle_09
 						has_distinction = distinction_jungle_08

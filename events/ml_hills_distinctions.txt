@@ -190,7 +190,7 @@ ml_hills_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_hills_10
 						has_distinction = distinction_hills_09
 						has_distinction = distinction_hills_08

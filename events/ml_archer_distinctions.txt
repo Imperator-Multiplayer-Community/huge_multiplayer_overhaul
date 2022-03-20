@@ -259,7 +259,7 @@ ml_archer_distinctions.1 = {
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_archer_offensive_20
 						has_distinction = distinction_archer_offensive_19
 						has_distinction = distinction_archer_offensive_18
@@ -736,7 +736,7 @@ type = country_event
 			}
 			else_if = {
 				limit = {
-					NOR = {
+					NOT = {
 						has_distinction = distinction_archer_defensive_20
 						has_distinction = distinction_archer_defensive_19
 						has_distinction = distinction_archer_defensive_18
