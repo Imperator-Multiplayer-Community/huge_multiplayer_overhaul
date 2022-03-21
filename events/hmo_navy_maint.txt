@@ -52,6 +52,14 @@ navy_maint.1 = {
 
 		if = {
 			limit = {
+				has_country_modifier = navy_maint_cost_scaling
+			}
+
+			remove_country_modifier = navy_maint_cost_scaling
+		}
+
+		if = {
+			limit = {
 				num_of_ships >= 100
 				num_of_ships < 200
 			}
