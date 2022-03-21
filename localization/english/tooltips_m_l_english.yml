@@ -8,7 +8,8 @@
  NavyMaintUp_TT:0 "@gold! Navy Maintenance Cost: #r +1.00%#!"
  slave_move_yes:0 "This is a slave hub. Slaves are moving here."
  slave_move_no:0 "Slaves are forbidden from leaving this territory."
- slave_hub_move_no:0 "Slaves will not be taken from other slave hubs."
+ slave_internal_move_no:0 "Slaves will not be taken from other slave hubs within the province."
+ slave_external_move_no:0 "Slaves will not be taken from other slave hubs from outside the provice."
  manpowercd:0 "You may not send manpower more than #Y once#! a month."
  CREATE_CREW_BUTTON:0 "#Bold Create a crew for your ships.#!\nCreate a cohort for #y 6#! gold and #y 500#! manpower\n You currently have [SCOPE.ScriptValue('num_ofMarines')|0Y] out of   \n\n#TF Crew assist in the maintenance of your ships, increasing the effectiveness in combat as well as allowing access to a number of new abilties. "
 

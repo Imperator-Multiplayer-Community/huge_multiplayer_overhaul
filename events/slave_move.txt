@@ -45,7 +45,7 @@ slave_move.2 = {
 				trigger_if = {
 					limit = {
 						ROOT = {
-							has_province_modifier = slave_hub_move_no
+							has_province_modifier = slave_external_move_no
 						}
 					}
 
@@ -88,7 +88,7 @@ slave_move.2 = {
 						trigger_if = {
 							limit = {
 								ROOT = {
-									has_province_modifier = slave_hub_move_no
+									has_province_modifier = slave_internal_move_no
 								}
 							}
 

@@ -91,6 +91,7 @@ port_building = {
 		0 = local_migration_attraction
 		1 = value_population_capacity
 		2 = local_ship_recruit_speed
+		3 = navy_maintenance_cost
 	}
 	
 	chance = {

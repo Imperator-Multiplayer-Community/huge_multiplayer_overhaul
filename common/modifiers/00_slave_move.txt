@@ -4,6 +4,9 @@
 slave_move_no = {
 	local_slaves_output = 0.0001
 }
-slave_hub_move_no = {
+slave_internal_move_no = {
+	local_slaves_output = 0.0001
+}
+slave_external_move_no = {
 	local_slaves_output = 0.0001
 }
