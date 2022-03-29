@@ -50,9 +50,10 @@ distinction.7 = { # Primigenia
                             has_legion_trigger = yes
                         }
 
-                        NOT = { has_distinction = distinction_legio_primagena }
+                        legion = {
+                            NOT = { has_distinction = distinction_legio_primagena }
+                        }
                     }
-                    
                 }
 
                 save_scope_as = actor
