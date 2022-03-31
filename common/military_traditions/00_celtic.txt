@@ -96,7 +96,7 @@
 		
 	celtic_gallic_path_1 = { ###Celtic 1A
 		modifier = { 
-			archers_offensive = 0.1
+			archers_offensive = 0.10
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_1
@@ -106,7 +106,6 @@
 	celtic_britannic_path_7 = { ###Celtic 2A
 		modifier = { 
 			archers_cost = -0.2
-			archers_morale = 0.1
 		}
 		icon = celtic_britannic_path_7
 		requires = {celtic_gallic_path_1}
@@ -114,7 +113,7 @@
 
 	celtic_germanic_path_7 = { ###Celtic 3A
 		modifier = { 
-			archers_defensive = 0.15
+			archers_defensive = 0.1
 			archers_plains_combat_bonus = 0.2
 			army_maintenance_cost = 0.01
 		}
@@ -134,7 +133,6 @@
 	celtic_germanic_path_6 = { ###Celtic 2BA
 		modifier = { 
 			light_infantry_cost = -0.2
-			light_infantry_offensive = 0.1
 		}
 		icon = celtic_germanic_path_6
 		requires = {celtic_germanic_path_1}
@@ -153,7 +151,7 @@
 	celtic_germanic_path_end_bonus = { ###Celtic 2BB
 		modifier = { 
 			light_infantry_discipline = 0.1
-			archers_discipline = 0.10
+			archers_discipline = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_end_bonus
@@ -195,10 +193,9 @@
 	celtic_gallic_path_3 = { ###Celtic 4B
 		modifier = { 
 			light_infantry_forest_combat_bonus = 0.1
-			light_infantry_plains_combat_bonus = 0.1
-			archers_plains_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
+			archers_hills_combat_bonus = 0.1
 			archers_forest_combat_bonus = 0.1
-			levy_size_multiplier = 0.025
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_3
