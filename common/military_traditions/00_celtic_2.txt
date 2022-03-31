@@ -81,6 +81,7 @@
 		modifier = { 
 			ruler_popularity_gain = 0.05
 			monthly_legitimacy = 0.01
+			archers_defensive = 0.1
 		}
 		icon = celtic_gallic_path_2
 		requires = { celtic_germanic_path_4 }
@@ -89,6 +90,7 @@
 	celtic_britannic_path_3 = { ###Celtic 3AA
 		modifier = { 
 			land_unit_attrition = -0.15
+			global_manpower_modifier = 0.1
 		}
 		icon = celtic_britannic_path_3
 		requires = { celtic_germanic_path_4 }
@@ -101,14 +103,15 @@
 		modifier = { 
 			global_cohort_start_experience = 10
 			experience_decay = -0.005
-			levy_size_multiplier = 0.025
+			land_morale_modifier = 0.05
+			
 			army_maintenance_cost = 0.01
 		}
 		on_activate = {
 			add_innovation = 4
 		}
 		icon = celtic_britannic_path_4
-		requires = { celtic_gallic_path_end_bonus celtic_britannic_path_1 }
+		requires = { celtic_gallic_path_end_bonus }
 	}
 
 	celtic_gallic_path_4 = { ###Celtic 4A
@@ -245,6 +248,7 @@
 	celtic_gallic_path_end_bonus = { ###Celtic 4BA
 		modifier = { 
 			manpower_recovery_speed = 0.05
+			archers_discipline = 0.15
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_end_bonus
@@ -287,8 +291,7 @@
 
 	celtic_north_african_enable = { ###Celtic 4BB
 		modifier = { 
-			light_cavalry_defensive = 0.1
-			land_morale_modifier = 0.025
+			light_cavalry_defensive = 0.15
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_3
