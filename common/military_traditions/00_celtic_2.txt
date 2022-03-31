@@ -223,8 +223,8 @@
 	celtic_germanic_path_2 = { ###Celtic 3B
 		modifier = { 
 			global_tribesmen_output = 0.1
-			local_forum_building_cost = -0.1
-			hill_fort_cost = -0.1
+			global_freemen_output = 0.05
+			fortress_building_cost = -0.2
 		}
 		icon = celtic_germanic_path_2
 		requires = { celtic_britannic_path_3 }
