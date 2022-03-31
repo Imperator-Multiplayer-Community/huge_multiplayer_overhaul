@@ -6,13 +6,17 @@ navy_maint.1 = {
 
 	trigger = {
 		is_ai = no
-		num_of_ships >= 100
+		OR = {
+			has_variable = previous_navy_rank
+			num_of_ships >= 100
+		}
 		trigger_if = {
 			limit = {
 				has_variable = previous_navy_rank
 			}
 
 			OR = {
+				num_of_ships < 100
 				NOT = {
 					var:previous_navy_rank = 1
 					num_of_ships >= 100
@@ -48,6 +52,14 @@ navy_maint.1 = {
 			}
 
 			remove_variable = previous_navy_rank
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = navy_maint_cost_scaling
+			}
+
+			remove_country_modifier = navy_maint_cost_scaling
 		}
 
 		if = {
@@ -105,12 +117,18 @@ navy_maint.1 = {
 			}
 		}
 
-		while = {
-			count = var:previous_navy_rank
-			add_country_modifier = {
-				name = navy_maint_cost_scaling
-				mode = add
-				duration = -1
+		if = {
+			limit = {
+				exists = var:previous_navy_rank
+			}
+
+			while = {
+				count = var:previous_navy_rank
+				add_country_modifier = {
+					name = navy_maint_cost_scaling
+					mode = add
+					duration = -1
+				}
 			}
 		}
 	}

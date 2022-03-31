@@ -841,7 +841,7 @@ base_sub_window = {
 		}
 	}
 	button_round_inverted = { ###############################################################
-		position = { -90 -130 }
+		position = { -120 -130 }
 		widgetanchor = bottom|right
 		parentanchor = bottom|right
 		size = { 30 30 }
@@ -851,20 +851,33 @@ base_sub_window = {
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
 			enabled = "[ViewPopsWindow.IsPlayerProvince]"
 		}
-		tooltip = "Slave Movement Forbidden"
+		tooltip = "Slave movement forbidden"
+	}
+	button_round_inverted = { ###############################################################
+		position = { -90 -130 }
+		widgetanchor = bottom|right
+		parentanchor = bottom|right
+		size = { 30 30 }
+		datacontext = "[GetScriptedGui('forbid_slave_internal_movement')]"
+		blockoverride "Icon" { texture = "gfx/interface/base_parts/button_alpha_close.dds" }
+		blockoverride "On_click" { 
+			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
+			enabled = "[ViewPopsWindow.IsPlayerProvince]"
+		}
+		tooltip = "Slave movement from territory importing slaves in province forbidden"
 	}
 	button_round_inverted = { ###############################################################
 		position = { -60 -130 }
 		widgetanchor = bottom|right
 		parentanchor = bottom|right
 		size = { 30 30 }
-		datacontext = "[GetScriptedGui('forbid_slave_hub_movement')]"
+		datacontext = "[GetScriptedGui('forbid_slave_external_movement')]"
 		blockoverride "Icon" { texture = "gfx/interface/base_parts/button_alpha_close.dds" }
 		blockoverride "On_click" { 
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
 			enabled = "[ViewPopsWindow.IsPlayerProvince]"
 		}
-		tooltip = "Slave Movement Forbidden From Province Accepting Slaves"
+		tooltip = "Slave movement from territory importing slaves outside province forbidden"
 	}
 	button_round_inverted = { ###############################################################
 		position = { -30 -130 }
@@ -877,7 +890,7 @@ base_sub_window = {
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
 			enabled = "[ViewPopsWindow.IsPlayerProvince]"
 		}
-		tooltip = "Move Slaves Here"
+		tooltip = "Save import enabled. Will disable automatically if no slaves available."
 	}
 	text_button_square = {
 		position = { -30 -12 }

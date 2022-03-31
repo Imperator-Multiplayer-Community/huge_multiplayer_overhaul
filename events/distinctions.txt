@@ -45,7 +45,15 @@ distinction.7 = { # Primigenia
             random_army = {
                 limit = {
                     has_legion_trigger = yes
-                    NOT = { has_distinction = distinction_legio_primagena }
+                    trigger_if = {
+                        limit = {
+                            has_legion_trigger = yes
+                        }
+
+                        legion = {
+                            NOT = { has_distinction = distinction_legio_primagena }
+                        }
+                    }
                 }
 
                 save_scope_as = actor
