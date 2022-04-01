@@ -170,15 +170,15 @@
 			navy_maintenance_cost = 0.01
 		}
 		requires = { greek_antigonid_path_1 }
+		allow_unit_type = octere
 		icon = greek_seleucid_path_3
 	}
 	
 	greek_antigonid_path_2_octere = {
 		modifier = {
-			naval_range = 0.1 
+			naval_range = 0.15
 			navy_maintenance_cost = 0.01
 		}
-		allow_unit_type = octere
 		requires = { greek_seleucid_path_3 }
 		icon = greek_antigonid_path_2
 		on_activate = {
@@ -217,9 +217,10 @@
 	}
 	
 	greek_states_path_5 = {
-		modifier = { navy_maintenance_cost = 0.01
+		modifier = { 
+			mega_galley_defensive = 0.1
+			navy_maintenance_cost = 0.01
 		}
-		allow_unit_type = mega_galley
 		requires = { greek_antigonid_path_2_octere }
 		icon = greek_states_path_5
 		on_activate = {
