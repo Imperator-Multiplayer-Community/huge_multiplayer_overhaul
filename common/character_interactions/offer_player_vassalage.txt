@@ -54,7 +54,7 @@
 			
 		}
 		scope:target.employer = {
-			num_of_cities <= 150
+			num_of_cities <= 200
 			is_subject = no
 		}
 	}

@@ -281,6 +281,7 @@
 		}
 		icon = north_african_naval_path_4
 		requires = { north_african_naval_path_end_bonus }
+		allow_unit_type = octere
 	}
 
 	north_african_naval_path_end_bonus = { ###North Aftica 4B
