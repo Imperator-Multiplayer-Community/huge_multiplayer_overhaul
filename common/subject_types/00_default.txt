@@ -630,7 +630,7 @@ player_client_state = {
 		# break if too many cities
 		if = {
 			limit = {
-				num_of_cities > 150
+				num_of_cities > 200
 				is_subject = yes
 			}
 
