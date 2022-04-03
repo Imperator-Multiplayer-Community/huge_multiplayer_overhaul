@@ -188,6 +188,7 @@
 		modifier = {
 			ship_cost = -0.15
 		}
+		allow_unit_type = mega_galley
 		on_activate = {
 			ordered_owned_province = {	#Upgrades a port, or creates one
 				limit = {
