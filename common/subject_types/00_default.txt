@@ -600,8 +600,8 @@ player_client_state = {
 		stability_monthly_change = -0.02
 	}
 	subject_modifier = {
-		ruler_popularity_gain = -0.025
-		global_commerce_modifier = 0.1
+		ruler_popularity_gain = -0.035
+		global_commerce_modifier = 0.15
 		stability_monthly_change = 0.01
 	}
 	
