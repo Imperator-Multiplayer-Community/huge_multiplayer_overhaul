@@ -429,7 +429,7 @@
 {
 	barbarian_power=0
 	civilization_value=7
-	culture="cantian"
+	culture="trinovantian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="marsh"
@@ -514,7 +514,7 @@
 {
 	barbarian_power=0
 	civilization_value=13
-	culture="cantian"
+	culture="trinovantian"
 	port_building=1
 	province_rank="settlement"
 	religion="druidism"
@@ -626,7 +626,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="cantian"
+	culture="trinovantian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -860,7 +860,7 @@
 {
 	barbarian_power=0
 	civilization_value=13
-	culture="trinovantian"
+	culture="cantian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="farmland"
@@ -897,28 +897,24 @@
 2040=
 {
 	barbarian_power=0
-	civilization_value=25
-	culture="carthaginian"
-	port_building=3
-	province_rank="city"
-	religion="carthaginian_pantheon"
+	civilization_value=8.5
+	culture="demetian"
+	port_building=1
+	province_rank="settlement"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="precious_metals"
-	nobles=
-	{
-		amount=8
-	}
 	citizen=
 	{
-		amount=9
+		amount=1
 	}
 	freemen=
 	{
-		amount=16
+		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
-		amount=10
+		amount=5
 	}
 }
 #Alavna
@@ -945,7 +941,7 @@
 {
 	barbarian_power=0
 	civilization_value=13
-	culture="trinovantian"
+	culture="cantian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="farmland"
@@ -1582,7 +1578,7 @@
 {
 	barbarian_power=0
 	civilization_value=6.5
-	culture="brigantic"
+	culture="parisian"
 	port_building=1
 	province_rank="settlement"
 	religion="druidism"
@@ -1602,7 +1598,7 @@
 {
 	barbarian_power=0
 	civilization_value=6.5
-	culture="brigantic"
+	culture="parisian"
 	port_building=1
 	province_rank="settlement"
 	religion="druidism"
@@ -1664,7 +1660,7 @@
 {
 	barbarian_power=0
 	civilization_value=10.5
-	culture="brigantic"
+	culture="parisian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1852,16 +1848,16 @@
 {
 	barbarian_power=0
 	civilization_value=8.5
-	culture="carthaginian"
+	culture="demetian"
 	province_rank="settlement"
-	religion="carthaginian_pantheon"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="base_metals"
 	freemen=
 	{
-		amount=10
+		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
 		amount=2
 	}
@@ -1967,18 +1963,18 @@
 {
 	barbarian_power=0
 	civilization_value=10.5
-	culture="carthaginian"
+	culture="demetian"
 	province_rank="settlement"
-	religion="carthaginian_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="wood"
 	freemen=
 	{
-		amount=10
+		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
-		amount=5
+		amount=2
 	}
 }
 #Oktapitaron Akron

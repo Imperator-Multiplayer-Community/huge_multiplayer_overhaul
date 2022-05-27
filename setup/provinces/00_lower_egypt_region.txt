@@ -611,6 +611,7 @@
 	culture="egyptian"
 	province_rank="city"
 	religion="egyptian_pantheon"
+	holy_site="omen_wadjet"
 	terrain="marsh"
 	trade_goods="dates"
 	citizen=
@@ -1262,7 +1263,7 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
@@ -1285,7 +1286,7 @@
 	culture="middle_egyptian"
 	province_rank="city"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="wine"
 	citizen=
 	{
@@ -1308,7 +1309,8 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	holy_site="omen_set"
+	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
@@ -1331,7 +1333,7 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
@@ -1364,7 +1366,7 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="stone"
 	citizen=
 	{
@@ -1383,7 +1385,7 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
@@ -1406,7 +1408,7 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="precious_metals"
 	citizen=
 	{
@@ -1429,7 +1431,7 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
@@ -1738,11 +1740,15 @@
 	culture="libyan"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="desert"
+	terrain="farmland"
 	trade_goods="camel"
+	slaves=
+	{
+		amount=2
+	}
 	tribesmen=
 	{
-		amount=1
+		amount=2
 	}
 }
 #Kom Namrud
@@ -1904,7 +1910,7 @@
 	culture="macedonian"
 	province_rank="settlement"
 	religion="roman_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="dates"
 	freemen=
 	{
@@ -1938,7 +1944,7 @@
 	culture="middle_egyptian"
 	province_rank="settlement"
 	religion="egyptian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
@@ -2008,6 +2014,7 @@
 	province_rank="settlement"
 	religion="egyptian_pantheon"
 	terrain="farmland"
+	holy_site="omen_thoth"
 	trade_goods="vegetables"
 	citizen=
 	{

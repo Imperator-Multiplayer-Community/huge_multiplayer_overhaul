@@ -416,17 +416,51 @@
 	barbarian_power=0
 	civilization_value=29
 	culture="gedrosian"
-	province_rank="settlement"
+	province_rank="city"
 	religion="zoroaster"
 	terrain="hills"
 	trade_goods="camel"
-	freemen=
+	nobles=
 	{
 		amount=1
 	}
-	tribesmen=
+	citizen=
 	{
 		amount=3
+	}
+	citizen=
+	{
+		amount=1
+		culture="pasargadi"
+	}
+	citizen=
+	{
+		amount=1
+		religion="roman_pantheon"
+		culture="macedonian"
+	}
+	freemen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=1
+		culture="pasargadi"
+	}
+	freemen=
+	{
+		amount=1
+		religion="roman_pantheon"
+		culture="macedonian"
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+	slaves=
+	{
+		amount=4
 	}
 }
 #Badis
@@ -1276,7 +1310,7 @@
 	barbarian_power=0
 	civilization_value=23
 	culture="sindhi"
-	province_rank="city"
+	province_rank="settlement"
 	religion="hindu"
 	terrain="desert"
 	trade_goods="cloth"
@@ -1897,22 +1931,10 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="hadhrami"
-	province_rank="settlement"
+	province_rank=""
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods="fish"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=4
-	}
+	trade_goods=""
 }
 #Jiddat al-Harasis
 7573=
@@ -1920,20 +1942,8 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="makan"
-	province_rank="settlement"
+	province_rank=""
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods="grain"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=4
-	}
+	trade_goods=""
 }

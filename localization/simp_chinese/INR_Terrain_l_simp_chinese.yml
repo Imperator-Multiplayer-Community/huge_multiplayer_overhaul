@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+ tributary_terrain:0 "河流支流/急流"
+ tributary_terrain_desc:0 "与其他河流相比，河流的某些部分更小或更难航行，从而增加了轻型船舶的收益。"
+ INR_terrain_desc:0 "该决定为所有国家的海军支流/快速地形类型修改了海军作战。该修饰符不知何故。"
+
+ INR_Tributary_Terrain:0 "河流支流/急流战斗修改器"
+ INR_Terrain:0 "河流支流/急流战斗修改器"
+ liburnian_tributary_terrain_combat_bonus:0 "单列桨座战船 河流支流/急流战斗修改器"
+ trireme_tributary_terrain_combat_bonus:0 "三层划桨战船 河流支流/急流战斗修改器"
+ hexere_tributary_terrain_combat_bonus:0 "六列桨座战船 河流支流/急流战斗修改器"
+ octere_tributary_terrain_combat_bonus:0 "八列桨座战船 河流支流/急流战斗修改器"
+ mega_galley_tributary_terrain_combat_bonus:0 "巨型多列桨座战船 河流支流/急流战斗修改器"
+ tributary_terrain_combat_bonus:0 "支流/急流战战斗加成"

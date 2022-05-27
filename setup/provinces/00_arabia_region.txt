@@ -486,7 +486,7 @@
 	culture="hebrew"
 	province_rank="settlement"
 	religion="judaism"
-	terrain="desert"
+	terrain="hills"
 	trade_goods="incense"
 	slaves=
 	{
@@ -505,7 +505,7 @@
 	culture="hebrew"
 	province_rank="settlement"
 	religion="judaism"
-	terrain="desert"
+	terrain="hills"
 	trade_goods="fur"
 	citizen=
 	{
@@ -1052,7 +1052,7 @@
 	culture="qedarite"
 	province_rank="settlement"
 	religion="arabian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="leather"
 	citizen=
 	{
@@ -1094,7 +1094,7 @@
 	culture="qedarite"
 	province_rank="settlement"
 	religion="arabian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="cloth"
 	citizen=
 	{
@@ -1232,11 +1232,11 @@
 	trade_goods="dates"
 	nobles=
 	{
-		amount=2
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=11
+		amount=10
 	}
 }
 #Arabia Deserta
@@ -1492,126 +1492,4 @@
 	{
 		amount=4
 	}
-}
-8567=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods=""
-}
-8568=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods=""
-}
-8569=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods=""
-}
-8570=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods=""
-}
-8571=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods=""
-}
-8572=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods=""
-}
-8573=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods=""
-}
-8574=
-{
-	barbarian_power=0
-	civilization_value=20
-	culture="qedarite"
-	province_rank="settlement"
-	religion="arabian_pantheon"
-	terrain="farmland"
-	trade_goods="grain"
-	tribesmen = {
-	amount = 1
-	}
-
-}
-8575=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="qedarite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain=""
-	trade_goods=""
-}
-8576=
-{
-	barbarian_power=0
-	civilization_value=20
-	culture="qedarite"
-	province_rank="settlement"
-	religion="arabian_pantheon"
-	terrain="plains"
-	trade_goods="vegetables"
-	nobles = {
-	amount = 3
-	}
-
-}
-8577=
-{
-	barbarian_power=0
-	civilization_value=20
-	culture="qedarite"
-	province_rank="settlement"
-	religion="arabian_pantheon"
-	terrain="desert"
-	trade_goods="salt"
-	tribesmen = {
-	amount = 1
-	}
-
 }

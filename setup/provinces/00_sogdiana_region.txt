@@ -330,6 +330,12 @@
 		culture="macedonian"
 		religion="roman_pantheon"
 	}
+	citizen=
+	{
+		amount=2
+		culture="pasargadi" 
+		religion="zoroaster"
+	}
 	freemen=
 	{
 		amount=2
@@ -371,15 +377,21 @@
 	trade_goods="silk"
 	nobles=
 	{
-		amount=1
+		amount=4
 	}
 	citizen=
 	{
-		amount=16
+		amount=13
 	}
 	freemen=
 	{
 		amount=10
+	}
+	freemen=
+	{
+		amount=2
+		culture=pasargadi 
+		religion=zoroaster
 	}
 	freemen=
 	{
@@ -389,13 +401,19 @@
 	}
 	slaves=
 	{
+		amount=4
+		culture="sakan"
+		religion="indo_iranian_religion"
+	}
+	slaves=
+	{
 		amount=2
 		culture="sogdian"
 		religion="zoroaster"
 	}
 	slaves=
 	{
-		amount=8
+		amount=4
 	}
 	tribesmen=
 	{
@@ -406,6 +424,12 @@
 		amount=2
 		culture="sogdian"
 		religion="zoroaster"
+	}
+	tribesmen=
+	{
+		amount=4
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Matuaspa
@@ -979,7 +1003,7 @@
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="farmland"
-	trade_goods="horses"
+	trade_goods="wood"
 	citizen=
 	{
 		amount=1
@@ -1117,9 +1141,9 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="tayuan"
+	culture="ionian"
 	province_rank="city"
-	religion="eastern_animism"
+	religion="roman_pantheon"
 	terrain="hills"
 	trade_goods="salt"
 	citizen=
@@ -1128,7 +1152,13 @@
 	}
 	freemen=
 	{
-		amount=8
+		amount=7
+	}
+	freemen=
+	{
+		amount=2
+		culture=sogdian
+		religion=zoroaster
 	}
 	slaves=
 	{
@@ -1137,6 +1167,8 @@
 	tribesmen=
 	{
 		amount=3
+		culture=sakan
+		religion=indo_iranian_religion
 	}
 }
 #Dawan
@@ -1194,26 +1226,50 @@
 {
 	barbarian_power=0
 	civilization_value=23.5
-	culture="tayuan"
+	culture="ionian"
 	province_rank="city"
-	religion="eastern_animism"
+	religion="roman_pantheon"
 	terrain="hills"
 	trade_goods="base_metals"
 	citizen=
 	{
-		amount=11
+		amount=7
 	}
 	freemen=
 	{
-		amount=15
+		amount=4
+		culture=tayuan
+		religion=zoroaster
 	}
-	slaves=
+	freemen=
 	{
 		amount=10
 	}
+	freemen=
+	{
+		amount=5
+		culture=tayuan
+		religion=zoroaster
+	}
+	slaves=
+	{
+		amount=6
+	}
+	slaves=
+	{
+		amount=5
+		culture=sakan
+		religion=indo_iranian_religion
+	}
 	tribesmen=
 	{
-		amount=9
+		amount=4
+	}
+	tribesmen=
+	{
+		amount=6
+		culture=sakan
+		religion=indo_iranian_religion
 	}
 }
 #Namakan
@@ -1324,7 +1380,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="hills"
@@ -1333,6 +1389,10 @@
 	{
 		amount=1
 	}
+	freemen=
+	{
+		amount=3
+	}
 	slaves=
 	{
 		amount=2
@@ -1340,6 +1400,8 @@
 	tribesmen=
 	{
 		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Balasaghun
@@ -1347,22 +1409,26 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="mountain"
 	trade_goods="salt"
-	freemen=
+	slaves=
 	{
 		amount=1
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	slaves=
 	{
 		amount=1
+		culture="tocharian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=4
+		amount=7
 	}
 }
 #Suyab
@@ -1370,26 +1436,20 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="mountain"
 	trade_goods="base_metals"
-	citizen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-	}
 	slaves=
 	{
-		amount=1
+		amount=2
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=2
+		amount=7
 	}
 }
 #Nevaket
@@ -1397,26 +1457,20 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="mountain"
 	trade_goods="cattle"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=3
-	}
 	slaves=
 	{
 		amount=2
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=1
+		amount=6
 	}
 }
 #Yul
@@ -1424,26 +1478,26 @@
 {
 	barbarian_power=0
 	civilization_value=21.5
-	culture="tocharian"
-	province_rank="city"
-	religion="eastern_animism"
+	culture="sakan"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
 	terrain="mountain"
 	trade_goods="salt"
-	citizen=
-	{
-		amount=6
-	}
 	freemen=
 	{
-		amount=4
+		amount=2
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	slaves=
 	{
 		amount=3
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=4
+		amount=13
 	}
 }
 #Ashpara
@@ -1451,22 +1505,20 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="mountain"
 	trade_goods="cattle"
-	freemen=
-	{
-		amount=1
-	}
 	slaves=
 	{
 		amount=2
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=3
+		amount=5
 	}
 }
 #Kulan
@@ -1474,11 +1526,15 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="mountain"
 	trade_goods="hemp"
+	freemen=
+	{
+		amount=3
+	}
 	slaves=
 	{
 		amount=1
@@ -1486,6 +1542,8 @@
 	tribesmen=
 	{
 		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Barskhan
@@ -1493,14 +1551,18 @@
 {
 	barbarian_power=0
 	civilization_value=21.5
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="city"
 	religion="eastern_animism"
 	terrain="mountain"
 	trade_goods="fur"
-	freemen=
+	citizen=
 	{
 		amount=2
+	}
+	freemen=
+	{
+		amount=4
 	}
 	slaves=
 	{
@@ -1508,7 +1570,9 @@
 	}
 	tribesmen=
 	{
-		amount=11
+		amount=4
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Shelji
@@ -1523,11 +1587,13 @@
 	trade_goods="cattle"
 	freemen=
 	{
-		amount=1
+		amount=3
 	}
 	tribesmen=
 	{
 		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Tobe
@@ -1535,7 +1601,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="hills"
@@ -1555,6 +1621,8 @@
 	tribesmen=
 	{
 		amount=3
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Narin
@@ -1562,10 +1630,10 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sakan"
 	holy_site="omen_blessing_life"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="mountain"
 	trade_goods="horses"
 	freemen=
@@ -1582,9 +1650,9 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="mountain"
 	trade_goods="base_metals"
 	tribesmen=
@@ -1632,6 +1700,8 @@
 	tribesmen=
 	{
 		amount=1
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Chach
@@ -1639,11 +1709,15 @@
 {
 	barbarian_power=0
 	civilization_value=16.5
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="mountain"
 	trade_goods="cattle"
+	freemen=
+	{
+		amount=2
+	}
 	slaves=
 	{
 		amount=1
@@ -1651,6 +1725,8 @@
 	tribesmen=
 	{
 		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Isfijab
@@ -1658,7 +1734,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="hills"
@@ -1674,6 +1750,8 @@
 	tribesmen=
 	{
 		amount=2
+		culture="sakan"
+		religion="indo_iranian_religion"
 	}
 }
 #Otrar
@@ -1681,22 +1759,20 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="hills"
 	trade_goods="hemp"
-	citizen=
-	{
-		amount=1
-	}
 	slaves=
 	{
-		amount=1
+		amount=2
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=3
+		amount=4
 	}
 }
 #Kuyruk
@@ -1704,18 +1780,20 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="hills"
 	trade_goods="cloth"
 	slaves=
 	{
-		amount=3
+		amount=2
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=2
+		amount=3
 	}
 }
 #Shavgar
@@ -1723,22 +1801,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="hills"
 	trade_goods="fur"
 	freemen=
 	{
-		amount=2
+		amount=1
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	slaves=
 	{
 		amount=2
+		culture="sogdian"
+		religion="eastern_animism"
 	}
 	tribesmen=
 	{
-		amount=1
+		amount=4
 	}
 }
 #Varakhsha
@@ -1890,26 +1972,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="hemp"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="fur"
 	tribesmen=
 	{
-		amount=2
+		amount=3
 	}
 }
 #Altinasar
@@ -1917,26 +1987,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="silk"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="steppe_horses"
 	tribesmen=
 	{
-		amount=2
+		amount=4
 	}
 }
 #Janaqala
@@ -1944,26 +2002,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="steppe_horses"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="horses"
 	tribesmen=
 	{
-		amount=2
+		amount=6
 	}
 }
 #Akkum
@@ -1971,26 +2017,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="cloth"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="cattle"
 	tribesmen=
 	{
-		amount=2
+		amount=3
 	}
 }
 #Koga
@@ -1998,26 +2032,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="woad"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="cattle"
 	tribesmen=
 	{
-		amount=2
+		amount=3
 	}
 }
 #Besta
@@ -2025,23 +2047,11 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="camel"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="wild_game"
 	tribesmen=
 	{
 		amount=2
@@ -2052,26 +2062,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="salt"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="steppe_horses"
 	tribesmen=
 	{
-		amount=2
+		amount=3
 	}
 }
 #Maidankuyryk
@@ -2079,26 +2077,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sakan"
 	province_rank="settlement"
-	religion="eastern_animism"
+	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="cloth"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="horses"
 	tribesmen=
 	{
-		amount=2
+		amount=3
 	}
 }
 #Jaxartes
@@ -2136,7 +2122,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="hills"
@@ -2151,7 +2137,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="plains"
@@ -2196,23 +2182,11 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="plains"
-	trade_goods="cattle"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="wood"
 	tribesmen=
 	{
 		amount=2
@@ -2238,7 +2212,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="plains"
@@ -2253,23 +2227,11 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="plains"
-	trade_goods="vegetables"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
+	trade_goods="fur"
 	tribesmen=
 	{
 		amount=2
@@ -2280,14 +2242,20 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="tocharian"
+	culture="sogdian"
 	province_rank="settlement"
 	religion="eastern_animism"
 	terrain="plains"
 	trade_goods="vegetables"
 	tribesmen=
 	{
-		amount=5
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=2
+		culture=sakan
+		religion=indo_iranian_religion
 	}
 }
 #Gabae

@@ -755,9 +755,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="grain"
 	tribesmen=
@@ -789,7 +789,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="plains"
@@ -804,7 +804,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="plains"
@@ -846,9 +846,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="farmland"
 	trade_goods="grain"
 	tribesmen=
@@ -861,9 +861,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="farmland"
 	trade_goods="woad"
 	freemen=
@@ -880,7 +880,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -895,7 +895,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="plains"
@@ -910,9 +910,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="fur"
 	citizen=
@@ -933,7 +933,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -942,13 +942,18 @@
 	{
 		amount=2
 	}
+	freemen = { #Anartian elite
+		culture = eravisci
+		religion = druidism
+		amount=1
+	}
 }
 #Potulatensia
 4837=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -963,7 +968,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -978,7 +983,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="hills"
@@ -987,15 +992,20 @@
 	{
 		amount=3
 	}
+	freemen = { #Anartian elite
+		culture = eravisci
+		religion = druidism
+		amount=1
+	}
 }
 #Zurobara
 4840=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="vegetables"
 	citizen=
@@ -1020,7 +1030,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="biephi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -1028,6 +1038,11 @@
 	tribesmen=
 	{
 		amount=2
+	}
+	freemen = {#Anartian elite
+		culture = eravisci
+		religion = druidism
+		amount=1
 	}
 }
 #Crisia
@@ -1048,15 +1063,20 @@
 	{
 		amount=4
 	}
+	freemen = {#Anartian elite
+		culture = eravisci
+		religion = druidism
+		amount=1
+	}
 }
 #Anartia
 4853=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="grain"
 	tribesmen=
@@ -1069,9 +1089,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="dacian"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="grain"
 	freemen=
@@ -1088,9 +1108,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="hemp"
 	slaves=
@@ -1112,8 +1132,9 @@
 	religion="shamanism"
 	terrain="forest"
 	trade_goods="woad"
-	freemen=
-	{
+	freemen = {#Anartian elite
+		culture = eravisci
+		religion = druidism
 		amount=1
 	}
 	tribesmen=
@@ -1154,6 +1175,11 @@
 	{
 		amount=2
 	}
+	freemen = {#Anartian elite
+		culture = eravisci
+		religion = druidism
+		amount=1
+	}
 }
 #Ad Statuam
 4861=
@@ -1166,13 +1192,19 @@
 	religion="shamanism"
 	terrain="hills"
 	trade_goods="fur"
-	freemen=
-	{
+	freemen = {#Anartian elite
+		culture = eravisci
+		religion = druidism
+		amount=1
+	}
+	citizen = {#Anartian elite
+		culture = eravisci
+		religion = druidism
 		amount=1
 	}
 	tribesmen=
 	{
-		amount=1
+		amount=3
 	}
 }
 #Antia
@@ -1180,9 +1212,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="hills"
 	trade_goods="wood"
 	tribesmen=
@@ -1195,9 +1227,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="hemp"
 	tribesmen=
@@ -1210,9 +1242,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="wood"
 	tribesmen=
@@ -1225,9 +1257,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="hills"
 	trade_goods="leather"
 	tribesmen=
@@ -1240,9 +1272,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="costoboci"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="hills"
 	trade_goods="leather"
 	tribesmen=
@@ -1255,9 +1287,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="vegetables"
 	tribesmen=
@@ -1364,9 +1396,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="biephi"
+	culture="eravisci"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="hills"
 	trade_goods="precious_metals"
 	tribesmen=

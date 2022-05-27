@@ -244,7 +244,7 @@
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
-	trade_goods="steppe_horses"
+	trade_goods="olive"
 	freemen=
 	{
 		amount=1
@@ -321,7 +321,7 @@
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
-	trade_goods="steppe_horses"
+	trade_goods="stone"
 	citizen=
 	{
 		amount=1
@@ -444,7 +444,7 @@
 	province_rank="settlement"
 	religion="druidism"
 	terrain="hills"
-	trade_goods="steppe_horses"
+	trade_goods="base_metals"
 	freemen=
 	{
 		amount=1
@@ -756,28 +756,19 @@
 1133=
 {
 	barbarian_power=0
-	civilization_value=28
-	culture="carthaginian"
-	port_building=3
-	province_rank="city"
-	religion="carthaginian_pantheon"
+	civilization_value=11
+	culture="callaecian"
+	province_rank="settlement"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="fish"
-	nobles=
-	{
-		amount=7
-	}
-	citizen=
-	{
-		amount=12
-	}
 	freemen=
 	{
-		amount=10
+		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
-		amount=10
+		amount=4
 	}
 }
 #Varina Marinia
@@ -804,9 +795,9 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="carthaginian"
+	culture="callaecian"
 	province_rank="settlement"
-	religion="carthaginian_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="base_metals"
 	citizen=
@@ -817,7 +808,7 @@
 	{
 		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
 		amount=6
 	}

@@ -84,7 +84,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="aulercian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -214,7 +214,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aulercian"
+	culture="aremorican"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -271,16 +271,16 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="carthaginian"
+	culture="aremorican"
 	province_rank="settlement"
-	religion="carthaginian_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="base_metals"
 	freemen=
 	{
-		amount=10
+		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
 		amount=4
 	}
@@ -290,17 +290,17 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="carthaginian"
+	culture="aremorican"
 	port_building=1
 	province_rank="settlement"
-	religion="carthaginian_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="fish"
 	freemen=
 	{
-		amount=10
+		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
 		amount=4
 	}
@@ -390,28 +390,20 @@
 2153=
 {
 	barbarian_power=0
-	civilization_value=25
-	culture="carthaginian"
-	port_building=3
-	province_rank="city"
-	religion="carthaginian_pantheon"
+	civilization_value=11
+	culture="aremorican"
+	port_building=1
+	province_rank="settlement"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="precious_metals"
-	nobles=
-	{
-		amount=8
-	}
-	citizen=
-	{
-		amount=13
-	}
 	freemen=
 	{
-		amount=15
+		amount=1
 	}
-	slaves=
+	tribesmen=
 	{
-		amount=10
+		amount=4
 	}
 }
 #Pollicum
@@ -557,7 +549,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aulercian"
+	culture="aremorican"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -622,17 +614,17 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="carthaginian"
+	culture="aremorican"
 	port_building=1
 	province_rank="settlement"
-	religion="carthaginian_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="hemp"
 	freemen=
 	{
 		amount=2
 	}
-	slaves=
+	tribesmen=
 	{
 		amount=4
 	}
@@ -730,7 +722,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="aulercian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -784,7 +776,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="aulercian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -803,7 +795,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="aulercian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -822,7 +814,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="aulercian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -841,7 +833,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="aulercian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -971,7 +963,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aulercian"
+	culture="aremorican"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1051,7 +1043,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aulercian"
+	culture="aremorican"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1112,7 +1104,7 @@
 {
 	barbarian_power=0
 	civilization_value=13
-	culture="aulercian"
+	culture="aremorican"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="farmland"
@@ -1150,7 +1142,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="biturigan"
+	culture="pictonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1386,7 +1378,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aulercian"
+	culture="biturigan"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1500,7 +1492,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aremorican"
+	culture="aulercian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1538,7 +1530,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aulercian"
+	culture="aremorican"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"

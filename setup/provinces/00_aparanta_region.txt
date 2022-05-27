@@ -76,7 +76,7 @@
 {
 	barbarian_power=0
 	civilization_value=29
-	culture="saurashtran"
+	culture="avanti"
 	province_rank="city"
 	religion="hindu"
 	terrain="forest"
@@ -103,22 +103,22 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="sheban"
+	culture="avanti"
 	province_rank="settlement"
-	religion="arabian_pantheon"
+	religion="hindu"
 	terrain="forest"
 	trade_goods="precious_metals"
 	citizen=
 	{
-		amount=4
+		amount=3
 	}
 	freemen=
 	{
-		amount=6
+		amount=4
 	}
 	slaves=
 	{
-		amount=5
+		amount=1
 	}
 	tribesmen=
 	{
@@ -130,15 +130,11 @@
 {
 	barbarian_power=0
 	civilization_value=31
-	culture="sheban"
+	culture="rathikan"
 	province_rank="city"
-	religion="arabian_pantheon"
+	religion="hindu"
 	terrain="plains"
 	trade_goods="cloth"
-	nobles=
-	{
-		amount=3
-	}
 	citizen=
 	{
 		amount=9
@@ -161,17 +157,13 @@
 {
 	barbarian_power=0
 	civilization_value=31
-	culture="sheban"
+	culture="rathikan"
 	holy_site="omen_bhrigu"
 	port_building=1
 	province_rank="city"
-	religion="arabian_pantheon"
+	religion="hindu"
 	terrain="plains"
 	trade_goods="earthware"
-	nobles=
-	{
-		amount=5
-	}
 	citizen=
 	{
 		amount=8
@@ -182,7 +174,7 @@
 	}
 	slaves=
 	{
-		amount=8
+		amount=5
 	}
 }
 #Kammonai
@@ -190,9 +182,9 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="sheban"
+	culture="rathikan"
 	province_rank="settlement"
-	religion="arabian_pantheon"
+	religion="hindu"
 	terrain="plains"
 	trade_goods="grain"
 	citizen=
@@ -217,7 +209,7 @@
 {
 	barbarian_power=0
 	civilization_value=20.5
-	culture="saurashtran"
+	culture="rathikan"
 	port_building=1
 	province_rank="settlement"
 	religion="hindu"
@@ -245,7 +237,7 @@
 {
 	barbarian_power=0
 	civilization_value=20.5
-	culture="saurashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -269,7 +261,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="saurashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -296,7 +288,7 @@
 {
 	barbarian_power=0
 	civilization_value=20.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="plains"
@@ -339,7 +331,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -368,7 +360,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="jungle"
@@ -405,7 +397,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -447,7 +439,7 @@
 {
 	barbarian_power=0
 	civilization_value=23.5
-	culture="maharashtran"
+	culture="rathikan"
 	port_building=1
 	province_rank="city"
 	religion="hindu"
@@ -490,7 +482,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -523,7 +515,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -550,7 +542,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -577,7 +569,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -821,35 +813,29 @@
 6881=
 {
 	barbarian_power=0
-	civilization_value=40
-	culture="macedonian"
-	port_building=3
+	civilization_value=16
+	culture="maharashtran"
 	province_rank="city"
-	religion="buddhism"
+	religion="hindu"
 	terrain="plains"
 	trade_goods="salt"
-	nobles=
-	{
-		amount=9
-	}
 	citizen=
-	{
-		amount=18
-	}
-	freemen=
 	{
 		amount=7
 	}
+	freemen=
+	{
+		amount=11
+	}
 	slaves=
 	{
-		amount=2
+		amount=8
 	}
 	tribesmen=
 	{
-		amount=2
+		amount=6
 	}
 }
-
 #Toparon
 6882=
 {
@@ -909,7 +895,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -963,7 +949,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -1175,7 +1161,7 @@
 {
 	barbarian_power=0
 	civilization_value=23.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="city"
 	religion="hindu"
 	terrain="hills"
@@ -1202,7 +1188,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1229,7 +1215,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1256,7 +1242,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1330,7 +1316,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1357,7 +1343,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1403,7 +1389,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1430,7 +1416,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -1457,7 +1443,7 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="avanti"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -1484,7 +1470,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1511,7 +1497,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -1664,7 +1650,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -1691,11 +1677,11 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
-	trade_goods="wild_game"
+	trade_goods="wine"
 	citizen=
 	{
 		amount=1
@@ -1718,7 +1704,7 @@
 {
 	barbarian_power=0
 	civilization_value=14
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="city"
 	religion="hindu"
 	terrain="jungle"
@@ -1745,7 +1731,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1772,7 +1758,7 @@
 {
 	barbarian_power=0
 	civilization_value=16
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="city"
 	religion="hindu"
 	terrain="plains"
@@ -1799,7 +1785,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1826,7 +1812,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -1853,7 +1839,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1907,7 +1893,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="saurashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -1934,7 +1920,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="maharashtran"
+	culture="rathikan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -1961,7 +1947,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="telugu"
+	culture="assaka"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -1984,7 +1970,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="telugu"
+	culture="assaka"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -2007,7 +1993,7 @@
 {
 	barbarian_power=0
 	civilization_value=16
-	culture="kannadan"
+	culture="assaka"
 	province_rank="city"
 	religion="hindu"
 	terrain="plains"
@@ -2034,7 +2020,7 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="vidharban"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -2061,7 +2047,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="maharashtran"
+	culture="avanti"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -2084,7 +2070,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="vidharban"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -2111,7 +2097,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -2162,7 +2148,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="vidharban"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -2199,7 +2185,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="assaka"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -2226,7 +2212,7 @@
 {
 	barbarian_power=0
 	civilization_value=16
-	culture="kannadan"
+	culture="kuntalan"
 	province_rank="city"
 	religion="hindu"
 	terrain="plains"
@@ -2295,7 +2281,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kannadan"
+	culture="assaka"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -2434,7 +2420,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="avanti"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -2480,7 +2466,7 @@
 {
 	barbarian_power=0
 	civilization_value=29
-	culture="avanti"
+	culture="cedi"
 	province_rank="city"
 	religion="hindu"
 	terrain="hills"
@@ -2503,7 +2489,7 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="avanti"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -2553,7 +2539,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="avanti"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -2580,7 +2566,7 @@
 {
 	barbarian_power=0
 	civilization_value=29
-	culture="avanti"
+	culture="cedi"
 	province_rank="city"
 	religion="hindu"
 	terrain="jungle"
@@ -2603,7 +2589,7 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="avanti"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -2630,7 +2616,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="avanti"
+	culture="cedi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"

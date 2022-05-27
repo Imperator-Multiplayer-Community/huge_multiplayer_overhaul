@@ -1,0 +1,60 @@
+﻿#Tributary Combat Bonuses:
+archers_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+camels_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+chariots_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+heavy_infantry_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+horse_archers_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+heavy_cavalry_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+light_cavalry_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+light_infantry_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+warelephant_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+supply_train_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+engineer_cohort_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+spearmen_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/_default.dds" #Unused
+}
+tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
+}
+
+
+liburnian_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/modifiers/liburnian_riverine_terrain_combat_bonus.dds"
+}
+trireme_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/modifiers/trireme_riverine_terrain_combat_bonus.dds"
+}
+tetrere_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/modifiers/tetrere_riverine_terrain_combat_bonus.dds"
+}
+hexere_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/modifiers/hexere_riverine_terrain_combat_bonus.dds"
+}
+octere_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/modifiers/octere_riverine_terrain_combat_bonus.dds"
+}
+mega_galley_tributary_terrain_combat_bonus = {
+	positive = "gfx/interface/icons/modifiers/mega_galley_riverine_terrain_combat_bonus.dds"
+}

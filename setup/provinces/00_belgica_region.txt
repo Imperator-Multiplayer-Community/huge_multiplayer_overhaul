@@ -335,7 +335,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="sennonian"
+	culture="nervian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -733,7 +733,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="nervian"
+	culture="belgae"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -928,7 +928,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="treverian"
+	culture="nervian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1035,7 +1035,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="belgae"
+	culture="nervian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1096,18 +1096,14 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
 	trade_goods="leather"
-	citizen=
-	{
-		amount=1
-	}
 	freemen=
 	{
-		amount=4
+		amount=3
 	}
 	slaves=
 	{
@@ -1115,7 +1111,7 @@
 	}
 	tribesmen=
 	{
-		amount=4
+		amount=3
 	}
 }
 #Amanium
@@ -1123,7 +1119,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1142,7 +1138,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="nervian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1161,7 +1157,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="nervian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1302,7 +1298,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="nervian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1359,7 +1355,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="eburonian"
+	culture="nervian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1382,7 +1378,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="eburonian"
+	culture="nervian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1458,7 +1454,7 @@
 	}
 	tribesmen=
 	{
-		amount=2
+		amount=3
 	}
 }
 #Blariacum
@@ -1466,14 +1462,14 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="belgae"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
 	trade_goods="fur"
 	freemen=
 	{
-		amount=1
+		amount=2
 	}
 	tribesmen=
 	{
@@ -1485,7 +1481,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="belgae"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1502,20 +1498,24 @@
 	{
 		amount=5
 	}
+	slaves=
+	{
+		amount=3
+	}
 }
 #Ad Duodecimum
 3713=
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="belgae"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
 	trade_goods="fur"
 	freemen=
 	{
-		amount=1
+		amount=3
 	}
 	tribesmen=
 	{
@@ -1527,15 +1527,19 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aduatacian"
+	culture="eburonian"
 	port_building=1
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
 	trade_goods="vegetables"
-	freemen=
+	citizen=
 	{
 		amount=1
+	}
+	freemen=
+	{
+		amount=3
 	}
 	tribesmen=
 	{
@@ -1547,7 +1551,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1566,7 +1570,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1585,7 +1589,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1604,7 +1608,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1623,7 +1627,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1646,7 +1650,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1749,7 +1753,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="aduatacian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1768,7 +1772,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="treverian"
+	culture="eburonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"

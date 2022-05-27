@@ -3,7 +3,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -33,7 +33,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
@@ -52,7 +52,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
@@ -67,7 +67,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
@@ -97,7 +97,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -116,7 +116,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
@@ -144,6 +144,16 @@
 	{
 		amount=2
 	}
+	slaves=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+		culture="sarmatian"
+		religion="indo_iranian_religion"
+	}
 }
 #Aghonor
 6143=
@@ -157,7 +167,17 @@
 	trade_goods="grain"
 	tribesmen=
 	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=2
+	}
+	slaves=
+	{
 		amount=1
+		culture="sarmatian"
+		religion="indo_iranian_religion"
 	}
 }
 #Nynt
@@ -176,11 +196,17 @@
 	}
 	slaves=
 	{
-		amount=1
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
 	}
 	tribesmen=
 	{
 		amount=2
+		culture="sarmatian"
+		religion="indo_iranian_religion"
 	}
 }
 #Ghahko
@@ -188,11 +214,11 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="wood"
+	trade_goods="base_metals"
 	freemen=
 	{
 		amount=1
@@ -203,7 +229,13 @@
 	}
 	tribesmen=
 	{
+		amount=2
+	}
+	slaves=
+	{
 		amount=1
+		culture="scythian"
+		religion="indo_iranian_religion"
 	}
 }
 #Kihkyengra
@@ -226,7 +258,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -256,7 +288,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -271,45 +303,53 @@
 	}
 	slaves=
 	{
-		amount=1
+		amount=2
 	}
 	tribesmen=
 	{
-		amount=1
+		amount=3
 	}
 }
 #Rynek
 6154=
 {
 	barbarian_power=0
-	civilization_value=0
-	culture="scythian"
+	civilization_value=6
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="steppe_horses"
 	slaves=
 	{
-		amount=1
+		amount=3
 	}
 	tribesmen=
 	{
-		amount=2
+		amount=4
 	}
 }
 #Kisko
 6155=
 {
 	barbarian_power=0
-	civilization_value=0
-	culture="scythian"
+	civilization_value=5
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="steppe_horses"
-	tribesmen=
+	freemen=
 	{
 		amount=1
+	}
+	slaves=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=4
 	}
 }
 #Aihkohna
@@ -317,14 +357,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="cattle"
 	tribesmen=
 	{
-		amount=1
+		amount=2
 	}
 }
 #Shgaritat
@@ -332,7 +372,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -351,7 +391,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -366,7 +406,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -396,7 +436,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -411,7 +451,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -425,13 +465,32 @@
 6163=
 {
 	barbarian_power=0
-	civilization_value=0
-	culture="scythian"
+	civilization_value=5
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="grain"
 	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Shchor
+6164=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="base_metals"
+	freemen=
 	{
 		amount=1
 	}
@@ -440,36 +499,25 @@
 		amount=2
 	}
 }
-#Shchor
-6164=
+#Vel
+6165=
 {
 	barbarian_power=0
-	civilization_value=0
-	culture="scythian"
+	civilization_value=6
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="hemp"
+	trade_goods="woad"
 	freemen=
 	{
 		amount=1
 	}
 	tribesmen=
 	{
-		amount=1
+		amount=3
 	}
-}
-#Vel
-6165=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="scythian"
-	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
-	trade_goods="woad"
-	tribesmen=
+	slaves=
 	{
 		amount=2
 	}
@@ -509,7 +557,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -524,7 +572,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -539,14 +587,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="grain"
+	trade_goods="precious_metals"
 	tribesmen=
 	{
-		amount=1
+		amount=3
 	}
 }
 #Galligh
@@ -584,7 +632,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -617,7 +665,7 @@
 	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="hemp"
 	tribesmen=
 	{
@@ -629,7 +677,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -644,7 +692,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -662,19 +710,23 @@
 6178=
 {
 	barbarian_power=0
-	civilization_value=15
-	culture="scythian"
-	province_rank="city"
+	civilization_value=8
+	culture="sarmatian"
+	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="cloth"
 	freemen=
 	{
-		amount=29
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=10
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
 	}
 }
 #Yoro
@@ -685,7 +737,7 @@
 	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="horses"
 	tribesmen=
 	{
@@ -697,7 +749,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -801,8 +853,8 @@
 6187=
 {
 	barbarian_power=0
-	civilization_value=0
-	culture="scythian"
+	civilization_value=7
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -831,11 +883,11 @@
 		amount=5
 	}
 }
-#A
+#Arn
 6189=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=9
 	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
@@ -1198,7 +1250,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -1228,7 +1280,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -1281,7 +1333,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -1296,7 +1348,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -1311,7 +1363,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -1334,7 +1386,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -1353,7 +1405,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="thyssagetaen"
+	culture="sarmatian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
@@ -1361,5 +1413,320 @@
 	tribesmen=
 	{
 		amount=1
+	}
+}
+#Krepkaya
+8551=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="grain"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Liska
+8552=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="wild_game"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Bazki
+8553=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="grain"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Kalmykovskii
+8554=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="cattle"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Bolshoi
+8555=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="woad"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Berezovaya
+8556=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="wood"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Tikhaya
+8557=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Olkhovaya
+8558=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Bogucharka
+8559=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Titarevka
+8560=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Komyshna
+8561=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="fur"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Kurennoe
+8562=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Tikhaya Sosna
+8563=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Chernyanka
+8564=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="budinian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="fur"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Rovenki
+8565=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="wild_game"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Bila
+8566=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="woad"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Kupyansk
+8567=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="budinian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="wood"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Horyane
+8568=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="budinian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="cattle"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Kozynka
+8569=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="budinian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="grain"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Volchya
+8570=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="budinian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="cattle"
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Artilne
+8571=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="budinian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	tribesmen=
+	{
+		amount=2
 	}
 }

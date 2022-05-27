@@ -3,9 +3,9 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="hills"
 	trade_goods="wood"
 	citizen=
@@ -30,9 +30,9 @@
 {
 	barbarian_power=0
 	civilization_value=12
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="farmland"
 	trade_goods="hemp"
 	freemen=
@@ -49,9 +49,9 @@
 {
 	barbarian_power=0
 	civilization_value=12
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="farmland"
 	trade_goods="cattle"
 	citizen=
@@ -72,9 +72,9 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="hills"
 	trade_goods="honey"
 	citizen=
@@ -99,9 +99,9 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="hills"
 	trade_goods="stone"
 	citizen=
@@ -126,9 +126,9 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="deurian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="roman_pantheon"
+	religion="druidism"
 	terrain="hills"
 	trade_goods="horses"
 	citizen=
@@ -155,7 +155,7 @@
 	civilization_value=11
 	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="roman_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="wine"
 	freemen=
@@ -172,9 +172,9 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="deurian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="roman_pantheon"
+	religion="druidism"
 	terrain="hills"
 	trade_goods="horses"
 	citizen=
@@ -195,9 +195,9 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="deurian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="roman_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="wine"
 	freemen=
@@ -218,7 +218,7 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="deurian"
+	culture="pannonian"
 	province_rank="settlement"
 	religion="roman_pantheon"
 	terrain="plains"
@@ -237,9 +237,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="deurian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="roman_pantheon"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="wood"
 	freemen=
@@ -302,7 +302,7 @@
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
-	trade_goods="fur"
+	trade_goods="incense"
 	freemen=
 	{
 		amount=2
@@ -417,9 +417,9 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="dacian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="forest"
 	trade_goods="wood"
 	freemen=
@@ -436,9 +436,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="triballoi"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="grain"
 	citizen=
@@ -459,9 +459,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="plains"
 	trade_goods="stone"
 	freemen=
@@ -478,9 +478,9 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="leather"
 	freemen=
@@ -501,9 +501,9 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="hemp"
 	citizen=
@@ -566,9 +566,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="dacian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="cattle"
 	freemen=
@@ -589,9 +589,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="dacian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="cattle"
 	freemen=
@@ -612,9 +612,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="dacian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="horses"
 	citizen=
@@ -681,9 +681,9 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="triballoi"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="hills"
 	trade_goods="woad"
 	citizen=
@@ -704,7 +704,7 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="hills"
@@ -723,9 +723,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="dacian"
+	culture="celtic_pannonian"
 	province_rank="settlement"
-	religion="shamanism"
+	religion="druidism"
 	terrain="plains"
 	trade_goods="horses"
 	citizen=
@@ -834,9 +834,9 @@
 {
 	barbarian_power=0
 	civilization_value=10
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="plains"
 	trade_goods="woad"
 	citizen=
@@ -899,9 +899,9 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="hills"
 	trade_goods="wood"
 	citizen=
@@ -1079,9 +1079,9 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="celtic_pannonian"
+	culture="triballoi"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="hills"
 	trade_goods="wood"
 	freemen=

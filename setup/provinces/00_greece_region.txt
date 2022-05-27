@@ -882,7 +882,7 @@
 	holy_site="omen_dionysus"
 	province_rank="city"
 	religion="roman_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="earthware"
 	nobles=
 	{
@@ -2641,6 +2641,7 @@
 	civilization_value=24
 	culture="argolian"
 	province_rank="settlement"
+	holy_site="omen_hestia"
 	religion="roman_pantheon"
 	terrain="hills"
 	trade_goods="wood"
