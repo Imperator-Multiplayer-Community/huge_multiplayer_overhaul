@@ -1,4 +1,4 @@
-LightInfantry = { # tradition for Light Infantry
+light_infantry_traditions = { # tradition for Light Infantry
 	color = hsv { 1.72 0.64 0.7 }
 	image = levantine_greco_path_3 #updated
 	
@@ -150,7 +150,7 @@ LightInfantry = { # tradition for Light Infantry
 		modifier = { 
 			light_infantry_cost = -0.1
 			army_maintenance_cost = 0.01
-			levy_size_multiplier = 0.025
+			
 		} 
 		icon = levantine_greco_path_2 #updated
 		requires = {light_infantry_path_3}
@@ -160,15 +160,24 @@ LightInfantry = { # tradition for Light Infantry
 		modifier = { 
 			light_infantry_movement_speed = 0.1
 			army_maintenance_cost = 0.01
-			discipline = 0.1
+			
 		} 
 		icon = north_african_tribal_path_6 #updated
 		requires = {light_infantry_path_4 }
 	}
 
+		light_infantry_path_7 = { ### final generic tradition
+		modifier = {
+			levy_size_multiplier = 0.025
+			discipline = 0.05
+		}
+		icon = mauryan_coastal_path_7
+		requires = { light_infantry_path_6 and light_infantry_path_5 }
+	}
+
 	aryan_river_path_2 = { ###
 		modifier = { 
-			archers_morale = 0.05
+			light_infantry_morale = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_7

@@ -1,4 +1,4 @@
-LightCavalry = { # tradition for Light Cavalry
+light_cavalry_traditions = { # tradition for Light Cavalry
 	color = hsv { 1.72 0.64 0.7 }
 	image = north_african_tribal_path_1
 	
@@ -133,7 +133,7 @@ LightCavalry = { # tradition for Light Cavalry
 		modifier = { 
 			light_cavalry_cost = -0.1
 			army_maintenance_cost = 0.01
-			levy_size_multiplier = 0.025
+			
 		} 
 		icon = north_african_tribal_path_7 #updated
 		requires = {light_cavalry_path_3}
@@ -143,10 +143,19 @@ LightCavalry = { # tradition for Light Cavalry
 		modifier = { 
 			light_cavalry_movement_speed = 0.1
 			army_maintenance_cost = 0.01
-			discipline = 0.1
+			
 		} 
 		icon = latin_support_path_7 #updated
 		requires = {light_cavalry_path_4 }
+	}
+
+	light_cavalry_path_7 = { ### final generic tradition
+		modifier = {
+			levy_size_multiplier = 0.025
+			discipline = 0.05
+		}
+		icon = north_african_tribal_path_1
+		requires = { light_cavalry_path_6 and light_cavalry_path_5 }
 	}
 
 	nubian_path_3 = { ###
@@ -292,175 +301,7 @@ LightCavalry = { # tradition for Light Cavalry
 		}
 	}
 
-	celtic_britannic_path_6 = { ###Celtic 1B
-		modifier = { 
-			light_cavalry_morale = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = celtic_britannic_path_6
-		requires = { }
-		on_activate = {
-			ordered_owned_province = {
-				limit = {
-					NOT = { trade_goods = iron }
-					NOT = { trade_goods = horses }
-					NOT = { trade_goods = steppe_horses }
-					is_capital = no
-					has_non_food_trade_good_trigger = yes
-				}
-				order_by = total_population
-				set_trade_goods = horses
-			}
-		}
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = gallic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = gallic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = celto_pannonian_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = celto_pannonian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = belgae_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = belgae_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = britannic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = britannic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = gaelic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = gaelic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = proto_european }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = proto_european
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = celtic_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_celtic"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:gallic
-							this.culture.culture_group = culture_group:celto_pannonian_group
-							this.culture.culture_group = culture_group:belgae_group
-							this.culture.culture_group = culture_group:britannic
-							this.culture.culture_group = culture_group:gaelic
-							this.culture.culture_group = culture_group:proto_european
-						}
-					}
-				}
-			}
-		}
-	}
-
-	celtic_britannic_path_end_bonus = { ###Celtic 4BA
-		modifier = { 
-			light_cavalry_offensive = 0.05
-			army_maintenance_cost = 0.01
-		}
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = disciplined
-				}
-			}
-		}
-		icon = celtic_britannic_path_end_bonus
-		requires = { celtic_britannic_path_6 }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = gallic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = gallic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = celto_pannonian_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = celto_pannonian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = belgae_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = belgae_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = britannic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = britannic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = gaelic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = gaelic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = proto_european }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = proto_european
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = celtic_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_celtic"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:gallic
-							this.culture.culture_group = culture_group:celto_pannonian_group
-							this.culture.culture_group = culture_group:belgae_group
-							this.culture.culture_group = culture_group:britannic
-							this.culture.culture_group = culture_group:gaelic
-							this.culture.culture_group = culture_group:proto_european
-						}
-					}
-				}
-			}
-		}
-	}
+	
 
 	celt_iberian_path_c_3A = { ###Celt-Iberian 3CA Cantabrian Circle
 		modifier = { 

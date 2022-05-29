@@ -1,4 +1,4 @@
-HorseArchers = { # tradition for Heavy Archers
+horse_archers_traditions = { # tradition for Heavy Archers
 	color = hsv { 1.72 0.64 0.7 }
 	image = levantine_arabian_path_end_bonus #updated
 	
@@ -118,7 +118,7 @@ HorseArchers = { # tradition for Heavy Archers
 		modifier = { 
 			horse_archers_cost = -0.1
 			army_maintenance_cost = 0.01
-			levy_size_multiplier = 0.025
+			
 		} 
 		icon = greek_antigonid_path_6
 		requires = {horse_archers_path_3}
@@ -128,124 +128,23 @@ HorseArchers = { # tradition for Heavy Archers
 		modifier = { 
 			horse_archers_movement_speed = 0.1
 			army_maintenance_cost = 0.01
-			discipline = 0.1
+			
 		} 
 		icon = levantine_arabian_path_end_bonus #updated
 		requires = {horse_archers_path_4 }
 	}
 
-	arabian_path_12 = { ###
-		enable_tactic = cavalry_skirmish
-		modifier = { 
-			horse_archers_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
+	horse_archers_path_7 = { ### final generic tradition
+		modifier = {
+			levy_size_multiplier = 0.025
+			discipline = 0.05
+		}
 		icon = north_african_tribal_path_2
-		requires = { }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = south_levantine }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = south_levantine
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = meroitic_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = meroitic_group
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = aksumite_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aksumite_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = afro_arabian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_afro_arabian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:south_levantine
-							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group
-						}
-					}
-				}
-			}
-		}
-		
+		requires = { horse_archers_path_6 and horse_archers_path_5 }
 	}
 
-	nubian_path_6 = { ###
-		enable_tactic = hit_and_run_tactics
-		modifier = { 
-			horse_archers_offensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = levantine_arabian_path_end_bonus
 
-		requires = { arabian_path_12 }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = south_levantine }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = south_levantine
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = meroitic_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = meroitic_group
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = aksumite_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aksumite_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = afro_arabian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_afro_arabian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:south_levantine
-							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group
-						}
-					}
-				}
-			}
-		}
-	}
-
+	
 	scythian_path_1 = { ###
 		modifier = { 
 			horse_archers_defensive = 0.05
@@ -408,6 +307,118 @@ HorseArchers = { # tradition for Heavy Archers
 				}
 			}
 		}
-
 	}
+
+	arabian_path_12 = { ###
+		enable_tactic = cavalry_skirmish
+		modifier = { 
+			horse_archers_morale = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_tribal_path_2
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}
+			}
+		}
+		
+	}
+
+	nubian_path_6 = { ###
+		enable_tactic = hit_and_run_tactics
+		modifier = { 
+			horse_archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = levantine_arabian_path_end_bonus
+
+		requires = { arabian_path_12 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}
+			}
+		}
+	}
+
 }

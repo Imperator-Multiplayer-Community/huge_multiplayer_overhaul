@@ -1,4 +1,4 @@
-Terrain = { # tradition for Terrain
+terrain_traditions = { # tradition for Terrain
 	color = hsv { 1.72 0.64 0.7 }
 	image = north_african_naval_path_6 #updated
 	
@@ -12,10 +12,6 @@ Terrain = { # tradition for Terrain
 			mountain_combat_bonus = 0.1
 			plains_combat_bonus = -0.05
 			farmland_combat_bonus = -0.05
-			desert_combat_bonus = -0.05
-			marsh_combat_bonus = -0.05
-			jungle_combat_bonus = -0.05
-			forest_combat_bonus = -0.05
 		}
 		
 		icon = celtic_gallic_path_3
@@ -25,9 +21,8 @@ Terrain = { # tradition for Terrain
 		modifier = {
 			hills_combat_bonus = -0.05
 			mountain_combat_bonus = -0.05
-			plains_combat_bonus = -0.05
-			farmland_combat_bonus = -0.05
 			desert_combat_bonus = -0.05
+			forest_combat_bonus = 0.05
 			marsh_combat_bonus = 0.1
 			jungle_combat_bonus = 0.05
 			
@@ -39,12 +34,10 @@ Terrain = { # tradition for Terrain
 
 	terrain_close_path = {
 		modifier = {
-			hills_combat_bonus = -0.05
-			mountain_combat_bonus = -0.05
+			mountain_combat_bonus = 0.1
 			plains_combat_bonus = -0.05
 			farmland_combat_bonus = -0.05
 			desert_combat_bonus = -0.05
-			marsh_combat_bonus = -0.05
 			jungle_combat_bonus = 0.1
 			forest_combat_bonus = 0.1
 		}
@@ -67,7 +60,6 @@ Terrain = { # tradition for Terrain
 		modifier = { 
 			fort_limit = 1
 			garrison_size = 0.1
-			global_manpower_modifier = -0.1
 			fort_maintenance_cost = 0.1
 		} 
 		icon = north_african_naval_path_6

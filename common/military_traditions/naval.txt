@@ -1,4 +1,4 @@
-Naval = { # tradition for Naval
+naval_traditions = { # tradition for Naval
 	color = hsv { 1.72 0.64 0.7 }
 	image = north_african_naval_path_7 #updated
 	
@@ -20,8 +20,8 @@ Naval = { # tradition for Naval
 
 	naval_coastal_path = {
 		modifier = {
-			coastal_terrain_combat_bonus = 0.4
-			ocean_combat_bonus = -0.4
+			coastal_terrain_combat_bonus = 0.3
+			ocean_combat_bonus = -0.3
 		}
 		icon = north_african_naval_path_3 #updated
 		requires = { }
@@ -29,8 +29,8 @@ Naval = { # tradition for Naval
 
 	naval_ocean_path = {
 		modifier = {
-			coastal_terrain_combat_bonus = -0.4
-			ocean_combat_bonus = 0.4
+			coastal_terrain_combat_bonus = -0.3
+			ocean_combat_bonus = 0.3
 		}
 		icon = levantine_philosophy_start_bonus #updated
 		requires = { }

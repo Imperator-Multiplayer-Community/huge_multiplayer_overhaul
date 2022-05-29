@@ -12,14 +12,14 @@
 	movement_speed = 2.5
 	build_time = 60
 
-	light_infantry = 1.2
+	light_infantry = 1.15
 	heavy_infantry = 1.0
-	heavy_cavalry = 1.2
+	heavy_cavalry = 1.1
 	warelephant = 1.2
 	horse_archers = 0.75
-	archers = 1.0
-	light_cavalry = 1.1
-	camels = 0.9
+	archers = 1.05
+	light_cavalry = 0.95
+	camels = 0.85
 	supply_train = 2.0
 	
 	attrition_weight = 1.5

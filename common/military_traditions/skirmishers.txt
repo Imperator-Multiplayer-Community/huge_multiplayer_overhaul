@@ -1,4 +1,4 @@
-Skirmishers = { # tradition for Skirmishers
+skirmishers_traditions = { # tradition for Skirmishers
 	color = hsv { 1.72 0.64 0.7 }
 	image = celtic_britannic_path_7
 	
@@ -125,7 +125,7 @@ Skirmishers = { # tradition for Skirmishers
 		modifier = { 
 			archers_cost = -0.1
 			army_maintenance_cost = 0.01
-			levy_size_multiplier = 0.025
+			
 		} 
 		icon = greek_antigonid_path_6
 		requires = {skirmishers_path_3}
@@ -135,10 +135,19 @@ Skirmishers = { # tradition for Skirmishers
 		modifier = { 
 			archers_movement_speed = 0.1
 			army_maintenance_cost = 0.01
-			discipline = 0.1
+			
 		} 
 		icon = levantine_arabian_path_end_bonus
 		requires = { skirmishers_path_4 }
+	}
+
+	skirmishers_path_7 = { ### final generic tradition
+		modifier = {
+			levy_size_multiplier = 0.025
+			discipline = 0.05
+		}
+		icon = greek_antigonid_path_6
+		requires = { skirmishers_path_6 and skirmishers_path_5 }
 	}
 
 	nubian_path_1 = { ### Ta Seti
@@ -355,7 +364,7 @@ Skirmishers = { # tradition for Skirmishers
 	
 	aryan_river_path_10 = { ### Poisoned Projectils
 		modifier = { 
-			archers_discipline = 0.025
+			archers_discipline = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_achaemenid_path_6
@@ -386,9 +395,10 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}
 	}
+
 	aryan_river_path_14 = { ### Fixing the target with the mind
 		modifier = { 
-			archers_offensive = 0.025
+			archers_offensive = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_6
@@ -462,13 +472,14 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}
 	}
+
 	aryan_plains_path_3 = { ### Bamboo Longbows
 		modifier = { 
 			archers_defensive = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_7
-		requires = { aryan_river_path_4}
+		requires = { aryan_river_path_4 and andhra_path_5}
 		allow = {
 			trigger_if = {
 				limit = { country_culture_group = aryan }
@@ -495,6 +506,7 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}
 	}
+
 	celtic_gallic_path_1 = { ### Strike from Afar
 		modifier = { 
 			archers_discipline = 0.05
@@ -585,6 +597,7 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}
 	}
+
 	celtic_germanic_path_7 = { ### Hail of Stones
 		modifier = { 
 			archers_defensive = 0.05
@@ -675,6 +688,7 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}	
 	}
+
 	celtic_gallic_path_6 = { ### Strong Arm
 		modifier = { 
 			archers_cost = -0.05
@@ -765,9 +779,10 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}
 	}
+
 	andhra_path_5 = { ### Iron Bows
 		modifier = { 
-			archers_offensive = 0.025
+			archers_offensive = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
@@ -798,13 +813,14 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}
 	}
+
 	andhra_path_8 = { ### Naraca Arrows
 		modifier = { 
-			archers_discipline = 0.025
+			archers_discipline = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_7
-		requires = { andhra_path_5 }
+		requires = { andhra_path_5}
 		allow = {
 			trigger_if = {
 				limit = { country_culture_group = indian }
@@ -831,6 +847,7 @@ Skirmishers = { # tradition for Skirmishers
 			}
 		}
 	}
+
 	iberian_central_path_4 = { ###Iberian 4B Talaiotic Slingers
 		modifier = { 
 			archers_offensive = 0.05
