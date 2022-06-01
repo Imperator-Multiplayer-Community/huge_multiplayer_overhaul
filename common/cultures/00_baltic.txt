@@ -61,14 +61,8 @@
 	}
 	culture = {
 		aestian = {}
-		sporic = {}
-		neuric = {}
-		budinian = {}
-		chernolian = {}
-		melanchlaenian = {}
-		androphagian = {}
 	}
-	barbarian_names = { SITONES FENNI VENEDAE NAVARI VELTAE BUDINI GELONI NEURI ANDROPHAGI MELANCHLAENI }
+	barbarian_names = { SITONES FENNI VENEDAE NAVARI VELTAE }
 	
 	graphical_culture = german_gfx
 	ethnicities = {

@@ -420,6 +420,13 @@ IOL = "setup/countries/africa/iol.txt"
 KUA = "setup/countries/africa/kerkouane.txt"
 DOD = "setup/countries/africa/dodekaschoinos.txt"
 
+#New by DoA mod
+
+B39 = "setup/countries/africa/B39.txt" #TAMEFKAT
+C03 = "setup/countries/africa/C03.txt" #TINGITANIA
+C33 = "setup/countries/africa/C33.txt" #AMMON
+B34 = "setup/countries/africa/B34.txt" #MEMPHIS
+B40 = "setup/countries/africa/B40.txt" #WASET
 
 #Gaul
 
@@ -782,9 +789,6 @@ ISA = "setup/countries/illyria_dacia/issa.txt"
 KOK = "setup/countries/illyria_dacia/korkyramelaina.txt"
 APO = "setup/countries/illyria_dacia/apollonia.txt"
 
-#Arabia Felix Molon Labe
-SOQ = "setup/countries/africa/soqotra.txt"
-
 # Turdetanian Kingdoms
 ASA = "setup/countries/iberia/asta.txt"
 CIP = "setup/countries/iberia/acinipo.txt"
@@ -793,50 +797,6 @@ CRM = "setup/countries/iberia/carmo.txt"
 ONU = "setup/countries/iberia/onuba.txt"
 ORP = "setup/countries/iberia/orippo.txt"
 LSC = "setup/countries/iberia/lascuta.txt"
-#USO = "setup/countries/iberia/urso.txt"
 
-#East Africa
-MOY = "setup/countries/africa/moya.txt"
-MAL = "setup/countries/africa/malao.txt"
-AMO = "setup/countries/africa/aromata.txt"
-MEM = "setup/countries/africa/memnones.txt"
-ADA = "setup/countries/africa/adabulia.txt"
-DAB = "setup/countries/africa/dabeli.txt"
-CRT = "setup/countries/africa/critensia.txt"
-RHZ = "setup/countries/africa/rhizophagia.txt"
-DOC = "setup/countries/africa/dochia.txt"
-GYM = "setup/countries/africa/gymnetia.txt"
-MDR = "setup/countries/africa/maiadrasha.txt"
-ONA = "setup/countries/africa/ona.txt"
-ATG = "setup/countries/africa/athagaus.txt"
-QOH = "setup/countries/africa/qohaito.txt"
-QAN = "setup/countries/africa/qandala.txt"
-SHW = "setup/countries/africa/shalcaw.txt"
-DIO = "setup/countries/africa/dioscoridus.txt"
-DRY = "setup/countries/africa/darayley.txt"
-BER = "setup/countries/africa/berberia.txt"
-APC = "setup/countries/africa/apocopa.txt"
-
-#North Africa
-NAS = "setup/countries/africa/nasamones.txt"
-GAR = "setup/countries/africa/garamantes.txt"
-MHY = "setup/countries/africa/machyles.txt"
-PSY = "setup/countries/africa/psylli.txt"
-MKA = "setup/countries/africa/makae.txt"
-PHZ = "setup/countries/africa/phazanii.txt"
-GIN = "setup/countries/africa/gindanes.txt"
-GYZ = "setup/countries/africa/gyzantes.txt"
-ATO = "setup/countries/africa/autolales.txt"
-CII = "setup/countries/africa/canarii.txt"
-PRO = "setup/countries/africa/perorsi.txt"
-NEC = "setup/countries/africa/nectiberes.txt"
-LXT = "setup/countries/africa/lixitoi.txt"
-DPH = "setup/countries/africa/daphnitae.txt"
-SOC = "setup/countries/africa/socosii.txt"
-CPA = "setup/countries/africa/caparienses.txt"
-ABA = "setup/countries/africa/abannae.txt"
-CET = "setup/countries/africa/cetiani.txt"
-
-#New India
-MDP = "setup/countries/india/mahiladvipika.txt"
-GAE = "setup/countries/africa/gaetulia.txt"
+#Arabia Felix Molon Labe
+SOQ = "setup/countries/africa/soqotra.txt"

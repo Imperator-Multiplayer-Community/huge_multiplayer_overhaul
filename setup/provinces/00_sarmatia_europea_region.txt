@@ -6,13 +6,9 @@
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="horses"
 	tribesmen=
-	{
-		amount=8
-	}
-	slaves=
 	{
 		amount=2
 	}
@@ -22,7 +18,7 @@
 {
 	barbarian_power=0
 	civilization_value=1
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="marsh"
@@ -33,21 +29,15 @@
 	}
 	freemen=
 	{
-		amount=2
+		amount=3
 	}
 	slaves=
 	{
-		amount=3
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=3
-	}
-	freemen=
-	{
-		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
+		amount=2
 	}
 }
 #Ta Antiphilou
@@ -55,7 +45,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="harpii"
+	culture="getian"
 	port_building=1
 	province_rank="settlement"
 	religion="shamanism"
@@ -65,40 +55,24 @@
 	{
 		amount=3
 	}
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
 }
 #Kremniskoi
 4523=
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
 	trade_goods="fish"
 	slaves=
 	{
-		amount=2
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=3
+		amount=2
 	}
 }
 #Aipolion
@@ -106,7 +80,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -119,30 +93,6 @@
 	{
 		amount=3
 	}
-	freemen=
-	{
-		amount=1
-		culture="getian"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=1
-		culture="getian"
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
 }
 #Tyras
 4525=
@@ -153,7 +103,7 @@
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="marsh"
-	trade_goods="marble"
+	trade_goods="salt"
 	citizen=
 	{
 		amount=3
@@ -162,27 +112,11 @@
 	{
 		amount=4
 	}
-	slaves=
-	{
-		amount=4
-	}
 	tribesmen=
 	{
 		amount=5
 		culture="getian"
 		religion="shamanism"
-	}
-	freemen=
-	{
-		amount=1
-		culture="scythian"
-		religion="indo_iranian_religion"
-	}
-	slaves=
-	{
-		amount=2
-		culture="scythian"
-		religion="indo_iranian_religion"
 	}
 }
 #Nikonion
@@ -195,7 +129,7 @@
 	province_rank="city"
 	religion="roman_pantheon"
 	terrain="marsh"
-	trade_goods="fish"
+	trade_goods="steppe_horses"
 	citizen=
 	{
 		amount=3
@@ -209,12 +143,6 @@
 		amount=2
 		culture="scythian"
 		religion="indo_iranian_religion"
-	}
-	slaves=
-	{
-		amount=1
-		culture="scythian"
-		religion="roman_pantheon"
 	}
 	tribesmen=
 	{
@@ -239,11 +167,7 @@
 	}
 	slaves=
 	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=3
+		amount=1
 		culture="scythian"
 	}
 	tribesmen=
@@ -269,27 +193,9 @@
 	}
 	tribesmen=
 	{
-		amount=2
-		culture="scythian"
-		religion="indo_iranian_religion"
-	}
-	slaves=
-	{
-		amount=2
-		culture="scythian"
-		religion="indo_iranian_religion"
-	}
-	freemen=
-	{
 		amount=1
 		culture="scythian"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=1
-		culture="scythian"
-		religion="roman_pantheon"
+		religion="indo_iranian_religion"
 	}
 }
 #Olbia
@@ -305,51 +211,21 @@
 	trade_goods="salt"
 	citizen=
 	{
-		amount=4
+		amount=15
 	}
 	freemen=
 	{
-		amount=3
+		amount=18
 	}
 	slaves=
 	{
-		amount=4
-	}
-	freemen=
-	{
 		amount=1
-		culture="scythian"
-		religion="indo_iranian_religion"
 	}
 	tribesmen=
 	{
 		amount=4
 		culture="scythian"
 		religion="indo_iranian_religion"
-	}
-	slaves=
-	{
-		amount=1
-		culture="scythian"
-		religion="indo_iranian_religion"
-	}
-	slaves=
-	{
-		amount=2
-		culture="scythian"
-		religion="roman_pantheon"
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="getian"
-		religion="shamanism"
-	}
-	slaves=
-	{
-		amount=1
-		culture="getian"
-		religion="roman_pantheon"
 	}
 }
 #Dinogetia
@@ -357,7 +233,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -368,17 +244,7 @@
 	}
 	tribesmen=
 	{
-		amount=4
-	}
-	slaves=
-	{
-		amount=4
-	}
-	slaves=
-	{
 		amount=2
-		culture="bosporan"
-		religion="roman_pantheon"
 	}
 }
 #Clepidava
@@ -386,24 +252,14 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="wood"
 	tribesmen=
 	{
 		amount=3
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-		culture="agathyrsian"
-		religion="indo_iranian_religion"
 	}
 }
 #Mirum
@@ -411,10 +267,10 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="leather"
 	citizen=
 	{
@@ -434,7 +290,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -449,7 +305,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -462,23 +318,17 @@
 	{
 		amount=2
 	}
-	slaves=
-	{
-		amount=2
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
 }
 #Olitis
 4919=
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="plains"
-	trade_goods="earthware"
+	trade_goods="horses"
 	tribesmen=
 	{
 		amount=3
@@ -489,7 +339,7 @@
 {
 	barbarian_power=0
 	civilization_value=7
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="farmland"
@@ -504,7 +354,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="plains"
@@ -527,7 +377,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -542,10 +392,10 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="cattle"
 	citizen=
 	{
@@ -564,11 +414,11 @@
 4928=
 {
 	barbarian_power=0
-	civilization_value=5
-	culture="getian"
+	civilization_value=0
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="horses"
 	tribesmen=
 	{
@@ -580,10 +430,10 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="wood"
 	tribesmen=
 	{
@@ -594,7 +444,7 @@
 6067=
 {
 	barbarian_power=0
-	civilization_value=5
+	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
@@ -609,7 +459,7 @@
 6068=
 {
 	barbarian_power=0
-	civilization_value=5
+	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
@@ -628,7 +478,7 @@
 6069=
 {
 	barbarian_power=0
-	civilization_value=5
+	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
@@ -643,22 +493,22 @@
 6070=
 {
 	barbarian_power=0
-	civilization_value=7
-	culture="agathyrsian"
+	civilization_value=0
+	culture="harpii"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="steppe_horses"
 	tribesmen=
 	{
-		amount=4
+		amount=3
 	}
 }
 #Shethigk
 6071=
 {
 	barbarian_power=0
-	civilization_value=3
+	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
@@ -677,70 +527,70 @@
 6072=
 {
 	barbarian_power=0
-	civilization_value=3
+	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="steppe_horses"
 	tribesmen=
 	{
-		amount=6
+		amount=2
 	}
 }
 #Vonnet
 6073=
 {
 	barbarian_power=0
-	civilization_value=3
-	culture="chernolian"
+	civilization_value=0
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="hemp"
 	tribesmen=
 	{
-		amount=5
+		amount=2
 	}
 }
 #Tiersi
 6074=
 {
 	barbarian_power=0
-	civilization_value=3
-	culture="chernolian"
+	civilization_value=0
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="cattle"
 	tribesmen=
 	{
-		amount=3
+		amount=1
 	}
 }
 #Mechkeht
 6075=
 {
 	barbarian_power=0
-	civilization_value=3
-	culture="chernolian"
+	civilization_value=0
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="vegetables"
 	tribesmen=
 	{
-		amount=5
+		amount=1
 	}
 }
 #Krueng
 6076=
 {
 	barbarian_power=0
-	civilization_value=3
+	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="base_metals"
 	tribesmen=
@@ -752,10 +602,10 @@
 6077=
 {
 	barbarian_power=0
-	civilization_value=3
-	culture="chernolian"
+	civilization_value=0
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="hemp"
 	tribesmen=
@@ -768,9 +618,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="chernolian"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="fur"
 	tribesmen=
@@ -783,9 +633,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="chernolian"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="fur"
 	tribesmen=
@@ -798,9 +648,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="chernolian"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="cattle"
 	tribesmen=
@@ -813,9 +663,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="chernolian"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="wild_game"
 	freemen=
@@ -832,10 +682,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="scythian"
+	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="horses"
 	tribesmen=
 	{
@@ -847,10 +697,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="harpii"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="grain"
 	tribesmen=
 	{
@@ -862,10 +712,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="harpii"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="grain"
 	citizen=
 	{
@@ -884,11 +734,11 @@
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="cattle"
 	tribesmen=
 	{
-		amount=8
+		amount=2
 	}
 }
 #Hkar
@@ -899,7 +749,7 @@
 	culture="scythian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="vegetables"
 	freemen=
 	{
@@ -919,18 +769,14 @@
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
-	trade_goods="iron"
+	trade_goods="stone"
 	freemen=
 	{
 		amount=2
 	}
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
+		amount=1
 	}
 }
 #Sitya
@@ -938,16 +784,12 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="chernolian"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="grain"
 	tribesmen=
-	{
-		amount=3
-	}
-	slaves=
 	{
 		amount=2
 	}
@@ -957,9 +799,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="chernolian"
+	culture="scythian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="horses"
 	tribesmen=
@@ -972,27 +814,18 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="chernolian"
-	port_building=1
+	culture="scythian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="grain"
 	citizen=
 	{
 		amount=1
 	}
-	freemen=
-	{
-		amount=2
-	}
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=3
+		amount=2
 	}
 }
 #Mangyl
@@ -1020,29 +853,9 @@
 	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="woad"
-	freemen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
 		amount=1
-		culture="neuric"
-		religion="matrist_religion"
-	}
-	slaves=
-	{
-		amount=3
-		culture="chernolian"
-		religion="matrist_religion"
 	}
 }
 #Siskary
@@ -1057,7 +870,7 @@
 	trade_goods="wood"
 	tribesmen=
 	{
-		amount=3
+		amount=1
 	}
 }
 #Vyelinat
@@ -1295,17 +1108,7 @@
 	trade_goods="fur"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=2
-		culture="chernolian"
-		religion="matrist_religion"
+		amount=1
 	}
 }
 #Ehkere
@@ -1320,11 +1123,7 @@
 	trade_goods="fur"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
+		amount=1
 	}
 }
 #Rotila
@@ -1358,11 +1157,7 @@
 	}
 	tribesmen=
 	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=2
+		amount=1
 	}
 }
 #Muika
@@ -1385,15 +1180,11 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="gelonian"
+	culture="scythian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="horses"
-	freemen=
-	{
-		amount=2
-	}
 	tribesmen=
 	{
 		amount=1
@@ -1409,17 +1200,9 @@
 	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="steppe_horses"
-	freemen=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=3
+		amount=2
 	}
 }
 #Syuthgrat
@@ -1427,7 +1210,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="gelonian"
+	culture="scythian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
@@ -1451,17 +1234,9 @@
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="steppe_horses"
-	freemen=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=3
+		amount=1
 	}
 }
 #Kin
@@ -1474,32 +1249,12 @@
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="woad"
-	freemen=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
-	}
-	freemen=
-	{
 		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=2
-		culture="bosporan"
-		religion="roman_pantheon"
 	}
 }
-#Formerly Skintara, Now Exampeaus
+#Skintara
 6119=
 {
 	barbarian_power=0
@@ -1509,49 +1264,17 @@
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="fur"
-	nobles=
-	{
-		amount=1
-	}
-	citizen=
-	{
-		amount=1
-	}
 	freemen=
 	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	citizen=
-	{
-		amount=1
-		culture="sarmatian"
-		religion="indo_iranian_religion"
-	}
-	freemen=
-	{
-		amount=1
-		culture="sarmatian"
-		religion="indo_iranian_religion"
-	}
-	tribesmen=
-	{
-		amount=2
-		culture="sarmatian"
-		religion="indo_iranian_religion"
+		amount=8
 	}
 	slaves=
 	{
 		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
+	}
+	tribesmen=
+	{
+		amount=2
 	}
 }
 #Volg
@@ -1559,15 +1282,11 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="gelonian"
+	culture="scythian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="cattle"
-	freemen=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
 		amount=2
@@ -1617,23 +1336,9 @@
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="horses"
-	freemen=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=3
-	}
-	slaves=
-	{
 		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
 	}
 }
 #Machiekkyt
@@ -1648,11 +1353,7 @@
 	trade_goods="cloth"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
+		amount=1
 	}
 }
 #Ratikgot
@@ -1679,18 +1380,14 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="budinian"
+	culture="scythian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="cattle"
-	freemen=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
-		amount=2
+		amount=1
 	}
 }
 #Zeh
@@ -1710,10 +1407,6 @@
 	tribesmen=
 	{
 		amount=2
-	}
-	slaves=
-	{
-		amount=3
 	}
 }
 #Gyonal
@@ -1743,11 +1436,7 @@
 	trade_goods="vegetables"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
+		amount=1
 	}
 }
 #Zhenna
@@ -1761,10 +1450,6 @@
 	terrain="plains"
 	trade_goods="stone"
 	tribesmen=
-	{
-		amount=2
-	}
-	slaves=
 	{
 		amount=1
 	}
@@ -1781,11 +1466,7 @@
 	trade_goods="vegetables"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=3
+		amount=2
 	}
 }
 #Enke
@@ -1797,18 +1478,10 @@
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="base_metals"
-	freemen=
-	{
-		amount=1
-	}
+	trade_goods="fur"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=3
+		amount=1
 	}
 }
 #Ghasett
@@ -1820,27 +1493,13 @@
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="plains"
-	trade_goods="precious_metals"
-	freemen=
-	{
-		amount=1
-	}
+	trade_goods="grain"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=3
-		culture="bosporan"
-		religion="roman_pantheon"
+		amount=20
 	}
 }
-#Formerly Yottor, Now Gerrhos
+#Yottor
 6145=
 {
 	barbarian_power=0
@@ -1850,31 +1509,24 @@
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="grain"
-	nobles=
+	tribesmen=
 	{
 		amount=1
 	}
-	citizen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=2
-	}
+}
+#Urschelats
+6233=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="agathyrsian"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="forest"
+	trade_goods="wood"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=2
-		culture="bosporan"
-		religion="roman_pantheon"
+		amount=1
 	}
 }
 #Atavria
@@ -1893,29 +1545,11 @@
 	}
 	freemen=
 	{
-		amount=2
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=3
-	}
-	freemen=
-	{
-		amount=1
-		culture="scythian"
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=4
-		culture="bosporan"
-		religion="roman_pantheon"
+		amount=2
 	}
 }
 #Scyra
@@ -1938,13 +1572,7 @@
 	}
 	tribesmen=
 	{
-		amount=2
-	}
-	slaves=
-	{
 		amount=3
-		culture="bosporan"
-		religion="roman_pantheon"
 	}
 }
 #Ektonopolis
@@ -1955,43 +1583,19 @@
 	culture="scythian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="grain"
-	citizen=
+	freemen=
 	{
-		amount=1
+		amount=2
 	}
 	slaves=
 	{
-		amount=2
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="scythian"
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=1
-		culture="scythian"
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=2
-		culture="bosporan"
-		religion="roman_pantheon"
+		amount=3
 	}
 }
 #Yendi
@@ -2004,27 +1608,13 @@
 	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="grain"
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="scythian"
-		religion="roman_pantheon"
-	}
 	freemen=
 	{
 		amount=1
-		culture="bosporan"
-		religion="roman_pantheon"
 	}
-	slaves=
+	tribesmen=
 	{
-		amount=2
-		culture="bosporan"
-		religion="roman_pantheon"
+		amount=1
 	}
 }
 #Rakan
@@ -2039,11 +1629,7 @@
 	trade_goods="vegetables"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=2
+		amount=20
 	}
 }
 #Uttar
@@ -2058,17 +1644,7 @@
 	trade_goods="horses"
 	tribesmen=
 	{
-		amount=3
-	}
-	slaves=
-	{
 		amount=2
-	}
-	slaves=
-	{
-		amount=2
-		culture="bosporan"
-		religion="roman_pantheon"
 	}
 }
 #Konae
@@ -2082,10 +1658,6 @@
 	terrain="plains"
 	trade_goods="wild_game"
 	tribesmen=
-	{
-		amount=3
-	}
-	slaves=
 	{
 		amount=3
 	}

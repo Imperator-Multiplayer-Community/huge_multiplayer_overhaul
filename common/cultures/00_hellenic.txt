@@ -1,7 +1,5 @@
 ﻿hellenic = {
 	
-	######## Torugu: Added namelist to Cyrenaica culture
-
 	color = hsv { 0.65  0.7  0.8 }
 	
 	primary = heavy_infantry
@@ -108,57 +106,6 @@
 		aetolian = {}
 		aegean = {}
 		greco_pontic = { }
-		greco_indian = { 
-			male_names = {
-				#Historical Names
-				Apollodotos Demetrios Antimachos Agathokles Pantaelon Eukratides Menander Zoilos Lysios
-				Strato Polyxenos Philoxenos Diomedes Amyntas Epander Theophilos Peukolaos Thraso Nikias
-				Artemidoros Hermaios Archebios Telephos Hippostratos Dionysios Apollophanes Euthydemos
-				Plato Heliokles Sandrakottos Poros Taxiles Omphis Abisares Agrammes Xandrames Satadtanan
-				Mithrenes Satibarzanes Andragoras Peithon Laomedon Oxydates Abistamenes Balakros Eudemos
-				Amitrochates Autophradates Demodamas Pantaleon Heliokles Artaxerxes Arimazes Oxyartes
-				Mithrenes Leonnatos Siriptolemaios Baleokouros Kerobothros Pandion Arkatos Tiastenes
-				Basaronax Sornas Sogdianos Arses Kyaxaris Deiokes Phraortis Polemon Astyages Madios Ariaramnes Teispes Anacharsis
-				Hystaspes Aspathines Kassandane Gobryas Hydarnes Hyroeades Harpagos
-				Intaphrenes Mandane Mazares Megabyzos Mitrobates Oroetos Otanes Aryandes Artembares
-				Pigres Spargapises Tabalos Tritantaechmes Zopyros Abrokomas Amorges Apollophanes
-				Ariabignes Bubares Datis Hermotimos Hyperanthes Oebares Pharnabazos Pissothnes
-				Tissaphernes Xenagoras Kamisares Mithrenes Niphates Oxyathres Phrasaortes Phrataphernes
-				Spitamenes Spithridates Tiribazos Tithraustes Tlepolemos Arkathias Hyspaosines 
-				Barzapharnes Monaeses Spalahores Xiphares Zeionises Nitokris Phegelas Sopeithes
-			}
-
-
-			female_names = {
-				#Generic Names
-				Charis Demetria Diantha Dionysia Agathokleia Agiatis Antiochis Apame
-				Apollonia Ariadne Arsinoe Artemisia Athenais Belistiche Berenike Damarate
-				Daphne Demo Elpis Eirene Euphemia Euthalia Hypatia Kandake Kassandra Megaira
-				Melaina Narkissa Nysa Olympia Phila Phile Eurydike Histieia Isidora Kalliope
-				Kallista Kellanthis Kleio Kratesikleia Lanassa Laodike
-				Libys Lysandra Lysis Mestris Monime Nephoris Oinanthe
-				Phthia Ptolema Sofia Sostrate Thais Theophila Thetima Timo Xanthe Xene Xenia
-				Ptolemais Selene Sophe Stratonike Theoxene Thoeris Tryphaina Zosime Parmys Phaedymia 
-				Irdabama Atossa Aryenis Artystone Amytis Damaspia Stateira Roxana
-				Sisygambis Laodice Charis Demetria Agathokleia Damarate Megaira Euthalia Euphemia
-				Oinanthe Selene Stratonike Theoxene Apameia Kratesipolis Onomaris Amastrine Arsinoe
-				Olympia Kamasarye Anzaze Athenais Dynamis Erato Orodaltis Orsabaris Pythodorida
-				Orypetis Hephta Ixeni Theoxena Pandrosion Thalassia Cleopatra Drypetina Iotapa
-				Cassandane Despina Parysatis Artemesia Artazostre Drypetis Gygaia 
-			}
-
-			family = {
-				Lagid Magid Euryclid Aleuadae Philaidae Demostenid
-				Achaid Agatharchidid Agathid Agelaid Agenid Agesipolid Agid Aknonid Akrotatid Alexandrid 
-				Alexarchid Alketid Alkimid Amantid Amnytid Amphoterid Anaxarchid Anaxikratid Anaximandrid 
-				Andagorid Andromachid Andromenid Andronikid Apollodorid Aristodemid Asandrid Bryaxid Charid 
-				Charidemid Chariklid Demadid Eupolemid Euthydemid Gorgid Gylippid Hekataid Hektid Helenid Heliodorid 
-				Helioklid Herakid Hermogenid Hippalid Hyperbatid Kalliarchid Kebalinid Kephisodotid Kleomenid 
-				Ktesiklid Leontid Leosthenid Lydiadid Lykurgid Menedemid Menid Menippid Mnesidemid Nearchid 
-				Nikagorid Niketid Nikid Olympiodorid Polyperchid Proteid Stratonid Xenophid Zeuxid
-				Onomarchid Onomastid Ophellid Orestid Parmenid 
-			}
-		}
 		aeolian = { }
 		troan = {}
 		ionian = {}
@@ -166,12 +113,7 @@
 		thessalian = { levy_template = levy_thessalian }
 		bosporan = { levy_template = levy_bosporan_greek }
 		syracusan = { levy_template = levy_magna_graecia }
-		cyrenaican = { 
-			family = { 
-				Battiad Agathoklid Alketid Apollonid Aratid Helladid Omirid Peithid Peneid Philonid Proktid Pytheid Sosiklid Tauromeneid Therid Theronid Timolid Xenonid Zagreid Zosimid Zotikid Pelopid Philetid Proteid Zenonid Sostratid Tauriskid Sosthenid Pyhrrid Leonidid Killistratid Nikoklid Pantauchid Leukonid Onomastid Kephistodid Karsid Nikokrid Persid Hippostratid Epandrid Gylippid Helenid Megalid Charinid Dydid Dionid Hiketasid Stratoklid Spartokid Stratonikid Taurid Timaid Timarchid Timoleid Timotheid Tryphid Xanthippid Xenarid Xenokratid Xenophid Zenid Achaid Agatharchidid Agathid Agelaid Agenid Agesipolid Agid Aknonid Akrotatid Alexandrid Alexarchid Alketid Alkimid Amantid Amnytid Amphoterid Anaxarchid Anaxikratid Anaximandrid Andagorid Andromachid Andromenid Andronikid Apollodorid Aristodemid Asandrid Bryaxid Charid Charidemid Chariklid Demadid Eupolemid Gorgid Gylippid Hekataid Hektid Helenid Heliodorid Helioklid Herakid Hermogenid Hippalid Hyperbatid Kalliarchid Kebalinid Kephisodotid Kleomenid Ktesiklid Leontid Leosthenid Lydiadid Lykurgid Menedemid Menid Menippid Mnesidemid Nearchid Nikagorid Niketid Nikid Olympiodorid Onomarchid Onomastid Ophellid Orestid Parmenid Polyperchid Proteid Stratonid Xenophid Zeuxid Pheraeid 
-			}
-			levy_template = levy_cyrene 
-		}
+		cyrenaican = { levy_template = levy_cyrene }
 		massalian = {}
 		
 		hellenistic = { }

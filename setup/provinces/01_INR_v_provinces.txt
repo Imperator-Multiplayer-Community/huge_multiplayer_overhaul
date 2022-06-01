@@ -8,15 +8,6 @@
 	barbarian_power=0 
 	province_rank="" 
 } 
-6333 ={ #LAKE 
-	terrain="riverine_terrain" 
-	culture="" 
-	religion="" 
-	trade_goods="" 
-	civilization_value=0 
-	barbarian_power=0 
-	province_rank="" 
-} 
 6429 ={ #LAKE 
 	terrain="tributary_terrain" 
 	culture="" 
@@ -108,7 +99,7 @@
 	province_rank="" 
 } 
 7782 ={ #Ister 
-	terrain="tributary_terrain" #terrain="riverine_terrain" 
+	terrain="riverine_terrain" #terrain="tributary_terrain" 
 	culture="" 
 	religion="" 
 	trade_goods="" 
@@ -429,16 +420,6 @@
 
 6443 ={ #LAKE 
 	terrain="riverine_terrain" 
-	culture="" 
-	religion="" 
-	trade_goods="" 
-	civilization_value=0 
-	barbarian_power=0 
-	province_rank="" 
-} 
-
-5367 ={ #IP 368 Lake Tritonis
-	terrain="coastal_terrain" 
 	culture="" 
 	religion="" 
 	trade_goods="" 

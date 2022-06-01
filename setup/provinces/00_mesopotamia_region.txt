@@ -426,7 +426,7 @@
 	province_rank="settlement"
 	religion="roman_pantheon"
 	terrain="plains"
-	trade_goods="wine"
+	trade_goods="cloth"
 	citizen=
 	{
 		amount=4
@@ -867,7 +867,7 @@
 	province_rank="settlement"
 	religion="mesopotamian_religion"
 	terrain="farmland"
-	trade_goods="wine"
+	trade_goods="grain"
 	citizen=
 	{
 		amount=3
@@ -909,7 +909,7 @@
 	province_rank="settlement"
 	religion="mesopotamian_religion"
 	terrain="farmland"
-	trade_goods="wine"
+	trade_goods="grain"
 	citizen=
 	{
 		amount=5
@@ -1014,7 +1014,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="wine"
 	freemen=
 	{
@@ -1087,7 +1087,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="desert"
 	trade_goods="leather"
 	freemen=
 	{
@@ -1360,7 +1360,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="wine"
 	slaves=
 	{
@@ -1384,7 +1384,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="steppe_horses"
 	freemen=
 	{
@@ -1408,7 +1408,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="grain"
 	citizen=
 	{
@@ -1437,7 +1437,7 @@
 	holy_site="omen_ishtar"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="base_metals"
 	citizen=
 	{
@@ -1472,7 +1472,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="spices"
 	freemen=
 	{
@@ -1496,7 +1496,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="vegetables"
 	citizen=
 	{
@@ -1845,7 +1845,7 @@
 	province_rank="settlement"
 	religion="mesopotamian_religion"
 	terrain="farmland"
-	trade_goods="wine"
+	trade_goods="horses"
 	freemen=
 	{
 		amount=1
@@ -2077,7 +2077,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="grain"
 	freemen=
 	{
@@ -2120,7 +2120,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="grain"
 	slaves=
 	{
@@ -2159,7 +2159,7 @@
 	province_rank="settlement"
 	religion="mesopotamian_religion"
 	terrain="plains"
-	trade_goods="wine"
+	trade_goods="wild_game"
 	freemen=
 	{
 		amount=1
@@ -2418,7 +2418,7 @@
 	culture="babylonian"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="dates"
 	citizen=
 	{

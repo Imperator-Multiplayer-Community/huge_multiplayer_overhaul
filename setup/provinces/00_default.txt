@@ -3468,7 +3468,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="saka"
 	province_rank=""
 	religion="eastern_animism"
 	terrain="impassable_terrain"
@@ -3479,7 +3479,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="saka"
 	province_rank=""
 	religion="eastern_animism"
 	terrain="impassable_terrain"
@@ -3854,6 +3854,17 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="tamil"
+	province_rank=""
+	religion="hindu"
+	terrain="impassable_terrain"
+	trade_goods=""
+}
+#Palaiogonoi
+5314=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="lankan"
 	province_rank=""
 	religion="hindu"
 	terrain="impassable_terrain"
@@ -4431,15 +4442,15 @@
 	terrain="impassable_terrain"
 	trade_goods=""
 }
-#Tritonis
+#Eastern Musalamia
 5367=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture=""
+	culture="gaetulian"
 	province_rank=""
-	religion=""
-	terrain="ocean"
+	religion="berber_religion"
+	terrain="impassable_terrain"
 	trade_goods=""
 }
 #
@@ -4535,7 +4546,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="saka"
 	province_rank=""
 	religion="eastern_animism"
 	terrain="impassable_terrain"
@@ -4568,7 +4579,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="saka"
 	province_rank=""
 	religion="eastern_animism"
 	terrain="impassable_terrain"
@@ -4981,12 +4992,12 @@
 	terrain="impassable_terrain"
 	trade_goods=""
 }
-#Desert
+#Cidamus
 5948=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="lotophagoi"
+	culture="massaesylian"
 	province_rank=""
 	religion="berber_religion"
 	terrain="impassable_terrain"
@@ -5140,7 +5151,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="saka"
 	province_rank=""
 	religion="eastern_animism"
 	terrain="impassable_terrain"
@@ -5151,7 +5162,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="saka"
 	province_rank=""
 	religion="eastern_animism"
 	terrain="impassable_terrain"
@@ -5421,23 +5432,23 @@
 	terrain="impassable_terrain"
 	trade_goods=""
 }
-#Sahara
+#
 5988=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="phazani"
+	culture="massaesylian"
 	province_rank=""
 	religion="berber_religion"
 	terrain="impassable_terrain"
 	trade_goods=""
 }
-#Desert
+#Thenteos
 5989=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="macaean"
+	culture="massaesylian"
 	province_rank=""
 	religion="berber_religion"
 	terrain="impassable_terrain"
@@ -5454,7 +5465,7 @@
 	terrain="impassable_terrain"
 	trade_goods=""
 }
-#Zalatan Desert
+#Gholaia
 5991=
 {
 	barbarian_power=0
@@ -5465,12 +5476,12 @@
 	terrain="impassable_terrain"
 	trade_goods=""
 }
-#Desert
+#Aguila
 5992=
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="garamantic"
+	culture="libyan"
 	province_rank=""
 	religion="berber_religion"
 	terrain="impassable_terrain"
@@ -6345,7 +6356,7 @@
 	terrain="ocean"
 	trade_goods=""
 }
-#Borysthenes_12
+#
 6354=
 {
 	barbarian_power=0
@@ -6353,10 +6364,10 @@
 	culture=""
 	province_rank=""
 	religion=""
-	terrain="riverine_terrain"
+	terrain="ocean"
 	trade_goods=""
 }
-#Borysthenes_11
+#
 6355=
 {
 	barbarian_power=0
@@ -6364,7 +6375,7 @@
 	culture=""
 	province_rank=""
 	religion=""
-	terrain="riverine_terrain"
+	terrain="ocean"
 	trade_goods=""
 }
 #Pelsodis
@@ -7625,12 +7636,16 @@
 7279=
 {
 	barbarian_power=0
-	civilization_value=0
+	civilization_value=2
 	culture="kharesmian"
-	province_rank=""
+	province_rank="settlement"
 	religion="eastern_animism"
-	terrain="impassable_terrain"
-	trade_goods=""
+	terrain="desert"
+	trade_goods="camel"
+	tribesmen=
+	{
+		amount=2
+	}
 }
 #
 7280=
@@ -7830,6 +7845,17 @@
 	terrain="impassable_terrain"
 	trade_goods=""
 }
+#Sarmatia
+7299=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank=""
+	religion="indo_iranian_religion"
+	terrain="impassable_terrain"
+	trade_goods=""
+}
 #Sundarbans
 7357=
 {
@@ -7863,6 +7889,17 @@
 	terrain="impassable_terrain"
 	trade_goods=""
 }
+#Sylvana
+7642=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="bastarnae"
+	province_rank=""
+	religion="germanic_religion"
+	terrain="impassable_terrain"
+	trade_goods=""
+}
 #Fennia
 7643=
 {
@@ -7871,6 +7908,17 @@
 	culture="bastarnae"
 	province_rank=""
 	religion="germanic_religion"
+	terrain="impassable_terrain"
+	trade_goods=""
+}
+#Pontic Steppe
+7644=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="sarmatian"
+	province_rank=""
+	religion="indo_iranian_religion"
 	terrain="impassable_terrain"
 	trade_goods=""
 }
@@ -9301,578 +9349,6 @@
 	culture="phrygian"
 	province_rank=""
 	religion="anatolian_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Northern Bayuda Desert
-8115=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="blemmyan"
-	province_rank=""
-	religion="egyptian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Southern Bayuda Desert
-8116=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="blemmyan"
-	province_rank=""
-	religion="egyptian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Troglodytic Desert
-8117=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="blemmyan"
-	province_rank=""
-	religion="egyptian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Upper Egyptian Desert
-8118=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="blemmyan"
-	province_rank=""
-	religion="egyptian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Allaqi Desert
-8119=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="blemmyan"
-	province_rank=""
-	religion="egyptian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Kerman Desert
-8120=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="blemmyan"
-	province_rank=""
-	religion="egyptian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Desert
-8135=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="phazani"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Syrtic Desert
-8148=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Psyllic Desert
-8150=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="psyllic"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Western Psyllic Desert
-8165=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Zamzam Desert
-8167=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Desert
-8176=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Desert
-8177=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Desert
-8183=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Garamantic Desert
-8185=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="garamantic"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Desert
-8186=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Western Black Mountains
-8187=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="garamantic"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Desert
-8188=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="macaean"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Sand Sea
-8240=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="phazani"
-	province_rank=""
-	religion="berber_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Salinae Tubunenses
-8388=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="ocean"
-	trade_goods=""
-}
-#Bazensis
-8394=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="ocean"
-	trade_goods=""
-}
-#Smolensk
-8550=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="androphagian"
-	province_rank=""
-	religion="matrist_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Borysthenes_13
-8572=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Borysthenes_14
-8573=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Borysthenes_15
-8574=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Pripyat_1
-8575=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Pripyat_2
-8576=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Pripyat_3
-8577=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Desna_1
-8578=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Desna_2
-8579=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Desna_3
-8580=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Desna_4
-8581=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tanais_6
-8582=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tanais_7
-8583=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tanais_8
-8584=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tanais_9
-8585=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Daugava_1
-8586=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Daugava_2
-8587=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Daugava_3
-8588=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Daugava_4
-8589=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Ethiopian Mountain
-8678=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="aksumite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Aromata Desert
-8691=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Mosylon Mountains
-8692=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Ethiopian Mountains
-8693=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="aksumite"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Berberia Desert
-8694=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Somali Desert
-8716=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Somali Desert
-8717=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Somali Desert
-8718=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Somali Desert
-8719=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Somali Desert
-8720=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="puntic"
-	province_rank=""
-	religion="puntic_religion"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Lake Tana
-8721=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="athagaun"
-	province_rank=""
-	religion="arabian_pantheon"
-	terrain="impassable_terrain"
-	trade_goods=""
-}
-#Brebana
-8737=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="athagaun"
-	province_rank=""
-	religion="arabian_pantheon"
 	terrain="impassable_terrain"
 	trade_goods=""
 }

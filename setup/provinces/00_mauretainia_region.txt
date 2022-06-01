@@ -532,6 +532,37 @@
 		religion="carthaginian_pantheon"
 	}
 }
+#Visum Montis
+3081=
+{
+	barbarian_power=0
+	civilization_value=16
+	culture="socossian"
+	holy_site="omen_shaheded"
+	province_rank="settlement"
+	religion="berber_religion"
+	terrain="mountain"
+	trade_goods="stone"
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Mons Ambulatis
+3082=
+{
+	barbarian_power=0
+	civilization_value=18
+	culture="socossian"
+	province_rank="settlement"
+	religion="berber_religion"
+	terrain="forest"
+	trade_goods="stone"
+	tribesmen=
+	{
+		amount=1
+	}
+}
 #Lemnis
 3083=
 {
@@ -1263,7 +1294,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="hills"
@@ -1278,7 +1309,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="forest"
@@ -1293,7 +1324,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="plains"
@@ -1308,7 +1339,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="plains"
@@ -1323,7 +1354,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="hills"
@@ -1338,7 +1369,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="plains"
@@ -1387,7 +1418,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="autolalean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="forest"
@@ -1430,7 +1461,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="autolalean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="forest"
@@ -1445,7 +1476,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="autolalean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="forest"
@@ -1460,7 +1491,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="autolalean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="hills"
@@ -1475,7 +1506,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="forest"
@@ -1520,7 +1551,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="hills"
@@ -1539,7 +1570,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="nectiberean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="hills"
@@ -1599,7 +1630,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="autolalean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="forest"
@@ -1614,7 +1645,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="autolalean"
+	culture="socossian"
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="plains"
@@ -1623,269 +1654,6 @@
 	{
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Zaio
-8322=
-{
-	barbarian_power=0
-	civilization_value=3
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="plains"
-	trade_goods="grain"
-	slaves=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-		culture="carthaginian"
-		religion="carthaginian_pantheon"
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Laatamna
-8323=
-{
-	barbarian_power=0
-	civilization_value=3
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="plains"
-	trade_goods="elephants"
-	slaves=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-		culture="carthaginian"
-		religion="carthaginian_pantheon"
-	}
-	tribesmen=
-	{
-		amount=4
-	}
-}
-#Kach Kouch
-8346=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="hills"
-	trade_goods="earthware"
-	tribesmen=
-	{
-		amount=7
-	}
-	slaves=
-	{
-		amount=1
-		culture="carthaginian"
-		religion="carthaginian_pantheon"
-	}
-}
-#Jebha
-8347=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="hills"
-	trade_goods="fish"
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Hoceima
-8348=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="hills"
-	trade_goods="fish"
-	tribesmen=
-	{
-		amount=4
-	}
-}
-#Sidi Driss
-8349=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="hills"
-	trade_goods="base_metals"
-	tribesmen=
-	{
-		amount=5
-	}
-	slaves=
-	{
-		amount=1
-		culture="carthaginian"
-		religion="carthaginian_pantheon"
-	}
-}
-#Tiztoutine
-8350=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="forest"
-	trade_goods="grain"
-	tribesmen=
-	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=1
-		culture="carthaginian"
-		religion="carthaginian_pantheon"
-	}
-}
-#Midar
-8351=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="hills"
-	trade_goods="vegetables"
-	tribesmen=
-	{
-		amount=3
-	}
-}
-#Ajdir
-8352=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="mountain"
-	trade_goods="precious_metals"
-	tribesmen=
-	{
-		amount=3
-	}
-}
-#Mnoud Nekkour
-8353=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="hills"
-	trade_goods="cattle"
-	tribesmen=
-	{
-		amount=3
-	}
-}
-#Ziam
-8354=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="mountain"
-	trade_goods="wild_game"
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Senada
-8355=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="mountain"
-	trade_goods="leather"
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Agourai
-8395=
-{
-	barbarian_power=0
-	civilization_value=5
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="forest"
-	trade_goods="wood"
-	tribesmen=
-	{
-		amount=4
-	}
-}
-#Kandar
-8396=
-{
-	barbarian_power=0
-	civilization_value=5
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="forest"
-	trade_goods="grain"
-	tribesmen=
-	{
-		amount=4
-	}
-}
-#Guigou
-8397=
-{
-	barbarian_power=0
-	civilization_value=5
-	culture="socossian"
-	province_rank="settlement"
-	religion="berber_religion"
-	terrain="forest"
-	trade_goods="fur"
 	tribesmen=
 	{
 		amount=2

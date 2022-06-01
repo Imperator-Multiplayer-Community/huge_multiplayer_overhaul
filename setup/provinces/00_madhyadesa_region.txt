@@ -3,7 +3,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -84,7 +84,7 @@
 {
 	barbarian_power=0
 	civilization_value=33
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="city"
 	religion="buddhism"
 	terrain="farmland"
@@ -111,7 +111,7 @@
 {
 	barbarian_power=0
 	civilization_value=33
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="city"
 	religion="hindu"
 	terrain="farmland"
@@ -138,7 +138,7 @@
 {
 	barbarian_power=0
 	civilization_value=33
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="city"
 	religion="hindu"
 	terrain="farmland"
@@ -165,7 +165,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -192,7 +192,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -219,7 +219,7 @@
 {
 	barbarian_power=0
 	civilization_value=35
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="city"
 	religion="hindu"
 	terrain="farmland"
@@ -250,7 +250,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -277,7 +277,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -304,7 +304,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -350,7 +350,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -373,7 +373,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -400,7 +400,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="farmland"
@@ -423,7 +423,7 @@
 {
 	barbarian_power=0
 	civilization_value=33
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="city"
 	religion="buddhism"
 	terrain="plains"
@@ -450,9 +450,9 @@
 {
 	barbarian_power=0
 	civilization_value=37
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="city"
-	religion="hindu"
+	religion="jainism"
 	terrain="farmland"
 	trade_goods="cloth"
 	nobles=
@@ -481,7 +481,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="farmland"
@@ -508,7 +508,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="farmland"
@@ -535,7 +535,7 @@
 {
 	barbarian_power=0
 	civilization_value=33
-	culture="kasi"
+	culture="magadhi"
 	province_rank="city"
 	religion="buddhism"
 	terrain="farmland"
@@ -566,7 +566,7 @@
 {
 	barbarian_power=0
 	civilization_value=47
-	culture="kasi"
+	culture="magadhi"
 	province_rank="city"
 	religion="hindu"
 	terrain="farmland"
@@ -597,7 +597,7 @@
 {
 	barbarian_power=0
 	civilization_value=33
-	culture="kasi"
+	culture="magadhi"
 	province_rank="city"
 	religion="hindu"
 	terrain="farmland"
@@ -678,22 +678,22 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kasi"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
-		amount=1
+		amount=2
 	}
 	freemen=
 	{
-		amount=1
+		amount=2
 	}
 	slaves=
 	{
-		amount=13
+		amount=4
 	}
 	tribesmen=
 	{
@@ -755,26 +755,26 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
-	religion="hindu"
+	religion="jainism"
 	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
-		amount=2
+		amount=3
 	}
 	freemen=
 	{
-		amount=1
+		amount=2
 	}
 	slaves=
 	{
-		amount=13
+		amount=5
 	}
 	tribesmen=
 	{
-		amount=1
+		amount=2
 	}
 }
 #Ayodhya
@@ -782,7 +782,7 @@
 {
 	barbarian_power=0
 	civilization_value=37
-	culture="malla"
+	culture="magadhi"
 	province_rank="city"
 	religion="hindu"
 	terrain="farmland"
@@ -813,7 +813,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="vrji"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -840,7 +840,7 @@
 {
 	barbarian_power=0
 	civilization_value=31
-	culture="vrji"
+	culture="magadhi"
 	holy_site="omen_kusinagara"
 	province_rank="city"
 	religion="hindu"
@@ -895,7 +895,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -922,7 +922,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="kuru"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1003,7 +1003,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -1030,7 +1030,7 @@
 {
 	barbarian_power=0
 	civilization_value=29
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="city"
 	religion="jainism"
 	terrain="forest"
@@ -1111,7 +1111,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="kasi"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="plains"
@@ -1253,7 +1253,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -1276,7 +1276,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -1345,7 +1345,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="vrji"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1372,7 +1372,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kasi"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="farmland"
@@ -1395,7 +1395,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kasi"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="farmland"
@@ -1422,7 +1422,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="vrji"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1441,7 +1441,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kasi"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="jainism"
 	terrain="farmland"
@@ -1456,7 +1456,7 @@
 	}
 	slaves=
 	{
-		amount=12
+		amount=4
 	}
 	tribesmen=
 	{
@@ -1468,7 +1468,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -1491,22 +1491,22 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
-	religion="hindu"
+	religion="jainism"
 	terrain="farmland"
 	trade_goods="grain"
 	citizen=
 	{
-		amount=1
+		amount=2
 	}
 	freemen=
 	{
-		amount=2
+		amount=4
 	}
 	slaves=
 	{
-		amount=13
+		amount=6
 	}
 	tribesmen=
 	{
@@ -1518,7 +1518,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="farmland"
@@ -1537,9 +1537,9 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
-	religion="hindu"
+	religion="jainism"
 	terrain="forest"
 	trade_goods="elephants"
 	citizen=
@@ -1560,9 +1560,9 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
-	religion="hindu"
+	religion="jainism"
 	terrain="forest"
 	trade_goods="vegetables"
 	citizen=
@@ -1587,7 +1587,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="forest"
@@ -1614,7 +1614,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1633,7 +1633,7 @@
 {
 	barbarian_power=0
 	civilization_value=29
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="city"
 	religion="jainism"
 	terrain="forest"
@@ -1660,7 +1660,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -1791,7 +1791,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="forest"
@@ -1818,7 +1818,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1845,7 +1845,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -1872,7 +1872,7 @@
 {
 	barbarian_power=0
 	civilization_value=29
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="city"
 	religion="buddhism"
 	terrain="forest"
@@ -1899,9 +1899,9 @@
 {
 	barbarian_power=0
 	civilization_value=29
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="city"
-	religion="hindu"
+	religion="jainism"
 	terrain="forest"
 	trade_goods="glass"
 	citizen=
@@ -1926,7 +1926,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -1953,7 +1953,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -1980,9 +1980,9 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
-	religion="hindu"
+	religion="jainism"
 	terrain="farmland"
 	trade_goods="grain"
 	citizen=
@@ -2007,7 +2007,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="farmland"
@@ -2153,7 +2153,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="kosala"
+	culture="shauraseni"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="forest"
@@ -2176,7 +2176,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="kasi"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -2249,7 +2249,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="kasi"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="jainism"
 	terrain="farmland"
@@ -2276,7 +2276,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="vrji"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -2303,7 +2303,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="vrji"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -2330,7 +2330,7 @@
 {
 	barbarian_power=0
 	civilization_value=28
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="farmland"
@@ -2353,7 +2353,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="malla"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="plains"
@@ -2376,7 +2376,7 @@
 {
 	barbarian_power=0
 	civilization_value=26
-	culture="vrji"
+	culture="magadhi"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"

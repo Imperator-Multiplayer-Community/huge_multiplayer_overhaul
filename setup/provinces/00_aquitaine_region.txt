@@ -3,7 +3,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -37,7 +37,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="pictonian"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -159,18 +159,18 @@
 {
 	barbarian_power=0
 	civilization_value=7
-	culture="biturigan"
+	culture="carthaginian"
 	province_rank="settlement"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	terrain="marsh"
 	trade_goods="fish"
 	freemen=
 	{
-		amount=1
+		amount=10
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=3
+		amount=7
 	}
 }
 #Burgus
@@ -219,20 +219,28 @@
 2236=
 {
 	barbarian_power=0
-	civilization_value=7
-	culture="biturigan"
-	port_building=1
-	province_rank="settlement"
-	religion="druidism"
+	civilization_value=25
+	culture="carthaginian"
+	port_building=3
+	province_rank="city"
+	religion="carthaginian_pantheon"
 	terrain="marsh"
 	trade_goods="wine"
+	nobles=
+	{
+		amount=6
+	}
+	citizen=
+	{
+		amount=10
+	}
 	freemen=
 	{
-		amount=1
+		amount=19
 	}
-	tribesmen=
+	slaves=
 	{
-		amount=4
+		amount=8
 	}
 }
 #Losa
@@ -841,7 +849,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1108,7 +1116,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1131,7 +1139,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1150,7 +1158,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1226,7 +1234,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1268,7 +1276,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1283,7 +1291,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1302,7 +1310,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1329,7 +1337,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1375,7 +1383,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1402,7 +1410,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1421,7 +1429,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1448,7 +1456,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1467,7 +1475,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1490,7 +1498,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1509,7 +1517,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1528,7 +1536,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1547,7 +1555,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="arverni"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1608,7 +1616,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="pictonian"
+	culture="santonian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1700,7 +1708,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1719,7 +1727,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="pictonian"
+	culture="biturigan"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1738,7 +1746,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="pictonian"
+	culture="biturigan"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1795,7 +1803,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="arverni"
+	culture="lemovician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"

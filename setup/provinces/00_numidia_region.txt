@@ -340,7 +340,7 @@
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="desert"
-	trade_goods="horses"
+	trade_goods="steppe_horses"
 	freemen=
 	{
 		amount=1
@@ -971,13 +971,13 @@
 	religion="berber_religion"
 	terrain="forest"
 	trade_goods="horses"
-	freemen=
+	citizen=
 	{
-		amount=2
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=7
+		amount=3
 	}
 }
 #Aqua Viva
@@ -986,21 +986,21 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="gaetulian"
-	province_rank="settlement"
+	province_rank="city"
 	religion="berber_religion"
 	terrain="plains"
-	trade_goods="horses"
+	trade_goods="steppe_horses"
 	citizen=
 	{
-		amount=1
+		amount=19
 	}
 	slaves=
 	{
-		amount=1
+		amount=14
 	}
 	tribesmen=
 	{
-		amount=3
+		amount=2
 	}
 }
 #Nicivibus
@@ -1318,7 +1318,7 @@
 	}
 	freemen=
 	{
-		amount=1
+		amount=7
 	}
 	slaves=
 	{
@@ -1361,14 +1361,14 @@
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="forest"
-	trade_goods="horses"
+	trade_goods="steppe_horses"
 	freemen=
 	{
 		amount=2
 	}
 	slaves=
 	{
-		amount=1
+		amount=8
 	}
 	tribesmen=
 	{
@@ -1831,7 +1831,7 @@
 	province_rank="settlement"
 	religion="berber_religion"
 	terrain="plains"
-	trade_goods="horses"
+	trade_goods="steppe_horses"
 	freemen=
 	{
 		amount=1

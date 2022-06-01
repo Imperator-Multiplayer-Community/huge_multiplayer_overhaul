@@ -1,0 +1,1530 @@
+﻿#Hokhmik
+1586=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="forest"
+	trade_goods="iron"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Vardbach
+1587=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="armenian"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="forest"
+	trade_goods="cattle"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Sary-tepe
+1610=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Iberian Gates
+1673=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="scythian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wild_game"
+}
+#Meschistha-Harmozike
+1676=
+{
+	barbarian_power=0
+	civilization_value=25.5
+	culture="ibero"
+	holy_site="omen_armazi"
+	province_rank="city"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="earthware"
+	nobles=
+	{
+		amount=1
+	}
+	citizen=
+	{
+		amount=7
+	}
+	freemen=
+	{
+		amount=7
+	}
+	slaves=
+	{
+		amount=11
+	}
+	tribesmen=
+	{
+		amount=5
+	}
+}
+#Algeti
+1677=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wood"
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="armenian_religion"
+	}
+}
+#Kavtiskhevi
+1679=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Zalissa
+1680=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=2
+	}
+}
+#Aragvispiri
+1681=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="ibero"
+	holy_site="omen_kopala"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="honey"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Aghaiani
+1683=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="cloth"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Uplistsikhe
+1685=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wood"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Samshvilde
+1686=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="iron"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Urbnisi
+1689=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="wine"
+	freemen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Zghuderi
+1690=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wood"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Dedoplis
+1691=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Tskhinvali
+1692=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Surium
+1694=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="grain"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Borjomi
+1695=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="wood"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Leukothea
+1696=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	holy_site="omen_ghmerti"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="grain"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="armenian_religion"
+	}
+}
+#Akhaltsikhe
+1697=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="wood"
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+		religion="armenian_religion"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Mzetamze
+1699=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wood"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Zekari Pass
+1700=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wood"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Goderdzi Pass
+1701=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wood"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Javakheti
+1702=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="forest"
+	trade_goods="iron"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="caucasian_religion"
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Bori
+1703=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Sarapanis
+1704=
+{
+	barbarian_power=0
+	civilization_value=25.5
+	culture="colchian"
+	province_rank="city"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="cloth"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Skandis
+1705=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Rhodopolis
+1706=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="grain"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Kotais
+1707=
+{
+	barbarian_power=0
+	civilization_value=21.5
+	culture="colchian"
+	province_rank="city"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=4
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Telephis
+1711=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Onogouris
+1714=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="grain"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Archaiopolis
+1715=
+{
+	barbarian_power=0
+	civilization_value=25.5
+	culture="colchian"
+	province_rank="city"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="base_metals"
+	nobles=
+	{
+		amount=1
+	}
+	citizen=
+	{
+		amount=7
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=8
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Chaladidi
+1717=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="earthware"
+	citizen=
+	{
+		amount=3
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Phasis
+1720=
+{
+	barbarian_power=0
+	civilization_value=31
+	culture="greco_pontic"
+	port_building=1
+	province_rank="city"
+	religion="roman_pantheon"
+	terrain="plains"
+	trade_goods="cloth"
+	citizen=
+	{
+		amount=8
+	}
+	citizen=
+	{
+		amount=1
+		culture="colchian"
+		religion="caucasian_religion"
+	}
+	citizen=
+	{
+		amount=1
+		culture="colchian"
+	}
+	freemen=
+	{
+		amount=1
+		culture="colchian"
+	}
+	freemen=
+	{
+		amount=3
+	}
+	slaves=
+	{
+		amount=1
+		culture="colchian"
+		religion="caucasian_religion"
+	}
+	slaves=
+	{
+		amount=2
+	}
+}
+#Vashnari
+1722=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Pichvnari
+1723=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="fish"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+		culture="greco_pontic"
+		religion="roman_pantheon"
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Apasidam
+1724=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="cloth"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Bathys Limen
+1725=
+{
+	barbarian_power=0
+	civilization_value=23.5
+	culture="colchian"
+	port_building=1
+	province_rank="city"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="wood"
+	citizen=
+	{
+		amount=7
+	}
+	freemen=
+	{
+		amount=5
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Apsaros
+1726=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="leather"
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Kissa
+1727=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="fish"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=1
+	}
+}
+#Morthoula
+1728=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="honey"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="armenian_religion"
+	}
+}
+#Ergeta
+1735=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Ziganne
+1737=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="forest"
+	trade_goods="fish"
+	citizen=
+	{
+		amount=1
+		culture="greco_pontic"
+		religion="roman_pantheon"
+	}
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+		culture="greco_pontic"
+		religion="roman_pantheon"
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Gyenos
+1738=
+{
+	barbarian_power=0
+	civilization_value=24
+	culture="greco_pontic"
+	port_building=1
+	province_rank="settlement"
+	religion="roman_pantheon"
+	terrain="forest"
+	trade_goods="fish"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="colchian"
+		religion="caucasian_religion"
+	}
+}
+#Tqvarcheli
+1739=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="precious_metals"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=4
+	}
+}
+#Tzibile
+1740=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wild_game"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Dioskourias
+1741=
+{
+	barbarian_power=0
+	civilization_value=24
+	culture="greco_pontic"
+	province_rank="settlement"
+	religion="roman_pantheon"
+	terrain="hills"
+	trade_goods="wine"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=1
+		culture="colchian"
+		religion="caucasian_religion"
+	}
+}
+#Anakopia
+1742=
+{
+	barbarian_power=0
+	civilization_value=18
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wine"
+	citizen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Pityous
+1743=
+{
+	barbarian_power=0
+	civilization_value=18
+	culture="colchian"
+	port_building=1
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="wine"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+}
+#Masaitike
+1745=
+{
+	barbarian_power=0
+	civilization_value=18
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="hills"
+	trade_goods="fish"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Itkhvissi
+1746=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="plains"
+	trade_goods="cattle"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+}
+#Modinakhe
+1748=
+{
+	barbarian_power=0
+	civilization_value=16.5
+	culture="colchian"
+	holy_site="omen_dali"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wild_game"
+	citizen=
+	{
+		amount=2
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=2
+	}
+}
+#Brili
+1749=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wild_game"
+}
+#Klukhor Pass
+1750=
+{
+	barbarian_power=0
+	civilization_value=0
+	culture="colchian"
+	province_rank="settlement"
+	religion="caucasian_religion"
+	terrain="mountain"
+	trade_goods="wild_game"
+}
+#Chorzene
+1752=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="armenian"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="plains"
+	trade_goods="horses"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=2
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Kola
+1753=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="plains"
+	trade_goods="wine"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Artahan
+1754=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="plains"
+	trade_goods="steppe_horses"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="caucasian_religion"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Colit
+1755=
+{
+	barbarian_power=0
+	civilization_value=20.5
+	culture="ibero"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="plains"
+	trade_goods="leather"
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="caucasian_religion"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Artanuji
+1756=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="hills"
+	trade_goods="cattle"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="caucasian_religion"
+	}
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Kaballa
+1757=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="hills"
+	trade_goods="vegetables"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Pharangion
+1758=
+{
+	barbarian_power=0
+	civilization_value=18.5
+	culture="colchian"
+	province_rank="settlement"
+	religion="armenian_religion"
+	terrain="hills"
+	trade_goods="leather"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=1
+		religion="caucasian_religion"
+	}
+	tribesmen=
+	{
+		amount=2
+	}
+}
+#Torikos
+4567=
+{
+	barbarian_power=0
+	civilization_value=10
+	culture="sindi"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="plains"
+	trade_goods="cattle"
+	tribesmen=
+	{
+		amount=1
+	}
+}
+#Palaia Achaia
+4568=
+{
+	barbarian_power=0
+	civilization_value=8
+	culture="sindi"
+	province_rank="settlement"
+	religion="indo_iranian_religion"
+	terrain="hills"
+	trade_goods="wine"
+	tribesmen=
+	{
+		amount=1
+	}
+}

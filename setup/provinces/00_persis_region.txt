@@ -335,7 +335,7 @@
 	culture="elamite"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="marsh"
 	trade_goods="vegetables"
 	citizen=
 	{
@@ -368,8 +368,8 @@
 	culture="elamite"
 	province_rank="settlement"
 	religion="zoroaster"
-	terrain="farmland"
-	trade_goods="wine"
+	terrain="marsh"
+	trade_goods="dates"
 	citizen=
 	{
 		amount=2
@@ -433,7 +433,7 @@
 	culture="elamite"
 	province_rank="settlement"
 	religion="mesopotamian_religion"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="wild_game"
 	freemen=
 	{

@@ -596,7 +596,7 @@
 {
 	barbarian_power=0
 	civilization_value=2
-	culture="sakan"
+	culture="scythian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
 	terrain="desert"
@@ -2082,14 +2082,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="scythian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
+	religion="eastern_animism"
 	terrain="plains"
-	trade_goods="horses"
+	trade_goods="steppe_horses"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
 	tribesmen=
 	{
-		amount=3
+		amount=2
 	}
 }
 #Ziram
@@ -2097,14 +2109,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="kharesmian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
+	religion="eastern_animism"
 	terrain="plains"
-	trade_goods="fur"
+	trade_goods="steppe_horses"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
 	tribesmen=
 	{
-		amount=3
+		amount=2
 	}
 }
 #Boot
@@ -2112,14 +2136,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="scythian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
+	religion="eastern_animism"
+	terrain="desert"
 	trade_goods="steppe_horses"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
 	tribesmen=
 	{
-		amount=5
+		amount=3
 	}
 }
 #Palisha
@@ -2127,14 +2163,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="scythian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
-	trade_goods="leather"
-	tribesmen=
+	religion="eastern_animism"
+	terrain="desert"
+	trade_goods="silk"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
 	{
 		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
 	}
 }
 #Zantak
@@ -2142,14 +2190,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="scythian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
-	trade_goods="horses"
-	tribesmen=
+	religion="eastern_animism"
+	terrain="desert"
+	trade_goods="woad"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
 	{
 		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
 	}
 }
 #Qala
@@ -2157,14 +2217,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="scythian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
-	trade_goods="cattle"
-	tribesmen=
+	religion="eastern_animism"
+	terrain="desert"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
 	{
 		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
 	}
 }
 #Birim
@@ -2172,14 +2244,26 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="kharesmian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
-	trade_goods="steppe_horses"
-	tribesmen=
+	religion="eastern_animism"
+	terrain="desert"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
 	{
 		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
 	}
 }
 #Baraq
@@ -2187,26 +2271,51 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sakan"
+	culture="kharesmian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
-	trade_goods="wild_game"
-	tribesmen=
+	religion="eastern_animism"
+	terrain="desert"
+	trade_goods="camel"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
 	{
 		amount=2
 	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=3
+	}
+	
 }
 #Kupir
 7260=
 {
 	barbarian_power=0
-	civilization_value=5
+	civilization_value=0
 	culture="kharesmian"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
-	trade_goods="cattle"
+	religion="eastern_animism"
+	terrain="desert"
+	trade_goods="vegetables"
+	citizen=
+	{
+		amount=1
+	}
+	freemen=
+	{
+		amount=2
+	}
+	slaves=
+	{
+		amount=1
+	}
 	tribesmen=
 	{
 		amount=3

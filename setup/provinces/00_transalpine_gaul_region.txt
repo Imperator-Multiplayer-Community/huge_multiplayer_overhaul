@@ -360,7 +360,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="santonian"
+	culture="volcae"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -379,7 +379,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="santonian"
+	culture="volcae"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -501,7 +501,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="volcae"
+	culture="salluvian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -539,7 +539,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -558,7 +558,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="allobrogian"
+	culture="arverni"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -581,7 +581,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -600,7 +600,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -623,7 +623,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -642,7 +642,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -661,7 +661,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -768,7 +768,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="volcae"
+	culture="salluvian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="hills"
@@ -791,7 +791,7 @@
 {
 	barbarian_power=0
 	civilization_value=13
-	culture="volcae"
+	culture="salluvian"
 	port_building=1
 	province_rank="settlement"
 	religion="druidism"
@@ -818,23 +818,32 @@
 2314=
 {
 	barbarian_power=0
-	civilization_value=11
-	culture="volcae"
-	province_rank="settlement"
-	religion="druidism"
+	civilization_value=34
+	culture="carthaginian"
+	commerce_building=3
+	province_rank="city"
+	religion="carthaginian_pantheon"
 	terrain="plains"
 	trade_goods="grain"
+	nobles=
+	{
+		amount=9
+	}
+	citizen=
+	{
+		amount=15
+	}
 	freemen=
 	{
-		amount=4
+		amount=10
 	}
 	slaves=
 	{
-		amount=1
+		amount=5
 	}
 	tribesmen=
 	{
-		amount=4
+		amount=1
 	}
 }
 #Briginnum
@@ -842,7 +851,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="volcae"
+	culture="salluvian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -911,7 +920,8 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="volcae"
+	culture="salluvian"
+	port_building=1
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1104,7 +1114,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="santonian"
+	culture="volcae"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1123,7 +1133,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1142,7 +1152,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="allobrogian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1508,7 +1518,7 @@
 {
 	barbarian_power=0
 	civilization_value=7
-	culture="allobrogian"
+	culture="salluvian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="mountain"

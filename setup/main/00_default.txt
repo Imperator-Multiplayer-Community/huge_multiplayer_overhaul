@@ -4711,6 +4711,9 @@ provinces = { #Any entry must contain a comment with city name.
 	6045 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
+	7573 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
 	6049 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
@@ -5258,20 +5261,6 @@ road_network = {
 	1808 = 290 # Ephesos
 	1969 = 1972 # Magnesia-Priene
 	278 = 279 # Pergamon-Elaia
-	
-	892 = 955	#Dura-Sinn
-	886 = 955	#Nuzi-Sinn
-	
-	4428 = 4432	#Prayaga-Sajahati
-	4431 = 4432	#Sumsumaragiri-Sajahati
-	
-	895 = 896	#Asana-Artemita
-	933 = 973	#Apamea-Bakusaya
-	934 = 973	#Kashkar-Bakusaya
-	814 = 803	#Barbalissus-Resafa
-	804 = 803	#Nicephorium-Resafa
-	868 = 861	#Dhahir-Apqu
-	862 = 861	#Nineveh-Apqu
 }
 
 #Trade
@@ -6106,6 +6095,19 @@ country = {
 				1894 1896 1890 1892
 			}
 		}
+
+		C84 = {
+			government = tribal_chiefdom
+			primary_culture = qedarite
+			religion = arabian_pantheon
+			diplomatic_stance = warmongering_stance
+			capital = 8574
+			centralization = -50
+			is_antagonist = yes
+			own_control_core = {
+				8574 8576 8577
+			}
+		}
 		
 		C46 = { #Charton
 			government = despotic_monarchy
@@ -6285,7 +6287,7 @@ country = {
 			capital = 7209
 			
 			own_control_core = 	{
-				7209 7208 7210 7211 7207 7206 7205 7213 7212
+				7209 7208 7210 7211 7207 7206 7205 7213 7212 7573 7572 7571 7570
 				7215 7214 7217 7216 5429 5430 5415 5416 5417 5418 5419 5420 5421
 			}
 		}
@@ -16349,7 +16351,6 @@ country = {
 				902 894 891 956 835 900 901 910 909 903 824
 			}
 		}
-
 
 	}
 }

@@ -3,7 +3,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="maharashtran"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -30,7 +30,7 @@
 {
 	barbarian_power=0
 	civilization_value=14
-	culture="alupan"
+	culture="kannadan"
 	port_building=1
 	province_rank="city"
 	religion="hindu"
@@ -73,7 +73,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	port_building=1
 	province_rank="settlement"
 	religion="hindu"
@@ -111,7 +111,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -130,7 +130,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="buddhism"
 	terrain="hills"
@@ -172,7 +172,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -191,7 +191,7 @@
 {
 	barbarian_power=0
 	civilization_value=14
-	culture="alupan"
+	culture="kannadan"
 	port_building=1
 	province_rank="city"
 	religion="hindu"
@@ -219,7 +219,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -246,7 +246,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -273,7 +273,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="alupan"
+	culture="kannadan"
 	port_building=1
 	province_rank="settlement"
 	religion="hindu"
@@ -297,7 +297,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -339,7 +339,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="cheran"
+	culture="tamil"
 	province_rank="city"
 	religion="hindu"
 	terrain="jungle"
@@ -381,7 +381,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="cheran"
+	culture="tamil"
 	port_building=1
 	province_rank="city"
 	religion="hindu"
@@ -409,7 +409,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -436,7 +436,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -463,7 +463,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -490,7 +490,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -513,9 +513,9 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="cheran"
+	culture="macedonian"
 	province_rank="city"
-	religion="hindu"
+	religion="buddhism"
 	terrain="jungle"
 	trade_goods="gems"
 	citizen=
@@ -539,15 +539,19 @@
 6901=
 {
 	barbarian_power=0
-	civilization_value=26
-	culture="cheran"
+	civilization_value=39
+	culture="macedonian"
 	province_rank="city"
-	religion="hindu"
+	religion="buddhism"
 	terrain="plains"
 	trade_goods="dye"
+	nobles=
+	{
+		amount=9
+	}
 	citizen=
 	{
-		amount=5
+		amount=18
 	}
 	freemen=
 	{
@@ -555,11 +559,11 @@
 	}
 	slaves=
 	{
-		amount=6
+		amount=2
 	}
 	tribesmen=
 	{
-		amount=3
+		amount=2
 	}
 }
 #Komari
@@ -567,7 +571,7 @@
 {
 	barbarian_power=0
 	civilization_value=21
-	culture="cheran"
+	culture="tamil"
 	holy_site="omen_kanya_devi"
 	port_building=1
 	province_rank="settlement"
@@ -592,7 +596,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -619,7 +623,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -642,11 +646,11 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
-	trade_goods="wine"
+	trade_goods="base_metals"
 	citizen=
 	{
 		amount=1
@@ -679,7 +683,7 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="jainism"
 	terrain="hills"
@@ -712,7 +716,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="jainism"
 	terrain="hills"
@@ -750,7 +754,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -777,7 +781,7 @@
 {
 	barbarian_power=0
 	civilization_value=19
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -815,7 +819,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="cheran"
+	culture="tamil"
 	province_rank="city"
 	religion="hindu"
 	terrain="hills"
@@ -842,7 +846,7 @@
 {
 	barbarian_power=0
 	civilization_value=24
-	culture="cheran"
+	culture="tamil"
 	province_rank="city"
 	religion="hindu"
 	terrain="hills"
@@ -993,11 +997,11 @@
 {
 	barbarian_power=0
 	civilization_value=18.5
-	culture="cheran"
+	culture="tamil"
 	province_rank="settlement"
 	religion="jainism"
 	terrain="jungle"
-	trade_goods="wine"
+	trade_goods="woad"
 	freemen=
 	{
 		amount=2
@@ -1134,7 +1138,7 @@
 {
 	barbarian_power=0
 	civilization_value=8.5
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -1161,7 +1165,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kuntalan"
+	culture="telugu"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1188,7 +1192,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kuntalan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1377,7 +1381,7 @@
 {
 	barbarian_power=0
 	civilization_value=14
-	culture="alupan"
+	culture="kannadan"
 	province_rank="city"
 	religion="hindu"
 	terrain="jungle"
@@ -1505,7 +1509,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kuntalan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1583,7 +1587,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
@@ -1683,7 +1687,7 @@
 	province_rank="city"
 	religion="hindu"
 	terrain="hills"
-	trade_goods="wine"
+	trade_goods="wood"
 	citizen=
 	{
 		amount=2
@@ -1710,7 +1714,7 @@
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
-	trade_goods="wine"
+	trade_goods="hemp"
 	slaves=
 	{
 		amount=7
@@ -1802,7 +1806,7 @@
 	province_rank="settlement"
 	religion="hindu"
 	terrain="hills"
-	trade_goods="wine"
+	trade_goods="fur"
 	citizen=
 	{
 		amount=3
@@ -1906,7 +1910,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kuntalan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1925,7 +1929,7 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="kuntalan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="plains"
@@ -1952,7 +1956,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="alupan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -1979,7 +1983,7 @@
 {
 	barbarian_power=0
 	civilization_value=9
-	culture="kuntalan"
+	culture="kannadan"
 	province_rank="settlement"
 	religion="hindu"
 	terrain="jungle"
@@ -2001,157 +2005,3 @@
 		amount=4
 	}
 }
-#Amindivi
-8281=
-{
-	barbarian_power=0
-	civilization_value=9
-	culture="dhivehi"
-	port_building=1
-	province_rank="settlement"
-	religion="hindu"
-	terrain="jungle"
-	trade_goods="spices"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-}
-#Laccadives
-8282=
-{
-	barbarian_power=0
-	civilization_value=7
-	culture="dhivehi"
-	province_rank="settlement"
-	religion="hindu"
-	terrain="jungle"
-	trade_goods="fish"
-	freemen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Minicoy
-8283=
-{
-	barbarian_power=0
-	civilization_value=7
-	culture="dhivehi"
-	province_rank="settlement"
-	religion="hindu"
-	terrain="jungle"
-	trade_goods="spices"
-	freemen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-}
-#Boduthiladhunmathi
-8338=
-{
-	barbarian_power=0
-	civilization_value=7
-	culture="dhivehi"
-	province_rank="settlement"
-	religion="hindu"
-	terrain="jungle"
-	trade_goods="wood"
-	freemen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-}
-#Male
-8342=
-{
-	barbarian_power=0
-	civilization_value=7
-	culture="dhivehi"
-	port_building=1
-	province_rank="settlement"
-	religion="hindu"
-	terrain="jungle"
-	trade_goods="spices"
-	citizen=
-	{
-		amount=1
-	}
-	citizen=
-	{
-		amount=1
-		culture="lankan"
-		religion="buddhism"
-	}
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Huvadhoo
-8343=
-{
-	barbarian_power=0
-	civilization_value=7
-	culture="dhivehi"
-	province_rank="settlement"
-	religion="hindu"
-	terrain="jungle"
-	trade_goods="fish"
-	freemen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-}
-#Kolhumadulu
-8387=
-{
-	barbarian_power=0
-	civilization_value=7
-	culture="dhivehi"
-	province_rank="settlement"
-	religion="hindu"
-	terrain="jungle"
-	trade_goods="fish"
-	freemen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-}
-

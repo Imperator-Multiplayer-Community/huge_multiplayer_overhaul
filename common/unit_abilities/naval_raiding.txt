@@ -65,7 +65,6 @@
 					terrain = riverine_terrain
 					terrain = ocean
 					terrain = coastal_terrain
-					terrain = tributary_terrain	#Added Tributary terrain where riverine also exists as about half of the rivers are that terrain type
 				}
 			}
 		}

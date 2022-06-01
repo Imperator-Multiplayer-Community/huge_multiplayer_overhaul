@@ -3,7 +3,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -18,9 +18,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="celtic_pannonian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="shamanism"
 	terrain="hills"
 	trade_goods="gems"
 	tribesmen=
@@ -33,9 +33,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="cotinian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="forest"
 	trade_goods="wood"
 	freemen=
@@ -52,9 +52,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="germanic_religion"
+	religion="shamanism"
 	terrain="plains"
 	trade_goods="cattle"
 	tribesmen=
@@ -67,9 +67,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="cotinian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="mountain"
 	trade_goods="precious_metals"
 	tribesmen=
@@ -82,9 +82,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="cotinian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="plains"
 	trade_goods="woad"
 	citizen=
@@ -105,9 +105,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="cotinian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="plains"
 	trade_goods="base_metals"
 	freemen=
@@ -124,7 +124,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -139,7 +139,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -154,7 +154,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="vandal"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -227,7 +227,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -242,7 +242,7 @@
 {
 	barbarian_power=0
 	civilization_value=12
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="farmland"
@@ -257,7 +257,7 @@
 {
 	barbarian_power=0
 	civilization_value=8
-	culture="harpii"
+	culture="getian"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -276,7 +276,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -291,10 +291,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="grain"
 	freemen=
 	{
@@ -310,10 +310,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="grain"
 	freemen=
 	{
@@ -329,7 +329,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -344,7 +344,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="getian"
+	culture="harpii"
 	province_rank="settlement"
 	religion="shamanism"
 	terrain="forest"
@@ -382,9 +382,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="harpii"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="fur"
 	freemen=
@@ -405,9 +405,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="harpii"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="wood"
 	tribesmen=
@@ -420,10 +420,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="hills"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="base_metals"
 	tribesmen=
 	{
@@ -435,10 +435,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="harpii"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="plains"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="horses"
 	citizen=
 	{
@@ -454,10 +454,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="hills"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="leather"
 	tribesmen=
 	{
@@ -469,9 +469,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="cattle"
 	tribesmen=
@@ -484,10 +484,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
-	terrain="hills"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="leather"
 	tribesmen=
 	{
@@ -499,9 +499,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="agathyrsian"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="indo_iranian_religion"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="vegetables"
 	freemen=
@@ -522,10 +522,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="germanic_religion"
-	terrain="hills"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="wood"
 	tribesmen=
 	{
@@ -537,10 +537,10 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="germanic_religion"
-	terrain="hills"
+	religion="shamanism"
+	terrain="forest"
 	trade_goods="wood"
 	citizen=
 	{
@@ -556,9 +556,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="germanic_religion"
+	religion="shamanism"
 	terrain="forest"
 	trade_goods="base_metals"
 	tribesmen=
@@ -571,9 +571,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="costoboci"
 	province_rank="settlement"
-	religion="germanic_religion"
+	religion="shamanism"
 	terrain="plains"
 	trade_goods="woad"
 	slaves=
@@ -593,7 +593,7 @@
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="cattle"
 	slaves=
 	{
@@ -609,9 +609,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="hemp"
 	tribesmen=
@@ -626,7 +626,7 @@
 	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="hemp"
 	tribesmen=
@@ -642,7 +642,7 @@
 	culture="agathyrsian"
 	province_rank="settlement"
 	religion="indo_iranian_religion"
-	terrain="plains"
+	terrain="forest"
 	trade_goods="vegetables"
 	tribesmen=
 	{
@@ -654,9 +654,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="neuric"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="hemp"
 	tribesmen=
@@ -669,9 +669,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="fur"
 	slaves=
@@ -683,21 +683,6 @@
 		amount=2
 	}
 }
-#Urschelats
-6233=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture="agathyrsian"
-	province_rank="settlement"
-	religion="matrist_religion"
-	terrain="forest"
-	trade_goods="wood"
-	tribesmen=
-	{
-		amount=1
-	}
-}
 #Myanik
 6234=
 {
@@ -705,7 +690,7 @@
 	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="vegetables"
 	tribesmen=
@@ -720,7 +705,7 @@
 	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="fur"
 	tribesmen=
@@ -735,7 +720,7 @@
 	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="vegetables"
 	tribesmen=
@@ -748,9 +733,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="fur"
 	tribesmen=
@@ -763,9 +748,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="leather"
 	tribesmen=
@@ -780,7 +765,7 @@
 	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="wild_game"
 	tribesmen=
@@ -793,9 +778,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="stone"
 	tribesmen=
@@ -808,9 +793,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="iron"
 	tribesmen=
@@ -825,7 +810,7 @@
 	civilization_value=0
 	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="stone"
 	tribesmen=
@@ -838,9 +823,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="woad"
 	slaves=
@@ -857,9 +842,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="wood"
 	tribesmen=
@@ -872,9 +857,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="plains"
 	trade_goods="wood"
 	tribesmen=
@@ -887,7 +872,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -902,9 +887,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="leather"
 	tribesmen=
@@ -917,9 +902,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="vegetables"
 	freemen=
@@ -936,9 +921,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="vegetables"
 	tribesmen=
@@ -951,9 +936,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="hemp"
 	freemen=
@@ -970,7 +955,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -985,7 +970,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1000,9 +985,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="fur"
 	tribesmen=
@@ -1015,7 +1000,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1030,7 +1015,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1045,9 +1030,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="grain"
 	tribesmen=
@@ -1060,7 +1045,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1083,7 +1068,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1102,7 +1087,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1121,7 +1106,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1140,7 +1125,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1159,9 +1144,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="aestian"
 	province_rank="settlement"
-	religion="germanic_religion"
+	religion="matrist_religion"
 	terrain="plains"
 	trade_goods="woad"
 	slaves=
@@ -1178,7 +1163,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1197,9 +1182,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="aestian"
 	province_rank="settlement"
-	religion="germanic_religion"
+	religion="matrist_religion"
 	terrain="plains"
 	trade_goods="cattle"
 	tribesmen=
@@ -1212,7 +1197,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1235,7 +1220,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1254,7 +1239,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="irminonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1273,9 +1258,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="aestian"
 	province_rank="settlement"
-	religion="germanic_religion"
+	religion="matrist_religion"
 	terrain="plains"
 	trade_goods="woad"
 	freemen=
@@ -1292,9 +1277,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="grain"
 	slaves=
@@ -1311,9 +1296,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="bastarnae"
+	culture="aestian"
 	province_rank="settlement"
-	religion="germanic_religion"
+	religion="matrist_religion"
 	terrain="forest"
 	trade_goods="horses"
 	tribesmen=
@@ -1326,9 +1311,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="stone"
 	tribesmen=
@@ -1341,9 +1326,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="cattle"
 	slaves=
@@ -1360,9 +1345,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="cattle"
 	tribesmen=
@@ -1375,9 +1360,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="sporic"
+	culture="agathyrsian"
 	province_rank="settlement"
-	religion="matrist_religion"
+	religion="indo_iranian_religion"
 	terrain="forest"
 	trade_goods="fur"
 	slaves=

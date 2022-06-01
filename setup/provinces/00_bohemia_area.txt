@@ -381,7 +381,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -400,7 +400,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="helvetian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -461,7 +461,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -499,7 +499,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="boian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="hills"
@@ -518,7 +518,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="boian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="hills"
@@ -541,7 +541,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="boian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="hills"
@@ -640,7 +640,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -663,7 +663,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -682,7 +682,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="treverian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -1234,7 +1234,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="boian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1253,7 +1253,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="vindelician"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1272,7 +1272,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="treverian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -1325,9 +1325,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="teurian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="hills"
 	trade_goods="cattle"
 	slaves=
@@ -1344,21 +1344,18 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="teurian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="hills"
 	trade_goods="cloth"
-	freemen={
+	freemen=
+	{
 		amount=1
 	}
-	tribesmen={
+	tribesmen=
+	{
 		amount=2
-	}
-	tribesmen = {
-		culture = irminonic
-		religion = germanic_religion
-		amount=1
 	}
 }
 #Camulia
@@ -1366,18 +1363,13 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="teurian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="plains"
 	trade_goods="grain"
 	tribesmen=
 	{
-		amount=1
-	}
-	tribesmen = {
-		culture = irminonic
-		religion = germanic_religion
 		amount=1
 	}
 }
@@ -1413,9 +1405,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="teurian"
+	culture="irminonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="plains"
 	trade_goods="stone"
 	slaves=
@@ -1425,11 +1417,6 @@
 	tribesmen=
 	{
 		amount=2
-	}
-	tribesmen = {
-		culture = irminonic
-		religion = germanic_religion
-		amount=1
 	}
 }
 #Bicurdium
@@ -1490,7 +1477,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"

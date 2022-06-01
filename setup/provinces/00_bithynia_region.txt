@@ -56,7 +56,7 @@
 	province_rank="settlement"
 	religion="anatolian_religion"
 	terrain="hills"
-	trade_goods="wine"
+	trade_goods="wood"
 	freemen=
 	{
 		amount=2
@@ -432,7 +432,7 @@
 	province_rank="settlement"
 	religion="roman_pantheon"
 	terrain="hills"
-	trade_goods="wine"
+	trade_goods="earthware"
 	freemen=
 	{
 		amount=3
@@ -490,7 +490,7 @@
 	province_rank="settlement"
 	religion="anatolian_religion"
 	terrain="hills"
-	trade_goods="wine"
+	trade_goods="wood"
 	freemen=
 	{
 		amount=1
@@ -596,7 +596,7 @@
 	province_rank="settlement"
 	religion="anatolian_religion"
 	terrain="hills"
-	trade_goods="wine"
+	trade_goods="vegetables"
 	freemen=
 	{
 		amount=2
@@ -664,7 +664,7 @@
 	province_rank="settlement"
 	religion="anatolian_religion"
 	terrain="forest"
-	trade_goods="wine"
+	trade_goods="vegetables"
 	citizen=
 	{
 		amount=1
@@ -782,10 +782,6 @@
 	{
 		amount=1
 	}
-	citizen=
-	{
-		amount=3
-	}
 	freemen=
 	{
 		amount=1
@@ -826,7 +822,7 @@
 	}
 	slaves=
 	{
-		amount=4
+		amount=1
 	}
 	tribesmen=
 	{
@@ -918,11 +914,7 @@
 	trade_goods="fish"
 	citizen=
 	{
-		amount=3
-	}
-	nobles = 
-	{
-		amount = 1
+		amount=1
 	}
 	freemen=
 	{
@@ -999,11 +991,6 @@
 		amount=2
 		culture="bithynian"
 	}
-	citizen=
-	{
-		amount=2
-		culture="bithynian"
-	}
 	slaves=
 	{
 		amount=2
@@ -1044,12 +1031,12 @@
 	}
 	freemen=
 	{
-		amount=2
+		amount=1
 		culture="thracian"
 	}
 	slaves=
 	{
-		amount=5
+		amount=3
 	}
 	slaves=
 	{

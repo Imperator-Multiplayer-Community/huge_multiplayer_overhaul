@@ -3,7 +3,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="treverian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -259,7 +259,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="treverian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -278,7 +278,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="treverian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
@@ -305,12 +305,7 @@
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
-	trade_goods="iron" #Siegener iron 
-	freemen={
-		amount=1
-		culture = ubian
-		religion = druidism
-	}
+	trade_goods="cattle"
 	tribesmen=
 	{
 		amount=2
@@ -321,9 +316,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="istvaeonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="hills"
 	trade_goods="cattle"
 	citizen=
@@ -345,10 +340,9 @@
 	religion="germanic_religion"
 	terrain="hills"
 	trade_goods="fur"
-	freemen={
+	freemen=
+	{
 		amount=1
-		culture = ubian
-		religion = druidism
 	}
 	tribesmen=
 	{
@@ -360,7 +354,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="treverian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -383,9 +377,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="istvaeonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="hills"
 	trade_goods="cloth"
 	citizen=
@@ -406,9 +400,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="istvaeonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="hills"
 	trade_goods="cloth"
 	citizen=
@@ -429,7 +423,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="treverian"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="forest"
@@ -505,7 +499,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="istvaeonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -524,7 +518,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="istvaeonic"
+	culture="suebian"
 	holy_site="omen_tuisto"
 	province_rank="settlement"
 	religion="germanic_religion"
@@ -548,7 +542,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -587,7 +581,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="istvaeonic"
+	culture="ingvaeonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -629,7 +623,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	port_building=1
 	province_rank="settlement"
 	religion="germanic_religion"
@@ -687,7 +681,7 @@
 {
 	barbarian_power=0
 	civilization_value=1
-	culture="ingvaeonic"
+	culture="saxonian"
 	holy_site="omen_baduhenna"
 	province_rank="settlement"
 	religion="germanic_religion"
@@ -711,7 +705,7 @@
 {
 	barbarian_power=0
 	civilization_value=1
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="marsh"
@@ -734,7 +728,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -761,7 +755,7 @@
 {
 	barbarian_power=0
 	civilization_value=1
-	culture="ingvaeonic"
+	culture="saxonian"
 	port_building=1
 	province_rank="settlement"
 	religion="germanic_religion"
@@ -777,7 +771,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -796,7 +790,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -815,7 +809,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -889,10 +883,10 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="belgae"
+	culture="istvaeonic"
 	port_building=1
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="plains"
 	trade_goods="fish"
 	citizen=
@@ -909,7 +903,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ingvaeonic"
+	culture="istvaeonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="marsh"
@@ -928,7 +922,7 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ingvaeonic"
+	culture="istvaeonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -947,18 +941,14 @@
 {
 	barbarian_power=0
 	civilization_value=11
-	culture="eburonian"
+	culture="belgae"
 	province_rank="settlement"
 	religion="druidism"
 	terrain="plains"
 	trade_goods="fish"
-	freemen=
-	{
-		amount=1
-	}
 	tribesmen=
 	{
-		amount=4
+		amount=2
 	}
 }
 #Chamoria
@@ -1011,11 +1001,11 @@
 	}
 	slaves=
 	{
-		amount=2
+		amount=1
 	}
 	tribesmen=
 	{
-		amount=4
+		amount=2
 	}
 }
 #Tubantia
@@ -1042,7 +1032,7 @@
 {
 	barbarian_power=0
 	civilization_value=1
-	culture="ingvaeonic"
+	culture="saxonian"
 	port_building=1
 	province_rank="settlement"
 	religion="germanic_religion"
@@ -1062,7 +1052,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	port_building=1
 	province_rank="settlement"
 	religion="germanic_religion"
@@ -1078,7 +1068,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1101,7 +1091,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1120,7 +1110,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="saxonian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1139,7 +1129,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1154,7 +1144,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1169,7 +1159,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1184,7 +1174,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1199,7 +1189,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1222,7 +1212,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1237,7 +1227,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1256,7 +1246,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	port_building=1
 	province_rank="settlement"
 	religion="germanic_religion"
@@ -1276,7 +1266,7 @@
 {
 	barbarian_power=0
 	civilization_value=1
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="marsh"
@@ -1291,7 +1281,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1310,7 +1300,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1329,7 +1319,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1344,7 +1334,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1382,7 +1372,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1420,7 +1410,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1458,7 +1448,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1477,9 +1467,9 @@
 {
 	barbarian_power=0
 	civilization_value=0
-	culture="ubian"
+	culture="istvaeonic"
 	province_rank="settlement"
-	religion="druidism"
+	religion="germanic_religion"
 	terrain="plains"
 	trade_goods="fish"
 	freemen=
@@ -1534,7 +1524,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="ingvaeonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1553,7 +1543,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1572,7 +1562,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1591,7 +1581,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1610,7 +1600,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1625,7 +1615,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1640,7 +1630,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1655,7 +1645,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1678,7 +1668,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1697,7 +1687,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1716,7 +1706,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1735,7 +1725,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1750,7 +1740,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1769,7 +1759,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1792,7 +1782,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1807,7 +1797,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1830,7 +1820,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1849,7 +1839,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="vandal"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1864,7 +1854,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="vandal"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1879,7 +1869,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="gothonic"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1898,7 +1888,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1917,7 +1907,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1936,7 +1926,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -1955,7 +1945,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1974,7 +1964,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -1989,7 +1979,7 @@
 {
 	barbarian_power=0
 	civilization_value=5
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="plains"
@@ -2004,7 +1994,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"
@@ -2019,7 +2009,7 @@
 {
 	barbarian_power=0
 	civilization_value=3
-	culture="irminonic"
+	culture="suebian"
 	province_rank="settlement"
 	religion="germanic_religion"
 	terrain="forest"

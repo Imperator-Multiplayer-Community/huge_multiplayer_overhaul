@@ -216,7 +216,7 @@
 	province_rank="settlement"
 	religion="judaism"
 	terrain="hills"
-	trade_goods="incense"
+	trade_goods="wood"
 	citizen=
 	{
 		amount=2
@@ -355,20 +355,28 @@
 4655=
 {
 	barbarian_power=0
-	civilization_value=10
-	culture="hadhrami"
-	port_building=1
-	province_rank="settlement"
-	religion="arabian_pantheon"
+	civilization_value=35
+	culture="saurashtran"
+	port_building=3
+	province_rank="city"
+	religion="buddhism"
 	terrain="plains"
 	trade_goods="fish"
+	nobles=
+	{
+		amount=9
+	}
+	citizen=
+	{
+		amount=15
+	}
 	freemen=
 	{
-		amount=3
+		amount=12
 	}
 	slaves=
 	{
-		amount=3
+		amount=9
 	}
 }
 #Dela
@@ -533,7 +541,7 @@
 	}
 	nobles=
 	{
-		amount=1
+		amount=2
 	}
 	citizen=
 	{
@@ -644,7 +652,7 @@
 	trade_goods="dates"
 	nobles=
 	{
-		amount=3
+		amount=4
 	}
 	citizen=
 	{
@@ -708,7 +716,7 @@
 	culture="minaean"
 	province_rank="settlement"
 	religion="arabian_pantheon"
-	terrain="plains"
+	terrain="farmland"
 	trade_goods="wild_game"
 	citizen=
 	{
@@ -820,7 +828,7 @@
 	trade_goods="cloth"
 	nobles=
 	{
-		amount=2
+		amount=3
 	}
 	citizen=
 	{
@@ -863,7 +871,7 @@
 	culture="hadhrami"
 	province_rank="city"
 	religion="arabian_pantheon"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="incense"
 	nobles=
 	{
@@ -871,7 +879,7 @@
 	}
 	citizen=
 	{
-		amount=5
+		amount=6
 	}
 	freemen=
 	{
@@ -919,11 +927,11 @@
 	holy_site="omen_sayin"
 	province_rank="city"
 	religion="arabian_pantheon"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="earthware"
 	nobles=
 	{
-		amount=1
+		amount=2
 	}
 	citizen=
 	{
@@ -951,7 +959,7 @@
 	culture="hadhrami"
 	province_rank="settlement"
 	religion="arabian_pantheon"
-	terrain="farmland"
+	terrain="plains"
 	trade_goods="cattle"
 	citizen=
 	{
@@ -1832,10 +1840,22 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="hadhrami"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="incense"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
 #Arabia Relicta
 7569=
@@ -1843,10 +1863,22 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="hadhrami"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="gems"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
 #Arabia Relicta
 7570=
@@ -1854,10 +1886,22 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="hadhrami"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="stone"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
 #Arabia Relicta
 7571=
@@ -1865,8 +1909,20 @@
 	barbarian_power=0
 	civilization_value=0
 	culture="hadhrami"
-	province_rank=""
+	province_rank="settlement"
 	religion="arabian_pantheon"
 	terrain="desert"
-	trade_goods=""
+	trade_goods="precious_metals"
+	freemen=
+	{
+		amount=1
+	}
+	slaves=
+	{
+		amount=1
+	}
+	tribesmen=
+	{
+		amount=4
+	}
 }
