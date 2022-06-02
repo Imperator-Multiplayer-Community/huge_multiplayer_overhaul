@@ -1,88 +1,120 @@
-﻿#Tanais
-8042=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
+﻿8042={ #Tanais
 	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tanais
-8043=
-{
-	barbarian_power=0
-	civilization_value=0
 	culture=""
-	province_rank=""
 	religion=""
-	terrain="riverine_terrain"
 	trade_goods=""
-}
-#Tanais
-8044=
-{
-	barbarian_power=0
 	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tanais
-8045=
-{
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Tanais
-8046=
-{
+
+8043={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Rha
-8047=
-{
+
+8044={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Rha
-8048=
-{
+
+8045={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Rha
-8049=
-{
+
+8046={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
+
+8047={ #Rha
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8048={ #Rha
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8049={ #Rha
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8582={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8583={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8584={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8585={ #Tanais
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+

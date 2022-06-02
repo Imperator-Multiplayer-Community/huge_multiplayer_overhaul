@@ -184,7 +184,7 @@ deity_hludana = { # FERTILITY
 	}
 }
 
-deity_alcis = { #changed to ECONOMY
+deity_alcis = { # CULTURE
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
@@ -196,19 +196,17 @@ deity_alcis = { #changed to ECONOMY
 			}
 		}
 	}
-	icon = deity_tribal_wealth
+	icon = deity_eloquence
 	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
 	omen = { monthly_corruption = omen_monthly_corruption } #Bonus from Omen
-	
+	on_activate = {
+		culture_apotheosis_characters_effect = yes
+	}
 	religion = germanic_religion
-	deity_category = economy 
+	deity_category = culture #This Deity uses a Culture Slot
 
 	deification_trigger = {
 		can_deify_trigger = yes
-	}
-	
-	on_activate = {
-		economy_income_effect = yes
 	}
 }
 
@@ -280,19 +278,19 @@ deity_irmin = {
 			}
 		}
 	}
-	icon = deity_tribal_eloquence
-	passive_modifier = { global_pop_assimilation_speed_modifier = deity_global_pop_assimilation_speed_modifier_svalue }
-	omen = { stability_monthly_change = omen_stability_monthly_change_svalue } #Bonus from Omen
+	icon = deity_tribal_wealth
+	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
+	omen = { fort_maintenance_cost = omen_fort_maintenance_cost_svalue } #Bonus from Omen
 	
 	religion = germanic_religion
-	deity_category = culture 
+	deity_category = economy 
 
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
 	
 	on_activate = {
-		culture_apotheosis_assimilate_effect = yes
+		economy_apotheosis_province_improvement_effect = yes
 	}
 }
 

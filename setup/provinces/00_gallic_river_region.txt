@@ -1,121 +1,110 @@
-﻿#Garumna
-7741=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
+﻿7741={ #Garumna
 	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Garumna
-7742=
-{
-	barbarian_power=0
-	civilization_value=0
 	culture=""
-	province_rank=""
 	religion=""
-	terrain="riverine_terrain"
 	trade_goods=""
-}
-#Garumna
-7766=
-{
-	barbarian_power=0
 	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Rhodanus
-7846=
-{
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Liger
-7864=
-{
+
+7742={ #Garumna
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Liger
-7865=
-{
+
+7766={ #Garumna
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Liger
-7866=
-{
+
+7846={ #Rhodanus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Liger
-7867=
-{
+
+7864={ #Liger
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Sequana
-7868=
-{
+
+7865={ #Liger
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Sequana
-7869=
-{
+
+7866={ #Liger
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Sequana
-7870=
-{
+
+7867={ #Liger
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
+
+7868={ #Sequana
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+7869={ #Sequana
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+7870={ #Sequana
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+

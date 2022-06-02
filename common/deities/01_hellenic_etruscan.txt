@@ -307,7 +307,7 @@ deity_hercle = {
 		}
 	}
 	icon = deity_war
-	passive_modifier = { army_maintenance_cost = -0.05 }
+	passive_modifier = { army_maintenance_cost = deity_army_maintenance_cost_svalue }
 	omen = { discipline = omen_discipline_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = war #This Deity uses a War slot.

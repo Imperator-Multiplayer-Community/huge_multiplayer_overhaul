@@ -12,7 +12,7 @@ deity_gurzil = { # WAR
 			}
 		}
 	}
-	icon = deity_war
+	icon = deity_tribal_war
 	passive_modifier = { discipline = deity_discipline_svalue }
 	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
 	on_activate = {
@@ -38,7 +38,7 @@ deity_shaheded = { # ECONOMY
 			}
 		}
 	}
-	icon = deity_wealth
+	icon = deity_tribal_wealth
 	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
 	omen = { naval_morale_modifier = omen_naval_morale_modifier_svalue } #Bonus from Omen
 	on_activate = {
@@ -65,7 +65,7 @@ deity_tannit = { # CULTURE
 			}
 		}
 	}
-	icon = deity_eloquence
+	icon = deity_tribal_eloquence
 	passive_modifier = { research_points_modifier = deity_research_points_modifier_svalue }
 	omen = { global_monthly_civilization = omen_global_monthly_civilization_svalue } #Bonus from Omen
 	on_activate = {
@@ -91,7 +91,7 @@ deity_nanna_tala = { # FERTILITY
 			}
 		}
 	}
-	icon = deity_love
+	icon = deity_tribal_love
 	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
 	omen = { global_freemen_happyness = omen_global_freemen_happiness_svalue } #Bonus from Omen
 	on_activate = {
@@ -117,7 +117,7 @@ deity_sinifere = { # WAR
 			}
 		}
 	}
-	icon = deity_war
+	icon = deity_tribal_war
 	passive_modifier = { monthly_experience_gain = deity_monthly_experience_gain_svalue }
 	omen = { land_morale_modifier = omen_land_morale_modifier_svalue } #Bonus from Omen
 	on_activate = {

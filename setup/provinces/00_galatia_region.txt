@@ -1,2813 +1,2302 @@
-﻿#Laranda
-169=
-{
-	barbarian_power=0
-	civilization_value=15
+﻿169={ #Laranda
+	terrain="plains"
 	culture="isaurian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="plains"
 	trade_goods="cloth"
-	citizen=
-	{
+	civilization_value=15
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="lycaonian"
-	}
-	slaves=
-	{
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
+	}
+	slaves={
 		culture="lycaonian"
+		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="lycaonian"
+		amount=1
 	}
 }
-#Kongoustos
-174=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="lycaonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+174={ #Kongoustos
 	terrain="plains"
+	culture="lycaonian"
+	religion="anatolian_religion"
 	trade_goods="salt"
-	freemen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="phrygian"
-	}
-	slaves=
-	{
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
+	}
+	tribesmen={
 		culture="morimenian"
+		amount=1
 	}
 }
-#Germa
-175=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+175={ #Germa
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="cattle"
-	citizen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Ekdaoumaoua
-176=
-{
-	barbarian_power=0
-	civilization_value=26
+
+176={ #Ekdaumaua
+	terrain="plains"
 	culture="phrygian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="plains"
 	trade_goods="horses"
-	freemen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="morimenian"
-	}
-	slaves=
-	{
 		amount=1
+	}
+	slaves={
 		culture="lycaonian"
+		amount=1
 	}
 }
-#Kindyria
-177=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="lycaonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+177={ #Kindyria
 	terrain="plains"
+	culture="lycaonian"
+	religion="anatolian_religion"
 	trade_goods="wild_game"
-	citizen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="hebrew"
 		religion="judaism"
+		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="phrygian"
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
 		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
 		culture="oroandian"
+		amount=1
 	}
 }
-#Tyriaion
-178=
-{
-	barbarian_power=0
-	civilization_value=26
+
+178={ #Tyriaion
+	terrain="plains"
 	culture="oroandian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="plains"
 	trade_goods="cattle"
-	citizen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	slaves=
-	{
-		amount=1
+	slaves={
 		culture="phrygian"
-	}
-	tribesmen=
-	{
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
+	}
+	tribesmen={
 		culture="phrygian"
+		amount=1
 	}
 }
-#Okenoi
-179=
-{
-	barbarian_power=0
-	civilization_value=22
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+179={ #Philomelion
 	terrain="marsh"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="wood"
-	citizen=
-	{
+	civilization_value=22
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="oroandian"
+		amount=1
 	}
 }
-#Keissia
-180=
-{
-	barbarian_power=0
-	civilization_value=26
+
+180={ #Keissia
+	terrain="plains"
 	culture="lycaonian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="plains"
 	trade_goods="leather"
-	freemen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=2
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="phrygian"
-	}
-	slaves=
-	{
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
+		amount=1
+	}
+	tribesmen={
 		amount=1
 	}
 }
-#Klaneos
-181=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+181={ #Klaneos
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="vegetables"
-	freemen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="lycaonian"
+		amount=1
 	}
 }
-#Aurokra
-182=
-{
-	barbarian_power=0
-	civilization_value=22
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+182={ #Aurokra
 	terrain="marsh"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="wood"
-	citizen=
-	{
+	civilization_value=22
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	slaves=
-	{
+	slaves={
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
 }
-#Abbasion
-183=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+183={ #Amorion
 	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="vegetables"
-	citizen=
-	{
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=3
 	}
-	slaves=
-	{
+	slaves={
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Dokimeion
-184=
-{
-	barbarian_power=0
-	civilization_value=29
-	culture="phrygian"
-	province_rank="city"
-	religion="anatolian_religion"
+
+184={ #Dokimeion
 	terrain="forest"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="marble"
-	citizen=
-	{
-		amount=2
-		religion="roman_pantheon"
-	}
-	citizen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	citizen=
-	{
-		amount=1
-		culture="macedonian"
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=2
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	freemen=
-	{
-		amount=2
-		culture="macedonian"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Ipsos
-185=
-{
+	civilization_value=29
 	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="wood"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Eukarpia
-186=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="stone"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-}
-#Kidyessos
-187=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="forest"
-	trade_goods="cattle"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-}
-#Pessinous
-188=
-{
-	barbarian_power=0
-	civilization_value=28
-	culture="phrygian"
-	holy_site="omen_cybele"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="cattle"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=3
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Gordion
-189=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="earthware"
-	citizen=
-	{
-		amount=1
-	}
-	citizen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-}
-#Kinna
-190=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="salt"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-}
-#Ouetissos
-191=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="horses"
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-}
-#Kyballon
-192=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="cloth"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Gorbeous
-193=
-{
-	barbarian_power=0
-	civilization_value=18
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="leather"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-}
-#Ankyra
-194=
-{
-	barbarian_power=0
-	civilization_value=25
-	culture="phrygian"
 	province_rank="city"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="earthware"
-	nobles=
-	{
-		amount=1
+	citizen={
+		religion="roman_pantheon"
+		amount=2
+	}
+	citizen={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	citizen=
-	{
+	citizen={
+		culture="macedonian"
+		religion="roman_pantheon"
+		amount=1
+	}
+	freemen={
+		religion="roman_pantheon"
+		amount=2
+	}
+	freemen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		culture="macedonian"
+		religion="roman_pantheon"
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+185={ #Ipsos
+	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="wood"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+186={ #Eukarpia
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="stone"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+187={ #Kidyessos
+	terrain="forest"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="cattle"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+188={ #Pessinous
+	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="cattle"
+	civilization_value=28
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=3
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+	holy_site=omen_cybele
+}
+
+189={ #Gordion
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="earthware"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+}
+
+190={ #Kinna
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="salt"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="lycaonian"
+		amount=1
+	}
+}
+
+191={ #Ouetissos
+	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="horses"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="lycaonian"
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="lycaonian"
+		amount=1
+	}
+}
+
+192={ #Kybeleion
+	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="cloth"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+193={ #Gorbeous
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="leather"
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+194={ #Ankyra
+	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="earthware"
+	civilization_value=25
+	barbarian_power=0
+	province_rank="city"
+	nobles={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	citizen={
 		amount=5
 	}
-	citizen=
-	{
-		amount=1
+	citizen={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=7
 	}
-	tribesmen=
-	{
-		amount=2
+	tribesmen={
 		culture="paphlagonian"
+		amount=2
 	}
-	slaves=
-	{
+	slaves={
 		amount=3
 	}
-	slaves=
-	{
-		amount=2
+	slaves={
 		culture="paphlagonian"
-	}
-	tribesmen=
-	{
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
+	}
+	tribesmen={
 		culture="paphlagonian"
+		amount=2
 	}
 }
-#Malos
-195=
-{
-	barbarian_power=0
-	civilization_value=18
-	culture="paphlagonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+195={ #Malos
 	terrain="hills"
+	culture="paphlagonian"
+	religion="anatolian_religion"
 	trade_goods="wood"
-	freemen=
-	{
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="phrygian"
+		amount=1
 	}
 }
-#Klossama
-196=
-{
-	barbarian_power=0
-	civilization_value=20
-	culture="paphlagonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+196={ #Klossama
 	terrain="plains"
+	culture="paphlagonian"
+	religion="anatolian_religion"
 	trade_goods="vegetables"
-	freemen=
-	{
+	civilization_value=20
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=2
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="phrygian"
+		amount=1
 	}
 }
-#Sarmalios
-197=
-{
-	barbarian_power=0
-	civilization_value=20
-	culture="paphlagonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+197={ #Sarmalios
 	terrain="plains"
+	culture="paphlagonian"
+	religion="anatolian_religion"
 	trade_goods="wine"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-}
-#Doudousa
-202=
-{
-	barbarian_power=0
 	civilization_value=20
-	culture="phrygian"
+	barbarian_power=0
 	province_rank="settlement"
-	religion="anatolian_religion"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="phrygian"
+		amount=1
+	}
+}
+
+202={ #Doudousa
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="grain"
-	freemen=
-	{
+	civilization_value=20
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="paphlagonian"
-	}
-	slaves=
-	{
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
+	}
+	tribesmen={
 		culture="cappadocian"
-	}
-	tribesmen=
-	{
 		amount=1
+	}
+	tribesmen={
 		culture="morimenian"
+		amount=1
 	}
 }
-#Aspona
-204=
-{
-	barbarian_power=0
-	civilization_value=18
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+204={ #Aspona
 	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="wood"
-	freemen=
-	{
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="lycaonian"
-	}
-	tribesmen=
-	{
 		amount=1
+	}
+	tribesmen={
 		culture="cappadocian"
-	}
-	tribesmen=
-	{
 		amount=1
+	}
+	tribesmen={
 		culture="morimenian"
+		amount=1
 	}
 }
-#Bloukion
-222=
-{
-	barbarian_power=0
-	civilization_value=18
+
+222={ #Bloukion
+	terrain="hills"
 	culture="paphlagonian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="hills"
 	trade_goods="vegetables"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-		culture="phrygian"
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-}
-#Mnezos
-226=
-{
-	barbarian_power=0
 	civilization_value=18
-	culture="phrygian"
+	barbarian_power=0
 	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="horses"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
+	freemen={
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
+		amount=1
+	}
+	slaves={
+		culture="phrygian"
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="phrygian"
+		amount=1
+	}
+}
+
+226={ #Mnezos
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="horses"
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
 		amount=2
 	}
 }
-#Trokna
-227=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+227={ #Trokna
 	terrain="forest"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="wood"
-	freemen=
-	{
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=3
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Androna
-228=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+228={ #Androna
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="cloth"
-	citizen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Orbana
-229=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+229={ #Orbana
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="cattle"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Thymbrion
-230=
-{
-	barbarian_power=0
 	civilization_value=26
-	culture="oroandian"
+	barbarian_power=0
 	province_rank="settlement"
-	religion="anatolian_religion"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+230={ #Thymbrion
 	terrain="plains"
+	culture="oroandian"
+	religion="anatolian_religion"
 	trade_goods="grain"
-	freemen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-}
-#Arinna
-231=
-{
+	civilization_value=26
 	barbarian_power=0
-	civilization_value=18
-	culture="paphlagonian"
 	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="wood"
-	freemen=
-	{
+	freemen={
 		amount=1
 	}
-	freemen=
-	{
-		amount=1
-		culture="cappadocian"
-	}
-	slaves=
-	{
+	freemen={
+		culture="phrygian"
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
-		culture="cappadocian"
-	}
-}
-#Kadoi
-302=
-{
-	barbarian_power=0
-	civilization_value=29
-	culture="phrygian"
-	holy_site="omen_attis"
-	province_rank="city"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="leather"
-	citizen=
-	{
+	tribesmen={
 		amount=2
 	}
-	citizen=
-	{
+	tribesmen={
+		culture="phrygian"
 		amount=1
+	}
+}
+
+231={ #Arinna
+	terrain="hills"
+	culture="paphlagonian"
+	religion="anatolian_religion"
+	trade_goods="wood"
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	freemen={
+		culture="cappadocian"
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="cappadocian"
+		amount=1
+	}
+}
+
+302={ #Kadoi
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="leather"
+	civilization_value=29
+	barbarian_power=0
+	province_rank="city"
+	citizen={
+		amount=2
+	}
+	citizen={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=4
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="mysian"
+		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=2
 	}
-	slaves=
-	{
-		amount=1
+	slaves={
 		culture="mysian"
+		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="lydian"
-	}
-	tribesmen=
-	{
 		amount=1
-		culture="mysian"
 	}
+	tribesmen={
+		culture="mysian"
+		amount=1
+	}
+	holy_site=omen_attis
 }
-#Bageis
-307=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+307={ #Bageis
 	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="precious_metals"
-	freemen=
-	{
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=2
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="lydian"
-	}
-	slaves=
-	{
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
+	}
+	tribesmen={
 		culture="mysian"
+		amount=1
 	}
 }
-#Blaoundos
-308=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+308={ #Blaundos
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="leather"
-	freemen=
-	{
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	slaves=
-	{
-		amount=1
+	slaves={
 		culture="lydian"
-	}
-	tribesmen=
-	{
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
+	}
+	tribesmen={
 		culture="mysian"
+		amount=1
 	}
 }
-#Akmoneia
-309=
-{
-	barbarian_power=0
-	civilization_value=29
-	culture="phrygian"
-	province_rank="city"
-	religion="anatolian_religion"
+
+309={ #Akmonia
 	terrain="forest"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="iron"
-	nobles=
-	{
-		amount=1
+	civilization_value=29
+	barbarian_power=0
+	province_rank="city"
+	nobles={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	citizen=
-	{
+	citizen={
 		amount=2
 	}
-	citizen=
-	{
-		amount=1
+	citizen={
 		culture="lydian"
+		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=3
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="lydian"
+		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
+	tribesmen={
 		culture="lydian"
+		amount=1
 	}
 }
-#Pepouza
-311=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+311={ #Pepouza
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="cloth"
-	freemen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-		culture="carian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="carian"
-	}
-}
-#Appia
-312=
-{
+	civilization_value=26
 	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
 	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="wood"
-	freemen=
-	{
+	freemen={
 		amount=1
 	}
-	slaves=
-	{
+	freemen={
+		culture="carian"
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="carian"
+		amount=1
+	}
+}
+
+312={ #Appia
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="wood"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Metropolis Phrygias
-313=
-{
-	barbarian_power=0
-	civilization_value=29
-	culture="phrygian"
-	province_rank="city"
-	religion="anatolian_religion"
+
+313={ #Metropolis Phrygias
 	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="wood"
-	citizen=
-	{
+	civilization_value=29
+	barbarian_power=0
+	province_rank="city"
+	citizen={
 		amount=1
 	}
-	citizen=
-	{
-		amount=1
+	citizen={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=3
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Nakoleia
-314=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+314={ #Nakoleia
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="cattle"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Dorylaion
-315=
-{
-	barbarian_power=0
-	civilization_value=29
-	culture="phrygian"
-	province_rank="city"
-	religion="anatolian_religion"
-	terrain="forest"
-	trade_goods="wood"
-	citizen=
-	{
-		amount=1
-	}
-	citizen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	freemen=
-	{
-		amount=3
-	}
-	freemen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	slaves=
-	{
-		amount=3
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Midaion
-316=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="forest"
-	trade_goods="wood"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Kotyaion
-317=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="forest"
-	trade_goods="grain"
-	citizen=
-	{
-		amount=1
-	}
-	citizen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	freemen=
-	{
-		amount=3
-	}
-	freemen=
-	{
-		amount=1
-		culture="bithynian"
-		religion="roman_pantheon"
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		religion="roman_pantheon"
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="bithynian"
-	}
-}
-#Meiros
-318=
-{
-	barbarian_power=0
 	civilization_value=26
-	culture="phrygian"
+	barbarian_power=0
 	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+315={ #Dorylaion
+	terrain="forest"
+	culture="phrygian"
 	religion="anatolian_religion"
+	trade_goods="wood"
+	civilization_value=29
+	barbarian_power=0
+	province_rank="city"
+	citizen={
+		amount=1
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		amount=3
+	}
+	freemen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	slaves={
+		amount=3
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+316={ #Midaeion
+	terrain="forest"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="wood"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+317={ #Kotyaion
+	terrain="forest"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="grain"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		amount=3
+	}
+	freemen={
+		culture="bithynian"
+		religion="roman_pantheon"
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+	tribesmen={
+		culture="bithynian"
+		amount=1
+	}
+}
+
+318={ #Meiros
 	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="vegetables"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Aizanoi
-319=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="cattle"
-	freemen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-		culture="mysian"
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="mysian"
-	}
-}
-#Orkistos
-328=
-{
-	barbarian_power=0
 	civilization_value=26
-	culture="phrygian"
+	barbarian_power=0
 	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="cattle"
-	freemen=
-	{
+	freemen={
+		amount=1
+	}
+	slaves={
 		amount=2
 	}
-	slaves=
-	{
+	tribesmen={
+		amount=2
+	}
+}
+
+319={ #Aizanoi
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="cattle"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	freemen={
+		culture="mysian"
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="mysian"
+		amount=1
+	}
+}
+
+328={ #Orkistos
+	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="cattle"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
 		amount=3
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
 }
-#Elouza
-339=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+339={ #Elouza
 	terrain="forest"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="iron"
-	freemen=
-	{
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=3
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Azareis
-1777=
-{
-	barbarian_power=0
-	civilization_value=26
+
+1777={ #Azareis
+	terrain="plains"
 	culture="phrygian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="plains"
 	trade_goods="grain"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Artanada
-1780=
-{
-	barbarian_power=0
-	civilization_value=13
-	culture="isaurian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="cattle"
-	freemen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-}
-#Ilistra
-1785=
-{
-	barbarian_power=0
-	civilization_value=15
-	culture="isaurian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="leather"
-	freemen=
-	{
-		amount=2
-		culture="lycaonian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Taouion
-1825=
-{
-	barbarian_power=0
-	civilization_value=18
-	culture="paphlagonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="leather"
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="cappadocian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-		culture="phrygian"
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-}
-#Posdala
-1841=
-{
-	barbarian_power=0
-	civilization_value=18
-	culture="paphlagonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="forest"
-	trade_goods="cloth"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="cappadocian"
-	}
-}
-#Perta
-1914=
-{
-	barbarian_power=0
 	civilization_value=26
-	culture="lycaonian"
+	barbarian_power=0
 	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+1780={ #Artanada
+	terrain="hills"
+	culture="isaurian"
 	religion="anatolian_religion"
+	trade_goods="cattle"
+	civilization_value=13
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	freemen={
+		culture="lycaonian"
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		culture="lycaonian"
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+}
+
+1784={ #Klibanos
+	terrain="hills"
+	culture="lalasian"
+	religion="anatolian_religion"
+	trade_goods="stone"
+	civilization_value=13
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="isaurian"
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=1
+	}
+}
+
+1785={ #Ilistra
 	terrain="plains"
-	trade_goods="wine"
-	citizen=
-	{
+	culture="isaurian"
+	religion="anatolian_religion"
+	trade_goods="leather"
+	civilization_value=15
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		culture="lycaonian"
+		amount=2
+	}
+	slaves={
 		amount=1
 	}
-	freemen=
-	{
+	tribesmen={
+		amount=2
+	}
+}
+
+1825={ #Taouion
+	terrain="hills"
+	culture="paphlagonian"
+	religion="anatolian_religion"
+	trade_goods="leather"
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="cappadocian"
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
+	slaves={
 		culture="phrygian"
-	}
-	tribesmen=
-	{
 		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="phrygian"
+		amount=1
+	}
+}
+
+1841={ #Posdala
+	terrain="forest"
+	culture="paphlagonian"
+	religion="anatolian_religion"
+	trade_goods="cloth"
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="cappadocian"
+		amount=1
+	}
+}
+
+1914={ #Perta
+	terrain="plains"
+	culture="lycaonian"
+	religion="anatolian_religion"
+	trade_goods="wine"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="phrygian"
+		amount=1
+	}
+	tribesmen={
 		culture="morimenian"
+		amount=1
 	}
 }
-#Kanna
-1916=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="lycaonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+1916={ #Kanna
 	terrain="plains"
+	culture="lycaonian"
+	religion="anatolian_religion"
 	trade_goods="horses"
-	freemen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="isaurian"
-	}
-}
-#Homonadeis
-1918=
-{
+	civilization_value=26
 	barbarian_power=0
-	civilization_value=15
-	culture="isaurian"
 	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="cloth"
-	citizen=
-	{
+	freemen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
+		culture="phrygian"
+		amount=1
+	}
+	slaves={
 		amount=2
 	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
+		culture="isaurian"
 		amount=1
-		culture="oroandian"
 	}
 }
-#Isaura
-1919=
-{
-	barbarian_power=0
-	civilization_value=20
-	culture="isaurian"
-	province_rank="city"
-	religion="anatolian_religion"
+
+1918={ #Homonadeis
 	terrain="plains"
+	culture="isaurian"
+	religion="anatolian_religion"
+	trade_goods="cloth"
+	civilization_value=15
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="oroandian"
+		amount=1
+	}
+}
+
+1919={ #Isaura
+	terrain="plains"
+	culture="isaurian"
+	religion="anatolian_religion"
 	trade_goods="earthware"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-}
-#Ouasada
-1920=
-{
-	barbarian_power=0
 	civilization_value=20
-	culture="oroandian"
+	barbarian_power=0
 	province_rank="city"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="wine"
-	citizen=
-	{
+	citizen={
 		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	tribesmen=
-	{
-		amount=1
-		culture="isaurian"
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=3
-		culture="isaurian"
-	}
-}
-#Amblada
-1921=
-{
-	barbarian_power=0
-	civilization_value=13
-	culture="oroandian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="cattle"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="pisidian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="pisidian"
-	}
-}
-#Misteia
-1922=
-{
-	barbarian_power=0
-	civilization_value=15
-	culture="oroandian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="vegetables"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="pisidian"
-	}
-}
-#Pappa
-1924=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="oroandian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="cloth"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Tymbriada
-1925=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="pisidian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="wine"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Anaboura
-1926=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="oroandian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="cloth"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-		culture="pisidian"
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="pisidian"
-	}
-}
-#Men Askainos
-1928=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="pisidian"
-	holy_site="omen_men"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="wood"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-	slaves=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-}
-#Mordiaion
-1930=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="milyadian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="wood"
-	citizen=
-	{
-		amount=1
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=2
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="pisidian"
-	}
-}
-#Ikonion
-1934=
-{
-	barbarian_power=0
-	civilization_value=35
-	culture="lycaonian"
-	province_rank="city"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="cloth"
-	citizen=
-	{
-		amount=2
-	}
-	citizen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	freemen=
-	{
-		amount=5
-	}
-	freemen=
-	{
-		amount=1
-		culture="isaurian"
-	}
-	freemen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	slaves=
-	{
-		amount=5
-	}
-	slaves=
-	{
-		amount=1
-		culture="oroandian"
-	}
-	tribesmen=
-	{
-		amount=3
-	}
-	tribesmen=
-	{
-		amount=2
+	freemen={
 		culture="lycaonian"
-	}
-	tribesmen=
-	{
 		amount=1
-		culture="oroandian"
+	}
+	slaves={
+		amount=1
+	}
+	slaves={
+		culture="lycaonian"
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="lycaonian"
+		amount=1
 	}
 }
-#Kelainai
-1936=
-{
-	barbarian_power=0
-	civilization_value=29
-	culture="phrygian"
-	province_rank="city"
+
+1920={ #Ouasada
+	terrain="plains"
+	culture="oroandian"
 	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="cloth"
-	nobles=
-	{
+	trade_goods="wine"
+	civilization_value=20
+	barbarian_power=0
+	province_rank="city"
+	citizen={
 		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
 	}
-	nobles=
-	{
-		amount=1
-		culture="macedonian"
-		religion="roman_pantheon"
-	}
-	citizen=
-	{
-		amount=3
-	}
-	citizen=
-	{
-		amount=1
-		culture="macedonian"
-		religion="roman_pantheon"
-	}
-	citizen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	freemen=
-	{
-		amount=3
-	}
-	freemen=
-	{
-		amount=1
-		culture="milyadian"
-	}
-	freemen=
-	{
+	freemen={
 		amount=2
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=3
+	}
+}
+
+1922={ #Misteia
+	terrain="plains"
+	culture="oroandian"
+	religion="anatolian_religion"
+	trade_goods="vegetables"
+	civilization_value=15
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="pisidian"
+		amount=1
+	}
+}
+
+1924={ #Pappa
+	terrain="plains"
+	culture="oroandian"
+	religion="anatolian_religion"
+	trade_goods="cloth"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+1925={ #Tymbrias
+	terrain="plains"
+	culture="pisidian"
+	religion="anatolian_religion"
+	trade_goods="wine"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+1926={ #Anaboura
+	terrain="hills"
+	culture="oroandian"
+	religion="anatolian_religion"
+	trade_goods="cloth"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	slaves={
+		culture="pisidian"
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="pisidian"
+		amount=1
+	}
+}
+
+1928={ #Tyita
+	terrain="hills"
+	culture="pisidian"
+	religion="anatolian_religion"
+	trade_goods="wood"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="phrygian"
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="phrygian"
+		amount=1
+	}
+	holy_site=omen_men
+}
+
+1930={ #Mordiaion
+	terrain="hills"
+	culture="milyadian"
+	religion="anatolian_religion"
+	trade_goods="wood"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		religion="roman_pantheon"
+		amount=1
+	}
+	freemen={
+		religion="roman_pantheon"
+		amount=2
+	}
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="phrygian"
+		amount=1
+	}
+	tribesmen={
+		culture="pisidian"
+		amount=1
+	}
+}
+
+1934={ #Ikonion
+	terrain="plains"
+	culture="lycaonian"
+	religion="anatolian_religion"
+	trade_goods="cloth"
+	civilization_value=35
+	barbarian_power=0
+	province_rank="city"
+	citizen={
+		amount=2
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		amount=5
+	}
+	freemen={
+		culture="isaurian"
+		amount=1
+	}
+	freemen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	slaves={
+		amount=5
+	}
+	slaves={
+		culture="oroandian"
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+	tribesmen={
+		culture="lycaonian"
+		amount=2
+	}
+	tribesmen={
+		culture="oroandian"
+		amount=1
+	}
+}
+
+1936={ #Kelainai
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="cloth"
+	civilization_value=29
+	barbarian_power=0
+	province_rank="city"
+	nobles={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	nobles={
 		culture="macedonian"
 		religion="roman_pantheon"
+		amount=1
 	}
-	slaves=
-	{
+	citizen={
+		amount=3
+	}
+	citizen={
+		culture="macedonian"
+		religion="roman_pantheon"
+		amount=1
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		amount=3
+	}
+	freemen={
+		culture="milyadian"
+		amount=1
+	}
+	freemen={
+		culture="macedonian"
+		religion="roman_pantheon"
+		amount=2
+	}
+	slaves={
 		amount=4
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=3
 	}
-	tribesmen=
-	{
-		amount=2
+	tribesmen={
 		culture="milyadian"
+		amount=2
 	}
 }
-#Euphorbion
-1937=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+1937={ #Euphorbion
 	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="cloth"
-	citizen=
-	{
-		amount=1
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		religion="roman_pantheon"
+		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	freemen=
-	{
-		amount=1
+	freemen={
 		culture="phrygian"
-	}
-	slaves=
-	{
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
+	}
+	slaves={
 		religion="roman_pantheon"
-	}
-	tribesmen=
-	{
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
+	}
+	tribesmen={
 		culture="phrygian"
+		amount=1
 	}
 }
-#Prymnessos
-1939=
-{
-	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+1939={ #Prymnessos
 	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="vegetables"
-	citizen=
-	{
-		amount=2
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		religion="roman_pantheon"
+		amount=2
 	}
-	freemen=
-	{
+	freemen={
 		amount=3
 	}
-	slaves=
-	{
+	slaves={
 		amount=2
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=2
 	}
 }
-#Synnada
-1941=
-{
-	barbarian_power=0
-	civilization_value=29
-	culture="phrygian"
-	province_rank="city"
-	religion="anatolian_religion"
+
+1941={ #Synnada
 	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
 	trade_goods="olive"
-	nobles=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	nobles=
-	{
-		amount=1
-		religion="roman_pantheon"
-	}
-	citizen=
-	{
-		amount=3
-		religion="roman_pantheon"
-	}
-	citizen=
-	{
-		amount=1
-		culture="macedonian"
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=2
-		culture="macedonian"
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=2
-		religion="roman_pantheon"
-	}
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=3
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Peltai
-1942=
-{
+	civilization_value=29
 	barbarian_power=0
-	civilization_value=24
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="vegetables"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-}
-#Sanaos
-1943=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="wood"
-	citizen=
-	{
-		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
-	}
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="carian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="milyadian"
-	}
-}
-#Lounda
-1944=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="phrygian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="vegetables"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="carian"
-	}
-}
-#Kolossai
-1945=
-{
-	barbarian_power=0
-	civilization_value=31
-	culture="phrygian"
 	province_rank="city"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="wood"
-	nobles=
-	{
-		amount=1
+	nobles={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	citizen=
-	{
-		amount=2
+	nobles={
+		religion="roman_pantheon"
+		amount=1
 	}
-	freemen=
-	{
+	citizen={
+		religion="roman_pantheon"
 		amount=3
 	}
-	freemen=
-	{
+	citizen={
+		culture="macedonian"
+		religion="roman_pantheon"
 		amount=1
-		culture="pasargadi"
-		religion="zoroaster"
 	}
-	slaves=
-	{
+	freemen={
+		culture="macedonian"
+		religion="roman_pantheon"
 		amount=2
 	}
-	slaves=
-	{
-		amount=1
-		culture="milyadian"
-	}
-	slaves=
-	{
-		amount=2
-		culture="cabalian"
-	}
-	tribesmen=
-	{
+	freemen={
+		religion="roman_pantheon"
 		amount=2
 	}
-	tribesmen=
-	{
-		amount=1
-		culture="cabalian"
+	freemen={
+		amount=2
 	}
-	tribesmen=
-	{
-		amount=1
-		culture="milyadian"
+	slaves={
+		amount=3
+	}
+	tribesmen={
+		amount=2
 	}
 }
-#Hierapolis
-1946=
-{
-	barbarian_power=0
-	civilization_value=26
+
+1942={ #Peltai
+	terrain="hills"
 	culture="phrygian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="cattle"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=3
-	}
-	freemen=
-	{
-		amount=1
-		culture="carian"
-	}
-	slaves=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-		culture="carian"
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="carian"
-	}
-}
-#Derbe
-1950=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="lycaonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="leather"
-	citizen=
-	{
-		amount=1
-	}
-	freemen=
-	{
-		amount=2
-	}
-	freemen=
-	{
-		amount=1
-		culture="isaurian"
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="isaurian"
-	}
-}
-#Thebasa
-1955=
-{
-	barbarian_power=0
-	civilization_value=15
-	culture="isaurian"
-	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="plains"
-	trade_goods="honey"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-}
-#Lystra
-1965=
-{
-	barbarian_power=0
+	trade_goods="vegetables"
 	civilization_value=24
-	culture="isaurian"
+	barbarian_power=0
 	province_rank="settlement"
-	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="stone"
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	tribesmen=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=1
-		culture="lycaonian"
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="oroandian"
+	tribesmen={
+		amount=2
 	}
 }
-#Soatra
-1971=
-{
-	barbarian_power=0
-	civilization_value=26
-	culture="lycaonian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+1943={ #Sanaos
 	terrain="plains"
-	trade_goods="salt"
-	freemen=
-	{
-		amount=2
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="phrygian"
-	}
-}
-#Barata
-1975=
-{
-	barbarian_power=0
-	civilization_value=28
-	culture="lycaonian"
-	province_rank="settlement"
+	culture="phrygian"
 	religion="anatolian_religion"
-	terrain="farmland"
-	trade_goods="cattle"
-	citizen=
-	{
-		amount=1
-	}
-	citizen=
-	{
-		amount=1
+	trade_goods="wood"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
 		culture="pasargadi"
 		religion="zoroaster"
+		amount=1
 	}
-	freemen=
-	{
+	freemen={
 		amount=2
 	}
-	freemen=
-	{
+	freemen={
+		culture="carian"
 		amount=1
-		culture="isaurian"
 	}
-	slaves=
-	{
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="milyadian"
+		amount=1
+	}
+}
+
+1944={ #Lounda
+	terrain="plains"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="vegetables"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=2
 	}
-	tribesmen=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
-		culture="isaurian"
+	}
+	tribesmen={
+		culture="carian"
+		amount=1
 	}
 }
-#Kagrai
-7961=
-{
-	barbarian_power=0
-	civilization_value=13
-	culture="oroandian"
-	province_rank="settlement"
-	religion="anatolian_religion"
+
+1945={ #Kolossai
 	terrain="hills"
-	trade_goods="leather"
-	freemen=
-	{
-		amount=1
-	}
-	slaves=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="pisidian"
-	}
-	tribesmen=
-	{
-		amount=1
-		culture="isaurian"
-	}
-}
-#Adrasos
-7963=
-{
-	barbarian_power=0
-	civilization_value=13
-	culture="lalasian"
-	province_rank="settlement"
+	culture="phrygian"
 	religion="anatolian_religion"
-	terrain="hills"
-	trade_goods="leather"
-	freemen=
-	{
+	trade_goods="wood"
+	civilization_value=31
+	barbarian_power=0
+	province_rank="city"
+	nobles={
+		culture="pasargadi"
+		religion="zoroaster"
 		amount=1
 	}
-	slaves=
-	{
+	citizen={
+		amount=2
+	}
+	freemen={
+		amount=3
+	}
+	freemen={
+		culture="pasargadi"
+		religion="zoroaster"
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
+		amount=2
+	}
+	slaves={
+		culture="milyadian"
 		amount=1
 	}
-	tribesmen=
-	{
+	slaves={
+		culture="cabalian"
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="cabalian"
 		amount=1
-		culture="isaurian"
+	}
+	tribesmen={
+		culture="milyadian"
+		amount=1
 	}
 }
-#Koropissos
-7964=
-{
+
+1946={ #Hieropolis
+	terrain="hills"
+	culture="phrygian"
+	religion="anatolian_religion"
+	trade_goods="cattle"
+	civilization_value=26
 	barbarian_power=0
-	civilization_value=11
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=3
+	}
+	freemen={
+		culture="carian"
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	slaves={
+		culture="carian"
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="carian"
+		amount=1
+	}
+}
+
+1950={ #Derbe
+	terrain="plains"
+	culture="lycaonian"
+	religion="anatolian_religion"
+	trade_goods="leather"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="isaurian"
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=1
+	}
+}
+
+1955={ #Thebasa
+	terrain="plains"
 	culture="isaurian"
-	province_rank="settlement"
 	religion="anatolian_religion"
-	terrain="mountain"
-	trade_goods="stone"
-	freemen=
-	{
+	trade_goods="honey"
+	civilization_value=15
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
 		amount=1
 	}
-	slaves=
-	{
+	slaves={
 		amount=1
 	}
-	tribesmen=
-	{
-		amount=2
-	}
-	tribesmen=
-	{
+	tribesmen={
 		amount=1
-		culture="isaurian"
+	}
+	tribesmen={
+		culture="lycaonian"
+		amount=1
 	}
 }
+
+1965={ #Lystra
+	terrain="hills"
+	culture="isaurian"
+	religion="anatolian_religion"
+	trade_goods="stone"
+	civilization_value=24
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="lycaonian"
+		amount=1
+	}
+	tribesmen={
+		culture="oroandian"
+		amount=1
+	}
+}
+
+1971={ #Soatra
+	terrain="plains"
+	culture="lycaonian"
+	religion="anatolian_religion"
+	trade_goods="salt"
+	civilization_value=26
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="phrygian"
+		amount=1
+	}
+}
+
+1975={ #Barate
+	terrain="farmland"
+	culture="lycaonian"
+	religion="anatolian_religion"
+	trade_goods="cattle"
+	civilization_value=28
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="isaurian"
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=1
+	}
+}
+
+7961={ #Kagrai
+	terrain="hills"
+	culture="oroandian"
+	religion="anatolian_religion"
+	trade_goods="leather"
+	civilization_value=13
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="pisidian"
+		amount=1
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=1
+	}
+}
+
+7963={ #Adrasos
+	terrain="hills"
+	culture="lalasian"
+	religion="anatolian_religion"
+	trade_goods="leather"
+	civilization_value=13
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=1
+	}
+}
+
+7964={ #Koropissos
+	terrain="mountain"
+	culture="isaurian"
+	religion="anatolian_religion"
+	trade_goods="stone"
+	civilization_value=11
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="isaurian"
+		amount=1
+	}
+}
+
