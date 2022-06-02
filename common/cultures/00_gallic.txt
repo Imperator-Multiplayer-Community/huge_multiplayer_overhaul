@@ -74,6 +74,25 @@
 		pictonian = {}
 		aulercian = { levy_template = levy_northern_gallic }
 		arverni = {}
+		
+		#Pannonia was colonised by Gauls starting in the 4th century BC -> same Celts as from Gaul
+		celtic_pannonian = {}
+		letobician = {}
+		carnian = {}
+		noric = {}
+		boian = {}
+		eravisci = {}
+		cotinian = {}
+		
+		#Gaulish Treveri and Sennones
+		treverian = {}
+		sennonian = {}
+		
+		#New cultures
+		ubian = {}
+		allobrogian = {}
+		teurian = {}
+		
 	}
 	
 	barbarian_names = { INSUBRES LINGONES TAURINI ALLOBROGES CADURCI BITURIGES LEUCI LEXOVII NAMNETES NITIOBROGES OSISMII RAURACI SALLUVII TRIBOCI }

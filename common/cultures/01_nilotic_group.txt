@@ -1,15 +1,15 @@
-﻿meroitic_group = {
-	color = hsv { 0.15  0.4  0.6 }
+﻿nilotic_group = {
+	color = hsv { 0.2 0.7 0.25 }
 	
-	primary = archers
-	second = light_infantry
-	flank = horse_archers
+	primary = light_infantry
+	second = heavy_infantry
+	flank = camels
 
 	primary_navy = tetrere
 	secondary_navy = octere
 	flank_navy = liburnian
 
-	levy_template = levy_nubian
+	levy_template = levy_nubian	#NEED TO MAKE NEW ONE
 
 	male_names = {
 		# Name Lists
@@ -48,12 +48,16 @@
 	}
 
 	culture = {
-		meroitic = {}	#Upper Nubian (near Meroe)
-		lower_nubian = {}		#Lower Nubian (near Thebes)
-		napatan = {} #Napata
+		moyan = {}
+		alutan = {}
+		boran = {}
+		nubian = {}
+		adabulian = {}
+		rhizophagian = {}
+		kumuzan = {}
 	}
 	
-	barbarian_names = { GARAMANTES NASSAMONES ASBYSTAE ADYRMACHIDAE GILLIGAMAE AUSCHISAE TROGLODYTAE PSYLLI LAGUATANI MESHWESH }
+	barbarian_names = { NOBATAE MEMNONES MEGABAROI MOYA ALUTAN }
 	
 	graphical_culture = egyptian_gfx
 	

@@ -1,11 +1,11 @@
-﻿numidian = {
-	color = hsv { 0.05  0.5  0.4 }
+﻿fezzani = {
+	color = hsv { 0.25  0.4  0.7 }
 	
 	levy_template = levy_numidian
 	
-	primary = horse_archers
-	second = heavy_cavalry
-	flank = light_cavalry
+	primary = light_infantry
+	second = light_cavalry
+	flank = camels
 	
 	primary_navy = tetrere
 	secondary_navy = hexere
@@ -38,20 +38,15 @@
 	}
 
 	culture = {
-		numidian = {}
-		gaetulian = {}
-		socossian = {}
-		massaesylian = {}
-		massylian = {}
-		autolalean = {}
-		lixitoi = {}
-		perorsian = {}
-		canarian = {}
-		nectiberean = {}
-		daphnitaean = {}
-		capariensian = {}
-		abannaean = {}
-		cetianian = {}
+		nasamonian = {}
+		macaean = {}
+		psyllic = {}
+		garamantic = {}
+		libyan = {}
+		berber = {}
+		phazani = {}
+		lotophagoi = {}
+		gyzantian = {}
 	}
 	
 	barbarian_names = { MACAE GAETULI MASSYLI MASSAESYLI MAURI MAXITANI GINDANES LOTOPHAGI MACHLYANES AUSEANES ZAVECIANES GYZANTIANES MARMARIDAE QUINQUEGENTIANI MUSULAMII }

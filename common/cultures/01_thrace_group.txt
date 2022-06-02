@@ -1,10 +1,9 @@
 ﻿thrace_group = {
-	color = hsv { 0.8 0.6 0.2 }
+	color = hsv { 0.463 0.95 0.8 }
 	
 	primary = archers
 	second = heavy_infantry
 	flank = light_cavalry
-	
 	primary_navy = tetrere
 	secondary_navy = octere
 	flank_navy = liburnian
