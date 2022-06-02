@@ -1,0 +1,991 @@
+skirmishers_traditions = { # tradition for Skirmishers
+	color = hsv { 1.72 0.64 0.7 }
+	image = celtic_britannic_path_7
+	
+	allow = {
+		trigger_if = {
+			OR = {
+				country_culture_group = south_levantine
+				country_culture_group = meroitic_group
+				country_culture_group = aksumite_group
+				country_culture_group = anatolian
+				country_culture_group = aryan
+				country_culture_group = gallic
+				country_culture_group = belgae_group
+				country_culture_group = britannic
+				country_culture_group = gaelic
+				country_culture_group = proto_european
+				country_culture_group = baltic
+				country_culture_group = indian
+				country_culture_group = bactrian
+				country_culture_group = scythia
+				country_culture_group = caucasian
+				country_culture_group = east_levantine
+				country_culture_group = celto_pannonian_group
+				country_culture_group = germanic
+				country_culture_group = hellenic
+				country_culture_group = pracyan
+				country_culture_group = tibetan
+				country_culture_group = celt_iberia
+				country_culture_group = iberia
+				country_culture_group = persia
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:south_levantine
+						this.culture.culture_group = culture_group:meroitic_group
+						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:anatolian
+						this.culture.culture_group = culture_group:aryan
+						this.culture.culture_group = culture_group:gallic
+						this.culture.culture_group = culture_group:belgae_group
+						this.culture.culture_group = culture_group:britannic
+						this.culture.culture_group = culture_group:gaelic
+						this.culture.culture_group = culture_group:proto_european
+						this.culture.culture_group = culture_group:baltic
+						this.culture.culture_group = culture_group:indian
+						this.culture.culture_group = culture_group:bactrian
+						this.culture.culture_group = culture_group:scythia
+						this.culture.culture_group = culture_group:caucasian
+						this.culture.culture_group = culture_group:east_levantine
+						this.culture.culture_group = culture_group:celto_pannonian_group
+						this.culture.culture_group = culture_group:germanic
+						this.culture.culture_group = culture_group:hellenic
+						this.culture.culture_group = culture_group:pracyan
+						this.culture.culture_group = culture_group:tibetan
+						this.culture.culture_group = culture_group:celt_iberia
+						this.culture.culture_group = culture_group:iberia
+						this.culture.culture_group = culture_group:persia
+					}	
+				}	
+				AND = {
+					military_tech >= 7
+					OR = {
+						country_culture_group = latin 
+						country_culture_group = illyrian_group
+						country_culture_group = dacia_group
+						country_culture_group = thrace_group
+						any_country_culture = {
+							is_integrated = yes
+							country_culture_pop_count >= percent_size_culture_group_comparison
+							OR = {
+								this.culture.culture_group = culture_group:latin
+								this.culture.culture_group = culture_group:illyrian_group
+								this.culture.culture_group = culture_group:dacia_group
+								this.culture.culture_group = culture_group:thrace_group
+							}
+						}	
+					}
+				}
+				AND = {
+					military_tech >= 13
+				}
+			}
+		}
+	}
+	
+	skirmishers_path_1 = { ###
+		modifier = { 
+			archers_morale = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = greek_antigonid_path_6
+		requires = { }
+	}
+
+	skirmishers_path_2 = { ###
+		modifier = { 
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = celtic_gallic_path_1
+		requires = {skirmishers_path_1}
+	}
+	
+	skirmishers_path_3 = { ###
+		modifier = { 
+			archers_offensive = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = {skirmishers_path_2}
+	}
+
+	skirmishers_path_4 = { ### Talaiotic Slingers
+		modifier = { 
+			archers_defensive = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_germanic_path_7
+		requires = {skirmishers_path_2}
+	}
+
+	skirmishers_path_5 = { ###
+		modifier = { 
+			archers_cost = -0.1
+			army_maintenance_cost = 0.01
+			
+		} 
+		icon = greek_antigonid_path_6
+		requires = {skirmishers_path_3}
+	}
+
+	skirmishers_path_6 = { ###
+		modifier = { 
+			archers_movement_speed = 0.1
+			army_maintenance_cost = 0.01
+			
+		} 
+		icon = levantine_arabian_path_end_bonus
+		requires = { skirmishers_path_4 }
+	}
+
+	skirmishers_path_7 = { ### final generic tradition
+		modifier = {
+			levy_size_multiplier = 0.025
+			discipline = 0.05
+		}
+		icon = greek_antigonid_path_6
+		requires = { skirmishers_path_6 and skirmishers_path_5 }
+	}
+
+	nubian_path_1 = { ### Ta Seti
+		modifier = { 
+			archers_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = greek_antigonid_path_6
+		requires = { nubian_path_2 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+					custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}	
+			}
+		}		
+	}
+
+	nubian_path_2 = { ### Thumb Rings
+		modifier = { 
+			archers_cost = -0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = { }
+        allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+					custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}	
+			}
+		}
+	}
+		
+	nubian_path_6 = { ### Kushitic Longbow
+		enable_tactic = hit_and_run_tactics
+		icon = levantine_arabian_path_end_bonus
+		requires = { nubian_path_1 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+					custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}	
+			}
+		}	
+	}
+	nubian_path_14 = { ### Kushitic Composite Bow
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = levantine_egyptian_path_3
+		requires = { nubian_path_6 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+					custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}	
+			}
+		}	
+	}
+	
+	aryan_river_path_10 = { ### Poisoned Projectils
+		modifier = { 
+			archers_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = persian_achaemenid_path_6
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = aryan }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aryan
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = aryan_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_aryan"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:aryan
+						}
+					}
+				}
+			}
+		}
+	}
+
+	aryan_river_path_14 = { ### Fixing the target with the mind
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = greek_antigonid_path_6
+		requires = { aryan_river_path_10 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = aryan }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aryan
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = aryan_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_aryan"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:aryan
+						}
+					}
+				}
+			}
+		}
+	}
+
+	aryan_river_path_4 = { ### Dhanurveda
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = confident
+				}
+			}
+		}
+		modifier = { 
+			archers_cost = -0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = { aryan_river_path_14 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = aryan }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aryan
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = aryan_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_aryan"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:aryan
+						}
+					}
+				}
+			}
+		}
+	}
+
+	aryan_plains_path_3 = { ### Bamboo Longbows
+		modifier = { 
+			archers_defensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_7
+		requires = { aryan_river_path_4 and andhra_path_5}
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = aryan }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aryan
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = aryan_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_aryan"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:aryan
+						}
+					}
+				}
+			}
+		}
+	}
+
+	celtic_gallic_path_1 = { ### Strike from Afar
+		modifier = { 
+			archers_discipline = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_gallic_path_1
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = gallic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = gallic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = celto_pannonian_group }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = celto_pannonian_group
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = belgae_group }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = belgae_group
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = britannic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = britannic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = gaelic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = gaelic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = proto_european }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = proto_european
+			}
+			trigger_else_if = {
+				limit = { primary_culture = ligurian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				primary_culture = ligurian
+			}
+			trigger_else_if = {
+				limit = { 
+					country_culture_group = illyrian_group
+					NOT = { primary_culture = messapian }
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = illyrian_group
+			}
+			trigger_else_if = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = celtic_influence
+				}
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_celtic"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:gallic
+							this.culture.culture_group = culture_group:celto_pannonian_group
+							this.culture.culture_group = culture_group:belgae_group
+							this.culture.culture_group = culture_group:britannic
+							this.culture.culture_group = culture_group:gaelic
+							this.culture.culture_group = culture_group:proto_european
+						}
+					}
+				}
+			}
+		}
+	}
+
+	celtic_germanic_path_7 = { ### Hail of Stones
+		modifier = { 
+			archers_defensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_germanic_path_7
+		requires = {celtic_gallic_path_1}
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = gallic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = gallic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = celto_pannonian_group }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = celto_pannonian_group
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = belgae_group }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = belgae_group
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = britannic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = britannic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = gaelic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = gaelic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = proto_european }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = proto_european
+			}
+			trigger_else_if = {
+				limit = { primary_culture = ligurian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				primary_culture = ligurian
+			}
+			trigger_else_if = {
+				limit = { 
+					country_culture_group = illyrian_group
+					NOT = { primary_culture = messapian }
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = illyrian_group
+			}
+			trigger_else_if = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = celtic_influence
+				}
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_celtic"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:gallic
+							this.culture.culture_group = culture_group:celto_pannonian_group
+							this.culture.culture_group = culture_group:belgae_group
+							this.culture.culture_group = culture_group:britannic
+							this.culture.culture_group = culture_group:gaelic
+							this.culture.culture_group = culture_group:proto_european
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	celtic_gallic_path_6 = { ### Strong Arm
+		modifier = { 
+			archers_cost = -0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_gallic_path_6
+		requires = {celtic_germanic_path_7}
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = gallic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = gallic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = celto_pannonian_group }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = celto_pannonian_group
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = belgae_group }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = belgae_group
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = britannic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = britannic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = gaelic }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = gaelic
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = proto_european }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = proto_european
+			}
+			trigger_else_if = {
+				limit = { primary_culture = ligurian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				primary_culture = ligurian
+			}
+			trigger_else_if = {
+				limit = { 
+					country_culture_group = illyrian_group
+					NOT = { primary_culture = messapian }
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = illyrian_group
+			}
+			trigger_else_if = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = celtic_influence
+				}
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_celtic"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:gallic
+							this.culture.culture_group = culture_group:celto_pannonian_group
+							this.culture.culture_group = culture_group:belgae_group
+							this.culture.culture_group = culture_group:britannic
+							this.culture.culture_group = culture_group:gaelic
+							this.culture.culture_group = culture_group:proto_european
+						}
+					}
+				}
+			}
+		}
+	}
+
+	andhra_path_5 = { ### Iron Bows
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	andhra_path_8 = { ### Naraca Arrows
+		modifier = { 
+			archers_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_7
+		requires = { andhra_path_5}
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	iberian_central_path_4 = { ###Iberian 4B Talaiotic Slingers
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_germanic_path_7
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = celt_iberia }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = celt_iberia
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = iberia }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = iberia
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = iberian_influence
+				}	
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_iberian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:celt_iberia
+							this.culture.culture_group = culture_group:iberia
+						}
+					}
+				}
+			}		
+		}
+	}
+	iranian_path_1 = { # To Blout out the sun
+		modifier = { 
+			archers_cost = -0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_britannic_path_2
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = persia }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = persia
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = persian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_persian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:persia
+						}
+					}
+				}
+			}
+		}
+	}
+	iranian_path_6 = { # Bronze-tipped arrows
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_7
+		requires = { iranian_path_1 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = persia }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = persia
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = persian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_persian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:persia
+						}
+					}
+				}
+			}
+		}
+	}
+	persian_path_4 = { # 
+		modifier = { 
+			archers_defensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = { iranian_path_6 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = persia }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = persia
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = persian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_persian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:persia
+						}
+					}
+				}
+			}
+		}
+	}
+}
