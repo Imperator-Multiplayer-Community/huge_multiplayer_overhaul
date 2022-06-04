@@ -57,370 +57,8 @@ war_elephant_traditions = { # tradition for War Elephant
 			}
 		}
 	}
-	
-	warelephant_path_1 = { ###
-		modifier = { 
-			warelephant_morale = 0.1
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_army_path_5 #updated
-		requires = { }
-	}
 
-	warelephant_path_2 = { ###
-		modifier = { 
-			warelephant_discipline = 0.1
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_mauryas_path_4 #updated
-		requires = {warelephant_path_1}
-	}
-	
-	warelephant_path_3 = { ###
-		modifier = { 
-			warelephant_offensive = 0.1
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_mauryas_path_5 #updated
-		requires = {warelephant_path_2}
-	}
-
-	warelephant_path_4 = { ### 
-		modifier = { 
-			warelephant_defensive = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = mauryan_noble_path_2 #updated
-		requires = {warelephant_path_2}
-	}
-
-	warelephant_path_5 = { ###
-		modifier = { 
-			warelephant_cost = -0.1
-			army_maintenance_cost = 0.01
-			
-		} 
-		icon = mauryan_coastal_path_5 #updated
-		requires = {warelephant_path_3}
-	}
-
-	warelephant_path_6 = { ###
-		modifier = { 
-			warelephant_movement_speed = 0.1
-			army_maintenance_cost = 0.01
-			
-		} 
-		icon = mauryan_noble_path_end_bonus #updated
-		requires = {warelephant_path_4 }
-	}
-
-	warelephant_path_7 = { ### final generic tradition
-		modifier = {
-			levy_size_multiplier = 0.025
-			discipline = 0.05
-		}
-		icon = north_african_army_path_5
-		requires = { warelephant_path_6 and warelephant_path_5 }
-	}
-
-	nubian_path_4 = { ###
-		modifier = { 
-			warelephant_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_army_path_5
-		requires = { }		
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = south_levantine }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = south_levantine
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = meroitic_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = meroitic_group
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = aksumite_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aksumite_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = afro_arabian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_afro_arabian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:south_levantine
-							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group
-						}
-					}
-				}
-			}
-		}
-	}
-
-	nubian_path_7 = { ###
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = confident
-				}
-			}
-		}
-		modifier = { 
-			warelephant_offensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_mauryas_path_4
-		requires = { nubian_path_4 }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = south_levantine }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = south_levantine
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = meroitic_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = meroitic_group
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = aksumite_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aksumite_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = afro_arabian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_afro_arabian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:south_levantine
-							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group
-						}
-					}
-				}
-			}
-		}
-	}
-
-	aryan_river_path_12 = { ###
-		modifier = { 
-			warelephant_morale = 0.05
-			warelephant_plains_combat_bonus = 0.05
-			warelephant_farmland_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_noble_path_2
-		requires = { }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = aryan }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aryan
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = aryan_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_aryan"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:aryan
-						}
-					}
-				}
-			}
-		}
-	}
-
-	aryan_plains_path_6 = { ###
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = steadfast
-				}
-			}
-		}
-		modifier = { 
-			warelephant_discipline = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_coastal_path_5
-		requires = { aryan_river_path_12 }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = aryan }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aryan
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = aryan_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_aryan"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:aryan
-						}
-					}
-				}
-			}
-		}
-	}
-
-	andhra_path_3 = { ###
-		modifier = { 
-			warelephant_discipline = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_noble_path_end_bonus
-		requires = {  }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = indian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = indian
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = indian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_dravidian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:indian
-						}
-					}
-				}
-			}
-		}
-	}
-
-	andhra_path_6 = { ###
-		modifier = { 
-			warelephant_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_noble_path_3
-		requires = { andhra_path_3 }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = indian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = indian
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = indian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_dravidian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:indian
-						}
-					}
-				}
-			}
-		}
-	}
-
-	andhra_path_9 = { ###
-		modifier = { 
-			warelephant_defensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_noble_path_2
-		requires = { andhra_path_6 and aryan_river_path_12}
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = indian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = indian
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = indian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_dravidian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:indian
-						}
-					}
-				}
-			}
-		}
-
-	}
+		
 
 	north_african_army_path_7 = { ###North Aftica 2AA
 		modifier = { 
@@ -565,5 +203,369 @@ war_elephant_traditions = { # tradition for War Elephant
 			}
 		}
 	}
+	
 
+	warelephant_path_1 = { ###
+		modifier = { 
+			warelephant_morale = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_army_path_5 #updated
+		requires = { }
+	}
+
+	warelephant_path_2 = { ###
+		modifier = { 
+			warelephant_discipline = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_4 #updated
+		requires = {warelephant_path_1}
+	}
+	
+	warelephant_path_3 = { ###
+		modifier = { 
+			warelephant_offensive = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5 #updated
+		requires = {warelephant_path_2}
+	}
+
+	warelephant_path_4 = { ### 
+		modifier = { 
+			warelephant_defensive = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_noble_path_2 #updated
+		requires = {warelephant_path_2}
+	}
+
+	warelephant_path_5 = { ###
+		modifier = { 
+			warelephant_cost = -0.1
+			army_maintenance_cost = 0.01
+			
+		} 
+		icon = mauryan_coastal_path_5 #updated
+		requires = {warelephant_path_3}
+	}
+
+	warelephant_path_6 = { ###
+		modifier = { 
+			warelephant_movement_speed = 0.1
+			army_maintenance_cost = 0.01
+			
+		} 
+		icon = mauryan_noble_path_end_bonus #updated
+		requires = {warelephant_path_4 }
+	}
+
+	warelephant_path_7 = { ### final generic tradition
+		modifier = {
+			levy_size_multiplier = 0.025
+			discipline = 0.05
+		}
+		icon = north_african_army_path_5
+		requires = { warelephant_path_6 and warelephant_path_5 }
+	}
+	
+	aryan_river_path_12 = { ###
+		modifier = { 
+			warelephant_morale = 0.05
+			warelephant_plains_combat_bonus = 0.05
+			warelephant_farmland_combat_bonus = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_noble_path_2
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = aryan }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aryan
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = aryan_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_aryan"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:aryan
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	aryan_plains_path_6 = { ###
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
+		}
+		modifier = { 
+			warelephant_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_5
+		requires = { aryan_river_path_12 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = aryan }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aryan
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = aryan_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_aryan"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:aryan
+						}
+					}
+				}
+			}
+		}
+	}
+
+		andhra_path_3 = { ###
+			modifier = { 
+				warelephant_discipline = 0.05
+				army_maintenance_cost = 0.01
+			} 
+			icon = mauryan_noble_path_end_bonus
+			requires = {  }
+			allow = {
+				trigger_if = {
+					limit = { country_culture_group = indian }
+					custom_tooltip = {
+						text = "began_with_tradition_group"
+					}
+					country_culture_group = indian
+				}
+				trigger_else = {
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_cultural_decision"
+						has_variable = indian_influence
+					}
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_dravidian"
+						any_country_culture = {
+							is_integrated = yes
+							country_culture_pop_count >= percent_size_culture_group_comparison
+							OR = {
+								this.culture.culture_group = culture_group:indian
+							}
+						}
+					}
+				}
+			}
+		}
+
+		andhra_path_6 = { ###
+			modifier = { 
+				warelephant_morale = 0.05
+				army_maintenance_cost = 0.01
+			} 
+			icon = mauryan_noble_path_3
+			requires = { andhra_path_3 }
+			allow = {
+				trigger_if = {
+					limit = { country_culture_group = indian }
+					custom_tooltip = {
+						text = "began_with_tradition_group"
+					}
+					country_culture_group = indian
+				}
+				trigger_else = {
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_cultural_decision"
+						has_variable = indian_influence
+					}
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_dravidian"
+						any_country_culture = {
+							is_integrated = yes
+							country_culture_pop_count >= percent_size_culture_group_comparison
+							OR = {
+								this.culture.culture_group = culture_group:indian
+							}
+						}
+					}
+				}
+			}
+		}
+
+		andhra_path_9 = { ###
+			modifier = { 
+				warelephant_defensive = 0.05
+				army_maintenance_cost = 0.01
+			} 
+			icon = mauryan_noble_path_2
+			requires = { andhra_path_6}
+			allow = {
+				trigger_if = {
+					limit = { country_culture_group = indian }
+					custom_tooltip = {
+						text = "began_with_tradition_group"
+					}
+					country_culture_group = indian
+				}
+				trigger_else = {
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_cultural_decision"
+						has_variable = indian_influence
+					}
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_dravidian"
+						any_country_culture = {
+							is_integrated = yes
+							country_culture_pop_count >= percent_size_culture_group_comparison
+							OR = {
+								this.culture.culture_group = culture_group:indian
+							}
+						}
+					}
+				}
+			}
+		}
+
+	nubian_path_4 = { ###
+		modifier = { 
+			warelephant_morale = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_army_path_5
+		requires = { }		
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}
+			}
+		}
+	}
+
+	nubian_path_7 = { ###
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = confident
+				}
+			}
+		}
+		modifier = { 
+			warelephant_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_4
+		requires = { nubian_path_4 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}
+			}
+		}
+	}
+	
 }
