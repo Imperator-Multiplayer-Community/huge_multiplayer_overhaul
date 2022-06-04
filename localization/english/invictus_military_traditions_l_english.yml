@@ -857,10 +857,10 @@
  heavy_infantry_farmland_combat_bonus:0 "Heavy Infantry Farmland Combat Bonus"
 
  ###New Skyrmishers Traditions###
- skirmishers_philosophy:0 "Skirmishers basic and cultural military traditions"
- skimirshiers_philosophy_desc:0 ""
+ skirmishers_traditions:0 "Skirmishers"
+ skimirshiers_traditions_desc:0 ""
 
- #Skyrmishers Traditions
+ #Skyrmishers Generic Traditions
  skirmishers_path_1:0 "Unit Generic Tradition"
  skirmishers_path_1_desc:0 "Here your description"
  skirmishers_path_2:0 "Unit Generic Tradition"
@@ -873,3 +873,174 @@
  skirmishers_path_5_desc:0 "Here your description"
  skirmishers_path_6:0 "Unit Generic Tradition"
  skirmishers_path_6_desc:0 "Here your description"
+ skirmishers_path_7:0 "Unit Generic Tradition"
+ skirmishers_path_7_desc:0 "Here your description"
+
+ ###New Camels Traditions###
+ camels_traditions:0 "Camels"
+ camels_traditions_desc:0 ""
+
+ #Camels Generic Traditions
+ camels_path_1:0 "Unit Generic Tradition"
+ camels_path_1_desc:0 "Here your description"
+ camels_path_2:0 "Unit Generic Tradition"
+ camels_path_2_desc:0 "Here your description"
+ camels_path_3:0 "Unit Generic Tradition"
+ camels_path_3_desc:0 "Here your description"
+ camels_path_4:0 "Unit Generic Tradition"
+ camels_path_4_desc:0 "Here your description"
+ camels_path_5:0 "Unit Generic Tradition"
+ camels_path_5_desc:0 "Here your description"
+ camels_path_6:0 "Unit Generic Tradition"
+ camels_path_6_desc:0 "Here your description"
+ camels_path_7:0 "Unit Generic Tradition"
+ camels_path_7_desc:0 "Here your description"
+
+ ###New Heavy Cavalry Traditions###
+ heavy_cavalry_traditions:0 "Heavy Cavalry"
+ heavy_cavalry_traditions_desc:0 ""
+
+ #Heavy Cavalry Generic Traditions
+ heavy_cavalry_path_1:0 "Unit Generic Tradition"
+ heavy_cavalry_path_1_desc:0 "Here your description"
+ heavy_cavalry_path_2:0 "Unit Generic Tradition"
+ heavy_cavalry_path_2_desc:0 "Here your description"
+ heavy_cavalry_path_3:0 "Unit Generic Tradition"
+ heavy_cavalry_path_3_desc:0 "Here your description"
+ heavy_cavalry_path_4:0 "Unit Generic Tradition"
+ heavy_cavalry_path_4_desc:0 "Here your description"
+ heavy_cavalry_path_5:0 "Unit Generic Tradition"
+ heavy_cavalry_path_5_desc:0 "Here your description"
+ heavy_cavalry_path_6:0 "Unit Generic Tradition"
+ heavy_cavalry_path_6_desc:0 "Here your description"
+ heavy_cavalry_path_7:0 "Unit Generic Tradition"
+ heavy_cavalry_path_7_desc:0 "Here your description"
+
+###New Heavy Infantry Traditions###
+ heavy_infantry_traditions:0 "Heavy Infantry"
+ heavy_infantry_traditions_desc:0 ""
+
+ #Heavy Infantry Generic Traditions
+ heavy_infantry_path_1:0 "Unit Generic Tradition"
+ heavy_infantry_path_1_desc:0 "Here your description"
+ heavy_infantry_path_2:0 "Unit Generic Tradition"
+ heavy_infantry_path_2_desc:0 "Here your description"
+ heavy_infantry_path_3:0 "Unit Generic Tradition"
+ heavy_infantry_path_3_desc:0 "Here your description"
+ heavy_infantry_path_4:0 "Unit Generic Tradition"
+ heavy_infantry_path_4_desc:0 "Here your description"
+ heavy_infantry_path_5:0 "Unit Generic Tradition"
+ heavy_infantry_path_5_desc:0 "Here your description"
+ heavy_infantry_path_6:0 "Unit Generic Tradition"
+ heavy_infantry_path_6_desc:0 "Here your description"
+ heavy_infantry_path_7:0 "Unit Generic Tradition"
+ heavy_infantry_path_7_desc:0 "Here your description" 
+
+###New Horse Archers Traditions###
+ horse_archers_traditions:0 "Horse Archers"
+ horse_archers_traditions_desc:0 ""
+
+ #Horse Archers Generic Traditions
+ horse_archers_path_1:0 "Unit Generic Tradition"
+ horse_archers_path_1_desc:0 "Here your description"
+ horse_archers_path_2:0 "Unit Generic Tradition"
+ horse_archers_path_2_desc:0 "Here your description"
+ horse_archers_path_3:0 "Unit Generic Tradition"
+ horse_archers_path_3_desc:0 "Here your description"
+ horse_archers_path_4:0 "Unit Generic Tradition"
+ horse_archers_path_4_desc:0 "Here your description"
+ horse_archers_path_5:0 "Unit Generic Tradition"
+ horse_archers_path_5_desc:0 "Here your description"
+ horse_archers_path_6:0 "Unit Generic Tradition"
+ horse_archers_path_6_desc:0 "Here your description"
+ horse_archers_path_7:0 "Unit Generic Tradition"
+ horse_archers_path_7_desc:0 "Here your description" 
+
+ ###New Light Cavalry Traditions###
+ light_cavalry_traditions:0 "Light Cavalry"
+ light_cavalry_traditions_desc:0 ""
+
+ #Light Cavalry Generic Traditions
+ light_cavalry_path_1:0 "Unit Generic Tradition"
+ light_cavalry_path_1_desc:0 "Here your description"
+ light_cavalry_path_2:0 "Unit Generic Tradition"
+ light_cavalry_path_2_desc:0 "Here your description"
+ light_cavalry_path_3:0 "Unit Generic Tradition"
+ light_cavalry_path_3_desc:0 "Here your description"
+ light_cavalry_path_4:0 "Unit Generic Tradition"
+ light_cavalry_path_4_desc:0 "Here your description"
+ light_cavalry_path_5:0 "Unit Generic Tradition"
+ light_cavalry_path_5_desc:0 "Here your description"
+ light_cavalry_path_6:0 "Unit Generic Tradition"
+ light_cavalry_path_6_desc:0 "Here your description"
+ light_cavalry_path_7:0 "Unit Generic Tradition"
+ light_cavalry_path_7_desc:0 "Here your description" 
+
+###New Light Infantry Traditions###
+ light_infantry_traditions:0 "Light Infantry"
+ light_infantry_traditions_desc:0 ""
+
+ #Light Infantry Generic Traditions
+ light_infantry_path_1:0 "Unit Generic Tradition"
+ light_infantry_path_1_desc:0 "Here your description"
+ light_infantry_path_2:0 "Unit Generic Tradition"
+ light_infantry_path_2_desc:0 "Here your description"
+ light_infantry_path_3:0 "Unit Generic Tradition"
+ light_infantry_path_3_desc:0 "Here your description"
+ light_infantry_path_4:0 "Unit Generic Tradition"
+ light_infantry_path_4_desc:0 "Here your description"
+ light_infantry_path_5:0 "Unit Generic Tradition"
+ light_infantry_path_5_desc:0 "Here your description"
+ light_infantry_path_6:0 "Unit Generic Tradition"
+ light_infantry_path_6_desc:0 "Here your description"
+ light_infantry_path_7:0 "Unit Generic Tradition"
+ light_infantry_path_7_desc:0 "Here your description" 
+
+ ###New War Elephants Traditions###
+ war_elephant_traditions:0 "War Elephants"
+ war_elephant_traditions_desc:0 ""
+
+ #War Elephants Generic Traditions
+ war_elephant_path_1:0 "Unit Generic Tradition"
+ war_elephant_path_1_desc:0 "Here your description"
+ war_elephant_path_2:0 "Unit Generic Tradition"
+ war_elephant_path_2_desc:0 "Here your description"
+ war_elephant_path_3:0 "Unit Generic Tradition"
+ war_elephant_path_3_desc:0 "Here your description"
+ war_elephant_path_4:0 "Unit Generic Tradition"
+ war_elephant_path_4_desc:0 "Here your description"
+ war_elephant_path_5:0 "Unit Generic Tradition"
+ war_elephant_path_5_desc:0 "Here your description"
+ war_elephant_path_6:0 "Unit Generic Tradition"
+ war_elephant_path_6_desc:0 "Here your description"
+ war_elephant_path_7:0 "Unit Generic Tradition"
+ war_elephant_path_7_desc:0 "Here your description"
+
+###New Terrain Traditions###
+ terrain_traditions:0 "Terrain"
+ terrain_traditions_desc:0 ""
+
+ #Terrain Traditions
+ terrain_forts_1:0 "Fortify!"
+ terrain_forts_1_desc:0 "Here your description"
+ terrain_forts_2:0 "Get inside the gates!"
+ terrain_forts_2_desc:0 "Here your description"
+ terrain_high_path:0 "We have the high ground"
+ terrain_high_path_desc:0 "Here your description"
+ terrain_wet_path:0 "Do not wet your pants"
+ terrain_wet_path_desc:0 "Here your description"
+ terrain_close_path:0 "Let's get physical"
+ terrain_close_path_desc:0 "Here your description"
+ 
+###New Naval Traditions###
+ naval_traditions:0 "Naval"
+ naval_traditions_desc:0 ""
+
+ #Naval Traditions
+ naval_light_path:0 "Surrender is not an option!"
+ naval_light_path_desc:0 "Here your description"
+ naval_coastal_path:0 "The rocks will crush your enemies"
+ naval_coastal_path_desc:0 "Naval supremacy when you are in coastal ties"
+ naval_ocean_path:0 "Open sea shall be their tomb"
+ naval_ocean_path_desc:0 "Open sea battles are our speciality"
+ 
