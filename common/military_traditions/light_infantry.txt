@@ -637,7 +637,7 @@ light_infantry_traditions = { # tradition for Light Infantry
 	egyptian_path_9 = { #
 		icon = north_african_army_path_end_bonus
 		modifier = {
-			light_infantry_defensive = 0.1
+			light_infantry_defensive = 0.05
 			army_maintenance_cost = 0.01
 		}
 		requires = { egyptian_path_6 }
