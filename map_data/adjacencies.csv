@@ -1,4 +1,4 @@
-﻿From;To;Type;Through;x;y;x;y;
+From;To;Type;Through;x;y;x;y;
 80;72;sea;2501;1935;2041;1937;2037;Strait of Messina
 1453;240;sea;2623;2814;2425;2821;2425;Byzantion-Rhebas
 1453;241;sea;2623;2811;2409;2819;2409;Byzantion-Chalcedon
@@ -153,18 +153,15 @@
 8015;7937;sea;2590;2789;1984;2822;1977;Kameiros-Telos
 #Padus
 3593;145;river_large;8030;1661;2648;1665;2641;Hatria-Corniculani
-3585;3587;river_large;8033;1570;2638;1572;2631;Bedricaum-Brixellum
+3585;3587;river_large;8032;1570;2638;1572;2631;Bedricaum-Brixellum
 3582;3575;river_large;8034;1532;2649;1534;2653;Cremona-Placentia
-3589;3591;river_large;8032;1608;2652;1608;2646;Hostilia-Vicus Varianus
+3589;3591;river_large;8031;1608;2652;1608;2646;Hostilia-Vicus Varianus
 #Thames
-2022;2028;river_large;8035;973;3256;974;3250;Londinium-Noviomagus
+2022;2038;river_large;8035;973;3256;974;3250;Londinium-Noviomagus
 #Don
 6178;5884;river_large;8042;3356;3125;3359;3118;Ganka-Katys
 6191;6192;river_large;8044;3440;3184;3443;3176;Khang-Syutnich
 6200;6201;river_large;8045;3504;3229;3511;3224;Urvel-Agharite
-#Volga
-5877;8050;river_large;8047;3886;3224;3881;3216;Enim-Sechtra
-6225;5905;river_large;8048;3799;3265;3796;3255;Monok-Iska
 #Iberus
 1012;1239;river_large;8037;909;2292;905;2288;Dertosa-Indiblis
 #Issa
@@ -178,6 +175,7 @@
 8338;8342;sea;8337;7433;1162;7445;1149;Maldive Straights
 3847;3852;sea;5782;1259;3374;1266;3376;Frisian Straights
 ### Borysthenes ###
+6092;6109;river_large;7879;-1;-1;-1;-1;Hdzyen-Teteriv
 8426;8424;river_large;6355;2701;3296;2710;3300;Hdzyen-Teteriv
 8448;8451;river_large;8572;2643;3443;2657;3448;Milohard-Gomel
 8435;8446;river_large;8576;2604;3371;2607;3385;Mazyr-Dikoye
@@ -186,5 +184,407 @@
 8466;8472;river_large;8581;2866;3559;2878;3560;Teteriv-Pidhirci
 ### Daugava ###
 7817;7643;river_large;8586;2247;3751;2260;3763;Carbonia-Fennia
-
+### INR Nile River ###
+570;569;river_large;8759;-1;-1;3397;1126;Memnonia-Diospolis Magna/Luxor
+618;613;river_large;8770;-1;-1;-1;-1;Urbim-Patigga
+635;634;river_large;8779;-1;-1;-1;-1;Galim-Darou
+640;641;river_large;8780;3674;390;3688;389;Epis-Meroe
+3312;3314;river_large;8784;-1;-1;-1;-1;Petta*-Alwa
+632;634;river_large;8786;-1;-1;-1;-1;Abale-Darou
+3321;634;river_large;8786;3716;470;-1;-1;Rocat*-Darou
+3322;7587;river_large;8787;-1;-1;-1;-1;Borassa-Anak*
+3328;7589;river_large;8789;3930;312;-1;-1;Thana*-Abliata
+626;646;river_large;8775;-1;-1;-1;-1;Napata-Fourth Cataract
+627;7584;river_large;8776;3616;566;3630;573;Marru-Hashem
+8725;8110;river_large;9254;3626;120;3638;128;Santah-Kawah
+600;601;river_large;8764;-1;-1;-1;-1;Pachora-Serra 
+607;7583;river_large;8768;-1;-1;-1;-1;Gugo-Kedurma
+591;592;river_large;8762;-1;-1;-1;-1;Syene-Talmis 
+563;564;river_large;8758;-1;-1;-1;-1;Tenthyris-Kainepolis
+### INR Iberian River ###
+# INR Baetis #
+1374;1372;river_large;8791;-1;-1;472;2082;Carmo-Segida
+1386;1378;river_large;8791;522;2082;520;2092;ClaritasIulia-Epora
+1380;1379;river_large;8792;-1;-1;-1;-1;Isiturgis-Sucia
+1380;1384;river_large;8792;-1;-1;-1;-1;Isiturgis-Baecula
+1287;1382;river_large;8794;-1;-1;-1;-1;Salaria-Vivatia
+# INR Flumen Anas #
+1422;1421;river_large;8796;-1;-1;-1;-1;AdMuratum-Luserium
+1423;1403;river_large;8797;409;2203;408;2188;Evandriana-Caspiana
+1459;1454;river_large;8799;-1;-1;-1;-1;Messicia-CalvriaMeridionalis
+# INR Tagus #
+1306;1434;river_large;8801;-1;-1;-1;-1;Lama-Turgalium
+1437;1434;river_large;8802;468;2270;458;2261;Augustobria-Turgalium
+# INR Ebro #
+1011;1070;river_large;8808;-1;-1;-1;-1;Celsa-GallikaPhlaouia
+1016;1088;river_large;8809;-1;-1;-1;-1;CalagurrisIulia-Ilurcis
+1016;1082;river_large;8810;751;2446;756;2459;CalagurrisIulia-Andelos
+1064;1241;river_large;8805;896;2361;905;2352;Etobesa-Olobesa
+1068;1057;river_large;8806;945;2400;945;2387;Aeso-Lesos
+# INR Durius #
+1289;1291;river_large;8807;306;2420;305;2406;Tongobriga-Langobriga
+1156;1290;river_large;9229;382;2412;379;2399;VicusVagornicensis-Aravorum
+### INR Maratania Rivers ###
+# INR Sububus #
+3065;3062;river_large;9238;375;1855;383;1865;Tabernae-Lixus
+3067;3072;river_large;9240;434;1771;439;1779;Volubilis-AquaeDacicae
+### INR Gaulish Rivers ###
+# INR Garonne #
+2288;2289;river_large;8811;-1;-1;-1;-1;Praemiacum-Lucaniacum
+2279;2269;river_large;8813;-1;-1;-1;-1;Fines-Divona
+2263;2262;river_large;8814;-1;-1;-1;-1;Albiga-Segodunum
+# INR Dordogne #
+2234;2289;river_large;8815;-1;-1;-1;-1;Burdigala-Lucaniacum
+2287;2289;river_large;8815;-1;-1;-1;-1;Corterate-Lucaniacum
+# INR Loire #
+2394;2395;river_large;8818;-1;-1;-1;-1;Rotomagus-Briggogalus
+2417;2408;river_large;8820;1062;2914;1054;2907;Belca-NoviodunumBiturigum
+2412;2434;river_large;8822;1102;2847;1112;2849;Nogeomagus-Cervidunum
+2372;2369;river_large;8824;-1;-1;-1;-1;Sitilia-Berberensis
+# INR Seine #
+2442;2473;river_large;8825;1033;3021;-1;-1;MediolanumAulercorum-Avalocum
+2475;2444;river_large;8826;-1;-1;-1;-1;Lutetia-Catalacus
+2480;2482;river_large;8827;-1;-1;-1;-1;Montargia-CondateAgedincum
+2448;2482;river_large;8828;-1;-1;-1;-1;Agedincum-CondateAgedincum
+2484;2483;river_large;8834;1088;3010;1091;2998;Calagum-Cala
+2491;2487;river_large;8835;-1;-1;-1;-1;Mugilonia-Senonia
+2474;2444;river_large;8838;-1;-1;-1;-1;Nemetodurum-Catalacus
+2493;2452;river_large;8840;-1;-1;-1;-1;Isara-AugustaSuessionum
+2452;2447;river_large;8842;1116;3045;1125;3055;AugustaSuessionum-Iatinon
+2452;2491;river_large;8843;1160;3048;-1;-1;AugustaSuessionum-Mugilonia
+# INR Rhone #
+2362;2359;river_large;8850;1225;2821;-1;-1;CastrumDivio-Matisco
+2319;2321;river_large;8924;1212;2542;1214;2552;Arelate-Avennio
+2309;2308;river_large;8845;1207;2640;1215;2640;Batiana-Valentia
+2302;2303;river_large;8846;1210;2720;1218;2717;Seguslavorum-Octavus
+2301;2303;river_large;8847;1229;2726;1229;2716;Lugdunum-Octavus
+### INR British Rivers ###
+# INR Thames #
+2016;2027;river_large;8852;916;3250;915;3262;Calleva-Verulamium
+# INR Severn #
+2049;2048;river_large;8851;841;3318;856;3328;Vertis-Alauna
+2049;2039;river_large;8854;-1;-1;-1;-1;Vertis-Korinion
+# INR Hull #
+2069;3057;river_large;9231;939;3438;952;3433;Lagentium-Hessulum
+2065;2062;river_large;9233;910;3383;918;3374;Derbentio-Vernemetum
+2069;2075;river_large;9234;938;3443;943;3454;Lagentium-Eboracum
+# INR Shannon #
+2166;2185;river_large;8858;-1;-1;-1;-1;Gangani-GanganiaOrientalis
+### INR Rhine ###
+3056;3055;river_large;8859;-1;-1;-1;-1;Borbetomagus-Lopodunum
+3023;3025;river_large;8861;-1;-1;-1;-1;Brocomagus-AureliaAquensis
+3721;3722;river_large;8865;-1;-1;-1;-1;Confuentes-Vosolvia
+3689;3690;river_large;8866;-1;-1;-1;-1;Andethanna-AugustaTreverorum
+3845;3846;river_large;8868;1200;3263;-1;-1;Marsacia-Lugadurum
+3711;3714;river_large;8870;-1;-1;-1;-1;Blariacum-CastraVetera
+3681;3719;river_large;8872;-1;-1;-1;-1;Tungrorum-Belsonancum
+3051;3703;river_large;8874;-1;-1;-1;-1;NoviomagusPorricum-BataviaMeridionalis
+3850;3776;river_large;8876;1300;3271;1305;3264;Chamoria-Asciburgium
+### INR Germanic Rivers ###
+# INR Ems #
+3833;3836;river_large;8831;1363;3381;1367;3392;Amisia-Amsivaria
+3834;3841;river_large;8831;1371;3353;1380;3353;Noviliacum-Chasuaria
+# INR Weser #
+3840;3838;river_large;9236;1447;3361;1455;3368;AdPontem-Angrivaria
+# INR Elbe #
+3967;3909;river_large;8877;-1;-1;-1;-1;Aregellia-Mesuium
+3990;3991;river_large;8879;-1;-1;-1;-1;Hercynia-BuriaMinores
+3981;3980;river_large;8880;1763;3170;1775;3176;Thuringiana-AdFines
+3967;3950;river_large;8882;1621;3258;1631;3250;Aregellia-Calaegia
+# INR Oder #
+3904;4752;river_large;8884;-1;-1;-1;-1;Sidenia-Viadrus
+3999;3908;river_large;8886;1768;3327;1774;3342;Susidata-Viritium
+4000;4762;river_large;8887;1782;3286;1794;3287;Omania-Buguntia
+4003;4770;river_large;8888;1856;3245;1860;3258;Lugidunum-Vindua
+4010;4778;river_large;8891;1960;3173;1968;3184;Casurgis-Lygia
+4013;4897;river_large;8892;-1;-1;-1;-1;Carredunum-Lecrotiana*
+# INR GotaAlv #
+6025;6012;river_large;8894;-1;-1;-1;-1;Scandia-Scandia
+### INR Baltic Rivers ###
+# INR Vistula #
+4862;4864;river_large;8895;-1;-1;-1;-1;Vistuliana-Vendica
+4764;4863;river_large;8896;1982;3414;1997;3405;Helveconiana-Vistulia
+6276;6279;river_large;8898;2064;3333;2067;3351;Venedicania-Vadina
+6273;6275;river_large;8901;2161;3285;2171;3295;Sopha-Korotan
+6259;6260;river_large;8904;-1;-1;-1;-1;Urgana-Folla
+4896;4890;river_large;8906;-1;-1;-1;-1;Valitum*-Agrum*
+6275;6277;river_large;8908;2144;3333;2136;3349;Korotan-Duretica
+6294;7821;river_large;8910;2283;3325;2287;3337;Felita-Ossioia Orientalis
+6262;6292;river_large;8911;2294;3275;2304;3282;Varcret-Trakylli
+6249;6248;river_large;8913;-1;-1;-1;-1;Celavira-Bonava
+# INR Neman #
+7830;7809;river_large;8915;-1;-1;-1;-1;Galindia Occidentalis-Rubonia Orientalis
+8497;8498;river_large;8917;2271;3547;2286;3548;Utinoye-Vistytis
+8496;8491;river_large;9257;-1;-1;-1;-1;Wigierski-Monki
+8506;8503;river_large;9259;-1;-1;-1;-1;Tytuvenu-Borodinskoye
+### INR Italic Rivers ###
+# INR Tiber #
+15;1;river_large;8918;1698;2363;1703;2355;Ostia-Roma
+16;1;river_large;8918;1701;2372;1710;2367;Veii-Roma
+16;2;river_large;8918;1706;2381;1715;2379;Veii-Tiber
+# INR Po #
+3574;3572;river_large;8926;1488;2647;-1;-1;Clastidium-Ticinum
+3555;3565;river_large;8927;-1;-1;-1;-1;FulviiValentium-Laumellum
+3555;3562;river_large;8927;-1;-1;1435;2661;FulviiValentium-Vercellae
+3555;3554;river_large;8929;-1;-1;-1;-1;FulviiValentium-Dertona
+3555;3556;river_large;8929;-1;-1;-1;-1;FulviiValentium-Statiellae
+3565;3572;river_large;8931;-1;-1;-1;-1;Laumellum-Ticinum
+3592;3591;river_large;8933;1618;2633;1627;2626;Ferraria-VicusVarianus
+150;145;river_large;8934;1650;2621;1651;2633;Vicus Aventia-Hadriani
+144;145;river_large;8934;1672;2622;1676;2632;Spina-Hadriani
+# INR Arno #
+137;136;river_large;8922;1560;2531;1563;2520;Luna-Pisae
+# INR Rubicon #
+142;133;river_large;8921;1687;2572;1691;2566;Ravenna-Ariminum
+### INR Danube ###
+4207;4263;river_large;8936;2285;2646;2285;2662;Cuppae-AdScofrulas
+4189;4843;river_large;8939;2142;2684;2140;2699;Sirmium-Onagrinum
+4157;4855;river_large;8944;2076;2888;2091;2888;Aquincum-Ocara
+3918;3919;river_large;8947;1954;2932;1955;2947;Carnuntum-Anduetium
+3648;3917;river_large;8951;-1;-1;-1;-1;Lauriacum-Adrabae
+3761;3817;river_large;8953;-1;-1;-1;-1;Petrensibus-Brodentica
+3758;3808;river_large;8954;-1;-1;-1;-1;CastraRegina-Vandulia
+3749;3774;river_large;8956;1592;2967;1589;2978;AugustaVindelicum-Parrodunum
+3750;3771;river_large;8957;1555;2950;1550;2959;Rapis-Aquileia
+4169;4162;river_large;8959;2073;2783;2075;2794;Lugio-AltaRipa
+4163;4160;river_large;8960;2029;2823;2038;2833;Tricciana-Gorsium
+4187;4171;river_large;8961;2056;2723;2058;2735;Mursella-Serena
+4137;4140;river_large;8965;-1;-1;-1;-1;Populi-Salia
+4842;4831;river_large;8967;2176;2700;2193;2701;Acumincum-Ad Sextum
+4847;4840;river_large;8969;-1;-1;-1;-1;Partiskon-Zurobara
+4857;4856;river_large;8973;-1;-1;-1;-1;Tisia-Crisiana
+4840;4835;river_large;8975;-1;-1;-1;-1;Zurobara-Albocensia
+4193;4195;river_large;8977;-1;-1;-1;-1;Altina-Singidunum
+4186;4077;river_large;8980;-1;-1;-1;-1;Picentino-Marsonia
+4178;4073;river_large;8982;1978;2683;1975;2670;Iassorum-AdPraetorium
+4038;4181;river_large;8984;1922;2712;1933;2716;Andautonia-Savia
+4276;4267;river_large;8985;-1;-1;-1;-1;CastraBistria-CastrisNovis
+4278;4271;river_large;8986;2404;2645;2404;2662;Amutria-Confluentiana
+4266;4818;river_large;8988;-1;-1;-1;-1;Romula-Pinion
+4810;4809;river_large;8991;2580;2651;2582;2666;Piephigiana-Piephigia
+4811;4808;river_large;8993;2636;2695;2633;2708;Sornus-Isteriana
+4806;4802;river_large;8995;2654;2775;2656;2788;Cotesiana-Agarusia
+4806;4804;river_large;8997;-1;-1;-1;-1;Cotesiana-Britolagia
+4802;4800;river_large;8998;-1;-1;-1;-1;Agarusia-Piroboridava
+4925;4921;river_large;9000;-1;-1;-1;-1;Volumis*-Bridava*
+4932;4934;river_large;9001;-1;-1;-1;-1;Millianum*-Muradava*
+4914;4937;river_large;9002;2549;3005;2556;3018;Carsidava-Confluentia*
+3851;3854;river_large;8876;1304;3303;1312;3307;Isala-Tubantia
+### INR Greece Rivers ###
+# INR Strymon #
+366;365;river_large;9241;2467;2338;2477;2343;Tragilos-Amfipolis
+# INR Evros #
+357;354;river_large;9242;2626;2362;2635;2355;Sale-Ainos
+490;353;river_large;9243;2639;2407;2651;2401;Plotinoupolis-Kypsela
+491;495;river_large;9244;2635;2455;2645;2458;Bourdepa-Tarpodizo
+### INR Black Sea Tributaries ###
+# INR Hypanis #
+6097;6098;river_large;9246;-1;-1;-1;-1;Kilkhaneg-Ocraent
+# INR Dniester #
+4915;6085;river_large;9004;-1;-1;-1;-1;Clepidava-Tumin
+4937;6067;river_large;9006;2534;3038;2528;3053;Confluentia*-Alkonet
+# INR Don #
+5888;6192;river_large;9008;-1;-1;-1;-1;Techka-Syutnich
+5892;5899;river_large;9009;3511;3098;3504;3112;Sechem-Gura
+5894;5896;river_large;9010;3600;3088;3610;3098;Kyta-Sarden
+6189;6188;river_large;9011;3391;3180;3406;3183;Arn-Vyrni
+### INR Caspian Sea Tributaries ###
+# INR Volga #
+8050;5876;river_large;8047;-1;-1;-1;-1;Moslar-PASS
+5877;8050;river_large;8047;-1;-1;-1;-1;PASS-Moslar
+5877;5878;river_large;8048;3902;3254;3913;3271;PASS-PASS
+5905;6221;river_large;9017;3769;3241;3762;3254;Iska-Zhelk
+6225;6221;river_large;9017;3792;3269;3776;3255;Monok-Zhelk
+6220;6221;river_large;9018;3705;3270;3718;3274;Uryennik-Zhelk
+6222;6221;river_large;9019;3731;3300;3718;3289;Arzhahk-Zhelk
+6215;6216;river_large;9015;-1;-1;-1;-1;Urghat-Vyalke
+# INR Ural #
+5879;5880;river_large;9014;-1;-1;-1;-1;PASS-PASS
+# INR Kural #
+1647;1648;river_large;9021;-1;-1;-1;-1;Salyan-Ghizil-Agaj
+1647;1652;river_large;9021;-1;-1;-1;-1;Salyan-Talish
+1655;1651;river_large;9022;-1;-1;-1;-1;Kaladasht-Shahargah
+1637;1635;river_large;9023;4009;2727;4015;2740;Mingechaur-Nyudi
+1652;1651;river_large;9024;-1;-1;-1;-1;Talish-Shahargah
+1638;1650;river_large;9025;4068;2636;4053;2639;Warthan-Sisakan
+### INR Tigris-Euphrates ###
+891;955;river_large;9030;3960;2144;3963;2153;Takrit-Sinn
+861;862;river_large;9033;3875;2262;3881;2276;Apqu-Nineveh
+893;895;river_large;9035;4031;2111;4044;2109;Samarra-Awana
+892;890;river_large;9036;4001;2160;4009;2173;Dura-Tell Gubba
+895;896;river_large;9038;-1;-1;-1;-1;Awana-Artemita
+933;973;river_large;9039;-1;-1;-1;-1;Apamea-Bakusaya
+923;936;river_large;7719;4181;1912;4192;1913;Qadissiyya-Medain
+906;907;river_large;9044;-1;-1;-1;-1;Anatho-Haradu
+826;828;river_large;9053;-1;-1;-1;-1;Appadana-Terqa
+814;847;river_large;9049;-1;-1;-1;-1;Barbalissum-Dausara
+810;817;river_large;9051;-1;-1;-1;-1;Zeugma/Seleukeia-Batnae
+837;837;river_large;9052;3507;2254;3511;2241;Tharsa-Seleukeia epi tou Zeugmatos
+918;915;river_large;9056;-1;-1;-1;-1;Babylon-Cutha
+919;921;river_large;9056;-1;-1;-1;-1;Borsippa-Marad
+823;874;river_large;9054;3717;2218;3727;2227;Shadikanni-Thannuris
+### INR Oxus ###
+5484;7260;river_large;9061;4619;3308;4636;3310;Cammie-Kupir*
+6803;5968;sea;9062;0;0;0;0;Gurganj-Karakum Desert Impassable
+6799;5968;sea;9062;0;0;0;0;Zamakshahr-Karakum Desert Impassable
+6800;5968;sea;9063;0;0;0;0;Hazarasp-Karakum Desert Impassable
+6801;5968;sea;9063;0;0;0;0;Jirbend-Karakum Desert Impassable
+6709;6708;river_large;9065;-1;-1;-1;-1;Rapete-Chadracarta
+7228;7227;river_large;9068;-1;-1;-1;-1;Dilbarjin-Kerki
+6686;6691;river_large;9071;5428;3113;5432;3133;Termaio-Aruktau
+6803;6797;river_large;9249;4633;3176;4634;3165;Gurganj-Vezir
+5475;5454;river_large;9250;4577;3086;4587;3084;Bela-Yatsha
+5452;6807;river_large;9251;4624;2979;4635;2980;Oshin-Talaykhan
+5452;6806;river_large;9251;4605;2948;4617;2942;Oshin-Igdiqalah
+5424;6811;river_large;9253;4447;2850;4449;2838;Venas-Hazar
+# INR Jaxartes #
+7250;7251;river_large;9224;-1;-1;-1;-1;Koga*-Besta*
+7251;7280;sea;9224;0;0;0;0;Besta*-Wasteland
+7261;7280;sea;9225;0;0;0;0;Maidankoga*-Wasteland
+7262;7280;sea;9225;0;0;0;0;Maidankuyryk*-Wasteland
+7262;7281;sea;9225;0;0;0;0;Maidankuyryk*-Wasteland
+7269;7281;sea;9225;0;0;0;0;Jaxartia*-Wasteland
+7272;7281;sea;9226;0;0;0;0;Khanus*-Wasteland
+7273;7281;sea;9226;0;0;0;0;Poshkar*-Wasteland
+7270;7281;sea;9226;0;0;0;0;Kashram*-Wasteland
+7267;7281;sea;9226;0;0;0;0;Araq*-Wasteland
+7267;7278;river_large;9227;5263;3437;5269;3427;Araq*-Padri*
+### INR Western India ###
+# INR Indus #
+4386;4350;river_large;9072;5965;2720;5974;2734;Jampur-Mulasthanapura/Multan
+4383;4330;river_large;9075;5880;2872;5896;2875;Abortai-Gogaraioi
+4378;4371;river_large;9077;6029;2706;6039;2687;Osioi-Alexandria (Indus)
+4381;6058;river_large;9078;6105;2817;6117;2814;Hydrakai-Marudesa
+4393;5445;river_large;9080;6142;2915;6156;2912;Okara*-UNINHABITABLE
+4384;4380;river_large;9086;5989;2896;6001;2895;Kekaya-Malloi
+7399;4399;river_large;9087;-1;-1;-1;-1;Rajagrha-Jaipura
+6852;7220;river_large;9089;-1;-1;-1;-1;Samarbriva-Sarawata
+4378;7286;sea;9078;0;0;0;0;Osioi-Impassable
+4381;7286;sea;9078;0;0;0;0;Hydrakai-Impassable
+4357;5356;sea;9089;0;0;0;0;Umarkot-IP 357
+4358;5356;sea;9090;0;0;0;0;Singai-IP 357
+# INR Narmada #
+6858;6859;river_large;9092;-1;-1;-1;-1;Minnagara-Bharukaccha
+4493;7420;river_large;9093;-1;-1;-1;-1;Akota-Nandipuri
+4476;7315;river_large;9095;6673;2367;6682;2356;Mahismati-Barwani*
+7421;7422;river_large;9097;6769;2487;6781;2478;Narmadapuram-Betul*
+# INR Tapil #
+6859;6860;river_large;9197;-1;-1;-1;-1;Bharukaccha-Kammonai
+7316;7423;river_large;9200;6780;2372;6796;2367;Khargone*-Melghat*
+# INR Mahil #
+6830;6858;river_large;9202;-1;-1;-1;-1;Svabhra-Minnagara
+4478;4497;river_large;9204;-1;-1;-1;-1;Devnimori-Dadhipadra
+### INR Ganges ###
+7478;4441;river_large;9100;7047;3077;7058;3066;Rivilganj*-Alavi
+4429;4465;river_large;9102;6982;2976;6999;2978;Varanasi-Bhabua
+4428;7373;river_large;9104;6893;2915;6889;2927;Prayaga-Sringivera
+7375;7411;river_large;9106;-1;-1;-1;-1;Kahnpuria-Unnao*
+4426;7404;river_large;9108;-1;-1;-1;-1;Kampili-Anupshahr*
+4404;4454;river_large;9110;6461;2998;6475;3002;Hastinapur-Matipura
+4428;4432;river_large;9111;-1;-1;-1;-1;Prayaga-Sajahati
+4434;7376;river_large;9113;-1;-1;-1;-1;Sotthavati-Asani
+7408;4427;river_large;9115;6639;2863;6638;2875;Batesar-Bhitargaon
+4405;4422;river_large;9118;6481;2897;6491;2907;Indraprastha-Antaranjiya
+4411;4412;river_large;9120;6376;2989;6391;2992;Sthanishvara-Karnal
+7306;7307;river_large;9123;6590;2790;6602;2788;Ranasthambapura-Sripatha
+7440;7435;river_large;9125;6550;2673;6565;2668;Khandar*-Ramgarh
+7471;4435;river_large;9127;-1;-1;-1;-1;Orai*-Erakaccha*
+4429;7370;river_large;9130;6976;2984;6974;3003;Varanasi-Garzapur
+4433;7374;river_large;9131;-1;-1;-1;-1;Kitagiri-Kusapura*
+7380;7482;river_large;9133;6752;2979;6754;2990;Lakhanpur*-Itwa*
+7478;7477;river_large;9135;-1;-1;-1;-1;Rivilganj*-Saran*
+7374;7484;river_large;9137;-1;-1;-1;-1;Kusapura*-Bhawaniganj*
+4455;4437;river_large;9138;6839;3016;6834;3025;Jaisingpur-Ayodhya*
+7496;7495;river_large;9140;7494;3315;7504;3328;Bhaluka-Egarosindur
+7323;7344;river_large;9140;7357;3367;7370;3374;Kirrhadia*-Goalpara****
+7342;7339;river_large;9143;7423;3486;7430;3470;Hajo-Pragjyotishpura
+7350;7349;river_large;9144;7504;3628;7514;3619;Gosira*-Gramera*
+7177;7393;river_large;9147;7482;3038;7490;3049;Tamalites-Kasipur
+7345;7329;river_large;9147;7466;3091;7477;3097;Nabadwipa-Chandraketugarh
+7477;7488;river_large;9148;7003;3128;7003;3139;Saran*-Bethadipa
+4457;4458;river_large;9149;6913;3153;6926;3162;Lumbini-Ramagrama
+7367;7322;river_large;9150;7235;3209;7232;3219;Mudgagiri-Purnia**
+7479;7480;river_large;9150;-1;-1;-1;-1;Samasipur*-Saharsa
+4460;4464;river_large;9151;-1;-1;-1;-1;Sugauna-Devaprastha
+7357;7330;sea;7795;0;0;0;0;Sundarbans-Bargysi
+7357;7396;sea;7794;0;0;0;0;Sundarbans-Bagerhat
+7357;7395;sea;7794;0;0;0;0;Sundarbans-Barisal*
+7357;7394;sea;7794;0;0;0;0;Sundarbans-Fathabad
+7357;7397;sea;7794;0;0;0;0;Sundarbans-Jessore*
+7357;7336;sea;7789;0;0;0;0;Sundarbans-Selampoura
+7357;7329;sea;7789;0;0;0;0;Sundarbans-Chandraketugarh
+7357;7393;sea;7790;0;0;0;0;Sundarbans-Kasipur
+7796;7358;sea;7790;0;0;0;0;Sundarbans-Khulna*
+7796;7330;sea;7790;0;0;0;0;Sundarbans-Bargysi
+7796;7396;sea;7790;0;0;0;0;Sundarbans-Bagerhat
+7796;7336;sea;7789;0;0;0;0;Sundarbans-Selampoura
+7796;7345;sea;9147;0;0;0;0;Sundarbans-Nabadwipa
+7796;7362;sea;9147;0;0;0;0;Sundarbans-Mallabhum
+7796;7177;sea;9147;0;0;0;0;Sundarbans-Tamalites
+### INR Eastern India ###
+# INR Brahmanil #
+7174;7173;river_large;9152;-1;-1;-1;-1;Jajatipura-Caritra
+7181;7170;river_large;9152;-1;-1;-1;-1;Manites-Magaris
+# INR Mahanadil #
+7086;7173;river_large;9153;-1;-1;-1;-1;Tosali-Caritra
+7171;7100;river_large;9154;-1;-1;-1;-1;Bhuvanesvara-Mahdnada
+7168;7167;river_large;9155;7301;2719;7302;2736;Suvarnapura-Yajatinagara
+7175;7169;river_large;9156;-1;-1;-1;-1;Bandavala*-Pali
+# INR Godavaril #
+7040;7046;river_large;9158;7404;2305;7420;2316;Mosali-Alosgyni
+7099;7123;river_large;9160;7268;2349;7280;2365;Goddvara-Alatnapura*
+7079;7165;river_large;9163;-1;-1;7011;2253;Potana-Minagana*
+7146;7161;river_large;9164;-1;-1;-1;-1;Asmakhala-Darur
+7077;7151;river_large;9167;-1;-1;-1;-1;Cikamburika-Vairagara
+7067;7151;river_large;9168;-1;-1;-1;-1;Ramagiri-Vairagara
+7099;5317;sea;9160;0;0;0;0;Goddvara-IP 318
+7133;5317;sea;9160;0;0;0;0;Kotilingala-IP 318
+7124;5317;sea;9166;0;0;0;0;Dhamna*-IP 318
+7115;5317;sea;9166;0;0;0;0;Wairagar-IP 318
+7077;5317;sea;9167;0;0;0;0;Cikamburika-IP 318
+# INR Krishna #
+7042;7041;river_large;9169;7324;2230;7334;2240;Pitoura-Kottobora
+7049;7043;river_large;9171;7236;2167;7251;2170;Naconda-Mallayapalam
+7120;7119;river_large;9173;7149;2068;7139;2080;Raichur-Kothapala
+7120;7092;river_large;9174;7089;2037;7076;2044;Raichur-Katriyal
+7109;7110;river_large;9175;-1;-1;-1;-1;Vijayapura*******-Vayapata*
+7092;7154;river_large;9177;7092;2059;7102;2072;Katriyal-Guriprava*
+7113;7127;river_large;9179;6909;2048;6912;2066;Mehdnapura*-Trinagua
+7120;7091;river_large;9181;7163;2052;7174;2039;Raichur-Bhakkuli
+7072;7006;river_large;9183;-1;-1;-1;-1;Palkigunda-Uccasrngi
+7049;7055;river_large;9184;7242;2188;7251;2204;Naconda-Pravarapura
+# INR Penner #
+7002;7003;river_large;9185;7405;2059;7397;2071;Nellore-Kottis
+7021;7034;river_large;9187;-1;-1;-1;-1;Suvarnagiri-Kadiri
+# INR Palar #
+6986;6985;river_large;9189;-1;-1;-1;-1;Sopattinam-Mavilankai
+6983;7028;river_large;9189;7442;1914;7434;1925;Arkatapura-Tirumala
+# INR Ponnaiyar #
+6987;6936;river_large;9190;7537;1862;7545;1851;Colapattinam-Karige
+6996;6988;river_large;9190;-1;-1;-1;-1;Tiruvannamalai-Koval
+# INR Cauvery #
+6936;6935;river_large;9191;7555;1835;7570;1829;Karige-Chaberis
+6928;6933;river_large;9191;7539;1774;7551;1779;Thanjavur-Karmara
+6938;6930;river_large;9193;7444;1699;7448;1714;Karur-Karafur
+6932;6931;river_large;9196;7589;1804;7600;1794;Koroula-Nikama
+6933;6929;river_large;9196;-1;-1;-1;-1;Karmara-Venni
+# INR Somme #
+3843;3844;river_large;9205;1183;3228;1191;3238;Ganuenta-Fletio
+3678;3707;river_large;9206;1193;3195;1198;3184;Condacum-Andellium
+3675;3041;river_large;9207;1145;3170;1153;3163;Cortoriacum-Turnacum
+# INR Rioni #
+1707;1706;river_large;9210;-1;-1;-1;-1;Kotais-Rhodopolis
+1720;1717;river_large;9209;-1;-1;-1;-1;Phasis-Chaladidi
+# INR Kuban #
+4561;4564;river_large;9212;3275;2909;3276;2899;Lebedia-Labrys
+7613;7614;river_large;9214;3380;2939;3390;2928;Yelsa-Salavy
+5933;7620;river_large;9217;3510;2953;3512;2942;Vylda-Kalkry*
+# INR Terek #
+5866;7633;river_large;9218;-1;-1;-1;-1;Zabender-Kayit*
+5867;7623;river_large;9219;3824;2934;3825;2923;Suthrander-Terekata
+# INR Tritonis #
+3289;3291;river_large;9255;1543;1670;1547;1655;Bennafa-Tacape
+### Portages ###
+8589;8574;sea;8541;2566;3641;2631;3605;Daugava_4-Borysthenes_15
+9013;9020;sea;6215;3563;3307;3583;3313;Don6-Volga7
 -1;-1;;-1;-1
