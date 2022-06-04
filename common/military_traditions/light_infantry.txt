@@ -733,7 +733,7 @@ light_infantry_traditions = { # tradition for Light Infantry
 
 	babylonian_path_11 = { ###
 		modifier = { 
-			light_infantry_offensive = 0.05
+			light_infantry_defensive = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_greco_path_3
