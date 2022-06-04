@@ -8,8 +8,10 @@ horse_archers_traditions = { # tradition for Heavy Archers
 				
 				country_culture_group = bactrian
 				country_culture_group = scythia
+				country_culture_group = scythian_east
 				country_culture_group = caucasian
 				country_culture_group = meroitic_group
+				country_culture_group = nilotic_group
 								
 				any_country_culture = {
 					is_integrated = yes
@@ -18,8 +20,10 @@ horse_archers_traditions = { # tradition for Heavy Archers
 						
 						this.culture.culture_group = culture_group:bactrian
 						this.culture.culture_group = culture_group:scythia
+						this.culture.culture_group = culture_group:scythian_east
 						this.culture.culture_group = culture_group:caucasian
 						this.culture.culture_group = culture_group:meroitic_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}	
 				}	
 				AND = {
@@ -39,6 +43,7 @@ horse_archers_traditions = { # tradition for Heavy Archers
 						country_culture_group = illyrian_group
 						country_culture_group = numidian
 						country_culture_group = west_levantine
+						country_culture_group = fezzani
 						country_culture_group = baltic
 						country_culture_group = britannic
 						country_culture_group = anatolian
@@ -62,6 +67,7 @@ horse_archers_traditions = { # tradition for Heavy Archers
 								this.culture.culture_group = culture_group:illyrian_group
 								this.culture.culture_group = culture_group:numidian
 								this.culture.culture_group = culture_group:west_levantine
+								this.culture.culture_group = culture_group:fezzani
 								this.culture.culture_group = culture_group:baltic
 								this.culture.culture_group = culture_group:britannic
 								this.culture.culture_group = culture_group:anatolian
