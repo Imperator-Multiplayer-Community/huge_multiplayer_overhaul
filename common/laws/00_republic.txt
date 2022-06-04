@@ -36,7 +36,7 @@
 			global_manpower_modifier = 0.10
 			levy_size_multiplier = 0.025
 			monthly_military_experience = 0.20
-			global_manpower_modifier = -0.2
+			
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
@@ -54,7 +54,7 @@
 		modifier = {
 			discipline = 0.05
 			monthly_military_experience = 0.15
-			global_manpower_modifier = -0.5
+			
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region
