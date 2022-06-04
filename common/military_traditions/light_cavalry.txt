@@ -440,7 +440,7 @@ light_cavalry_traditions = { # tradition for Light Cavalry
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_1
-		requires = {north_african_tribal_path_6}
+		requires = {north_african_army_path_6}
 		allow = {
 			trigger_if = {
 				limit = { primary_culture = carthaginian }
