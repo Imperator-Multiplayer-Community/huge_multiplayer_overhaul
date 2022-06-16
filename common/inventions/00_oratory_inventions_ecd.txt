@@ -1032,9 +1032,9 @@
     ## Indian Specific - Level 1
     #Vanilla invention modified for Invictus
     indian_toe_stirrup_inv = {
-        modifier = { heavy_cavalry_discipline = 0.05
-        			 light_cavalry_discipline = 0.05
-        			 horse_archers_discipline = 0.05 }
+        modifier = { heavy_cavalry_discipline = 0.01
+        			 light_cavalry_discipline = 0.01
+        			 horse_archers_discipline = 0.01 }
         requires = { indian_wootz_steel_inv }
         allow = {
 			OR = {
@@ -1155,8 +1155,8 @@
 
     #Vanilla invention modified for Invictus
     indian_crucible_steel_inv = {
-        modifier = { light_infantry_offensive = 0.05
-					 heavy_infantry_offensive = 0.05 }
+        modifier = { light_infantry_offensive = 0.01
+					 heavy_infantry_offensive = 0.01 }
 		requires = { indian_cataract_surgery_inv }
         allow = {
 			OR = {
