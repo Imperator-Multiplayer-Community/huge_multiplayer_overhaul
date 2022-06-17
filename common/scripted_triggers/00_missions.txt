@@ -860,7 +860,7 @@ roman_4_punic_rivals_scripted_trigger = {
 }
 
 generic_block_trigger = {
-	always = no
+	always = yes
 }
 
 gm_2_kindred_trigger = {
