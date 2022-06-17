@@ -6,11 +6,22 @@
 		aternum_area
 		ariminum_area
 		asculum_area
+		pisae_area
+	}
+    color = rgb { 160 10 10 }
+
+}
+
+first_provincia_region = {		#7 areas
+	areas = {
+		east_sicily_area
+		west_sicily_area
+		syracuse_area
 		corsica_area
 		sardinia_septentrionalis
 		sardinia_meridionalis
+		balearides_area
 	}
-    color = rgb { 160 10 10 }
 }
 
 taurica_region = { #8
@@ -523,10 +534,9 @@ lusitania_region = {			#9 areas
 		lusitania_meridionalis_area
 		celticia_maoioris_area
 		celticia_minoris_area
-		turdulia_occidentalis_area
-		aebocosia_area
 		vettonia_septentrionalis_area
 		vettonia_meridionalis_area
+		couneia_area	
 	}
 }
 
@@ -567,11 +577,12 @@ gallaecia_region = {				#7 areas
 		cantabria_area
 		asturia_septentrionalis_area
 		asturia_meridionalis_area
-		vaccaeia_septentrionalis_area
 		callaecia_septentrionalis_area
 		callaecia_meridionalis_area
+		aebocosia_area
+		autrigonia_area
 		vaccaeia_meridionalis_area
-
+		vaccaeia_septentrionalis_area
 	}
 }
 
@@ -798,9 +809,6 @@ magna_graecia_region = {		#8 areas
 		tarentum_area
 		heraclea_area
 		croton_area
-		east_sicily_area
-		west_sicily_area
-		syracuse_area
 	}
     color = rgb { 109 43 175 }
 }
@@ -896,7 +904,6 @@ contestania_region = {		#8 areas
 		contestania_meridionalis_area
 		contestania_septentrionalis_area
 		edetania_area
-		balearides_area
 		mastiania_area
 		celtiberia_meridionalis_area
 		lobetania_area
@@ -954,7 +961,6 @@ tarraconensis_region = {	#9 areas
 		ilercavonia_area
 		vasconia_area
 		vardulia_area
-		autrigonia_area
 		celtiberia_septentrionalis_area
 		celtiberia_centralis_area
 	}
@@ -981,7 +987,6 @@ cisalpine_gaul_region = {	#8 areas
 	areas = {
 		venetia_area
 		east_insubria_area
-		pisae_area
 		liguria_area
 		aemilla_area
 		transpadana_area
@@ -1023,14 +1028,14 @@ rhaetia_region = {		#7 areas
 baetica_region = {		#9 areas
 	areas = {
 		malacita_area
-		gaditanus_area
+		gaditanus_area	
 		baetica_hispalensis_area
 		bastetania_area
-		turdetania_occidentalis_area
 		baetica_cordubensis_area
-		couneia_area
 		oretania_area
 		turdulia_orientalis_area
+		turdulia_occidentalis_area
+		turdetania_occidentalis_area
 	}
 }
 
