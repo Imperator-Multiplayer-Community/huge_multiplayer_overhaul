@@ -1,4 +1,4 @@
-﻿# Main Areas #
+# Main Areas #
 
 roma_area = { #11 
 	provinces = { 1 2 3 4 5 15 16 19 20 25 26 } 
@@ -2830,7 +2830,7 @@ oder_river_area = {
 	provinces = { 8884 8885 8886 8887 8888 8889 8890 8891 8892 8893 } 
 } 
 gotaalv_river_area = { 
-	provinces = { 8894 6351 } 
+	provinces = { 8894 6351 6351 } 
 } 
 vistula_river_area = { 
 	provinces = { 8895 8896 8897 8898 8899 8900 8901 8903 8904 8905 8906 8907 8908 8909 8910 8911 8912 8913 8914 } 
@@ -3062,6 +3062,12 @@ mare_sardonium_area = {
 		2550 2688 2690 2692 2703 2704 2706 2708 2709 2710 2711 2712 2713 2714 2717 2720 
 		2705 2702 2701 
 		2563 2562 
+	} 
+} 
+
+sinus_gallicus_area = { 
+	provinces = { 
+		2551 2552 2707 
 	} 
 } 
 
