@@ -1514,11 +1514,12 @@ vettonia_septentrionalis_area = {
 } 
 
 vettonia_meridionalis_area = { 
-	provinces = { 340 1437 1201 1200 1202 1434 1461 1438 1462 1455 1454 } 
+	provinces = { 340 1437 1201 1200 1202 1434 1461 1438 1462 1455 1454 
+	              1458 1463 } 
 } 
 
 couneia_area = { 
-	provinces = { 1324 1330 1336 1333 1334 1337 1338 1335 1339 1340 } 
+	provinces = { 1324 1330 1336 1333 1334 1337 1338 1335 } 
 } 
 
 turdulia_occidentalis_area = { 
@@ -1526,31 +1527,36 @@ turdulia_occidentalis_area = {
 } 
 
 turdulia_orientalis_area = { 
-	provinces = { 1406 1440 1439 1459 1460 1448 1444 1458 1463 1449 } 
+	provinces = { 1406 1440 1439 1459 1460 1448 1444 1449
+	              1447 1446 1379 } 
 } 
 
 turdetania_occidentalis_area = { 
-	provinces = { 1416 1415 1359 1414 1417 1410 1341 1358 1356 1412 1405 1409 } 
+	provinces = { 1416 1415 1359 1414 1417 1341 1358 1356 
+	              1339 1340 } 
 } 
 
 baetica_cordubensis_area = { #11 
-	provinces = { 1404 1411 1442 1441 1446 1379 1378 1373 1372 1447 1384 } 
+	provinces = { 1404 1411 1442 1441 1378 1373 1372 
+	              1405 1409 1412 1410 } 
 } 
 
 gaditanus_area = { 
-	provinces = { 1342 1344 1345 1347 1348 1346 1351 1343 1349 1352 1350 1364 } 
+	provinces = { 1342 1344 1345 1347 1348 1346 1351 1343 1349 1352 1350 } 
 } 
 
 baetica_hispalensis_area = { #11 
-	provinces = { 1353 1360 1357 1355 1370 1354 1368 1369 1374 1371 1377 } 
+	provinces = { 1353 1360 1357 1355 1370 1354 1368 1369 1374 1371 } 
 } 
 
 malacita_area = { 
-	provinces = { 1361 1362 1366 1389 1363 1365 1388 1375 1376 1386 1390 1387 } 
+	provinces = { 1361 1362 1389 1363 1365 1388 1375 1376 1390 
+	              1364 } 
 } 
 
 bastetania_area = { 
-	provinces = { 1367 1392 1391 1398 1385 1285 1397 1283 1282 1284 1278 1276 } 
+	provinces = { 1367 1385 1285 1283 1282 1284 1278 1276
+	              1392 1366 } 
 } 
 
 mastiania_area = { 
@@ -1558,7 +1564,8 @@ mastiania_area = {
 } 
 
 oretania_area = { 
-	provinces = { 1396 1395 1393 1394 1287 1383 1381 1382 1286 1399 1380 } 
+	provinces = { 1396 1395 1393 1394 1287 1383 1380
+                  1391 1397 1398 1387 1386 1377 } 
 } 
 
 contestania_meridionalis_area = { 
@@ -1570,15 +1577,18 @@ contestania_septentrionalis_area = {
 } 
 
 carpetania_area = { 
-	provinces = { 1457 1456 1452 1025 1024 1204 1023 1195 1205 1206 1203 1208 } 
+	provinces = { 1452 1025 1024 1204 1023 1195 1205 1206 1203 1208
+	              1272 1457 1456 } 
 } 
 
 lobetania_area = { 
-	provinces = { 1443 1451 1450 1258 1026 1257 1271 1027 1269 1272 1256 } 
+	provinces = { 1443 1451 1450 1258 1026 1257 1271 1027 1269 1256
+	              1381 1384 1286 1399 1382 } 
 } 
 
 edetania_area = { 
-	provinces = { 1029 1237 1234 1263 1267 1261 1235 1236 1238 1216 } 
+	provinces = { 1029 1237 1234 1263 1267 1261 1235 1236 1238 1216 
+	              1217 1266 } 
 } 
 
 ilercavonia_area = { #10 
@@ -1586,7 +1596,8 @@ ilercavonia_area = { #10
 } 
 
 celtiberia_meridionalis_area = { 
-	provinces = { 1268 1270 1209 1028 1266 1233 1211 1207 1210 1232 1217 1224 } 
+	provinces = { 1268 1270 1209 1028 1233 1211 1210 1232 1224 
+	              1269 1256 } 
 } 
 
 celtiberia_septentrionalis_area = { 
@@ -1594,9 +1605,9 @@ celtiberia_septentrionalis_area = {
 } 
 
 celtiberia_centralis_area = { 
-	provinces = { 1223 1225 1222 1221 1226 1220 1219 1227 1091 1018 1218 1092 } 
-} 
-
+	provinces = { 1223 1225 1222 1221 1226 1220 1219 1227 1091 1018 1218 1092
+	              1207 } 
+}
 morinia_area = { 
 	provinces = { 3026 3029 3027 3030 3028 3675 3040 } 
 } 
