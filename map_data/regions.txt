@@ -553,7 +553,6 @@ germania_magna_region = {
 		semnonia_area
 		pharodenia_area
 		suradonia_area
-		turonia_area
 		caluconia_area
 	}
     color = rgb { 28 200 35 }
@@ -562,12 +561,12 @@ germania_magna_region = {
 transalpine_gaul_region = {		#7 areas
 	areas = {
 		alpes_maritimae_area
-		central_massif_area
 		narbonensis_occidentalis_area
 		alpes_maritimae_two_area
-		narbonensis_orientalis_area
-		narbonensis_centralis_area
 		allobrogia_area
+		tigurinia_area
+		alpes_graiae_area
+		celtica_orientalis_area
 	}
 	    color = rgb { 28 130 35 }
 }
@@ -783,7 +782,6 @@ bohemia_region = {
 		boioa_septentrionalis_area
 		marcomannia_minores_area
 		celamantia_area
-		chattia_orientalis_area
 		marsignia_area
 		viadria_area
 	}
@@ -818,8 +816,6 @@ belgica_region = {
 		morinia_area
 		bellovacia_area
 		veliocassia_area
-		suaeuconia_area
-		parisia_area
 		remia_area
 		treveria_area
 		nervia_area
@@ -873,21 +869,21 @@ macedonia_region = { #7 areas
 }
 
 
-central_gaul_region = {	#7 areas
+central_gaul_region = {	#6 areas
 	areas = {
-		bituriga_orientalis_area
-		celtica_orientalis_area
 		sequania_area
 		lingonia_area
 		senonia_area
-		celtica_centralis_area
+		leucia_area
+		remia_area
+		suaeuconia_area
+		parisia_area
 	}
     color = rgb { 227 11 93 }
 }
 
 germania_superior_region = {
 	areas = {
-		leucia_area
 		tribocia_area
 		mediomatricia_area
 		chattia_occidentalis_area
@@ -895,11 +891,13 @@ germania_superior_region = {
 		germanicum_area
 		latobrigia_area
 		vangionia_area
+		turonia_area
+		chattia_orientalis_area
 	}
     color = rgb { 54 69 79 }
 }
 
-contestania_region = {		#8 areas
+contestania_region = {		#7 areas
 	areas = {
 		contestania_meridionalis_area
 		contestania_septentrionalis_area
@@ -938,18 +936,28 @@ mauretainia_region = {	#7 areas
     color = rgb { 139 90 63 }
 }
 
-aquitaine_region = {			#8 areas
+aquitaine_region = {			#6 areas
 	areas = {
 		aquitania_occidentalis_area
 		aquitania_orientalis_area
-		sentonia_maioris_area
+		biggeronia_area
+		narbonensis_orientalis_area
 		cadurcia_area
+		narbonensis_centralis_area
+		central_massif_area
+	}
+    color = rgb { 156 81 182 }
+}
+gaul_minor_region = {	#8 areas
+	areas = {
+		sentonia_maioris_area
 		lemovicia_area
 		pictonia_meridionalis_area
 		celtica_occidentalis_area
-		biggeronia_area
+		bituriga_orientalis_area
+		celtica_centralis_area
 	}
-    color = rgb { 156 81 182 }
+    color = rgb { 27 211 93 }
 }
 
 
@@ -1013,10 +1021,8 @@ africa_region = {		#9 areas
 
 rhaetia_region = {		#7 areas
 	areas = {
-		alpes_graiae_area
 		alpes_raetiae_occidentalis
 		alpes_raetiae_orientalis
-		tigurinia_area
 		helvetia_inferioris_area
 		helvetia_superioris_area
 		tulingia_area
