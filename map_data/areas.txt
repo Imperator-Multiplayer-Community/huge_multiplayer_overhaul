@@ -71,7 +71,7 @@ ferraria_area = {
 
 venetia_area = { 
 	provinces = { 3598 3599 3600 3603 3601 3602 3604 3605 3606 3607
-	4026 } 
+	 } 
 } 
 east_insubria_area = { 
 	provinces = { 3579 3578 3573 3580 3582 3581 3585 3583 3586 3584 3661 3662 } 
@@ -833,12 +833,11 @@ macedonia_salutaris_area = { #12
 } 
 
 dardania_inferioris_area = { 
-	provinces = {  } 
+	provinces = { 4095 4093 4099 4098 4108 4109 4113 4114 4110 4094 4092 4111 4112 } 
 } 
 
 dardania_superioris_area = { 
-	provinces = { 4100 4101 4119 4120 4106 4121 4122 4118 4103 4102 
-	              4197 4095 4093 4099 4098 4108 4109 4113 4094 } 
+	provinces = { 4100 4101 4119 4120 4106 4121 4127 4122 4118 4103 4102 } 
 } 
 
 #Dacia and Illyria 
@@ -900,8 +899,8 @@ iazygia_minoris_area = { #12
 } 
 
 dacia_mediterranea_area = { 
-	provinces = { 4235 4229 4230 477 4116 4115 4112 4219 4222 
-	              3853 4114 4110 4111 4109 } 
+	provinces = { 4235 4229 4230 477 4116 4115 4219 4222 
+	              3853 } 
 } 
 
 dacia_superioris_area = { 
@@ -911,7 +910,7 @@ dacia_superioris_area = {
 
 dacia_inferioris_area = { 
 	provinces = { 4223 4221 4217 4220 4215 4216 4214 4218 4209 4208
-                  4212 4207 4224 4225 } 
+                  4224 4225 } 
 } 
 
 malvensis_area = { 
@@ -931,17 +930,15 @@ porolissensis_inferioris_area = {
 } 
 
 moesia_prima_orientalis_area = { 
-	provinces = { 4200 4213 4204 4203 4201 4199 4205 4206 4202
-	              4198 4195 4196 } 
+	provinces = {4200 4207 4212 4213 4204 4203 4201 4199 4205 4206 4202 4219 } 
 } 
 
 moesia_prima_occidentalis_area = { 
-	provinces = { } 
+	provinces = { 4197 4198 4195 4124 4125 4196 4194 4123 4126 4130 4128 4129 4077 } 
 } 
 
 marsonia_area = { 
-	provinces = { 4077 4123 4125 4126 4128 4129 4130 
-	              4124 4127 4194 } 
+	provinces = {  } 
 } 
 
 pannonia_secunda_area = { 
@@ -958,11 +955,11 @@ savia_orientalis_area = {
 } 
 
 noricum_mediterranum_area = { 
-	provinces = { 4028 4029 4030 4136 4031 4048 4047 4135 4134 4143 4027 4025 4024 4131 } 
+	provinces = { 4029 4030 4136 4031 4048 4047 4135 4134 4143 4024 4131 } 
 } 
 
 histria_area = { 
-	provinces = { 4020 4019 4018 4022 4021 4023 4032 4034 } 
+	provinces = { 4020 4019 4018 4022 4021 4023 4026 4024 4027 4032 4034 4025 4028 } 
 } 
 
 pannonia_prima_occidentalis_area = { 
@@ -979,17 +976,15 @@ pannonia_valeria_area = {
 } 
 
 dalmatia_occidentalis_area = { # 13 
-	provinces = { 4033 4050 4035 4049 4052 4051 4053 4055 4054 4056 4057 
-	              4059 4058 4060 } 
+	provinces = { 4033 4050 4035 4049 4052 4051 4053 4055 4054 4056 4057 4061 4058 } 
 } 
 
 dalmatia_centralis_area = { 
-	provinces = { 4062 4084 8026 8027 4081 4082 4085 4083 4086 4087 4088 1144 4089 4090 4091
-                  4092 } 
+	provinces = { 4059 4060 4062 4063 4065 4064 4069 4070 4068 4078 4079 4080 4067 } 
 } 
 
 dalmatia_orientalis_area = { 
-	provinces = { 4066 4104 4105 4107 4063 4080 4079 4078 4070 4067 4068 4069 4064 4065 4061 } 
+	provinces = { 4081 4066 4082 4085 4083 4086 4087 4088 4104 4105 4107 8027 4084 8026 1144 4090 4091 4089 } 
 } 
 
 moesia_orientalis_area = { 
@@ -1174,7 +1169,8 @@ pictonia_meridionalis_area = {
 } 
 
 sentonia_maioris_area = { #11 
-	provinces = { 2229 2230 2231 2232 2282 2290 2291 2332 2333 2334 3000 } 
+	provinces = { 2229 2230 2231 2232 2282 2290 2291 2332 2333 2334 3000 
+                  2287 2234 } 
 } 
 
 aquitania_occidentalis_area = { #10 
@@ -1206,7 +1202,7 @@ allobrogia_area = { #11
 } 
 
 cadurcia_area = { 
-	provinces = { 2234 2287 2289 2294 2292 2293 2269 2270 2326 2327 2335 2338 } 
+	provinces = { 2289 2294 2292 2293 2269 2270 2326 2327 2335 2338 } 
 } 
 
 central_massif_area = { #10 
@@ -1273,12 +1269,13 @@ remia_area = { #continue into Belgicae
 } 
 
 treveria_area = { 
-	provinces = { 3728 3721 3730 3729 3685 3689 3690 3726 3722 3724 7738
+	provinces = { 3728 3721 3730 3729 3685 3689 3726 7738
 	3683 3719 } 
 } 
 
 mediomatricia_area = { 
-	provinces = { 3054 3056 3053 3691 3692 3695 3693 3694 3696 3697 3698 3725 3723 3701 } 
+	provinces = { 3054 3056 3053 3691 3692 3695 3693 3694 3696 3697 3698 3725 3723 3701 
+	              3690 3722 3724 } 
 } 
 
 vangionia_area = { 
