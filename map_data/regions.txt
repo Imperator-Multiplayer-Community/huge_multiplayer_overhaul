@@ -57,7 +57,6 @@ greece_region = {	#10 areas
 		crete_area
 		aegean_islands_area
 		achaea_area
-		epirus_area
 		aetolia_area
 		central_greece_area
 		south_peleponnesos_area
@@ -704,10 +703,10 @@ moesia_region = { #8
 		moesia_prima_orientalis_area
 		moesia_prima_occidentalis_area
 		dardania_inferioris_area
-		dardania_superioris_area
 		dacia_inferioris_area
 		dacia_mediterranea_area
 		dacia_superioris_area
+		macedonia_salutaris_area
 	}
     color = rgb { 255 120 17 }
 }
@@ -784,6 +783,7 @@ bohemia_region = {
 illyria_region = {			#7 regions
 	areas = {
 		marsonia_area
+		dardania_superioris_area
 		histria_area
 		dalmatia_occidentalis_area
 		dalmatia_centralis_area
@@ -854,9 +854,9 @@ macedonia_region = { #7 areas
 		macedonia_area
 		upper_macedonia_area
 		chalkidiki_area
-		macedonia_salutaris_area
 		thessaly_area
 		illyria_graeca_area
+		epirus_area
 	}
     color = rgb { 19 48 175 }
 }
@@ -899,6 +899,7 @@ contestania_region = {		#7 areas
 		celtiberia_meridionalis_area
 		lobetania_area
 		carpetania_area
+		bastetania_area
 	}
 }
 
@@ -1029,7 +1030,6 @@ baetica_region = {		#9 areas
 		malacita_area
 		gaditanus_area	
 		baetica_hispalensis_area
-		bastetania_area
 		baetica_cordubensis_area
 		oretania_area
 		turdulia_orientalis_area
