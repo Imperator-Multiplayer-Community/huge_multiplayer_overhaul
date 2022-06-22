@@ -1494,19 +1494,22 @@ oppidania_area = {
 } 
 
 lusitania_septentrionalis_area = { 
-	provinces = { 1290 1299 1158 1162 1159 1300 1049 1302 1301 1198 1305 1160 } 
+	provinces = { 1290 1299 1158 1162 1159 1300 1049 1160 } 
 } 
 
 lusitania_meridionalis_area = { 
-	provinces = { 1303 1308 1311 1312 1433 1310 1430 1315 1309 1306 1304 1307 } 
+	provinces = { 1303 1308 1311 1312 1306 1304 1307
+	              1302 1301 1198 1305 } 
 } 
 
 celticia_maoioris_area = { 
-	provinces = { 1435 1431 1432 1426 1400 1423 1425 1427 1428 1329 1327 } 
+	provinces = { 1435 1431 1432 1426 1400 1423 1425 1427
+	              1433 1310 1430 1309 } 
 } 
 
 celticia_minoris_area = { 
-	provinces = { 1318 1320 1328 1321 1322 1323 1422 1325 1326 1413 1331 1332 } 
+	provinces = { 1318 1320 1328 1321 1322 1323 1422 1325
+	              1428 1329 1327 1315 } 
 } 
 
 vettonia_septentrionalis_area = { 
@@ -1519,7 +1522,8 @@ vettonia_meridionalis_area = {
 } 
 
 couneia_area = { 
-	provinces = { 1324 1330 1336 1333 1334 1337 1338 1335 } 
+	provinces = { 1324 1330 1336 1333 1334 1337 1338 1335
+	              1413 1331 1332 1326 } 
 } 
 
 turdulia_occidentalis_area = { 
@@ -1582,7 +1586,7 @@ carpetania_area = {
 } 
 
 lobetania_area = { 
-	provinces = { 1443 1451 1450 1258 1026 1257 1271 1027 1269 1256
+	provinces = { 1443 1451 1450 1258 1026 1257 1271 1027
 	              1381 1384 1286 1399 1382 } 
 } 
 
@@ -2990,7 +2994,7 @@ oder_river_area = {
 	provinces = { 8884 8885 8886 8887 8888 8889 8890 8891 8892 8893 } 
 } 
 gotaalv_river_area = { 
-	provinces = { 8894 6351 6351 } 
+	provinces = { 8894 6351 } 
 } 
 vistula_river_area = { 
 	provinces = { 8895 8896 8897 8898 8899 8900 8901 8903 8904 8905 8906 8907 8908 8909 8910 8911 8912 8913 8914 } 

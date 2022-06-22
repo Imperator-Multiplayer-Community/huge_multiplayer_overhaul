@@ -692,31 +692,24 @@ thrace_region = { #8 areas
 		europa_area
 		rhodope_area
 		haemimontus_area
+		moesia_orientalis_area
+		moesia_occidentalis_area
+		scythia_area
 	}
     color = rgb { 52 211 140 }
 }
 
 moesia_region = { #8
 	areas = {
-		dacia_inferioris_area
-		dacia_superioris_area
-		dacia_mediterranea_area
-		moesia_orientalis_area
-		moesia_occidentalis_area
-		scythia_area
-	}
-    color = rgb { 255 120 17 }
-}
-
-moesia_s_region = { #4
-	areas = {
 		moesia_prima_orientalis_area
 		moesia_prima_occidentalis_area
 		dardania_inferioris_area
 		dardania_superioris_area
-		marsonia_area
+		dacia_inferioris_area
+		dacia_mediterranea_area
+		dacia_superioris_area
 	}
-    color = rgb { 255 35 130 }
+    color = rgb { 255 120 17 }
 }
 
 dacia_region = {				#7 areas
@@ -790,6 +783,7 @@ bohemia_region = {
 
 illyria_region = {			#7 regions
 	areas = {
+		marsonia_area
 		histria_area
 		dalmatia_occidentalis_area
 		dalmatia_centralis_area
@@ -816,7 +810,6 @@ belgica_region = {
 		morinia_area
 		bellovacia_area
 		veliocassia_area
-		remia_area
 		treveria_area
 		nervia_area
 		menapia_orientalis
