@@ -743,22 +743,22 @@
 
 2040={ #Glevum
 	terrain="forest"
-	culture="demetian"
-	religion="druidism"
-	trade_goods="precious_metals"
-	civilization_value=8
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
+	trade_goods="dye"
+	civilization_value=20
 	barbarian_power=0
-	province_rank="settlement"
+	province_rank="city"
 	citizen={
-		amount=1
+		amount=10
 	}
 	freemen={
-		amount=1
+		amount=15
 	}
 	tribesmen={
 		amount=5
 	}
-	port_building=1
+	port_building=3
 }
 
 2041={ #Alavna
