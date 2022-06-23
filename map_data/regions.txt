@@ -548,10 +548,6 @@ germania_magna_region = {
 		sicambria_area
 		chasuaria_area
 		frisia_area
-		buria_area
-		semnonia_area
-		pharodenia_area
-		suradonia_area
 		caluconia_area
 	}
     color = rgb { 28 200 35 }
@@ -678,7 +674,6 @@ pannonia_region = {		#9 areas
 		carnuntia_area
 		pannonia_terminus_area
 		noricum_mediterranum_area
-		transcarpathia_occidentalis_area
 		pannonia_secunda_area
 		savia_occidentalis_area
 	}
@@ -715,7 +710,6 @@ dacia_region = {				#7 areas
 		transcarpathia_orientalis_area
 		iazygia_minoris_area
 		iazygia_majoris_area
-		transcarpathia_centralis_area
 		getia_occidentalis_area
 		getia_orientalis_area
 		malvensis_area
@@ -769,6 +763,8 @@ bohemia_region = {
 		boioa_meridionalis_area
 		boioa_septentrionalis_area
 		marcomannia_minores_area
+		transcarpathia_occidentalis_area
+		transcarpathia_centralis_area
 		celamantia_area
 		marsignia_area
 		viadria_area
@@ -816,11 +812,23 @@ belgica_region = {
     color = rgb { 70 130 180 }
 }
 
+elysia_region = {
+	areas = {
+	rugia_area
+	helveconia_area
+	elysia_area
+	suradonia_area
+	buria_area
+	semnonia_area
+	pharodenia_area
+	}
+    color = rgb { 120 15 80 }
+}
+
 vistulia_region = {
 	areas = {
 		subcarpathia_area
 		vistulia_inferioris_area
-		amadocia_occidentalis_area
 		bassetia_area
 		venedia_area
 		lugia_area
@@ -833,12 +841,10 @@ vistulia_region = {
 venedia_region = {
 	areas = {
 		turuntia_area
+		amadocia_occidentalis_area
 		galindia_area
 		chrononis_area
 		ossioia_area
-		rugia_area
-		helveconia_area
-		elysia_area
 		biebrzankski_area
 		neman_area
 		aristavos_area
