@@ -1,36 +1,42 @@
 ﻿# Administrative areas. 
 
 roma_area = { #11 
-	provinces = { 1 2 3 4 5 15 16 19 20 25 26 } 
+	provinces = { 1 2 3 4 5 19 20 25 26 
+	              27 1712 31 } 
 	# color = hsv { 0.5 1.0 1.0 } # or named color, or rgb 
 } 
 
 south_etruria_area = { #10 
-	provinces = { 14 17 18 21 22 23 102 103 112 113 } 
+	provinces = { 14 17 18 21 22 102 112 113 
+	              15 16 } 
 } 
 
 north_etruria_area = { #10 
-	provinces = { 114 115 116 120 124 125 126 127 128 129 130 } 
+	provinces = { 114 115 116 120 124 125 126 127 
+	              123 119 } 
 } 
 
 aternum_area = { #11 
-	provinces = { 24 27 28 29 30 34 35 48 49 106 1712 } 
+	provinces = { 24 28 29 34 35 48 49 106 30 } 
 } 
 
 asculum_area = { #10 
-	provinces = { 104 105 107 108 109 110 111 117 118 119} 
+	provinces = { 104 105 107 108 109 110 111 
+	              103 23 } 
 } 
 
 pisae_area = { #9 
-	provinces = { 134 135 136 137 138 139 141 154 153 } 
+	provinces = { 134 135 136 137 138 139 
+	              131 128 129 140 130 } 
 } 
 
 ariminum_area = { #10 
-	provinces = { 121 122 123 131 132 133 140 142 147 148 } 
+	provinces = {  121 122 132 133 148 
+	               117 118 142 147 144 } 
 } 
 
 neapolis_area = { #12 
-	provinces = { 6 7 8 9 31 32 33 40 41 1713 1716 1718 } 
+	provinces = { 6 7 8 9 32 33 40 41 1713 1716 1718 } 
 } 
 
 cannae_area = { #12 
@@ -38,7 +44,7 @@ cannae_area = { #12
 } 
 
 liguria_area = { # 10 
-	provinces = { 3552 3549 3547 3546 3545 3544 3550 3557 3553 3556 } 
+	provinces = { 3552 3549 3547 3546 3545 3544 3550 3557 3553 3556 154 141 3554 } 
 } 
 
 heraclea_area = { #12 
@@ -54,15 +60,20 @@ croton_area = { #10
 } 
 
 aemilla_area = { # 11 
-	provinces = { 144 146 150 149 3591 3588 151 3587 152 3576 3575 3592 } 
+	provinces = { 146 150 149 3591 3588 151 3587 152 3576 3575 3592 153 3574 } 
 } 
 
 transpadana_area = { 
-	provinces = { 3563 3564 3551 3559 3530 3535 3560 3558 3555 3548 3561 } 
+	provinces = { 3563 3564 3551 3559 3530 3535 3560 3558 3555 3548 3561 3534 } 
 } 
 
 west_insubria_area = { 
-	provinces = { 3554 3562 3565 3568 3566 3569 3567 3571 3574 3572 3570 3577 } 
+	provinces = { 3562 3565 3568 3566 3569 3567 3571 3572 3570 3577 
+	3578 3573 } 
+} 
+
+east_insubria_area = { 
+	provinces = { 3579 3580 3582 3581 3585 3583 3586 3584 3661 3662 } 
 } 
 
 ferraria_area = { 
@@ -70,11 +81,7 @@ ferraria_area = {
 } 
 
 venetia_area = { 
-	provinces = { 3598 3599 3600 3603 3601 3602 3604 3605 3606 3607
-	 } 
-} 
-east_insubria_area = { 
-	provinces = { 3579 3578 3573 3580 3582 3581 3585 3583 3586 3584 3661 3662 } 
+	provinces = { 3598 3599 3600 3603 3601 3602 3604 3605 3606 3607 } 
 } 
 east_sicily_area = { # 10 
 	provinces = { 80 81 82 89 98 99 100 1472 7838 7839 } 
@@ -837,7 +844,8 @@ dardania_inferioris_area = {
 } 
 
 dardania_superioris_area = { 
-	provinces = { 4100 4101 4119 4120 4106 4121 4127 4122 4118 4103 4102 } 
+	provinces = { 4100 4101 4119 4120 4106 4121 4127 4122 4118 4103 4102
+	              4104 4105 4107 } 
 } 
 
 #Dacia and Illyria 
@@ -943,11 +951,12 @@ marsonia_area = {
 } 
 
 pannonia_secunda_area = { 
-	provinces = { 4190 4189 4192 4191 4186 4188 4187 4185 4193 } 
+	provinces = { 4190 4189 4192 4191 4186 4188 4187 4185 4193 
+	              4183 } 
 } 
 
 savia_occidentalis_area = { 
-	provinces = { 4176 4177 4183 4184 4178 4179 4182 4180 4181
+	provinces = { 4176 4177 4184 4178 4179 4182 4180 4181
 	4137 4039 4175 } 
 } 
 
@@ -985,7 +994,7 @@ dalmatia_centralis_area = {
 } 
 
 dalmatia_orientalis_area = { 
-	provinces = { 4081 4066 4082 4085 4083 4086 4087 4088 4104 4105 4107 8027 4084 8026 1144 4090 4091 4089 } 
+	provinces = { 4081 4066 4082 4085 4083 4086 4087 4088 8027 4084 8026 1144 4090 4091 4089 } 
 } 
 
 moesia_orientalis_area = { 

@@ -3,7 +3,6 @@
 		roma_area
 		south_etruria_area
 		north_etruria_area
-		aternum_area
 		ariminum_area
 		asculum_area
 		pisae_area
@@ -589,6 +588,8 @@ caledonia_region = {		#7 areas
 		hibernia_orientalis_area
 		hibernia_occidentalis_area
 		hibernia_meridionalis_area
+		britannia_secunda_septentrionalis_area
+		britannia_secunda_meridionalis_area
 	}
 }
 
@@ -792,6 +793,7 @@ magna_graecia_region = {		#8 areas
 	areas = {
 		neapolis_area
 		cannae_area
+		aternum_area
 		tarentum_area
 		heraclea_area
 		croton_area
@@ -983,8 +985,6 @@ britain_region = {			#10 areas
 		dobunnia_area
 		coritania_area
 		cornovia_area
-		britannia_secunda_septentrionalis_area
-		britannia_secunda_meridionalis_area
 		brigantia_area
 	}
     color = rgb { 82 6 6 }
