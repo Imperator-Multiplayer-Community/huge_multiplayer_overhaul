@@ -116,7 +116,7 @@ alpes_maritimae_area = { # 12
 } 
 
 alpes_maritimae_two_area = { # 12 
-	provinces = { 3529 3519 3527 3524 3526 3525 3533 3534 3536 3531 3532 3528 } 
+	provinces = { 3529 3519 3527 3524 3526 3525 3533 3536 3531 3532 3528 } 
 } 
 
 alpes_graiae_area = { 
@@ -851,7 +851,7 @@ dardania_superioris_area = {
 #Dacia and Illyria 
 
 clepia_area = { 
-	provinces = { 4521 4522 4523 4524 4525 4917 4918 4919 4920 4921 4800 4922 } 
+	provinces = { } 
 } 
 
 zargidava_area = { #11 
@@ -859,7 +859,8 @@ zargidava_area = { #11
 } 
 
 muradava_area = { 
-	provinces = { 4915 4916 4928 4929 4934 4936 4937 } 
+	provinces = { 4915 4916 4928 4929 4934 4936 4937
+	              4917 4918 4920 4921 4800 4922 4919 } 
 } 
 
 transcarpathia_orientalis_area = { #12 
@@ -939,7 +940,7 @@ porolissensis_inferioris_area = {
 } 
 
 moesia_prima_orientalis_area = { 
-	provinces = {4200 4207 4212 4213 4204 4203 4201 4199 4205 4206 4202 4219 } 
+	provinces = {4200 4207 4212 4213 4204 4203 4201 4199 4205 4206 4202 } 
 } 
 
 moesia_prima_occidentalis_area = { 
@@ -965,7 +966,7 @@ savia_orientalis_area = {
 } 
 
 noricum_mediterranum_area = { 
-	provinces = { 4029 4030 4136 4031 4048 4047 4135 4134 4143 4024 4131 } 
+	provinces = { 4029 4030 4136 4031 4048 4047 4135 4134 4143 4131 } 
 } 
 
 histria_area = { 
@@ -1049,7 +1050,8 @@ sarmatia_hyrcania_area = { #10
 } 
 
 olbia_area = { 
-	provinces = { 4526 4527 4528 4529 } 
+	provinces = { 4526 4527 4528 4529
+	              4522 4523 4524 4525 4521 } 
 } 
 
 maeotia_area = { 
@@ -1673,7 +1675,7 @@ elysia_area = { #10
 } 
 
 chasuaria_area = { 
-	provinces = { 3834 3832 3833 3841 3842 3836 3781 3779 3780 
+	provinces = { 3834 3832 3833 3841 3781 3779 3780 
 	              3835 } 
 } 
 
@@ -2285,11 +2287,13 @@ galindia_area = {
 } 
 
 venedia_area = { 
-	provinces = { 6272 6274 6275 6293 6290 6267 6273 6271 6269 6270 6276 } 
+	provinces = { 6272 6274 6273 6271 6269 6270 6276 
+	6268 6265 6266 6259 } 
 } 
 
 vistulia_area = { #12 
-	provinces = { 6268 6266 6265 6259 6260 6262 6264 6263 6261 6254 6255 6258 6291 6294 } 
+	provinces = { 6260 6262 6264 6263 6261 6254 6255 6258 6291 6294 
+	6275 6293 6290 6267 } 
 } 
 
 vistulia_inferioris_area = { #12 

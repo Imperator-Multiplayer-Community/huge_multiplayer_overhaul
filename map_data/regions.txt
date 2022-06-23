@@ -28,26 +28,36 @@ taurica_region = { #8
 		maeotia_area
 		bosproranum_area
 		taurica_area
+		abasgoi_area
 		maeotia_minores_area
 		alania_area
-		tanaissa_area
-		sattara_area
 		borysthenia_minor_area
 	}
     color = rgb { 224 22 255 }
 }
 
+alania_region = { #8
+	areas = {
+		alania_proper_area
+		alania_orientalis_area
+		hyrcania_superior_area
+		tanaissa_area
+		sattara_area
+		sarmatia_hyrcania_area
+	}
+    color = rgb { 24 22 155 }
+}
 sarmatia_asiatica_region = { #10 areas
 	areas = {
 		borysthenia_maioris_area
+		gelonia_area
 		danaia_superioris_area
 		tanassa_area
 		danaia_area
 		confluenta_area
-		alania_proper_area
-		alania_orientalis_area
 		donbas_area
 		zarubinets_area
+		transborysthenia_area
 	}
 }
 
@@ -272,17 +282,15 @@ palestine_region = {	#7 areas
 }
 sarmatia_europea_region = {			#9 areas
 	areas = {
-		transborysthenia_area
 		hypania_minoris_area
 		transhypania_area
 		sarmatia_superioris_area
 		hypania_area
 		sarmatia_area
-		olbia_area
 		borysthenia_area
-		clepia_area
 		zargidava_area
 		muradava_area
+		olbia_area
 	}
     color = rgb { 185 221 4 }
 }
@@ -478,7 +486,6 @@ sogdiana_region = { #8
 
 scythia_region = { #10
 	areas = {
-		hyrcania_superior_area
 		atara_area
 		transhyrcania_area
 		darn_area
@@ -723,7 +730,6 @@ colchis_region = { #7
 		suaneti_area
 		colchis_area
 		bekhyria_area
-		abasgoi_area
 		caucasian_iberia_area
 		gugark_area
 		tayk_area
@@ -739,7 +745,6 @@ albania_region = { #7
 		artshak_area
 		kahetia_area
 		scythia_trans_montem_area
-		sarmatia_hyrcania_area
 	}
     color = rgb { 255 164 28 }
 }
@@ -1267,7 +1272,6 @@ atlas_region = {
 
 borysthenia_region = {
 	areas = {
-		gelonia_area
 		budinia_area
 		dnieper_area
 		volyn_area
