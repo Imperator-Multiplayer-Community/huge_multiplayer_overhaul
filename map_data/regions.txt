@@ -349,13 +349,12 @@ maru_region = { #7
     color = rgb { 80 201 244 }
 }
 
-avanti_region = { #8
+avanti_region = { #7
 	areas = {
+		sthanisvara_area
+		kuru_area
 		madhyamika_area
-		avanti_area
 		anartta_area
-		dasarna_area
-		dahala_area
 		matsya_area
 		surasena_area
 		maru_area
@@ -363,22 +362,33 @@ avanti_region = { #8
     color = rgb { 255 135 15 }
 }
 
-madhyadesa_region { #9
+madhyadesa_region { #6
 	areas = {
-		sthanisvara_area
-		kuru_area
 		ahicchatra_area
 		pancala_area
 		kosala_area
 		west_cedi_area
-		east_cedi_area
 		kasi_area
 		malla_area
 	}
     color = rgb { 255 68 227 }
 }
 
-pracya_region = { #8
+vindhyachala_region { #8
+	areas = {
+		east_cedi_area
+		dahala_area
+		dasarna_area
+		anupa_area
+		vindya_area
+		dakshina_kosala_area
+		avanti_area
+		fanindrapura_area
+	}
+	color = rgb { 106 63 255 }
+}
+
+pracya_region = { #7
 	areas = {
 		magadha_area
 		kamata_area
@@ -391,56 +401,61 @@ pracya_region = { #8
     color = rgb { 183 138 82 }
 }
 
-vindhyaprstha_region = { #8
+vindhyaprstha_region = { #6
 	areas = {
 		radha_area
 		kalinga_area
 		mahendragiri_area
-		dakshina_kosala_area
 		andhra_area
-		fanindrapura_area
 		asmaka_area
 		vidarbha_area
 	}
     color = rgb { 219 86 86 }
 }
 
-dravida_region = { #8
+dravida_region = { #4
 	areas = {
 		pandiya_area
-		koda_area
-		north_tondainadu_area
-		south_tondainadu_area
 		north_tambapamni_area
 		south_tambapamni_area
-		sriparvata_area
 		malayas_area
 	}
     color = rgb { 146 63 255 }
 }
 
-aparanta_region = { #8
+koda_region = { #5
+	areas = {
+		koda_area
+		north_tondainadu_area
+		south_tondainadu_area
+		sriparvata_area
+		south_mahishamandala_area
+	}
+	color = rgb { 106 63 155 }
+}
+
+aparanta_region = { #6
 	areas = {
 		mulaka_area
-		vindya_area
+		
 		north_sahyadri_area
 		aparanta_area
 		south_sahyadri_area
-		anupa_area
+		
 		asika_area
 		kuntala_area
 	}
     color = rgb { 219 255 40 }
 }
 
-karnata_region = { #7
+karnata_region = { #6
 	areas = {
 		vanavasi_area
 		north_satiyaputa_area
 		south_satiyaputa_area
 		keralaputa_area
 		north_mahishamandala_area
-		south_mahishamandala_area
+		
 		maldives_area
 	}
 }
