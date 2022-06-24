@@ -569,15 +569,15 @@ asoristan_area = { #12
 #Egypt 
 
 western_delta_area = { # 12 
-	provinces = { 515 516 517 518 527 529 530 531 532 453 445 7691 } 
+	provinces = { 515 516 517 518 527 529 530 531 532 7691 } 
 } 
 
 eastern_delta_area = { #12 
-	provinces = { 503 508 509 510 511 524 525 535 655 656 701 7688 } 
+	provinces = { 503 508 509 510 511 524 525 535 655 656 701 7688 7690 } 
 } 
 
 central_delta_area = { #13 
-	provinces = { 504 513 519 520 521 522 523 526 528 533 534 7689 7690 } 
+	provinces = { 504 513 519 520 521 522 523 526 528 533 534 7689 } 
 } 
 
 memphis_area = { #11 
@@ -585,7 +585,7 @@ memphis_area = { #11
 } 
 
 heptanomis_area = { #12 
-	provinces = { 538 539 540 541 542 543 544 545 546 547 548 5547 } 
+	provinces = { 538 539 540 541 542 543 544 545 546 547 548 } 
 } 
 
 sinai_area = { #11 
@@ -1478,7 +1478,8 @@ marmarica_occidentalis_area = {
 } 
 
 marmarica_orientalis_area = { 
-	provinces = { 3374 3375 3376 3377 3378 3379 3380 3476 3477 3478 } 
+	provinces = { 3374 3375 3376 3377 3378 3379 3380 3476 3477 3478 
+	              453 445 } 
 } 
 
 #Iberia 
@@ -2240,7 +2241,8 @@ ammon_area = { #14
 } 
 
 parva_area = { #12 
-	provinces = { 550 5544 5542 5543 5541 5531 5535 5533 5532 5548 5546 5534 } 
+	provinces = { 550 5544 5542 5543 5541 5531 5535 5533 5532 5548 5546 5534 
+	5547 } 
 } 
 
 farfara_area = { #11 

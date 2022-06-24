@@ -236,6 +236,7 @@ palestine_region = {	#7 areas
 		judea_area
 		peraea_area
 		decapolis_area
+		sinai_area
 	}
 }
 
@@ -585,9 +586,9 @@ upper_egypt_region = {		#9 areas
 		kharga_area
 		khargana_area
 		hema_nome_area
-		farfara_area
 		eastern_desert_area
 		ptolemais_area
+		heptanomis_area
 	}
     color = rgb { 255 245 193 }
 }
@@ -598,8 +599,6 @@ lower_egypt_region = {		#7 areas
 		eastern_delta_area
 		central_delta_area
 		memphis_area
-		heptanomis_area
-		sinai_area
 	}
     color = rgb { 255 53 35 }
 }
@@ -1010,6 +1009,7 @@ cyrenaica_region = {		#7 areas
 		ammon_area
 		nasamonia_area
 		parva_area
+		farfara_area
 	}
     color = rgb { 17 127 237 }
 }
@@ -1023,7 +1023,7 @@ africa_region = {		#9 areas
 		numidia_maioris_area
 		numidia_minoris_area
 	}
-    color = rgb { 167 130 93 }
+    color = rgb { 167 230 63 }
 }
 
 africa_minor_region = {		#9 areas
@@ -1062,7 +1062,7 @@ numidia_region = {		#8 areas
 		mauretania_caesariensis_maioris_area
 		mauretania_caesariensis_minoris_area
 	}
-    color = rgb { 65 70 55 }
+    color = rgb { 15 40 95 }
 }
 
 fezzan_region = {
