@@ -381,7 +381,7 @@ horse_archers_traditions = { # tradition for Heavy Archers
 		} 
 		icon = levantine_arabian_path_end_bonus
 
-		requires = { arabian_path_12 }
+		requires = { arabian_path_12 north_african_tribal_path_4}
 		allow = {
 			trigger_if = {
 				limit = { country_culture_group = south_levantine }
