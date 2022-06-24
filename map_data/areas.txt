@@ -2201,7 +2201,8 @@ mosylon_area = { #12
 } 
 
 scythia_trans_montem_area = { #12 
-	provinces = { 7604 7605 7621 7632 7633 7602 7623 7626 7624 1674 7625 7627 7628 } 
+	provinces = { 7604 7605 7621 7632 7633 7602 7623 7626 7624 1674 7625 7627 7628 
+	7629 } 
 } 
 
 maeotia_minores_area = { #12 
@@ -2209,7 +2210,7 @@ maeotia_minores_area = { #12
 } 
 
 alania_area = { 
-	provinces = { 7610 7609 7611 7607 7619 7620 7630 7606 7622 7629 7631 } 
+	provinces = { 7610 7609 7611 7607 7619 7620 7630 7606 7622 7631 } 
 } 
 
 kharga_area = { #11 
@@ -2329,7 +2330,8 @@ hypania_area = { #11
 } 
 
 transborysthenia_area = { #12 
-	provinces = { 6109 6111 6113 6112 6115 6114 6120 6116 6125 6126 6127 6131 } 
+	provinces = { 6109 6111 6113 6112 6115 6114 6120 6116 6125 6126 6127 6131 
+	6132 } 
 } 
 
 borysthenia_area = { #10 
@@ -2337,11 +2339,12 @@ borysthenia_area = { #10
 } 
 
 borysthenia_maioris_area = { #12 
-	provinces = { 6133 6132 6134 6136 6137 6140 6150 6143 6152 6148 6149 6153 } 
+	provinces = { 6136 6140 6150 6143 6152 6148 6149 6153 
+	6144 6146 6147 } 
 } 
 
 borysthenia_minor_area = { # 
-	provinces = { 4530 4531 4532 7190 7192 7193 6124 6144 6146 6147 } 
+	provinces = { 4530 4531 4532 7190 7192 7193 6124 } 
 } 
 
 tanassa_area = { #12 
@@ -2349,7 +2352,8 @@ tanassa_area = { #12
 } 
 
 danaia_area = { #12 
-	provinces = { 6156 6159 6158 6151 6169 6162 6138 6161 6160 6135 6166 6167 } 
+	provinces = { 6156 6159 6158 6151 6169 6162 6138 6161 6160 6135 6167 
+	6134 6133 6137 } 
 } 
 
 danaia_superioris_area = { #12 
@@ -2960,7 +2964,8 @@ donbas_area = { #11
 }
 
 zarubinets_area = { #10
-    provinces = { 8562 8563 8564 8565 8566 8567 8568 8569 8570 8571 }
+    provinces = { 8562 8563 8564 8565 8566 8567 8568 8569 8570 8571 
+	              6166 }
 }
 
 daugava_river_area = { #4
