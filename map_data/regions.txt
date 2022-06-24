@@ -23,44 +23,6 @@ first_provincia_region = {		#7 areas
 	}
 }
 
-taurica_region = { #8
-	areas = {
-		maeotia_area
-		bosproranum_area
-		taurica_area
-		abasgoi_area
-		maeotia_minores_area
-		alania_area
-		borysthenia_minor_area
-	}
-    color = rgb { 224 22 255 }
-}
-
-alania_region = { #8
-	areas = {
-		alania_proper_area
-		alania_orientalis_area
-		hyrcania_superior_area
-		tanaissa_area
-		sattara_area
-		sarmatia_hyrcania_area
-	}
-    color = rgb { 24 22 155 }
-}
-sarmatia_asiatica_region = { #10 areas
-	areas = {
-		borysthenia_maioris_area
-		gelonia_area
-		danaia_superioris_area
-		tanassa_area
-		danaia_area
-		confluenta_area
-		donbas_area
-		zarubinets_area
-		transborysthenia_area
-	}
-}
-
 greece_region = {	#10 areas
 	areas = {
 		crete_area
@@ -280,20 +242,6 @@ palestine_region = {	#7 areas
 		decapolis_area
 	}
 }
-sarmatia_europea_region = {			#9 areas
-	areas = {
-		hypania_minoris_area
-		transhypania_area
-		sarmatia_superioris_area
-		hypania_area
-		sarmatia_area
-		borysthenia_area
-		zargidava_area
-		muradava_area
-		olbia_area
-	}
-    color = rgb { 185 221 4 }
-}
 
 #Arabia
 
@@ -501,7 +449,6 @@ sogdiana_region = { #8
 
 scythia_region = { #10
 	areas = {
-		atara_area
 		transhyrcania_area
 		darn_area
 		scythia_ultima_area
@@ -740,6 +687,122 @@ dacia_region = {				#7 areas
     color = rgb { 133 255 127 }
 }
 
+elysia_region = {
+	areas = {
+	rugia_area
+	helveconia_area
+	elysia_area
+	suradonia_area
+	buria_area
+	semnonia_area
+	pharodenia_area
+	}
+    color = rgb { 120 15 80 }
+}
+
+vistulia_region = {
+	areas = {
+		subcarpathia_area
+		vistulia_inferioris_area
+		bassetia_area
+		venedia_area
+		lugia_area
+		ciscarpathia_area
+		vistulia_area
+	}
+    color = rgb { 137 207 240 }
+}
+
+venedia_region = { #8 areas
+	areas = {
+		turuntia_area
+		daugava_area
+		aristavos_area
+		ozeros_area
+		minsk_area
+		polatsk_area
+		neman_area
+		milograd_area
+	}
+    color = rgb { 255 191 0 }
+}
+
+biebrzankski_region = { #6 areas
+	areas = {
+		amadocia_occidentalis_area
+		biebrzankski_area
+		galindia_area
+		chrononis_area
+		ossioia_area
+		volyn_area
+	}
+    color = rgb { 55 191 0 }
+}
+
+borysthenia_region = { #6 areas
+	areas = {
+		budinia_area
+		dnieper_area
+		desna_area
+		yukhnovo_area
+		seym_area
+		transhypania_area
+		gelonia_area
+	}
+}
+
+taurica_region = { #8
+	areas = {
+		maeotia_area
+		bosproranum_area
+		taurica_area
+		abasgoi_area
+		maeotia_minores_area
+		alania_area
+		borysthenia_minor_area
+	}
+    color = rgb { 224 22 255 }
+}
+
+alania_region = { #8
+	areas = {
+		alania_proper_area
+		alania_orientalis_area
+		hyrcania_superior_area
+		tanaissa_area
+		sattara_area
+		sarmatia_hyrcania_area
+		atara_area
+	}
+    color = rgb { 24 22 155 }
+}
+
+sarmatia_asiatica_region = { #9 areas
+	areas = {
+		borysthenia_maioris_area
+		danaia_superioris_area
+		tanassa_area
+		danaia_area
+		confluenta_area
+		donbas_area
+		zarubinets_area
+		transborysthenia_area
+	}
+}
+
+sarmatia_europea_region = {			#9 areas
+	areas = {
+		hypania_minoris_area
+		sarmatia_superioris_area
+		hypania_area
+		sarmatia_area
+		borysthenia_area
+		zargidava_area
+		muradava_area
+		olbia_area
+	}
+    color = rgb { 185 221 4 }
+}
 colchis_region = { #7
 	areas = {
 		suaneti_area
@@ -833,48 +896,6 @@ belgica_region = {
 	}
     color = rgb { 70 130 180 }
 }
-
-elysia_region = {
-	areas = {
-	rugia_area
-	helveconia_area
-	elysia_area
-	suradonia_area
-	buria_area
-	semnonia_area
-	pharodenia_area
-	}
-    color = rgb { 120 15 80 }
-}
-
-vistulia_region = {
-	areas = {
-		subcarpathia_area
-		vistulia_inferioris_area
-		bassetia_area
-		venedia_area
-		lugia_area
-		ciscarpathia_area
-		vistulia_area
-	}
-    color = rgb { 137 207 240 }
-}
-
-venedia_region = {
-	areas = {
-		turuntia_area
-		amadocia_occidentalis_area
-		galindia_area
-		chrononis_area
-		ossioia_area
-		biebrzankski_area
-		neman_area
-		aristavos_area
-		daugava_area
-	}
-    color = rgb { 255 191 0 }
-}
-
 macedonia_region = { #7 areas
 	areas = {
 		macedonia_area
@@ -1282,21 +1303,6 @@ atlas_region = {
 		saharan_atlas_area
 		jedi_area
 		chefia_area
-	}
-}
-
-borysthenia_region = {
-	areas = {
-		budinia_area
-		dnieper_area
-		volyn_area
-		milograd_area
-		desna_area
-		yukhnovo_area
-		seym_area
-		ozeros_area
-		minsk_area
-		polatsk_area
 	}
 }
 
