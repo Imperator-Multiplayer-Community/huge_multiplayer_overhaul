@@ -1418,7 +1418,7 @@ gaetulia_centralis_area = {
 } 
 
 gaetulia_orientalis_area = { 
-	provinces = { 3195 3194 3196 3198 3199 3200 3201 3202 } 
+	provinces = { 3195 3194 3196 3198 3199 3200 3201 3202 3285 3288 3289 } 
 } 
 
 gaetulia_septentrionalis_area = { 
@@ -1450,7 +1450,7 @@ africa_septentrionalis_area = {
 } 
 
 africa_meridionalis_area = { 
-	provinces = { 3279 3286 3276 3277 3282 3281 3278 3280 3283 3287 3285 3288 3289 3284 } 
+	provinces = { 3279 3286 3276 3277 3282 3281 3278 3280 3283 3287 3284 } 
 } 
 
 tripolitania_occidentalis_area = { #9 
@@ -2823,11 +2823,8 @@ hayaa_area = { #8
 } 
 
 murzuq_area = { #8 
-	provinces = { 8173 8174 8175 8178 8179 8181 8182 8184 } 
-} 
-
-himka_area = { #6 
-	provinces = { 8189 8190 8191 8192 8193 8194 } 
+	provinces = { 8173 8174 8175 8178 8179 8181 8182 8184 
+	8189 8190 8191 8192 8193 8194 } 
 } 
 
 psyllia_area = { #8 
@@ -2835,15 +2832,12 @@ psyllia_area = { #8
 } 
 
 zamzam_area = { #11 
-	provinces = { 8170 8198 8203 8204 8205 8206 8207 8208 8209 8210 8211 } 
-} 
-
-girgiri_area = { #8 
-	provinces = { 8212 8213 8214 8215 8216 8217 8218 8219 } 
+	provinces = { 8170 8198 8203 8204 8205 8206 8207 8208 8209 8210 8211 8212 } 
 } 
 
 soffegin_area = { #9 
-	provinces = { 8220 8221 8222 8223 8224 8225 8226 8227 8228 } 
+	provinces = { 8220 8221 8222 8223 8224 8225 8226 8227 8228 
+	8213 8214 8215 8216 8217 8218 8219 } 
 } 
 
 phazania_area = { #14 

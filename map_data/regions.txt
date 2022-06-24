@@ -459,19 +459,6 @@ scythia_region = { #10
 
 #Africa
 
-cyrenaica_region = {		#7 areas
-	areas = {
-		tripolitania_centralis_area
-		tripolitania_orientalis_area
-		cyrenaica_inferioris_area
-		cyrenaica_superioris_area
-		marmarica_occidentalis_area
-		marmarica_orientalis_area
-		ammon_area
-	}
-    color = rgb { 17 127 237 }
-}
-
 punt_region = {		#12 areas
 	areas = {
 		mosylon_area
@@ -558,20 +545,6 @@ caledonia_region = {		#7 areas
 	}
 }
 
-numidia_region = {		#8 areas
-	areas = {
-		numidia_occidentalis_area
-		numidia_centralis_area
-		mauretania_caesariensis_orientalis_area
-		gaetulia_occidentalis_area
-		gaetulia_centralis_area
-		gaetulia_septentrionalis_area
-		mauretania_caesariensis_maioris_area
-		mauretania_caesariensis_minoris_area
-	}
-    color = rgb { 65 70 55 }
-}
-
 nubia_region = {		#12 areas
 	areas = {
 		meroe_area
@@ -627,7 +600,6 @@ lower_egypt_region = {		#7 areas
 		memphis_area
 		heptanomis_area
 		sinai_area
-		parva_area
 	}
     color = rgb { 255 53 35 }
 }
@@ -961,19 +933,6 @@ armorica_region = {			#7 areas
     color = rgb { 248 184 120 }
 }
 
-mauretainia_region = {	#7 areas
-	areas = {
-		rutubis_area
-		tadla_area
-		mauretania_tingitana_septentrionalis_area
-		mauretania_tingitana_meridionalis_area
-		mauretania_caesariensis_occidentalis_area
-		mauretania_caesariensis_centralis_area
-		rif_area
-	}
-    color = rgb { 139 90 63 }
-}
-
 aquitaine_region = {			#6 areas
 	areas = {
 		aquitania_occidentalis_area
@@ -1040,6 +999,22 @@ cisalpine_gaul_region = {	#8 areas
     color = rgb { 145 154 183 }
 }
 
+cyrenaica_region = {		#7 areas
+	areas = {
+		tripolitania_centralis_area
+		tripolitania_orientalis_area
+		cyrenaica_inferioris_area
+		cyrenaica_superioris_area
+		marmarica_occidentalis_area
+		marmarica_orientalis_area
+		ammon_area
+		nasamonia_area
+		parva_area
+	}
+    color = rgb { 17 127 237 }
+}
+
+
 africa_region = {		#9 areas
 	areas = {
 		carthage_area
@@ -1047,12 +1022,75 @@ africa_region = {		#9 areas
 		africa_meridionalis_area
 		numidia_maioris_area
 		numidia_minoris_area
+	}
+    color = rgb { 167 130 93 }
+}
+
+africa_minor_region = {		#9 areas
+	areas = {
 		gaetulia_orientalis_area
 		tripolitania_occidentalis_area
 		lotophagia_area
 		tritonia_area
+		gaetulia_centralis_area
+		phazania_area
 	}
-    color = rgb { 167 130 93 }
+    color = rgb { 17 110 93 }
+}
+
+mauretainia_region = {	#7 areas
+	areas = {
+		rutubis_area
+		tadla_area
+		mauretania_tingitana_septentrionalis_area
+		mauretania_tingitana_meridionalis_area
+		mauretania_caesariensis_occidentalis_area
+		mauretania_caesariensis_centralis_area
+		rif_area
+		lower_moulouya_area
+	}
+    color = rgb { 139 90 63 }
+}
+
+numidia_region = {		#8 areas
+	areas = {
+		numidia_occidentalis_area
+		numidia_centralis_area
+		mauretania_caesariensis_orientalis_area
+		gaetulia_occidentalis_area
+		gaetulia_septentrionalis_area
+		mauretania_caesariensis_maioris_area
+		mauretania_caesariensis_minoris_area
+	}
+    color = rgb { 65 70 55 }
+}
+
+fezzan_region = {
+	areas = {
+		syrtis_area
+		shatti_area
+		hayaa_area
+		murzuq_area
+		psyllia_area
+		zamzam_area
+		soffegin_area
+		tripolitania_centralis_area
+	}
+    color = rgb { 255 289 127 }
+}
+
+atlas_region = {
+	areas = {
+		souss_area
+		marrakesh_area
+		upper_draa_area
+		upper_moulouya_area
+		sijilmasa_area
+		figuig_area
+		saharan_atlas_area
+		jedi_area
+		chefia_area
+	}
 }
 
 rhaetia_region = {		#7 areas
@@ -1267,38 +1305,6 @@ don_river_region = {
 	areas = {
 		don_river_area
 		volga_river_area
-	}
-}
-
-fezzan_region = {
-	areas = {
-		nasamonia_area
-		syrtis_area
-		shatti_area
-		hayaa_area
-		murzuq_area
-		himka_area
-		psyllia_area
-		zamzam_area
-		girgiri_area
-		soffegin_area
-		phazania_area
-	}
-    color = rgb { 255 289 127 }
-}
-
-atlas_region = {
-	areas = {
-		souss_area
-		marrakesh_area
-		upper_draa_area
-		upper_moulouya_area
-		lower_moulouya_area
-		sijilmasa_area
-		figuig_area
-		saharan_atlas_area
-		jedi_area
-		chefia_area
 	}
 }
 
