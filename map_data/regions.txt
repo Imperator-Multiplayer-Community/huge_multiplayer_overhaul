@@ -45,13 +45,11 @@ asia_region = {		#8 areas
 		lydia_area
 		ionia_area
 		aeolia_area
-		mysia_area
 		mysia_abrettene_area
 		inland_caria_area
 		coastal_caria_area
 		sporades_area
 	}
-    color = rgb { 244 222 89 }
 }
 
 cilicia_region = {	#Lycia, Pamphylia, Cilicia	#7 areas
@@ -64,7 +62,6 @@ cilicia_region = {	#Lycia, Pamphylia, Cilicia	#7 areas
 		pisidia_area
 		milyas_area
 	}
-    color = rgb { 227 103 61 }
 }
 
 galatia_region = {	#Galatia & Phrygia	#7 areas
@@ -77,7 +74,6 @@ galatia_region = {	#Galatia & Phrygia	#7 areas
 		galatia_area
 		galatia_trocmi_area
 	}
-    color = rgb { 133 115 25 }
 }
 
 bithynia_region = { #8
@@ -88,8 +84,8 @@ bithynia_region = { #8
 		heracleotis_area
 		paphlagonia_inferior_area
 		bithynia_area
+		mysia_area
 	}
-    color = rgb { 96 255 249 }
 }
 
 cappadocia_region = { #5
@@ -99,6 +95,7 @@ cappadocia_region = { #5
 		cappadocia_garsauritis_area
 		cappadocia_saravene_area
 		cappadocia_melitene_area
+		commagene_area
 	}
 }
 
@@ -109,8 +106,9 @@ cappadocia_pontica_region = { #5
 		armenia_maior_area
 		pontus_area
 		machelonia_area
+		upper_armenia_area
+		sophene_area
 	}
-    color = rgb { 238 225 244 }
 }
 
 #Mesopotamia
@@ -119,10 +117,8 @@ assyria_region = {		#7 areas
 	areas = {
 		corduene_area
 		osroene_area
-		sophene_area
 		upper_mesopotamia_area
 		niniveh_area
-		commagene_area
 		adiabene_area
 	}
     color = rgb { 255 255 127 }
@@ -811,6 +807,7 @@ colchis_region = { #7
 		caucasian_iberia_area
 		gugark_area
 		tayk_area
+		syracene_area
 	}
     color = rgb { 255 140 203 }
 }
@@ -822,6 +819,7 @@ albania_region = { #7
 		paytankert_area
 		artshak_area
 		kahetia_area
+		ayrarat_area
 		scythia_trans_montem_area
 	}
     color = rgb { 255 164 28 }
@@ -832,12 +830,10 @@ armenia_region = {		#9 areas
 		upper_armenia_area
 		tarawn_area
 		vaspurakan_area
-		syracene_area
 		soducene_area
 		parsatunik_area
 		parskahayk_area
 		syunik_area
-		ayrarat_area
 	}
 }
 
