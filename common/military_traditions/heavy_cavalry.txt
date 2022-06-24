@@ -9,7 +9,6 @@ heavy_cavalry_traditions = { # tradition for Heavy Cavalry
 				country_culture_group = thrace_group
 				country_culture_group = dacia_group
 				country_culture_group = illyrian_group
-				country_culture_group = north_african
 				country_culture_group = east_levantine
 				
 				any_country_culture = {
@@ -19,7 +18,6 @@ heavy_cavalry_traditions = { # tradition for Heavy Cavalry
 						
 						this.culture.culture_group = culture_group:thrace_group
 						this.culture.culture_group = culture_group:dacia_group
-						this.culture.culture_group = culture_group:north_african
 						this.culture.culture_group = culture_group:east_levantine
 					}	
 				}	
