@@ -1764,6 +1764,7 @@ oratory_2 = {
 			add_tyranny = 10
 			add_2_free_province_investments = yes
 			switch_government_type_event_clearup_effect = yes
+			add_innovation = 4
 			current_ruler = {
 				if = {
 					limit = {
