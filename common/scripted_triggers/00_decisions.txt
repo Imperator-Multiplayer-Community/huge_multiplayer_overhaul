@@ -44,13 +44,13 @@
 		tag = XXS #Saxonia
 		tag = LOE #Lower Egypt
 		tag = UPE #Upper Egypt
+		tag = ARM #armenia
 	}
 }
 
 is_tier_2_formable_trigger = {
 	OR = {
 		tag = ARI #armenia formable
-		tag = ARM #armenia
 		tag = ASR #Assyria
 		tag = BBY #Babylon
 		tag = BGG #Belgia
