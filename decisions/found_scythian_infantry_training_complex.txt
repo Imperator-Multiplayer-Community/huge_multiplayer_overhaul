@@ -8,11 +8,11 @@
 			NOR = {
 				has_variable = founded_scythian_infantry_training_complex
 			}
-			OR = { 	country_culture_group = scythia
+			OR = { 	country_culture_group = scythian_east
 					any_country_culture = {
 						is_integrated = yes
 						country_culture_pop_count >= percent_size_culture_group_comparison
-						this.culture.culture_group = culture_group:scythia
+						this.culture.culture_group = culture_group:scythian_east
 					}			
 			}
 		}
