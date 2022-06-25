@@ -460,20 +460,17 @@ scythia_region = { #10
 
 #Africa
 
-punt_region = {		#12 areas
+punt_region = {		#9 areas
 	areas = {
 		mosylon_area
 		tana_area
-		aksum_area
 		punt_area
-		ona_area
 		upper_punt_area
 		aromata_area
 		elephas_area
 		zingis_area
-		webiyada_area
 		awash_area
-		ichthyophagia_area
+		kumuzia_area
 	}
     color = rgb { 50 99 38 }
 }
@@ -556,10 +553,7 @@ nubia_region = {		#12 areas
 		hawad_area
 		kartub_area
 		qadarif_area
-		gash_area
 		atbaras_area
-		kumuzia_area
-		sinkat_area
 	}
     color = rgb { 13 9 25 }
 }
@@ -571,7 +565,6 @@ lower_nubia_region = {		#8 areas
 		aswan_area
 		north_nubia_area
 		gabgaba_area
-		allaqi_area
 		alana_area
 		bayuda_area
 	}
@@ -586,8 +579,6 @@ upper_egypt_region = {		#9 areas
 		kharga_area
 		khargana_area
 		hema_nome_area
-		eastern_desert_area
-		ptolemais_area
 		heptanomis_area
 	}
     color = rgb { 255 245 193 }
@@ -599,6 +590,20 @@ lower_egypt_region = {		#7 areas
 		eastern_delta_area
 		central_delta_area
 		memphis_area
+	}
+    color = rgb { 255 53 35 }
+}
+
+aegyptia_region = {		#8 areas
+	areas = {
+		eastern_desert_area
+		ptolemais_area
+		allaqi_area
+		sinkat_area
+		gash_area
+		ichthyophagia_area
+		ona_area
+		aksum_area
 	}
     color = rgb { 255 53 35 }
 }
