@@ -117,6 +117,7 @@ assyria_region = {		#7 areas
 	areas = {
 		corduene_area
 		osroene_area
+		euphrates_area
 		upper_mesopotamia_area
 		niniveh_area
 		adiabene_area
@@ -127,26 +128,33 @@ assyria_region = {		#7 areas
 mesopotamia_region = {	#8 areas (Lower Mesopotamia)
 	areas = {
 		babylonia_area
-		veh_kavad_area
 		beth_daraye_area
-		meshan_area
 		asoristan_area
 		garamig_area
 		tigris_area
-		euphrates_area
 	}
     color = rgb { 190 145 60 }
 }
 
 gedrosia_region = { #7
 	areas = {
-		omana_area
-		east_omana_area
-		gerrha_area
 		gedrosia_area
 		harmozeia_area
 		patalene_area
 		parecania_area
+		south_sindhu_area
+		utia_area
+	}
+}
+
+persian_coast_region = { #6
+	areas = {
+		omana_area
+		east_omana_area
+		gerrha_area
+		veh_kavad_area
+		meshan_area
+		hadramut_orientalis_area
 	}
 }
 
@@ -154,7 +162,6 @@ persis_region = { #7
 	areas = {
 		pars_area
 		veshapur_area
-		utia_area
 		persepolis_area
 		ardashir_area
 		media_felix_area
@@ -167,12 +174,10 @@ media_region = { #9
 		aspadana_area
 		rhagai_area
 		media_area
-		media_atropatene_area
 		media_choromithrene
 		ecbatana_area
 		kossioi_area
 		amardioi_area
-		kadousioi_area
 	}
     color = rgb { 23 237 144 }
 }
@@ -198,6 +203,7 @@ ariana_region = { #7
 		drangiana_area
 		carmania_area
 		namek_area
+		vishpauzatis_area
 	}
 }
 
@@ -206,7 +212,6 @@ parthia_region = { #7
 		parthia_area
 		parthia_komishene_area
 		hyrcania_area
-		vishpauzatis_area
 		margu_area
 		derbicca_area
 		parnia_area
@@ -262,7 +267,6 @@ arabia_felix_region = { #7
 		sheba_area
 		qataba_area
 		hadramut_occidentalis_area
-		hadramut_orientalis_area
 	}
 }
 
@@ -277,6 +281,7 @@ gandhara_region = { #7
 		panchanada_area
 		trigarta_area
 		sivi_area
+		north_sindhu_area
 	}
     color = rgb { 255 248 58 }
 }
@@ -284,12 +289,11 @@ gandhara_region = { #7
 maru_region = { #7
 	areas = {
 		sauvira_area
-		north_sindhu_area
-		south_sindhu_area
 		abhiria_area
 		kaccha_area
 		outer_saurashtra_area
 		inner_saurashtra_area
+		maru_area
 	}
     color = rgb { 80 201 244 }
 }
@@ -302,7 +306,6 @@ avanti_region = { #7
 		anartta_area
 		matsya_area
 		surasena_area
-		maru_area
 	}
     color = rgb { 255 135 15 }
 }
@@ -438,8 +441,8 @@ sogdiana_region = { #8
 		sirdarya_area
 		talas_area
 		ferghana_area
-		kharesmia_superior
 		upper_jaxartia_area
+		eastern_aral_area
 	}
     color = rgb { 163 133 58 }
 }
@@ -453,7 +456,7 @@ scythia_region = { #10
 		dahaea_area
 		scythia_ad_pontem_area
 		kharesmia_area
-		eastern_aral_area
+		kharesmia_superior
 	}
     color = rgb { 84 255 209 }
 }
@@ -803,13 +806,14 @@ albania_region = { #7
 
 armenia_region = {		#9 areas
 	areas = {
-		upper_armenia_area
 		tarawn_area
 		vaspurakan_area
 		soducene_area
 		parsatunik_area
 		parskahayk_area
 		syunik_area
+		media_atropatene_area
+		kadousioi_area
 	}
 }
 
@@ -1005,7 +1009,6 @@ cisalpine_gaul_region = {	#8 areas
 
 cyrenaica_region = {		#7 areas
 	areas = {
-		tripolitania_centralis_area
 		tripolitania_orientalis_area
 		cyrenaica_inferioris_area
 		cyrenaica_superioris_area
