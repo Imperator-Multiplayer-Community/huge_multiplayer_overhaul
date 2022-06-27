@@ -27,7 +27,7 @@
 		highlight = {
 			scope:province = {
 				OR = {
-					is_in_area = carnuntia_area
+					is_in_area = celamantia_area
 					is_in_area = transcarpathia_occidentalis_area
 					is_in_area = transcarpathia_centralis_area
 				}
@@ -45,7 +45,7 @@
 				}
 			}
 			can_form_nation_trigger = yes
-			owns_or_subject_owns_area = carnuntia_area
+			owns_or_subject_owns_area = celamantia_area
 			owns_or_subject_owns_area = transcarpathia_occidentalis_area
 			owns_or_subject_owns_area = transcarpathia_centralis_area
 		}

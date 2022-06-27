@@ -28,9 +28,30 @@
 					is_in_area = mediomatricia_area
 					is_in_area = treveria_area
 					is_in_area = menapia_orientalis
-					is_in_region = germania_region
-					is_in_region = bohemia_area
-					is_in_region = venedia_region
+					#is_in_region = germania_region
+					#is_in_region = bohemia_area
+					#is_in_region = venedia_region
+					is_in_region = germania_magna_region
+					#Old Venedia region
+					is_in_region = elysia_region
+					is_in_area = marsignia_area
+					is_in_area = lugia_area
+					is_in_area = venedia_area
+					is_in_area = vistulia_area
+					#amadocia_occidentalis_area
+					is_in_area = ossioia_area
+					is_in_area = chrononis_area
+					is_in_area = galindia_area
+					is_in_area = turuntia_area
+					#Southern Germania and Boihaemia
+					is_in_area = chattia_orientalis_area
+					is_in_area = marcomannia_maiores_area
+					is_in_area = boioa_meridionalis_area
+					is_in_area = boioa_septentrionalis_area
+					is_in_area = marcomannia_minores_area
+					is_in_area = germanicum_area
+					
+
 				}
 			}
 		}
@@ -57,9 +78,29 @@
 			owns_or_subject_owns_area = mediomatricia_area
 			owns_or_subject_owns_area = treveria_area
 			owns_or_subject_owns_area = menapia_orientalis
-			owns_or_subject_owns_region = germania_region
-			owns_or_subject_owns_region = bohemia_area
-			owns_or_subject_owns_region = venedia_region
+			#owns_or_subject_owns_region = germania_region
+			#owns_or_subject_owns_region = bohemia_area
+			#owns_or_subject_owns_region = venedia_region
+			owns_or_subject_owns_region = germania_magna_region
+			#Old Venedia region
+			owns_or_subject_owns_region = elysia_region
+			owns_or_subject_owns_area = marsignia_area
+			owns_or_subject_owns_area = lugia_area
+			owns_or_subject_owns_area = venedia_area
+			owns_or_subject_owns_area = vistulia_area
+			#amadocia_occidentalis_area
+			owns_or_subject_owns_area = ossioia_area
+			owns_or_subject_owns_area = chrononis_area
+			owns_or_subject_owns_area = galindia_area
+			owns_or_subject_owns_area = turuntia_area
+			#Southern Germania and Boihaemia
+			owns_or_subject_owns_area = chattia_orientalis_area
+			owns_or_subject_owns_area = marcomannia_maiores_area
+			owns_or_subject_owns_area = boioa_meridionalis_area
+			owns_or_subject_owns_area = boioa_septentrionalis_area
+			owns_or_subject_owns_area = marcomannia_minores_area
+			owns_or_subject_owns_area = germanicum_area
+
 		}
 		
 		effect = {

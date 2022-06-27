@@ -2,6 +2,7 @@
 	
 	# Form the Isle of Mann
 	# Created by Shinymewtwo99
+	# Defunct, since Monopia tag now exists
 	form_mann = {
 		
 		potential = {
@@ -15,6 +16,9 @@
 
 			NOT = {
 				tag = MNX
+			}
+			NOT = {
+				primary_culture = monapian
 			}
 			NOR = {
 				is_tier_1_formable_trigger = yes

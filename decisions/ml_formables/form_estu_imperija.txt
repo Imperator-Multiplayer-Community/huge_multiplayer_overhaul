@@ -8,7 +8,7 @@
 		potential = {
 			num_of_cities >= 1
 			NOT = { tag = EST }
-			country_culture_group = baltic
+			primary_culture = aestian
 			NOT = {
 				is_endgame_tag_trigger = yes
 			}
@@ -41,8 +41,19 @@
 					is_in_area = caluconia_area
 					is_in_area = buria_area
 					is_in_area = boioa_septentrionalis_area
-					is_in_region = venedia_region
+					#is_in_region = venedia_region
 					is_in_region = scandinavia_region
+					#Old Venedia
+					is_in_area = chrononis_area
+					is_in_area = elysia_area
+					is_in_area = marsignia_area
+					is_in_area = lugia_area
+					is_in_area = venedia_area
+					is_in_area = galindia_area
+					is_in_area = turuntia_area
+					is_in_area = rugia_area
+					is_in_area = helveconia_area
+					
 				}
 			}
 		}

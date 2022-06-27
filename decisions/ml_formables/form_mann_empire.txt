@@ -8,6 +8,7 @@
 			num_of_cities >= 1
 			OR = {
 				primary_culture = manavian
+				primary_culture = monapian
 			}
 			NOT = {
 				is_endgame_tag_trigger = yes
@@ -21,6 +22,7 @@
 			scope:province = {
 				OR = {
 					is_in_region = britain_region
+					is_in_region = caledonia_region
 					#province_id = 2108
 				}
 			}
@@ -37,6 +39,7 @@
 			}
 			can_form_nation_trigger = yes
 			owns_region = britain_region
+			owns_region = caledonia_region
 			owns = 2108
 		}
 		

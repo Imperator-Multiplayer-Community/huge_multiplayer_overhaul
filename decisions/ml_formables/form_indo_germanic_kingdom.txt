@@ -34,6 +34,8 @@
 					is_in_region = maru_region
 					is_in_region = gandhara_region
 					is_in_region = indus_region
+					is_in_region = koda_region
+					is_in_region = vindhyachala_region
 				}
 			}
 		}
@@ -45,14 +47,28 @@
 					any_country = {
 						tag = IGK
 					}
-					#owns_or_subject_owns_region = germania_region        TODO fix
-					#owns_or_subject_owns_region = scandinavia_region
-					#owns_or_subject_owns_region = bohemia_area
-					#owns_or_subject_owns_region = belgica_region
-					#owns_or_subject_owns_region = rhaetia_region
+					owns_or_subject_owns_region = germania_magna_region
+					owns_or_subject_owns_region = scandinavia_region
+					owns_or_subject_owns_region = bohemia_region
+					owns_or_subject_owns_region = belgica_region
+					owns_or_subject_owns_region = rhaetia_region
 				}
 			}
 			can_form_nation_trigger = yes
+			OR = {
+				owns_or_subject_owns_region = pracya_region
+				owns_or_subject_owns_region = madhyadesa_region
+				owns_or_subject_owns_region = vindhyaprstha_region
+				owns_or_subject_owns_region = dravida_region
+				owns_or_subject_owns_region = aparanta_region
+				owns_or_subject_owns_region = karnata_region
+				owns_or_subject_owns_region = avanti_region
+				owns_or_subject_owns_region = maru_region
+				owns_or_subject_owns_region = gandhara_region
+				owns_or_subject_owns_region = indus_region
+				owns_or_subject_owns_region = koda_region
+				owns_or_subject_owns_region = vindhyachala_region
+			}
 		}
 		
 		effect = {

@@ -5,7 +5,11 @@
 		
 		potential = {
 			num_of_cities >= 1
-			country_culture_group = gaelic
+			OR = {
+				country_culture_group = gaelic
+				primary_culture = ivernian
+				primary_culture = voluntian
+			}
 			NOT = {
 				tag = BRY
 			}
@@ -23,6 +27,7 @@
 			scope:province = {
 				OR = {
 					is_in_region = britain_region
+					is_in_region = caledonia_region
 				}
 			}
 		}
@@ -38,6 +43,7 @@
 			}
 			can_form_nation_trigger = yes
 			owns_or_subject_owns_region = britain_region
+			owns_region = caledonia_region
 		}
 		
 		effect = {
