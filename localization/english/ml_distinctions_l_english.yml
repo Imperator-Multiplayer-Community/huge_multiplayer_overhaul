@@ -1039,4 +1039,4 @@ distinction_warelephant_discipline_3_desc:0 "When this legion's war elephants ta
 gw_effect_honor_expeditionaries:0 "Honor Expeditionaries"
 gw_effect_honor_expeditionaries_DESC:0 "In honor of our heroic expeditionary legion."
 
-victories_defeats_history:0 "[LEGION.MakeScope.GetVariable('total_victory_count')] victories ... [LEGION.MakeScope.GetVariable('total_defeat_count')] defeats."
+victories_defeats_history:0 "[hist_legion_scope.MakeScope.GetVariable('total_victory_count')] victories ... [hist_legion_scope.MakeScope.GetVariable('total_defeat_count')] defeats."
