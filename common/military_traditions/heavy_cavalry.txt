@@ -1,4 +1,4 @@
-heavy_cavalry_traditions = { # tradition for Heavy Cavalry
+﻿heavy_cavalry_traditions = { # tradition for Heavy Cavalry
 	color = hsv { 1.72 0.64 0.7 }
 	image = persian_bactrian_path_end_bonus #updated
 	
@@ -232,7 +232,7 @@ heavy_cavalry_traditions = { # tradition for Heavy Cavalry
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_end_bonus
-		requires = { assyrian_path_3 and iranian_path_11}
+		requires = { assyrian_path_3 iranian_path_11}
 		allow = {
 			trigger_if = {
 				limit = { country_culture_group = east_levantine }
@@ -324,7 +324,7 @@ heavy_cavalry_traditions = { # tradition for Heavy Cavalry
 			discipline = 0.05
 		}
 		icon = persian_bactrian_path_end_bonus
-		requires = { heavy_cavalry_path_6 and heavy_cavalry_path_5 }
+		requires = { heavy_cavalry_path_6 heavy_cavalry_path_5 }
 	}
 
 	armenian_path_2 = { ###
@@ -463,7 +463,7 @@ heavy_cavalry_traditions = { # tradition for Heavy Cavalry
 
 	thracian_path_11 = { #Cavalry again
 		enable_tactic = cavalry_skirmish
-		requires = { thracian_path_2 and armenian_path_2 }
+		requires = { thracian_path_2 armenian_path_2 }
 		modifier = {
 			heavy_cavalry_cost = -0.05
 		}

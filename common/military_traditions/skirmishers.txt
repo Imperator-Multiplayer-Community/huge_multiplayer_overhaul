@@ -1,4 +1,4 @@
-skirmishers_traditions = { # tradition for Skirmishers
+﻿skirmishers_traditions = { # tradition for Skirmishers
 	color = hsv { 1.72 0.64 0.7 }
 	image = celtic_britannic_path_7
 	
@@ -151,7 +151,7 @@ skirmishers_traditions = { # tradition for Skirmishers
 			discipline = 0.05
 		}
 		icon = greek_antigonid_path_6
-		requires = { skirmishers_path_6 and skirmishers_path_5 }
+		requires = { skirmishers_path_6 skirmishers_path_5 }
 	}
 
 	nubian_path_1 = { ### Ta Seti
@@ -483,7 +483,7 @@ skirmishers_traditions = { # tradition for Skirmishers
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_coastal_path_7
-		requires = { aryan_river_path_4 and andhra_path_5}
+		requires = { aryan_river_path_4 andhra_path_5}
 		allow = {
 			trigger_if = {
 				limit = { country_culture_group = aryan }

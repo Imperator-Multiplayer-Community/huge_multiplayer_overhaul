@@ -1,4 +1,4 @@
-horse_archers_traditions = { # tradition for Heavy Archers
+﻿horse_archers_traditions = { # tradition for Heavy Archers
 	color = hsv { 1.72 0.64 0.7 }
 	image = levantine_arabian_path_end_bonus #updated
 	
@@ -150,7 +150,7 @@ horse_archers_traditions = { # tradition for Heavy Archers
 			discipline = 0.05
 		}
 		icon = north_african_tribal_path_2
-		requires = { horse_archers_path_6 and horse_archers_path_5 }
+		requires = { horse_archers_path_6 horse_archers_path_5 }
 	}
 
 

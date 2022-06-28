@@ -1,4 +1,4 @@
-camels_traditions = { # tradition for Camels
+﻿camels_traditions = { # tradition for Camels
 	color = hsv { 1.72 0.64 0.7 }
 	image = levantine_egyptian_path_6 #updated
 	
@@ -128,7 +128,7 @@ camels_traditions = { # tradition for Camels
 			discipline = 0.05
 		}
 		icon = north_african_army_path_6
-		requires = { camels_path_6 and camels_path_5 }
+		requires = { camels_path_6 camels_path_5 }
 	}
 
 	arabian_path_3 = { ###

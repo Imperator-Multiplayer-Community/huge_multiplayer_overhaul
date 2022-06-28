@@ -11,12 +11,6 @@
 			OR = {
 				num_of_cities < 1
 				NOR = {
-					is_tradition_tree_allowed = greek_philosophy
-					is_tradition_tree_allowed = aryan_philosophy #New for Invictus
-					is_tradition_tree_allowed = haemic_philosophy #New for Invictus
-					is_tradition_tree_allowed = iberian_philosophy #New for Invictus
-					is_tradition_tree_allowed = anatolian_philosophy #New for Invictus
-					is_tradition_tree_allowed = afro_arabian_philosophy #New for Invictus
 					heritage = pirate_heritage
 				}
 			}
@@ -26,28 +20,16 @@
 	allow = {
 		unit_owner = {
 			trigger_if = {
-				limit = { is_tradition_tree_allowed = greek_philosophy }
 				has_military_bonus = greek_antigonid_path_4
 			}
 			trigger_else_if = {
-				limit = { is_tradition_tree_allowed = aryan_philosophy } #New for Invictus
 				has_military_bonus = aryan_river_path_3
 			}
 			trigger_else_if = {
-				limit = { is_tradition_tree_allowed = haemic_philosophy } #New for Invictus
 				has_military_bonus = illyrian_piracy_path_1
 			}
 			trigger_else_if = {
-				limit = { is_tradition_tree_allowed = iberian_philosophy } #New for Invictus
-				has_military_bonus = celt_iberian_path_c_3
-			}
-			trigger_else_if = {
-				limit = { is_tradition_tree_allowed = anatolian_philosophy } #New for Invictus
 				has_military_bonus = lydian_path_1
-			}
-			trigger_else_if = {
-				limit = { is_tradition_tree_allowed = afro_arabian_philosophy } #New for Invictus
-				has_military_bonus = arabian_path_4
 			}
 			trigger_else_if = {
 				limit = {

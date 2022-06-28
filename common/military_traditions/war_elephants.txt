@@ -1,4 +1,4 @@
-war_elephant_traditions = { # tradition for War Elephant
+﻿war_elephant_traditions = { # tradition for War Elephant
 	color = hsv { 1.72 0.64 0.7 }
 	image = north_african_army_path_5
 	
@@ -170,7 +170,7 @@ war_elephant_traditions = { # tradition for War Elephant
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_5
-		requires = {north_african_army_path_3 and nubian_path_4}
+		requires = {north_african_army_path_3 nubian_path_4}
 		allow = {
 			trigger_if = {
 				limit = { primary_culture = carthaginian }
@@ -271,7 +271,7 @@ war_elephant_traditions = { # tradition for War Elephant
 			discipline = 0.05
 		}
 		icon = north_african_army_path_5
-		requires = { warelephant_path_6 and warelephant_path_5 }
+		requires = { warelephant_path_6 warelephant_path_5 }
 	}
 	
 	aryan_river_path_12 = { ###
