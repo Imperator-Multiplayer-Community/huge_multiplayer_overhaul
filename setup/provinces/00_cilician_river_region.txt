@@ -1,33 +1,30 @@
-﻿#Pyramus
-8028=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
+﻿8028={ #Pyramus
 	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Pyramus
-8029=
-{
-	barbarian_power=0
-	civilization_value=0
 	culture=""
-	province_rank=""
 	religion=""
-	terrain="riverine_terrain"
 	trade_goods=""
-}
-#Cydnus
-8051=
-{
-	barbarian_power=0
 	civilization_value=0
-	culture=""
+	barbarian_power=0
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
+
+8029={ #Pyramus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8051={ #Cydnus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+

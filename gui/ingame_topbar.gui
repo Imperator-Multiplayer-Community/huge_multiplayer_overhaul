@@ -3400,47 +3400,6 @@ vbox = {
 					}
 				}
 
-				list_button = {
-					size = { @setwidth @setheight }
-					visible = "[GetVariableSystem.Exists('browser_button')]"
-					onclick = "[GetVariableSystem.Toggle('browser_button')]"
-					onclick = "[GetVariableSystem.Clear('browser')]"
-					onclick = "[PdxGuiTriggerAllAnimations('close_browser')]"
-					check_filter = {
-						parentanchor = vcenter
-						position = { 2 0 }
-						blockoverride "On_click" {
-							alwaystransparent = yes
-						}
-						blockoverride "Frame" {
-							frame = "[Select_int32( GetVariableSystem.Exists('browser_button'), '(int32)2', '(int32)1')]"
-						}
-						blockoverride "TagText" {
-							text = "browser"
-						}
-					}
-				}
-
-				list_button = {
-					visible = "[Not(GetVariableSystem.Exists('browser_button'))]"
-					size = { @setwidth @setheight }
-					onclick = "[GetVariableSystem.Toggle('browser_button')]"
-					onclick = "[GetVariableSystem.Toggle('browser')]"
-					check_filter = {
-						parentanchor = vcenter
-						position = { 2 0 }
-						blockoverride "On_click" {
-							alwaystransparent = yes
-						}
-						blockoverride "Frame" {
-							frame = "[Select_int32( GetVariableSystem.Exists('browser_button'), '(int32)2', '(int32)1')]"
-						}
-						blockoverride "TagText" {
-							text = "browser"
-						}
-					}
-				}
-
 				widget = {
 					size = { 0 25 }
 				}

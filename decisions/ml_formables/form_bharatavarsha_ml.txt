@@ -34,7 +34,8 @@
 					is_in_region = karnata_region
 					is_in_region = gandhara_region
 					is_in_region = aparanta_region
-					is_in_region = indus_region
+					is_in_region = vindhyaprstha_region
+					is_in_region = koda_region
 				}
 			}
 		}
@@ -58,7 +59,8 @@
 			owns_or_subject_owns_region = avanti_region
 			owns_or_subject_owns_region = maru_region
 			owns_or_subject_owns_region = gandhara_region
-			owns_or_subject_owns_region = indus_region
+			owns_or_subject_owns_region = vindhyaprstha_region
+			owns_or_subject_owns_region = koda_region
 		}
 		
 		

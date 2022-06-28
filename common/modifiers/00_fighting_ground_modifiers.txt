@@ -4,23 +4,29 @@
 	archers_hills_combat_bonus = 0.25
 	archers_marsh_combat_bonus = 0.25
 	archers_desert_combat_bonus = 0.1
+	archers_desert_hills_combat_bonus = 0.1
 	archers_jungle_combat_bonus = -0.2
 	archers_forest_combat_bonus = -0.2
 		
 	light_infantry_mountain_combat_bonus = 0.1
 	light_infantry_hills_combat_bonus = 0.15
 	light_infantry_desert_combat_bonus = 0.1
+	light_infantry_desert_hills_combat_bonus = 0.1
 	light_infantry_jungle_combat_bonus = 0.15
 	light_infantry_forest_combat_bonus = 0.15
 
 	heavy_infantry_mountain_combat_bonus = -0.1
 	heavy_infantry_hills_combat_bonus = -0.15
 	heavy_infantry_desert_combat_bonus = -0.2
+	heavy_infantry_desert_hills_combat_bonus = -0.2
 	heavy_infantry_marsh_combat_bonus = -0.2
 	heavy_infantry_jungle_combat_bonus = -0.15
 	heavy_infantry_forest_combat_bonus = -0.1
 	heavy_infantry_plains_combat_bonus = 0.1
 	heavy_infantry_farmland_combat_bonus = 0.1
+	heavy_infantry_flood_plain_combat_bonus = 0.1
+	heavy_infantry_oasis_combat_bonus = 0.1
+
 }	
 
 light_mounted_terrain_boni = {	
@@ -29,18 +35,24 @@ light_mounted_terrain_boni = {
 	light_cavalry_mountain_combat_bonus = -0.2
 	light_cavalry_hills_combat_bonus = 0.15
 	light_cavalry_desert_combat_bonus = 0.15
+	light_cavalry_desert_hills_combat_bonus = 0.15
 	light_cavalry_marsh_combat_bonus = -0.2
 	light_cavalry_jungle_combat_bonus = -0.2
 	light_cavalry_farmland_combat_bonus = 0.2
+	light_cavalry_flood_plain_combat_bonus = 0.2
+	light_cavalry_oasis_combat_bonus = 0.2
 	light_cavalry_forest_combat_bonus = -0.15
 
 	horse_archers_plains_combat_bonus = 0.15
 	horse_archers_mountain_combat_bonus = -0.2
 	horse_archers_hills_combat_bonus = 0.15
 	horse_archers_desert_combat_bonus = 0.1
+	horse_archers_desert_hills_combat_bonus = 0.1
 	horse_archers_marsh_combat_bonus = -0.15
 	horse_archers_jungle_combat_bonus = -0.25
 	horse_archers_farmland_combat_bonus = 0.15
+	horse_archers_flood_plain_combat_bonus = 0.15
+	horse_archers_oasis_combat_bonus = 0.15
 	horse_archers_forest_combat_bonus = -0.25	
 }	
 
@@ -50,26 +62,35 @@ heavy_mounted_terrain_boni = {
 	heavy_cavalry_mountain_combat_bonus = -0.2
 	heavy_cavalry_hills_combat_bonus = -0.1
 	heavy_cavalry_desert_combat_bonus = -0.1
+	heavy_cavalry_desert_hills_combat_bonus = -0.1
 	heavy_cavalry_marsh_combat_bonus = -0.2
 	heavy_cavalry_jungle_combat_bonus = -0.25
 	heavy_cavalry_farmland_combat_bonus = 0.2
+	heavy_cavalry_flood_plain_combat_bonus = 0.2
+	heavy_cavalry_oasis_combat_bonus = 0.2
 	heavy_cavalry_forest_combat_bonus = -0.2
 	
 	camels_plains_combat_bonus = 0.2
 	camels_mountain_combat_bonus = -0.2
 	camels_desert_combat_bonus = 0.25
+	camels_desert_hills_combat_bonus = 0.15
 	camels_marsh_combat_bonus = -0.2
 	camels_jungle_combat_bonus = -0.25
 	camels_farmland_combat_bonus = 0.2
+	camels_flood_plain_combat_bonus = 0.2
+	camels_oasis_combat_bonus = 0.2
 	camels_forest_combat_bonus = -0.2	
 	
 	warelephant_plains_combat_bonus = 0.15
 	warelephant_hills_combat_bonus = -0.1
 	warelephant_desert_combat_bonus = -0.1
+	warelephant_desert_hills_combat_bonus = -0.1
 	warelephant_marsh_combat_bonus = -0.25
 	warelephant_mountain_combat_bonus = -0.25
 	warelephant_jungle_combat_bonus = -0.2
 	warelephant_farmland_combat_bonus = 0.15
+	warelephant_flood_plain_combat_bonus = 0.15
+	warelephant_oasis_combat_bonus = 0.15
 	warelephant_forest_combat_bonus = -0.15
 }
 

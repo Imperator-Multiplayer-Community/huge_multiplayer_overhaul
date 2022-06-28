@@ -1,55 +1,50 @@
-﻿#Albis
-7884=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
+﻿7884={ #Albis
 	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Albis
-7885=
-{
-	barbarian_power=0
-	civilization_value=0
 	culture=""
-	province_rank=""
 	religion=""
-	terrain="riverine_terrain"
 	trade_goods=""
-}
-#Albis
-7886=
-{
-	barbarian_power=0
 	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Albis
-7887=
-{
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Albis
-7888=
-{
+
+7885={ #Albis
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
+
+7886={ #Albis
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+7887={ #Albis
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+7888={ #Albis
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+

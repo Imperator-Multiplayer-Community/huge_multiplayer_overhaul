@@ -13,6 +13,8 @@ ml_victories_defeats_count.1 = {
 
 	immediate = {
 		scope:actor.legion = {
+			save_scope_as = hist_legion_scope
+
 			if = {
 				limit = {
 					has_variable = total_victory_count
@@ -65,6 +67,8 @@ ml_victories_defeats_count.2 = {
 
 	immediate = {
 		scope:actor.legion = {
+			save_scope_as = hist_legion_scope
+
 			if = {
 				limit = {
 					has_variable = total_defeat_count

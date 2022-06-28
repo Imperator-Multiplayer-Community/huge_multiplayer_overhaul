@@ -534,8 +534,7 @@
 	#New HMO invention
 	iberian_cavalry_inv = {
 		modifier = { 
-			heavy_cavalry_offensive = 0.1 
-			heavy_cavalry_defensive = 0.1 
+			heavy_cavalry_offensive = 0.01 
 		}
 		on_activate = {
 			trigger_event = {
@@ -592,10 +591,10 @@
 	#New HMO invention
 	bitless_bridle_inv = { 
         modifier = { 
-			light_cavalry_defensive = 0.05
-			heavy_cavalry_defensive = 0.05
-			light_cavalry_offensive = 0.05
-			heavy_cavalry_offensive = 0.05
+			light_cavalry_defensive = 0.01
+			heavy_cavalry_defensive = 0.01
+			light_cavalry_offensive = 0.01
+			heavy_cavalry_offensive = 0.01
 		}
 		on_activate = {
 			trigger_event = {
@@ -834,7 +833,7 @@ military_inventions = {
 	# Level 2
 	heavy_cavalry_discipline_inv = {
 		modifier = { 
-			heavy_cavalry_discipline = 0.1
+			heavy_cavalry_discipline = 0.05
 		}
 		on_activate = {
 			trigger_event = {
@@ -946,9 +945,9 @@ military_inventions = {
 	#New HMO invention
 	kikkuli_inv = {
     	modifier = { 
-    		heavy_cavalry_morale = 0.05
-    		light_cavalry_morale = 0.05
-    		horse_archers_morale = 0.05
+    		heavy_cavalry_morale = 0.01
+    		light_cavalry_morale = 0.01
+    		horse_archers_morale = 0.01
 		}
 		on_activate = {
 			trigger_event = {
@@ -1180,8 +1179,8 @@ military_inventions = {
     ## Gallic Specific - Level 1
     #Vanilla invention modified for Invictus
     gallic_noric_steel_inv = {
-    	modifier = { light_infantry_offensive = 0.05
-    				 heavy_infantry_offensive = 0.05 
+    	modifier = { light_infantry_offensive = 0.01
+    				 heavy_infantry_offensive = 0.01 
 					}
 					on_activate = {
 						trigger_event = {
@@ -1267,9 +1266,9 @@ military_inventions = {
     #Vanilla invention modified for Invictus
     gallic_chainmail_inv = {
     	modifier = { 
-    		light_infantry_defensive  = 0.05 
-			heavy_infantry_defensive = 0.05
-    		heavy_cavalry_defensive = 0.05
+    		light_infantry_defensive  = 0.01
+			heavy_infantry_defensive = 0.01
+    		heavy_cavalry_defensive = 0.01
 		}
 		on_activate = {
 			trigger_event = {
@@ -1300,9 +1299,9 @@ military_inventions = {
 
     #Vanilla invention modified for Invictus
     gallic_four_horned_saddle_inv = {
-    	modifier = { light_cavalry_offensive = 0.05
-    				 heavy_cavalry_offensive = 0.05
-    				 horse_archers_offensive = 0.05
+    	modifier = { light_cavalry_offensive = 0.01
+    				 heavy_cavalry_offensive = 0.01
+    				 horse_archers_offensive = 0.01
 					}
 					on_activate = {
 						trigger_event = {
@@ -1338,7 +1337,7 @@ military_inventions = {
     	modifier = {
 			light_infantry_discipline = 0.05
     		heavy_infantry_discipline = 0.05
-			archers_discipline = 0.1
+			archers_discipline = 0.05
 		}
 		on_activate = {
 			trigger_event = {
@@ -1370,9 +1369,9 @@ military_inventions = {
 
     #Vanilla invention modified for Invictus
     gallic_trimarcisia_inv = {
-    	modifier = { light_cavalry_morale = 0.05
-    				 heavy_cavalry_morale = 0.05
-    				 horse_archers_morale = 0.05
+    	modifier = { light_cavalry_morale = 0.01
+    				 heavy_cavalry_morale = 0.01
+    				 horse_archers_morale = 0.01
 					}
 					on_activate = {
 						trigger_event = {

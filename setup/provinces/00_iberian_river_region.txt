@@ -1,132 +1,120 @@
-﻿#Lacus Ligustinus
-7665=
-{
-	barbarian_power=0
-	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
+﻿7665={ #Lacus Ligustinus
 	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tagus
-7767=
-{
-	barbarian_power=0
-	civilization_value=0
 	culture=""
-	province_rank=""
 	religion=""
-	terrain="riverine_terrain"
 	trade_goods=""
-}
-#Tagus
-7768=
-{
-	barbarian_power=0
 	civilization_value=0
-	culture=""
-	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
-}
-#Tagus
-7769=
-{
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Tagus
-7770=
-{
+
+7767={ #Tagus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Baetis
-7771=
-{
+
+7768={ #Tagus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Baetis
-7772=
-{
+
+7769={ #Tagus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Flumen Anas
-7862=
-{
+
+7770={ #Tagus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Flumen Anas
-7863=
-{
+
+7771={ #Baetis
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Iberus
-8037=
-{
+
+7772={ #Baetis
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Iberus
-8038=
-{
+
+7862={ #Flumen Anas
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
-#Iberus
-8039=
-{
+
+7863={ #Flumen Anas
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
 	barbarian_power=0
-	civilization_value=0
-	culture=""
 	province_rank=""
-	religion=""
-	terrain="riverine_terrain"
-	trade_goods=""
 }
+
+8037={ #Iberus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8038={ #Iberus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+
+8039={ #Iberus
+	terrain="riverine_terrain"
+	culture=""
+	religion=""
+	trade_goods=""
+	civilization_value=0
+	barbarian_power=0
+	province_rank=""
+}
+

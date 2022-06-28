@@ -4,9 +4,9 @@ pdxmesh = {
 
 	meshsettings = {
 		name = "egypt_temple_04"
-		texture_diffuse = "wonder_giza_diffuse.dds"
-		texture_normal = "wonder_giza_normal.dds"
-		texture_specular = "wonder_giza_properties.dds"
+		texture_diffuse = "gw_pyramid_atlas_03_diffuse.dds"
+		texture_normal = "gw_pyramid_atlas_03_normal.dds"
+		texture_specular = "gw_pyramid_atlas_03_properties.dds"
 		shader = "standard_snow"
 		shader_file = "gfx/FX/pdxmesh.shader"
 	}

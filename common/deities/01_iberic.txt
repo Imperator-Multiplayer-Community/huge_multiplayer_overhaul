@@ -47,7 +47,7 @@ deity_dercetius = { # ECONOMY
 		}
 	}
 	icon = deity_iberian_economy
-	passive_modifier = { monthly_political_influence_modifier = deity_monthly_political_influence_modifier_svalue }
+	passive_modifier = { fabricate_claim_speed = deity_fabricate_claim_speed_svalue }
 	omen = { global_slaves_output = omen_global_slaves_output_svalue } #Bonus from Omen
 	on_activate = {
 		economy_apotheosis_province_improvement_effect = yes
@@ -77,7 +77,7 @@ deity_eacus = { # CULTURE
 		}
 	}
 	icon = deity_iberian_culture
-	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
+	passive_modifier = { diplomatic_reputation = deity_diplomatic_reputation_svalue }
 	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue } #Bonus from Omen
 	on_activate = {
 		culture_apotheosis_assimilate_effect = yes
@@ -227,7 +227,7 @@ deity_cariocecus = { # WAR
 		}
 	}
 	icon = deity_iberian_war
-	passive_modifier = { army_maintenance_cost = -0.05 }
+	passive_modifier = { army_maintenance_cost = deity_army_maintenance_cost_svalue }
 	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
 	on_activate = {
 		military_apotheosis_military_experience_effect = yes

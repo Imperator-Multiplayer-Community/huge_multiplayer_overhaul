@@ -298,7 +298,7 @@ libyan_elephant_training_programme = {
 }
 
 tarentine_cavalry_training_programme = { 
-	horse_archers_morale = 0.1
+	light_cavalry_morale = 0.1
 }
 
 ferghani_cavalry_training_programme = { 
@@ -314,7 +314,7 @@ himalayan_training_programme = {
 }
 
 aksumite_horse_archer_training_programme = { 
-	horse_archers_offensive = 0.1
+	archers_offensive = 0.1
 }
 
 aramaic_infantry_training_programme = { 
@@ -362,7 +362,7 @@ median_infantry_training_programme = {
 }
 
 scythian_infantry_training_programme = { 
-	heavy_infantry_discipline = 0.1
+	horse_archers_morale = 0.1
 }
 
 arabian_piracy = {

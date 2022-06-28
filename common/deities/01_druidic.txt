@@ -221,7 +221,7 @@ deity_cichol = {
 		}
 	}
 	icon = deity_tribal_war
-	passive_modifier = { army_maintenance_cost = -0.05 }
+	passive_modifier = { army_maintenance_cost = deity_army_maintenance_cost_svalue }
 	omen = { agressive_expansion_monthly_change = omen_aggressive_expansion_monthly_change_svalue } #Bonus from Omen
 	religion = druidism
 	deity_category = war #This Deity uses a War slot.
@@ -708,7 +708,7 @@ deity_lenus = {
 			rare_deity_culture_region_trigger = {
 				RELIGION = druidism
 				CULTURE = treverian
-				REGION = bohemia_area
+				REGION = germania_superior_region
 			}
 			deity:omen_lenus = {
 				holy_site_deity_check_trigger = yes
@@ -736,7 +736,7 @@ deity_intarabus = {
 			rare_deity_culture_region_trigger = {
 				RELIGION = druidism
 				CULTURE = treverian
-				REGION = bohemia_area
+				REGION = germania_superior_region
 			}
 			deity:omen_intarabus = {
 				holy_site_deity_check_trigger = yes
@@ -764,7 +764,7 @@ deity_ancamna = {
 			rare_deity_culture_region_trigger = {
 				RELIGION = druidism
 				CULTURE = treverian
-				REGION = bohemia_area
+				REGION = germania_superior_region
 			}
 			deity:omen_ancamna = {
 				holy_site_deity_check_trigger = yes

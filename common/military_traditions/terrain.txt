@@ -1,0 +1,107 @@
+﻿terrain_traditions = { # tradition for Terrain
+	color = hsv { 1.72 0.64 0.7 }
+	image = north_african_naval_path_6 #updated
+	
+	allow = {
+		
+	}
+	
+	terrain_high_path = {
+		modifier = {
+			hills_combat_bonus = 0.1
+			desert_hills_combat_bonus = 0.1
+			mountain_combat_bonus = 0.1
+			plains_combat_bonus = -0.05
+			farmland_combat_bonus = -0.05
+			flood_plain_combat_bonus = -0.05
+			oasis_combat_bonus = -0.05
+		}
+		
+		icon = celtic_gallic_path_3
+	}
+
+	terrain_wet_path = {
+		modifier = {
+			hills_combat_bonus = -0.05
+			desert_hills_combat_bonus = -0.05
+			mountain_combat_bonus = -0.05
+			desert_combat_bonus = -0.05
+			forest_combat_bonus = 0.05
+			marsh_combat_bonus = 0.1
+			jungle_combat_bonus = 0.05
+			
+		}
+		
+		icon = persian_bactrian_path_7
+
+	}
+
+	terrain_close_path = {
+		modifier = {
+			mountain_combat_bonus = 0.1
+			plains_combat_bonus = -0.05
+			farmland_combat_bonus = -0.05
+			flood_plain_combat_bonus = -0.05
+			oasis_combat_bonus = -0.05
+			desert_combat_bonus = -0.05
+			jungle_combat_bonus = 0.1
+			forest_combat_bonus = 0.1
+		}
+		
+		icon = celtic_germanic_path_3
+
+	}
+
+	terrain_forts_1 = { ###
+		modifier = { 
+			global_defensive = 0.15
+			hostile_attrition = 1
+			fort_maintenance_cost = 0.01
+		} 
+		icon = north_african_naval_path_6
+		requires = { }
+	}
+
+	terrain_forts_2 = { ###
+		modifier = { 
+			fort_limit = 1
+			garrison_size = 0.1
+			fort_maintenance_cost = 0.1
+		} 
+		icon = north_african_naval_path_6
+		requires = { terrain_forts_1 }
+	}
+
+	latin_roman_path_4 = { ###Latin 3B
+		modifier = {
+			army_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		enable_ability = road_building
+		requires = { }
+		icon = latin_roman_path_4
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = latin }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = latin
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = italic_influence
+				}	
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_latin"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						this.culture.culture_group = culture_group:latin	
+					}
+				}
+			}
+		}
+	}
+}

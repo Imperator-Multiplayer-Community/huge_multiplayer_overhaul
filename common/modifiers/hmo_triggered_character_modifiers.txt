@@ -1,0 +1,17 @@
+﻿##########################################################################
+## THIS FILE IS FOR OVERRIDES NOT NEW VALUES ##
+##########################################################################
+
+nominated_heir_modifier = {
+	succession_value = 3000
+		
+	cancellation_trigger = {
+		OR = {
+			is_ruler = yes
+			is_alive = no
+			has_character_modifier = foreign_citizen
+			employer = { has_law = elective_succession_law }
+			employer = { is_monarchy = no }
+		}
+	}
+}

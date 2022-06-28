@@ -10,6 +10,10 @@
 			NOT = {
 				tag = ARF
 			}
+			NOT = {
+				primary_culture = ivernian
+				primary_culture = voluntian
+			}
 			OR = {
 				is_ai = no
 				num_of_cities >= 12
@@ -31,6 +35,7 @@
 					is_in_area = west_gothia_area
 					is_in_area = herulia_area
 					is_in_area = scandia_insula_area
+					is_in_area = saxony_area
 				}
 			}
 		}
@@ -53,6 +58,7 @@
 			owns_or_subject_owns_area = west_gothia_area
 			owns_or_subject_owns_area = herulia_area
 			owns_or_subject_owns_area = scandia_insula_area
+			owns_or_subject_owns_area = saxony_area
 		}
 		
 		effect = {

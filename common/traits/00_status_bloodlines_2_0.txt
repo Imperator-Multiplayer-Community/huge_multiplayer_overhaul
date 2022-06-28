@@ -10,10 +10,6 @@ alcimachid = {
 	province = {
 		local_tax_modifier = 0.05
 	}
-	unit = {
-		heavy_infantry_offensive = 0.10
-	}			 
-	
 }
 
 antigonids = { 
@@ -28,10 +24,6 @@ antigonids = {
 	province = {
 		local_monthly_state_loyalty = 0.05
 	}
-	unit = {
-		heavy_cavalry_offensive = 0.1
-	}			 
-	
 }
 
 antipatrid = { 
@@ -41,16 +33,12 @@ antipatrid = {
 	prominence = 20
 	charisma = 1
 	country = {
-		build_cost = -0.05
+		build_cost = -0.01
 		monthly_legitimacy = 0.03
 	}
 	province = {
 		local_slaves_output = 0.05
 	}
-	unit = {
-		heavy_cavalry_offensive = 0.1
-	}			 
-	
 }
 
 argeads = { 
@@ -67,10 +55,6 @@ argeads = {
 	province = {
 		local_monthly_civilization = 0.02
 	}
-	unit = {
-		heavy_cavalry_discipline = 0.05
-	}			 
-	
 }
 
 lagids = { 
@@ -85,10 +69,6 @@ lagids = {
 	province = {
 		local_nobles_output = 0.1
 	}
-	unit = {
-		camels_discipline = 0.05
-	}			 
-	
 }
 
 seleucids = { 
@@ -102,10 +82,6 @@ seleucids = {
 	province = {
 		state_commerce_modifier = 0.05
 	}
-	unit = {
-		warelephant_discipline = 0.05
-	}
-
 }
 	
 agiad = { 
@@ -118,10 +94,6 @@ agiad = {
 	province = {
 		 local_manpower_modifier = 0.1
 	}
-	unit = {
-		heavy_infantry_defensive = 0.1
-	}
-	
 }
 
 achaemenid = { 
@@ -136,10 +108,6 @@ achaemenid = {
 	province = {
 		local_unrest = -1
 	}
-	unit = {
-		heavy_infantry_discipline = 0.05
-	}
-	
 }
 
 maurya = { 
@@ -154,10 +122,6 @@ maurya = {
 	province = {
 		local_population_growth = 0.05
 	}
-	unit = {
-		warelephant_offensive = 0.1
-	}
-	
 }
 
 aeacidae = { 
@@ -170,10 +134,6 @@ aeacidae = {
 	province = {
 		local_cohort_start_experience = 10 	
 	}
-	unit = {
-		light_infantry_offensive = 0.10
-	}
-
 }
 
 zadok = { 
@@ -187,10 +147,6 @@ zadok = {
 	province = {
 		local_defensive = 0.1
 	}
-	unit = {
-		light_infantry_defensive = 0.1
-	}
-
 }
 
 agathocles = { 
@@ -204,10 +160,6 @@ agathocles = {
 	province = {
 		local_slaves_output = 0.1
 	}
-	unit = {
-		light_infantry_discipline = 0.05
-	}
-
 }
 
 orontid = { 
@@ -220,10 +172,6 @@ orontid = {
 	province = {
 		local_defensive = 0.10
 	}
-	unit = {
-		light_cavalry_discipline = 0.05
-	}
-
 }
 
 atropates = { 
@@ -237,10 +185,6 @@ atropates = {
 	province = {
 		local_happiness_for_same_religion_modifier = 0.05
 	}
-	unit = {
-		light_cavalry_defensive = 0.1
-	}
-
 }
 
 barca = { 
@@ -252,26 +196,18 @@ barca = {
 	province = {
 		supply_limit_modifier = 0.1
 	}
-	unit = {
-		warelephant_defensive = 0.1
-	}
-
 }
 
 arsaces = { 
 	type = status
 	prominence = 20
 	country = {
-		happiness_for_same_culture_modifier = 0.05
-		global_unrest = -1	
+		happiness_for_same_culture_modifier = 0.01
+		global_unrest = -0.2	
 	}
 	province = {
 		local_tax_modifier = 0.05
 	}
-	unit = {
-		horse_archers_discipline = 0.05
-	}
-
 }
 
 spartocid = { 
@@ -285,10 +221,6 @@ spartocid = {
 	province = {
 		local_citizen_output = 0.1
 	}
-	unit = {
-		horse_archers_defensive = 0.1
-	}
-
 }
 
 sophytid = { 
@@ -302,10 +234,6 @@ sophytid = {
 	province = {
 		local_tax_modifier = 0.05
 	}
-	unit = {
-		heavy_cavalry_defensive = 0.1
-	}
-
 }
 
 diodotus = { 
@@ -313,16 +241,12 @@ diodotus = {
 	prominence = 20
 	country = {
 		loyalty_to_overlord = -50
-		happiness_for_same_culture_modifier = 0.05
+		happiness_for_same_culture_modifier = 0.01
 		army_maintenance_cost = -0.05
 	}
 	province = {
 		local_manpower_modifier = 0.1
 	}
-	unit = {
-		horse_archers_offensive = 0.05
-	}
-
 }
 
 brennus = { 
@@ -335,10 +259,6 @@ brennus = {
 	province = {
 		local_tribesmen_output = 0.1
 	}
-	unit = {
-		light_infantry_discipline = 0.05
-	}
-
 }
 
 illyrius = {
@@ -346,16 +266,12 @@ illyrius = {
 	prominence = 20
 	finesse = 1
 	country = {
-		happiness_for_same_culture_modifier = 0.05
+		happiness_for_same_culture_modifier = 0.01
 		monthly_legitimacy = 0.03
 	}
 	province = {
 		local_freemen_output = 0.05
 	}
-	unit = {
-		light_cavalry_offensive = 0.1
-	}
-
 }
 
 ashokalegendary = {
@@ -373,9 +289,7 @@ pyrrhuslegendary = {
 	zeal = 1
 	country = {
 		diplomatic_range_modifier = 1.2
-		warelephant_discipline = 0.1
 	}
-
 }
 
 chandraguptalegendary = {
@@ -399,10 +313,6 @@ claudii = {
 	province = {
 		local_defensive = 0.1
 	}
-	unit = {
-		heavy_infantry_discipline = 0.05
-	}
-
 }
 
 cornelii = {
@@ -410,16 +320,12 @@ cornelii = {
 	prominence = 20
 	finesse = 1
 	country = {
-		build_cost = -0.1
+		build_cost = -0.02
 		global_commerce_modifier = 0.05	
 	}
 	province = {
 		local_freemen_output = 0.1
 	}
-	unit = {
-		heavy_infantry_offensive = 0.05
-	}
-
 }
 
 fabii = {
@@ -433,9 +339,6 @@ fabii = {
 	province = {
 		local_manpower_modifier = 0.1
 	}
-	unit = {
-		heavy_infantry_defensive = 0.1
-	}
 }
 
 demosthenid = {
@@ -448,9 +351,6 @@ demosthenid = {
 	}
 	province = {
 		local_defensive = 0.1
-	}
-	unit = {
-		heavy_infantry_defensive = 0.1
 	}
 }
 
@@ -466,10 +366,6 @@ mithridates = {
 	province = {
 		local_research_points_modifier = 0.05
 	}
-	unit = {
-		archers_discipline = 0.05
-	}			 
-	
 }
 
 superbus = { 
@@ -478,16 +374,12 @@ superbus = {
 	prominence = 20
 	finesse = 1
 	country = {
-		build_cost = -0.1
+		build_cost = -0.02
 		build_time = -0.15
 	}
 	province = {
 		local_tax_modifier = 0.05
 	}
-	unit = {
-		archers_defensive = 0.10
-	}			 
-	
 }
 
 vercingetorix = { 
@@ -501,8 +393,4 @@ vercingetorix = {
 	province = {
 		local_monthly_civilization = 0.02
 	}
-	unit = {
-		archers_offensive = 0.1
-	}			 
-	
 }

@@ -845,10 +845,10 @@
 
     ## Latin Specific - Level 1
     italic_pilum_scutum_inv = {
-		modifier = { heavy_infantry_offensive = 0.05
-                     heavy_infantry_defensive = 0.05
-                     light_infantry_offensive = 0.05
-                     light_infantry_defensive = 0.05 }
+		modifier = { heavy_infantry_offensive = 0.01
+                     heavy_infantry_defensive = 0.01
+                     light_infantry_offensive = 0.01
+                     light_infantry_defensive = 0.01 }
 		requires = { italic_etruscan_pottery_inv }
 		allow = {
 			OR = {

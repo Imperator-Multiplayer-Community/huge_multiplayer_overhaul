@@ -1,6 +1,6 @@
 base_sub_window = {
 	name = "create_trade_route_window"
-	size = { 832 860 }
+	size = { 832 920 }
 	parentanchor = bottom|left
 	widgetanchor = bottom|left
 	position = { 760 0 }
@@ -29,7 +29,7 @@ base_sub_window = {
 			### ALL GOODS
 			scrollarea = {
 				#resizeparent = yes
-				size = { 822 522 }
+				size = { 822 582 }
 				position = { 0 32 }
 				scrollbarpolicy_horizontal = always_off
 				
@@ -48,7 +48,7 @@ base_sub_window = {
 						
 						item = {
 							widget = {
-								size = { 272 246 }
+								size = { 272 290 }
 								tag_dark = {
 									position = { 0 0 }
 									size = { 266 36 }
@@ -159,7 +159,7 @@ base_sub_window = {
 
 				sub_header = {
 					size = { 814 28 }
-					position = { 8 0 }
+					position = { 8 60 }
 					blockoverride "Title_text" 
 					{ 
 						text = "CURRENT_IMPORT_ROUTES" 
@@ -168,7 +168,7 @@ base_sub_window = {
 
 				scrollarea = {
 					size = { 804 246 }
-					position = { 14 38 }
+					position = { 14 98 }
 					scrollbarpolicy_horizontal = always_off
 					scrollbar_vertical = {
 						using = VerticalScrollBar
@@ -259,5 +259,3 @@ base_sub_window = {
 		
 	}
 }
-
-

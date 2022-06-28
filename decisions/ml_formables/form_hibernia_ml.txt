@@ -4,7 +4,11 @@
 	form_hibernia = {
 		potential = {
 			num_of_cities >= 1
-			primary_culture = hibernian
+			OR = {
+				primary_culture = hibernian
+				primary_culture = ivernian
+				primary_culture = voluntian
+			}
 			NOT = {
 				tag = HIB
 			}
