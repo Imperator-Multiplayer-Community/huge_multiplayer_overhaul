@@ -37,8 +37,16 @@
 					is_in_area = durotrigia_area
 					is_in_area = dumnonia_area
 					is_in_area = dobunnia_area
+					is_in_area = biggeronia_area
+					is_in_area = aquitania_orientalis_area
+					is_in_area = aquitania_occidentalis_area
+					is_in_area = cadurcia_area
+					is_in_area = sentonia_maioris_area
+					is_in_area = lemovicia_area
+					is_in_area = celtica_occidentalis_area
+					is_in_area = pictonia_meridionalis_area
 					#is_in_region = britain_region
-					is_in_region = aquitaine_region
+					#is_in_region = aquitaine_region
 					is_in_region = armorica_region
 				}
 			}
@@ -70,8 +78,15 @@
 			owns_or_subject_owns_area = britannia_secunda_meridionalis_area
 			owns_or_subject_owns_area = durotrigia_area
 			owns_or_subject_owns_area = dumnonia_area
+			owns_or_subject_owns_area = aquitania_orientalis_area
+			owns_or_subject_owns_area = aquitania_occidentalis_area
+			owns_or_subject_owns_area = cadurcia_area
+			owns_or_subject_owns_area = sentonia_maioris_area
+			owns_or_subject_owns_area = lemovicia_area
+			owns_or_subject_owns_area = celtica_occidentalis_area
+			owns_or_subject_owns_area = pictonia_meridionalis_area
 			#owns_or_subject_owns_region = britain_region
-			owns_or_subject_owns_region = aquitaine_region
+			#owns_or_subject_owns_region = aquitaine_region
 			owns_or_subject_owns_region = armorica_region
 		}
 		

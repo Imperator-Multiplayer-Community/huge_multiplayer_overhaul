@@ -5,7 +5,10 @@
 		
 		potential = {
 			num_of_cities >= 1
-			primary_culture = suebian
+			OR = {
+				primary_culture = suebian
+				primary_culture = irminonic
+			}
 			is_tribal = yes
 			NOT = {
 				tag = SBN
@@ -27,7 +30,7 @@
 					AND = {
 						has_owner = yes
 						owner = {
-							primary_culture = suebian
+							primary_culture = irminonic
 						}
 					}
 				}
@@ -51,7 +54,7 @@
 					any_country = {
 						count = all
 						filter = {
-							primary_culture = suebian
+							primary_culture = irminonic
 							num_of_cities >= 1
 							NOT = {
 								this = root
@@ -63,7 +66,7 @@
 						num_of_cities >= 1
 						any_country = {
 							count = 1
-							primary_culture = suebian
+							primary_culture = irminonic
 						}
 					}
 				}
@@ -102,12 +105,12 @@
 			if = {
 				limit = {
 					any_subject = {
-						primary_culture = suebian
+						primary_culture = irminonic
 					}
 				}
 				every_subject = {
 					limit = {
-						primary_culture = suebian
+						primary_culture = irminonic
 					}
 					every_owned_province = {
 						limit = {

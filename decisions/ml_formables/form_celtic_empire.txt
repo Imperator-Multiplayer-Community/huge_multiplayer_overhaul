@@ -30,6 +30,7 @@
 					is_in_region = aquitaine_region
 					is_in_region = central_gaul_region
 					is_in_region = transalpine_gaul_region
+					is_in_region = gaul_minor_region
 					is_in_area = dumnonia_area
 					is_in_area = durotrigia_area
 					is_in_area = cantiacia_area
@@ -51,6 +52,7 @@
 			owns_or_subject_owns_region = aquitaine_region
 			owns_or_subject_owns_region = central_gaul_region
 			owns_or_subject_owns_region = transalpine_gaul_region
+			owns_or_subject_owns_region = gaul_minor_region
 			owns_or_subject_owns_area = dumnonia_area
 			owns_or_subject_owns_area = durotrigia_area
 			owns_or_subject_owns_area = cantiacia_area

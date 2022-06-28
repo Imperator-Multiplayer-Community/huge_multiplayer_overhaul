@@ -5,7 +5,10 @@
 	form_nemedia = {
 		potential = {
 			num_of_cities >= 1
-			country_culture_group = scythia
+			OR = {
+				country_culture_group = scythia
+				country_culture_group = scythian_east
+			}
 			NOT = {
 				tag = NEM
 			}

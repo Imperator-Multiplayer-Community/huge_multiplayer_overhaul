@@ -15,6 +15,10 @@
 			NOT = {
 				tag = AIO
 			}
+			NOT = {
+				primary_culture = ivernian
+				primary_culture = voluntian
+			}
 			OR = {
 				is_ai = no
 				OR = {
@@ -31,6 +35,7 @@
 			scope:province = {
 				OR = {
 					is_in_region = britain_region
+					is_in_region = caledonia_region
 				}
 			}
 		}
@@ -50,6 +55,7 @@
 			}
 			can_form_nation_trigger = yes
 			owns_region = britain_region
+			owns_region = caledonia_region
 		}
 		
 		effect = {
