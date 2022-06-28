@@ -1641,7 +1641,7 @@ gw_effect_cohort_drill_doctrine = {
 			country_modifier = {
 				army_maintenance_cost = -0.025
 				global_cohort_start_experience = 2.5
-				monthly_experience_gain = 0.01
+				monthly_military_experience = 0.01
 				#experience_decay = -0.01
 			}
 		}
@@ -1651,7 +1651,7 @@ gw_effect_cohort_drill_doctrine = {
 			country_modifier = {
 				army_maintenance_cost = -0.05
 				global_cohort_start_experience = 5
-				monthly_experience_gain = 0.02
+				monthly_military_experience = 0.02
 				#experience_decay = -0.02
 			}
 		} 
@@ -1661,7 +1661,7 @@ gw_effect_cohort_drill_doctrine = {
 			country_modifier = {
 				army_maintenance_cost = -0.075
 				global_cohort_start_experience = 5
-				monthly_experience_gain = 0.05
+				monthly_military_experience = 0.05
 				#experience_decay = -0.03
 			}
 		} 
@@ -1671,7 +1671,7 @@ gw_effect_cohort_drill_doctrine = {
 			country_modifier = {
 				army_maintenance_cost = -0.1
 				global_cohort_start_experience = 10
-				monthly_experience_gain = 0.1
+				monthly_military_experience = 0.1
 				#experience_decay = -0.045
 			}
 		}

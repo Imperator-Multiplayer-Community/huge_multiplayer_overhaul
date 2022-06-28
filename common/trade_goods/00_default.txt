@@ -535,8 +535,8 @@ sugar = {
 	}
 	
 	color = hsv { 0.25 0.25 0.21  }
-	
 }
+
 cedar = {
 	category = 0
 
@@ -553,9 +553,9 @@ cedar = {
 		global_ship_recruit_speed = 0.25
 	}
 	
-	color = hsv { 0.3 0.35 0.26  }
-	
+	color = hsv { 0.3 0.35 0.26  }	
 }
+
 myrrh = {
 	category = 2
 	gold = 0.45 #Same as incense
@@ -567,9 +567,9 @@ myrrh = {
 		global_nobles_city_desired_pop_ratio = 0.02
 	}
 	
-	color = hsv { 0.11 0.05 0.23  }
-	
+	color = hsv { 0.11 0.05 0.23  }	
 }
+
 cinnabar = {
 	category = 5
 	gold = 0.45
@@ -582,8 +582,8 @@ cinnabar = {
 	}
 	
 	color = hsv { 1 0.95 0.8  }
-	
 }
+
 lapis = {
 	category = 3
 	
@@ -598,6 +598,7 @@ lapis = {
 	
 	color = hsv { 0.7 0.85 1  }
 }
+
 jade = {
 	category = 3
 	
@@ -612,6 +613,7 @@ jade = {
 
 	color = { 0.1 0.63 0.2 }
 }
+
 fruits = {
 	category = 1
 	gold = 0.3
@@ -625,6 +627,7 @@ fruits = {
 	}
 	color = hsv { 0.38 0.84 0.87 }
 }
+
 silphium = {
 	category = 4
 	gold = 0.35

@@ -1,4 +1,8 @@
-﻿# All global modifiers are here.  They are applied from certain game-features.
+﻿##########################################################################
+## THIS FILE IS FOR OVERRIDES NOT NEW VALUES ##
+##########################################################################
+
+# All global modifiers are here.  They are applied from certain game-features.
 #
 # Effects are fully scriptable here.
 
@@ -95,6 +99,15 @@ war_exhaustion = {
 	character_loyalty = -1
 }
 
+nation_rank_0 = {
+	global_manpower = 1
+	num_of_clan_chiefs = 1
+	army_weight_modifier = -0.25
+	max_mercenary_stacks = 1
+
+	agressive_expansion_impact = -0.3
+}
+
 nation_rank_1 = {
 	global_commerce_modifier = 0.2	
 	global_defensive = 0.2
@@ -107,6 +120,8 @@ nation_rank_1 = {
 	mercenary_land_maintenance_cost = -0.15
 	build_cost = -0.15
 	max_mercenary_stacks = 1
+
+	agressive_expansion_impact = -0.3
 }
 
 nation_rank_2 = {
@@ -119,6 +134,8 @@ nation_rank_2 = {
 	mercenary_land_maintenance_cost = -0.1
 	build_cost = -0.1
 	max_mercenary_stacks = 1
+
+	agressive_expansion_impact = -0.2
 }
 
 nation_rank_3 = {
@@ -135,6 +152,9 @@ nation_rank_3 = {
 	monthly_wage_modifier = 0.040
 	build_cost = -0.05
 	max_mercenary_stacks = 2
+
+	agressive_expansion_impact = -0.05
+	agressive_expansion_monthly_change = 0.02
 }
 
 nation_rank_4 = {
@@ -153,6 +173,9 @@ nation_rank_4 = {
 	happiness_for_same_culture_modifier = 0.12
 	monthly_wage_modifier = 0.075
 	max_mercenary_stacks = 3
+
+	agressive_expansion_impact = 0.1
+	agressive_expansion_monthly_change = 0.03
 }
 
 
@@ -172,6 +195,9 @@ nation_rank_5 = {
 	happiness_for_same_culture_modifier = 0.16
 	monthly_wage_modifier = 0.10
 	max_mercenary_stacks = 4
+
+	agressive_expansion_impact = 0.2
+	agressive_expansion_monthly_change = 0.05
 }
 
 is_tribe = {
