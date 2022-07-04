@@ -104,4 +104,46 @@
 			}
 		}
 	}
+
+	greek_states_path_4 = {
+		modifier = {
+			price_found_city_cost_modifier = -0.05
+		}
+		enable_ability = military_colonies
+		requires = { }
+		icon = greek_states_path_4
+		allow = {
+		}
+		on_activate = {
+			ordered_owned_province = {
+				limit = {
+					NOT = { province_dominant_culture_group = hellenic }
+					any_neighbor_province = {
+						count > 1
+						NOT = { province_dominant_culture_group = hellenic }
+					}
+					state = {
+						NOT = {
+							any_state_province = {
+								is_capital = yes
+							}
+						}
+					}
+				}
+				order_by = {
+					value = 0
+					add = population_cap
+					subtract = total_population
+				}
+				add_province_modifier = {
+					name = "local_colonia"
+					duration = -1
+				}
+				custom_tooltip = military_colonia_here_tt
+				trigger_event = { id = cultural_integration.11 }
+			}
+		}
+	}
+
+
 }
