@@ -144,6 +144,13 @@
 			}
 		}
 	}
-
+	latin_support_path_4 = { ###Latin 4AB
+		modifier = {
+			fort_maintenance_cost = -0.15
+		}
+		enable_ability = border_forts
+		requires = { }
+		icon = latin_support_path_4
+	}
 
 }
