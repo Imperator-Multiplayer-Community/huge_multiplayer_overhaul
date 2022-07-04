@@ -12,7 +12,7 @@
 	hidden = {
 		always = yes
         unit_owner = { 
-            NOR = { 
+            NOT = { 
                 is_tradition_tree_allowed = terrain_traditions 
             } 
         }
@@ -23,7 +23,14 @@
 			has_military_bonus = greek_states_path_4
 		}
 		unit_location = {
-			NOT = { dominant_province_culture = owner.culture }
+			NOT = {
+				any_culture = {
+					limit = {
+						is_integrated = yes
+					}
+					dominant_province_culture = this
+				}
+			}
 		}
 		has_commander = yes
 		is_army = yes
