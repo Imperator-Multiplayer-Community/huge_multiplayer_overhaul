@@ -55,7 +55,6 @@
 					}
 				}
 			}
-			free_building_slots > 0
 			custom_tooltip = {
 				text = neighboring_border_province_tt
 				any_neighbor_province = {
@@ -123,12 +122,9 @@
 					has_owner = yes
 					owner = root.unit_owner
 				}
-				add_building_level = local_forum_building
 			}
 			else = {
-				set_conquered_by = root.unit_owner
-				add_building_level = local_forum_building
-				create_state_pop = freemen
+				set_conquered_by = root.unit_owner				
 			}
 		}
 	}
