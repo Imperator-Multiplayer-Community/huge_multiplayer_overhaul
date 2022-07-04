@@ -92,70 +92,85 @@ light_cavalry_tributary_terrain_combat_bonus = {
 light_infantry_tributary_terrain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
+warelephant_tributary_terrain_combat_bonus = {
+    positive = "gfx/interface/icons/_default.dds"
+}
 marines_tributary_terrain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
 supply_train_tributary_terrain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-warelephant_oasis_terrain_combat_bonus = {
-    positive = "gfx/interface/icons/_default.dds"
-}
-engineer_cohort_desert_hills_terrain_combat_bonus = {
+engineer_cohort_desert_hills_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/engineer_cohort_desert_combat_bonus.dds"
 }
-liburnian_desert_hills_terrain_combat_bonus = {
+supply_train_desert_hills_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/supply_train_desert_combat_bonus.dds"
+}
+liburnian_desert_hills_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-trireme_desert_hills_terrain_combat_bonus = {
+trireme_desert_hills_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-tetrere_desert_hills_terrain_combat_bonus = {
+tetrere_desert_hills_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-hexere_desert_hills_terrain_combat_bonus = {
+hexere_desert_hills_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-octere_desert_hills_terrain_combat_bonus = {
+octere_desert_hills_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-mega_galley_desert_hills_terrain_combat_bonus = {
+mega_galley_desert_hills_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-liburnian_oasis_terrain_combat_bonus = {
+engineer_cohort_oasis_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/engineer_cohort_farmland_combat_bonus.dds"
+}
+supply_train_oasis_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/supply_train_farmland_combat_bonus.dds"
+}
+liburnian_oasis_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-trireme_oasis_terrain_combat_bonus = {
+trireme_oasis_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-tetrere_oasis_terrain_combat_bonus = {
+tetrere_oasis_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-hexere_oasis_terrain_combat_bonus = {
+hexere_oasis_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-octere_oasis_terrain_combat_bonus = {
+octere_oasis_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-mega_galley_oasis_terrain_combat_bonus = {
+mega_galley_oasis_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-liburnian_flood_plain_terrain_combat_bonus = {
+engineer_cohort_flood_plain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/engineer_cohort_farmland_combat_bonus.dds"
+}
+supply_train_flood_plain_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/supply_train_farmland_combat_bonus.dds"
+}
+liburnian_flood_plain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-trireme_flood_plain_terrain_combat_bonus = {
+trireme_flood_plain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-tetrere_flood_plain_terrain_combat_bonus = {
+tetrere_flood_plain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-hexere_flood_plain_terrain_combat_bonus = {
+hexere_flood_plain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-octere_flood_plain_terrain_combat_bonus = {
+octere_flood_plain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
-mega_galley_flood_plain_terrain_combat_bonus = {
+mega_galley_flood_plain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
 
