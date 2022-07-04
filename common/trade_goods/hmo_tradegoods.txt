@@ -1,4 +1,6 @@
-﻿# use this to override trade good values since main files may be overwritten by invictus
+﻿#####################################
+# HMO - PUT TRADEGOOD MODIFIER OVERRIDES HERE
+#####################################
 wood = { #558 territories
 	category = 0
 
