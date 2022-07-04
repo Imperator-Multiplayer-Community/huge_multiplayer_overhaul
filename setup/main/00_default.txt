@@ -5097,17 +5097,14 @@ road_network = {
 	872 = 832 #Ta'idu
 	832 = 830 #Nisibis
 	830 = 873 #Hassu
-	873 = 868 #Dhahir
-	868 = 863 #Balad
 	863 = 862 #Niniveh
 	862 = 881 #Kilizu
 	881 = 880 #Arbela
 	881 = 957 #Tell Mahuz
 	957 = 886 #Nuzi
-	886 = 892 #Dura
 	892 = 893 #Samarra
 	893 = 895 #Awana
-	895 = 898 #Nahrawan
+	895 = 899 #Bagdata
 	898 = 914 #Opis
 	914 = 911 #Seleukia Magna
 	911 = 913 #Vologesias
@@ -5119,7 +5116,6 @@ road_network = {
 	929 = 930 #Tell Laham
 	930 = 962 #Tell Khay
 	962 = 933 #Apamea
-	933 = 934 #Kashkar
 	934 = 970 #Madhar
 	970 = 975 #Cissa
 	975 = 946 #Shushan/Susa
@@ -5373,26 +5369,17 @@ road_network = {
 	793 = 798 #Gindaros - Beroia
 	798 = 808 #Beroia
 	808 = 807 #Hierapolis
-	807 = 809 #Europos
-	809 = 810 #Zeugma
-	814 = 847 #Dausara
 	807 = 805 #Hierapolis-Amphipolis
 	805 = 814 #Barbalissos
-	814 = 847 #Daurara
-	847 = 804 #Nikephorion
 	804 = 806 #Birtha
 	806 = 827 #Circesium
-	827 = 828 #Terqa
+	827 = 829 #Terqa
 	828 = 829 #Doura
-	829 = 908 #Hindanu
-	908 = 907 #Haradu
-	907 = 906 #Anatho
+	829 = 906 #Anatho
 	906 = 953 #Bijan
 	953 = 954 #Haditha
-	954 = 904 #Idu
-	904 = 902 #Mische
-	902 = 909 #Naarda
-	909 = 910 #Sippar
+	954 = 903 #Kerbala
+	903 = 918 #Babilim
 	910 = 918 #Babylon
 	
 	###Mauryan Royal Road / Alexandria ad Caucasum - Tamralipti
@@ -5407,15 +5394,15 @@ road_network = {
 	7319 = 7314 # Taxila
 	7314 = 4322 # Nikaia
 	4322 = 4316 # Boukephalia
-	4316 = 4315 # Dyrte
-	4315 = 4340 # Sakala
+	4316 = 7399 # Rajagrha
+	7399 = 4399 # Kalliope Indike
+	4399 = 4340 # Sakala
 	4340 = 4346 # Madra
 	4346 = 4379 # Phegus
 	4379 = 4392 # Sarwmanpur
 	4392 = 4390 # Jalandhara
-	4390 = 4418 # Satadru
-	4418 = 4416 # Sunam
-	4416 = 4411 # Sthanisvara
+	4390 = 4401 # Rupar
+	4401 = 4411 # Sthanishvara
 	4411 = 4412 # Karnal
 	4412 = 4404 # Hastinapur
 	4404 = 4421 # Varana
@@ -5438,8 +5425,8 @@ road_network = {
 	4447 = 7327 # Karnasuvarna
 	7327 = 7328 # Vardhamana
 	7328 = 7345 # Nabadwipa
-	7345 = 7393 # Kasipur
-	7393 = 7177 # Tamralipti
+	7345 = 7362 # Mallabhum
+	7362 = 7177 # Tamralipti
 
 	# Ionia
 	252 = 254 # Kyzikos - Zeleia
@@ -16256,7 +16243,7 @@ country = {
 		MND = {
 			government = plutocratic_republic
 			primary_culture = berberian
-			religion = puntic_pantheon
+			religion = puntic_religion
 			diplomatic_stance=trading_stance
 			
 			technology={
@@ -16421,7 +16408,7 @@ country = {
 		OPO = {
 			government = despotic_monarchy
 			primary_culture = puntic
-			religion = puntic_pantheon
+			religion = puntic_religion
 			diplomatic_stance=trading_stance
 			
 			technology={
@@ -16441,7 +16428,7 @@ country = {
 		DIO = {
 			government = plutocratic_monarchy
 			primary_culture = puntic
-			religion = puntic_pantheon
+			religion = puntic_religion
 			diplomatic_stance=trading_stance
 			
 			technology={
@@ -17842,7 +17829,7 @@ country = {
 					capital = 3505
 					
 					own_control_core = {
-						3505 3506 3504 3508 3507 3515 3516 3514 3513 3512 3511 3510 3509 3508
+						3505 3506 3504 3508 3507 3515 3516 3514 3513 3512 3511 3510 3509
 					}
 				}
 				#Coracensia 

@@ -3086,10 +3086,19 @@ hills_combat_bonus = {
 desert_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/desert_combat_bonus.dds"
 }
+desert_hills_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/desert_combat_bonus.dds"
+}
 marsh_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/marsh_combat_bonus.dds"
 }
+flood_plains_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/marsh_combat_bonus.dds"
+}
 jungle_combat_bonus = {
+    positive = "gfx/interface/icons/modifiers/jungle_combat_bonus.dds"
+}
+oasis_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/jungle_combat_bonus.dds"
 }
 farmland_combat_bonus = {
