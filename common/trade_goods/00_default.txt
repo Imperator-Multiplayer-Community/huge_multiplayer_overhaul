@@ -1,10 +1,10 @@
 ﻿grain = { #430 territories
 	category = 1
 
-	gold = 0.2
+	gold = 0.3
 	
 	province = { 
-		local_monthly_food = 6
+		local_monthly_food = 5
 	}
 	
 	country = { 
