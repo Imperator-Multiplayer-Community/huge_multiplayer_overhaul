@@ -70,13 +70,13 @@ heavy_mounted_terrain_boni = {
 	heavy_cavalry_oasis_combat_bonus = 0.2
 	heavy_cavalry_forest_combat_bonus = -0.2
 	
-	camels_plains_combat_bonus = 0.2
+	camels_plains_combat_bonus = 0.1
 	camels_mountain_combat_bonus = -0.2
 	camels_desert_combat_bonus = 0.25
 	camels_desert_hills_combat_bonus = 0.15
 	camels_marsh_combat_bonus = -0.2
 	camels_jungle_combat_bonus = -0.25
-	camels_farmland_combat_bonus = 0.2
+	camels_farmland_combat_bonus = 0.1
 	camels_flood_plain_combat_bonus = 0.2
 	camels_oasis_combat_bonus = 0.2
 	camels_forest_combat_bonus = -0.2	
