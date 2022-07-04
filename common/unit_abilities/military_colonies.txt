@@ -23,14 +23,7 @@
 			has_military_bonus = greek_states_path_4
 		}
 		unit_location = {
-			NOT = {
-				any_culture = {
-					limit = {
-						is_integrated = yes
-					}
-					dominant_province_culture = this
-				}
-			}
+			NOT = { dominant_province_culture = owner.culture }
 		}
 		has_commander = yes
 		is_army = yes
@@ -111,11 +104,8 @@
 			}
 		}
 		unit_location = {
-			create_state_pop = freemen
 			add_state_loyalty = -15
+			create_state_pop = freemen
 		}
-		
 	}
-	
-	
 }
