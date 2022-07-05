@@ -11,40 +11,20 @@
 	
 	hidden = {
 		always = yes
-        #unit_owner = { 
-        #    NOR = { 
-        #        is_tradition_tree_allowed = greek_philosophy
-        #        is_tradition_tree_allowed = levantine_philosophy
-        #        is_tradition_tree_allowed = persian_philosophy
-		#		is_tradition_tree_allowed = haemic_philosophy #New for Invictus
-		#		is_tradition_tree_allowed = steppe_philosophy #New for Invictus
-		#		is_tradition_tree_allowed = aryan_philosophy #New for Invictus
-        #    } 
-        #}
+        unit_owner = { 
+            NOT = { 
+                is_tradition_tree_allowed = terrain_traditions 
+            } 
+        }
 	}
 
 	allow = {
-		always = no
-		#unit_owner = { 
-		#	trigger_if = {
-		#		has_military_bonus = greek_states_path_4
-		#	}
-		#	trigger_else_if = {
-		#		has_military_bonus = phoenician_path_9
-		#	}
-		#	trigger_else_if = {
-		#		has_military_bonus = iranian_path_13 
-		#	}
-		#	trigger_else_if = {
-		#		has_military_bonus = thracian_path_6
-		#	}
-		#	trigger_else_if = {
-		#		has_military_bonus = bactrian_path_14
-		#	}
-		#	trigger_else_if = {
-		#		has_military_bonus = aryan_plains_path_5
-		#	}
-		#}
+		unit_owner = { 
+			has_military_bonus = greek_states_path_4
+		}
+		unit_location = {
+			NOT = { dominant_province_culture = owner.culture }
+		}
 		has_commander = yes
 		is_army = yes
 		in_combat = no
@@ -124,11 +104,8 @@
 			}
 		}
 		unit_location = {
-			create_state_pop = freemen
 			add_state_loyalty = -15
+			create_state_pop = freemen
 		}
-		
 	}
-	
-	
 }

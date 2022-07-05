@@ -1010,4 +1010,102 @@
 		}
 	}
 
+	celt_iberian_path_c_3 = { ###Celt-Iberian 3C Raids on Neighbours
+		modifier = { 
+			enslavement_efficiency = 0.1
+			global_slaves_output = 0.06
+		}
+		enable_ability = naval_raiding
+		icon = latin_tribal_path_4
+		requires = { celt_iberian_path_c_2 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = celt_iberia }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = celt_iberia
+			}
+			trigger_else_if = {
+				limit = { country_culture_group = iberia }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = iberia
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = iberian_influence
+				}	
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_iberian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:celt_iberia
+							this.culture.culture_group = culture_group:iberia
+						}
+					}
+				}
+			}		
+		}
+	}
+
+	arabian_path_4 = { ###
+		enable_ability = naval_raiding
+		modifier = {
+			trireme_offensive = 0.05
+			enslavement_efficiency = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		icon = levantine_egyptian_path_2
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = south_levantine }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = south_levantine
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = meroitic_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = meroitic_group
+			}
+			trigger_else_if = {
+				limit = {
+					country_culture_group = aksumite_group
+				}
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = aksumite_group
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = afro_arabian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_afro_arabian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:south_levantine
+							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:aksumite_group
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -10,19 +10,18 @@
 
 	hidden = {
 		always = yes
-		#NOT = {
-		#	unit_owner = { 
-		#		is_tradition_tree_allowed = latin_philosophy  
-		#	}
-		#}
+		NOT = {
+			unit_owner = { 
+				is_tradition_tree_allowed = terrain_traditions   
+			}
+		}
 	}
 	
 	allow = {
-		#hidden:unit_owner = { can_pay_price = build_border_fort }
-		#unit_owner = { 
-		#	has_military_bonus = latin_support_path_4
-		#}
-		always = no
+		hidden:unit_owner = { can_pay_price = build_border_fort }
+		unit_owner = { 
+			has_military_bonus = latin_support_path_4
+		}
 		has_commander = yes
 		is_army = yes
 		in_combat = no
@@ -36,7 +35,7 @@
 				NOT = { is_sea = yes }
 			}
 			NOT = {
-				has_building = fortress_building
+				has_city_status = yes
 			}
 			custom_tooltip = {
 				text = "neighboring_tribal_province_tt"
@@ -56,24 +55,11 @@
 					}
 				}
 			}
-			free_building_slots > 0
 			custom_tooltip = {
 				text = neighboring_border_province_tt
 				any_neighbor_province = {
 					owner =  root.unit_owner
 					controller = root.unit_owner
-				}
-			}
-			custom_tooltip = {
-				text = "neighboring_fort_province_tt"
-				NOT = {
-					any_neighbor_province = {
-						has_building = fortress_building
-						AND = {
-							has_owner = yes
-							owner = root.unit_owner
-						}
-					}
 				}
 			}
 		}
@@ -136,12 +122,9 @@
 					has_owner = yes
 					owner = root.unit_owner
 				}
-				add_building_level = fortress_building
 			}
 			else = {
-				set_conquered_by = root.unit_owner
-				add_building_level = fortress_building
-				create_state_pop = freemen
+				set_conquered_by = root.unit_owner				
 			}
 		}
 	}
