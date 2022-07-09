@@ -1017,7 +1017,7 @@
 		}
 		enable_ability = naval_raiding
 		icon = latin_tribal_path_4
-		requires = { celt_iberian_path_c_2 }
+		requires = { }
 		allow = {
 			trigger_if = {
 				limit = { country_culture_group = celt_iberia }
