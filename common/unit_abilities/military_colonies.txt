@@ -109,6 +109,7 @@
 				count = 2
 				limit = {
 					any_pops_in_province = {
+						count = all
 						NOT = { pop_culture = location.owner.culture }
 					}
 				}
