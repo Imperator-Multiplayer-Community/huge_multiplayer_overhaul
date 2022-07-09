@@ -105,7 +105,19 @@
 		}
 		unit_location = {
 			add_state_loyalty = -15
-			create_state_pop = freemen
+			while = {
+				count = 2
+				limit = {
+					any_pops_in_province = {
+						NOT = { pop_culture = location.owner.culture }
+					}
+				}
+				random_pops_in_province = {
+					limit = {
+						NOT = { pop_culture = location.owner.culture }
+					}
+				set_pop_culture = location.owner.culture	
+			}		
 		}
 	}
 }
