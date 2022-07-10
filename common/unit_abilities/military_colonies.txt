@@ -22,9 +22,6 @@
 		unit_owner = { 
 			has_military_bonus = greek_states_path_4
 		}
-		unit_location = {
-			NOT = { dominant_province_culture = owner.culture }
-		}
 		has_commander = yes
 		is_army = yes
 		in_combat = no
@@ -39,6 +36,7 @@
 		hidden:unit_owner = { can_pay_price = create_military_colony }
 		hidden:unit_location = {
 			has_owner = yes
+			NOT = { dominant_province_culture = owner.culture }
 			total_population <= 5
 			state_loyalty >= 33
 			custom_tooltip = {
