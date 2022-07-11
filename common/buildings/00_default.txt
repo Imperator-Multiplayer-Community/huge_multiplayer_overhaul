@@ -582,7 +582,8 @@ latifundia_building = { #New Slave Estate
 	time = 360
 	
 	modification_display = {
-		
+		0 = value_num_of_goods_produced
+		1 = value_civilization_cap
 	}
 	
 	chance = {
@@ -641,8 +642,8 @@ basic_settlement_infratructure_building = { #Farming Settlements reflecting the 
 	time = 360
 	
 	modification_display = {
-		0 = value_num_of_goods_produced
-		1 = local_monthly_food_modifier
+		0 = local_monthly_food_modifier
+		1 = value_civilization_cap
 	}
 	
 	chance = {
@@ -749,8 +750,8 @@ workshop_building = { #Mill as a means of urban concentration of slaves
 	}
 	
 	modification_display = {
-		0 = local_slaves_output
-		1 = local_slaves_desired_pop_ratio
+		0 = value_num_of_goods_produced
+		1 = local_slaves_output
 		2 = local_slaves_happyness
 	}
 

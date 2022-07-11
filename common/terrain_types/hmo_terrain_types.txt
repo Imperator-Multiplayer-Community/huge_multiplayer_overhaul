@@ -1,4 +1,7 @@
-﻿#use this file to override terrain behaviors as the main file may get overriden by invictus changes
+﻿#####################################
+# HMO - PUT TERRAIN TYPES OVERRIDES HERE
+#####################################
+
 # same as farmland
 flood_plain = {
 	color = { 0.25 0.6 0.25 }
