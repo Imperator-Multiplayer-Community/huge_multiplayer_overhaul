@@ -124,10 +124,33 @@
 				}
 			}
 			else = {
-				set_conquered_by = root.unit_owner				
+				set_conquered_by = root.unit_owner
+			}
+		}
+		unit_owner = {
+			random_owned_province = {
+				limit = {
+					total_population >= 2
+					any_pops_in_province = {
+						count >= 1
+						NOT = { pop_type = slaves }
+						NOT = { pop_type = tribesmen }
+						NOT = { pop_type = freemen }
+					}
+				}
+				random_pops_in_province = {
+					limit = {
+						NOT = { pop_type = slaves }
+						NOT = { pop_type = tribesmen }
+						NOT = { pop_type = freemen }	
+					}
+					move_pop = root.unit_location
+				}
 			}
 		}
 	}
+
+
 	
 	#Expect AI to run out of provinces to do this in given they don't deliberately try to reach border provinces with units, hence over-expenditure is not a problem.
 	ai_will_do = {
