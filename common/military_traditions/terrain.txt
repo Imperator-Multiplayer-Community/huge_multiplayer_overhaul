@@ -66,7 +66,7 @@
 		modifier = { 
 			fort_limit = 1
 			garrison_size = 0.1
-			fort_maintenance_cost = 0.075
+			fort_maintenance_cost = 0.1
 		} 
 		icon = north_african_naval_path_6
 		requires = { terrain_forts_1 }
