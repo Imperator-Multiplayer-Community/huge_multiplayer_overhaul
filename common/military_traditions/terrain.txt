@@ -107,7 +107,7 @@
 
 	greek_states_path_4 = {
 		modifier = {
-			price_found_city_cost_modifier = -0.05
+			price_found_city_cost_modifier = -0.1
 		}
 		enable_ability = military_colonies
 		requires = { }
