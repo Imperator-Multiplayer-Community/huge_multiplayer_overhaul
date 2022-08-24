@@ -25,7 +25,9 @@ border_fortress_building = {
 			root.owner = {
 				has_military_bonus = border_fort_path_1
 			}
-			is_tribal = yes
+			root.owner = {
+				is_tribal = yes
+			}
 		}
 		
 		custom_tooltip = {
