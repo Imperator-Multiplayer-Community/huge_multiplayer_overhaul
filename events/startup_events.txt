@@ -150,3 +150,19 @@ startup_events.8 = {
 		}
 	}
 }
+
+startup_events.9 = {
+	type = country_event
+	hidden = yes
+	
+	immediate = {
+		every_owned_province = {
+			limit = {
+				has_city_status = yes
+				has_building = border_fortress_building
+			}
+
+			remove_building_level = border_fortress_building
+		}
+	}
+}

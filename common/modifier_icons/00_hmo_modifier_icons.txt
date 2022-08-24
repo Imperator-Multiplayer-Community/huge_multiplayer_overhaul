@@ -174,6 +174,7 @@ mega_galley_flood_plain_combat_bonus = {
     positive = "gfx/interface/icons/_default.dds"
 }
 
+# BUILDINGS
 
 large_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
@@ -213,4 +214,7 @@ go_hunting_cost_modifier = {
 }
 subject_player_client_state_pays_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+border_fortress_building_cost = {
+    positive = "gfx/interface/icons/modifiers/fortress_building_cost.dds"
 }
