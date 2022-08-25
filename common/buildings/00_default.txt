@@ -47,19 +47,24 @@ border_fortress_building = {
 	}
 
 	allow = {
-		OR = {
-			root.owner = {
-				has_military_bonus = border_fort_path_1
-			}
-			root.owner = {
-				is_tribal = yes
-			}
-		}
-		
 		custom_tooltip = {
 			text = "is_valid_border_fortress_location_tt"
 			is_valid_border_fortress_location = yes
 		}
+
+		custom_tooltip = {
+			text = "is_allowed_border_fortress_tt"
+			OR = {
+				root.owner = {
+					has_military_bonus = border_fort_path_1
+				}
+				root.owner = {
+					is_tribal = yes
+				}
+			}
+		}
+		
+
 		NOT = {
 			is_ai = yes
 		}

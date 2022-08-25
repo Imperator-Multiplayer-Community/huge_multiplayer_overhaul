@@ -10,6 +10,9 @@
 NCountry = {
 	PIG_STAB_DURATION = 3650 # was 1825
 	BASE_NAVAL_RANGE = 650
+
+	BASE_FORT_LIMIT_PER_STATE = 5
+	FIRST_FORT_COST_IN_POINTS = 3 # Is measured against BASE_FORT_LIMIT_PER_STATE. This applies for the first fort in every province - every other fort in the same province is 1 point towards this limit
 	FORT_MAINTENANCE = 0.7 # was .4
 
 	LOYALTY_INCREASE_AT_CIVIL_WAR_OR_REBELLION = 25 # Is this what gives provice loyalty?
