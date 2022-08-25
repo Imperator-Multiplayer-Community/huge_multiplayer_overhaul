@@ -329,9 +329,22 @@ base_window = {
 					}
 				}
 			}
+			textbox = {
+				visible = "[Not( StringIsEmpty( LegionGovernorshipItem.GetGovernorship.MakeScope.GetVariable('total_victory_count').GetValue) )]"
+				text = "Victories [LegionGovernorshipItem.GetGovernorship.MakeScope.GetVariable('total_victory_count').GetValue|0] : Defeats [LegionGovernorshipItem.GetGovernorship.MakeScope.GetVariable('total_defeat_count').GetValue|0]"
+				using = BaseFontM
+				using = Black_FontColor
+				autoresize = yes
+				parentanchor = hcenter
+				position = { 0 238 }
+				multiline = yes
+				max_width = 200
+				align = center
+				alpha = 0.6
+			}
 			margin_widget = { 
-				size = { 100% 606 }
-				position = { 0 240 }
+				size = { 100% 576 }
+				position = { 0 270 }
 				textbox = {
 					visible = "[StringIsEmpty( LegionGovernorshipItem.GetGovernorship.GetLegion.GetHistorySummary )]"
 					text = "DEEDS_NONE"
