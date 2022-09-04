@@ -508,12 +508,13 @@ germania_magna_region = {
 transalpine_gaul_region = {		#7 areas
 	areas = {
 		alpes_maritimae_area
-		narbonensis_occidentalis_area
 		alpes_maritimae_two_area
 		allobrogia_area
 		tigurinia_area
 		alpes_graiae_area
 		celtica_orientalis_area
+		alpes_rhodanus_area 
+		arar_convallis_area
 	}
 	    color = rgb { 28 130 35 }
 }
@@ -886,7 +887,7 @@ macedonia_region = { #7 areas
 }
 
 
-central_gaul_region = {	#6 areas
+central_gaul_region = {	#8 areas
 	areas = {
 		sequania_area
 		lingonia_area
@@ -895,6 +896,7 @@ central_gaul_region = {	#6 areas
 		remia_area
 		suaeuconia_area
 		parisia_area
+		celtica_orientalis_area
 	}
     color = rgb { 227 11 93 }
 }
@@ -941,7 +943,7 @@ armorica_region = {			#7 areas
     color = rgb { 248 184 120 }
 }
 
-aquitaine_region = {			#6 areas
+aquitaine_region = {			#7 areas
 	areas = {
 		aquitania_occidentalis_area
 		aquitania_orientalis_area
@@ -949,11 +951,11 @@ aquitaine_region = {			#6 areas
 		narbonensis_orientalis_area
 		cadurcia_area
 		narbonensis_centralis_area
-		central_massif_area
+		narbonensis_occidentalis_area
 	}
     color = rgb { 156 81 182 }
 }
-gaul_minor_region = {	#8 areas
+gaul_minor_region = {	#7 areas
 	areas = {
 		sentonia_maioris_area
 		lemovicia_area
@@ -961,6 +963,7 @@ gaul_minor_region = {	#8 areas
 		celtica_occidentalis_area
 		bituriga_orientalis_area
 		celtica_centralis_area
+		central_massif_area
 	}
     color = rgb { 27 211 93 }
 }
