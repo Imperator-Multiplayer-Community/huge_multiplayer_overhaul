@@ -24,7 +24,7 @@
 					province_id = 3756
 					province_id = 3053
 					is_in_area = chattia_occidentalis_area
-					#is_in_area = vangionia_area
+					###is_in_area = vangionia_area
 					is_in_area = mediomatricia_area
 					is_in_area = treveria_area
 					is_in_area = menapia_orientalis
@@ -74,7 +74,7 @@
 			owns_or_subject_owns = 3756
 			owns_or_subject_owns = 3053
 			owns_or_subject_owns_area = chattia_occidentalis_area
-			#owns_or_subject_owns_area = vangionia_area
+			###owns_or_subject_owns_area = vangionia_area
 			owns_or_subject_owns_area = mediomatricia_area
 			owns_or_subject_owns_area = treveria_area
 			owns_or_subject_owns_area = menapia_orientalis
