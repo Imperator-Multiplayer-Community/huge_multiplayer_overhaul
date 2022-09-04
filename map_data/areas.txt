@@ -844,9 +844,8 @@ dardania_superioris_area = {
 
 #Dacia and Illyria 
 
-clepia_area = { 
-	provinces = { } 
-} 
+#clepia_area = { 
+# provinces = { } } 
 
 zargidava_area = { #11 
 	provinces = { 4801 4802 4924 4923 4925 4913 4912 4914 4930 4931 4932 4935 4933 } 
@@ -943,9 +942,8 @@ moesia_prima_occidentalis_area = {
 	provinces = { 4197 4198 4195 4124 4125 4196 4194 4123 4126 4130 4128 4129 4077 } 
 } 
 
-marsonia_area = { 
-	provinces = {  } 
-} 
+#marsonia_area = { 
+#provinces = {  } } 
 
 pannonia_secunda_area = { 
 	provinces = { 4190 4189 4192 4191 4186 4188 4187 4185 4193 
@@ -1285,11 +1283,13 @@ celtica_orientalis_area = { #10
 } 
 
 sequania_area = { #8
-	provinces = { 2362 2363 3010 2427 3013 3014 2428 2429 } 
+	provinces = { 2362 2363 3010 2427 3013 3014 2428 2429 
+	3011 3009 3019 3024 3018 } 
 } 
 
 lingonia_area = { 
-	provinces = { 2440 2435 2436 2437 2433 2354 3005 2431 2449 3008 3006 2489 } 
+	provinces = { 2440 2435 2436 2437 2433 2354 3005 2431 2449 3008 3006 2489 
+	2490 } 
 } 
 
 senonia_area = { # 
@@ -1315,21 +1315,22 @@ carnutia_area = { #12
 
 parisia_area = { # 12 
 	provinces = { 2447 2476 2481 2483 2475 2477 2485 2484 2444 2482 
-	2479 2480 } 
+	2479 2480 2487 2486 } 
 } 
 
 leucia_area = { 
-	provinces = { 3015 3004 3007 3003 3016 2453 3017 2499 2454 3002 2497 } 
+	provinces = { 3015 3004 3007 3003 3016 2453 3017 2499 2454 3002 2497 
+	3021 3023 } 
 } 
 
 remia_area = { #continue into Belgicae 
-	provinces = { 3001 2455 2498 2496 2495 2494 3050 3703 3686 3687 3688 3684
-	3705 } 
+	provinces = { 3001 2455 2498 2496 2495 2494 3050 3686 3687 3688 
+	} 
 } 
 
 treveria_area = { 
 	provinces = { 3728 3721 3730 3729 3685 3689 3726 7738
-	3683 3719 } 
+	3683 3719 3705 3703 3684 } 
 } 
 
 mediomatricia_area = { 
@@ -1337,39 +1338,37 @@ mediomatricia_area = {
 	              3690 3722 3724 } 
 } 
 
-vangionia_area = { 
-	provinces = { } 
-} 
+#vangionia_area = { 
+#	provinces = { } } 
 
 menapia_orientalis = { 
 	provinces = { 3718 3717 3716 3715 3710 3714 3711 3712 3713 3727 3720 } 
 } 
 
 suaeuconia_area = { 
-	provinces = { 2490 2487 2486 2491 2451 3049 3051 3048 2492 2452 3043 2450
-	3047 } 
+	provinces = { 2491 2451 3049 3051 3048 2492 2452 3043 2450
+	} 
 } 
 
 bellovacia_area = { 
-	provinces = { 2493 3044 2445 3032 3031 2446 3038 3042 3045 3046 } 
+	provinces = { 2493 3044 2445 3032 3031 2446 3038 
+	2443 2469 2474 2473 2472 } 
 } 
 
 veliocassia_area = { #11 
-	provinces = { 2468 2470 2469 2471 3034 3033 3035 3037 3039 3036 2443 
-	2474 2473 2472 } 
+	provinces = { 2468 2470 2471 3034 3033 3035 3037 3039 3036 
+	} 
 } 
 
-tribocia_area = { 
-	provinces = { 3011 3009 3019 3024 3021 3023 3018 } 
-} 
+#tribocia_area = { 
+#	provinces = { } } 
 
 raurica_area = { 
 	provinces = { 3012 3020 3022 3025 3731 3733 3734 3744 } 
 } 
 
-latobrigia_area = { 
-	provinces = {  } 
-} 
+#latobrigia_area = { 
+#provinces = {  } } 
 
 tulingia_area = { # 12 
 	provinces = {  } 
@@ -1699,7 +1698,7 @@ morinia_area = {
 
 nervia_area = { 
 	provinces = { 3041 3676 3679 3707 3704 3680 3706 3681 3682 3708 
-	3709 } 
+	3709 3042 3045 3046 3047 } 
 } 
 
 #Balearics 
@@ -1736,9 +1735,8 @@ sicambria_area = {
 	provinces = { 3699 3700 3785 3786 3787 3790 3788 3789 3793 3791 3792 3794 3796 } 
 } 
 
-turonia_area = { 
-	provinces = { } 
-} 
+#turonia_area = { 
+#provinces = { } } 
 
 chattia_occidentalis_area = { 
 	provinces = { 3802 3804 3800 3801 3803 3805 
