@@ -531,20 +531,6 @@ gallaecia_region = {				#7 areas
 	}
 }
 
-caledonia_region = {		#7 areas
-	areas = {
-		caledonia_meridionalis_area
-		caledonia_occidentalis_area
-		caledonia_septentrionalis_area
-		hibernia_septentrionalis_area
-		hibernia_orientalis_area
-		hibernia_occidentalis_area
-		hibernia_meridionalis_area
-		britannia_secunda_septentrionalis_area
-		britannia_secunda_meridionalis_area
-	}
-}
-
 nubia_region = {		#12 areas
 	areas = {
 		meroe_area
@@ -978,8 +964,9 @@ tarraconensis_region = {	#9 areas
 	}
     color = rgb { 97 98 51 }
 }
+## Britannia 
 
-britain_region = {			#10 areas
+britain_region = {			#9 areas
 	areas = {
 		dumnonia_area
 		durotrigia_area
@@ -988,9 +975,24 @@ britain_region = {			#10 areas
 		dobunnia_area
 		coritania_area
 		cornovia_area
+		britannia_secunda_septentrionalis_area
+		britannia_secunda_meridionalis_area
+	}
+    color = rgb { 255 56 56 }
+}
+
+caledonia_region = {		#8 areas
+	areas = {
+		caledonia_meridionalis_area
+		caledonia_occidentalis_area
+		caledonia_septentrionalis_area
+		hibernia_septentrionalis_area
+		hibernia_orientalis_area
+		hibernia_occidentalis_area
+		hibernia_meridionalis_area
 		brigantia_area
 	}
-    color = rgb { 82 6 6 }
+    color = rgb { 38 139 255 }
 }
 
 cisalpine_gaul_region = {	#8 areas
