@@ -491,7 +491,7 @@ lusitania_region = {			#9 areas
 	}
 }
 
-germania_magna_region = {
+germania_magna_region = { # 7 areas
 	areas = {
 		chaucia_area
 		langobardia_area
@@ -500,7 +500,6 @@ germania_magna_region = {
 		sicambria_area
 		chasuaria_area
 		frisia_area
-		caluconia_area
 	}
     color = rgb { 28 200 35 }
 }
@@ -512,7 +511,6 @@ transalpine_gaul_region = {		#7 areas
 		allobrogia_area
 		tigurinia_area
 		alpes_graiae_area
-		celtica_orientalis_area
 		alpes_rhodanus_area 
 		arar_convallis_area
 	}
@@ -820,7 +818,6 @@ armenia_region = {		#9 areas
 
 bohemia_region = {
 	areas = {
-		marcomannia_maiores_area
 		boioa_meridionalis_area
 		boioa_septentrionalis_area
 		marcomannia_minores_area
@@ -897,21 +894,20 @@ central_gaul_region = {	#8 areas
 		suaeuconia_area
 		parisia_area
 		celtica_orientalis_area
+		mediomatricia_area
 	}
     color = rgb { 227 11 93 }
 }
 
-germania_superior_region = {
+germania_superior_region = { # 7 areas
 	areas = {
-		tribocia_area
-		mediomatricia_area
+		#tribocia_area
 		chattia_occidentalis_area
 		raurica_area
 		germanicum_area
-		latobrigia_area
-		vangionia_area
-		turonia_area
 		chattia_orientalis_area
+		marcomannia_maiores_area
+		caluconia_area
 	}
     color = rgb { 54 69 79 }
 }
