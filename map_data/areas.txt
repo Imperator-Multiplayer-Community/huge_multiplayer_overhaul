@@ -1176,13 +1176,13 @@ alpes_graiae_area = { #
 } 
 
 alpes_raetiae_occidentalis = { 
-	provinces = { 3618 3617 3619 3636 3657 3656 3658 3660 3659 3654 3655 
+	provinces = { 3618 3617 3619 3657 3656 3658 3660 3659 3654 3655 
 	3616 } 
 } 
 
 alpes_raetiae_orientalis = { 
 	provinces = { 3665 3666 3664 3667 3668 3671 3672 3673 3674 3669 3670 
-	3647 3648 3649 3663 } 
+	3663 } 
 } 
 
 tigurinia_area = { #6
@@ -1378,19 +1378,23 @@ germanicum_area = {
 	provinces = { 3766 3767 3768 3769 3772 3774 3736 3743 3770 3742 3771 } 
 } 
 
-helvetia_inferioris_area = { 
+helvetia_inferioris_area = { # 13
 	provinces = { 3632 3633 3634 3732 3635 3637 3639 3739 3745 3746 
-	              3638 3740 } 
+	              3638 3740 3636 } 
 } 
 
-helvetia_superioris_area = { 
+helvetia_superioris_area = { # 12
 	provinces = { 3741 3747 3640 3750 3751 3641 3748 3753 
-	              3775 3749 3752 3773 3765 3757 } 
+	              3775 3749 3752 3773 } 
 } 
 
-helvetia_orientalis_area = { 
-	provinces = { 3758 3759 3756 3754 3755 3760 3764 3761 3642 3643 3644 3762 3645 3646 3763 } 
+helvetia_orientalis_area = { # 10
+	provinces = { 3758 3759 3756 3754 3755 3760 3764 3761 3642 3643 3765 3757 } 
 } 
+
+helvetia_ister_convallis_area = { # 10
+	provinces = { 3647 3648 3649 3644 3762 3645 3646 3763 3650 3651 }
+}
 
 frisia_area = { 
 	provinces = { 3848 3847 3850 3851 3852 3854 } 
@@ -1767,7 +1771,7 @@ boioa_septentrionalis_area = {
 
 carnuntia_area = { 
 	provinces = { 3918 3653 4144 4145 4146 4147
-	4142 4141 3650 3651 3652 } 
+	4142 4141 3652 } 
 } 
 
 lauriacum_area = { 
