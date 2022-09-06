@@ -421,7 +421,7 @@ distinction_light_cavalry_discipline_1 = {
 distinction_light_cavalry_discipline_2 = {
 	icon = "phalera_horse"
 	commander = {
-		martial = 1
+		martial = 0
 	}
 	unit = {
 		loyalty_gain_chance_modifier = 0.05
@@ -433,7 +433,7 @@ distinction_light_cavalry_discipline_2 = {
 distinction_light_cavalry_discipline_3 = {
 	icon = "phalera_horse"
 	commander = {
-		martial = 2
+		martial = 1
 	}
 	unit = {
 		loyalty_gain_chance_modifier = 0.10

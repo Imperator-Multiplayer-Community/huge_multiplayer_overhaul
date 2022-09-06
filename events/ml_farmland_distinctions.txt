@@ -149,12 +149,6 @@ ml_farmland_distinctions.1 = {
 							} 
 						}
 					}
-
-					ROOT = {
-						trigger_event = {
-							id = ml_expeditionary_distinctions.1
-						}
-					}
 				}
 			}
 			else_if = {
@@ -204,12 +198,6 @@ ml_farmland_distinctions.1 = {
 				}
 
 				add_distinction = distinction_farmland_01
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.1
-					}
-				}
 			}
 		}
 	}
@@ -282,12 +270,6 @@ ml_farmland_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_farmland_04
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.2
-					}
-				}
 			}
 			else_if = {
 				limit = {
@@ -295,12 +277,6 @@ ml_farmland_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_farmland_03
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.2
-					}
-				}
 			}
 			else_if = {
 				limit = {
@@ -308,12 +284,6 @@ ml_farmland_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_farmland_02
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.2
-					}
-				}
 			}
 			else_if = {
 				limit = {
@@ -321,12 +291,6 @@ ml_farmland_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_farmland_01
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.2
-					}
-				}
 			}
 		}
 	}

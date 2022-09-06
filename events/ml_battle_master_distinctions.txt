@@ -16,7 +16,16 @@ ml_battle_master.1 = {
 	}
 
 	immediate = {
-		scope:actor = {
+		every_governorships = {
+			limit = {
+				has_legion_trigger = yes
+				legion = scope:actor.legion
+			}
+
+			save_scope_as = legion_governorship
+		}
+
+		scope:legion_governorship = {
 			if = {
 				limit = {
 					NOT = {
@@ -63,13 +72,6 @@ ml_battle_master.1 = {
 					scope:actor.legion = {
 						add_distinction = distinction_battle_master_01
 					}
-
-					ROOT = {
-						trigger_event = {
-							id = ml_expeditionary_distinctions.1
-						}
-					}
-					
 				}
 				else_if = {
 					limit = {
@@ -164,7 +166,16 @@ ml_battle_master.2 = {
 	}
 
 	immediate = {
-		scope:actor = {
+		every_governorships = {
+			limit = {
+				has_legion_trigger = yes
+				legion = scope:actor.legion
+			}
+
+			save_scope_as = legion_governorship
+		}
+
+		scope:legion_governorship = {
 			if = {
 				limit = {
 					has_variable = legion_victories

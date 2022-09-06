@@ -417,7 +417,7 @@ distinction_archer_discipline_1 = {
 distinction_archer_discipline_2 = {
 	icon = "phalera_archer"
 	commander = {
-		martial = 1
+		martial = 0
 	}
 	unit = {
 		loyalty_gain_chance_modifier = 0.05
@@ -429,7 +429,7 @@ distinction_archer_discipline_2 = {
 distinction_archer_discipline_3 = {
 	icon = "phalera_archer"
 	commander = {
-		martial = 2
+		martial = 1
 	}
 	unit = {
 		loyalty_gain_chance_modifier = 0.10
