@@ -150,3 +150,47 @@ startup_events.8 = {
 		}
 	}
 }
+
+startup_events.9 = { # makes sure forts are on citys and border forts are on settlements
+	type = country_event
+	hidden = yes
+	
+	immediate = {
+		every_owned_province = {
+			limit = {
+				has_city_status = yes
+				has_building = border_fortress_building
+			}
+
+			remove_building_level = border_fortress_building
+		}
+
+		every_owned_province = {
+			limit = {
+				is_capital = yes;
+				NOT = {
+					has_building = fortress_building
+				}
+			}
+
+			add_building_level = fortress_building
+		}
+
+		every_owned_province = {
+			limit = {
+				has_city_status = no
+				has_building = fortress_building
+			}
+
+			while = {
+				limit = {
+					has_building = fortress_building
+				}
+
+				remove_building_level = fortress_building
+			}
+
+			add_building_level = border_fortress_building
+		}
+	}
+}

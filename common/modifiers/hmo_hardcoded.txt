@@ -52,6 +52,10 @@ civilization_value = {
 	local_pop_assimilation_speed = 0.01
 }
 
+forts_over_limit = {
+	fort_maintenance_cost = 0.8 # was 0.5
+}
+
 manpower = {
 	garrison_growth = 0.01	# was 0.01
 }
