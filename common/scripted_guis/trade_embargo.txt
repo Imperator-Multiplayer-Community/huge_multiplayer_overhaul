@@ -6,34 +6,67 @@
 	} 
 
 	is_valid = {
-		trigger_if = {
-			limit = {
-				has_variable_list = embargoed_list
-			}
+		trade_embargo_trigger = yes
+	}
 
-			NOT = {
-				is_target_in_variable_list = {
-					name = embargoed_list
-					target = scope:player
-				}
+	effect = {
+
+	}
+}
+
+trade_embargo_filter_toggle = { #root = player country
+	scope = country 
+
+	ai_is_valid = {
+		always = no
+	}
+
+	is_shown = { # for showing the yes checkmark
+		has_variable = embargo_filter
+	}
+
+	effect = { # this toggles the trade overview filter for embargo
+		debug_log = "Test1"
+
+		if = {
+			limit = {
+				has_variable = embargo_filter
 			}
+			debug_log = "Test2"
+			remove_variable = embargo_filter
 		}
+		else = {
+			debug_log = "Test3"
+			set_variable = embargo_filter
+		}
+	}
+}
 
-		trigger_if = {
+trade_embargo_filter = {  # root = country scope of player that has trade good
+	scope = country
+
+	saved_scopes = {
+		player
+	}
+
+	ai_is_valid = {
+		always = no
+	} 
+
+	is_shown = { # whether to show an import item or not
+		trigger_if  = {
 			limit = {
 				scope:player = {
-					has_variable_list = embargo_list
+					has_variable = embargo_filter
 				}
 			}
 
-			NOT = {
-				scope:player = {
-					is_target_in_variable_list = {
-						name = embargo_list
-						target = ROOT
-					}
-				}
-			}
+			# checks if country in the embargo list (no means yes)
+			trade_embargo_trigger = no
+		}
+		trigger_else = {
+			# if not filtering return yes
+			always = yes
 		}
 	}
 
