@@ -251,10 +251,10 @@ base_window = {
 					}
 					
 					scrollwidget = {
-						fixedgridbox = {
+						dynamicgridbox = {
 							name = "routes_grid"
-							addrow = 38
-							addcolumn = 608
+							size = { 100% 100% }
+							ignoreinvisible = yes
 							datamodel = "[TradeView.GetCurrentTradeRoutes]"
 							item = {
 								widget = {
@@ -262,11 +262,9 @@ base_window = {
 									list_entry = {
 										size = { 100% 100% }
 									}
+									datacontext = "[GetScriptedGui('trade_embargo_filter')]"
+									visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(ActiveTradeRoute.GetFrom.GetCountry.MakeScope).AddScope('player', Player.MakeScope ).End )]"
 									flowcontainer = {
-										datacontext = "[GetScriptedGui('trade_embargo_filter')]"
-										visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(ActiveTradeRoute.GetFrom.GetCountry.MakeScope).AddScope('player', Player.MakeScope ).End )]"
-										spacing = 5
-										ignoreinvisible = yes
 										widget = {
 											size = { 34 34 }	
 											
@@ -308,7 +306,7 @@ base_window = {
 										}
 										
 										widget = {
-											size = { 150 100% }
+											size = { 200 100% }
 											onmousehierarchyenter = "[SetHighlightArea( ActiveTradeRoute.GetFrom.GetArea )]"
 											textbox = {
 												using = BaseFontS
@@ -334,7 +332,7 @@ base_window = {
 										}
 										#widget = {}
 										widget = {
-											size = { 150 100% }
+											size = { 200 100% }
 											onmousehierarchyenter = "[SetHighlightArea( ActiveTradeRoute.GetTo.GetArea )]"
 											textbox = {
 												using = BaseFontS
