@@ -1,0 +1,42 @@
+﻿trade_embargo = { # root = country scope of player that has trade good
+	scope = country
+
+	saved_scopes = {
+		player
+	} 
+
+	is_valid = {
+		trigger_if = {
+			limit = {
+				has_variable_list = embargoed_list
+			}
+
+			NOT = {
+				is_target_in_variable_list = {
+					name = embargoed_list
+					target = scope:player
+				}
+			}
+		}
+
+		trigger_if = {
+			limit = {
+				scope:player = {
+					has_variable_list = embargo_list
+				}
+			}
+
+			NOT = {
+				scope:player = {
+					is_target_in_variable_list = {
+						name = embargo_list
+						target = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	effect = {
+	}
+}
