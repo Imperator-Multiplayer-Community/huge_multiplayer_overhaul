@@ -26,17 +26,13 @@ trade_embargo_filter_toggle = { #root = player country
 	}
 
 	effect = { # this toggles the trade overview filter for embargo
-		debug_log = "Test1"
-
 		if = {
 			limit = {
 				has_variable = embargo_filter
 			}
-			debug_log = "Test2"
 			remove_variable = embargo_filter
 		}
 		else = {
-			debug_log = "Test3"
 			set_variable = embargo_filter
 		}
 	}

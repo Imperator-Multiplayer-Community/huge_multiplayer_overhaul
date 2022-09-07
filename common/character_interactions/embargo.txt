@@ -59,11 +59,21 @@
 				name = embargo_list
 				target = scope:target.employer
 			}
+
+			add_opinion = {
+				modifier = "opinion_embargo"
+				target = scope:target.employer
+			}
 		}
 
 		scope:target.employer = {
 			add_to_variable_list = {
 				name = embargoed_list
+				target = scope:actor
+			}
+
+			add_opinion = {
+				modifier = "opinion_embargoed"
 				target = scope:actor
 			}
 			
@@ -121,11 +131,21 @@ lift_embargo = {
 				name = embargo_list
 				target = scope:target.employer
 			}
+
+			reverse_add_opinion = {
+				modifier = "opinion_embargo"
+				target = scope:target.employer
+			}
 		}
 
 		scope:target.employer = {
 			remove_list_variable = {
 				name = embargoed_list
+				target = scope:actor
+			}
+
+			reverse_add_opinion = {
+				modifier = "opinion_embargoed"
 				target = scope:actor
 			}
 			
