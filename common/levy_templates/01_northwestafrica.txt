@@ -9,11 +9,6 @@ levy_numidian = {	#General Numidian
 	default = no
 
 	light_infantry = 0.4
-
-	light_cavalry = 0.3
-	horse_archers = 0.15
-	
-	heavy_infantry = 0.1
-	
-	warelephant = 0.05
+	warelephant = 0.2
+	light_cavalry = 0.4	
 }
