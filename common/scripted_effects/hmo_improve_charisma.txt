@@ -1,0 +1,109 @@
+﻿# positive charisma
+improve_charisma = {
+	if = {
+		limit = {
+			has_character_modifier = better_charisma_01
+		}
+		remove_character_modifier = better_charisma_01
+		add_character_modifier = {
+			name = "better_charisma_02"
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = better_charisma_02
+		}
+		remove_character_modifier = better_charisma_02
+		add_character_modifier = {
+			name = "better_charisma_03"
+			duration = -1
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = better_charisma_03
+		}
+		remove_character_modifier = better_charisma_03
+		add_character_modifier = {
+			name = "better_charisma_04"
+			duration = -1
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = better_charisma_04
+		}
+		remove_character_modifier = better_charisma_04
+		add_character_modifier = {
+			name = "better_charisma_05"
+			duration = -1
+		}		
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_character_modifier = better_charisma_05
+				}
+			}
+		add_character_modifier = {
+			name = "better_charisma_01"
+			duration = -1
+		}
+	}
+}
+
+# negative charisma
+impair_charisma = {
+	if = {
+		limit = {
+			has_character_modifier = worse_charisma_01
+			}
+		remove_character_modifier = worse_charisma_01
+		add_character_modifier = {
+			name = "worse_charisma_02"
+			duration = 2920
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = worse_charisma_02
+			}
+		remove_character_modifier = worse_charisma_02
+		add_character_modifier = {
+			name = "worse_charisma_03"
+			duration = 2920
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = worse_charisma_03
+			}
+		remove_character_modifier = worse_charisma_03
+		add_character_modifier = {
+			name = "worse_charisma_04"
+			duration = 2920
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = worse_charisma_04
+			}
+		remove_character_modifier = worse_charisma_04
+		add_character_modifier = {
+			name = "worse_charisma_05"
+			duration = 2920
+		}		
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_character_modifier = worse_charisma_05
+				}
+			}
+		add_character_modifier = {
+			name = "worse_charisma_01"
+			duration = 2920
+		}
+	}
+}

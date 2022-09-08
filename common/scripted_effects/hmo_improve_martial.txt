@@ -1,0 +1,108 @@
+﻿# positive martial
+improve_martial = {
+	if = {
+		limit = {
+			has_character_modifier = better_martial_01
+		}
+		remove_character_modifier = better_martial_01
+		add_character_modifier = {
+			name = "better_martial_02"
+			duration = -1
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = better_martial_02
+		}
+		remove_character_modifier = better_martial_02
+		add_character_modifier = {
+			name = "better_martial_03"
+			duration = -1
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = better_martial_03
+		}
+		remove_character_modifier = better_martial_03
+		add_character_modifier = {
+			name = "better_martial_04"
+			duration = -1
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = better_martial_04
+		}
+		remove_character_modifier = better_martial_04
+		add_character_modifier = {
+			name = "better_martial_05"
+			duration = -1
+		}		
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_character_modifier = better_martial_05
+			}
+		}
+		add_character_modifier = {
+			name = "better_martial_01"
+			duration = -1
+		}
+	}
+}
+
+impair_martial = {
+	if = {
+		limit = {
+			has_character_modifier = worse_martial_01
+		}
+		remove_character_modifier = worse_martial_01
+		add_character_modifier = {
+			name = "worse_martial_02"
+			duration = 2920
+		}
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = worse_martial_02
+		}
+		remove_character_modifier = worse_martial_02
+		add_character_modifier = {
+			name = "worse_martial_03"
+			duration = 2920
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = worse_martial_03
+		}
+		remove_character_modifier = worse_martial_03
+		add_character_modifier = {
+			name = "worse_martial_04"
+			duration = 2920
+		}		
+	}
+	else_if = {
+		limit = {
+			has_character_modifier = worse_martial_04
+		}
+		remove_character_modifier = worse_martial_04
+		add_character_modifier = {
+			name = "worse_martial_05"
+			duration = 2920
+		}		
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_character_modifier = worse_martial_05
+			}
+		}
+		add_character_modifier = {
+			name = "worse_martial_01"
+			duration = 2920
+		}
+	}
+}
