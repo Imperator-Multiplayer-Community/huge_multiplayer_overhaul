@@ -2,10 +2,13 @@
 	#check neighbors first for slaves
 	random_valid_neighbor_slave_exporter = {
 		limit = {
-			trigger_if = {
+			trigger_if = { # if slave_external_move_no then dont import from province that is also importing if its outside the state
 				limit = {
 					ROOT = {
 						has_province_modifier = slave_external_move_no
+					}
+					NOT = {
+						state = ROOT.state
 					}
 				}
 
