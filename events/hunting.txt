@@ -4,7 +4,7 @@ hunting.1 = { #You send the invite to a ruler. Does he accept to correspond? Rec
 	type = country_event
 	title = "hunting.1.t"
 	desc = "hunting.1.desc"
-	left_portrait = current_ruler
+	left_portrait = scope:target
 	right_portrait = scope:actor.current_ruler
 	picture = steppe_cavalry
 	
