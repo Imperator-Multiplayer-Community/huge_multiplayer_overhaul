@@ -851,7 +851,7 @@ base_sub_window = {
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
 			enabled = "[ViewPopsWindow.IsPlayerProvince]"
 		}
-		tooltip = "Slave movement forbidden"
+		tooltip = "Slave movement from territory completely forbidden."
 	}
 	button_round_inverted = { ###############################################################
 		position = { -90 -130 }
@@ -864,7 +864,7 @@ base_sub_window = {
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
 			enabled = "[ViewPopsWindow.IsPlayerProvince]"
 		}
-		tooltip = "Slave movement from territory importing slaves in province forbidden"
+		tooltip = "Disables moving slaves from territories within the current province that are also importing slaves."
 	}
 	button_round_inverted = { ###############################################################
 		position = { -60 -130 }
@@ -877,7 +877,7 @@ base_sub_window = {
 			onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( ViewPopsWindow.GetProvince.MakeScope ).End )]"
 			enabled = "[ViewPopsWindow.IsPlayerProvince]"
 		}
-		tooltip = "Slave movement from territory importing slaves outside province forbidden"
+		tooltip = "Disables moving slaves from territories not in the current province that are also importing slaves."
 	}
 	button_round_inverted = { ###############################################################
 		position = { -30 -130 }

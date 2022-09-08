@@ -1078,6 +1078,23 @@
  relic_gift_event.52.desc:0 "Though it is only ever touched by high priests, legend has that if you put this conch to your ear, you can hear a mystical voice form the far north calling out the word ‘Agooooooonia’."
  relic_gift_event.52.a:0 "What a gift! What a friend!"
 
+ embargo:0 "Embargo"
+ embargo_past:0 "Restrict Trade"
+ embargo_act:0 "New trade routes between your nations are forbidden."
+ embargo_act_past:0 "Our goods are not meant for these thieves."
+ embargo_tt:0 "Prevent new trade routes from being created with this nation."
+ lift_embargo:0 "Lift Embargo"
+ lift_embargo_past:0 "Resume Trade"
+ lift_embargo_act:0 "New trade routes between your nations can be created."
+ lift_embargo_act_past:0 "Surely they wish to buy our glorious trade goods!"
+ lift_embargo_tt:0 "Allow new trade routes to be created with this nation."
+ embargo.1.t:0 "Embargoed!"
+ embargo.1.desc:0 "Our trade with (@[SCOPE.sC('actor').GetFlag]!) [SCOPE.sC('actor').GetName] has been blocked!"
+ embargo.1.a:0 "Nobody wanted their shoddy goods anyways."
+ embargo.2.t:0 "Embargo Lifted!"
+ embargo.2.desc:0 "Trade with (@[SCOPE.sC('actor').GetFlag]!) [SCOPE.sC('actor').GetName] has resumed!"
+ embargo.2.a:0 "May trade between our nations flourish again."
+
  #Assassination
 
  need_assassin_in_place_tt:0 "You must have a #Y Spy#! operating in the country."
