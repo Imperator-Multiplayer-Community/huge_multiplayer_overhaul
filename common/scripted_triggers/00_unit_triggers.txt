@@ -85,7 +85,7 @@ naval_supply_trigger = {
 		NOT = { war = root.unit_owner }	
 	}
 	NOT = {
-			has_province_modifier = supplied_by_sea
+		has_province_modifier = supplied_by_sea
 	}
 	owner = controller
 }
