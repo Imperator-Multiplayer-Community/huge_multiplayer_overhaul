@@ -1,0 +1,160 @@
+﻿auto_import_slave_effect = { # root = owned province
+	#check neighbors first for slaves
+	random_valid_neighbor_slave_exporter = {
+		limit = {
+			trigger_if = {
+				limit = {
+					ROOT = {
+						has_province_modifier = slave_external_move_no
+					}
+				}
+
+				NOT = {
+					has_province_modifier = slave_move_yes
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				exists = this
+			}
+
+			save_scope_as = slave_move_province
+		}
+	}
+
+	#if no slaves in neighbors, check whole province
+	if = {
+		limit = {
+			NOT = {
+				exists = scope:slave_move_province 
+			}
+		}
+
+		ROOT.state = {
+			random_valid_state_slave_exporter = {
+				limit = {
+					NOR = {
+						has_province_modifier = slave_move_no
+						this = ROOT
+					}
+					trigger_if = {
+						limit = {
+							ROOT = {
+								has_province_modifier = slave_internal_move_no
+							}
+						}
+
+						NOT = {
+							has_province_modifier = slave_move_yes
+						}
+					}
+					owner = ROOT.owner
+				}
+
+				if = {
+					limit = {
+				 		exists = this
+					}
+
+					save_scope_as = slave_move_province
+				}
+			}
+		}
+	}
+
+	# if no available provinces with slaves turn move off to save performance
+	# allow 3 retries
+	if = { 
+		limit = {
+			NOT = {
+				exists = scope:slave_move_province
+			}
+		}
+
+		if = {
+			limit = {
+				has_variable = slave_move_fail_count
+			}
+
+			change_variable = {
+				name = slave_move_fail_count
+				add = 1
+			}
+		}
+		else = {
+			set_variable = {
+				name = slave_move_fail_count
+				value = 1
+			} 
+		}
+
+		if = {
+			limit = {
+				var:slave_move_fail_count >= 3
+			}
+
+			ROOT = {
+				remove_province_modifier = slave_move_yes
+			}
+		}
+	}
+
+	#move found slaves
+	if = {
+		limit = {
+			exists = scope:slave_move_province 
+		}
+
+		scope:slave_move_province = {
+			random_valid_slave_to_move = {
+				ROOT.owner = {
+					# check for vegetable surplus bonus
+					if = {
+						limit = {
+							capital_scope.state = {
+								trade_good_surplus = { 
+									target = vegetables 
+									value >= 2 
+								}
+							}
+						}
+
+						add_treasury = {
+							value = -5
+							multiply = 0.75
+						}
+					}
+					else = {
+						add_treasury = {
+							value = -5
+						}
+					}
+				}
+
+				move_pop = ROOT
+			}
+		}
+	}
+
+	# if at the pop cap, turn slave move off
+	ROOT = {
+		if = {
+			limit = {
+				total_population >= population_cap
+			}
+
+			remove_province_modifier = slave_move_yes
+		}
+	}
+
+	# clean up
+	if = {
+		limit = {
+			exists = scope:slave_move_province
+		}
+
+		clear_saved_scope = slave_move_province
+	}
+}

@@ -1,5 +1,5 @@
 ﻿# positive zeal
-improve_zeal = {
+improve_zeal_effect = {
 	if = {
 		limit = {
 			has_character_modifier = better_zeal_01
@@ -54,7 +54,7 @@ improve_zeal = {
 }
 
 # negative zeal
-impair_zeal = {
+impair_zeal_effect = {
 	if = {
 		limit = {
 			has_character_modifier = worse_zeal_01

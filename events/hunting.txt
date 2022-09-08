@@ -363,7 +363,7 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}
 
 						scope:hunting_friend = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 
 						if = {
@@ -490,7 +490,7 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}
 
 						scope:hunter = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 
 						scope:hunter.employer = {
@@ -911,7 +911,7 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}
 
 						scope:hunting_friend = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 
 						if = {
@@ -1039,7 +1039,7 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}
 
 						scope:hunter = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 
 						scope:hunter.employer = {
@@ -1451,7 +1451,7 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}
 
 						scope:hunting_friend = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 
 						if = {
@@ -1579,7 +1579,7 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}
 
 						scope:hunter = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 
 						scope:hunter.employer = {
@@ -1991,7 +1991,7 @@ hunting.19 = { # Success whaling at sea
 						}
 
 						scope:hunting_friend = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 						if = {
 							limit = {
@@ -2117,7 +2117,7 @@ hunting.19 = { # Success whaling at sea
 						}
 
 						scope:hunter = {
-							improve_martial = yes
+							improve_martial_effect = yes
 						}
 
 						scope:hunter.employer = {

@@ -1,5 +1,5 @@
 ﻿# positive martial
-improve_martial = {
+improve_martial_effect = {
 	if = {
 		limit = {
 			has_character_modifier = better_martial_01
@@ -53,7 +53,7 @@ improve_martial = {
 	}
 }
 
-impair_martial = {
+impair_martial_effect = {
 	if = {
 		limit = {
 			has_character_modifier = worse_martial_01

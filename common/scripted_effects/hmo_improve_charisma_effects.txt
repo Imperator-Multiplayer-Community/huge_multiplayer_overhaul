@@ -1,5 +1,5 @@
 ﻿# positive charisma
-improve_charisma = {
+improve_charisma_effect = {
 	if = {
 		limit = {
 			has_character_modifier = better_charisma_01
@@ -54,7 +54,7 @@ improve_charisma = {
 }
 
 # negative charisma
-impair_charisma = {
+impair_charisma_effect = {
 	if = {
 		limit = {
 			has_character_modifier = worse_charisma_01

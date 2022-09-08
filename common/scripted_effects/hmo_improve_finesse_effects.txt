@@ -1,5 +1,5 @@
 ﻿# positive finesse
-improve_finesse = {
+improve_finesse_effect = {
 	if = {
 		limit = {
 			has_character_modifier = better_finesse_01
@@ -54,7 +54,7 @@ improve_finesse = {
 }
 
 # negative finesse
-impair_finesse = {
+impair_finesse_effect = {
 	if = {
 		limit = {
 			has_character_modifier = worse_finesse_01
