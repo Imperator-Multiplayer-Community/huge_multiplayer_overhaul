@@ -327,40 +327,6 @@
 		requires = { heavy_cavalry_path_6 heavy_cavalry_path_5 }
 	}
 
-	armenian_path_2 = { ###
-		modifier = { 
-			heavy_cavalry_offensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = persian_bactrian_path_end_bonus
-		requires = { }
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = anatolian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = anatolian
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = anatolian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_anatolian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:anatolian
-						}
-					}
-				}
-			}
-		}
-	}
-
 	illyrian_path_8 = { #Dardanian hoplites
 		requires = {}		
 		modifier = {
