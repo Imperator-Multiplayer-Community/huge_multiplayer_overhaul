@@ -1,1 +1,293 @@
-﻿
+﻿dravidian_philosophy = { #Tamil Path
+	color = hsv { 1.72 0.64 0.7 }
+	image = mauryan_coastal_path_5
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = indian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = indian
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = indian_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_dravidian"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:indian
+					}
+				}
+			}
+		}
+	}
+
+	##### HEAVY INF
+
+	tamil_path_7 = { ###
+		modifier = { 
+			heavy_infantry_defensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = persian_scythian_path_7
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	##### NAVAL
+
+	tamil_path_12 = { ###
+		allow_unit_type = octere
+		modifier = { 
+			octere_defensive = 0.05
+			naval_range = 0.15
+			navy_maintenance_cost = 0.01
+		}
+		on_activate = {
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = octere
+						add_subunit = octere
+					}
+				}
+			}
+		}
+		icon = levantine_greco_path_6
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	##### ARCHERS
+
+	andhra_path_5 = { ### Iron Bows
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = { }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	andhra_path_8 = { ### Naraca Arrows
+		modifier = { 
+			archers_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_7
+		requires = { andhra_path_5}
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	##### WARELEPHANTS
+
+	andhra_path_3 = { ###
+		modifier = { 
+			warelephant_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_noble_path_end_bonus
+		requires = {  }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	andhra_path_6 = { ###
+		modifier = { 
+			warelephant_morale = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_noble_path_3
+		requires = { andhra_path_3 }
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+
+	andhra_path_9 = { ###
+		modifier = { 
+			warelephant_defensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_noble_path_2
+		requires = { andhra_path_6}
+		allow = {
+			trigger_if = {
+				limit = { country_culture_group = indian }
+				custom_tooltip = {
+					text = "began_with_tradition_group"
+				}
+				country_culture_group = indian
+			}
+			trigger_else = {
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_cultural_decision"
+					has_variable = indian_influence
+				}
+				custom_tooltip = {
+					text = "tradition_unlock_requirement_dravidian"
+					any_country_culture = {
+						is_integrated = yes
+						country_culture_pop_count >= percent_size_culture_group_comparison
+						OR = {
+							this.culture.culture_group = culture_group:indian
+						}
+					}
+				}
+			}
+		}
+	}
+}
