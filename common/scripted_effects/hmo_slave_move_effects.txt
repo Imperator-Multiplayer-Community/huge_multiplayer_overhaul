@@ -1,14 +1,14 @@
-﻿auto_import_slave_effect = { # root = owned province
+﻿auto_import_slave_effect = { # root = country, this = province
+	save_scope_as = slave_import_province
+
 	#check neighbors first for slaves
 	random_valid_neighbor_slave_exporter = {
 		limit = {
 			trigger_if = { # if slave_external_move_no then dont import from province that is also importing if its outside the state
 				limit = {
-					ROOT = {
-						has_province_modifier = slave_external_move_no
-					}
+					has_province_modifier = slave_external_move_no
 					NOT = {
-						state = ROOT.state
+						state = scope:slave_import_province.state
 					}
 				}
 
@@ -35,16 +35,16 @@
 			}
 		}
 
-		ROOT.state = {
+		scope:slave_import_province.state = {
 			random_valid_state_slave_exporter = {
 				limit = {
 					NOR = {
 						has_province_modifier = slave_move_no
-						this = ROOT
+						this = scope:slave_import_province
 					}
 					trigger_if = {
 						limit = {
-							ROOT = {
+							scope:slave_import_province = {
 								has_province_modifier = slave_internal_move_no
 							}
 						}
@@ -53,7 +53,7 @@
 							has_province_modifier = slave_move_yes
 						}
 					}
-					owner = ROOT.owner
+					owner = scope:slave_import_province.owner
 				}
 
 				if = {
@@ -98,9 +98,9 @@
 				var:slave_move_fail_count >= 3
 			}
 
-			ROOT = {
-				remove_province_modifier = slave_move_yes
-			}
+
+			remove_variable = slave_move_fail_count
+			remove_province_modifier = slave_move_yes
 		}
 	}
 
@@ -112,7 +112,7 @@
 
 		scope:slave_move_province = {
 			random_valid_slave_to_move = {
-				ROOT.owner = {
+				scope:slave_import_province.owner = {
 					# check for vegetable surplus bonus
 					if = {
 						limit = {
@@ -136,13 +136,13 @@
 					}
 				}
 
-				move_pop = ROOT
+				move_pop = scope:slave_import_province
 			}
 		}
 	}
 
 	# if at the pop cap, turn slave move off
-	ROOT = {
+	scope:slave_import_province = {
 		if = {
 			limit = {
 				total_population >= population_cap
@@ -160,4 +160,6 @@
 
 		clear_saved_scope = slave_move_province
 	}
+
+	clear_saved_scope = slave_import_province
 }

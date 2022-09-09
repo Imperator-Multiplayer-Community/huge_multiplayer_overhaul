@@ -216,38 +216,6 @@ ml_drill_distinctions.2 = {
 							any_sub_unit = {
 								count >= 20
 								AND = {
-							    	sub_unit_type = chariots
-								}
-							}
-						}
-					}
-
-					trigger_event = {
-						id = ml_chariots_distinctions.1
-					}
-				}
-			1 = {
-					trigger = {
-						scope:actor = {
-							any_sub_unit = {
-								count >= 20
-								AND = {
-							    	sub_unit_type = chariots
-								}
-							}
-						}
-					}
-
-					trigger_event = {
-						id = ml_chariots_distinctions.3
-					}
-				}
-			1 = {
-					trigger = {
-						scope:actor = {
-							any_sub_unit = {
-								count >= 20
-								AND = {
 							    	sub_unit_type = heavy_cavalry
 								}
 							}

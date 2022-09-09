@@ -12,8 +12,7 @@ slave_move.1 = {
 	}
 
 	immediate = {
-		# spread out event to avoid performance bottleneck
-		owned_province_with_slave_move = {
+		every_owned_province_with_slave_move = {
 			auto_import_slave_effect = yes
 		}
 	}

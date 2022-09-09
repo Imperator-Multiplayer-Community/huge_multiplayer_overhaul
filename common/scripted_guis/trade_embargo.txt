@@ -1,6 +1,10 @@
 ﻿trade_embargo = { # root = country scope of player that has trade good
 	scope = country
 
+	ai_is_valid = {
+		always = no
+	} 
+
 	saved_scopes = {
 		player
 	} 
