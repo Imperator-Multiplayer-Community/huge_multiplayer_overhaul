@@ -4,21 +4,60 @@
 	
 	allow = {
 		trigger_if = {
-			OR = {
-				
-				country_culture_group = aksumite_group
-				country_culture_group = south_levantine
-				
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						
-						this.culture.culture_group = culture_group:south_levantine
-						this.culture.culture_group = culture_group:aksumite_group
-					}	
-				}	
-				AND = {
+			limit = { country_culture_group = aksumite_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = aksumite_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = south_levantine }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = south_levantine
+		}
+		trigger_else = {
+			trigger_if = {
+				limit = {
+					NOR = {
+						country_culture_group = aksumite_group
+						country_culture_group = south_levantine
+					}						
+				}
+
+				OR = {
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_camels.2"
+						any_country_culture = {
+							is_integrated = yes
+							country_culture_pop_count >= percent_size_culture_group_comparison
+							OR = {
+								this.culture.culture_group = culture_group:south_levantine
+								this.culture.culture_group = culture_group:aksumite_group
+								this.culture.culture_group = culture_group:aryan
+								this.culture.culture_group = culture_group:hellenic
+								this.culture.culture_group = culture_group:latin
+								this.culture.culture_group = culture_group:south_levantine
+								this.culture.culture_group = culture_group:west_levantine
+								this.culture.culture_group = culture_group:numidian
+								this.culture.culture_group = culture_group:bactrian
+								this.culture.culture_group = culture_group:caucasian
+								this.culture.culture_group = culture_group:west_levantine
+								this.culture.culture_group = culture_group:fezzani
+								this.culture.culture_group = culture_group:meroitic_group
+								this.culture.culture_group = culture_group:nilotic_group
+								this.culture.culture_group = culture_group:scythia
+								this.culture.culture_group = culture_group:scythian_east
+								this.culture.culture_group = culture_group:east_levantine
+							}
+						}
+					}
+					military_tech >= 13
+				}
+			}
+			trigger_else = {
+				trigger_else = {
 					military_tech >= 7
 					OR = {
 						country_culture_group = aryan
@@ -36,33 +75,34 @@
 						country_culture_group = scythia
 						country_culture_group = scythian_east
 						country_culture_group = east_levantine
-						
-						any_country_culture = {
-							is_integrated = yes
-							country_culture_pop_count >= percent_size_culture_group_comparison
-							OR = {
-								this.culture.culture_group = culture_group:aryan
-								this.culture.culture_group = culture_group:hellenic
-								this.culture.culture_group = culture_group:latin
-								this.culture.culture_group = culture_group:south_levantine
-								this.culture.culture_group = culture_group:west_levantine
-								this.culture.culture_group = culture_group:numidian
-								this.culture.culture_group = culture_group:bactrian
-								this.culture.culture_group = culture_group:caucasian
-								this.culture.culture_group = culture_group:west_levantine
-								this.culture.culture_group = culture_group:fezzani
-								this.culture.culture_group = culture_group:meroitic_group
-								this.culture.culture_group = culture_group:nilotic_group
-								this.culture.culture_group = culture_group:scythia
-								this.culture.culture_group = culture_group:scythian_east
-								this.culture.culture_group = culture_group:east_levantine
-								
+
+						AND = {
+							custom_tooltip = {
+								text = tradition_unlock_requirement_camels.1
+								any_country_culture = {
+									is_integrated = yes
+									country_culture_pop_count >= percent_size_culture_group_comparison
+									OR = {
+										this.culture.culture_group = culture_group:aryan
+										this.culture.culture_group = culture_group:hellenic
+										this.culture.culture_group = culture_group:latin
+										this.culture.culture_group = culture_group:south_levantine
+										this.culture.culture_group = culture_group:west_levantine
+										this.culture.culture_group = culture_group:numidian
+										this.culture.culture_group = culture_group:bactrian
+										this.culture.culture_group = culture_group:caucasian
+										this.culture.culture_group = culture_group:west_levantine
+										this.culture.culture_group = culture_group:fezzani
+										this.culture.culture_group = culture_group:meroitic_group
+										this.culture.culture_group = culture_group:nilotic_group
+										this.culture.culture_group = culture_group:scythia
+										this.culture.culture_group = culture_group:scythian_east
+										this.culture.culture_group = culture_group:east_levantine
+									}	
+								}
 							}
-						}	
+						}
 					}
-				}
-				AND = {
-					military_tech >= 13
 				}
 			}
 		}
