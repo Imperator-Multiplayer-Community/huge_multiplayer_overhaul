@@ -4,29 +4,56 @@
 	
 	allow = {
 		trigger_if = {
-			OR = {
-				
-				country_culture_group = indian
-				country_culture_group = aryan
-				country_culture_group = numidian
-				country_culture_group = west_levantine
-				country_culture_group = fezzani
-												
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						
-						this.culture.culture_group = culture_group:indian
-						this.culture.culture_group = culture_group:aryan
-						this.culture.culture_group = culture_group:numidian
-						this.culture.culture_group = culture_group:west_levantine
-						this.culture.culture_group = culture_group:fezzani
-					}	
-				}	
-				AND = {
-					military_tech >= 7
-					OR = {
+			limit = { country_culture_group = indian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = indian
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = latin }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = latin
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = aryan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = aryan
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = numidian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = numidian
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = west_levantine }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = west_levantine
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = fezzani }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = fezzani
+		}
+		trigger_else = {
+			trigger_if = {
+				limit = {
+					NOR = {
+						country_culture_group = indian
+						country_culture_group = aryan
+						country_culture_group = numidian
+						country_culture_group = west_levantine
+						country_culture_group = fezzani
 						country_culture_group = tibetan
 						country_culture_group = meroitic_group
 						country_culture_group = nilotic_group
@@ -36,11 +63,21 @@
 						country_culture_group = iberia
 						country_culture_group = aksumite_group
 						country_culture_group = south_levantine
-																		
+					}
+				}
+
+				OR = {
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_heavy_infantry.2"
 						any_country_culture = {
 							is_integrated = yes
 							country_culture_pop_count >= percent_size_culture_group_comparison
 							OR = {
+								this.culture.culture_group = culture_group:indian
+								this.culture.culture_group = culture_group:aryan
+								this.culture.culture_group = culture_group:numidian
+								this.culture.culture_group = culture_group:west_levantine
+								this.culture.culture_group = culture_group:fezzani
 								this.culture.culture_group = culture_group:tibetan
 								this.culture.culture_group = culture_group:meroitic_group
 								this.culture.culture_group = culture_group:nilotic_group
@@ -50,18 +87,45 @@
 								this.culture.culture_group = culture_group:iberia
 								this.culture.culture_group = culture_group:aksumite_group
 								this.culture.culture_group = culture_group:south_levantine
-													
 							}
-						}	
+						}
 					}
-				}
-				AND = {
 					military_tech >= 13
+				}
+			}				
+			trigger_else = {
+				military_tech >= 7
+				OR = {
+					country_culture_group = tibetan
+					country_culture_group = meroitic_group
+					country_culture_group = nilotic_group
+					country_culture_group = north_african
+					country_culture_group = pracyan
+					country_culture_group = celt_iberia
+					country_culture_group = iberia
+					country_culture_group = aksumite_group
+					country_culture_group = south_levantine
+
+					AND = {
+						custom_tooltip = {
+							text = tradition_unlock_requirement_heavy_infantry.1
+							any_country_culture = {
+								is_integrated = yes
+								country_culture_pop_count >= percent_size_culture_group_comparison
+								OR = {
+									this.culture.culture_group = culture_group:indian
+									this.culture.culture_group = culture_group:aryan
+									this.culture.culture_group = culture_group:numidian
+									this.culture.culture_group = culture_group:west_levantine
+									this.culture.culture_group = culture_group:fezzani
+								}	
+							}
+						}
+					}
 				}
 			}
 		}
-	}
-	
+	}	
 
 	warelephant_path_1 = { ###
 		modifier = { 

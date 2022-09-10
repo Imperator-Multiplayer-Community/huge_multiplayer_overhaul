@@ -4,31 +4,128 @@
 	
 	allow = {
 		trigger_if = {
-			OR = {
-				
-				country_culture_group = bactrian
-				country_culture_group = scythia
-				country_culture_group = scythian_east
-				country_culture_group = caucasian
-				country_culture_group = meroitic_group
-				country_culture_group = nilotic_group
-				country_culture_group = north_african
-								
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						
-						this.culture.culture_group = culture_group:bactrian
-						this.culture.culture_group = culture_group:scythia
-						this.culture.culture_group = culture_group:scythian_east
-						this.culture.culture_group = culture_group:caucasian
-						this.culture.culture_group = culture_group:meroitic_group
-						this.culture.culture_group = culture_group:nilotic_group
-						this.culture.culture_group = culture_group:north_african
-					}	
-				}	
-				AND = {
+			limit = { country_culture_group = bactrian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = bactrian
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = scythia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = scythia
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = scythian_east }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = scythian_east
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = caucasian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = caucasian
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = meroitic_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = meroitic_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = nilotic_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = nilotic_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = north_african }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = north_african
+		}
+		trigger_else = {
+			trigger_if = {
+				limit = {
+					NOR = {
+						country_culture_group = bactrian
+						country_culture_group = scythia
+						country_culture_group = scythian_east
+						country_culture_group = caucasian
+						country_culture_group = meroitic_group
+						country_culture_group = nilotic_group
+						country_culture_group = north_african
+						country_culture_group = indian
+						country_culture_group = pracyan
+						country_culture_group = tibetan
+						country_culture_group = gallic
+						country_culture_group = celto_pannonian_group
+						country_culture_group =	belgae_group
+						country_culture_group = germanic
+						country_culture_group = gaelic
+						country_culture_group = proto_european
+						country_culture_group = thrace_group
+						country_culture_group = dacia_group
+						country_culture_group = illyrian_group
+						country_culture_group = numidian
+						country_culture_group = west_levantine
+						country_culture_group = fezzani
+						country_culture_group = baltic
+						country_culture_group = britannic
+						country_culture_group = anatolian
+						country_culture_group = persia
+					}						
+				}
+
+				OR = {
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_horse_archers.2"
+						any_country_culture = {
+							is_integrated = yes
+							country_culture_pop_count >= percent_size_culture_group_comparison
+							OR = {
+								this.culture.culture_group = culture_group:bactrian
+								this.culture.culture_group = culture_group:scythia
+								this.culture.culture_group = culture_group:scythian_east
+								this.culture.culture_group = culture_group:caucasian
+								this.culture.culture_group = culture_group:meroitic_group
+								this.culture.culture_group = culture_group:nilotic_group
+								this.culture.culture_group = culture_group:north_african
+								this.culture.culture_group = culture_group:indian
+								this.culture.culture_group = culture_group:pracyan
+								this.culture.culture_group = culture_group:tibetan
+								this.culture.culture_group = culture_group:gallic
+								this.culture.culture_group = culture_group:celto_pannonian_group
+								this.culture.culture_group = culture_group:belgae_group
+								this.culture.culture_group = culture_group:germanic
+								this.culture.culture_group = culture_group:gaelic
+								this.culture.culture_group = culture_group:proto_european
+								this.culture.culture_group = culture_group:thrace_group
+								this.culture.culture_group = culture_group:dacia_group
+								this.culture.culture_group = culture_group:illyrian_group
+								this.culture.culture_group = culture_group:numidian
+								this.culture.culture_group = culture_group:west_levantine
+								this.culture.culture_group = culture_group:fezzani
+								this.culture.culture_group = culture_group:baltic
+								this.culture.culture_group = culture_group:britannic
+								this.culture.culture_group = culture_group:anatolian
+								this.culture.culture_group = culture_group:persia
+							}
+						}
+					}
+					military_tech >= 13
+				}
+			}
+			trigger_else = {
+				trigger_else = {
 					military_tech >= 7
 					OR = {
 						country_culture_group = indian
@@ -50,43 +147,42 @@
 						country_culture_group = britannic
 						country_culture_group = anatolian
 						country_culture_group = persia
-						
-						any_country_culture = {
-							is_integrated = yes
-							country_culture_pop_count >= percent_size_culture_group_comparison
-							OR = {
-								this.culture.culture_group = culture_group:indian
-								this.culture.culture_group = culture_group:pracyan
-								this.culture.culture_group = culture_group:tibetan
-								this.culture.culture_group = culture_group:gallic
-								this.culture.culture_group = culture_group:celto_pannonian_group
-								this.culture.culture_group = culture_group:belgae_group
-								this.culture.culture_group = culture_group:germanic
-								this.culture.culture_group = culture_group:gaelic
-								this.culture.culture_group = culture_group:proto_european
-								this.culture.culture_group = culture_group:thrace_group
-								this.culture.culture_group = culture_group:dacia_group
-								this.culture.culture_group = culture_group:illyrian_group
-								this.culture.culture_group = culture_group:numidian
-								this.culture.culture_group = culture_group:west_levantine
-								this.culture.culture_group = culture_group:fezzani
-								this.culture.culture_group = culture_group:baltic
-								this.culture.culture_group = culture_group:britannic
-								this.culture.culture_group = culture_group:anatolian
-								this.culture.culture_group = culture_group:persia
-								
+
+						AND = {
+							custom_tooltip = {
+								text = "tradition_unlock_requirement_horse_archers.1"
+								any_country_culture = {
+									is_integrated = yes
+									country_culture_pop_count >= percent_size_culture_group_comparison
+									OR = {
+										this.culture.culture_group = culture_group:indian
+										this.culture.culture_group = culture_group:pracyan
+										this.culture.culture_group = culture_group:tibetan
+										this.culture.culture_group = culture_group:gallic
+										this.culture.culture_group = culture_group:celto_pannonian_group
+										this.culture.culture_group = culture_group:belgae_group
+										this.culture.culture_group = culture_group:germanic
+										this.culture.culture_group = culture_group:gaelic
+										this.culture.culture_group = culture_group:proto_european
+										this.culture.culture_group = culture_group:thrace_group
+										this.culture.culture_group = culture_group:dacia_group
+										this.culture.culture_group = culture_group:illyrian_group
+										this.culture.culture_group = culture_group:numidian
+										this.culture.culture_group = culture_group:west_levantine
+										this.culture.culture_group = culture_group:fezzani
+										this.culture.culture_group = culture_group:baltic
+										this.culture.culture_group = culture_group:britannic
+										this.culture.culture_group = culture_group:anatolian
+										this.culture.culture_group = culture_group:persia
+									}	
+								}
 							}
-						}	
+						}
 					}
-				}
-				AND = {
-					military_tech >= 13
 				}
 			}
 		}
 	}
-	
-	
 
 	horse_archers_path_1 = { ###
 		modifier = { 
