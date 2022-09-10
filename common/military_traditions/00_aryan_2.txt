@@ -1,0 +1,174 @@
+﻿aryan_philosophy = { #Aryan River Path
+	color = hsv { 1.72 0.64 0.7 }
+	image = mauryan_mauryas_path_3
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = aryan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = aryan
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = aryan_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_aryan"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:aryan
+					}
+				}
+			}
+		}
+	}
+
+	##### CAMELS
+
+	aryan_river_path_9 = { ###
+		modifier = { 
+			camels_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = levantine_arabian_path_3
+		requires = {  }
+	}
+
+	##### LIGHT CAV
+
+	aryan_plains_path_1 = { ###
+		modifier = { 
+			light_cavalry_morale = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_tribal_path_1
+		requires = { }
+	}
+
+	##### LIGHT INF
+
+	aryan_river_path_2 = { ###
+		modifier = { 
+			light_infantry_morale = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_7
+		requires = { }
+	}
+	
+	aryan_plains_path_2 = { ###
+		modifier = { 
+			light_infantry_defensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_6
+		requires = { aryan_river_path_2 }
+	}
+
+	##### NAVAL
+
+	aryan_river_path_3 = { ###
+		enable_ability = naval_raiding
+		modifier = { 
+			trireme_offensive = 0.1
+			enslavement_efficiency = 0.1
+			navy_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_end_bonus
+		requires = { }
+	}
+
+	aryan_river_path_15 = { ###
+		modifier = { 
+			riverine_terrain_combat_bonus = 0.25
+			global_ship_recruit_speed = 0.2
+			naval_damage_done = 0.05
+			navy_maintenance_cost = 0.01
+		} 
+		icon = levantine_philosophy_start_bonus
+		requires = { aryan_river_path_3 }
+	}
+
+	##### ARCHERS
+
+	aryan_river_path_10 = { ### Poisoned Projectils
+		modifier = { 
+			archers_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = persian_achaemenid_path_6
+		requires = { }
+	}
+
+	aryan_river_path_14 = { ### Fixing the target with the mind
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = greek_antigonid_path_6
+		requires = { aryan_river_path_10 }
+	}
+
+	aryan_river_path_4 = { ### Dhanurveda
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = confident
+				}
+			}
+		}
+		modifier = { 
+			archers_cost = -0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = { aryan_river_path_14 }
+	}
+
+	aryan_plains_path_3 = { ### Bamboo Longbows
+		modifier = { 
+			archers_defensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_7
+		requires = { aryan_river_path_4 andhra_path_5}
+	}
+
+	##### WARELEPHANTS
+
+	aryan_river_path_12 = { ###
+		modifier = { 
+			warelephant_morale = 0.05
+			warelephant_plains_combat_bonus = 0.05
+			warelephant_farmland_combat_bonus = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_noble_path_2
+		requires = { }
+	}
+
+	aryan_plains_path_6 = { ###
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
+		}
+		modifier = { 
+			warelephant_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_5
+		requires = { aryan_river_path_12 }
+	}
+}
