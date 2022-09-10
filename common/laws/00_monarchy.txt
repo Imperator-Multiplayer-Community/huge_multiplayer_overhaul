@@ -97,10 +97,19 @@ monarchy_military_reforms = {
 			levy_size_multiplier = 0.05
 			happiness_for_same_culture_modifier = 0.05
 			happiness_for_wrong_culture_modifier = -0.05
-			discipline = 0.25
-			land_morale = 0.25
-			experience_decay = -0.1
-			monthly_military_experience = 0.1
+			discipline = 0.025
+			land_morale_modifier = 0.025
+
+			trigger_if = {
+				limit = {
+					any_legion = {
+						exists = no
+					}
+				}
+
+				experience_decay = -0.1
+				monthly_military_experience = 0.1
+			}
 
 			trigger_if = {
 				limit = {
@@ -122,10 +131,20 @@ monarchy_military_reforms = {
 		modifier = {
 			mercenary_land_maintenance_cost = -0.20
 			recruit_mercenary_cost_modifier = -0.35
-			cohort_reinforcement_speed = 0.2
 			max_mercenary_stacks = 1
-			monthly_military_experience = 0.075
 			levy_size_multiplier = -0.05
+
+			trigger_if = {
+				limit = {
+					any_legion = {
+						exists = no
+					}
+				}
+
+				cohort_reinforcement_speed = 0.1
+				land_morale_recovery = 0.1
+				monthly_military_experience = 0.075
+			}
 
 			trigger_if = {
 				limit = {
@@ -170,8 +189,9 @@ monarchy_military_reforms = {
 			rank >= major_power
 		}
 		modifier = {
-			army_maintenance_cost = -0.15
-			monthly_military_experience = 0.15
+			army_maintenance_cost = 0.10
+			monthly_military_experience = 0.25
+			general_loyalty = -2
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region
