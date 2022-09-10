@@ -20,7 +20,7 @@
 
 	allow = {
 		unit_owner = { 
-			has_military_bonus = greek_states_path_4
+			has_military_bonus = military_colonies_path_1
 		}
 		has_commander = yes
 		is_army = yes
