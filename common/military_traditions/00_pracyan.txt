@@ -39,6 +39,26 @@
 		}
 	}
 
+	##### HEAVY INF
+
+	tibetan_path_4 = { ###
+		modifier = { 
+			heavy_infantry_morale = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_army_path_3
+		requires = { tibetan_path_1 }
+	}
+
+	tibetan_path_9 = { ###
+		modifier = { 
+			heavy_infantry_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = greek_states_path_end_bonus
+		requires = { tibetan_path_4 }
+	}
+
 
 	##### NAVAL
 
