@@ -11,13 +11,6 @@
 			country_culture_group = indian
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = latin }
-			custom_tooltip = {
-				text = "began_with_tradition_group"
-			}
-			country_culture_group = latin
-		}
-		trigger_else_if = {
 			limit = { country_culture_group = aryan }
 			custom_tooltip = {
 				text = "began_with_tradition_group"

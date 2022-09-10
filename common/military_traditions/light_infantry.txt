@@ -319,55 +319,53 @@
 				}
 			}
 			trigger_else = {
-				trigger_else = {
-					military_tech >= 7
-					OR = {
-						country_culture_group = proto_european
-						country_culture_group = north_african
+				military_tech >= 7
+				OR = {
+					country_culture_group = proto_european
+					country_culture_group = north_african
 
-						AND = {
-							custom_tooltip = {
-								text = "tradition_unlock_requirement_light_infantry.1"
-								any_country_culture = {
-									is_integrated = yes
-									country_culture_pop_count >= percent_size_culture_group_comparison
-									OR = {
-										this.culture.culture_group = culture_group:north_african
-										this.culture.culture_group = culture_group:aryan
-										this.culture.culture_group = culture_group:numidian
-										this.culture.culture_group = culture_group:west_levantine
-										this.culture.culture_group = culture_group:fezzani
-										this.culture.culture_group = culture_group:meroitic_group
-										this.culture.culture_group = culture_group:nilotic_group
-										this.culture.culture_group = culture_group:baltic
-										this.culture.culture_group = culture_group:britannic
-										this.culture.culture_group = culture_group:celt_iberia
-										this.culture.culture_group = culture_group:iberia
-										this.culture.culture_group = culture_group:persia
-										this.culture.culture_group = culture_group:britannic
-										this.culture.culture_group = culture_group:thrace_group
-										this.culture.culture_group = culture_group:dacia_group
-										this.culture.culture_group = culture_group:illyrian_group
-										this.culture.culture_group = culture_group:latin
-										this.culture.culture_group = culture_group:bactrian
-										this.culture.culture_group = culture_group:scythia
-										this.culture.culture_group = culture_group:scythian_east
-										this.culture.culture_group = culture_group:caucasian
-										this.culture.culture_group = culture_group:east_levantine
-										this.culture.culture_group = culture_group:hellenic
-										this.culture.culture_group = culture_group:tibetan
-										this.culture.culture_group = culture_group:indian
-										this.culture.culture_group = culture_group:pracyan
-										this.culture.culture_group = culture_group:gallic
-										this.culture.culture_group = culture_group:celto_pannonian_group
-										this.culture.culture_group = culture_group:belgae_group
-										this.culture.culture_group = culture_group:germanic
-										this.culture.culture_group = culture_group:gaelic
-										this.culture.culture_group = culture_group:anatolian
-										this.culture.culture_group = culture_group:aksumite_group
-										this.culture.culture_group = culture_group:south_levantine
-									}	
-								}
+					AND = {
+						custom_tooltip = {
+							text = "tradition_unlock_requirement_light_infantry.1"
+							any_country_culture = {
+								is_integrated = yes
+								country_culture_pop_count >= percent_size_culture_group_comparison
+								OR = {
+									this.culture.culture_group = culture_group:north_african
+									this.culture.culture_group = culture_group:aryan
+									this.culture.culture_group = culture_group:numidian
+									this.culture.culture_group = culture_group:west_levantine
+									this.culture.culture_group = culture_group:fezzani
+									this.culture.culture_group = culture_group:meroitic_group
+									this.culture.culture_group = culture_group:nilotic_group
+									this.culture.culture_group = culture_group:baltic
+									this.culture.culture_group = culture_group:britannic
+									this.culture.culture_group = culture_group:celt_iberia
+									this.culture.culture_group = culture_group:iberia
+									this.culture.culture_group = culture_group:persia
+									this.culture.culture_group = culture_group:britannic
+									this.culture.culture_group = culture_group:thrace_group
+									this.culture.culture_group = culture_group:dacia_group
+									this.culture.culture_group = culture_group:illyrian_group
+									this.culture.culture_group = culture_group:latin
+									this.culture.culture_group = culture_group:bactrian
+									this.culture.culture_group = culture_group:scythia
+									this.culture.culture_group = culture_group:scythian_east
+									this.culture.culture_group = culture_group:caucasian
+									this.culture.culture_group = culture_group:east_levantine
+									this.culture.culture_group = culture_group:hellenic
+									this.culture.culture_group = culture_group:tibetan
+									this.culture.culture_group = culture_group:indian
+									this.culture.culture_group = culture_group:pracyan
+									this.culture.culture_group = culture_group:gallic
+									this.culture.culture_group = culture_group:celto_pannonian_group
+									this.culture.culture_group = culture_group:belgae_group
+									this.culture.culture_group = culture_group:germanic
+									this.culture.culture_group = culture_group:gaelic
+									this.culture.culture_group = culture_group:anatolian
+									this.culture.culture_group = culture_group:aksumite_group
+									this.culture.culture_group = culture_group:south_levantine
+								}	
 							}
 						}
 					}

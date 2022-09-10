@@ -3,222 +3,265 @@
 	image = celtic_britannic_path_7
 	
 	allow = {
-		allow = {
+		trigger_if = {
+			limit = { country_culture_group = south_levantine }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = south_levantine
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = meroitic_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = meroitic_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = nilotic_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = nilotic_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = aksumite_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = aksumite_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = anatolian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = anatolian
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = aryan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = aryan
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = gallic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = gallic
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = belgae_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = belgae_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = britannic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = britannic
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = gaelic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = gaelic
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = proto_european }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = proto_european
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = baltic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = baltic
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = indian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = indian
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = scythia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = scythia
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = scythian_east }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = scythian_east
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = caucasian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = caucasian
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = celto_pannonian_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = celto_pannonian_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = germanic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = germanic
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = hellenic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = hellenic
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = pracyan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = pracyan
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = tibetan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = tibetan
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = celt_iberia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = celt_iberia
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = iberia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = iberia
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = persia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = persia
+		}
+		trigger_else = {
 			trigger_if = {
-				limit = { country_culture_group = south_levantine }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
+				limit = {
+					NOR = {
+						country_culture_group = south_levantine
+						country_culture_group = meroitic_group
+						country_culture_group = nilotic_group
+						country_culture_group = aksumite_group
+						country_culture_group = anatolian
+						country_culture_group = aryan
+						country_culture_group = gallic
+						country_culture_group = belgae_group
+						country_culture_group = britannic
+						country_culture_group = gaelic
+						country_culture_group = proto_european
+						country_culture_group = baltic
+						country_culture_group = indian
+						country_culture_group = bactrian
+						country_culture_group = scythia
+						country_culture_group = scythian_east
+						country_culture_group = caucasian
+						country_culture_group = east_levantine
+						country_culture_group = celto_pannonian_group
+						country_culture_group = germanic
+						country_culture_group = hellenic
+						country_culture_group = pracyan
+						country_culture_group = tibetan
+						country_culture_group = celt_iberia
+						country_culture_group = iberia
+						country_culture_group = persia
+						country_culture_group = latin 
+						country_culture_group = illyrian_group
+						country_culture_group = dacia_group
+						country_culture_group = thrace_group
+					}						
 				}
-				country_culture_group = south_levantine
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = meroitic_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
+
+				OR = {
+					custom_tooltip = {
+						text = "tradition_unlock_requirement_archers.2"
+						any_country_culture = {
+							is_integrated = yes
+							country_culture_pop_count >= percent_size_culture_group_comparison
+							OR = {
+								this.culture.culture_group = culture_group:south_levantine
+								this.culture.culture_group = culture_group:meroitic_group
+								this.culture.culture_group = culture_group:nilotic_group
+								this.culture.culture_group = culture_group:aksumite_group
+								this.culture.culture_group = culture_group:anatolian
+								this.culture.culture_group = culture_group:aryan
+								this.culture.culture_group = culture_group:gallic
+								this.culture.culture_group = culture_group:belgae_group
+								this.culture.culture_group = culture_group:britannic
+								this.culture.culture_group = culture_group:gaelic
+								this.culture.culture_group = culture_group:proto_european
+								this.culture.culture_group = culture_group:baltic
+								this.culture.culture_group = culture_group:indian
+								this.culture.culture_group = culture_group:bactrian
+								this.culture.culture_group = culture_group:scythia
+								this.culture.culture_group = culture_group:scythian_east
+								this.culture.culture_group = culture_group:caucasian
+								this.culture.culture_group = culture_group:east_levantine
+								this.culture.culture_group = culture_group:celto_pannonian_group
+								this.culture.culture_group = culture_group:germanic
+								this.culture.culture_group = culture_group:hellenic
+								this.culture.culture_group = culture_group:pracyan
+								this.culture.culture_group = culture_group:tibetan
+								this.culture.culture_group = culture_group:celt_iberia
+								this.culture.culture_group = culture_group:iberia
+								this.culture.culture_group = culture_group:persia
+								this.culture.culture_group = culture_group:latin
+								this.culture.culture_group = culture_group:illyrian_group
+								this.culture.culture_group = culture_group:dacia_group
+								this.culture.culture_group = culture_group:thrace_group
+							}
+						}
+					}
+					military_tech >= 13
 				}
-				country_culture_group = meroitic_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = nilotic_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = nilotic_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = aksumite_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aksumite_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = anatolian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = anatolian
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = aryan }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aryan
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = gallic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = gallic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = belgae_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = belgae_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = britannic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = britannic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = gaelic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = gaelic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = proto_european }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = proto_european
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = baltic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = baltic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = indian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = indian
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = scythia }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = scythia
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = latin }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = latin
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = scythian_east }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = scythian_east
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = caucasian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = caucasian
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = celto_pannonian_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = celto_pannonian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = germanic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = germanic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = hellenic }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = hellenic
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = pracyan }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = pracyan
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = tibetan }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = tibetan
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = celt_iberia }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = celt_iberia
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = iberia }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = iberia
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = persia }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = persia
 			}
 			trigger_else = {
-				trigger_if = {
-					limit = {
-						NOR = {
-							country_culture_group = south_levantine
-							country_culture_group = meroitic_group
-							country_culture_group = nilotic_group
-							country_culture_group = aksumite_group
-							country_culture_group = anatolian
-							country_culture_group = aryan
-							country_culture_group = gallic
-							country_culture_group = belgae_group
-							country_culture_group = britannic
-							country_culture_group = gaelic
-							country_culture_group = proto_european
-							country_culture_group = baltic
-							country_culture_group = indian
-							country_culture_group = bactrian
-							country_culture_group = scythia
-							country_culture_group = scythian_east
-							country_culture_group = caucasian
-							country_culture_group = east_levantine
-							country_culture_group = celto_pannonian_group
-							country_culture_group = germanic
-							country_culture_group = hellenic
-							country_culture_group = pracyan
-							country_culture_group = tibetan
-							country_culture_group = celt_iberia
-							country_culture_group = iberia
-							country_culture_group = persia
-							country_culture_group = latin 
-							country_culture_group = illyrian_group
-							country_culture_group = dacia_group
-							country_culture_group = thrace_group
-						}						
-					}
+				military_tech >= 7
+				OR = {
+					country_culture_group = latin 
+					country_culture_group = illyrian_group
+					country_culture_group = dacia_group
+					country_culture_group = thrace_group
 
-					OR = {
+					AND = {
 						custom_tooltip = {
-							text = "tradition_unlock_requirement_archers.2"
+							text = "tradition_unlock_requirement_archers.1"
 							any_country_culture = {
 								is_integrated = yes
 								country_culture_pop_count >= percent_size_culture_group_comparison
@@ -249,61 +292,7 @@
 									this.culture.culture_group = culture_group:celt_iberia
 									this.culture.culture_group = culture_group:iberia
 									this.culture.culture_group = culture_group:persia
-									this.culture.culture_group = culture_group:latin
-									this.culture.culture_group = culture_group:illyrian_group
-									this.culture.culture_group = culture_group:dacia_group
-									this.culture.culture_group = culture_group:thrace_group
-								}
-							}
-						}
-						military_tech >= 13
-					}
-				}
-				trigger_else = {
-					trigger_else = {
-						military_tech >= 7
-						OR = {
-							country_culture_group = latin 
-							country_culture_group = illyrian_group
-							country_culture_group = dacia_group
-							country_culture_group = thrace_group
-
-							AND = {
-								custom_tooltip = {
-									text = "tradition_unlock_requirement_archers.1"
-									any_country_culture = {
-										is_integrated = yes
-										country_culture_pop_count >= percent_size_culture_group_comparison
-										OR = {
-											this.culture.culture_group = culture_group:south_levantine
-											this.culture.culture_group = culture_group:meroitic_group
-											this.culture.culture_group = culture_group:nilotic_group
-											this.culture.culture_group = culture_group:aksumite_group
-											this.culture.culture_group = culture_group:anatolian
-											this.culture.culture_group = culture_group:aryan
-											this.culture.culture_group = culture_group:gallic
-											this.culture.culture_group = culture_group:belgae_group
-											this.culture.culture_group = culture_group:britannic
-											this.culture.culture_group = culture_group:gaelic
-											this.culture.culture_group = culture_group:proto_european
-											this.culture.culture_group = culture_group:baltic
-											this.culture.culture_group = culture_group:indian
-											this.culture.culture_group = culture_group:bactrian
-											this.culture.culture_group = culture_group:scythia
-											this.culture.culture_group = culture_group:scythian_east
-											this.culture.culture_group = culture_group:caucasian
-											this.culture.culture_group = culture_group:east_levantine
-											this.culture.culture_group = culture_group:celto_pannonian_group
-											this.culture.culture_group = culture_group:germanic
-											this.culture.culture_group = culture_group:hellenic
-											this.culture.culture_group = culture_group:pracyan
-											this.culture.culture_group = culture_group:tibetan
-											this.culture.culture_group = culture_group:celt_iberia
-											this.culture.culture_group = culture_group:iberia
-											this.culture.culture_group = culture_group:persia
-										}	
-									}
-								}
+								}	
 							}
 						}
 					}

@@ -184,53 +184,51 @@
 				}
 			}
 			trigger_else = {
-				trigger_else = {
-					military_tech >= 7
-					OR = {
-						country_culture_group = pracyan
-						country_culture_group = aksumite_group
-						country_culture_group = south_levantine
-						country_culture_group = aryan
-						country_culture_group = bactrian
-						country_culture_group =	scythia
-						country_culture_group =	scythian_east
-						country_culture_group = caucasian
-						country_culture_group = east_levantine
-						country_culture_group = hellenic
-						country_culture_group = tibetan
-						country_culture_group = indian
-						country_culture_group = gallic
-						country_culture_group = celto_pannonian_group
-						country_culture_group = belgae_group
-						country_culture_group = germanic
-						country_culture_group = gaelic
+				military_tech >= 7
+				OR = {
+					country_culture_group = pracyan
+					country_culture_group = aksumite_group
+					country_culture_group = south_levantine
+					country_culture_group = aryan
+					country_culture_group = bactrian
+					country_culture_group =	scythia
+					country_culture_group =	scythian_east
+					country_culture_group = caucasian
+					country_culture_group = east_levantine
+					country_culture_group = hellenic
+					country_culture_group = tibetan
+					country_culture_group = indian
+					country_culture_group = gallic
+					country_culture_group = celto_pannonian_group
+					country_culture_group = belgae_group
+					country_culture_group = germanic
+					country_culture_group = gaelic
 
-						AND = {
-							custom_tooltip = {
-								text = "tradition_unlock_requirement_light_cavalry.1"
-								any_country_culture = {
-									is_integrated = yes
-									country_culture_pop_count >= percent_size_culture_group_comparison
-									OR = {
-										this.culture.culture_group = culture_group:pracyan
-										this.culture.culture_group = culture_group:aksumite_group
-										this.culture.culture_group = culture_group:south_levantine
-										this.culture.culture_group = culture_group:aryan
-										this.culture.culture_group = culture_group:bactrian
-										this.culture.culture_group = culture_group:scythia
-										this.culture.culture_group = culture_group:scythian_east
-										this.culture.culture_group = culture_group:caucasian
-										this.culture.culture_group = culture_group:east_levantine
-										this.culture.culture_group = culture_group:hellenic
-										this.culture.culture_group = culture_group:tibetan
-										this.culture.culture_group = culture_group:indian
-										this.culture.culture_group = culture_group:gallic
-										this.culture.culture_group = culture_group:celto_pannonian_group
-										this.culture.culture_group = culture_group:belgae_group
-										this.culture.culture_group = culture_group:germanic
-										this.culture.culture_group = culture_group:gaelic
-									}	
-								}
+					AND = {
+						custom_tooltip = {
+							text = "tradition_unlock_requirement_light_cavalry.1"
+							any_country_culture = {
+								is_integrated = yes
+								country_culture_pop_count >= percent_size_culture_group_comparison
+								OR = {
+									this.culture.culture_group = culture_group:pracyan
+									this.culture.culture_group = culture_group:aksumite_group
+									this.culture.culture_group = culture_group:south_levantine
+									this.culture.culture_group = culture_group:aryan
+									this.culture.culture_group = culture_group:bactrian
+									this.culture.culture_group = culture_group:scythia
+									this.culture.culture_group = culture_group:scythian_east
+									this.culture.culture_group = culture_group:caucasian
+									this.culture.culture_group = culture_group:east_levantine
+									this.culture.culture_group = culture_group:hellenic
+									this.culture.culture_group = culture_group:tibetan
+									this.culture.culture_group = culture_group:indian
+									this.culture.culture_group = culture_group:gallic
+									this.culture.culture_group = culture_group:celto_pannonian_group
+									this.culture.culture_group = culture_group:belgae_group
+									this.culture.culture_group = culture_group:germanic
+									this.culture.culture_group = culture_group:gaelic
+								}	
 							}
 						}
 					}
