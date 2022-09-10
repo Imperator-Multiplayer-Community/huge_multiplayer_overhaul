@@ -62,29 +62,14 @@ monarchy_military_reforms = {
 	
 	relaxed_recruiting_standards = { #Noble Retinues - Macedon
 		modifier = {
-			levy_size_multiplier = 0.1
-			manpower_recovery_speed = 0.2
-			discipline = -0.025
-
-			trigger_if = {
-				limit = {
-					any_legion = {
-						exists = no
-					}
-				}
-
-				monthly_military_experience = 0.15
-			}
-
-			trigger_if = {
-				limit = {
-					any_legion = {
-						exists = yes
-					}
-				}
-
-				army_maintenance_cost = 0.2
-			}
+			levy_size_multiplier = 0.05
+			happiness_for_same_culture_modifier = 0.05
+			happiness_for_wrong_culture_modifier = -0.05
+			discipline = 0.025
+			land_morale_modifier = 0.025
+			experience_decay = -0.1
+			monthly_military_experience = 0.1
+			army_maintenance_cost = 0.5
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -94,32 +79,11 @@ monarchy_military_reforms = {
 	
 	recruit_from_nobles = {	#Military Service - Sparta
 		modifier = {
-			levy_size_multiplier = 0.05
-			happiness_for_same_culture_modifier = 0.05
-			happiness_for_wrong_culture_modifier = -0.05
-			discipline = 0.025
-			land_morale_modifier = 0.025
-
-			trigger_if = {
-				limit = {
-					any_legion = {
-						exists = no
-					}
-				}
-
-				experience_decay = -0.1
-				monthly_military_experience = 0.1
-			}
-
-			trigger_if = {
-				limit = {
-					any_legion = {
-						exists = yes
-					}
-				}
-
-				army_maintenance_cost = 0.2
-			}
+			levy_size_multiplier = 0.1
+			manpower_recovery_speed = 0.2
+			discipline = -0.025
+			monthly_military_experience = 0.15
+			army_maintenance_cost = 0.5
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -133,28 +97,10 @@ monarchy_military_reforms = {
 			recruit_mercenary_cost_modifier = -0.35
 			max_mercenary_stacks = 1
 			levy_size_multiplier = -0.05
-
-			trigger_if = {
-				limit = {
-					any_legion = {
-						exists = no
-					}
-				}
-
-				cohort_reinforcement_speed = 0.1
-				land_morale_recovery = 0.1
-				monthly_military_experience = 0.075
-			}
-
-			trigger_if = {
-				limit = {
-					any_legion = {
-						exists = yes
-					}
-				}
-
-				army_maintenance_cost = 0.2
-			}
+			cohort_reinforcement_speed = 0.1
+			land_morale_recovery = 0.1
+			monthly_military_experience = 0.075
+			army_maintenance_cost = 0.5
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -167,7 +113,7 @@ monarchy_military_reforms = {
 			rank >= regional_power
 			NOT = { # once standing army has been enacted, cannot go back
 				custom_tooltip = {
-					text = "Has already enacted Standing Army."
+					text = "already_enacted_standing_army"
 					has_variable = has_enacted_standing_army
 				}
 			}
@@ -196,7 +142,7 @@ monarchy_military_reforms = {
 		on_enact = {
 			custom_tooltip = legions_in_any_region
 			set_legion_recruitment = enabled
-			custom_tooltip = "Once standing army has been enacted, cannot go back to capital only legion law."
+			custom_tooltip = "standing_army_warning"
 			hidden_effect = {
 				if = {
 					limit = {
