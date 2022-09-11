@@ -5,42 +5,20 @@
 #	3rd NOTE: If a specific subunit cannot be constructed for some reason another one that can from that tier will replace it ( if possible )
 #
 
-levy_anatolian = {	#General Anatolian
+levy_east_levantine = {	#Mesopotamian states
 	default = no
 
-	light_infantry = 0.4
-	light_cavalry = 0.3
+	light_infantry = 0.45
+	light_cavalry = 0.25
+
 	heavy_cavalry = 0.3
 }
 
-levy_armenian = {	#Armenians
+levy_babylonian = {	#Babylonian states
 	default = no
 
-	light_infantry = 0.7
-	horse_archers = 0.15
-	heavy_cavalry = 0.15
-}
+	archers = 0.45
+	light_cavalry = 0.25
 
-levy_pontus = {	#Pontus
-	default = no
-
-	archers = 0.3
-	light_infantry = 0.4	
 	heavy_cavalry = 0.3
-}
-
-levy_cappadocia = {	#Cappadocia
-	default = no
-
-	light_infantry = 0.4
-	heavy_cavalry = 0.3
-	light_cavalry = 0.3
-}
-
-levy_cilician = {	#Cilicia
-	default = no
-
-	light_infantry = 0.5
-	heavy_infantry = 0.3
-	light_cavalry = 0.2
 }
