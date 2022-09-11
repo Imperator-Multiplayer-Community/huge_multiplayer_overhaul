@@ -270,8 +270,31 @@ tribal_super_decentralized_laws = {
 			war_exhaustion = -0.05
 		}
 	}
-	
 }
+
+tribal_super_decentralized_military_laws = {
+	potential = {
+		is_tribal = yes
+	}
+		
+	super_decentralized_military_law_one = {
+		allow = {
+			centralization <= -90
+		}
+
+		modifier = {
+			general_loyalty = 0.1
+			army_maintenance_cost = -0.5
+			army_movement_speed = 0.1
+		}
+
+		on_enact = {
+			custom_tooltip = legions_in_any_region
+			set_legion_recruitment = enabled
+		}
+	}
+}
+
 
 tribal_super_centralized_laws = {
 	potential = {
@@ -305,6 +328,29 @@ tribal_super_centralized_laws = {
 		}
 	}
 	
+}
+
+tribal_super_centralized_military_laws = {
+	potential = {
+		is_tribal = yes
+	}
+		
+	super_centralized_military_law_one = {
+		allow = {
+			centralization >= 90
+		}
+
+		modifier = {
+			levy_size_multiplier = 0.1
+			discipline = 0.05
+			army_weight_modifier = -0.2
+		}
+
+		on_enact = {
+			custom_tooltip = legions_in_capital_region
+			set_legion_recruitment = capital
+		}
+	}
 }
 
 
