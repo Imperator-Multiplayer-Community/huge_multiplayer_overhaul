@@ -1,4 +1,4 @@
-is_valid_border_fortress_location = { # border forts cannot be built next to another border fort
+﻿is_valid_border_fortress_location = { # border forts cannot be built next to another border fort
 	NOT = {
 		any_neighbor_province = {
 			owner = root.owner

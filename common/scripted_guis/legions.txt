@@ -8,10 +8,45 @@
 		}
 	}
 
-	is_valid = {
+	is_valid = { # can build legions
 		OR = {
 			has_capital_legion_law = yes
 			has_all_region_legion_law = yes
+		}
+	}
+
+	# not using but save for later
+	effect = { # populate variable list for valid commanders
+		every_valid_commander = {
+			add_to_variable_list = {
+				name = valid_commanders_list
+				target = this
+			}
+		}
+	}
+}
+
+# not using but save for later
+can_command_legion = { # scope legion, current_character
+	scope = legion
+
+	saved_scopes = {
+		current_character
+	}
+
+	is_shown = {
+		trigger_if = {
+			limit = {
+				scope:current_character = {
+					is_general = yes
+					has_legion_trigger = yes
+				}
+
+				scope:current_character.legion = root
+			}
+		}
+		trigger_else = {
+			always = yes
 		}
 	}
 }
