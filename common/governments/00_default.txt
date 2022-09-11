@@ -411,6 +411,7 @@ tribal_federation = {
 		manpower_recovery_speed = 0.2
 		land_morale_recovery = 0.05
 		land_morale = 0.15
+		army_maintenance_cost = -0.15
 	}
 
 	election_delay = 0

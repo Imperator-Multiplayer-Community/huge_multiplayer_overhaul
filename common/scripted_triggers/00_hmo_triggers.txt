@@ -1,4 +1,4 @@
-is_valid_border_fortress_location = { # boarder forts cannot be built next to another border fort
+is_valid_border_fortress_location = { # border forts cannot be built next to another border fort
 	NOT = {
 		any_neighbor_province = {
 			owner = root.owner
@@ -6,4 +6,22 @@ is_valid_border_fortress_location = { # boarder forts cannot be built next to an
 			has_building = border_fortress_building
 		}		
 	}
+}
+
+has_capital_legion_law = {
+	OR = {
+		has_law = work_for_the_best
+		has_law = republican_recruitment_2
+		has_law = punic_reforms
+		has_law = super_centralized_military_law_two
+	}
+}
+
+has_all_region_legion_law = {
+	OR = {
+		has_law = standing_army_law
+		has_law = republican_recruitment_4
+		has_law = marian_reforms
+		has_law = super_decentralized_military_law_two
+	}	
 }

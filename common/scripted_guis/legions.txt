@@ -1,0 +1,17 @@
+﻿can_build_legions = { # scope country
+	scope = country
+
+	ai_is_valid = {
+		OR = {
+			has_capital_legion_law = yes
+			has_all_region_legion_law = yes
+		}
+	}
+
+	is_valid = {
+		OR = {
+			has_capital_legion_law = yes
+			has_all_region_legion_law = yes
+		}
+	}
+}
