@@ -15,9 +15,9 @@ levy_italic = {
 levy_roman = {
 	default = no
 
-	light_infantry = 0.30
-	heavy_infantry = 0.50
-	light_cavalry = 0.20
+	light_infantry = 0.3
+	heavy_infantry = 0.5
+	light_cavalry = 0.2
 }
 
 levy_etruscan = {
@@ -32,15 +32,15 @@ levy_samnite = {
 	default = no
 
 	light_infantry = 0.5
-	heavy_infantry = 0.4
-	light_cavalry = 0.1
+	heavy_infantry = 0.3
+	light_cavalry = 0.2
 }
 
 levy_rhaetian = {
 	default = no
 
-	light_infantry = 0.4
-	archers = 0.2
-	heavy_infantry = 0.4
+	light_infantry = 0.35
+	archers = 0.35
+	heavy_infantry = 0.3
 }
 

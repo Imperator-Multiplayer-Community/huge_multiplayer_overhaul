@@ -16,9 +16,9 @@ levy_steppes = {
 levy_sarmatian = {	#Sarmatians
 	default = no
 
-	archers = 0.4
-	light_cavalry = 0.2
-	horse_archers = 0.4
+	archers = 0.45
+	light_cavalry = 0.25
+	horse_archers = 0.3
 }
 
 
@@ -34,6 +34,6 @@ levy_dahae = {
 	default = no
 
 	heavy_cavalry = 0.2
-	light_infantry = 0.6
-	horse_archers = 0.2
+	light_infantry = 0.5
+	horse_archers = 0.3
 }
