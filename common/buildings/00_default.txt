@@ -41,9 +41,6 @@ border_fortress_building = {
 
 	potential = {
 		has_city_status = no
-		NOT = {
-			is_ai = yes
-		}
 	}
 
 	allow = {
@@ -63,11 +60,10 @@ border_fortress_building = {
 				}
 			}
 		}
-		
+	}
 
-		NOT = {
-			is_ai = yes
-		}
+	ai_will_do = {
+		factor = 0
 	}
 
 	modification_display = {
