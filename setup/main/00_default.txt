@@ -6748,7 +6748,7 @@ country = {
 		
 		SIR = {
 			government = tribal_kingdom
-			primary_culture = demetian
+			primary_culture = silurian ## HMO V2.1 DaFoogles Heritages
 			religion = druidism
 			centralization=5
 
@@ -7705,12 +7705,12 @@ country = {
 			government = tribal_kingdom
 			primary_culture = aulercian
 			religion = druidism
-			centralization=10
+			centralization=15
 
 			capital = 2459
 
 			own_control_core = 	{
-				2351 2459 2456 2401 2402 
+				2351 2459 2456 2401 2402 2400
 			}
 		}
 		
@@ -11448,6 +11448,36 @@ country = {
 		
 		own_control_core = {
 		    2040 2098 2092
+		}
+	
+	}
+
+	C75 = { 
+		government = plutocratic_republic
+		diplomatic_stance= trading_stance
+		primary_culture = carthaginian
+		religion = carthaginian_pantheon
+		
+		technology={
+			military_tech={ level=2 progress=0 }
+			civic_tech={ level=2 progress=0 }
+			oratory_tech={ level=2 progress=0 }
+			religious_tech= { level=2 progress=0  }
+		}
+
+		pantheon = { 
+			
+			{ deity = 425 }
+			{ deity = 401 }
+			{ deity = 428 }	
+			{ deity = 426}
+			
+			}
+		
+		capital = 2153
+		
+		own_control_core = {
+			2153 2147 2212 2148 2209 3308 2352
 		}
 	
 	}
