@@ -412,7 +412,10 @@ upper_mesopotamia_area = { #12
 } 
 
 niniveh_area = { #10 
-	provinces = { 773 861 862 863 864 866 867 868 882 986 875 } 
+	provinces = { 773 861 862 863 864 866 867 868 882 986 875 
+ 
+	5440 # uninhabitables 
+    } 
 } 
 
 garamig_area = { #10 
@@ -421,7 +424,8 @@ garamig_area = { #10
 } 
 
 adiabene_area = { #10 
-	provinces = { 865 880 881 884 886 887 957 984 985 } 
+	provinces = { 865 880 881 884 886 887 957 984 985 
+	883 } 
 } 
 
 osroene_area = { #14 
@@ -429,23 +433,24 @@ osroene_area = { #14
 } 
 
 babylonia_area = { #12 
-	provinces = { 900 903 909 901 910 915 917 918 919 922 } 
+	provinces = { 900 903 909 901 910 915 918 919 922 
+	920 923 } 
 } 
 
-veh_kavad_area = { #12 
-	provinces = { 920 921 923 930 931 932 935 936 939 937 968 7723 
-		7567 7566 # Uninhabitables 
-	} 
+veh_kavad_area = { #11 
+	provinces = {  921 930 931 932 935 936 939 937 
+	917 929 960 } 
 } 
 
-beth_daraye_area = { #12 
-	provinces = { 979 925 928 933 934 961 962 973 974 976 
-	929 960 } 
+beth_daraye_area = { #11 
+	provinces = { 979 925 928 933 934 961 973 974 976 
+	938 962 } 
 } 
 
 meshan_area = { #10 
-	provinces = { 940 941 942 944 963 964 965 969 971 938 
-		5399 5400 5401 # Uninhabitables 
+	provinces = { 940 941 942 944 963 964 965 969 971 
+	7723 968 	
+	5399 5400 5401 7567 7566 # Uninhabitables 
 	} 
 } 
 
@@ -470,7 +475,7 @@ susiana_area = { #12
 } 
 
 tigris_area = { #10 
-	provinces = { 835 883 891 892 893 894 895 955 956 977 
+	provinces = { 835 891 892 893 894 895 955 956 977 
 	899 } 
 } 
 
@@ -832,7 +837,7 @@ thracia_area = { #11
 } 
 
 macedonia_salutaris_area = { #12 
-	provinces = { 497 4303 4304 4305 4153 498 4152 4117 499 4096 4097 4306 4302 } 
+	provinces = { 497 4303 4304 4305 4153 498 4152 4117 499 4096 4306 4302 } 
 } 
 
 dardania_inferioris_area = { 
@@ -906,8 +911,8 @@ iazygia_minoris_area = { #12
 } 
 
 dacia_mediterranea_area = { 
-	provinces = { 4235 4229 4230 477 4116 4115 4219 4222 
-	              3853 } 
+	provinces = { 4235 4229 4230 477 4116 4115 4222 
+	              3853 4097 } 
 } 
 
 dacia_superioris_area = { 
@@ -917,7 +922,7 @@ dacia_superioris_area = {
 
 dacia_inferioris_area = { 
 	provinces = { 4223 4221 4217 4220 4215 4216 4214 4218 4209 4208
-                  4224 4225 } 
+                  4224 4225 4219 } 
 } 
 
 malvensis_area = { 

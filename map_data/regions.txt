@@ -113,25 +113,26 @@ cappadocia_pontica_region = { #5
 
 #Mesopotamia
 
-assyria_region = {		#7 areas
+assyria_region = {		#6 areas
 	areas = {
 		corduene_area
 		osroene_area
-		euphrates_area
 		upper_mesopotamia_area
 		niniveh_area
 		adiabene_area
+		garamig_area
 	}
     color = rgb { 255 255 127 }
 }
 
-mesopotamia_region = {	#8 areas (Lower Mesopotamia)
+mesopotamia_region = {	#6 areas (Lower Mesopotamia)
 	areas = {
 		babylonia_area
 		beth_daraye_area
 		asoristan_area
-		garamig_area
 		tigris_area
+		veh_kavad_area
+		euphrates_area
 	}
     color = rgb { 190 145 60 }
 }
@@ -147,14 +148,12 @@ gedrosia_region = { #7
 	}
 }
 
-persian_coast_region = { #6
+persian_coast_region = { #4
 	areas = {
 		omana_area
 		east_omana_area
 		gerrha_area
-		veh_kavad_area
 		meshan_area
-		hadramut_orientalis_area
 	}
 }
 
@@ -267,6 +266,7 @@ arabia_felix_region = { #7
 		sheba_area
 		qataba_area
 		hadramut_occidentalis_area
+		hadramut_orientalis_area
 	}
 }
 
