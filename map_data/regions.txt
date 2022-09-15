@@ -152,10 +152,8 @@ mesopotamia_region = {	#6 areas (Lower Mesopotamia)
 		babylonia_area
 		veh_kavad_area
 		beth_daraye_area
-		meshan_area
 		asoristan_area
 		tigris_area
-		veh_kavad_area
 		euphrates_area
 	}
     color = rgb { 190 145 60 }
@@ -163,9 +161,6 @@ mesopotamia_region = {	#6 areas (Lower Mesopotamia)
 
 gedrosia_region = { #7
 	areas = {
-		omana_area
-		east_omana_area
-		gerrha_area
 		gedrosia_area
 		harmozeia_area
 		patalene_area
@@ -188,7 +183,6 @@ persis_region = { #7
 	areas = {
 		pars_area
 		veshapur_area
-		utia_area
 		persepolis_area
 		ardashir_area
 		media_felix_area
