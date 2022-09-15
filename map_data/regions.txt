@@ -281,12 +281,11 @@ gandhara_region = { #7
 		panchanada_area
 		trigarta_area
 		sivi_area
-		north_sindhu_area
 	}
     color = rgb { 255 248 58 }
 }
 
-maru_region = { #7
+maru_region = { #8
 	areas = {
 		sauvira_area
 		abhiria_area
@@ -294,6 +293,7 @@ maru_region = { #7
 		outer_saurashtra_area
 		inner_saurashtra_area
 		maru_area
+		north_sindhu_area
 	}
     color = rgb { 80 201 244 }
 }
