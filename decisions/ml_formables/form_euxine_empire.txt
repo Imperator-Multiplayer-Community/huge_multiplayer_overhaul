@@ -30,7 +30,7 @@
 				OR = {
 					is_in_area = europa_area
 					is_in_area = mysia_area
-					is_in_area = clepia_area
+					###is_in_area = clepia_area
 					is_in_area = pontus_area					
 					is_in_area = bithynia_area
 					is_in_area = bithynia_inferior_area
@@ -64,7 +64,7 @@
 			}
 			can_form_nation_trigger = yes
 			owns_or_subject_owns_area = europa_area
-			owns_or_subject_owns_area = clepia_area
+			###owns_or_subject_owns_area = clepia_area
 			owns_or_subject_owns_area = mysia_area
 			owns_or_subject_owns_area = pontus_area			
 			owns_or_subject_owns_area = bithynia_area
