@@ -325,7 +325,7 @@ tribal_super_decentralized_military_laws = {
 
 		modifier = {
 			general_loyalty = 0.02
-			army_maintenance_cost = -0.5
+			army_maintenance_cost = -0.25
 			manpower_recovery_speed = 0.1
 		}
 
@@ -353,7 +353,7 @@ tribal_super_centralized_military_laws = {
 		}
 
 		modifier = {
-			levy_size_multiplier = 0.5
+			levy_size_multiplier = 0.025
 			discipline = 0.05
 			army_weight_modifier = -0.2
 		}
