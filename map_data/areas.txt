@@ -109,32 +109,6 @@ sardinia_meridionalis = {
 	provinces = { 3493 3495 3491 3492 3482 3485 3481 3483 3484 3490 3486 3487 3488 } 
 } 
 
-#Alps 
-
-alpes_maritimae_area = { # 12 
-	provinces = { 3541 3540 3517 2325 2324 3521 3523 3542 3518 3522 3520 3543 } 
-} 
-
-alpes_maritimae_two_area = { # 12 
-	provinces = { 3529 3519 3527 3524 3526 3525 3533 3536 3531 3532 3528 } 
-} 
-
-alpes_graiae_area = { 
-	provinces = { 3537 3538 3608 3609 3610 3611 3612 3613 3615 3614 3616 3620 } 
-} 
-
-alpes_raetiae_occidentalis = { 
-	provinces = { 3618 3617 3619 3636 3657 3656 3658 3660 3659 3663 3654 3655 } 
-} 
-
-alpes_raetiae_orientalis = { 
-	provinces = { 3665 3666 3664 3667 3668 3671 3672 3673 3674 3669 3670 
-	3647 3648 3649 } 
-} 
-
-tigurinia_area = { 
-	provinces = { 3539 3621 3622 3623 3624 3626 3627 3628 3625 3629 3630 } 
-} 
 #Caucasus 
 
 sophene_area = { #12 
@@ -438,7 +412,10 @@ upper_mesopotamia_area = { #12
 } 
 
 niniveh_area = { #10 
-	provinces = { 773 861 862 863 864 866 867 868 882 986 875 } 
+	provinces = { 773 861 862 863 864 866 867 868 882 986 875 
+ 
+	5440 # uninhabitables 
+    } 
 } 
 
 garamig_area = { #10 
@@ -447,7 +424,8 @@ garamig_area = { #10
 } 
 
 adiabene_area = { #10 
-	provinces = { 865 880 881 884 886 887 957 984 985 } 
+	provinces = { 865 880 881 884 886 887 957 984 985 
+	883 } 
 } 
 
 osroene_area = { #14 
@@ -455,23 +433,24 @@ osroene_area = { #14
 } 
 
 babylonia_area = { #12 
-	provinces = { 900 903 909 901 910 915 917 918 919 922 } 
+	provinces = { 900 903 909 901 910 915 918 919 922 
+	920 923 } 
 } 
 
-veh_kavad_area = { #12 
-	provinces = { 920 921 923 930 931 932 935 936 939 937 968 7723 
-		7567 7566 # Uninhabitables 
-	} 
+veh_kavad_area = { #11 
+	provinces = {  921 930 931 932 935 936 939 937 
+	917 929 960 } 
 } 
 
-beth_daraye_area = { #12 
-	provinces = { 979 925 928 933 934 961 962 973 974 976 
-	929 960 } 
+beth_daraye_area = { #11 
+	provinces = { 979 925 928 933 934 961 973 974 976 
+	938 962 } 
 } 
 
 meshan_area = { #10 
-	provinces = { 940 941 942 944 963 964 965 969 971 938 
-		5399 5400 5401 # Uninhabitables 
+	provinces = { 940 941 942 944 963 964 965 969 971 
+	7723 968 	
+	5399 5400 5401 7567 7566 # Uninhabitables 
 	} 
 } 
 
@@ -496,7 +475,7 @@ susiana_area = { #12
 } 
 
 tigris_area = { #10 
-	provinces = { 835 883 891 892 893 894 895 955 956 977 
+	provinces = { 835 891 892 893 894 895 955 956 977 
 	899 } 
 } 
 
@@ -577,8 +556,8 @@ western_delta_area = { # 12
 	provinces = { 515 516 517 518 527 529 530 531 532 7691 } 
 } 
 
-eastern_delta_area = { #12 
-	provinces = { 503 508 509 510 511 524 525 535 655 656 701 7688 7690 } 
+eastern_delta_area = { #13 
+	provinces = { 503 508 509 510 511 524 525 535 655 7688 7690 506 } 
 } 
 
 central_delta_area = { #13 
@@ -590,18 +569,19 @@ memphis_area = { #11
 } 
 
 heptanomis_area = { #12 
-	provinces = { 538 539 540 541 542 543 544 545 546 547 548 } 
+	provinces = { 538 539 540 541 542 543 544 545 546 547 548 
+	550 } 
 } 
 
 sinai_area = { #11 
-	provinces = { 506 1600 1604 1675 1682 1684 1688 1693 1708 1709 1710 } 
+	provinces = { 1600 1604 1675 1682 1684 1688 1693 1708 1709 1710 } 
 } 
 
 #Upper Egypt 
 
 hema_nome_area = { #12 #8th to 15th Nome 
 	provinces = { 549 551 552 554 553 555 556 557 558 559 560 561 
-	5501 5500 } 
+	} 
 } 
 
 luxor_area = { #10 #7th to 4th Nome 
@@ -609,7 +589,7 @@ luxor_area = { #10 #7th to 4th Nome
 } 
 
 aswan_area = { #11 #1st to 3rd Nome 
-	provinces = { 576 577 591 592 593 594 595 596 597 598 599 } 
+	provinces = { 576 577 591 592 593 594 595 596 597 598 } 
 } 
 
 troglodytica_area = { #10 
@@ -621,7 +601,8 @@ myos_hormos_area = { #10
 } 
 
 philistia_area = { #12 
-	provinces = { 657 658 659 660 661 662 690 693 694 695 696 697 } 
+	provinces = { 657 658 659 660 661 662 690 693 694 695 696 697 
+	656 701 } 
 } 
 
 arabia_petrea_area = { #11 
@@ -856,7 +837,7 @@ thracia_area = { #11
 } 
 
 macedonia_salutaris_area = { #12 
-	provinces = { 497 4303 4304 4305 4153 498 4152 4117 499 4096 4097 4306 4302 } 
+	provinces = { 497 4303 4304 4305 4153 498 4152 4117 499 4096 4306 4302 } 
 } 
 
 dardania_inferioris_area = { 
@@ -870,9 +851,8 @@ dardania_superioris_area = {
 
 #Dacia and Illyria 
 
-clepia_area = { 
-	provinces = { } 
-} 
+#clepia_area = { 
+# provinces = { } } 
 
 zargidava_area = { #11 
 	provinces = { 4801 4802 4924 4923 4925 4913 4912 4914 4930 4931 4932 4935 4933 } 
@@ -931,8 +911,8 @@ iazygia_minoris_area = { #12
 } 
 
 dacia_mediterranea_area = { 
-	provinces = { 4235 4229 4230 477 4116 4115 4219 4222 
-	              3853 } 
+	provinces = { 4235 4229 4230 477 4116 4115 4222 
+	              3853 4097 } 
 } 
 
 dacia_superioris_area = { 
@@ -942,7 +922,7 @@ dacia_superioris_area = {
 
 dacia_inferioris_area = { 
 	provinces = { 4223 4221 4217 4220 4215 4216 4214 4218 4209 4208
-                  4224 4225 } 
+                  4224 4225 4219 } 
 } 
 
 malvensis_area = { 
@@ -969,9 +949,8 @@ moesia_prima_occidentalis_area = {
 	provinces = { 4197 4198 4195 4124 4125 4196 4194 4123 4126 4130 4128 4129 4077 } 
 } 
 
-marsonia_area = { 
-	provinces = {  } 
-} 
+#marsonia_area = { 
+#provinces = {  } } 
 
 pannonia_secunda_area = { 
 	provinces = { 4190 4189 4192 4191 4186 4188 4187 4185 4193 
@@ -1181,6 +1160,43 @@ hibernia_meridionalis_area = { #11
 	provinces = { 2177 2161 2176 2179 2162 2163 2178 2182 2180 2181 2185 } 
 } 
 
+#Alps 
+
+alpes_maritimae_area = { # 10 
+	provinces = { 3541 3540 3517 2325 3521 3523 3542 3543 
+	2323 2319 } 
+} 
+
+alpes_maritimae_two_area = { # 10 
+	provinces = { 3529 3524 3536 3528 
+	2324 3518 3520 3522 3532 } 
+color = rgb { 95 221 18 }
+} 
+
+alpes_rhodanus_area = { # 9 
+provinces = { 3533 3525 3527 3519 2320 2310 3526 2321 2322 } 
+color = rgb { 55 64 128 }
+} 
+
+alpes_graiae_area = { #
+	provinces = { 3537 3538 3608 3609 3610 3611 3612 3613 3615 3620 } 
+} 
+
+alpes_raetiae_occidentalis = { 
+	provinces = { 3618 3617 3619 3657 3656 3658 3660 3659 3654 3655 
+	3616 } 
+} 
+
+alpes_raetiae_orientalis = { 
+	provinces = { 3665 3666 3664 3667 3668 3671 3672 3673 3674 3669 3670 
+	3663 } 
+} 
+
+tigurinia_area = { #6
+	provinces = { 3629 3630 3623 3624 3625 
+	3614 3631 3627 3628 } 
+} 
+
 #Gaul + Belgium 
 
 armorica_minoris_area = { 
@@ -1209,39 +1225,51 @@ sentonia_maioris_area = { #11
 } 
 
 aquitania_occidentalis_area = { #10 
-	provinces = { 2235 2236 2237 2238 2239 2240 2241 2242 2245 2233 } 
+	provinces = { 2235 2236 2237 2238 2239 2240 2241 2242 2245 2233 
+	2243 2244 } 
 } 
 
 aquitania_orientalis_area = { # 10 
 	provinces = { 2288 2272 2274 2281 2273 2250 2271 2275 2278 2279 } 
 } 
 
-narbonensis_orientalis_area = { # 10 
-	provinces = { 1079 2253 2254 2255 2263 2265 2266 2267 2280 2262 } 
+narbonensis_orientalis_area = { # 9 
+	provinces = { 
+	2268 2295 3309 2262 2280 2261 2285 2296 2286 } 
 } 
 
 narbonensis_centralis_area = { #10 
-	provinces = { 2256 2257 2258 2259 2260 2312 2313 2297 2315 2261 } 
+	provinces = { 2256 2257 2258 2259 
+	1079 2254 2255 2263 2265 2267 } 
 } 
 
-narbonensis_occidentalis_area = { 
-	provinces = { 2310 2311 2314 2316 2317 2318 2319 2320 2321 2323 2322 } 
+narbonensis_occidentalis_area = { #10
+	provinces = { 2311 2314 2316 2317 2318 2297 2315 2312 2313 2260 2309 
+} 
 } 
 
 biggeronia_area = { # 9 
-	provinces = { 2243 2244 2246 2247 2248 2249 2251 2252 2277 2276 } 
+	provinces = { 2246 2247 2248 2249 2251 2252 2277 2276 
+	2253 2266 } 
 } 
 
-allobrogia_area = { #11 
-	provinces = { 2301 2303 2304 2305 2306 2307 2308 2309 2356 2357 2302 } 
+allobrogia_area = { #7 
+	provinces = { 2304 2303 2305 2307 2308 
+	3539 3621 3531 } 
+} 
+
+arar_convallis_area = { #7
+	provinces = { 2301 2356 2357 2358 2359 2361 2355 3622 3626 } 
 } 
 
 cadurcia_area = { 
-	provinces = { 2289 2294 2292 2293 2269 2270 2326 2327 2335 2338 } 
+	provinces = { 2289 2294 2292 2293 2269 2270 2326 2327 2335 2338 
+	2339 } 
 } 
 
-central_massif_area = { #10 
-	provinces = { 2339 2268 2295 2285 2296 2286 2298 2284 3309 1719 } 
+central_massif_area = { #9 
+	provinces = { 2298 
+	2371 2370 2372 2284 1719 2300 2299 2342 } 
 } 
 
 lemovicia_area = { #12 
@@ -1252,20 +1280,23 @@ celtica_occidentalis_area = {
 	provinces = { 2382 2383 2384 2385 2386 2387 2388 2395 2419 2420 2421 2422 2343 2405 2346 } 
 } 
 
-celtica_centralis_area = { 
-	provinces = { 2378 2379 2380 2375 2376 2381 2409 2377 2368 2373 2374 2342 } 
+celtica_centralis_area = { #12
+	provinces = { 2378 2379 2380 2375 2376 2381 2409 2377 2368 2373 2374 } 
 } 
 
-celtica_orientalis_area = { 
-	provinces = { 2300 2299 2371 2370 2364 2365 2369 2372 2366 2367 2348 2360 } 
+celtica_orientalis_area = { #10
+	provinces = { 2364 2365 2369 2366 2367 2348 2360 
+	2302 2306 } 
 } 
 
-sequania_area = { 
-	provinces = { 2358 2359 2361 2362 2363 2355 3010 2427 3013 3014 2428 2429 } 
+sequania_area = { #8
+	provinces = { 2362 2363 3010 2427 3013 3014 2428 2429 
+	3011 3009 3019 3024 3018 } 
 } 
 
 lingonia_area = { 
-	provinces = { 2440 2435 2436 2437 2433 2354 3005 2431 2449 3008 3006 2489 } 
+	provinces = { 2440 2435 2436 2437 2433 2354 3005 2431 2449 3008 3006 2489 
+	2490 } 
 } 
 
 senonia_area = { # 
@@ -1291,21 +1322,22 @@ carnutia_area = { #12
 
 parisia_area = { # 12 
 	provinces = { 2447 2476 2481 2483 2475 2477 2485 2484 2444 2482 
-	2479 2480 } 
+	2479 2480 2487 2486 } 
 } 
 
 leucia_area = { 
-	provinces = { 3015 3004 3007 3003 3016 2453 3017 2499 2454 3002 2497 } 
+	provinces = { 3015 3004 3007 3003 3016 2453 3017 2499 2454 3002 2497 
+	3021 3023 } 
 } 
 
 remia_area = { #continue into Belgicae 
-	provinces = { 3001 2455 2498 2496 2495 2494 3050 3703 3686 3687 3688 3684
-	3705 } 
+	provinces = { 3001 2455 2498 2496 2495 2494 3050 3686 3687 3688 
+	} 
 } 
 
 treveria_area = { 
 	provinces = { 3728 3721 3730 3729 3685 3689 3726 7738
-	3683 3719 } 
+	3683 3719 3705 3703 3684 } 
 } 
 
 mediomatricia_area = { 
@@ -1313,39 +1345,37 @@ mediomatricia_area = {
 	              3690 3722 3724 } 
 } 
 
-vangionia_area = { 
-	provinces = { } 
-} 
+#vangionia_area = { 
+#	provinces = { } } 
 
 menapia_orientalis = { 
 	provinces = { 3718 3717 3716 3715 3710 3714 3711 3712 3713 3727 3720 } 
 } 
 
 suaeuconia_area = { 
-	provinces = { 2490 2487 2486 2491 2451 3049 3051 3048 2492 2452 3043 2450
-	3047 } 
+	provinces = { 2491 2451 3049 3051 3048 2492 2452 3043 2450
+	} 
 } 
 
 bellovacia_area = { 
-	provinces = { 2493 3044 2445 3032 3031 2446 3038 3042 3045 3046 } 
+	provinces = { 2493 3044 2445 3032 3031 2446 3038 
+	2443 2469 2474 2473 2472 } 
 } 
 
 veliocassia_area = { #11 
-	provinces = { 2468 2470 2469 2471 3034 3033 3035 3037 3039 3036 2443 
-	2474 2473 2472 } 
+	provinces = { 2468 2470 2471 3034 3033 3035 3037 3039 3036 
+	} 
 } 
 
-tribocia_area = { 
-	provinces = { 3011 3009 3019 3024 3021 3023 3018 } 
-} 
+#tribocia_area = { 
+#	provinces = { } } 
 
 raurica_area = { 
 	provinces = { 3012 3020 3022 3025 3731 3733 3734 3744 } 
 } 
 
-latobrigia_area = { 
-	provinces = {  } 
-} 
+#latobrigia_area = { 
+#provinces = {  } } 
 
 tulingia_area = { # 12 
 	provinces = {  } 
@@ -1355,19 +1385,23 @@ germanicum_area = {
 	provinces = { 3766 3767 3768 3769 3772 3774 3736 3743 3770 3742 3771 } 
 } 
 
-helvetia_inferioris_area = { 
-	provinces = { 3631 3632 3633 3634 3732 3635 3637 3639 3739 3745 3746 
-	              3638 3740 } 
+helvetia_inferioris_area = { # 13
+	provinces = { 3632 3633 3634 3732 3635 3637 3639 3739 3745 3746 
+	              3638 3740 3636 } 
 } 
 
-helvetia_superioris_area = { 
+helvetia_superioris_area = { # 12
 	provinces = { 3741 3747 3640 3750 3751 3641 3748 3753 
-	              3775 3749 3752 3773 3765 3757 } 
+	              3775 3749 3752 3773 } 
 } 
 
-helvetia_orientalis_area = { 
-	provinces = { 3758 3759 3756 3754 3755 3760 3764 3761 3642 3643 3644 3762 3645 3646 3763 } 
+helvetia_orientalis_area = { # 10
+	provinces = { 3758 3759 3756 3754 3755 3760 3764 3761 3642 3643 3765 3757 } 
 } 
+
+helvetia_ister_convallis_area = { # 10
+	provinces = { 3647 3648 3649 3644 3762 3645 3646 3763 3650 3651 }
+}
 
 frisia_area = { 
 	provinces = { 3848 3847 3850 3851 3852 3854 } 
@@ -1480,12 +1514,13 @@ cyrenaica_superioris_area = { #11
 } 
 
 marmarica_occidentalis_area = { 
-	provinces = { 3367 3368 3369 3370 3371 3372 3373 8153 8158 } 
+	provinces = { 3367 3368 3369 3370 3371 3372 3373 8158 
+	3374 3375 3376 } 
 } 
 
 marmarica_orientalis_area = { 
-	provinces = { 3374 3375 3376 3377 3378 3379 3380 3476 3477 3478 
-	              453 445 } 
+	provinces = { 3377 3378 3379 3380 3476 3477 3478 
+	              453 445 5553 5556 } 
 } 
 
 #Iberia 
@@ -1675,7 +1710,7 @@ morinia_area = {
 
 nervia_area = { 
 	provinces = { 3041 3676 3679 3707 3704 3680 3706 3681 3682 3708 
-	3709 } 
+	3709 3042 3045 3046 3047 } 
 } 
 
 #Balearics 
@@ -1712,9 +1747,8 @@ sicambria_area = {
 	provinces = { 3699 3700 3785 3786 3787 3790 3788 3789 3793 3791 3792 3794 3796 } 
 } 
 
-turonia_area = { 
-	provinces = { } 
-} 
+#turonia_area = { 
+#provinces = { } } 
 
 chattia_occidentalis_area = { 
 	provinces = { 3802 3804 3800 3801 3803 3805 
@@ -1745,12 +1779,11 @@ boioa_septentrionalis_area = {
 
 carnuntia_area = { 
 	provinces = { 3918 3653 4144 4145 4146 4147
-	4142 4141 3650 3651 3652 } 
+	4142 4141 3652 } 
 } 
 
-lauriacum_area = { 
-	provinces = { } 
-} 
+#lauriacum_area = { 
+	#provinces = { } } 
 
 celamantia_area = { 
 	provinces = { 3919 3927 3924 3925 3926 4017 3929 4016 } 
@@ -1865,11 +1898,12 @@ avanti_area = { #12
 } 
 
 anupa_area = { #10 
-	provinces = { 4476 4492 4493 7311 7315 7316 7420 7421 7422 7424 } 
+	provinces = { 4476 4492 4493 7311 7315 7316 7422 7424 6855 6858 } 
 } 
 
 dahala_area = { #11 
-	provinces = { 4477 4483 7312 7313 7451 7452 7454 7457 7458 7459 } 
+	provinces = { 4477 4483 7312 7313 7451 7452 7454 7457 7458 7459 
+	7421 } 
 } 
 
 dasarna_area = { #10 
@@ -1881,15 +1915,17 @@ anartta_area = { #10
 } 
 
 patalene_area = { #11 
-	provinces = { 6526 6527 6531 6532 6536 6815 6821 6822 6848 6849 7660 } 
+	provinces = { 6526 6527 6531 6532 6536 6815 6821 6849 7660 } 
 } 
 
 south_sindhu_area = { #10 
-	provinces = { 4355 4361 4362 4364 4365 4366 4368 4369 4376 } 
+	provinces = { 4355 4361 4362 4364 4365 4366 4368 4369 4376 
+	4375 4377 4386 } 
 } 
 
 sauvira_area = { #10 
-	provinces = { 4353 4354 4356 4357 4358 4359 4360 4363 6827 6852 } 
+	provinces = { 4353 4354 4356 4357 4358 4359 6827 6852 
+	6822 6848 } 
 } 
 
 abhiria_area = { #11 
@@ -1993,7 +2029,8 @@ gandhara_area = { #12
 } 
 
 taxila_area = { #12 
-	provinces = { 4308 4316 4317 4318 4320 4322 4326 4327 4328 4329 7314 7492 } 
+	provinces = { 4308 4316 4317 4318 4320 4322 4326 4327 4328 4329 7314 7492 
+	4383 4319 } 
 } 
 
 kasmira_area = { #12 
@@ -2001,7 +2038,8 @@ kasmira_area = { #12
 } 
 
 panchanada_area = { #11 
-	provinces = { 4331 4380 4384 4388 4393 4395 4396 4397 4398 4399 7399 } 
+	provinces = { 4380 4388 4393 4395 4396 4397 4399 
+	4349 4378 4381 4382 } 
 } 
 
 madra_area = { #12 
@@ -2009,12 +2047,13 @@ madra_area = { #12
 } 
 
 sivi_area = { #10 
-	provinces = { 4319 4321 4330 4348 4350 4351 4383 4385 4386 } 
+	provinces = { 4321 4330 4348 4350 4351 4385 
+	7399 4331 4384 4398 } 
 } 
 
 north_sindhu_area = { #10 
-	provinces = { 4349 4371 4373 4374 4378 4372 4375 4377 4381 4382 
-	4352 } 
+	provinces = { 4371 4373 4374 4372 
+	4352 4360 4363 } 
 } 
 
 #Southern India 
@@ -2071,8 +2110,9 @@ vanavasi_area = { #11
 	provinces = { 7015 6887 6885 7023 7035 7038 7072 7088 6884 6883 7090 } 
 } 
 
-aparanta_area = { #12 
-	provinces = { 6830 6855 6858 6859 6860 6861 6862 6863 6865 6864 6866 6869 } 
+aparanta_area = { #11 
+	provinces = { 6860 6861 6862 6863 6865 6864 6866 6869 
+	7066 6867 } 
 } 
 
 outer_saurashtra_area = { #11 
@@ -2080,11 +2120,12 @@ outer_saurashtra_area = { #11
 } 
 
 inner_saurashtra_area = { #12 
-	provinces = { 4494 6831 6835 6820 6839 6832 6846 6847 6838 6837 6836 6854 } 
+	provinces = { 4494 6831 6835 6820 6839 6832 6846 6847 6838 6837 6836 6854 
+	6830 } 
 } 
 
 north_sahyadri_area = { #12 
-	provinces = { 6868 6867 6870 6871 7060 7066 7061 6872 6873 6874 6875 6876 } 
+	provinces = { 6868 6870 6871 7060 7061 6872 6873 6874 6875 6876 } 
 } 
 
 south_sahyadri_area = { #10 
@@ -2104,7 +2145,8 @@ asika_area = { #10
 } 
 
 vindya_area = { #12 
-	provinces = { 7116 7114 7125 7117 7182 7126 7065 7128 7097 7121 7318 7423 } 
+	provinces = { 7116 7114 7125 7117 7182 7126 7065 7128 7097 7121 7318 7423 
+	7420 6859 } 
 } 
 
 asmaka_area = { #11 
@@ -2176,11 +2218,12 @@ gerrha_area = { #12
 } 
 
 north_nubia_area = { #12 
-	provinces = { 600 601 603 602 7580 604 7579 606 7581 605 7582 607 } 
+	provinces = { 601 603 602 7580 604 7579 606 7581 605 7582 607 
+	7583 } 
 } 
 
 south_nubia_area = { #12 
-	provinces = { 7583 608 609 610 611 612 613 618 617 616 615 614 } 
+	provinces = { 608 609 610 611 612 613 618 617 616 615 614 } 
 } 
 
 napata_area = { #12 
@@ -2235,26 +2278,31 @@ alania_area = {
 	provinces = { 7610 7609 7611 7607 7619 7620 7630 7606 7622 7631 } 
 } 
 
-kharga_area = { #11 
-	provinces = {  } 
-} 
+#kharga_area = { #11 
+	#provinces = {  } } 
 
 khargana_area = { #11 
-	provinces = { 5513 5507 5516 5508 5515 5517 5518 5520 5519 5521 5506 
-	              5502 5503 5504 5505 5512 5509 5510 5511 5522 } 
+	provinces = { 5513 5506 5502 5503 5504 5505 5512 5509 5522 
+	5501 5500 } 
+} 
+
+hameka_area = { 
+	provinces = { 599 600 5507 5508 5515 5516 5517 5518 5519 5520 5521 } 
 } 
 
 ammon_area = { #14 
-	provinces = { 5537 5555 5538 5539 5540 5551 5550 5554 5552 5553 5556 5536 8121 8122} 
+	provinces = { 5537 5555 5538 5539 5540 5551 5550 5554 5552 5536 8121 8122 
+	8153 } 
 } 
 
 parva_area = { #12 
-	provinces = { 550 5544 5542 5543 5541 5531 5535 5533 5532 5548 5546 5534 
+	provinces = { 5544 5542 5543 5541 5531 5535 5533 5532 5548 5546 5534 
 	5547 } 
 } 
 
 farfara_area = { #11 
-	provinces = { 5526 5525 5524 5523 5528 5545 5527 5529 5530 5514 } 
+	provinces = { 5526 5525 5524 5523 5528 5545 5527 5529 5530 5514 
+	5510 5511 } 
 } 
 
 gilgit_area = { #12 
@@ -2610,15 +2658,15 @@ palus_maeotis_area = {
 nile_river_area = { 
 	provinces = { 
 		7666 7667 7669 7670 7671 7672 7673 7674 7675 7676 7677 7678 7679 7680 7681 7682 7683 7684 7685 7686 7687 6376 
-		8750 8751 8752 8753 8754 8755 8756 8757 8758 8759 8760 8761 8762 8763 8764 8765 8766 8767 8768 8769 8770 8771 8772 8773 8774 8775 8776 8777 8778 8779 8780 8781 8782 8783 8784 8785 8786 8787 8788 8789 8790 
-		9254 9256
+		8759 8760 8761 8762 8763 8764 8765 8766 8767 8768 8769 8770 8771 8772 8773 8774 8775 8776 8777 8778 8779 8780 8781 8782 8783 8784 8785 8786 8787 8788 8789 8790 8791 8792 8793 8794 8795 8796 8797 8798 8799 
+		9263 9265 
 	} 
 } 
 
 mesopotamia_river_area = { 
 	provinces = { 
 		7710 7711 7712 7713 7714 7715 7716 7717 7718 7719 7720 7721 7722 
-		9027 9028 9029 9030 9031 9032 9033 9034 9035 9036 9037 9038 9039 9040 9041 9042 9043 9044 9045 9046 9047 9048 9049 9050 9051 9052 9053 9054 9055 9056 
+		9036 9037 9038 9039 9040 9041 9042 9043 9044 9045 9046 9047 9048 9049 9050 9051 9052 9053 9054 9055 9056 9057 9058 9059 9060 9061 9062 9063 9064 9065 
 		6422 6439 6440 6434 6435 6430 
 	} 
 } 
@@ -2626,24 +2674,24 @@ mesopotamia_river_area = {
 indus_river_area = { 
 	provinces = { 
 		7692 7693 7694 7695 7696 7697 7698 7699 7700 
-		9072 9073 9074 9075 9076 9077 9078 9079 9080 9081 9082 9083 9084 9085 9086 9087 9088 9089 9090 9091 
+		9081 9082 9083 9084 9085 9086 9087 9088 9089 9090 9091 9092 9093 9094 9095 9096 9097 9098 9099 9100 
 	} 
 } 
 
 ganges_river_area = { 
 	provinces = { 
 		7701 7702 7703 7704 7705 7706 7707 7708 7786 7787 7788 7789 7790 7791 7792 7793 7794 7795 
-		9100 9101 9102 9103 9104 9105 9106 9107 9108 9109 9110 9111 9112 9113 9114 9115 9116 9117 9118 9119 9120 9121 9122 9123 9124 9125 9126 9127 9128 9129 9130 9131 9132 9133 9134 9135 9136 9137 9138 9139 9140 9141 9142 9143 9144 9145 9146 9147 
-		9148 9149 9150 9151 
+		9109 9110 9111 9112 9113 9114 9115 9116 9117 9118 9119 9120 9121 9122 9123 9124 9125 9126 9127 9128 9129 9130 9131 9132 9133 9134 9135 9136 9137 9138 9139 9140 9141 9142 9143 9144 9145 9146 9147 9148 9149 9150 9151 9152 9153 9154 9155 9156 
+		9157 9158 9159 9160 
 	} 
 } 
 
 rhine_river_area = { 
 	provinces = { 
 		7724 7725 7726 7727 7728 7729 7730 7731 
-		8859 8860 8861 8862 8863 8864 8865 8866 8867 8868 8869 8870 8871 8872 8873 8874 8875 8876 
+		8868 8869 8870 8871 8872 8873 8874 8875 8876 8877 8878 8879 8880 8881 8882 8883 8884 8885 
 	} 
-} 
+}
 
 gallikos_river_area = { 
 	provinces = { 7709 } 
@@ -3046,41 +3094,45 @@ ichthyophagia_area { #7
 	provinces = { 7550 7551 7552 7553 8742 8743 8744 8662 8663 8665 8666 }
 }
 
+beishan_area = { #8
+	provinces = { 8750 8751 8752 8753 8754 8755 8756 8757 }
+}
+
 #INR NEW 
 ems_river_area = { 
-	provinces = { 8831 8902 } 
+	provinces = { 8840 8911 } 
 } 
 avon_river_area = { 
 	provinces = { 
-		8854 8855 8856 
-		8851 9228 
+		8863 8864 8865 
+		8860 9237 
 	} 
 } 
 shannon_river_area = { 
-	provinces = { 8857 8858 6306 } 
+	provinces = { 8866 8867 6306 } 
 } 
 oder_river_area = { 
-	provinces = { 8884 8885 8886 8887 8888 8889 8890 8891 8892 8893 } 
+	provinces = { 8893 8894 8895 8896 8897 8898 8899 8900 8901 8902 } 
 } 
 gotaalv_river_area = { 
-	provinces = { 8894 6351 } 
+	provinces = { 8903 6351 6333 } 
 } 
 vistula_river_area = { 
-	provinces = { 8895 8896 8897 8898 8899 8900 8901 8903 8904 8905 8906 8907 8908 8909 8910 8911 8912 8913 8914 } 
+	provinces = { 8904 8905 8906 8907 8908 8909 8910 8912 8913 8914 8915 8916 8917 8918 8919 8920 8921 8922 8923 } 
 } 
 neman_river_area = { 
-	provinces = { 8915 8916 8917 9257 9258 9259 9260 9261 } 
+	provinces = { 8924 8925 8926 9266 9267 9268 9269 9270 } 
 } 
 tiber_river_area = { 
-	provinces = { 8918 8919 8920 } 
+	provinces = { 8927 8928 8929 } 
 } 
 
 kura_river_area = { 
-	provinces = { 6429 9021 9022 9023 9024 9025 9026 } 
+	provinces = { 6429 9030 9031 9032 9033 9034 9035 } 
 } 
 mare_aral_area = { #5 
 	provinces = { 
-		9057 9058 9059 9060 
+		9066 9067 9068 9069 
 		6444 
 	} 
 } 
@@ -3092,87 +3144,87 @@ mare_caspian_area = { #32
 } 
 oxus_river_area = { 
 	provinces = { 
-		9061 9062 9063 9064 9065 9066 9067 9068 9069 9070 9071 
+		9070 9071 9072 9073 9074 9075 9076 9077 9078 9079 9080 
 		6443 
-		9249 9250 9251 9252 9253 
+		9258 9259 9260 9261 9262 
 	} 
 } 
 narmada_river_area = { 
-	provinces = { 9092 9093 9094 9095 9096 9097 9098 9099 } 
+	provinces = { 9101 9102 9103 9104 9105 9106 9107 9108 } 
 } 
 brahmani_river_area = { 
-	provinces = { 9152 } 
+	provinces = { 9161 } 
 } 
 mahanadi_river_area = { 
-	provinces = { 9153 9154 9155 9156 9157 } 
+	provinces = { 9162 9163 9164 9165 9166 } 
 } 
 godavari_river_area = { 
-	provinces = { 9158 9159 9160 9161 9162 9163 9164 9165 9166 9167 9168 } 
+	provinces = { 9167 9168 9169 9170 9171 9172 9173 9174 9175 9176 9177 } 
 } 
 krishna_river_area = { 
-	provinces = { 9169 9170 9171 9172 9173 9174 9175 9176 9177 9178 9179 9180 9181 9182 9183 9184 } 
+	provinces = { 9178 9179 9180 9181 9182 9183 9184 9185 9186 9187 9188 9189 9190 9191 9192 9193 } 
 } 
 penner_river_area = { 
-	provinces = { 9185 9186 9187 9188 } 
+	provinces = { 9194 9195 9196 9197 } 
 } 
 palar_river_area = { 
-	provinces = { 9189 } 
+	provinces = { 9198 } 
 } 
 ponnaiyar_river_area = { 
-	provinces = { 9190 } 
+	provinces = { 9199 } 
 } 
 cauvery_river_area = { 
-	provinces = { 9191 9192 9193 9194 9195 9196 } 
+	provinces = { 9200 9201 9202 9203 9204 9205 } 
 } 
 tapi_river_area = { 
-	provinces = { 9197 9198 9199 9200 9201 } 
+	provinces = { 9206 9207 9208 9209 9210 } 
 } 
 mahi_river_area = { 
-	provinces = { 9202 9203 9204 } 
+	provinces = { 9211 9212 9213 } 
 } 
 somme_river_area = { 
-	provinces = { 9205 9206 9207 9208 } 
+	provinces = { 9214 9215 9216 9217 } 
 } 
 rioni_river_area = { 
-	provinces = { 9209 9210 9211 } 
+	provinces = { 9218 9219 9220 } 
 } 
 kuban_river_area = { 
-	provinces = { 9212 9213 9214 9215 9216 9217 } 
+	provinces = { 9221 9222 9223 9224 9225 9226 } 
 } 
 terek_river_area = { 
-	provinces = { 9218 9219 9220 9221 } 
+	provinces = { 9227 9228 9229 9230 } 
 } 
 
 rubicon_river_area = { 
-	provinces = { 8921 } 
+	provinces = { 8930 } 
 } 
 arno_river_area = { 
-	provinces = { 8922 8923 } 
+	provinces = { 8931 8932 } 
 } 
 durius_river_area = { 
-	provinces = { 8807 9229 9230 } 
+	provinces = { 8816 9238 9239 } 
 } 
 ural_river_area = { 
-	provinces = { 9014 } 
+	provinces = { 9023 } 
 } 
 jaxartes_river_area = { 
-	provinces = { 9222 9223 9224 9225 9226 9227 } 
+	provinces = { 9231 9232 9233 9234 9235 9236 } 
 } 
 weser_river_area = { 
-	provinces = { 9236 9237 } 
+	provinces = { 9245 9246 } 
 } 
 sububus_river_area = { 
-	provinces = { 9238 9239 9240 } 
+	provinces = { 9247 9248 9249 } 
 } 
 strymon_river_area = { 
-	provinces = { 9241 } 
+	provinces = { 9250 } 
 } 
 evros_river_area = { 
-	provinces = { 9242 9243 9244 } 
+	provinces = { 9251 9252 9253 } 
 } 
 hypanis_river_area = { 
-	provinces = { 9245 9246 9247 9248 } 
+	provinces = { 9254 9255 9256 9257 } 
 } 
 tritonis_river_area = { 
-	provinces = { 5367 9255 } 
+	provinces = { 5367 9264 } 
 } 
