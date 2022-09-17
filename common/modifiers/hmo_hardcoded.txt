@@ -210,14 +210,13 @@ is_tribe = {
 	change_governor_policy_cost_modifier = 0.1
 	army_maintenance_cost = 0.3
 	global_tribesmen_desired_pop_ratio = 0.1
+	hill_fort_cost = -0.25
 	price_found_city_cost_modifier = 0.25
 	price_revoke_city_status_cost_modifier = -0.2
     price_revoke_metropolis_status_cost_modifier = -0.2
 	monthly_military_experience = 0.2
 	global_defensive = -0.25
-	land_morale = -0.375
-	#buy_military_tradition_cost_modifer = -0.1
-
+	land_morale = 0.375 # equal to 5 levels of military tech
 }
 
 is_monarchy = {
@@ -241,7 +240,7 @@ negative_centralization = {
 	land_morale_modifier = -0.1
 	start_migration_cost_modifier = 0.5
 	price_found_city_cost_modifier = -0.5
-	hill_fort_cost = 0.25
+	hill_fort_cost = 0.15
 	monthly_military_experience = -0.05
 }
 
@@ -249,6 +248,10 @@ positive_centralization = {
 	global_pop_promotion_speed = 2.5
 	country_civilization_value = 15
 	research_points_modifier = 0.5
+	oratory_tech_investment = 0.05
+	military_tech_investment = 0.05
+	civic_tech_investment = 0.05
+	religious_tech_investment = 0.05
 	discipline = 0.05
 	price_found_city_cost_modifier = -0.15
 }
