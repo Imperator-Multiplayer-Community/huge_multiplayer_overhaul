@@ -218,6 +218,11 @@ is_tribe = {
 	global_defensive = -0.25
 	land_morale = 0.375 # equal to 5 levels of military tech
 	experience_decay = -0.15 # this will get removed by tribal legion laws once enacted, so makes tribal levies better until they get legions
+	global_nobles_city_desired_pop_ratio = 0.05 # slight increase
+	global_freemen_city_desired_pop_ratio = 0.0 # replace freemen with tribesmen in city 
+	global_tribesmen_city_desired_pop_ratio = 0.75 # replace freemen, citizens with tribesmen in city 
+	global_citizen_city_desired_pop_ratio = 0.0 # nothing unless centralizing
+	global_slaves_city_desired_pop_ratio = 0.05 # reduced so we get more nobles and tribesmen
 }
 
 is_monarchy = {
@@ -248,13 +253,16 @@ negative_centralization = {
 positive_centralization = {
 	global_pop_promotion_speed = 2.5
 	country_civilization_value = 15
+	global_tribesmen_happyness = 0.015 # offsets unhappyness from civilization value gain
 	research_points_modifier = 0.5
 	oratory_tech_investment = 0.1
 	military_tech_investment = 0.1
 	civic_tech_investment = 0.1
 	religious_tech_investment = 0.1
 	discipline = 0.05
-	price_found_city_cost_modifier = -0.15
+	price_found_city_cost_modifier = -0.15 # still should be 10% more expensive
+	global_citizen_city_desired_pop_ratio = 0.3 # on par with monarchy
+	global_tribesmen_city_desired_pop_ratio = -0.3 # reduce this a little bit to make citizens and nobles more prevelant
 }
 
 
