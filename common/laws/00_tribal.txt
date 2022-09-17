@@ -96,7 +96,7 @@ tribal_authority_laws = {
 			centralization >= 10
 		}
 		modifier = {
-			monthly_tyranny = -0.075
+			monthly_tyranny = -0.05
 			monthly_centralization = 0.075
 		}
 	}
