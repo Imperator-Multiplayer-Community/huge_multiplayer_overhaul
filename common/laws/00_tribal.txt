@@ -11,7 +11,7 @@
 	
 	syncretization_law_tribal = {
 		modifier = {
-			monthly_centralization = -0.05
+			monthly_centralization = -0.075
 			happiness_for_wrong_culture_group_modifier = wrong_culture_group_huge
 		}
 	}
@@ -19,7 +19,7 @@
 	adopt_human_sacrifice_law_tribal = { 
 		modifier = {
 			omen_power = 0.1
-			monthly_centralization = -0.075
+			monthly_centralization = -0.15
 		}
 		on_enact = {
 			custom_tooltip = adopt_human_sacrifice_tt
@@ -47,7 +47,7 @@ tribal_currency_laws = {
 	coin_minting_law = {
 		modifier = {
 			global_monthly_civilization = 0.03
-			monthly_centralization = 0.0755
+			monthly_centralization = 0.15
 		}
 	}
 }
@@ -76,7 +76,7 @@ tribal_centralization_law = {
 			centralization <= -10
 		}
 		modifier = {
-			monthly_centralization = -0.0755
+			monthly_centralization = -0.15
 			global_tax_modifier = 0.1
 		}
 	}
@@ -107,7 +107,7 @@ tribal_authority_laws = {
 		}
 		modifier = {
 			ruler_popularity_gain = 0.15
-			monthly_centralization = 0.0755
+			monthly_centralization = 0.15
 		}
 	}
 	
