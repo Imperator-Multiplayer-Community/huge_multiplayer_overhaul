@@ -217,6 +217,7 @@ is_tribe = {
 	monthly_military_experience = 0.2
 	global_defensive = -0.25
 	land_morale = 0.375 # equal to 5 levels of military tech
+	experience_decay = -0.15 # this will get removed by tribal legion laws once enacted, so makes tribal levies better until they get legions
 }
 
 is_monarchy = {
