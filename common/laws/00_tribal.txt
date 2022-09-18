@@ -325,7 +325,7 @@ tribal_super_decentralized_military_laws = {
 
 		modifier = {
 			general_loyalty = 2
-			army_maintenance_cost = -0.25
+			army_maintenance_cost = -0.25 # tribes start with +30, so this should put them on +5 which is slightly better than civ govt laws
 			manpower_recovery_speed = 0.1
 			experience_decay = 0.15 # this offsets a tribe's natural experience decay
 		}
@@ -354,7 +354,7 @@ tribal_super_centralized_military_laws = {
 		}
 
 		modifier = {
-			levy_size_multiplier = 0.025
+			levy_size_multiplier = 0.03
 			discipline = 0.05
 			army_weight_modifier = -0.2
 			experience_decay = 0.15 # this offsets a tribal's natural experience decay

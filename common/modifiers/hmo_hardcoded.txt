@@ -243,6 +243,7 @@ is_republic = {
 negative_centralization = {
 	global_tribesmen_output = -0.25
 	levy_size_multiplier = -0.05
+	global_manpower_modifier = -0.05
 	land_morale_modifier = -0.1
 	start_migration_cost_modifier = 0.5
 	price_found_city_cost_modifier = -0.5
