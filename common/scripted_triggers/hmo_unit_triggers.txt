@@ -9,3 +9,37 @@ navy_slave_raiding = {
 navy_supplying = {
 	has_variable = is_navy_supplying
 }
+
+navy_assaulting = {
+	has_variable = is_navy_assaulting
+}
+
+navy_fishing = {
+	has_variable = is_navy_fishing
+}
+
+navy_raiding = {
+	has_variable = is_navy_raiding
+}
+
+can_assault_port = {
+	is_sea = no
+	has_owner = yes
+	is_port = yes
+	fort_level >= 1
+	NOT = { controller = scope:naval_assaulter_unit.unit_owner }
+	controller = { war_with = scope:naval_assaulter_unit.unit_owner }
+	NOT = { has_enemy_army = scope:naval_assaulter_unit.unit_owner }
+}
+
+can_raid_port = {
+	is_sea = no
+	has_owner = yes
+	is_port = yes
+	NOT = { controller = scope:naval_raider_unit.unit_owner }
+	controller = { war_with = scope:naval_raider_unit.unit_owner }
+	has_siege = yes
+	siege = {
+		has_breach = no
+	}
+}

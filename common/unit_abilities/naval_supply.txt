@@ -1,7 +1,7 @@
 ﻿naval_supply = {
 	duration = 91
 	enable = yes
-	toggle = no
+	toggle = yes
 	navy_only = yes
 	cancel_on_combat_end = yes
 
@@ -79,14 +79,16 @@
 
 		add_unit_modifier = {
 			name = naval_action
-			duration = 90
+			duration = -1
 		}
 
-		save_scope_as = naval_supplier_unit
-		unit_location = {
-			save_scope_as = naval_supplier_location
+		hidden_effect = {
+			save_scope_as = naval_supplier_unit
+			unit_location = {
+				save_scope_as = naval_supplier_location
+			}
+			set_variable = is_navy_supplying
 		}
-		set_variable = is_navy_supplying
 
 		if = {
 			limit = {
@@ -111,9 +113,12 @@
 					}
 				}
 			}
-			trigger_event = {
-				id = hmo_unit_abilities.3
-				days = 90
+
+			hidden_effect = {
+				trigger_event = {
+					id = hmo_unit_abilities.3
+					days = 90
+				}
 			}
 		}
 	}
@@ -137,6 +142,7 @@
 		unit_owner = {
 			remove_country_modifier = naval_supplier
 		}
+		remove_unit_modifier = naval_action
 	}
 	
 	ai_will_do = {

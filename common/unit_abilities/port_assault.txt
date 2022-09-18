@@ -1,11 +1,12 @@
 ﻿port_assault = {
-
+	duration = 61
 	enable = yes
-	toggle = no
-	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_assualt"
-	map = yes
+	toggle = yes
+	cancel_on_combat_end = yes
 	navy_only = yes
 
+	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_assualt"
+	map = yes
 
 	allow = {
 		is_navy = yes
@@ -68,59 +69,38 @@
 					}
 				}
 			}
-
-			#custom_tooltip = {
-			#	text = no_marines_tt
-			#}
 		}
 	}
 	
 	start_effect = {
-		random_sub_unit = {
-			limit = {
-				sub_unit_type = mega_galley
-				subunit_strength_percentage >= 0.95
-			}
-			add_subunit_strength = -0.70
-		}
 		if = {
 			limit = {
+				save_scope_as = naval_assaulter_unit
 				unit_location = {
 					any_neighbor_province = {
-						is_sea = no
-						has_owner = yes
-						is_port = yes
-						fort_level >= 1
-						NOT = { controller = root.unit_owner }
-						controller = { war_with = root.unit_owner }
-						NOT = { has_enemy_army = root.unit_owner }
+						can_assault_port = yes
 					}
 				}
+			}
+			random_sub_unit = {
+				limit = {
+					sub_unit_type = mega_galley
+					subunit_strength_percentage >= 0.95
+				}
+				add_subunit_strength = -0.70
+			}
+			add_unit_modifier = {
+				name = naval_action
+				duration = 60
 			}
 			hidden_effect = {
-				root.unit_owner = {
-					while = {
-						count >= num_of_ships_svalue
-						add_country_modifier = {
-							name = naval_action
-							duration = 90
-							mode = add	
-						}
-					}
+				unit_location = {
+					save_scope_as = naval_assaulter_location
 				}
-			}
-			unit_location = {
-				random_neighbor_province = {
-					limit = {
-						is_sea = no
-						has_owner = yes
-						is_port = yes
-						fort_level >= 1
-						NOT = { controller = root.unit_owner }
-						controller = { war_with = root.unit_owner }
-						NOT = { has_enemy_army = root.unit_owner }
-					}
-					remove_building_level = fortress_building
+				set_variable = is_navy_assaulting
+				trigger_event = {
+					id = hmo_unit_abilities.4
+					days = 60
 				}
 			}
 		}
@@ -128,5 +108,25 @@
 			custom_tooltip = port_assault_explain_effect_tt
 		}
 	}
-	
+
+	finished_when = {
+		OR = {
+			is_exiled = yes
+			unit_owner = { has_low_economic_policy = expense_navy }
+			is_moving = yes
+			in_combat = yes
+			has_commander = no
+			strength_percentage < 0.3
+			morale_percentage < 0.3
+			navy_drilling = yes
+			navy_slave_raiding = yes
+			navy_fishing = yes
+		}
+	}
+
+	finish_effect = {
+		remove_variable = is_navy_assaulting
+	}
+
+	idle_entity_state = combat
 }

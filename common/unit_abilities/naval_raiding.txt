@@ -152,13 +152,14 @@
 				}
 			}
 
-			show_animated_text = "slave_raiding_animated_effect"
-
-			save_scope_as = slave_raiding_unit
-			unit_location = {
-				save_scope_as = slave_raiding_location
+			hidden_effect = {
+				save_scope_as = slave_raiding_unit
+				unit_location = {
+					save_scope_as = slave_raiding_location
+				}
+				set_variable = is_slave_raiding
+				show_animated_text = "slave_raiding_animated_effect"
 			}
-			set_variable = is_slave_raiding
 
 			add_unit_modifier = {
 				name = naval_action
@@ -186,11 +187,10 @@
 				root.unit_owner = {
 					add_aggressive_expansion = 1
 				}
-			}
-
-			trigger_event = {
-				id = hmo_unit_abilties.1
-				days = 30
+				trigger_event = {
+					id = hmo_unit_abilties.1
+					days = 30
+				}
 			}
 		}
 		else = {

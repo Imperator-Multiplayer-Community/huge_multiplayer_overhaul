@@ -1,7 +1,7 @@
 ﻿port_raid = {
-
+	duration = 31
 	enable = yes
-	toggle = no
+	toggle = yes
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_raid"
 
 	map = yes
@@ -19,8 +19,6 @@
 				ship_category = heavy
 				subunit_strength_percentage >= 0.95
 			}
-			# text = marines_ratio
-			# num_of_marines >= num_of_ships_10
 		}
 		trigger_if = {
 			limit = {
@@ -77,65 +75,41 @@
 					}
 				}	
 			}
-
-			#custom_tooltip = {
-			#	text = no_marines_tt
-			#}
 		}
 	}
 	
-	
-	
 	start_effect = {
-		random_sub_unit = {
-			limit = {
-				ship_category = heavy
-				subunit_strength_percentage >= 0.95
-			}
-			add_subunit_strength = -0.30
-		}
 		if = {
 			limit = {
+				save_scope_as = naval_raider_unit
 				unit_location = {
 					any_neighbor_province = {
-						is_sea = no
-						has_owner = yes
-						is_port = yes
-						NOT = { controller = root.unit_owner }
-						controller = { war_with = root.unit_owner }
-						has_siege = yes
-						siege = {
-							has_breach = no
-						}
+						can_raid_port = yes
 					}
 				}
 			}
+
+			random_sub_unit = {
+				limit = {
+					ship_category = heavy
+					subunit_strength_percentage >= 0.95
+				}
+				add_subunit_strength = -0.30
+			}
+
+			add_unit_modifier = {
+				name = naval_action
+				duration = 30
+			}
+
 			hidden_effect = {
-				root.unit_owner = {
-					while = {
-						count >= num_of_ships_svalue
-						add_country_modifier = {
-							name = naval_action
-							duration = 90
-							mode = add	
-						}
-					}
+				unit_location = {
+					save_scope_as = naval_raider_location
 				}
-			}
-			unit_location = {
-				random_neighbor_province = {
-					limit = {
-						is_sea = no
-						has_owner = yes
-						is_port = yes
-						NOT = { controller = root.unit_owner }
-						controller = { war_with = root.unit_owner }
-						has_siege = yes
-						siege = {
-							has_breach = no
-						}
-					}
-					siege = { add_breach = 1 }
+				set_variable = is_navy_raiding
+				trigger_event = {
+					id = hmo_unit_abilities.5
+					days = 30
 				}
 			}
 		}
@@ -144,5 +118,24 @@
 		}
 	}
 	
-	
+	finished_when = {
+		OR = {
+			is_exiled = yes
+			unit_owner = { has_low_economic_policy = expense_navy }
+			is_moving = yes
+			in_combat = yes
+			has_commander = no
+			strength_percentage < 0.3
+			morale_percentage < 0.3
+			navy_drilling = yes
+			navy_slave_raiding = yes
+			navy_fishing = yes
+		}
+	}
+
+	finish_effect = {
+		remove_variable = is_navy_raiding
+	}
+
+	idle_entity_state = combat
 }

@@ -1,8 +1,7 @@
-﻿fish = {
-
-	duration = 90
+﻿fishing = {
+	duration = -1
 	enable = yes
-	toggle = no
+	toggle = yes
 	navy_only = yes
 	cancel_on_combat_end = yes
 
@@ -11,7 +10,6 @@
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
 	allow = {
-
 		is_navy = yes
 		unit_size >= 10
 		in_combat = no
@@ -19,10 +17,6 @@
 		is_exiled = no
 		in_siege = no
 		has_commander = yes
-		# custom_tooltip = {
-		# 	text = marines_ratio
-		# 	num_of_marines >= num_of_ships_10
-		# }
 		
 		trigger_if = {
 			limit = {
@@ -90,42 +84,26 @@
 				loyalty > 33
 			}
 		}
-				unit_location = {
-					any_neighbor_province = {
-						is_sea = no
-						fishing_province_trigger = yes
-							NOT = {
-								has_province_modifier = getting_fished
-							}
-					}
+		unit_location = {
+			any_neighbor_province = {
+				is_sea = no
+				fishing_province_trigger = yes
+				NOT = {
+					has_province_modifier = getting_fished
 				}
-
-		#trigger_else = {
-		#	custom_tooltip = {
-		#		text = no_marines_tt
-		#	}
-		#}
-
+			}
+		}
 	}
 
 
 	start_effect = {
+		add_unit_modifier = {
+			name = naval_action
+			duration = -1
+		}
 
-		unit_owner = {
-			while = {
-				count >= num_of_ships_svalue
-				add_country_modifier = {
-					name = go_fish
-					duration = 180
-					mode = add
-				}
-				count >= num_of_ships_svalue
-				add_country_modifier = {
-					name = naval_action
-					duration = 90
-					mode = add	
-				}
-			}
+		hidden_effect = {
+			set_variable = is_navy_fishing			
 		}
 
 		if = {
@@ -146,7 +124,7 @@
 						custom = fishing_explain_modifier_tooltip
 						add_province_modifier = {
 							name = getting_fished
-							duration = 180
+							duration = -1
 						}
 					}
 				}
@@ -162,7 +140,7 @@
 					hidden_effect = {
 						add_province_modifier = {
 							name = getting_fished
-							duration = 180
+							duration = -1
 						}
 					}
 				}
@@ -179,11 +157,24 @@
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
+			navy_drilling = yes
+			navy_supplying = yes
 		}
 	}
 
 	finish_effect = {
-
+		unit_location = {
+			any_neighbor_province = {
+				limit = {
+					has_province_modifier = getting_fished
+				}
+				remove_province_modifier = getting_fished
+			}
+		}
+		unit_owner = {
+			remove_country_modifier = go_fish
+		}
+		remove_variable = is_navy_fishing
 	}
 	
 	ai_will_do = {

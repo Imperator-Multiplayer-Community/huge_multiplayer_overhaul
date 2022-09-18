@@ -149,3 +149,70 @@ hmo_unit_abilities.3 = { # naval supply
 		}
 	}
 }
+
+hmo_unit_abilities.4 = { # port assault
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:naval_assaulter_unit = {
+			navy_assaulting = yes
+			unit_location = scope:naval_assaulter_location
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:naval_assaulter_unit = {
+					navy_assaulting = yes
+					unit_location = scope:naval_assaulter_location
+				}
+			}
+			
+			scope:naval_assaulter_unit.unit_location = {
+				unit_location = {
+					ordered_neighbor_province = {
+						limit = {
+							can_assault_port = yes
+						}
+						order_by = fort_level
+						remove_building_level = fortress_building
+					}
+				}
+			}
+		}
+	}
+}
+
+hmo_unit_abilities.5 = { # port raid
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:naval_raider_unit = {
+			navy_raiding = yes
+			unit_location = scope:naval_raider_location
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:naval_raider_unit = {
+					navy_raiding = yes
+					unit_location = scope:naval_raider_location
+				}
+			}
+			
+			scope:naval_raider_unit.unit_location = {
+				random_neighbor_province = {
+					limit = {
+						can_raid_port = yes
+					}
+					siege = { add_breach = 1 }
+				}
+			}
+		}
+	}
+}
