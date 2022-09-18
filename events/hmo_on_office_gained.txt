@@ -45,6 +45,7 @@ office_gain.3 = {
 			factor = 2
 			employer = {
 				is_tribal = yes
+				centralization < 90 # if highly centralized, stop giving bonus
 			}
 		}
 		modifier = {
@@ -115,6 +116,7 @@ office_gain.4 = {
 			limit = {
 				scope:innovation_giver.employer = {
 					is_tribal = yes
+					centralization < 90 # if highly centralized, stop giving bonus
 				}
 			}
 
