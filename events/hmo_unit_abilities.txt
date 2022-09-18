@@ -1,0 +1,151 @@
+﻿namespace = hmo_unit_abilties
+
+hmo_unit_abilties.1 = { # slave raid
+	type = country_event
+	hidden = yes
+		
+	trigger = {
+		scope:slave_raiding_unit = {
+			has_variable = is_slave_raiding
+			unit_location = scope:slave_raiding_location
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				scope:slave_raiding_unit = {
+					has_variable = is_slave_raiding
+					unit_location = scope:slave_raiding_location
+				}
+			}
+			
+			scope:slave_raiding_location = {
+				ordered_neighbor_province = {
+					limit = {
+						naval_raid_target_province_trigger = yes
+						NOT = {	has_province_modifier = port_province_raided }
+						NOT = { has_enemy_army = scope:slave_raiding_unit.unit_owner }
+					}
+					add_city_smoke_effect = yes
+					add_city_fire_effect = yes
+					order_by = total_population
+					max = scope:slave_raiding_unit.naval_raid_capacity_svalue
+					hidden_effect = {
+						scope:slave_raiding_unit.unit_owner = {
+							add_aggressive_expansion = 1
+						}
+						add_province_modifier = {
+							name = port_province_raided
+							duration = 3650
+						}
+					}
+					random_pops_in_province = {
+						move_pop = scope:slave_raiding_unit.unit_owner.capital_scope
+						if = {
+							limit = { NOT = { pop_type = slaves } }
+							set_pop_type = slaves
+						}
+						random_list = { # 25 percent change raided player is notified
+							3 = {}
+							1 = {
+								this.owner = {
+									trigger_event = {
+										id = hmo_unit_abilties.2
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+hmo_unit_abilties.2 = { # slave raid warning
+	type = minor_country_event
+	title = hmo_unit_abilties.2.t
+	desc = hmo_unit_abilties.2.desc
+	picture = revolt
+	
+	left_portrait = current_ruler
+	
+	immediate = {
+	
+	}
+	
+	option = { # do nothing
+		name = hmo_unit_abilties.2.a
+	}
+	option = { # insult
+	    name = hmo_unit_abilties.2.b
+
+	    immediate = {
+	    	add_opinion = {
+	    		modifier = "opinion_insult"
+	    		target = scope:slave_raiding_unit.unit_owner
+	    	}
+	    }
+	}
+	option = { # declare war 
+	    name = hmo_unit_abilties.2.c
+
+	    trigger = {
+	    	limit = {
+	    		opinion = {
+	    			target = root.unit_owner
+	    			value < -100
+	    		}
+	    	}
+	    }
+
+	    immediate = {
+	    	root = {
+	    		declare_war_with_wargoal = {
+	    			war_goal = raiding_wargoal
+	    			target = scope:slave_raiding_unit.unit_owner
+	    		}
+	    	}
+	    }
+	}
+}
+
+hmo_unit_abilities.3 = { # naval supply
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:naval_supplier_unit = {
+			navy_supplying = yes
+			unit_location = scope:naval_supplier_location
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:naval_supplier_unit = {
+					navy_supplying = yes
+					unit_location = scope:naval_supplier_location
+				}
+			}
+			
+			scope:naval_supplier_unit.unit_location = {
+				ordered_neighbor_province = {
+					limit = {
+						naval_supply_trigger = yes
+						NOT = {	has_province_modifier = supplied_by_sea }
+					}
+					order_by = fort_level
+					hidden_effect = {
+						add_province_modifier = {
+							name = supplied_by_sea
+							duration = 90
+						}
+					}
+				}
+			}
+		}
+	}
+}

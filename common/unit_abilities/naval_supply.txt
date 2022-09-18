@@ -1,6 +1,5 @@
 ﻿naval_supply = {
-
-	duration = 90
+	duration = 91
 	enable = yes
 	toggle = no
 	navy_only = yes
@@ -11,7 +10,6 @@
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
 	allow = {
-
 		is_navy = yes
 		unit_size >= 25
 		in_combat = no
@@ -72,21 +70,23 @@
 
 
 	start_effect = {
-	
 		unit_owner = {
-			while = {
-				count >= num_of_ships_svalue
-				add_country_modifier = {
-					name = naval_action
-					duration = 90
-					mode = add	
-				}
-			}
 			add_country_modifier = {
 				name = naval_supplier
 				duration = 90
 			}
 		}
+
+		add_unit_modifier = {
+			name = naval_action
+			duration = 90
+		}
+
+		save_scope_as = naval_supplier_unit
+		unit_location = {
+			save_scope_as = naval_supplier_location
+		}
+		set_variable = is_navy_supplying
 
 		if = {
 			limit = {
@@ -96,31 +96,14 @@
 					}
 				}
 			}
-			#custom_tooltip = naval_raiding_ae_gain_tooltip
 			show_as_tooltip = { #All fake for the tooltips sake
 				unit_location = {
-						every_neighbor_province = { 
-							limit = {
-								naval_supply_trigger = yes
-								NOT = { has_province_modifier = supplied_by_sea }
-							}
-							custom = naval_supply_explain_modifier_tooltip
-							add_province_modifier = {
-								name = supplied_by_sea
-								duration = 90
-							}
+					every_neighbor_province = { 
+						limit = {
+							naval_supply_trigger = yes
+							NOT = { has_province_modifier = supplied_by_sea }
 						}
-				}
-			}
-
-			unit_location = {
-				ordered_neighbor_province = {
-					limit = {
-						naval_supply_trigger = yes
-						NOT = {	has_province_modifier = supplied_by_sea }
-					}
-					order_by = fort_level
-					hidden_effect = {
+						custom = naval_supply_explain_modifier_tooltip
 						add_province_modifier = {
 							name = supplied_by_sea
 							duration = 90
@@ -128,8 +111,11 @@
 					}
 				}
 			}
+			trigger_event = {
+				id = hmo_unit_abilities.3
+				days = 90
+			}
 		}
-
 	}
 
 	finished_when = {
@@ -137,14 +123,20 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			is_moving = yes
+			in_combat = yes
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
+			navy_drilling = yes
+			navy_slave_raiding = yes
 		}
 	}
 
 	finish_effect = {
-
+		remove_variable = is_navy_supplying
+		unit_owner = {
+			remove_country_modifier = naval_supplier
+		}
 	}
 	
 	ai_will_do = {
@@ -179,5 +171,7 @@
 			}
 		}
 	}
+
+	idle_entity_state = combat
 }
 

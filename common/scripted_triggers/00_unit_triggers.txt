@@ -80,12 +80,11 @@ mugged_province_trigger = {
 naval_supply_trigger = {
 	has_owner = yes
 	is_port = yes
-	has_siege = yes
-	controller = {
-		NOT = { war = root.unit_owner }	
-	}
 	NOT = {
 		has_province_modifier = supplied_by_sea
 	}
-	owner = controller
+	OR = {
+		owner - unit_owner
+		controller = unit_owner
+	}
 }

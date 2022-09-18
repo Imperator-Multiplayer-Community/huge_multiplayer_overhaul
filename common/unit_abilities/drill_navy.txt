@@ -1,5 +1,5 @@
 ﻿drill_navy = {
-	duration = -1
+	duration = 31
 	enable = no
 	toggle = yes
 	navy_only = yes
@@ -14,12 +14,7 @@
 		is_navy = yes
 		in_combat = no
 		is_moving = no
-		has_commander = yes
-		# custom_tooltip = {
-		# 	text = marines_ratio
-		# 	num_of_marines >= num_of_ships_10
-		# }
-		
+		has_commander = yes		
 		NOT = { unit_owner = { has_low_economic_policy = expense_navy } }
 
 		trigger_if = {
@@ -30,11 +25,6 @@
 				loyalty > 33
 			}
 		}
-		#trigger_else = {
-		#	custom_tooltip = {
-		#		text = no_marines_tt
-		#	}
-		#}
 	}
 	modifier = {
 		monthly_experience_gain = 2.5
@@ -44,9 +34,18 @@
 	
 	
 	start_effect = {
+		set_variable = is_navy_drilling
 	}
 	
-	
+	finish_effect = {
+		if = {
+			limit = {
+				has_variable = is_navy_drilling
+			}
+
+			remove_variable = is_navy_drilling
+		}
+	}
 	
 	finished_when = {
 		OR = {
@@ -55,6 +54,7 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			has_commander = no
+			navy_slave_raiding = yes
 		}
 	}
 	
