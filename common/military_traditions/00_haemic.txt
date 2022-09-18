@@ -53,47 +53,6 @@
 			army_maintenance_cost = 0.01
 		}
 		icon = greek_seleucid_path_2
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = illyrian_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = illyrian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = dacia_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = dacia_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = thrace_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = thrace_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = haemic_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_haemic"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:illyrian_group
-							this.culture.culture_group = culture_group:dacia_group
-							this.culture.culture_group = culture_group:thrace_group
-						}
-					}
-				}
-			}
-		}
 	}
 
 	thracian_path_2 = { #Thracian Horsemanship
@@ -103,92 +62,35 @@
 			army_maintenance_cost = 0.01
 		}
 		icon = greek_states_path_2
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = illyrian_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = illyrian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = dacia_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = dacia_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = thrace_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = thrace_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = haemic_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_haemic"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:illyrian_group
-							this.culture.culture_group = culture_group:dacia_group
-							this.culture.culture_group = culture_group:thrace_group
-						}
-					}
-				}
-			}
-		}
 	}
 
 	thracian_path_11 = { #Cavalry again
 		enable_tactic = cavalry_skirmish
-		requires = { thracian_path_2 armenian_path_2 }
+		requires = { thracian_path_2 }
 		modifier = {
 			heavy_cavalry_cost = -0.05
 		}
 		icon = greek_seleucid_path_1
-		allow = {
+		allow = { # need anatolian culture as well
 			trigger_if = {
-				limit = { country_culture_group = illyrian_group }
+				limit = { country_culture_group = anatolian }
 				custom_tooltip = {
 					text = "began_with_tradition_group"
 				}
-				country_culture_group = illyrian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = dacia_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = dacia_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = thrace_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = thrace_group
+				country_culture_group = anatolian
 			}
 			trigger_else = {
 				custom_tooltip = {
 					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = haemic_influence
+					has_variable = anatolian_influence
 				}
 				custom_tooltip = {
-					text = "tradition_unlock_requirement_haemic"
+					text = "tradition_unlock_requirement_anatolian"
 					any_country_culture = {
 						is_integrated = yes
 						country_culture_pop_count >= percent_size_culture_group_comparison
 						OR = {
-							this.culture.culture_group = culture_group:illyrian_group
-							this.culture.culture_group = culture_group:dacia_group
-							this.culture.culture_group = culture_group:thrace_group
+							this.culture.culture_group = culture_group:anatolian
 						}
 					}
 				}
@@ -204,47 +106,6 @@
 			enslavement_efficiency = 0.1
 		}
 		icon = north_african_naval_path_4
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = illyrian_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = illyrian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = dacia_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = dacia_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = thrace_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = thrace_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = haemic_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_haemic"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:illyrian_group
-							this.culture.culture_group = culture_group:dacia_group
-							this.culture.culture_group = culture_group:thrace_group
-						}
-					}
-				}
-			}
-		}
 	}
 
 
@@ -273,47 +134,6 @@
 						add_subunit = liburnian
 						add_subunit = tetrere
 						add_subunit = tetrere
-					}
-				}
-			}
-		}
-		allow = {
-			trigger_if = {
-				limit = { country_culture_group = illyrian_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = illyrian_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = dacia_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = dacia_group
-			}
-			trigger_else_if = {
-				limit = { country_culture_group = thrace_group }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = thrace_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = haemic_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_haemic"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:illyrian_group
-							this.culture.culture_group = culture_group:dacia_group
-							this.culture.culture_group = culture_group:thrace_group
-						}
 					}
 				}
 			}
