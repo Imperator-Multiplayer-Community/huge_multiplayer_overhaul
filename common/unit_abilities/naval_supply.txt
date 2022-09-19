@@ -1,7 +1,7 @@
 ﻿naval_supply = {
 	duration = 91
 	enable = yes
-	toggle = yes
+	toggle = no
 	navy_only = yes
 	cancel_on_combat_end = yes
 
@@ -43,26 +43,37 @@
 		
 		trigger_if = {
 			limit = {
-				unit_location = {
-					NOT = {
+				NOT = {
+					unit_location = {
 						any_neighbor_province = {
-							is_sea = no
+							naval_supply_trigger = yes
 						}
 					}
 				}
 			}
 
-			custom_tooltip = {
-				text = explain_naval_supply_tooltip
-				naval_supply_trigger = yes
+			custom_tooltip = explain_naval_supply_tooltip
+
+			trigger_if = {
+				limit = {
+					NOT = {
+						unit_location = {
+							any_neighbor_province = {
+								has_province_modifier = supplied_by_sea
+							}
+						}
+					}
+				}
+
+				custom_tooltip = naval_supply_cooldown_tooltip
 			}
 
+			always = no
+		}
+		trigger_else = {
 			unit_location = {
-				NOT = {
-					custom_tooltip = {
-						text = naval_supply_cooldown_tooltip
-						has_province_modifier = supplied_by_sea
-					}
+				any_neighbor_province = {
+					naval_supply_trigger = yes
 				}
 			}
 		}

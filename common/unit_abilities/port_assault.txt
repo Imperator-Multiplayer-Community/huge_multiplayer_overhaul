@@ -1,7 +1,7 @@
 ﻿port_assault = {
 	duration = 61
 	enable = yes
-	toggle = yes
+	toggle = no
 	cancel_on_combat_end = yes
 	navy_only = yes
 
@@ -96,9 +96,12 @@
 			hidden_effect = {
 				unit_location = {
 					save_scope_as = naval_assaulter_location
+
+					trigger_event = {
+						id = hmo_unit_abilities.8
+					}
 				}
 				set_variable = is_navy_assaulting
-				show_animated_text = "port_being_assaulted"
 				trigger_event = {
 					id = hmo_unit_abilities.4
 					days = 60

@@ -268,3 +268,61 @@ hmo_unit_abilties.6 = { # raid commerce warning
 	    }
 	}
 }
+
+hmo_unit_abilities.7 = { # slave raid text
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		show_animated_text = ports_being_slave_raided
+	}
+}
+
+hmo_unit_abilities.8 = { # port assault text
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		show_animated_text = port_being_assaulted
+	}
+}
+
+hmo_unit_abilities.8 = { # port raid text
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		show_animated_text = port_being_raided
+	}
+}
+
+hmo_unit_abilities.9 = { # raid commerce
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		show_animated_text = commerce_raided
+	}
+}
+
+hmo_unit_abilities.10 = { # fishing
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		show_animated_text = port_being_fished
+	}
+}
+
+						
+hmo_unit_abilities.11 = { # protect commerce
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		show_animated_text = commerce_protected
+	}
+}
+
+
+

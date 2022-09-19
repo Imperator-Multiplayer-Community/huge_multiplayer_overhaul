@@ -17,24 +17,34 @@
 		is_exiled = no
 		in_siege = no
 		has_commander = yes
-		
+		unit_owner = {
+			NOT = {
+				has_country_modifier = go_fish
+				has_low_economic_policy = expense_navy
+			}
+		}
+
+		trigger_if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				loyalty > 33
+			}
+		}
+
 		trigger_if = {
 			limit = {
 				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							fishing_province_trigger = yes
-						}
-					}
 					any_neighbor_province = {
-						is_sea = no
-						has_owner = yes
-						trade_goods = fish
-						NOT = {
-							has_province_modifier = getting_fished
-						}
+						fishing_province_trigger = yes
 					}
+				}
+			}
+
+			unit_location = {
+				any_neighbor_province = {
+					fishing_province_trigger = yes
 				}
 			}
 		}
@@ -43,7 +53,6 @@
 				unit_location = {
 					NOT = {
 						any_neighbor_province = {
-							is_sea = no
 							fishing_province_trigger = yes
 						}
 					}
@@ -57,14 +66,8 @@
 		trigger_else_if = {
 			limit = {
 				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							fishing_province_trigger = yes
-							NOT = {
-								has_province_modifier = getting_fished
-							}
-						}
+					any_neighbor_province = {
+						has_province_modifier = getting_fished
 					}
 				}
 			}
@@ -73,23 +76,10 @@
 				always = no
 			}
 		}
-
-		NOT = { unit_owner = { has_country_modifier = go_fish } }
-		NOT = { unit_owner = { has_low_economic_policy = expense_navy } }		
-		trigger_if = {
-			limit = {
-				exists = commander
-			}
-			commander = {
-				loyalty > 33
-			}
-		}
-		unit_location = {
-			any_neighbor_province = {
-				is_sea = no
-				fishing_province_trigger = yes
-				NOT = {
-					has_province_modifier = getting_fished
+		trigger_else = {
+			unit_location = {
+				any_neighbor_province = {
+					fishing_province_trigger = yes
 				}
 			}
 		}
@@ -110,7 +100,7 @@
 			set_variable = is_navy_fishing			
 		}
 
-		if = {
+		trigger_if = {
 			limit = {
 				unit_location = {
 					any_neighbor_province = {
@@ -137,27 +127,34 @@
 							fishing_province_trigger = yes
 							NOT = {	has_province_modifier = getting_fished }
 						}
-						custom = fishing_explain_modifier_tooltip
-						add_province_modifier = {
-							name = getting_fished
-							duration = -1
+						custom_tooltip = {
+							text = fishing_explain_modifier_tooltip
+
+							add_province_modifier = {
+								name = getting_fished
+								duration = -1
+							}
 						}
 					}
 				}
 			}
 
-			unit_location = {
-				ordered_neighbor_province = {
-					limit = {
-						fishing_province_trigger = yes
-						NOT = {	has_province_modifier = getting_fished }
-					}
-					order_by = total_population
-					hidden_effect = {
-						show_animated_text = "port_being_fished"
-						add_province_modifier = {
-							name = getting_fished
-							duration = -1
+			hidden_effect = {
+				unit_location = {
+					ordered_neighbor_province = {
+						limit = {
+							fishing_province_trigger = yes
+							NOT = {	has_province_modifier = getting_fished }
+						}
+						order_by = total_population
+						hidden_effect = {
+							trigger_event = {
+								id = hmo_unit_abilities.10
+							}
+							add_province_modifier = {
+								name = getting_fished
+								duration = -1
+							}
 						}
 					}
 				}

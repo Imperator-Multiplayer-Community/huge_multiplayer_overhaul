@@ -36,9 +36,23 @@
 		trigger_if = {
 			limit = {
 				unit_location = {
+					any_neighbor_province = {
+						has_province_modifier = trading_partner
+					}
+				}
+			}
+
+			custom_tooltip = {
+				text = trading_cooldown_tooltip
+				always = no
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				unit_location = {
 					NOT = {
 						any_neighbor_province = {
-							is_sea = no
+							trading_partner_province_trigger = yes
 						}
 					}
 				}
@@ -46,18 +60,16 @@
 
 			custom_tooltip = {
 				text = explain_trading_tooltip
-				trading_partner_province_trigger = yes
+				always = no
 			}
-
+		}
+		trigger_else = {
 			unit_location = {
-				NOT = {
-					custom_tooltip = {
-						text = trading_cooldown_tooltip
-						has_province_modifier = trading_partner
-					}
+				any_neighbor_province = {
+					trading_partner_province_trigger = yes
 				}
 			}
-		}	
+		}
 	}
 	
 
@@ -70,18 +82,7 @@
 			set_variable = is_navy_protected_commerce
 		}
 
-		while = {
-			count >= num_of_ships_svalue
-			unit_owner = {
-				add_country_modifier = {
-					name = protect_merchants
-					duration = -1
-					mode = add
-				}
-			}
-		}
-
-		if = {
+		trigger_if = {
 			limit = {
 				unit_location = {
 					any_neighbor_province = {
@@ -89,6 +90,18 @@
 					}
 				}
 			}
+
+			while = {
+				count >= num_of_ships_svalue
+				unit_owner = {
+					add_country_modifier = {
+						name = protect_merchants
+						duration = -1
+						mode = add
+					}
+				}
+			}
+
 			show_as_tooltip = { 
 				unit_location = {
 					every_neighbor_province = {
@@ -104,16 +117,18 @@
 					}
 				}
 			}
-	
-			unit_location = {
-				ordered_neighbor_province = {
-					limit = {
-						trading_partner_province_trigger = yes
-						NOT = {	has_province_modifier = trading_partner }
-					}
-					order_by = total_population
-					hidden_effect = {
-						show_animated_text = "commerce_protected"
+			
+			hidden_effect = {
+				unit_location = {
+					ordered_neighbor_province = {
+						limit = {
+							trading_partner_province_trigger = yes
+							NOT = {	has_province_modifier = trading_partner }
+						}
+						order_by = total_population
+						trigger_event = {
+							id = hmo_unit_abilities.11
+						}
 						add_province_modifier = {
 							name = trading_partner
 							duration = -1
@@ -122,7 +137,6 @@
 				}
 			}
 		}
-
 	}
 
 	finished_when = {
@@ -180,7 +194,7 @@
 		}
 		else = {
 			unit_owner = {
-				remove_country_modifier = protected_merchants
+				remove_country_modifier = protect_merchants
 				remove_country_modifier = unprotected_merchants
 			}
 		}

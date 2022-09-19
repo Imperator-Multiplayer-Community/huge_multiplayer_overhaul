@@ -1,7 +1,7 @@
 ﻿naval_raiding = {
 	duration = 31
 	enable = yes
-	toggle = yes
+	toggle = no
 	navy_only = yes
 	cancel_on_combat_end = yes
 
@@ -160,7 +160,9 @@
 				set_variable = is_slave_raiding
 
 				unit_location = {
-					show_animated_text = "ports_being_slave_raided"
+					trigger_event = {
+						id = hmo_unit_abilities.7
+					}
 				}
 			}
 

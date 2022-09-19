@@ -1,7 +1,7 @@
 ﻿port_raid = {
 	duration = 31
 	enable = yes
-	toggle = yes
+	toggle = no
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_raid"
 
 	map = yes
@@ -79,7 +79,7 @@
 	}
 	
 	start_effect = {
-		if = {
+		trigger_if = {
 			limit = {
 				save_scope_as = naval_raider_unit
 				unit_location = {
@@ -105,6 +105,10 @@
 			hidden_effect = {
 				unit_location = {
 					save_scope_as = naval_raider_location
+
+					trigger_event = {
+						id = hmo_unit_abilities.9
+					}
 				}
 				set_variable = is_navy_raiding
 				trigger_event = {

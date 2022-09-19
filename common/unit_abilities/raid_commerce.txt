@@ -10,7 +10,6 @@
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
 	allow = {
-	
 		is_navy = yes
 		unit_size >= 10
 		in_combat = no
@@ -28,78 +27,40 @@
 
 		trigger_if = {
 			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							mugged_province_trigger = yes
-						}
-					}
-					any_neighbor_province = {
-						is_sea = no
-						has_owner = yes
-						NOT = { owner = root.unit_owner }
-						NOT = {
-							OR = {
-				 				has_province_modifier = mugged_by_reality 
-								has_province_modifier = trading_partner
-				 			} 
-						}
-						trigger_if = {
-							limit = { root.unit_owner = { is_subject = yes } }
-							NOT = { root.unit_owner.overlord = this.owner }
-						}
-						owner = {
-							NOT = { alliance_with = root.unit_owner }
-							NOT = { is_subject_of = root.unit_owner }
-							NOT = { has_truce_with = root.unit_owner }
-							NOT = { exports_to = root.unit_owner }
-							NOT = { imports_from = root.unit_owner }
-						}
-						is_port = yes
-						owner = controller
-					}
-				}
-			}
-			custom_tooltip = {
-				text = raiding_commerce_only_overlord_ports_tooltip
-				always = no
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							mugged_province_trigger = yes
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = explain_raiding_commerce_tooltip
-				always = no
-			}
-		}
-		trigger_if = {
-			limit = {
 				exists = commander
 			}
 			commander = {
 				loyalty > 33
 			}
 		}
-	}
 
-	unit_owner = {
-		modifier = {
-			agressive_expansion_monthly_change = 2
+		trigger_if = {
+			limit = {
+				unit_location = {
+					NOT = {
+						any_neighbor_province = {
+							can_mug_province_trigger = yes
+						}
+					}
+				}
+			}
+
+			custom_tooltip = raiding_commerce_only_overlord_ports_tooltip
+			custom_tooltip = explain_raiding_commerce_tooltip
+			always = no
+		}
+		trigger_else = {
+			unit_location = {
+				any_neighbor_province = {
+					can_mug_province_trigger = yes
+				}
+			}
 		}
 	}
 
 	start_effect = {
 		hidden_effect = {
+			save_scope_as = raid_commerce_unit
 			set_variable = { 
 				name = starting_num_of_ships
 				value = num_of_ships_svalue
@@ -107,58 +68,64 @@
 			set_variable = is_navy_raiding_commerce
 		}
 
-		while = {
-			count >= num_of_ships_svalue
-			unit_owner = {
-				add_country_modifier = {
-					name = naughty_mugger
-					duration = -1
-					mode = add
-				}
-			}
-		}
-
-		hidden_effect = {
-			save_scope_as = raid_commerce_unit
-		}
-
-		if = {
+		trigger_if = {
 			limit = {
 				unit_location = {
 					any_neighbor_province = {
-						mugged_province_trigger = yes
+						can_mug_province_trigger = yes
 					}
 				}
 			}
-			custom_tooltip = raiding_commerce_ae_gain_tooltip
+
+			while = {
+				count >= num_of_ships_svalue
+				unit_owner = {
+					add_country_modifier = {
+						name = naughty_mugger
+						duration = -1
+						mode = add
+					}
+				}
+			}
+
+			unit_owner = {
+				add_country_modifier = raid_commerce_ae
+			}
+
 			show_as_tooltip = { #All fake for the tooltips sake
 				unit_location = {
 					every_neighbor_province = {
 						limit = {
-							mugged_province_trigger = yes
+							can_mug_province_trigger = yes
 							NOT = {	has_province_modifier = mugged_by_reality }
 						}
-						custom = raiding_commerce_explain_modifier_tooltip
-						add_province_modifier = {
-							name = mugged_by_reality
-							duration = 180
-						}
+						custom_tooltip = {
+							text = raiding_commerce_explain_modifier_tooltip
+
+							add_province_modifier = {
+								name = mugged_by_reality
+								duration = -1
+							}
+						} 
 					}
 				}
 			}
 
-			unit_location = {
-				ordered_neighbor_province = {
-					limit = {
-						mugged_province_trigger = yes
-						NOT = {	has_province_modifier = mugged_by_reality }
-					}
-					add_city_smoke_effect = yes
-					add_city_fire_effect = yes
-					order_by = total_population
-					
-					hidden_effect = {
-						show_animated_text = "commerce_raided"
+
+			hidden_effect = {
+				unit_location = {
+					ordered_neighbor_province = {
+						limit = {
+							can_mug_province_trigger = yes
+							NOT = {	has_province_modifier = mugged_by_reality }
+						}
+						add_city_smoke_effect = yes
+						add_city_fire_effect = yes
+						order_by = total_population
+						
+						trigger_event = {
+							id = hmo_unit_abilities.9
+						}
 						add_province_modifier = {
 							name = mugged_by_reality
 							duration = -1

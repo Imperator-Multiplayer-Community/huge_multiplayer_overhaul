@@ -46,3 +46,10 @@
 
  disband_levy:0 "Disband Levy"
  disband_levydesc:0 "Send levy troops home and gain experience from their campaigns. Only levies commanded by governors will yield military experience."
+
+ ports_being_slave_raided:0 "Slave raiding begun!"
+ port_being_assaulted:0 "Port under assault!"
+ port_being_raided:0 "Port being raided!"
+ commerce_raided:0 "Commerce is being raided!"
+ port_being_fished:0 "Begun fishing off the coast."
+ commerce_protected:0 "Commerce is being protected!"
