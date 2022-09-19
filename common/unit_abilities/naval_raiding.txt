@@ -1,7 +1,7 @@
 ﻿naval_raiding = {
 	duration = 31
 	enable = yes
-	toggle = no
+	toggle = yes
 	navy_only = yes
 	cancel_on_combat_end = yes
 
@@ -158,7 +158,10 @@
 					save_scope_as = slave_raiding_location
 				}
 				set_variable = is_slave_raiding
-				show_animated_text = "slave_raiding_animated_effect"
+
+				unit_location = {
+					show_animated_text = "ports_being_slave_raided"
+				}
 			}
 
 			add_unit_modifier = {
@@ -211,17 +214,13 @@
 			has_commander = no
 			navy_drilling = yes
 			navy_supplying = yes
+			navy_assaulting = yes
+			navy_fishing = yes
+			navy_raiding = yes
+			navy_raiding_commerce = yes
+			navy_protecting_commerce = yes
 		}
 	}
 
 	idle_entity_state = combat
 }
-
-#while = {
-#	count >= num_of_ships_svalue
-#	add_country_modifier = {
-#		name = naval_action
-#		duration = 90
-#		mode = add	
-#	}
-#}

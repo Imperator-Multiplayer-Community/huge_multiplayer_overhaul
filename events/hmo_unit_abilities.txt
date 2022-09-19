@@ -70,6 +70,8 @@ hmo_unit_abilties.2 = { # slave raid warning
 	picture = revolt
 	
 	left_portrait = current_ruler
+
+	goto_location = scope:slave_raiding_unit
 	
 	immediate = {
 	
@@ -94,7 +96,7 @@ hmo_unit_abilties.2 = { # slave raid warning
 	    trigger = {
 	    	limit = {
 	    		opinion = {
-	    			target = root.unit_owner
+	    			target = scope:slave_raiding_unit.unit_owner
 	    			value < -100
 	    		}
 	    	}
@@ -214,5 +216,55 @@ hmo_unit_abilities.5 = { # port raid
 				}
 			}
 		}
+	}
+}
+
+hmo_unit_abilties.6 = { # raid commerce warning
+	type = minor_country_event
+	title = hmo_unit_abilties.2.t
+	desc = hmo_unit_abilties.2.desc
+	picture = revolt
+	
+	left_portrait = current_ruler
+
+	goto_location = scope:raid_commerce_unit
+	
+	immediate = {
+	
+	}
+	
+	option = { # do nothing
+		name = hmo_unit_abilties.6.a
+	}
+	option = { # insult
+	    name = hmo_unit_abilties.6.b
+
+	    immediate = {
+	    	add_opinion = {
+	    		modifier = "opinion_insult"
+	    		target = scope:raid_commerce_unit.unit_owner
+	    	}
+	    }
+	}
+	option = { # declare war 
+	    name = hmo_unit_abilties.6.c
+
+	    trigger = {
+	    	limit = {
+	    		opinion = {
+	    			target = scope:raid_commerce_unit.unit_owner
+	    			value < -100
+	    		}
+	    	}
+	    }
+
+	    immediate = {
+	    	root = {
+	    		declare_war_with_wargoal = {
+	    			war_goal = raiding_wargoal
+	    			target = scope:raid_commerce_unit.unit_owner
+	    		}
+	    	}
+	    }
 	}
 }

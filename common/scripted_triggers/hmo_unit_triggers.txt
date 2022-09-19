@@ -22,6 +22,14 @@ navy_raiding = {
 	has_variable = is_navy_raiding
 }
 
+navy_raiding_commerce = {
+	has_variable = is_navy_raiding_commerce
+}
+
+navy_protecting_commerce = {
+	has_variable = is_navy_protecting_commerce
+}
+
 can_assault_port = {
 	is_sea = no
 	has_owner = yes

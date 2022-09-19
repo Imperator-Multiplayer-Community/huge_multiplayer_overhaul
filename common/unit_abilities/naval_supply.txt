@@ -115,6 +115,7 @@
 			}
 
 			hidden_effect = {
+				show_animated_text = "port_being_supplied"
 				trigger_event = {
 					id = hmo_unit_abilities.3
 					days = 90
@@ -134,6 +135,11 @@
 			morale_percentage < 0.3
 			navy_drilling = yes
 			navy_slave_raiding = yes
+			navy_assaulting = yes
+			navy_fishing = yes
+			navy_raiding = yes
+			navy_raiding_commerce = yes
+			navy_protecting_commerce = yes
 		}
 	}
 

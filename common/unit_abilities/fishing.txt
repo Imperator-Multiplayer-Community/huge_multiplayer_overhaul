@@ -103,6 +103,10 @@
 		}
 
 		hidden_effect = {
+			set_variable = { 
+				name = starting_num_of_ships
+				value = num_of_ships_svalue
+			}
 			set_variable = is_navy_fishing			
 		}
 
@@ -114,6 +118,18 @@
 					}
 				}
 			}
+
+			unit_owner = {
+				while = {
+					count >= num_of_ships_svalue
+					add_country_modifier = {
+						name = go_fish
+						duration = -1
+						mode = add
+					}
+				}
+			}
+
 			show_as_tooltip = { 
 				unit_location = {
 					every_neighbor_province = { 
@@ -138,6 +154,7 @@
 					}
 					order_by = total_population
 					hidden_effect = {
+						show_animated_text = "port_being_fished"
 						add_province_modifier = {
 							name = getting_fished
 							duration = -1
@@ -158,11 +175,18 @@
 			strength_percentage < 0.3
 			morale_percentage < 0.3
 			navy_drilling = yes
+			navy_slave_raiding = yes
 			navy_supplying = yes
+			navy_assaulting = yes
+			navy_raiding = yes
+			navy_raiding_commerce = yes
+			navy_protecting_commerce = yes
 		}
 	}
 
 	finish_effect = {
+		remove_variable = is_navy_fishing
+
 		unit_location = {
 			any_neighbor_province = {
 				limit = {
@@ -171,10 +195,35 @@
 				remove_province_modifier = getting_fished
 			}
 		}
-		unit_owner = {
-			remove_country_modifier = go_fish
+
+		if = {
+			limit = {
+				unit_owner = {
+					any_navy = {
+						navy_fishing = yes
+					}
+				}
+			}
+
+			while = {
+				count >= var:starting_num_of_ships
+				unit_owner = {
+					add_country_modifier = {
+						name = not_go_fish
+						duration = -1
+						mode = add
+					}
+				}
+			}
 		}
-		remove_variable = is_navy_fishing
+		else = {
+			unit_owner = {
+				remove_country_modifier = go_fish
+				remove_country_modifier = not_go_fish
+			}
+		}
+
+		remove_variable = starting_num_of_ships
 	}
 	
 	ai_will_do = {

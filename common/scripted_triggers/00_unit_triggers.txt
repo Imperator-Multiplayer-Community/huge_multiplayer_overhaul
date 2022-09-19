@@ -58,6 +58,7 @@ fishing_province_trigger = {
 
 mugged_province_trigger = {
 	has_owner = yes
+	is_port = yes
 	NOT = { owner = root.unit_owner }
 	trigger_if = {
 		limit = { root.unit_owner = { is_subject = yes } }
@@ -68,7 +69,6 @@ mugged_province_trigger = {
 		NOT = { is_subject_of = root.unit_owner }
 		NOT = { has_truce_with = root.unit_owner }
 	}
-	is_port = yes
 	NOT = {
 		OR = {
 			has_province_modifier = mugged_by_reality 

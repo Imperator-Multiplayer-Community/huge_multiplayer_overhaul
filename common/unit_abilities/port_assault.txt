@@ -98,6 +98,7 @@
 					save_scope_as = naval_assaulter_location
 				}
 				set_variable = is_navy_assaulting
+				show_animated_text = "port_being_assaulted"
 				trigger_event = {
 					id = hmo_unit_abilities.4
 					days = 60
@@ -120,7 +121,11 @@
 			morale_percentage < 0.3
 			navy_drilling = yes
 			navy_slave_raiding = yes
+			navy_supplying = yes
 			navy_fishing = yes
+			navy_raiding = yes
+			navy_raiding_commerce = yes
+			navy_protecting_commerce = yes
 		}
 	}
 
