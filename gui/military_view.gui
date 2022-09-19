@@ -457,13 +457,14 @@ base_window = {
 				}
 				category_tab = {
 					name = "show_legions"
+					datacontext = "[GetScriptedGui('can_build_legions')]"
 					blockoverride "MinSize" { size = { @mincategorybuttonwidth @mincategorybuttonheight } }
 					blockoverride "MaxSize" { size = { @maxcategorybuttonwidth @maxcategorybuttonheight } }
 					blockoverride "MinVisible" { visible = "[Not( MilitaryView.IsShowLegions )]" }
 					blockoverride "MaxVisible" { visible = "[MilitaryView.IsShowLegions]" }
-					tooltip = "[MilitaryView.GetLegionTabTooltip]"
-					tooltip_enabled = "[Not(MilitaryView.IsLegionsAvailable)]"
-					enabled = "[MilitaryView.IsLegionsAvailable]"
+					tooltip = "MILITARY_VIEW_LEGIONS_TOOLTIP"
+					tooltip_enabled = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End))]"
+					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
 					visible = "[MilitaryView.IsLegionsVisible]"
 					######## Shared Overrides
 					blockoverride "Center_text" { text = "LEGIONS" }
