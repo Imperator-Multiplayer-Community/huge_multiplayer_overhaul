@@ -252,7 +252,6 @@ base_window = {
 					
 					scrollwidget = {
 						dynamicgridbox = {
-							name = "routes_grid"
 							size = { 100% 100% }
 							ignoreinvisible = yes
 							datamodel = "[TradeView.GetCurrentTradeRoutes]"

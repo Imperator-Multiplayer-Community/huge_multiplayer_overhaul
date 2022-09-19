@@ -41,6 +41,15 @@
 
 	##### HEAVY INF
 
+	tibetan_path_1 = { ###
+		modifier = { 
+			heavy_infantry_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_naval_path_2
+		requires = { }
+	}
+
 	tibetan_path_4 = { ###
 		modifier = { 
 			heavy_infantry_morale = 0.05

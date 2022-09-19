@@ -1,0 +1,166 @@
+﻿namespace = test
+
+test.70 = {
+	type = province_event
+	title = "todo_test_event"
+	desc = "todo_test_event"
+	
+	option = {
+		name = "10x_light_infantry"
+		owner = {
+			create_unit = {
+				location = root
+				random_sub_unit = {
+					destroy_subunit = yes
+				}
+				while = {
+					count = 10
+					add_subunit = light_infantry
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "10x_archers"
+		owner = {
+			create_unit = {
+				location = root
+				while = {
+					count = 9
+					add_subunit = archers
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "10x_heavy_infantry"
+		owner = {
+			create_unit = {
+				location = root
+				random_sub_unit = {
+					destroy_subunit = yes
+				}
+				while = {
+					count = 10
+					add_subunit = heavy_infantry
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "10x_light_cavalry"
+		owner = {
+			create_unit = {
+				location = root
+				random_sub_unit = {
+					destroy_subunit = yes
+				}
+				while = {
+					count = 10
+					add_subunit = light_cavalry
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "10x_heavy_cavalry"
+		owner = {
+			create_unit = {
+				location = root
+				random_sub_unit = {
+					destroy_subunit = yes
+				}
+				while = {
+					count = 10
+					add_subunit = heavy_cavalry
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "10x_horse_archers"
+		owner = {
+			create_unit = {
+				location = root
+				random_sub_unit = {
+					destroy_subunit = yes
+				}
+				while = {
+					count = 10
+					add_subunit = horse_archers
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "10x_camels"
+		owner = {
+			create_unit = {
+				location = root
+				random_sub_unit = {
+					destroy_subunit = yes
+				}
+				while = {
+					count = 10
+					add_subunit = camels
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "10x_war_elephants"
+		owner = {
+			create_unit = {
+				location = root
+				random_sub_unit = {
+					destroy_subunit = yes
+				}
+				while = {
+					count = 10
+					add_subunit = warelephant
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "power"
+		owner = {
+			add_political_influence = 800
+		}
+	}
+	
+	option = {
+		name = "kill"
+		owner = {
+			every_army = {
+				destroy_unit = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "new_general"
+		owner = {
+			trigger_event = {
+				id = test.71
+			}
+		}
+	}
+	
+	option = {
+		name = "add_pops_to_province"
+		while = {
+			count = 50
+			create_state_pop = freemen
+		}
+	}
+	
+}

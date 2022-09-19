@@ -70,7 +70,7 @@ border_fortress_building = {
 		0 = fort_level
 		1 = local_defensive
 		2 = value_population_capacity
-		3 = local_manpower_modifier = -0.05
+		3 = local_manpower_modifier
 	}
 }
 
@@ -727,6 +727,7 @@ hill_fort = { #Tribal Settlement as a tribal form of large town
 		0 = value_population_capacity
 		1 = local_citizen_desired_pop_ratio
 		2 = local_tribesmen_output
+		3 = local_tribesmen_happyness
 	}
 	
 	chance = {
