@@ -1,6 +1,6 @@
 [b]Huge Multiplayer Overhaul[/b] or ‘HMO’ is a mod that, well, does exactly what it says, overhauls Imperator: Rome solely for multiplayer. What does this entail? Making focused changes that retain the overall feel of I:R vanilla, while encouraging a fun, engaging and balanced game for multiplayer.
 
-[b][i]This is the current and maintained version of HMO.[/i][/b]
+[b][u]This is the current and maintained version of HMO.[/u][/b]
 
 This mod is intended for Multiplayer use only, you can use it in Singleplayer but the AI is never taken into consideration for our changes and sometimes we may even ‘gut it’ in order to add mechanics to the mod for players. It is currently only localized to English due to the small team and majority being English speakers only.
 
