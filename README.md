@@ -5,16 +5,18 @@
 This mod is intended for Multiplayer use only, you can use it in Singleplayer but the AI is never taken into consideration for our changes and sometimes we may even ‘gut it’ in order to add mechanics to the mod for players. It is currently only localized to English due to the small team and majority being English speakers only.
 
 HMO has been given permission to integrate the following mods:
--Field of Mars (Built off of)
--Commander Kings
--Great Wonders Refined
--Bloodlines 2.0
--Imperator Navigable Rivers
--Legion Distinctions Overhaul
--Map Modes Enhanced and Clear Skies
--Metropolis Sprawl
--Clear and Solid Borders
--Invictus (Map)
+[list]
+[*]Field of Mars (Built off of)
+[*]Commander Kings
+[*]Great Wonders Refined
+[*]Bloodlines 2.0
+[*]Imperator Navigable Rivers
+[*]Legion Distinctions Overhaul
+[*]Map Modes Enhanced and Clear Skies
+[*]Metropolis Sprawl
+[*]Clear and Solid Borders
+[*]Invictus (Map)
+[/list]
 
 Features Highlights:
 
