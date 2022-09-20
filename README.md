@@ -31,7 +31,7 @@ Tribal Legions - We’ve successfully unlocked legions for tribal governments so
 
 [b]Diplomatic Abilities[/b] - We’ve added a number of new diplomatic options to the character interaction menu for rulers. You can influence the world by sending manpower to an ally, offering vassalage to a player, or embargoing trade!
 
-[b]New Event Chains[/b]- Characters can be improved through tasking office holders or going hunting. Espionage can be conducted when you hire a spymaster.
+[b]New Event Chains[/b]- Characters can be improved through tasking office holders, going hunting, or even writing letters. Espionage can be conducted when you hire a spymaster.
 
 [b]New Formable Nations[/b] - There have been countless formable nations added into the game to spice up gameplay with such formables as Italia for non Roman Italian nations, Anatolia for Antolian nations etc. There have been too many to list added across the map varying in all shapes and sizes alongside ‘easter egg’ nations of historical or fantasy nations. (Visigothic Kingdom anyone? Indo-Germanic Empire?)
 
