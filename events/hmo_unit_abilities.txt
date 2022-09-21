@@ -24,20 +24,39 @@ hmo_unit_abilties.1 = { # slave raid
 				ordered_neighbor_province = {
 					limit = {
 						naval_raid_target_province_trigger = yes
-						NOT = {	has_province_modifier = port_province_raided }
+						NOT = { owner = scope:slave_raiding_unit.unit_owner }
+						trigger_if = {
+							limit = { scope:slave_raiding_unit.unit_owner = { is_subject = yes } }
+							NOT = { scope:slave_raiding_unit.unit_owner.overlord = this.owner }
+						}
+						owner = {
+							NOT = { alliance_with = scope:slave_raiding_unit.unit_owner }
+							NOT = { is_subject_of = scope:slave_raiding_unit.unit_owner }
+							NOT = { has_truce_with = scope:slave_raiding_unit.unit_owner }
+						}
 						NOT = { has_enemy_army = scope:slave_raiding_unit.unit_owner }
+						NOT = {	has_province_modifier = port_province_raided }
 					}
 					add_city_smoke_effect = yes
 					add_city_fire_effect = yes
 					order_by = total_population
 					max = scope:slave_raiding_unit.naval_raid_capacity_svalue
-					hidden_effect = {
-						scope:slave_raiding_unit.unit_owner = {
-							add_aggressive_expansion = 1
-						}
-						add_province_modifier = {
-							name = port_province_raided
-							duration = 3650
+					
+					scope:slave_raiding_unit.unit_owner = {
+						add_aggressive_expansion = 1
+					}
+					add_province_modifier = {
+						name = port_province_raided
+						duration = 3650
+					}
+					random_list = { # 25 percent chance raided player is notified
+						3 = {}
+						1 = {
+							this.owner = {
+								trigger_event = {
+									id = hmo_unit_abilties.2
+								}
+							}
 						}
 					}
 					random_pops_in_province = {
@@ -45,16 +64,6 @@ hmo_unit_abilties.1 = { # slave raid
 						if = {
 							limit = { NOT = { pop_type = slaves } }
 							set_pop_type = slaves
-						}
-						random_list = { # 25 percent change raided player is notified
-							3 = {}
-							1 = {
-								this.owner = {
-									trigger_event = {
-										id = hmo_unit_abilties.2
-									}
-								}
-							}
 						}
 					}
 				}
@@ -70,6 +79,7 @@ hmo_unit_abilties.2 = { # slave raid warning
 	picture = revolt
 	
 	left_portrait = current_ruler
+	right_portrait = scope:slave_raiding_unit.owner.current_ruler 
 
 	goto_location = scope:slave_raiding_unit
 	
@@ -83,37 +93,31 @@ hmo_unit_abilties.2 = { # slave raid warning
 	option = { # insult
 	    name = hmo_unit_abilties.2.b
 
-	    immediate = {
-	    	add_opinion = {
-	    		modifier = "opinion_insult"
-	    		target = scope:slave_raiding_unit.unit_owner
-	    	}
+	    add_opinion = {
+	    	modifier = "opinion_insult"
+	    	target = scope:slave_raiding_unit.unit_owner
 	    }
 	}
 	option = { # declare war 
 	    name = hmo_unit_abilties.2.c
 
 	    trigger = {
-	    	limit = {
-	    		opinion = {
-	    			target = scope:slave_raiding_unit.unit_owner
-	    			value < -100
-	    		}
+    		opinion = {
+    			target = scope:slave_raiding_unit.unit_owner
+    			value < -100
 	    	}
 	    }
 
-	    immediate = {
-	    	root = {
-	    		declare_war_with_wargoal = {
-	    			war_goal = raiding_wargoal
-	    			target = scope:slave_raiding_unit.unit_owner
-	    		}
+	    scope:slave_raiding_unit.unit_owner = {
+	    	declare_war_with_wargoal = {
+	    		war_goal = raiding_wargoal
+	    		target = root
 	    	}
 	    }
 	}
 }
 
-hmo_unit_abilities.3 = { # naval supply
+hmo_unit_abilties.3 = { # naval supply
 	type = country_event
 	hidden = yes
 
@@ -136,15 +140,18 @@ hmo_unit_abilities.3 = { # naval supply
 			scope:naval_supplier_unit.unit_location = {
 				ordered_neighbor_province = {
 					limit = {
-						naval_supply_trigger = yes
-						NOT = {	has_province_modifier = supplied_by_sea }
-					}
-					order_by = fort_level
-					hidden_effect = {
-						add_province_modifier = {
-							name = supplied_by_sea
-							duration = 90
+						naval_supply_province_trigger = yes
+						OR = {
+							owner = scope:naval_supplier_unit.unit_owner
+							controller = scope:naval_supplier_unit.unit_owner
+							controller = { alliance_with = scope:naval_supplier_unit.unit_owner }
 						}
+					}
+					max = 1
+					order_by = fort_level
+					add_province_modifier = {
+						name = supplied_by_sea
+						duration = 90
 					}
 				}
 			}
@@ -152,7 +159,7 @@ hmo_unit_abilities.3 = { # naval supply
 	}
 }
 
-hmo_unit_abilities.4 = { # port assault
+hmo_unit_abilties.4 = { # port assault
 	type = country_event
 	hidden = yes
 
@@ -173,21 +180,23 @@ hmo_unit_abilities.4 = { # port assault
 			}
 			
 			scope:naval_assaulter_unit.unit_location = {
-				unit_location = {
-					ordered_neighbor_province = {
-						limit = {
-							can_assault_port = yes
-						}
-						order_by = fort_level
-						remove_building_level = fortress_building
+				ordered_neighbor_province = {
+					limit = {
+						assault_port_province_trigger = yes
+						NOT = { controller = scope:naval_assaulter_unit.unit_owner }
+						controller = { war_with = scope:naval_assaulter_unit.unit_owner }
+						NOT = { has_enemy_army = scope:naval_assaulter_unit.unit_owner }
 					}
+					order_by = fort_level
+					max = 1
+					remove_building_level = fortress_building
 				}
 			}
 		}
 	}
 }
 
-hmo_unit_abilities.5 = { # port raid
+hmo_unit_abilties.5 = { # port raid
 	type = country_event
 	hidden = yes
 
@@ -210,7 +219,9 @@ hmo_unit_abilities.5 = { # port raid
 			scope:naval_raider_unit.unit_location = {
 				random_neighbor_province = {
 					limit = {
-						can_raid_port = yes
+						raid_port_province_trigger = yes
+						NOT = { controller = scope:naval_raider_unit.unit_owner }
+						controller = { war_with = scope:naval_raider_unit.unit_owner }
 					}
 					siege = { add_breach = 1 }
 				}
@@ -226,6 +237,7 @@ hmo_unit_abilties.6 = { # raid commerce warning
 	picture = revolt
 	
 	left_portrait = current_ruler
+	right_portrait = scope:raid_commerce_unit.owner.current_ruler 
 
 	goto_location = scope:raid_commerce_unit
 	
@@ -239,37 +251,31 @@ hmo_unit_abilties.6 = { # raid commerce warning
 	option = { # insult
 	    name = hmo_unit_abilties.6.b
 
-	    immediate = {
-	    	add_opinion = {
-	    		modifier = "opinion_insult"
-	    		target = scope:raid_commerce_unit.unit_owner
-	    	}
+	    add_opinion = {
+	    	modifier = "opinion_insult"
+	    	target = scope:raid_commerce_unit.unit_owner
 	    }
 	}
 	option = { # declare war 
 	    name = hmo_unit_abilties.6.c
 
 	    trigger = {
-	    	limit = {
-	    		opinion = {
-	    			target = scope:raid_commerce_unit.unit_owner
-	    			value < -100
-	    		}
+	    	opinion = {
+	    		target = scope:raid_commerce_unit.unit_owner
+	    		value < -100
 	    	}
 	    }
 
-	    immediate = {
-	    	root = {
-	    		declare_war_with_wargoal = {
-	    			war_goal = raiding_wargoal
-	    			target = scope:raid_commerce_unit.unit_owner
-	    		}
+	    scope:raid_commerce_unit.unit_owner = {
+	    	declare_war_with_wargoal = {
+	    		war_goal = raiding_wargoal
+	    		target = root
 	    	}
 	    }
 	}
 }
 
-hmo_unit_abilities.7 = { # slave raid text
+hmo_unit_abilties.7 = { # slave raid text
 	type = province_event
 	hidden = yes
 
@@ -278,7 +284,7 @@ hmo_unit_abilities.7 = { # slave raid text
 	}
 }
 
-hmo_unit_abilities.8 = { # port assault text
+hmo_unit_abilties.8 = { # port assault text
 	type = province_event
 	hidden = yes
 
@@ -287,7 +293,7 @@ hmo_unit_abilities.8 = { # port assault text
 	}
 }
 
-hmo_unit_abilities.8 = { # port raid text
+hmo_unit_abilties.9 = { # port raid text
 	type = province_event
 	hidden = yes
 
@@ -296,7 +302,7 @@ hmo_unit_abilities.8 = { # port raid text
 	}
 }
 
-hmo_unit_abilities.9 = { # raid commerce
+hmo_unit_abilties.10 = { # raid commerce
 	type = province_event
 	hidden = yes
 
@@ -305,7 +311,7 @@ hmo_unit_abilities.9 = { # raid commerce
 	}
 }
 
-hmo_unit_abilities.10 = { # fishing
+hmo_unit_abilties.11 = { # fishing
 	type = province_event
 	hidden = yes
 
@@ -315,12 +321,21 @@ hmo_unit_abilities.10 = { # fishing
 }
 
 						
-hmo_unit_abilities.11 = { # protect commerce
+hmo_unit_abilties.12 = { # protect commerce
 	type = province_event
 	hidden = yes
 
 	immediate = {
 		show_animated_text = commerce_protected
+	}
+}
+
+hmo_unit_abilties.13 = { # supply
+	type = province_event
+	hidden = yes
+
+	immediate = {
+		show_animated_text = port_supplied
 	}
 }
 

@@ -16,7 +16,7 @@
  disallow_octere_rome_tt:0 "We lack the shipbuilders and plans to construct such a large vessel."
  disallow_octere_wood_tt:0 "We do not have enough wood for a vessel of this size."
 
- raid_commerce:0 "Attack Merchants"
+ raid_commerce:0 "Raid Commerce"
  raid_commercedesc:0 "Attack economic activity along this coastline, bringing ruin to the local communities."
 
  naval_supply:0 "Naval Supply"
@@ -41,11 +41,14 @@
 
  explain_naval_supply_tooltip:0 "This fleet can deliver food and supplies to a community in need." 
  naval_supply_cooldown_tooltip:0 "This Territory has just received a bounty in food and supplies. You will not be able to send fresh supplies for some time."
- naval_supply_explain_modifier_tooltip:0 "All Provinces receiving supplies will gain the following Modifiers" 
+ naval_supply_explain_modifier_tooltip:0 "All provinces receiving supplies will gain the following modifiers after 90 days" 
  naval_supply_explain_tt:0 "Navy must contain at least 1 Heavy Ship at 95% Health or more."
 
  disband_levy:0 "Disband Levy"
  disband_levydesc:0 "Send levy troops home and gain experience from their campaigns. Only levies commanded by governors will yield military experience."
+
+ port_assault_explainer:0 "Reduces the fort level of an adjacent enemy port province by 1 after 60 days."
+ port_raid_explainer:0 "Creates a Breach in one adjacent siege after 30 days."
 
  ports_being_slave_raided:0 "Slave raiding begun!"
  port_being_assaulted:0 "Port under assault!"
@@ -53,3 +56,4 @@
  commerce_raided:0 "Commerce is being raided!"
  port_being_fished:0 "Begun fishing off the coast."
  commerce_protected:0 "Commerce is being protected!"
+ port_supplied:0 "Port is being supplied!"

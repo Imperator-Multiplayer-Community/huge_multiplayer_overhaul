@@ -44,11 +44,7 @@
 		trigger_if = {
 			limit = {
 				NOT = {
-					unit_location = {
-						any_neighbor_province = {
-							naval_supply_trigger = yes
-						}
-					}
+					can_naval_supply_trigger = yes
 				}
 			}
 
@@ -71,50 +67,34 @@
 			always = no
 		}
 		trigger_else = {
-			unit_location = {
-				any_neighbor_province = {
-					naval_supply_trigger = yes
-				}
-			}
+			can_naval_supply_trigger = yes
 		}
 	}
 
 
 	start_effect = {
-		unit_owner = {
-			add_country_modifier = {
-				name = naval_supplier
-				duration = 90
-			}
-		}
-
-		add_unit_modifier = {
-			name = naval_action
-			duration = -1
-		}
-
-		hidden_effect = {
-			save_scope_as = naval_supplier_unit
-			unit_location = {
-				save_scope_as = naval_supplier_location
-			}
-			set_variable = is_navy_supplying
-		}
-
 		if = {
 			limit = {
-				unit_location = {
-					any_neighbor_province = {
-						naval_supply_trigger = yes
+				can_naval_supply_trigger = yes
+			}
+
+			show_as_tooltip = { #All fake for the tooltips sake
+				unit_owner = {
+					add_country_modifier = {
+						name = naval_supplier
+						duration = 90
 					}
 				}
-			}
-			show_as_tooltip = { #All fake for the tooltips sake
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = 90
+				}
+
 				unit_location = {
 					every_neighbor_province = { 
 						limit = {
-							naval_supply_trigger = yes
-							NOT = { has_province_modifier = supplied_by_sea }
+							naval_supply_province_trigger = yes
 						}
 						custom = naval_supply_explain_modifier_tooltip
 						add_province_modifier = {
@@ -126,10 +106,34 @@
 			}
 
 			hidden_effect = {
-				show_animated_text = "port_being_supplied"
+				save_scope_as = naval_supplier_unit
+				unit_location = {
+					save_scope_as = naval_supplier_location
+				}
+				set_variable = is_navy_supplying
+
+				unit_owner = {
+					add_country_modifier = {
+						name = naval_supplier
+						duration = 90
+					}
+				}
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = 90
+				}
+
 				trigger_event = {
 					id = hmo_unit_abilities.3
 					days = 90
+				}
+
+				unit_location = {
+					trigger_event = {
+						id = hmo_unit_abilities.13
+						days = 1
+					}
 				}
 			}
 		}

@@ -2,17 +2,8 @@
 	has_owner = yes
 	total_population > 5
 	fort_level <= 0
-	NOT = { owner = root.unit_owner }
-	trigger_if = {
-		limit = { root.unit_owner = { is_subject = yes } }
-		NOT = { root.unit_owner.overlord = this.owner }
-	}
-	owner = {
-		NOT = { alliance_with = root.unit_owner }
-		NOT = { is_subject_of = root.unit_owner }
-		NOT = { has_truce_with = root.unit_owner }
-	}
 	is_port = yes
+	is_sea = no
 }
 
 subunit_not_mercenary_unit_trigger = {

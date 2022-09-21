@@ -89,28 +89,48 @@
 				}
 			}
 
-			random_sub_unit = {
-				limit = {
-					ship_category = heavy
-					subunit_strength_percentage >= 0.95
+			show_as_tooltip = { #All fake for the tooltips sake
+				random_sub_unit = {
+					limit = {
+						ship_category = heavy
+						subunit_strength_percentage >= 0.95
+					}
+					add_subunit_strength = -0.30
 				}
-				add_subunit_strength = -0.30
-			}
 
-			add_unit_modifier = {
-				name = naval_action
-				duration = 30
+				add_unit_modifier = {
+					name = naval_action
+					duration = 30
+				}
+
+				custom = port_raid_explainer
 			}
 
 			hidden_effect = {
+				set_variable = is_navy_raiding
+
+				random_sub_unit = {
+					limit = {
+						ship_category = heavy
+						subunit_strength_percentage >= 0.95
+					}
+					add_subunit_strength = -0.30
+				}
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = 30
+				}
+
 				unit_location = {
 					save_scope_as = naval_raider_location
 
 					trigger_event = {
 						id = hmo_unit_abilities.9
+						days = 1
 					}
 				}
-				set_variable = is_navy_raiding
+
 				trigger_event = {
 					id = hmo_unit_abilities.5
 					days = 30
@@ -118,7 +138,7 @@
 			}
 		}
 		else = {
-			custom_tooltip = port_raid_explain_effect_tt
+			custom_tooltip = port_raid_explainer
 		}
 	}
 	

@@ -49,12 +49,8 @@
 		}
 		trigger_else_if = {
 			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							trading_partner_province_trigger = yes
-						}
-					}
+				NOT = {
+					can_protect_trade = yes
 				}
 			}
 
@@ -64,50 +60,57 @@
 			}
 		}
 		trigger_else = {
-			unit_location = {
-				any_neighbor_province = {
-					trading_partner_province_trigger = yes
-				}
-			}
+			can_protect_trade = yes
 		}
 	}
 	
 
 	start_effect = {
-		hidden_effect = {
-			set_variable = { 
-				name = starting_num_of_ships
-				value = num_of_ships_svalue
-			}
-			set_variable = is_navy_protected_commerce
-		}
-
-		trigger_if = {
+		if = {
 			limit = {
-				unit_location = {
-					any_neighbor_province = {
-						trading_partner_province_trigger = yes
-					}
-				}
+				can_protect_trade = yes
 			}
 
-			while = {
-				count >= num_of_ships_svalue
-				unit_owner = {
-					add_country_modifier = {
-						name = protect_merchants
-						duration = -1
-						mode = add
-					}
+			hidden_effect = {
+				set_variable = { 
+					name = starting_num_of_ships
+					value = num_of_ships_svalue
 				}
+				set_variable = is_navy_protected_commerce
 			}
 
 			show_as_tooltip = { 
+				while = {
+					count >= num_of_ships_svalue
+					unit_owner = {
+						add_country_modifier = {
+							name = protect_merchants
+							duration = -1
+							mode = add
+						}
+					}
+				}
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
 				unit_location = {
 					every_neighbor_province = {
 						limit = {
 							trading_partner_province_trigger = yes
-							NOT = {	has_province_modifier = trading_partner }
+							owner = {
+								OR = {
+									war_with = root.unit_owner
+									exports_to = root.unit_owner
+									imports_from = root.unit_owner
+								}
+							}
+							owner = controller
+							NOT = {
+								owner = root.unit_owner
+							}
 						}
 						custom = trading_explain_modifier_tooltip
 						add_province_modifier = {
@@ -119,15 +122,43 @@
 			}
 			
 			hidden_effect = {
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
+				while = {
+					count >= num_of_ships_svalue
+					unit_owner = {
+						add_country_modifier = {
+							name = protect_merchants
+							duration = -1
+							mode = add
+						}
+					}
+				}
+
 				unit_location = {
 					ordered_neighbor_province = {
 						limit = {
 							trading_partner_province_trigger = yes
-							NOT = {	has_province_modifier = trading_partner }
+							owner = {
+								OR = {
+									war_with = root.unit_owner
+									exports_to = root.unit_owner
+									imports_from = root.unit_owner
+								}
+							}
+							owner = controller
+							NOT = {
+								owner = root.unit_owner
+							}
 						}
 						order_by = total_population
+						max = 1
 						trigger_event = {
-							id = hmo_unit_abilities.11
+							id = hmo_unit_abilities.12
+							days = 1
 						}
 						add_province_modifier = {
 							name = trading_partner
@@ -160,6 +191,7 @@
 
 	finish_effect = {
 		remove_variable = is_navy_protecting_commerce
+		remove_unit_modifier = naval_action
 
 		unit_location = {
 			any_neighbor_province = {

@@ -37,17 +37,29 @@
 		trigger_if = {
 			limit = {
 				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							can_mug_province_trigger = yes
-						}
+					any_neighbor_province = {
+						muggable_province_trigger = yes
+						root.unit_owner.overlord = this.owner
 					}
+				}				
+			}
+
+			custom_tooltip = {
+				text = raiding_commerce_only_overlord_ports_tooltip
+				always = no
+			}
+		}
+		trigger_else_if = {
+			limit = {
+				NOT = {
+					can_mug_province_trigger = yes
 				}
 			}
 
-			custom_tooltip = raiding_commerce_only_overlord_ports_tooltip
-			custom_tooltip = explain_raiding_commerce_tooltip
-			always = no
+			custom_tooltip = {
+				text = explain_raiding_commerce_tooltip
+				always = no
+			}
 		}
 		trigger_else = {
 			unit_location = {
@@ -59,42 +71,46 @@
 	}
 
 	start_effect = {
-		hidden_effect = {
-			save_scope_as = raid_commerce_unit
-			set_variable = { 
-				name = starting_num_of_ships
-				value = num_of_ships_svalue
-			}
-			set_variable = is_navy_raiding_commerce
-		}
-
-		trigger_if = {
+		if = {
 			limit = {
-				unit_location = {
-					any_neighbor_province = {
-						can_mug_province_trigger = yes
-					}
-				}
+				can_mug_province_trigger = yes
 			}
 
-			while = {
-				count >= num_of_ships_svalue
-				unit_owner = {
-					add_country_modifier = {
-						name = naughty_mugger
-						duration = -1
-						mode = add
-					}
+			hidden_effect = {
+				save_scope_as = raid_commerce_unit
+				set_variable = { 
+					name = starting_num_of_ships
+					value = num_of_ships_svalue
 				}
-			}
-
-			unit_owner = {
-				add_country_modifier = raid_commerce_ae
+				set_variable = is_navy_raiding_commerce
 			}
 
 			show_as_tooltip = { #All fake for the tooltips sake
+				while = {
+					count >= num_of_ships_svalue
+					unit_owner = {
+						add_country_modifier = {
+							name = naughty_mugger
+							duration = -1
+							mode = add
+						}
+					}
+				}
+
+				unit_owner = {
+					add_country_modifier = {
+						name = raid_commerce_ae
+						duration = -1
+					}
+				}
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
 				unit_location = {
-					every_neighbor_province = {
+					any_neighbor_province = {
 						limit = {
 							can_mug_province_trigger = yes
 							NOT = {	has_province_modifier = mugged_by_reality }
@@ -113,18 +129,52 @@
 
 
 			hidden_effect = {
+				while = {
+					count >= num_of_ships_svalue
+					unit_owner = {
+						add_country_modifier = {
+							name = naughty_mugger
+							duration = -1
+							mode = add
+						}
+					}
+				}
+
+				unit_owner = {
+					add_country_modifier = {
+						name = raid_commerce_ae
+						duration = -1
+					}
+				}
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
 				unit_location = {
 					ordered_neighbor_province = {
 						limit = {
-							can_mug_province_trigger = yes
-							NOT = {	has_province_modifier = mugged_by_reality }
+							muggable_province_trigger = yes
+							NOT = { owner = root.unit_owner }
+							NOT = { root.unit_owner.overlord = this.owner }
+							owner = {
+								NOT = { alliance_with = root.unit_owner }
+								NOT = { is_subject_of = root.unit_owner }
+								NOT = { has_truce_with = root.unit_owner }
+								NOT = { exports_to = root.unit_owner }
+								NOT = { imports_from = root.unit_owner }
+							}
+							owner = controller
 						}
 						add_city_smoke_effect = yes
 						add_city_fire_effect = yes
 						order_by = total_population
+						max = 1
 						
 						trigger_event = {
-							id = hmo_unit_abilities.9
+							id = hmo_unit_abilities.10
+							days = 1
 						}
 						add_province_modifier = {
 							name = mugged_by_reality
@@ -163,6 +213,7 @@
 
 	finish_effect = {
 		remove_variable = is_navy_raiding_commerce
+		remove_unit_modifier = naval_action
 
 		unit_location = {
 			any_neighbor_province = {
@@ -198,6 +249,7 @@
 			unit_owner = {
 				remove_country_modifier = naughty_mugger
 				remove_country_modifier = not_mugger
+				remove_country_modifier = raid_commerce_ae
 			}
 		}
 

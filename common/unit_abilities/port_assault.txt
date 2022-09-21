@@ -73,34 +73,57 @@
 	}
 	
 	start_effect = {
+		save_scope_as = naval_assaulter_unit
+
 		if = {
 			limit = {
-				save_scope_as = naval_assaulter_unit
 				unit_location = {
 					any_neighbor_province = {
 						can_assault_port = yes
 					}
 				}
 			}
-			random_sub_unit = {
-				limit = {
-					sub_unit_type = mega_galley
-					subunit_strength_percentage >= 0.95
+
+			show_as_tooltip = { #All fake for the tooltips sake
+				random_sub_unit = {
+					limit = {
+						sub_unit_type = mega_galley
+						subunit_strength_percentage >= 0.95
+					}
+					add_subunit_strength = -0.70
 				}
-				add_subunit_strength = -0.70
+				
+				add_unit_modifier = {
+					name = naval_action
+					duration = 60
+				}
+
+				custom = port_assault_explainer
 			}
-			add_unit_modifier = {
-				name = naval_action
-				duration = 60
-			}
+
 			hidden_effect = {
+				random_sub_unit = {
+					limit = {
+						sub_unit_type = mega_galley
+						subunit_strength_percentage >= 0.95
+					}
+					add_subunit_strength = -0.70
+				}
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = 60
+				}
+
 				unit_location = {
 					save_scope_as = naval_assaulter_location
 
 					trigger_event = {
 						id = hmo_unit_abilities.8
+						days = 1
 					}
 				}
+				
 				set_variable = is_navy_assaulting
 				trigger_event = {
 					id = hmo_unit_abilities.4
@@ -109,7 +132,7 @@
 			}
 		}
 		else = {
-			custom_tooltip = port_assault_explain_effect_tt
+			custom_tooltip = port_assault_explainer
 		}
 	}
 

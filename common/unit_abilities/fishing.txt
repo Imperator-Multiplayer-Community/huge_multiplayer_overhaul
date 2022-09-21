@@ -36,21 +36,6 @@
 		trigger_if = {
 			limit = {
 				unit_location = {
-					any_neighbor_province = {
-						fishing_province_trigger = yes
-					}
-				}
-			}
-
-			unit_location = {
-				any_neighbor_province = {
-					fishing_province_trigger = yes
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				unit_location = {
 					NOT = {
 						any_neighbor_province = {
 							fishing_province_trigger = yes
@@ -67,6 +52,10 @@
 			limit = {
 				unit_location = {
 					any_neighbor_province = {
+						has_owner = yes
+						is_sea = no
+						total_population > 4
+						trade_goods = fish
 						has_province_modifier = getting_fished
 					}
 				}
@@ -100,7 +89,7 @@
 			set_variable = is_navy_fishing			
 		}
 
-		trigger_if = {
+		if = {
 			limit = {
 				unit_location = {
 					any_neighbor_province = {
@@ -109,23 +98,27 @@
 				}
 			}
 
-			unit_owner = {
-				while = {
-					count >= num_of_ships_svalue
-					add_country_modifier = {
-						name = go_fish
-						duration = -1
-						mode = add
+			show_as_tooltip = { 
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
+				unit_owner = {
+					while = {
+						count >= num_of_ships_svalue
+						add_country_modifier = {
+							name = go_fish
+							duration = -1
+							mode = add
+						}
 					}
 				}
-			}
 
-			show_as_tooltip = { 
 				unit_location = {
 					every_neighbor_province = { 
 						limit = {
 							fishing_province_trigger = yes
-							NOT = {	has_province_modifier = getting_fished }
 						}
 						custom_tooltip = {
 							text = fishing_explain_modifier_tooltip
@@ -140,6 +133,22 @@
 			}
 
 			hidden_effect = {
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
+				unit_owner = {
+					while = {
+						count >= num_of_ships_svalue
+						add_country_modifier = {
+							name = go_fish
+							duration = -1
+							mode = add
+						}
+					}
+				}
+
 				unit_location = {
 					ordered_neighbor_province = {
 						limit = {
@@ -147,20 +156,24 @@
 							NOT = {	has_province_modifier = getting_fished }
 						}
 						order_by = total_population
-						hidden_effect = {
-							trigger_event = {
-								id = hmo_unit_abilities.10
-							}
-							add_province_modifier = {
-								name = getting_fished
-								duration = -1
-							}
+						max = 1
+
+						trigger_event = {
+							id = hmo_unit_abilities.11
+							days = 1
+						}
+
+						add_province_modifier = {
+							name = getting_fished
+							duration = -1
 						}
 					}
 				}
 			}
 		}
-
+		else = {
+			custom_tooltip = explain_fishing_tooltip
+		}
 	}
 
 	finished_when = {
