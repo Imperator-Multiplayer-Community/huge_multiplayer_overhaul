@@ -100,10 +100,8 @@ can_protect_trade = {
 		any_neighbor_province = {
 			trading_partner_province_trigger = yes
 			owner = {
-				OR = {
+				NOT = {
 					war_with = scope:current_unit.unit_owner
-					exports_to = scope:current_unit.unit_owner
-					imports_from = scope:current_unit.unit_owner
 				}
 			}
 			owner = controller

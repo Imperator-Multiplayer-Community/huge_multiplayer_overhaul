@@ -45,25 +45,31 @@ hmo_unit_abilties.1 = { # slave raid
 					scope:slave_raiding_unit.unit_owner = {
 						add_aggressive_expansion = 1
 					}
+					
 					add_province_modifier = {
 						name = port_province_raided
 						duration = 3650
 					}
-					random_list = { # 25 percent chance raided player is notified
-						3 = {}
-						1 = {
-							this.owner = {
-								trigger_event = {
-									id = hmo_unit_abilties.2
-								}
-							}
-						}
-					}
+
 					random_pops_in_province = {
 						move_pop = scope:slave_raiding_unit.unit_owner.capital_scope
 						if = {
 							limit = { NOT = { pop_type = slaves } }
 							set_pop_type = slaves
+						}
+					}
+
+					owner = {
+						save_temporary_scope_as = target_nation
+					}
+					random_list = { # 25 percent chance raided player is notified
+						3 = { }
+						1 = {
+							scope:target_nation = {
+								trigger_event = {
+									id = hmo_unit_abilties.2
+								}
+							}
 						}
 					}
 				}

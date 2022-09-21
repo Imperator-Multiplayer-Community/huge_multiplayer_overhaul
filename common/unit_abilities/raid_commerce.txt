@@ -106,19 +106,28 @@
 				}
 
 				unit_location = {
-					every_neighbor_province = {
+					ordered_neighbor_province = {
 						limit = {
-							can_mug_province_trigger = yes
-							NOT = {	has_province_modifier = mugged_by_reality }
-						}
-						custom_tooltip = {
-							text = raiding_commerce_explain_modifier_tooltip
-
-							add_province_modifier = {
-								name = mugged_by_reality
-								duration = -1
+							muggable_province_trigger = yes
+							NOT = { owner = root.unit_owner }
+							NOT = { root.unit_owner.overlord = this.owner }
+							owner = {
+								NOT = { alliance_with = root.unit_owner }
+								NOT = { is_subject_of = root.unit_owner }
+								NOT = { has_truce_with = root.unit_owner }
+								NOT = { exports_to = root.unit_owner }
+								NOT = { imports_from = root.unit_owner }
 							}
-						} 
+							owner = this.controller
+						}
+						order_by = total_population
+						max = 1
+
+						custom = raiding_commerce_explain_modifier_tooltip
+						add_province_modifier = {
+							name = mugged_by_reality
+							duration = -1
+						}
 					}
 				}
 			}
@@ -254,18 +263,17 @@
 	
 	ai_will_do = {
 		modifier = {
+			add = {
+				value = 250
+				divide = unit_size_rank
+			}
 			trigger = {
-
 				experience_percentage < 0.65
 				
 				unit_owner = {
 					treasury > 50
 					manpower > 20
 				}
-			}
-			add = {
-				value = 250
-				divide = unit_size_rank
 			}
 		}
 	}

@@ -34,11 +34,13 @@
  explain_trading_tooltip:0 "This navy can escort your merchants as they do business with the ports nearby, making a fortune for them. The local communities will also prosper once they get their hands on our fine goods."
  trading_cooldown_tooltip:0 "All nearby markets are saturated with our goods. You'll find no buyers here for some time."
  trading_only_overlord_ports_tooltip:0 "Nearby ports are owned by the #Y Overlord#! of this navy's owner."
+ trading_import_export:0 "Owner of province needs to have imported or exported goods from or to our nation."
 
  explain_fishing_tooltip:0 "This fleet can focus all effort on fishing, hauling in as much fish as the gods will allow."
  fishing_cooldown_tooltip:0 "The fish stock has been devastated and will take time to return to healthy levels. You will not be able to fish here for some time."
  fishing_explain_modifier_tooltip:0 "All Provinces subsisting on Fish will suffer the following Modifiers"
  fishing_not_enough_pops:0 "Fishing province requires at least 5 pops."
+ fishing_needs_fish:0 "Fishing needs fish."
 
  explain_naval_supply_tooltip:0 "This fleet can deliver food and supplies to a community in need." 
  naval_supply_cooldown_tooltip:0 "This Territory has just received a bounty in food and supplies. You will not be able to send fresh supplies for some time."

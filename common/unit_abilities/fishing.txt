@@ -50,10 +50,9 @@
 				}
 			}
 
-			unit_location = {
-				any_neighbor_province = {
-					trade_goods = fish
-				}
+			custom_tooltip = {
+				text = fishing_needs_fish
+				always = no
 			}
 		}
 		trigger_else_if = {

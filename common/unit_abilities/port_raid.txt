@@ -79,14 +79,10 @@
 	}
 	
 	start_effect = {
+		save_scope_as = naval_raider_unit
 		if = {
 			limit = {
-				save_scope_as = naval_raider_unit
-				unit_location = {
-					any_neighbor_province = {
-						can_raid_port = yes
-					}
-				}
+				can_raid_port = yes
 			}
 
 			show_as_tooltip = { #All fake for the tooltips sake

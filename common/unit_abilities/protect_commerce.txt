@@ -97,14 +97,12 @@
 				}
 
 				unit_location = {
-					every_neighbor_province = {
+					ordered_neighbor_province = {
 						limit = {
 							trading_partner_province_trigger = yes
 							owner = {
-								OR = {
+								NOT = {
 									war_with = root.unit_owner
-									exports_to = root.unit_owner
-									imports_from = root.unit_owner
 								}
 							}
 							owner = controller
@@ -112,6 +110,7 @@
 								owner = root.unit_owner
 							}
 						}
+						max = 1
 						custom = trading_explain_modifier_tooltip
 						add_province_modifier = {
 							name = trading_partner
@@ -143,10 +142,8 @@
 						limit = {
 							trading_partner_province_trigger = yes
 							owner = {
-								OR = {
+								NOT = {
 									war_with = root.unit_owner
-									exports_to = root.unit_owner
-									imports_from = root.unit_owner
 								}
 							}
 							owner = controller
