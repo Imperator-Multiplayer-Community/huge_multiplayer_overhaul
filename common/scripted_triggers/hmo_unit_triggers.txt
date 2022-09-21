@@ -142,7 +142,7 @@ can_mug_province_trigger = { # unit scope
 		any_neighbor_province = {
 			muggable_province_trigger = yes
 			NOT = { owner = scope:current_unit.unit_owner }
-			NOT = { root.unit_owner.overlord = this.owner }
+			NOT = { scope:current_unit.unit_owner.overlord = this.owner }
 			owner = {
 				NOT = { alliance_with = scope:current_unit.unit_owner }
 				NOT = { is_subject_of = scope:current_unit.unit_owner }
@@ -150,7 +150,7 @@ can_mug_province_trigger = { # unit scope
 				NOT = { exports_to = scope:current_unit.unit_owner }
 				NOT = { imports_from = scope:current_unit.unit_owner }
 			}
-			owner = controller
+			owner = this.controller
 		}
 	}
 }

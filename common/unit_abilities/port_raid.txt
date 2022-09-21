@@ -79,7 +79,7 @@
 	}
 	
 	start_effect = {
-		trigger_if = {
+		if = {
 			limit = {
 				save_scope_as = naval_raider_unit
 				unit_location = {
@@ -126,13 +126,13 @@
 					save_scope_as = naval_raider_location
 
 					trigger_event = {
-						id = hmo_unit_abilities.9
+						id = hmo_unit_abilties.9
 						days = 1
 					}
 				}
 
 				trigger_event = {
-					id = hmo_unit_abilities.5
+					id = hmo_unit_abilties.5
 					days = 30
 				}
 			}

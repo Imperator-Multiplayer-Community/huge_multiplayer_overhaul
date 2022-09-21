@@ -62,11 +62,7 @@
 			}
 		}
 		trigger_else = {
-			unit_location = {
-				any_neighbor_province = {
-					can_mug_province_trigger = yes
-				}
-			}
+			can_mug_province_trigger = yes
 		}
 	}
 
@@ -110,7 +106,7 @@
 				}
 
 				unit_location = {
-					any_neighbor_province = {
+					every_neighbor_province = {
 						limit = {
 							can_mug_province_trigger = yes
 							NOT = {	has_province_modifier = mugged_by_reality }
@@ -165,7 +161,7 @@
 								NOT = { exports_to = root.unit_owner }
 								NOT = { imports_from = root.unit_owner }
 							}
-							owner = controller
+							owner = this.controller
 						}
 						add_city_smoke_effect = yes
 						add_city_fire_effect = yes
@@ -173,7 +169,7 @@
 						max = 1
 						
 						trigger_event = {
-							id = hmo_unit_abilities.10
+							id = hmo_unit_abilties.10
 							days = 1
 						}
 						add_province_modifier = {
@@ -216,7 +212,7 @@
 		remove_unit_modifier = naval_action
 
 		unit_location = {
-			any_neighbor_province = {
+			every_neighbor_province = {
 				limit = {
 					has_province_modifier = mugged_by_reality
 				}

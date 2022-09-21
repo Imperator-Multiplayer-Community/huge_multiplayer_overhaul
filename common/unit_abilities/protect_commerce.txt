@@ -157,7 +157,7 @@
 						order_by = total_population
 						max = 1
 						trigger_event = {
-							id = hmo_unit_abilities.12
+							id = hmo_unit_abilties.12
 							days = 1
 						}
 						add_province_modifier = {
@@ -194,7 +194,7 @@
 		remove_unit_modifier = naval_action
 
 		unit_location = {
-			any_neighbor_province = {
+			every_neighbor_province = {
 				limit = {
 					has_province_modifier = trading_partner
 				}

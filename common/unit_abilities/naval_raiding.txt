@@ -137,7 +137,7 @@
 	start_effect = {
 		if = {
 			limit = {
-				naval_raid_target_province_trigger = yes
+				can_slave_raid_trigger = yes
 			}
 
 			hidden_effect = {

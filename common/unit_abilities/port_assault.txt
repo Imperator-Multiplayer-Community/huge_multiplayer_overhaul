@@ -83,7 +83,8 @@
 					}
 				}
 			}
-
+ 
+			custom_tooltip = port_assault_explainer 
 			show_as_tooltip = { #All fake for the tooltips sake
 				random_sub_unit = {
 					limit = {
@@ -97,11 +98,11 @@
 					name = naval_action
 					duration = 60
 				}
-
-				custom = port_assault_explainer
 			}
 
 			hidden_effect = {
+				set_variable = is_navy_assaulting
+
 				random_sub_unit = {
 					limit = {
 						sub_unit_type = mega_galley
@@ -119,14 +120,13 @@
 					save_scope_as = naval_assaulter_location
 
 					trigger_event = {
-						id = hmo_unit_abilities.8
+						id = hmo_unit_abilties.8
 						days = 1
 					}
 				}
 				
-				set_variable = is_navy_assaulting
 				trigger_event = {
-					id = hmo_unit_abilities.4
+					id = hmo_unit_abilties.4
 					days = 60
 				}
 			}

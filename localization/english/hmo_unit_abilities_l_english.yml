@@ -4,8 +4,8 @@
  drill_navydesc:0 "A fleet that drills is always ready to engage the enemy. Of course we will need to cover the costs."
  utilize_marines:0 "Double Time"
  utilize_marinesdesc:0 "Our seasoned crew can make this fleet move much faster, but they will not be ready for combat."
- fish:0 "Fish"
- fishdesc:0 "Task this fleet with catching as many fish from the sea as it can. The territory producing fish must have at least 5 pops."
+ fishing:0 "Fishing"
+ fishingdesc:0 "Task this fleet with catching as many fish from the sea as it can. The territory producing fish must have at least 5 pops."
  protect_commerce:0 "Protect Trade"
  protect_commercedesc:0 "Order this fleet to make maritime trade safe for local merchants."
  #
@@ -38,6 +38,7 @@
  explain_fishing_tooltip:0 "This fleet can focus all effort on fishing, hauling in as much fish as the gods will allow."
  fishing_cooldown_tooltip:0 "The fish stock has been devastated and will take time to return to healthy levels. You will not be able to fish here for some time."
  fishing_explain_modifier_tooltip:0 "All Provinces subsisting on Fish will suffer the following Modifiers"
+ fishing_not_enough_pops:0 "Fishing province requires at least 5 pops."
 
  explain_naval_supply_tooltip:0 "This fleet can deliver food and supplies to a community in need." 
  naval_supply_cooldown_tooltip:0 "This Territory has just received a bounty in food and supplies. You will not be able to send fresh supplies for some time."
