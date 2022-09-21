@@ -531,7 +531,7 @@ base_window = {
 			icon_button_square = {
 				size = { 224 28 }
 				parentanchor = hcenter
-				position = { 0 4 }
+				position = { 0 24 }
 				blockoverride "On_click"
 				{
 					enabled = "[SingleUnitWindow.CanToggleFlankSize]"
@@ -560,7 +560,7 @@ base_window = {
 				dynamicgridbox = {
 					size = { 342 100% }
 					flipdirection = no
-					position = { 3 6 }
+					position = { 3 26 }
 					datamodel = "[SingleUnitWindow.GetPreferredUnitItems]"
 
 					item = {
@@ -738,6 +738,7 @@ base_window = {
 			overlappingitembox = {
 				name = "unit_types_grid"
 				size = { 100% 120 }
+				position = { 0 20 }
 				datamodel = "[SingleUnitWindow.GetSubUnitCounts]"
 
 				item = {
