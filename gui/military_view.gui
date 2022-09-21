@@ -329,22 +329,9 @@ base_window = {
 					}
 				}
 			}
-			textbox = {
-				visible = "[Not( StringIsEmpty( LegionGovernorshipItem.GetGovernorship.MakeScope.GetVariable('total_victory_count').GetValue) )]"
-				text = "Victories [LegionGovernorshipItem.GetGovernorship.MakeScope.GetVariable('total_victory_count').GetValue|0] : Defeats [LegionGovernorshipItem.GetGovernorship.MakeScope.GetVariable('total_defeat_count').GetValue|0]"
-				using = BaseFontM
-				using = Black_FontColor
-				autoresize = yes
-				parentanchor = hcenter
-				position = { 0 238 }
-				multiline = yes
-				max_width = 200
-				align = center
-				alpha = 0.6
-			}
 			margin_widget = { 
-				size = { 100% 576 }
-				position = { 0 270 }
+				size = { 100% 606 }
+				position = { 0 240 }
 				textbox = {
 					visible = "[StringIsEmpty( LegionGovernorshipItem.GetGovernorship.GetLegion.GetHistorySummary )]"
 					text = "DEEDS_NONE"
@@ -457,14 +444,13 @@ base_window = {
 				}
 				category_tab = {
 					name = "show_legions"
-					datacontext = "[GetScriptedGui('can_build_legions')]"
 					blockoverride "MinSize" { size = { @mincategorybuttonwidth @mincategorybuttonheight } }
 					blockoverride "MaxSize" { size = { @maxcategorybuttonwidth @maxcategorybuttonheight } }
 					blockoverride "MinVisible" { visible = "[Not( MilitaryView.IsShowLegions )]" }
 					blockoverride "MaxVisible" { visible = "[MilitaryView.IsShowLegions]" }
-					tooltip = "MILITARY_VIEW_LEGIONS_TOOLTIP"
-					tooltip_enabled = "[Not(ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End))]"
-					enabled = "[ScriptedGui.IsValid(GuiScope.SetRoot( Player.MakeScope ).End)]"
+					tooltip = "[MilitaryView.GetLegionTabTooltip]"
+					tooltip_enabled = "[Not(MilitaryView.IsLegionsAvailable)]"
+					enabled = "[MilitaryView.IsLegionsAvailable]"
 					visible = "[MilitaryView.IsLegionsVisible]"
 					######## Shared Overrides
 					blockoverride "Center_text" { text = "LEGIONS" }
@@ -517,6 +503,7 @@ base_window = {
 				}
 				
 				scrollarea = {
+					position = { 0 4 }
 					size = { 612 746 }
 					scrollbarpolicy_horizontal = always_off
 					
@@ -1851,6 +1838,64 @@ base_window = {
 						}
 					}
 				}
+				#container = {
+				#	# TODO: scrollcontainer
+				#	name = "legions Scroll List"
+				#	layoutpolicy_horizontal = expanding
+				#	layoutpolicy_vertical = expanding
+				#	direction = vertical
+				#	size = { 240 623 }
+				#
+				#	sub_header = {
+				#		size = { 240 32 }
+				#		blockoverride "Title_text" { text = "LEGIONS" } #TODO HEADING 
+				#	}
+				#
+				#	container = {
+				#		name = "Current Legions"
+				#		position = { 0 32 }
+				#		size = { 240 311 }
+				#		fixedgridbox = {
+				#			addrow = 32
+				#			addcolumn = 240
+				#			maxhorizontalslots = 1
+				#			size = { 100% 100% }
+				#			resizeparent = yes
+				#
+				#			datamodel = "[MilitaryView.GetGovernorshipsWithLegion]"
+				#			item = {
+				#				margin_widget = {
+				#					margin = { 8 8 }
+				#					size = { 240 32 }
+				#
+				#					text_button_square = {
+				#						parentanchor = hcenter
+				#						size = { 100% 32 } 
+				#					
+				#						blockoverride "Center_text" { visible = yes }
+				#
+				#						blockoverride "Button_text" { 
+				#							text = "[LegionGovernorshipItem.GetGovernorship.GetNameWithNoTooltip]" 
+				#						}
+				#						blockoverride "On_click" { 
+				#							onclick = "[LegionGovernorshipItem.Select]" 
+				#							enabled = "[Not(LegionGovernorshipItem.IsSelected)]"
+				#						}
+				#						icon_and_text = {
+				#							position = { 0 0 }
+				#							parentanchor = right
+				#							size = { 80 0 }
+				#							blockoverride "Text" { text = "[LegionGovernorshipItem.GetUpkeep|1-=]" }
+				#							blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/treasury.dds" }
+				#						}
+				#					}
+				#					# price tooltip TODO
+				#					# tooltip = "[LegionGovernorshipItem.GetTooltip]"
+				#				}
+				#			}
+				#		}
+				#	}
+				#}
 			}
 		}
 	}

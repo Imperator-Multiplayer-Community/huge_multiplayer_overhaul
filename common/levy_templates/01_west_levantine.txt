@@ -8,23 +8,29 @@
 levy_west_levantine = {	#Levantine states
 	default = no
 
-	archers = 0.4
-	heavy_infantry = 0.3
-	light_cavalry = 0.3
+	light_infantry = 0.3
+	archers = 0.3
+	light_cavalry = 0.25
+	
+	heavy_infantry = 0.15
 }
 
 levy_punic = {	#Punic states
 	default = no
 
-	archers = 0.3
-	light_infantry = 0.4
-	heavy_cavalry = 0.3
+	light_infantry = 0.35
+	archers = 0.15
+	
+	heavy_infantry = 0.25
+	heavy_cavalry = 0.25
 }
 
 levy_nabatean = {
 	default = no
 	
-	light_infantry = 0.3
-	heavy_cavalry = 0.3
-	camels = 0.4	
+	light_infantry = 0.5
+	camels = 0.25
+	light_cavalry = 0.2
+	
+	heavy_infantry = 0.05
 }

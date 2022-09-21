@@ -1,7 +1,87 @@
 ﻿namespace = ml_expeditionary_distinctions
 
-## adds any expeditionary distinctions
+# adds expeditionary count
 ml_expeditionary_distinctions.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		exists = scope:actor
+		trigger_if = {
+			limit = {
+				exists = scope:actor
+			}
+
+			scope:actor = {
+				has_legion_trigger = yes
+			}
+		}
+	}
+
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					has_variable = expeditionary
+				}
+				change_variable = {
+					name = expeditionary
+					add = 1
+				}
+			}
+			else = {
+				set_variable = {
+					name = expeditionary
+					value = 1
+				}
+			}
+			
+			ROOT = {
+				trigger_event = {
+					id = ml_expeditionary_distinctions.3
+				}
+			}
+		}
+	}
+}
+
+# removes expeditionary count
+ml_expeditionary_distinctions.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		exists = scope:actor
+		scope:actor = {
+			has_legion_trigger = yes
+		}
+	}
+
+	immediate = {
+		scope:actor = {
+			if = {
+				limit = {
+					has_variable = expeditionary
+				}
+
+				if = {
+					limit = {
+						var:expeditionary >= 1
+					}
+
+					change_variable = {
+						name = expeditionary
+						subtract = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+## adds any expeditionary distinctions
+ml_expeditionary_distinctions.3 = {
 	type = country_event
 	hidden = yes
 
@@ -9,6 +89,7 @@ ml_expeditionary_distinctions.1 = {
 		exists = scope:actor
     	scope:actor = {
             has_legion_trigger = yes
+        	has_variable = expeditionary
         	NOT = {
         		scope:actor.legion = {
 					has_distinction = distinction_expeditionary_01
@@ -21,9 +102,9 @@ ml_expeditionary_distinctions.1 = {
 		scope:actor = {
 			if = {
 				limit = {
-					scope:actor.legion = {
-						distinction_count >= 20
-					}
+					var:expeditionary >= 20
+					# testing
+					# var:expeditionary >= 2
 				}
 
 				scope:actor.legion = {

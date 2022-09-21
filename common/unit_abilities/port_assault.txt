@@ -18,6 +18,8 @@
 				sub_unit_type = mega_galley
 				subunit_strength_percentage >= 0.95
 			}
+			#text = marines_ratio
+			# num_of_marines >= num_of_ships_10
 		}
 		trigger_if = {
 			limit = {

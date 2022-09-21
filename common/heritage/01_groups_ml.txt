@@ -242,31 +242,3 @@ highland_heritage = {
 		}
 	}
 }
-
-## HMO V2.1 (DaFoogle's Heritages)
-
-caledonian_heritage = { #Caledonii Heritage
-	modifier = {
-		#good
-		supply_limit = 30
-		global_tribesmen_output = 0.05
-		
-		#bad
-		global_population_capacity_modifier = -0.05
-	}
-	
-	trigger = {
-		primary_culture = caledonian
-	}
-
-	trigger = {
-		capital_scope = {
-			OR ={
-				is_coastal = yes
-				terrain = mountain
-				terrain = forest
-		 }
-			   
-		}
-	}
-}

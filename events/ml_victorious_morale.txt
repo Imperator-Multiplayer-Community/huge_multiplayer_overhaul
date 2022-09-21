@@ -181,6 +181,12 @@ ml_victorious_morale.1 = {
 				}
 
 				add_distinction = distinction_victorious_morale_01
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
 			}
 		}
 	}
@@ -338,6 +344,12 @@ ml_victorious_morale.2 = {
 				}
 
 				remove_distinction = distinction_victorious_morale_01
+			}
+
+			ROOT = {
+				trigger_event = {
+					id = ml_expeditionary_distinctions.2
+				}
 			}
 		}
 	}

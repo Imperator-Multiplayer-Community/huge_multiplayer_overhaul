@@ -690,7 +690,7 @@
 				area:celtica_orientalis_area = { mission_area_claim_effect = yes }
 				area:lingonia_area = { mission_area_claim_effect = yes }
 				area:leucia_area = { mission_area_claim_effect = yes }
-				#area:tribocia_area = { mission_area_claim_effect = yes }
+				area:tribocia_area = { mission_area_claim_effect = yes }
 				area:helvetia_inferioris_area = { mission_area_claim_effect = yes }
 			}
 			c:ROM = {
@@ -750,7 +750,7 @@
 			owns_or_subject_owns_area = area:menapia_orientalis
 			owns_or_subject_owns_area = area:treveria_area
 			owns_or_subject_owns_area = area:mediomatricia_area
-			#owns_or_subject_owns_area = area:tribocia_area
+			owns_or_subject_owns_area = area:tribocia_area
 		}
 
 		highlight = {
@@ -759,7 +759,7 @@
 					is_in_area = menapia_orientalis
 					is_in_area = treveria_area
 					is_in_area = mediomatricia_area
-					#is_in_area = tribocia_area
+					is_in_area = tribocia_area
 				}
 			}
 		}

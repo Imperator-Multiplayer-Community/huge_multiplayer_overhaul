@@ -29,8 +29,7 @@
 					is_in_region = cyrenaica_region
 					is_in_area = parva_area	
 					is_in_area = farfara_area
-					is_in_area = hameka_area
-					##is_in_area = kharga_area
+					is_in_area = kharga_area
 					is_in_area = khargana_area					
 				}
 			}
@@ -51,9 +50,8 @@
 			owns_or_subject_owns_region = africa_region
 			owns_or_subject_owns_region = cyrenaica_region
 			owns_or_subject_owns_area = parva_area
-			owns_or_subject_owns_area = farfara_area
-			owns_or_subject_owns_area = hameka_area	
-			##owns_or_subject_owns_area = kharga_area	
+			owns_or_subject_owns_area = farfara_area	
+			owns_or_subject_owns_area = kharga_area	
 			owns_or_subject_owns_area = khargana_area				
 		}
 		

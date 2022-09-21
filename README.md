@@ -1,52 +1,93 @@
-[b]Huge Multiplayer Overhaul[/b] or ‘HMO’ is a mod that, well, does exactly what it says, overhauls Imperator: Rome solely for multiplayer. What does this entail? Making focused changes that retain the overall feel of I:R vanilla, while encouraging a fun, engaging and balanced game for multiplayer.
+# huge_multiplayer_overhaul
+Huge Multiplayer Overhaul
 
-[b][u]This is the current and maintained version of HMO.[/u][/b]
+The latest and greatest from the Imperator: Rome multiplayer community.
+-- Version 3 --
 
-This mod is intended for Multiplayer use only, you can use it in Singleplayer but the AI is never taken into consideration for our changes and sometimes we may even ‘gut it’ in order to add mechanics to the mod for players. It is currently only localized to English due to the small team and majority being English speakers only.
+* Oratory tech tree rework (overhauled the whole left tree, some changes on the right as well)
+* New invention added to Civic tech tree that reduces metropolis founding cost
 
-HMO has been given permission to integrate the following mods:
-[list]
-[*]Field of Mars (Built off of)
-[*]Commander Kings
-[*]Great Wonders Refined
-[*]Bloodlines 2.0
-[*]Imperator Navigable Rivers
-[*]Legion Distinctions Overhaul
-[*]Map Modes Enhanced and Clear Skies
-[*]Metropolis Sprawl
-[*]Clear and Solid Borders
-[*]Invictus (Map)
-[/list]
+* Metropolises now grant additional trade routes and 10% pop output
+* Metropolises can now be built adjacent to other Metropolises (previously on in province capitals). Credit to chinerpeton for his Mod: Metropolis Sprawl.
+ -- Metropolises were hardly seen worthwhile to be built by players. Hopefully these buffs will encourage more metropolises.
 
-Features Highlights:
+* Tyranny over 50 will now result in dimished returns for AE reduction and slave output
+* When keeping Tyranny below 10 for at least a year, country will get a 15% max research efficiency modifier
+ -- Tyranny was too good not to just max out almost all the time. Now the higher levels aren't as powerful and there's some incentive for players to not max out their tyranny
 
-[b]Broken World Map[/b] - Our custom map has been forged in the fires of many multiplayer campaigns. We break the map apart so that every nation has a somewhat balanced start.
+* Country ranks have aggressive expansion impact modifiers
+ -- Lower ranks have reduced impact while higher ranks have increasingly higher impact
+* Raising levies adds 1 AE per levies rasied
+* Creating a legion addes +0.02 aggressive expansion for each legion created
+* Stabbing pigs effect lasts 10 years
+ -- This is intended to be an option for combatting high AE since tyranny won't reduce it as much  
 
-[b]Mechanic Balance[/b] - The entire game has been rebalanced with multiplayer in mind from buildings to heritages to technology and units. This is also an ongoing progress as we aim to make all areas of the map, all government forms and all cultures viable AND competitive for multiplayer.
+* Big balance overhaul. Almost all bonus values have been reduced by about 50%. Legions were simply too strong now that it became much easier to hit max bonuses with floors!
+* One level of floors for most distinctions have been removed. Most floors are at level 5 and level 10 now for units and level 3 for terrain.
+* Drilling will now give a low chance for your legions to gain some distinctions providing they meet the requirements criteria.
+* Army size to qualify for great battles has been raised to 30k (unit requirements are still just 20 cohorts though).
+* Added a new feature that records total victories and defeats for your legion in its history.
 
-[b]Complete Military Traditions Overhaul[/b] - We have gutted the vanilla traditions system and built it from the ground up for multiplayer balance. While some cultural traditions remain, there are now brand new generic trees that every culture has access to, enabling maximum player flexibility. Values have also been normalized to maximize unit diversity and unit-versus-unit matchups.
+* Added aqueduct maintenance. The first 4 aqueducts are free and then each addition aqueduct will reduce the province's taxes. Public works maintenance isn't free!
 
-[b]Terrain Combat modifiers[/b] - All units now have modifiers for combat ability on all terrain types to create more asymmetrical warfare. Archers can crush Heavy Infantry in rough terrain like mountains, forests and marshes whereas Heavy Infantry and Cavalry will dominate in the flat terrain like farmlands and plains. We have done this to break up the stagnant multiplayer meta of Heavy Infantry spam while also adding a fun layer of historical relevance to where units excelled.
-Tribal Legions - We’ve successfully unlocked legions for tribal governments so that they can compete with other government types.
+* Capture stance now gives -10% naval movement speed and Ramming gives +10% movement speed
+ -- Trying to buff ramming over capture to offer other options for players
+* Added scaling naval maintenance. Every 100 ships will add 10% more naval maintenance due to increased maintenance scale (up to 50%).
+* Ports now have a small reduction in naval maintenance. Build lots of ports to offset the costs of maintaining a large fleet.
+ -- Players were able to build huge fleets for little cost or draw back. Now there might be something to be said for quality over quantity. Or at least a naval power will need the ports to maintain its fleet...
 
-[b]Ship Abilities[/b] - We’ve added a number of new abilities that make naval warfare more engaging.
+* Civil wars have been made more painful. Disloyal provinces will quickly become disloyal upon the outbreak of civil war when legions are involved. Opposing armies are more powerful as well. Maybe triggering a civil war isn't a good thing anymore...
 
-[b]Diplomatic Abilities[/b] - We’ve added a number of new diplomatic options to the character interaction menu for rulers. You can influence the world by sending manpower to an ally, offering vassalage to a player, or embargoing trade!
+* Hunting has been balanced somewhat. Much less martial gain and in general martial gain from is now capped at +5 across all character improvement events.
 
-[b]New Event Chains[/b]- Characters can be improved through tasking office holders, going hunting, or even writing letters. Espionage can be conducted when you hire a spymaster.
+* Added cooldowns to recruit talent and present debutante. These were being exploited to adopt new characters into one family and triggering a reduction in wages paid. Additionally all the extra chracters were causing lag.
 
-[b]New Formable Nations[/b] - There have been countless formable nations added into the game to spice up gameplay with such formables as Italia for non Roman Italian nations, Anatolia for Antolian nations etc. There have been too many to list added across the map varying in all shapes and sizes alongside ‘easter egg’ nations of historical or fantasy nations. (Visigothic Kingdom anyone? Indo-Germanic Empire?)
+* Added new feature to auto slave movement to disable the movement of slaves from another territory that was importing them. This should allow you to set up one-way highways for slave movement.
+ -- In theory icons should finally show up?!
 
-[b]Monarchy to Republic[/b] - We have added a mission tree to allow all Monarchies to attempt to become a republic, it wasn’t fair that it was only one way right? This should allow more fluidity in the game so players can really pick and choose what government type they want to be and are not restricted to a monarchy from game start.
+* Fort maintenance increased and excess fort maintence increased
+* Base garrison size doubled
+* Base garrison growth reduced
+* Earthworks now grants 2 fort levels
+* Fort and Earthworks costs and build times increased
+ -- Forts were still being spammed a lot for not much consequence. In exchange for making them stronger they are now a bit more expensive as well. Earthworks was given a slight buff to make them more attractive and they should be a good options now that forts are more costly to maintain.
 
-[b]Culturally Unique Innovations[/b] - Dozens of new innovations have been added in for specific cultures, tags and even government forms to better enhance cultural diversity and history. Arabian nations now have access to innovations that showcase the Monsoon Trade with India, boosting their economies and naval range, Egypt has many new innovations surrounding the Pyramids, Nile food production while the Punics have access to innovations to showcase the serial production of their ships and huge trading empire.
+* General Military balancing across all traditions (more will come in the future)
+ -- We attempted to normalize some values across all traditions through various strategies. For example a Gaullic tradition gave +20% forest combat modifier, which was very strong; now it just gives it to the archer unit.
+* Slightly raised Military XP for disbanding levies
+* Removed martial from bloodlines
+* Military XP no longer earned from leaders marital now through Military laws. 
+ -- In general, the overall amount of military XP generated has been nerfed
 
-[b]Cultural Decisions[/b] - Many new cultural decisions have been added to encourage players to not mass assimilate everyone. Now to get new traditions you must enact a decision on the culture and keep them integrated to continue to learn from their tradition tree, this also works for culturally unique innovations.
+* 5 new nations in the steppe 1 in Pannonia 
+* Byzantine Empire, Greater Scythia and Crimmera formables
+* New map tiles in Ethiopia 
+* All of Indian regions changed (should look more like vanilla) 
+* Britain, Western Arabia and Cyrenaica regions changed 
 
-[b]Caste System[/b] - The religions of the Indian Subcontinent have been slightly reworked to better reflect the caste system and slow down the Indian blob that unbalances games. Hindu nations will find themselves struggling to promote their many new pops and begin to buckle under over expansion. To combat this the players will have to institute reforms in the forms of laws to negate some of the drawbacks.
+* Civilisation Value Pop growth amount and assimilation speed reduced. 
+ -- Excessive pop growth was causing lag. In version 2 pops would assimilate before they converted, which was hurting tech efficiency among other issues.)
 
-[b]Overhaul of Regions[/] - To help balance out multiplayer ALL regions have been adjusted and several broken up with many new regions added to better balance the game. With this new system all regions are now competitive in pop sizes for legion creation, there are still a few standouts for players to fight over though.
+* Tribes
+ -- Less mercenary cost for tribes from 50% to 25%
+ -- Removed global tech output nerf
+ -- Increased base mil XP from being a tribe, you will now generate more XP than civil nations. 
+ -- Lowered % increase nerf to found cities as a tribe
+ -- Reduced Pi cost of reforming and made easier 
 
-[url=https://github.com/Imperator-Multiplayer-Community/huge_multiplayer_overhaul]Github can be found here[/url]: https://github.com/Imperator-Multiplayer-Community/huge_multiplayer_overhaul
+* Removed the town evolution feature
+ -- There were some cool ideas here, but ultimately the building evolution was confusing and really didn't help nations that needed it the most (tribal) since the requirements were too high for the poor terrain.
 
-[url=https://discord.gg/X362hy3EBh]Join us for multiplayer games and Mod discussion![/url]: https://discord.gg/X362hy3EBh
+-- Version 2
+* From the last grand campaign MOD, balanced Levy XP has been added. Now when you disband you levies you gain XP like in vanilla. Note: there's a new button for disbanding a single levy available next to other unit actions (on the right, not the left) when you focus on that levy unit.
+* Character interaction have been fixed, fleshed out and expanded upon.
+* Map changes in the Persia areas. Other map fixes around Tibet. Fixed a river crossing.
+* War score changes - can now earned up to 50 war score from war goal. Rejecting a fair peace deal will now cause 15 stability loss. Truces are now 10 years.
+* Gifting manpower has new costs and requirements
+* Added vassalage character interaction to offer players a unique vassal type (must be under 150 cities)
+* updated some wonder effects
+* Other various bug fixes
+* Adds russian localization for many of the mod features
+
+Github can be found here: https://github.com/Imperator-Multiplayer-Community/huge_multiplayer_overhaul
+Join us for multiplayer games and Mod discussion!: https://discord.gg/X362hy3EBh
