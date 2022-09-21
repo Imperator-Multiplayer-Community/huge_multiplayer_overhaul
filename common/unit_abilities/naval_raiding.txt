@@ -155,7 +155,7 @@
 					duration = 30
 				}
 				unit_location = {
-					every_neighbor_province = {
+					ordered_neighbor_province = {
 						limit = {
 							naval_raid_target_province_trigger = yes
 							NOT = { owner = root.unit_owner }
@@ -171,6 +171,18 @@
 							NOT = { has_enemy_army = root.unit_owner }
 							NOT = {	has_province_modifier = port_province_raided }
 						}
+						order_by = total_population
+						max = scope:slave_raiding_unit.naval_raid_capacity_svalue
+
+						custom = naval_raiding_days
+						random_pops_in_province = {
+							move_pop = scope:slave_raiding_unit.unit_owner.capital_scope
+							if = {
+								limit = { NOT = { pop_type = slaves } }
+								set_pop_type = slaves
+							}
+						}
+
 						custom = naval_raiding_explain_modifier_tooltip
 						add_province_modifier = {
 							name = port_province_raided
@@ -218,7 +230,7 @@
 				}
 				unit_location = {
 					trigger_event = {
-						id = hmo_unit_abilities.7
+						id = hmo_unit_abilties.7
 						days = 1
 					}
 				}

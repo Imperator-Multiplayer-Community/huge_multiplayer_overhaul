@@ -1,7 +1,7 @@
 ﻿naval_supply = {
 	duration = 91
 	enable = yes
-	toggle = no
+	toggle = yes
 	navy_only = yes
 	cancel_on_combat_end = yes
 
@@ -125,13 +125,13 @@
 				}
 
 				trigger_event = {
-					id = hmo_unit_abilities.3
+					id = hmo_unit_abilties.3
 					days = 90
 				}
 
 				unit_location = {
 					trigger_event = {
-						id = hmo_unit_abilities.13
+						id = hmo_unit_abilties.13
 						days = 1
 					}
 				}

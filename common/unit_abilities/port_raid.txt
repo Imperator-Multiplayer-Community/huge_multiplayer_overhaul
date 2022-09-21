@@ -1,7 +1,7 @@
 ﻿port_raid = {
 	duration = 31
 	enable = yes
-	toggle = no
+	toggle = yes
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_raid"
 
 	map = yes
@@ -99,7 +99,15 @@
 					duration = 30
 				}
 
-				custom = port_raid_explainer
+				custom_tooltip = port_raid_explainer
+				random_neighbor_province = {
+					limit = {
+						raid_port_province_trigger = yes
+						NOT = { controller = root.unit_owner }
+						controller = { war_with = root.unit_owner }
+					}
+					siege = { add_breach = 1 }
+				}
 			}
 
 			hidden_effect = {

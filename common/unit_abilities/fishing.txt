@@ -35,15 +35,9 @@
 
 		trigger_if = {
 			limit = {
-				unit_location = {
-					any_neighbor_province = {
-						has_owner = yes
-						is_sea = no
-						NOT = {
-							has_province_modifier = getting_fished
-						}
-						total_population > 4
-						NOT = {
+				NOT = {
+					unit_location = {
+						any_neighbor_province = {					
 							trade_goods = fish
 						}
 					}

@@ -45,7 +45,7 @@ hmo_unit_abilties.1 = { # slave raid
 					scope:slave_raiding_unit.unit_owner = {
 						add_aggressive_expansion = 1
 					}
-					
+
 					add_province_modifier = {
 						name = port_province_raided
 						duration = 3650
@@ -238,8 +238,8 @@ hmo_unit_abilties.5 = { # port raid
 
 hmo_unit_abilties.6 = { # raid commerce warning
 	type = minor_country_event
-	title = hmo_unit_abilties.2.t
-	desc = hmo_unit_abilties.2.desc
+	title = hmo_unit_abilties.6.t
+	desc = hmo_unit_abilties.6.desc
 	picture = revolt
 	
 	left_portrait = current_ruler

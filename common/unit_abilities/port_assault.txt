@@ -1,7 +1,7 @@
 ﻿port_assault = {
 	duration = 61
 	enable = yes
-	toggle = no
+	toggle = yes
 	cancel_on_combat_end = yes
 	navy_only = yes
 

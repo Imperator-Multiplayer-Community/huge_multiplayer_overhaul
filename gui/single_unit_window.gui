@@ -66,7 +66,7 @@ template unit_action_item_diamond
 
 base_window = {
 	name = "single_unit_window"
-	size = { 492 620 }
+	size = { 492 660 }
 	widgetanchor = top|left
 	using = main_window_template
 	position = { 60 138 }
@@ -457,19 +457,19 @@ base_window = {
 		}
 		margin_widget = { size = { 0 20 } }
 		margin_widget = {
-			size = { 0 160 }
+			size = { 0 170 }
 			margin = { 0 0 }
 			layoutpolicy_horizontal = expanding
 			# First Row: Reorg!
 			icon = {
 				texture = "gfx/interface/event_window/Event_local_life.dds"
-				scale = 0.42
-				position = { -12 0 }
+				scale = 0.52
+				position = { 0 20 }
 				alpha = 0.5
 				parentanchor = bottom|hcenter
 			}
 			dynamicgridbox = {
-				position = { 12 68 }
+				position = { 12 108 }
 				name = "reorg_buttons"
 				flipdirection = yes
 				datamodel_wrap = 3
@@ -483,7 +483,7 @@ base_window = {
 			dynamicgridbox = {
 				name = "action_buttons"
 				parentanchor = right
-				position = { -12 68 }
+				position = { -12 108 }
 				flipdirection = yes
 				layoutanchor = topright
 				datamodel_wrap = 6
@@ -495,7 +495,7 @@ base_window = {
 
 			button_round_inverted_toggle = {
 				size = { 72 72 }
-				position = { 140 32 }
+				position = { 140 52 }
 				parentanchor = vcenter
 				tooltip = "COMBAT_TACTIC_BUTTON"
 				blockoverride "On_click"
@@ -511,16 +511,17 @@ base_window = {
 			}
 
 			#Third Row: Toggle
-			hbox = {
-				margin = { 6 0 }
+			dynamicgridbox = {
+				position = { 0 -16 }
+				parentanchor = hcenter
 				name = "toggle_buttons"
-				#datamodel_wrap = 4
-				position = { 0 -46 }
+				datamodel_wrap = 2
 				datamodel = "[SingleUnitWindow.GetToggleItems]"
 				item = {
 					using = unit_action_item_round
 				}
 			}
+			
 		}
 		margin_widget = {
 			size = { 0 94 }
