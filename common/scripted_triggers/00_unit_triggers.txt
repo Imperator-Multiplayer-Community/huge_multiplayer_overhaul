@@ -2,17 +2,8 @@
 	has_owner = yes
 	total_population > 5
 	fort_level <= 0
-	NOT = { owner = root.unit_owner }
-	trigger_if = {
-		limit = { root.unit_owner = { is_subject = yes } }
-		NOT = { root.unit_owner.overlord = this.owner }
-	}
-	owner = {
-		NOT = { alliance_with = root.unit_owner }
-		NOT = { is_subject_of = root.unit_owner }
-		NOT = { has_truce_with = root.unit_owner }
-	}
 	is_port = yes
+	is_sea = no
 }
 
 subunit_not_mercenary_unit_trigger = {
@@ -24,68 +15,4 @@ subunit_not_mercenary_unit_trigger = {
             is_mercenary = no
         }
     }
-}
-
-trading_partner_province_trigger = {
-	has_owner = yes
-	is_port = yes
-	NOT = {
-		OR = {
-			has_province_modifier = mugged_by_reality 
-			has_province_modifier = trading_partner
-		} 
-	}
-	owner = {
-		OR = {
-			exports_to = root.unit_owner
-			imports_from = root.unit_owner
-		}
-	}
-	owner = controller
-		NOT = {
-			owner = root.unit_owner
-		}
-}
-
-fishing_province_trigger = {
-	has_owner = yes
-	NOT = {
-			has_province_modifier = getting_fished
-	}
-	total_population > 4
-	trade_goods = fish	
-}
-
-mugged_province_trigger = {
-	has_owner = yes
-	NOT = { owner = root.unit_owner }
-	trigger_if = {
-		limit = { root.unit_owner = { is_subject = yes } }
-		NOT = { root.unit_owner.overlord = this.owner }
-	}
-	owner = {
-		NOT = { alliance_with = root.unit_owner }
-		NOT = { is_subject_of = root.unit_owner }
-		NOT = { has_truce_with = root.unit_owner }
-	}
-	is_port = yes
-	NOT = {
-		OR = {
-			has_province_modifier = mugged_by_reality 
-			has_province_modifier = trading_partner
-		} 
-	}
-}
-
-naval_supply_trigger = {
-	has_owner = yes
-	is_port = yes
-	has_siege = yes
-	controller = {
-		NOT = { war = root.unit_owner }	
-	}
-	NOT = {
-		has_province_modifier = supplied_by_sea
-	}
-	owner = controller
 }

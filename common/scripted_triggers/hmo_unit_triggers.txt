@@ -1,0 +1,188 @@
+﻿navy_drilling = {
+	has_variable = is_navy_drilling
+}
+
+navy_slave_raiding = {
+	has_variable = is_slave_raiding
+}
+
+navy_supplying = {
+	has_variable = is_navy_supplying
+}
+
+navy_assaulting = {
+	has_variable = is_navy_assaulting
+}
+
+navy_fishing = {
+	has_variable = is_navy_fishing
+}
+
+navy_raiding = {
+	has_variable = is_navy_raiding
+}
+
+navy_raiding_commerce = {
+	has_variable = is_navy_raiding_commerce
+}
+
+navy_protecting_commerce = {
+	has_variable = is_navy_protecting_commerce
+}
+
+can_assault_port = {
+	is_sea = no
+	has_owner = yes
+	is_port = yes
+	fort_level >= 1
+	NOT = { controller = root.unit_owner }
+	controller = { war_with = root.unit_owner }
+	NOT = { has_enemy_army = root.unit_owner }
+}
+
+assault_port_province_trigger = {
+	is_sea = no
+	has_owner = yes
+	is_port = yes
+	fort_level >= 1
+}
+
+can_raid_port = { # unit scope
+	save_temporary_scope_as = current_unit
+	unit_location = {
+		any_neighbor_province = {
+			is_sea = no
+			has_owner = yes
+			is_port = yes
+			has_siege = yes
+			siege = {
+				has_breach = no
+			}
+			NOT = { controller = scope:current_unit.unit_owner }
+			controller = { war_with = scope:current_unit.unit_owner }
+		}
+	}
+}
+
+raid_port_province_trigger = {
+	is_sea = no
+	has_owner = yes
+	is_port = yes
+	has_siege = yes
+	siege = {
+		has_breach = no
+	}
+}
+
+can_slave_raid_trigger = { # unit scope
+	save_temporary_scope_as = current_unit
+	scope:current_unit.unit_location = {
+		any_neighbor_province = {
+			naval_raid_target_province_trigger = yes
+			NOT = { owner = scope:current_unit.unit_owner }
+			trigger_if = {
+				limit = { scope:current_unit.unit_owner = { is_subject = yes } }
+				NOT = { scope:current_unit.unit_owner.overlord = this.owner }
+			}
+			owner = {
+				NOT = { alliance_with = scope:current_unit.unit_owner }
+				NOT = { is_subject_of = scope:current_unit.unit_owner }
+				NOT = { has_truce_with = scope:current_unit.unit_owner }
+			}
+			NOT = { has_enemy_army = scope:current_unit.unit_owner }
+		}
+	}
+}
+
+can_protect_trade = {
+	save_temporary_scope_as = current_unit
+	scope:current_unit.unit_location = {
+		any_neighbor_province = {
+			trading_partner_province_trigger = yes
+			owner = {
+				NOT = {
+					war_with = scope:current_unit.unit_owner
+				}
+			}
+			owner = controller
+			NOT = {
+				owner = scope:current_unit.unit_owner
+			}
+		}
+	}
+	
+}
+
+trading_partner_province_trigger = {
+	has_owner = yes
+	is_port = yes
+	NOT = {
+		OR = {
+			has_province_modifier = mugged_by_reality 
+			has_province_modifier = trading_partner
+		} 
+	}
+}
+
+fishing_province_trigger = {
+	has_owner = yes
+	is_sea = no
+	NOT = {
+		has_province_modifier = getting_fished
+	}
+	total_population > 4
+	trade_goods = fish	
+}
+
+can_mug_province_trigger = { # unit scope
+	save_temporary_scope_as = current_unit
+	scope:current_unit.unit_location = {
+		any_neighbor_province = {
+			muggable_province_trigger = yes
+			NOT = { owner = scope:current_unit.unit_owner }
+			NOT = { scope:current_unit.unit_owner.overlord = this.owner }
+			owner = {
+				NOT = { alliance_with = scope:current_unit.unit_owner }
+				NOT = { is_subject_of = scope:current_unit.unit_owner }
+				NOT = { has_truce_with = scope:current_unit.unit_owner }
+				NOT = { exports_to = scope:current_unit.unit_owner }
+				NOT = { imports_from = scope:current_unit.unit_owner }
+			}
+			owner = this.controller
+		}
+	}
+}
+
+muggable_province_trigger = {
+	is_sea = no
+	has_owner = yes
+	is_port = yes
+	NOT = {
+		OR = {
+			has_province_modifier = mugged_by_reality 
+			has_province_modifier = trading_partner
+		} 
+	}
+}
+
+can_naval_supply_trigger = { # unit scope
+	save_temporary_scope_as = current_unit
+	scope:current_unit.unit_location = {
+		any_neighbor_province = {
+			naval_supply_province_trigger = yes
+			OR = {
+				owner = scope:current_unit.unit_owner
+				controller = scope:current_unit.unit_owner
+				controller = { alliance_with = scope:current_unit.unit_owner }
+			}
+		}
+	}
+}
+
+naval_supply_province_trigger = {
+	has_owner = yes
+	is_port = yes
+	NOT = {
+		has_province_modifier = supplied_by_sea
+	}
+}

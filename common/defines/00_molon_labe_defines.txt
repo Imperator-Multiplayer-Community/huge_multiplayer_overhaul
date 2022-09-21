@@ -33,6 +33,7 @@ NCombat = {
 	ASSAULT_ATTACKER_LOSS = 1.25
 	DAYS_PER_SIEGE_PHASE = 20 # Was 25
 	GARRISON_SIZE = 1 # Was 1
+	SIEGE_FORCE_NEEDED_MULTIPLIER  = 4 # was 4
 }
 
 NUnit = {
@@ -64,7 +65,7 @@ NTrade = {
 }
 
 NLevy = {
-
+	MIN_SIZE = 8 # minimum number of cohorts raised as levy
 	DISBAND_MILITARY_EXP_MULT = 0 # when disbanding a levy military experience will be added to the country
 	WAR_EXHAUSTION_ON_RAISE = 0 # set to 0 to avoid exploiting
 }

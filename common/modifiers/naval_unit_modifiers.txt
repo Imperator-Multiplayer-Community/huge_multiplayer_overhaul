@@ -1,50 +1,59 @@
-﻿
+﻿raid_commerce_ae = {
+    agressive_expansion_monthly_change = 2
+}
 
 protect_merchants = {
- global_commerce_modifier = 0.0015
+    global_commerce_modifier = 0.0015
+}
+
+unprotected_merchants = {
+    global_commerce_modifier = -0.0015
 }
 
 go_fish = {
- global_monthly_food_modifier = 0.002
+    global_monthly_food_modifier = 0.002
+}
+
+not_go_fish = {
+    global_monthly_food_modifier = -0.002
 }
 
 naughty_mugger = {
- global_tax_modifier = 0.0025
+    global_tax_modifier = 0.0025
+}
+
+not_mugger = {
+    global_tax_modifier = -0.0025
 }
 
 naval_supplier = {
- global_monthly_food_modifier = -0.75
+    global_monthly_food_modifier = -0.75
 }
 
 #province modifiers
 trading_partner = {
- local_tax_modifier = 0.5
- local_population_happiness = 0.08
+    local_tax_modifier = 0.5
+    local_population_happiness = 0.08
 }
 
 getting_fished = {
- local_monthly_food = -3
- local_population_happiness = -0.1
+    local_monthly_food = -3
+    local_population_happiness = -0.1
 }
 
 mugged_by_reality = {
- local_monthly_food_modifier = -0.5
- local_tax_modifier = -0.5
- local_population_happiness = -0.2
+    local_monthly_food_modifier = -0.5
+    local_tax_modifier = -0.5
+    local_population_happiness = -0.2
 }
 
 supplied_by_sea = {
- local_defensive = 2
- garrison_growth = 0.15
- hostile_attrition = 3
- max_attrition = 3
+    local_monthly_food = 150
 }
 
 naval_action = {
- navy_movement_speed = -0.005
- naval_morale_modifier = -0.0015
- naval_damage_done = -0.0015
- naval_morale_recovery = -0.0015
+    navy_movement_speed = -0.25
+    naval_morale_modifier = -0.1
+    naval_damage_done = -0.1
+    naval_morale_recovery = -0.1
 }
-
-
