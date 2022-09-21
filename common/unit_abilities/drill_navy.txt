@@ -54,8 +54,13 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			has_commander = no
+			navy_fishing = yes
 			navy_slave_raiding = yes
 			navy_supplying = yes
+			navy_assaulting = yes
+			navy_raiding = yes
+			navy_raiding_commerce = yes
+			navy_protecting_commerce = yes
 		}
 	}
 	
