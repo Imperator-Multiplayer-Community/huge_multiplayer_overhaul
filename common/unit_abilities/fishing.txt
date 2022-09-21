@@ -190,6 +190,11 @@
 							duration = -1
 						}
 					}
+
+					trigger_event = {
+						id = hmo_unit_abilties.11
+						days = 1
+					}
 				}
 			}
 		}
