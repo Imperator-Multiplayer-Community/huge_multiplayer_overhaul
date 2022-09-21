@@ -62,3 +62,15 @@
  port_being_fished:0 "Begun fishing off the coast."
  commerce_protected:0 "Commerce is being protected!"
  port_supplied:0 "Port is being supplied!"
+
+ hmo_unit_abilties.2.t:0 "Slave Raids!"
+ hmo_unit_abilties.2.desc:0 "Fleeing villagers tell you of the slave fleets stealing people from your shores."
+ hmo_unit_abilties.2.a:0 "We have other pressing matters."
+ hmo_unit_abilties.2.b:0 "Vile curs!"
+ hmo_unit_abilties.2.c:0 "This means war!"
+
+hmo_unit_abilties.6.t:0 "Trade Raided!"
+ hmo_unit_abilties.6.desc:0 "Distraught merchants tell tales of another nation pirating your shores."
+ hmo_unit_abilties.6.a:0 "We have other pressing matters."
+ hmo_unit_abilties.6.b:0 "Vile curs!"
+ hmo_unit_abilties.6.c:0 "This means war!"
