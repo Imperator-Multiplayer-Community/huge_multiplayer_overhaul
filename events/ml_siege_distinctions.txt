@@ -40,19 +40,7 @@ ml_siege_distinctions.1 = {
             save_scope_as = actor
         }
 
-        scope:actor.owner = {
-			every_governorships = {
-				limit = {
-					has_legion_trigger = yes
-					legion = scope:actor.legion
-				}
-	
-				save_scope_as = legion_governorship
-			}
-        }
-
-
-		scope:legion_governorship = {
+		scope:actor = {
 			if = {
 				limit = {
 					has_variable = siege_victories
@@ -78,7 +66,7 @@ ml_siege_distinctions.1 = {
 				if = {
 					limit = {
 						var:siege_victories = 2
-						scope:actor.legion = {
+						legion = {
 							NOT = {
 								has_distinction = distinction_siege_master_01
 								has_distinction = distinction_siege_master_02
@@ -92,11 +80,17 @@ ml_siege_distinctions.1 = {
 					scope:actor.legion = {
 						add_distinction = distinction_siege_master_01
 					}
+
+					scope:actor.unit_owner = {
+						trigger_event = {
+							id = ml_expeditionary_distinctions.1
+						}
+					}
 				}
 				else_if = {
 					limit = {
 						var:siege_victories = 6
-						scope:actor.legion = {
+						legion = {
 							NOT = {
 								has_distinction = distinction_siege_master_02
 								has_distinction = distinction_siege_master_03
@@ -113,7 +107,7 @@ ml_siege_distinctions.1 = {
 				else_if = {
 					limit = {
 						var:siege_victories = 12
-						scope:actor.legion = {
+						legion = {
 							NOT = {
 								has_distinction = distinction_siege_master_03
 								has_distinction = distinction_siege_master_04						
@@ -129,7 +123,7 @@ ml_siege_distinctions.1 = {
 				else_if = {
 					limit = {
 						var:siege_victories = 20
-						scope:actor.legion = {
+						legion = {
 							NOT = {
 								has_distinction = distinction_siege_master_04						
 							}
@@ -165,16 +159,7 @@ ml_siege_distinctions.2 = {
 	}
 
 	immediate = {
-		 every_governorships = {
-			limit = {
-				has_legion_trigger = yes
-				legion = scope:actor.legion
-			}
-
-			save_scope_as = legion_governorship
-		}
-
-		scope:legion_governorship = {
+		scope:actor = {
 			if = {
 				limit = {
 					has_variable siege_victories

@@ -43,8 +43,8 @@
 				is_rival = scope:actor.current_ruler
 			}
 			custom_tooltip = {
-				text = "hunting_friend_skill_tt"
-				martial <= 16
+			text = "hunting_friend_skill_tt"
+			martial <= 16
 			}
 			trigger_if = {
 				limit = {

@@ -20,7 +20,7 @@
 	allow = {
 		hidden:unit_owner = { can_pay_price = build_border_fort }
 		unit_owner = { 
-			has_military_bonus = border_fort_path_1
+			has_military_bonus = latin_support_path_4
 		}
 		has_commander = yes
 		is_army = yes

@@ -2,9 +2,9 @@
 	#aryan (northern)
 	color = hsv { 0.05 1 0.9 }
 	
-	primary = light_infantry
-	second = archers
-	flank = warelephant
+	primary = archers
+	second = light_infantry
+	flank = light_cavalry
 
 	primary_navy = tetrere
 	secondary_navy = octere

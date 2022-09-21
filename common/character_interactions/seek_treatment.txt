@@ -21,7 +21,6 @@ seek_treatment = {
 		scope:target = {
 			OR = {
 			 is_friend = scope:actor.current_ruler
-			 is_spouse_of = scope:actor.current_ruler
 			 is_general = yes
 			 is_admiral = yes
 			 is_governor = yes

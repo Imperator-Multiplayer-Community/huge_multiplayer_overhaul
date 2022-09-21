@@ -1557,17 +1557,17 @@
 
 2093={ #Bornium
 	terrain="forest"
-	culture="silurian" ## HMO V2.1 DaFoogles Heritages
+	culture="demetian"
 	religion="druidism"
-	trade_goods="honey"
-	civilization_value=12
+	trade_goods="leather"
+	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
-		amount=2
+		amount=1
 	}
 	tribesmen={
-		amount=7
+		amount=3
 	}
 }
 

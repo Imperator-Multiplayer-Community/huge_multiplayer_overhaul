@@ -3808,20 +3808,3 @@ Cimmeria_heritage = {
     trigger = {
         tag = CMM
     }
-	## HMO V2.1 (DaFoogles Heritages)
-	
-silurian_heritage = {
-		modifier = {
-			#good
-			global_start_experience = 25
-			forest_combat_bonus = 0.05
-			
-			#bad
-			navy_maintenance_cost = 0.025
-		}
-		
-		trigger = {
-			tag = SIR
-		}
-	}
-	
