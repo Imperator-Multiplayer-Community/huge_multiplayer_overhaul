@@ -1,1 +1,124 @@
-﻿
+﻿pracyan_philosophy = { #Pracyan Path
+	color = hsv { 0.27 0.6 0.5 }
+	image = mauryan_coastal_path_1
+	
+
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = pracyan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = pracyan
+		}
+		trigger_else_if = {
+			limit = {
+				country_culture_group = tibetan
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = tibetan
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = tibeto_pracyan_influence
+			}	
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_tibeto_pracyan"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:pracyan
+						this.culture.culture_group = culture_group:tibetan
+					}
+				}
+			}
+		}
+	}
+
+	##### HEAVY INF
+
+	tibetan_path_1 = { ###
+		modifier = { 
+			heavy_infantry_discipline = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_naval_path_2
+		requires = { }
+	}
+
+	tibetan_path_4 = { ###
+		modifier = { 
+			heavy_infantry_morale = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = north_african_army_path_3
+		requires = { tibetan_path_1 }
+	}
+
+	tibetan_path_9 = { ###
+		modifier = { 
+			heavy_infantry_offensive = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = greek_states_path_end_bonus
+		requires = { tibetan_path_4 }
+	}
+
+
+	##### NAVAL
+
+	pracyan_path_10 = { ###
+		allow_unit_type = octere
+		on_activate = {
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = octere
+						add_subunit = octere
+					}
+				}
+			}
+		}
+		modifier = { 
+			trireme_defensive = 0.15
+			navy_maintenance_cost = 0.01
+		} 
+		icon = persian_achaemenid_path_3
+		requires = { }
+	}
+
+	pracyan_path_5 = { ###
+		on_activate = {
+			ordered_owned_province = {	#Upgrades a port, or creates one
+				limit = {
+					is_coastal = yes
+					has_building = port_building
+					can_build_building = port_building
+				}
+				alternative_limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+				order_by = total_population
+				add_building_level = port_building
+				add_building_level = port_building
+			}
+		}
+		modifier = { 
+			naval_range = 0.15
+			trireme_morale = 0.1
+			navy_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_end_bonus
+		requires = { pracyan_path_10 }
+	}
+}

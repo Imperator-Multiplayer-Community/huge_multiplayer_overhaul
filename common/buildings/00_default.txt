@@ -3,9 +3,10 @@
 ############################
 
 fortress_building = {
-	fort_level = 1
+	fort_level = 2
 	local_defensive = 0.05
-	local_manpower_modifier = -0.05
+	local_hostile_attrition = 0.025
+	local_manpower_modifier = -0.025
 	local_country_civilization_value = 1
 	cost = 200
 	time = 1825
@@ -13,7 +14,6 @@ fortress_building = {
 	potential = {
 		OR = {
 			has_city_status = yes 
-		 	owner = { is_tribal = yes } 
 			has_building = fortress_building
 		}
 	}
@@ -23,15 +23,62 @@ fortress_building = {
 		0 = fort_level
 		1 = value_manpower
 		2 = local_defensive
+		3 = local_hostile_attrition
 	}
 #AI handles fort building in code. It's too complicated to script this
+}
+
+border_fortress_building = {
+	fort_level = 1
+	local_defensive = 0.1
+	local_population_capacity_modifier = -0.5
+	local_manpower_modifier = -0.05
+
+	cost = 150
+	time = 1095
+
+	max_amount = 1
+
+	potential = {
+		has_city_status = no
+	}
+
+	allow = {
+		custom_tooltip = {
+			text = "is_valid_border_fortress_location_tt"
+			is_valid_border_fortress_location = yes
+		}
+
+		custom_tooltip = {
+			text = "is_allowed_border_fortress_tt"
+			OR = {
+				root.owner = {
+					has_military_bonus = border_fort_path_1
+				}
+				root.owner = {
+					is_tribal = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	modification_display = {
+		0 = fort_level
+		1 = local_defensive
+		2 = value_population_capacity
+		3 = local_manpower_modifier
+	}
 }
 
 fortress_ramparts_building = {
 	fort_level = 2
 	local_combat_width_modifier = -3
 	local_defensive = 0.6
-	local_hostile_attrition = 1
+	local_hostile_attrition = 0.5
 	local_population_capacity_modifier = -0.1
 	cost = 350
 	time = 1825
@@ -39,7 +86,10 @@ fortress_ramparts_building = {
 	max_amount = 1
 	
 	potential = {
-		has_city_status = yes
+		OR = {
+			has_building = border_fortress_building
+			has_building = fortress_building
+		}
 	}
 	
 	allow = { 
@@ -62,10 +112,11 @@ fortress_ramparts_building = {
 	}
 	
 	modification_display = {
-		0 = local_combat_width_modifier
-		1 = value_population_capacity
+		1 = fort_level
 		2 = local_defensive
-		3 = fort_level
+		3 = local_hostile_attrition
+		4 = local_combat_width_modifier
+		5 = value_population_capacity
 	}
 }
 
@@ -676,6 +727,7 @@ hill_fort = { #Tribal Settlement as a tribal form of large town
 		0 = value_population_capacity
 		1 = local_citizen_desired_pop_ratio
 		2 = local_tribesmen_output
+		3 = local_tribesmen_happyness
 	}
 	
 	chance = {

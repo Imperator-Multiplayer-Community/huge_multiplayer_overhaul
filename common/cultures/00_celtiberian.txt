@@ -5,9 +5,9 @@
 	secondary_navy = hexere
 	flank_navy = liburnian
 	
-	primary = archers
-	second = light_cavalry
-	flank = horse_archers
+	primary = light_infantry
+	second = heavy_infantry
+	flank = light_cavalry
 	
 	levy_template = levy_celtiberian
 
@@ -74,6 +74,8 @@
 		couneian = {}
 		oppidanian = {}
 		autrigonian = { levy_template = levy_cantabric }
+		## HMO V2.1 DaFoogles Heritages
+		silurian = { levy_template = levy_celtiberian }
 		
 	}
 	

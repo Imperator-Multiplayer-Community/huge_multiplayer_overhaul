@@ -3,7 +3,6 @@
 distinction_expeditionary_01 = {
 	icon = "phalera_helmet"
 	commander = {
-		martial = 1
 	}
 	unit = {
 		land_morale_recovery = 0.1

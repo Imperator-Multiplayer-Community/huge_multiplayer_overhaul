@@ -303,9 +303,7 @@ base_window = {
 					parentanchor = center
 						
 					scrollarea = {
-						position = { 0 4 }
 						size = { 612 650 }
-
 						scrollbarpolicy_horizontal = always_off
 						
 						using = VerticalScrollAreaCutOff
@@ -317,7 +315,6 @@ base_window = {
 							dynamicgridbox = {
 								name = "possible_laws_grid"
 								flipdirection = yes
-								position = { 0 4 }
 								datamodel = "[GovernmentView.GetCurrentLaws]"
 								datamodel_wrap = 2
 

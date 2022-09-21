@@ -1,1 +1,127 @@
-﻿
+﻿persian_philosophy = { #Persian Traditions
+	color = hsv { 1.72 0.64 0.7 }
+	image = persian_achaemenid_path_end_bonus
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = persia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = persia
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = persian_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_persian"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:persia
+					}
+				}
+			}
+		}
+	}
+
+	##### HEAVY INF
+
+	persian_path_2 = { #
+		modifier = { 
+			heavy_infantry_defensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = { }
+	}
+
+	persian_path_8 = { #
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = confident
+				}
+			}
+		}
+		modifier = { 
+			heavy_infantry_morale = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_3
+		requires = { persian_path_2 }
+	}
+
+	persian_path_11 = { #
+		enable_tactic = greek_phalanx
+		modifier = { 
+			heavy_infantry_offensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_scythian_path_7
+		requires = { persian_path_8 }
+	}
+
+	##### ARCHERS
+
+	iranian_path_1 = { # To Blout out the sun
+		modifier = { 
+			archers_cost = -0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_britannic_path_2
+		requires = { }
+	}
+	iranian_path_6 = { # Bronze-tipped arrows
+		modifier = { 
+			archers_offensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_7
+		requires = { iranian_path_1 }
+	}
+
+	persian_path_4 = { # 
+		modifier = { 
+			archers_defensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = greek_antigonid_path_6
+		requires = { iranian_path_6 }
+	}
+
+	##### HEAVY CAV
+
+	iranian_path_11 = { #
+		modifier = { 
+			heavy_cavalry_offensive = 0.05
+			heavy_cavalry_desert_combat_bonus = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_scythian_path_5
+		requires = { }
+	}
+
+	iranian_path_15 = { #
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = conqueror
+				}
+			}
+		}
+		modifier = { 
+			heavy_cavalry_defensive = 0.05
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_scythian_path_3
+		requires = { iranian_path_11 }
+	}
+}

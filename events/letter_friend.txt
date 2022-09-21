@@ -439,7 +439,7 @@ letter_friend.13 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_martial.1 }
+			improve_martial_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.21 }
@@ -454,7 +454,7 @@ letter_friend.14 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_martial.2 }
+			impair_martial_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.22 }
@@ -469,7 +469,7 @@ letter_friend.15 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_finesse.1 }
+			improve_finesse_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.23 }
@@ -485,7 +485,7 @@ letter_friend.16 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_finesse.2 }
+			impair_finesse_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.24 }
@@ -500,7 +500,7 @@ letter_friend.17 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_zeal.1 }
+			improve_zeal_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.25 }
@@ -516,7 +516,7 @@ letter_friend.18 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_zeal.2 }
+			impair_zeal_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.26 }
@@ -531,7 +531,7 @@ letter_friend.19 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_charisma.1 }
+			improve_charisma_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.27 }
@@ -546,7 +546,7 @@ letter_friend.20 = {
 
 	immediate = {
 		scope:letter_writer = {
-			trigger_event = { id = hmo_improve_charisma.2 }
+			impair_charisma_effect = yes
 		}
 		scope:letter_writer.employer = {
 			trigger_event = { id = letter_friend.28 }

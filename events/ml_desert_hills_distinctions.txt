@@ -1,0 +1,297 @@
+﻿namespace = ml_desert_hills_distinctions
+
+## adds any desert_hills distinctions
+ml_desert_hills_distinctions.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+    	scope:actor = {
+            has_legion_trigger = yes
+            unit_location = {
+            	terrain = desert_hills
+            }
+        }
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_desert_hills_09
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
+				}
+
+				remove_distinction = distinction_desert_hills_09
+				add_distinction = distinction_desert_hills_10
+
+				if = {
+					limit = {							
+						AND = {
+							has_distinction = distinction_desert_hills_master_01
+							NOT = {
+								has_distinction = distinction_desert_hills_master_02
+							}
+						}
+					}
+
+					remove_distinction = distinction_desert_hills_master_01
+					add_distinction = distinction_desert_hills_master_02
+				}
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_08
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
+				}
+
+				remove_distinction = distinction_desert_hills_08
+				add_distinction = distinction_desert_hills_09
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_07
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
+				}
+
+				remove_distinction = distinction_desert_hills_07
+				add_distinction = distinction_desert_hills_08
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_06
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
+				}
+
+				remove_distinction = distinction_desert_hills_06
+				add_distinction = distinction_desert_hills_07
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_05
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
+				}
+
+				remove_distinction = distinction_desert_hills_05
+				add_distinction = distinction_desert_hills_06
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_04
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
+				}
+
+				remove_distinction = distinction_desert_hills_04
+				add_distinction = distinction_desert_hills_05
+
+				if = {
+					limit = {							
+						NOT = {
+							OR = {
+								has_distinction = distinction_desert_hills_master_01
+								has_distinction = distinction_desert_hills_master_02
+							}
+						}						
+					}
+
+					add_distinction = distinction_desert_hills_master_01
+
+					scope:actor = {
+						if = {
+							limit = {
+								has_variable = terrain_master
+							}
+
+							if = {
+								limit = {
+									var:terrain_master < 5
+								}
+
+								change_variable = {
+									name = terrain_master
+									add = 1
+								}
+							}
+						} else {
+							set_variable = {
+								name = terrain_master
+								value = 1
+							}
+						}
+						
+						ROOT = {
+							trigger_event = {
+								id = ml_terrain_master_distinctions.1
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_03
+					NOT = {
+						scope:actor = {
+							has_variable = is_drilling
+						}
+					}
+				}
+
+				remove_distinction = distinction_desert_hills_03
+				add_distinction = distinction_desert_hills_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_02
+				}
+
+				remove_distinction = distinction_desert_hills_02
+				add_distinction = distinction_desert_hills_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_01
+				}
+
+
+				remove_distinction = distinction_desert_hills_01
+				add_distinction = distinction_desert_hills_02
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_distinction = distinction_desert_hills_10
+						has_distinction = distinction_desert_hills_09
+						has_distinction = distinction_desert_hills_08
+						has_distinction = distinction_desert_hills_07
+						has_distinction = distinction_desert_hills_06
+						has_distinction = distinction_desert_hills_05
+						has_distinction = distinction_desert_hills_04
+						has_distinction = distinction_desert_hills_03
+						has_distinction = distinction_desert_hills_02
+						has_distinction = distinction_desert_hills_01
+					}
+				}
+
+				add_distinction = distinction_desert_hills_01
+			}
+		}
+	}
+}
+
+## removes any desert_hills distinctions
+ml_desert_hills_distinctions.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			has_legion_trigger = yes
+        	unit_location = {
+            	terrain = desert_hills
+            }
+		}
+	}
+
+	immediate = {
+		scope:actor.legion = {
+			if = {
+				limit = {
+					has_distinction = distinction_desert_hills_10
+				}
+
+				remove_distinction = distinction_desert_hills_10
+				add_distinction = distinction_desert_hills_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_09
+				}
+
+				remove_distinction = distinction_desert_hills_09
+				add_distinction = distinction_desert_hills_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_08
+				}
+
+				remove_distinction = distinction_desert_hills_08
+				add_distinction = distinction_desert_hills_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_07
+				}
+
+				remove_distinction = distinction_desert_hills_07
+				add_distinction = distinction_desert_hills_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_06
+				}
+
+				remove_distinction = distinction_desert_hills_06
+				add_distinction = distinction_desert_hills_05
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_05
+				}
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_04
+				}
+
+				remove_distinction = distinction_desert_hills_04
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_03
+				}
+
+				remove_distinction = distinction_desert_hills_03
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_02
+				}
+
+				remove_distinction = distinction_desert_hills_02
+			}
+			else_if = {
+				limit = {
+					has_distinction = distinction_desert_hills_01
+				}
+
+				remove_distinction = distinction_desert_hills_01
+			}
+		}
+	}
+}

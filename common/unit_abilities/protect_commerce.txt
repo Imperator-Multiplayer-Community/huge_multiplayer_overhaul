@@ -19,86 +19,6 @@
 		is_exiled = no
 		in_siege = no
 		has_commander = yes
-		# custom_tooltip = {
-		# 	text = marines_ratio
-		# 	num_of_marines >= num_of_ships_10
-		# }
-
-		trigger_if = {
-			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							trading_partner_province_trigger = yes
-						}
-					}
-					any_neighbor_province = {
-						is_sea = no
-						has_owner = yes
-						is_port = yes
-						owner = {
-							OR = {
-								exports_to = root.unit_owner
-								imports_from = root.unit_owner
-							}
-						}
-						NOT = {
-							OR = {
-				 				has_province_modifier = mugged_by_reality 
-								has_province_modifier = trading_partner
-				 			} 
-						}
-						owner = controller
-							NOT = {
-								owner = root.unit_owner 
-							}
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							trading_partner_province_trigger = yes
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = explain_trading_tooltip
-				always = no
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							trading_partner_province_trigger = yes
-							NOT = {
-								has_province_modifier = trading_partner
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = trading_cooldown_tooltip
-				always = no
-			}
-		}
-
-		NOT = {
-			OR = {
-				unit_owner = { has_country_modifier = protect_merchants }  #New addition, lets see if it works
-				unit_owner = { has_low_economic_policy = expense_navy }
-			} 
-		}		
 		trigger_if = {
 			limit = {
 				exists = commander
@@ -107,20 +27,39 @@
 				loyalty > 33
 			}
 		}
-		unit_location = {
-			any_neighbor_province = {
-				is_sea = no
-				trading_partner_province_trigger = yes
-				NOT = {
-					has_province_modifier = trading_partner
+
+		NOT = {
+			OR = {
+				unit_owner = { has_country_modifier = protect_merchants }  #New addition, lets see if it works
+				unit_owner = { has_low_economic_policy = expense_navy }
+			} 
+		}
+
+		trigger_if = {
+			limit = {
+				unit_location = {
+					NOT = {
+						any_neighbor_province = {
+							is_sea = no
+						}
+					}
 				}
 			}
-		}
-		#trigger_else = {
-		#	custom_tooltip = {
-		#		text = no_marines_tt
-		#	}
-		#}
+
+			custom_tooltip = {
+				text = explain_trading_tooltip
+				trading_partner_province_trigger = yes
+			}
+
+			unit_location = {
+				NOT = {
+					custom_tooltip = {
+						text = trading_cooldown_tooltip
+						has_province_modifier = trading_partner
+					}
+				}
+			}
+		}	
 	}
 	
 

@@ -323,21 +323,26 @@
 	}
 }
 
-2153={ #Grannona
-	terrain="plains"
-	culture="aremorican"
-	religion="druidism"
-	trade_goods="precious_metals"
-	civilization_value=11
-	barbarian_power=0
-	province_rank="settlement"
-	freemen={
-		amount=1
-	}
-	tribesmen={
-		amount=4
-	}
-	port_building=1
+2153={ #Grannona #(HMO V2.1)
+terrain="plains"
+culture="carthaginian"
+religion="carthaginian_pantheon"
+trade_goods="precious_metals"
+civilization_value=20
+barbarian_power=0
+province_rank="city"
+nobles={
+	amount=2
+}
+citizen={
+	amount=5
+}
+freemen={
+	amount=6
+}
+tribesmen={
+	amount=1
+}
 }
 
 2154={ #Pollicum

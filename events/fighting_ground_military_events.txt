@@ -30,11 +30,7 @@ fighting_ground_military_events.1 = { # Players
         add_country_modifier = {
 			name = naval_terrain_boni
 			duration = -1
-		}
-        add_country_modifier = {
-			name = real_assault
-			duration = -1
-		}		
+		}	
 		add_country_modifier = {
 			name = INR_Tributary_Terrain
 			duration = -1

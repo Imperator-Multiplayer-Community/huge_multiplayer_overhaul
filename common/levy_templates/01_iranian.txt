@@ -8,57 +8,43 @@
 levy_iran = {
 	default = no
 
-	archers = 0.5
-	light_infantry = 0.1
-	light_cavalry = 0.1
-	horse_archers = 0.1
-	
-	heavy_cavalry = 0.15
+	archers = 0.2
+	heavy_cavalry = 0.3
+	light_cavalry = 0.5
 }
 
 levy_parthian = {
 	default = no
 
-	archers = 0.5
-
-	light_cavalry = 0.15
-	horse_archers = 0.2
-	
-	heavy_cavalry = 0.15
+	archers = 0.35
+	light_cavalry = 0.35
+	horse_archers = 0.3	
 }
 
 
 levy_cadusian = {
 	default = no
 
-	archers = 0.3
-	light_infantry = 0.3
-
-	horse_archers = 0.1
-	
-	heavy_cavalry = 0.1
+	archers = 0.4
+	light_infantry = 0.3	
+	heavy_cavalry = 0.3
 }
 
 
 levy_carmanian = {
 	default = no
 
-	archers = 0.4
+	archers = 0.3
 	light_infantry = 0.4
-
-	horse_archers = 0.1
-	heavy_cavalry = 0.1
+	horse_archers = 0.3
 }
 
 
 levy_persian = {
 	default = no
 
-	archers = 0.3
-	light_infantry = 0.3
-
-	light_cavalry = 0.15
-	heavy_infantry = 0.1
+	archers = 0.7
+	heavy_infantry = 0.15
 	heavy_cavalry = 0.15
 }
 
