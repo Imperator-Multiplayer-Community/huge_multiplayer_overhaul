@@ -128,16 +128,13 @@
 
 				unit_location = {
 					save_scope_as = naval_raider_location
-
-					trigger_event = {
-						id = hmo_unit_abilties.9
-						days = 1
-					}
 				}
 
-				trigger_event = {
-					id = hmo_unit_abilties.5
-					days = 30
+				unit_owner = {
+					trigger_event = {
+						id = hmo_unit_abilties.5
+						days = 30
+					}
 				}
 			}
 		}

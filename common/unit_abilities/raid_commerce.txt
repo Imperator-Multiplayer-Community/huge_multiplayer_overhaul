@@ -177,14 +177,11 @@
 						order_by = total_population
 						max = 1
 						
-						trigger_event = {
-							id = hmo_unit_abilties.10
-							days = 1
-						}
 						add_province_modifier = {
 							name = mugged_by_reality
 							duration = -1
 						}
+						
 						owner = {
 							trigger_event = {
 								id = hmo_unit_abilties.6

@@ -118,16 +118,13 @@
 
 				unit_location = {
 					save_scope_as = naval_assaulter_location
-
-					trigger_event = {
-						id = hmo_unit_abilties.8
-						days = 1
-					}
 				}
 				
-				trigger_event = {
-					id = hmo_unit_abilties.4
-					days = 60
+				unit_owner = {
+					trigger_event = {
+						id = hmo_unit_abilties.4
+						days = 60
+					}
 				}
 			}
 		}

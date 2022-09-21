@@ -228,12 +228,6 @@
 						days = 30
 					}
 				}
-				unit_location = {
-					trigger_event = {
-						id = hmo_unit_abilties.7
-						days = 1
-					}
-				}
 			}
 		}
 		else = {

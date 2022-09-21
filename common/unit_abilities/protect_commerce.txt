@@ -153,10 +153,7 @@
 						}
 						order_by = total_population
 						max = 1
-						trigger_event = {
-							id = hmo_unit_abilties.12
-							days = 1
-						}
+
 						add_province_modifier = {
 							name = trading_partner
 							duration = -1
