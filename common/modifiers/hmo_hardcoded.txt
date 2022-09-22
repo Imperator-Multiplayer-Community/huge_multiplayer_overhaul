@@ -223,6 +223,7 @@ is_tribe = {
 	global_tribesmen_city_desired_pop_ratio = 0.75 # replace freemen, citizens with tribesmen in city 
 	global_citizen_city_desired_pop_ratio = -0.34 # nothing unless centralizing
 	global_slaves_city_desired_pop_ratio = -0.1 # reduced so we get more nobles and tribesmen (base is already .1 so total here is .15)
+	global_pop_demotion_speed_modifier = 0.25 # speed up demotion of civilized pops
 }
 
 is_monarchy = {
