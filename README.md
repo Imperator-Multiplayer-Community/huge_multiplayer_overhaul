@@ -27,7 +27,8 @@ Features Highlights:
 [b]Complete Military Traditions Overhaul[/b] - We have gutted the vanilla traditions system and built it from the ground up for multiplayer balance. While some cultural traditions remain, there are now brand new generic trees that every culture has access to, enabling maximum player flexibility. Values have also been normalized to maximize unit diversity and unit-versus-unit matchups.
 
 [b]Terrain Combat modifiers[/b] - All units now have modifiers for combat ability on all terrain types to create more asymmetrical warfare. Archers can crush Heavy Infantry in rough terrain like mountains, forests and marshes whereas Heavy Infantry and Cavalry will dominate in the flat terrain like farmlands and plains. We have done this to break up the stagnant multiplayer meta of Heavy Infantry spam while also adding a fun layer of historical relevance to where units excelled.
-Tribal Legions - We’ve successfully unlocked legions for tribal governments so that they can compete with other government types.
+
+[b]Tribal Legions[/b] - We’ve successfully unlocked legions for tribal governments so that they can compete with other government types.
 
 [b]Ship Abilities[/b] - We’ve added a number of new abilities that make naval warfare more engaging.
 
@@ -45,7 +46,7 @@ Tribal Legions - We’ve successfully unlocked legions for tribal governments so
 
 [b]Caste System[/b] - The religions of the Indian Subcontinent have been slightly reworked to better reflect the caste system and slow down the Indian blob that unbalances games. Hindu nations will find themselves struggling to promote their many new pops and begin to buckle under over expansion. To combat this the players will have to institute reforms in the forms of laws to negate some of the drawbacks.
 
-[b]Overhaul of Regions[/] - To help balance out multiplayer ALL regions have been adjusted and several broken up with many new regions added to better balance the game. With this new system all regions are now competitive in pop sizes for legion creation, there are still a few standouts for players to fight over though.
+[b]Overhaul of Regions[/b] - To help balance out multiplayer ALL regions have been adjusted and several broken up with many new regions added to better balance the game. With this new system all regions are now competitive in pop sizes for legion creation, there are still a few standouts for players to fight over though.
 
 [url=https://github.com/Imperator-Multiplayer-Community/huge_multiplayer_overhaul]Github can be found here[/url]: https://github.com/Imperator-Multiplayer-Community/huge_multiplayer_overhaul
 
