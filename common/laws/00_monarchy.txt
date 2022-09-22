@@ -66,7 +66,7 @@ monarchy_military_reforms = {
 			global_population_happiness = 0.05
 			discipline = 0.025
 			land_morale_modifier = 0.025
-			experience_decay = -0.2
+			experience_decay = -0.015
 			monthly_military_experience = 0.15
 			army_maintenance_cost = 0.5
 		}
