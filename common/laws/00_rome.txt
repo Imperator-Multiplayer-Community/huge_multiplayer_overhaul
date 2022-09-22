@@ -39,7 +39,7 @@
 			levy_size_multiplier = -0.025
 			cohort_reinforcement_speed = 0.1
 			land_morale_recovery = 0.1
-			monthly_military_experience = 0.15
+			monthly_military_experience = 0.10
 			army_maintenance_cost = 0.5
 		}
 		on_enact = {
