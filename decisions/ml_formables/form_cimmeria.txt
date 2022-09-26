@@ -57,20 +57,19 @@
 				change_country_adjective = "CIMMERIA_ADJECTIVE"
 				change_country_color =  "Cimmeria_color"
 				change_country_tag = CMM
-				change_country_flag = CIMMERIA_FLAG
 				trigger_event = {
-					id = formable_heritage.140
+					id = formable_heritage.180
 				}				
 			}
 			capital_scope = {
 				capital_formable_large_effect = yes
 				formable_capital_modifier_large_effect = yes
 			}
-			add_5_free_province_investments = yes
+			add_3_free_province_investments = yes
 		}
 		
 		ai_will_do = {
-			base = 1
+			base = 1f
 		}
 	}
 

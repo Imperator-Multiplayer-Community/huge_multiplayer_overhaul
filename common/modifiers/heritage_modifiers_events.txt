@@ -1095,3 +1095,9 @@ GreaterScyhtia_modifier = {
 	global_tax_modifier = 0.05
 	character_loyalty = -5.00
 }
+
+Cimmeria_modifier = {
+		price_found_city_cost_modifier = -0.20
+        global_export_commerce_modifier = 0.05
+        global_import_commerce_modifier = -0.1
+}
