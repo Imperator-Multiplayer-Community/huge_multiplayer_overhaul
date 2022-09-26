@@ -354,7 +354,7 @@ tribal_super_centralized_military_laws = {
 		}
 
 		modifier = {
-			levy_size_multiplier = 0.03
+			levy_size_multiplier = 0.04
 			discipline = 0.05
 			army_weight_modifier = -0.2
 			experience_decay = 0.015 # this offsets a tribe's natural experience decay to +0.005 natural
