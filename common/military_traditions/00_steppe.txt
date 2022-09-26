@@ -4,7 +4,7 @@
 	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = scythia }
+			limit = { country_culture_group = scythian }
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
