@@ -1074,7 +1074,7 @@ heritage_of_assur = {
 	modifier = {
 		#good
 		land_morale_modifier = 0.05
-		siege_ability = 0.10
+		discipline = 0.05
 		#bad
 		monthly_political_influence_modifier = -0.05
 	}
@@ -3723,7 +3723,7 @@ meshwesh_heritage = {
 hellenic_kingdom_heritage = {
 	modifier = {
 		#good
-		mercenary_land_maintenance_cost = -0.1
+		army_maintenance_cost = 0.05
 		country_civilization_value = 0.05
 		
 		#bad
@@ -3799,7 +3799,7 @@ Cimmeria_heritage = {
     modifier = {
         #good
 		price_found_city_cost_modifier = -0.15
-        global_export_commerce_modifier = 0.05
+        global_population_capacity_modifier = 0.05
 
         #bad
         global_import_commerce_modifier = -0.1
