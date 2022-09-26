@@ -66,7 +66,7 @@ template unit_action_item_diamond
 
 base_window = {
 	name = "single_unit_window"
-	size = { 492 660 }
+	size = { 492 680 }
 	widgetanchor = top|left
 	using = main_window_template
 	position = { 60 138 }
@@ -457,7 +457,7 @@ base_window = {
 		}
 		margin_widget = { size = { 0 20 } }
 		margin_widget = {
-			size = { 0 170 }
+			size = { 0 200 }
 			margin = { 0 0 }
 			layoutpolicy_horizontal = expanding
 			# First Row: Reorg!
@@ -524,7 +524,7 @@ base_window = {
 			
 		}
 		margin_widget = {
-			size = { 0 94 }
+			size = { 0 104 }
 			margin = { 12 0 }
 			#using = NoninteractableBG
 			layoutpolicy_horizontal = expanding
@@ -556,7 +556,7 @@ base_window = {
 				visible = yes
 
 				position = { 0 30 }
-				size = { 100% 60 }
+				size = { 100% 80 }
 				dynamicgridbox = {
 					size = { 342 100% }
 					flipdirection = no
