@@ -48,18 +48,18 @@ expense_army = {
 	#war_minimum = default
 
 	low = {
-		levy_size_multiplier = 0.025 
+		levy_size_multiplier = 0.035 
 		war_exhaustion = -0.04
 		
 		land_morale_modifier = -0.25
 		army_maintenance_cost = -0.25 #Legion Maintenance
 	}
 	default = {
-		levy_size_multiplier = 0.025
+		levy_size_multiplier = 0.035
 	}
 	high = {
 		war_exhaustion = 0.06
-		levy_size_multiplier = 0.025
+		levy_size_multiplier = 0.035
 		land_morale_modifier = 0.1
 		army_maintenance_cost = 0.25 #Legion Maintenance
 	}

@@ -21,6 +21,13 @@ social_tax_exemption_law_desc:0 "Let us relax the tax burden on certain classes 
 socialism_law:0 "State-Sponsored Food and Board"
 socialism_law_desc:0 "Let us feed those who are unable to feed themselves."
 
+merc_reliance_monthly_cost_tt = "Overall monthly Mercenary costs are reduced by 25 percent."
+
+#New Republic Laws
+
+republican_recruitment_5:0 "Mercenary Reliance"
+republican_recruitment_5_desc:0 "We rely in Mercs"
+
 
 #New Monarchy Laws
 
@@ -28,6 +35,8 @@ new_friends_law:0 "Personal Diplomacy"
 new_friends_law_desc:0 "A personal touch helps to align interests."
 pay_the_crown_law:0 "Burdensome Tribute"
 pay_the_crown_law_desc:0 "Subjects will pay what they must to ensure their overlord's protection."
+monarchy_recruitment_5:0 "Mercenary Reliance"
+monarchy_recruitment_5_desc:0 "We rely in Mercs"
 
 already_enacted_marian_reforms:0 "Has not already enacted Marian Reforms."
 marian_reforms_warning:0 "Once Marian Reforms has been enacted, cannot go back to capital only legion law."

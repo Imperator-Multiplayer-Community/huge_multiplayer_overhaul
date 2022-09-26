@@ -35,9 +35,9 @@
 		}
 	}
 
-	mercenary_reliance = {
+	republican_recruitment_5 = {
 		modifier = {
-			mercenary_land_maintenance_cost = -0.25
+			mercenary_land_maintenance_cost = -0.35
 			recruit_mercenary_cost_modifier = -0.35
 			max_mercenary_stacks = 1
 			levy_size_multiplier = -0.025

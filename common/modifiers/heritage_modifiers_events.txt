@@ -1055,8 +1055,8 @@ meshwesh_modifier = {
 }
 
 hellenic_kingdom_modifier = {
-		mercenary_land_maintenance_cost = -0.05
-		heavy_infantry_offensive = 0.1
+		mercenary_land_maintenance_cost = -0.1
+		country_civilization_value = 0.05
 		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
 }
 
@@ -1120,4 +1120,9 @@ pannonian_pannonian_modifier = {
 		light_infantry_discipline = 0.1
 		global_pop_assimilation_speed_modifier = 0.05
 		manpower_recovery_speed = -0.05
+}
+Cimmeria_modifier = {
+		price_found_city_cost_modifier = -0.20
+        global_export_commerce_modifier = 0.05
+        global_import_commerce_modifier = -0.1
 }
