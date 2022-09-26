@@ -3808,6 +3808,8 @@ Cimmeria_heritage = {
     trigger = {
         tag = CMM
     }
+}
+
 	## HMO V2.1 (DaFoogles Heritages)
 	
 silurian_heritage = {
@@ -3824,4 +3826,78 @@ silurian_heritage = {
 			tag = SIR
 		}
 	}
+
+slavia_heritage = {
+	modifier = {
+		#good
+		global_manpower_modifier = 0.1
+		global_population_growth = 0.05
+		
+		#bad
+		discipline = -0.05
+	}
 	
+	trigger = {
+		tag = SLA
+	}
+}
+
+tibetan_empire_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.1
+		global_population_capacity_modifier = 0.05
+		
+		#bad
+		global_tax_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = TIB	
+	}
+}
+
+baratanac_heritage = {
+	modifier = {
+		#good
+		global_capital_trade_routes = 1
+		global_export_commerce_modifier = 0.05
+		
+		#bad
+		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
+	}
+	
+	trigger = {
+		tag = BTC	
+	}
+}
+
+hekamet_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.05
+		global_defensive = 0.10
+		
+		#bad
+		general_loyalty = -5
+	}
+	
+	trigger = {
+		tag = HEK	
+	}
+}
+
+pannonian_pannonian_heritage = {
+	modifier = {
+		#good
+		light_infantry_discipline = 0.1
+		global_pop_assimilation_speed_modifier = 0.05
+		
+		#bad
+		manpower_recovery_speed = -0.05
+	}
+	
+	trigger = {
+		tag = PAN
+	}
+}

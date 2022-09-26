@@ -745,3 +745,42 @@
  Greater_Scythia_not_exists:0 "Greater Scythia Must Not Exist"
  GREATER_SCYTHIA_NAME:0 "Greater Scythia"
  GREATER_SCYTHIA_ADJECTIVE:0 "Scythians"
+
+ #Batatanac
+ form_baratanac:0 "Form the Baratanac Federation"
+ form_baratanac_desc:0 "For generations Dido and Azibal have been two distant Punic colonies deep in a foreign land surrounded by alien countries. If we were to unite with our kin across the channel, we would be in a position to establish a federation capable of monopolizing trade and projecting our influence, becoming a worthy successor to the Punic and Phoenecian realms of our forebearers."
+ BARATANAC_NAME:0 "Baratanac Federation"
+ BARATANAC_ADJECTIVE:0 "Baratanac"
+ baratanac_not_exists:0 "#YThe Baratanac Federation#! must NOT exist."
+
+ #Hekamet
+ form_hekamet:0 "Form Hekamet"
+ form_hekamet_desc:0 "Long have we persecuted and oppressed the followers of Yahweh within our lands, preventing any serious debate or discussion on the message they preach. Now that the Greek pretenders have been ousted, there are some powerful and influential elites within our government who think that there may be some truth in what the Israelites have to say, however, and that we should incorporate some of their ideas into our new kingdom. By adopting Judaism as our official state religion, we will become Hekamet, and with our newfound faith, Yahweh will ensure that our zealous Pharaoh shall keep our lands free from foreign barbarians."
+ HEKAMET_NAME:0 "Hekamet"
+ HEKAMET_ADJECTIVE:0 "Hekameti"
+ hekamet_not_exists:0 "#YHekamet#! must NOT exist."
+
+ #Pannonia (Pannonian)
+ form_pannonia_pannonian:0 "Form Pannonia"
+ form_pannonia_pannonian_desc:0 "Protected by the mountains in the north and east and shielded by rivers to the south, the Carpathian basin is the perfect place to establish a great kingdom worthy of remembrance. Our bretheren are scattered and divided, lead by lesser rulers unworthy of their title; if we can unite the region, we can proclaim ourselves the true master of Pannonia."
+
+ #Slavia
+ form_slavia:0 "Form Slavia"
+ form_slavia_desc:0 "Us Slavs have lived along the boundaries of the known world for millennia, eeking out a meager existence dwelling among the vast forests. Yet in spite of our similarities, we are scattered and divided, living as if we were separate peoples, fighting and warring amongst eachother over petty despites and meaningless feuds. If we were to rise up and subdue the rest of our kin, we could proclaim a pan-Slavic federation stretching from the Baltic Sea to the Steppe, capable of subduing those foolish enough to challenge us."
+ SLAVIA_NAME:1 "Slavia"
+ SLAVIA_ADJECTIVE:0 "Slavic"
+ formable_not_slavia_exists:0 "#YSlavia#! must NOT exist."
+
+ #Tibetan Empire
+ form_tibetan_empire:0 "Form the Tibetan Empire"
+ form_tibetan_empire_desc:0 "Tibet has long been a backwater, isolated on the mountain tops which protect us. However, our harsh and trecherous lands will not protect us forever, for sooner or later, we will be conquered by a force too great and terrable to overcome on our own; to survive we must end our time of isolation, and actively lay conquest to our neighbors. With the borders of our realm stretching from the Steppe to the coast, we can proclaim a glorious Tibetan Empire capable of projecting power and influence from the top of the world!"
+ TIBETAN_EMPIRE_NAME:0 "Tibetan Empire"
+ TIBETAN_EMPIRE_ADJECTIVE:0 "Tibetan"
+ tibetan_empire_not_exists:0 "#YThe Tibetan Empire#! must NOT exist."
+
+ #Italiotian League
+ form_italiotian_league:0 "Form the Italiotian League"
+ form_italiotian_league_desc:0 ""
+ ITALIOTIAN_LEAGUE:0 "Italiotian League"
+ ITALIOTIAN_LEAGUE_ADJECTIVE:0 "Italiotian"
+ italiotian_league_not_exists:0 "#YThe Italiotian League#! must NOT exist."
