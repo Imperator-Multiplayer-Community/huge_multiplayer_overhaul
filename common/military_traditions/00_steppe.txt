@@ -4,11 +4,11 @@
 	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = scythian }
+			limit = { country_culture_group = scythia }
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
-			country_culture_group = scythian
+			country_culture_group = scythia
 		}
 		trigger_else_if = {
 			limit = {
@@ -18,6 +18,15 @@
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = bactrian
+		}
+		trigger_else_if = {
+			limit = {
+				country_culture_group = scythian_east
+			}
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = scythian_east
 		}
 		trigger_else_if = {
 			limit = {
@@ -39,7 +48,8 @@
 					is_integrated = yes
 					country_culture_pop_count >= percent_size_culture_group_comparison
 					OR = {
-						this.culture.culture_group = culture_group:scythian
+						this.culture.culture_group = culture_group:scythia
+						this.culture.culture_group = culture_group:scythian_east
 						this.culture.culture_group = culture_group:bactrian
 						this.culture.culture_group = culture_group:caucasian
 					}
