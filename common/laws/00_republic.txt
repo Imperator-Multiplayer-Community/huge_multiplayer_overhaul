@@ -37,7 +37,7 @@
 
 	republican_recruitment_5 = {
 		modifier = {
-			mercenary_land_maintenance_cost = -0.25
+			mercenary_land_maintenance_cost = -0.50
 			recruit_mercenary_cost_modifier = -0.35
 			max_mercenary_stacks = 1
 			levy_size_multiplier = -0.025
@@ -47,6 +47,7 @@
 			army_maintenance_cost = 0.5
 		}
 		on_enact = {
+			custom_tooltip = merc_reliance_monthly_cost_tt
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
 		}
