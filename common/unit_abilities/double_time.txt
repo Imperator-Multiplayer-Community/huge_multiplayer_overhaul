@@ -1,0 +1,88 @@
+﻿double_time = {
+	duration = -1
+	enable = no
+	toggle = yes
+	navy_only = yes
+	cancel_on_combat_end = no
+	
+	map = yes
+	
+	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_force_march"
+
+	allow = {
+		is_navy = yes
+		in_combat = no
+		is_moving = no
+		has_commander = yes
+		# custom_tooltip = {
+		# 	text = marines_ratio
+		# 	num_of_marines >= num_of_ships_10
+		# }
+		
+		NOT = { unit_owner = { has_low_economic_policy = expense_navy } }
+
+		trigger_if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				loyalty > 33
+			}
+		}
+		trigger_else = {
+			custom_tooltip = {
+				text = no_marines_tt
+			}
+		}
+	}
+	modifier = {
+		naval_morale_modifier = -0.2
+		naval_damage_done = -0.2
+		naval_morale_recovery = -0.2
+		navy_movement_speed = 0.25
+	}
+	
+	finished_when = {
+		OR = {
+			is_exiled = yes
+			unit_owner = { has_low_economic_policy = expense_navy }
+			has_commander = no
+			#num_of_marines < num_of_ships_10
+			strength_percentage < 0.3
+			morale_percentage < 0.3
+		}
+	}
+	
+	ai_will_do = {
+		modifier = {
+			trigger = {
+
+				experience_percentage < 0.65
+				
+				unit_owner = {
+					treasury > 50
+					manpower > 20
+				}
+			}
+			add = {
+				value = 250
+				divide = unit_size_rank
+			}
+		}
+	}
+	
+	ai_will_revoke = {
+		OR = {
+			is_idle = no
+			unit_threat > 0.2
+			experience_percentage >= 0.95
+
+			unit_owner = {
+				treasury < 1
+			}
+			unit_owner = {
+				months_to_war < 12
+			}
+		}
+	}
+}

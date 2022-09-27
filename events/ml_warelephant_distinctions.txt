@@ -278,12 +278,6 @@ ml_warelephant_distinctions.1 = {
 				}
 
 				add_distinction = distinction_warelephant_offensive_01
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.1
-					}
-				}
 			}
 		}
 	}
@@ -464,12 +458,6 @@ ml_warelephant_distinctions.2 = {
 				}
 
 				remove_distinction = distinction_warelephant_offensive_01
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.2
-					}
-				}
 			}
 		}
 	}
@@ -756,12 +744,6 @@ type = country_event
 				}
 
 				add_distinction = distinction_warelephant_defensive_01
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.1
-					}
-				}
 			}
 		}
 	}
@@ -937,12 +919,6 @@ ml_warelephant_distinctions.4 = {
 				}
 
 				remove_distinction = distinction_warelephant_defensive_01
-
-				ROOT = {
-					trigger_event = {
-						id = ml_expeditionary_distinctions.2
-					}
-				}
 			}
 		}
 	}
@@ -1012,12 +988,6 @@ ml_warelephant_distinctions.5 = {
 
 					scope:actor.legion = {
 						add_distinction = distinction_warelephant_discipline_1
-					}
-
-					ROOT = {
-						trigger_event = {
-							id = ml_expeditionary_distinctions.1
-						}
 					}
 				}
 				else_if = {

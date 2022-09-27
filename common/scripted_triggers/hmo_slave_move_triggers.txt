@@ -1,0 +1,8 @@
+﻿has_valid_slave_import_province = {
+	any_owned_province = {
+		AND = {
+			has_province_modifier = slave_move_yes
+			total_population < population_cap
+		}
+	}
+}

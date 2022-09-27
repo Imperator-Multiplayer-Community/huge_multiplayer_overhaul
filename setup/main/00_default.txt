@@ -6748,7 +6748,7 @@ country = {
 		
 		SIR = {
 			government = tribal_kingdom
-			primary_culture = demetian
+			primary_culture = silurian ## HMO V2.1 DaFoogles Heritages
 			religion = druidism
 			centralization=5
 
@@ -7705,12 +7705,12 @@ country = {
 			government = tribal_kingdom
 			primary_culture = aulercian
 			religion = druidism
-			centralization=10
+			centralization=15
 
 			capital = 2459
 
 			own_control_core = 	{
-				2351 2459 2456 2401 2402 
+				2351 2459 2456 2401 2402 2400
 			}
 		}
 		
@@ -11452,6 +11452,36 @@ country = {
 	
 	}
 
+	C75 = { 
+		government = plutocratic_republic
+		diplomatic_stance= trading_stance
+		primary_culture = carthaginian
+		religion = carthaginian_pantheon
+		
+		technology={
+			military_tech={ level=2 progress=0 }
+			civic_tech={ level=2 progress=0 }
+			oratory_tech={ level=2 progress=0 }
+			religious_tech= { level=2 progress=0  }
+		}
+
+		pantheon = { 
+			
+			{ deity = 425 }
+			{ deity = 401 }
+			{ deity = 428 }	
+			{ deity = 426}
+			
+			}
+		
+		capital = 2153
+		
+		own_control_core = {
+			2153 2147 2212 2209 3308 2352
+		}
+	
+	}
+
 	C76 = { 
 		government = plutocratic_republic
 		diplomatic_stance=trading_stance
@@ -12487,7 +12517,7 @@ country = {
 		PRA = { #Pauravas
 			family=85
 			government = oligarchic_republic
-			primary_culture = gandhari
+			primary_culture = purus
 			religion = hindu
 			capital = 4340
 			
@@ -12540,7 +12570,7 @@ country = {
 		
 		NBA = { #Nabha
 			government = tribal_kingdom
-			primary_culture = himalayan
+			primary_culture = dardic
 			religion = hindu
 			centralization=-10
 			capital = 7385
@@ -12618,7 +12648,7 @@ country = {
 		ALU = {
 			family = 38
 			government = tribal_kingdom
-			primary_culture = kannadan
+			primary_culture = alupan
 			religion = hindu
 			centralization=10
 			capital = 7015
@@ -12670,7 +12700,7 @@ country = {
 		
 		RTI = {
 			government = despotic_monarchy
-			primary_culture = maharashtran
+			primary_culture = rathikan
 			religion = hindu
 			centralization=10
 			capital = 7066
@@ -12690,7 +12720,7 @@ country = {
 		
 		ASM = {
 			government = tribal_kingdom
-			primary_culture = telugu
+			primary_culture = assaka
 			religion = hindu
 			centralization=10
 			capital = 7058
@@ -12705,7 +12735,7 @@ country = {
 		
 		ANH = {
 			government = tribal_federation
-			primary_culture = telugu
+			primary_culture = andhran
 			religion = jainism
 			centralization=30
 			
@@ -12801,7 +12831,7 @@ country = {
 		
 		IDR = {
 			government = tribal_kingdom
-			primary_culture = telugu
+			primary_culture = savara
 			religion = hindu
 			centralization=-10
 			capital = 7134
@@ -12814,7 +12844,7 @@ country = {
 		PND = {
 			family = 37
 			government = despotic_monarchy
-			primary_culture = tamil
+			primary_culture = pandyan
 			religion = hindu
 			
 			technology={
@@ -12835,7 +12865,7 @@ country = {
 		
 		KRA = {
 			government = tribal_kingdom
-			primary_culture = kalingan
+			primary_culture = savara
 			religion = hindu
 			centralization=-10
 			capital = 7169
@@ -12852,7 +12882,7 @@ country = {
 		CHL = {
 			family = 36
 			government = despotic_monarchy
-			primary_culture = tamil
+			primary_culture = cholan
 			religion = hindu
 			
 			technology={
@@ -12874,7 +12904,7 @@ country = {
 		
 		CHR = {
 			government = despotic_monarchy
-			primary_culture = tamil
+			primary_culture = cheran
 			religion = hindu
 			
 			technology={
@@ -12893,7 +12923,7 @@ country = {
 		
 		STY = {
 			government = tribal_kingdom
-			primary_culture = tamil
+			primary_culture = alupan
 			religion = hindu
 			centralization=10
 			capital = 6889
@@ -13080,7 +13110,7 @@ country = {
 			capital = 6781
 			
 			own_control_core = {
-				6781 6778 6779 6780 6782 6787 6788
+				6781 6778 6779 6780 6782 6787 6788 8750 8751 8752 8753 8754 8755 8756 8757
 			}
 		}
 		
@@ -13105,7 +13135,7 @@ country = {
 
 		A06 = { #VARENDRA
 			government = aristocratic_monarchy
-			primary_culture = bangli
+			primary_culture = pandra
 			religion = buddhism
 		
 			technology={
@@ -13183,7 +13213,7 @@ country = {
 		
 		A48 = { #MADYHAMIKA
 			government = despotic_monarchy
-			primary_culture = avanti
+			primary_culture = matsya
 			religion = hindu
 		
 			technology={
@@ -13345,7 +13375,7 @@ country = {
 	
 		C38 = { #PANCHALA
 			government = oligarchic_republic
-			primary_culture = shauraseni
+			primary_culture = kosala
 			religion = jainism
 		
 			technology={
@@ -13406,7 +13436,7 @@ country = {
 
 		C81 = { 
 			government = plutocratic_republic
-			primary_culture = macedonian
+			primary_culture = cheran
 			religion = buddhism
 		
 			technology={
@@ -13428,14 +13458,14 @@ country = {
 			}
 		
 			own_control_core =  {
-				6901 6900 6899 6911 6902
+				6901 6900 6899 6911 6902 8281 8282 8283 8338 8342 8343 8387
 			}
 		}
 
 		C79 = { 
 			government = plutocratic_republic
 			diplomatic_stance=trading_stance
-			primary_culture = macedonian
+			primary_culture = maharashtran
 			religion = buddhism
 		
 			technology={

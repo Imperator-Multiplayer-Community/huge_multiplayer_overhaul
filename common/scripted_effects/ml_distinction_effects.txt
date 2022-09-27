@@ -1,0 +1,35 @@
+﻿recently_earned_distinction_effect = { # unit scope
+	every_governorships = {
+		limit = {
+			has_legion_trigger = yes
+			legion = scope:actor.legion
+		}
+
+		save_scope_as = legion_governorship
+	}
+
+	scope:legion_governorship = {
+		every_governorship_state = {
+			limit = {
+				is_capital_state = yes
+			}
+			
+			save_scope_as = governorship_capital_state
+		}
+
+		scope:governorship_capital_state = {
+			if = {
+				limit = {
+					NOT = {
+						has_state_modifier = distinction_cooldown
+					}
+				}
+
+				add_state_modifier = {
+					name = distinction_cooldown
+					duration = 5
+				}
+			}
+		}
+	}
+}

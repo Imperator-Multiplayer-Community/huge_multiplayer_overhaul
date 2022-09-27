@@ -24,7 +24,7 @@ base_sub_window = {
 		ignoreinvisible = yes
 		
 		margin_widget = {
-			size = { 820 860 }
+			size = { 820 900 }
 
 			### ALL GOODS
 			scrollarea = {
@@ -154,7 +154,7 @@ base_sub_window = {
 
 			### CURRENT IMPORTS
 			margin_widget = {
-				size = { 820 300 }
+				size = { 820 340 }
 				parentanchor = bottom
 
 				sub_header = {

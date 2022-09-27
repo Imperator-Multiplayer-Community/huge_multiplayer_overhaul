@@ -3723,8 +3723,8 @@ meshwesh_heritage = {
 hellenic_kingdom_heritage = {
 	modifier = {
 		#good
-		mercenary_land_maintenance_cost = -0.05
-		heavy_infantry_offensive = 0.1
+		army_maintenance_cost = -0.05
+		country_civilization_value = 0.05
 		
 		#bad
 		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
@@ -3799,12 +3799,104 @@ Cimmeria_heritage = {
     modifier = {
         #good
 		price_found_city_cost_modifier = -0.15
-        global_population_growth = 0.1
+        global_population_capacity_modifier = 0.05
 
         #bad
-        global_tribesmen_happyness = negative_happiness_small_svalue
+        global_import_commerce_modifier = -0.1
     }
 
     trigger = {
         tag = CMM
     }
+}
+	## HMO V2.1 (DaFoogles Heritages)
+	
+silurian_heritage = {
+		modifier = {
+			#good
+			global_start_experience = 25
+			forest_combat_bonus = 0.05
+			
+			#bad
+			navy_maintenance_cost = 0.025
+		}
+		
+		trigger = {
+			tag = SIR
+		}
+	}
+
+slavia_heritage = {
+	modifier = {
+		#good
+		global_manpower_modifier = 0.1
+		global_population_growth = 0.05
+		
+		#bad
+		discipline = -0.05
+	}
+	
+	trigger = {
+		tag = SLA
+	}
+}
+
+tibetan_empire_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.1
+		global_population_capacity_modifier = 0.05
+		
+		#bad
+		global_tax_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = TIB	
+	}
+}
+
+baratanac_heritage = {
+	modifier = {
+		#good
+		global_capital_trade_routes = 1
+		global_export_commerce_modifier = 0.05
+		
+		#bad
+		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
+	}
+	
+	trigger = {
+		tag = BTC	
+	}
+}
+
+hekamet_heritage = {
+	modifier = {
+		#good
+		omen_power = 0.05
+		global_defensive = 0.10
+		
+		#bad
+		general_loyalty = -5
+	}
+	
+	trigger = {
+		tag = HEK	
+	}
+}
+
+pannonian_pannonian_heritage = {
+	modifier = {
+		#good
+		light_infantry_discipline = 0.1
+		global_pop_assimilation_speed_modifier = 0.05
+		
+		#bad
+		manpower_recovery_speed = -0.05
+	}
+	
+	trigger = {
+		tag = PAN
+	}
+}

@@ -12,9 +12,16 @@ ml_victories_defeats_count.1 = {
 	}
 
 	immediate = {
-		scope:actor.legion = {
-			save_scope_as = hist_legion_scope
+		every_governorships = {
+			limit = {
+				has_legion_trigger = yes
+				legion = scope:actor.legion
+			}
 
+			save_scope_as = legion_governorship
+		}
+
+		scope:legion_governorship = {
 			if = {
 				limit = {
 					has_variable = total_victory_count
@@ -29,25 +36,6 @@ ml_victories_defeats_count.1 = {
 				set_variable = {
 					name = total_victory_count
 					value = 1
-				}
-			}
-			if = {
-				limit = { exists = scope:actor.commander }
-				scope:actor.legion = {
-					add_legion_history = {
-						key = victories_defeats_history
-						province = scope:actor.unit_location
-						commander = scope:actor.commander
-					}
-				}
-			}
-			else = {
-				scope:actor.legion = {
-					add_legion_history = {
-						key = victories_defeats_history
-						province = scope:actor.unit_location
-						commander = scope:actor.commander
-					}
 				}
 			}
 		}
@@ -66,9 +54,16 @@ ml_victories_defeats_count.2 = {
 	}
 
 	immediate = {
-		scope:actor.legion = {
-			save_scope_as = hist_legion_scope
+		every_governorships = {
+			limit = {
+				has_legion_trigger = yes
+				legion = scope:actor.legion
+			}
 
+			save_scope_as = legion_governorship
+		}
+
+		scope:legion_governorship = {
 			if = {
 				limit = {
 					has_variable = total_defeat_count
@@ -83,26 +78,6 @@ ml_victories_defeats_count.2 = {
 				set_variable = {
 					name = total_defeat_count
 					value = 1
-				}
-			}
-
-			if = {
-				limit = { exists = scope:actor.commander }
-				scope:actor.legion = {
-					add_legion_history = {
-						key = victories_defeats_history
-						province = scope:actor.unit_location
-						commander = scope:actor.commander
-					}
-				}
-			}
-			else = {
-				scope:actor.legion = {
-					add_legion_history = {
-						key = victories_defeats_history
-						province = scope:actor.unit_location
-						commander = scope:actor.commander
-					}
 				}
 			}
 		}

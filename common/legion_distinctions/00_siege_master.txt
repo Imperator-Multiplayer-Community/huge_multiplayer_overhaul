@@ -6,10 +6,9 @@ distinction_siege_master_01 = {
 
 	}
 	unit = {
-
+		assault_ability = 0.025
 	}
 	legion = {
-		assault_ability = 0.025
 		siege_ability = 0.05
 	}
 }
@@ -20,10 +19,9 @@ distinction_siege_master_02 = {
 
 	}
 	unit = {
-
+		assault_ability = 0.05
 	}
 	legion = {
-		assault_ability = 0.05
 		siege_ability = 0.1
 		siege_engineers = 1
 	}
@@ -35,10 +33,9 @@ distinction_siege_master_03 = {
 
 	}
 	unit = {
-
+		assault_ability = 0.075
 	}
 	legion = {
-		assault_ability = 0.075
 		siege_ability = 0.15
 		siege_engineers = 1
 	}
@@ -50,10 +47,9 @@ distinction_siege_master_04 = {
 
 	}
 	unit = {
-
+		assault_ability = 0.01
 	}
 	legion = {
-		assault_ability = 0.01
 		siege_ability = 0.2
 		siege_engineers = 2
 	}

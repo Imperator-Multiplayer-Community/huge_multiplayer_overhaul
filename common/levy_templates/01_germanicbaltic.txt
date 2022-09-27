@@ -8,26 +8,16 @@
 levy_germanic = {
 	default = no
 	
+	archers = 0.4	
 	light_infantry = 0.3
-
-	archers = 0.4
-	
-	light_cavalry = 0.20
-	
-	heavy_infantry = 0.10
-
+	heavy_infantry = 0.3
 }
 
 
 levy_baltic = {	
 	default = no
 
-	light_infantry = 0.3
-
-	archers = 0.4
-	
-	light_cavalry = 0.20
-	
-	heavy_infantry = 0.10
-
+	archers = 0.3	
+	light_infantry = 0.4
+	heavy_infantry = 0.3
 }
