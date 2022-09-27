@@ -1055,7 +1055,7 @@ meshwesh_modifier = {
 }
 
 hellenic_kingdom_modifier = {
-	    army_maintenance_cost = 0.05
+	    army_maintenance_cost = -0.05
 	    country_civilization_value = 0.05
 	    happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
 }
