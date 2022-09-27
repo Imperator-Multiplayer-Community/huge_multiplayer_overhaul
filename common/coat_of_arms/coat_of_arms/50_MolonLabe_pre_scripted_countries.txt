@@ -1861,3 +1861,193 @@ MAT = {
         instance = { scale = { 0.75 0.75 }  }
     }
 }
+
+BARATANAC_FLAG = {
+    pattern = "pattern_horizontal_bar_01.tga"
+    color1 = "offwhite"
+    color2 = "baratanac_color"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_01.tga"
+        color1 = "ck2_green"
+        instance = { rotation = 0 scale = { 0.5 1.0 } position={ 0.75 0.5 } }
+	instance = { rotation = 180 scale = { 0.5 1.0 } position={ 0.75 0.5 } }
+        instance = { rotation = 0 scale = { 0.5 1.0 } position={ 0.75 0.62 } }
+	instance = { rotation = 180 scale = { 0.5 1.0 } position={ 0.75 0.38 } }
+    }
+
+    colored_emblem = {
+        texture = "ce_border_simple_01.tga"
+        color1 = "baratanac_color"
+        instance = { rotation = 0 scale = { 0.5 1.0 } position={ 0.25 0.5 } }
+	instance = { rotation = 180 scale = { 0.5 1.0 } position={ 0.25 0.5 } }
+        instance = { rotation = 0 scale = { 0.5 1.0 } position={ 0.25 0.62 } }
+	instance = { rotation = 180 scale = { 0.5 1.0 } position={ 0.25 0.38 } }
+    }
+
+    colored_emblem = {
+        texture = "ce_block.dds"
+        color1 = "offwhite"
+        instance = {
+		scale = { 1.0 0.45 }
+	}
+    }
+
+    colored_emblem = {
+        texture = "ce_flower_04.dds"
+        color1 = "carpetania_color"
+        instance = {
+		scale = { 0.55 0.50 }
+		position={ 0.17 0.5 }
+	}
+    }
+
+    colored_emblem = {
+        texture = "ce_flower_04.dds"
+        color1 = "carpetania_color"
+	instance = {
+		scale = { -0.55 0.50 }
+		position={ 0.83 0.5 }
+	}
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_02.dds"
+        color1 = "carpetania_color"
+        instance = {
+		scale = { 0.63 0.54 }
+		position={ 0.5 0.5 }
+	}
+    }
+
+
+    colored_emblem = {
+        texture = "ce_border_meander_01.tga"
+        color1 = "offwhite"
+	color2 = "ck2_green"
+        instance = {
+		position={ 1.0 0.56 }
+	}
+        instance = {
+		position={ 1.0 0.44 }
+		rotation = 180
+	}
+
+
+    }
+
+    colored_emblem = {
+        texture = "ce_border_meander_01.tga"
+        color1 = "offwhite"
+	color2 = "baratanac_color"
+        instance = {
+		position={ 0 0.56 }
+	}
+        instance = {
+		position={ 0 0.44 }
+		rotation = 180
+	}
+
+
+    }
+
+	
+}
+
+HEKAMET_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = hekamet_blue_color	
+	textured_emblem = {
+		texture = "HEKAMET_FLAG.png"
+	}
+}
+
+PANNONIA_PANNONIAN_FLAG = {
+	pattern = "pattern_vertical_bar_01.tga"
+	color1 = "offwhite"
+	color2 = "pannonia_pannonian_color"
+
+	colored_emblem = {
+		texture = "ce_border_simple_01.tga"
+		color1 = "pannonia_pannonian_color"
+		instance = { 
+			rotation = 90
+			position={ 0.25 0.50 }
+		}
+		instance = { 
+			rotation = 270
+			position={ 0.75 0.50 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_border_leaves_01.dds"
+		color1 = "pannonia_pannonian_color"
+		color2 = "ck2_black"
+		instance = { 
+			rotation = 90
+		}
+		instance = { 
+			rotation = 270
+		}
+
+	}
+
+	colored_emblem = {
+		texture = "ce_illyrian_1.dds"
+		color1 = "ck2_black"
+		instance = {
+		scale = { 0.64 0.61 }
+		}
+	}
+}
+
+#Slavia
+SLAVIA_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_blue"
+	color2 = rgb { 49  104  99 }
+
+	colored_emblem = {
+		texture = "ce_slavia.dds"
+		color1 = rgb { 49  104  99 }
+		color2 = "frost_blue"
+		instance = { 
+			scale = { 0.9  0.9 } 
+		}
+	}
+}
+
+#Tibetan Empire
+TIBETAN_EMPIRE_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = tibetan_empire_flag_color
+
+	colored_emblem = {
+		texture = "ce_tibetLion.dds"
+		color1 = "pure_white"
+		color2 = "ck2_black"
+		instance = { 
+			scale = { 1.5 1.5 } 
+			position={ 0.55 0.50 }
+		}
+	}
+	colored_emblem = {
+		texture = "ce_tibetLionEyes.dds"
+		color1 = "roman_gold"
+		color2 = "pure_white"
+		instance = { 
+			scale = { 1.5 1.5 } 
+			position={ 0.55 0.50 }
+		}
+	}
+	colored_emblem = {
+		texture = "ce_tibetLionTongue.dds"
+		color1 = "tibetan_empire_toungue_color"
+		color2 = "pure_white"
+		instance = { 
+			scale = { 1.5 1.5 } 
+			position={ 0.55 0.50 }
+		}
+	}
+}
