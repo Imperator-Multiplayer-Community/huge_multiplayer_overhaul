@@ -1055,9 +1055,9 @@ meshwesh_modifier = {
 }
 
 hellenic_kingdom_modifier = {
-		mercenary_land_maintenance_cost = -0.05
-		heavy_infantry_offensive = 0.1
-		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
+	    army_maintenance_cost = -0.05
+	    country_civilization_value = 0.05
+	    happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
 }
 
 nemedia_modifier = {
@@ -1094,4 +1094,35 @@ GreaterScyhtia_modifier = {
 	horse_archers_offensive = 0.1
 	global_tax_modifier = 0.05
 	character_loyalty = -5.00
+}
+
+slavia_modifier = {
+		global_manpower_modifier = 0.10
+		global_population_growth = 0.05
+		discipline = -0.05
+}
+tibetan_empire_modifier = {
+		omen_power = 0.1
+		global_population_capacity_modifier = 0.05
+		global_tax_modifier = -0.05
+}
+baratanac_modifier = {
+		global_capital_trade_routes = 1
+		global_export_commerce_modifier = 0.05
+		happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
+}
+hekamet_modifier = {
+		omen_power = 0.05
+		global_defensive = 0.10
+		general_loyalty = -5
+}
+pannonian_pannonian_modifier = {
+		light_infantry_discipline = 0.1
+		global_pop_assimilation_speed_modifier = 0.05
+		manpower_recovery_speed = -0.05
+}
+Cimmeria_modifier = {
+		price_found_city_cost_modifier = -0.15
+        global_population_capacity_modifier = 0.05
+        global_import_commerce_modifier = -0.1
 }

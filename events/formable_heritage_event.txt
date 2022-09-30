@@ -5769,3 +5769,249 @@ formable_heritage.150 = {
 		}
 	}
 }
+
+formable_heritage.151 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.151.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.151.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+    
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = SLA
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.151.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = slavia_heritage 
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = slavia_modifier
+				#duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.151.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 125
+    }	
+    option = { # EFFECT FIELD - THIRD OPTION
+        name = formable_heritage.151.c # LOCALIZATION KEY - Option B text
+		hidden_effect = { 
+			set_country_heritage = tribal_heritage 
+		}
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = tribal_modifier
+				#duration = -1
+			}
+		}
+	}
+}
+
+formable_heritage.152 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.152.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.152.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+    
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = TIB
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.152.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = tibetan_empire_heritage 
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = tibetan_empire_modifier
+				#duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.152.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 125
+    }	
+    option = { # EFFECT FIELD - THIRD OPTION
+        name = formable_heritage.152.c # LOCALIZATION KEY - Option B text
+		hidden_effect = { 
+			set_country_heritage = tribal_heritage 
+		}
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = tribal_modifier
+				#duration = -1
+			}
+		}
+	}
+}
+
+formable_heritage.153 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.153.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.153.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+    
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = BTC
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.153.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = baratanac_heritage 
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = baratanac_modifier
+				#duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.153.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 125
+    }	
+}
+
+formable_heritage.154 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.154.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.154.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+    
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = HEK
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.154.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = hekamet_heritage 
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = hekamet_modifier
+				#duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.154.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 125
+    }	
+}
+
+formable_heritage.155 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.155.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.155.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = PAN
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.155.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = pannonian_pannonian_heritage 
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = pannonian_pannonian_modifier
+				#duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.155.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 125
+    }	
+    option = { # EFFECT FIELD - THIRD OPTION
+        name = formable_heritage.155.c # LOCALIZATION KEY - Option B text
+		hidden_effect = { 
+			set_country_heritage = tribal_heritage 
+		}
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = tribal_modifier
+				#duration = -1
+			}
+		}
+	}
+}
+
+formable_heritage.180 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.180.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.180.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = CMM
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.180.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = Cimmeria_heritage
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = Cimmeria_modifier
+				#duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.180.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 250
+    }	
+    option = { # EFFECT FIELD - THIRD OPTION
+        name = formable_heritage.180.c # LOCALIZATION KEY - Option B text
+		hidden_effect = { 
+			set_country_heritage = tribal_heritage 
+		}
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = tribal_modifier
+				#duration = -1
+			}
+		}
+	}
+}
