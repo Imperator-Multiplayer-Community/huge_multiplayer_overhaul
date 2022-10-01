@@ -66,7 +66,7 @@ template unit_action_item_diamond
 
 base_window = {
 	name = "single_unit_window"
-	size = { 492 620 }
+	size = { 492 680 }
 	widgetanchor = top|left
 	using = main_window_template
 	position = { 60 138 }
@@ -457,19 +457,19 @@ base_window = {
 		}
 		margin_widget = { size = { 0 20 } }
 		margin_widget = {
-			size = { 0 160 }
+			size = { 0 200 }
 			margin = { 0 0 }
 			layoutpolicy_horizontal = expanding
 			# First Row: Reorg!
 			icon = {
 				texture = "gfx/interface/event_window/Event_local_life.dds"
-				scale = 0.42
-				position = { -12 0 }
+				scale = 0.52
+				position = { 0 20 }
 				alpha = 0.5
 				parentanchor = bottom|hcenter
 			}
 			dynamicgridbox = {
-				position = { 12 68 }
+				position = { 12 108 }
 				name = "reorg_buttons"
 				flipdirection = yes
 				datamodel_wrap = 3
@@ -483,7 +483,7 @@ base_window = {
 			dynamicgridbox = {
 				name = "action_buttons"
 				parentanchor = right
-				position = { -12 68 }
+				position = { -12 108 }
 				flipdirection = yes
 				layoutanchor = topright
 				datamodel_wrap = 6
@@ -495,7 +495,7 @@ base_window = {
 
 			button_round_inverted_toggle = {
 				size = { 72 72 }
-				position = { 140 32 }
+				position = { 140 52 }
 				parentanchor = vcenter
 				tooltip = "COMBAT_TACTIC_BUTTON"
 				blockoverride "On_click"
@@ -511,26 +511,27 @@ base_window = {
 			}
 
 			#Third Row: Toggle
-			hbox = {
-				margin = { 6 0 }
+			dynamicgridbox = {
+				position = { 0 -16 }
+				parentanchor = hcenter
 				name = "toggle_buttons"
-				#datamodel_wrap = 4
-				position = { 0 -46 }
+				datamodel_wrap = 2
 				datamodel = "[SingleUnitWindow.GetToggleItems]"
 				item = {
 					using = unit_action_item_round
 				}
 			}
+			
 		}
 		margin_widget = {
-			size = { 0 94 }
+			size = { 0 104 }
 			margin = { 12 0 }
 			#using = NoninteractableBG
 			layoutpolicy_horizontal = expanding
 			icon_button_square = {
 				size = { 224 28 }
 				parentanchor = hcenter
-				position = { 0 4 }
+				position = { 0 24 }
 				blockoverride "On_click"
 				{
 					enabled = "[SingleUnitWindow.CanToggleFlankSize]"
@@ -555,11 +556,11 @@ base_window = {
 				visible = yes
 
 				position = { 0 30 }
-				size = { 100% 60 }
+				size = { 100% 80 }
 				dynamicgridbox = {
 					size = { 342 100% }
 					flipdirection = no
-					position = { 3 6 }
+					position = { 3 26 }
 					datamodel = "[SingleUnitWindow.GetPreferredUnitItems]"
 
 					item = {
@@ -737,6 +738,7 @@ base_window = {
 			overlappingitembox = {
 				name = "unit_types_grid"
 				size = { 100% 120 }
+				position = { 0 20 }
 				datamodel = "[SingleUnitWindow.GetSubUnitCounts]"
 
 				item = {

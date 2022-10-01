@@ -1,0 +1,39 @@
+﻿owned_province_with_slave_move = { #Creates any/every/random/owned_province_with_slave_move
+	base = owned_province
+	conditions = {
+		has_province_modifier = slave_move_yes
+	}
+}
+
+valid_neighbor_slave_exporter = { #Creates any/every/random/valid_neighbor_slave_exporter
+	base = neighbor_province
+	conditions = {
+		NOT = {
+			has_province_modifier = slave_move_no
+		}
+		total_population > 1
+		any_pops_in_province = {
+			pop_type = slaves
+			pop_can_move = yes
+		}
+	}
+}
+
+valid_state_slave_exporter = { #Creates any/every/random/valid_state_slave_exporter
+	base = state_province
+	conditions = {
+		total_population > 1
+		any_pops_in_province = {
+			pop_type = slaves
+			pop_can_move = yes
+		}
+	}
+}
+
+valid_slave_to_move = { #Creates any/every/random/valid_slave_to_move
+	base = pops_in_province
+	conditions = {
+		pop_type = slaves
+		pop_can_move = yes
+	}
+}

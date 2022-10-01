@@ -14,17 +14,17 @@
 		amount=1
 	}
 	citizen={
-		amount=4
+		amount=6
 	}
 	citizen={
 		culture="athenian"
 		amount=2
 	}
 	freemen={
-		amount=4
+		amount=6
 	}
 	slaves={
-		amount=6
+		amount=9
 	}
 	port_building=1
 }
@@ -105,13 +105,13 @@
 		amount=1
 	}
 	citizen={
-		amount=6
-	}
-	freemen={
 		amount=8
 	}
+	freemen={
+		amount=10
+	}
 	slaves={
-		amount=4
+		amount=5
 	}
 	holy_site=omen_diktean_zeus
 	port_building=1
@@ -129,10 +129,10 @@
 		amount=1
 	}
 	citizen={
-		amount=7
+		amount=10
 	}
 	freemen={
-		amount=4
+		amount=6
 	}
 	freemen={
 		culture="carian"
@@ -140,7 +140,7 @@
 		amount=1
 	}
 	slaves={
-		amount=3
+		amount=5
 	}
 	holy_site=omen_ariadne
 	port_building=1
@@ -180,13 +180,13 @@
 		amount=1
 	}
 	citizen={
-		amount=7
+		amount=10
 	}
 	freemen={
-		amount=5
+		amount=7
 	}
 	slaves={
-		amount=4
+		amount=8
 	}
 	port_building=1
 }
@@ -223,13 +223,16 @@
 		amount=1
 	}
 	citizen={
-		amount=6
+		amount=7
 	}
 	freemen={
-		amount=2
+		amount=5
 	}
 	slaves={
 		amount=3
+	}
+	tribesmen={
+		amount=1
 	}
 	port_building=1
 }
@@ -646,7 +649,7 @@
 		amount=2
 	}
 	freemen={
-		amount=4
+		amount=8
 	}
 	slaves={
 		amount=3
@@ -815,7 +818,7 @@
 		amount=2
 	}
 	citizen={
-		amount=4
+		amount=6
 	}
 	freemen={
 		culture="hebrew"
@@ -823,7 +826,7 @@
 		amount=2
 	}
 	freemen={
-		amount=7
+		amount=10
 	}
 	slaves={
 		amount=5
@@ -882,10 +885,10 @@
 		amount=3
 	}
 	citizen={
-		amount=6
+		amount=9
 	}
 	freemen={
-		amount=7
+		amount=11
 	}
 	slaves={
 		amount=3
@@ -1705,10 +1708,10 @@
 		amount=2
 	}
 	freemen={
-		amount=2
+		amount=5
 	}
 	tribesmen={
-		amount=1
+		amount=2
 	}
 	slaves={
 		amount=2
@@ -1730,7 +1733,7 @@
 		amount=1
 	}
 	slaves={
-		amount=1
+		amount=3
 	}
 }
 
@@ -1746,16 +1749,16 @@
 		amount=1
 	}
 	citizen={
-		amount=4
+		amount=6
 	}
 	freemen={
-		amount=8
+		amount=18
 	}
 	tribesmen={
 		amount=2
 	}
 	slaves={
-		amount=2
+		amount=4
 	}
 }
 
@@ -1771,13 +1774,13 @@
 		amount=1
 	}
 	citizen={
-		amount=4
+		amount=6
 	}
 	freemen={
-		amount=7
+		amount=9
 	}
 	slaves={
-		amount=5
+		amount=6
 	}
 	holy_site=omen_poseidon
 	port_building=1

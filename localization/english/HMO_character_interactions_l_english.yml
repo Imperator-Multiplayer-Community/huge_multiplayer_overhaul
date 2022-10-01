@@ -503,7 +503,7 @@
  letter_friend.4.a:0 "Express an interest in military matters"
  letter_friend.4.a.tt:0 "The higher the target's martial ability, the better chance improving your own martial skill."
  letter_friend.4.b:0 "Inquire into how to best manage one's affairs"
- letter_friend.4.b.tt:0 "The higher the target's finese ability, the better chance improving your own finese skill."
+ letter_friend.4.b.tt:0 "The higher the target's finesse ability, the better chance improving your own finesse skill."
  letter_friend.4.c:0 "Ask about the divine"
  letter_friend.4.c.tt:0 "The higher the target's zeal, the better chance improving your own zeal."
  letter_friend.4.d:0 "Fish for rumours and gossip"
@@ -1077,6 +1077,23 @@
  relic_gift_event.52.t:0 "Conch of Agonia"
  relic_gift_event.52.desc:0 "Though it is only ever touched by high priests, legend has that if you put this conch to your ear, you can hear a mystical voice form the far north calling out the word ‘Agooooooonia’."
  relic_gift_event.52.a:0 "What a gift! What a friend!"
+
+ embargo:0 "Embargo"
+ embargo_past:0 "Restrict Trade"
+ embargo_act:0 "New trade routes between your nations are forbidden."
+ embargo_act_past:0 "Our goods are not meant for these thieves."
+ embargo_tt:0 "Prevent new trade routes from being created with this nation."
+ lift_embargo:0 "Lift Embargo"
+ lift_embargo_past:0 "Resume Trade"
+ lift_embargo_act:0 "New trade routes between your nations can be created."
+ lift_embargo_act_past:0 "Surely they wish to buy our glorious trade goods!"
+ lift_embargo_tt:0 "Allow new trade routes to be created with this nation."
+ embargo.1.t:0 "Embargoed!"
+ embargo.1.desc:0 "Our trade with (@[SCOPE.sC('actor').GetFlag]!) [SCOPE.sC('actor').GetName] has been blocked!"
+ embargo.1.a:0 "Nobody wanted their shoddy goods anyways."
+ embargo.2.t:0 "Embargo Lifted!"
+ embargo.2.desc:0 "Trade with (@[SCOPE.sC('actor').GetFlag]!) [SCOPE.sC('actor').GetName] has resumed!"
+ embargo.2.a:0 "May trade between our nations flourish again."
 
  #Assassination
 
