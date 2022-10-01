@@ -99,3 +99,8 @@ recruit_mercenary = {
 	gold = 100
 	aggressive_expansion = 2
 }
+
+build_border_fort = {
+	gold = 150
+	manpower = 3
+}
