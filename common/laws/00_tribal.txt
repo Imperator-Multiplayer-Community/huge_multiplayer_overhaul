@@ -11,7 +11,7 @@
 	
 	syncretization_law_tribal = {
 		modifier = {
-			monthly_centralization = -0.075
+			monthly_centralization = -0.1
 			happiness_for_wrong_culture_group_modifier = wrong_culture_group_huge
 		}
 	}
@@ -19,7 +19,7 @@
 	adopt_human_sacrifice_law_tribal = { 
 		modifier = {
 			omen_power = 0.1
-			monthly_centralization = -0.15
+			monthly_centralization = -0.2
 		}
 		on_enact = {
 			custom_tooltip = adopt_human_sacrifice_tt
@@ -40,14 +40,14 @@ tribal_currency_laws = {
 	barter_economy_law = {
 		modifier = {
 			global_commerce_modifier = 0.2
-			monthly_centralization = 0.075
+			monthly_centralization = 0.1
 		}
 	}
 	
 	coin_minting_law = {
 		modifier = {
 			global_monthly_civilization = 0.03
-			monthly_centralization = 0.15
+			monthly_centralization = 0.2
 		}
 	}
 }
@@ -66,7 +66,7 @@ tribal_centralization_law = {
 			centralization <= -10
 		}
 		modifier = {
-			monthly_centralization = -0.075
+			monthly_centralization = -0.1
 			global_tribesmen_output = output_huge_svalue
 		}
 	}
@@ -76,7 +76,7 @@ tribal_centralization_law = {
 			centralization <= -10
 		}
 		modifier = {
-			monthly_centralization = -0.15
+			monthly_centralization = -0.2
 			global_tax_modifier = 0.1
 		}
 	}
@@ -97,7 +97,7 @@ tribal_authority_laws = {
 		}
 		modifier = {
 			monthly_tyranny = -0.05
-			monthly_centralization = 0.075
+			monthly_centralization = 0.1
 		}
 	}
 	
@@ -107,7 +107,7 @@ tribal_authority_laws = {
 		}
 		modifier = {
 			ruler_popularity_gain = 0.15
-			monthly_centralization = 0.15
+			monthly_centralization = 0.2
 		}
 	}
 	
@@ -127,7 +127,7 @@ tribal_autonomy_laws = {
 			centralization <= -30
 		}
 		modifier = {
-			monthly_centralization = -0.075
+			monthly_centralization = -0.1
 			stability_monthly_change = 0.15
 		}
 	}
@@ -137,7 +137,7 @@ tribal_autonomy_laws = {
 			centralization <= -30
 		}
 		modifier = {
-			monthly_centralization = -0.15
+			monthly_centralization = -0.2
 			clan_chief_loyalty = 10
 		}
 	}
@@ -161,7 +161,7 @@ tribal_domestic_laws = {
 		}
 		modifier = {
 			global_goods_from_slaves = -1
-			monthly_centralization = 0.075
+			monthly_centralization = 0.1
 		}
 	}
 	
@@ -171,7 +171,7 @@ tribal_domestic_laws = {
 		}
 		modifier = {
 			global_tribesmen_output = output_huge_svalue
-			monthly_centralization = 0.15
+			monthly_centralization = 0.2
 		}
 	}
 	
@@ -192,7 +192,7 @@ tribal_decentralized_laws = {
 		}
 		modifier = {
 			global_pop_assimilation_speed_modifier = 0.30
-			monthly_centralization = -0.075
+			monthly_centralization = -0.1
 		}
 	}
 
@@ -202,7 +202,7 @@ tribal_decentralized_laws = {
 		}
 		modifier = {
 			happiness_for_same_culture_modifier = 0.1
-			monthly_centralization = -0.15
+			monthly_centralization = -0.2
 		}
 	}
 	
@@ -223,7 +223,7 @@ tribal_centralized_laws = {
 		}
 		modifier = {
 			monthly_political_influence_modifier = 0.1
-			monthly_centralization = 0.075
+			monthly_centralization = 0.1
 		}
 	}
 	
@@ -233,7 +233,7 @@ tribal_centralized_laws = {
 		}
 		modifier = {
 			global_pop_promotion_speed = 2
-			monthly_centralization = 0.15
+			monthly_centralization = 0.2
 		}
 	}
 	
@@ -266,12 +266,12 @@ tribal_super_decentralized_laws = {
 			centralization <= -80
 		}
 		modifier = {
-			land_morale = 0.375 # worth 5 levels of tech
+			land_morale_modifier = 0.05
 			war_exhaustion = -0.05
 		}
 	}
+	
 }
-
 
 tribal_super_centralized_laws = {
 	potential = {
@@ -305,66 +305,6 @@ tribal_super_centralized_laws = {
 		}
 	}
 	
-}
-
-tribal_super_decentralized_military_laws = {
-	potential = {
-		is_tribal = yes
-	}
-	
-	super_decentralized_military_law_one = {
-		modifier = {
-
-		}
-	}
-
-	super_decentralized_military_law_two = {
-		allow = {
-			centralization <= -90
-		}
-
-		modifier = {
-			general_loyalty = 2
-			army_maintenance_cost = -0.25 # tribes start with +30, so this should put them on +5 which is slightly better than civ govt laws
-			manpower_recovery_speed = 0.1
-			experience_decay = 0.015 # this offsets a tribe's natural experience decay to +0.005 natural
-		}
-
-		on_enact = {
-			custom_tooltip = legions_in_any_region
-			set_legion_recruitment = enabled
-		}
-	}
-}
-
-tribal_super_centralized_military_laws = {
-	potential = {
-		is_tribal = yes
-	}
-
-	super_centralized_military_law_one = {
-		modifier = {
-		
-		}
-	}
-		
-	super_centralized_military_law_two = {
-		allow = {
-			centralization >= 90
-		}
-
-		modifier = {
-			levy_size_multiplier = 0.03
-			discipline = 0.05
-			army_weight_modifier = -0.2
-			experience_decay = 0.015 # this offsets a tribe's natural experience decay to +0.005 natural
-		}
-
-		on_enact = {
-			custom_tooltip = legions_in_capital_region
-			set_legion_recruitment = capital
-		}
-	}
 }
 
 

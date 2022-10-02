@@ -4,8 +4,13 @@
 	form_byzantine_empire = {
 		
 		potential = {
-			primary_culture = thracian
 			num_of_cities >= 1
+			OR = {
+				capital_scope = {
+						province_id = 1453
+					}
+				}
+
 			NOT = {
 				tag = BYT
 			}
@@ -24,7 +29,6 @@
 					is_in_region = thrace_region
 					is_in_region = macedonia_region
 					is_in_region = asia_region
-					is_in_region = greece_region
 				}
 			}
 		}

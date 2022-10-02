@@ -5,9 +5,9 @@
 	secondary_navy = hexere
 	flank_navy = liburnian
 	
-	primary = light_infantry
-	second = heavy_infantry
-	flank = light_cavalry
+	primary = archers
+	second = light_cavalry
+	flank = horse_archers
 	
 	levy_template = levy_celtiberian
 

@@ -1,9 +1,8 @@
 ﻿naval_raiding = {
-	duration = 31
-	enable = yes
-	toggle = yes
+
+	enable = no
+	toggle = no
 	navy_only = yes
-	cancel_on_combat_end = yes
 
 	map = yes
 	
@@ -62,39 +61,34 @@
 		is_moving = no
 		in_siege = no
 		is_exiled = no
-		NOT = { unit_owner = { has_low_economic_policy = expense_navy } }
-
+		# custom_tooltip = {
+		# 	text = marines_ratio
+		# 	num_of_marines >= num_of_ships_10
+		# }
 		trigger_if = {
 			limit = {
-				exists = commander
-			}
-			commander = {
-				loyalty > 33
-			}
-		}
-
-		trigger_if = {
-			limit = {
-				NOT = {
-					can_slave_raid_trigger = yes
-				}
-				
 				unit_location = {
+					NOT = {
+						any_neighbor_province = {
+							is_sea = no
+							naval_raid_target_province_trigger = yes
+						}
+					}
 					any_neighbor_province = {
+						is_sea = no
 						has_owner = yes
 						total_population > 5
 						fort_level <= 0
-						is_port = yes
-						is_sea = no
-						NOT = { owner = scope:current_unit.unit_owner }
+						NOT = { owner = root.unit_owner }
 						root.unit_owner = { is_subject = yes }
 						root.unit_owner.overlord = this.owner
 						owner = {
-							NOT = { alliance_with = scope:current_unit.unit_owner }
-							NOT = { is_subject_of = scope:current_unit.unit_owner }
-							NOT = { has_truce_with = scope:current_unit.unit_owner }
+							NOT = { alliance_with = root.unit_owner }
+							NOT = { is_subject_of = root.unit_owner }
+							NOT = { has_truce_with = root.unit_owner }
 						}
-						NOT = { has_enemy_army = scope:current_unit.unit_owner }
+						is_port = yes
+						NOT = { has_enemy_army = root.unit_owner }
 					}
 				}
 			}
@@ -105,8 +99,13 @@
 		}
 		trigger_else_if = {
 			limit = {
-				NOT = {
-					can_slave_raid_trigger = yes
+				unit_location = {
+					NOT = {
+						any_neighbor_province = {
+							is_sea = no
+							naval_raid_target_province_trigger = yes
+						}
+					}
 				}
 			}
 			custom_tooltip = {
@@ -116,11 +115,16 @@
 		}
 		trigger_else_if = {
 			limit = {
-				can_slave_raid_trigger = yes
 				unit_location = {
-					any_neighbor_province = {
-						is_sea = no
-						has_province_modifier = port_province_raided
+					NOT = {
+						any_neighbor_province = {
+							is_sea = no
+							naval_raid_target_province_trigger = yes
+							NOT = {
+								has_province_modifier = port_province_raided
+							}
+							NOT = { has_enemy_army = root.unit_owner }
+						}
 					}
 				}
 			}
@@ -129,103 +133,97 @@
 				always = no
 			}
 		}
-		trigger_else = {
-			can_slave_raid_trigger = yes
+		NOT = { unit_owner = { has_low_economic_policy = expense_navy } }		
+		trigger_if = {
+			limit = {
+				exists = commander
+			}
+			commander = {
+				loyalty > 33
+			}
 		}
+		#trigger_else = {
+		#	custom_tooltip = {
+		#		text = no_marines_tt
+		#	}
+		#}
 	}
 	
 	start_effect = {
 		if = {
 			limit = {
-				can_slave_raid_trigger = yes
-			}
-
-			hidden_effect = {
-				save_scope_as = slave_raiding_unit
 				unit_location = {
-					save_scope_as = slave_raiding_location
+					any_neighbor_province = {
+						naval_raid_target_province_trigger = yes
+					}
+					NOT = { has_enemy_army = root.unit_owner }
 				}
-				set_variable = is_slave_raiding
 			}
-
 			custom_tooltip = naval_raiding_ae_gain_tooltip
 			show_as_tooltip = { #All fake for the tooltips sake
-				add_unit_modifier = {
-					name = naval_action
-					duration = 30
-				}
 				unit_location = {
-					ordered_neighbor_province = {
+					every_neighbor_province = {
 						limit = {
 							naval_raid_target_province_trigger = yes
-							NOT = { owner = root.unit_owner }
-							trigger_if = {
-								limit = { root.unit_owner = { is_subject = yes } }
-								NOT = { root.unit_owner.overlord = this.owner }
-							}
-							owner = {
-								NOT = { alliance_with = root.unit_owner }
-								NOT = { is_subject_of = root.unit_owner }
-								NOT = { has_truce_with = root.unit_owner }
-							}
-							NOT = { has_enemy_army = root.unit_owner }
 							NOT = {	has_province_modifier = port_province_raided }
+							NOT = { has_enemy_army = root.unit_owner }
 						}
-						order_by = total_population
-						max = scope:slave_raiding_unit.naval_raid_capacity_svalue
-
-						custom = naval_raiding_days
-						random_pops_in_province = {
-							move_pop = scope:slave_raiding_unit.unit_owner.capital_scope
-							if = {
-								limit = { NOT = { pop_type = slaves } }
-								set_pop_type = slaves
-							}
-						}
-
 						custom = naval_raiding_explain_modifier_tooltip
 						add_province_modifier = {
 							name = port_province_raided
 							duration = 3650
 						}
+						save_scope_as = raided_province
 					}
 				}
 			}
-
 			hidden_effect = {
-				unit_location = {
-					every_neighbor_province = { 
-						limit = {
-							naval_raid_target_province_trigger = yes
-							NOT = { owner = root.unit_owner }
-							trigger_if = {
-								limit = { root.unit_owner = { is_subject = yes } }
-								NOT = { root.unit_owner.overlord = this.owner }
-							}
-							owner = {
-								NOT = { alliance_with = root.unit_owner }
-								NOT = { is_subject_of = root.unit_owner }
-								NOT = { has_truce_with = root.unit_owner }
-							}
-							NOT = { has_enemy_army = root.unit_owner }
-							NOT = {	has_province_modifier = port_province_raided }
-						}
-						
-						add_city_smoke_effect = yes
-					}
-				}
-
-				add_unit_modifier = {
-					name = naval_action
-					duration = 30
-				}
-
 				root.unit_owner = {
 					add_aggressive_expansion = 1
-
-					trigger_event = {
-						id = hmo_unit_abilties.1
-						days = 30
+					#set_variable = {
+					#	name = slavers
+					#	days = 180
+					#}
+					while = {
+						count >= num_of_ships_svalue
+						add_country_modifier = {
+							name = naval_action
+							duration = 90
+							mode = add	
+						}
+					}
+				}
+			}
+			unit_location = {
+				ordered_neighbor_province = {
+					limit = {
+						naval_raid_target_province_trigger = yes
+						NOT = {	has_province_modifier = port_province_raided }
+						NOT = { has_enemy_army = root.unit_owner }
+					}
+					add_city_smoke_effect = yes
+					add_city_fire_effect = yes
+					order_by = total_population
+					max = root.naval_raid_capacity_svalue
+					hidden_effect = {
+						root.unit_owner = {
+							add_aggressive_expansion = 1
+							#set_variable = {
+							#	name = slavers
+							#	days = 180
+							#}
+						}
+						add_province_modifier = {
+							name = port_province_raided
+							duration = 3650
+						}
+					}
+					random_pops_in_province = {
+						move_pop = root.unit_owner.capital_scope
+						if = {
+							limit = { NOT = { pop_type = slaves } }
+							set_pop_type = slaves
+						}
 					}
 				}
 			}
@@ -234,27 +232,6 @@
 			custom_tooltip = naval_raiding_tooltip
 		}
 	}
-
-	finish_effect = {
-		remove_variable = is_slave_raiding
-	}
-
-	finished_when = {
-		OR = {
-			in_combat = yes
-			is_moving = yes
-			is_exiled = yes
-			unit_owner = { has_low_economic_policy = expense_navy }
-			has_commander = no
-			navy_drilling = yes
-			navy_supplying = yes
-			navy_assaulting = yes
-			navy_fishing = yes
-			navy_raiding = yes
-			navy_raiding_commerce = yes
-			navy_protecting_commerce = yes
-		}
-	}
-
-	idle_entity_state = combat
+	
+	
 }
