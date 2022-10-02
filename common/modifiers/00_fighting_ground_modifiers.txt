@@ -115,3 +115,7 @@ INR_Tributary_Terrain = {
 	octere_tributary_terrain_combat_bonus = -0.3
 	mega_galley_tributary_terrain_combat_bonus = -0.5
 }
+
+real_assault = { 
+	assault_ability = -0.6
+}

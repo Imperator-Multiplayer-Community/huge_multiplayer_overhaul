@@ -12,36 +12,25 @@ ml_cohort_master_distinctions.1 = {
 	}
 
 	immediate = {
-		every_governorships = {
+		if = {
 			limit = {
-				has_legion_trigger = yes
-				legion = scope:actor.legion
+				has_variable = cohort_master
 			}
-
-			save_scope_as = legion_governorship
+			change_variable = {
+				name = cohort_master
+				add = 1
+			}
+		}
+		else = {
+			set_variable = {
+				name = cohort_master
+				value = 1
+			}
 		}
 
-		scope:legion_governorship = {
-			if = {
-				limit = {
-					has_variable = cohort_master
-				}
-				change_variable = {
-					name = cohort_master
-					add = 1
-				}
-			}
-			else = {
-				set_variable = {
-					name = cohort_master
-					value = 1
-				}
-			}
-
-			ROOT = {
-				trigger_event = {
-					id = ml_cohort_master_distinctions.2
-				}
+		ROOT = {
+			trigger_event = {
+				id = ml_cohort_master_distinctions.2
 			}
 		}
 	}
@@ -60,20 +49,11 @@ ml_cohort_master_distinctions.2 = {
 	}
 
 	immediate = {
-		every_governorships = {
-			limit = {
-				has_legion_trigger = yes
-				legion = scope:actor.legion
-			}
-
-			save_scope_as = legion_governorship
-		}
-
-		scope:legion_governorship = {
+		scope:actor = {
 			if = {
 				limit = {
 					var:cohort_master = 3
-					scope:actor.legion = {
+					legion = {
 						NOT = {
 							has_distinction = distinction_cohort_master_01
 							has_distinction = distinction_cohort_master_02
@@ -84,15 +64,21 @@ ml_cohort_master_distinctions.2 = {
 				scope:actor.legion = {
 					add_distinction = distinction_cohort_master_01
 				}
+
+				ROOT = {
+					trigger_event = {
+						id = ml_expeditionary_distinctions.1
+					}
+				}
 			}
 			else_if = {
 				limit = {
 					var:cohort_master = 6
-					scope:actor.legion = {
+					legion = {
 						has_distinction = distinction_cohort_master_01
 					}
 					NOT = {
-						scope:actor.legion = {
+						legion = {
 							has_distinction = distinction_cohort_master_02
 						}
 					}

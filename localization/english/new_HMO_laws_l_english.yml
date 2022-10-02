@@ -1,0 +1,31 @@
+﻿l_english:
+
+#Generic Laws
+
+bureaucracy_law:0 "Administrative Law"
+default_bureaucracy_law:0 "Inherited Bureaucracy"
+default_bureaucracy_law_desc:0 "No law has been selected. We have the same bureaucracy that we received from our predecessors."
+bureaucracy_kleptocracy_law:0 "Pillage the State's Coffers"
+bureaucracy_kleptocracy_law_desc:0 "Confiscate and embezzle the state's wealth for the benefit of the noblest families."
+bureaucracy_reform_law:0 "Initiate Reform"
+bureaucracy_reform_law_desc:0 "Instruct state auditors to review the books periodically... without turning over too many stones."
+bureaucracy_purge_law:0 "Purge the Bureaucrats"
+bureaucracy_purge_law_desc:0 "Crack down on corruption and restore the people's faith in their local authorities."
+
+social_law:0 "Social Welfare Law"
+default_social_law:0 "Traditional Social Welfare System"
+default_social_law_desc:0 "No law has been selected."
+social_capital_primacy_law:0 "Capital Primacy"
+social_capital_primacy_law_desc:0 "As capital is so necessary for achieving the aims of the state, we will enact policies to stimulate the creation of wealth and prioritise its pursuit over all other matters."
+social_tax_exemption_law:0 "Tax Exemptions"
+social_tax_exemption_law_desc:0 "Let us relax the tax burden on certain classes of citizens, helping them to prosper and grow."
+socialism_law:0 "State-Sponsored Food and Board"
+socialism_law_desc:0 "Let us feed those who are unable to feed themselves."
+
+
+#New Monarchy Laws
+
+new_friends_law:0 "Personal Diplomacy"
+new_friends_law_desc:0 "A personal touch helps to align interests."
+pay_the_crown_law:0 "Burdensome Tribute"
+pay_the_crown_law_desc:0 "Subjects will pay what they must to ensure their overlord's protection."

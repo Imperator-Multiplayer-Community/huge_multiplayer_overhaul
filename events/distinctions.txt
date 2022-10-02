@@ -59,5 +59,11 @@ distinction.7 = { # Primigenia
                 save_scope_as = actor
             }
         }
+
+        ROOT = {
+            trigger_event = {
+                id = ml_expeditionary_distinctions.1
+            }
+        }
     }
 }

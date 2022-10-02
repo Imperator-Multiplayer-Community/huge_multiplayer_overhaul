@@ -4,7 +4,7 @@ hunting.1 = { #You send the invite to a ruler. Does he accept to correspond? Rec
 	type = country_event
 	title = "hunting.1.t"
 	desc = "hunting.1.desc"
-	left_portrait = scope:target
+	left_portrait = current_ruler
 	right_portrait = scope:actor.current_ruler
 	picture = steppe_cavalry
 	
@@ -358,12 +358,8 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}					
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunting_friend = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 
 						if = {
@@ -412,7 +408,9 @@ hunting.13 = { # Success mountain An 18 Point Buck
 					10 = { 
 						trigger = {
 							NOT = {
-								has_global_variable = 18_point_buck
+								scope:hunting_friend.employer = {
+									has_global_variable = 18_point_buck
+								}
 							}
 						}
 
@@ -485,12 +483,8 @@ hunting.13 = { # Success mountain An 18 Point Buck
 						}						
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunter = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 
 						scope:hunter.employer = {
@@ -523,7 +517,9 @@ hunting.13 = { # Success mountain An 18 Point Buck
 					10 = { 
 						trigger = {
 							NOT = {
-								has_global_variable = 18_point_buck
+								scope:hunter.employer = {
+									has_global_variable = 18_point_buck
+								}
 							}
 						}
 
@@ -906,12 +902,8 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}						
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunting_friend = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 
 						if = {
@@ -960,7 +952,9 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 					10 = { 
 						trigger = {
 							NOT = {
-								has_global_variable = bear_trophy
+								scope:hunting_friend.employer = {
+									has_global_variable = bear_trophy
+								}
 							}
 						}
 
@@ -1034,12 +1028,8 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 						}						
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunter = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 
 						scope:hunter.employer = {
@@ -1071,7 +1061,9 @@ hunting.15 = { # Success forest  A Rare Kind of Peacock
 					10 = { 
 						trigger = {
 							NOT = {
-								has_global_variable = peacock_trophy
+								scope:hunter.employer = {
+									has_global_variable = peacock_trophy
+								}
 							}
 						}
 
@@ -1446,12 +1438,8 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}						
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunting_friend = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 
 						if = {
@@ -1500,7 +1488,9 @@ hunting.17 = { # Success hills The Joys of Falconry
 					10 = { 
 						trigger = {
 							NOT = {
-								has_global_variable = boar_trophy
+								scope:hunting_friend.employer = {
+									has_global_variable = boar_trophy
+								}
 							}
 						}
 
@@ -1574,12 +1564,8 @@ hunting.17 = { # Success hills The Joys of Falconry
 						}						
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunter = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 
 						scope:hunter.employer = {
@@ -1613,7 +1599,9 @@ hunting.17 = { # Success hills The Joys of Falconry
 					10 = { 
 						trigger = {
 							NOT = {
-								has_global_variable = boar_trophy
+								scope:hunter.employer = {
+									has_global_variable = boar_trophy
+								}
 							}
 						}
 
@@ -1986,12 +1974,8 @@ hunting.19 = { # Success whaling at sea
 						}					
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunting_friend = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 						if = {
 							limit = {
@@ -2038,7 +2022,9 @@ hunting.19 = { # Success whaling at sea
 					10 = {
 						trigger = {
 							NOT = {
-								has_global_variable = marlin_trophy
+								scope:hunting_friend.employer = {
+									has_global_variable = marlin_trophy
+								}
 							}
 						}
 						
@@ -2112,12 +2098,8 @@ hunting.19 = { # Success whaling at sea
 						}						
 					}
 					10 = { 
-						trigger = {
-							is_max_improved_martial = no
-						}
-
 						scope:hunter = {
-							improve_martial_effect = yes
+							trigger_event = { id = hmo_improve_martial.1 }
 						}
 
 						scope:hunter.employer = {
@@ -2150,7 +2132,9 @@ hunting.19 = { # Success whaling at sea
 					10 = { 
 						trigger = {
 							NOT = {
-								has_global_variable = marlin_trophy
+								scope:hunter.employer = {
+									has_global_variable = marlin_trophy
+								}
 							}
 						}
 

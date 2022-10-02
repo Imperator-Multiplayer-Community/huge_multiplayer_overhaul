@@ -44,7 +44,35 @@
 	}
 	
 	on_entering_province = {
-
+		hidden_effect = {	
+			if = {
+				random_list = {
+					90 = {}
+					10 = {
+						trigger = {
+							has_dlc = "Heirs of Alexander"
+							has_legion_trigger = yes
+							unit_location = {
+								OR = {
+									terrain = mountains
+									terrain = hills
+									terrain = desert
+									terrain = marsh
+									terrain = jungle
+								}
+							}
+						}
+						save_scope_as = barca_legion
+						unit_owner = {
+							trigger_event = {
+								days = 5
+								id = distinction.12
+							}
+						}
+					}	
+				}				
+			}	
+		}
 	}
 	#Currently, a conservative approach to avoid attrition: Enable forced march ASAP in own territory where attrition is unlikely (it's then effectively free)
 	#and disable as soon as we stop in enemy controlled territory.
