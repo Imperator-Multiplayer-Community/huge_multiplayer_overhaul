@@ -2061,7 +2061,7 @@
  NO_UNIT_SELECTED:0 "You do not have a unit selected."
  HISTORY:1 "View History"
  change_governor_policy:0 "Change Governor Policy"
- MILITARY_VIEW_LEGIONS_TOOLTIP:0 "[legions|E] are not available for Tribes. Upgrade your [government|E] type to view this tab. Government types that can use Legions are: "
+ MILITARY_VIEW_LEGIONS_TOOLTIP:0 "[legions|E] are not available until they are unlocked via laws."
  MILITARY_VIEW_LEGIONS_TOOLTIP_ITEM:0 "- $CATEGORY_NAME$"
  MACRO_BUILDER_MOD_ITEM_TT:0 "[ModificationItem.GetTextIcon] [ModificationItem.GetName] [ModificationItem.GetOldValueFormatted] → [ModificationItem.GetNewValueFormatted] ([ModificationItem.GetDifferenceFormatted])"
  RAISE_LEVY_DESCRIPTION:0 "$NAME$: $AMOUNT$"

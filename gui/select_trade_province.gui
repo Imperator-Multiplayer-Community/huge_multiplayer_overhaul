@@ -1,0 +1,183 @@
+base_sub_window = {
+	name = "select_trade_province_window"
+	size = { 420 860 }
+	position = { 322 220 }
+	blockoverride "Title_text" { text = "SELECT_WHERE_TO_IMPORT_FROM" }
+	
+	blockoverride "White_buttons" 
+	{
+		spacing = 4
+		button_back = {
+			visible = no
+		}
+		
+		button_close = {
+			onclick = "[SelectTradeProvinceView.Close]"
+			tooltip = "CLOSE"
+		}
+	}
+		
+	container = {
+		ignoreinvisible = yes
+		resizeparent = yes
+		
+		# CHOOSE PROVINCE TO TRADE WITH
+		margin_widget = {
+			size = { 792 860 }
+			position = { 0 32 }
+			
+			flowcontainer = {
+				resizeparent = yes
+				position = { 12 8 }
+				direction = vertical
+				parentanchor = hcenter
+				spacing = 6
+					
+				flowcontainer = {
+					direction = horizontal
+					spacing = 4
+
+					icon_card = {
+						name = "Slot"
+						blockoverride "Icon" { 
+							texture = "[GetTradeGoodsIcon(SelectTradeProvinceView.GetGoods)]"
+							size = { 34 34 }
+						}
+						size = { 42 42 }
+						tooltip = "[SelectTradeProvinceView.GetGoods.GetTooltip]"
+
+					}
+					textbox = {
+						minimumsize = { 264 26 }
+						using = BaseFontM
+						using = Black_FontColor
+						parentanchor = vcenter
+						autoresize = yes
+						text = "[SelectTradeProvinceView.GetGoods.GetName]"
+					}
+					icon_and_text = {
+						size = { 80 0 }
+						#position = { 0 -4 }
+						parentanchor = right|vcenter
+						blockoverride "Text" 
+						{ 
+							text = "[SelectTradeProvinceView.GetGoods.GetRoutePrice]" 
+							position = { 0 4 }
+						}
+
+						blockoverride "Icon" 
+						{ 
+							using = icon_treasury 
+							size = { 31 31 }
+						}
+					}
+					widget = {
+						size = { 40 10 }
+					}
+				}
+				
+				scrollarea = {
+					size = { 408 754 }
+					maximumsize = { 999 754 }
+					scrollbarpolicy_horizontal = always_off
+					using = VerticalScrollAreaCutOff
+					scrollbar_vertical = {
+						using = VerticalScrollBar
+					}
+					
+					scrollwidget = {
+						dynamicgridbox = {
+							position = { 0 0 }
+							resizeparent = yes
+							size = { 406 200 }
+							
+							datamodel = "[SelectTradeProvinceView.GetStates]"
+							
+							item = {
+								widget = {
+									size = { 406 38 }
+
+									icon = {
+										size = { 54 6 }
+										parentanchor = right
+										position = { -6 0 }
+										texture = "gfx/interface/base_parts/brown_underline_x60bd.dds"
+										spriteType = Corneredtiled
+										spriteborder = { 30 0 }
+									}
+									icon = {
+										size = { 54 6 }
+										parentanchor = bottom|right
+										position = { -6 -4 }
+										texture = "gfx/interface/base_parts/brown_underline_x60bd.dds"
+										spriteType = Corneredtiled
+										spriteborder = { 30 0 }
+									}
+
+									flowcontainer = {
+										parentanchor = hcenter
+										spacing = 4
+										country_flag = {
+											datacontext = "[CreateTradeRoute.GetCountry]"
+											tooltip = "[Country.GetDescriptiveName]"
+											
+											blockoverride "flag"
+											{
+												texture = "[Country.AccessCoatOfArms.GetTexture('(int32)32','(int32)32')]"
+												frame = "[Country.AccessCoatOfArms.GetFrame('(int32)32','(int32)32')]"
+												framesize = { 32 32 }
+											}
+											
+											blockoverride "size"
+											{
+												size = { 32 32 }
+											}
+											
+											blockoverride "click"
+											{
+												onclick = "[OpenDiplomacy(Country.Self)]"
+											}
+											parentanchor = vcenter
+										}
+										goto_button = {
+											parentanchor = vcenter
+											size = { 32 32 }
+											blockoverride "On_click" { onclick = "[PanToProvince( CreateTradeRoute.GetCountry.GetCapitalState.GetCapital )]" }
+											tooltip = "GOTO_PROVINCE"
+										}
+
+										text_button_square = {
+											datacontext = "[GetScriptedGui('trade_embargo')]"
+											size = { 278 28 }
+											blockoverride "Center_text" { text = "[CreateTradeRoute.GetName]" }
+											blockoverride "On_click"
+											{
+												onclick = "[CreateTradeRoute.OnClick]"
+												enabled = "[And(CreateTradeRoute.CanClick, ScriptedGui.IsValid( GuiScope.SetRoot( CreateTradeRoute.GetCountry.MakeScope ).AddScope('player', Player.MakeScope ).End))]"
+												tooltip = "[CreateTradeRoute.GetTooltip]"
+											}
+											parentanchor = vcenter
+										}
+										icon = {
+											parentanchor = vcenter
+											framesize = { 46 46 }
+											size = { 34 34 }
+											visible = "[CreateTradeRoute.RequireAcceptance]"
+											texture = "gfx/interface/base_parts/accept_decline_flat.dds"
+											frame = "[CreateTradeRoute.GetAcceptanceFrame]"
+											tooltip = "[CreateTradeRoute.GetAcceptanceTooltip]"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				widget = {
+					size = { 10 20 }
+				}
+			}
+		}
+
+	}
+}

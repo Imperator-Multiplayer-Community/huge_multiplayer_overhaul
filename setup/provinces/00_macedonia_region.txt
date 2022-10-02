@@ -169,16 +169,16 @@
 	citizen={
 		culture="hebrew"
 		religion="judaism"
-		amount=1
+		amount=2
 	}
 	citizen={
-		amount=6
+		amount=7
 	}
 	freemen={
-		amount=9
+		amount=11
 	}
 	slaves={
-		amount=8
+		amount=11
 	}
 	slaves={
 		culture="hebrew"
@@ -186,7 +186,7 @@
 		amount=1
 	}
 	tribesmen={
-		amount=2
+		amount=3
 	}
 	port_building=2
 }
@@ -292,19 +292,19 @@
 	barbarian_power=0
 	province_rank="city"
 	nobles={
-		amount=4
+		amount=5
 	}
 	citizen={
-		amount=10
+		amount=14
 	}
 	freemen={
-		amount=9
+		amount=15
 	}
 	slaves={
-		amount=8
+		amount=14
 	}
 	tribesmen={
-		amount=2
+		amount=6
 	}
 	port_building=2
 }
@@ -474,7 +474,7 @@
 		amount=1
 	}
 	citizen={
-		amount=5
+		amount=8
 	}
 	citizen={
 		culture="hebrew"
@@ -482,7 +482,7 @@
 		amount=2
 	}
 	freemen={
-		amount=11
+		amount=14
 	}
 	freemen={
 		culture="macedonian"
@@ -494,7 +494,7 @@
 		amount=2
 	}
 	slaves={
-		amount=7
+		amount=12
 	}
 }
 
@@ -510,7 +510,7 @@
 		amount=3
 	}
 	freemen={
-		amount=2
+		amount=4
 	}
 	slaves={
 		amount=3
@@ -587,13 +587,13 @@
 	barbarian_power=0
 	province_rank="city"
 	citizen={
-		amount=7
+		amount=11
 	}
 	freemen={
 		amount=6
 	}
 	slaves={
-		amount=11
+		amount=13
 	}
 }
 
@@ -827,13 +827,13 @@
 	barbarian_power=0
 	province_rank="city"
 	citizen={
-		amount=5
+		amount=1
 	}
 	freemen={
 		amount=3
 	}
 	slaves={
-		amount=7
+		amount=2
 	}
 	port_building=1
 }
@@ -866,10 +866,10 @@
 	barbarian_power=0
 	province_rank="city"
 	citizen={
-		amount=7
+		amount=2
 	}
 	freemen={
-		amount=6
+		amount=3
 	}
 	slaves={
 		amount=2
@@ -890,7 +890,7 @@
 		amount=1
 	}
 	freemen={
-		amount=3
+		amount=5
 	}
 	slaves={
 		amount=5
@@ -906,13 +906,13 @@
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
-		amount=2
+		amount=1
 	}
 	freemen={
-		amount=4
+		amount=1
 	}
 	slaves={
-		amount=3
+		amount=1
 	}
 }
 
@@ -1304,13 +1304,13 @@
 	barbarian_power=0
 	province_rank="city"
 	citizen={
-		amount=2
-	}
-	freemen={
 		amount=3
 	}
+	freemen={
+		amount=4
+	}
 	slaves={
-		amount=2
+		amount=3
 	}
 	port_building=1
 }

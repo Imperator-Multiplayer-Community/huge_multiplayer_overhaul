@@ -1,8 +1,7 @@
 ﻿protect_commerce = {
-
-	duration = 90
+	duration = -1
 	enable = yes
-	toggle = no
+	toggle = yes
 	navy_only = yes
 	cancel_on_combat_end = yes
 
@@ -11,7 +10,6 @@
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
 	allow = {
-		
 		is_navy = yes
 		unit_size >= 10
 		in_combat = no
@@ -19,86 +17,6 @@
 		is_exiled = no
 		in_siege = no
 		has_commander = yes
-		# custom_tooltip = {
-		# 	text = marines_ratio
-		# 	num_of_marines >= num_of_ships_10
-		# }
-
-		trigger_if = {
-			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							trading_partner_province_trigger = yes
-						}
-					}
-					any_neighbor_province = {
-						is_sea = no
-						has_owner = yes
-						is_port = yes
-						owner = {
-							OR = {
-								exports_to = root.unit_owner
-								imports_from = root.unit_owner
-							}
-						}
-						NOT = {
-							OR = {
-				 				has_province_modifier = mugged_by_reality 
-								has_province_modifier = trading_partner
-				 			} 
-						}
-						owner = controller
-							NOT = {
-								owner = root.unit_owner 
-							}
-					}
-				}
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							trading_partner_province_trigger = yes
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = explain_trading_tooltip
-				always = no
-			}
-		}
-		trigger_else_if = {
-			limit = {
-				unit_location = {
-					NOT = {
-						any_neighbor_province = {
-							is_sea = no
-							trading_partner_province_trigger = yes
-							NOT = {
-								has_province_modifier = trading_partner
-							}
-						}
-					}
-				}
-			}
-			custom_tooltip = {
-				text = trading_cooldown_tooltip
-				always = no
-			}
-		}
-
-		NOT = {
-			OR = {
-				unit_owner = { has_country_modifier = protect_merchants }  #New addition, lets see if it works
-				unit_owner = { has_low_economic_policy = expense_navy }
-			} 
-		}		
 		trigger_if = {
 			limit = {
 				exists = commander
@@ -107,85 +25,143 @@
 				loyalty > 33
 			}
 		}
-		unit_location = {
-			any_neighbor_province = {
-				is_sea = no
-				trading_partner_province_trigger = yes
-				NOT = {
-					has_province_modifier = trading_partner
+
+		NOT = {
+			OR = {
+				unit_owner = { has_country_modifier = protect_merchants }  #New addition, lets see if it works
+				unit_owner = { has_low_economic_policy = expense_navy }
+			} 
+		}
+
+		trigger_if = {
+			limit = {
+				unit_location = {
+					any_neighbor_province = {
+						has_province_modifier = trading_partner
+					}
 				}
 			}
+
+			custom_tooltip = {
+				text = trading_cooldown_tooltip
+				always = no
+			}
 		}
-		#trigger_else = {
-		#	custom_tooltip = {
-		#		text = no_marines_tt
-		#	}
-		#}
+		trigger_else_if = {
+			limit = {
+				NOT = {
+					can_protect_trade = yes
+				}
+			}
+
+			custom_tooltip = {
+				text = explain_trading_tooltip
+				always = no
+			}
+		}
+		trigger_else = {
+			can_protect_trade = yes
+		}
 	}
 	
 
 	start_effect = {
-
-		unit_owner = {
-			while = {
-				count >= num_of_ships_svalue
-				add_country_modifier = {
-					name = protect_merchants
-					duration = 180
-					mode = add
-				}
-				count >= num_of_ships_svalue
-				add_country_modifier = {
-					name = naval_action
-					duration = 90
-					mode = add	
-				}
-
-			}
-		}
-
 		if = {
 			limit = {
-				unit_location = {
-					any_neighbor_province = {
-						trading_partner_province_trigger = yes
+				can_protect_trade = yes
+			}
+
+			hidden_effect = {
+				set_variable = { 
+					name = starting_num_of_ships
+					value = num_of_ships_svalue
+				}
+				set_variable = is_navy_protected_commerce
+			}
+
+			show_as_tooltip = { 
+				while = {
+					count >= num_of_ships_svalue
+					unit_owner = {
+						add_country_modifier = {
+							name = protect_merchants
+							duration = -1
+							mode = add
+						}
 					}
 				}
-			}
-			#custom_tooltip = trading_ae_gain_tooltip
-			show_as_tooltip = { 
+
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
 				unit_location = {
-					every_neighbor_province = {
+					ordered_neighbor_province = {
 						limit = {
 							trading_partner_province_trigger = yes
-							NOT = {	has_province_modifier = trading_partner }
+							owner = {
+								NOT = {
+									war_with = root.unit_owner
+								}
+							}
+							owner = controller
+							NOT = {
+								owner = root.unit_owner
+							}
 						}
+						max = 1
 						custom = trading_explain_modifier_tooltip
 						add_province_modifier = {
 							name = trading_partner
-							duration = 180
+							duration = -1
 						}
 					}
 				}
 			}
-	
-			unit_location = {
-				ordered_neighbor_province = {
-					limit = {
-						trading_partner_province_trigger = yes
-						NOT = {	has_province_modifier = trading_partner }
+			
+			hidden_effect = {
+				add_unit_modifier = {
+					name = naval_action
+					duration = -1
+				}
+
+				while = {
+					count >= num_of_ships_svalue
+					unit_owner = {
+						add_country_modifier = {
+							name = protect_merchants
+							duration = -1
+							mode = add
+						}
 					}
-					order_by = total_population
-					hidden_effect = {
+				}
+
+				unit_location = {
+					ordered_neighbor_province = {
+						limit = {
+							trading_partner_province_trigger = yes
+							owner = {
+								NOT = {
+									war_with = root.unit_owner
+								}
+							}
+							owner = controller
+							NOT = {
+								owner = root.unit_owner
+							}
+						}
+						order_by = total_population
+						max = 1
+
 						add_province_modifier = {
 							name = trading_partner
-							duration = 180
+							duration = -1
 						}
 					}
 				}
 			}
 		}
-
 	}
 
 	finished_when = {
@@ -193,14 +169,63 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			is_moving = yes
+			in_combat = yes
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
+			navy_drilling = yes
+			navy_slave_raiding = yes
+			navy_supplying = yes
+			navy_assaulting = yes
+			navy_fishing = yes
+			navy_raiding = yes
+			navy_raiding_commerce = yes
 		}
 	}
 
 	finish_effect = {
+		remove_variable = is_navy_protecting_commerce
+		remove_unit_modifier = naval_action
 
+		unit_location = {
+			every_neighbor_province = {
+				limit = {
+					has_province_modifier = trading_partner
+				}
+
+				remove_province_modifier = trading_partner
+			}
+		}
+
+
+		if = {
+			limit = {
+				unit_owner = {
+					any_navy = {
+						navy_protecting_commerce = yes
+					}
+				}
+			}
+
+			while = {
+				count >= var:starting_num_of_ships
+				unit_owner = {
+					add_country_modifier = {
+						name = unprotected_merchants
+						duration = -1
+						mode = add
+					}
+				}
+			}
+		}
+		else = {
+			unit_owner = {
+				remove_country_modifier = protect_merchants
+				remove_country_modifier = unprotected_merchants
+			}
+		}
+
+		remove_variable = starting_num_of_ships
 	}
 	
 	ai_will_do = {

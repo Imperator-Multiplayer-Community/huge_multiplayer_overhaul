@@ -1,0 +1,31 @@
+﻿trade_embargo_trigger = { # root is target country of trade good
+	trigger_if = {
+		limit = {
+			has_variable_list = embargoed_list
+		}
+
+		NOT = {
+			is_target_in_variable_list = {
+				name = embargoed_list
+				target = scope:player
+			}
+		}
+	}
+
+	trigger_if = {
+		limit = {
+			scope:player = {
+				has_variable_list = embargo_list
+			}
+		}
+
+		NOT = {
+			scope:player = {
+				is_target_in_variable_list = {
+					name = embargo_list
+					target = ROOT
+				}
+			}
+		}
+	}
+}
