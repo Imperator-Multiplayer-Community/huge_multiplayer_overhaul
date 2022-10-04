@@ -787,9 +787,9 @@ base_window = {
 	allow_outside = yes
 
 	base_window = {
-		size = { 100% 286 }
+		size = { 100% 266 }
 		movable = no
-		position = { 0 613 }
+		position = { 0 673 }
 		visible = "[GetVariableSystem.HasValue( 'show_subunits', 'yes' )]"
 		sub_header = {
 			size = { 100% 32 }
