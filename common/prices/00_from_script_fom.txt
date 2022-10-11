@@ -82,7 +82,7 @@ price_test_loyalty = {
 }
 
 create_merc_state_price = { 
-	political_influence = 30
+	political_influence = 15
 }
 
 assassinate_attempt_foreign = {
@@ -98,4 +98,9 @@ subject_player_client_state_pays = {
 recruit_mercenary = {
 	gold = 100
 	aggressive_expansion = 2
+}
+
+build_border_fort = {
+	gold = 150
+	manpower = 3
 }
