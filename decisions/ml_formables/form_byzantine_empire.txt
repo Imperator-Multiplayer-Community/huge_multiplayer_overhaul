@@ -59,6 +59,7 @@
 			hidden_effect = {
 				change_country_adjective = "BYZANTINE_EMPIRE_ADJECTIVE"
 				change_country_tag = BYT
+				change_country_color = "byzantine_empire_colour"
 				change_country_flag = EASTERN_ROME_FLAG
 				trigger_event = {
 					id = formable_heritage.149
