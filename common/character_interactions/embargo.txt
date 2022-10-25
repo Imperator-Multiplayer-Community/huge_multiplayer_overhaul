@@ -132,7 +132,7 @@ lift_embargo = {
 				target = scope:target.employer
 			}
 
-			reverse_add_opinion = {
+			remove_opinion = {
 				modifier = "opinion_embargo"
 				target = scope:target.employer
 			}
@@ -144,7 +144,7 @@ lift_embargo = {
 				target = scope:actor
 			}
 
-			reverse_add_opinion = {
+			remove_opinion = {
 				modifier = "opinion_embargoed"
 				target = scope:actor
 			}
