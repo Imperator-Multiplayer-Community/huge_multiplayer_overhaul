@@ -990,6 +990,17 @@
  scientific_patronage_3_inv_desc:0 "Aristotle's inductive-deductive method used inductions from observations to infer general principles, deductions from those principles to check against further observations, and more cycles of induction and deduction to continue the advance of knowledge."
  metropolis_inv_1:0 "Mother City"
  metropolis_inv_1_desc:0 "Ancient Rome was the largest city in antiquity between the first century BC and second century AD, perhaps reaching 1,000,000 inhabitants.  No city was as large until the Industrial Revolution, and we get a sense of the size of the city with the Aurelianic wall circuit, twelve miles long, encircling 3000 acres."
+ naval_new_inv_1:0 "Marine Auxilia"
+ naval_new_inv_1_desc:0 "Choosing to serve as crewman or marine was the only choice that potential crew-members would receive. There primarily to defend against boarding, or to capture enemy ships in boarding actions, the presence of a marine detachment was a widespread tradition amongst state navies."
+ naval_new_inv_2:0 "Expanded Naval Hierarchy"
+ naval_new_inv_2_desc:0 "Instituting a formalized hierarchy on board our vessels is vital in keeping order amidst the chaos of combat."
+ naval_new_inv_3:0 "Fleet Hierarchy"
+ naval_new_inv_3_desc:0 "In addition to the complex ship-based hierarchy of officers, the establishment of a command structure for our navies will ensure that responsibility always lies in the correct places."
+ naval_new_inv_4:0 "Punishment Roster"
+ naval_new_inv_4_desc:0 "By publishing a detailed list of offenses, we can ensure that crews and officers alike, understand the obedience expected of them at sea."
+ naval_new_inv_5:0 "Bow Ornamentation"
+ naval_new_inv_5_desc:0 "The sight of a proud deity affixed or painted on the bow of our vessels will bolster pride and morale within our navies. Additionally, the sight of a fearsome god bearing down upon them, must surely break the resolve of our foes."
+ 
 
  #New tooltips
  integrated_any_celtic_culture:0 "Integrate any #Y Gallic#!, #Y Pannonian#! or #Y Belgae#! culture."
@@ -1022,7 +1033,6 @@
  persecute_minority_decision:0 "This invention unlocks a special cultural decision, #Y Persecute Minority#!, killing their members, confiscating their wealth and driving them from their homes."
  exile_minority_decision:0 "This invention unlocks a special cultural decision, #Y Exile Minority#!, which uproots a community and settles it elsewhere in your nation."
  pander_minority_decision:0 "This invention unlocks a special cultural decision, #Y Promote Minority#!, which boosts population growth in a minority-dominant province."
- zoonotic_defence:0 "This invention will decrease the attrition suffered by #Y Mounted Units#! when they make up 50% of a besieging army."
 
  anti_corruption_decision:0 "This invention unlocks a decision, #Y Reform Bureaucracy#!, which allows you to lower corruption, though some will object."
  another_anti_corruption_decision:0 "This invention unlocks a decision, #Y Anti-Corruption Crackdown#!, which allows you to lower corruption quickly, but painfully."

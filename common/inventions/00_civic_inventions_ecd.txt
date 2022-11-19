@@ -4,13 +4,14 @@
     
     # Level 0
     commerce_inv_1 = { 
-        modifier = { global_import_commerce_modifier = 0.05 }
+        modifier = { global_capital_trade_routes = 1 }
     }
 
     # Level 1
 	capital_trade_inv_2 = 
     {
-        modifier = { global_capital_trade_routes = 1 }
+        modifier = { global_import_commerce_modifier = 0.05
+        			 naval_range = 0.1 }
         requires = { commerce_inv_1 }
     }
     global_tax_modifier_inv_1 = { 
@@ -20,7 +21,7 @@
 
     # Level 1 - Culture specific - Greek
     greek_advanced_mechanics_inv = {
-        modifier = { build_cost = -0.075 
+        modifier = { build_cost = -0.05 
                      build_time = -0.1 }
         requires = { commerce_inv_1 }
         allow = {
@@ -47,13 +48,14 @@
     } 
 
     build_time_inv = { 
-        modifier = { build_time = -0.2 }
+        modifier = { build_time = -0.20 }
         
         requires = { global_tax_modifier_inv_1 }
     } 
 
     civic_tech_investment_inv_2 = { 
-        modifier = { price_state_investment_civic_cost_modifier = -0.1 }
+        modifier = { navy_movement_speed = 0.025
+        			 price_state_investment_civic_cost_modifier = -0.1 }
 		on_activate = {
 			add_1_free_province_investments = yes
 		}
@@ -63,7 +65,7 @@
 
     
 	coins_inv = {
-    	modifier = { global_tax_modifier = 0.1 }
+    	modifier = { global_tax_modifier = 0.075 }
         
         requires = { global_tax_modifier_inv_1 }
         allow = {
@@ -91,16 +93,17 @@
     } 
 
     commerce_inv_2 = {
-        modifier = { global_commerce_modifier = 0.05 }
+        modifier = { global_commerce_modifier = 0.05
+        			 naval_range = 0.1 }
         
-        requires = { research_points_modifier_inv_1 }
+        requires_or = { research_points_modifier_inv_1 civic_tech_investment_inv_2 }
     }
 
     capital_trade_inv_1 = { 
         modifier = { 
 			global_capital_trade_routes = 1 
-			global_import_commerce_modifier = 0.1
-			navy_movement_speed = 0.1
+			global_import_commerce_modifier = 0.05
+			navy_movement_speed = 0.025
 		}
         keystone = yes
         requires_or = { build_time_inv civic_tech_investment_inv_2 } 
@@ -138,7 +141,7 @@
     monthly_wage_inv = { 
         modifier = { monthly_wage_modifier = -0.05 }
         
-        requires = { commerce_inv_2 } 
+        requires_or = { commerce_inv_2 research_points_modifier_inv_4 } 
     } 
 
     enact_law_cost_modifier_inv = { 
@@ -241,7 +244,9 @@
 
     # Level 5
     commerce_inv_3 = { 
-        modifier = { global_export_commerce_modifier = 0.1 }
+        modifier = { global_export_commerce_modifier = 0.05
+        			 global_state_trade_routes = 0.15
+        			 naval_morale_modifier = 0.025 }
         
         requires = { monthly_wage_inv }
     }
@@ -249,10 +254,11 @@
     state_trade_inv_1 = { 
         modifier = { 
 			global_capital_trade_routes = 1 
-			global_population_happiness = 0.01
+			global_export_commerce_modifier = 0.05
+			naval_morale_modifier = 0.025
 		}
         keystone = yes
-        requires_or = { monthly_wage_inv research_points_modifier_inv_4 }
+        requires = { monthly_wage_inv }
     }
 
     global_tax_modifier_inv_3 = { 
@@ -370,14 +376,17 @@
     } 
 	
 	gw_effect_finesse_education_inv = {
+		modifier = { global_state_trade_routes = 0.25 }
 		on_activate = { custom_tooltip = "allow_gw_effect_finesse_education" }
-		requires = { research_points_modifier_inv_3 }
+		requires_or = { research_points_modifier_inv_3 state_trade_inv_2 }
 		icon_override = gw_icon
 		allow = { has_dlc = "Heirs of Alexander" }
 	}
 
     civic_roads_inv = { 
-        modifier = { build_expensive_roads_cost_modifier = -0.25 }
+        modifier = { build_expensive_roads_cost_modifier = -0.2
+        			 army_movement_speed = 0.025
+        			 army_maintenance_cost = 0.01 }
         
         requires = { global_tax_modifier_inv_3 } 
     }
@@ -457,10 +466,11 @@
 
     gum_trade_inv = { 
         modifier = {
-        	global_commerce_modifier = 0.075
+        	global_commerce_modifier = 0.05
         }
         
-        requires = { commerce_inv_3 }
+        requires = { state_trade_inv_2
+         }
         allow = {
 			OR = {
 				country_culture_group = south_levantine
@@ -499,7 +509,9 @@
     }
 
     state_trade_inv_2 = { 
-        modifier = { global_capital_trade_routes = 1 }
+        modifier = { global_capital_trade_routes = 1
+        			 global_import_commerce_modifier = 0.05
+        			 naval_range = 0.1  }
         
         requires_or = { state_trade_inv_1 commerce_inv_3 } 
     } 
@@ -555,7 +567,7 @@
 
     myrrh_trade_inv = { 
         modifier = {
-        	global_commerce_modifier = 0.075
+        	global_commerce_modifier = 0.05
         	global_capital_trade_routes = 1
         }
         
@@ -590,7 +602,7 @@
 
     ivory_trade_inv = { 
         modifier = {
-        	global_export_commerce_modifier = 0.1
+        	global_export_commerce_modifier = 0.05
         	global_capital_trade_routes = 1
         }
         
@@ -616,9 +628,10 @@
 
     # Level 8
     monthly_governor_wage_inv = { 
-        modifier = { monthly_governor_wage = -0.05 }
+        modifier = { monthly_governor_wage = -0.05
+        			  }
         
-        requires = { commerce_inv_4 }
+        requires_or = { commerce_inv_4 gw_effect_finesse_education_inv }
     }
 
     monthly_wage_inv_2 = { 
@@ -628,18 +641,20 @@
 			civil_war_threshold = 0.05
 		}
         keystone = yes
-        requires = { state_trade_inv_2 }
+        requires = { monthly_governor_wage_inv }
     }
 
     state_trade_inv_3 = { 
-        modifier = { global_capital_trade_routes = 1 }
+        modifier = { global_state_trade_routes = 0.15
+        			 global_import_commerce_modifier = 0.05
+        			 naval_morale_modifier = 0.025 }
         
-        requires = { global_tax_modifier_inv_4 }
+        requires_or = { global_tax_modifier_inv_4 commerce_inv_4 }
     }
 
     tyrian_purple_inv = { 
         modifier = { 
-        	global_commerce_modifier = 0.075
+        	global_commerce_modifier = 0.05
         	global_export_commerce_modifier = 0.025
         }
         
@@ -662,7 +677,7 @@
 
     pepper_trade_inv = { 
         modifier = {
-        	global_commerce_modifier = 0.075
+        	global_import_commerce_modifier = 0.1
         }
         
         requires = { myrrh_trade_inv }
@@ -691,21 +706,25 @@
     }
 
     create_trade_route_inv = { 
-        modifier = { global_export_commerce_modifier = 0.05 }
+        modifier = { global_export_commerce_modifier = 0.05
+        			 global_nobles_happyness = 0.03
+        			 naval_range = 0.1 }
         
         requires = { state_trade_inv_3 } 
     }
 
     global_tax_modifier_inv_5 = { 
-        modifier = { global_import_commerce_modifier = 0.05 }
+        modifier = { global_import_commerce_modifier = 0.1
+        			 global_state_trade_routes = 0.25
+        			 naval_morale_modifier = 0.025 }
         
-        requires_or = { monthly_wage_inv_2 monthly_governor_wage_inv }
+        requires = { monthly_governor_wage_inv }
     }
 
     #New Invictus invention
     silent_trade_inv = { 
         modifier = { 
-        	global_commerce_modifier = 0.075 
+        	global_commerce_modifier = 0.05 
         	global_capital_trade_routes = 1
         }
         
@@ -729,7 +748,7 @@
     #New Invictus invention
     cinnamon_trade_inv = { 
         modifier = {
-        	global_state_trade_routes = 1
+        	global_state_trade_routes = 0.25
         }
         
         requires = { pepper_trade_inv }
@@ -782,7 +801,7 @@
     capital_trade_inv_3 = { 
         modifier = { 
 			global_capital_trade_routes = 2 
-			
+			naval_range = 0.1
 		}
 		on_activate = {
 			if = {
@@ -809,15 +828,15 @@
 			}
 		}
         keystone = yes
-        requires_or = { create_trade_route_inv global_tax_modifier_inv_5 }
+        requires_or = { monthly_wage_inv_2 global_tax_modifier_inv_5 }
     }
 
     # Level 11
     metropolis_inv_1 = {
     	modifier = {
     		price_found_metropolis_cost_modifier = -0.25
-    		global_commerce_modifier = 0.025
-    		global_tax_modifier = 0.025
+    		global_commerce_modifier = 0.05
+    		global_tax_modifier = 0.05
     	}
 
         requires = { research_points_modifier_inv_5 capital_trade_inv_3 }
@@ -845,10 +864,8 @@
 
     ## Latin Specific - Level 1
     italic_pilum_scutum_inv = {
-		modifier = { heavy_infantry_offensive = 0.01
-                     heavy_infantry_defensive = 0.01
-                     light_infantry_offensive = 0.01
-                     light_infantry_defensive = 0.01 }
+		modifier = {
+			army_maintenance_cost = -0.05 }
 		requires = { italic_etruscan_pottery_inv }
 		allow = {
 			OR = {
@@ -887,7 +904,8 @@
 
     ## Latin Specific - Level 2
     italic_lituus_inv = { # Brass trumpets
-        modifier = { discipline = 0.025 }
+		modifier = { monthly_military_experience_modifier = 0.025
+                     army_maintenance_cost = 0.01 }
         requires = { italic_pilum_scutum_inv }
 		allow = {
 			OR = {
@@ -1055,13 +1073,15 @@ civic_2 = {
 
  	# Level 1
 	global_slaves_output_inv_1 = { 
-        modifier = { global_slaves_output = output_small_svalue }
+        modifier = { global_slaves_output = output_small_svalue
+        			 global_slaves_happyness = 0.03 }
         
         requires = { global_citizen_output_inv_1 }
     }
 
    	global_tribesmen_output_inv_1 = { 
-       modifier = { global_tribesmen_output = output_small_svalue }  
+       modifier = { global_tribesmen_output = 0.05
+       				 global_tribesmen_happyness = 0.05 }  
        requires = { global_citizen_output_inv_1 }
    	}
  
@@ -1139,19 +1159,24 @@ civic_2 = {
 
     # Level 2
     global_goods_from_slaves_inv = { 
-        modifier = { global_goods_from_slaves = -1 }
+        modifier = { global_goods_from_slaves = -1
+        			 global_pop_demotion_speed_modifier = 0.1
+			 }
         
         requires = { global_slaves_output_inv_1 } 
     }
 
     freemen_promotion_cost_modifier_inv = { 
-        modifier = { global_pop_promotion_speed_modifier = 0.10 }
+        modifier = { global_pop_promotion_speed_modifier = 0.1
+        			 global_slaves_happyness = 0.03
+        			 cultural_integration_speed_modifier = 0.2 }
         
         requires = { global_freemen_output_inv_1 } 
     } 
 
    	global_tribesmen_output_inv_2 = { 
-        modifier = { global_tribesmen_output = output_small_svalue }
+       modifier = { global_tribesmen_output = 0.05
+       				 global_tribesmen_happyness = 0.05 } 
         
         requires = { global_tribesmen_output_inv_1 }
     }
@@ -1166,7 +1191,10 @@ civic_2 = {
     }
 
     global_slaves_output_inv_2 = { 
-        modifier = { global_slaves_output = output_small_svalue }
+        modifier = { global_slaves_output = output_small_svalue
+        			 global_slaves_happyness = 0.03
+        			 slaves_move_cost_modifier = -0.05
+					 global_pop_promotion_speed_modifier = 0.05    }
         
         requires = { global_goods_from_slaves_inv }
     } 
@@ -1174,14 +1202,15 @@ civic_2 = {
     global_citizen_output_inv_2 = { 
         modifier = { 
 			global_citizen_output = output_small_svalue 
-			monthly_political_influence_modifier = 0.05
 		}
         
         requires = { freemen_promotion_cost_modifier_inv }
     } 
 
     move_pop_cost_modifier_inv = { 
-        modifier = { global_migration_speed_modifier = 0.1 }
+        modifier = { global_migration_speed_modifier = 0.1
+        			 global_pop_assimilation_speed_modifier = 0.1
+        			 barbarian_spawn_chance = -0.1 }
         
         requires_or = { global_tribesmen_output_inv_2 freemen_promotion_cost_modifier_inv } 
 		keystone = yes
@@ -1199,7 +1228,10 @@ civic_2 = {
     }  
 
     happiness_for_wrong_culture_modifier_inv_2 = { 
-        modifier = { happiness_for_wrong_culture_modifier = wrong_culture_small }
+        modifier = { happiness_for_wrong_culture_modifier = 0.03
+        			 global_monthly_state_loyalty = 0.02
+        			 cultural_integration_speed_modifier = 0.25
+        			 enact_law_cost_modifier = -0.05 }
         
         requires_or = { global_tribesmen_output_inv_2 global_goods_from_slaves_inv } 
         on_activate = { custom_tooltip = "pander_minority_decision" }
@@ -1207,7 +1239,6 @@ civic_2 = {
 
     brass_coinage_inv = { #Iberian brass coinage
         modifier = { 
-        	global_commerce_modifier = 0.05 
         	global_tax_modifier = 0.05
         }
         
@@ -1234,15 +1265,20 @@ civic_2 = {
 
     # Level 4
     civic_tech_investment_inv_1 = { 
-        modifier = { price_state_investment_civic_cost_modifier = -0.1 }
+        modifier = { price_state_investment_civic_cost_modifier = -0.1
+        			 global_defensive = 0.05
+        			 build_time = -0.075
+        			  }
         on_activate = {
-			add_1_free_province_investments = yes
+			add_2_free_province_investments = yes
 		}
-        requires = { move_pop_cost_modifier_inv } 
+        requires_or = { move_pop_cost_modifier_inv happiness_for_wrong_culture_modifier_inv_2 } 
     }
 
     citizen_promotion_cost_modifier_inv = { 
-        modifier = { global_pop_promotion_speed_modifier = 0.2}
+        modifier = { global_pop_promotion_speed_modifier = 0.2
+        			 global_slaves_happyness = 0.03
+        			 cultural_integration_speed_modifier = 0.2 }
         on_activate = {
 			if = {
 				limit = { is_monarchy = yes }
@@ -1253,6 +1289,10 @@ civic_2 = {
     }
 	
 	gw_effect_culture_expansion_inv = {
+		modifier = { 
+        			 global_unrest = -0.25
+        			 price_patron_of_arts_button_cost_modifier = -0.3
+        			 buy_idea_cost_modifier = -0.25  }
 		on_activate = { custom_tooltip = "allow_gw_effect_culture_expansion" }
 		requires = { citizen_promotion_cost_modifier_inv }
 		icon_override = gw_icon
@@ -1261,8 +1301,10 @@ civic_2 = {
 
     global_tribesmen_output_inv_3 = { 
         modifier = { 
-			global_tribesmen_output = 0.15 
+			global_tribesmen_output = 0.1 
 			global_migration_speed_modifier = 0.2
+			tribesmen_move_cost_modifier = -0.1
+			global_pop_assimilation_speed_modifier = 0.1
 		}
 		on_activate = {
 			if = {
@@ -1327,7 +1369,8 @@ civic_2 = {
         modifier = { 
 			happiness_for_wrong_culture_modifier = 0.05 
 			price_found_city_cost_modifier = -0.20
-			#global_monthly_state_loyalty = 0.02
+			global_pop_assimilation_speed_modifier = -0.15
+			barbarian_spawn_chance = -0.15
 		}
 		keystone = yes
         
@@ -1335,13 +1378,16 @@ civic_2 = {
     }
 
     happiness_for_wrong_culture_modifier_inv_1 = { 
-        modifier = { happiness_for_wrong_culture_modifier = wrong_culture_small }
+        modifier = { happiness_for_wrong_culture_modifier = wrong_culture_small
+        			 slaves_move_cost_modifier = -0.1
+        			 global_migration_speed_modifier = 0.2 }
         
         requires =  {citizen_promotion_cost_modifier_inv } 
     }
 
     research_points_modifier_inv_2 = { 
-        modifier = { build_cost = -0.05 }
+        modifier = {
+        			 global_unrest = -0.25 }
         
         requires = { global_tribesmen_output_inv_3 } 
     } 
@@ -1395,7 +1441,9 @@ civic_2 = {
     # Level 6
     build_cost_inv = { 
         modifier = { 
-			build_expensive_roads_cost_modifier = -0.15
+			build_expensive_roads_cost_modifier = -0.2
+			army_movement_speed = 0.025
+			army_maintenance_cost = 0.01
 		}
         requires = { research_points_modifier_inv_2 } 
 		on_activate = {
@@ -1410,16 +1458,27 @@ civic_2 = {
 
     global_slaves_output_inv_3 = { 
         modifier = { 
-			global_slaves_output = output_small_svalue 
+			global_slaves_output = 0.05
+			global_slaves_happyness = -0.05
+			global_pop_demotion_speed_modifier = 0.1
+			global_pop_promotion_speed_modifier = -0.2
 		}
 		on_activate = {
 			custom_tooltip = "imprison_cost_gsoi3_tt"
 		}
         keystone = yes
-        requires = { happiness_for_wrong_culture_modifier_inv_3 }
+        requires_or = { happiness_for_wrong_culture_modifier_inv_3 gw_effect_culture_expansion_inv }
     } 
 	
 	gw_effect_slave_work_inv = {
+		modifier = { 
+			global_slaves_output = 0.05
+			global_slaves_happyness = -0.05
+			global_pop_demotion_speed_modifier = 0.1
+			global_pop_promotion_speed_modifier = -0.2
+			global_slaves_desired_pop_ratio = 0.05
+			global_tax_modifier = 0.025
+		}
 		on_activate = { custom_tooltip = "allow_gw_effect_slave_work" }
 		requires = { global_slaves_output_inv_3 }
 		icon_override = gw_icon
@@ -1429,7 +1488,7 @@ civic_2 = {
     global_citizen_output_inv_3 = { 
         modifier = { global_citizen_output = output_small_svalue }
         
-        requires = { happiness_for_wrong_culture_modifier_inv_1 }
+        requires_or = { happiness_for_wrong_culture_modifier_inv_1 gw_effect_culture_expansion_inv }
     } 
 
     global_freemen_output_inv_3 = { 
@@ -1440,16 +1499,17 @@ civic_2 = {
 
     # Level 7
     convert_pop_cost_modifier_inv = { 
-        modifier = { global_pop_conversion_speed_modifier = 0.1}
+        modifier = { global_pop_conversion_speed_modifier = 0.2
+        			 omen_power = 0.025 }
         
         requires = { global_slaves_output_inv_3} 
     } 
 
     assimilate_pop_cost_modifier_inv_1 = { 
         modifier = { 
-			global_pop_assimilation_speed_modifier = 0.10
+			global_pop_assimilation_speed_modifier = 0.2
 			cultural_integration_speed_modifier = 0.25
-			monthly_political_influence_modifier = 0.1
+			monthly_political_influence_modifier = 0.05
 		}
 		on_activate = {
 			current_ruler = {
@@ -1483,25 +1543,32 @@ civic_2 = {
 
     # Level 8
     global_slaves_output_inv_4 = { 
-        modifier = { global_slaves_output = output_small_svalue }
+        modifier = { global_slaves_output = output_small_svalue
+        			 global_slaves_happyness = 0.03
+        			 slaves_move_cost_modifier = -0.1
+        			 global_pop_promotion_speed_modifier = 0.1 }
         
         requires = { convert_pop_cost_modifier_inv }
     } 
 
     global_tribesmen_output_inv_4 = { 
-        modifier = { global_tribesmen_output = output_small_svalue }
+        modifier = { tribesmen_move_cost_modifier = -0.15
+        			 global_monthly_civilization = -0.05
+        			 clan_chief_loyalty = 10
+        			 monthly_wage_modifier = 0.02
+        			 hostile_attrition = 1 }
         
         requires = { convert_pop_cost_modifier_inv }
     } 
 
     global_citizen_output_inv_4 = { 
-        modifier = { global_citizen_output = output_small_svalue }
+        modifier = { global_citizen_desired_pop_ratio = 0.05 }
         
         requires = { assimilate_pop_cost_modifier_inv_1 }
     } 
 
     global_freemen_output_inv_4 = { 
-        modifier = { global_freemen_output = output_small_svalue }
+        modifier = { global_freemen_desired_pop_ratio = 0.05 }
         
         requires = { assimilate_pop_cost_modifier_inv_1 }
     } 
@@ -1529,8 +1596,12 @@ civic_2 = {
     # Level 9
     global_slaves_output_inv_5 = { 
         modifier = { 
-			global_slaves_output = output_small_svalue 
-			global_tax_modifier = 0.025
+			global_slaves_output = 0.05 
+			global_tax_modifier = 0.05
+			global_slaves_happyness = -0.1
+			global_population_happiness = -0.03
+			global_pop_demotion_speed_modifier = 0.1
+			global_pop_promotion_speed_modifier = -0.2
 		}
         on_activate = {
         	custom_tooltip = crucifixion_tooltip
@@ -1570,8 +1641,10 @@ civic_2 = {
 
     global_citizen_output_inv_5 = {
         modifier = { 
-			global_citizen_output = output_small_svalue 
-			monthly_political_influence_modifier = 0.1
+			global_citizen_output = 0.03
+			monthly_political_influence_modifier = 0.05
+			global_pop_demotion_speed_modifier = 0.15
+			global_pop_promotion_speed_modifier = -0.1
 		}
         
         requires = { global_citizen_output_inv_4 }
@@ -1579,8 +1652,8 @@ civic_2 = {
 
     global_freemen_output_inv_5 = { 
         modifier = { 
-			global_freemen_output = output_small_svalue 
-			global_manpower_modifier = 0.05
+			global_freemen_happyness = 0.03
+			global_manpower_modifier = 0.025
 			army_maintenance_cost = 0.01
 		}
         
@@ -1588,7 +1661,9 @@ civic_2 = {
     }
 
     global_tribesmen_output_inv_5 = { 
-        modifier = { global_tribesmen_output = output_small_svalue }
+        modifier = { tribe_new_ruler_cost_modifier = -0.3
+        			 global_tribesmen_desired_pop_ratio = 0.1
+        			 war_no_cb_cost_modifier = -0.25 }
         
         requires = { global_tribesmen_output_inv_4 }
     }
@@ -1616,20 +1691,25 @@ civic_2 = {
 	# Level 10
     recruit_mercenary_inv = { 
         modifier = { 
-			recruit_mercenary_cost_modifier = -0.25 
+			recruit_mercenary_cost_modifier = -0.25
 			max_mercenary_stacks = 1
+			character_loyalty = -2
+			levy_size_multiplier = 0.0025
+			army_maintenance_cost = 0.01
 		}
         keystone = yes
 		on_activate = {
 			custom_tooltip = "cannot_be_bribed_mercs"
 		}
-        requires_or = { global_slaves_output_inv_5 global_freemen_output_inv_5 }
+        requires_or = { global_citizen_output_inv_5 global_freemen_output_inv_5 }
     }
 
     loyalty_gain_chance_modifier_inv = {	
         modifier = { 
 			loyalty_gain_chance_modifier = -0.05 
 			land_morale = 0.25
+			levy_size_multiplier = 0.0025
+			army_maintenance_cost = -0.05
 		}
 		on_activate = {
 			current_ruler = {
@@ -1637,7 +1717,7 @@ civic_2 = {
 			}
 		}
         keystone = yes
-        requires = { global_tribesmen_output_inv_5 }
+        requires_or = { global_tribesmen_output_inv_5 global_slaves_output_inv_5 }
     }
 	
 	#### Greek Specific Invention Tree ####
@@ -1662,7 +1742,7 @@ civic_2 = {
 
     ## Greek Specific - Level 1
     greek_odometer_inv = {
-        modifier = { global_commerce_modifier = 0.075 }
+        modifier = { global_commerce_modifier = 0.05 }
         requires = { greek_fire_hose_inv }      
         allow = {
 			OR = {
@@ -1722,7 +1802,7 @@ civic_2 = {
     greek_cartography_inv = {
         modifier = { diplomatic_range_modifier = 0.15
 					 naval_range = 0.1
-                     global_commerce_modifier = 0.075 }
+                     global_commerce_modifier = 0.05 }
         requires = { greek_odometer_inv }                    
         allow = {
 			OR = {
@@ -1741,7 +1821,7 @@ civic_2 = {
 
     ## Greek Specific - Level 3
     greek_advanced_astronomy_inv_1 = { # Astrolabe
-        modifier = { global_commerce_modifier = 0.075 }
+        modifier = { global_commerce_modifier = 0.05 }
         requires = { greek_cartography_inv }
         allow = {
 			OR = {
@@ -1804,7 +1884,8 @@ civic_2 = {
 	#Greek invention
     greek_epicureanism_inv = {
         modifier = { monthly_corruption = -0.02 
-                     happiness_for_same_culture_modifier = 0.05}
+                     happiness_for_same_culture_modifier = 0.05
+                     character_loyalty = -1 }
         requires = { greek_stoicism_inv }
 		allow = {
 			OR = {

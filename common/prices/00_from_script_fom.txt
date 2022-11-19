@@ -23,23 +23,23 @@ recruit_general = {
 }
 
 seduce_governor = {
-	aggressive_expansion = 15
-	political_influence = 25
-	scaled_gold = 1
+	aggressive_expansion = 20
+	political_influence = 35
+	scaled_gold = 2
 }
 
 gift_slave = {
-	scaled_gold = 5
+	scaled_gold = 3
 }
 
 send_letter = {
 	gold = 50
-	political_influence = 30
+	political_influence = 15
 }
 
 go_hunting = {
 	gold = 100
-	political_influence = 20
+	political_influence = 15
 }
 
 price_force_divorce = {
@@ -64,11 +64,11 @@ price_oaths_of_allegiance_button = {
 }
 
 price_patron_of_arts_button = {
-	political_influence = 50
+	political_influence = 40
 }
 
 price_assemble_raiding_party_button = {
-	political_influence = 75
+	political_influence = 60
 }
 
 price_tribal_duel = {
@@ -82,7 +82,8 @@ price_test_loyalty = {
 }
 
 create_merc_state_price = { 
-	political_influence = 30
+	political_influence = 50
+	military_experience = 5
 }
 
 assassinate_attempt_foreign = {
@@ -96,8 +97,9 @@ subject_player_client_state_pays = {
 }
 
 recruit_mercenary = {
-	gold = 100
+	scaled_gold = 3
 	aggressive_expansion = 2
+	military_experience = 5
 }
 
 build_border_fort = {

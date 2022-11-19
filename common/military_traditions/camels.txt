@@ -123,7 +123,7 @@
 	
 	camels_path_1 = { ###
 		modifier = { 
-			camels_morale = 0.1
+			camels_cost = -0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_egyptian_path_6 #updated
@@ -132,7 +132,8 @@
 
 	camels_path_2 = { ###
 		modifier = { 
-			camels_discipline = 0.1
+			camels_movement_speed = 0.1
+			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_3 #updated
@@ -142,6 +143,7 @@
 	camels_path_3 = { ###
 		modifier = { 
 			camels_offensive = 0.1
+			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_tribal_path_5 #updated
@@ -151,6 +153,7 @@
 	camels_path_4 = { ### 
 		modifier = { 
 			camels_defensive = 0.1
+			discipline = 0.025
 			army_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_6 #updated
@@ -159,7 +162,8 @@
 
 	camels_path_5 = { ###
 		modifier = { 
-			camels_cost = -0.1
+			camels_morale = 0.1
+			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_6
@@ -168,7 +172,8 @@
 
 	camels_path_6 = { ###
 		modifier = { 
-			camels_movement_speed = 0.1
+			camels_discipline = 0.1
+			discipline = 0.025
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_end_bonus #updated
@@ -177,8 +182,9 @@
 
 	camels_path_7 = { ### final generic tradition
 		modifier = {
-			levy_size_multiplier = 0.025
-			discipline = 0.05
+			levy_size_multiplier = 0.01
+			discipline = 0.01
+			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_6
 		requires = { camels_path_6 camels_path_5 }

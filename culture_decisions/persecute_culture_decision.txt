@@ -44,7 +44,7 @@
 				}
 				add_city_smoke_effect = yes
 				add_city_fire_effect = yes
-				add_state_loyalty = -50
+				add_state_loyalty = -35
 				ordered_pops_in_province = {
 					limit = {
 						OR = {
@@ -73,7 +73,7 @@
 				name = "persecution_project"
 				duration = 1826
 			}
-			add_tyranny = 15
+			add_tyranny = 12
 			add_treasury = 800
 			add_political_influence = -10
 		}

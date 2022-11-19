@@ -1,4 +1,4 @@
-﻿	martial_1 = {
+﻿martial_1 = {
 	technology = military_tech
 	color = hsv { 0 0.8 0.5 }
 
@@ -16,28 +16,18 @@
 	# Level 1
 	global_start_experience_inv_1 = { 
 		modifier = { 
-			global_start_experience = 10
+			army_movement_speed = 0.025
+			army_maintenance_cost = 0.01
 		}
-			 on_activate = {
-				custom_tooltip = "ArmyMaintUp_TT"
 
-				 trigger_event = {
-					 id = maintenance_event.6
-				 }
-			 }
 		requires = { military_tech_investment_inv_1 }
 	}
 
 	global_start_experience_inv_2 = { 
 		modifier = { 
-			global_start_experience = 10
+			army_maintenance_cost = -0.025
 		}
-			on_activate = {
-				trigger_event = {
-					id = maintenance_event.6
-			}
-				custom_tooltip = "ArmyMaintUp_TT"
-			}
+
 		requires = { military_tech_investment_inv_1 }
 		ai_will_do = {
 			modifier = {
@@ -51,39 +41,32 @@
 	}
 
 	global_supply_limit_modifier_inv_3 = { 
-		modifier = { global_supply_limit_modifier = 0.1 }
+		modifier = { global_supply_limit_modifier = 0.1
+					 army_maintenance_cost = 0.01 }
 		requires = { military_tech_investment_inv_1 }
 	}
 
 	# Level 2
-	heavy_infantry_discipline_inv = {
+	heavy_infantry_discipline_inv = { ############# Fustuarium
 		modifier = { 
-			monthly_military_experience_modifier = 0.05}
-			on_activate = {
-				trigger_event = {
-					id = maintenance_event.6
+			army_maintenance_cost = -0.025
 			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { global_start_experience_inv_3 }
 	}
 
 	global_start_experience_inv_3 = { 
 		modifier = { 
-			global_start_experience = 10
+			land_morale_modifier = 0.025
+			army_maintenance_cost = 0.01
 			}
-			on_activate = {
-				trigger_event = {
-					id = maintenance_event.6
-				}
-				custom_tooltip = "ArmyMaintUp_TT"
-			}
+
 		requires = { global_start_experience_inv_1 }
 	}
 
 	#New for HMO
 	centralised_production_inv = {
-		modifier = { global_tax_modifier = 0.01 }
+		modifier = { global_unrest = 0.25 }
 		requires = { global_start_experience_inv_3 }
 		on_activate = { custom_tooltip = "enables_foundry_building_tt" }
 		keystone = yes
@@ -98,15 +81,10 @@
 
 	experience_decay_inv_1 = { 
 		modifier = { 
-			discipline = 0.05
+			monthly_military_experience_modifier = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
 
-		}
 		requires = { global_start_experience_inv_2 }
 		ai_will_do = {
 			modifier = {
@@ -125,41 +103,41 @@
 	}
 
 	global_supply_limit_modifier_inv_1 = { 
-		modifier = { global_supply_limit_modifier = 0.1 }
+		modifier = { global_supply_limit_modifier = 0.1
+					 supply_train_movement_speed = 0.1
+					 army_maintenance_cost = 0.01 }
 		requires = { general_loyalty_inv }
 	}
 
 	general_loyalty_inv = {
 		modifier = { 
 			general_loyalty = 5 
+			monthly_wage_modifier = 0.01
 			 }
-			 on_activate = {
-				trigger_event = {
-					id = maintenance_event.6
-				}
-				custom_tooltip = "ArmyMaintUp_TT"
-			}
 		requires = { global_supply_limit_modifier_inv_3 }
 	}
 
 	global_supply_limit_modifier_inv_2 = { 
-		modifier = { global_supply_limit_modifier = 0.05 }
+		modifier = { army_weight_modifier = -0.1
+					 army_maintenance_cost = 0.01 }
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
+		}
 		requires = { global_supply_limit_modifier_inv_3 }
 	}
 
 	#New HMO invention
 	backgammon_inv = {
     	modifier = { 
-    		discipline = 0.025
-    		global_start_experience = 5
+    		monthly_military_experience_modifier = 0.025
+    		army_maintenance_cost = 0.01
     	}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-
-		}
         
         requires = { global_start_experience_inv_1 }
         allow = {
@@ -182,18 +160,11 @@
 	discipline_inv_4 = { 
 		requires = { discipline_inv_3 }
 		modifier = { 
-			discipline = 0.05
-			loyalty_gain_chance_modifier = -0.05
+			land_morale_modifier = 0.025
+			manpower_recovery_speed = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			custom_tooltip = "exp_from_sieging_legions"
 
-			trigger_event = {
-				id = maintenance_event.6
-			}
-				custom_tooltip = "ArmyMaintUp_TT"
-
-		}
 	
 		keystone = yes
 	}
@@ -217,14 +188,9 @@
 		requires = { experience_decay_inv_1 }
 		modifier = { 
 			cohort_reinforcement_speed = 0.05
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
 
-		}
 		ai_will_do = {
 			modifier = {
 				add = 25
@@ -238,16 +204,12 @@
 
 	global_cohort_recruit_speed_inv = { 
 		modifier = { 
-			discipline = 0.05 
 			experience_decay = -0.005
+			army_maintenance_cost = 0.01
 		}
 		keystone = yes
 		requires = { experience_decay_inv_1 }
 		on_activate = {
-				trigger_event = {
-					id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
 
 			if = {
 				limit = {
@@ -278,60 +240,54 @@
 	}
 	
 	gw_effect_martial_education_inv = {
+		modifier = { 
+			army_movement_speed = 0.025
+			retreat_delay = -1
+			army_maintenance_cost = 0.01
+		}
 		on_activate = { custom_tooltip = "allow_gw_effect_martial_education" }
-		requires = { global_cohort_recruit_speed_inv }
+		requires_or = { global_cohort_recruit_speed_inv  cohort_reinforcement_speed_inv }
 		allow = { has_dlc = "Heirs of Alexander" }
 		icon_override = gw_icon
 	}
 	
 	discipline_inv_2 = { 
 		modifier = { 
-			discipline = 0.025
+			army_movement_speed = 0.05
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { cohort_reinforcement_speed_inv }
 	}	
 
 	army_movement_speed_inv = { 
 		modifier = { 
-			army_movement_speed = 0.05 			
+			army_movement_speed = 0.05
+			army_maintenance_cost = 0.01 			
 		}
 		on_activate = {
 			custom_tooltip = "enables_forced_march"
-				trigger_event = {
-					id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
 
 		}
 		keystone = yes
-		requires_or = { military_tech_investment_inv_2 global_supply_limit_modifier_inv_4 }
+		requires_or = { military_tech_investment_inv_2  global_supply_limit_modifier_inv_4 }
 	}
 
 	military_tech_investment_inv_2 = { 
 		modifier = { 
-			army_movement_speed = 0.05 
+			army_movement_speed = 0.05
+			army_maintenance_cost = 0.01 
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { global_supply_limit_modifier_inv_1 }
 	}
 
 	global_supply_limit_modifier_inv_4 = { 
 		requires = { fort_maintenance_cost_inv }
-		modifier = { global_supply_limit_modifier = 0.05 }
-		on_activate = {
-			custom_tooltip = "zoonotic_defence"
-		}
+		modifier = { global_supply_limit_modifier = 0.05
+					 supply_train_movement_speed = 0.1
+					 supply_train_maintenance_cost = -0.1
+					 army_maintenance_cost = 0.01 }
 	}
 
 	#New HMO invention
@@ -341,15 +297,20 @@
 		modifier = { 
 			global_tax_modifier = 0.05
 			global_slaves_output = 0.05
-			global_slaves_happyness = -0.1 
+			global_slaves_happyness = -0.1
+			global_population_happiness = -0.03
+			global_pop_demotion_speed_modifier = 0.1
+			global_pop_promotion_speed_modifier = -0.2
 		}
 		requires = { centralised_production_inv }
 	}
 
 	cured_ham_inv = {
 		modifier = { 
-			supply_train_cost = -0.1
+			supply_train_maintenance_cost = -0.1
+			supply_train_movement_speed = 0.1
 			global_supply_limit_modifier = 0.05
+			army_maintenance_cost = 0.01
 		}
 		
 		requires = { global_supply_limit_modifier_inv_2 }
@@ -374,7 +335,7 @@
 
 	#New Invictus invention
 	draco_inv = {
-		modifier = { character_loyalty = 3 }
+		modifier = { character_loyalty = 2 }
 		requires = { heavy_infantry_discipline_inv }
 		allow = {
 			OR = {
@@ -402,27 +363,19 @@
 	discipline_inv_3 = { 
 		modifier = { 
 			land_morale_recovery = 0.04
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { global_start_experience_inv_4 }
 	}
 
 	global_start_experience_inv_4 = { 
 		requires = { army_maintenance_cost_inv_2 }
 		modifier = { 
-			global_start_experience = 5
 			supply_limit_modifier = 0.20
+			army_maintenance_cost = 0.01
 		}
 		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -447,27 +400,21 @@
 	global_start_experience_inv_5 = { 
 		requires = { discipline_inv_2 }
 		modifier = { 
-			global_start_experience = 10
+			manpower_recovery_speed = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 	}
 
 
 	discipline_inv_5 = { 
-		requires = { global_start_experience_inv_5 experience_decay_inv_2 }
+		requires = { experience_decay_inv_2 }
 		modifier = { 
-			discipline = 0.05 
+			monthly_military_experience_modifier = 0.05
+			army_maintenance_cost = 0.01
+
 		}
 		on_activate = {
-				trigger_event = {
-					id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
 
 			custom_tooltip = "allow_all_legion_law"
 			if = {
@@ -507,13 +454,11 @@
 
 	hostile_attrition_inv = { 
 		modifier = { 
-			hostile_attrition = 1 
+			hostile_attrition = 1
+			army_maintenance_cost = 0.01
 		}
 		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
+			
 			custom_tooltip = "scorched_earth_decision"
 		}
 		requires = { retreat_delay_inv }
@@ -521,8 +466,10 @@
 
 
 	global_supply_limit_modifier_inv_5 = { 
-		requires = { army_movement_speed_inv }
-		modifier = { global_supply_limit_modifier = 0.1 }
+		requires_or = { army_movement_speed_inv  army_maintenance_cost_inv_1 }
+		modifier = { global_supply_limit_modifier = 0.1
+					 supply_train_movement_speed = 0.15
+					 army_maintenance_cost = 0.01 }
 	}
 
 
@@ -534,14 +481,11 @@
 	#New HMO invention
 	iberian_cavalry_inv = {
 		modifier = { 
-			heavy_cavalry_offensive = 0.01 
+			heavy_cavalry_movement_speed = 0.05
+			monthly_military_experience_modifier = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		
 		requires = { cured_ham_inv }
 		allow = {
@@ -591,19 +535,13 @@
 	#New HMO invention
 	bitless_bridle_inv = { 
         modifier = { 
-			light_cavalry_defensive = 0.01
-			heavy_cavalry_defensive = 0.01
-			light_cavalry_offensive = 0.01
-			heavy_cavalry_offensive = 0.01
+			light_cavalry_movement_speed = 0.05
+			monthly_military_experience_modifier = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
         
-        requires_or = { global_supply_limit_modifier_inv_4 }
+        requires = { global_supply_limit_modifier_inv_4 }
         allow = {
 			OR = {
 				country_culture_group = numidian
@@ -622,16 +560,12 @@
 
 	# Level 5
 	experience_decay_inv_2 = { 
-		requires = { global_start_experience_inv_4 }
+		requires = { global_start_experience_inv_5 }
 		modifier = { 
 			experience_decay = -0.005
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		ai_will_do = {
 			modifier = {
 				add = 25
@@ -645,15 +579,19 @@
 
 	retreat_delay_inv = {
 		requires = { army_movement_speed_inv }
-		modifier = { retreat_delay = -2 }
+		modifier = { army_movement_speed = 0.025
+					 retreat_delay = -1
+					 army_maintenance_cost = 0.01 }
 	}
 
 	land_unit_attrition_inv = { 
-		requires_or = { global_supply_limit_modifier_inv_5 army_maintenance_cost_inv_1 }
+		requires = { global_supply_limit_modifier_inv_5 }
 		keystone = yes
 		modifier = { 
 			land_unit_attrition = -0.1   
 			global_supply_limit_modifier = 0.15
+			supply_train_movement_speed = 0.15
+			army_maintenance_cost = 0.01
 		}
 		on_activate = {
 			random_character = {
@@ -668,15 +606,10 @@
 	#New HMO invention
 	werewolves_inv = {
 		modifier = { 
-			discipline = 0.025
-			global_start_experience = 5
+			monthly_military_experience_modifier = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { falconry_inv }
 		allow = {
 			OR = {
@@ -702,17 +635,13 @@
 	#New HMO invention
     postal_service_inv = {
     	modifier = {
-    		light_cavalry_movement_speed = 0.1
-    		heavy_cavalry_movement_speed = 0.1
-    		camels_movement_speed = 0.1
-    		horse_archers_movement_speed = 0.1
+    		light_cavalry_movement_speed = 0.05
+    		heavy_cavalry_movement_speed = 0.05
+    		camels_movement_speed = 0.05
+    		horse_archers_movement_speed = 0.05
+    		army_maintenance_cost = 0.01
     	}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
         
         requires = { global_start_experience_inv_5 }
         allow = {
@@ -734,13 +663,8 @@
     #New HMO invention
     decimal_command_inv = {
     	modifier = { 
-			discipline = 0.025
-		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
+			monthly_military_experience_modifier = 0.025
+			army_maintenance_cost = 0.01
 		}
         
         requires = { postal_service_inv }
@@ -791,26 +715,24 @@ military_inventions = {
 	color = hsv { 0 0.6 0.9 }
 	# Level 0
 	buy_military_tradition_inv = { 
-		modifier = { army_weight_modifier = -0.1  }
+		modifier = { army_weight_modifier = -0.1		   
+		}
 	}
 
 	# Level 1
 	discipline_inv_1 = { 
 		modifier = {
-			discipline = 0.025 
+			monthly_military_experience_modifier = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { buy_military_tradition_inv }
 	}
 
 	global_defensive_inv_1 = {
 		modifier = { 
 			global_defensive = 0.05
+			price_state_investment_military_cost_modifier = -0.1
 			fort_maintenance_cost = 0.01  }
 		requires = { buy_military_tradition_inv }
 	}
@@ -818,13 +740,11 @@ military_inventions = {
 	siege_engineers_inv_1 = { 
 		modifier = { 
 			siege_engineers = 1
+			supply_train_movement_speed = 0.1
+			army_maintenance_cost = 0.01
 		}
 		requires = { buy_military_tradition_inv }
 		on_activate = {
-				trigger_event = {
-					id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
 
 			custom_tooltip = "allow_gw_effect_siege_doctrine"
 		}
@@ -833,20 +753,20 @@ military_inventions = {
 	# Level 2
 	heavy_cavalry_discipline_inv = {
 		modifier = { 
-			heavy_cavalry_discipline = 0.05
+			camels_movement_speed = 0.05
+			horse_archers_movement_speed = 0.05
+			light_cavalry_movement_speed = 0.05
+			heavy_cavalry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
-		requires = { discipline_inv_1 }
+
+		requires = { heavy_infantry_cost_inv }
 	}
 
 	global_defensive_inv_2 = { 
 		modifier = { 
-			global_defensive = 0.05
+			global_defensive = 0.1
+			build_time = -0.05
 			fort_maintenance_cost = 0.01  }
 		requires = { global_defensive_inv_1 }
 		on_activate = {
@@ -860,11 +780,10 @@ military_inventions = {
 	}	
 
 	global_defensive_inv_4 = { 
-		requires_or = { global_defensive_inv_1 siege_engineers_inv_1 }
+		requires_or = { global_defensive_inv_1  siege_engineers_inv_1 }
 		modifier = { 
 			global_defensive = 0.1 
 			garrison_size = 0.1
-			garrison_growth = 0.1
 			fort_maintenance_cost = 0.01 
 		}
 		keystone = yes
@@ -872,14 +791,10 @@ military_inventions = {
 
 	assault_ability_inv = { 
 		modifier = { 
-			assault_ability = 0.05
+			assault_ability = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { siege_engineers_inv_1 }
 	}
 
@@ -887,21 +802,20 @@ military_inventions = {
 	siege_engineers_inv_3 = { 
 		modifier = { 
 			siege_ability = 0.05
+			engineer_cohort_maintenance_cost = -0.1
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { assault_ability_inv }
 	}	
 
 	#Changed for HMO
 	heavy_infantry_cost_inv = {
 		modifier = { army_maintenance_cost = -0.05 }
-		requires = { heavy_cavalry_discipline_inv }
+		requires = { discipline_inv_1
+		}
 	}	
+
 
 	global_defensive_inv_3 = { 
 		modifier = { 
@@ -917,27 +831,20 @@ military_inventions = {
 
 	siege_speed_inv_3 = { 
 		modifier = { 
-			siege_ability = 0.05
+			siege_ability = 0.1
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { global_defensive_inv_4 }
 	}
 
 	siege_speed_inv_2 = { 
 		modifier = { 
 			siege_ability = 0.05
+			assault_ability = 0.025
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		requires = { assault_ability_inv }
 	}		
 
@@ -945,16 +852,12 @@ military_inventions = {
 	#New HMO invention
 	kikkuli_inv = {
     	modifier = { 
-    		heavy_cavalry_morale = 0.01
-    		light_cavalry_morale = 0.01
-    		horse_archers_morale = 0.01
+    		heavy_cavalry_movement_speed = 0.05
+    		light_cavalry_movement_speed = 0.05
+    		horse_archers_movement_speed = 0.05
+    		army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
         
         requires = { heavy_cavalry_discipline_inv }
         allow = {
@@ -977,31 +880,22 @@ military_inventions = {
 	# Level 4
 	siege_speed_inv_4 = { 
 		modifier = { 
-			siege_ability = 0.05
+			land_unit_attrition = -0.1
+			fortress_ramparts_building_cost = -0.2
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}		requires = { global_defensive_inv_3 }
-		requires_or = { heavy_infantry_cost_inv siege_speed_inv_3 }
+		
+		requires_or = { siege_speed_inv_3 global_defensive_inv_3 }
 	}
 
 	siege_engineers_inv_5 = { 
-		requires = { siege_engineers_inv_3 }
-		requires_or = { siege_speed_inv_2 siege_speed_inv_3 }
+		requires_or = { siege_speed_inv_2  siege_speed_inv_3  siege_engineers_inv_3 }
 		modifier = { 
-			engineer_cohort_cost = -0.1  
-			siege_ability = 0.05
-			land_unit_attrition = -0.05
+			siege_ability = 0.1
+			army_movement_speed = -0.01
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
+
 		keystone = yes
 	}	
 
@@ -1036,7 +930,7 @@ military_inventions = {
 	#New Invictus invention
     bloomeries_inv = { 
         modifier = {
-        	slaves_move_cost_modifier -0.15
+        	slaves_move_cost_modifier -0.1
         	global_tax_income = 0.05
         }
         
@@ -1064,19 +958,25 @@ military_inventions = {
 	siege_speed_inv_5 = { 
 		requires = { siege_engineers_inv_5 }
 		modifier = { 
-			siege_ability = 0.05
+			assault_ability = 0.025
+			army_movement_speed = -0.01
+			army_maintenance_cost = 0.01
 		}
 		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = original_thinker
+				}
 			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}	}
+		}
+	}
 
 	global_defensive_inv_5 = { 
 		requires = { siege_speed_inv_4 }
 		modifier = { 
-			global_defensive = 0.20 
+			global_defensive = 0.25 
 			fort_maintenance_cost = 0.01  
 		}
 		on_activate = { custom_tooltip = "fortified_capital_decision" }
@@ -1085,14 +985,12 @@ military_inventions = {
 
 	siege_engineers_inv_4 = { 
 		modifier = { 
-			siege_engineers = 1
+			enslavement_efficiency = 0.025
+			supply_train_movement_speed = 0.1
+			army_movement_speed = -0.01
+			army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}		requires = { siege_engineers_inv_5}
+		requires = { siege_engineers_inv_5}
 	}	
 
 
@@ -1123,25 +1021,27 @@ military_inventions = {
 
 	# Level 6
 	siege_speed_inv_1 = { 
-		modifier = { engineer_cohort_maintenance_cost = -0.1 }
-		requires = { siege_engineers_inv_4 }
+		modifier = { engineer_cohort_maintenance_cost = -0.15
+					 engineer_cohort_defensive = 4
+					 supply_train_defensive = 4
+					 supply_train_movement_speed = 0.1
+					 army_maintenance_cost = 0.01
+					  }
+		requires = { siege_speed_inv_4 }
 	}
 
 	# Level 7
 	siege_engineers_inv_6 = { 
-		requires = {   global_defensive_inv_5 }
-		requires_or = { siege_speed_inv_1 siege_speed_inv_5  }
+		requires_or = { siege_speed_inv_1  siege_speed_inv_5  global_defensive_inv_5  siege_engineers_inv_4 }
 		modifier = { 
 			siege_engineers = 1
-			engineer_cohort_cost = -0.1
-			Army_movement_speed = -0.05
+			assault_ability = 0.025
+			army_weight_modifier = -0.1
+			supply_train_movement_speed = 0.15
+			army_maintenance_cost = 0.01
+			army_movement_speed = -0.02
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}		keystone = yes
+		keystone = yes
 	}
 
 	#### Gallic Specific Invention Tree ####
@@ -1151,8 +1051,7 @@ military_inventions = {
     	modifier = { 
 			global_defensive  = 0.1 
     		fort_limit = 1
-    		commerce_value = 0.01
-			fort_maintenance_cost = 0.01 
+			fort_maintenance_cost = 0.075
 		}
         requires = { global_defensive_inv_3 }
 		allow = {
@@ -1179,16 +1078,9 @@ military_inventions = {
     ## Gallic Specific - Level 1
     #Vanilla invention modified for Invictus
     gallic_noric_steel_inv = {
-    	modifier = { light_infantry_offensive = 0.01
-    				 heavy_infantry_offensive = 0.01 
-					}
-					on_activate = {
-						trigger_event = {
-							id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
+    	modifier = { monthly_military_experience_modifier = 0.025
+					 army_maintenance_cost = 0.01 }
 
-						}
 	    requires = { gallic_oppidum_inv }
         allow = {
 			OR = {
@@ -1239,8 +1131,8 @@ military_inventions = {
     ## Gallic Specific - Level 2
     #Vanilla invention modified for Invictus
     gallic_celtic_plough_inv = {
-    	modifier = { global_tribesmen_output = 0.1 
-    				 global_population_growth = 0.01 }
+    	modifier = { global_tribesmen_output = 0.2 
+    				 global_population_growth = 0.03 }
         requires = { gallic_noric_steel_inv }
         allow = {
 			OR = {
@@ -1266,16 +1158,10 @@ military_inventions = {
     #Vanilla invention modified for Invictus
     gallic_chainmail_inv = {
     	modifier = { 
-    		light_infantry_defensive  = 0.01
-			heavy_infantry_defensive = 0.01
-    		heavy_cavalry_defensive = 0.01
+			enslavement_efficiency = 0.025
+    		army_maintenance_cost = 0.01
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}    	requires = { gallic_noric_steel_inv }
+    	requires = { gallic_noric_steel_inv }
         allow = {
 			OR = {
 				country_culture_group = gallic
@@ -1299,16 +1185,12 @@ military_inventions = {
 
     #Vanilla invention modified for Invictus
     gallic_four_horned_saddle_inv = {
-    	modifier = { light_cavalry_offensive = 0.01
-    				 heavy_cavalry_offensive = 0.01
-    				 horse_archers_offensive = 0.01
+    	modifier = { light_cavalry_movement_speed = 0.05
+    				 heavy_cavalry_movement_speed = 0.05
+    				 horse_archers_movement_speed = 0.05
+    				 army_maintenance_cost = 0.01
 					}
-					on_activate = {
-						trigger_event = {
-							id = maintenance_event.6
-						}
-						custom_tooltip = "ArmyMaintUp_TT"
-					}        
+      
 		requires = { gallic_celtic_calendar_inv }
 		allow = {
 			OR = {
@@ -1335,17 +1217,10 @@ military_inventions = {
     #Vanilla invention modified for Invictus
     gallic_montefortino_helmet_inv = {
     	modifier = {
-			light_infantry_discipline = 0.05
-    		heavy_infantry_discipline = 0.05
-			archers_discipline = 0.05
+    		army_maintenance_cost = -0.05
 		}
-		on_activate = {
-			trigger_event = {
-				id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
-		}
-		requires_or = { gallic_celtic_plough_inv gallic_chainmail_inv }
+
+		requires_or = { gallic_celtic_plough_inv  gallic_chainmail_inv }
 		allow = {
 			OR = {
 				country_culture_group = gallic
@@ -1369,17 +1244,11 @@ military_inventions = {
 
     #Vanilla invention modified for Invictus
     gallic_trimarcisia_inv = {
-    	modifier = { light_cavalry_morale = 0.01
-    				 heavy_cavalry_morale = 0.01
-    				 horse_archers_morale = 0.01
-					}
-					on_activate = {
-						trigger_event = {
-							id = maintenance_event.6
-			}
-			custom_tooltip = "ArmyMaintUp_TT"
+    	modifier = { global_supply_limit_modifier = 0.1
+    				 hostile_attrition = 0.5
+    				 army_maintenance_cost = 0.01
+		}
 
-						}
 				        requires = { gallic_four_horned_saddle_inv }
 		allow = {
 			OR = {
@@ -1405,9 +1274,10 @@ military_inventions = {
     ## Gallic Specific - Level 4
     #Vanilla invention modified for Invictus
     gallic_timbered_roads_inv = {
-    	modifier = { Army_maintenance_cost = -0.1
-    				 Army_movement_speed = 0.1 }
-        requires_or = { gallic_montefortino_helmet_inv gallic_trimarcisia_inv }
+    	modifier = {
+    				 army_movement_speed = 0.025
+    				 army_maintenance_cost = 0.01 }
+        requires_or = { gallic_montefortino_helmet_inv  gallic_trimarcisia_inv }
         allow = {
 			OR = {
 				country_culture_group = gallic
@@ -1436,7 +1306,10 @@ naval_tree = {
 	color = hsv { 0 0.6 0.7 }
 	# Level 0
 	pirate_spawn_chance_inv_1 = { 
-		modifier = { naval_range = 0.1 }
+		modifier = { 
+			naval_range = 0.2
+			global_monthly_food_modifier = 0.02
+		}
 		on_activate = {
 			random_owned_province = {
 				limit = {
@@ -1457,27 +1330,18 @@ naval_tree = {
 	liburnian_invention_2 = {
 		modifier = { 
 			liburnian_morale = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			navy_movement_speed = 0.05 
+			navy_maintenance_cost = 0.01
+		}	 
 		requires = { pirate_spawn_chance_inv_1 }
 	}	
 
 	katapharct_inv = {
 		modifier = { 
 			tetrere_defensive = 0.05
-			hexere_defensive = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			port_building_cost = -0.1
+			navy_maintenance_cost = 0.01
+		}
 		requires = { pirate_spawn_chance_inv_1 }
 	}	
 
@@ -1486,29 +1350,17 @@ naval_tree = {
 		requires = { pirate_spawn_chance_inv_1 }
 		allow = { tag = SYR } #SYR
 		modifier = { 
-			global_ship_start_experience = 20
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			global_ship_start_experience = 30
+			navy_maintenance_cost = 0.01
+		}
 	}
 
 	#New Invictus invention
     sewn_planks_inv = { 
         modifier = { 
         	naval_range = 0.25
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
-        }
-        
+			navy_maintenance_cost = 0.01
+		}
         requires = { pirate_spawn_chance_inv_1 }
         allow = {
 			OR = {
@@ -1575,7 +1427,6 @@ naval_tree = {
         modifier = { 
         	global_commerce_modifier = 0.2
         }
-        
         requires = { pirate_spawn_chance_inv_1 }
         allow = { tag = TYO } 
     }
@@ -1584,33 +1435,30 @@ naval_tree = {
 	naval_tactic_inv_1 = { 
 		modifier = {
 			naval_damage_taken = -0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-				custom_tooltip = "defend_coast_decision"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
+			global_ship_start_experience = 10
+			navy_maintenance_cost = 0.01
 		}
+		on_activate = {
+			custom_tooltip = "defend_coast_decision"
+		}
+				
 		requires = { liburnian_invention_2 }
 	}
 
 	naval_weapon_platform_inv_2 = {
 		modifier = { 
 			tetrere_offensive = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			tetrere_discipline = 0.05
+			navy_maintenance_cost = 0.01
+		}
 		requires = { katapharct_inv }
 	}
 
 	navy_maintenance_cost_inv_1 = {
-		modifier = { navy_maintenance_cost = -0.05  }
+		modifier = { 
+			navy_maintenance_cost = -0.05
+			navy_movement_speed = 0.1
+		}
 		requires = { katapharct_inv }
 		on_activate = {
 			if = {
@@ -1640,17 +1488,9 @@ naval_tree = {
 	#New Invictus invention
     monsoon_navigation_inv = { 
         modifier = { 
-        	diplomatic_range_modifier = 1.5
-        	control_range_modifier = 0.33
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
-        }
-        
+        	diplomatic_range_modifier = 1.8
+        	control_range_modifier = 0.35
+		}
         requires = { sewn_planks_inv }
         allow = {
 			OR = {
@@ -1715,16 +1555,9 @@ naval_tree = {
     #New Invictus invention
     beden_inv = { 
         modifier = { 
-        	naval_morale_recovery = 0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
-        }
-        
+        	naval_morale_recovery = 0.05
+        	navy_maintenance_cost = 0.01
+		}
         requires = { sewn_planks_inv }
         allow = {
 			OR = {
@@ -1748,16 +1581,9 @@ naval_tree = {
     dhow_inv = { 
         modifier = { 
         	global_ship_start_experience = 10
-        	global_ship_recruit_speed = 0.15
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
-        }
-        
+        	global_ship_recruit_speed = 0.2
+        	navy_maintenance_cost = 0.01
+		}
         requires = { sewn_planks_inv }
         allow = {
 			OR = {
@@ -1779,13 +1605,10 @@ naval_tree = {
 		liburnian_invention_1 = {
 		modifier = { 
 			liburnian_offensive = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }}
+			navy_movement_speed = 0.05
+			naval_damage_taken = -0.05
+			navy_maintenance_cost = 0.01
+		}
 		requires = { naval_tactic_inv_1 }
 	}
 
@@ -1793,57 +1616,38 @@ naval_tree = {
 		modifier = { 
 			liburnian_discipline = 0.05
 			trireme_discipline = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			navy_maintenance_cost = 0.01
+		}
 		requires = { liburnian_invention_2 }		
 	}	
 
 	trireme_discipline_inv_2 = { 
 		modifier = { 
 			tetrere_discipline = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			hexere_defensive = 0.05
+			naval_damage_done = 0.025
+			navy_maintenance_cost = 0.01
+		}
 		requires = { navy_maintenance_cost_inv_1 }
 	}	
 
 	# Level 4
 	pirate_spawn_chance_inv_2 = { 
-		requires_or = { liburnian_invention_1 naval_rostra_inv_1 }
+		requires = { liburnian_invention_1 }
 		modifier = { 
 			naval_range = 0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }  }
+			navy_weight_modifier = -0.1
+			navy_movement_speed = 0.05
+			navy_maintenance_cost = 0.01
+		}
 	}
 
 	trireme_discipline_inv_4 = { 
-		requires_or = { naval_rostra_inv_1 naval_weapon_platform_inv_2}
-		modifier = { 
-			hexere_discipline = 0.05 		 
-			tetrere_discipline = 0.05 
+		requires_or = { naval_rostra_inv_1  naval_weapon_platform_inv_2 }
+		modifier = { 		 
 			naval_range = 0.1
 			naval_damage_taken = -0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
+			navy_maintenance_cost = 0.01
 		}
 		keystone = yes
 	}
@@ -1851,30 +1655,24 @@ naval_tree = {
 	naval_tactic_inv_3 = {
 		modifier = { 
 			naval_damage_done = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			hexere_discipline = 0.05 
+			navy_maintenance_cost = 0.01
+		}
 		requires = { naval_weapon_platform_inv_2 }
 	}
 
 	trireme_discipline_inv_1 = { 
 		modifier = {
-			naval_damage_taken = -0.05
 			global_ship_start_experience = 15
+			naval_range = 0.1
+			navy_maintenance_cost = 0.01
+			mercenary_naval_maintenance_cost = -0.15
 			max_mercenary_stacks = 1
-					}
-		requires = { trireme_discipline_inv_2 }
+		}
+		requires_or = { trireme_discipline_inv_2  naval_tactic_inv_3 }
 		keystone = yes
 		on_activate = {
-			custom_tooltip = "NavyMaintUp_TT"
 
-			trigger_event = {
-				id = maintenance_event.3
-			}
 			if = {
 				limit = { is_monarchy = yes }
 				custom_tooltip = allows_maritime_laws
@@ -1888,75 +1686,61 @@ naval_tree = {
 	}			
 
 	# Level 5
+
+	############################################################# Punishment Roster ################################################
+	naval_new_inv_4 = { 
+		modifier = { 
+			naval_morale_recovery = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		requires = { naval_tactic_inv_3 trieme_discipline_inv_4 } ##############################################
+	}	
+
+
 	trireme_discipline_inv_3 = { 
 		modifier = { 
 			trireme_discipline = 0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
-		requires = { pirate_spawn_chance_inv_2 }
+			navy_maintenance_cost = 0.01
+		}
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = oarmaster
+				}
+			}
+		}
+		requires = { liburnian_invention_1  }
 	}
 
 	naval_weapon_platform_inv_1 = {
 		modifier = { 
 			trireme_offensive = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			enslavement_efficiency = 0.025
+			navy_maintenance_cost = 0.01
+		}
 		requires = { pirate_spawn_chance_inv_2 }		
 	}	
-
-	naval_weapon_platform_inv_3 = {
-		modifier = { 
-			octere_offensive = 0.25 
-			octere_defensive = -0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
-		}
-		keystone = yes
-		requires_or = { naval_tactic_inv_3 trireme_discipline_inv_1 }	
-			
-	}	
+	
 
 	double_bow_and_stern_inv_1 = {
 		modifier = { 
 			tetrere_defensive = 0.05 
 			hexere_defensive = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
-		requires = { trireme_discipline_inv_1 }
+			naval_damage_done = 0.025
+			navy_maintenance_cost = 0.01
+		}
+		requires = { trireme_discipline_inv_1 naval_new_inv_4 } #######################################
 	}	
 
 	#New Invictus invention
 	serial_production_inv = {
 		modifier = { 
 			global_ship_recruit_speed = 0.2
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }  }
-		requires = { naval_tactic_inv_3 }
+			navy_maintenance_cost = 0.01
+		}
+		requires = { pirate_spawn_chance_inv_1 }
 		 allow = {
 			OR = {
 				country_culture_group = west_levantine
@@ -1979,16 +1763,9 @@ naval_tree = {
     		navy_maintenance_cost = -0.05
     		diplomatic_range_modifier = 0.75
     		naval_range = 0.3
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
-    	}
+		}
         
-        requires = { trireme_discipline_inv_1 }
+        requires = { pirate_spawn_chance_inv_1 }
         allow = {
 			OR = {
 				country_culture_group = persia
@@ -2007,58 +1784,41 @@ naval_tree = {
 
 	# Level 6
 	navy_movement_speed_inv = { 
-		requires_or = { trireme_discipline_inv_3 naval_weapon_platform_inv_1 }
+		requires_or = { naval_weapon_platform_inv_1 naval_morale_recovery_inv_1 }
 		modifier = { 
-			liburnian_discipline = 0.1
 			naval_range = 0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			retreat_delay = -1
+			naval_damage_taken = -0.05
+			navy_maintenance_cost = 0.01
+		}
 	}
 
 	naval_rostra_inv_2 = {
 		modifier = { 
 			naval_morale_modifier = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
-		requires = { trireme_discipline_inv_4 }		
+			naval_range = 0.1
+			naval_damage_done = 0.05
+			navy_maintenance_cost = 0.01
+		}
+		requires_or = { trireme_discipline_inv_4  liburnian_invention_1 }		
 	}	
 
 	blockade_efficiency_inv = {
-		requires = { double_bow_and_stern_inv_1 }
+		requires = { trireme_discipline_inv_1  }
 		modifier = { 
-			blockade_efficiency = 0.2
-			naval_range = 0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			global_ship_start_experience = 15
+			naval_damage_taken = -0.025
+			retreat_delay = -1
+			navy_maintenance_cost = 0.01
+		}
 	}	
 
 	#New Invictus invention
 	cedar_planks_inv = {
 		modifier = { 
-			global_ship_start_experience = 10
-			naval_damage_taken = -0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			naval_morale_recovery = 0.05
+			navy_maintenance_cost = 0.01
+		}
 		requires = { serial_production_inv }
 		 allow = {
 			OR = {
@@ -2076,71 +1836,79 @@ naval_tree = {
 		}
 	}
 
-	# Level 7
-	naval_tactic_inv_2 = {
+	# Level 7 #############################
+	
+	naval_new_inv_1 = {
 		modifier = { 
-			liburnian_offensive = 0.05 
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
+			naval_morale_recovery = 0.05
+			global_ship_start_experience = 15
+			navy_maintenance_cost = 0.01 
 		}
-		requires = { navy_movement_speed_inv }
+		requires = { trireme_discipline_inv_3 }
+	}
+
+	naval_new_inv_2 = {
+		modifier = { 
+			admiral_loyalty = 5
+			naval_damage_done = 0.05
+			monthly_wage_modifier = 0.01
+		}
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = daring
+				}
+			}
+		}	
+		requires_or = { naval_tactic_inv_2  global_ship_recruit_speed_inv }
+	}
+
+		naval_tactic_inv_2 = {
+		modifier = { 
+			liburnian_offensive = 0.05
+			navy_movement_speed = 0.15
+			navy_maintenance_cost = 0.01 
+		}
+		requires_or = { navy_movement_speed_inv navy_maintenance_cost_inv_2 }
 	}
 	
 	siege_engineers_inv_2 = { 
 		modifier = { 
 			siege_engineers = 1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }  }
-		requires = { navy_movement_speed_inv }
+			siege_ability = 0.05
+			navy_maintenance_cost = 0.01
+		}
+		requires = { mega_catamaran_inv }
 	}
 
 	trireme_discipline_inv_5 = { 
-		requires = { naval_rostra_inv_2 }
+		requires = { naval_tactic_inv_2 }
 		modifier = { 
-			naval_damage_done = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			naval_damage_taken = -0.025
+			ship_capture_chance = 0.025
+			global_ship_start_experience = 10
+			navy_maintenance_cost = 0.01
+		}
 	}		
 
 	counterbalanced_oars_inv = {
 		modifier = { 
-			naval_morale_recovery = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
-		requires = { blockade_efficiency_inv }
+			navy_movement_speed = 0.1
+			naval_range = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		requires = { double_bow_and_stern_inv_1 }
 	}
-
+############################################################### Honesta Missio ###########################################
 	navy_maintenance_cost_inv_2 = { 
-		requires = { blockade_efficiency_inv }
 		modifier = { 
 			naval_damage_taken = -0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }  }
+			liburnian_discipline = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		requires_or = { naval_new_inv_1 naval_new_inv_3 }
 	}		
 
 	# Level 7 Country Specific
@@ -2159,62 +1927,46 @@ naval_tree = {
 			}
 		}
 		modifier = { 
-			ship_capture_chance = 0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
+			ship_capture_chance = 0.025
+			navy_maintenance_cost = 0.01
+		}
 	}	
 
-	# Level 8
+	# Level 8 ###################### Advanced Rostra #####################################################################
 	naval_rostra_inv_3 = {
 		modifier = { 
 			naval_morale_modifier = 0.1 
 			naval_damage_done = 0.05
 			trireme_offensive = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 }
+			navy_maintenance_cost = 0.01
 		}
 		keystone = yes
-		requires = { trireme_discipline_inv_5 }
-		requires_or = { naval_tactic_inv_2 siege_engineers_inv_2 }		
+		requires = { naval_new_inv_2 }	
 	}
 
 	naval_unit_attrition_inv = {
 		modifier = { 
 			naval_unit_attrition = -0.1 
+			navy_weight_modifier = -0.1
 			navy_maintenance_cost = -0.1
 			naval_range = 0.1
 		}
 		keystone = yes
-		requires_or = { counterbalanced_oars_inv navy_maintenance_cost_inv_2 }
+		requires = { trireme_discipline_inv_5 }
 	}	
 
 	# Level 9	
 	global_ship_recruit_speed_inv = { 
 		modifier = { 
 			global_ship_recruit_speed = 0.25
-					}
-					
+			navy_maintenance_cost = 0.01
+		}			
 		keystone = yes
-		requires_or = { naval_rostra_inv_3 naval_unit_attrition_inv }
+		requires_or = { counterbalanced_oars_inv  naval_new_inv_5 }
 		potential = {
 			num_of_ports >= 1
 		}
 		on_activate = {
-			custom_tooltip = "NavyMaintUp_TT"
-
-			trigger_event = {
-				id = maintenance_event.3
-			} 
 			random_owned_province = {
 				limit = {
 					num_of_port_building > 0 
@@ -2240,29 +1992,32 @@ naval_tree = {
 	# Level 10
 	double_bow_and_stern_inv_2 = {
 		modifier = { 
-			octere_defensive = 0.05 
+			octere_morale = 0.05 
 			mega_galley_defensive = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
+			naval_damage_done = 0.025
+			navy_maintenance_cost = 0.01
+		}
+		requires_or = { global_ship_recruit_speed_inv  siege_engineers_inv_2 }					 
+	}
 
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
-		requires = { global_ship_recruit_speed_inv }					 
+	naval_weapon_platform_inv_3 = {
+		modifier = { 
+			octere_offensive = 0.25 
+			octere_defensive = -0.1
+			navy_maintenance_cost = 0.01
+		}
+		keystone = yes
+		requires_or = { naval_rostra_inv_4  double_bow_and_stern_inv_2 }			
 	}
 
 	mega_catamaran_inv = {
 		modifier = { 
-			blockade_efficiency = 0.1
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
-		requires = { global_ship_recruit_speed_inv }				
+			blockade_efficiency = 0.3
+			siege_ability = 0.05
+			naval_range = 0.1
+			navy_maintenance_cost = 0.01
+		}
+		requires = { blockade_efficiency_inv }				
 	}	
 
 	# Level 11
@@ -2270,13 +2025,30 @@ naval_tree = {
 		modifier = { 
 			octere_discipline = 0.05
 			mega_galley_discipline = 0.05
-					}
-			 on_activate = {
-				custom_tooltip = "NavyMaintUp_TT"
-
-				 trigger_event = {
-					 id = maintenance_event.3
-				 } }
-		requires = { double_bow_and_stern_inv_2 mega_catamaran_inv }		
+			naval_damage_done = 0.025
+			navy_maintenance_cost = 0.01
+		}
+		requires = { global_ship_recruit_speed_inv }		
 	}
+
+
+	naval_new_inv_3 = {
+		modifier = { 
+			global_ship_start_experience = 10
+			admiral_loyalty = 5
+			monthly_wage_modifier = 0.01
+		}
+		requires_or = { naval_rostra_inv_2 naval_new_inv_4 }
+	}
+
+
+	naval_new_inv_5 = {
+		modifier = { 
+			naval_morale_recovery = 0.05
+			navy_movement_speed = 0.05
+			navy_maintenance_cost = 0.01
+		}
+		requires = { naval_new_inv_3  }
+	}
+
 }

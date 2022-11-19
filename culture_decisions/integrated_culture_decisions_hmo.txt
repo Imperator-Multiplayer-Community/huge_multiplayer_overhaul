@@ -106,6 +106,9 @@
 			any_owned_province = {
 				dominant_province_culture = scope:target_culture.culture
 			}
+			NOT = {
+				has_variable = recently_promoted_talent_int
+			}
 			trigger_if = {
 				limit = {
 					any_country_culture = {
@@ -173,6 +176,10 @@
 				id = character_introductions.2
 				days = 5
 			}
+			set_variable = {
+				name = recently_promoted_talent_int
+				days = 730
+			}
         }	
 			
 		ai_will_do = {
@@ -195,6 +202,9 @@
 		allow = {
 			any_owned_province = {
 				dominant_province_culture = scope:target_culture.culture
+			}
+			NOT = {
+				has_variable = recently_presented_debutante_int
 			}
 			trigger_if = {
 				limit = {
@@ -270,6 +280,10 @@
             trigger_event = {
 				id = character_introductions.1
 				days = 5
+			}
+			set_variable = {
+				name = recently_presented_debutante_int
+				days = 365
 			}
         }	
 			

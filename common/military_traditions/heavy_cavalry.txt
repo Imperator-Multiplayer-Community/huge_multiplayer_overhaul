@@ -152,7 +152,7 @@
 	
 	heavy_cavalry_path_1 = { ###
 		modifier = { 
-			heavy_cavalry_morale = 0.1
+			heavy_cavalry_cost = -0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = greek_seleucid_path_1 #updated
@@ -161,7 +161,8 @@
 
 	heavy_cavalry_path_2 = { ###
 		modifier = { 
-			heavy_cavalry_discipline = 0.1
+			heavy_cavalry_movement_speed = 0.1
+			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_scythian_path_3 #updated
@@ -171,6 +172,7 @@
 	heavy_cavalry_path_3 = { ###
 		modifier = { 
 			heavy_cavalry_offensive = 0.1
+			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_scythian_path_4 #updated
@@ -180,6 +182,7 @@
 	heavy_cavalry_path_4 = { ### 
 		modifier = { 
 			heavy_cavalry_defensive = 0.1
+			discipline = 0.025
 			army_maintenance_cost = 0.01
 		}
 		icon = levantine_arabian_path_end_bonus #updated
@@ -188,9 +191,9 @@
 
 	heavy_cavalry_path_5 = { ###
 		modifier = { 
-			heavy_cavalry_cost = -0.1
-			army_maintenance_cost = 0.01
-			
+			heavy_cavalry_morale = 0.1
+			levy_size_multiplier = 0.005
+			army_maintenance_cost = 0.01			
 		} 
 		icon = north_african_tribal_path_7 #updated
 		requires = {heavy_cavalry_path_3}
@@ -198,9 +201,9 @@
 
 	heavy_cavalry_path_6 = { ###
 		modifier = { 
-			heavy_cavalry_movement_speed = 0.1
-			army_maintenance_cost = 0.01
-			
+			heavy_cavalry_discipline = 0.1
+			discipline = 0.025
+			army_maintenance_cost = 0.01	
 		} 
 		icon = greek_states_path_2 #updated
 		requires = {heavy_cavalry_path_4 }
@@ -208,8 +211,9 @@
 
 	heavy_cavalry_path_7 = { ### final generic tradition
 		modifier = {
-			levy_size_multiplier = 0.025
-			discipline = 0.05
+			levy_size_multiplier = 0.01
+			discipline = 0.01
+			army_maintenance_cost = 0.01
 		}
 		icon = persian_bactrian_path_end_bonus
 		requires = { heavy_cavalry_path_6 heavy_cavalry_path_5 }

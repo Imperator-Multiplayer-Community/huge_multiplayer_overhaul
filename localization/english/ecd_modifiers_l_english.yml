@@ -159,8 +159,6 @@
  depraved:0 "Depraved"
 
 
- suppor_rebels_cost_modifier:0 "Support Rebels Cost"
-
 #Country modifiers
  spy_recruited:0 "Expanding State Intelligence"
  foreign_intel_ops:0 "Foreign Espionage"
@@ -189,8 +187,21 @@
  gallic_item_8:0 "War Drums"
  desc_gallic_item_8:0 "Before each battle, the warriors will assemble and clank on their shields. The drummers will then join in forcefully and heighten the morale of the troops."
   
-inspire_disloyalty_black_widow_cost_modifier:0 "Tempt Cost"
-gift_slave_cost_modifier:0 "Gift Slave Cost"
-price_force_divorce_cost_modifier:0 "Force Divorce Cost"
-price_tribal_duel_cost_modifier:0 "Challenge Duel Cost"
-price_test_loyalty_cost_modifier:0 "Test Loyalty Cost"
+ inspire_disloyalty_black_widow_cost_modifier:0 "Tempt Cost"
+ gift_slave_cost_modifier:0 "Gift Slave Cost"
+ price_force_divorce_cost_modifier:0 "Force Divorce Cost"
+ price_tribal_duel_cost_modifier:0 "Challenge Duel Cost"
+ price_test_loyalty_cost_modifier:0 "Test Loyalty Cost"
+ support_rebels_cost_modifier:0 "Support Rebels Cost"
+ price_patron_of_arts_button_cost_modifier:0 "Patron of the Arts Cost"
+ recruit_character_cost_modifier:0 "Recruit Character Cost"
+ bribe_pi_cost_modifier:0 "Bribe Cost"
+ price_stipends_cost_modifier:0 "Award Stipends Cost"
+ price_found_metropolis_cost_modifier:0 "Found Metropolis Cost"
+ price_reward_veterans_cost_modifier:0 "Reward Veterans Cost"
+ price_anabasis_cost_modifier:0 "Anabasis Cost"
+ buy_idea_cost_modifier:0 "Buy Idea Cost"
+
+ MODIFIER_CONTROL_RANGE:0 "Control Range Modifier"
+ MODIFIER_NAVY_WEIGHT_MODIFIER:0 "Navy Weight Modifier"
+ MODIFIER_WAR_SCORE_COST:0 "War Score Cost"

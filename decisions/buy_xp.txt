@@ -1,0 +1,33 @@
+﻿country_decisions = {
+	
+	# Borrow some XP to hire mercs
+	buy_xp = {
+	
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				has_variable = bought_xp
+			}
+		}
+		
+		allow = {
+			political_influence >= 15
+			OR = {
+				is_tribal = yes
+				is_monarchy = yes
+				is_republic = yes
+			}
+		}
+		
+		effect = {
+			set_variable = bought_xp
+			add_political_influence = -15
+			add_military_experience = 5
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+	}
+
+}

@@ -1058,10 +1058,24 @@
  naval_traditions_desc:0 ""
 
  #Naval Traditions
+ naval_cost_path:0 "Seafaring Traditions"
+ naval_cost_path_desc:0 "We shall rely on the tried and true methods of our ancestors as the basis for our ship production."
  naval_light_path:0 "Surrender is not an option!"
  naval_light_path_desc:0 "Here your description"
- naval_coastal_path:0 "The rocks will crush your enemies"
+ naval_light_path_discipline:0 "Surrender is not an option!"
+ naval_light_path_discipline_desc:0 "Here your description"
+ naval_coastal_path:0 "The rocks will crush our enemies"
  naval_coastal_path_desc:0 "Naval supremacy when you are in coastal ties"
  naval_ocean_path:0 "Open sea shall be their tomb"
  naval_ocean_path_desc:0 "Open sea battles are our speciality"
- 
+ naval_river_path:0 ""
+ naval_river_path_desc:0 ""
+ naval_mid_path:0 ""
+ naval_mid_path_desc:0 ""
+ naval_mid_path_morale:0 ""
+ naval_mid_path_morale_desc:0 ""
+ naval_heavy_path:0 ""
+ naval_heavy_path_desc:0 ""
+ naval_heavy_path_morale:0 ""
+ naval_heavy_path_morale_desc:0 ""
+

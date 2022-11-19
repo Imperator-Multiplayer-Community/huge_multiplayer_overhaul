@@ -85,101 +85,101 @@ too_many_steppes = {
 }
 
 patronizing_greek_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_latin_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_celtic_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_indian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_iberian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_haemic_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_punic_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_numidian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_egyptian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_mesopotamian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_nubian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_arabian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_persian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 patronizing_anatolian_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 integration_status_removed = {
@@ -199,10 +199,10 @@ revoked_tax_exemption = {
 }
 
 patronizing_literature = {
-	culture_happiness_modifier = 0.06
-	culture_citizen_output = 0.1
-	culture_freemen_output = -0.1
-	culture_slaves_output = -0.1
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.8
+	culture_freemen_output = -0.5
+	culture_slaves_output = -0.5
 }
 
 honor_guard = {
@@ -211,7 +211,7 @@ honor_guard = {
 }
 
 torture_protection = {
-	culture_happiness_modifier = -0.08
+	culture_happiness_modifier = -0.05
 	culture_slaves_output = 0.08
 	cultural_integration_speed_modifier = 0.1
 }
@@ -225,7 +225,7 @@ trial_right = {
 land_protection = {
 	culture_happiness_modifier = -0.1
 	culture_citizen_output = 0.05
-	culture_nobles_output = 0.03
+	culture_nobles_output = 0.05
 }
 
 inheritance_right = {
@@ -239,15 +239,21 @@ right_of_marriage = {
 }
 
 right_to_enter_contracts = {
-	culture_freemen_output = 0.12
+	culture_freemen_output = 0.1
 	culture_slaves_happiness = -0.08
+	culture_slaves_output = -0.05
 	culture_citizen_happiness = -0.05
 	cultural_integration_speed_modifier = 0.1
 }
 
 officer_right = {
-	culture_freemen_happiness = 0.06
+	culture_freemen_happiness = 0.05
 	culture_freemen_output = 0.1
+}
+
+citizenship_by_adoption = {
+	culture_nobles_happiness = -0.03
+	culture_citizen_happiness = 0.08
 }
 
 promoted_administrators_in_subcultures = {

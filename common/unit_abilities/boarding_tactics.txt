@@ -27,15 +27,14 @@
 			}
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = no_marines_tt
-			}
+			#custom_tooltip = {
+			#	text = no_marines_tt
+			#}
 		}
 	}
 	modifier = {
-		ship_capture_chance = 0.1
+		ship_capture_chance = 0.05
 		naval_damage_done = -0.1
-		navy_movement_speed = -0.1
 	}
 	
 	

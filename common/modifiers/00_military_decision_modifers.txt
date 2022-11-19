@@ -42,9 +42,9 @@ veterans_conscripted = {
 coastal_defence = {
  naval_morale_modifier = 0.05
  naval_damage_taken = -0.05
- global_ship_recruit_speed = 0.1
- ship_cost = -0.05
- global_ship_start_experience = 15
+ ship_capture_chance = 0.01
+ global_ship_recruit_speed = 0.2
+ global_ship_start_experience = 25
  riverine_terrain_combat_bonus = 0.05
 }
 
@@ -53,7 +53,6 @@ sea_offence = {
  naval_range = 0.1
  naval_damage_done = 0.05
  naval_morale_recovery = 0.05
- mercenary_naval_maintenance_cost = -0.15
  ocean_combat_bonus = 0.1
 }
 

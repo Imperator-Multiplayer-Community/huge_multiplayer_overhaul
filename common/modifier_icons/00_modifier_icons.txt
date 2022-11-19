@@ -3117,9 +3117,6 @@ riverine_terrain_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
 }
 
-port_building_cost = {
-    positive = "gfx/interface/icons/_default.dds"
-}
 
 innovations = {
     positive = "gfx/interface/icons/modifiers/innovations.dds"
@@ -3240,4 +3237,16 @@ price_tribal_duel_cost_modifier = {
 }
 price_test_loyalty_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/price_bring_to_trial_cost_modifier.dds"
+}
+
+port_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+
+theathre_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+
+foundry_building_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
