@@ -10,12 +10,12 @@ religious_1 = {
 
 	# Level 1	
 	happiness_for_wrong_group_modifier_inv_1 = { 
-		modifier = { happiness_for_wrong_culture_group_modifier = wrong_culture_group_small  }
+		modifier = { happiness_for_wrong_culture_group_modifier = 0.05  }
 		requires = { ruler_popularity_gain_inv_1 }
 	}
 
 	global_unrest_inv_1 = {
-		modifier = { happiness_for_same_culture_modifier = 0.03 }
+		modifier = { happiness_for_same_culture_modifier = 0.05 }
 		requires = { ruler_popularity_gain_inv_1 }
 		
 	}		
@@ -231,10 +231,12 @@ religious_1 = {
 
 	religious_tech_investment_inv_1 = { 
 		modifier = { 
-			global_monthly_civilization = 0.02
+			global_monthly_civilization = 0.03
 			monthly_political_influence_modifier = 0.025
-			barbarian_spawn_chance = -0.25
 		  }
+		on_activate = {
+			add_innovation = 1
+		}
 		requires = { technology_cost_inv_2 }
 	}
 
@@ -391,6 +393,9 @@ religious_1 = {
 					 land_morale_recovery = 0.02
 					 army_maintenance_cost = 0.01
 		 }
+		 on_activate = {
+			add_innovation = 1
+		}
 		requires_or = { stability_inv_3 land_morale_recovery_inv_5 }
 	}	
 
@@ -417,6 +422,7 @@ religious_1 = {
 	winemaking_inv = {
 		modifier = { 
 			happiness_for_wrong_culture_group_modifier = 0.05
+			diplomatic_relations = 1
 		}
 
 		requires = { call_omen_cost_modifier_inv }
@@ -932,7 +938,7 @@ religious_1 = {
 
 	omen_duration_inv_4 = {
 		modifier = { price_found_city_cost_modifier = -0.1
-					 barbarian_spawn_chance = -0.2
+					 country_civilization_value = 3
 					 omen_power = 0.05 }
 		requires_or = { omen_duration_inv_1 global_population_growth_inv_4 }
 	}
@@ -1080,9 +1086,10 @@ religious_1 = {
 	}	
 
 	global_unrest_inv_5 = {
-		modifier = { happiness_for_same_culture_modifier = 0.03
-					 happiness_for_wrong_culture_group_modifier = 0.03
+		modifier = { happiness_for_same_culture_modifier = 0.05
+					 happiness_for_wrong_culture_group_modifier = 0.05
 		}
+		
 		requires = { omen_duration_inv_3 }
 	}	
 
@@ -1093,6 +1100,9 @@ religious_1 = {
 			theathre_building_cost = -0.1
 			global_pop_assimilation_speed_modifier = 0.1
 		}
+		on_activate = {
+			add_innovation = 1
+		}
 		keystone = yes
 		requires_or = { ruler_popularity_gain_inv_5 monthly_corruption_inv omen_power_inv_5 }
 	}
@@ -1101,6 +1111,7 @@ religious_1 = {
 	chandragupta_legacy_inv = {
 		modifier = {
 			happiness_for_wrong_culture_group_modifier = 0.05
+			diplomatic_relations = 1
 		}
 		requires = { global_manpower_modifier_inv_1 }
 		allow = {
@@ -1157,6 +1168,9 @@ religious_1 = {
 		modifier = { 
 			global_pop_conversion_speed = 0.5
 			global_pop_conversion_speed_modifier = 0.1
+		}
+		on_activate = {
+			add_innovation = 1
 		}
 		keystone = yes
 		requires = { global_unrest_inv_5 }

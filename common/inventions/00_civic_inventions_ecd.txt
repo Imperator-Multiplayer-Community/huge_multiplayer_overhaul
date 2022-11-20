@@ -567,7 +567,7 @@
 
     myrrh_trade_inv = { 
         modifier = {
-        	global_commerce_modifier = 0.05
+        	global_commerce_modifier = 0.025
         	global_capital_trade_routes = 1
         }
         
@@ -655,7 +655,6 @@
     tyrian_purple_inv = { 
         modifier = { 
         	global_commerce_modifier = 0.05
-        	global_export_commerce_modifier = 0.025
         }
         
         requires = { phoenician_colonies_inv }
@@ -724,7 +723,7 @@
     #New Invictus invention
     silent_trade_inv = { 
         modifier = { 
-        	global_commerce_modifier = 0.05 
+        	global_commerce_modifier = 0.025 
         	global_capital_trade_routes = 1
         }
         
@@ -845,7 +844,10 @@
 	#### Latin Specific Invention Tree ####
     ## Latin Specific - Level 0
     italic_etruscan_pottery_inv = {
-        modifier = { global_commerce_modifier = 0.05 }
+        modifier = { 
+        	global_commerce_modifier = 0.025 
+        	global_population_growth = 0.025 
+        }
         requires = { capital_trade_inv_2 }
 		allow = {
 			OR = {
@@ -1210,7 +1212,7 @@ civic_2 = {
     move_pop_cost_modifier_inv = { 
         modifier = { global_migration_speed_modifier = 0.1
         			 global_pop_assimilation_speed_modifier = 0.1
-        			 barbarian_spawn_chance = -0.1 }
+        			 country_civilization_value = 3 }
         
         requires_or = { global_tribesmen_output_inv_2 freemen_promotion_cost_modifier_inv } 
 		keystone = yes
@@ -1340,8 +1342,8 @@ civic_2 = {
 
     iberian_ceramics_inv = { #Iberian ceramics
         modifier = { 
-        	global_commerce_modifier = 0.05 
-        	global_population_growth = 0.03
+        	global_commerce_modifier = 0.025 
+        	global_population_growth = 0.025
         }
         
         requires = { brass_coinage_inv }
@@ -1370,7 +1372,7 @@ civic_2 = {
 			happiness_for_wrong_culture_modifier = 0.05 
 			price_found_city_cost_modifier = -0.20
 			global_pop_assimilation_speed_modifier = -0.15
-			barbarian_spawn_chance = -0.15
+			country_civilization_value = 2
 		}
 		keystone = yes
         
@@ -1378,8 +1380,8 @@ civic_2 = {
     }
 
     happiness_for_wrong_culture_modifier_inv_1 = { 
-        modifier = { happiness_for_wrong_culture_modifier = wrong_culture_small
-        			 slaves_move_cost_modifier = -0.1
+        modifier = { happiness_for_wrong_culture_modifier = 0.05
+        			 slaves_move_cost_modifier = -0.15
         			 global_migration_speed_modifier = 0.2 }
         
         requires =  {citizen_promotion_cost_modifier_inv } 
@@ -1388,6 +1390,9 @@ civic_2 = {
     research_points_modifier_inv_2 = { 
         modifier = {
         			 global_unrest = -0.25 }
+        on_activate = {
+			add_innovation = 1
+		}
         
         requires = { global_tribesmen_output_inv_3 } 
     } 
@@ -1543,9 +1548,9 @@ civic_2 = {
 
     # Level 8
     global_slaves_output_inv_4 = { 
-        modifier = { global_slaves_output = output_small_svalue
-        			 global_slaves_happyness = 0.03
-        			 slaves_move_cost_modifier = -0.1
+        modifier = { global_slaves_output = 0.05
+        			 global_slaves_happyness = 0.05
+        			 slaves_move_cost_modifier = -0.15
         			 global_pop_promotion_speed_modifier = 0.1 }
         
         requires = { convert_pop_cost_modifier_inv }
@@ -1553,12 +1558,12 @@ civic_2 = {
 
     global_tribesmen_output_inv_4 = { 
         modifier = { tribesmen_move_cost_modifier = -0.15
-        			 global_monthly_civilization = -0.05
+        			 global_monthly_civilization = -0.03
         			 clan_chief_loyalty = 10
         			 monthly_wage_modifier = 0.02
         			 hostile_attrition = 1 }
         
-        requires = { convert_pop_cost_modifier_inv }
+        requires_or = { global_settlement_building_slot_inv global_building_slot_inv }
     } 
 
     global_citizen_output_inv_4 = { 
@@ -1636,7 +1641,7 @@ civic_2 = {
 				}
 			}
 		}
-        requires = { global_slaves_output_inv_4 }
+        requires = { convert_pop_cost_modifier_inv }
     }
 
     global_citizen_output_inv_5 = {
@@ -1717,7 +1722,7 @@ civic_2 = {
 			}
 		}
         keystone = yes
-        requires_or = { global_tribesmen_output_inv_5 global_slaves_output_inv_5 }
+        requires_or = { global_slaves_output_inv_4 global_slaves_output_inv_5 }
     }
 	
 	#### Greek Specific Invention Tree ####
@@ -1742,7 +1747,7 @@ civic_2 = {
 
     ## Greek Specific - Level 1
     greek_odometer_inv = {
-        modifier = { global_commerce_modifier = 0.05 }
+        modifier = { global_commerce_modifier = 0.025 }
         requires = { greek_fire_hose_inv }      
         allow = {
 			OR = {
@@ -1800,9 +1805,10 @@ civic_2 = {
 
 	#Greek invention
     greek_cartography_inv = {
-        modifier = { diplomatic_range_modifier = 0.15
-					 naval_range = 0.1
-                     global_commerce_modifier = 0.05 }
+        modifier = { 
+        	diplomatic_range_modifier = 0.15
+			naval_range = 0.1
+        }
         requires = { greek_odometer_inv }                    
         allow = {
 			OR = {
@@ -1821,7 +1827,10 @@ civic_2 = {
 
     ## Greek Specific - Level 3
     greek_advanced_astronomy_inv_1 = { # Astrolabe
-        modifier = { global_commerce_modifier = 0.05 }
+        modifier = { 
+        	global_commerce_modifier = 0.025
+        	control_range_modifier = 0.1
+        }
         requires = { greek_cartography_inv }
         allow = {
 			OR = {

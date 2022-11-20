@@ -109,7 +109,14 @@
 	# Level 2 Specific
 	intervene_inv = {
 		requires = { gw_effect_charisma_education_inv } 
-		modifier = { enable_intervene = yes }
+		modifier = { 
+			enable_intervene = yes
+			fabricate_claim_speed = 0.25
+			integrate_speed = 0.25
+		}
+		on_activate = {
+			add_innovation = 1
+		}
 		ai_will_do = {
 			modifier = {
 				add = -50
@@ -264,7 +271,7 @@
 		requires = { subject_loyalty_inv }
 		modifier = { max_research_efficiency = 0.25 }
 		on_activate = {
-			add_innovation = 2
+			add_innovation = 1
 
 		}
 	}
@@ -689,7 +696,7 @@
     ukaz_poetry_fair_inv = { 
         modifier = {
         	monthly_corruption = -0.01
-        	global_monthly_civilization = 0.01
+        	global_monthly_civilization = 0.02
         }
         
         requires = { musnad_script_inv }
@@ -927,6 +934,9 @@
 		allow = {
 			is_ai = no
 		} 
+		on_activate = {
+			add_innovation = 1
+		}
 		requires = { tribute_income_modifier_inv_2 }
 	}
 
@@ -1020,7 +1030,7 @@
     #Vanilla invention modified for Invictus
     indian_wootz_steel_inv = {
         modifier = { global_migration_speed_modifier = 0.15
-                     global_population_growth = 0.02 }
+                     global_population_growth = 0.025 }
         requires = { brahmi_script_invention }
 		allow = {
 			OR = {
@@ -1269,8 +1279,7 @@
     ## Indian Specific - Level 4
     #Vanilla invention modified for Invictus
     indian_indigo_dye_inv = {
-        modifier = { global_commerce_modifier = 0.05
-        			 global_state_trade_routes = 0.15 }
+        modifier = { global_state_trade_routes = 0.3 }
         requires = { indian_hindu_number_system_inv }
 		allow = {
 			OR = {
@@ -1296,8 +1305,7 @@
     #Vanilla invention modified for Invictus
     #Vanilla invention modified for Invictus
     indian_tube_drawn_technology_inv = {
-        modifier = { global_commerce_modifier = 0.05
-        			 global_state_trade_routes = 0.15 }
+        modifier = { global_commerce_modifier = 0.05 }
         requires = { indian_hindu_number_system_inv }
         allow = {
 			OR = {
@@ -1362,7 +1370,7 @@ oratory_2 = {
 
 	# Level 1
 	change_governor_policy_inv = { 
-		modifier = { change_governor_policy_cost_modifier = -0.25
+		modifier = { change_governor_policy_cost_modifier = -0.3
 					 monthly_governor_wage = -0.025  }
 		
 		requires_or = { diplomatic_reputation_inv_1 }
@@ -1862,7 +1870,9 @@ oratory_2 = {
 
 	#New Invictus invention
 	kithara_inv = { 
-		modifier = { happiness_for_wrong_culture_group_modifier = 0.03 }
+		modifier = { 
+			happiness_for_wrong_culture_group_modifier = 0.05
+			diplomatic_relations = 1 }
 		
 		requires = { oratory_tech_investment_inv_1 }
 		allow = {
@@ -1888,7 +1898,9 @@ oratory_2 = {
 
 	#New Invictus invention
 	phrygian_mode_inv = {
-    	modifier = { happiness_for_wrong_culture_group_modifier = 0.03 }
+    	modifier = { 
+    		happiness_for_wrong_culture_group_modifier = 0.05
+    		diplomatic_relations = 1 }
         
         requires = { tyranny_inv_1 }
         allow = {
@@ -1918,8 +1930,10 @@ oratory_2 = {
 	}
 
 	diplo_range_inv_1 = {
-		modifier = { diplomatic_range_modifier = 0.15
-					  }
+		modifier = { 
+			diplomatic_range_modifier = 0.15
+			control_range_modifier = 0.1
+		}
 		
 		requires = { smear_character_cost_modifier_inv }
 
@@ -2102,6 +2116,7 @@ oratory_2 = {
 		modifier = { 
 			price_state_investment_oratory_cost_modifier = -0.1
 			global_population_growth = 0.02
+			country_civilization_value = 3
 		}
 		requires_or = { tyranny_inv_3 diplomatic_relations_inv_2 }
 		on_activate = {
@@ -2301,7 +2316,7 @@ oratory_2 = {
 	#New Invictus invention
     polycentric_administration_inv = {
     	modifier = { 
-    		happiness_for_wrong_culture_group_modifier = 0.03 
+    		happiness_for_wrong_culture_group_modifier = 0.05
     		diplomatic_relations = 1
     	}
         
@@ -2344,9 +2359,9 @@ oratory_2 = {
 		allow = { rank >= regional_power }
 		requires = { monthly_character_loyalty_inv_5 }
 		
-		modifier = { research_points_modifier = 0.1 }
+		modifier = { research_points_modifier = 0.15 }
 		on_activate = {
-			add_innovation = 3
+			add_innovation = 1
 		}
 	}
 
@@ -2366,9 +2381,9 @@ oratory_2 = {
 		allow = { rank >= major_power }
 		
 		requires = { scientific_patronage_inv }
-		modifier = { research_points_modifier = 0.1 }
+		modifier = { research_points_modifier = 0.15 }
 		on_activate = {
-			add_innovation = 2
+			add_innovation = 1
 		}
 	}
 
@@ -2435,7 +2450,7 @@ oratory_2 = {
 		requires_or = { monthly_character_loyalty_inv_4 diplo_range_inv_4 }
 		modifier = { max_research_efficiency = 0.25 }
 		on_activate = {
-			add_innovation = 2
+			add_innovation = 1
 		}
 	}
 
