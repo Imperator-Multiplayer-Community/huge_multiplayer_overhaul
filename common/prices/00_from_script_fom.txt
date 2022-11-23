@@ -29,7 +29,7 @@ seduce_governor = {
 }
 
 gift_slave = {
-	scaled_gold = 3
+	scaled_gold = 2
 }
 
 send_letter = {
@@ -64,7 +64,7 @@ price_oaths_of_allegiance_button = {
 }
 
 price_patron_of_arts_button = {
-	political_influence = 40
+	political_influence = 50
 }
 
 price_assemble_raiding_party_button = {
@@ -72,7 +72,7 @@ price_assemble_raiding_party_button = {
 }
 
 price_tribal_duel = {
-	political_influence = 12
+	political_influence = 10
 	tyranny = 4
 }
 
@@ -98,7 +98,7 @@ subject_player_client_state_pays = {
 
 recruit_mercenary = {
 	scaled_gold = 3
-	aggressive_expansion = 2
+	aggressive_expansion = 3
 	military_experience = 5
 }
 

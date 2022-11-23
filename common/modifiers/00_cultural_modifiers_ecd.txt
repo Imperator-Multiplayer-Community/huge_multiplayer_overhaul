@@ -182,22 +182,6 @@ patronizing_anatolian_literature = {
 	culture_slaves_output = -0.5
 }
 
-integration_status_removed = {
-	culture_happiness_modifier = -0.25
-	culture_citizen_output = -0.15
-	culture_nobles_output = -0.15
-}
-
-rights_revoked = {
-	culture_happiness_modifier = -0.12
-}
-
-revoked_tax_exemption = {
-	culture_happiness_modifier = -0.05
-	culture_citizen_happiness = -0.08
-	culture_nobles_happiness = -0.1
-}
-
 patronizing_literature = {
 	culture_happiness_modifier = 0.05
 	culture_citizen_output = 0.8
@@ -205,69 +189,65 @@ patronizing_literature = {
 	culture_slaves_output = -0.5
 }
 
+
+rights_revoked = {
+	culture_happiness_modifier = -0.25
+}
+
+
+#Primary
+revoked_tax_exemption = {
+	culture_happiness_modifier = -0.05
+	culture_citizen_happiness = -0.08
+	culture_nobles_happiness = -0.1
+}
+
+land_protection = {
+	culture_freemen_output = -0.03
+	culture_citizen_happiness = 0.05
+	culture_nobles_happiness = 0.05
+}
+
+citizenship_by_adoption = {
+	culture_citizen_output = 0.05
+	culture_nobles_happiness = -0.03
+}
+
+trial_right = {
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = -0.03
+	cultural_integration_speed_modifier = 0.15
+}
+
+#Integrated
+integration_status_removed = {
+	culture_happiness_modifier = -0.25
+	culture_citizen_output = -0.2
+	culture_nobles_output = -0.2
+}
+
 honor_guard = {
 	culture_happiness_modifier = 0.05
 	culture_freemen_output = 0.1
 }
 
-torture_protection = {
-	culture_happiness_modifier = -0.05
-	culture_slaves_output = 0.08
-	cultural_integration_speed_modifier = 0.1
-}
-
-trial_right = {
-	culture_happiness_modifier = -0.08
-	culture_slaves_output = 0.05
-	culture_freemen_output = 0.05
-}
-
-land_protection = {
-	culture_happiness_modifier = -0.1
-	culture_citizen_output = 0.05
-	culture_nobles_output = 0.05
-}
-
-inheritance_right = {
-	culture_happiness_modifier = 0.08
-	cultural_integration_speed_modifier = 0.1
-}
-
-right_of_marriage = {
-	culture_happiness_modifier = 0.08
-	cultural_integration_speed_modifier = 0.15
-}
-
-right_to_enter_contracts = {
-	culture_freemen_output = 0.1
-	culture_slaves_happiness = -0.08
-	culture_slaves_output = -0.05
-	culture_citizen_happiness = -0.05
-	cultural_integration_speed_modifier = 0.1
-}
-
-officer_right = {
-	culture_freemen_happiness = 0.05
-	culture_freemen_output = 0.1
-}
-
-citizenship_by_adoption = {
-	culture_nobles_happiness = -0.03
-	culture_citizen_happiness = 0.08
+honor_guard_other = {
+	culture_happiness_modifier = -0.03
 }
 
 promoted_administrators_in_subcultures = {
-	culture_citizen_output = -0.05
+	culture_happiness_modifier = 0.05
+	culture_citizen_output = 0.2
+	culture_freemen_output = -0.2
+	culture_slaves_output = -0.2
 }
 
-persecuted_people = {
-	culture_happiness_modifier = -0.15
-	cultural_integration_speed_modifier = -1
+administrators_cultmodifier = {
+	culture_happiness_modifier = 0.03
 }
 
-exiled_people = {
-	culture_happiness_modifier = -0.15
-	cultural_integration_speed_modifier = -1
+bestowed_city_rights = {
+	culture_happiness_modifier = 0.1
 }
 
 pandered_people = {
@@ -277,4 +257,71 @@ pandered_people = {
 	culture_citizen_output = -0.05
 	culture_nobles_output = -0.05
 	culture_happiness_modifier = 0.05
+}
+
+#Unintegrated
+
+torture_protection = {
+	culture_slaves_happiness = 0.08
+	culture_slaves_output = 0.08
+	cultural_integration_speed_modifier = 0.15
+}
+
+inheritance_right = {
+	culture_citizen_happiness = 0.05
+	culture_nobles_happiness = 0.08
+	cultural_integration_speed_modifier = 0.15
+}
+
+right_of_marriage = {
+	culture_happiness_modifier = 0.05
+	cultural_integration_speed_modifier = 0.15
+}
+
+right_to_enter_contracts = {
+	culture_happiness_modifier = 0.05
+	culture_freemen_output = 0.05
+	culture_citizen_output = 0.1
+	cultural_integration_speed_modifier = 0.15
+}
+
+officer_right = {
+	culture_freemen_happiness = 0.06
+	culture_freemen_output = 0.12
+}
+
+persecuted_people = {
+	culture_happiness_modifier = -0.2
+	cultural_integration_speed_modifier = -1
+}
+
+exiled_people = {
+	culture_happiness_modifier = -0.15
+	cultural_integration_speed_modifier = -1
+}
+
+colonia_founded = {
+	culture_happiness_modifier = -0.05
+	cultural_integration_speed_modifier = -0.15
+}
+
+angry_mob = {
+	culture_happiness_modifier = -0.15
+}
+
+slave_rights_imposed = {
+	culture_happiness_modifier = -0.15
+	culture_slaves_output = 0.08
+}
+
+rights_increased = {
+	culture_happiness_modifier = 0.05
+}
+
+annexed_my_home_culture_lenient = {
+	culture_happiness_modifier = -0.05
+}
+
+annexed_my_home_culture = {
+	culture_happiness_modifier = -0.1
 }

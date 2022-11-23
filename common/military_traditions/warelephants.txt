@@ -163,8 +163,7 @@
 		modifier = { 
 			warelephant_morale = 0.1
 			levy_size_multiplier = 0.005
-			army_maintenance_cost = 0.01
-			
+			army_maintenance_cost = 0.01		
 		} 
 		icon = mauryan_coastal_path_5 #updated
 		requires = {warelephant_path_3}
@@ -183,8 +182,8 @@
 
 	warelephant_path_7 = { ### final generic tradition
 		modifier = {
-			levy_size_multiplier = 0.025
-			discipline = 0.05
+			levy_size_multiplier = 0.01
+			discipline = 0.01
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_5

@@ -1,6 +1,238 @@
 ﻿culture_decisions = {
 
+
 	#Primary Culture Rights and Privileges:
+	
+	protected_land_rights = {
+		potential = {
+			primary_culture = scope:target_culture.culture
+		}
+		allow = {
+			scope:target_culture = {
+				NOT = { has_country_culture_modifier = land_protection }
+			}
+			NOT = { has_country_modifier = extended_land_protection }
+		}
+		effect = {
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "land_protection" 
+					duration = -1
+				}
+			}
+		#	add_country_modifier = {
+		#		name = "extended_land_protection"
+		#		duration = 1825
+		#	}
+			add_country_modifier = { #############################################
+				name = "social_change"
+				duration = 1460
+			}
+			add_stability = -10
+			add_political_influence = -20
+			add_4_free_province_investments = yes #############################################
+			approval_effect = {
+				PARTY = optimates_party
+				VALUE = party_approval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = populares_party
+				VALUE = party_disapproval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = oligarchic_party
+				VALUE = party_approval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = traditionalist_party
+				VALUE = party_disapproval_medium_svalue
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	allow_citizenship_by_adoption = {
+		potential = {
+			primary_culture = scope:target_culture.culture
+		}
+		allow = {
+			scope:target_culture = {
+				NOT = { has_country_culture_modifier = citizenship_by_adoption }
+			}
+		}
+		effect = {
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "citizenship_by_adoption" 
+					duration = -1
+				}
+			}
+			add_country_modifier = { #############################################
+				name = "social_change"
+				duration = 1460
+			}
+			add_country_modifier = { #############################################
+				name = "expanded_citizenship"
+				duration = -1
+			}
+			add_stability = -10
+			add_political_influence = -20
+			custom_tooltip = non_state_culture_adoption
+			approval_effect = {
+				PARTY = optimates_party
+				VALUE = party_disapproval_small_svalue
+			}
+			approval_effect = {
+				PARTY = boni_party
+				VALUE = party_approval_small_svalue
+			}
+			approval_effect = {
+				PARTY = traditionalist_party
+				VALUE = party_disapproval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = democratic_party
+				VALUE = party_approval_medium_svalue
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	right_of_trial = {
+		potential = {
+			primary_culture = scope:target_culture.culture
+		}
+		allow = {
+			scope:target_culture = {
+				NOT = { has_country_culture_modifier = trial_right }
+			}
+			NOT = { has_country_modifier = extended_trial_rights }
+		}
+		effect = {
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "trial_right" 
+					duration = -1
+				}
+			}
+			custom_tooltip = this_will_make_it_easier_to_prosecute_tt
+			add_country_modifier = {
+				name = "extended_trial_rights"
+				duration = -1
+			}
+			add_country_modifier = { #############################################
+				name = "social_change"
+				duration = 1460
+			}
+			add_stability = -10
+			add_political_influence = -20
+			add_tyranny = -25 #############################################
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	exemption_from_census_tax = {
+		potential = {
+			primary_culture = scope:target_culture.culture
+			NOT = { has_country_modifier = citizen_exemption_from_census_tax } #Has revoke version.
+		}
+		allow = {
+			NOT = {
+				has_country_modifier = citizen_exemption_from_census_tax
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "citizen_exemption_from_census_tax" #Applies to all integrated cultures
+				duration = -1
+			}
+			add_country_modifier = { #############################################
+				name = "social_change"
+				duration = 1460
+			}
+			add_stability = -10
+			add_political_influence = -20
+			capital_scope = {
+				create_state_pop = nobles
+				create_state_pop = nobles
+				create_state_pop = nobles
+			}
+			approval_effect = {
+				PARTY = optimates_party
+				VALUE = party_approval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = populares_party
+				VALUE = party_disapproval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = oligarchic_party
+				VALUE = party_approval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = democratic_party
+				VALUE = party_disapproval_medium_svalue
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	revoke_exemption_from_census_tax = {
+		potential = {
+			primary_culture = scope:target_culture.culture
+			has_country_modifier = citizen_exemption_from_census_tax
+		}
+		allow = {
+			has_country_modifier = citizen_exemption_from_census_tax
+		}
+		effect = {
+			add_political_influence = -20
+			remove_country_modifier = citizen_exemption_from_census_tax
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "revoked_tax_exemption" 
+					duration = 1825
+				}
+			}
+			#every_integrated_culture = {
+			#	add_country_culture_modifier = {
+			#		name = "revoked_tax_exemption"
+			#		duration = 1825
+			#	}
+			#}
+			approval_effect = {
+				PARTY = optimates_party
+				VALUE = party_disapproval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = populares_party
+				VALUE = party_approval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = oligarchic_party
+				VALUE = party_disapproval_medium_svalue
+			}
+			approval_effect = {
+				PARTY = democratic_party
+				VALUE = party_approval_medium_svalue
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+
+	#HMO Primary Culture Rights and Privileges:
 	
 	promote_war_hero = {
 		potential = {
@@ -12,7 +244,7 @@
 				has_country_modifier = war_hero 
 			}	
 			stability > 10
-			military_experience >= 15
+			military_experience >= 5
 			}
 			
 		effect = {
@@ -57,6 +289,7 @@
 								name = "war_hero_character"
 								duration = -1
 							}
+							add_martial = 3 
 							save_scope_as = war_hero_char
 						}
 					}
@@ -82,7 +315,7 @@
 				has_country_modifier = naval_war_hero 
 			}	
 			stability > 10
-			military_experience >= 15
+			military_experience >= 5
 			}
 		
 		effect = {
@@ -130,6 +363,7 @@
 								name = "naval_war_hero_character"
 								duration = -1
 							}
+							add_martial = 3
 							save_scope_as = naval_war_hero_char
 						}
 					}
@@ -216,6 +450,7 @@
 								name = "counterintelligence"
 								duration = -1
 							}
+							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}
@@ -304,6 +539,7 @@
 								name = "counterintelligence"
 								duration = -1
 							}
+							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}

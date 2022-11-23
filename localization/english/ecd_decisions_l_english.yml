@@ -125,6 +125,12 @@
  pandered_project:0 "Promoting Minority"
  pandered_project_desc:0 ""
 
+ social_change:0 "Social Change"
+ social_change_desc:0 "Be the change you want to see in the world."
+
+ beacon_of_civ:0 "Beacon of Civilization"
+ beacon_of_civ_desc:0 "A light unto the barbarians."
+
  baby_boom:0 "Baby Boom"
  baby_boom_desc:0 "Confident and enjoying a host of new privileges, the people of this culture are producing a birth rate to match their newfound prosperity and prestige."
 
@@ -137,7 +143,7 @@
  exiled_community_desc:0 "This community is still adjusting to the arrival of a large population of exiles from a distant land."
 
  exiled_people:0 "Pain of Exile"
- exiled_people_desc:0 ""
+ exiled_people_desc:0 "By the rivers of Babylon, where we sat down, and where we wept, when we remembered Zion."
 
  exile_project:0 "Enforcing Exile"
  exile_project_desc:0 ""
@@ -153,6 +159,8 @@
  buy_xp:0 "Make Sacrifice to the God of War"
  buy_xp_desc:0 "Honour the god of war with a sacrifice to arouse the interest of all belligerent men in the area."
 
+
+ requires_more_cultures_tt:0 "There must be at least one other culture with at least 100 pops between them in the same culture group as [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]."
 
 #Tooltips
  culture_group_embraced_tt:0 "Freemen that are currently in our country and that belong to the #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetCultureGroup.GetName]#! Culture Group gain #G 5%#! Happiness and #G 3%#! Output for #Y 30 Years#! (Currently there are #Y [SCOPE.ScriptValue('num_of_pops_in_country_cultures_in_same_group_svalue')|0]#! Pops that would be affected)."
