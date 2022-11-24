@@ -16,7 +16,7 @@
 			NOT = { has_country_modifier = extended_inheritance_right }
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -76,7 +76,7 @@
 			NOT = { has_country_modifier = extended_contract_rights }
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -124,7 +124,7 @@
 			NOT = { has_country_modifier = extended_torture_protection }
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -187,7 +187,7 @@
 			NOT = { has_country_modifier = extended_right_of_marriage }
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -259,7 +259,7 @@
 			military_experience >= 5
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			add_military_experience = -5
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
@@ -336,7 +336,7 @@
 			}
 		}
 		effect = {
-			add_political_influence = -10
+			add_political_influence = -20
 			ordered_owned_province = {
 				limit = {
 					dominant_province_culture = scope:target_culture.culture
