@@ -22,7 +22,7 @@ recruit_general = {
 	scaled_gold = 1
 }
 
-seduce_governor = {
+secude_governor = {
 	aggressive_expansion = 20
 	political_influence = 35
 	scaled_gold = 2
@@ -68,7 +68,7 @@ price_patron_of_arts_button = {
 }
 
 price_assemble_raiding_party_button = {
-	political_influence = 60
+	political_influence = 50
 }
 
 price_tribal_duel = {
@@ -86,6 +86,7 @@ create_merc_state_price = {
 	military_experience = 5
 }
 
+
 assassinate_attempt_foreign = {
 	aggressive_expansion = 20
 	scaled_gold = 1
@@ -96,13 +97,24 @@ subject_player_client_state_pays = {
 	scaled_manpower = 0.10
 }
 
-recruit_mercenary = {
-	scaled_gold = 3
-	aggressive_expansion = 3
-	military_experience = 5
-}
 
 build_border_fort = {
 	gold = 150
 	manpower = 3
+}
+
+raid = {
+	aggressive_expansion = 5
+}
+
+raise_levies = {
+	tyranny = 2
+}
+
+price_support_primary_heir = {
+	tyranny = 2
+}
+
+price_arena_match = {
+	tyranny = 5
 }

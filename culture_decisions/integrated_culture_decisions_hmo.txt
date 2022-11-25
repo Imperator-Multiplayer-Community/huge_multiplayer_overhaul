@@ -32,14 +32,19 @@ culture_decisions = {
 
 			num_of_cities >= 20
 			stability > 40
+			political_influence > 25
 		}
 		effect = {
 			add_stability = -10
-			add_political_influence = -20
+			add_political_influence = -25
 			add_innovation = 1
 			add_country_modifier = {
 				name = "beacon_of_civ"
 				duration = -1
+			}
+			add_country_modifier = {
+				name = "new_admin_team"
+				duration = 1095
 			}
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
@@ -48,7 +53,31 @@ culture_decisions = {
 					duration = -1
 				}
 			}
-
+			custom_tooltip = brilliant_foreign_admin_tt
+			ordered_owned_province = {
+				limit = { dominant_province_culture = scope:target_culture.culture }
+				order_by = total_population
+				ROOT = {
+					create_character = {
+						culture = scope:target_culture.culture
+						religion = prev.prev.religion
+						hidden_effect = {
+							random_list = {
+								10 = { 
+									add_trait = obsessive
+								}
+								10 = {
+									add_trait = scholar
+								}					
+							}			
+							add_character_modifier = {
+								name = "brilliant_foreign_admin_character"
+								duration = -1
+							}
+						}
+					}
+				}
+			}
 			custom_tooltip = culture_group_boosted_tt
 			hidden_effect = {
 				every_country_culture = {
@@ -155,11 +184,16 @@ culture_decisions = {
 				total_population >= 25
 				is_capital = no
 			}
+			political_influence > 20
 		}
 		effect = {
 			add_stability = -10
 			add_political_influence = -20
 			add_aggressive_expansion = -15
+			add_country_modifier = {
+				name = "granted_autonomy"
+				duration = 1095
+			}
 			culture_state_loyalty_effect = yes
 			if = {
 				limit = {
@@ -319,7 +353,7 @@ culture_decisions = {
 						is_integrated = yes
 					}
 				}
-				military_experience >= 10
+				military_experience >= 15
 			}
 		}
 		effect = {
@@ -363,12 +397,16 @@ culture_decisions = {
 					}
 					add_country_culture_modifier = {
 						name = "honor_guard_other" 
-						duration = 4380
+						duration = -1
 					}
 				}
 			}
 			else = {
-				add_military_experience = -10
+				add_military_experience = -15
+				add_country_modifier = {
+					name = "barbarian_soldiers"
+					duration = 1095
+				}
 			}
 			custom_tooltip = honor_guard_tt
 			ordered_owned_province = {
@@ -381,7 +419,7 @@ culture_decisions = {
 						hidden_effect = {
 							add_trait = brave
 							add_trait = reckless
-							add_martial = 3
+							add_martial = 7
 							add_character_modifier = {
 								name = "honor_guard_character"
 								duration = -1
@@ -435,7 +473,7 @@ culture_decisions = {
 				}
 			}
 			stability > 40
-			political_influence > 20
+			political_influence > 25
 			invention = happiness_for_wrong_culture_modifier_inv_2
 		}
 		
@@ -454,22 +492,22 @@ culture_decisions = {
 				state = {
 					add_state_modifier = {
 						name = "baby_boom"
-						duration = 5475
+						duration = 4380
 					}
 				}
-				add_state_loyalty = 15
+				add_state_loyalty = 10
 			}		
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "pandered_people" 
-					duration = 9131
+					duration = 10950
 				}
 			}
-			add_political_influence = -20
+			add_political_influence = -25
 			add_stability = -5
 			add_country_modifier = {
 				name = "pandered_project"
-				duration = 9131
+				duration = 10950
 			}
 			trigger_event = {
 					id = cultural_integration.4
@@ -778,7 +816,6 @@ culture_decisions = {
 								name = "counterintelligence"
 								duration = -1
 							}
-							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}
@@ -874,7 +911,6 @@ culture_decisions = {
 								name = "counterintelligence"
 								duration = -1
 							}
-							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}
@@ -887,6 +923,140 @@ culture_decisions = {
         }	
 		ai_will_do = {
 			factor = 0
+		}
+	}
+
+
+	create_petty_nobles = {
+		potential = {
+			NOT = { primary_culture = scope:target_culture.culture }
+			scope:target_culture = {
+					has_pop_type_right = nobles
+			}
+		}
+		allow = {
+			any_owned_province = {
+				dominant_province_culture = scope:target_culture.culture
+			}
+			trigger_if = {
+				limit = {
+					any_character = {
+						has_character_modifier = petty_noble_character
+					}
+				}
+				NOT = {
+					any_character = {
+						custom_tooltip = {
+							text = no_current_petty_noble
+							has_character_modifier = petty_noble_character
+						}
+					}
+				}
+			}
+			trigger_if = {
+				limit = {
+					any_country_culture = {
+						has_country_culture_modifier = petty_noble_other
+					}
+				}
+				NOT = {
+					any_country_culture = {
+						custom_tooltip = {
+							text = no_current_petty_noble_other
+							has_country_culture_modifier = petty_noble_other
+						}
+					}
+				}
+			}
+ 
+			trigger_if = {
+				limit = {
+					any_country_culture = {
+						count <= 1
+						is_integrated = yes
+					}
+				}
+				stability > 40
+				political_influence > 20
+			}
+		}
+		effect = {
+			culture_state_loyalty_effect = yes
+			if = {
+				limit = {
+					any_country_culture = {
+						has_country_culture_modifier = petty_noble
+					}
+				}
+				random_country_culture = {
+					limit = { has_country_culture_modifier = petty_noble }
+					remove_country_culture_modifier = petty_noble
+				}
+			}
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "petty_noble" 
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					any_country_culture = {
+						count > 1
+						is_integrated = yes
+					}
+				}
+				every_country_culture = {
+					limit = {
+						#NOT = {
+							ROOT = {
+								primary_culture = prev.culture
+							}
+						#}
+						NOT = { this = scope:target_culture }
+						OR = {
+							has_pop_type_right = nobles
+							has_pop_type_right = citizen
+						}
+					}
+					add_country_culture_modifier = {
+						name = "petty_noble_other" 
+						duration = -1
+					}
+				}
+			}
+			else = {
+				add_political_influence = -20
+				add_stability = -5
+			}
+			custom_tooltip = petty_noble_tt
+			ordered_owned_province = {
+				limit = { dominant_province_culture = scope:target_culture.culture }
+				order_by = total_population
+				ROOT = {
+					create_character = {
+						culture = scope:target_culture.culture
+						religion = prev.prev.religion
+						hidden_effect = {
+							add_character_modifier = {
+								name = "petty_noble_character"
+								duration = -1
+							}
+						}
+					}
+					#trigger_event = { id = cultural_integration.10 }
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				any_integrated_culture = {
+					count > 2
+				}
+			}
 		}
 	}
 

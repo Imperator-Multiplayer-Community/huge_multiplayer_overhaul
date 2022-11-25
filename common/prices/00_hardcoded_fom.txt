@@ -18,7 +18,7 @@ change_pantheon = {
 }
 
 change_governor_policy = {
-	political_influence = 3
+	political_influence = 4
 }
 
 change_diplomatic_stance = {
@@ -33,4 +33,18 @@ support_rebels = {
 
 buy_idea = {
 	political_influence = 10
+}
+
+recruit_mercenary = {
+	scaled_gold = 3
+	aggressive_expansion = 5
+	military_experience = 5
+}
+
+improve_relation = {
+	scaled_gold = 3
+}
+
+insult = {
+	aggressive_expansion = 10
 }

@@ -12,6 +12,8 @@
 				NOT = { has_country_culture_modifier = land_protection }
 			}
 			NOT = { has_country_modifier = extended_land_protection }
+			stability > 10
+			political_influence >= 25
 		}
 		effect = {
 			scope:target_culture = {
@@ -29,7 +31,7 @@
 				duration = 1460
 			}
 			add_stability = -10
-			add_political_influence = -20
+			add_political_influence = -25
 			add_4_free_province_investments = yes #############################################
 			approval_effect = {
 				PARTY = optimates_party
@@ -61,6 +63,8 @@
 			scope:target_culture = {
 				NOT = { has_country_culture_modifier = citizenship_by_adoption }
 			}
+			stability > 10
+			political_influence >= 25
 		}
 		effect = {
 			scope:target_culture = {
@@ -78,7 +82,7 @@
 				duration = -1
 			}
 			add_stability = -10
-			add_political_influence = -20
+			add_political_influence = -25
 			custom_tooltip = non_state_culture_adoption
 			approval_effect = {
 				PARTY = optimates_party
@@ -111,6 +115,8 @@
 				NOT = { has_country_culture_modifier = trial_right }
 			}
 			NOT = { has_country_modifier = extended_trial_rights }
+			stability > 10
+			political_influence >= 25
 		}
 		effect = {
 			scope:target_culture = {
@@ -129,7 +135,7 @@
 				duration = 1460
 			}
 			add_stability = -10
-			add_political_influence = -20
+			add_political_influence = -25
 			add_tyranny = -25 #############################################
 		}
 		ai_will_do = {
@@ -146,6 +152,8 @@
 			NOT = {
 				has_country_modifier = citizen_exemption_from_census_tax
 			}
+			stability > 10
+			political_influence >= 25
 		}
 		effect = {
 			add_country_modifier = {
@@ -157,8 +165,9 @@
 				duration = 1460
 			}
 			add_stability = -10
-			add_political_influence = -20
+			add_political_influence = -25
 			capital_scope = {
+				create_state_pop = nobles
 				create_state_pop = nobles
 				create_state_pop = nobles
 				create_state_pop = nobles
@@ -245,10 +254,10 @@
 			}	
 			stability > 10
 			military_experience >= 5
-			}
+		}
 			
 		effect = {
-			add_military_experience = -15
+			add_military_experience = -5
 			add_country_modifier = {
 					name = "war_hero"
 					duration = 9131
@@ -289,7 +298,6 @@
 								name = "war_hero_character"
 								duration = -1
 							}
-							add_martial = 3 
 							save_scope_as = war_hero_char
 						}
 					}
@@ -316,10 +324,10 @@
 			}	
 			stability > 10
 			military_experience >= 5
-			}
+		}
 		
 		effect = {
-			add_military_experience = -15
+			add_military_experience = -5
 			add_country_modifier = {
 					name = "naval_war_hero"
 					duration = 9131
@@ -363,7 +371,6 @@
 								name = "naval_war_hero_character"
 								duration = -1
 							}
-							add_martial = 3
 							save_scope_as = naval_war_hero_char
 						}
 					}
@@ -393,7 +400,7 @@
 			stability > 10
 			treasury >= 50
 			military_experience >= 5
-			}
+		}
 			
 		effect = {
 			add_military_experience = -5
@@ -450,7 +457,6 @@
 								name = "counterintelligence"
 								duration = -1
 							}
-							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}
@@ -478,7 +484,7 @@
 			stability > 10
 			treasury >= 40
 			military_experience >= 4
-			}
+		}
 			
 		effect = {
 			add_military_experience = -4
@@ -539,7 +545,6 @@
 								name = "counterintelligence"
 								duration = -1
 							}
-							add_charisma = 3
 							save_scope_as = new_intel_recruit
 						}
 					}

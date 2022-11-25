@@ -40,6 +40,10 @@ after_battle.1 = {
 					name = war_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}		
 			}
 		}
 	}
@@ -96,10 +100,6 @@ after_battle.2 = {
 				trigger_event = {
 					id = after_battle.12
 				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
 			}
 		}
 	}
@@ -165,6 +165,10 @@ after_battle.3 = {
 					name = war_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}
 			}
 		}
 	}
@@ -223,6 +227,10 @@ after_battle.4 = {
 					name = war_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}			
 			}
 		}
 	}
@@ -341,6 +349,10 @@ after_battle.5 = {
 					name = war_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}
 			}
 		}
 	}
@@ -416,6 +428,10 @@ after_battle.6 = {
 					name = war_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}
 			}
 		}
 	}
@@ -483,11 +499,7 @@ after_battle.7 = {
 			employer = {
 				trigger_event = {
 					id = after_battle.17
-				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
+				}	
 			}
 		}
 	}
@@ -560,6 +572,10 @@ after_battle.8 = {
 					name = war_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}
 			}
 		}
 	}
@@ -632,6 +648,10 @@ after_battle.9 = {
 					name = war_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}
 			}
 		}
 	}
@@ -723,7 +743,6 @@ after_battle.20 = {
 		#Increased amount of injuries also increases chance to die.
 		scope:after_battle_20_target = {
 			random_list = {
-				15 = {  }
 				20 = { 
 					trigger = {
 						NOT = { has_trait = wounded }
@@ -742,7 +761,7 @@ after_battle.20 = {
 					}
 					add_trait = limp
 				}
-				25 = {
+				40 = {
 					if = {
 						limit = { has_legion_trigger = yes }
 						hidden_effect = {
@@ -805,6 +824,10 @@ after_battle.21 = {
 					name = naval_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.6
+					days = 5
+				}
 			}
 		}
 	}
@@ -891,6 +914,10 @@ after_battle.22 = {
 					name = naval_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.6
+					days = 5
+				}
 			}
 		}
 	}
@@ -976,6 +1003,10 @@ after_battle.23 = {
 					name = naval_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.6
+					days = 5
+				}
 			}
 		}
 	}
@@ -1046,6 +1077,10 @@ after_battle.24 = {
 					name = naval_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.6
+					days = 5
+				}
 			}
 		}
 	}
@@ -1117,6 +1152,10 @@ after_battle.25 = {
 					name = naval_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.6
+					days = 5
+				}
 			}
 		}
 	}
@@ -1242,6 +1281,10 @@ after_battle.26 = {
 					name = naval_hero_arises
 					days = 720
 				} ############################################################################
+				trigger_event = {
+					id = character_introductions.6
+					days = 5
+				}
 			}
 		}
 	}
@@ -1620,7 +1663,6 @@ after_battle.51 = {
 		#Increased amount of injuries also increases chance to die.
 		scope:after_battle_41_target = {
 			random_list = {
-				15 = {  }
 				20 = { 
 					trigger = {
 						NOT = { has_trait = wounded }
@@ -1639,7 +1681,7 @@ after_battle.51 = {
 					}
 					add_trait = limp
 				}
-				25 = { 
+				40 = { 
 					if = {
 						limit = { has_legion_trigger = yes }
 						hidden_effect = {

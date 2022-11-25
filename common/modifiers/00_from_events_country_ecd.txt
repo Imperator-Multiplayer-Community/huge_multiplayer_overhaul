@@ -5,78 +5,78 @@
 ### Tutorials ###
 
 impressive_greek_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_latin_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_celtic_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_indian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_iberian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_haemic_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_punic_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_numidian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_egyptian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_mesopotamian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_nubian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_arabian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_persian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_anatolian_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 impressive_culture_literature = {
-	happiness_for_same_culture_modifier = -0.03
-	research_points_modifier = 0.05
+	happiness_for_same_culture_modifier = -0.025
+	research_points_modifier = 0.025
 }
 
 war_hero = {
@@ -88,7 +88,7 @@ naval_war_hero = {
 }
 
 spy_recruited = {
-	oratory_tech_investment = 0.02
+	oratory_tech_investment = 0.01
 	character_loyalty = -2
 }
 
@@ -111,7 +111,6 @@ civilized_tribe = { #Reward for changing from tribal government.
     price_found_city_cost_modifier = -0.15
     local_forum_building_cost = -0.15
 }
-
 
 gov_confiscation = {
 	global_tax_modifier = 0.2
@@ -200,7 +199,6 @@ citizen_exemption_from_census_tax = {
 	global_citizen_happyness = 0.05
 	global_nobles_happyness = 0.03
 	global_tax_modifier = -0.05
-	global_nobles_desired_pop_ratio = 0.03
 	global_state_trade_routes = 0.25
 }
 
@@ -210,10 +208,10 @@ extended_trial_rights = {
 }
 
 social_change = {
-	civil_war_threshold = -0.05
+	civil_war_threshold = -0.1
 	character_loyalty = -4
-	stability_monthly_change = -0.2
-	happiness_for_same_culture_modifier = -0.03
+	stability_monthly_change = -0.25
+	happiness_for_same_culture_modifier = -0.05
 	global_pop_promotion_speed_modifier = 0.1
 }
 
@@ -234,23 +232,50 @@ pandered_project = {
 beacon_of_civ = {
 	country_civilization_value = 5
 	global_monthly_civilization = 0.02
+	monthly_wage_modifier = 0.01
 }
 
+new_admin_team = {
+	civil_war_threshold = -0.05
+	character_loyalty = -3
+	stability_monthly_change = -0.2
+	research_points_modifier = -0.1
+	happiness_for_same_culture_modifier = -0.03
+	global_pop_promotion_speed_modifier = 0.1
+}
+
+granted_autonomy = {
+	civil_war_threshold = -0.05
+	character_loyalty = -3
+	stability_monthly_change = -0.2
+	global_commerce_modifier = -0.05
+	happiness_for_same_culture_modifier = -0.03
+	global_pop_promotion_speed_modifier = 0.1
+}
+
+barbarian_soldiers = {
+	civil_war_threshold = -0.05
+	character_loyalty = -3
+	stability_monthly_change = -0.2
+	land_morale_modifier = -0.025
+	happiness_for_same_culture_modifier = -0.03
+	global_pop_promotion_speed_modifier = 0.1
+}
 
 #Unintegrated
 
 extended_right_of_marriage = {
 	character_loyalty = -4
-	stability_monthly_change = -0.1
-	happiness_for_same_culture_modifier = -0.025
-	global_pop_assimilation_speed_modifier = 0.25
-	global_population_growth = 0.025
+	stability_monthly_change = -0.15
+	happiness_for_same_culture_modifier = -0.05
+	global_pop_assimilation_speed_modifier = 0.3
+	global_population_growth = 0.02
 	global_pop_promotion_speed_modifier = 0.1
 }
 
 extended_inheritance_right = {
 	character_loyalty = -2
-	stability_monthly_change = -0.1
+	stability_monthly_change = -0.15
 	global_nobles_happyness = -0.03
 	global_tax_modifier = -0.025
 	global_pop_promotion_speed_modifier = 0.1
@@ -258,7 +283,7 @@ extended_inheritance_right = {
 
 extended_torture_protection = {
 	character_loyalty = -2
-	stability_monthly_change = -0.1
+	stability_monthly_change = -0.15
 	global_citizen_happyness = -0.03
 	global_nobles_happyness = -0.03
 	global_pop_promotion_speed_modifier = 0.1
@@ -266,7 +291,7 @@ extended_torture_protection = {
 
 extended_contract_rights = {
 	character_loyalty = -2
-	stability_monthly_change = -0.1
+	stability_monthly_change = -0.15
 	global_citizen_happyness = -0.03
 	global_commerce_modifier = -0.025
 	global_pop_promotion_speed_modifier = 0.1
@@ -274,11 +299,12 @@ extended_contract_rights = {
 
 extended_officer_right = {
 	character_loyalty = -2
-	stability_monthly_change = -0.1
+	stability_monthly_change = -0.15
 	happiness_for_same_culture_modifier = -0.03
 	land_morale_modifier = -0.025
 	global_pop_promotion_speed_modifier = 0.1
 }
+
 
 persecution_project = {
 	global_tax_modifier = 0.2

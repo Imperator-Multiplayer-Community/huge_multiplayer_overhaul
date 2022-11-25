@@ -38,14 +38,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_greek_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
 			add_political_influence = -30
 			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_greek_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = greek_science
@@ -137,14 +137,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_latin_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
 			add_political_influence = -30
 			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_latin_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = latin_science
@@ -239,14 +239,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_celtic_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
 			add_political_influence = -30
 			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_celtic_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = celtic_science
@@ -341,14 +341,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_indian_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
 			add_political_influence = -30
 			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_indian_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = indian_science
@@ -441,14 +441,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_iberian_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
 			add_political_influence = -30
 			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_iberian_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = iberian_science
@@ -543,14 +543,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_haemic_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
 			add_political_influence = -30
 			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_haemic_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = haemic_science
@@ -641,14 +641,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_punic_literature"
-					duration = 18262
+					duration = -1
 				}
 			}
 			add_political_influence = -30
 			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_punic_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = punic_science

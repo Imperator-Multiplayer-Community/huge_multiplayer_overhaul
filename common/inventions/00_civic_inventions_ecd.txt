@@ -1389,7 +1389,9 @@ civic_2 = {
 
     research_points_modifier_inv_2 = { 
         modifier = {
-        			 global_unrest = -0.25 }
+        	global_unrest = -0.25 
+        	global_tax_modifier = -0.05
+        }
         on_activate = {
 			add_innovation = 1
 		}

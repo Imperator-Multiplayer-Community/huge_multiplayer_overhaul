@@ -68,3 +68,36 @@ character_introductions.4 = {
 	}
 }
 
+character_introductions.5 = { 
+	type = country_event
+	title = character_introductions.5.t
+	desc = character_introductions.5.desc
+	left_portrait = scope:root.current_ruler
+	right_portrait = scope:root.current_ruler
+	picture = elephant_battle
+	interface_lock = no
+	
+	immediate = {
+	}
+
+	option = {
+		name = "character_introductions.5.a"
+	}
+}
+
+character_introductions.6 = { 
+	type = country_event
+	title = character_introductions.6.t
+	desc = character_introductions.6.desc
+	left_portrait = scope:root.current_ruler
+	right_portrait = scope:root.current_ruler
+	picture = naval_battle
+	interface_lock = no
+	
+	immediate = {
+	}
+
+	option = {
+		name = "character_introductions.6.a"
+	}
+}

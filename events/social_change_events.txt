@@ -1,0 +1,27 @@
+﻿namespace = social_change_events
+
+social_change_events.1 = { 
+ 	type = country_event
+	title = "social_change_events.1.t"
+	desc = "social_change_events.1.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = city_siege
+
+	trigger = {
+
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "social_change_events.1.a"
+	 }
+
+	 option = {
+		name = "social_change_events.1.b"
+	 }
+}
+

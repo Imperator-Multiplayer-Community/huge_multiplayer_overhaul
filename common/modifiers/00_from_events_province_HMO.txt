@@ -52,8 +52,8 @@ embellished_temple_jupiter_optimus_maximus = { #Now a country modifier
 
 exiled_community = {
 	local_pop_assimilation_speed_modifier = -1
-	local_unrest = 1
-	local_population_capacity_modifier = 0.2
+	local_unrest = 0.5
+	local_population_capacity_modifier = 0.25
 }
 
 recent_convert_modifier = { #Country Modifier
