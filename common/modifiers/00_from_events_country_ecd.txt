@@ -158,7 +158,7 @@ purging_bureaucrats = {
 	monthly_corruption = -0.3
 	monthly_wage_modifier = 0.05
 	stability_monthly_change = -0.3
-	civil_war_threshold = -0.25
+	civil_war_threshold = -0.2
 	global_monthly_state_loyalty = 0.1
 	monthly_tyranny = 0.06
 	price_bring_to_trial_cost_modifier = -0.5
@@ -178,33 +178,34 @@ colonia_project = {
 
 
 corrupt_research_modifier = {
-    research_points_modifier = -0.25 #was 0.35
+    research_points_modifier = -0.2 #was 0.35
 }
 
 
 civil_war_benefits = {
-    character_loyalty = 5 # Was 10
-	stability_monthly_change = 0.02 # Was 0.05
+    character_loyalty = 10 # Was 10
+	stability_monthly_change = 0.05 # Was 0.05
 }
 
 
 
 #Primary
 
-#extended_land_protection = {
-#	global_freemen_happyness = -0.05
-#}
+extended_land_protection = {
+	build_cost = -0.05
+	global_population_capacity_modifier = 0.025
+}
 
 citizen_exemption_from_census_tax = {
 	global_citizen_happyness = 0.05
-	global_nobles_happyness = 0.03
+	global_nobles_happyness = 0.05
 	global_tax_modifier = -0.05
 	global_state_trade_routes = 0.25
 }
 
 extended_trial_rights = {
 	monthly_tyranny = -0.02
-	character_loyalty = 1
+	monthly_corruption = -0.01
 }
 
 social_change = {
@@ -216,9 +217,9 @@ social_change = {
 }
 
 expanded_citizenship = {
-	levy_size_multiplier = 0.01
-	land_morale_modifier = -0.015
-	discipline = -0.015
+	levy_size_multiplier = 0.0125
+	land_morale_modifier = -0.0125
+	discipline = -0.0125
 	army_maintenance_cost = 0.01
 }
 
@@ -236,7 +237,7 @@ beacon_of_civ = {
 }
 
 new_admin_team = {
-	civil_war_threshold = -0.05
+	civil_war_threshold = -0.1
 	character_loyalty = -3
 	stability_monthly_change = -0.2
 	research_points_modifier = -0.1
@@ -245,7 +246,7 @@ new_admin_team = {
 }
 
 granted_autonomy = {
-	civil_war_threshold = -0.05
+	civil_war_threshold = -0.1
 	character_loyalty = -3
 	stability_monthly_change = -0.2
 	global_commerce_modifier = -0.05
@@ -254,7 +255,7 @@ granted_autonomy = {
 }
 
 barbarian_soldiers = {
-	civil_war_threshold = -0.05
+	civil_war_threshold = -0.1
 	character_loyalty = -3
 	stability_monthly_change = -0.2
 	land_morale_modifier = -0.025
@@ -268,7 +269,7 @@ extended_right_of_marriage = {
 	character_loyalty = -4
 	stability_monthly_change = -0.15
 	happiness_for_same_culture_modifier = -0.05
-	global_pop_assimilation_speed_modifier = 0.3
+	global_pop_assimilation_speed_modifier = 0.25
 	global_population_growth = 0.02
 	global_pop_promotion_speed_modifier = 0.1
 }
@@ -323,4 +324,44 @@ exile_project = {
 	subject_opinions = -5
 	integrate_speed = -0.3
 	cultural_integration_speed_modifier = -0.3
+}
+
+social_stability = {
+	stability_monthly_change = -0.1
+}
+
+civil_war_risk = {
+	civil_war_threshold = -0.1
+	character_loyalty = -3
+}
+
+social_disloyalty = {
+	governor_loyalty = -5
+	global_monthly_state_loyalty = -0.1
+}
+
+social_unrest = {
+	global_unrest = 1.5
+}
+
+indian_social_stability = {
+	stability_monthly_change = -0.2
+	happiness_for_same_culture_modifier = -0.05
+}
+
+indian_civil_war_risk = {
+	civil_war_threshold = -0.15
+	character_loyalty = -5
+	happiness_for_same_culture_modifier = -0.05
+}
+
+indian_social_disloyalty = {
+	governor_loyalty = -5
+	global_monthly_state_loyalty = -0.2
+	happiness_for_same_culture_modifier = -0.05
+}
+
+indian_social_unrest = {
+	global_unrest = 2
+	happiness_for_same_culture_modifier = -0.05
 }

@@ -181,7 +181,17 @@
  loved_by_the_gods:0 "Favoured by the Gods"
  unloved_by_the_gods:0 "Spurned by the Gods"
 
- 
+ social_stability:0 "Social Instability"
+ civil_war_risk:0 "Civil Tension"
+ social_unrest:0 "Social Strife"
+ social_disloyalty:0 "Open Disrespect" 
+
+ indian_social_stability:0 "Social Discord"
+ indian_civil_war_risk:0 "Breakdown of Public Trust"
+ indian_social_unrest:0 "Social Strain"
+ indian_social_disloyalty:0 "Open Mockery"
+
+
  paradisial_gardens_modifier:0 "Paradisial Gardens"
  desc_paradisial_gardens_modifier:0 "These gardens have been built by a rich land-owner in one of his estates to relax."
  ritual_sacrifice_modifier_1:0 "Successful Sacrifice"
