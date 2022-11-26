@@ -193,7 +193,7 @@ civil_war_benefits = {
 
 extended_land_protection = {
 	build_cost = -0.05
-	global_population_capacity_modifier = 0.025
+	global_monthly_state_loyalty = 0.02
 }
 
 citizen_exemption_from_census_tax = {
@@ -201,11 +201,13 @@ citizen_exemption_from_census_tax = {
 	global_nobles_happyness = 0.05
 	global_tax_modifier = -0.05
 	global_state_trade_routes = 0.25
+	global_population_capacity_modifier = 0.025
 }
 
 extended_trial_rights = {
 	monthly_tyranny = -0.02
 	monthly_corruption = -0.01
+	character_loyalty = 1
 }
 
 social_change = {
@@ -217,9 +219,9 @@ social_change = {
 }
 
 expanded_citizenship = {
-	levy_size_multiplier = 0.0125
-	land_morale_modifier = -0.0125
-	discipline = -0.0125
+	levy_size_multiplier = 0.01
+	land_morale_modifier = -0.025
+	discipline = -0.025
 	army_maintenance_cost = 0.01
 }
 
@@ -364,4 +366,8 @@ indian_social_disloyalty = {
 indian_social_unrest = {
 	global_unrest = 2
 	happiness_for_same_culture_modifier = -0.05
+}
+
+mass_slave_death = {
+	global_slaves_output = -0.15
 }

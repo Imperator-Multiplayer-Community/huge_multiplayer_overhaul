@@ -63,3 +63,7 @@ recent_convert_modifier = { #Country Modifier
 	local_unrest = 1
 	omen_power = -0.2
 }
+
+recent_slave_death = {
+	local_tax_modifier = -0.25
+}

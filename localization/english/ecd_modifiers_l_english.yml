@@ -164,7 +164,8 @@
  petty_noble_other:0 "Joys of Condescension"
  petty_noble:0 "Indulged Nobility"
 
-
+#Province modifiers
+ recent_slave_death:0 "Slave Population Collapsed"
 
 #Country modifiers
  spy_recruited:0 "Expanding State Intelligence"
@@ -190,6 +191,9 @@
  indian_civil_war_risk:0 "Breakdown of Public Trust"
  indian_social_unrest:0 "Social Strain"
  indian_social_disloyalty:0 "Open Mockery"
+
+ mass_slave_death:0 "Exhausted Slaves"
+
 
 
  paradisial_gardens_modifier:0 "Paradisial Gardens"
