@@ -103,6 +103,10 @@
 		}
 		unit_location = {
 			add_state_loyalty = -15
+			add_province_modifier = {
+				name = "local_colonia"
+				duration = -1
+			}
 		}
 		unit_owner = {
 			random_owned_province = {
@@ -110,18 +114,14 @@
 					total_population >= 3
 					any_pops_in_province = {
 						count >= 2
-						NOT = { pop_type = slaves }
-						NOT = { pop_type = tribesmen }
-						NOT = { pop_type = freemen }
+						pop_culture = location.owner.culture
 					}
 				}
 				while = {
 					count = 2
 					random_pops_in_province = {
 						limit = {
-							NOT = { pop_type = slaves }
-							NOT = { pop_type = tribesmen }
-							NOT = { pop_type = freemen }	
+							pop_culture = location.owner.culture
 						}
 						move_pop = root.unit_location
 					}

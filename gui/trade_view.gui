@@ -257,7 +257,7 @@ base_window = {
 							datamodel = "[TradeView.GetCurrentTradeRoutes]"
 							item = {
 								widget = {
-									size = { 608 38 }
+									size = { 658 38 }
 									list_entry = {
 										size = { 100% 100% }
 									}
