@@ -41,7 +41,10 @@
 	}
 
 	global_supply_limit_modifier_inv_3 = { 
-		modifier = { global_supply_limit_modifier = 0.1
+		modifier = {
+			global_supply_limit_modifier = 0.1
+			supply_train_maintenance_cost = -0.05
+
 					 army_maintenance_cost = 0.01 }
 		requires = { military_tech_investment_inv_1 }
 	}
@@ -885,7 +888,7 @@ military_inventions = {
 	siege_speed_inv_4 = { 
 		modifier = { 
 			land_unit_attrition = -0.1
-			fortress_ramparts_building_cost = -0.2
+			fortress_ramparts_building_cost = -0.15
 			army_maintenance_cost = 0.01
 		}
 		
@@ -980,7 +983,8 @@ military_inventions = {
 	global_defensive_inv_5 = { 
 		requires = { siege_speed_inv_4 }
 		modifier = { 
-			global_defensive = 0.25 
+			global_defensive = 0.25
+			fortress_ramparts_building_cost = -0.15
 			fort_maintenance_cost = 0.01  
 		}
 		on_activate = { custom_tooltip = "fortified_capital_decision" }

@@ -300,7 +300,7 @@ torture_protection = {
 }
 
 inheritance_right = {
-	culture_nobles_happiness = 0.1
+	culture_nobles_happiness = 0.12
 	culture_nobles_output = 0.15
 	cultural_integration_speed_modifier = 0.2
 }
@@ -312,7 +312,7 @@ right_of_marriage = {
 
 right_to_enter_contracts = {
 	culture_citizen_happiness = 0.1
-	culture_citizen_output = 0.15
+	culture_citizen_output = 0.1
 	cultural_integration_speed_modifier = 0.2
 }
 

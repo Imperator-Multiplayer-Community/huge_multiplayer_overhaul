@@ -6,77 +6,92 @@
 
 impressive_greek_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_latin_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_celtic_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_indian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_iberian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_haemic_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_punic_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_numidian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_egyptian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_mesopotamian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_nubian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_arabian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_persian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_anatolian_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 impressive_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
-	research_points_modifier = 0.025
+	research_points_modifier = 0.05
+	monthly_wage_modifier = 0.01
 }
 
 war_hero = {
@@ -369,5 +384,5 @@ indian_social_unrest = {
 }
 
 mass_slave_death = {
-	global_slaves_output = -0.15
+	global_slaves_output = -0.1
 }

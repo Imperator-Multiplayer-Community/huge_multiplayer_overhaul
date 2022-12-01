@@ -2058,7 +2058,10 @@ oratory_2 = {
 	}
 
 	tyranny_inv_3 = {
-		modifier = { global_unrest = -0.25 }
+		modifier = { 
+			global_unrest = -0.25
+			global_manpower_modifier = -0.025
+		}
 		
 		requires_or =  { diplo_range_inv_2 diplo_range_inv_1 }
 	}

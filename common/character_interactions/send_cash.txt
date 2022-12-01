@@ -1,4 +1,4 @@
-﻿send_men_1k = {
+﻿send_cash_500 = {
 	on_other_nation = yes
 	on_own_nation = no
 	message = yes
@@ -15,9 +15,9 @@
 		scope:actor.current_ruler ={
 			trigger_if = {
 				limit = {
-					has_variable = manpoweropen
+					has_variable = cashopen
 				}
-				var:manpoweropen = 0
+				var:cashopen = 0
 			}
 			trigger_else = {
 				always = no
@@ -28,14 +28,14 @@
 
 	allowed_trigger = {
 		scope:actor = {
-			can_pay_price = onekman
+			can_pay_price = cash500
 			trigger_if = {
 				limit = {
-					has_variable = manpowercooldown
+					has_variable = cashcooldown
 				}
 				custom_tooltip = {
-					text = manpowercd
-					NOT = {var:manpowercooldown = 1}
+					text = cashcd
+					NOT = {var:cashcooldown = 1}
 				}
 			}
 		}
@@ -55,18 +55,18 @@
 	effect = {
 		scope:actor = {
 			set_variable = {
-				name = manpowercooldown
+				name = cashcooldown
 				value = 1
 				days = 90
 			}
-			pay_price = onekman
+			pay_price = cash500
 		}
 		scope:target.employer = {
-			add_manpower = 2
+			treasury = 500
 		}
 		scope:actor.current_ruler = {
 			set_variable = {
-				name = manpoweropen
+				name = cashopen
 				value = 1
 			}
 		}
@@ -74,7 +74,7 @@
 
 }
 
-send_men_5k = {
+send_cash_1k = {
 	on_other_nation = yes
 	on_own_nation = no
 	message = yes
@@ -91,9 +91,9 @@ send_men_5k = {
 		scope:actor.current_ruler ={
 			trigger_if = {
 				limit = {
-					has_variable = manpoweropen
+					has_variable = cashopen
 				}
-				var:manpoweropen = 0
+				var:cashopen = 0
 			}
 			trigger_else = {
 				always = no
@@ -105,15 +105,15 @@ send_men_5k = {
 		scope:actor = {
 			trigger_if = {
 				limit = {
-					has_variable = manpowercooldown
+					has_variable = cashcooldown
 				 }
 				 custom_tooltip = {
-					text = manpowercd
-					NOT = {var:manpowercooldown = 1}
+					text = cashcd
+					NOT = {var:cashcooldown = 1}
 				}			
 			}
 
-			can_pay_price = fivekman
+			can_pay_price = cash1k
 		}
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
@@ -130,18 +130,18 @@ send_men_5k = {
 	effect = {
 		scope:actor = {
 			set_variable = {
-				name = manpowercooldown
+				name = cashcooldown
 				value = 1
 				days = 180
 			}
-			pay_price = fivekman
+			pay_price = cash1k
 		}
 		scope:target.employer = {
-			add_manpower = 10
+			add_treasury = 1000
 		}
 		scope:actor.current_ruler = {
 			set_variable = {
-				name = manpoweropen
+				name = cashopen
 				value = 1
 			}
 		}
@@ -149,7 +149,7 @@ send_men_5k = {
 
 }
 
-send_men_10k = {
+send_cash_2k = {
 	on_other_nation = yes
 	on_own_nation = no
 	message = yes
@@ -166,9 +166,9 @@ send_men_10k = {
 		scope:actor.current_ruler ={
 			trigger_if = {
 				limit = {
-					has_variable = manpoweropen
+					has_variable = cashopen
 				}
-				var:manpoweropen = 0
+				var:cashopen = 0
 			}
 			trigger_else = {
 				always = no
@@ -180,15 +180,15 @@ send_men_10k = {
 		scope:actor = {			
 			trigger_if = {
 				limit = {
-					has_variable = manpowercooldown
+					has_variable = cashcooldown
 				 }
 				 custom_tooltip = {
-					text = manpowercd
-					NOT = {var:manpowercooldown = 1}
+					text = cashcd
+					NOT = {var:cashcooldown = 1}
 				}
 			}
 
-			can_pay_price = tenkman
+			can_pay_price = cash2k
 		}
 		scope:target.employer = {
 			in_diplomatic_range = scope:actor
@@ -204,100 +204,27 @@ send_men_10k = {
 
 	effect = {
 		scope:actor = {
-			pay_price = tenkman
+			pay_price = cash2k
 			set_variable = {
-				name = manpowercooldown
+				name = cashcooldown
 				value = 1
 				days = 360
 			}
 		}
 		scope:target.employer = {
-			add_manpower = 20
+			add_treasury = 2000
 		}
 		scope:actor.current_ruler = {
 			set_variable = {
-				name = manpoweropen
+				name = cashopen
 				value = 1
 			}
 		}
 	}
 }
 
-send_men_50k = {
-	on_other_nation = yes
-	on_own_nation = no
-	message = yes
 
-	potential_trigger = {
-		scope:target = {
-			NOT = { employer = scope:actor }
-			NOT = { employer = { tag = REB } }
-			NOT = { employer = { tag = BAR } }	
-		}
-		scope:actor = {
-			is_ai = no
-		}
-		scope:actor.current_ruler ={
-			trigger_if = {
-				limit = {
-					has_variable = manpoweropen
-				}
-				var:manpoweropen = 0
-			}
-			trigger_else = {
-				always = no
-			}
-		}
-	}
-
-	allowed_trigger = {
-		scope:actor = {
-			trigger_if = {
-				limit = {
-					has_variable = manpowercooldown
-				 }
-				 custom_tooltip = {
-					text = manpowercd
-					NOT = {var:manpowercooldown = 1}
-				}			
-			}
-
-			can_pay_price = fiftykman
-		}
-		scope:target.employer = {
-			in_diplomatic_range = scope:actor
-			opinion = {
-        		target = scope:actor
-        		value >= 100
-        	}
-		}
-		scope:target = {
-			is_friend = scope:actor.current_ruler
-		}
-	}
-
-	effect = {
-		scope:actor = {
-			set_variable = {
-				name = manpowercooldown
-				value = 1
-				days = 720
-			}
-			pay_price = fiftykman
-		}
-		scope:target.employer = {
-			add_manpower = 40
-		}
-		scope:actor.current_ruler = {
-			set_variable = {
-				name = manpoweropen
-				value = 1
-			}
-		}
-	}
-}
-
-send_men_open = {
+send_cash_open = {
 	on_other_nation = yes
 	on_own_nation = no
 	message = no
@@ -309,9 +236,9 @@ send_men_open = {
 		scope:actor.current_ruler ={
 			OR = {
 				NOT = {
-					has_variable = manpoweropen
+					has_variable = cashopen
 				}
-				var:manpoweropen = 1
+				var:cashopen = 1
 			}
 		}
 		scope:target = {
@@ -325,10 +252,10 @@ send_men_open = {
 		scope:actor.current_ruler ={
 			OR = {
 				NOR = {
-					has_variable = manpoweropen
-					has_variable = manpowercooldown
+					has_variable = cashopen
+					has_variable = cashcooldown
 				}
-				var:manpoweropen = 1
+				var:cashopen = 1
 			}
 		}
 		scope:target.employer = {
@@ -340,14 +267,14 @@ send_men_open = {
 	effect = {
 		scope:actor.current_ruler = {
 			set_variable = {
-				name = manpoweropen
+				name = cashopen
 				value = 0
 			}
 		}
 	}
 }
 
-send_men_close = {
+send_cash_close = {
 	on_other_nation = yes
 	on_own_nation = no
 	message = no
@@ -365,9 +292,9 @@ send_men_close = {
 		scope:actor.current_ruler = {
 			trigger_if = {
 				limit = {
-					has_variable = manpoweropen
+					has_variable = cashopen
 				}
-				var:manpoweropen = 0
+				var:cashopen = 0
 			}
 			trigger_else = {
 				always = no
@@ -384,7 +311,7 @@ send_men_close = {
 	effect = {
 		scope:actor.current_ruler = {
 			set_variable = {
-				name = manpoweropen
+				name = cashopen
 				value = 1
 			}
 		}
