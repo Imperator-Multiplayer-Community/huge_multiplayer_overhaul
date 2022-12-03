@@ -40,7 +40,7 @@ slave_death.1 = {
 		}
 		add_city_smoke_effect = yes
 		add_city_fire_effect = yes
-		add_state_loyalty = -10
+		add_state_loyalty = -15
 		ordered_pops_in_province = {
 			limit = {
 				pop_type = slaves
@@ -48,7 +48,7 @@ slave_death.1 = {
 		order_by = pop_hapiness 
 			max = {
 				value = total_population
-				divide = 6
+				divide = 5
 			}
 		kill_pop = yes
 		}

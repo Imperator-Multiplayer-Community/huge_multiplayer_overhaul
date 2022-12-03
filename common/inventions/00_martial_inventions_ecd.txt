@@ -164,7 +164,7 @@
 		requires = { discipline_inv_3 }
 		modifier = { 
 			land_morale_modifier = 0.025
-			manpower_recovery_speed = 0.025
+			cohort_reinforcement_speed = 0.025
 			army_maintenance_cost = 0.01
 		}
 
@@ -405,7 +405,7 @@
 	global_start_experience_inv_5 = { 
 		requires = { discipline_inv_2 }
 		modifier = { 
-			manpower_recovery_speed = 0.025
+			manpower_recovery_speed = 0.03
 			army_maintenance_cost = 0.01
 		}
 
@@ -799,6 +799,7 @@ military_inventions = {
 	assault_ability_inv = { 
 		modifier = { 
 			assault_ability = 0.025
+			siege_ability = 0.025
 			army_maintenance_cost = 0.01
 		}
 
@@ -808,7 +809,7 @@ military_inventions = {
 	# Level 3
 	siege_engineers_inv_3 = { 
 		modifier = { 
-			siege_ability = 0.05
+			siege_ability = 0.075
 			engineer_cohort_maintenance_cost = -0.1
 			army_maintenance_cost = 0.01
 		}
@@ -888,6 +889,7 @@ military_inventions = {
 	siege_speed_inv_4 = { 
 		modifier = { 
 			land_unit_attrition = -0.1
+			siege_ability = 0.025
 			fortress_ramparts_building_cost = -0.15
 			army_maintenance_cost = 0.01
 		}

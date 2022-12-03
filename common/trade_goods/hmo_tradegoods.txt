@@ -85,12 +85,28 @@ elephants = { #82 territories
 	color = hsv { 0.6 0.2 0.4 }	
 }
 
+wild_game = { #190 territories
+	category = 5
+	
+	gold = 0.2
+	
+	province = {
+		local_monthly_food = 3 #local_tribesmen_happyness = happiness_small_svalue
+	}
+	country = {
+		archers_discipline = 0.1
+	}
+
+	color = hsv { 0.1 0.4 0.25 }
+}
+
 leather = { #338 territories
 	category = 4
 	gold = 0.2
 
 	province = {
 		local_freemen_happyness = happiness_small_svalue
+		local_tribesmen_happyness = happiness_small_svalue
 	}
 	country = {
 		light_infantry_defensive = 0.1
@@ -135,7 +151,7 @@ honey = { #86 territories
 	gold = 0.4
 
 	province = {
-		local_monthly_food_modifier = 0.03
+		local_monthly_food = 3 #local_monthly_food_modifier = 0.03 
 	}
 	country = {
 		light_cavalry_discipline = 0.1
@@ -181,7 +197,7 @@ dates = { #60 Territories
 	gold = 0.3
 
 	province = {
-		local_freemen_happyness = happiness_small_svalue
+		local_monthly_food = 3 #local_freemen_happyness = happiness_small_svalue
 	}
 	country = {
 		global_commerce_modifier = 0.05

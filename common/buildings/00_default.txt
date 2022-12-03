@@ -176,8 +176,7 @@ port_building = {
 
 barracks_building = {
 	local_freemen_desired_pop_ratio = 0.25
-	#local_freemen_happyness = happiness_large_svalue
-	local_manpower_modifier = 0.40
+	local_manpower_modifier = 0.35 #Was 0.40
 	local_country_civilization_value = 20
 	max_amount = 1
 	cost = 200
@@ -529,7 +528,7 @@ court_building = { #Better loyalty from Court of Law
 
 military_building = { #Loyalty and XP from Training Camp
 	local_manpower_modifier = 0.075 # Was 0.1 in vanilla
-	local_cohort_start_experience = 5 #Increase this value since nobody likes traning camps?
+	local_cohort_start_experience = 5 #Increase this value since nobody likes training camps?
 	local_country_civilization_value = 2
 	#city_monthly_state_loyalty = 0.005
 	
@@ -622,7 +621,8 @@ town_hall_building = { #Want to do something else here Tax Office
 ### Settlement Buildings
 
 latifundia_building = { #New Slave Estate
-	local_goods_from_slaves = -6 #Or -7, #Was -5
+	local_slaves_output = 0.1 #New, to compensate the change from -5 to -4 
+	local_goods_from_slaves = -4 #Was -5
 	local_country_civilization_value = 15
 	local_population_capacity_modifier = 0.05
 	local_slaves_desired_pop_ratio = 0.4
@@ -648,14 +648,13 @@ latifundia_building = { #New Slave Estate
 }
 
 slave_mine_building = { #New Mine, worst place for a slave
-	#base_resources = 1### Replace this monstrosity with a slave for surplus bonus
 	max_amount = 1
-	local_goods_from_slaves = -8 #Yes! Was -5 in vanilla
+	local_goods_from_slaves = -6 #Was -5 in vanilla
 	local_slaves_desired_pop_ratio = 0.3
 	local_slaves_output = 0.06
 	local_slaves_happyness = -0.05 ###Read dev note above "New Mine..." Shouldn't this be reflected? Slaves should be dying in the mines...
 	potential = {
-		has_city_status = no
+		has_city_status = no*-
 	}
 	
 	allow = {
@@ -681,10 +680,9 @@ slave_mine_building = { #New Mine, worst place for a slave
 
 basic_settlement_infratructure_building = { #Farming Settlements reflecting the free farming population
 	local_monthly_food_modifier = 1.5
-	#base_resources = 1 ## Replace this monstrosity with a better slave for surplus bonus
-	local_goods_from_slaves = -5 #Restoring it to its vanilla value, -5... It is now -2 in HMO People need food and farms should be common
+	local_goods_from_slaves = -5 #Restoring it to its vanilla value, -5
 	local_country_civilization_value = 10
-	local_freemen_desired_pop_ratio = 0.25
+	local_food_capacity = 200
 	max_amount = 1
 	potential = {
 		has_city_status = no

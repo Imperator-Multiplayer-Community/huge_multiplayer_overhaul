@@ -390,7 +390,7 @@ religious_1 = {
 
 	global_unrest_inv_3 = {
 		modifier = { happiness_for_same_religion_modifier = 0.025
-					 land_morale_recovery = 0.02
+					 cohort_reinforcement_speed = 0.025
 					 army_maintenance_cost = 0.01
 		 }
 		 on_activate = {
@@ -1218,7 +1218,7 @@ religious_1 = {
 
 	global_manpower_modifier_inv_4 = {
 		modifier = { 
-			global_manpower_modifier = 0.025
+			land_morale_recovery = 0.02
 			levy_size_multiplier = 0.0025
 			global_population_happiness = -0.025
 			army_maintenance_cost = 0.01

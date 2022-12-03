@@ -528,7 +528,7 @@ sugar = {
 	
 	province = {
 		local_nobles_happyness = happiness_small_svalue
-		local_monthly_food_modifier = 0.01 #AI is dumb, so give them some food if they import this
+		local_monthly_food_modifier = 0.02 #AI is dumb, so give them some food if they import this
 	}
 	country = {
 		global_nobles_happyness = happiness_small_svalue
@@ -608,7 +608,7 @@ jade = {
 		local_citizen_happyness = happiness_small_svalue
 	}
 	country = {
-		deify_ruler_cost_modifier = -0.1
+		local_population_capacity_modifier = 0.05 #deify_ruler_cost_modifier = -0.1
 	}
 
 	color = { 0.1 0.63 0.2 }
