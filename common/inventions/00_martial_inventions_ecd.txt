@@ -1736,12 +1736,12 @@ naval_tree = {
 
 	double_bow_and_stern_inv_1 = {
 		modifier = { 
-			tetrere_defensive = 0.05 
+			octere_defensive = 0.05 
 			hexere_defensive = 0.05
 			naval_damage_done = 0.025
 			navy_maintenance_cost = 0.01
 		}
-		requires = { trireme_discipline_inv_1 naval_new_inv_4 } #######################################
+		requires_or = { trireme_discipline_inv_1 naval_new_inv_4 } #######################################
 	}	
 
 	#New Invictus invention
@@ -1810,7 +1810,7 @@ naval_tree = {
 			naval_damage_done = 0.05
 			navy_maintenance_cost = 0.01
 		}
-		requires_or = { trireme_discipline_inv_4  liburnian_invention_1 }		
+		requires_or = { trireme_discipline_inv_4 liburnian_invention_1 }		
 	}	
 
 	blockade_efficiency_inv = {
@@ -1948,7 +1948,6 @@ naval_tree = {
 		modifier = { 
 			naval_morale_modifier = 0.1 
 			naval_damage_done = 0.05
-			trireme_offensive = 0.05
 			navy_maintenance_cost = 0.01
 		}
 		keystone = yes
@@ -2003,22 +2002,22 @@ naval_tree = {
 	# Level 10
 	double_bow_and_stern_inv_2 = {
 		modifier = { 
-			octere_morale = 0.05 
+			octere_defensive = 0.05 
 			mega_galley_defensive = 0.05
 			naval_damage_done = 0.025
 			navy_maintenance_cost = 0.01
 		}
-		requires_or = { global_ship_recruit_speed_inv  siege_engineers_inv_2 }					 
+		requires_or = { global_ship_recruit_speed_inv siege_engineers_inv_2 }			 
 	}
 
 	naval_weapon_platform_inv_3 = {
 		modifier = { 
-			octere_offensive = 0.25 
-			octere_defensive = -0.1
+			octere_offensive = 0.1 
+			octere_defensive = 0.1
 			navy_maintenance_cost = 0.01
 		}
 		keystone = yes
-		requires_or = { naval_rostra_inv_4  double_bow_and_stern_inv_2 }			
+		requires_or = { naval_rostra_inv_4 double_bow_and_stern_inv_2 }			
 	}
 
 	mega_catamaran_inv = {
