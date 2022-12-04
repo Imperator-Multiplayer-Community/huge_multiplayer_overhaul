@@ -199,7 +199,6 @@ has_food_trade_good_trigger = {
 			trade_goods = vegetables
 			trade_goods = honey
 			trade_goods = dates
-			trade_goods = fruits
 			trade_goods = wild_game
 			trade_goods = fruits
 			trade_goods = sugar
@@ -216,7 +215,6 @@ has_non_food_trade_good_trigger = {
 		trade_goods = vegetables
 		trade_goods = honey
 		trade_goods = dates
-		trade_goods = fruits
 		trade_goods = wild_game
 		trade_goods = fruits
 		trade_goods = sugar
@@ -261,9 +259,6 @@ has_minable_trade_good_trigger = {
 			trade_goods = gems
 			trade_goods = amber
 			trade_goods = salt
-			trade_goods = lapis
-			trade_goods = cinnabar
-			trade_goods = jade
 		}
 	}
 }
@@ -281,9 +276,6 @@ has_unminable_trade_good_trigger = {
 		trade_goods = gems
 		trade_goods = amber
 		trade_goods = salt
-		trade_goods = lapis
-		trade_goods = cinnabar
-		trade_goods = jade
 	}
 }
 

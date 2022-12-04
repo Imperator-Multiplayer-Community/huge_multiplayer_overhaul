@@ -213,7 +213,7 @@ extended_land_protection = {
 
 citizen_exemption_from_census_tax = {
 	global_citizen_happyness = 0.05
-	global_nobles_happyness = 0.05
+	global_nobles_happyness = 0.03
 	global_tax_modifier = -0.05
 	global_state_trade_routes = 0.25
 	global_population_capacity_modifier = 0.025

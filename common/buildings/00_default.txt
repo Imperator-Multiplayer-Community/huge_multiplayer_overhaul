@@ -789,7 +789,7 @@ local_forum_building = { #Provincial Legation as a town
 }
 
 workshop_building = { #Mill as a means of urban concentration of slaves
-	local_slaves_happyness = 0.03
+	local_slaves_happyness = -0.03
 	local_slaves_output = 0.06
 	local_goods_from_slaves = -2
 	local_slaves_desired_pop_ratio = 0.1

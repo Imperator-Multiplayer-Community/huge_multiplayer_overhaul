@@ -75,7 +75,7 @@ wild_game = { #190 territories
 	gold = 0.2
 	
 	province = {
-		local_monthly_food = 3
+		local_monthly_food = 2
 		local_tribesmen_happyness = happiness_small_svalue
 	}
 	country = {
@@ -107,7 +107,7 @@ leather = { #338 territories
 
 	province = {
 		local_slaves_happyness = happiness_small_svalue
-		local_tribesmen_happyness = happiness_small_svalue
+		local_freemen_happyness = happiness_small_svalue
 	}
 	country = {
 		light_infantry_defensive = 0.1
@@ -152,7 +152,7 @@ honey = { #86 territories
 	gold = 0.4
 
 	province = {
-		local_monthly_food = 3 #local_monthly_food_modifier = 0.03 
+		local_monthly_food = 2
 	}
 	country = {
 		light_cavalry_discipline = 0.1
@@ -198,7 +198,8 @@ dates = { #60 Territories
 	gold = 0.3
 
 	province = {
-		local_monthly_food = 3 #local_freemen_happyness = happiness_small_svalue
+		local_monthly_food = 2
+		local_freemen_happyness = happiness_small_svalue
 	}
 	country = {
 		global_commerce_modifier = 0.05

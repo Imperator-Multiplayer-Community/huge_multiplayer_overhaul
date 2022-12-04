@@ -219,13 +219,13 @@ revoked_tax_exemption = {
 
 land_protection = {
 	culture_freemen_output = -0.03
-	culture_citizen_happiness = 0.06
-	culture_nobles_happiness = 0.06
+	culture_citizen_happiness = 0.05
+	culture_nobles_happiness = 0.05
 }
 
 citizenship_by_adoption = {
 	culture_citizen_output = 0.05
-	culture_nobles_happiness = -0.03
+	culture_nobles_happiness = -0.05
 }
 
 trial_right = {
@@ -294,7 +294,7 @@ pandered_people = {
 #Unintegrated
 
 torture_protection = {
-	culture_slaves_happiness = 0.12
+	culture_slaves_happiness = 0.1
 	culture_slaves_output = 0.05
 	cultural_integration_speed_modifier = 0.2
 }

@@ -222,14 +222,6 @@ after_battle.4 = {
 			employer = {
 				trigger_event = {
 					id = after_battle.14
-				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
-				trigger_event = {
-					id = character_introductions.5
-					days = 5
 				}			
 			}
 		}

@@ -20,9 +20,12 @@
 		}
 		
 		effect = {
-			set_variable = bought_xp
 			add_political_influence = -15
 			add_military_experience = 5
+			set_variable = {
+				name = bought_xp
+				days = -1
+			}
 		}
 		
 		ai_will_do = {
