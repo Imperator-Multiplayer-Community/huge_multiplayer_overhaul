@@ -48,7 +48,7 @@ mesopotamian_religion = { # Chaldean
 	modifier = { 
 		global_monthly_civilization = 0.02
 		build_cost = -0.025
-		bribe_pi_cost_modifier = 0.2
+		bribe_pi_cost_modifier = 0.3
 		global_defensive = -0.05
 	}
 	religion_category = pantheon
@@ -107,7 +107,7 @@ zoroaster = { # Zoroastrianism
 	modifier = { 
 		#army_maintenance_cost = -0.05
 		monthly_political_influence_modifier = 0.05
-		loyalty_gain_chance_modifier = 0.05
+		#loyalty_gain_chance_modifier = 0.05
 	}
 	religion_category = firetemples
 	sacrifice_icon = sacrifice_incense
@@ -118,7 +118,7 @@ berber_religion = { # Megalithic
 	modifier = { 
 		#light_cavalry_discipline = 0.05
 		diplomatic_relations = 1
-		character_loyalty = -3
+		character_loyalty = -2
 	}
 	religion_category = pantheon
 }
@@ -136,9 +136,9 @@ germanic_religion = { # Tuistic
 indo_iranian_religion = { # Heptadic
 	color = hsv { 0.2 0.5 0.8 }
 	modifier = { 
-		#war_exhaustion = -0.01
+		war_exhaustion = -0.02
 		#land_morale_modifier = 0.025
-		character_loyalty = -3
+		character_loyalty = -2
 	}
 	religion_category = pantheon
 	sacrifice_icon = sacrifice_incense
@@ -148,8 +148,8 @@ arabian_pantheon = { # Arabic
 	color = hsv { 0.3 0.7 0.6 }
 	modifier = { 
 		hostile_attrition = 0.25
-		enslavement_efficiency = 0.05
-		character_loyalty = -3
+		enslavement_efficiency = 0.025
+		character_loyalty = -2
 	}
 	religion_category = pantheon
 }
@@ -220,7 +220,7 @@ pre_indo_european_religion = { # Marite
 	color = hsv { 0.2  0.25  0.5 }
 	modifier = { 
 		global_population_happiness = 0.03
-		navy_maintenance_cost = 0.05
+		#navy_maintenance_cost = 0.05
 		#light_infantry_defensive = 0.1
 	}
 	religion_category = pantheon
@@ -230,7 +230,7 @@ puntic_religion = {
 	color = hsv { 0.95 1.0 0.85 } #CHANGE THIS IT'S TOO CLOSE TO BON
 	modifier = { 
 		global_commerce_modifier = 0.025
-		global_defensive = 0.05
+		#global_defensive = 0.05
 	}
 	religion_category = pantheon
 	sacrifice_icon = sacrifice_incense
