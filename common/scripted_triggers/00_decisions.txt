@@ -1,4 +1,4 @@
-﻿is_tier_1_formable_trigger = {
+﻿Ais_tier_1_formable_trigger = {
 	OR = {
 		tag = ACH #achaea
 		tag = AQI #aquitania
@@ -199,7 +199,7 @@ has_food_trade_good_trigger = {
 			trade_goods = vegetables
 			trade_goods = honey
 			trade_goods = dates
-			trade_goods = fruit
+			trade_goods = fruits
 			trade_goods = wild_game
 		}
 	}
@@ -213,7 +213,7 @@ has_non_food_trade_good_trigger = {
 		trade_goods = vegetables
 		trade_goods = honey
 		trade_goods = dates
-		trade_goods = fruit
+		trade_goods = fruits
 		trade_goods = wild_game
 	}
 }

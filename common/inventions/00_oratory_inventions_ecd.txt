@@ -975,7 +975,7 @@
 	# Level 12
 	war_score_cost_inv_3 = { 
 		modifier = { 
-			global_manpower_modifier = 0.1
+			global_manpower_modifier = 0.075
 			global_population_happiness = -0.05
 			war_exhaustion = -0.02
 			army_maintenance_cost = 0.01
