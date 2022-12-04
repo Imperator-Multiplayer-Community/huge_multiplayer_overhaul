@@ -209,7 +209,8 @@ wild_game = { #190 territories
 	gold = 0.2
 	
 	province = {
-		local_monthly_food = 3 #local_tribesmen_happyness = happiness_small_svalue
+		local_monthly_food = 3
+		local_tribesmen_happyness = happiness_small_svalue
 	}
 	country = {
 		archers_discipline = 0.1
@@ -329,7 +330,7 @@ leather = { #338 territories
 	gold = 0.2
 
 	province = {
-		local_freemen_happyness = happiness_small_svalue
+		local_slaves_happyness = happiness_small_svalue
 		local_tribesmen_happyness = happiness_small_svalue
 	}
 	country = {

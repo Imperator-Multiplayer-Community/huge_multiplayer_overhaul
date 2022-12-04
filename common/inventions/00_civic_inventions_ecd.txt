@@ -1294,7 +1294,9 @@ civic_2 = {
 		modifier = { 
         			 global_unrest = -0.25
         			 price_patron_of_arts_button_cost_modifier = -0.3
-        			 buy_idea_cost_modifier = -0.25  }
+        			 buy_idea_cost_modifier = -0.25
+        			 global_manpower_modifier = -0.025  
+        }
 		on_activate = { custom_tooltip = "allow_gw_effect_culture_expansion" }
 		requires = { citizen_promotion_cost_modifier_inv }
 		icon_override = gw_icon

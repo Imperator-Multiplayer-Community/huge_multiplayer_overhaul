@@ -1498,8 +1498,8 @@ naval_tree = {
 	#New Invictus invention
     monsoon_navigation_inv = { 
         modifier = { 
-        	diplomatic_range_modifier = 1.8
-        	control_range_modifier = 0.35
+        	diplomatic_range_modifier = 2
+        	control_range_modifier = 1.5
 		}
         requires = { sewn_planks_inv }
         allow = {

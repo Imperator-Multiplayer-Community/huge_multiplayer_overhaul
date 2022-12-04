@@ -130,7 +130,7 @@
 		modifier = { 
 			fabricate_claim_speed = 0.25 
 			monthly_political_influence_modifier = 0.025
-			control_range_modifier = 0.20
+			control_range_modifier = 0.3
 			diplomatic_range_modifier = 0.20
 		}
 		requires = { tribute_income_modifier_inv_1 }
@@ -156,7 +156,7 @@
 	}
 
 	subject_loyalty_inv = {
-		modifier = { diplomatic_relations = 1
+		modifier = { control_range_modifier = 0.3
 					 integrate_speed = 0.25
 					 agressive_expansion_monthly_change = -0.04
 					 naval_range = 0.1 }
@@ -1932,7 +1932,7 @@ oratory_2 = {
 	diplo_range_inv_1 = {
 		modifier = { 
 			diplomatic_range_modifier = 0.15
-			control_range_modifier = 0.1
+			control_range_modifier = 0.3
 		}
 		
 		requires = { smear_character_cost_modifier_inv }
@@ -1992,7 +1992,7 @@ oratory_2 = {
 
 	# Level 4
 	control_range_modifier_inv = { 
-		modifier = { control_range_modifier = 0.1
+		modifier = { control_range_modifier = 0.3
 					 support_rebels_cost_modifier = -0.15
 		}
 		
@@ -2045,7 +2045,7 @@ oratory_2 = {
 	tyranny_inv_2 = {
 		modifier = { 
 			monthly_tyranny = -0.02
-			control_range_modifier = 0.15
+			diplomatic_relations = 1
 			diplomatic_range_modifier = 0.15
 		}
 		requires = { control_range_modifier_inv }
@@ -2424,7 +2424,7 @@ oratory_2 = {
 	diplo_range_inv_4 = {
 		modifier = { 
 			diplomatic_range_modifier = 0.3
-			control_range_modifier = 0.2
+			control_range_modifier = 0.3
 			diplomatic_relations = 3
 		}
 		keystone = yes
