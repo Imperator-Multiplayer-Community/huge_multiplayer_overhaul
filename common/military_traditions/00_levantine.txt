@@ -39,6 +39,13 @@
 			}
 			country_culture_group = north_african
 		}
+		trigger_else_if = {
+			limit = { country_culture_group = fezzani }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = fezzani
+		}
 		trigger_else = {
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
