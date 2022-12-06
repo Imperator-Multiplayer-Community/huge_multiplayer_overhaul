@@ -3900,3 +3900,112 @@ pannonian_pannonian_heritage = {
 		tag = PAN
 	}
 }
+
+garamantes_heritage = {
+	modifier = {
+		#good
+		desert_combat_bonus = 0.1
+		global_commerce_modifier = 0.1
+		#bad
+		diplomatic_reputation = -2
+	}
+
+	trigger = {
+		tag = GAR
+	}
+}
+
+#Machylia
+Androgynous_heritage = {
+	modifier = {
+		#good
+		discipline = 0.05
+		global_start_experience = 5.0
+
+		#bad
+		diplomatic_reputation = -2.0
+	}
+
+	trigger = {
+		tag = MHY
+	}
+}
+
+Nasamonian_heritage = {
+	modifier = {
+		#good
+		army_movement_speed = 0.05
+		desert_combat_bonus = 0.1
+
+		#bad
+		global_population_growth = -0.02
+	}
+
+	trigger = {
+		tag = NAS
+	}
+}
+
+#Psyllia
+Snake_Bite_heritage = {
+	modifier = {
+		#good
+		diplomatic_reputation = 2.0
+		omen_power = 0.12
+
+		#bad
+		retreat_delay = 1.0
+	}
+
+	trigger = {
+		tag = PSY
+	}
+}
+
+#Makae
+Heritage_of_the_Ostrich_Shield = {
+	modifier = {
+		#good
+		hills_combat_bonus = 0.1
+		build_cost = -0.05
+
+		#bad
+		build_time = 0.1
+	}
+
+	trigger = {
+		tag = MKA
+	}
+}
+
+#Phazania
+Pheasant_heritage = {
+	modifier = {
+		#good
+		build_cost = -0.1
+		global_defensive = 0.1
+
+		#bad
+		happiness_for_wrong_culture_modifier = -0.04
+	}
+
+	trigger = {
+		tag = PHZ
+	}
+}
+
+#Gindania
+Heritage_of_the_Leather_Legged_Women = {
+	modifier = {
+		#good
+		global_population_growth = 0.03
+		global_tribesmen_happyness = 0.06
+
+		#bad
+		global_tribesmen_output = -0.05
+	}
+
+	trigger = {
+		tag = GIN
+	}
+}
