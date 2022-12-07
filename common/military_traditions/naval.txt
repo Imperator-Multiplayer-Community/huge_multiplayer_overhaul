@@ -6,24 +6,24 @@
 		is_ai = no
 	}
 
-	naval_cost_path = {
-		modifier = {
-			navy_maintenance_cost = -0.05
-			navy_movement_speed = 0.1
-		}
-		icon = greek_seleucid_path_3
-		requires = { }
-	}
+#	naval_cost_path = {
+#		modifier = {
+#			navy_maintenance_cost = -0.05
+#			navy_movement_speed = 0.1
+#		}
+#		icon = greek_seleucid_path_3
+#		requires = { }
+#	}
 
 
 	naval_light_path = {
 		modifier = {
 			navy_maintenance_cost = 0.01
-			liburnian_morale = 0.3
+			liburnian_morale = 0.3 #########
 			trireme_morale = 0.3
 		}
 		icon = levantine_egyptian_path_2
-		requires = { naval_cost_path }
+		requires = { }
 	}
 
 	naval_light_path_discipline = {
@@ -55,7 +55,7 @@
 			hexere_defensive = 0.1
 		}
 		icon = greek_antigonid_path_2
-		requires = { naval_cost_path }
+		requires = {  }
 	}
 
 	naval_mid_path_morale = {
@@ -86,7 +86,7 @@
 			mega_galley_offensive = 0.15
 		}
 		icon = mauryan_coastal_path_3
-		requires = { naval_cost_path }
+		requires = {  }
 	}
 
 

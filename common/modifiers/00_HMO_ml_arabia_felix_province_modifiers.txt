@@ -14,12 +14,12 @@ mines_of_tharsis = {
 
 pearl_divers_tylos = {
 	base_resources = 1
-	local_state_trade_routes = 2
+	local_base_trade_routes = 2
 }
 
 royal_ironworks_ganagaras = {
 	local_goods_from_slaves = -4
-	base_resources = 1
+	base_resources = 2
 }
 
 dragonsblood_soqotra = {
@@ -32,58 +32,58 @@ incense_fields_qana = {
 }
 
 incense_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 cinnamon_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 lapis_lazuli_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 monsoon_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 black_pepper_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 red_sea_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 bactrian_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 sogdian_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 margian_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 north_tarim_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 west_tarim_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 

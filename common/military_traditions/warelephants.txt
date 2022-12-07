@@ -122,7 +122,8 @@
 
 	warelephant_path_1 = { ###
 		modifier = { 
-			warelephant_cost = -0.1
+			warelephant_cost = -0.05
+			warelephant_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_army_path_5 #updated
@@ -131,17 +132,18 @@
 
 	warelephant_path_2 = { ###
 		modifier = { 
-			warelephant_movement_speed = 0.1
-			levy_size_multiplier = 0.005
+			warelephant_cost = -0.05
+			warelephant_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_4 #updated
-		requires = {warelephant_path_1}
+		requires = { }
 	}
 	
 	warelephant_path_3 = { ###
 		modifier = { 
-			warelephant_offensive = 0.1
+			warelephant_offensive = 0.05
+			warelephant_morale = 0.05
 			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
@@ -151,17 +153,19 @@
 
 	warelephant_path_4 = { ### 
 		modifier = { 
-			warelephant_defensive = 0.1
+			warelephant_defensive = 0.05
+			warelephant_discipline = 0.05
 			discipline = 0.025
 			army_maintenance_cost = 0.01
 		}
 		icon = mauryan_noble_path_2 #updated
-		requires = {warelephant_path_2}
+		requires = {warelephant_path_1}
 	}
 
 	warelephant_path_5 = { ###
 		modifier = { 
-			warelephant_morale = 0.1
+			warelephant_offensive = 0.05
+			warelephant_morale = 0.05
 			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01		
 		} 
@@ -171,7 +175,8 @@
 
 	warelephant_path_6 = { ###
 		modifier = { 
-			warelephant_discipline = 0.1
+			warelephant_defensive = 0.05
+			warelephant_discipline = 0.05
 			discipline = 0.025
 			army_maintenance_cost = 0.01
 			
@@ -185,6 +190,7 @@
 			levy_size_multiplier = 0.01
 			discipline = 0.01
 			army_maintenance_cost = 0.01
+			global_population_happiness = -0.03
 		}
 		icon = north_african_army_path_5
 		requires = { warelephant_path_6 warelephant_path_5 }

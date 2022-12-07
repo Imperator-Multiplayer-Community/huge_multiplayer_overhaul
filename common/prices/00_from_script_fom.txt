@@ -29,7 +29,8 @@ secude_governor = {
 }
 
 gift_slave = {
-	scaled_gold = 2
+	gold = 100
+	political_influence = 15
 }
 
 send_letter = {
@@ -47,24 +48,24 @@ price_force_divorce = {
 }
 
 price_state_investment_military = {
-	political_influence = 60
+	political_influence = 50
 }
 price_state_investment_civic = {
-	political_influence = 60
+	political_influence = 50
 }
 price_state_investment_oratory = {
-	political_influence = 60
+	political_influence = 50
 }
 price_state_investment_religious = {
-	political_influence = 60
+	political_influence = 50
 }
 
 price_oaths_of_allegiance_button = {
-	political_influence = 50
+	political_influence = 40
 }
 
 price_patron_of_arts_button = {
-	political_influence = 50
+	political_influence = 40
 }
 
 price_assemble_raiding_party_button = {
@@ -112,7 +113,7 @@ raise_levies = {
 }
 
 price_support_primary_heir = {
-	tyranny = 2
+	tyranny = 5
 }
 
 price_arena_match = {

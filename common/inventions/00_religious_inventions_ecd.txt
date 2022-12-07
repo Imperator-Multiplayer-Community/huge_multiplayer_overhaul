@@ -111,7 +111,7 @@ religious_1 = {
 
 	global_slaves_happyness_inv = {
 		modifier = { global_slaves_happyness = 0.05 
-					 global_freemen_output = 0.05
+					 global_freemen_output = 0.03
 					 global_citizen_happyness = -0.05
 					 global_pop_promotion_speed_modifier = 0.1
 		}
@@ -122,14 +122,13 @@ religious_1 = {
 		modifier = { 
 			global_population_growth = 0.03
 			global_monthly_food_modifier = 0.03
-			global_food_capacity = 250
+			global_food_capacity = 300
 		}
 		requires = { technology_cost_inv_1 }
 	} 	
 
 	technology_cost_inv_2 = {
 		modifier = { price_state_investment_religious_cost_modifier = -0.1
-					 global_food_capacity = 250
 					 global_population_capacity_modifier = 0.025 }
 		on_activate = {
 			add_1_free_province_investments = yes
@@ -231,7 +230,7 @@ religious_1 = {
 
 	religious_tech_investment_inv_1 = { 
 		modifier = { 
-			global_monthly_civilization = 0.03
+			global_monthly_civilization = 0.02
 			monthly_political_influence_modifier = 0.025
 		  }
 		on_activate = {
@@ -393,7 +392,7 @@ religious_1 = {
 					 cohort_reinforcement_speed = 0.025
 					 army_maintenance_cost = 0.01
 		 }
-		 on_activate = {
+		on_activate = {
 			add_innovation = 1
 		}
 		requires_or = { stability_inv_3 land_morale_recovery_inv_5 }
@@ -404,6 +403,9 @@ religious_1 = {
 					 global_monthly_state_loyalty = 0.02
 					 price_anabasis_cost_modifier = -0.25
 					 monthly_wage_modifier = 0.01 }
+		on_activate = {
+			add_1_free_province_investments = yes
+		}
 		requires_or = { global_tribesmen_happyness_inv technology_cost_inv_3 }
 	}	
 
@@ -582,6 +584,7 @@ religious_1 = {
 		modifier = { 
 			global_monthly_food_modifier = 0.05
 			global_population_growth = 0.05
+			basic_settlement_infratructure_building_cost = -0.1
 		}
 		keystone = yes
 		requires_or = { land_morale_recovery_inv_5 ruler_popularity_gain_inv_4 }
@@ -594,6 +597,7 @@ religious_1 = {
 		modifier = { 
 			happiness_for_same_religion_modifier = 0.025
 			global_citizen_output = 0.03
+			global_monthly_civilization = 0.01
 		}
 		keystone = yes
 		on_activate = {
@@ -781,8 +785,9 @@ religious_1 = {
 	# Level 6 - 9 DLC
 	omen_power_inv_2 = { 
 		modifier = {	
-					 land_morale_recovery = 0.02
-					 army_maintenance_cost = 0.01
+			cohort_reinforcement_speed = 0.025
+			land_morale_recovery = 0.02
+			army_maintenance_cost = 0.01
 		}
 		requires = { global_unrest_inv_4 }
 	}
@@ -1043,6 +1048,9 @@ religious_1 = {
 	stability_inv_4 = {
 		modifier = { stability_cost_modifier = -0.075 }
 		requires = { omen_duration_inv_4 }
+		on_activate = {
+			add_1_free_province_investments = yes
+		}
 	}	
 
 	omen_duration_inv_3 = {
@@ -1128,7 +1136,7 @@ religious_1 = {
 	global_manpower_modifier_inv_3 = {
 		modifier = { 
 			army_movement_speed = 0.025
-			cohort_reinforcement_speed = 0.05
+			cohort_reinforcement_speed = 0.025
 			army_maintenance_cost = 0.01 }
 		requires = { global_manpower_modifier_inv_1 }
 	}

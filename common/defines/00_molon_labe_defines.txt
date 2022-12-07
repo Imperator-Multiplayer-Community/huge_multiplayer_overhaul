@@ -8,6 +8,8 @@
 }
 
 NCountry = {
+	MAXIMUM_MILITARY_EXPERIENCE = 200 ############################################ Hmmmmmm....
+
 	PIG_STAB_DURATION = 3650 # was 1825
 	BASE_NAVAL_RANGE = 650
 
@@ -42,6 +44,7 @@ NUnit = {
 	WAR_EXHAUSTION_ON_RAISE = 0 # was 0.5 can be exploited to keep WE high
 	OUTSIDE_OF_NAVAL_RANGE_ATTRITION = 8 #Was 4.0
 	NAVAL_ATTRITION_CHANCE = 1 #Was 0.4
+	NAVAL_MORALE = 2.0 #Was 2.0
 }
 
 NPolitics = {

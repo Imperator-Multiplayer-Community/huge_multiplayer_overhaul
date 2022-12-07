@@ -26,11 +26,11 @@ country_decisions = {
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 20
+			military_experience >= 15
 		}
 	effect = {
 		add_treasury = -100
-		add_military_experience = -20
+		add_military_experience = -15
 
 		add_country_modifier = { 
 			name = better_armour 
@@ -51,11 +51,11 @@ country_decisions = {
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 20
+			military_experience >= 15
 		}
 	effect = {
 		add_treasury = -100
-		add_military_experience = -20
+		add_military_experience = -15
 
 		add_country_modifier = { 
 			name = better_weapons 
@@ -76,11 +76,11 @@ country_decisions = {
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 20
+			military_experience >= 15
 		}
 	effect = {
 		add_treasury = -100
-		add_military_experience = -20
+		add_military_experience = -15
 
 		add_country_modifier = { 
 			name = routine_drill
@@ -105,14 +105,14 @@ country_decisions = {
 		}	
 		allow = {
 			treasury >= 100
-			military_experience >= 20
+			military_experience >= 15
 			invention = naval_tactic_inv_1
 			capital_scope.state = { 
 				trade_good_surplus = { target = wood value > 0 }
 			}
 		}
 		effect = {
-			add_military_experience = -20
+			add_military_experience = -15
 			add_treasury = -100
 			add_country_modifier = { 
 				name = coastal_defence
@@ -134,14 +134,14 @@ country_decisions = {
 		}		
 		allow = {
 			treasury >= 100
-			military_experience >= 20
+			military_experience >= 15
 			invention = navy_maintenance_cost_inv_1
 			capital_scope.state = { 
 				trade_good_surplus = { target = wood value > 0 }
 			}
 		}
 		effect = {
-			add_military_experience = -20
+			add_military_experience = -15
 			add_treasury = -100
 			add_country_modifier = { 
 				name = sea_offence

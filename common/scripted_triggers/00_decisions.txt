@@ -202,7 +202,7 @@ has_food_trade_good_trigger = {
 			trade_goods = wild_game
 			trade_goods = fruits
 			trade_goods = sugar
-			trade_goods = dates
+			trade_goods = olive
 		}
 	}
 }
@@ -218,7 +218,7 @@ has_non_food_trade_good_trigger = {
 		trade_goods = wild_game
 		trade_goods = fruits
 		trade_goods = sugar
-		trade_goods = dates
+		trade_goods = olive
 	}
 }
 

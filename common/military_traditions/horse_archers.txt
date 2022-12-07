@@ -184,7 +184,8 @@
 
 	horse_archers_path_1 = { ###
 		modifier = { 
-			horse_archers_cost = -0.1
+			horse_archers_cost = -0.05
+			horse_archers_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_6
@@ -193,18 +194,19 @@
 
 	horse_archers_path_2 = { ###
 		modifier = { 
-			horse_archers_movement_speed = 0.1
-			levy_size_multiplier = 0.005
+			horse_archers_cost = -0.05
+			horse_archers_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = celtic_gallic_path_1
-		requires = {horse_archers_path_1}
+		requires = { }
 	}
 	
 	horse_archers_path_3 = { ###
 		modifier = { 
-			horse_archers_offensive = 0.1
-			discipline = 0.025
+			horse_archers_offensive = 0.05
+			horse_archers_morale = 0.05
+			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
@@ -213,18 +215,20 @@
 
 	horse_archers_path_4 = { ### 
 		modifier = { 
-			horse_archers_defensive = 0.1
-			levy_size_multiplier = 0.005
+			horse_archers_defensive = 0.05
+			horse_archers_discipline = 0.05
+			discipline = 0.025
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_7
-		requires = {horse_archers_path_2}
+		requires = {horse_archers_path_1}
 	}
 
 	horse_archers_path_5 = { ###
 		modifier = { 
-			horse_archers_morale = 0.1
-			discipline = 0.025
+			horse_archers_offensive = 0.05
+			horse_archers_morale = 0.05
+			levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 			
 		} 
@@ -234,12 +238,13 @@
 
 	horse_archers_path_6 = { ###
 		modifier = { 
-			horse_archers_discipline = 0.1
-			levy_size_multiplier = 0.005
+			horse_archers_defensive = 0.05
+			horse_archers_discipline = 0.05
+			discipline = 0.025
 			army_maintenance_cost = 0.01		
 		} 
 		icon = levantine_arabian_path_end_bonus #updated
-		requires = {horse_archers_path_4 }
+		requires = {horse_archers_path_4}
 	}
 
 	horse_archers_path_7 = { ### final generic tradition
@@ -247,6 +252,7 @@
 			levy_size_multiplier = 0.01
 			discipline = 0.01
 			army_maintenance_cost = 0.01
+			global_population_happiness = -0.03
 		}
 		icon = north_african_tribal_path_2
 		requires = { horse_archers_path_6 horse_archers_path_5 }
