@@ -206,15 +206,44 @@ vineyard_building_cost = {
 industry_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-send_letter_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/build_cost.dds"
-}
-go_hunting_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/build_cost.dds"
-}
+
+
 subject_player_client_state_pays_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
+
 border_fortress_building_cost = {
     positive = "gfx/interface/icons/modifiers/fortress_building_cost.dds"
+}
+
+gift_slave_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/culture_slaves_output.dds"
+}
+
+give_relic_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+price_force_divorce_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_fam_prestige.dds"
+}
+
+price_tribal_duel_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_clan_chief_loyalty.dds"
+}
+
+price_test_loyalty_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_loyalty.dds"
+}
+
+send_letter_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/ruler_popularity_gain.dds"
+}
+
+go_hunting_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/diplomatic_reputation.dds"
+}
+
+price_humiliate_rival_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/smear_character_cost_modifier.dds"
 }

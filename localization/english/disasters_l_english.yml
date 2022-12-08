@@ -88,3 +88,11 @@ disasters_inv.14.a:0 "Better late than never."
 disasters_inv.15.t:0 "The Locusts are gone"
 disasters_inv.15.desc:0 "The newest reports coming out of [we_are_hungry.GetName] and the surrounding area indicate that the locusts have mostly disappeared. The danger of a locust plague is no longer pending, but it will be a while before the region completely recovers. Hopefully, the damnable creatures are now in the lands of our enemies...may they never return!"
 disasters_inv.15.a:0 "Finally!"
+
+#Monsoon modifiers
+
+good_monsoon:0 "Divine Monsoon"
+blessed_monsoon:0 "Blessed Monsoon"
+bad_monsoon:0 "Harsh Monsoon"
+terrible_moonsoon:0 "Fearsome Monsoon"
+destructive_monsoon:0 "Ferocious Monsoon"

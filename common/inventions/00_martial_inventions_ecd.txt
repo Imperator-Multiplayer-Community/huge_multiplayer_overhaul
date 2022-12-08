@@ -16,7 +16,7 @@
 	# Level 1
 	global_start_experience_inv_1 = { 
 		modifier = { 
-			army_movement_speed = 0.025
+			army_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		}
 
@@ -121,8 +121,11 @@
 	}
 
 	global_supply_limit_modifier_inv_2 = { 
-		modifier = { army_weight_modifier = -0.1
-					 army_maintenance_cost = 0.01 }
+		modifier = { 
+			army_weight_modifier = -0.1
+			go_hunting_cost_modifier = -0.3
+			army_maintenance_cost = 0.01
+		}
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
@@ -475,6 +478,7 @@
 		requires_or = { army_movement_speed_inv  army_maintenance_cost_inv_1 }
 		modifier = { global_supply_limit_modifier = 0.1
 					 supply_train_movement_speed = 0.15
+					 army_movement_speed = 0.05
 					 army_maintenance_cost = 0.01 }
 	}
 
@@ -585,7 +589,7 @@
 
 	retreat_delay_inv = {
 		requires = { army_movement_speed_inv }
-		modifier = { army_movement_speed = 0.025
+		modifier = { army_movement_speed = 0.05
 					 retreat_delay = -1
 					 army_maintenance_cost = 0.01 }
 	}
@@ -891,10 +895,10 @@ military_inventions = {
 		modifier = { 
 			land_unit_attrition = -0.1
 			siege_ability = 0.025
-			fortress_ramparts_building_cost = -0.15
+			fortress_ramparts_building_cost = -0.1
 			army_maintenance_cost = 0.01
 		}
-		
+		on_activate = { custom_tooltip = "grand_siege_decision" }
 		requires_or = { siege_speed_inv_3 global_defensive_inv_3 }
 	}
 
@@ -905,7 +909,7 @@ military_inventions = {
 			army_movement_speed = -0.01
 			army_maintenance_cost = 0.01
 		}
-
+		on_activate = { custom_tooltip = "furious_assault_decision" }
 		keystone = yes
 	}	
 
@@ -987,7 +991,7 @@ military_inventions = {
 		requires = { siege_speed_inv_4 }
 		modifier = { 
 			global_defensive = 0.2
-			fortress_ramparts_building_cost = -0.15
+			fortress_ramparts_building_cost = -0.1
 			fort_maintenance_cost = 0.01  
 		}
 		on_activate = { custom_tooltip = "fortified_capital_decision" }
@@ -1591,7 +1595,7 @@ naval_tree = {
         #New Invictus invention
     dhow_inv = { 
         modifier = { 
-        	global_ship_recruit_speed = 0.25
+        	global_ship_recruit_speed = 0.2
         	navy_maintenance_cost = 0.01
 		}
         requires = { sewn_planks_inv }

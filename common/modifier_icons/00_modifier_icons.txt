@@ -2738,25 +2738,25 @@ price_found_city_cost_modifier = {
 	positive = "gfx/interface/icons/modifiers/price_found_city_cost_modifier.dds"
 }
 
-latifundia_building_cost = {
-	positive = "gfx/interface/icons/_default.dds" #Unused
-}
+#latifundia_building_cost = {
+#	positive = "gfx/interface/icons/_default.dds" #Unused
+#}
 
-slave_mine_building_cost = {
-	positive = "gfx/interface/icons/_default.dds" #Unused
-}
+#slave_mine_building_cost = {
+#	positive = "gfx/interface/icons/_default.dds" #Unused
+#}
 
-basic_settlement_infratructure_building_cost = {
-	positive = "gfx/interface/icons/_default.dds" #Unused
-}
+#basic_settlement_infratructure_building_cost = {
+#	positive = "gfx/interface/icons/_default.dds" #Unused
+#}
 
-hill_fort_cost = {
-	positive = "gfx/interface/icons/_default.dds" #Unused
-}
+#hill_fort_cost = {#
+#	positive = "gfx/interface/icons/_default.dds" #Unused
+#}
 
-local_forum_building_cost = {
-	positive = "gfx/interface/icons/_default.dds" #Unused
-}
+#local_forum_building_cost = {
+#	positive = "gfx/interface/icons/_default.dds" #Unused
+#}
 
 local_monthly_food = {
 	positive = "gfx/interface/icons/modifiers/local_monthly_food.dds"
@@ -3226,18 +3226,7 @@ local_forum_building_cost = {
 inspire_disloyalty_black_widow_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/bribe_character_cost_modifier.dds"
 }
-gift_slave_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/max_loyalty.dds"
-}
-price_force_divorce_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/appoint_dictator_cost_modifier.dds"
-}
-price_tribal_duel_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/monthly_clan_chief_loyalty.dds"
-}
-price_test_loyalty_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/price_bring_to_trial_cost_modifier.dds"
-}
+
 
 port_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"

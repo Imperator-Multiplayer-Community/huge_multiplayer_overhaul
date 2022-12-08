@@ -182,6 +182,10 @@
  loved_by_the_gods:0 "Favoured by the Gods"
  unloved_by_the_gods:0 "Spurned by the Gods"
 
+ grand_assault_mod:0 "Furious Assault"
+ grand_siege_mod:0 "Grand Siege"
+ 
+
  social_stability:0 "Social Instability"
  civil_war_risk:0 "Civil Tension"
  social_unrest:0 "Social Strife"
@@ -193,8 +197,6 @@
  indian_social_disloyalty:0 "Open Mockery"
 
  mass_slave_death:0 "Exhausted Slaves"
-
-
 
  paradisial_gardens_modifier:0 "Paradisial Gardens"
  desc_paradisial_gardens_modifier:0 "These gardens have been built by a rich land-owner in one of his estates to relax."
@@ -209,9 +211,7 @@
  desc_gallic_item_8:0 "Before each battle, the warriors will assemble and clank on their shields. The drummers will then join in forcefully and heighten the morale of the troops."
   
  inspire_disloyalty_black_widow_cost_modifier:0 "Tempt Cost"
- gift_slave_cost_modifier:0 "Gift Slave Cost"
- price_force_divorce_cost_modifier:0 "Force Divorce Cost"
- price_tribal_duel_cost_modifier:0 "Challenge Duel Cost"
+
  price_test_loyalty_cost_modifier:0 "Test Loyalty Cost"
  support_rebels_cost_modifier:0 "Support Rebels Cost"
  price_patron_of_arts_button_cost_modifier:0 "Patron of the Arts Cost"
@@ -225,6 +225,14 @@
  latifundia_building_cost:0 "Slave Estate Build Cost"
  basic_settlement_infratructure_building_cost:0 "Build Farm Cost"
  slave_mine_building_cost:0 "Build Mine Cost"
+
+ send_letter_cost_modifier:0 "Send Letter Cost"
+ go_hunting_cost_modifier:0 "Invite Hunting Cost"
+ gift_slave_cost_modifier:0 "Gift Slave Cost"
+ give_relic_cost_modifier:0 "Send Marvellous Gift Cost"
+ price_force_divorce_cost_modifier:0 "Force Divorce Cost"
+ price_tribal_duel_cost_modifier:0 "Challenge Duel Cost"
+ price_humiliate_rival_cost_modifier:0 "Humiliate Rival Cost"
 
  MODIFIER_CONTROL_RANGE:0 "Control Range Modifier"
  MODIFIER_NAVY_WEIGHT_MODIFIER:0 "Navy Weight Modifier"

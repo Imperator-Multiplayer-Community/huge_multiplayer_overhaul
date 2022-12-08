@@ -99,6 +99,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4631 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 1
@@ -117,6 +119,8 @@
 					TRADE_GOOD = myrrh
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -141,6 +145,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4685 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 1
@@ -155,6 +161,8 @@
 					name = qana_myrrh_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -179,6 +187,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4648 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 2
@@ -193,6 +203,8 @@
 					name = saraka_myrrh_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -217,6 +229,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7523 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -231,6 +245,8 @@
 					name = moundou_myrrh_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -256,6 +272,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7173 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -274,6 +292,8 @@
 					TRADE_GOOD = sugar
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -298,7 +318,8 @@
 		}
 
 		allow = {
-			p:7329 = {
+			treasury >= 500
+			political_influence >= 20			p:7329 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
 				}
@@ -316,6 +337,8 @@
 					TRADE_GOOD = sugar
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -340,6 +363,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7356 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -358,6 +383,8 @@
 					TRADE_GOOD = sugar
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -383,6 +410,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:1439 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 1
@@ -397,6 +426,8 @@
 					name = mirobriga_cinnabar_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -421,6 +452,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4025 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -439,6 +472,8 @@
 					TRADE_GOOD = cinnabar
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -463,6 +498,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4195 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -477,6 +514,8 @@
 					name = singidunum_cinnabar_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -502,6 +541,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6694 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -516,6 +557,8 @@
 					name = eukratideia_lapis_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -540,6 +583,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6611 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -554,6 +599,8 @@
 					name = kaukasou_lapis_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -579,6 +626,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6742 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 2
@@ -593,6 +642,8 @@
 					name = pishan_jade_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -617,6 +668,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6741 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -631,6 +684,8 @@
 					name = yutian_jade_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -655,6 +710,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7184 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 2
@@ -669,6 +726,8 @@
 					name = kuche_jade_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -694,6 +753,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:3344 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -708,6 +769,8 @@
 					name = serapeion_silphium_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -733,6 +796,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:3402 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -747,6 +812,8 @@
 					name = darabgird_marble_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -772,6 +839,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4346 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -786,6 +855,8 @@
 					name = madra_silk_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -810,6 +881,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4985 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -824,6 +897,8 @@
 					name = rasht_silk_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -848,6 +923,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6704 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -862,6 +939,8 @@
 					name = alexandreia_eschate_silk_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -887,6 +966,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:8128 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -901,6 +982,8 @@
 					name = augila_dates_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -925,6 +1008,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7199 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -939,6 +1024,8 @@
 					name = gerrha_dates_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -963,6 +1050,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4353 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -977,6 +1066,8 @@
 					name = brahmanaka_dates_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1002,6 +1093,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6912 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1016,6 +1109,8 @@
 					name = korkei_amber_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1040,6 +1135,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:2151 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1054,6 +1151,8 @@
 					name = vorganium_amber_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1078,6 +1177,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4750 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1092,6 +1193,8 @@
 					name = rugia_amber_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1117,6 +1220,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:2187 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 2
@@ -1131,6 +1236,8 @@
 					name = brigantia_metals_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1155,6 +1262,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:1139 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1169,6 +1278,8 @@
 					name = assegonia_metals_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1193,6 +1304,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7022 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1207,6 +1320,8 @@
 					name = belgola_metals_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1231,6 +1346,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:1739 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -1245,6 +1362,8 @@
 					name = tqvarcheli_metals_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1270,6 +1389,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:1468 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -1284,6 +1405,8 @@
 					name = tuci_glass_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1308,6 +1431,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:790 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -1322,6 +1447,8 @@
 					name = antigoneia_glass_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1346,6 +1473,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4781 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -1360,6 +1489,8 @@
 					name = kazerun_glass_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1385,6 +1516,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6840 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1399,6 +1532,8 @@
 					name = maltecoria_elephants_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1423,6 +1558,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7108 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1437,6 +1574,8 @@
 					name = athani_elephants_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1461,6 +1600,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6485 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1475,6 +1616,8 @@
 					name = tiflet_elephants_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1500,6 +1643,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4889 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1514,6 +1659,8 @@
 					name = tantonum_gemstones_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1538,6 +1685,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6971 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1552,6 +1701,8 @@
 					name = kalyani_gemstones_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1576,6 +1727,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7202 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -1590,6 +1743,8 @@
 					name = tylos_gemstones_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1615,6 +1770,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:593 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 2
@@ -1629,6 +1786,8 @@
 					name = per_selk_papyrus_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1653,6 +1812,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:278 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -1667,6 +1828,8 @@
 					name = pergamon_papyrus_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1691,6 +1854,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:504 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1705,6 +1870,8 @@
 					name = leontopolis_papyrus_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1730,6 +1897,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:1894 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 1
@@ -1744,6 +1913,8 @@
 					name = olbe_cedar_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1768,6 +1939,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:4370 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 2
@@ -1782,6 +1955,8 @@
 					name = massaka_cedar_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1806,6 +1981,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:334 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1820,6 +1997,8 @@
 					name = paphos_cedar_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1845,6 +2024,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:6975 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 3
@@ -1859,6 +2040,8 @@
 					name = mihintale_spices_mod
 				}
 			}
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {
@@ -1883,6 +2066,8 @@
 		}
 
 		allow = {
+			treasury >= 500
+			political_influence >= 20
 			p:7530 = {
 				trade_good_decision_allow = {
 					DIFFICULTY = 4
@@ -1897,7 +2082,8 @@
 					name = dioscoridus_spices_mod
 				}
 			}
-			add_political_influence = 25
+			add_political_influence = -20
+			add_treasury = -500
 		}
 		
 		ai_will_do = {

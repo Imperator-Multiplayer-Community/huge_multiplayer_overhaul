@@ -874,7 +874,7 @@ annexation.3 = {
 
 		random_list = {
 			10 = { 
-				scope:annexer.current_ruler = { add_popularity = 8 }
+				scope:annexer.current_ruler = { add_popularity = 5 }
 			}
 			10 = { 
 				scope:annexer.current_ruler = { add_corruption = 5 }
@@ -886,22 +886,22 @@ annexation.3 = {
 				scope:annexer.current_ruler = { add_zeal = -1 }
 			}
 			10 = { 
-				scope:annexer = { add_aggressive_expansion = 15 }
+				scope:annexer = { add_aggressive_expansion = 10 }
 			}
 			10 = { 
-				scope:annexer = { add_war_exhaustion = 7 }
+				scope:annexer = { add_war_exhaustion = 5 }
 			}
 			10 = { 
-				scope:annexer = { add_stability = 7 }
+				scope:annexer = { add_stability = 5 }
 			}
 			10 = { 
-				scope:annexer = { add_stability = -7 }
+				scope:annexer = { add_stability = -5 }
 			}
 			10 = { 
-				scope:annexer = { add_military_experience = 7 }
+				scope:annexer = { add_military_experience = 5 }
 			}
 			10 = { 
-				scope:annexer = { add_political_influence = 20 }
+				scope:annexer = { add_political_influence = 10 }
 			}
 		}
 

@@ -598,6 +598,7 @@ religious_1 = {
 			happiness_for_same_religion_modifier = 0.025
 			global_citizen_output = 0.03
 			global_monthly_civilization = 0.01
+			send_letter_cost_modifier = -0.3
 		}
 		keystone = yes
 		on_activate = {
@@ -851,8 +852,8 @@ religious_1 = {
 	#New Invictus Invention
 	alexander_legacy_inv = {
 		modifier = {
-			monthly_legitimacy = 0.05
-			land_morale_modifier = 0.1
+			monthly_legitimacy = 0.1
+			land_morale_modifier = 0.05
 			army_maintenance_cost = 0.01
 		}
 		requires = { omen_power_inv_2  }
@@ -955,9 +956,11 @@ religious_1 = {
 	}
 		
 	monthly_corruption_inv = { 
-		modifier = { monthly_corruption = -0.01
-					 max_rivals = 1
-				}
+		modifier = { 
+			monthly_corruption = -0.01
+			max_rivals = 1
+			price_humiliate_rival_cost_modifier = -0.25		
+		}
 		requires_or = { ruler_popularity_gain_inv_3 global_citizen_happyness_inv }
 	} 
 
@@ -1033,6 +1036,7 @@ religious_1 = {
 		modifier = { 
 			land_morale_recovery = 0.02
 			levy_size_multiplier = 0.0025
+			global_freemen_happyness= -0.05
 			army_maintenance_cost = 0.01 }
 		requires = { land_morale_recovery_inv_1 }
 	}	
@@ -1163,7 +1167,7 @@ religious_1 = {
 	omen_duration_inv_5 = {
 		modifier = { 
 			inspire_devotio_cost_modifier = -0.25
-			land_morale_modifier = 0.05
+			land_morale_modifier = 0.025
 			global_population_happiness = -0.025
 			levy_size_multiplier = 0.0025
 			army_maintenance_cost = 0.01

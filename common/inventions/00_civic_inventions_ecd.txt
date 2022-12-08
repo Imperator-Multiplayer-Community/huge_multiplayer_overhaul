@@ -388,7 +388,7 @@
 
     civic_roads_inv = { 
         modifier = { build_expensive_roads_cost_modifier = -0.2
-        			 army_movement_speed = 0.025
+        			 army_movement_speed = 0.05
         			 army_maintenance_cost = 0.01 }
         
         requires = { global_tax_modifier_inv_3 } 
@@ -1180,8 +1180,11 @@ civic_2 = {
     } 
 
    	global_tribesmen_output_inv_2 = { 
-       modifier = { global_tribesmen_output = 0.05
-       				 global_tribesmen_happyness = 0.05 } 
+       	modifier = { 
+       		global_tribesmen_output = 0.05
+       		global_tribesmen_happyness = 0.05
+       		price_tribal_duel_cost_modifier = -0.25 
+       	} 
         
         requires = { global_tribesmen_output_inv_1 }
     }
@@ -1397,6 +1400,7 @@ civic_2 = {
         modifier = {
         	global_unrest = -0.25 
         	global_tax_modifier = -0.05
+        	gift_slave_cost_modifier = -0.3
         }
         on_activate = {
 			add_innovation = 1
@@ -1455,7 +1459,7 @@ civic_2 = {
     build_cost_inv = { 
         modifier = { 
 			build_expensive_roads_cost_modifier = -0.2
-			army_movement_speed = 0.025
+			army_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		}
         requires = { research_points_modifier_inv_2 } 

@@ -5,16 +5,16 @@
 	
 		potential = {
 			num_of_cities >= 1
-			invention = hostile_attrition_inv
 			NOR = {
 				has_country_modifier = burnt_ground
 			}
 		}
 		
 		allow = {
+			invention = hostile_attrition_inv
 			has_war_exhaustion >= 5
-			treasury >= 150
-			military_experience >= 25
+			treasury >= 100
+			military_experience >= 15
 			war = yes
 			stability >= 40
 		}
@@ -35,14 +35,14 @@
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
-					add_martial = 6
+					add_martial = 7
 					add_trait = brave
 				}
 			}
 			
-			add_treasury = -150
-			add_tyranny = 10
-			add_military_experience = -25
+			add_treasury = -100
+			add_tyranny = 5
+			add_military_experience = -15
 			add_stability = -10
 			add_country_modifier = {
 				name = burnt_ground

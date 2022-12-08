@@ -105,7 +105,7 @@ country_decisions = {
 		}	
 		allow = {
 			treasury >= 100
-			military_experience >= 15
+			military_experience >= 20
 			invention = naval_tactic_inv_1
 			capital_scope.state = { 
 				trade_good_surplus = { target = wood value > 0 }
@@ -134,7 +134,7 @@ country_decisions = {
 		}		
 		allow = {
 			treasury >= 100
-			military_experience >= 15
+			military_experience >= 20
 			invention = navy_maintenance_cost_inv_1
 			capital_scope.state = { 
 				trade_good_surplus = { target = wood value > 0 }

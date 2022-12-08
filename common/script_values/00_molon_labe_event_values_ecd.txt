@@ -37,6 +37,21 @@ veterans_fight_svalue = {
 	min = 10
 }
 
+grand_assault_svalue = {
+	value = max_manpower
+	multiply = -0.25
+	max = -100
+	min = -20
+}
+
+
+grand_siege_svalue = {
+	value = max_manpower
+	multiply = -0.125
+	max = -100
+	min = -20
+}
+
 veterans_fight_svalue_slaves = {
 	value = veterans_fight_svalue
 	divide = 2

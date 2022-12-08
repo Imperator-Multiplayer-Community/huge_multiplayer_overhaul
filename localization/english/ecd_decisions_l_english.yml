@@ -175,7 +175,6 @@
  buy_xp:0 "Make Sacrifice to the God of War"
  buy_xp_desc:0 "Honour the god of war with a sacrifice to arouse the interest of all belligerent men in the area."
 
-
  requires_more_cultures_tt:0 "There must be at least one other culture with at least 100 pops between them in the same culture group as [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]."
 
 #Tooltips

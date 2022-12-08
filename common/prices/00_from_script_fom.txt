@@ -29,22 +29,27 @@ secude_governor = {
 }
 
 gift_slave = {
-	gold = 100
+	gold = 75
+	political_influence = 15
+}
+
+give_relic = {
+	gold = 75
 	political_influence = 15
 }
 
 send_letter = {
-	gold = 50
+	gold = 75
 	political_influence = 15
 }
 
 go_hunting = {
-	gold = 100
+	gold = 75
 	political_influence = 15
 }
 
 price_force_divorce = {
-	political_influence = 12
+	political_influence = 10
 }
 
 price_state_investment_military = {
@@ -61,11 +66,11 @@ price_state_investment_religious = {
 }
 
 price_oaths_of_allegiance_button = {
-	political_influence = 40
+	political_influence = 50
 }
 
 price_patron_of_arts_button = {
-	political_influence = 40
+	political_influence = 50
 }
 
 price_assemble_raiding_party_button = {
@@ -73,11 +78,16 @@ price_assemble_raiding_party_button = {
 }
 
 price_tribal_duel = {
-	political_influence = 10
+	political_influence = 8
 	tyranny = 4
 }
 
 price_test_loyalty = {
+	political_influence = 8
+	tyranny = 4
+}
+
+price_humiliate_rival = {
 	political_influence = 8
 	tyranny = 4
 }
