@@ -249,7 +249,7 @@
     commerce_inv_3 = { 
         modifier = { global_export_commerce_modifier = 0.05
         			 global_state_trade_routes = 0.15
-        			 naval_morale_modifier = 0.025 }
+        			 navy_movement_speed = 0.025 }
         
         requires = { monthly_wage_inv }
     }
@@ -258,7 +258,7 @@
         modifier = { 
 			global_capital_trade_routes = 1
 			global_export_commerce_modifier = 0.05
-			naval_morale_modifier = 0.025
+			navy_movement_speed = 0.025
 		}
         keystone = yes
         requires = { monthly_wage_inv }
@@ -650,7 +650,7 @@
     state_trade_inv_3 = { 
         modifier = { global_state_trade_routes = 0.15
         			 global_import_commerce_modifier = 0.05
-        			 naval_morale_modifier = 0.025 }
+        			 navy_movement_speed = 0.025 }
         
         requires_or = { global_tax_modifier_inv_4 commerce_inv_4 }
     }
@@ -718,7 +718,7 @@
     global_tax_modifier_inv_5 = { 
         modifier = { global_import_commerce_modifier = 0.1
         			 global_state_trade_routes = 0.25
-        			 naval_morale_modifier = 0.025 }
+        			 navy_movement_speed = 0.025 }
         
         requires = { monthly_governor_wage_inv }
     }
