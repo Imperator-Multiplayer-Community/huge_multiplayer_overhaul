@@ -233,7 +233,7 @@ social_change = {
 	global_pop_promotion_speed_modifier = 0.1
 }
 
-expanded_citizenship = {
+expanded_citizenship = { ############################################################
 	levy_size_multiplier = 0.01
 	land_morale_modifier = -0.025
 	discipline = -0.025
@@ -384,5 +384,5 @@ indian_social_unrest = {
 }
 
 mass_slave_death = {
-	global_slaves_output = -0.12
+	global_slaves_output = -0.15
 }

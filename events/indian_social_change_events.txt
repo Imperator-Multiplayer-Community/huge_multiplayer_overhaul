@@ -5,7 +5,11 @@ indian_social_change_events.1 = {
  	hidden = yes
 
  	trigger = {
-		
+ 		OR = { 	
+			has_country_modifier = dharana_modifier
+			has_country_modifier = dhyana_modifier
+			has_country_modifier = samadhi_modifier
+		}
 	}
 
 	immediate = {
@@ -58,7 +62,7 @@ indian_social_change_events.2 = {
 	picture = ascetic
 
 	trigger = {
-		has_country_modifier = social_change
+		
 	}
 
 	immediate = {
@@ -85,7 +89,7 @@ indian_social_change_events.3 = {
 	picture = ascetic
 
 	trigger = {
-		has_country_modifier = indian_social_change
+		
 	}
 
 	immediate = {
@@ -95,7 +99,7 @@ indian_social_change_events.3 = {
 	option = {
 		name = "indian_social_change_events.3.a"
 		add_stability = -5
-		add_corruption = 4
+		scope:actor.current_ruler = { add_corruption = 4 }
 	 }
 }
 
@@ -108,7 +112,7 @@ indian_social_change_events.4 = {
 	picture = ascetic
 
 	trigger = {
-		has_country_modifier = indian_social_change
+		
 	}
 
 	immediate = {
@@ -134,7 +138,7 @@ indian_social_change_events.5 = {
 	picture = ascetic
 
 	trigger = {
-		has_country_modifier = indian_social_change
+		
 	}
 
 	immediate = {
@@ -160,7 +164,7 @@ indian_social_change_events.6 = {
 	picture = ascetic
 
 	trigger = {
-		has_country_modifier = indian_social_change
+		
 	}
 
 	immediate = {

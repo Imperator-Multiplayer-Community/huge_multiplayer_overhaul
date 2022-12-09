@@ -62,7 +62,7 @@
 			pay_price = cash500
 		}
 		scope:target.employer = {
-			treasury = 500
+			add_treasury = 500
 		}
 		scope:actor.current_ruler = {
 			set_variable = {

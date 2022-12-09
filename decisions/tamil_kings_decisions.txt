@@ -79,11 +79,6 @@
 		}
 
 		allow = {
-			OR = { 	
-				primary_culture = pandya
-				primary_culture = chola
-				primary_culture = chera			
-			}
 			owns = 6915
 			owns = 6902
 			owns = 6927
