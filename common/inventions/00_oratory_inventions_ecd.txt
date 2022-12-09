@@ -235,6 +235,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -420,6 +421,7 @@
 							is_integrated = yes
 							this.culture.culture_group = culture_group:meroitic_group
 							this.culture.culture_group = culture_group:aksumite_group
+							this.culture.culture_group = culture_group:nilotic_group
 						}	
 					}
 			}
@@ -447,6 +449,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -579,6 +582,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -2315,7 +2319,7 @@ oratory_2 = {
 		requires = { monthly_character_loyalty_inv_2 }
 		modifier = { 
 			price_oaths_of_allegiance_button_cost_modifier = -0.5
-			price_test_loyalty_cost_modifier = -0.5
+			price_test_loyalty_cost_modifier = -0.25
 			bribe_pi_cost_modifier = -0.3
 		}
 	}

@@ -247,3 +247,7 @@ go_hunting_cost_modifier = {
 price_humiliate_rival_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/smear_character_cost_modifier.dds"
 }
+
+price_task_character_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_prominence.dds"
+}

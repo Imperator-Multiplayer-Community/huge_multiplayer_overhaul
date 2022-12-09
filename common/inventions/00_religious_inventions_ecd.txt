@@ -54,7 +54,10 @@ religious_1 = {
 	}	
 
 	global_monthly_state_loyalty_inv = {
-		modifier = { global_monthly_state_loyalty = 0.02 }
+		modifier = { 
+			global_monthly_state_loyalty = 0.02
+			price_task_character_cost_modifier = -0.3
+		}
 		requires = { global_unrest_inv_1 }
 	}		
 
@@ -284,6 +287,7 @@ religious_1 = {
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 				country_culture_group = west_levantine
@@ -503,6 +507,7 @@ religious_1 = {
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 				country_culture_group = west_levantine
@@ -709,6 +714,7 @@ religious_1 = {
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 			}
@@ -742,6 +748,7 @@ religious_1 = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}	
 				}
 			}
@@ -882,6 +889,7 @@ religious_1 = {
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 			}
@@ -918,6 +926,7 @@ religious_1 = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}	
 				}
 			}
@@ -985,6 +994,7 @@ religious_1 = {
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 			}

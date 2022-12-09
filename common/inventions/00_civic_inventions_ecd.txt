@@ -198,6 +198,7 @@
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 			}
@@ -324,6 +325,7 @@
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 			}
@@ -411,6 +413,7 @@
 					any_country_culture = {
 						is_integrated = yes
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 					}
 				}
 				country_culture_group = west_levantine
@@ -496,6 +499,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -597,6 +601,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -622,6 +627,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}

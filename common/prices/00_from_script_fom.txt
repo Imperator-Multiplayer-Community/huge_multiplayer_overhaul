@@ -92,6 +92,11 @@ price_humiliate_rival = {
 	tyranny = 4
 }
 
+price_task_character = {
+	political_influence = 15
+	treasury = 45
+}
+
 create_merc_state_price = { 
 	political_influence = 50
 	military_experience = 5

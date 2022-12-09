@@ -708,7 +708,8 @@
 			is_integrated = yes
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
 				OR = {	
-					this.culture.culture_group = culture_group:numidian			
+					this.culture.culture_group = culture_group:numidian
+					this.culture.culture_group = culture_group:fezzani			
 				}	
 			}
 		}
@@ -719,7 +720,8 @@
 					is_integrated = yes
 					country_culture_pop_count >= 300
 						OR = {
-							this.culture.culture_group = culture_group:numidian				
+							this.culture.culture_group = culture_group:numidian
+							this.culture.culture_group = culture_group:fezzani				
 						}
 				}
 			}
@@ -1101,7 +1103,8 @@
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
 				OR = {	
 					this.culture.culture_group = culture_group:meroitic_group
-					this.culture.culture_group = culture_group:aksumite_group		
+					this.culture.culture_group = culture_group:aksumite_group
+					this.culture.culture_group = culture_group:nilotic_group		
 				}	
 			}
 		}
@@ -1113,7 +1116,8 @@
 					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group				
+							this.culture.culture_group = culture_group:aksumite_group
+							this.culture.culture_group = culture_group:nilotic_group				
 						}
 				}
 			}
