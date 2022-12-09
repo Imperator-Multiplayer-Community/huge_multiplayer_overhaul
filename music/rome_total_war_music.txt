@@ -1,19 +1,5 @@
 ﻿#####ROME: TOTAL WAR####BY DAFOOGLE#####
 
-track1416 = {
-	music = "file:/music/rome_total_war_music/Arabic_Summer.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1417 = {
-	music = "file:/music/rome_total_war_music/Arabic_Winter.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
 track1418 = {
 	music = "file:/music/rome_total_war_music/Army_of_Drums.mp3"
 	weight = 25
@@ -23,13 +9,6 @@ track1418 = {
 
 track1419 = {
 	music = "file:/music/rome_total_war_music/Autumn.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1420 = {
-	music = "file:/music/rome_total_war_music/BattleVictory_Barbarian.mp3"
 	weight = 25
 	mood = yes
 	can_be_interrupted = yes
@@ -70,85 +49,8 @@ track1425 = {
 	can_be_interrupted = yes
 }
 
-track1426 = {
-	music = "file:/music/rome_total_war_music/Forever_(Credits).mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1427 = {
-	music = "file:/music/rome_total_war_music/GameWin_Arabic.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1428 = {
-	music = "file:/music/rome_total_war_music/GameWin_Barbarian.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
 track1429 = {
 	music = "file:/music/rome_total_war_music/Imperial_Conflict.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1430 = {
-	music = "file:/music/rome_total_war_music/Intro_Barbarian.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1431 = {
-	music = "file:/music/rome_total_war_music/Intro_Carthage.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1432 = {
-	music = "file:/music/rome_total_war_music/Intro_Eastern.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1433 = {
-	music = "file:/music/rome_total_war_music/Intro_Egyptian.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1434 = {
-	music = "file:/music/rome_total_war_music/Intro_Greek.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1435 = {
-	music = "file:/music/rome_total_war_music/Intro_Roman_Brutii.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1436 = {
-	music = "file:/music/rome_total_war_music/Intro_Roman_Julii.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1437 = {
-	music = "file:/music/rome_total_war_music/Intro_Roman_Scipii.mp3"
 	weight = 25
 	mood = yes
 	can_be_interrupted = yes
@@ -210,13 +112,6 @@ track1445 = {
 	can_be_interrupted = yes
 }
 
-track1446 = {
-	music = "file:/music/rome_total_war_music/Melee_Cafe.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
 track1447 = {
 	music = "file:/music/rome_total_war_music/Mobilize.mp3"
 	weight = 25
@@ -233,13 +128,6 @@ track1448 = {
 
 track1449 = {
 	music = "file:/music/rome_total_war_music/Soldiers_Chant.mp3"
-	weight = 25
-	mood = yes
-	can_be_interrupted = yes
-}
-
-track1450 = {
-	music = "file:/music/rome_total_war_music/Time2Kill.mp3"
 	weight = 25
 	mood = yes
 	can_be_interrupted = yes
