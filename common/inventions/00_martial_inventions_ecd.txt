@@ -1349,7 +1349,6 @@ naval_tree = {
 		modifier = { 
 			naval_morale_recovery = 0.05
 			navy_movement_speed = 0.05 
-			navy_maintenance_cost = 0.01
 		}	 
 		requires = { pirate_spawn_chance_inv_1 }
 	}	
@@ -1358,7 +1357,6 @@ naval_tree = {
 		modifier = { 
 			tetrere_defensive = 0.1
 			port_building_cost = -0.1
-			navy_maintenance_cost = 0.01
 		}
 		requires = { pirate_spawn_chance_inv_1 }
 	}	
@@ -1369,7 +1367,6 @@ naval_tree = {
 		allow = { tag = SYR } #SYR
 		modifier = { 
 			global_ship_start_experience = 30
-			navy_maintenance_cost = 0.01
 		}
 	}
 
@@ -1377,7 +1374,6 @@ naval_tree = {
     sewn_planks_inv = { 
         modifier = { 
         	naval_range = 0.25
-			navy_maintenance_cost = 0.01
 		}
         requires = { pirate_spawn_chance_inv_1 }
         allow = {
@@ -1455,7 +1451,6 @@ naval_tree = {
 		modifier = {
 			naval_damage_taken = -0.05
 			navy_movement_speed = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		on_activate = {
 			custom_tooltip = "defend_coast_decision"
@@ -1468,7 +1463,6 @@ naval_tree = {
 		modifier = { 
 			tetrere_offensive = 0.05
 			tetrere_discipline = 0.05
-			navy_maintenance_cost = 0.01
 		}
 		requires = { katapharct_inv }
 	}
@@ -1576,7 +1570,6 @@ naval_tree = {
     beden_inv = { 
         modifier = { 
         	navy_movement_speed = 0.1
-        	navy_maintenance_cost = 0.01
 		}
         requires = { sewn_planks_inv }
         allow = {
@@ -1602,7 +1595,6 @@ naval_tree = {
     dhow_inv = { 
         modifier = { 
         	global_ship_recruit_speed = 0.2
-        	navy_maintenance_cost = 0.01
 		}
         requires = { sewn_planks_inv }
         allow = {
@@ -1627,7 +1619,6 @@ naval_tree = {
 			liburnian_offensive = 0.05
 			navy_weight_modifier = -0.05
 			naval_damage_taken = -0.05
-			navy_maintenance_cost = 0.01
 		}
 		requires = { naval_tactic_inv_1 }
 	}
@@ -1636,7 +1627,6 @@ naval_tree = {
 		modifier = { 
 			liburnian_defensive = 0.075
 			navy_movement_speed = 0.05
-			navy_maintenance_cost = 0.01
 		}
 		requires = { liburnian_invention_2 }		
 	}	
@@ -1646,7 +1636,6 @@ naval_tree = {
 			tetrere_discipline = 0.05
 			hexere_offensive = 0.05
 			naval_damage_done = 0.05
-			navy_maintenance_cost = 0.01
 		}
 		requires = { navy_maintenance_cost_inv_1 }
 	}	
@@ -1658,7 +1647,6 @@ naval_tree = {
 			naval_range = 0.1
 			navy_weight_modifier = -0.1
 			liburnian_defensive = 0.025
-			navy_maintenance_cost = 0.01
 		}
 	}
 
@@ -1667,7 +1655,6 @@ naval_tree = {
 		modifier = { 		 
 			naval_range = 0.1
 			naval_damage_done = 0.05
-			navy_maintenance_cost = 0.01
 		}
 		keystone = yes
 	}
@@ -1676,7 +1663,6 @@ naval_tree = {
 		modifier = { 
 			naval_damage_done = 0.05
 			hexere_discipline = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		requires = { naval_weapon_platform_inv_2 }
 	}
@@ -1685,7 +1671,6 @@ naval_tree = {
 		modifier = {
 			hexere_defensive = 0.05
 			naval_range = 0.1
-			navy_maintenance_cost = 0.01
 			mercenary_naval_maintenance_cost = -0.15
 			max_mercenary_stacks = 1
 		}
@@ -1713,7 +1698,6 @@ naval_tree = {
 			naval_morale_recovery = 0.05
 			hexere_offensive = 0.05
 			naval_damage_done = 0.025
-			navy_maintenance_cost = 0.01
 		}
 		requires = { naval_tactic_inv_3 trieme_discipline_inv_4 } ##############################################
 	}	
@@ -1722,7 +1706,6 @@ naval_tree = {
 	trireme_discipline_inv_3 = { 
 		modifier = { 
 			trireme_discipline = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
@@ -1740,7 +1723,6 @@ naval_tree = {
 		modifier = { 
 			trireme_offensive = 0.1
 			enslavement_efficiency = 0.025
-			navy_maintenance_cost = 0.01
 		}
 		requires = { pirate_spawn_chance_inv_2 }		
 	}	
@@ -1751,7 +1733,6 @@ naval_tree = {
 			octere_defensive = 0.05 
 			hexere_defensive = 0.05
 			naval_damage_done = 0.025
-			navy_maintenance_cost = 0.01
 		}
 		requires_or = { trireme_discipline_inv_1 naval_new_inv_4 } #######################################
 	}	
@@ -1760,7 +1741,6 @@ naval_tree = {
 	serial_production_inv = {
 		modifier = { 
 			global_ship_recruit_speed = 0.2
-			navy_maintenance_cost = 0.01
 		}
 		requires = { pirate_spawn_chance_inv_1 }
 		 allow = {
@@ -1812,7 +1792,6 @@ naval_tree = {
 			retreat_delay = -1
 			naval_damage_taken = -0.05
 			navy_movement_speed = 0.05
-			navy_maintenance_cost = 0.01
 		}
 	}
 
@@ -1821,7 +1800,6 @@ naval_tree = {
 			ship_capture_chance = 0.025 
 			naval_range = 0.1
 			naval_damage_done = 0.025
-			navy_maintenance_cost = 0.01
 		}
 		requires_or = { trireme_discipline_inv_4 liburnian_invention_1 }		
 	}	
@@ -1833,7 +1811,6 @@ naval_tree = {
 			octere_offensive = 0.05 
 			naval_damage_taken = -0.025
 			retreat_delay = -1
-			navy_maintenance_cost = 0.01
 		}
 	}	
 
@@ -1842,7 +1819,6 @@ naval_tree = {
 		modifier = { 
 			naval_unit_attrition = -0.05 
 			navy_weight_modifier = -0.1
-			navy_maintenance_cost = 0.01
 		}
 		requires = { serial_production_inv }
 		 allow = {
@@ -1868,7 +1844,6 @@ naval_tree = {
 			naval_morale_recovery = 0.05
 			ship_capture_chance = 0.025
 			trireme_defensive = 0.05
-			navy_maintenance_cost = 0.01 
 		}
 		requires = { trireme_discipline_inv_3 }
 	}
@@ -1896,7 +1871,6 @@ naval_tree = {
 			liburnian_offensive = 0.05
 			naval_damage_taken = -0.05 
 			navy_movement_speed = 0.1
-			navy_maintenance_cost = 0.01 
 		}
 		requires_or = { navy_movement_speed_inv navy_maintenance_cost_inv_2 }
 	}
@@ -1906,7 +1880,6 @@ naval_tree = {
 			siege_engineers = 1
 			siege_ability = 0.05
 			supply_train_movement_speed = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		requires = { mega_catamaran_inv }
 	}
@@ -1917,7 +1890,6 @@ naval_tree = {
 			naval_damage_taken = -0.025
 			ship_capture_chance = 0.025
 			tetrere_offensive = 0.05
-			navy_maintenance_cost = 0.01
 		}
 	}		
 
@@ -1925,7 +1897,6 @@ naval_tree = {
 		modifier = { 
 			navy_movement_speed = 0.15
 			naval_range = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		requires = { double_bow_and_stern_inv_1 }
 	}
@@ -1934,7 +1905,6 @@ naval_tree = {
 		modifier = { 
 			naval_damage_taken = -0.05
 			liburnian_discipline = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		requires_or = { naval_new_inv_1 naval_new_inv_3 }
 	}		
@@ -1966,7 +1936,6 @@ naval_tree = {
 			navy_movement_speed = 0.1 #Was morale
 			naval_range = 0.1
 			naval_damage_done = 0.025 
-			navy_maintenance_cost = 0.01
 		}
 		keystone = yes
 		requires = { naval_new_inv_2 }	
@@ -1988,7 +1957,6 @@ naval_tree = {
 	global_ship_recruit_speed_inv = { 
 		modifier = { 
 			global_ship_recruit_speed = 0.3
-			navy_maintenance_cost = 0.01
 		}			
 		keystone = yes
 		requires_or = { counterbalanced_oars_inv  naval_new_inv_5 }
@@ -2024,7 +1992,6 @@ naval_tree = {
 			octere_defensive = 0.05 
 			mega_galley_defensive = 0.1
 			naval_damage_done = 0.025
-			navy_maintenance_cost = 0.01
 		}
 		requires_or = { global_ship_recruit_speed_inv siege_engineers_inv_2 }			 
 	}
@@ -2032,7 +1999,6 @@ naval_tree = {
 	naval_weapon_platform_inv_3 = {
 		modifier = { 
 			mega_galley_offensive = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		keystone = yes
 		requires_or = { naval_rostra_inv_4 double_bow_and_stern_inv_2 }			
@@ -2044,7 +2010,6 @@ naval_tree = {
 			blockade_efficiency = 0.3
 			siege_ability = 0.05
 			naval_range = 0.1
-			navy_maintenance_cost = 0.01
 		}
 		requires = { blockade_efficiency_inv }				
 	}	
@@ -2055,7 +2020,6 @@ naval_tree = {
 			octere_discipline = 0.05
 			mega_galley_discipline = 0.1
 			naval_damage_done = 0.025
-			navy_maintenance_cost = 0.01
 		}
 		requires = { global_ship_recruit_speed_inv }		
 	}
@@ -2076,7 +2040,6 @@ naval_tree = {
 			naval_morale_recovery = 0.05
 			trireme_defensive = 0.05
 			navy_movement_speed = 0.05
-			navy_maintenance_cost = 0.01
 		}
 		requires = { naval_new_inv_3  }
 	}
