@@ -1,1 +1,150 @@
-﻿
+﻿levantine_philosophy_2 = { 
+	color = hsv { 2.7 0.6 0.5 }
+	image = levantine_philosophy_start_bonus
+	
+
+	allow = {
+		trigger_if = {
+			limit = { primary_culture = hebrew }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			primary_culture = hebrew
+		}
+		trigger_else_if = {
+			limit = { primary_culture = nabatean }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			primary_culture = nabatean
+		}
+		trigger_else_if = {
+			limit = { primary_culture = phoenician }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			primary_culture = phoenician
+		}
+		trigger_else_if = {
+			limit = { heritage = ptolemys_heritage }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			heritage = ptolemys_heritage
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = north_african }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = north_african
+		}
+		
+		trigger_else = {
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = levantine_influence
+			}	
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_levantine"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:west_levantine
+						this.culture.culture_group = culture_group:north_african
+					}
+				}
+			}
+		}
+	}
+	
+	levantine_arabian_path_4 = { ###Levantine 2A
+		modifier = { 
+			camels_defensive = 0.05
+			camels_morale = -0.05
+			camels_desert_combat_bonus = 0.10
+			camels_flood_plain_combat_bonus = 0.10
+		}
+		icon = levantine_arabian_path_4
+		requires = {}
+	}
+
+	levantine_philosophy_start_bonus = { ###
+		modifier = { 
+			camels_defensive = 0.05
+			camels_morale = -0.05
+			camels_oasis_combat_bonus = 0.10
+			camels_desert_hills_combat_bonus = 0.10
+			}
+		icon = levantine_arabian_path_2
+		requires = { levantine_arabian_path_4 }
+	}
+	
+	levantine_egyptian_path_4 = { ###Levantine 4B
+		modifier = { }
+		enable_ability = military_colonies
+		icon = levantine_egyptian_path_4
+		requires = {}
+		on_activate = {
+			ordered_owned_province = {
+				limit = {
+					NOT = { dominant_province_culture_group = root.culture_group }
+					any_neighbor_province = {
+						count > 1
+						NOT = { dominant_province_culture_group = root.culture_group }
+					}
+					state = {
+						NOT = {
+							any_state_province = {
+								is_capital = yes
+							}
+						}
+					}
+				}
+				order_by = {
+					value = 0
+					add = population_cap
+					subtract = total_population
+				}
+				add_province_modifier = {
+					name = "local_colonia"
+					duration = -1
+				}
+				custom_tooltip = military_colonia_here_tt
+				trigger_event = { id = cultural_integration.11 }
+			}
+		}
+	}
+	
+	levantine_egyptian_path_1 = { ###Levantine 2BA
+		modifier = {
+			light_infantry_offensive = 0.05
+			light_infantry_morale = 0.05
+			light_infantry_desert_combat_bonus = 0.1
+			light_infantry_flood_plain_combat_bonus = 0.1
+		}
+		icon = levantine_egyptian_path_1
+		requires = {}
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
+		}
+	}
+
+	levantine_egyptian_path_end_bonus = { ###Levantine 4BA
+		modifier = {
+			light_infantry_offensive = 0.05
+			light_infantry_morale = 0.05
+			light_infantry_oasis_combat_bonus = 0.1
+			light_infantry_desert_hills_combat_bonus = 0.1
+		}
+		icon = levantine_egyptian_path_end_bonus
+		requires = {levantine_egyptian_path_1}
+	}
+}
