@@ -12,14 +12,14 @@
 
 	build_time = 120
 	
-	light_infantry = 1.15
-	heavy_infantry = 0.75
+	light_infantry = 1.35
+	heavy_infantry = 0.9
 	heavy_cavalry = 1.0
-	light_cavalry = 1.15
-	camels = 0.9
-	warelephant = 0.5
-	horse_archers = 1.15
-	archers = 1.25
+	light_cavalry = 1.1
+	camels = 1.1
+	warelephant = 0.85
+	horse_archers = 1.1
+	archers = 1.35
 	supply_train = 2.0
 	
 	attrition_weight = 2
@@ -30,5 +30,5 @@
 	attrition_loss = 0.05
 	
 	food_consumption = 0.25
-	food_storage = 2.4
+	food_storage = 3.2
 }
