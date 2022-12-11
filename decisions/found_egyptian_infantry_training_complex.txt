@@ -4,7 +4,7 @@
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 507
+			owns = 5535
 			NOR = {
 				has_variable = founded_egyptian_infantry_training_complex
 			}
@@ -18,13 +18,13 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 507
+				province_id = 5535 #Colira Base metals
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			owns = 507
+			owns = 5535
 		}
 		
 		effect = {
@@ -36,7 +36,7 @@
 				duration = -1
 			}
 			
-			p:507 = {
+			p:5535 = {
 					add_province_modifier = {
 						name = egyptian_infantry_training_complex
 						duration = -1					

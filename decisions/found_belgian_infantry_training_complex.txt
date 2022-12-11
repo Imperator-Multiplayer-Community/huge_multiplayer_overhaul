@@ -4,7 +4,7 @@
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 3691
+			owns = 3680
 			NOR = {
 				has_variable = founded_belgian_infantry_training_complex
 			}
@@ -19,13 +19,13 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 3691
+				province_id = 3680 #Geminiacum
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			owns = 3691
+			owns = 3680
 		}
 		
 		effect = {
@@ -37,7 +37,7 @@
 				duration = -1
 			}
 			
-			p:3691 = {
+			p:3680 = {
 					add_province_modifier = {
 						name = belgian_infantry_training_complex
 						duration = -1					

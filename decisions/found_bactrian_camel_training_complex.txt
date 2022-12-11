@@ -23,7 +23,7 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 4367
+				province_id = 4367 #Arjunava Base Metals => Camels
 			}
 		}
 		allow = {
@@ -46,6 +46,7 @@
 						name = bactrian_camel_training_complex
 						duration = -1					
 					}
+					set_trade_goods = camels
 				}
 				
 			}

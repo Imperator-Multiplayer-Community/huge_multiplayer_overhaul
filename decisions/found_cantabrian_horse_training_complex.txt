@@ -18,7 +18,7 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 1103
+				province_id = 1103 #Segisima Iiulia
 			}
 		}
 		allow = {
@@ -37,13 +37,17 @@
 			}
 			
 			p:1103 = {
-					add_province_modifier = {
-						name = cantabrian_horse_training_complex
-						duration = -1					
-					}
+				add_province_modifier = {
+					name = cantabrian_horse_training_complex
+					duration = -1					
 				}
-				
+				set_trade_goods = steppe_horses
 			}
+			p:1112 = { #Caiellium
+
+				set_trade_goods = steppe_horses
+			}
+		}
 		
 		ai_will_do = {
 			base = 100
