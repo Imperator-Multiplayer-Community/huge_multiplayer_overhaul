@@ -398,7 +398,7 @@
 		modifier = { 
 			light_infantry_offensive = 0.05
 			light_infantry_morale = 0.05
-			levy_size_multiplier = 0.005
+			#levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = persian_bactrian_path_3 #updated
@@ -409,7 +409,7 @@
 		modifier = { 
 			light_infantry_defensive = 0.05
 			light_infantry_discipline = 0.05
-			discipline = 0.025
+			#discipline = 0.025
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_end_bonus #updated
@@ -420,9 +420,9 @@
 		modifier = { 
 			light_infantry_offensive = 0.05
 			light_infantry_morale = 0.05
-			levy_size_multiplier = 0.005
+			#levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
-			
+			global_population_happiness = -0.01
 		} 
 		icon = levantine_greco_path_2 #updated
 		requires = {light_infantry_path_3}
@@ -432,9 +432,9 @@
 		modifier = { 
 			light_infantry_defensive = 0.05
 			light_infantry_discipline = 0.05
-			discipline = 0.025
+			#discipline = 0.025
 			army_maintenance_cost = 0.01
-			
+			global_population_happiness = -0.01
 		} 
 		icon = north_african_tribal_path_6 #updated
 		requires = {light_infantry_path_4}
@@ -442,10 +442,11 @@
 
 		light_infantry_path_7 = { ### final generic tradition
 		modifier = {
-			levy_size_multiplier = 0.01
-			discipline = 0.01
+			light_infantry_morale = 0.1
+			#levy_size_multiplier = 0.01
+			#discipline = 0.01
 			army_maintenance_cost = 0.01
-			global_population_happiness = -0.03
+			global_population_happiness = -0.01
 		}
 		icon = mauryan_coastal_path_7
 		requires = { light_infantry_path_6 light_infantry_path_5 }

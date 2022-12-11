@@ -1,30 +1,29 @@
-﻿namespace = me_tamil_king
+﻿namespace = puntic_trade_fleet
 
 
 #####################
-#Tamil Trade Fleet Decision Events
-me_tamil_king.11 = { #Trade Fleet Ready to Depart
+puntic_trade_fleet.11 = { #Trade Fleet Ready to Depart
     type = country_event
-    title = me_tamil_king_11_title
-    desc = me_tamil_king_11_desc
+    title = puntic_trade_fleet_11_title
+    desc = puntic_trade_fleet_11_desc
     picture = interesting_histories_southern_india
-    goto_location = p:6915
+    goto_location = p:7532 #Mosylon
 
     immediate = {
         hidden_effect = {
             create_character = {
-                first_name = "Asela"
-                family_name = "Chola"
+                first_name = "Bakenrenef"
+                family_name = "Ezanid"
                 age = 70
-                culture = tamil
-                religion = hindu
+                culture = aksumite
+                religion = puntic_religion
                 female = no
 #                add_trait = coastal_raider
 #                add_trait = oarmaster
                 add_trait = abrasive
                 good_martial_effect = yes
                 good_charisma_effect = yes
-                save_scope_as = tamil_admiral_temp
+                save_scope_as = puntic_admiral_temp
             }
         }   
         if = {
@@ -33,9 +32,9 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
             }
             create_unit = {
                 navy = yes
-                commander = scope:tamil_admiral_temp
+                commander = scope:puntic_admiral_temp
                 sub_unit = octere
-                location = 6915 #Koti
+                location = 7532 #Mosylon
                 add_subunit = trireme
                 add_subunit = trireme
                 add_subunit = trireme
@@ -53,9 +52,9 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
             }
             create_unit = {
                 navy = yes
-                commander = scope:tamil_admiral_temp
+                commander = scope:puntic_admiral_temp
                 sub_unit = octere
-                location = 6915 #Koti
+                location = 7532 #Mosylon #Adan
                 add_subunit = trireme
                 add_subunit = trireme
                 add_subunit = trireme
@@ -80,7 +79,7 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
     }
 
     option = {
-    name = me_tamil_king_11.a  #Send them east to the China
+    name = puntic_trade_fleet_11.a  #Send them east to China
         trigger = {
             NOT = { has_variable = china_trade_disabled}
         }    
@@ -92,13 +91,13 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
                         name = china_trade_flag
                     }         
                     trigger_event = {   #Good Event
-                        id = me_tamil_king.13
+                        id = puntic_trade_fleet.13
                         days = { 720 1825 }
                     } 
                 }
                 10 = { 
                     trigger_event = {   #Bad Event
-                        id = me_tamil_king.12
+                        id = puntic_trade_fleet.12
                         days = { 720 1825 }
                     }
                 }
@@ -106,7 +105,7 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
         }        
     } 
     option = {
-    name = me_tamil_king_11.b  #Send them west to Rome
+    name = puntic_trade_fleet_11.b  #Send them west to Rome
         trigger = {
             NOT = { has_variable = roman_trade_disabled}
         }    
@@ -118,13 +117,13 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
                         name = roman_trade_flag
                     }                            
                     trigger_event = {   #Good Event
-                        id = me_tamil_king.13
+                        id = puntic_trade_fleet.13
                         days = { 720 1825 }
                     } 
                 }
                 10 = { 
                     trigger_event = {   #Bad Event
-                        id = me_tamil_king.12
+                        id = puntic_trade_fleet.12
                         days = { 720 1825 }
                     }
                 }
@@ -132,25 +131,25 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
         }        
     }
     option = {
-    name = me_tamil_king_11.c  #Send them west to Arabia (Incense province in Arabia Felix)
+    name = puntic_trade_fleet_11.c  #Send them east to India
         trigger = {
-            NOT = { has_variable = arabian_trade_disabled}
+            NOT = { has_variable = indian_trade_disabled}
         }    
-        #Either come back with Incense from Hadrahumat or bad event
+        #Either come back with Indian goods or bad event
         hidden_effect = { 
             random_list = { 
                 90 = {
                     set_variable = {
-                        name = arabia_trade_flag
+                        name = india_trade_flag
                     }                            
                     trigger_event = {   #Good Event
-                        id = me_tamil_king.13
+                        id = puntic_trade_fleet.13
                         days = { 720 1825 }
                     } 
                 }
                 10 = { 
                     trigger_event = {   #Bad Event
-                        id = me_tamil_king.12
+                        id = puntic_trade_fleet.12
                         days = { 720 1825 }
                     }
                 }
@@ -158,7 +157,7 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
         }        
     }   
     option = {
-    name = me_tamil_king_11.d  #Send them west to Egypt (Alexandria)
+    name = puntic_trade_fleet_11.d  #Send them west to Egypt (Alexandria)
         trigger = {
             NOT = { has_variable = egypt_trade_disabled}
         }    
@@ -170,13 +169,13 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
                         name = egypt_trade_flag
                     }                            
                     trigger_event = {   #Good Event
-                        id = me_tamil_king.13
+                        id = puntic_trade_fleet.13
                         days = { 720 1825 }
                     } 
                 }
                 10 = { 
                     trigger_event = {   #Bad Event
-                        id = me_tamil_king.12
+                        id = puntic_trade_fleet.12
                         days = { 720 1825 }
                     }
                 }
@@ -186,7 +185,7 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
     ##Remove all ships from the first character. They may or may not come back with a better adirmal.
     after = {
         hidden_effect = {
-        scope:tamil_admiral_temp = {
+        scope:puntic_admiral_temp = {
             every_character_unit = {
                 destroy_unit = yes
             }
@@ -195,38 +194,38 @@ me_tamil_king.11 = { #Trade Fleet Ready to Depart
     }               
 }
 
-me_tamil_king.12 = { #Bad news from the trade fleet
+puntic_trade_fleet.12 = { #Bad news from the trade fleet
     type = country_event
-    title = me_tamil_king_12_title
-    desc = me_tamil_king_12_desc
+    title = puntic_trade_fleet_12_title
+    desc = puntic_trade_fleet_12_desc
     picture = interesting_histories_southern_india
     option = {
-    name = me_tamil_king_12.a  #We shouldn't have wasted our money!
-        add_political_influence = -25
+    name = puntic_trade_fleet_12.a  #We shouldn't have wasted our money!
+        add_political_influence = -30
     }       
 }
 
-me_tamil_king.13 = { #Trade fleet arrives home 
+puntic_trade_fleet.13 = { #Trade fleet arrives home 
     type = country_event
-    title = me_tamil_king_13_title
+    title = puntic_trade_fleet_13_title
     desc = {
-        #desc = "me_tamil_king_13_desc"
+        #desc = "puntic_trade_fleet_13_desc"
         first_valid = {
             triggered_desc = {  ##China Description
                 trigger = { has_variable = china_trade_flag }  
-                desc = "me_tamil_king_13_desc_1"
+                desc = "puntic_trade_fleet_13_desc_1"
             }
             triggered_desc = {  ##roman Description
                 trigger = { has_variable = roman_trade_flag }    
-                desc = "me_tamil_king_13_desc_2"
+                desc = "puntic_trade_fleet_13_desc_2"
             }
-            triggered_desc = {  ##Arabia (Arabia Felix) Description
-                trigger = { has_variable = arabia_trade_flag } 
-                desc = "me_tamil_king_13_desc_3"
+            triggered_desc = {  ##India
+                trigger = { has_variable = india_trade_flag } 
+                desc = "puntic_trade_fleet_13_desc_3"
             }
             triggered_desc = {  ##Egypt Description
                 trigger = { has_variable = egypt_trade_flag }    
-                desc = "me_tamil_king_13_desc_4"
+                desc = "puntic_trade_fleet_13_desc_4"
             }           
         }
     }    
@@ -250,7 +249,7 @@ me_tamil_king.13 = { #Trade fleet arrives home
     }
 
     option = {
-    name = me_tamil_king_13.a   #Tamil Trading has made us rich!
+    name = puntic_trade_fleet_13.a   #Trading has made us rich!
         switch = {
             trigger = has_variable 
             #Money
@@ -272,9 +271,9 @@ me_tamil_king.13 = { #Trade fleet arrives home
                 random_owned_province = {
                 limit = {
                     NOR = {
-                     province_id = 6917
-                     province_id = 6916
-                     province_id = 6927
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
                      }
                     NOT = { trade_goods = elephants }
                     NOT = { trade_goods = grain }
@@ -308,9 +307,9 @@ me_tamil_king.13 = { #Trade fleet arrives home
                 random_owned_province = {
                 limit = {
                     NOR = {
-                     province_id = 6917
-                     province_id = 6916
-                     province_id = 6927
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
                      }
                     NOT = { trade_goods = elephants }
                     NOT = { trade_goods = grain }
@@ -336,23 +335,18 @@ me_tamil_king.13 = { #Trade fleet arrives home
                 remove_variable = roman_trade_flag
                 set_variable = roman_trade_disabled                            
             } 
-            arabia_trade_flag = {
+            india_trade_flag = {
                 add_country_modifier = {
-                    name = arabian_trade_goods
+                    name = indian_trade_goods
                     duration = 3650
                 }
-                current_ruler = {
-                    add_character_modifier = {
-                        name = qat_consumption
-                        duration = 1825
-                    }
-                }
+                
                 random_owned_province = {
                 limit = {
                     NOR = {
-                     province_id = 6917
-                     province_id = 6916
-                     province_id = 6927
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
                      }
                     NOT = { trade_goods = elephants }
                     NOT = { trade_goods = grain }
@@ -367,18 +361,18 @@ me_tamil_king.13 = { #Trade fleet arrives home
                 } 
                     random_list = {
                         50 = {
-                            set_trade_goods = incense                
+                            set_trade_goods = spices               
                         }
                         25 = {
-                            set_trade_goods = myrrh
+                            set_trade_goods = gems
                         }
                         25 = {
-                            set_trade_goods = dates
+                            set_trade_goods = elephants
                         }                        
                     }                
                 }
                 create_country_treasure = {
-                    key = "royal_gorillas"
+                    key = "tiger_pelts"
                     icon = "cr_treasure_skins_of_the_gorilla_02"
                 
                     modifier = {
@@ -386,8 +380,8 @@ me_tamil_king.13 = { #Trade fleet arrives home
                         local_defensive = 0.1
                     }
                 }
-                remove_variable = arabia_trade_flag
-                set_variable = arabian_trade_disabled                                                              
+                remove_variable = india_trade_flag
+                set_variable = indian_trade_disabled                                                              
             }
             egypt_trade_flag = {
                 add_country_modifier = {
@@ -397,9 +391,9 @@ me_tamil_king.13 = { #Trade fleet arrives home
                 random_owned_province = {
                 limit = {
                     NOR = {
-                     province_id = 6917
-                     province_id = 6916
-                     province_id = 6927
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
                      }
                     NOT = { trade_goods = elephants }
                     NOT = { trade_goods = grain }
@@ -431,18 +425,18 @@ me_tamil_king.13 = { #Trade fleet arrives home
     after = { 
         hidden_effect = {
             create_character = {
-                first_name = "Narmudi"
-                family_name = "Chola"
+                first_name = "Sindbad"
+                family_name = "Alaswad"
                 age = 40
-                culture = tamil
-                religion = hindu
+                culture = aksumite 
+                religion = puntic_religion
                 female = no
                 add_trait = coastal_raider
                 add_trait = oarmaster
                 add_trait = abrasive
                 good_martial_effect = yes
                 good_charisma_effect = yes
-                save_scope_as = tamil_admiral
+                save_scope_as = puntic_admiral
             }
         }       
         if = {
@@ -451,9 +445,9 @@ me_tamil_king.13 = { #Trade fleet arrives home
             }
             create_unit = {
                 navy = yes
-                commander = scope:tamil_admiral
+                commander = scope:puntic_admiral
                 sub_unit = octere
-                location = 6915 #Koti
+                location = 7532 #Mosylon 
                 add_subunit = trireme
                 add_subunit = trireme
                 add_subunit = trireme
@@ -471,9 +465,9 @@ me_tamil_king.13 = { #Trade fleet arrives home
             }
             create_unit = {
                 navy = yes
-                commander = scope:tamil_admiral
+                commander = scope:puntic_admiral
                 sub_unit = octere
-                location = 6915
+                location = 7532 #Mosylon 
                 add_subunit = trireme
                 add_subunit = trireme
                 add_subunit = trireme
@@ -499,14 +493,14 @@ me_tamil_king.13 = { #Trade fleet arrives home
 }
 
 
-me_tamil_king.14 = { # Begin Trade Fleet Construction
+puntic_trade_fleet.14 = { # Begin Trade Fleet Construction
     type = country_event
-    title = me_tamil_king_14_title
-    desc = me_tamil_king_14_desc
+    title = puntic_trade_fleet_14_title
+    desc = puntic_trade_fleet_14_desc
     picture = interesting_histories_southern_india
 
     option = {  #Big Fleet (20 Ships)
-        name = me_tamil_king_14.a
+        name = puntic_trade_fleet_14.a
         add_treasury = -500
             set_variable = {
                 name = big_fleet_construction
@@ -514,7 +508,7 @@ me_tamil_king.14 = { # Begin Trade Fleet Construction
             }        
     }
     option = {  #Small Fleet (10 Ships)
-        name = me_tamil_king_14.b
+        name = puntic_trade_fleet_14.b
         add_treasury = -300
             set_variable = {
                 name = small_fleet_construction
@@ -523,21 +517,21 @@ me_tamil_king.14 = { # Begin Trade Fleet Construction
     }
     after = {
         trigger_event = {
-            id = me_tamil_king.11
+            id = puntic_trade_fleet.11
             days = { 90 182 } #3-6 months
         }    
     }    
 }
 
 #Mission task Flavor Events
-me_tamil_king.15 = { # Pandya Madurai Flavor
+puntic_trade_fleet.15 = { # Adouli
     type = country_event
-    title = me_tamil_king_15_title
-    desc = me_tamil_king_15_desc
+    title = puntic_trade_fleet_15_title
+    desc = puntic_trade_fleet_15_desc
     picture = interesting_histories_southern_india
     option = {
-        name = me_tamil_king_15.a
-        p:6917 = {
+        name = puntic_trade_fleet_15.a
+        p:7503 = {
             add_province_modifier = {
                 name = regional_trading_center
                 duration = -1
@@ -546,14 +540,14 @@ me_tamil_king.15 = { # Pandya Madurai Flavor
     }
 }
 
-me_tamil_king.16 = { # Pandya Koti Flavor
+puntic_trade_fleet.16 = { # Mosylon
     type = country_event
-    title = me_tamil_king_16_title
-    desc = me_tamil_king_16_desc
+    title = puntic_trade_fleet_16_title
+    desc = puntic_trade_fleet_16_desc
     picture = interesting_histories_southern_india
     option = {
-        name = me_tamil_king_16.a
-        p:6915 = {
+        name = puntic_trade_fleet_16.a
+        p:7532 = {
             add_province_modifier = {
                 name = regional_trading_center
                 duration = -1
@@ -562,13 +556,45 @@ me_tamil_king.16 = { # Pandya Koti Flavor
     }
 }
 
-me_tamil_king.17 = { # Chola Urayur Flavor
+puntic_trade_fleet.17 = { # Opone
     type = country_event
-    title = me_tamil_king_17_title
-    desc = me_tamil_king_17_desc
+    title = puntic_trade_fleet_17_title
+    desc = puntic_trade_fleet_17_desc
     picture = interesting_histories_southern_india
     option = {
-        name = me_tamil_king_17.a
+        name = puntic_trade_fleet_17.a
+        p:7528 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}
+
+puntic_trade_fleet.18 = { # Malao
+    type = country_event
+    title = puntic_trade_fleet_18_title
+    desc = puntic_trade_fleet_18_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = puntic_trade_fleet_18.a
+        p:7522 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}
+
+puntic_trade_fleet.19 = { # Moundou
+    type = country_event
+    title = puntic_trade_fleet_19_title
+    desc = puntic_trade_fleet_19_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = puntic_trade_fleet_19.a
         p:7523 = {
             add_province_modifier = {
                 name = regional_trading_center
@@ -578,46 +604,14 @@ me_tamil_king.17 = { # Chola Urayur Flavor
     }
 }
 
-me_tamil_king.18 = { # Chola Karige Flavor
+puntic_trade_fleet.20 = { # Apocopa
     type = country_event
-    title = me_tamil_king_18_title
-    desc = me_tamil_king_18_desc
+    title = puntic_trade_fleet_20_title
+    desc = puntic_trade_fleet_20_desc
     picture = interesting_histories_southern_india
     option = {
-        name = me_tamil_king_18.a
-        p:6936 = {
-            add_province_modifier = {
-                name = regional_trading_center
-                duration = -1
-            }
-        }
-    }
-}
-
-me_tamil_king.19 = { # Chera Vanci Flavor
-    type = country_event
-    title = me_tamil_king_19_title
-    desc = me_tamil_king_19_desc
-    picture = interesting_histories_southern_india
-    option = {
-        name = me_tamil_king_19.a
-        p:6916 = {
-            add_province_modifier = {
-                name = regional_trading_center
-                duration = -1
-            }
-        }
-    }
-}
-
-me_tamil_king.20 = { # Chera Kodungallur Flavor
-    type = country_event
-    title = me_tamil_king_20_title
-    desc = me_tamil_king_20_desc
-    picture = interesting_histories_southern_india
-    option = {
-        name = me_tamil_king_20.a
-        p:6895 = {
+        name = puntic_trade_fleet_20.a
+        p:8704 = {
             add_province_modifier = {
                 name = regional_trading_center
                 duration = -1

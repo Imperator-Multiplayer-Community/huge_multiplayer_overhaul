@@ -659,6 +659,10 @@
         			 navy_movement_speed = 0.025 }
         
         requires_or = { global_tax_modifier_inv_4 commerce_inv_4 }
+        on_activate = {
+			
+			custom_tooltip = "trade_fleet_decision"
+		}
     }
 
     tyrian_purple_inv = { 
@@ -719,6 +723,10 @@
         			 naval_range = 0.1 }
         
         requires = { state_trade_inv_3 } 
+        on_activate = {
+			
+			custom_tooltip = "trade_good_decision"
+		}
     }
 
     global_tax_modifier_inv_5 = { 

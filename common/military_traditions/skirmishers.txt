@@ -325,7 +325,7 @@
 		modifier = { 
 			archers_morale = 0.05
 			archers_offensive = 0.05
-			levy_size_multiplier = 0.005
+			#levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
@@ -336,7 +336,7 @@
 		modifier = { 
 			archers_defensive = 0.05
 			archers_discipline = 0.05
-			discipline = 0.025
+			#discipline = 0.025
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_7
@@ -347,9 +347,9 @@
 		modifier = { 
 			archers_morale = 0.05
 			archers_offensive = 0.05
-			levy_size_multiplier = 0.005
+			#levy_size_multiplier = 0.005
 			army_maintenance_cost = 0.01
-			
+			global_population_happiness = -0.01
 		} 
 		icon = greek_antigonid_path_6
 		requires = {skirmishers_path_3}
@@ -359,9 +359,9 @@
 		modifier = { 
 			archers_defensive = 0.05
 			archers_discipline = 0.05
-			discipline = 0.025
+			#discipline = 0.025
 			army_maintenance_cost = 0.01
-			
+			global_population_happiness = -0.01
 		} 
 		icon = levantine_arabian_path_end_bonus
 		requires = { skirmishers_path_4 }
@@ -369,10 +369,11 @@
 
 	skirmishers_path_7 = { ### final generic tradition
 		modifier = {
-			levy_size_multiplier = 0.01
-			discipline = 0.01
+			archers_morale = 0.1
+			#levy_size_multiplier = 0.01
+			#discipline = 0.01
 			army_maintenance_cost = 0.01
-			global_population_happiness = -0.03
+			global_population_happiness = -0.01
 		}
 		icon = greek_antigonid_path_6
 		requires = { skirmishers_path_6 skirmishers_path_5 }

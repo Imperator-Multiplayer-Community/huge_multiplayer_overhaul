@@ -3,6 +3,7 @@
 
 	skill = martial
 
+	land_morale = 0.01
 	army_maintenance_cost = -0.01 # Was land_morale = 0.075
 	discipline = 0.01 # Was naval_morale = 0.075
 	levy_size_multiplier = 0.005
