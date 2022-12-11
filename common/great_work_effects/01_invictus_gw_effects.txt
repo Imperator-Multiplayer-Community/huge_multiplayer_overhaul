@@ -159,7 +159,7 @@ gw_effect_cothon = {
 			country_modifier = {
 				navy_movement_speed = 0.05
 				navy_maintenance_cost = -0.25
-				naval_morale_modifier = 0.025
+				naval_damage_done = 0.025  #naval_morale_modifier = 0.025
 			}
 		}
 		gw_effect_cothon_tier_2 = {
@@ -167,7 +167,7 @@ gw_effect_cothon = {
 			country_modifier = {
 				navy_movement_speed = 0.075
 				navy_maintenance_cost = -0.05
-				naval_morale_modifier = 0.05
+				naval_damage_done = 0.05 #naval_morale_modifier = 0.05
 			}
 		}
 		gw_effect_cothon_tier_3 = {
@@ -175,7 +175,7 @@ gw_effect_cothon = {
 			country_modifier = {
 				navy_movement_speed = 0.1
 				navy_maintenance_cost = -0.075
-				naval_morale_modifier = 0.075
+				naval_damage_done = 0.075 #naval_morale_modifier = 0.075
 			}
 		}
 		gw_effect_cothon_tier_4 = {
@@ -183,7 +183,7 @@ gw_effect_cothon = {
 			country_modifier = {
 				navy_movement_speed = 0.15
 				navy_maintenance_cost = -0.1
-				naval_morale_modifier = 0.1
+				naval_damage_done = 0.1 #naval_morale_modifier = 0.1
 			}
 		}
 	}
@@ -470,7 +470,7 @@ gw_effect_acropolis_rhodes = {
 		gw_effect_acropolis_rhodes_tier_1 = {
 			great_work_effect_tier = gw_effect_tier_1
 			country_modifier = {
-				ship_repair_at_sea = 0.06
+				naval_damage_taken = -0.025 #ship_repair_at_sea = 0.06
 				garrison_growth = 0.15
 			}
 			state_modifier = {
@@ -481,7 +481,7 @@ gw_effect_acropolis_rhodes = {
 		gw_effect_acropolis_rhodes_tier_2 = {
 			great_work_effect_tier = gw_effect_tier_2
 			country_modifier = {
-				ship_repair_at_sea = 0.06
+				naval_damage_taken = -0.05 #ship_repair_at_sea = 0.06
 				garrison_growth = 0.15
 			}
 			state_modifier = {
@@ -492,7 +492,7 @@ gw_effect_acropolis_rhodes = {
 		gw_effect_acropolis_rhodes_tier_3 = {
 			great_work_effect_tier = gw_effect_tier_3
 			country_modifier = {
-				ship_repair_at_sea = 0.06
+				naval_damage_taken = -0.075 #ship_repair_at_sea = 0.06
 				garrison_growth = 0.15
 			}
 			state_modifier = {
@@ -503,7 +503,7 @@ gw_effect_acropolis_rhodes = {
 		gw_effect_acropolis_rhodes_tier_4 = {
 			great_work_effect_tier = gw_effect_tier_4
 			country_modifier = {
-				ship_repair_at_sea = 0.06
+				naval_damage_taken = -0.1 #ship_repair_at_sea = 0.06
 				garrison_growth = 0.15
 			}
 			state_modifier = {
@@ -673,7 +673,7 @@ gw_effect_temple_jupiter = {
 			great_work_effect_tier = gw_effect_tier_1
 			country_modifier = {
 				omen_power = 0.025
-				improve_relation_impact = 0.05
+				stability_cost_modifier = -0.025 #improve_relation_impact = 0.05
 			}
 			state_modifier = {
 				local_migration_attraction = 2.5
@@ -684,7 +684,7 @@ gw_effect_temple_jupiter = {
 			great_work_effect_tier = gw_effect_tier_2
 			country_modifier = {
 				omen_power = 0.05
-				improve_relation_impact = 0.1
+				stability_cost_modifier = -0.05 #improve_relation_impact = 0.1
 			}
 			state_modifier = {
 				local_migration_attraction = 5
@@ -695,7 +695,7 @@ gw_effect_temple_jupiter = {
 			great_work_effect_tier = gw_effect_tier_3
 			country_modifier = {
 				omen_power = 0.075
-				improve_relation_impact = 0.15
+				stability_cost_modifier = -0.075 #improve_relation_impact = 0.15
 			}
 			state_modifier = {
 				local_migration_attraction = 7.5
@@ -706,7 +706,7 @@ gw_effect_temple_jupiter = {
 			great_work_effect_tier = gw_effect_tier_4
 			country_modifier = {
 				omen_power = 0.1
-				improve_relation_impact = 0.2
+				stability_cost_modifier = -0.1 #improve_relation_impact = 0.2
 			}
 			state_modifier = {
 				local_migration_attraction = 10
@@ -780,7 +780,7 @@ gw_effect_temple_zeus = {
 		gw_effect_temple_zeus_tier_1 = {
 			great_work_effect_tier = gw_effect_tier_1
 			country_modifier = {
-				improve_relation_impact = 0.1
+				stability_cost_modifier = -0.025 #improve_relation_impact = 0.1
 				global_citizen_output = 0.01
 			}
 			state_modifier = {
@@ -790,7 +790,7 @@ gw_effect_temple_zeus = {
 		gw_effect_temple_zeus_tier_2 = {
 			great_work_effect_tier = gw_effect_tier_2
 			country_modifier = {
-				improve_relation_impact = 0.2
+				stability_cost_modifier = -0.05 #improve_relation_impact = 0.2
 				global_citizen_output = 0.02
 			}
 			state_modifier = {
@@ -800,7 +800,7 @@ gw_effect_temple_zeus = {
 		gw_effect_temple_zeus_tier_3 = {
 			great_work_effect_tier = gw_effect_tier_3
 			country_modifier = {
-				improve_relation_impact = 0.3
+				stability_cost_modifier = -0.075 #improve_relation_impact = 0.3
 				global_citizen_output = 0.03
 			}
 			state_modifier = {
@@ -810,7 +810,7 @@ gw_effect_temple_zeus = {
 		gw_effect_temple_zeus_4 = {
 			great_work_effect_tier = gw_effect_tier_4
 			country_modifier = {
-				improve_relation_impact = 0.5
+				stability_cost_modifier = -0.1 #improve_relation_impact = 0.5
 				global_citizen_output = 0.05
 			}
 			state_modifier = {
@@ -1124,7 +1124,7 @@ gw_effect_colossus = {
 			country_modifier = {
 				admiral_loyalty = 2.5
 				global_commerce_modifier = 0.025
-				naval_morale_modifier = 0.025
+				global_ship_recruit_speed = 0.1 #naval_morale_modifier = 0.025
 			}
 		}
 		gw_effect_colossus_tier_2 = {
@@ -1132,7 +1132,7 @@ gw_effect_colossus = {
 			country_modifier = {
 				admiral_loyalty = 5
 				global_commerce_modifier = 0.05
-				naval_morale_modifier = 0.05
+				global_ship_recruit_speed = 0.2 #naval_morale_modifier = 0.05
 			}
 		}
 		gw_effect_colossus_tier_3 = {
@@ -1140,7 +1140,7 @@ gw_effect_colossus = {
 			country_modifier = {
 				admiral_loyalty = 7.5
 				global_commerce_modifier = 0.075
-				naval_morale_modifier = 0.075
+				global_ship_recruit_speed = 0.3 #naval_morale_modifier = 0.075
 			}
 		}
 		gw_effect_colossus_tier_4 = {
@@ -1148,7 +1148,7 @@ gw_effect_colossus = {
 			country_modifier = {
 				admiral_loyalty = 10
 				global_commerce_modifier = 0.1
-				naval_morale_modifier = 0.1
+				global_ship_recruit_speed = 0.4 #naval_morale_modifier = 0.1
 			}
 		}
 	}

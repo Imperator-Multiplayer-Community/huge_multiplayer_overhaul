@@ -302,7 +302,7 @@ deity_boria = {
 		}
 	}
 	icon = deity_wealth
-	passive_modifier = { naval_morale_modifier = deity_naval_morale_modifier_svalue }
+	passive_modifier = { naval_damage_taken = deity_naval_damage_taken_svalue }
 	omen = { fort_maintenance_cost = omen_fort_maintenance_cost_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = economy #This Deity uses an Economy Slot
