@@ -1,55 +1,56 @@
 ﻿country_decisions = {
 	
-	create_illyrian_pirate_cove = {
+	
+	create_cyrenaican_naval_base = {
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 4060
+			owns = 3353
 			NOR = {
-				has_variable = created_illyrian_pirate_cove
+				has_variable = created_cyrenaican_naval_base
 			}
-			OR = { 	country_culture_group = illyrian_group
+			OR = { 	primary_culture = cyrenaican
 					any_country_culture = {
 						is_integrated = yes
 						country_culture_pop_count >= small_percent_size_culture_group_comparison
-						this.culture.culture_group = culture_group:illyrian_group
+						is_culture = cyrenaican
 					}			
 			}
 		}
 		highlight = {
 			scope:province = {
-				province_id = 4060
+				province_id = 3353 #Taucheira
 			}
 		}
 		allow = {
 			treasury >= 200
 			military_experience >= 80
 			invention = navy_maintenance_cost_inv_1
-			owns = 4060
+			owns = 3353
 			capital_scope.state = { 
 				trade_good_surplus = { target = wood value > 1 }
 			}
 		}
 		
 		effect = {
-			set_variable = created_illyrian_pirate_cove
+			set_variable = created_cyrenaican_naval_base
 			add_treasury = -200
 			add_military_experience = -80
 			add_country_modifier = {
-				name = illyrian_piracy
+				name = cyrenaican_naval_programme
 				duration = -1
 			}
 			
-			p:4060 = {
+			p:3353 = {
 					add_province_modifier = {
-						name = illyrian_pirate_cove
+						name = cyrenaican_naval_base
 						duration = -1					
 					}
 					add_building_level = port_building
 			}
 			create_unit = {
 				navy = yes
-				location = 4060
+				location = 3353
 				add_subunit = hexere
 				add_subunit = hexere
 				add_subunit = hexere

@@ -28,7 +28,7 @@
 		}
 		allow = {
 			treasury >= 200
-			military_experience >= 100
+			military_experience >= 80
 			invention = navy_maintenance_cost_inv_1
 			owns = 7216
 			capital_scope.state = { 
@@ -39,7 +39,7 @@
 		effect = {
 			set_variable = created_arabian_pirate_cove
 			add_treasury = -200
-			add_military_experience = -100
+			add_military_experience = -80
 			add_country_modifier = {
 				name = arabian_piracy
 				duration = -1

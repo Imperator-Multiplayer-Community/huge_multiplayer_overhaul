@@ -1,44 +1,45 @@
 ﻿country_decisions = {
 	
-	found_dacian_infantry_training_complex = {
+	found_gallic_infantry_training_complex = {
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 4289
+			owns = 2317
 			NOR = {
-				has_variable = founded_dacian_infantry_training_complex
+				has_variable = founded_gallic_infantry_training_complex
 			}
-			OR = { 	country_culture_group = dacia_group
+			OR = { 	country_culture_group = gallic
 					any_country_culture = {
 						is_integrated = yes
 						country_culture_pop_count >= percent_size_culture_group_comparison
-						this.culture.culture_group = culture_group:dacia_group
+						this.culture.culture_group = culture_group:gallic
+
 					}			
 			}
 		}
 		highlight = {
 			scope:province = {
-				province_id = 4289 #Ampellum Iron
+				province_id = 2317 #Ucetia
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 80
-			owns = 4289
+			owns = 2317
 		}
 		
 		effect = {
-			set_variable = founded_dacian_infantry_training_complex
+			set_variable = founded_gallic_infantry_training_complex
 			add_treasury = -100
 			add_military_experience = -80
 			add_country_modifier = {
-				name = dacian_infantry_training_programme 
+				name = gallic_infantry_training_programme 
 				duration = -1
 			}
 			
-			p:4289 = {
+			p:2317 = {
 					add_province_modifier = {
-						name = dacian_infantry_training_complex
+						name = gallic_infantry_training_complex
 						duration = -1					
 					}
 				}

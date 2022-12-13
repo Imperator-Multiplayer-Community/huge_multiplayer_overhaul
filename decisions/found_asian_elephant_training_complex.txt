@@ -28,14 +28,14 @@
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
+			military_experience >= 80
 			owns = 6977
 		}
 		
 		effect = {
 			set_variable = founded_asian_elephant_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = asian_elephant_training_programme 
 				duration = -1

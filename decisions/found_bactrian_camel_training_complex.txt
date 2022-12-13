@@ -28,14 +28,14 @@
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
+			military_experience >= 80
 			owns = 4367
 		}
 		
 		effect = {
 			set_variable = founded_bactrian_camel_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = bactrian_camel_training_programme 
 				duration = -1
@@ -46,7 +46,7 @@
 						name = bactrian_camel_training_complex
 						duration = -1					
 					}
-					set_trade_goods = camels
+					set_trade_goods = camel
 				}
 				
 			}

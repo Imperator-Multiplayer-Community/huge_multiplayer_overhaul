@@ -26,14 +26,14 @@
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
+			military_experience >= 80
 			owns = 6731
 		}
 		
 		effect = {
 			set_variable = founded_ferghani_cavalry_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = ferghani_cavalry_training_programme 
 				duration = -1
