@@ -342,11 +342,22 @@ pracya_region = { #7
 		kamata_area
 		pundra_area
 		anga_area
-		samatata_area
 		vrji_area
 		vanga_area
 	}
     color = rgb { 183 138 82 }
+}
+
+burma_region = { #6
+	areas = {
+		arakan_area
+		pyu_area
+		pubu_area
+		samatata_area
+		kamarupa_area
+		shan_area
+	}
+	color = rgb { 76 153 0 }
 }
 
 vindhyaprstha_region = { #6
@@ -416,7 +427,6 @@ tibet_region = { #6 !
 		tsang_area
 		chomolangma_area
 		jangtang_area
-		kamarupa_area
 	}
 }
 
