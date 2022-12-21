@@ -26,7 +26,7 @@
 mithridates_in_phrygia = {
 	country = "KIO"
 	97={
-		first_name="Mithridates"
+		first_name="Mithradates"
 		family = c:KIO.fam:Mithridatid
 		birth_date=416.9.12
 		culture="median"
@@ -184,9 +184,9 @@ mithridates_in_phrygia = {
 	}
 	71={
 		first_name="Nearchos"
-		family_name="Andotomid"
+		family_name="Androtomid"
 		birth_date=394.3.22
-		culture="macedonian"
+		culture="cretan"
 		religion="roman_pantheon"
 		no_stats=yes
 		add_martial=8
@@ -194,9 +194,9 @@ mithridates_in_phrygia = {
 		add_finesse=8
 		add_zeal=6
 		no_traits=yes
-		add_trait="tactician"
 		add_trait="victorious"
 		add_trait="scholar"
+		add_trait="oarmaster"
 		add_gold=50
 		add_popularity=70
 		dna="FvQW9IF5gXnsg+yDAnMCcwJtAm0CkwKTAngCeAKLAosCcwJzAm8CbwKXApcBZQFlAoUChQKGAoYDoQOhAm8CbwJmAmYCgwKDApkCmQKHAocE4gTiAmwCbAJ9An0AZABkAWMBYwKOAo4CgAKAAmwCbAKPAo8EyATIAnwCfAJ4AngCbAJsAVcBVwJ5AnkCdQJ1A6sDqwKVApUDnwOfA60DrQJyAnIChwKHAooCigJuAm4ChQKFAmcCZwJ3AncDowOjAnsCewKVApUCewJ7ApcClwOwA7ACbgJuA6ADoAKCAoICkQKRApgCmAL6AvoAGwAbALwAvAAMAAwAigCKADcANwCxALEBQQFBAqYCpgFEAUQCpwKnANQA1AAAAAAASQBJAUEBQQCcAJwBTQFNAVoBWgARABEA0wDTALIAsgAAAAACvgK+AtcC1wBCAEIBagFqARIBEgMOAw4C9wL3AEwATAFBAUEA5gDmAKEAoQDUANQE6AToAAAAAAADAAMFWAVYANsA2wXIBcgCrwKvAhECEQAAAAAAAAAAAAAAAA=="
@@ -285,13 +285,14 @@ mithridates_in_phrygia = {
 		mother="char:10"
 		no_stats=yes
 		add_martial=9
-		add_charisma=4
+		add_charisma=9
 		add_finesse=3
 		add_zeal=5
 		no_traits=yes
 		add_trait="antigonids"
 		add_trait="victorious"
 		add_trait="founder"
+		add_trait="just"
 		add_gold=400
 		add_popularity=50
 		dna="fv9+/6RzpHPao9qjAEkASQKGAoYChAKEAnMCcwAkACQCcQJxAm8CbwKWApYE0QTRAnACcAJ1AnUCiQKJAmkCaQJ0AnQDrQOtAoACgAKUApQClQKVApQClAFXAVcCfgJ+AnICcgKUApQChwKHAVEBUQFSAVIClwKXAnMCcwOtA60CgQKBAmsCawKEAoQCkgKSAogCiAJ7AnsCgwKDAmcCZwJzAnMCjQKNApkCmQKNAo0BYwFjA7IDsgJzAnMCigKKA6kDqQKRApECegJ6Am0CbQJ0AnQCiAKIAo8CjwKXApcCbQJtAn8CfwJ9An0BKAEoAEIAQgKpAqkBNwE3ABcAFwCVAJUAIgAiAXkBeQADAAMAxgDGAq8CrwB/AH8AxgDGAK4ArgEGAQYAbABsANIA0gAHAAcA1gDWAT0BPQB/AH8ClgKWABAAEADfAN8CiwKLAJcAlwD9AP0AfwB/ACIAIgLHAscBJwEnAzEDMQD3APcM3gzeAH8AfwGTAZMAewB7AGIAYgWwALAAoACgAA4ADgAAAAAAAAAAAAAAAA=="
@@ -567,75 +568,6 @@ mithridates_in_phrygia = {
 		birth_date=381.2.3
 		culture="macedonian"
 		religion="roman_pantheon"
-	}
-	112={
-		first_name="Abd-Hadad"
-		family_name = "Atargatid"
-		birth_date=380.6.14
-		culture="aramaic"
-		religion="carthaginian_pantheon"
-		no_stats=yes
-		add_martial=5
-		add_charisma=6
-		add_finesse=7
-		add_zeal=9
-		no_traits=yes
-		add_trait="zealous"
-		add_gold=300
-		add_popularity=50
-		dna="5OXk5ZSRlJGt8a3xAmwCbAKPAo8ChQKFAooCigJrAmsCiwKLAoQChAJ5AnkCjgKOA58DnwKBAoEDtQO1AngCeAJrAmsCbwJvAo8CjwJ5AnkCfgJ+An0CfQFSAVIEygTKAmkCaQOlA6UBXAFcAAEAAQJ2AnYChAKEAWIBYgJyAnICdgJ2AnACcAJ6AnoClwKXAncCdwJ8AnwCkwKTAocChwKGAoYCewJ7ApYClgKKAooCdwJ3AnACcAKTApMClAKUAmsCawKIAogCgAKAAU8BTwKEAoQCggKCAVABUAKTApMBUQFRAnACcAI/Aj8A0ADQAP0A/QFqAWoArgCuAUoBSgLUAtQBLgEuABcAFwFzAXMBcgFyASEBIQAAAAABAAEAALQAtACfAJ8BBQEFAI4AjgEyATIDSwNLASoBKgAAAAAANgA2AXUBdQKDAoMC0QLRAIUAhQK0ArQAsQCxA3gDeAKlAqUBFgEWAuYC5gA4ADgBkgGSAAAAAAWXBZcEzwTPAfoB+gL8AvwDUQNRA0ADQAAAAAAAAAAAAAAAAA=="
-	}
-	92={
-		first_name="Gerasthart"
-		family_name = "Gerasthartid"
-		birth_date=384.8.7
-		culture="phoenician"
-		religion="carthaginian_pantheon"
-		no_stats=yes
-		add_martial=4
-		add_charisma=5
-		add_finesse=5
-		add_zeal=7
-		no_traits=yes
-		add_trait="devout"
-		add_gold=400
-		add_popularity=80
-		dna="aexp7LOCs4LSzNLMAnsCewJ3AncCfgJ+AmYCZgJ0AnQCbwJvApYClgJvAm8CaAJoAooCigOnA6cBcAFwAooCigSyBLICcgJyAnsCewKKAooCdAJ0An4CfgJtAm0CcAJwAm0CbQTMBMwCjAKMABUAFQKLAosCawJrAoACgAJ/An8CbAJsACIAIgJsAmwCmAKYAmkCaQJ/An8CgwKDAo4CjgKCAoICfAJ8AoMCgwKOAo4CmQKZAo0CjQKQApACigKKApECkQOqA6oCbQJtAnUCdQKbApsCagJqAmcCZwKJAokCaAJoADAAMAFiAWIABQAFAIAAgAFDAUMAFAAUARIBEgCdAJ0ALwAvAMMAwwFGAUYBVgFWAXoBegAAAAAAxQDFAIEAgQEtAS0AUgBSAXEBcQFKAUoDXgNeAD8APwAAAAAAzwDPAuYC5gEHAQcALAAsAMcAxwFKAUoBeQF5AQQBBADYANgDCAMIAUcBRwEJAQkDewN7AAAAAAVRBVEEcARwAbABsALqAuoDiQOJAzsDOwAAAAAAAAAAAAAAAA=="
-	}
-	93={
-		first_name="Abd-'Ashtart"
-		family_name="Garashtratid"
-		birth_date=400.4.7
-		culture="phoenician"
-		religion="carthaginian_pantheon"
-		father="char:92"
-		no_stats=yes
-		add_martial=5
-		add_charisma=5
-		add_finesse=6
-		add_zeal=4
-		no_traits=yes
-		add_trait="ambitious"
-		add_gold=400
-		add_popularity=80
-		dna="Te1N7bOJs4nu2u7aAWIBYgKMAowCegJ6AoYChgJ9An0CgQKBAnoCegKIAogCkwKTAokCiQKNAo0CkgKSAm4CbgBLAEsChQKFAoACgAKRApECbgJuAnkCeQJ+An4ARABEAo0CjQJ1AnUCZgJmAmsCawKPAo8CbgJuAnkCeQKLAosCkQKRAosCiwKJAokBTwFPA7IDsgJpAmkCbQJtAooCigJrAmsChgKGAmYCZgJuAm4CfwJ/AmsCawOtA60CgwKDAm8CbwKQApACbwJvAVMBUwKZApkCmQKZAnwCfAJrAmsCgAKAAn4CfgQgBCAA+AD4AGQAZAKhAqEAmgCaAO0A7QAaABoASQBJAIcAhwBJAEkBcQFxAVQBVAAAAAAANQA1AuIC4gKTApMBEQERASoBKgCTAJMDZwNnAKAAoAAAAAAAZQBlAWwBbALQAtAAcwBzANwA3ADJAMkBAwEDAx4DHgKfAp8ClwKXAwkDCQM4AzgL4QvhAAAAAAUdBR0E/gT+AeEB4QKKAooDqgOqAw0DDQAAAAAAAAAAAAAAAA=="
-	}
-	95={
-		first_name="Abd-Elonim"
-		family_name = "Elonimid"
-		birth_date=380.6.14
-		culture="phoenician"
-		religion="carthaginian_pantheon"
-		no_stats=yes
-		add_martial=4
-		add_charisma=3
-		add_finesse=6
-		add_zeal=6
-		no_traits=yes
-		add_trait="scholar"
-		add_gold=500
-		add_popularity=80
-		dna="XfVd9aOIo4j+xf7FAnoCegJwAnACkgKSApMCkwKXApcCiwKLAnECcQKGAoYCiwKLAWYBZgAjACMChgKGAmsCawKSApICggKCAnUCdQJ9An0E3gTeAn4CfgJ7AnsCggKCApMCkwKQApACawJrAVUBVQOZA5kChQKFApYClgKAAoACkwKTAokCiQBJAEkCcAJwAm0CbQTZBNkCmAKYAngCeAKYApgCjQKNAosCiwJ4AngDqAOoAn4CfgKMAowBcwFzAnUCdQJzAnMCiwKLAokCiQKaApoCawJrAnUCdQOcA5wChgKGAosCiwIVAhUApQClAJAAkAFeAV4AKgAqAuAC4AAvAC8BMQExAQ8BDwEaARoDEAMQAH4AfgAAAAAAHwAfAE8ATwA+AD4BIwEjAO4A7gEqASoACQAJAOYA5gAAAAABOwE7AtoC2gArACsAMQAxABUAFQC0ALQBJAEkAkgCSAAAAAABFQEVAyYDJgA1ADUF8AXwAAAAAAX1BfUELwQvAcYBxgJAAkADzwPPA/gD+AAAAAAAAAAAAAAAAA=="
 	}
 }
 

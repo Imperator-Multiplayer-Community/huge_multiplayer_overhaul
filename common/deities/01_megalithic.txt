@@ -40,7 +40,7 @@ deity_shaheded = { # ECONOMY
 	}
 	icon = deity_tribal_wealth
 	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
-	omen = { naval_damage_done = omen_naval_damage_done_svalue } #Bonus from Omen
+	omen = { naval_morale_modifier = omen_naval_morale_modifier_svalue } #Bonus from Omen
 	on_activate = {
 		naval_apotheosis_effect = yes
 	}

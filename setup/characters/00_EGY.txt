@@ -1,5 +1,13 @@
-﻿"EGY"={
+﻿	#########################################################################
+	########################## Changes by TORUGU ############################
+
+	#### Added magas trait to 18, 46, 57 and 115 
+
+	######################################################################### 
+
+"EGY"={
 	country="EGY"
+
 	18={
 		first_name="Berenike"
 		family = c:EGY.fam:Magid
@@ -17,6 +25,7 @@
 		no_traits=yes
 		add_trait="lustful"
 		add_trait="crafty"
+		add_trait="magas"
 		add_gold=2000
 		add_popularity=60
 		dna="Z1FnUZ6HnofQ8NDwApMCkwJrAmsCfAJ8AnQCdAJ0AnQCaQJpAoQChAKVApUCZgJmAngCeAKOAo4CZwJnApkCmQJ2AnYCdAJ0A6IDogFfAV8AIgAiAosCiwJ3AncEugS6AnsCewJ9An0CagJqAmsCawJqAmoCdgJ2AnECcQJrAmsCcAJwAnYCdgJ2AnYCkAKQA6wDrAKTApMCfgJ+AnwCfAJyAnICgAKAAmwCbAKWApYDqwOrAoECgQJrAmsCZgJmAnICcgKVApUChQKFAEgASAKHAocCagJqAoMCgwFkAWQClAKUAoICggK0ArQAygDKAKEAoQFiAWIALwAvABkAGQFgAWABSAFIAtAC0AB6AHoBDQENAI0AjQAAAAAAUQBRAEcARwFJAUkAcgByANkA2QFlAWUAFAAUAvAC8AAAAAAAxADEAPsA+wBiAGIC0wLTAUgBSAByAHIAqQCpA2EDYQAYABgDNQM1AHQAdAM8AzwKbApsAAAAAASvBK8F9wX3AIIAggVzBXMCSAJIAtMC0wAAAAAAAAAAAAAAAA=="
@@ -124,6 +133,7 @@
 		no_traits=yes
 		add_trait="ambitious"
 		add_trait="devout"
+		add_trait="magas"
 		add_gold=300
 		add_popularity=80
 		dna="dqN2o4V3hXfuwu7CAncCdwKOAo4CkQKRAVYBVgJtAm0DsQOxAm0CbQKGAoYExQTFAowCjAJ4AngCkQKRAo4CjgKQApAChgKGAooCigJ4AngCmAKYAnICcgKXApcCcgJyAnwCfAJ/An8CiQKJA5kDmQKHAocChwKHAmcCZwKGAoYCcgJyAnwCfAJqAmoClAKUAI0AIwKXApcCjAKMAmYCZgJnAmcClAKUAo8CjwKBAoEClQKVAVABUAKJAokCdwJ3AoMCgwFeAV4CfQJ9AncCdwFYAVgBVQFVADMAMwJ7AnsClAKUAo8CjwK2ArYAcgByAOsA6wAwADAAZgBmAJwAnAEFAQUAlgCWAQgBCAABAAEE6wTrAU0BTQAAAAAAtwC3ABAAEAACAAIBSAFIADkAOQLsAuwAzADMAugC6AAAAAAAdwB3AJcAlwApACkBAgECAMMAwwDnAOcBOgE6BJYElgCDAIMEAATEAysDfwMnAycBwgHCAAAAAAM+Az4FXgWjAIMAgwVqBWoCywLLAqgCqAAAAAAAAAAAAAAAAA=="
@@ -181,6 +191,7 @@
 		add_finesse=4
 		add_zeal=6
 		no_traits=yes
+		add_trait="magas"
 		add_gold=500
 		add_popularity=50
 		dna="I+kj6Y2FjYXeud65ApQClAKPAo8CigKKAnECcQKSApICmQKZAm8CbwKDAoMChAKEAnwCfAKJAokChwKHAnYCdgKIAogCZgJmAo0CjQTlBOUCfQJ9A5oDmgJ4AngDpwOnAnUCdQJ/An8CewJ7ApgCmAFUAVQDqQOpAo8CjwKPAo8CbwJvAV0BXQKDAoMCkAKQApACkAJpAmkCjQKNA6gDqAKDAoMCcQJxAmoCagKRApEClgKWAmcCZwOyA7ICjwKPAngCeAJuAm4CZwJnAnICcgJnAmcCkgKSAnsCewKEAoQCgwKDAo8CjwP7A/sC/AL8AqICogDdAN0A0gDSAPEA8QEzATMA/gD+AEMAQwAhACEAHwAfAQoBCgAAAAAAFwAXAQUBBQB4AHgAvwC/AUoBSgDpAOkC0ALQAqsCqwAAAAABcAFwAMgAyAFTAVMCvgK+ADcANwFYAVgCsQKxAGIAYgC4ALgA2QDZAS8BLwB3AHcB9wH3AAAAAAGcAZwFmAWYAGUAZQVDBUMClgKWAqMCowAAAAAAAAAAAAAAAA=="
@@ -280,6 +291,7 @@
 		add_finesse=4
 		add_zeal=5
 		no_traits=yes
+		add_trait="magas"
 		add_gold=50
 		add_popularity=50
 		dna="UtNS056AnoA5czlzAngCeAFVAVUCggKCAVwBXAJoAmgCeAJ4AnMCcwBLAEsCmAKYAnUCdQKTApMCjQKNAosCiwJ3AncCdgJ2AmsCawJnAmcCcAJwAnwCfAObA5sCgQKBAnoCegJ0AnQCkgKSAoACgAJvAm8CfQJ9AnQCdAJ5AnkAJwAnAoYChgS5BLkCiAKIAn0CfQJoAmgCZgJmAoQChAJqAmoCmAKYApACkAKYApgCiAKIAnICcgFeAV4ChgKGAoQChAA6ADoChwKHAnkCeQFOAU4ChwKHAmoCagKVApUCbwJvAnQCdAJrAmsAagBqAMoAygBDAEMAGQAZAJQAlAEVARUChAKEAs4CzgDkAOQAcwBzAHMAcwAAAAAALgAuADoAOgFIAUgBGgEaAsoCygEQARABNgE2AP8A/wAAAAAAAQABAHEAcQCEAIQBIgEiAN4A3gE5ATkADgAOAtUC1QAgACAElgSWANMA0wMkAyQB7wHvAAAAAAF7AXsFbwVvAKMAowVpBWkCxgLGAloCWgAAAAAAAAAAAAAAAA=="
@@ -412,7 +424,7 @@
 		add_zeal=5
 		no_traits=yes
 		add_trait="brave"
-		#add_as_governor=p:8003.governorship # greece_region
+		add_as_governor=p:8003.governorship # greece_region
 	}
 	430={
 		first_name="Eunostos"
@@ -431,23 +443,5 @@
 			name=foreign_citizen
 		}
 		marry_character=char:252
-	}
-110={
-		first_name="Sesen"
-		family_name = "Wakekiye"
-		birth_date=380.6.14
-		culture="egyptian"
-		religion="egyptian_pantheon"
-		no_stats=yes
-		add_martial=5
-		add_charisma=7
-		add_finesse=4
-		add_zeal=5
-		no_traits=yes
-		add_trait="ambitious"
-		add_trait="zealous"
-		add_gold=300
-		add_popularity=50
-		dna="EuwS7FCMUIzc9tz2AocChwKVApUCbgJuAnwCfAJyAnIBYwFjAnwCfAJ0AnQCdAJ0AnoCegJ7AnsCcgJyADcANwTPBM8ClgKWAm4CbgKUApQCQQJBAr0CvQKMAowEyQTJAnECcQLLAssCkQKRAnwCfAKCAoICgQKBACoAKgJnAmcCiAKIAosCiwJ/An8CdgJ2AokCiQKUApQChwKHApkCmQFRAVECawJrApMCkwKHAocCmAKYAmYCZgK8ArwCvgK+AnoCegKYApgCgAKAAmwCbAF6AXoDnQOdAmsCawKTApMCgwKDADIAMgDNAM0CnQKdAH0AfQEbARsBGAEYAWcBZwERAREA3gDeANQA1ALLAssCsQKxASYBJgAAAAAAVgBWAE8ATwAJAAkBNQE1AQMBAwLIAsgAEQARApgCmAAAAAAADwAPApwCnABUAFQA9AD0Av8C/wFRAVECIQIhA3YDdgBQAFABawFrAqMCowDfAN8L8wvzAAAAAAW9Bb0Pug+6AcQBxAZHBkcIQwhDDJ0MnQAAAAAAAAAAAAAAAA=="
 	}
 }

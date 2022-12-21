@@ -1,4 +1,22 @@
 ﻿### General Deity Checks ###
+deity_moses = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_war
+	passive_modifier = { global_start_experience = deity_global_start_experience_svalue }
+	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
+	religion = judaism
+	deity_category = war #This Deity uses a War slot.
+	on_activate = {
+		add_1_free_province_investments = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
 deity_deborah = {
 	trigger = {
 		religion = judaism
@@ -8,7 +26,7 @@ deity_deborah = {
 	omen = { land_morale_modifier = omen_land_morale_modifier_svalue } #Bonus from Omen
 	religion = judaism
 	deity_category = war #This Deity uses a War slot.
-	
+
 	on_activate = {
 		if = {
 			limit = { manpower_percentage < 0.8 }
@@ -18,7 +36,7 @@ deity_deborah = {
 			add_military_experience = 2
 		}
 	}
-	
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
@@ -33,31 +51,10 @@ deity_caleb_joshua = {
 	omen = { monthly_tyranny = omen_monthly_tyranny_svalue } #Bonus from Omen
 	religion = judaism
 	deity_category = economy #This Deity uses an Economy Slot
-	
+
 	on_activate = {
 		capital_scope = {
 			create_2_citizens_effect = yes
-		}
-	}
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_samuel = {
-	trigger = {
-		religion = judaism
-	}
-	icon = deity_eloquence
-	passive_modifier = { agressive_expansion_monthly_change = deity_aggressive_expansion_monthly_change_svalue }
-	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
-	religion = judaism
-	deity_category = culture #This Deity uses a Culture Slot'
-	on_activate = {
-		add_research = {
-			technology = religious_tech
-			value = 10
 		}
 	}
 
@@ -82,7 +79,7 @@ deity_abraham = {
 				any_owned_province = {
 					any_pops_in_province = {
 						NOT = {
-							pop_religion = scope:deified_ruler.religion 
+							pop_religion = scope:deified_ruler.religion
 						}
 					}
 				}
@@ -97,7 +94,7 @@ deity_abraham = {
 					any_owned_province = {
 						any_pops_in_province = {
 							NOT = {
-								pop_religion = scope:deified_ruler.religion 
+								pop_religion = scope:deified_ruler.religion
 							}
 						}
 					}
@@ -106,14 +103,14 @@ deity_abraham = {
 					limit = {
 						any_pops_in_province = {
 							NOT = {
-								pop_religion = scope:deified_ruler.religion 
+								pop_religion = scope:deified_ruler.religion
 							}
 						}
 					}
 					random_pops_in_province = {
 						limit = {
 							NOT = {
-								pop_religion = scope:deified_ruler.religion 
+								pop_religion = scope:deified_ruler.religion
 							}
 						}
 						set_pop_religion = scope:deified_ruler.religion
@@ -121,83 +118,6 @@ deity_abraham = {
 				}
 			}
 		}
-	}
-	
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_children_of_god = { #Not used
-	trigger = {
-		religion = judaism
-	}
-	icon = deity_war
-	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
-	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
-	religion = judaism
-	deity_category = war #This Deity uses a War slot.
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_david = {
-	trigger = {
-		religion = judaism
-	}
-	icon = deity_wealth
-	passive_modifier = { global_citizen_output = deity_global_citizen_output_svalue }
-	omen = { global_tax_modifier = omen_global_tax_modifier_svalue } #Bonus from Omen
-	religion = judaism
-	deity_category = economy #This Deity uses an Economy Slot
-	on_activate = {
-		capital_scope = {
-			create_2_freemen_effect = yes
-		}
-	}
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_solomon = {
-	trigger = {
-		religion = judaism
-	}
-	icon = deity_eloquence
-	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
-	omen = { ruler_popularity_gain = omen_ruler_popularity_gain_svalue } #Bonus from Omen
-	religion = judaism
-	deity_category = culture #This Deity uses a Culture Slot
-	on_activate = {
-		p:687 = { 
-			add_permanent_province_modifier = {
-				name = "second_temple_embelishment"
-				duration = -1
-				mode = add
-			}
-		}
-	}
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_moses = {
-	trigger = {
-		religion = judaism
-	}
-	icon = deity_war
-	passive_modifier = { global_start_experience = deity_global_start_experience_svalue }
-	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
-	religion = judaism
-	deity_category = war #This Deity uses a War slot.
-	on_activate = {
-		add_1_free_province_investments = yes
 	}
 
 	deification_trigger = {
@@ -230,9 +150,284 @@ deity_joseph = {
 	}
 }
 
+deity_children_of_god = { #Not used
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_war
+	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
+	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
+	religion = judaism
+	deity_category = war #This Deity uses a War slot.
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_aaron = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_monthly_civilization = deity_global_monthly_civilization_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = culture
+	on_activate = {
+		culture_apotheosis_rel_tech_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_joshua = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_war
+	passive_modifier = { war_no_cb_cost_modifier = deity_war_no_cb_cost_modifier }
+	omen = { war_score_cost = omen_war_score_cost_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = war
+	on_activate = {
+		culture_apotheosis_assimilate_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_jacob = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_love
+	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
+	omen = { ruler_popularity_gain = omen_ruler_popularity_gain_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = fertility
+	on_activate = {
+		economy_apotheosis_capital_citizens_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_miriam = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_wealth
+	passive_modifier = { global_citizen_output = deity_global_citizen_output_svalue }
+	omen = { global_citizen_happyness = omen_global_citizen_happiness_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = economy
+	on_activate = {
+		fertility_apotheosis_food_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_samson = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_war
+	passive_modifier = { land_morale_modifier = deity_land_morale_modifier_svalue }
+	omen = { war_exhaustion = omen_war_exhaustion } #Bonus from Omen
+	religion = judaism
+	deity_category = war
+	on_activate = {
+		military_apotheosis_military_experience_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_adam = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_eloquence
+	passive_modifier = { diplomatic_reputation = deity_diplomatic_reputation_svalue }
+	omen = { global_population_growth = omen_global_population_growth } #Bonus from Omen
+	religion = judaism
+	deity_category = culture
+	on_activate = {
+		economy_apotheosis_capital_noble_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_eve = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_love
+	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
+	omen = { global_monthly_food_modifier = omen_global_monthly_food_modifier } #Bonus from Omen
+	religion = judaism
+	deity_category = fertility
+	on_activate = {
+		fertility_apotheosis_capital_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_enoch = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_wealth
+	passive_modifier = { monthly_corruption = deity_monthly_corruption_svalue }
+	omen = { religious_tech_investment = omen_religious_tech_investment_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = economy
+	on_activate = {
+		economy_income_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_noah = {
+	trigger = {
+		religion = judaism
+	}
+	icon = deity_war
+	passive_modifier = { navy_maintenance_cost = deity_navy_maintenance_cost_svalue }
+	omen = { global_population_growth = omen_global_population_growth } #Bonus from Omen
+	religion = judaism
+	deity_category = war
+	on_activate = {
+		naval_apotheosis_effect = yes
+		storm_of_the_century_effect = {
+			REGION = mediterranean_region
+		}
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+
+### Judaean
+
+deity_samuel = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { agressive_expansion_monthly_change = deity_aggressive_expansion_monthly_change_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = culture #This Deity uses a Culture Slot'
+	on_activate = {
+		add_research = {
+			technology = religious_tech
+			value = 10
+		}
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_david = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_citizen_output = deity_global_citizen_output_svalue }
+	omen = { global_tax_modifier = omen_global_tax_modifier_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = economy #This Deity uses an Economy Slot
+	on_activate = {
+		capital_scope = {
+			create_2_freemen_effect = yes
+		}
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_solomon = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
+	omen = { ruler_popularity_gain = omen_ruler_popularity_gain_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = culture #This Deity uses a Culture Slot
+	on_activate = {
+		if ={
+			limit = {
+				p:687 = {
+					has_ancient_wonder = "second_temple_herod"
+				}
+				owns = 687
+			}
+			p:687 = {
+				add_permanent_province_modifier = {
+					name = "second_temple_embelishment"
+					duration = -1
+					mode = add
+				}
+			}
+		}
+		else = {
+			economy_apotheosis_province_improvement_effect = yes
+		}
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
 deity_esther = {
 	trigger = {
 		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
 	}
 	icon = deity_love
 	passive_modifier = { global_pop_conversion_speed_modifier = deity_global_pop_conversion_speed_modifier_svalue }
@@ -261,7 +456,7 @@ deity_esther = {
 					any_owned_province = {
 						any_pops_in_province = {
 							NOT = {
-								pop_culture = scope:deified_ruler.culture 
+								pop_culture = scope:deified_ruler.culture
 							}
 						}
 					}
@@ -270,14 +465,14 @@ deity_esther = {
 					limit = {
 						any_pops_in_province = {
 							NOT = {
-								pop_culture = scope:deified_ruler.culture 
+								pop_culture = scope:deified_ruler.culture
 							}
 						}
 					}
 					random_pops_in_province = {
 						limit = {
 							NOT = {
-								pop_culture = scope:deified_ruler.culture 
+								pop_culture = scope:deified_ruler.culture
 							}
 						}
 						set_pop_culture = scope:deified_ruler.culture
@@ -295,6 +490,10 @@ deity_esther = {
 deity_daniel = {
 	trigger = {
 		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
 	}
 	icon = deity_wealth
 	passive_modifier = { monthly_political_influence_modifier = deity_monthly_political_influence_modifier_svalue }
@@ -344,6 +543,10 @@ deity_daniel = {
 deity_ezekiel = {
 	trigger = {
 		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
 	}
 	icon = deity_war
 	passive_modifier = { cohort_reinforcement_speed = deity_cohort_reinforcement_speed_svalue }
@@ -369,6 +572,10 @@ deity_ezekiel = {
 deity_ezra = {
 	trigger = {
 		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
 	}
 	icon = deity_eloquence
 	passive_modifier = { global_monthly_state_loyalty = deity_global_monthly_state_loyalty_svalue }
@@ -384,4 +591,229 @@ deity_ezra = {
 	}
 }
 
-### Exclusive Deity Checks ###
+deity_ruth = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_pop_assimilation_speed_modifier = deity_global_pop_assimilation_speed_modifier_svalue }
+	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = culture
+	on_activate = {
+		culture_apotheosis_assimilate_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_nehemiah = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_war
+	passive_modifier = { global_monthly_civilization = deity_global_monthly_civilization_svalue }
+	omen = { fort_maintenance_cost = omen_fort_maintenance_cost_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = war
+	on_activate = {
+		military_apotheosis_defensive_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_job = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { monthly_corruption = deity_monthly_corruption_svalue }
+	omen = { monthly_tyranny = omen_monthly_tyranny_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = culture
+	on_activate = {
+		economy_income_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_isaiah = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
+	omen = { global_commerce_modifier = omen_global_commerce_modifier_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = economy
+	on_activate = {
+		economy_income_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_jeremiah = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_love
+	passive_modifier = { monthly_corruption = deity_monthly_corruption_svalue }
+	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = fertility
+	on_activate = {
+		fertility_apotheosis_capital_slaves_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_elijah = {
+	trigger = {
+		religion = judaism
+		NOR = {
+		  tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_pop_conversion_speed_modifier = deity_global_pop_conversion_speed_modifier_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
+	religion = judaism
+	deity_category = culture
+	on_activate = {
+		fertility_apotheosis_food_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+
+### Samaritans
+
+deity_abishua = {
+	trigger = {
+		religion = judaism
+		OR = {
+			tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { religious_tech_investment = deity_religious_tech_investment_svalue }
+	omen = { happiness_for_same_culture_modifier = omen_happiness_for_same_culture_modifier_svalue }
+
+	religion = judaism
+	deity_category = culture
+	on_activate = {
+		culture_apotheosis_capital_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_uzzi = {
+	trigger = {
+		religion = judaism
+		OR = {
+			tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
+	omen = { global_monthly_state_loyalty = omen_global_monthly_state_loyalty } #Bonus from Omen
+
+	religion = judaism
+  deity_category = culture
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_abdel = {
+	trigger = {
+		religion = judaism
+		OR = {
+			tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_love
+	passive_modifier = { global_pop_assimilation_speed_modifier = deity_global_pop_assimilation_speed_modifier_svalue }
+	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
+
+	religion = judaism
+	deity_category = fertility
+	on_activate = {
+		military_apotheosis_capital_freemen_effect = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_manasseh = {
+	trigger = {
+		religion = judaism
+		OR = {
+			tag = SMA
+			heritage = samaria_heritage
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { build_cost = deity_build_cost_svalue }
+	omen = { global_monthly_civilization = omen_global_monthly_civilization_svalue } #Bonus from Omen
+
+	religion = judaism
+	deity_category = economy
+	on_activate = {
+		add_1_free_province_investments = yes
+	}
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}

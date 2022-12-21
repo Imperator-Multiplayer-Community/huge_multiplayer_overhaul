@@ -224,7 +224,7 @@ deity_soma = { # ECONOMY
 	}
 	icon = deity_hindu_eloquence
 	passive_modifier = { research_points_modifier = deity_research_points_modifier_svalue }
-	omen = { naval_damage_done = omen_naval_damage_done_svalue } #Bonus from Omen
+	omen = { naval_morale_modifier = omen_naval_morale_modifier_svalue } #Bonus from Omen
 	on_activate = {
 		culture_apotheosis_oratory_tech_effect = yes
 	}

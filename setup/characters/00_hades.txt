@@ -87,7 +87,7 @@
 	}
 	35={
 		first_name="Philippos" # Father of Alexander the Great
-		nickname = "NICKNAME_THE_GREAT"
+		nickname = "NICKNAME_II"
 		family_name="Argead"
 		birth_date=372.1.1
 		death_date=418.10.1
@@ -108,8 +108,8 @@
 		dna="P6Fg38OQv3Xnk+eTAn0CfQKMAowCeAJ4AokCiQKAAoACmQKZAnkCeQAhACEBUQFRAv8CfwOaA5oCmQKZAm4CbgKBAoECbgJuAngCeAKYAooCeAJ4AnwCfAJ3AncCjAKMAnYCdgJqAmoClQKVAnUCdQKYApgChAKEAo8CjwKXApcCewJ7AmYCZgJ6AnoCjgKOApgCmAS9BL0CaQJpAo4CjgKDAoMCawJrAnUCdQFbAVsCdQJ1ApUClQOdA50ChwKHApACkAKUApQCcwJzBDcENwKBAoECjwKPA64DrgKEAoQCcAJwAn4CfgLLAssAgACAAX8BfwB7AHsAHAAcAXkBeQC0ALQBdQF1ABAAEAFEAUQA5wDnAuEC4QAAAAAAmwCbAPoA+gD1APUBOAE4AXMBcwAWABYDOAM4ABIAEgAAAAAAMQAxAEEAQQE8ATwBWAFYABAAEAEPAQ8BcQFxAEgASAC7AOsAqACoAGUAZQCVAJUGKgt7AAAAAARIBEwFwwVSAM4AbwWnBacCPQJOAi8CPQMAAAAAAAAAAAAAAA=="
 	}
 	39={
-		first_name="Alexander" # Alexander the Great
-		nickname="NICKNAME_THE_CONQUEROR"
+		first_name="Alexandros" # Alexander the Great
+		nickname="NICKNAME_THE_GREAT"
 		father = scope:philippos
 		mother = scope:olympias
 		family_name="Argead"
@@ -662,6 +662,42 @@
 		add_trait="cruel"
 		add_trait="aeacidae"
 	}
+	493 = { # added by Invictus
+		first_name="Neoptolemos" # https://en.wikipedia.org/wiki/Neoptolemus
+		nickname = "NICKNAME_I"
+		family = c:EPI.fam:Aiakid
+		birth_date=1.1.2  # can't go earlier than that, but should be around the Trojan War
+		death_date=30.1.2
+		religion="roman_pantheon"
+		culture="epirote"
+		no_stats=yes
+		no_traits=yes
+		add_trait="aeacidae"
+	}
+	494 = { # added by Invictus
+		first_name="Admetos" # https://en.wikipedia.org/wiki/Admetus_of_Epirus
+		nickname = "NICKNAME_I"
+		family = c:EPI.fam:Aiakid
+		birth_date=253.1.1  # c. 500 BC
+		death_date=303.1.1  # c. 450 BC
+		religion="roman_pantheon"
+		culture="epirote"
+		no_stats=yes
+		no_traits=yes
+		add_trait="aeacidae"
+	}
+	495 = { # added by Invictus
+		first_name="Tharrhypas" # https://en.wikipedia.org/wiki/Tharrhypas
+		nickname = "NICKNAME_I"
+		family = c:EPI.fam:Aiakid
+		birth_date=310.1.1  # before 440 BC
+		death_date=363.1.1  # c. 390 BC
+		religion="roman_pantheon"
+		culture="epirote"
+		no_stats=yes
+		no_traits=yes
+		add_trait="aeacidae"
+	}
 }
 
 "Elysium_TRE"={
@@ -752,4 +788,250 @@
 		add_trait="prominent"
 		dna="Wc1ZzbN0s3TDhcOFApACkAJvAm8CfwJ/AncCdwJ0AnQCdgJ2AoACgAKMAowCmAKYAnECcQJ3AncCfgJ+ApcClwJ3AncClQKVAm4CbgJzAnMCkQKRA6sDqwJtAm0CeQJ5AokCiQJ/An8CgwKDAmsCawJ6AnoBUgFSAnUCdQKSApICagJqAoUChQKEAoQCkwKTA5kDmQKDAoMCcwJzAmsCawJtAm0EzQTNAn8CfwOjA6MCaAJoApMCkwKAAoABWwFbApgCmAKRApECZwJnAo8CjwKQApAChwKHAoQChAJpAmkCiAKIAo4CjgI7AjsBPAE8AOEA4QBwAHABcwFzACMAIwFbAVsAvAC8AQgBCAFDAUMBBgEGAUQBRAB/AH8AoQChAK8ArwBLAEsAHAAcAMEAwQDLAMsBVgFWATIBMgB/AH8AswCzADoAOgEqASoBfQF9AKwArAFPAU8C6wLrA3MDcwC0ALQBQAFAAIUAhQNYA1gH7wfvAH8AfwSNBI0FcQVxAOsA6wViBWICYwJjAioCKgAAAAAAAAAAAAAAAA=="
 	}
+}
+"Elysium_ANU"={
+	country="ANU"
+	445={
+		first_name="Sinhabahu"
+		family = c:ANU.fam:Vijaya
+		birth_date=170.3.5
+		death_date=220.4.8
+		culture="vanga"
+		religion="hindu"
+		no_stats=yes
+		add_martial=5
+		add_charisma=9
+		add_finesse=8
+		add_zeal=8
+		no_traits=yes
+		add_trait="orator"
+		add_trait="intelligent"
+		add_trait ="blood_of_vijaya"
+	}
+	446={
+		first_name="Sumitta"
+		family = c:ANU.fam:Vijaya
+		father = char:445
+		birth_date=205.12.29
+		death_date=298.5.2
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=5
+		add_charisma=9
+		add_finesse=8
+		add_zeal=8
+		no_traits=yes
+		add_trait="orator"
+		add_trait="intelligent"
+		add_trait ="blood_of_vijaya"
+	}
+	447={
+		first_name="Prince Vijaya"	#Founder of Aryan Lankans
+		family_name = " "
+		nickname="NICKNAME_THE_GREAT"
+#		family = c:ANU.fam:Vijaya
+		father = char:445
+		birth_date=204.3.5
+		death_date=250.7.5
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=14
+		add_charisma=6
+		add_finesse=6
+		add_zeal=12
+		no_traits=yes
+		add_trait="brave"
+		add_trait="victorious"
+		add_trait="ambitious"
+		add_trait="rash"
+		add_trait ="blood_of_vijaya"
+	}
+	448={
+		first_name="Panduvasdeva"
+		family = c:ANU.fam:Vijaya
+		father = char:446
+		birth_date=240.4.7
+		death_date=279.4.6
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=5
+		add_charisma=6
+		add_finesse=4
+		add_zeal=10
+		no_traits=yes
+		add_trait="crafty"
+		add_trait="intelligent"
+		add_trait ="blood_of_vijaya"
+	}
+	449={
+		first_name="Bhaddakacchana"
+		female=yes
+		family = c:ANU.fam:Vijaya
+		birth_date=250.4.3
+		death_date=286.4.6
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=5
+		add_charisma=9
+		add_finesse=8
+		add_zeal=8
+		no_traits=yes
+		add_trait="orator"
+		add_trait="intelligent"
+	}			
+	450={
+		first_name="Chittra"
+		female=yes
+		family = c:ANU.fam:Vijaya
+		father = char:448
+		mother = char:449
+		birth_date=275.7.3
+		death_date=330.9.6
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=6
+		add_charisma=8
+		add_finesse=10
+		add_zeal=6
+		no_traits=yes
+		add_trait="brave"
+		add_trait="victorious"
+		add_trait="ambitious"
+		add_trait ="blood_of_vijaya"
+	}
+	451={
+		first_name="Dighagamani"
+		family = c:ANU.fam:Vijaya
+		birth_date=270.7.3
+		death_date=325.4.6
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=5
+		add_charisma=7
+		add_finesse=6
+		add_zeal=6
+		no_traits=yes
+		add_trait="cautious"
+		add_trait="unnoticeable"
+	}	
+	452={
+		first_name="Pandukabhaya" # Pandukabhaya - First king of Anuradhapura
+		family = c:ANU.fam:Vijaya
+#		nickname="NICKNAME_THE_GREAT"
+		mother = char:450
+		father = char:451
+		birth_date=315.3.21
+		death_date=385.4.25
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=14
+		add_charisma=8
+		add_finesse=10
+		add_zeal=12
+		no_traits=yes
+		add_trait="brave"
+		add_trait="victorious"
+		add_trait="ambitious"
+		add_trait ="blood_of_vijaya"
+		dna="DPIM8uLP4s/x1vHWAnQCdAKPAo8ChgKGAoACgAKZApkCcgJyAmcCZwJ3AncChAKEAnoCegKZApkDqQOpAowCjAKJAokCdQJ1Am8CbwS0BLQCdgJ2AoQChAJxAnECigKKAWQBZAKYApgCeQJ5AUcBRwFCAUIAKgAqAm8CbwJ1AnUDpwOnAm4CbgKOAo4AJAAkAnECcQKRApECdwJ3Am0CbQAqACoCmQKZBLYEtgKOAo4EyQTJAoUChQKWApYChwKHAokCiQKZApkCkQKRAm8CbwOqA6oCfQJ9AVgBWAKTApMChwKHAnYCdgL/Av8ApwCnARABEAAiACIAuQC5AMAAwAD+AP4BCQEJALkAuQFnAWcDCwMLAI0AjQAAAAAAvgC+AJcAlwCiAKIAnwCfAtUC1QEpASkAAQABADQANAAAAAACvQK9ASsBKwC0ALQASwBLAQIBAgAiACIANgA2AGMAYwDRANEAUABQBMkEyQDgAOAMeAx4AAAAAAb6BvoNBQ0FAaABoAgjCCMKfgp+B58HnwAAAAAAAAAAAAAAAA=="
+	}
+	453={
+		first_name="Suvarnapali" # Suvarnapali - Wife of Pandukabhaya
+		female=yes
+		family = c:ANU.fam:Vijaya
+		birth_date=315.3.21
+		death_date=385.4.25
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=4
+		add_charisma=8
+		add_finesse=10
+		add_zeal=8
+		no_traits=yes
+		add_trait="brave"
+		add_trait="devout"
+	}
+	454={
+		first_name="Keshini" # Keshini - Wife of Mutasiva
+		female=yes
+		family = c:ANU.fam:Vijaya
+		birth_date=370.7.21
+		death_date=443.8.2
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=6
+		add_charisma=8
+		add_finesse=10
+		add_zeal=6
+		no_traits=yes
+		add_trait="brave"
+		add_trait="devout"
+	}
+	455={
+		first_name="Mutasiva" # Mutasiva - Second king of Anuradhapura
+		family = c:ANU.fam:Vijaya
+		father = char:452
+		mother = char:453		
+		birth_date=375.7.21
+		death_date=446.8.2
+		culture="lankan"
+		religion="hindu"
+		no_stats=yes
+		add_martial=7
+		add_charisma=6
+		add_finesse=6
+		add_zeal=12
+		no_traits=yes
+		add_trait="brave"
+		add_trait="rash"
+		add_trait ="blood_of_vijaya"
+		dna="DPIM8uLP4s/x1vHWAnQCdAKPAo8ChgKGAoACgAKZApkCcgJyAmcCZwJ3AncChAKEAnoCegKZApkDqQOpAowCjAKJAokCdQJ1Am8CbwS0BLQCdgJ2AoQChAJxAnECigKKAWQBZAKYApgCeQJ5AUcBRwFCAUIAKgAqAm8CbwJ1AnUDpwOnAm4CbgKOAo4AJAAkAnECcQKRApECdwJ3Am0CbQAqACoCmQKZBLYEtgKOAo4EyQTJAoUChQKWApYChwKHAokCiQKZApkCkQKRAm8CbwOqA6oCfQJ9AVgBWAKTApMChwKHAnYCdgL/Av8ApwCnARABEAAiACIAuQC5AMAAwAD+AP4BCQEJALkAuQFnAWcDCwMLAI0AjQAAAAAAvgC+AJcAlwCiAKIAnwCfAtUC1QEpASkAAQABADQANAAAAAACvQK9ASsBKwC0ALQASwBLAQIBAgAiACIANgA2AGMAYwDRANEAUABQBMkEyQDgAOAMeAx4AAAAAAb6BvoNBQ0FAaABoAgjCCMKfgp+B58HnwAAAAAAAAAAAAAAAA=="
+	}
+					
+}
+
+"Elysium_BIT"={
+	country="BIT"
+		88={
+			first_name="Boteiras" # New =  "Boteiras" BORN IN 310.4.2
+			family = c:BIT.fam:Zipoeteid
+			birth_date=310.4.2
+			death_date=378.10.1
+			culture="bithynian"
+			religion="roman_pantheon"
+			no_stats=yes
+			add_martial=7
+			add_charisma=7
+			add_finesse=5
+			add_zeal=2
+			no_traits=yes
+			add_trait="ambitious"
+			add_trait="founder"
+		}
+		89={
+			first_name="Bas" # New =  "Bas" - BORN IN 357.4.2
+			family_name="Bryaxid"
+			birth_date=357.4.2
+			death_date=428.10.1
+			culture="bithynian"
+			religion="roman_pantheon"
+			female=no
+			father = char:88
+			no_stats=yes
+			add_martial=5
+			add_charisma=6
+			add_finesse=7
+			add_zeal=5
+			no_traits=yes
+			add_trait="lustful"
+		}
 }
