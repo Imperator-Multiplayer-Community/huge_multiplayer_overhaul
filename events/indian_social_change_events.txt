@@ -15,37 +15,37 @@ indian_social_change_events.1 = {
 	immediate = {
 		hidden_effect = {
 				random_list = {
-					10 = {
+					15 = {
 						trigger_event = {
 							id = indian_social_change_events.2 
 							days = { 1000 2000 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = indian_social_change_events.3
 							days = { 1000 2000 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = indian_social_change_events.4 
 							days = { 1000 2000 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = indian_social_change_events.5 
 							days = { 1000 2000 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = indian_social_change_events.6 
 							days = { 1000 2000 }
 						}
 					}
-					10 = { 
+					25 = { 
 					}
 				}
 		}		
@@ -99,7 +99,11 @@ indian_social_change_events.3 = {
 	option = {
 		name = "indian_social_change_events.3.a"
 		add_stability = -5
-		scope:actor.current_ruler = { add_corruption = 4 }
+		add_country_modifier = { 
+			name = "indian_social_stability"
+			duration = 730
+		}
+		scope:actor.current_ruler = { add_corruption = 5 }
 	 }
 }
 

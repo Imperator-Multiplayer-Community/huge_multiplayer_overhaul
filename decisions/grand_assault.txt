@@ -27,7 +27,7 @@
 		effect = {			
 			add_country_modifier = {
 				name = grand_assault_mod
-				duration = 50
+				duration = 45
 			}
 			add_manpower = grand_assault_svalue
 			add_military_experience = -12

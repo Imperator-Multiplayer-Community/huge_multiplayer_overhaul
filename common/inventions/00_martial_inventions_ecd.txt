@@ -247,7 +247,7 @@
 	
 	gw_effect_martial_education_inv = {
 		modifier = { 
-			army_movement_speed = 0.025
+			army_movement_speed = 0.05
 			retreat_delay = -1
 			army_maintenance_cost = 0.01
 		}
@@ -1293,7 +1293,7 @@ military_inventions = {
     #Vanilla invention modified for Invictus
     gallic_timbered_roads_inv = {
     	modifier = {
-    				 army_movement_speed = 0.025
+    				 army_movement_speed = 0.05
     				 army_maintenance_cost = 0.01 }
         requires_or = { gallic_montefortino_helmet_inv  gallic_trimarcisia_inv }
         allow = {
@@ -1817,7 +1817,7 @@ naval_tree = {
 	#New Invictus invention
 	cedar_planks_inv = {
 		modifier = { 
-			naval_unit_attrition = -0.05 
+			naval_unit_attrition = -0.1
 			navy_weight_modifier = -0.1
 		}
 		requires = { serial_production_inv }

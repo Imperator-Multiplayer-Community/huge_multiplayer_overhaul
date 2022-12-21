@@ -49,20 +49,21 @@ go_hunting = {
 }
 
 price_force_divorce = {
-	political_influence = 10
+	political_influence = 20
+	tyranny = 5
 }
 
 price_state_investment_military = {
-	political_influence = 50
+	political_influence = 60
 }
 price_state_investment_civic = {
-	political_influence = 50
+	political_influence = 60
 }
 price_state_investment_oratory = {
-	political_influence = 50
+	political_influence = 60
 }
 price_state_investment_religious = {
-	political_influence = 50
+	political_influence = 60
 }
 
 price_oaths_of_allegiance_button = {
@@ -74,7 +75,7 @@ price_patron_of_arts_button = {
 }
 
 price_assemble_raiding_party_button = {
-	political_influence = 50
+	political_influence = 60
 }
 
 price_tribal_duel = {
@@ -88,13 +89,12 @@ price_test_loyalty = {
 }
 
 price_humiliate_rival = {
-	political_influence = 8
-	tyranny = 4
+	political_influence = 10
 }
 
 price_task_character = {
 	political_influence = 15
-	treasury = 45
+	treasury = 50
 }
 
 create_merc_state_price = { 
@@ -120,7 +120,7 @@ build_border_fort = {
 }
 
 raid = {
-	aggressive_expansion = 5
+	aggressive_expansion = 3 #5 #Aries says this is too harsh. It was 2 in vanilla
 }
 
 raise_levies = {
