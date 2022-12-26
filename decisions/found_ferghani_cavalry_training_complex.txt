@@ -21,7 +21,7 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 6731
+				province_id = 6731 #Massagetia
 			}
 		}
 		allow = {
@@ -44,6 +44,7 @@
 						name = ferghani_cavalry_training_complex
 						duration = -1					
 					}
+					set_trade_goods = horses
 				}
 				
 		}

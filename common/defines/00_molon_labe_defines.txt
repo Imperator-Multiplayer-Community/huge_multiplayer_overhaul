@@ -44,7 +44,9 @@ NUnit = {
 	WAR_EXHAUSTION_ON_RAISE = 0 # was 0.5 can be exploited to keep WE high
 	OUTSIDE_OF_NAVAL_RANGE_ATTRITION = 8 #Was 4.0
 	NAVAL_ATTRITION_CHANCE = 1 #Was 0.4
-	NAVAL_MORALE = 2.0 #Was 2.0
+	LAND_MORALE = 4.0 #Was 3.0
+	NAVAL_MORALE = 2.0 #Was 3.0
+
 }
 
 NPolitics = {

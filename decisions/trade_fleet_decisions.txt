@@ -1,0 +1,183 @@
+﻿country_decisions = {	
+	send_indian_trade_fleet = {
+		
+		potential = {
+			country_culture_group = indian
+			num_of_ports >= 1
+			NOT = { has_variable = indian_trade_fleet_cooldown }
+		}
+		
+		highlight = {
+			scope:province = {
+				province_id = 6915
+				province_id = 6917
+				province_id = 6927
+				province_id = 6936
+				province_id = 6916
+				province_id = 6895
+			}
+		}
+
+		allow = {
+			owns = 6915
+			owns = 6917
+			owns = 6927
+			owns = 6936
+			owns = 6916
+			owns = 6895
+			invention = state_trade_inv_3
+			treasury >= 500
+			political_influence >= 50
+			NOT = { has_variable = indian_trade_fleet_cooldown }
+			custom_tooltip = {
+			text = trade_fleet_tooltip
+				trigger_if = {	
+					any_owned_province = {
+					province_is_exotic_good_trigger = yes
+					num_goods_produced >= 4
+					count >= 2
+					}
+				}
+			}		
+		}
+		
+		effect = {
+			add_political_influence = -50
+			set_variable = {
+				name = indian_trade_fleet_cooldown
+				days = 9125	#50 years
+			}
+                trigger_event = {
+                id = me_tamil_king.14
+                }        	
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	send_arabian_trade_fleet = {
+		
+		potential = {
+			OR = {
+				country_culture_group = south_levantine
+				primary_culture = nabatean
+			}
+			num_of_ports >= 1
+			NOT = { has_variable = arabian_trade_fleet_cooldown }
+		}
+		
+		highlight = {
+			scope:province = {
+				province_id = 4650
+				province_id = 4666
+				province_id = 4700
+				province_id = 4680
+				province_id = 4662
+				province_id = 4676
+			}
+		}
+
+		allow = {
+			owns = 4650
+			owns = 4666
+			owns = 4700
+			owns = 4680
+			owns = 4662
+			owns = 4676
+			invention = state_trade_inv_3
+			treasury >= 500
+			political_influence >= 50
+			NOT = { has_variable = arabian_trade_fleet_cooldown }
+			custom_tooltip = {
+			text = trade_fleet_tooltip
+				trigger_if = {	
+					any_owned_province = {
+					province_is_exotic_good_trigger = yes
+					num_goods_produced >= 4
+					count >= 2
+					}
+				}
+			}		
+		}
+		
+		effect = {
+			add_political_influence = -50
+			set_variable = {
+				name = arabian_trade_fleet_cooldown
+				days = 9125	#50 years
+			}
+                trigger_event = {
+                id = arabian_trade_fleet.14
+                }        	
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}	
+
+
+	send_puntic_trade_fleet = {
+		
+		potential = {
+			OR = {
+				country_culture_group = meroitic_group
+				country_culture_group = aksumite_group
+				country_culture_group = nilotic_group
+			}
+			num_of_ports >= 1
+			NOT = { has_variable = puntic_trade_fleet_cooldown }
+		}
+		
+		highlight = {
+			scope:province = {
+				province_id = 7532
+				province_id = 7523
+				province_id = 7528
+				province_id = 7522
+				province_id = 7503
+				province_id = 8704
+			}
+		}
+
+		allow = {
+			owns = 7532
+			owns = 7523
+			owns = 7528
+			owns = 7522
+			owns = 7503
+			owns = 8704
+			invention = state_trade_inv_3
+			treasury >= 500
+			political_influence >= 50
+			NOT = { has_variable = puntic_trade_fleet_cooldown }
+			custom_tooltip = {
+			text = trade_fleet_tooltip
+				trigger_if = {	
+					any_owned_province = {
+					province_is_exotic_good_trigger = yes
+					num_goods_produced >= 4
+					count >= 2
+					}
+				}
+			}		
+		}
+		
+		effect = {
+			add_political_influence = -50
+			set_variable = {
+				name = puntic_trade_fleet_cooldown
+				days = 9125	#50 years
+			}
+                trigger_event = {
+                id = puntic_trade_fleet.14
+                }        	
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

@@ -52,7 +52,7 @@ deity_poseidon = {
 	}
 	icon = deity_war
 	passive_modifier = { global_ship_start_experience = deity_global_ship_start_experience_svalue }
-	omen = { naval_morale_modifier = omen_naval_morale_modifier_svalue } #Bonus from Omen
+	omen = { naval_damage_done = omen_naval_damage_done_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = war #This Deity uses a War slot.
 
@@ -615,7 +615,7 @@ deity_dioscuri = {
 	}
 	icon = deity_war
 	passive_modifier = { navy_maintenance_cost = deity_navy_maintenance_cost_svalue }
-	omen = { naval_morale_modifier = omen_naval_morale_modifier_svalue } #Bonus from Omen
+	omen = { naval_damage_taken = omen_naval_damage_taken_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = war #This Deity uses a War Slot
 

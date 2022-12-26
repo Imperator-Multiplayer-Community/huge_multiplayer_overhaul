@@ -4,7 +4,7 @@
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 651
+			owns = 8732
 			NOR = {
 				has_variable = founded_aksumite_horse_archer_training_complex
 			}
@@ -18,13 +18,13 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 651
+				province_id = 8732 #Gehar Sheep => Steppe Horses
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			owns = 651
+			owns = 8732
 		}
 		
 		effect = {
@@ -36,14 +36,18 @@
 				duration = -1
 			}
 			
-			p:651 = {
+			p:8732 = {
 					add_province_modifier = {
 						name = aksumite_horse_archer_training_complex
 						duration = -1					
 					}
-				}
-				
+					set_trade_goods = steppe_horses
 			}
+			p:8733 = {
+					set_trade_goods = steppe_horses
+			}
+				
+		}
 		
 		ai_will_do = {
 			base = 100

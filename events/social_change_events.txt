@@ -95,7 +95,9 @@ social_change_events.3 = {
 	option = {
 		name = "social_change_events.3.a"
 		add_stability = -5
-		add_corruption = 3
+		scope:actor.current_ruler = { 
+			add_corruption = 3 
+		}
 	 }
 }
 

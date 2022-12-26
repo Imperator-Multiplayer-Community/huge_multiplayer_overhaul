@@ -4,7 +4,7 @@
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 404
+			owns = 392
 			NOR = {
 				has_variable = founded_thessalian_cavalry_training_complex
 			}
@@ -18,13 +18,13 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 404
+				province_id = 392 #Meliboia 
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			owns = 404
+			owns = 392
 		}
 		
 		effect = {
@@ -36,7 +36,7 @@
 				duration = -1
 			}
 			
-			p:404 = {
+			p:392 = {
 					add_province_modifier = {
 						name = thessalian_cavalry_training_complex
 						duration = -1					

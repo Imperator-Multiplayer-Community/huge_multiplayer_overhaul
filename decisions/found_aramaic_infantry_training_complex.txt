@@ -4,7 +4,7 @@
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 851
+			owns = 811
 			NOR = {
 				has_variable = founded_aramaic_infantry_training_complex
 			}
@@ -18,13 +18,13 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 851
+				province_id = 811 #Doliche Base Metals
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			owns = 851
+			owns = 811
 		}
 		
 		effect = {
@@ -36,7 +36,7 @@
 				duration = -1
 			}
 			
-			p:851 = {
+			p:811 = {
 					add_province_modifier = {
 						name = aramaic_infantry_training_complex
 						duration = -1					

@@ -4,7 +4,7 @@
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 1465
+			owns = 1464
 			NOR = {
 				has_variable = founded_balearic_slingers_training_complex
 			}
@@ -18,13 +18,13 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 1465
+				province_id = 1464 #Ibasim
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 65
-			owns = 1465
+			owns = 1464
 		}
 		
 		effect = {
@@ -36,11 +36,12 @@
 				duration = -1
 			}
 			
-			p:1465 = {
+			p:1464 = {
 					add_province_modifier = {
 						name = balearic_slingers_training_complex
 						duration = -1					
 					}
+					set_trade_goods = wild_game
 				}
 				
 			}

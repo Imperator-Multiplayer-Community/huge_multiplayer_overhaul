@@ -274,7 +274,7 @@
 		}
 		on_activate = {
 			custom_tooltip = "enables_forced_march"
-
+			custom_tooltip = "improves_force_march"
 		}
 		keystone = yes
 		requires_or = { military_tech_investment_inv_2  global_supply_limit_modifier_inv_4 }
@@ -1699,7 +1699,7 @@ naval_tree = {
 			hexere_offensive = 0.05
 			naval_damage_done = 0.025
 		}
-		requires = { naval_tactic_inv_3 trieme_discipline_inv_4 } ##############################################
+		requires = { naval_tactic_inv_3 trireme_discipline_inv_4 } ##############################################
 	}	
 
 
@@ -1786,7 +1786,7 @@ naval_tree = {
 
 	# Level 6
 	navy_movement_speed_inv = { 
-		requires_or = { naval_weapon_platform_inv_1 naval_morale_recovery_inv_1 }
+		requires_or = { naval_weapon_platform_inv_1 naval_new_inv_1 } #naval_morale_recovery_inv_1 }
 		modifier = { 
 			naval_range = 0.05
 			retreat_delay = -1
@@ -1946,7 +1946,6 @@ naval_tree = {
 			navy_movement_speed = 0.05
 			naval_unit_attrition = -0.1 
 			navy_weight_modifier = -0.1
-			navy_maintenance_cost = 0.1
 			naval_range = 0.1
 		}
 		keystone = yes

@@ -251,3 +251,23 @@ price_humiliate_rival_cost_modifier = {
 price_task_character_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/monthly_character_prominence.dds"
 }
+
+secude_governor_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_prominence.dds"
+}
+
+cash500_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+cash1k_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+cash2k_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+hill_fort_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}

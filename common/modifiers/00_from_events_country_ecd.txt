@@ -234,9 +234,9 @@ social_change = {
 }
 
 expanded_citizenship = { ############################################################
-	levy_size_multiplier = 0.01
-	land_morale_modifier = -0.025
-	discipline = -0.025
+	levy_size_multiplier = 0.02
+	land_morale_modifier = -0.04
+	discipline = -0.04
 	army_maintenance_cost = 0.01
 }
 
@@ -385,4 +385,34 @@ indian_social_unrest = {
 
 mass_slave_death = {
 	global_slaves_output = -0.15
+}
+
+chinese_trade_goods = {
+	global_commerce_modifier = 0.025
+}
+
+roman_trade_goods = {
+	global_commerce_modifier = 0.025
+}
+
+arabian_trade_goods = {
+	global_commerce_modifier = 0.025
+}
+
+egyptian_trade_goods = {
+	global_commerce_modifier = 0.025
+}
+
+indian_trade_goods = {
+	global_commerce_modifier = 0.025
+}
+
+regional_trading_center = {
+	local_commerce_value_modifier = 0.05
+	local_migration_attraction = 1
+}
+
+qat_consumption = {
+	charisma = 1
+	finesse = 1
 }

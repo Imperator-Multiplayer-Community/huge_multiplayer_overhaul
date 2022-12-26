@@ -19,7 +19,7 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 3207
+				province_id = 3207 #Vatari
 			}
 		}
 		allow = {
@@ -42,6 +42,10 @@
 						name = numidian_cavalry_training_complex
 						duration = -1					
 					}
+					set_trade_goods = steppe_horses
+				}
+			p:3204 = {
+					set_trade_goods = steppe_horses
 				}
 				
 			}
