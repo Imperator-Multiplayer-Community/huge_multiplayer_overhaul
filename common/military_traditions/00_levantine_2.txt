@@ -62,7 +62,6 @@
 	levantine_arabian_path_4 = { ###Levantine 2A
 		modifier = { 
 			camels_defensive = 0.05
-			camels_morale = -0.05
 			camels_desert_combat_bonus = 0.10
 			camels_flood_plain_combat_bonus = 0.10
 		}
@@ -73,7 +72,6 @@
 	levantine_philosophy_start_bonus = { ###
 		modifier = { 
 			camels_defensive = 0.05
-			camels_morale = -0.05
 			camels_oasis_combat_bonus = 0.10
 			camels_desert_hills_combat_bonus = 0.10
 			}
@@ -120,7 +118,6 @@
 	levantine_egyptian_path_1 = { ###Levantine 2BA
 		modifier = {
 			light_infantry_offensive = 0.05
-			light_infantry_morale = 0.05
 			light_infantry_desert_combat_bonus = 0.1
 			light_infantry_flood_plain_combat_bonus = 0.1
 		}
@@ -140,11 +137,32 @@
 	levantine_egyptian_path_end_bonus = { ###Levantine 4BA
 		modifier = {
 			light_infantry_offensive = 0.05
-			light_infantry_morale = 0.05
 			light_infantry_oasis_combat_bonus = 0.1
 			light_infantry_desert_hills_combat_bonus = 0.1
 		}
 		icon = levantine_egyptian_path_end_bonus
 		requires = {levantine_egyptian_path_1}
+	}
+
+	levantine_greco_path_4 = { ###Levantine 1B
+			modifier = { }
+			enable_tactic = greek_phalanx
+			icon = levantine_greco_path_4
+			requires = {}
+	}
+
+	levantine_greco_path_3 = { ###Levantine 3BB
+		modifier = { }
+		icon = levantine_greco_path_3
+		requires = {levantine_greco_path_4}
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
+		}
 	}
 }

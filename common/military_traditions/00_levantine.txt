@@ -219,7 +219,7 @@
 	levantine_arabian_path_2 = { ###Levantine 1A
 		modifier = { 
 			ship_cost = -0.15
-			global_state_trade_routes = 0.15
+			global_state_trade_routes = 0.05
 		}
 		icon = levantine_philosophy_start_bonus
 		requires = {}
@@ -322,28 +322,7 @@
 		requires = {levantine_egyptian_path_2}
 	}
 
-	levantine_greco_path_4 = { ###Levantine 1B
-			modifier = { }
-			enable_tactic = greek_phalanx
-			icon = levantine_greco_path_4
-			requires = {}
-	}
-
-	levantine_greco_path_3 = { ###Levantine 3BB
-		modifier = { }
-		icon = levantine_greco_path_3
-		requires = {levantine_greco_path_4}
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = steadfast
-				}
-			}
-		}
-	}
-	
+		
 	levantine_arabian_path_6 = { ###Levantine 3A
 		modifier = { 
 			global_building_slot = 1
