@@ -342,7 +342,6 @@ pracya_region = { #7
 		kamata_area
 		pundra_area
 		anga_area
-		samatata_area
 		vrji_area
 		vanga_area
 	}
@@ -355,6 +354,8 @@ burma_region = { #6
 		pyu_area
 		pubu_area
 		shan_area
+		kamarupa_area
+		samatata_area
 	}
 	color = rgb { 76 153 0 }
 }
@@ -426,7 +427,6 @@ tibet_region = { #6 !
 		tsang_area
 		chomolangma_area
 		jangtang_area
-		kamarupa_area
 	}
 }
 
@@ -854,7 +854,6 @@ belgica_region = {
 		morinia_area
 		bellovacia_area
 		veliocassia_area
-		tribocia_area
 		treveria_area
 		nervia_area
 		menapia_orientalis
@@ -887,14 +886,14 @@ central_gaul_region = {	#8 areas
 		parisia_area
 		celtica_orientalis_area
 		mediomatricia_area
-		vangionia_area
 	}
     color = rgb { 227 11 93 }
 }
 
 germania_superior_region = { # 7 areas
 	areas = {
-		#tribocia_area
+		tribocia_area
+		vangionia_area
 		chattia_occidentalis_area
 		raurica_area
 		latobrigia_area
