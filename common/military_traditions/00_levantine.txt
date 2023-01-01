@@ -32,14 +32,12 @@
 			}
 			heritage = ptolemys_heritage
 		}
-		trigger_else_if = {
+		trigger_else = {
 			limit = { country_culture_group = north_african }
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = north_african
-		}
-		trigger_else = {
 		}
 	}
 
@@ -220,6 +218,7 @@
 		modifier = { 
 			ship_cost = -0.15
 			global_state_trade_routes = 0.05
+			navy_maintenance_cost = 0.01
 		}
 		icon = levantine_philosophy_start_bonus
 		requires = {}
@@ -258,6 +257,7 @@
 	levantine_arabian_path_5 = { ###Levantine 2AB
 		modifier = { 
 			naval_damage_taken = -0.1
+			navy_maintenance_cost = 0.01
 		}
 		allow_unit_type = octere
 		icon = levantine_arabian_path_5
@@ -282,6 +282,7 @@
 	levantine_greco_path_6 = { ###Levantine 3A
 		modifier = { 
 			naval_damage_done = 0.15
+			navy_maintenance_cost = 0.01
 		}
 		icon = levantine_greco_path_6
 		requires = {levantine_arabian_path_5 }
@@ -291,6 +292,7 @@
 		modifier = { 
 			ocean_combat_bonus = 0.05
 			global_ship_recruit_speed = 0.15
+			navy_maintenance_cost = 0.01
 		}
 		allow_unit_type = mega_galley
 		icon = levantine_egyptian_path_2
@@ -317,6 +319,7 @@
 			mega_galley_cost = -0.15
 			coastal_terrain_combat_bonus = 0.1
 			riverine_terrain_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_5
 		requires = {levantine_egyptian_path_2}

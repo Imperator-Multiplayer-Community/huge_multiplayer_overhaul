@@ -64,6 +64,7 @@
 			camels_defensive = 0.05
 			camels_desert_combat_bonus = 0.10
 			camels_flood_plain_combat_bonus = 0.10
+			army_maintenance_cost = 0.01
 		}
 		icon = levantine_arabian_path_4
 		requires = {}
@@ -74,6 +75,7 @@
 			camels_defensive = 0.05
 			camels_oasis_combat_bonus = 0.10
 			camels_desert_hills_combat_bonus = 0.10
+			army_maintenance_cost = 0.01
 			}
 		icon = levantine_arabian_path_2
 		requires = { levantine_arabian_path_4 }
@@ -120,6 +122,7 @@
 			light_infantry_offensive = 0.05
 			light_infantry_desert_combat_bonus = 0.1
 			light_infantry_flood_plain_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_1
 		requires = {}
@@ -139,6 +142,7 @@
 			light_infantry_offensive = 0.05
 			light_infantry_oasis_combat_bonus = 0.1
 			light_infantry_desert_hills_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_end_bonus
 		requires = {levantine_egyptian_path_1}
