@@ -38,16 +38,12 @@
 			country_culture_group = nilotic_group
 		}
 		trigger_else = {
-			limit = {
+			OR = {
 				country_culture_group = south_levantine
 				country_culture_group = meroitic_group
 				country_culture_group = aksumite_group
 				country_culture_group = nilotic_group
 			}
-			country_culture_group = south_levantine
-			country_culture_group = meroitic_group
-			country_culture_group = aksumite_group
-			country_culture_group = nilotic_group
 		}
 	}
 

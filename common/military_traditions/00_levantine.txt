@@ -26,18 +26,19 @@
 			primary_culture = phoenician
 		}
 		trigger_else_if = {
-			limit = { heritage = ptolemys_heritage }
-			custom_tooltip = {
-				text = "began_with_tradition_group"
-			}
-			heritage = ptolemys_heritage
-		}
-		trigger_else = {
 			limit = { country_culture_group = north_african }
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = north_african
+		}
+		trigger_else = {
+			OR = {
+				primary_culture = hebrew
+				primary_culture = nabatean
+				primary_culture = phoenician
+				country_culture_group = north_african
+			}
 		}
 	}
 
