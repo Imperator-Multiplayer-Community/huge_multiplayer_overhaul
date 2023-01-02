@@ -43,6 +43,14 @@
 	}
 
 	egyptian_generic_path_1 = { ###
+		allow = {
+            NOT = {
+                has_variable = left_generic_tree
+            }
+        }
+        on_activate = {
+            set variable = left_generic_tree
+        }
 		modifier = { 
 			archers_cost = -0.05
 			archers_movement_speed = 0.05
@@ -57,6 +65,14 @@
 	}
 
 	egyptian_generic_path_2 = { ###
+		allow = {
+            NOT = {
+                has_variable = right_generic_tree
+            }
+        }
+        on_activate = {
+            set variable = right_generic_tree
+        }
 		modifier = { 
 			archers_cost = -0.05
 			archers_movement_speed = 0.05

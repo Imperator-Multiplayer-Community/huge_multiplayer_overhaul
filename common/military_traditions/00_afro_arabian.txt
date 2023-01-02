@@ -48,6 +48,14 @@
 	}
 
 	afro_arabian_generic_path_1 = { ###
+		allow = {
+            NOT = {
+                has_variable = left_generic_tree
+            }
+        }
+        on_activate = {
+            set variable = left_generic_tree
+        }
 		modifier = { 
 			camels_cost = -0.05
 			camels_movement_speed = 0.05
@@ -62,6 +70,14 @@
 	}
 
 	afro_arabian_generic_path_2 = { ###
+		allow = {
+            NOT = {
+                has_variable = right_generic_tree
+            }
+        }
+        on_activate = {
+            set variable = right_generic_tree
+        }
 		modifier = { 
 			camels_cost = -0.05
 			camels_movement_speed = 0.05
