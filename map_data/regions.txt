@@ -7,7 +7,7 @@
 		asculum_area
 		pisae_area
 	}
-    color = rgb { 160 10 10 }
+    color = rgb { 243 22 22 }
 
 }
 
@@ -83,8 +83,8 @@ bithynia_region = { #8
 		paphlagonia_superior_area
 		heracleotis_area
 		paphlagonia_inferior_area
-		bithynia_area
 		mysia_area
+		#bithynia_area
 	}
 }
 
@@ -512,7 +512,7 @@ germania_magna_region = { # 7 areas
 		sicambria_area
 		chasuaria_area
 		frisia_area
-		turonia_area
+		#turonia_area
 	}
     color = rgb { 28 200 35 }
 }
@@ -613,11 +613,11 @@ pannonia_region = {		#9 areas
 		pannonia_prima_occidentalis_area
 		pannonia_prima_orientalis_area
 		pannonia_valeria_area
-		carnuntia_area
 		pannonia_terminus_area
 		noricum_mediterranum_area
 		pannonia_secunda_area
 		savia_occidentalis_area
+		#carnuntia_area
 	}
     color = rgb { 121 146 0 }
 }
@@ -774,12 +774,12 @@ colchis_region = { #8
 	areas = {
 		suaneti_area
 		colchis_area
-		bekhyria_area
 		caucasian_iberia_area
 		gugark_area
 		tayk_area
 		syracene_area
 		ayrarat_area
+		#bekhyria_area
 	}
     color = rgb { 255 140 203 }
 }
@@ -817,7 +817,7 @@ bohemia_region = {
 		transcarpathia_centralis_area
 		celamantia_area
 		marsignia_area
-		viadria_area
+		#viadria_area
 	}
     color = rgb { 255 36 0 }
 }
@@ -1030,11 +1030,12 @@ cyrenaica_region = {		#7 areas
 
 akhtabar_region = { 
 	areas = { 
-		kharga_area
+		hameka_area
 		khargana_area
 		farfara_area
 		parva_area
 		ammon_area
+		#kharga_area
     }
 }
 
