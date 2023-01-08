@@ -27,173 +27,327 @@
 			}
 		}
 	}
-
-	##### CAMELS
-
-	aryan_river_path_9 = { ###
+	
+	aryan_generic_path_1 = { ###
+		allow = {
+            NOT = {
+                has_variable = left_generic_tree
+            }
+        }
+        on_activate = {
+            set variable = left_generic_tree
+        }
 		modifier = { 
-			camels_offensive = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
+			light_infantry_cost = -0.05
+			light_infantry_movement_speed = 0.05
+			warelephant_cost = -0.05
+			warelephant_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
-		icon = levantine_arabian_path_3
-		requires = {  }
-	}
-
-	##### LIGHT CAV
-
-	aryan_plains_path_1 = { ###
-		modifier = { 
-			light_cavalry_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_tribal_path_1
+		icon = persian_bactrian_path_5
 		requires = { }
 	}
 
-	##### LIGHT INF
-
-	aryan_river_path_2 = { ###
+	aryan_generic_path_2 = { ###
+		allow = {
+            NOT = {
+                has_variable = right_generic_tree
+            }
+        }
+        on_activate = {
+            set variable = right_generic_tree
+        }
 		modifier = { 
-			light_infantry_morale = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
+			light_infantry_cost = -0.05
+			light_infantry_movement_speed = 0.05
+			warelephant_cost = -0.05
+			warelephant_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
-		icon = mauryan_coastal_path_7
+		icon = mauryan_noble_path_6
 		requires = { }
 	}
 	
-	aryan_plains_path_2 = { ###
+	aryan_generic_path_3 = { ###
 		modifier = { 
-			light_infantry_defensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_mauryas_path_6
-		requires = { aryan_river_path_2 }
-	}
-
-	##### NAVAL
-
-	aryan_river_path_3 = { ###
-		enable_ability = naval_raiding
-		modifier = { 
-			trireme_offensive = 0.1
-			enslavement_efficiency = 0.1
-			navy_maintenance_cost = 0.01
-		} 
-		icon = mauryan_coastal_path_end_bonus
-		requires = { }
-	}
-
-	aryan_river_path_15 = { ###
-		modifier = { 
-			riverine_terrain_combat_bonus = 0.25
-			global_ship_recruit_speed = 0.2
-			naval_damage_done = 0.05
-			navy_maintenance_cost = 0.01
-		} 
-		icon = levantine_philosophy_start_bonus
-		requires = { aryan_river_path_3 }
-	}
-
-	##### ARCHERS
-
-	aryan_river_path_10 = { ### Poisoned Projectils
-		modifier = { 
-			archers_discipline = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = persian_achaemenid_path_6
-		requires = { }
-	}
-
-	aryan_river_path_14 = { ### Fixing the target with the mind
-		modifier = { 
-			archers_offensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = greek_antigonid_path_6
-		requires = { aryan_river_path_10 }
-	}
-
-	aryan_river_path_4 = { ### Dhanurveda
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = confident
-				}
-			}
-		}
-		modifier = { 
-			archers_cost = -0.05
+			archers_offensive = 0.1
+			archers_morale = 0.1
+			light_infantry_offensive = 0.1
+			light_infantry_morale = 0.1
+			warelephant_offensive = 0.1
+			warelephant_morale = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
-		requires = { aryan_river_path_14 }
+		requires = {aryan_generic_path_1}
 	}
 
-	aryan_plains_path_3 = { ### Bamboo Longbows
+	aryan_generic_path_4 = { ### 
 		modifier = { 
-			archers_defensive = 0.05
+			archers_defensive = 0.1
+			archers_discipline = 0.1
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
+			warelephant_defensive = 0.1
+			warelephant_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_2
+		requires = {aryan_generic_path_2}
+	}
+
+	aryan_generic_path_5 = { ###
+		modifier = { 
+			light_cavalry_cost = -0.05
+			light_cavalry_movement_speed = 0.05
+			camels_cost = -0.05
+			camels_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
-		icon = mauryan_coastal_path_7
-		requires = { aryan_river_path_4 }
-		allow = { # also require indian culture
-			trigger_if = {
-				limit = { country_culture_group = indian }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
+		allow = {military_tech >= 7}
+		icon = levantine_arabian_path_4
+		requires = {aryan_generic_path_3}
+	}
+
+	aryan_generic_path_6 = { ###
+		modifier = { 
+			light_cavalry_cost = -0.05
+			light_cavalry_movement_speed = 0.05
+			camels_cost = -0.05
+			camels_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		allow = {military_tech >= 7} 
+		icon = levantine_arabian_path_3
+		requires = {aryan_generic_path_4}
+	}
+	
+	aryan_generic_path_7 = { ###
+		modifier = { 
+			light_cavalry_offensive = 0.1
+			light_cavalry_morale = 0.1
+			camels_offensive = 0.1
+			camels_morale = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = {aryan_generic_path_5}
+	}
+
+	aryan_generic_path_8 = { ### 
+		modifier = { 
+			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
+			camels_defensive = 0.1
+			camels_morale = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = levantine_egyptian_path_6
+		requires = {aryan_generic_path_6}
+	}
+
+	aryan_generic_path_9 = { ###
+		modifier = { 
+			heavy_infantry_cost = -0.05
+			heavy_infantry_movement_speed = 0.05
+			horse_archers_cost = -0.05
+			horse_archers_movement_speed = 0.05
+			heavy_cavalry_cost = -0.05
+			heavy_cavalry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		allow = {military_tech >= 13}
+		icon = mauryan_mauryas_path_1
+		requires = {aryan_generic_path_7 }
+	}
+
+	aryan_generic_path_10 = { ###
+		modifier = { 
+			heavy_infantry_cost = -0.05
+			heavy_infantry_movement_speed = 0.05
+			horse_archers_cost = -0.05
+			horse_archers_movement_speed = 0.05
+			heavy_cavalry_cost = -0.05
+			heavy_cavalry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_3
+		allow = {military_tech >= 13}
+		requires = {aryan_generic_path_8 }
+	}
+		aryan_generic_path_11 = { ###
+		modifier = { 
+			heavy_infantry_offensive = 0.1
+			heavy_infantry_morale = 0.1
+			horse_archers_offensive = 0.1
+			horse_archers_morale = 0.1
+			heavy_cavalry_offensive = 0.1
+			heavy_cavalry_morale = 0.1
+			army_maintenance_cost = 0.01
+			global_population_happiness = -0.02	
+		} 
+		icon = persian_philosophy_start_bonus
+		requires = {aryan_generic_path_9}
+	}
+	aryan_generic_path_12 = { ### 
+		modifier = { 
+			heavy_infantry_defensive = 0.1
+			heavy_infantry_discipline = 0.1
+			horse_archers_defensive = 0.1
+			horse_archers_discipline = 0.1
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_morale = 0.1
+			army_maintenance_cost = 0.01
+			global_population_happiness = -0.02	
+		}
+		icon = persian_achaemenid_path_end_bonus
+		requires = {aryan_generic_path_10}
+	}
+	
+	### NAVAL
+	lydian_path_6 = { ###
+		modifier = { 
+			liburnian_discipline = 0.05
+			trireme_offensive = 0.1
+			trireme_coastal_terrain_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_3
+		requires = { }
+	}
+	lydian_path_12 = { ###
+		allow_unit_type = octere
+		on_activate = {
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
 				}
-				country_culture_group = indian
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = indian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_dravidian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:indian
-						}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = octere
+						add_subunit = octere
 					}
 				}
 			}
 		}
-	}
-
-	##### WARELEPHANTS
-
-	aryan_river_path_12 = { ###
 		modifier = { 
-			warelephant_morale = 0.05
-			warelephant_plains_combat_bonus = 0.05
-			warelephant_farmland_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
+			naval_morale_modifier = 0.05
+			naval_damage_taken = -0.05
+			ocean_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
 		} 
-		icon = mauryan_noble_path_2
-		requires = { }
+		icon = mauryan_coastal_path_1
+		requires = { lydian_path_6 }
 	}
-
-	aryan_plains_path_6 = { ###
+	lydian_path_13 = { ###
+		modifier = { 
+			naval_range = 0.25
+			mercenary_naval_maintenance_cost = -0.3
+			max_mercenary_stacks = 1
+			navy_maintenance_cost = 0.01
+		} 
+		icon = mauryan_coastal_path_end_bonus
+		requires = { lydian_path_12 }
+	}
+	### CIVILIZATION
+	
+	tibetan_path_5 = { ###
+		modifier = { 
+			global_capital_trade_routes = 1 
+			global_commerce_modifier = 0.05
+			global_monthly_food_modifier = 0.03
+		} 
+		icon = mauryan_coastal_path_6
+		requires = {  }
+	}
+	aryan_river_path_11 = { ###
 		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = steadfast
+			add_innovation = 3
+			manpower_recovery_speed = 0.05
+		}	
+		modifier = { 
+			global_nobles_output = 0.05
+		} 
+		icon = mauryan_noble_path_7
+		requires = { tibetan_path_5 }
+
+	}
+	aryan_plains_path_5 = { ###
+	enable_ability = military_colonies
+	on_activate = {
+		ordered_owned_province = {
+			limit = {
+				NOT = { dominant_province_culture_group = root.culture_group }
+				any_neighbor_province = {
+					count > 1
+					NOT = { dominant_province_culture_group = root.culture_group }
+				}
+				state = {
+					NOT = {
+						any_state_province = {
+							is_capital = yes
+						}
+					}
 				}
 			}
+			order_by = {
+				value = 0
+				add = population_cap
+				subtract = total_population
+			}
+			add_province_modifier = {
+				name = "local_colonia"
+				duration = -1
+			}
+			custom_tooltip = military_colonia_here_tt
+			trigger_event = { id = cultural_integration.11 }
+		}
+	}
+	modifier = { 
+		price_found_city_cost_modifier = -0.1
+		country_civilization_value = 5
+	} 
+	icon = mauryan_coastal_path_2
+	requires = { aryan_river_path_11 }
+
+
+	}
+
+	tamil_path_6 = { ###
+	on_activate = {
+		custom_tooltip = "create_high_martial_rising_star"
+		hidden_effect = {
+			create_character = {
+				add_martial = 8
+				add_trait = steadfast
+			}
+		}
+	}
+	modifier = { 
+		global_manpower_modifier = 0.075
+		army_maintenance_cost = 0.01
+	} 
+	    icon = mauryan_mauryas_path_3
+	    requires = { aryan_river_path_7 }
+    }   
+	### FORTS
+	aryan_river_path_7 = { ###
+		on_activate = {
+			add_1_free_province_investments = yes
 		}
 		modifier = { 
-			warelephant_discipline = 0.05
-			army_maintenance_cost = 0.01
+			global_defensive = 0.1
+			fort_limit = 1
+			fort_maintenance_cost = -0.1
+			siege_ability = 0.1
 		} 
-		icon = mauryan_coastal_path_5
-		requires = { aryan_river_path_12 }
+		icon = mauryan_coastal_path_2
+		requires = { }
 	}
 }
