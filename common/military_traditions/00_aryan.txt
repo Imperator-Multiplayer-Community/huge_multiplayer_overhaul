@@ -266,6 +266,7 @@
 		icon = mauryan_coastal_path_6
 		requires = {  }
 	}
+
 	aryan_river_path_11 = { ###
 		on_activate = {
 			add_innovation = 3
@@ -278,6 +279,7 @@
 		requires = { tibetan_path_5 }
 
 	}
+
 	aryan_plains_path_5 = { ###
 	enable_ability = military_colonies
 	on_activate = {
@@ -336,6 +338,7 @@
 	    icon = mauryan_mauryas_path_3
 	    requires = { aryan_river_path_7 }
     }   
+	
 	### FORTS
 	aryan_river_path_7 = { ###
 		on_activate = {
