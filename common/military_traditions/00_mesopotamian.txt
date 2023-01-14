@@ -48,7 +48,7 @@
 		hlight_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = persian_bactrian_path_5
+	icon = latin_roman_path_end_bonus
 	requires = { }
 }
 
@@ -70,7 +70,7 @@ mesopotamian_generic_path_2 = { ###
 		light_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = mauryan_noble_path_6
+	icon = greek_states_path_end_bonus
 	requires = { }
 }
 
@@ -98,7 +98,7 @@ mesopotamian_generic_path_4 = { ###
 		light_cavalry_discipline = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = mauryan_mauryas_path_2
+	icon = greek_states_path_7
 	requires = {mesopotamian_generic_path_2}
 }
 
@@ -111,7 +111,7 @@ mesopotamian_generic_path_5 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}
-	icon = levantine_arabian_path_4
+	icon = greek_states_path_3
 	requires = {mesopotamian_generic_path_3}
 }
 
@@ -124,7 +124,7 @@ mesopotamian_generic_path_6 = { ###
 		army_maintenance_cost = 0.01
 	}
 	allow = {military_tech >= 7} 
-	icon = levantine_arabian_path_3
+	icon = greek_states_path_2
 	requires = {mesopotamian_generic_path_4}
 }
 
@@ -136,7 +136,7 @@ mesopotamian_generic_path_7 = { ###
 		light_infantry_morale = 0.1
 		army_maintenance_cost = 0.01
 	} 
-	icon = mauryan_mauryas_path_5
+	icon = latin_support_path_7
 	requires = {mesopotamian_generic_path_5}
 }
 
@@ -148,7 +148,7 @@ mesopotamian_generic_path_8 = { ###
 		light_infantry_morale = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = levantine_egyptian_path_6
+	icon = latin_tribal_path_2
 	requires = {mesopotamian_generic_path_6}
 }
 
@@ -163,7 +163,7 @@ mesopotamian_generic_path_9 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 13}
-	icon = mauryan_mauryas_path_1
+	icon = latin_tribal_path_4
 	requires = {mesopotamian_generic_path_7 }
 }
 
@@ -177,7 +177,7 @@ mesopotamian_generic_path_10 = { ###
 		warelephant_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = mauryan_mauryas_path_3
+	icon = greek_antigonid_path_end_bonus
 	allow = {military_tech >= 13}
 	requires = {mesopotamian_generic_path_8 }
 }
@@ -192,7 +192,7 @@ mesopotamian_generic_path_11 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	} 
-	icon = persian_philosophy_start_bonus
+	icon = levantine_greco_path_3
 	requires = {mesopotamian_generic_path_9}
 }
 mesopotamian_generic_path_12 = { ### 
@@ -206,7 +206,7 @@ mesopotamian_generic_path_12 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	}
-	icon = persian_achaemenid_path_end_bonus
+	icon = levantine_greco_path_end_bonus
 	requires = {mesopotamian_generic_path_10}
 }
 
@@ -279,7 +279,7 @@ on_activate = {
 modifier = { 
 	global_food_capacity = 350
 } 
-icon = persian_achaemenid_path_1
+icon = mauryan_coastal_path_6
 requires = { }
 }
 
@@ -291,7 +291,7 @@ modifier = {
 	build_cost = -0.1
 	global_goods_from_slaves = -1
 } 
-icon = north_african_army_path_4
+icon = levantine_greco_path_7
 requires = { babylonian_path_1 }
 }
 
@@ -301,7 +301,7 @@ modifier = {
 	global_slaves_output = 0.1
 	global_nobles_happyness = 0.05
 } 
-icon = north_african_naval_path_5
+icon = north_african_army_path_4
 requires = { babylonian_path_5 }
 }
 
@@ -310,8 +310,18 @@ modifier = {
 	monthly_legitimacy = 0.10
 	global_population_growth = 0.02
 } 
-icon = north_african_naval_path_5
+icon = persian_bactrian_path_2
 requires = { babylonian_path_13 }
+}
+
+babylonian_generic_city_path_2  = { ###
+modifier = { 
+	research_points_modifier = 0.10
+	price_found_metropolis_cost_modifier = -0.15
+
+} 
+icon = levantine_egyptian_path_4
+requires = { babylonian_generic_city_path_1 }
 }
 
 

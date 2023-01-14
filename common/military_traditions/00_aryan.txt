@@ -317,8 +317,6 @@
 	} 
 	icon = mauryan_coastal_path_2
 	requires = { aryan_river_path_11 }
-
-
 	}
 
 	tamil_path_6 = { ###
@@ -339,6 +337,16 @@
 	    requires = { aryan_river_path_7 }
     }   
 	
+
+	babylonian_generic_city_path_1 = { ###
+	modifier = { 
+		research_points_modifier = 0.075
+	    price_found_metropolis_cost_modifier = -0.20
+	} 
+	icon = mauryan_coastal_path_6
+	requires = { aryan_plains_path_5 }
+    }
+
 	### FORTS
 	aryan_river_path_7 = { ###
 		on_activate = {
