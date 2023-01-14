@@ -37,7 +37,7 @@
 		}
 	}
 	on_activate = {
-		set variable = left_generic_tree
+		set_variable = left_generic_tree
 	}
 	modifier = { 
 		archers_cost = -0.05
@@ -59,7 +59,7 @@ dravidian_generic_path_2 = { ###
 		}
 	}
 	on_activate = {
-		set variable = right_generic_tree
+		set_variable = right_generic_tree
 	}
 	modifier = { 
 		archers_cost = -0.05
