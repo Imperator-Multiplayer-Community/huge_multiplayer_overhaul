@@ -20,10 +20,6 @@
 	allow = {
 		unit_owner = { can_pay_price = build_border_fort }
 		custom_tooltip = {
-			text = "is_valid_border_fortress_location_tt"
-			is_valid_border_fortress_location = yes
-		}
-		custom_tooltip = {
 			text = "is_allowed_border_fortress_tt"
 			OR = {
 				root.unit_owner = {

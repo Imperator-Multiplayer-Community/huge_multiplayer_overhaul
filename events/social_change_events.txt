@@ -11,37 +11,37 @@ social_change_events.1 = {
 	immediate = {
 		hidden_effect = {
 				random_list = {
-					10 = {
+					15 = {
 						trigger_event = {
 							id = social_change_events.2 
 							days = { 365 730 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = social_change_events.3
 							days = { 365 730 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = social_change_events.4 
 							days = { 365 730 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = social_change_events.5 
 							days = { 365 730 }
 						}
 					}
-					10 = {
+					15 = {
 						trigger_event = {
 							id = social_change_events.6 
 							days = { 365 730 }
 						}
 					}
-					10 = { 
+					25 = { 
 					}
 				}
 		}		
@@ -95,8 +95,12 @@ social_change_events.3 = {
 	option = {
 		name = "social_change_events.3.a"
 		add_stability = -5
+		add_country_modifier = { 
+			name = "social_stability"
+			duration = 730
+		}
 		scope:actor.current_ruler = { 
-			add_corruption = 3 
+			add_corruption = 5
 		}
 	 }
 }

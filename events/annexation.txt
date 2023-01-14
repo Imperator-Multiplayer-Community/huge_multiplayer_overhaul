@@ -877,31 +877,13 @@ annexation.3 = {
 				scope:annexer.current_ruler = { add_popularity = 5 }
 			}
 			10 = { 
-				scope:annexer.current_ruler = { add_corruption = 5 }
-			}
-			10 = { 
-				scope:annexer.current_ruler = { add_martial = 1 }
-			}
-			10 = { 
-				scope:annexer.current_ruler = { add_zeal = -1 }
-			}
-			10 = { 
-				scope:annexer = { add_aggressive_expansion = 10 }
-			}
-			10 = { 
-				scope:annexer = { add_war_exhaustion = 5 }
-			}
-			10 = { 
-				scope:annexer = { add_stability = 5 }
-			}
-			10 = { 
-				scope:annexer = { add_stability = -5 }
+				scope:annexer = { add_aggressive_expansion = 5 }
 			}
 			10 = { 
 				scope:annexer = { add_military_experience = 5 }
 			}
 			10 = { 
-				scope:annexer = { add_political_influence = 10 }
+				scope:annexer = { add_war_exhaustion = 5 }
 			}
 		}
 

@@ -629,6 +629,10 @@ latifundia_building = { #New Slave Estate
 	max_amount = 1
 	potential = {
 		has_city_status = no
+		NOR = {
+			has_building = slave_mine_building
+			has_building = basic_settlement_infratructure_building
+		}
 	}
 
 	cost = 120
@@ -654,7 +658,11 @@ slave_mine_building = { #New Mine, worst place for a slave
 	local_slaves_output = 0.06
 	local_slaves_happyness = -0.05 ###Read dev note above "New Mine..." Shouldn't this be reflected? Slaves should be dying in the mines...
 	potential = {
-		has_city_status = no*-
+		has_city_status = no
+		NOR = {
+			has_building = latifundia_building
+			has_building = basic_settlement_infratructure_building
+		}
 	}
 	
 	allow = {
@@ -686,6 +694,10 @@ basic_settlement_infratructure_building = { #Farming Settlements reflecting the 
 	max_amount = 1
 	potential = {
 		has_city_status = no
+		NOR = {
+			has_building = latifundia_building
+			has_building = slave_mine_building
+		}
 	}
 	
 	allow = {

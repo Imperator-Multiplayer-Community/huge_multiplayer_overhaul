@@ -169,8 +169,8 @@ naval_timberland = {
 }
 
 germanic_raiders_dock = {
-	base_resources = 1
-	local_ship_recruit_speed = 0.15
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
 }
 
 cilician_pirate_cove = {
@@ -184,8 +184,7 @@ illyrian_pirate_cove = {
 }
 
 arabian_pirate_cove = {
-	base_resources = 1
-	local_goods_from_slaves = -4
+	base_resources = 2
 	local_ship_recruit_speed = 0.25
 }
 
@@ -200,6 +199,11 @@ aramaic_infantry_training_complex = {
 }
 
 balearic_slingers_training_complex = {
+	base_resources = 1
+	local_defensive = 0.2
+}
+
+cretan_archers_training_complex = {
 	base_resources = 1
 	local_defensive = 0.2
 }
@@ -244,10 +248,61 @@ median_infantry_training_complex = {
 	local_population_capacity = 0.05
 }
 
-scythian_infantry_training_complex = {
+scythian_horse_archers_training_complex = {
 	base_resources = 1
 	local_goods_from_slaves = -4
 }
+
+dahae_horse_archers_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+
+#########################################################
+
+gallic_infantry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+noric_infantry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+indian_archers_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+anatolian_cavalry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+germanic_infantry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+
+cyrenaican_naval_base = { 
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
+}
+
+indus_naval_base = { 
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
+}
+
+soqotri_naval_base = { 
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
+}
+
+#########################################################
 
 
 espionage_bureau = {
@@ -310,11 +365,11 @@ armenian_cavalry_training_programme = {
 }
 
 himalayan_training_programme = { 
-	heavy_infantry_discipline = 0.05
+	heavy_infantry_defensive = 0.05
 }
 
 aksumite_horse_archer_training_programme = { 
-	archers_offensive = 0.05
+	horse_archers_offensive = 0.05
 }
 
 aramaic_infantry_training_programme = { 
@@ -323,6 +378,10 @@ aramaic_infantry_training_programme = {
 
 balearic_slingers_training_programme = { 
 	archers_offensive = 0.05
+}
+
+cretan_archers_training_programme = { 
+	archers_morale = 0.05
 }
 
 bangli_infantry_training_programme = { 
@@ -361,37 +420,84 @@ median_infantry_training_programme = {
 	heavy_infantry_offensive = 0.05
 }
 
-scythian_infantry_training_programme = { 
+scythian_horse_archers_training_programme = { 
 	horse_archers_morale = 0.05
+}
+
+dahae_horse_archers_training_programme = { 
+	horse_archers_discipline = 0.05
+}
+
+
+#########################################################################
+
+
+gallic_infantry_training_programme = { 
+	light_infantry_defensive = 0.05
+}
+
+noric_infantry_training_programme = { 
+	heavy_infantry_defensive = 0.05
+}
+
+indian_archers_training_programme = { 
+	archers_discipline = 0.05
+}
+
+anatolian_cavalry_training_programme = { 
+	light_cavalry_discipline = 0.05
+}
+
+germanic_infantry_training_programme = { 
+	light_infantry_offensive = 0.05
+}
+
+
+cyrenaican_naval_programme = { 
+	naval_damage_done = 0.025
+	tetrere_offensive = 0.025
+}
+
+indus_naval_programme = { 
+	riverine_terrain_combat_bonus = 0.025
+	coastal_terrain_combat_bonus = 0.025
+	naval_range = 0.1
+}
+
+soqotri_naval_programme = { 
+	ocean_combat_bonus = 0.05
+	naval_range = 0.1
 }
 
 arabian_piracy = {
 	mercenary_naval_maintenance_cost = -0.2
-	enslavement_efficiency = 0.025
-	ocean_combat_bonus = 0.05
+	hexere_offensive = 0.025
+	coastal_terrain_combat_bonus = 0.025
 }
 
 
 cilician_piracy = {
 	mercenary_naval_maintenance_cost = -0.2
-	enslavement_efficiency = 0.025
-	coastal_terrain_combat_bonus = 0.05
+	coastal_terrain_combat_bonus = 0.025
+	tetrere_defensive = 0.025
 }
 
 illyrian_piracy = {
 	mercenary_naval_maintenance_cost = -0.2
-	enslavement_efficiency = 0.025
 	riverine_terrain_combat_bonus = 0.05
+	liburnian_offensive = 0.025
 }
 
 britannic_shipbuilding_programme = { 
 	global_ship_recruit_speed = 0.25
-	octere_offensive = 0.05
+	hexere_defensive = 0.025
+	coastal_terrain_combat_bonus = 0.025
 }
 
 germanic_raiding_tradition = { 
 	riverine_terrain_combat_bonus = 0.05
-	naval_range = 0.15
+	trireme_offensive = 0.025
+	naval_range = 0.25
 }
 
 kautilyas_espionage_programme = { 

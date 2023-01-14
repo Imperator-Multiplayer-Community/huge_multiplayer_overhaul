@@ -1073,8 +1073,8 @@ babylonian_heritage = {
 heritage_of_assur = {
 	modifier = {
 		#good
-		land_morale_modifier = 0.05
-		discipline = 0.05
+		siege_ability = 0.1
+		assault_ability = 0.1
 		#bad
 		monthly_political_influence_modifier = -0.05
 	}
@@ -1945,9 +1945,8 @@ mahameghavahani_heritage = {
 malavi_heritage = {
 	modifier = {
 		#good
-		siege_engineers = 0.1
-		heavy_infantry_maintenance_cost = -0.1
-		
+		siege_ability = 0.1
+		warelephant_maintenance_cost = -0.1
 		#bad
 		agressive_expansion_impact = 0.1
 	}
@@ -1961,7 +1960,7 @@ neo_lydian_heritage = {
 	modifier = {
 		#good
 		global_tax_modifier = 0.1
-		global_commerce_modifier = 0.1
+		global_commerce_modifier = 0.05
 		
 		#bad
 		character_loyalty = -2
@@ -2171,7 +2170,7 @@ hibernia_magna_heritage = {
 	modifier = {
 		#good
 		loyalty_gain_chance_modifier = -0.05
-		
+		global_commerce_modifier = 0.1
 		
 		#bad
 		global_manpower_modifier = -0.05

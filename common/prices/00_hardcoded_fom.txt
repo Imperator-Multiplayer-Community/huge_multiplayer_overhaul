@@ -37,8 +37,6 @@ buy_idea = {
 
 recruit_mercenary = {
 	scaled_gold = 3
-	aggressive_expansion = 5
-	military_experience = 5
 }
 
 improve_relation = {
@@ -46,5 +44,5 @@ improve_relation = {
 }
 
 insult = {
-	aggressive_expansion = 10
+	aggressive_expansion = 8
 }

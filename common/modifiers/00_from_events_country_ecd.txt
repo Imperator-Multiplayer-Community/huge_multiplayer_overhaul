@@ -208,21 +208,21 @@ civil_war_benefits = {
 
 extended_land_protection = {
 	build_cost = -0.05
-	global_monthly_state_loyalty = 0.02
+	global_monthly_state_loyalty = 0.04
 }
 
 citizen_exemption_from_census_tax = {
 	global_citizen_happyness = 0.05
-	global_nobles_happyness = 0.03
+	global_nobles_happyness = 0.05
 	global_tax_modifier = -0.05
-	global_state_trade_routes = 0.25
-	global_population_capacity_modifier = 0.025
+	global_state_trade_routes = 0.2
+	global_population_capacity_modifier = 0.05
 }
 
 extended_trial_rights = {
 	monthly_tyranny = -0.02
-	monthly_corruption = -0.01
-	character_loyalty = 1
+	monthly_corruption = -0.02
+	character_loyalty = 2
 }
 
 social_change = {
@@ -235,8 +235,7 @@ social_change = {
 
 expanded_citizenship = { ############################################################
 	levy_size_multiplier = 0.02
-	land_morale_modifier = -0.04
-	discipline = -0.04
+	discipline = -0.03
 	army_maintenance_cost = 0.01
 }
 
@@ -275,7 +274,7 @@ barbarian_soldiers = {
 	civil_war_threshold = -0.1
 	character_loyalty = -3
 	stability_monthly_change = -0.2
-	land_morale_modifier = -0.025
+	discipline = -0.03
 	happiness_for_same_culture_modifier = -0.03
 	global_pop_promotion_speed_modifier = 0.1
 }
@@ -319,7 +318,7 @@ extended_officer_right = {
 	character_loyalty = -2
 	stability_monthly_change = -0.15
 	happiness_for_same_culture_modifier = -0.03
-	land_morale_modifier = -0.025
+	discipline = -0.03
 	global_pop_promotion_speed_modifier = 0.1
 }
 
@@ -379,7 +378,7 @@ indian_social_disloyalty = {
 }
 
 indian_social_unrest = {
-	global_unrest = 2
+	global_unrest = -2
 	happiness_for_same_culture_modifier = -0.05
 }
 
