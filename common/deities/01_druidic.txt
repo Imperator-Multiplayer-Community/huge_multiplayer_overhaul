@@ -625,7 +625,7 @@ deity_nodens = {
 		}
 	}
 	icon = deity_tribal_eloquence
-	passive_modifier = { naval_morale_modifier = deity_naval_morale_modifier_svalue }
+	passive_modifier = { naval_damage_taken = deity_naval_damage_taken_svalue }
 	omen = { global_monthly_state_loyalty = omen_global_monthly_state_loyalty } #Bonus from Omen
 	religion = druidism
 	deity_category = culture #This Deity uses a Fertility Slot
