@@ -14,12 +14,12 @@ mines_of_tharsis = {
 
 pearl_divers_tylos = {
 	base_resources = 1
-	local_state_trade_routes = 2
+	local_base_trade_routes = 2
 }
 
 royal_ironworks_ganagaras = {
 	local_goods_from_slaves = -4
-	base_resources = 1
+	base_resources = 2
 }
 
 dragonsblood_soqotra = {
@@ -27,63 +27,63 @@ dragonsblood_soqotra = {
 }
 
 incense_fields_qana = {
-	local_goods_from_slaves = -4
+	local_goods_from_slaves = -2
 	base_resources = 1
 }
 
 incense_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 cinnamon_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 lapis_lazuli_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 monsoon_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 black_pepper_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 red_sea_route_hub = {
-	state_commerce_modifier = 0.2
-	local_state_trade_routes = 1.75
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 bactrian_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 sogdian_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 margian_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 north_tarim_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 west_tarim_silk_road_hub = {
-	state_commerce_modifier = 0.1
-	local_state_trade_routes = 1.6
+	state_commerce_modifier = 0.15
+	local_base_trade_routes = 0.15
 }
 
 
@@ -169,24 +169,23 @@ naval_timberland = {
 }
 
 germanic_raiders_dock = {
-	base_resources = 1
-	local_ship_recruit_speed = 0.15
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
 }
 
 cilician_pirate_cove = {
 	base_resources = 2
-	local_ship_recruit_speed = 0.15
+	local_ship_recruit_speed = 0.25
 }
 
 illyrian_pirate_cove = {
 	base_resources = 2
-	local_ship_recruit_speed = 0.15
+	local_ship_recruit_speed = 0.25
 }
 
 arabian_pirate_cove = {
-	base_resources = 1
-	local_ship_recruit_speed = 0.4
-	local_ship_start_experience = 25
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
 }
 
 aksumite_horse_archer_training_complex = {
@@ -200,6 +199,11 @@ aramaic_infantry_training_complex = {
 }
 
 balearic_slingers_training_complex = {
+	base_resources = 1
+	local_defensive = 0.2
+}
+
+cretan_archers_training_complex = {
 	base_resources = 1
 	local_defensive = 0.2
 }
@@ -244,10 +248,61 @@ median_infantry_training_complex = {
 	local_population_capacity = 0.05
 }
 
-scythian_infantry_training_complex = {
+scythian_horse_archers_training_complex = {
 	base_resources = 1
 	local_goods_from_slaves = -4
 }
+
+dahae_horse_archers_training_complex = {
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+
+#########################################################
+
+gallic_infantry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+noric_infantry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+indian_archers_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+anatolian_cavalry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+germanic_infantry_training_complex = { 
+	base_resources = 1
+	local_goods_from_slaves = -4
+}
+
+
+cyrenaican_naval_base = { 
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
+}
+
+indus_naval_base = { 
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
+}
+
+soqotri_naval_base = { 
+	base_resources = 2
+	local_ship_recruit_speed = 0.25
+}
+
+#########################################################
 
 
 espionage_bureau = {
@@ -258,148 +313,204 @@ espionage_bureau = {
 
 ###Country modifiers###
 elephant_training_programme = { 
-	warelephant_defensive = 0.1
+	warelephant_defensive = 0.05
 }
 
 dromedary_training_programme = { 
-	camels_morale = 0.1
+	camels_morale = 0.05
 }
 
 bactrian_camel_training_programme = { 
-	camels_defensive = 0.1
+	camels_defensive = 0.05
 }
 
 cantabrian_horse_training_programme = { 
-	horse_archers_offensive = 0.1
+	horse_archers_offensive = 0.05
 }
 
 aryan_cavalry_training_programme = { 
-	light_cavalry_offensive = 0.1
+	light_cavalry_offensive = 0.05
 }
 
 celtic_cavalry_training_programme = { 
-	light_cavalry_defensive = 0.1
+	light_cavalry_defensive = 0.05
 }
 
 numidian_cavalry_training_programme = { 
-	horse_archers_defensive = 0.1
+	horse_archers_defensive = 0.05
 }
 
 thessalian_cavalry_training_programme = {
-	heavy_cavalry_morale = 0.1
+	heavy_cavalry_morale = 0.05
 }
 
 asian_elephant_training_programme = { 
-	warelephant_morale = 0.1
+	warelephant_morale = 0.05
 }
 
 libyan_elephant_training_programme = { 
-	warelephant_discipline = 0.1
+	warelephant_discipline = 0.05
 }
 
 tarentine_cavalry_training_programme = { 
-	light_cavalry_morale = 0.1
+	light_cavalry_morale = 0.05
 }
 
 ferghani_cavalry_training_programme = { 
-	heavy_cavalry_offensive = 0.1
+	heavy_cavalry_offensive = 0.05
 }
 
 armenian_cavalry_training_programme = { 
-	heavy_cavalry_defensive = 0.1
+	heavy_cavalry_defensive = 0.05
 }
 
 himalayan_training_programme = { 
-	heavy_infantry_discipline = 0.1
+	heavy_infantry_defensive = 0.05
 }
 
 aksumite_horse_archer_training_programme = { 
-	archers_offensive = 0.1
+	horse_archers_offensive = 0.05
 }
 
 aramaic_infantry_training_programme = { 
-	heavy_infantry_discipline = 0.1
+	heavy_infantry_discipline = 0.05
 }
 
 balearic_slingers_training_programme = { 
-	archers_offensive = 0.1
+	archers_offensive = 0.05
+}
+
+cretan_archers_training_programme = { 
+	archers_morale = 0.05
 }
 
 bangli_infantry_training_programme = { 
-	light_infantry_marsh_combat_bonus = 0.1
-	light_infantry_jungle_combat_bonus = 0.1
+	light_infantry_marsh_combat_bonus = 0.05
+	light_infantry_jungle_combat_bonus = 0.05
 }
 
 belgian_infantry_training_programme = { 
-	light_infantry_plains_combat_bonus = 0.1
-	light_infantry_marsh_combat_bonus = 0.1
+	light_infantry_plains_combat_bonus = 0.05
+	light_infantry_marsh_combat_bonus = 0.05
 }
 
 caucasian_infantry_training_programme = { 
-	light_infantry_mountain_combat_bonus = 0.1
-	light_infantry_hills_combat_bonus = 0.1
+	light_infantry_mountain_combat_bonus = 0.05
+	light_infantry_hills_combat_bonus = 0.05
 }
 
 dacian_infantry_training_programme = { 
-	light_infantry_morale = 0.1
+	light_infantry_morale = 0.05
 }
 
 egyptian_infantry_training_programme = { 
-	light_infantry_cost = -0.1
-	light_infantry_desert_combat_bonus = 0.1
+	light_infantry_cost = -0.05
+	light_infantry_desert_combat_bonus = 0.05
 }
 
 hebrew_slingers_training_programme = { 
-	archers_defensive = 0.1
+	archers_defensive = 0.05
 }
 
 iberian_cavalry_training_programme = { 
-	heavy_cavalry_defensive = 0.1
+	heavy_cavalry_defensive = 0.05
 }
 
 median_infantry_training_programme = { 
-	heavy_infantry_offensive = 0.1
+	heavy_infantry_offensive = 0.05
 }
 
-scythian_infantry_training_programme = { 
-	horse_archers_morale = 0.1
+scythian_horse_archers_training_programme = { 
+	horse_archers_morale = 0.05
+}
+
+dahae_horse_archers_training_programme = { 
+	horse_archers_discipline = 0.05
+}
+
+
+#########################################################################
+
+
+gallic_infantry_training_programme = { 
+	light_infantry_defensive = 0.05
+}
+
+noric_infantry_training_programme = { 
+	heavy_infantry_defensive = 0.05
+}
+
+indian_archers_training_programme = { 
+	archers_discipline = 0.05
+}
+
+anatolian_cavalry_training_programme = { 
+	light_cavalry_discipline = 0.05
+}
+
+germanic_infantry_training_programme = { 
+	light_infantry_offensive = 0.05
+}
+
+
+cyrenaican_naval_programme = { 
+	naval_damage_done = 0.025
+	tetrere_offensive = 0.025
+}
+
+indus_naval_programme = { 
+	riverine_terrain_combat_bonus = 0.025
+	coastal_terrain_combat_bonus = 0.025
+	naval_range = 0.1
+}
+
+soqotri_naval_programme = { 
+	ocean_combat_bonus = 0.05
+	naval_range = 0.1
 }
 
 arabian_piracy = {
 	mercenary_naval_maintenance_cost = -0.2
-	global_ship_start_experience = 10
-	ocean_combat_bonus = 0.05
+	hexere_offensive = 0.025
+	coastal_terrain_combat_bonus = 0.025
 }
 
 
 cilician_piracy = {
-	global_ship_start_experience = 20
-	mercenary_naval_maintenance_cost = -0.15
-	trireme_defensive = 0.05
+	mercenary_naval_maintenance_cost = -0.2
+	coastal_terrain_combat_bonus = 0.025
+	tetrere_defensive = 0.025
 }
 
 illyrian_piracy = {
-	global_ship_start_experience = 15
-	enslavement_efficiency = 0.025
+	mercenary_naval_maintenance_cost = -0.2
 	riverine_terrain_combat_bonus = 0.05
+	liburnian_offensive = 0.025
 }
 
 britannic_shipbuilding_programme = { 
-	global_ship_recruit_speed = 0.15
-	octere_offensive = 0.1
+	global_ship_recruit_speed = 0.25
+	hexere_defensive = 0.025
+	coastal_terrain_combat_bonus = 0.025
 }
 
 germanic_raiding_tradition = { 
-	riverine_terrain_combat_bonus = 0.1
-	global_ship_start_experience = 10
-	naval_range = 0.1
+	riverine_terrain_combat_bonus = 0.05
+	trireme_offensive = 0.025
+	naval_range = 0.25
 }
 
 kautilyas_espionage_programme = { 
 	character_loyalty = 2
 	inspire_disloyalty_cost_modifier = -0.15
-	seduce_governor_cost_modifier = -0.15
+	secude_governor_cost_modifier = -0.15
 	recruit_character_cost_modifier = -0.15
 	support_rebels_cost_modifier = -0.15
 	assassinate_attempt_foreign_cost_modifier = -0.15
 }
+
+unified_tamil_dynasties = {
+	control_range_modifier = 0.15
+	monthly_legitimacy = 0.04
+}
+

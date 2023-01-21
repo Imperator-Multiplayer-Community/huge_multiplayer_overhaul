@@ -20,6 +20,11 @@
  recruit_aryan_intel_agent_desc:0 "Whoever is allowed to plot and creep in the shadows could do lasting harm to the state. Let us cultivate an intelligence network to keep a watchful eye on the population. Only agents trained by us will be able to find interlopers in our midst. However, the more spies we hire, the more it will erode the public trust."
  indian_espionage_bureau:0 "Establish Secret Police"
  indian_espionage_bureau_desc:0 "Kautilya would have wanted us to do so"
+ grand_assault:0 "Furious Assault"
+ grand_assault_desc:0 ""
+ 
+ grand_siege:0 "Grand Siege"
+ grand_siege_desc:0 "Lay a grand siege to topple the tallest of towers."
 
   ### modifiers
  veterans_conscripted:0 "Conscripted Veterans"
@@ -38,3 +43,9 @@
  burnt_ground_desc:0 ""
  fortified_capital:0 "Fortified Capital"
  fortified_capital_desc:0 ""
+ grand_assault_mod:0 "Furious Assault"
+ grand_assault_mod_desc:0 ""
+ grand_siege_mod:0 "Grand Siege"
+ grand_siege_mod_desc:0 "Lay a grand siege to topple the tallest of towers."
+
+ fortress_ramparts_building_cost:0 "Earthworks Cost Modifier"

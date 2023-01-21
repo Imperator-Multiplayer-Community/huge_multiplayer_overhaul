@@ -13,6 +13,12 @@
 # Difficulty Modifiers
 ##########################################################################
 
+mercenary_captain = {
+	martial = 4
+	ship_capture_chance = -1
+	land_morale_modifier = -0.05
+	naval_morale_modifier = -0.05
+}
 
 ##########################################################################
 # Province Static Modifiers
@@ -50,6 +56,17 @@ civilization_value = {
 	local_migration_attraction = 0.05
 	local_population_growth = 0.001
 	local_pop_assimilation_speed = 0.01
+}
+
+roads_in_province = {
+	local_monthly_civilization = 0.001
+	local_pop_conversion_speed_modifier = 0.025
+	local_pop_assimilation_speed_modifier = 0.025
+	local_pop_promotion_speed_modifier = 0.025
+	local_pop_demotion_speed_modifier = 0.01
+	local_migration_attraction = 0.05
+	local_migration_speed_modifier = 0.1
+	local_base_trade_routes_modifier = 0.1 #0.05
 }
 
 forts_over_limit = {
@@ -299,3 +316,13 @@ positive_state_food_growth = {
 	local_defensive = 0.025
 }
 
+
+#### Culture Modifiers
+
+number_of_integrated_cultures = { #Scaled by number of current integrated cultures 
+	culture_happiness_modifier = -0.04 #Was -0.04
+}
+
+number_of_noble_cultures = { #Scaled by number of cultures with noble civic right. Affects primary culture
+	culture_happiness_modifier = -0.05 #Was -0.05
+}

@@ -13,7 +13,7 @@
 					country_culture_group = aryan
 					any_country_culture = {
 						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
+						country_culture_pop_count >= small_percent_size_culture_group_comparison
 						OR = {
 							this.culture.culture_group = culture_group:bactrian
 							this.culture.culture_group = culture_group:aryan
@@ -23,19 +23,19 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 4367
+				province_id = 4367 #Arjunava Base Metals => Camels
 			}
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
+			military_experience >= 80
 			owns = 4367
 		}
 		
 		effect = {
 			set_variable = founded_bactrian_camel_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = bactrian_camel_training_programme 
 				duration = -1
@@ -46,6 +46,7 @@
 						name = bactrian_camel_training_complex
 						duration = -1					
 					}
+					set_trade_goods = camel
 				}
 				
 			}

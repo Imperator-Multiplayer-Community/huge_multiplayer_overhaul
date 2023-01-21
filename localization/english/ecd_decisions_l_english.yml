@@ -100,6 +100,7 @@
 
 
  brilliant_foreign_researcher_tt:0 "There is so much yet to learn."
+ brilliant_foreign_admin_tt:0 "I'll manage the books."
 
  persecute_cultural_decision:0 "Persecute Minority"
  persecute_cultural_decision_desc:0 "Persecute this troublesome minority, killing their members, confiscating their wealth and driving them from their homes."
@@ -125,8 +126,32 @@
  pandered_project:0 "Promoting Minority"
  pandered_project_desc:0 ""
 
+ create_petty_nobles:0 "Indulge Petty Nobles"
+ create_petty_nobles_desc:0 "Flatter the fallen nobility of this subject people, helping them to cling to their former glory."
+ petty_noble_tt:0 "Flatter the fallen nobility of the #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]#! culture, helping them to cling to their former glory."
+ no_current_petty_noble:0 ""
+ no_current_petty_noble_other:0 ""
+
+ social_change:0 "Social Change"
+ social_change_desc:0 "Be the change you want to see in the world."
+
+ beacon_of_civ:0 "Beacon of Civilization"
+ beacon_of_civ_desc:0 "A light unto the barbarians."
+
+ new_admin_team:0 "Legacy Administrators"
+ new_admin_team_desc:0 "Our administrative class comes from an older and illustrious culture than our own, a point not lost on us..."
+
+ granted_autonomy:0 "Eye of Envy"
+ granted_autonomy_desc:0 "We have recently allowed some of our subjects to rule themselves. Our peoples resent their continued servitude and deride our new vassal as unworthy."
+
+ barbarian_soldiers:0 "Barbarians at the Gates"
+ barbarian_soldiers_desc:0 "We entrust our lives to men with a bloodthirsty reputation who speak a different tongue. Our young women do annoy with the attention they give the foreign warriors." 
+
  baby_boom:0 "Baby Boom"
- baby_boom_desc:0 "Confident and enjoying a host of new privileges, the people of this culture are producing a birth rate to match their newfound prosperity and prestige."
+ baby_boom_desc:0 "Flushed with confidence and with a host of new privileges, the people of this culture are producing a birth rate to match their newfound prosperity and prestige."
+
+ expanded_citizenship:0 "Expanded Citizenship"
+ expanded_citizenship_desc:0 "Nothing contributed more to making Sparta an isolated nation than Lycurgus’ fine law, which did not grant xenelasia to any foreigner without compelling reasons, and even prevented any foreigner from having at his discretion the right to free entry into Sparta."
 
  exile_cultural_decision:0 "Exile Minority"
  exile_cultural_decision_desc:0 "Punish this recalcitrant minority by sending it into exile. In a distant land they can ponder their errors... if they manage to remain cohesive, that is."
@@ -137,7 +162,7 @@
  exiled_community_desc:0 "This community is still adjusting to the arrival of a large population of exiles from a distant land."
 
  exiled_people:0 "Pain of Exile"
- exiled_people_desc:0 ""
+ exiled_people_desc:0 "By the rivers of Babylon, there we sat down, and there we wept, when we remembered Zion."
 
  exile_project:0 "Enforcing Exile"
  exile_project_desc:0 ""
@@ -150,6 +175,10 @@
  reform_bureaucracy_desc:0 "Rein in the bureaucracy, making it more cooperative and transparent and punishing corruption. Some of the greedy will oppose these measures."
  purge_bureaucrats:0 "Anti-Corruption Crackdown"
  purge_bureaucrats_desc:0 "Crack down on corruption, which is gnawing away at the state, leading to faithlessness and social decay. The rot is now so deep that many will oppose these measures."
+ buy_xp:0 "Make Sacrifice to the God of War"
+ buy_xp_desc:0 "Honour the god of war with a sacrifice to arouse the interest of all belligerent men in the area."
+
+ requires_more_cultures_tt:0 "There must be at least one other culture with at least 100 pops between them in the same culture group as [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]."
 
 #Tooltips
  culture_group_embraced_tt:0 "Freemen that are currently in our country and that belong to the #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetCultureGroup.GetName]#! Culture Group gain #G 5%#! Happiness and #G 3%#! Output for #Y 30 Years#! (Currently there are #Y [SCOPE.ScriptValue('num_of_pops_in_country_cultures_in_same_group_svalue')|0]#! Pops that would be affected)."

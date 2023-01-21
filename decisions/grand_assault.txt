@@ -1,0 +1,41 @@
+﻿country_decisions = {
+	
+	# Assault the grand fortress
+	grand_assault = {
+	
+		potential = {
+			num_of_cities >= 1
+			NOR = {
+				has_country_modifier = grand_assault_mod
+				has_country_modifier = grand_siege_mod
+			}			
+		}
+		
+		allow = {
+			invention = siege_engineers_inv_5
+			military_experience >= 12
+			war = yes
+			stability >= 40
+			capital_scope.state = { 
+				trade_good_surplus = { target = iron value >= 1 }
+				trade_good_surplus = { target = base_metals value >= 1 }
+				trade_good_surplus = { target = wood value >= 1 }
+			}
+
+		}
+		
+		effect = {			
+			add_country_modifier = {
+				name = grand_assault_mod
+				duration = 45
+			}
+			add_manpower = grand_assault_svalue
+			add_military_experience = -12
+			add_war_exhaustion = 5
+		}
+		
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

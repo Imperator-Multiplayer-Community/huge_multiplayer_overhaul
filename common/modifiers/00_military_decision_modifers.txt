@@ -40,32 +40,37 @@ veterans_conscripted = {
 }
 
 coastal_defence = {
- naval_morale_modifier = 0.05
+ navy_movement_speed = 0.15
+ naval_range = 0.05
  naval_damage_taken = -0.05
- global_ship_recruit_speed = 0.1
- ship_cost = -0.05
- global_ship_start_experience = 15
+ ship_capture_chance = 0.015
+ naval_morale_recovery = 0.05
+ global_ship_recruit_speed = 0.2
  riverine_terrain_combat_bonus = 0.05
 }
 
 sea_offence = {
- navy_movement_speed = 0.1
- naval_range = 0.1
- naval_damage_done = 0.05
+ navy_movement_speed = 0.05
+ naval_range = 0.15
+ naval_damage_done = 0.075
  naval_morale_recovery = 0.05
- mercenary_naval_maintenance_cost = -0.15
+ naval_unit_attrition = 0.2
+ navy_weight_modifier = -0.1
  ocean_combat_bonus = 0.1
 }
 
 burnt_ground = {
- max_attrition = 1
- hostile_attrition = 0.4
- global_defensive = 0.25
- garrison_size = 0.2
- max_war_exhaustion = 10
+ global_monthly_food_modifier = -0.15
+ global_food_capacity = -500
  global_tax_modifier = -0.3
  global_commerce_modifier = -0.3
+ max_attrition = 1
+ hostile_attrition = 0.4
+ max_war_exhaustion = 10
  stability_monthly_change = -0.04
+ army_weight_modifier = -0.1
+ global_defensive = 0.2
+ garrison_size = 0.2
 }
 
 fortified_capital = {
@@ -77,4 +82,20 @@ fortified_capital = {
  local_tax_modifier = -0.1
  local_manpower_modifier = 0.25
 }
+
+grand_assault_mod = {
+ assault_ability = 0.25
+ army_weight_modifier = -0.2
+ enslavement_efficiency = 0.1
+ army_movement_speed = -0.1
+}
+
+grand_siege_mod = {
+ siege_ability = 0.33
+ siege_engineers = 3
+ army_weight_modifier = -0.2
+ enslavement_efficiency = 0.1
+ army_movement_speed = -0.1
+}
+
 

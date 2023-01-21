@@ -743,22 +743,22 @@
 
 2040={ #Glevum
 	terrain="forest"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="dye"
-	civilization_value=20
+	culture="demetian"
+	religion="druidism"
+	trade_goods="precious_metals"
+	civilization_value=8
 	barbarian_power=0
-	province_rank="city"
+	province_rank="settlement"
 	citizen={
-		amount=10
+		amount=1
 	}
 	freemen={
-		amount=15
+		amount=1
 	}
 	tribesmen={
 		amount=5
 	}
-	port_building=3
+	port_building=1
 }
 
 2041={ #Alavna
@@ -845,7 +845,7 @@
 	terrain="plains"
 	culture="cornovian"
 	religion="druidism"
-	trade_goods="earthware"
+	trade_goods="salt"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -861,7 +861,7 @@
 	terrain="farmland"
 	culture="cornovian"
 	religion="druidism"
-	trade_goods="precious_metals"
+	trade_goods="stone"
 	civilization_value=12
 	barbarian_power=0
 	province_rank="settlement"
@@ -1204,7 +1204,7 @@
 	terrain="plains"
 	culture="coritani"
 	religion="druidism"
-	trade_goods="horses"
+	trade_goods="grain"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -1557,17 +1557,17 @@
 
 2093={ #Bornium
 	terrain="forest"
-	culture="silurian" ## HMO V2.1 DaFoogles Heritages
+	culture="demetian"
 	religion="druidism"
-	trade_goods="honey"
-	civilization_value=12
+	trade_goods="leather"
+	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
-		amount=2
+		amount=1
 	}
 	tribesmen={
-		amount=7
+		amount=3
 	}
 }
 
@@ -1778,7 +1778,7 @@
 	terrain="plains"
 	culture="ordovitian"
 	religion="druidism"
-	trade_goods="hemp"
+	trade_goods="precious_metals"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"

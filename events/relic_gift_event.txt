@@ -95,7 +95,7 @@ relic_gift_event.3 = { #accepted with pleasure
 	option = {
 		name = "relic_gift_event.3.a"
 		scope:actor = {
-			pay_price = gift_slave
+			pay_price = give_relic
 		}
 		scope:actor = {
 			trigger_event = { 

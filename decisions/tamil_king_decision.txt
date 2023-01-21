@@ -1,0 +1,67 @@
+﻿country_decisions = {	
+
+unify_tamil_dynasties = {
+		potential = {
+			OR = {
+				primary_culture = pandyan
+				primary_culture = cheran
+				primary_culture = cholan
+			}
+			NOT = { has_variable = unified_tamil_dyansties }
+		}
+
+		highlight = {
+			scope:province = {
+				OR = {
+					province_id = 6915
+					province_id = 6902
+					province_id = 6927
+					province_id = 6986
+					province_id = 6999
+					province_id = 7001
+					province_id = 7022
+					province_id = 6894
+					province_id = 6916
+					province_id = 6936
+				}
+			}
+		}
+
+		allow = {
+			owns = 6915
+			owns = 6902
+			owns = 6927
+			owns = 6986
+			owns = 6999
+			owns = 7001
+			owns = 7022
+			owns = 6894
+			owns = 6916
+			owns = 6936
+
+		}
+		effect = {
+			current_ruler = {
+				force_add_trait = victorious
+			}
+			create_country_treasure = {
+				key = "tamil_king_crown"
+				icon = "treasure_chest"
+			
+				modifier = {
+					local_tax_modifier = 0.15
+					local_population_capacity_modifier = 0.15
+				}
+			}
+			add_country_modifier = {
+			name = unified_tamil_dynasties
+			duration = -1
+			}			
+			set_variable = unified_tamil_dyansties    	
+		}
+		
+		ai_will_do = {
+			base = 100
+		}				
+	}
+}

@@ -33,53 +33,6 @@
 # }
 
 
- zoonotic_ratio = {
-    value = 0
-
-    every_army = {
-        limit = {
-            #unit_location = root.unit_location
-            in_siege = yes
-        }
-        every_sub_unit = {
-            limit = {
-                OR = {
-                    sub_unit_type = heavy_cavalry
-                    sub_unit_type = light_cavalry
-                    sub_unit_type = camels
-                    sub_unit_type = horse_archers
-                    sub_unit_type = warelephants
-                }
-            }
-            add = 1
-        }
-    }
-}
-
- zoonotic_limit = {
-    value = 0
-
-    every_army = {
-        limit = {
-            #unit_location = root.unit_location
-            in_siege = yes
-        }
-        every_sub_unit = {
-            limit = {
-                OR = {
-                    sub_unit_type = heavy_infantry
-                    sub_unit_type = light_infantry
-                    sub_unit_type = archers
-                }
-            }
-            add = 1
-        }
-    }
-
-    divide = 2 #Was 3
-    #ceiling = yes
-}
-
  num_of_ships_svalue = {
     value = 0
 

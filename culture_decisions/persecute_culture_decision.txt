@@ -26,7 +26,7 @@
 				}
 			}
 			stability > 40
-			political_influence > 10
+			political_influence > 25
 			invention = assassinate_attempt_cost_modifier_inv
 		}
 		effect = {
@@ -44,7 +44,7 @@
 				}
 				add_city_smoke_effect = yes
 				add_city_fire_effect = yes
-				add_state_loyalty = -50
+				add_state_loyalty = 20
 				ordered_pops_in_province = {
 					limit = {
 						OR = {
@@ -71,11 +71,11 @@
 			}
 			add_country_modifier = {
 				name = "persecution_project"
-				duration = 1826
+				duration = 1460
 			}
-			add_tyranny = 15
-			add_treasury = 800
-			add_political_influence = -10
+			add_tyranny = 10
+			add_treasury = 500
+			add_political_influence = -25
 		}
 		ai_will_do = {
 			modifier = {

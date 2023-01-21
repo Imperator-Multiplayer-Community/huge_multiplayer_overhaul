@@ -1,0 +1,621 @@
+﻿namespace = arabian_trade_fleet
+
+
+#####################
+arabian_trade_fleet.11 = { #Trade Fleet Ready to Depart
+    type = country_event
+    title = arabian_trade_fleet_11_title
+    desc = arabian_trade_fleet_11_desc
+    picture = interesting_histories_southern_india
+    goto_location = p:4650
+
+    immediate = {
+        hidden_effect = {
+            create_character = {
+                first_name = "Houran"
+                family_name = "Banow"
+                age = 70
+                culture = himjar 
+                religion = arabian_pantheon #puntic_religion
+                female = no
+#                add_trait = coastal_raider
+#                add_trait = oarmaster
+                add_trait = abrasive
+                good_martial_effect = yes
+                good_charisma_effect = yes
+                save_scope_as = arab_admiral_temp
+            }
+        }   
+        if = {
+            limit = {
+            has_variable = small_fleet_construction
+            }
+            create_unit = {
+                navy = yes
+                commander = scope:arab_admiral_temp
+                sub_unit = octere
+                location = 4650 #Adan
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+            }            
+        }
+        if = {
+            limit = {
+            has_variable = big_fleet_construction
+            }
+            create_unit = {
+                navy = yes
+                commander = scope:arab_admiral_temp
+                sub_unit = octere
+                location = 4650 #Adan
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme                
+            }            
+        }
+    }
+
+    option = {
+    name = arabian_trade_fleet_11.a  #Send them east to China
+        trigger = {
+            NOT = { has_variable = china_trade_disabled}
+        }    
+        #Either come back with chinese goods or get bad event
+        hidden_effect = { 
+            random_list = { 
+                90 = {  
+                    set_variable = {
+                        name = china_trade_flag
+                    }         
+                    trigger_event = {   #Good Event
+                        id = arabian_trade_fleet.13
+                        days = { 720 1825 }
+                    } 
+                }
+                10 = { 
+                    trigger_event = {   #Bad Event
+                        id = arabian_trade_fleet.12
+                        days = { 720 1825 }
+                    }
+                }
+            }
+        }        
+    } 
+    option = {
+    name = arabian_trade_fleet_11.b  #Send them west to Rome
+        trigger = {
+            NOT = { has_variable = roman_trade_disabled}
+        }    
+        #Either come back with goods from Tylos or bad event        
+        hidden_effect = { 
+            random_list = { 
+                90 = {
+                    set_variable = {
+                        name = roman_trade_flag
+                    }                            
+                    trigger_event = {   #Good Event
+                        id = arabian_trade_fleet.13
+                        days = { 720 1825 }
+                    } 
+                }
+                10 = { 
+                    trigger_event = {   #Bad Event
+                        id = arabian_trade_fleet.12
+                        days = { 720 1825 }
+                    }
+                }
+            }
+        }        
+    }
+    option = {
+    name = arabian_trade_fleet_11.c  #Send them east to India
+        trigger = {
+            NOT = { has_variable = indian_trade_disabled}
+        }    
+        #Either come back with Indian goods or bad event
+        hidden_effect = { 
+            random_list = { 
+                90 = {
+                    set_variable = {
+                        name = india_trade_flag
+                    }                            
+                    trigger_event = {   #Good Event
+                        id = arabian_trade_fleet.13
+                        days = { 720 1825 }
+                    } 
+                }
+                10 = { 
+                    trigger_event = {   #Bad Event
+                        id = arabian_trade_fleet.12
+                        days = { 720 1825 }
+                    }
+                }
+            }
+        }        
+    }   
+    option = {
+    name = arabian_trade_fleet_11.d  #Send them west to Egypt (Alexandria)
+        trigger = {
+            NOT = { has_variable = egypt_trade_disabled}
+        }    
+        #Either come back with goods from Egypt or bad event
+        hidden_effect = { 
+            random_list = { 
+                90 = {
+                    set_variable = {
+                        name = egypt_trade_flag
+                    }                            
+                    trigger_event = {   #Good Event
+                        id = arabian_trade_fleet.13
+                        days = { 720 1825 }
+                    } 
+                }
+                10 = { 
+                    trigger_event = {   #Bad Event
+                        id = arabian_trade_fleet.12
+                        days = { 720 1825 }
+                    }
+                }
+            }
+        }
+    }
+    ##Remove all ships from the first character. They may or may not come back with a better adirmal.
+    after = {
+        hidden_effect = {
+        scope:arab_admiral_temp = {
+            every_character_unit = {
+                destroy_unit = yes
+            }
+        }
+        }
+    }               
+}
+
+arabian_trade_fleet.12 = { #Bad news from the trade fleet
+    type = country_event
+    title = arabian_trade_fleet_12_title
+    desc = arabian_trade_fleet_12_desc
+    picture = interesting_histories_southern_india
+    option = {
+    name = arabian_trade_fleet_12.a  #We shouldn't have wasted our money!
+        add_political_influence = -30
+    }       
+}
+
+arabian_trade_fleet.13 = { #Trade fleet arrives home 
+    type = country_event
+    title = arabian_trade_fleet_13_title
+    desc = {
+        #desc = "arabian_trade_fleet_13_desc"
+        first_valid = {
+            triggered_desc = {  ##China Description
+                trigger = { has_variable = china_trade_flag }  
+                desc = "arabian_trade_fleet_13_desc_1"
+            }
+            triggered_desc = {  ##roman Description
+                trigger = { has_variable = roman_trade_flag }    
+                desc = "arabian_trade_fleet_13_desc_2"
+            }
+            triggered_desc = {  ##India
+                trigger = { has_variable = india_trade_flag } 
+                desc = "arabian_trade_fleet_13_desc_3"
+            }
+            triggered_desc = {  ##Egypt Description
+                trigger = { has_variable = egypt_trade_flag }    
+                desc = "arabian_trade_fleet_13_desc_4"
+            }           
+        }
+    }    
+    picture = interesting_histories_southern_india
+
+    immediate = {
+        random_list = {
+            1 = {
+                set_variable = {
+                    name = large_trade_returns
+                    days = 2000
+                }                
+            }
+            1 = {
+                set_variable = {
+                    name = modest_trade_returns
+                    days = 2000
+                }
+            }
+        }
+    }
+
+    option = {
+    name = arabian_trade_fleet_13.a   #Trading has made us rich!
+        switch = {
+            trigger = has_variable 
+            #Money
+            large_trade_returns = {
+                add_treasury = 500
+            }
+            modest_trade_returns = {
+                add_treasury = 200
+            }
+        }
+        switch = {
+            trigger = has_variable
+            #Modifiers
+            china_trade_flag = {
+                add_country_modifier = {
+                    name = chinese_trade_goods
+                    duration = 3650
+                }
+                random_owned_province = {
+                limit = {
+                    NOR = {
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
+                     }
+                    NOT = { trade_goods = elephants }
+                    NOT = { trade_goods = grain }
+                    NOT = { trade_goods = dye }
+                    NOT = { trade_goods = vegetables }
+                    NOT = { trade_goods = gems }
+                    NOT = { trade_goods = amber }
+                    NOT = { trade_goods = precious_metals }
+                    NOT = { trade_goods = spices }
+                    NOT = { trade_goods = silk }
+                } 
+                set_trade_goods = silk
+                }
+                create_country_treasure = {
+                    key = "heshibis_jade_disc"
+                    icon = "treasure_chest"
+                
+                    modifier = {
+                        local_research_points_modifier = 0.1
+                        local_unrest = -0.25
+                    }
+                }
+                remove_variable = china_trade_flag
+                set_variable = china_trade_disabled                         
+            }
+            roman_trade_flag = {
+                add_country_modifier = {
+                    name = roman_trade_goods
+                    duration = 3650
+                }
+                random_owned_province = {
+                limit = {
+                    NOR = {
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
+                     }
+                    NOT = { trade_goods = elephants }
+                    NOT = { trade_goods = grain }
+                    NOT = { trade_goods = dye }
+                    NOT = { trade_goods = vegetables }
+                    NOT = { trade_goods = gems }
+                    NOT = { trade_goods = amber }
+                    NOT = { trade_goods = precious_metals }
+                    NOT = { trade_goods = spices }
+                    NOT = { trade_goods = silk }
+                } 
+                set_trade_goods = marble
+                }
+                create_country_treasure = {
+                    key = "roman_marble_statue"
+                    icon = "treasure_it_baetyl_goddess_aluzza"
+                
+                    modifier = {
+                        local_monthly_civilization = 0.05
+                        local_migration_attraction = 1.0
+                    }
+                }
+                remove_variable = roman_trade_flag
+                set_variable = roman_trade_disabled                            
+            } 
+            india_trade_flag = {
+                add_country_modifier = {
+                    name = indian_trade_goods
+                    duration = 3650
+                }
+                
+                random_owned_province = {
+                limit = {
+                    NOR = {
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
+                     }
+                    NOT = { trade_goods = elephants }
+                    NOT = { trade_goods = grain }
+                    NOT = { trade_goods = dye }
+                    NOT = { trade_goods = vegetables }
+                    NOT = { trade_goods = gems }
+                    NOT = { trade_goods = amber }
+                    NOT = { trade_goods = precious_metals }
+                    NOT = { trade_goods = spices }
+                    NOT = { trade_goods = silk }
+                    NOT = { trade_goods = incense }
+                } 
+                    random_list = {
+                        50 = {
+                            set_trade_goods = spices               
+                        }
+                        25 = {
+                            set_trade_goods = gems
+                        }
+                        25 = {
+                            set_trade_goods = elephants
+                        }                        
+                    }                
+                }
+                create_country_treasure = {
+                    key = "tiger_pelts"
+                    icon = "cr_treasure_skins_of_the_gorilla_02"
+                
+                    modifier = {
+                        local_manpower_modifier = 0.05
+                        local_defensive = 0.1
+                    }
+                }
+                remove_variable = india_trade_flag
+                set_variable = indian_trade_disabled                                                              
+            }
+            egypt_trade_flag = {
+                add_country_modifier = {
+                    name = egyptian_trade_goods
+                    duration = 3650
+                }
+                random_owned_province = {
+                limit = {
+                    NOR = {
+                     #province_id = 6917
+                     #province_id = 6916
+                     #province_id = 6927
+                     }
+                    NOT = { trade_goods = elephants }
+                    NOT = { trade_goods = grain }
+                    NOT = { trade_goods = dye }
+                    NOT = { trade_goods = vegetables }
+                    NOT = { trade_goods = gems }
+                    NOT = { trade_goods = amber }
+                    NOT = { trade_goods = precious_metals }
+                    NOT = { trade_goods = spices }
+                    NOT = { trade_goods = silk }
+                } 
+                set_trade_goods = papyrus
+                }
+                create_country_treasure = {
+                    key = "yellow_glass_scarab"
+                    icon = "treasure_it_divine_vessel_of_isis"
+                
+                    modifier = {
+                        global_nobles_desired_pop_ratio = 0.03
+                        local_nobles_output = 0.03
+                    }
+                }
+                remove_variable = egypt_trade_flag
+                set_variable = egypt_trade_disabled                            
+            }                                   
+        }        
+    }
+    #Recreate the fleet with a good admiral
+    after = { 
+        hidden_effect = {
+            create_character = {
+                first_name = "Sindbad"
+                family_name = "Albahry"
+                age = 40
+                culture = himjar 
+                religion = arabian_pantheon #puntic_religion
+                female = no
+                add_trait = coastal_raider
+                add_trait = oarmaster
+                add_trait = abrasive
+                good_martial_effect = yes
+                good_charisma_effect = yes
+                save_scope_as = arab_admiral
+            }
+        }       
+        if = {
+            limit = {
+            has_variable = small_fleet_construction
+            }
+            create_unit = {
+                navy = yes
+                commander = scope:arab_admiral
+                sub_unit = octere
+                location = 4650 #Adan
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+            }            
+        }
+        if = {
+            limit = {
+            has_variable = big_fleet_construction
+            }
+            create_unit = {
+                navy = yes
+                commander = scope:arab_admiral
+                sub_unit = octere
+                location = 4650 #Adan
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme
+                add_subunit = trireme                
+            }            
+        }
+    }         
+}
+
+
+arabian_trade_fleet.14 = { # Begin Trade Fleet Construction
+    type = country_event
+    title = arabian_trade_fleet_14_title
+    desc = arabian_trade_fleet_14_desc
+    picture = interesting_histories_southern_india
+
+    option = {  #Big Fleet (20 Ships)
+        name = arabian_trade_fleet_14.a
+        add_treasury = -500
+            set_variable = {
+                name = big_fleet_construction
+                days = 2000
+            }        
+    }
+    option = {  #Small Fleet (10 Ships)
+        name = arabian_trade_fleet_14.b
+        add_treasury = -300
+            set_variable = {
+                name = small_fleet_construction
+                days = 2000
+            }                
+    }
+    after = {
+        trigger_event = {
+            id = arabian_trade_fleet.11
+            days = { 90 182 } #3-6 months
+        }    
+    }    
+}
+
+#Mission task Flavor Events
+arabian_trade_fleet.15 = { # Yathill
+    type = country_event
+    title = arabian_trade_fleet_15_title
+    desc = arabian_trade_fleet_15_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = arabian_trade_fleet_15.a
+        p:4700 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}
+
+arabian_trade_fleet.16 = { # Mariaba
+    type = country_event
+    title = arabian_trade_fleet_16_title
+    desc = arabian_trade_fleet_16_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = arabian_trade_fleet_16.a
+        p:4666 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}
+
+arabian_trade_fleet.17 = { # Adan
+    type = country_event
+    title = arabian_trade_fleet_17_title
+    desc = arabian_trade_fleet_17_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = arabian_trade_fleet_17.a
+        p:4650 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}
+
+arabian_trade_fleet.18 = { # Zafar
+    type = country_event
+    title = arabian_trade_fleet_18_title
+    desc = arabian_trade_fleet_18_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = arabian_trade_fleet_18.a
+        p:4680 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}
+
+arabian_trade_fleet.19 = { # Tamna
+    type = country_event
+    title = arabian_trade_fleet_19_title
+    desc = arabian_trade_fleet_19_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = arabian_trade_fleet_19.a
+        p:4662 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}
+
+arabian_trade_fleet.20 = { # Shabwa
+    type = country_event
+    title = arabian_trade_fleet_20_title
+    desc = arabian_trade_fleet_20_desc
+    picture = interesting_histories_southern_india
+    option = {
+        name = arabian_trade_fleet_20.a
+        p:4676 = {
+            add_province_modifier = {
+                name = regional_trading_center
+                duration = -1
+            }
+        }
+    }
+}

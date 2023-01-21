@@ -1,0 +1,184 @@
+﻿namespace = social_change_events
+
+social_change_events.1 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+		
+	}
+
+	immediate = {
+		hidden_effect = {
+				random_list = {
+					15 = {
+						trigger_event = {
+							id = social_change_events.2 
+							days = { 365 730 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = social_change_events.3
+							days = { 365 730 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = social_change_events.4 
+							days = { 365 730 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = social_change_events.5 
+							days = { 365 730 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = social_change_events.6 
+							days = { 365 730 }
+						}
+					}
+					25 = { 
+					}
+				}
+		}		
+	}
+}
+
+
+social_change_events.2 = { 
+ 	type = country_event
+	title = "social_change_events.2.t"
+	desc = "social_change_events.2.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = revolt
+
+	trigger = {
+		has_country_modifier = social_change
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "social_change_events.2.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "social_stability"
+			duration = 730
+		}
+	 }
+}
+
+
+social_change_events.3 = { 
+ 	type = country_event
+	title = "social_change_events.3.t"
+	desc = "social_change_events.3.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = revolt
+
+	trigger = {
+		has_country_modifier = social_change
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "social_change_events.3.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "social_stability"
+			duration = 730
+		}
+		scope:actor.current_ruler = { 
+			add_corruption = 5
+		}
+	 }
+}
+
+social_change_events.4 = { 
+ 	type = country_event
+	title = "social_change_events.4.t"
+	desc = "social_change_events.4.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = revolt
+
+	trigger = {
+		has_country_modifier = social_change
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "social_change_events.4.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "civil_war_risk"
+			duration = 730
+		}
+	 }
+}
+
+social_change_events.5 = { 
+ 	type = country_event
+	title = "social_change_events.5.t"
+	desc = "social_change_events.5.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = revolt
+
+	trigger = {
+		has_country_modifier = social_change
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "social_change_events.5.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "social_disloyalty"
+			duration = 730
+		}
+	 }
+}
+
+social_change_events.6 = { 
+ 	type = country_event
+	title = "social_change_events.6.t"
+	desc = "social_change_events.6.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = revolt
+
+	trigger = {
+		has_country_modifier = social_change
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "social_change_events.6.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "social_unrest"
+			duration = 730
+		}
+	 }
+}

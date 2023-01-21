@@ -4,43 +4,44 @@
 	
 		potential = {
 			num_of_cities >= 1
-			owns = 1465
+			owns = 1464
 			NOR = {
 				has_variable = founded_balearic_slingers_training_complex
 			}
 			OR = { 	primary_culture = talaiotic
 					any_country_culture = {
 						is_integrated = yes
-						#country_culture_pop_count >= small_percent_size_culture_group_comparison
+						country_culture_pop_count >= tiny_percent_size_culture_group_comparison
 						is_culture = talaiotic
 					}			
 			}
 		}
 		highlight = {
 			scope:province = {
-				province_id = 1465
+				province_id = 1464 #Ibasim
 			}
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
-			owns = 1465
+			military_experience >= 80
+			owns = 1464
 		}
 		
 		effect = {
 			set_variable = founded_balearic_slingers_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = balearic_slingers_training_programme 
 				duration = -1
 			}
 			
-			p:1465 = {
+			p:1464 = {
 					add_province_modifier = {
 						name = balearic_slingers_training_complex
 						duration = -1					
 					}
+					set_trade_goods = wild_game
 				}
 				
 			}

@@ -20,6 +20,13 @@
 			}
 			country_culture_group = numidian
 		}
+		trigger_else_if = {
+			limit = { country_culture_group = fezzani }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = fezzani
+		}
 		trigger_else = {
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
@@ -32,6 +39,7 @@
 					country_culture_pop_count >= percent_size_culture_group_comparison
 					OR = {
 						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
 						is_culture = carthaginian
 					}
 				}

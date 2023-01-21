@@ -11,31 +11,33 @@
 			}
 			OR = { 	country_culture_group = meroitic_group
 					country_culture_group = aksumite_group
+					country_culture_group = nilotic_group
 					any_country_culture = {
 						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
+						country_culture_pop_count >= small_percent_size_culture_group_comparison
 						OR = {
 							this.culture.culture_group = culture_group:aksumite_group
 							this.culture.culture_group = culture_group:meroitic_group
+							this.culture.culture_group = culture_group:nilotic_group
 						}
 					}			
 			}
 		}
 		highlight = {
 			scope:province = {
-				province_id = 7587
+				province_id = 7587 #Anak Elephants
 			}
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
+			military_experience >= 80
 			owns = 7587
 		}
 		
 		effect = {
 			set_variable = founded_elephant_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = elephant_training_programme 
 				duration = -1
