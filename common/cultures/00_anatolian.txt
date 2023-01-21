@@ -63,7 +63,6 @@
 		isaurian = {}
 		paphlagonian = {}
 		lycian = {}
-		pamphylian = {}
 		mysian = {}
 		#pontic = { levy_template = levy_pontus }
 		cilician = { levy_template = levy_cilician }
@@ -126,7 +125,7 @@
 	
 	barbarian_names = { AMARDI ANARIACAE AUGASII CASPII CHORASMII CYRTII DAHAE DERBICII ISSEDONES LEGAE MATIANI MASSAGETAE PARNI SACAE SARMATAE SOANES VITII }
 	
-	graphical_culture = persian_gfx
+	graphical_culture = anatolian_gfx
 	ethnicities = {
 		10 = persian
 	}

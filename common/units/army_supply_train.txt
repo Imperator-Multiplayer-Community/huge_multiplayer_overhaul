@@ -24,13 +24,13 @@ supply_train = {
 	attrition_loss = 0.1
 	
 	food_consumption = 0.05
-	food_storage = 50
+	food_storage = 75
 	
 	
 	morale_damage_taken = 2.0
 	
 	build_cost = {
-		gold = 20
+		gold = 35
 		manpower = 1
 	}
 	

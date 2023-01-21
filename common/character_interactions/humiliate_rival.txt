@@ -21,7 +21,7 @@
 	
 	allowed_trigger = {
 		hidden:scope:actor = {
-			can_pay_price = price_test_loyalty
+			can_pay_price = price_humiliate_rival
 		}
 		scope:actor = {
 			NOR = {
@@ -56,8 +56,7 @@
 	
 	effect = {
 		scope:actor = {
-			pay_price = price_test_loyalty
-		}
+			pay_price = price_humiliate_rival
 		
 		scope:target = {
 			hidden_effect = {

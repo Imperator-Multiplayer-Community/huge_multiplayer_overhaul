@@ -16,7 +16,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_greek
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:hellenic							
 						}
@@ -38,13 +38,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_greek_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_greek_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = greek_science
@@ -114,7 +115,7 @@
 					#this text may need to be changed
 					text = tradition_unlock_requirement_latin
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {	
 							this.culture.culture_group = culture_group:latin	
 						}
@@ -136,13 +137,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_latin_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_latin_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = latin_science
@@ -213,7 +215,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_celtic
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:gallic
 							this.culture.culture_group = culture_group:celto_pannonian_group
@@ -237,13 +239,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_celtic_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_celtic_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = celtic_science
@@ -314,7 +317,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_indian
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:aryan
 							this.culture.culture_group = culture_group:pracyan
@@ -338,13 +341,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_indian_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_indian_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = indian_science
@@ -414,7 +418,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_iberian
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:celt_iberia
 							this.culture.culture_group = culture_group:iberia						
@@ -437,13 +441,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_iberian_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_iberian_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = iberian_science
@@ -514,7 +519,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_haemic
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:illyrian_group
 							this.culture.culture_group = culture_group:dacia_group
@@ -538,13 +543,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_haemic_literature" 
-					duration = 18262
+					duration = -1
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_haemic_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = haemic_science
@@ -613,7 +619,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_punic
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:west_levantine					
 						}
@@ -635,13 +641,14 @@
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "patronizing_punic_literature"
-					duration = 18262
+					duration = -1
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_punic_culture_literature"
-				duration = 1825
+				duration = -1
 			}
 			set_variable = {
 				name = punic_science
@@ -701,7 +708,8 @@
 			is_integrated = yes
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
 				OR = {	
-					this.culture.culture_group = culture_group:numidian			
+					this.culture.culture_group = culture_group:numidian
+					this.culture.culture_group = culture_group:fezzani			
 				}	
 			}
 		}
@@ -710,9 +718,10 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_numidian
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
-							this.culture.culture_group = culture_group:numidian				
+							this.culture.culture_group = culture_group:numidian
+							this.culture.culture_group = culture_group:fezzani				
 						}
 				}
 			}
@@ -735,7 +744,8 @@
 					duration = 18262
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_numidian_culture_literature"
 				duration = 1825
@@ -807,7 +817,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_egyptian
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:north_african			
 						}
@@ -832,7 +842,8 @@
 					duration = 18262
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_egyptian_culture_literature"
 				duration = 1825
@@ -904,7 +915,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_east_levantine
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:east_levantine				
 						}
@@ -929,7 +940,8 @@
 					duration = 18262
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_mesopotamian_culture_literature"
 				duration = 1825
@@ -1001,7 +1013,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_persian
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:persia			
 						}
@@ -1026,7 +1038,8 @@
 					duration = 18262
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_persian_culture_literature"
 				duration = 1825
@@ -1090,7 +1103,8 @@
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
 				OR = {	
 					this.culture.culture_group = culture_group:meroitic_group
-					this.culture.culture_group = culture_group:aksumite_group		
+					this.culture.culture_group = culture_group:aksumite_group
+					this.culture.culture_group = culture_group:nilotic_group		
 				}	
 			}
 		}
@@ -1099,10 +1113,11 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_nubian
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group				
+							this.culture.culture_group = culture_group:aksumite_group
+							this.culture.culture_group = culture_group:nilotic_group				
 						}
 				}
 			}
@@ -1125,7 +1140,8 @@
 					duration = 18262
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_nubian_culture_literature"
 				duration = 1825
@@ -1197,7 +1213,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_south_levantine
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:south_levantine				
 						}
@@ -1222,7 +1238,8 @@
 					duration = 18262
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_arabian_culture_literature"
 				duration = 1825
@@ -1294,7 +1311,7 @@
 				custom_tooltip = {
 					text = tradition_unlock_requirement_anatolian
 					is_integrated = yes
-					country_culture_pop_count >= 30
+					country_culture_pop_count >= 300
 						OR = {
 							this.culture.culture_group = culture_group:anatolian				
 						}
@@ -1319,7 +1336,8 @@
 					duration = 18262
 				}
 			}
-			add_political_influence = -50
+			add_political_influence = -30
+			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_anatolian_culture_literature"
 				duration = 1825

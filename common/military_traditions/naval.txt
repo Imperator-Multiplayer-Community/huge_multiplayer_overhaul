@@ -3,36 +3,128 @@
 	image = north_african_naval_path_7 #updated
 	
 	allow = {
-		
+		is_ai = no
 	}
-	
+
+#	naval_cost_path = {
+#		modifier = {
+#			navy_maintenance_cost = -0.05
+#			navy_movement_speed = 0.1
+#		}
+#		icon = greek_seleucid_path_3
+#		requires = { }
+#	}
+
+
 	naval_light_path = {
 		modifier = {
 			navy_maintenance_cost = 0.01
-			liburnian_discipline = 0.2
-			trireme_discipline = 0.2
-			liburnian_morale = 0.5
-			trireme_morale = 0.5
+			liburnian_morale = 0.3 #########
+			trireme_morale = 0.3
+		}
+		icon = levantine_egyptian_path_2
+		requires = { }
+	}
+
+	naval_light_path_discipline = {
+		modifier = {
+			navy_maintenance_cost = 0.01
+			liburnian_discipline = 0.1
+			trireme_discipline = 0.1
+			ship_capture_chance = 0.025
 		}
 		icon = north_african_naval_path_7
-		requires = { }
+		requires = { naval_light_path }
+	}
+
+
+	naval_river_path = {
+		modifier = {
+			riverine_terrain_combat_bonus = 0.25
+			coastal_terrain_combat_bonus = -0.05
+			ocean_combat_bonus = -0.05
+		}
+		icon = levantine_philosophy_start_bonus #updated
+		requires = { naval_light_path }
+	}
+
+	naval_mid_path = {
+		modifier = {
+			navy_maintenance_cost = 0.01
+			tetrere_defensive = 0.1
+			hexere_defensive = 0.1
+		}
+		icon = greek_antigonid_path_2
+		requires = {  }
+	}
+
+	naval_mid_path_morale = {
+		modifier = {
+			navy_maintenance_cost = 0.01
+			tetrere_morale = 0.1
+			hexere_morale = 0.1
+			naval_damage_taken = -0.025
+		}
+		icon = greek_seleucid_path_3
+		requires = { naval_mid_path }
 	}
 
 	naval_coastal_path = {
 		modifier = {
-			coastal_terrain_combat_bonus = 0.3
-			ocean_combat_bonus = -0.3
+			riverine_terrain_combat_bonus = -0.05
+			coastal_terrain_combat_bonus = 0.25
+			ocean_combat_bonus = -0.05
+		}
+		allow = {
+			NOT = {
+				has_variable = took_ocean_path
+			}
+		}
+		on_activate = {
+			set_variable = took_coastal_path
 		}
 		icon = north_african_naval_path_3 #updated
-		requires = { }
+		requires = { naval_mid_path }
+	}
+
+	naval_heavy_path = {
+		modifier = {
+			navy_maintenance_cost = 0.01
+			octere_offensive = 0.15
+			mega_galley_offensive = 0.15
+		}
+		icon = mauryan_coastal_path_3
+		requires = {  }
+	}
+
+
+	naval_heavy_path_morale = {
+		modifier = {
+			navy_maintenance_cost = 0.01
+			octere_morale = 0.1
+			mega_galley_morale = 0.1
+			naval_damage_done = 0.025
+		}
+		icon = greek_states_path_5
+		requires = { naval_heavy_path }
 	}
 
 	naval_ocean_path = {
 		modifier = {
-			coastal_terrain_combat_bonus = -0.3
-			ocean_combat_bonus = 0.3
+			riverine_terrain_combat_bonus = -0.05
+			coastal_terrain_combat_bonus = -0.05
+			ocean_combat_bonus = 0.25
 		}
-		icon = levantine_philosophy_start_bonus #updated
-		requires = { }
+		allow = {
+			NOT = {
+				has_variable = took_coastal_path
+			}
+		}
+		on_activate = {
+			set_variable = took_ocean_path
+		}
+		icon = persian_achaemenid_path_3
+		requires = { naval_heavy_path }
 	}
+
 }

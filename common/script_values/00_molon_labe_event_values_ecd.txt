@@ -2,15 +2,22 @@
 percent_size_culture_group_comparison = {
 	value = root.country_culture.country_culture_pop_count
 	multiply = 0.25
-	max = 225
-	min = 25
+	max = 250
+	min = 125
 }
 
 small_percent_size_culture_group_comparison = {
 	value = root.country_culture.country_culture_pop_count
 	multiply = 0.1
 	max = 100
-	min = 10
+	min = 50
+}
+
+tiny_percent_size_culture_group_comparison = {
+	value = root.country_culture.country_culture_pop_count
+	multiply = 0.1
+	max = 25
+	min = 5
 }
 
 administrators_in_subcultures_cost_svalue = {
@@ -35,6 +42,21 @@ veterans_fight_svalue = {
 	multiply = 0.25
 	max = 100
 	min = 10
+}
+
+grand_assault_svalue = {
+	value = max_manpower
+	multiply = -0.25
+	max = -100
+	min = -20
+}
+
+
+grand_siege_svalue = {
+	value = max_manpower
+	multiply = -0.125
+	max = -100
+	min = -20
 }
 
 veterans_fight_svalue_slaves = {

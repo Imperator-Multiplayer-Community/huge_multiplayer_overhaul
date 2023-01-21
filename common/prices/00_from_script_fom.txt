@@ -22,28 +22,35 @@ recruit_general = {
 	scaled_gold = 1
 }
 
-seduce_governor = {
-	aggressive_expansion = 15
-	political_influence = 25
-	scaled_gold = 1
+secude_governor = {
+	aggressive_expansion = 20
+	political_influence = 35
+	scaled_gold = 2
 }
 
 gift_slave = {
-	scaled_gold = 5
+	gold = 75
+	political_influence = 15
+}
+
+give_relic = {
+	gold = 75
+	political_influence = 15
 }
 
 send_letter = {
-	gold = 50
-	political_influence = 30
+	gold = 75
+	political_influence = 15
 }
 
 go_hunting = {
-	gold = 100
-	political_influence = 20
+	gold = 75
+	political_influence = 15
 }
 
 price_force_divorce = {
-	political_influence = 12
+	political_influence = 20
+	tyranny = 5
 }
 
 price_state_investment_military = {
@@ -68,11 +75,11 @@ price_patron_of_arts_button = {
 }
 
 price_assemble_raiding_party_button = {
-	political_influence = 75
+	political_influence = 60
 }
 
 price_tribal_duel = {
-	political_influence = 12
+	political_influence = 8
 	tyranny = 4
 }
 
@@ -81,9 +88,20 @@ price_test_loyalty = {
 	tyranny = 4
 }
 
-create_merc_state_price = { 
-	political_influence = 15
+price_humiliate_rival = {
+	political_influence = 10
 }
+
+price_task_character = {
+	political_influence = 15
+	treasury = 50
+}
+
+create_merc_state_price = { 
+	political_influence = 50
+	military_experience = 5
+}
+
 
 assassinate_attempt_foreign = {
 	aggressive_expansion = 20
@@ -95,12 +113,24 @@ subject_player_client_state_pays = {
 	scaled_manpower = 0.025
 }
 
-recruit_mercenary = {
-	gold = 100
-	aggressive_expansion = 2
-}
 
 build_border_fort = {
 	gold = 150
 	manpower = 3
+}
+
+raid = {
+	aggressive_expansion = 3 #5 #Aries says this is too harsh. It was 2 in vanilla
+}
+
+raise_levies = {
+	tyranny = 2
+}
+
+price_support_primary_heir = {
+	tyranny = 5
+}
+
+price_arena_match = {
+	tyranny = 5
 }

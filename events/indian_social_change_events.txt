@@ -1,0 +1,186 @@
+﻿namespace = indian_social_change_events
+
+indian_social_change_events.1 = {
+	type = country_event
+ 	hidden = yes
+
+ 	trigger = {
+ 		OR = { 	
+			has_country_modifier = dharana_modifier
+			has_country_modifier = dhyana_modifier
+			has_country_modifier = samadhi_modifier
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+				random_list = {
+					15 = {
+						trigger_event = {
+							id = indian_social_change_events.2 
+							days = { 1000 2000 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = indian_social_change_events.3
+							days = { 1000 2000 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = indian_social_change_events.4 
+							days = { 1000 2000 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = indian_social_change_events.5 
+							days = { 1000 2000 }
+						}
+					}
+					15 = {
+						trigger_event = {
+							id = indian_social_change_events.6 
+							days = { 1000 2000 }
+						}
+					}
+					25 = { 
+					}
+				}
+		}		
+	}
+}
+
+
+indian_social_change_events.2 = { 
+ 	type = country_event
+	title = "indian_social_change_events.2.t"
+	desc = "indian_social_change_events.2.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = ascetic
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "indian_social_change_events.2.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "indian_social_stability"
+			duration = 730
+		}
+	 }
+}
+
+
+indian_social_change_events.3 = { 
+ 	type = country_event
+	title = "indian_social_change_events.3.t"
+	desc = "indian_social_change_events.3.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = ascetic
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "indian_social_change_events.3.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "indian_social_stability"
+			duration = 730
+		}
+		scope:actor.current_ruler = { add_corruption = 5 }
+	 }
+}
+
+indian_social_change_events.4 = { 
+ 	type = country_event
+	title = "indian_social_change_events.4.t"
+	desc = "indian_social_change_events.4.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = ascetic
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "indian_social_change_events.4.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "indian_civil_war_risk"
+			duration = 730
+		}
+	 }
+}
+
+indian_social_change_events.5 = { 
+ 	type = country_event
+	title = "indian_social_change_events.5.t"
+	desc = "indian_social_change_events.5.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = ascetic
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "indian_social_change_events.5.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "indian_social_disloyalty"
+			duration = 730
+		}
+	 }
+}
+
+indian_social_change_events.6 = { 
+ 	type = country_event
+	title = "indian_social_change_events.6.t"
+	desc = "indian_social_change_events.6.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = ascetic
+
+	trigger = {
+		
+	}
+
+	immediate = {
+	
+	}
+
+	option = {
+		name = "indian_social_change_events.6.a"
+		add_stability = -5
+		add_country_modifier = { 
+			name = "indian_social_unrest"
+			duration = 730
+		}
+	 }
+}

@@ -10,13 +10,13 @@
 	build_time = 30
 
 	light_infantry = 1.0
-	heavy_infantry = 1.0
+	heavy_infantry = 0.85
 	heavy_cavalry = 0.80
-	warelephant = 1.1
-	horse_archers = 0.7
-	archers = 1.0
-	camels = 1.0
-	light_cavalry = 1.0
+	warelephant = 0.80
+	horse_archers = 0.95
+	archers = 1.1
+	camels = 0.95
+	light_cavalry = 0.95
 	supply_train = 2.0
 	
 	attrition_weight = 0.5
@@ -26,7 +26,7 @@
 	food_storage = 2.4
 	
 	build_cost = {
-		gold = 8
+		gold = 11
 		manpower = 1
 	}
 }

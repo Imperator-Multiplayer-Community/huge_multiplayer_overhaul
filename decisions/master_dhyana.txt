@@ -27,7 +27,7 @@
 			set_variable = mastered_dhyana
 			add_treasury = -200
 			add_political_influence = -30
-			add_stability = -25
+			add_stability = -10
 			random_character = {
 				limit = {
 					has_high_priest_office_trigger = yes
@@ -36,9 +36,12 @@
 			}
 			add_country_modifier = {
 				name = "dhyana_modifier"
-				duration = 3650
+				duration = 2990
 			}
-					
+			trigger_event = {
+				id = indian_social_change_events.1
+				days = 5
+			}			
 		}
 		
 		ai_will_do = {

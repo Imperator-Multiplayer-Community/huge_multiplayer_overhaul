@@ -18,19 +18,19 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 1686
+				province_id = 1686 #Samshvilde
 			}
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
+			military_experience >= 80
 			owns = 1686
 		}
 		
 		effect = {
 			set_variable = founded_caucasian_infantry_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = caucasian_infantry_training_programme 
 				duration = -1

@@ -28,9 +28,9 @@
  letter_friend_skill_tt:0 "This character is too skilled to correspond with the likes of you."
  hunting_friend_skill_tt:0 "This character is too skilled to go hunting with the likes of you."
 
- humiliate_rival_tt:0 "Rub your rival's nose in their own excrement and luxuriate in the moment. Your leader's zeal will be used as the basis for determining whether you win the gods' favour... or scorn."
- test_loyalty_tt:0 "Make this person swear fealty to you, or face backlash by overplaying your hand. Your most zealous secret police agent will enforce pledges and demonstrations of allegiance."
- challenge_duel_tt:0 "Challenge a rival for dominance or attempt to remove senile successors to leadership of the tribe. Your leader's martial skill will be the basis for determining success... or failure."
+ humiliate_rival_tt:0 "Rub your rival's nose in their own excrement and luxuriate in the moment. Your ruler's #Y Zeal#! will be used as the basis for determining whether you win the gods' favour... or scorn."
+ test_loyalty_tt:0 "Make this person swear fealty to you, or face backlash by overplaying your hand. The #Y Zeal#! of your most ruthless #Counterintelligence Agent#! will be used to enforce pledges of allegiance."
+ challenge_duel_tt:0 "Challenge a rival for dominance or attempt to remove senile successors to leadership of the tribe. Your ruler's #Y Martial#! will be the basis for determining success... or failure."
 
 
  paradisial_garden:0 "Build a Garden"
@@ -218,7 +218,7 @@
  arrest_spy_past:0 "Put an End to Foreign Meddling"
  arrest_spy_act:0 "Pursue and detain this member of a foreign spy ring"
  arrest_spy_act_past:0 "Detain this person at once"
- arrest_spy_tt:0 "Order your intelligence agents to find and arrest this foreign interloper. If they succeed, the spy will be brought to us in chains. If they fail, we may lose track of the spy, lose an agent or suffer a blow to our reptuation."
+ arrest_spy_tt:0 "Order your men to track and arrest this foreign interloper, led by your #Y Counterintelligence Agent#! with the highest #Y Martial#!. If they succeed, the spy will be brought to us in chains. If they fail, we may lose track of the spy, lose the agent or suffer a blow to our reptuation."
 
  counterintel.6.t:0 "Like Sand" #Spy escapes and you have lost her trace
  counterintel.6.desc:0 "You receive a report that your guards were recently trailing a foreign spy, who managed to slip through their fingers"
@@ -355,6 +355,14 @@
  character_introductions.4.desc:0 "This warrior recently distinguished himself in battle on the high sea"
  character_introductions.4.a:0 "The state extends its gratitude"
 
+ character_introductions.5.t:0 "Valour in the Field"
+ character_introductions.5.desc:0 "A junior officer recently assisted your army in victory. You have two years to promote him in the Cultural Decisions menu under your Primary Culture."
+ character_introductions.5.a:0 "Our nation needs a hero"
+
+ character_introductions.6.t:0 "Valour at Sea"
+ character_introductions.6.desc:0 "A junior officer recently assisted you fleet in victory. You have two years to promote him in the Cultural Decisions menu under your Primary Culture."
+ character_introductions.6.a:0 "Our nation needs a hero" 
+
  temptress_bribe_character:0 "Titillate"
  temptress_bribe_character_past:0 "Charm Offensive"
  temptress_bribe_character_act:0 "Use your feminine wiles to win his heart and mind"
@@ -483,7 +491,7 @@
  correspond_friend_act:0 "Send a letter"
  correspond_friend_act_past:0 "Send a letter to your friend"
  correspond_friend_tt:0 "You write a letter to your friend, hoping to learn their opinion on certain matters."
- letter_cost_tt:0 "Just try not to embarrass yourself..."
+ letter_cost_tt:0 "Send a letter to a friendly letter with high #Y Martial#!, #Y Finesse#!, #Y Charisma#! or #Y Zeal#!, hoping to learn something from them. Just try not to embarrass yourself."
  letter_writer_tooltip:0 "You have recently sent a letter."
  relic_giver_tooltip:0 "You have recently sent a gift."
 
@@ -555,7 +563,7 @@
  go_hunting_past:0 "The Call of the Hunt"
  go_hunting_act:0 "Strenghten your friendship in the pursuit of game"
  go_hunting_act_past:0 "See which of you is the better hunter"
- go_hunting_tt:0 "Invite your friend to pick their favourite hunting spot, so you may spend some time together and slough off the burdens of the world."
+ go_hunting_tt:0 "Invite your friend to pick their favourite hunting spot, so you may spend some time together and slough off the burdens of the world. Only friends with high #Y Martial#! make for good hunting companions."
  hunting.1.t:0 "A Invitation to Hunt"
  hunting.1.desc:0 "A friend has sent you an invitation to join them on a hunting trip. Though this is a great opportunity to relax and improve your skill, it can also be dangerous."
  hunting.1.a:0 "Accept with pleasure"
@@ -857,14 +865,14 @@
  gift_relic_past:0 "A Gift Fit for a King"
  gift_relic_act:0 "Send your friend a gift to remember"
  gift_relic_act_past:0 "Show your friend how much you care with this gift"
- gift_relic_tt:0 "Have a marvellous artefact crafted and sent to your friend as a gift."
+ gift_relic_tt:0 "Have a marvellous artefact crafted and sent to your friend as a gift. The quality of the gift will be influenced its category. matched with your friend's #Y Martial#!, #Y Finesse#!, #Y Charisma#! or #Y Zeal#!."
 
 
  gift_slave:0 "Gift Fine Slave"
  gift_slave_past:0 "The Best Servant Money Can Buy"
  gift_slave_act:0 "Send your friend a talented and loyal slave"
  gift_slave_act_past:0 "Show your friend how much you care with this gift"
- gift_slave_tt:0 "Have one of your best slaves sent to your friend as a gift."
+ gift_slave_tt:0 "Have one of your best slaves sent to your friend as a gift. The quality of the slave will be influenced by your #Y Finesse#!."
 
  slave_gift_event.1.t:0 "A Thoughtful Gesture"
  slave_gift_event.1.desc:0 "An earnest friend wants to send you a loyal slave as a personal gift."
@@ -1097,7 +1105,7 @@
 
  #Assassination
 
- need_assassin_in_place_tt:0 "You must have a #Y Spy#! operating in the country."
+need_assassin_in_place_tt:0 "You must have a #Y Spy#! operating in the country."
 
 # Vassalage
 recently_offered_vassalage_tt:0 "This player was recently offered vassalage."

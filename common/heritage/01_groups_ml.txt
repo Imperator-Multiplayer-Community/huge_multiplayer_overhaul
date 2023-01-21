@@ -82,9 +82,10 @@ coastal_heritage = {
 	
 	modifier = {
 		global_commerce_modifier = 0.05
-		price_state_investment_oratory_cost_modifier = -0.05
+		global_ship_recruit_speed = 0.25
 		
 		fortress_building_cost = 0.1
+
 	}
 	
 	trigger = {
@@ -143,9 +144,11 @@ steppe_heritage = {
 rural_heritage = { #Pseudo Rome
 	
 	modifier = {
-		price_found_city_cost_modifier = -0.2
-		global_monthly_food_modifier = 0.1
-		global_tribesmen_happyness = -0.05
+		enslavement_efficiency = 0.05
+        build_cost = -0.1
+		
+		global_monthly_civilization = -0.02
+
 	}
 	
 	trigger = {

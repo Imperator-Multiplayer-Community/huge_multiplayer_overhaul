@@ -286,7 +286,7 @@ send_men_50k = {
 			pay_price = fiftykman
 		}
 		scope:target.employer = {
-			add_manpower = 100
+			add_manpower = 40
 		}
 		scope:actor.current_ruler = {
 			set_variable = {

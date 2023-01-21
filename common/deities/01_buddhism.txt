@@ -205,7 +205,7 @@ deity_bodh = {
 		religion = buddhism
 	}
 	icon = deity_war
-	passive_modifier = { army_maintenance_cost = -0.05 }
+	passive_modifier = { army_maintenance_cost = deity_army_maintenance_cost_svalue }
 	omen = { global_nobles_happyness = omen_global_nobles_happiness_svalue } #Bonus from Omen
 	religion = buddhism
 	deity_category = war
@@ -244,5 +244,198 @@ deity_kusinagara = {
 	
 	on_activate = {
 		culture_apotheosis_capital_effect = yes
+	}
+}
+
+
+# New Invictus Deities
+
+
+deity_mitreya = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_eloquence
+	passive_modifier = { monthly_political_influence_modifier = deity_monthly_political_influence_modifier_svalue }
+	omen = { research_points_modifier = omen_research_points_modifier_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = culture
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+
+	on_activate = {
+		culture_apotheosis_civic_tech_effect = yes
+	}
+}
+
+deity_manjushri = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_love
+	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
+	omen = { monthly_wage_modifier = omen_monthly_wage_modifier_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = fertility
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		fertility_apotheosis_food_effect = yes
+	}
+}
+
+deity_avalokitesvara = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_wealth
+	passive_modifier = { global_tax_modifier = deity_global_tax_modifier_svalue }
+	omen = { global_slaves_happyness = omen_global_slaves_happiness_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = economy #This Deity uses a economy Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		culture_apotheosis_capital_effect = yes
+	}
+}
+
+deity_samantabhadra = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_war
+	passive_modifier = { land_morale_modifier = deity_land_morale_modifier_svalue }
+	omen = { manpower_recovery_speed = omen_manpower_recovery_speed } #Bonus from Omen
+	religion = buddhism
+	deity_category = war
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		military_apotheosis_manpower_effect = yes
+	}
+}
+
+deity_samantabhadri = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_love
+	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = fertility
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		fertility_apotheosis_food_effect = yes
+	}
+}
+
+deity_sakra = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_war
+	passive_modifier = { army_maintenance_cost = deity_army_maintenance_cost_svalue }
+	omen = { discipline = omen_discipline_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = war
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		military_apotheosis_military_experience_effect = yes
+	}
+}
+
+deity_mahesvara = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_nobles_happyness = deity_global_nobles_happiness_svalue }
+	omen = { global_monthly_civilization = omen_global_monthly_civilization_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = culture
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+
+	on_activate = {
+		economy_apotheosis_capital_noble_effect = yes
+	}
+}
+
+deity_vajrapani = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_war
+	passive_modifier = { land_morale_modifier = omen_land_morale_modifier_svalue }
+	omen = { hostile_attrition = omen_hostile_attrition_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = war
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		military_apotheosis_military_experience_effect = yes
+	}
+}
+
+deity_marici = {
+	trigger = {
+		religion = buddhism
+	}
+	icon = deity_wealth
+	passive_modifier = { build_cost = deity_build_cost_svalue }
+	omen = { global_tax_modifier = omen_global_tax_modifier_svalue } #Bonus from Omen
+	religion = buddhism
+	deity_category = economy #This Deity uses a economy Slot
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+		if = {
+			limit = {
+				exists = scope:deified_ruler
+				is_ai = no
+			}
+			hidden_effect = {
+				random = {
+					chance = 5
+					random_character = {
+						limit = {
+							is_ruler = no
+							is_head_of_family = no
+							is_general = no
+							is_admiral = no
+							is_primary_heir = no
+							is_governor = no
+							has_any_office = no
+							from_ruler_family = no
+							is_mercenary = no
+							is_party_leader = no
+							is_pretender = no
+						}
+						death = { death_reason = death_claimed_by_the_underworld }
+					}
+				}
+			}
+		}
 	}
 }
