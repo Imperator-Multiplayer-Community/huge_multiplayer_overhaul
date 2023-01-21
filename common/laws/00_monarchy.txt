@@ -1,4 +1,4 @@
-﻿succession_law = {
+succession_law = {
 	potential = {
 		is_monarchy = yes
 	}
@@ -94,11 +94,10 @@ monarchy_military_reforms = {
 	monarchy_recruitment_5 = {
 		modifier = {
 			mercenary_land_maintenance_cost = -0.35
-			recruit_mercenary_cost_modifier = -0.35
 			max_mercenary_stacks = 1
 			levy_size_multiplier = -0.025
-			cohort_reinforcement_speed = 0.1
-			land_morale_recovery = 0.1
+			cohort_reinforcement_speed = 0.075
+			land_morale_recovery = 0.075
 			monthly_military_experience = 0.125
 			army_maintenance_cost = 0.5
 		}
@@ -110,7 +109,14 @@ monarchy_military_reforms = {
 	
 	work_for_the_best = { #Royal Guard - Diadochi
 		allow = {
-			rank >= regional_power
+			OR = {
+				rank >= regional_power
+				AND = {
+					is_subject_type = player_client_state
+					num_of_cities > 100
+				}
+			}
+			
 			NOT = { # once standing army has been enacted, cannot go back
 				custom_tooltip = {
 					text = "already_enacted_standing_army"

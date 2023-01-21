@@ -22,6 +22,18 @@ provinces = {
 	536={ # Tentyris
 		great_work=11
 	}
+	600 = { # Pachora - Abu Simbel
+		great_work = 40
+	}
+	687 = { # Jerusalem - Second Temple Ezra
+		great_work = 35
+	}
+	918={ # Babylon
+		great_work=12
+	}
+	1471 = { # Mliet/Malta - Punic Tomb
+		great_work = 32
+	}
 	1981={
 		great_work=13
 	}
@@ -31,12 +43,18 @@ provinces = {
 	3256 = { # Carthage - Cothon
 		great_work = 30
 	}
+	4666 = { # Mariaba - Marib Dam
+		great_work = 51
+	}	
 	6978={
 		great_work=16
 	}
 	7314={
 		great_work=17
 	}
+	7723 = { # Durum (rough location of Ur) - Ur Ziggurat
+		great_work = 50
+	}	
 }
 
 great_work_manager={	
@@ -149,6 +167,28 @@ great_work_manager={
 			great_work_effect_selections={
 				{
 					great_work_effect="gw_effect_pyramids"
+					great_work_effect_tier = "gw_effect_tier_4"
+				}
+			}
+		}
+		12={
+			ancient_wonder = yes
+			key="hanging_gardens_of_babylon"
+			great_work_state=great_work_state_completed
+			finished_date=450.10.1
+			great_work_category="building"
+
+			great_work_name={
+				name="gardens_of_babylon"
+			}
+			great_work_components={
+				{
+					great_work_module="wonder_hanging_gardens"
+				}
+			}
+			great_work_effect_selections={
+				{
+					great_work_effect="gw_effect_garden_babylon"
 					great_work_effect_tier = "gw_effect_tier_4"
 				}
 			}
@@ -312,3 +352,126 @@ great_work_manager={
 				}
 			}
 		}
+		32 = { # Punic Tomb
+			ancient_wonder = yes
+			key = "punic_tomb"
+			great_work_category = "building"
+			great_work_state = great_work_state_completed
+			finished_date = 450.10.1
+
+			great_work_name = {
+				name = "wonder_punic_tomb"
+			}
+			great_work_components = {
+				{
+					great_work_module = "wonder_punic_tomb"
+				}
+			}
+
+			great_work_effect_selections = {
+				{
+					# Honoured Nobles
+					great_work_effect = "gw_effect_punic_tomb"
+					great_work_effect_tier = "gw_effect_tier_4"
+				}
+			}
+		}
+		35 = { # Second Temple Ezra
+			ancient_wonder = yes
+			key = "second_temple_herod"
+			great_work_category = "building"
+			great_work_state = great_work_state_completed
+			finished_date = 405.1.1
+
+			great_work_name = {
+				name = "wonder_second_temple_herod"
+			}
+			great_work_components = {
+				{
+					great_work_module = "wonder_second_temple_herod"
+				}
+			}
+
+			great_work_effect_selections = {
+				{
+					# Second Temple
+					great_work_effect = "gw_effect_second_temple"
+					great_work_effect_tier = "gw_effect_tier_4"
+				}
+			}
+		}
+		40 = {
+			ancient_wonder = yes
+			key = "abu_simbel"
+			great_work_category = "building"
+			great_work_state = great_work_state_completed
+			finished_date = 450.10.1
+
+			great_work_name = {
+				name = "wonder_abu_simbel"
+			}
+			great_work_components = {
+				{
+					great_work_module = "wonder_abu_simbel"
+				}
+			}
+
+			great_work_effect_selections = {
+				{
+					# Honoured Nobles
+					great_work_effect = "gw_effect_abu_simbel"
+					great_work_effect_tier = "gw_effect_tier_4"
+				}
+			}
+		}
+		50 = {
+			ancient_wonder = yes
+			key = "ur_ziggurat"
+			great_work_category = "building"
+			great_work_state = great_work_state_completed
+			finished_date = 450.10.1
+
+			great_work_name = {
+				name = "wonder_ur_ziggurat"
+			}
+			great_work_components = {
+				{
+					great_work_module = "wonder_ur_ziggurat"
+				}
+			}
+
+			great_work_effect_selections = {
+				{
+					# Honoured Nobles
+					great_work_effect = "gw_effect_ur_ziggurat"
+					great_work_effect_tier = "gw_effect_tier_4"
+				}
+			}
+		}
+		51 = {
+			ancient_wonder = yes
+			key = "marib_dam"
+			great_work_category = "building"
+			great_work_state = great_work_state_completed
+			finished_date = 450.10.1
+
+			great_work_name = {
+				name = "wonder_marib_dam"
+			}
+			great_work_components = {
+				{
+					great_work_module = "wonder_marib_dam"
+					great_work_material = "stone"
+				}
+			}
+
+			great_work_effect_selections = {
+				{
+					# unique
+					great_work_effect = "gw_effect_marib_dam"
+					great_work_effect_tier = "gw_effect_tier_4"
+				}
+			}
+		}
+	}
+}
