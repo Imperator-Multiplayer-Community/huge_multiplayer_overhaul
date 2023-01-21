@@ -109,8 +109,8 @@ assassinate_attempt_foreign = {
 }
 
 subject_player_client_state_pays = {
-	scaled_gold = 0.15
-	scaled_manpower = 0.10
+	scaled_gold = 0.025
+	scaled_manpower = 0.025
 }
 
 

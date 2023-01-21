@@ -40,109 +40,114 @@ ml_siege_distinctions.1 = {
             save_scope_as = actor
         }
 
-        scope:actor.owner = {
-			every_governorships = {
-				limit = {
-					has_legion_trigger = yes
-					legion = scope:actor.legion
-				}
-	
-				save_scope_as = legion_governorship
-			}
+        if = {
+        	limit = {
+        		exists = scope:actor
+        	}
+
+        	scope:actor.owner = {
+        		every_governorships = {
+        			limit = {
+        				has_legion_trigger = yes
+        				legion = scope:actor.legion
+        			}
+        	
+        			save_scope_as = legion_governorship
+        		}
+        	}
+
+        	scope:legion_governorship = {
+        		if = {
+        			limit = {
+        				has_variable = siege_victories
+        			}
+        			
+        			change_variable = {
+        				name = siege_victories
+        				add = 1
+        			}
+        		}
+        		else = {
+        			set_variable = {
+        				name = siege_victories
+        				value = 1
+        			}
+        		}
+
+        		if = {
+        			limit = {
+        				has_variable = siege_victories
+        			}
+        			
+        			if = {
+        				limit = {
+        					var:siege_victories = 2
+        					scope:actor.legion = {
+        						NOT = {
+        							has_distinction = distinction_siege_master_01
+        							has_distinction = distinction_siege_master_02
+        							has_distinction = distinction_siege_master_03
+        							has_distinction = distinction_siege_master_04						
+        						}
+        					}
+        					
+        				}
+        				
+        				scope:actor.legion = {
+        					add_distinction = distinction_siege_master_01
+        				}
+        			}
+        			else_if = {
+        				limit = {
+        					var:siege_victories = 6
+        					scope:actor.legion = {
+        						NOT = {
+        							has_distinction = distinction_siege_master_02
+        							has_distinction = distinction_siege_master_03
+        							has_distinction = distinction_siege_master_04						
+        						}
+        					}
+        				}
+        	
+        				scope:actor.legion = {
+        					remove_distinction = distinction_siege_master_01
+        					add_distinction = distinction_siege_master_02
+        				}
+        			}
+        			else_if = {
+        				limit = {
+        					var:siege_victories = 12
+        					scope:actor.legion = {
+        						NOT = {
+        							has_distinction = distinction_siege_master_03
+        							has_distinction = distinction_siege_master_04						
+        						}
+        					}
+        				}
+        				
+        				scope:actor.legion = {
+        					remove_distinction = distinction_siege_master_02
+        					add_distinction = distinction_siege_master_03
+        				}
+        			}
+        			else_if = {
+        				limit = {
+        					var:siege_victories = 20
+        					scope:actor.legion = {
+        						NOT = {
+        							has_distinction = distinction_siege_master_04						
+        						}
+        					}
+        				}
+        				
+        				scope:actor.legion = {
+        					remove_distinction = distinction_siege_master_03
+        					add_distinction = distinction_siege_master_04
+        				}
+        			}
+        		}
+        	}
         }
-
-
-		scope:legion_governorship = {
-			if = {
-				limit = {
-					has_variable = siege_victories
-				}
-				
-				change_variable = {
-					name = siege_victories
-					add = 1
-				}
-			}
-			else = {
-				set_variable = {
-					name = siege_victories
-					value = 1
-				}
-			}
-
-			if = {
-				limit = {
-					has_variable = siege_victories
-				}
-				
-				if = {
-					limit = {
-						var:siege_victories = 2
-						scope:actor.legion = {
-							NOT = {
-								has_distinction = distinction_siege_master_01
-								has_distinction = distinction_siege_master_02
-								has_distinction = distinction_siege_master_03
-								has_distinction = distinction_siege_master_04						
-							}
-						}
-						
-					}
-					
-					scope:actor.legion = {
-						add_distinction = distinction_siege_master_01
-					}
-				}
-				else_if = {
-					limit = {
-						var:siege_victories = 6
-						scope:actor.legion = {
-							NOT = {
-								has_distinction = distinction_siege_master_02
-								has_distinction = distinction_siege_master_03
-								has_distinction = distinction_siege_master_04						
-							}
-						}
-					}
-	
-					scope:actor.legion = {
-						remove_distinction = distinction_siege_master_01
-						add_distinction = distinction_siege_master_02
-					}
-				}
-				else_if = {
-					limit = {
-						var:siege_victories = 12
-						scope:actor.legion = {
-							NOT = {
-								has_distinction = distinction_siege_master_03
-								has_distinction = distinction_siege_master_04						
-							}
-						}
-					}
-					
-					scope:actor.legion = {
-						remove_distinction = distinction_siege_master_02
-						add_distinction = distinction_siege_master_03
-					}
-				}
-				else_if = {
-					limit = {
-						var:siege_victories = 20
-						scope:actor.legion = {
-							NOT = {
-								has_distinction = distinction_siege_master_04						
-							}
-						}
-					}
-					
-					scope:actor.legion = {
-						remove_distinction = distinction_siege_master_03
-						add_distinction = distinction_siege_master_04
-					}
-				}
-			}
-		}
 	}
 }
 
