@@ -12,13 +12,10 @@ gw_effect_honor_expeditionaries = {
 		"offense"
 	}
 	allow = {
-		any_unit = {
-			is_army = yes
-			AND = {
-				has_legion_trigger = yes
-				legion = {
-					has_distinction = distinction_expeditionary_01
-				}
+		any_army = {
+			has_legion_trigger = yes
+			legion = {
+				has_distinction = distinction_expeditionary_01
 			}
 		}
 	}
