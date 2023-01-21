@@ -36,6 +36,7 @@ NCombat = {
 	DAYS_PER_SIEGE_PHASE = 20 # Was 25
 	GARRISON_SIZE = 2 # Was 1
 	SIEGE_FORCE_NEEDED_MULTIPLIER  = 4 # was 4
+	SIEGE_BREACH_IMPACT = 2 # was 2
 }
 
 NUnit = {
@@ -47,6 +48,7 @@ NUnit = {
 	LAND_MORALE = 4.0 #Was 3.0
 	NAVAL_MORALE = 2.0 #Was 3.0
 
+	WATERCROSSING_NEGATION_REQUIRED_PER_COHORT = 0.2
 }
 
 NPolitics = {
