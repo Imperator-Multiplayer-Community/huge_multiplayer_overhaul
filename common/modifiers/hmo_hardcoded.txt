@@ -156,6 +156,7 @@ nation_rank_2 = {
 	build_cost = -0.1
 	max_mercenary_stacks = 1
 
+	levy_size_multiplier = 0.2
 	agressive_expansion_impact = -0.1
 }
 
@@ -176,6 +177,7 @@ nation_rank_3 = {
 
 	agressive_expansion_impact = 0.05
 	agressive_expansion_monthly_change = 0.025
+	levy_size_multiplier = 0.1
 }
 
 nation_rank_4 = {
