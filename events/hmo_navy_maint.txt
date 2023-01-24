@@ -167,7 +167,7 @@ navy_maint.2 = {
 			divide = var:total_port_buildings
 		}
 
-		if = {
+		if = { 
 			limit = {
 				var:port_to_ship_ratio >= 5
 			}
