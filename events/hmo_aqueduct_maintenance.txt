@@ -9,9 +9,13 @@ aqueduct_maintenance.1 = {
 		any_owned_province = {
 			has_city_status = yes
 			OR = {
-				NOT = {
-					has_variable = previous_total_aqueduct_buildings
+				AND = {
+					NOT = {
+						has_variable = previous_total_aqueduct_buildings
+					}
+					num_of_aqueduct_building > 4
 				}
+				
 				trigger_if = {
 					limit = {
 						has_variable = previous_total_aqueduct_buildings
@@ -65,6 +69,14 @@ aqueduct_maintenance.2 = {
 			}
 
 			remove_variable = previous_total_aqueduct_buildings
+		}
+
+		if = {
+			limit = {
+				has_province_modifier = aqueduct_maintenance
+			}
+
+			remove_province_modifier = aqueduct_maintenance
 		}
 
 		set_variable = {
