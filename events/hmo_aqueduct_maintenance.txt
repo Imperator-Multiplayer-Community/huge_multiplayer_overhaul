@@ -1,36 +1,36 @@
 ﻿namespace = aqueduct_maintenance
 
 aqueduct_maintenance.1 = {
-	type = country_event
+	type = province_event
 	hidden = yes
 
 	trigger = {
-		is_ai = no
-		any_owned_province = {
-			has_city_status = yes
-			OR = {
-				AND = {
-					NOT = {
-						has_variable = previous_total_aqueduct_buildings
-					}
-					num_of_aqueduct_building > 4
+		owner = {
+			is_ai = no
+		}
+		has_city_status = yes
+		OR = {
+			AND = {
+				NOT = {
+					has_variable = previous_total_aqueduct_buildings
 				}
+				num_of_aqueduct_building > 4
+			}
 				
-				trigger_if = {
-					limit = {
-						has_variable = previous_total_aqueduct_buildings
-					}
+			trigger_if = {
+				limit = {
+					has_variable = previous_total_aqueduct_buildings
+				}
 
-					NOT = {
-						var:previous_total_aqueduct_buildings = num_of_aqueduct_building
-					}
+				NOT = {
+					var:previous_total_aqueduct_buildings = num_of_aqueduct_building
 				}
 			}
 		}
 	}
 
 	immediate = {
-		random_owned_province = { # dont need to do everything all at once
+		if = {
 			limit = {
 				has_city_status = yes
 				num_of_aqueduct_building > 4 # allow 4 free aqueducts 
@@ -52,7 +52,7 @@ aqueduct_maintenance.1 = {
 
 			trigger_event = {
 				id = aqueduct_maintenance.2
-				days = 3
+				days = { 1 10 }
 			}
 		}
 	}

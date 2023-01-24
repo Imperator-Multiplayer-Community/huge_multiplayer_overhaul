@@ -1,5 +1,7 @@
 ﻿monthly_province_pulse = {
 	on_actions = {
+		delay = { days = { 2 11 } }
+		hmo_province_pulse
 	}
 	events = {
 		
