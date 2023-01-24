@@ -15,15 +15,6 @@ fiftykman_cost_modifier = {
 tributary_terrain_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
 }
-slave_move_yes = {
-    positive = "gfx/interface/icons/modifiers/slaves_move_cost_modifier.dds"
-}
-slave_move_no = {
-    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
-}
-slave_hub_move_no = {
-    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
-}
 civil_war_unrest = {
     positive = "gfx/interface/icons/modifiers/local_unrest.dds"
 }

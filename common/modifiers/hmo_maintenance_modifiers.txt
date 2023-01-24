@@ -1,0 +1,15 @@
+﻿insufficient_ports_maintenance = {
+	navy_maintenance_cost = 0.01
+}
+
+excess_ports_maintenance = {
+	navy_maintenance_cost = -0.01
+}
+
+navy_maint_cost_scaling = {
+	navy_maintenance_cost = 0.1
+}
+
+aqueduct_maintenance = {
+	tax_income = -0.125
+}
