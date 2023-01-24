@@ -56,6 +56,23 @@ state_improvement.6 = { #Toggles City Status
 	}
 }
 
+state_improvement.7 = { #Toggles Metropolis Status
+	type = province_event
+	hidden = yes
+	
+	trigger = {
+		
+	}
+	
+	immediate = {
+		set_city_status = city_metropolis
+
+		state = {
+			local_fort_limit = 1
+		}
+	}
+}
+
 state_improvement.8 = { #Toggles Metropolis Status
 	type = country_event
 	hidden = yes
