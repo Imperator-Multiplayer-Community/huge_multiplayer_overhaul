@@ -1,6 +1,6 @@
 ﻿namespace = navy_maint
 
-navy_maint.1 = {
+navy_maint.1 = { # scale based on number of ships
 	type = country_event
 	hidden = yes
 
@@ -130,6 +130,118 @@ navy_maint.1 = {
 					duration = -1
 				}
 			}
+		}
+	}
+}
+
+navy_maint.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+		num_of_ships > 0
+		num_of_ports > 0
+	}
+
+	immediate = {
+		set_variable = {
+			name = total_port_buildings
+			value = 0
+		}
+
+		every_owned_province = {
+			limit = {
+				num_of_port_building > 0
+			}
+
+			change_variable = {
+				name = total_port_buildings
+				add = num_of_port_building
+			}
+		}
+
+		set_variable = {
+			name = port_to_ship_ratio
+			value = num_of_ships
+			divide = var:total_port_buildings
+		}
+
+		if = {
+			limit = {
+				var:port_to_ship_ratio >= 5
+			}
+
+			if = {
+				limit = {
+					has_country_modifier = excess_ports_maintenance
+				}
+				remove_country_modifier = excess_ports_maintenance
+			}
+
+			if = {
+				limit = {
+					has_country_modifier = insufficient_ports_maintenance
+				}
+				remove_country_modifier = insufficient_ports_maintenance
+			}
+
+			set_variable = {
+				name = excess_ports
+				value = var:port_to_ship_ratio
+				subtract = 5
+				min = 1
+			}
+			while = {
+				count = var:excess_ports
+				add_country_modifier = {
+					name = excess_ports_maintenance
+					mode = add
+					duration = -1
+				}
+			}
+
+			remove_variable = port_to_ship_ratio
+			remove_variable = excess_ports
+			remove_variable = total_port_buildings
+		}
+		else_if = {
+			limit = {
+				var:port_to_ship_ratio < 5
+			}
+
+			if = {
+				limit = {
+					has_country_modifier = excess_ports_maintenance
+				}
+				remove_country_modifier = excess_ports_maintenance
+			}
+
+			if = {
+				limit = {
+					has_country_modifier = insufficient_ports_maintenance
+				}
+				remove_country_modifier = insufficient_ports_maintenance
+			}
+
+			set_variable = {
+				name = insufficient_ports
+				value = 5
+				subtract = var:port_to_ship_ratio
+				min = 1
+			}
+			while = {
+				count = var:insufficient_ports
+				add_country_modifier = {
+					name = insufficient_ports_maintenance
+					mode = add
+					duration = -1
+				}
+			}
+
+			remove_variable = port_to_ship_ratio
+			remove_variable = insufficient_ports
+			remove_variable = total_port_buildings
 		}
 	}
 }
