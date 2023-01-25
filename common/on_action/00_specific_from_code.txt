@@ -1603,7 +1603,6 @@ on_being_born = {
             days = 1
         }
     }
-}    }
 }
 
 on_zero_health = {
@@ -1671,7 +1670,6 @@ on_losing_war = {
 	events = {
 
 	}
-	
 }
 
 on_ending_war = {
