@@ -5,8 +5,12 @@ aqueduct_maintenance.1 = {
 	hidden = yes
 
 	trigger = {
-		owner = {
-			is_ai = no
+		debug_log_scopes = yes
+		AND = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 		has_city_status = yes
 		OR = {

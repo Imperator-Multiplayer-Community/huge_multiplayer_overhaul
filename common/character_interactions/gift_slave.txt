@@ -20,10 +20,7 @@
 			is_friend = scope:actor.current_ruler
 			NOT = {
 				this = scope:actor.current_ruler
-			}
-			NOT = {
-				has_character_modifier = commander_king
-			}			
+			}		
 		}
 	}
 	

@@ -16,9 +16,6 @@
 				has_character_modifier = disloyal_successor_cmod
 			}
 			NOT = {
-				has_character_modifier = commander_king
-			}
-			NOT = {
 				has_character_modifier = spy_recruit_character
 			}
 		}
