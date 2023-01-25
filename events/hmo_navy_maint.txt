@@ -171,9 +171,14 @@ navy_maint.2 = {
 			divide = var:total_port_buildings
 		}
 
+		round_variable = {
+			name = port_to_ship_ratio
+			nearest = 1
+		}
+
 		if = { 
-			limit = {
-				var:port_to_ship_ratio >= 5
+			limit = { # 1:10 port to ship efficiency ratio
+				var:port_to_ship_ratio < 10
 			}
 
 			if = {
@@ -192,19 +197,25 @@ navy_maint.2 = {
 
 			set_variable = {
 				name = excess_ports
-				value = var:port_to_ship_ratio
+				value = 10 # ratio
 			}
 			change_variable = {
 				name = excess_ports
-				subtract = 5
-				min = 1
+				subtract = var:port_to_ship_ratio
 			}
-			while = {
-				count = var:excess_ports
-				add_country_modifier = {
-					name = excess_ports_maintenance
-					mode = add
-					duration = -1
+
+			if = {
+				limit = {
+					var:excess_ports >= 1
+				}
+
+				while = {
+					count = var:excess_ports
+					add_country_modifier = {
+						name = excess_ports_maintenance
+						mode = add
+						duration = -1
+					}
 				}
 			}
 
@@ -214,7 +225,7 @@ navy_maint.2 = {
 		}
 		else_if = {
 			limit = {
-				var:port_to_ship_ratio < 5
+				var:port_to_ship_ratio > 10
 			}
 
 			if = {
@@ -233,19 +244,25 @@ navy_maint.2 = {
 
 			set_variable = {
 				name = insufficient_ports
-				value = 5
+				value = var:port_to_ship_ratio # ratio
 			}
 			change_variable = {
 				name = insufficient_ports
-				subtract = var:port_to_ship_ratio
-				min = 1
+				subtract = 10
 			}
-			while = {
-				count = var:insufficient_ports
-				add_country_modifier = {
-					name = insufficient_ports_maintenance
-					mode = add
-					duration = -1
+			
+			if = {
+				limit = {
+					var:insufficient_ports >= 1
+				}
+
+				while = {
+					count = var:insufficient_ports
+					add_country_modifier = {
+						name = insufficient_ports_maintenance
+						mode = add
+						duration = -1
+					}
 				}
 			}
 
