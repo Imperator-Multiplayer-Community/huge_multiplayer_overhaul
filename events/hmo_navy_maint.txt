@@ -164,6 +164,10 @@ navy_maint.2 = {
 		set_variable = {
 			name = port_to_ship_ratio
 			value = num_of_ships
+		}
+
+		change_variable = {
+			name = port_to_ship_ratio
 			divide = var:total_port_buildings
 		}
 
@@ -189,6 +193,9 @@ navy_maint.2 = {
 			set_variable = {
 				name = excess_ports
 				value = var:port_to_ship_ratio
+			}
+			change_variable = {
+				name = excess_ports
 				subtract = 5
 				min = 1
 			}
@@ -227,6 +234,9 @@ navy_maint.2 = {
 			set_variable = {
 				name = insufficient_ports
 				value = 5
+			}
+			change_variable = {
+				name = insufficient_ports
 				subtract = var:port_to_ship_ratio
 				min = 1
 			}

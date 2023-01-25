@@ -1,4 +1,4 @@
-succession_law = {
+﻿succession_law = {
 	potential = {
 		is_monarchy = yes
 	}
@@ -238,33 +238,36 @@ free_ports_monarchy_law = {
 				ordered_country_sub_unit = {
 	        		limit = {
 		        		OR = {
-		    			sub_unit_type = liburnian
-		    			sub_unit_type = trireme
-		    			sub_unit_type = tetrere
-		    			sub_unit_type = hexere
-		    			sub_unit_type = octere
-		    			sub_unit_type = mega_galley
+			    			sub_unit_type = liburnian
+			    			sub_unit_type = trireme
+			    			sub_unit_type = tetrere
+			    			sub_unit_type = hexere
+			    			sub_unit_type = octere
+			    			sub_unit_type = mega_galley
 		    			}
 	        		}
 	        		order_by = subunit_strength_percentage
 	        		while = {
 						count = { 5  15 } #Change to 10%
-	       				 destroy_subunit = yes
+	       				destroy_subunit = yes
 	    			}
 	    			if = {
 	       				limit = {
-	       					any_navy = {
-	        					unit_size = 0
-	        				}
+	       					owning_unit.unit_owner = {
+	       						any_navy = {
+	        						unit_size = 0
+	        					}
+	       					}
 	        			}
-	       				every_navy = {
-	        				limit = {
-	        					unit_size = 0
-	        				}
-	        			destroy_unit = yes
-	        			}
+	        			owning_unit.unit_owner = {
+	       					every_navy = {
+	       						limit = {
+	       							unit_size = 0
+	       						}
+	       						destroy_unit = yes
+	       					}
+	       				}
 	 				}
-
 	        	}
 	       		trigger_event = {
 						id = law_events.1
