@@ -267,7 +267,7 @@ Persian_civ_generic_path_1  = { ###
 }
 Persian_civ_generic_path_2 = { ###
 	on_activate = {
-		add_innovation = 1
+		add_innovation = 3
 	}	
 	modifier = { 
 		build_time = 0.10
