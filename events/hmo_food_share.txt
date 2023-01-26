@@ -5,6 +5,8 @@ food_share.1 = {
 	hidden = yes
 
 	trigger = {
+		is_sea = no
+		save_temporary_scope_as = current_province 
 		AND = {
 			exists = owner
 			owner = {
@@ -12,11 +14,20 @@ food_share.1 = {
 			}
 		}
 		any_unit_in_province = {
-			unit_owner = { # ai units wont take your food
-				is_ai = no
-				OR = {
-					alliance_with = root
-					is_subject_of = root
+			count = 1
+			is_army = yes
+			is_navy = no
+			AND = {
+				exists = unit_owner
+				NOT = {
+					unit_owner = scope:current_province.owner
+				}
+				unit_owner = { # ai units wont take your food
+					is_ai = no
+					OR = {
+						alliance_with = scope:current_province.owner
+						is_subject_of = scope:current_province.owner
+					}
 				}
 			}
 			food_percentage < 100
@@ -25,60 +36,78 @@ food_share.1 = {
 		state = {
 			has_state_food >= 10
 		}
+		clear_saved_scope = current_province
 	}
 	immediate = {
+		save_temporary_scope_as = current_province
 		every_unit_in_province = {
 			limit = {
-				OR = {
-					unit_owner = {
-						alliance_with = root
-						is_subject_of = root
+				is_army = yes
+				is_navy = no
+				NOT = {
+					unit_owner = scope:current_province.owner
+					unit_owner = { # ai units wont take your food
+						is_ai = yes
 					}
 				}
-				NOT = { # ai units wont take your food
-					unit_owner = {
-						is_ai = no
+				unit_owner = {
+					OR = {
+						alliance_with = scope:current_province.owner
+						is_subject_of = scope:current_province.owner
 					}
 				}
 				food_percentage < 100
 				in_combat = no
 			}
 
-			set_local_variable = {
+			save_temporary_scope_as = current_unit
+
+			set_variable = {
 				name = food
 				value = unit_size
 			}
 
-			change_local_variable = {
+
+			change_variable = {
 				name = food
 				divide = 4
 				add = 5
 			}
 
-			round_local_variable = {
+			round_variable = {
 				name = food
 				nearest = 1
 			}
+
 
 			if = {
 				limit = {
 					unit_location = {
 						state = {
-							has_state_food >= local_var:food
+							has_state_food >= scope:current_unit.var:food
 						}
 					}
 				}
 				
-				add_food = local_var:food
+				add_food = scope:current_unit.var:food
 				
-				change_local_variable = {
-					name = food
-					multiply = -1
+				scope:current_unit = {
+					change_variable = {
+						name = food
+						multiply = -1
+					}
 				}
-				root.state = {
-					add_state_food = local_var:food
+				
+				scope:current_province.state = {
+					add_state_food = scope:current_unit.var:food
 				}
 			}
+
+			scope:current_unit = {
+				remove_variable = food
+			}
+			clear_saved_scope = current_unit
+			clear_saved_scope = current_province
 		}
 	}
 }

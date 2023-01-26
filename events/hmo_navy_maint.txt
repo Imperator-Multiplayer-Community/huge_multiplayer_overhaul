@@ -165,7 +165,7 @@ navy_maint.2 = {
 				num_of_port_building > 0
 			}
 
-			save_scope_as = current_province
+			save_temporary_scope_as = current_province
 
 			owner = {
 				change_local_variable = {
