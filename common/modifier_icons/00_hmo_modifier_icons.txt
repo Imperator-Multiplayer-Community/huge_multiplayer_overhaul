@@ -58,7 +58,7 @@ navy_maint_cost = {
     positive = "gfx/interface/icons/modifiers/mercenary_naval_maintenance_cost.dds"
 }
 
-excess_ports_maintenance = {
+sufficient_ports_maintenance = {
     positive = "gfx/interface/icons/modifiers/navy_maintenance_cost.dds"
 }
 
@@ -269,4 +269,8 @@ cash2k_cost_modifier = {
 
 hill_fort_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+
+metropolitan_walls = {
+    positive = "gfx/interface/icons/modifiers/fort_level.dds"
 }

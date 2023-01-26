@@ -147,114 +147,55 @@ navy_maint.2 = {
 	immediate = {
 		if = {
 			limit = {
-				has_country_modifier = excess_ports_maintenance
+				has_country_modifier = sufficient_ports_maintenance
 			}
-			remove_country_modifier = excess_ports_maintenance
+			remove_country_modifier = sufficient_ports_maintenance
 		}
 
-		if = {
-			limit = {
-				has_country_modifier = insufficient_ports_maintenance
-			}
-			remove_country_modifier = insufficient_ports_maintenance
-		}
-
-		set_variable = {
+		set_local_variable = {
 			name = total_port_buildings
 			value = 0
 		}
 
 		every_owned_province = {
 			limit = {
+				NOT = {
+					num_of_port_building = 0
+				}
 				num_of_port_building > 0
 			}
 
-			change_variable = {
-				name = total_port_buildings
-				add = num_of_port_building
+			save_scope_as = current_province
+
+			owner = {
+				change_local_variable = {
+					name = total_port_buildings
+					add = scope:current_province.num_of_port_building
+				}
 			}
+
+			clear_saved_scope = current_province
 		}
 
-		set_variable = {
-			name = port_to_ship_ratio
-			value = num_of_ships
+		change_local_variable = {
+			name = total_port_buildings
+			divide = 10
 		}
 
-		change_variable = {
-			name = port_to_ship_ratio
-			divide = var:total_port_buildings
-		}
-
-		round_variable = {
-			name = port_to_ship_ratio
+		round_local_variable = {
+			name = total_port_buildings
 			nearest = 1
 		}
 
-		if = { 
-			limit = { # 1:10 port to ship efficiency ratio
-				var:port_to_ship_ratio < 10
+		while = {
+			count = local_var:total_port_buildings
+			add_country_modifier = {
+				name = sufficient_ports_maintenance
+				mode = add
+				duration = -1
 			}
-
-			set_variable = {
-				name = excess_ports
-				value = 10 # ratio
-			}
-			change_variable = {
-				name = excess_ports
-				subtract = var:port_to_ship_ratio
-			}
-
-			if = {
-				limit = {
-					var:excess_ports >= 1
-				}
-
-				while = {
-					count = var:excess_ports
-					add_country_modifier = {
-						name = excess_ports_maintenance
-						mode = add
-						duration = -1
-					}
-				}
-			}
-
-			remove_variable = port_to_ship_ratio
-			remove_variable = excess_ports
-			remove_variable = total_port_buildings
 		}
-		else_if = {
-			limit = {
-				var:port_to_ship_ratio > 10
-			}
 
-			set_variable = {
-				name = insufficient_ports
-				value = var:port_to_ship_ratio
-			}
-			change_variable = {
-				name = insufficient_ports
-				subtract = 10 # ratio
-			}
-			
-			if = {
-				limit = {
-					var:insufficient_ports >= 1
-				}
-
-				while = {
-					count = var:insufficient_ports
-					add_country_modifier = {
-						name = insufficient_ports_maintenance
-						mode = add
-						duration = -1
-					}
-				}
-			}
-
-			remove_variable = port_to_ship_ratio
-			remove_variable = insufficient_ports
-			remove_variable = total_port_buildings
-		}
+		remove_local_variable = total_port_buildings
 	}
 }

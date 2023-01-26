@@ -68,7 +68,11 @@ state_improvement.7 = { #Toggles Metropolis Status
 		set_city_status = city_metropolis
 
 		state = {
-			local_fort_limit = 1
+			add_state_modifier = {
+				name = metropolitan_walls
+				mode = add
+				duration = -1
+			}
 		}
 	}
 }

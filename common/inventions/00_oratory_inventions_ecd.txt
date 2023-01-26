@@ -2448,8 +2448,11 @@ oratory_2 = {
 
 	# Level 12
 	scientific_patronage_3_inv = {
-		allow = { 
-			rank >= major_power 
+		allow = {
+			OR = {
+				rank >= major_power 
+				is_subject_type = player_client_state
+			} 
 			capital_scope = {
 				civilization_value >= 95
 			}

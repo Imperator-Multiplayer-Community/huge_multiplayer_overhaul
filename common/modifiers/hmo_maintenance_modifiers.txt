@@ -2,8 +2,8 @@
 	navy_maintenance_cost = 0.0075
 }
 
-excess_ports_maintenance = {
-	navy_maintenance_cost = -0.015
+sufficient_ports_maintenance = {
+	navy_maintenance_cost = -0.005
 }
 
 navy_maint_cost_scaling = {

@@ -5,11 +5,15 @@ food_share.1 = {
 	hidden = yes
 
 	trigger = {
-		owner = {
-			war = yes
+		AND = {
+			exists = owner
+			owner = {
+				war = yes
+			}
 		}
 		any_unit_in_province = {
-			unit_owner = {
+			unit_owner = { # ai units wont take your food
+				is_ai = no
 				OR = {
 					alliance_with = root
 					is_subject_of = root
@@ -26,8 +30,15 @@ food_share.1 = {
 		every_unit_in_province = {
 			limit = {
 				OR = {
-					alliance_with = root
-					is_subject_of = root
+					unit_owner = {
+						alliance_with = root
+						is_subject_of = root
+					}
+				}
+				NOT = { # ai units wont take your food
+					unit_owner = {
+						is_ai = no
+					}
 				}
 				food_percentage < 100
 				in_combat = no
@@ -59,8 +70,13 @@ food_share.1 = {
 				}
 				
 				add_food = local_var:food
+				
+				change_local_variable = {
+					name = food
+					multiply = -1
+				}
 				root.state = {
-					add_state_food = -local_var:food
+					add_state_food = local_var:food
 				}
 			}
 		}
