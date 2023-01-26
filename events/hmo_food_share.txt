@@ -1,0 +1,68 @@
+﻿namespace = food_share
+
+food_share.1 = {
+	type = province_event
+	hidden = yes
+
+	trigger = {
+		owner = {
+			war = yes
+		}
+		any_unit_in_province = {
+			unit_owner = {
+				OR = {
+					alliance_with = root
+					is_subject_of = root
+				}
+			}
+			food_percentage < 100
+			in_combat = no
+		}
+		state = {
+			has_state_food >= 10
+		}
+	}
+	immediate = {
+		every_unit_in_province = {
+			limit = {
+				OR = {
+					alliance_with = root
+					is_subject_of = root
+				}
+				food_percentage < 100
+				in_combat = no
+			}
+
+			set_local_variable = {
+				name = food
+				value = unit_size
+			}
+
+			change_local_variable = {
+				name = food
+				divide = 4
+				add = 5
+			}
+
+			round_local_variable = {
+				name = food
+				nearest = 1
+			}
+
+			if = {
+				limit = {
+					unit_location = {
+						state = {
+							has_state_food >= local_var:food
+						}
+					}
+				}
+				
+				add_food = local_var:food
+				root.state = {
+					add_state_food = -local_var:food
+				}
+			}
+		}
+	}
+}

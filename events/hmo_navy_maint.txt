@@ -145,6 +145,20 @@ navy_maint.2 = {
 	}
 
 	immediate = {
+		if = {
+			limit = {
+				has_country_modifier = excess_ports_maintenance
+			}
+			remove_country_modifier = excess_ports_maintenance
+		}
+
+		if = {
+			limit = {
+				has_country_modifier = insufficient_ports_maintenance
+			}
+			remove_country_modifier = insufficient_ports_maintenance
+		}
+
 		set_variable = {
 			name = total_port_buildings
 			value = 0
@@ -181,20 +195,6 @@ navy_maint.2 = {
 				var:port_to_ship_ratio < 10
 			}
 
-			if = {
-				limit = {
-					has_country_modifier = excess_ports_maintenance
-				}
-				remove_country_modifier = excess_ports_maintenance
-			}
-
-			if = {
-				limit = {
-					has_country_modifier = insufficient_ports_maintenance
-				}
-				remove_country_modifier = insufficient_ports_maintenance
-			}
-
 			set_variable = {
 				name = excess_ports
 				value = 10 # ratio
@@ -228,27 +228,13 @@ navy_maint.2 = {
 				var:port_to_ship_ratio > 10
 			}
 
-			if = {
-				limit = {
-					has_country_modifier = excess_ports_maintenance
-				}
-				remove_country_modifier = excess_ports_maintenance
-			}
-
-			if = {
-				limit = {
-					has_country_modifier = insufficient_ports_maintenance
-				}
-				remove_country_modifier = insufficient_ports_maintenance
-			}
-
 			set_variable = {
 				name = insufficient_ports
-				value = var:port_to_ship_ratio # ratio
+				value = var:port_to_ship_ratio
 			}
 			change_variable = {
 				name = insufficient_ports
-				subtract = 10
+				subtract = 10 # ratio
 			}
 			
 			if = {

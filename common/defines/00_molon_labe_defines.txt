@@ -71,6 +71,15 @@ NTrade = {
 	MINIMUM_SLAVES_PER_GOOD = 4 #Was 3
 }
 
+NProvince = {
+	#additional efficiency for supply limit. BaseSupplyLimit() * (1.0 + efficiency)
+	#THESE ARE MUTUALLy EXCLUSIVE
+	SUPPLY_LIMIT_OWNER = 0.25	 #Should be highest of these defines or AI will be confused.
+	SUPPLY_LIMIT_ACCESS = 0.2
+	SUPPLY_LIMIT_ALLY = 0.2
+	SUPPLY_LIMIT_CONTROLLER = 0.2
+}
+
 NLevy = {
 	MIN_SIZE = 8 # minimum number of cohorts raised as levy
 	DISBAND_MILITARY_EXP_MULT = 0 # when disbanding a levy military experience will be added to the country
