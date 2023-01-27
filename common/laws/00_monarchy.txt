@@ -129,6 +129,7 @@ monarchy_military_reforms = {
 			discipline = 0.05
 			levy_size_multiplier = 0.025
 			monthly_military_experience = 0.20
+			mercenary_land_maintenance_cost = 0.35
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
@@ -145,6 +146,7 @@ monarchy_military_reforms = {
 			army_maintenance_cost = 0.10
 			monthly_military_experience = 0.25
 			general_loyalty = -2
+			mercenary_land_maintenance_cost = 0.30
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region

@@ -1,45 +1,48 @@
 ﻿trade_embargo_trigger = { # root is target country of trade good
-	trigger_if = { 
+	trigger_if = {
 		limit = {
 			OR = {
-				has_variable_list = embargoed_list
-				scope:player = {
-					has_variable_list = embargo_list
-				}
-			}
-		}
-
-		trigger_if = { # checks is player is embargoed by target country
-			limit = {
+				has_variable_list = embargo_list
 				has_variable_list = embargoed_list
 			}
-
-			NOT = {
-				is_target_in_variable_list = {
-					name = embargoed_list
-					target = scope:player
-				}
-			}
 		}
 
-		trigger_if = { # checks if player is embargoing target
-			limit = {
-				scope:player = {
-					has_variable_list = embargo_list
-				}
-			}
-
-			NOT = {
-				scope:player = {
-					is_target_in_variable_list = {
-						name = embargo_list
-						target = ROOT
-					}
-				}
-			}
-		}
+		trade_player_embargoed_by_trigger = no # checks root vs player
+		trade_player_embargo_target_trigger = no # checks root vs player
 	}		
 	trigger_else = { # if no embargo lists then show
 		always = yes
+	}
+}
+
+trade_player_embargoed_by_trigger = { # scope country, no = not embargoed
+	trigger_if = {
+		limit = {
+			has_variable_list = embargo_list
+		}
+	
+		is_target_in_variable_list = {
+			name = embargo_list
+			target = scope:player
+		}
+	}
+	trigger_else = {
+		always = no
+	}
+}
+
+trade_player_embargo_target_trigger = { # scope country, no = not embargoing
+	trigger_if = {
+		limit = {
+			has_variable_list = embargoed_list
+		}
+
+		is_target_in_variable_list = {
+			name = embargoed_list
+			target = scope:player
+		}
+	}
+	trigger_else = {
+		always = no
 	}
 }
