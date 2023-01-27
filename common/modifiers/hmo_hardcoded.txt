@@ -238,7 +238,6 @@ is_tribe = {
     price_revoke_metropolis_status_cost_modifier = -0.2
 	monthly_military_experience = 0.2
 	global_defensive = -0.25
-	land_morale = 0.375 # equal to 5 levels of military tech
 	experience_decay = -0.02 # this will get removed by tribal legion laws once enacted, so makes tribal levies better until they get legions
 	global_nobles_city_desired_pop_ratio = 0.05 # slight increase
 	global_freemen_city_desired_pop_ratio = -0.35 # replace freemen with tribesmen in city. Allows 1% of freemen to let POPs promote to freemen and then to citizen or nobles
@@ -272,6 +271,7 @@ negative_centralization = {
 	price_found_city_cost_modifier = -0.5
 	hill_fort_cost = 0.15
 	monthly_military_experience = -0.05
+	land_morale = -0.15
 }
 
 positive_centralization = {
@@ -284,6 +284,7 @@ positive_centralization = {
 	civic_tech_investment = 0.1
 	religious_tech_investment = 0.1
 	discipline = 0.05
+	monthly_military_experience = -0.15
 	price_found_city_cost_modifier = -0.15 # still should be 10% more expensive
 	global_citizen_city_desired_pop_ratio = 0.34 # on par with monarchy
 	global_tribesmen_city_desired_pop_ratio = -0.34 # reduce this a little bit to make citizens and nobles more prevelant
