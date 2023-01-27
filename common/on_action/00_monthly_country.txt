@@ -27,6 +27,7 @@
 		high_tyranny.5 # removes low tyranny
 		navy_maint.1 # scales navy maintenance
 		navy_maint.2 # gives navy maintenance modifiers per ports to ships ratio
+		food_share.1 # shares food with allies
 	}
 	
 	random_events = {
