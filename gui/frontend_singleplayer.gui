@@ -5,7 +5,7 @@ widget = {
 	size = { 100% 100% }
 
 	proportional_icon = {
-		texture = "gfx/loadingscreens/load_9.dds"
+		texture = "gfx/loadingscreens/load_10.dds"
 		size = { 100% 100% }
 	}
 
@@ -19,22 +19,22 @@ widget = {
 		visible = "[GameIsCloudStorageOperationInProgress]"
 	}
 
-	icon = {
-		name = "clausewitz_logo"
-		position = { -160 0 }
-		parentanchor = bottom|right
-		texture = "gfx/interface/clausewitz_logo.dds"
-		scale = 0.90
-		shaderfile = "gfx/FX/pdxgui_glow_game.shader"
-	}
-	icon = {
-		name = "pdx_dev_logo"
-		position = { -40 0 }
-		parentanchor = bottom|right
-		texture = "gfx/interface/pdx_dev_logo_s.dds"
-		scale = 0.90
-		shaderfile = "gfx/FX/pdxgui_glow_game.shader"
-	}
+	#icon = {
+		#name = "clausewitz_logo"
+		#position = { -160 0 }
+		#parentanchor = bottom|right
+		#texture = "gfx/interface/clausewitz_logo.dds"
+		#scale = 0.90
+		#shaderfile = "gfx/FX/pdxgui_glow_game.shader"
+	#}
+	#icon = {
+		#name = "pdx_dev_logo"
+		#position = { -40 0 }
+		#parentanchor = bottom|right
+	#	texture = "gfx/interface/pdx_dev_logo_s.dds"
+	#	scale = 0.90
+		#shaderfile = "gfx/FX/pdxgui_glow_game.shader"
+	#}
 
 	widget = {
 		name "main_menu_banner_bit_sp"
