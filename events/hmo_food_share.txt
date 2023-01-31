@@ -1,0 +1,92 @@
+﻿namespace = food_share
+
+food_share.1 = {
+	type = country_event # making this a country event to keep performant
+	hidden = yes
+
+	trigger = { # only check countries at war
+		war = yes # wont do any checks unless nation is at war
+	}
+
+	immediate = {
+		every_owned_province = {
+			limit = {
+				state = {
+					has_state_food >= 10
+				}
+			}
+
+			save_temporary_scope_as = current_province
+			every_unit_in_province = {
+				limit = {
+					is_army = yes
+					AND = {
+						exists = unit_owner
+						NOT = {
+							unit_owner = scope:current_province.owner
+							unit_owner = { # ai units wont take your food
+								is_ai = yes
+							}
+						}
+						unit_owner = {
+							OR = {
+								alliance_with = scope:current_province.owner
+								is_subject_of = scope:current_province.owner
+							}
+						}
+					}
+
+					food_percentage < 100
+					in_combat = no
+				}
+
+				save_temporary_scope_as = current_unit
+
+				set_variable = {
+					name = food
+					value = unit_size
+				}
+
+				change_variable = {
+					name = food
+					divide = 4
+					add = 5
+				}
+
+				round_variable = {
+					name = food
+					nearest = 1
+				}
+
+				if = {
+					limit = {
+						unit_location = {
+							state = {
+								has_state_food >= scope:current_unit.var:food
+							}
+						}
+					}
+					
+					add_food = scope:current_unit.var:food
+					
+					scope:current_unit = {
+						change_variable = {
+							name = food
+							multiply = -1
+						}
+					}
+					
+					scope:current_province.state = {
+						add_state_food = scope:current_unit.var:food
+					}
+				}
+
+				scope:current_unit = {
+					remove_variable = food
+				}
+				clear_saved_scope = current_unit
+				clear_saved_scope = current_province
+			}
+		}
+	}
+}

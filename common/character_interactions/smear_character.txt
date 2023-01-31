@@ -30,8 +30,7 @@
 		scope:target = {
 			is_adult = yes
 			popularity > 5
-			NOR = {
-				has_character_modifier = commander_king
+			NOT = {
 				has_character_modifier = on_espionage_mission_cmod
 			}
 		}

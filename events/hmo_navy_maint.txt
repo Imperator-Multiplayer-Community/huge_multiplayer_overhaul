@@ -1,6 +1,6 @@
 ﻿namespace = navy_maint
 
-navy_maint.1 = {
+navy_maint.1 = { # scale based on number of ships
 	type = country_event
 	hidden = yes
 
@@ -131,5 +131,71 @@ navy_maint.1 = {
 				}
 			}
 		}
+	}
+}
+
+navy_maint.2 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		is_ai = no
+		num_of_ships > 0
+		num_of_ports > 0
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_modifier = sufficient_ports_maintenance
+			}
+			remove_country_modifier = sufficient_ports_maintenance
+		}
+
+		set_local_variable = {
+			name = total_port_buildings
+			value = 0
+		}
+
+		every_owned_province = {
+			limit = {
+				NOT = {
+					num_of_port_building = 0
+				}
+				num_of_port_building > 0
+			}
+
+			save_temporary_scope_as = current_province
+
+			owner = {
+				change_local_variable = {
+					name = total_port_buildings
+					add = scope:current_province.num_of_port_building
+				}
+			}
+
+			clear_saved_scope = current_province
+		}
+
+		change_local_variable = {
+			name = total_port_buildings
+			divide = 10
+		}
+
+		round_local_variable = {
+			name = total_port_buildings
+			nearest = 1
+		}
+
+		while = {
+			count = local_var:total_port_buildings
+			add_country_modifier = {
+				name = sufficient_ports_maintenance
+				mode = add
+				duration = -1
+			}
+		}
+
+		remove_local_variable = total_port_buildings
 	}
 }

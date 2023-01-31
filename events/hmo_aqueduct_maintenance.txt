@@ -1,62 +1,36 @@
 ﻿namespace = aqueduct_maintenance
 
 aqueduct_maintenance.1 = {
-	type = country_event
+	type = province_event
 	hidden = yes
 
 	trigger = {
-		is_ai = no
-		any_owned_province = {
-			has_city_status = yes
-			OR = {
+		AND = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
+		}
+		has_city_status = yes
+		OR = {
+			AND = {
 				NOT = {
 					has_variable = previous_total_aqueduct_buildings
 				}
-				trigger_if = {
-					limit = {
-						has_variable = previous_total_aqueduct_buildings
-					}
+				num_of_aqueduct_building > 4
+			}
+				
+			trigger_if = { # if the number changed since last time
+				limit = {
+					has_variable = previous_total_aqueduct_buildings
+				}
 
-					NOT = {
-						var:previous_total_aqueduct_buildings = num_of_aqueduct_building
-					}
+				NOT = {
+					var:previous_total_aqueduct_buildings = num_of_aqueduct_building
 				}
 			}
 		}
 	}
-
-	immediate = {
-		random_owned_province = { # dont need to do everything all at once
-			limit = {
-				has_city_status = yes
-				num_of_aqueduct_building > 4 # allow 4 free aqueducts 
-				OR = {
-					NOT = {
-						has_variable = previous_total_aqueduct_buildings
-					}
-					trigger_if = {
-						limit = {
-							has_variable = previous_total_aqueduct_buildings
-						}
-
-						NOT = {
-							var:previous_total_aqueduct_buildings = num_of_aqueduct_building
-						}
-					}
-				}
-			}
-
-			trigger_event = {
-				id = aqueduct_maintenance.2
-				days = 3
-			}
-		}
-	}
-}
-
-aqueduct_maintenance.2 = {
-	type = province_event
-	hidden = yes
 
 	immediate = {
 		if = {
@@ -65,6 +39,14 @@ aqueduct_maintenance.2 = {
 			}
 
 			remove_variable = previous_total_aqueduct_buildings
+		}
+
+		if = {
+			limit = {
+				has_province_modifier = aqueduct_maintenance
+			}
+
+			remove_province_modifier = aqueduct_maintenance
 		}
 
 		set_variable = {
@@ -80,15 +62,21 @@ aqueduct_maintenance.2 = {
 		change_variable = {
 			name = aqueduct_count
 			add = -4
-			min = 0
 		}
 
-		while = {
-			count = var:aqueduct_count
-			add_province_modifier = {
-				name = aqueduct_maintenance
-				mode = add
-				duration = -1
+		if = { # if count is zero, no need to do any of this and leave modifier removed
+			limit = {
+				var:aqueduct_count > 0
+			}
+
+			while = {
+				count = var:aqueduct_count
+				
+				add_province_modifier = {
+					name = aqueduct_maintenance
+					mode = add
+					duration = -1
+				}
 			}
 		}
 

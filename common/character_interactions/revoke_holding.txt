@@ -19,9 +19,6 @@
 			is_mercenary = no
 			is_adult = yes
 			is_head_of_family = yes
-			NOT = {
-				has_character_modifier = commander_king
-			}
 		}
 	}
 	
