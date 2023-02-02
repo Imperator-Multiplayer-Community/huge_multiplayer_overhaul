@@ -46,7 +46,7 @@
 		light_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = greek_antigonid_path_6
+	icon = latin_roman_path_1
 	requires = { }
 }
 
@@ -68,7 +68,7 @@ italic_generic_path_2 = { ###
 		light_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = celtic_gallic_path_1
+	icon = latin_roman_path_2
 	requires = { }
 }
 
@@ -82,7 +82,7 @@ italic_generic_path_3 = { ###
 		light_cavalry_morale = 0.1
 		army_maintenance_cost = 0.01
 	} 
-	icon = mauryan_mauryas_path_5
+	icon = latin_roman_path_3
 	requires = {italic_generic_path_1}
 }
 
@@ -96,7 +96,7 @@ italic_generic_path_4 = { ###
 		light_cavalry_discipline = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = celtic_germanic_path_7
+	icon = latin_roman_path_5
 	requires = {italic_generic_path_2}
 }
 
@@ -109,7 +109,7 @@ italic_generic_path_5 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}
-	icon = greek_antigonid_path_6
+	icon = latin_roman_path_7
 	requires = {italic_generic_path_3}
 }
 
@@ -122,7 +122,7 @@ italic_generic_path_6 = { ###
 		army_maintenance_cost = 0.01
 	}
 	allow = {military_tech >= 7} 
-	icon = celtic_gallic_path_1
+	icon = latin_roman_path_end_bonus
 	requires = {italic_generic_path_4}
 }
 
@@ -134,7 +134,7 @@ italic_generic_path_7 = { ###
 		archers_morale = 0.1
 		army_maintenance_cost = 0.01
 	} 
-	icon = mauryan_mauryas_path_5
+	icon = latin_support_path_6
 	requires = {italic_generic_path_5}
 }
 
@@ -146,7 +146,7 @@ italic_generic_path_8 = { ###
 		archers_discipline = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = celtic_germanic_path_7
+	icon = latin_support_path_7
 	requires = {italic_generic_path_6}
 }
 
@@ -161,7 +161,7 @@ italic_generic_path_9 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 13}
-	icon = greek_antigonid_path_6
+	icon = latin_tribal_path_2
 	requires = {italic_generic_path_7 }
 }
 
@@ -175,7 +175,7 @@ italic_generic_path_10 = { ###
 		camels_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = celtic_gallic_path_1
+	icon = latin_tribal_path_4
 	allow = {military_tech >= 13}
 	requires = {italic_generic_path_8 }
 }
@@ -191,7 +191,7 @@ italic_generic_path_11 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	} 
-	icon = mauryan_mauryas_path_5
+	icon = latin_tribal_path_end_bonus
 	requires = {italic_generic_path_9}
 }
 
@@ -206,7 +206,7 @@ italic_generic_path_12 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	}
-	icon = celtic_germanic_path_7
+	icon = greek_states_path_end_bonus
 	requires = {italic_generic_path_10}
 }
 
@@ -219,7 +219,7 @@ modifier = {
 	army_maintenance_cost = 0.01
 }
 requires = {}
-icon = latin_support_path_3
+icon = latin_support_path_2
 }
 
 latin_support_path_2 = { ###Latin 2B
@@ -228,7 +228,7 @@ modifier = {
 	army_maintenance_cost = 0.01
 }
 requires = { latin_support_path_3 }
-icon = latin_support_path_2
+icon = latin_support_path_4
 
 on_activate = {
 	add_innovation = 2
@@ -254,7 +254,7 @@ modifier = {
 	army_maintenance_cost = 0.01
 }
 requires = { latin_roman_path_4 }
-icon = latin_roman_path_end_bonus
+icon = latin_support_path_3
 }
 
 latin_roman_path_9 = {
@@ -263,7 +263,7 @@ modifier = {
 	army_maintenance_cost = 0.01
 }
 requires = { latin_roman_path_end_bonus }
-icon = greek_antigonid_path_end_bonus
+icon = latin_support_path_4
 }
 
 latin_roman_path_5 = { ###Latin 5AA
@@ -273,7 +273,7 @@ modifier = {
 	army_maintenance_cost = -0.01
 }
 requires = { latin_roman_path_9 }
-icon = latin_roman_path_5
+icon = latin_support_path_5
 }
 
 
@@ -336,7 +336,7 @@ modifier = {
 }
 
 requires = { latin_support_path_1 }
-icon = latin_tribal_path_4
+icon = greek_states_path_5
 }
 
 
@@ -349,7 +349,7 @@ modifier = {
 }
 
 requires = { latin_philosophy_start_bonus }
-icon = latin_tribal_path_6
+icon = latin_support_path_end_bonus
 }
 
 generic_latin_civic_3 = { ###Latin 1B
@@ -359,7 +359,8 @@ modifier = {
 }
 
 requires = { generic_latin_civic_2 }
-icon = latin_tribal_path_6
+icon = latin_tribal_path_7
+
 }
 
 latin_tribal_path_3 = { ###Latin 5AC
@@ -388,7 +389,7 @@ latin_tribal_path_3 = { ###Latin 5AC
 	}
 	
 	requires = { latin_tribal_path_3 }
-	icon = latin_tribal_path_6
+	icon = levantine_greco_path_7
 	}
 
 

@@ -44,7 +44,7 @@
 		light_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = greek_antigonid_path_6
+	icon = greek_antigonid_path_5
 	requires = { }
 }
 
@@ -66,7 +66,7 @@ greek_generic_path_2 = { ###
 		light_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = celtic_gallic_path_1
+	icon = greek_antigonid_path_4
 	requires = { }
 }
 
@@ -80,7 +80,7 @@ greek_generic_path_3 = { ###
 		light_cavalry_morale = 0.1
 		army_maintenance_cost = 0.01
 	} 
-	icon = mauryan_mauryas_path_5
+	icon = greek_antigonid_path_3
 	requires = {greek_generic_path_1}
 }
 
@@ -94,7 +94,7 @@ greek_generic_path_4 = { ###
 		light_cavalry_discipline = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = celtic_germanic_path_7
+	icon = greek_seleucid_path_1
 	requires = {greek_generic_path_2}
 }
 
@@ -107,7 +107,7 @@ greek_generic_path_5 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}
-	icon = greek_antigonid_path_6
+	icon = greek_seleucid_path_2
 	requires = {greek_generic_path_3}
 }
 
@@ -120,7 +120,7 @@ greek_generic_path_6 = { ###
 		army_maintenance_cost = 0.01
 	}
 	allow = {military_tech >= 7} 
-	icon = celtic_gallic_path_1
+	icon = greek_antigonid_path_end_bonus
 	requires = {greek_generic_path_4}
 }
 
@@ -132,7 +132,7 @@ greek_generic_path_7 = { ###
 		archers_morale = 0.1
 		army_maintenance_cost = 0.01
 	} 
-	icon = mauryan_mauryas_path_5
+	icon = greek_seleucid_path_5
 	requires = {greek_generic_path_5}
 }
 
@@ -144,7 +144,7 @@ greek_generic_path_8 = { ###
 		archers_discipline = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = celtic_germanic_path_7
+	icon = greek_seleucid_path_7
 	requires = {greek_generic_path_6}
 }
 
@@ -159,7 +159,7 @@ greek_generic_path_9 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 13}
-	icon = greek_antigonid_path_6
+	icon = greek_states_path_1
 	requires = {greek_generic_path_7 }
 }
 
@@ -173,7 +173,7 @@ greek_generic_path_10 = { ###
 		camels_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = celtic_gallic_path_1
+	icon = greek_states_path_2
 	allow = {military_tech >= 13}
 	requires = {greek_generic_path_8 }
 }
@@ -189,7 +189,7 @@ greek_generic_path_11 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	} 
-	icon = mauryan_mauryas_path_5
+	icon = greek_states_path_end_bonus
 	requires = {greek_generic_path_9}
 }
 
@@ -204,7 +204,7 @@ greek_generic_path_12 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	}
-	icon = celtic_germanic_path_7
+	icon = greek_states_path_7
 	requires = {greek_generic_path_10}
 }
 
@@ -223,7 +223,7 @@ greek_antigonid_path_4 = {
 
 greek_antigonid_path_2 = {
 	requires = { greek_naval_heritage }
-	icon = greek_antigonid_path_2
+	icon = greek_seleucid_path_end_bonus
 	modifier = {
 		ship_cost = -0.15
 	}
@@ -252,7 +252,7 @@ greek_levantine_enable = {
 		navy_maintenance_cost = 0.01
 	}
 	requires = { greek_antigonid_path_2 }
-	icon = levantine_philosophy_start_bonus
+	icon = greek_states_path_5
 }
 
 greek_naval_heritage = { 
@@ -262,7 +262,7 @@ greek_naval_heritage = {
 		navy_maintenance_cost = 0.01
 	}
 	requires = { greek_levantine_enable }
-	icon = north_african_naval_path_4
+	icon = greek_seleucid_path_3
 	on_activate = {
 		if = {
 			limit = {
@@ -326,7 +326,7 @@ greek_seleucid_path_3 = {
 		navy_maintenance_cost = 0.01
 	}
 	requires = { greek_naval_heritage }
-	icon = greek_seleucid_path_3
+	icon = greek_antigonid_path_2
 }
 
 greek_antigonid_path_2_octere = {
@@ -336,7 +336,7 @@ greek_antigonid_path_2_octere = {
 	}
 	allow_unit_type = octere
 	requires = { greek_seleucid_path_3 }
-	icon = greek_antigonid_path_2
+	icon = default_test
 	on_activate = {
 		random_owned_province = {
 			limit = {
@@ -362,7 +362,7 @@ greek_states_path_4 = {
 	}
 	enable_ability = military_colonies
 	requires = { }
-	icon = greek_states_path_4
+	icon = latin_philosophy_start_bonus
 	on_activate = {
 		ordered_owned_province = {
 			limit = {
@@ -401,7 +401,7 @@ generic_greek_civic_2 = { ###Latin 1B
 	}
 	
     requires = { greek_states_path_4 }
-    icon = latin_tribal_path_6
+    icon = greek_states_path_4
 
 }
 
@@ -412,7 +412,7 @@ generic_greek_civic_3 = { ###Latin 1B
 	}
 	
     requires = { generic_greek_civic_2 }
-    icon = latin_tribal_path_6
+    icon = levantine_greco_path_5
 }
 
 generic_greek_civic_4 = { ###Latin 1B
@@ -422,7 +422,7 @@ generic_greek_civic_4 = { ###Latin 1B
 	}
 	
 	requires = { generic_greek_civic_3 }
-	icon = latin_tribal_path_6
+	icon = persian_bactrian_path_2
 }
 
 generic_greek_civic_5 = { ###Latin 1B
@@ -432,7 +432,7 @@ generic_greek_civic_5 = { ###Latin 1B
 	}
 	
     requires = { generic_greek_civic_4 }
-    icon = latin_tribal_path_6
+    icon = levantine_greco_path_7
 }
 
 #fort
@@ -446,7 +446,7 @@ greek_antigonid_path_1 = {
 			army_maintenance_cost = 0.01
 		}
 		requires = { greek_seleucid_path_2 }
-		icon = greek_antigonid_path_1
+		icon = greek_states_path_3
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
@@ -468,7 +468,8 @@ greek_seleucid_path_end_bonus = {
 			add_innovation = 3
 		}
 		requires = { greek_antigonid_path_1 }
-		icon = greek_seleucid_path_end_bonus
+		icon = greek_states_path_7
+
 }
 
 greek_states_path_6 = {
@@ -493,7 +494,7 @@ greek_seleucid_path_2 = {
 			garrison_size = 0.15
 		}
 		potential = {}
-		icon = greek_seleucid_path_2
+		icon = latin_support_path_3
 		on_activate = {
 			ordered_owned_province = {
 				limit = {
