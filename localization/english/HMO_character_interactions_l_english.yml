@@ -43,7 +43,7 @@
  send_envoy_act_past:0 "You have told the player to check his Discord messages"
  send_envoy_past:0 "Envoy Sent"
  send_envoy.1.t:0 "Message Received"
- send_envoy.1.desc:0 "I sent you a messaage on Discord. Would you respond to me, please?"
+ send_envoy.1.desc:0 "The ruler of @[envoy_sender.GetFlag]! [envoy_sender.GetName] sent you a message on Discord. Would you respond to me, please?"
  send_envoy.1.a:0 "Thanks, I'll go read it now"
  send_envoy_cd_tt:0 "Must wait until [SCOPE.sChar('target').GetVariableExpiry('anti_spam_envoy')|Y]\n"
 

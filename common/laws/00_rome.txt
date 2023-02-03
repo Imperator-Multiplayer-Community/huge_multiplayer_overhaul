@@ -8,8 +8,8 @@
 			levy_size_multiplier = 0.025
 			global_population_happiness = 0.05
 			discipline = 0.025
-			land_morale_modifier = 0.025
-			experience_decay = -0.015
+			land_morale_modifier = 0.05
+			experience_decay = -0.02
 			monthly_military_experience = 0.15
 			army_maintenance_cost = 0.5
 		}
@@ -21,8 +21,10 @@
 	lex_porcia = { #Polybian System / general levy
 		modifier = {
 			levy_size_multiplier = 0.035
-			war_exhaustion = -0.05
+			global_population_happiness = -0.05
 			manpower_recovery_speed = 0.2
+			global_manpower_modifier = 0.1 
+			discipline = -0.025
 			monthly_military_experience = 0.20
 			army_maintenance_cost = 0.5
 		}
@@ -34,11 +36,10 @@
 	mercenary_reliance = {
 		modifier = {
 			mercenary_land_maintenance_cost = -0.35
-			recruit_mercenary_cost_modifier = -0.35
 			max_mercenary_stacks = 1
 			levy_size_multiplier = -0.025
-			cohort_reinforcement_speed = 0.1
-			land_morale_recovery = 0.1
+			cohort_reinforcement_speed = 0.075
+			land_morale_recovery = 0.075
 			monthly_military_experience = 0.125
 			army_maintenance_cost = 0.5
 		}
@@ -50,7 +51,13 @@
 	punic_reforms = {
 		allow = {
 			invention = global_cohort_recruit_speed_inv
-			rank >= regional_power
+			OR = {
+				rank >= regional_power
+				AND = {
+					is_subject_type = player_client_state
+					num_of_cities > 100
+				}
+			}
 			NOT = { # once standing army has been enacted, cannot go back
 				custom_tooltip = {
 					text = "already_enacted_marian_reforms"
@@ -63,6 +70,7 @@
 			levy_size_multiplier = 0.015
 			army_maintenance_cost = -0.10
 			monthly_military_experience = 0.20
+			mercenary_land_maintenance_cost = 0.35
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
@@ -79,6 +87,7 @@
 			monthly_military_experience = 0.15
 			army_maintenance_cost = 0.10
 			general_loyalty = -2
+			mercenary_land_maintenance_cost = 0.30
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region

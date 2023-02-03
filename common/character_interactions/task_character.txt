@@ -22,7 +22,6 @@
 				this = scope:actor.current_ruler
 			}
 			NOR = {
-				has_character_modifier = commander_king
 				has_character_modifier = recently_tasked
 				has_character_modifier = on_espionage_mission_cmod
 				has_character_modifier = foreign_citizen

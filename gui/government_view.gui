@@ -497,16 +497,6 @@ base_window = {
 						visible = "[And( GovernmentView.GetPlayer.UseCoRuler, And( GovernmentView.GetPlayer.GetGovernment.IsMonarchy, Not( Player.HasTimedModifier('regency_government') ) ) )]"						
 					}
 					sub_header = {
-						name = "Government Regency Overview Header"	
-						position = { 0 0 }
-						size = { 100% 28 }	
-						datacontext = "[GovernmentView]"
-						blockoverride "Title_text" { text = "REGENCY_TERM_DESCRIPTION_MONARCHY_STANDARD" }
-						blockoverride "Max_text_width" { max_width = 650 }
-						#visible = "[And( GovernmentView.GetPlayer.GetGovernment.IsMonarchy, Not( GovernmentView.GetPlayer.GetCoRuler.IsValid ) )]"
-						visible = "[And( GovernmentView.GetPlayer.GetGovernment.IsMonarchy, And( GovernmentView.GetPlayer.GetCoRuler.IsValid, Player.HasTimedModifier('regency_government') ) )]"
-					}
-					sub_header = {
 						name = "Government Overview Header Republic"
 						position = { 0 0 }
 						size = { 100% 28 }	
@@ -1221,25 +1211,6 @@ base_window = {
 								blockoverride "Max_text_width" { max_width = 400 }
 								alpha = 0.95
 							}
-							sub_header = {
-								datacontext = "[GovernmentView]"
-								#visible = "[And( GovernmentView.GetPlayer.GetGovernment.IsMonarchy, GovernmentView.GetPlayer.GetConsort.IsValid )]"
-								visible = "[And( GovernmentView.GetPlayer.UseCoRuler, And( GovernmentView.GetPlayer.GetGovernment.IsMonarchy, Player.HasTimedModifier('regency_government') ) )]"
-								position = { 0 0 }
-								size = { 400 22 }
-								blockoverride "HeaderTexture" { texture = "gfx/interface/base_parts/background_noninteractable_texture.dds"  }
-								blockoverride "OrnamentTexture" { 
-									using = flat_background_black 
-									alpha = 0.4
-								}
-								blockoverride "Title_text" { 
-									text = "REGENCY_TERM_SPOUSE_DESCRIPTION" 
-									using = Black_FontColor
-								}
-								blockoverride "Max_text_width" { max_width = 400 }
-								alpha = 0.95
-							}
-							
 						}
 					}
 				}

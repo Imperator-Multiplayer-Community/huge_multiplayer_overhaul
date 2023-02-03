@@ -51,7 +51,7 @@ treasure_manager = {
 			key = "treasure_axe_of_zalmoxis"
 			icon = "treasure_chest"
 			state_modifier = {
-				local_freemen_output = 0.1
+				local_tribesmen_output = 0.15
 			}
 		}
 		8 = { # Ephesos
@@ -100,7 +100,7 @@ treasure_manager = {
 			key = "treasure_stone_of_sinifere"
 			icon = "treasure_sarcophagus"
 			state_modifier = {
-				local_freemen_output = 0.1
+				local_tribesmen_output = 0.15
 			}
 		}
 		15 = { # Arcus - Bicha of Balazote
@@ -198,7 +198,7 @@ treasure_manager = {
 			key = "treasure_scythian_altar"
 			icon = "treasure_chest"
 			state_modifier = {
-				local_freemen_happyness = 0.1
+				local_tribesmen_happyness = 0.1
 			}
 		}
 		29 = { # Armaouira
@@ -444,7 +444,7 @@ treasure_manager = {
             key = "treasure_sprig_of_tyr"
             icon = "treasure_chest"
             state_modifier = {
-                local_freemen_output = 0.1
+                local_tribesmen_output = 0.15
             }
         }
         64 = { # Athenai
@@ -465,7 +465,7 @@ treasure_manager = {
             key = "treasure_fetters_of_woden"
             icon = "treasure_chest"
             state_modifier = {
-                local_freemen_happyness = 0.1
+                local_tribesmen_happyness = 0.1
             }
         }
         67 = { # ?
@@ -681,7 +681,7 @@ treasure_manager = {
         }
         95 = { #r2 Phrygia
         	key = "treasure_gordian_knot"
-            icon = "treasure_chest"
+            icon = "cr_treasure_gordian_knot_01"
             state_modifier = {
                 local_monthly_state_loyalty = 0.15
             }
@@ -785,7 +785,7 @@ treasure_manager = {
             icon = "treasure_architecture"
 			dlc = "Magna Graecia"
             state_modifier = {
-                local_freemen_happyness = 0.1
+                local_tribesmen_happyness = 0.1
             }
         }
         109 = { #r2 Troizen
@@ -917,11 +917,11 @@ treasure_manager = {
 		}
 		186 = {
 			key = "black_stone_of_kaaba" #Mecca
-			icon = "treasure_chest"
+			icon = "black_stone"
             state_modifier = {
 				local_monthly_food_modifier = 0.1
 			}
-		}		
+		}
 		187 = {
 			key = "babylonian_map_of_the_world" #Sippar
 			icon = "treasure_chest"
@@ -958,28 +958,28 @@ treasure_manager = {
 			}
 		}
 		192 = {
-			key = "lion_rython" 
+			key = "lion_rython"
 			icon = "treasure_chest"
             state_modifier = {
 				local_citizen_output = 0.1
 			}
 		}
 		193= {
-			key = "statue_of_aphrodite_of_aphrodisias" 
+			key = "statue_of_aphrodite_of_aphrodisias"
 			icon = "treasure_architecture"
             state_modifier = {
 				local_pop_promotion_speed_modifier = 0.15
 			}
 		}
 		194 = {
-			key = "hemhem_crown_of_egypt" 
+			key = "hemhem_crown_of_egypt"
 			icon = "treasure_chest"
             state_modifier = {
 				local_monthly_food_modifier = 0.1
 			}
 		}
 		195 = {
-			key = "lion_capital" 
+			key = "lion_capital"
 			icon = "treasure_architecture"
             state_modifier = {
 				local_pop_conversion_speed_modifier = 0.2
@@ -1008,7 +1008,7 @@ treasure_manager = {
 		}
 		199 = {
 			key = "stone_of_jacob" #Bet-El
-			icon = "treasure_chest"
+			icon = "stone_of_jacob"
             state_modifier = {
 				local_tax_modifier = 0.2
 			}
@@ -1302,9 +1302,27 @@ treasure_manager = {
 				local_research_points_modifier = 0.15
 			}
 		}
-
-		#New treasures
-
+		241 = { # Balagrai
+			key = "cyr_treasure_serpent_of_slonta"
+			icon = "treasure_architecture"
+			state_modifier = {
+				local_tribesmen_output = 0.05
+			}
+		}
+		450 = {
+			key = "treasure_cr_skin_of_the_gorillae" #Carthage
+			icon = "cr_treasure_skins_of_the_gorilla_03"
+			state_modifier = {
+				local_base_trade_routes_modifier = 0.1
+			}
+		}
+		451 = {
+			key = "cr_treasure_ambrosial_rock_gadir" #Tyre
+			icon = "cr_treasure_ambrosial_rock_02"
+			state_modifier = {
+				local_happiness_for_same_religion_modifier = 0.1
+			}
+		}
 		500 = { # Platanus - Vettonian Verracos
 			key = "treasure_stone_verracos"
 			icon = "treasure_architecture"
@@ -1312,7 +1330,7 @@ treasure_manager = {
 				local_population_happiness = 0.05
 			}
 		}
-		501 = { # Nora/Carthage - Stelae of Nora
+		501 = { # Metalla/Carthage - Stelae of Nora
 			key = "treasure_tarshish_stelae"
 			icon = "treasure_architecture"
 			state_modifier = {
@@ -1344,7 +1362,7 @@ treasure_manager = {
 			key = "treasure_callaecian_ornated_axe"
 			icon = "treasure_chest"
 			state_modifier = {
-				local_freemen_happyness = 0.1
+				local_tribesmen_happyness = 0.1
 			}
 		}
 		506 = { # Tartessia - Bronze Carriazo
@@ -1375,13 +1393,14 @@ treasure_manager = {
 				local_pop_conversion_speed_modifier = 0.2
 			}
 		}
-		510 = { # Gigurria - Fibula of Bragança
+		510 = { # Gigurria - Fibula of Braganca
 			key = "treasure_lusitanian_fibula"
 			icon = "treasure_chest"
 			state_modifier = {
 				local_manpower_modifier = 0.15
 			}
 		}
+
 		801 = { # 334
 			key = "treasure_it_sacred_stone_of_aphrodite"
 			icon = "treasure_it_sacred_stone_of_aphrodite"
@@ -1540,7 +1559,7 @@ treasure_manager = {
 			key = "treasure_it_statue_of_protis"
 			icon = "treasure_it_statue_of_protis"
 			state_modifier = {
-                local_freemen_happyness = 0.03
+                local_tribesmen_happyness = 0.03
 			}
 		}
 		824 = { # 687
@@ -1575,14 +1594,14 @@ treasure_manager = {
 			key = "treasure_it_scythian_ritualistic_treasure"
 			icon = "treasure_it_scythian_ritualistic_treasure"
 			state_modifier = {
-                local_freemen_happyness = 0.03
+                local_tribesmen_happyness = 0.03
 			}
 		}
 		829 = { # LGI
 			key = "treasure_it_scythian_princes_plunder"
 			icon = "treasure_it_scythian_princes_plunder"
 			state_modifier = {
-                local_freemen_happyness = 0.03
+                local_tribesmen_happyness = 0.03
 			}
 		}
 		830 = { # ARG
@@ -1736,14 +1755,14 @@ treasure_manager = {
 			key = "treasure_it_basamum_ibex_statue"
 			icon = "treasure_it_basamum_ibex_statue"
 			state_modifier = {
-				local_freemen_output = 0.03	
+				local_tribesmen_output = 0.03
 			}
 		}
 		852 = { # TQF
 			key = "treasure_it_baetyl_goddess_aluzza"
 			icon = "treasure_it_baetyl_goddess_aluzza"
 			state_modifier = {
-				local_freemen_happyness = 0.03
+				local_tribesmen_happyness = 0.03
 			}
 		}
 		853 = { # SHB
@@ -1757,7 +1776,7 @@ treasure_manager = {
 			key = "treasure_it_arabian_snake_cult_shrine"
 			icon = "treasure_it_arabian_snake_cult_shrine"
 			state_modifier = {
-				local_freemen_happyness = 0.03
+				local_tribesmen_happyness = 0.03
 			}
 		}
 		855 = { # DUR
@@ -1785,7 +1804,7 @@ treasure_manager = {
 			key = "treasure_it_medeina_forest_mother"
 			icon = "treasure_it_medeina_forest_mother"
 			state_modifier = {
-				local_freemen_happyness = 0.03
+				local_tribesmen_happyness = 0.03
 			}
 		}
 		859 = { # SLV
@@ -1799,10 +1818,10 @@ treasure_manager = {
 			key = "treasure_it_lusitanian_silver_breastplate"
 			icon = "treasure_it_lusitanian_silver_breastplate"
 			state_modifier = {
-				local_freemen_happyness = 0.03
+				local_tribesmen_happyness = 0.03
 			}
 		}
-		
+
 		861 = { # SPA
 			key = "treasure_it_euryleonis_bronze_statue"
 			icon = "treasure_it_euryleonis_bronze_statue"
@@ -1810,7 +1829,7 @@ treasure_manager = {
 				local_pop_assimilation_speed_modifier = 0.03
 			}
 		}
-		
+
 		862 = { # OSM
 			key = "treasure_it_stele_of_agritore"
 			icon = "treasure_it_stele_of_agritore"
@@ -1818,15 +1837,15 @@ treasure_manager = {
 				local_happiness_for_same_religion_modifier = 0.03
 			}
 		}
-		
+
 		863 = { # ARM
 			key = "treasure_it_vishapaqar_fish_stone"
-			icon = "treasure_it_vishapaqar_fish_stone"
+			icon = "treasure_it_lady_of_the_nets"
 			state_modifier = {
 				local_monthly_food_modifier = 0.03
 			}
 		}
-		
+
 		864 = { # VCL
 			key = "treasure_it_veliocassian_tribal_helmet"
 			icon = "treasure_it_veliocassian_tribal_helmet"
@@ -1834,7 +1853,7 @@ treasure_manager = {
 				local_cohort_recruit_speed = 0.03
 			}
 		}
-		
+
 		865 = { # ION
 			key = "treasure_it_goddess_artemis_stone"
 			icon = "treasure_it_goddess_artemis_stone"
@@ -1842,15 +1861,15 @@ treasure_manager = {
 				local_monthly_state_loyalty = 0.03
 			}
 		}
-		
+
 		866 = { # BOA
 			key = "treasure_it_cult_bear_sculpture"
 			icon = "treasure_it_cult_bear_sculpture"
 			state_modifier = {
-				local_freemen_happyness = 0.03
+				local_tribesmen_happyness = 0.03
 			}
 		}
-		
+
 		867 = { # CNT
 			key = "treasure_it_beast_of_achelous"
 			icon = "treasure_it_beast_of_achelous"
@@ -1858,7 +1877,7 @@ treasure_manager = {
 				local_monthly_food_modifier = 0.03
 			}
 		}
-		
+
 		868 = { # HRE
 			key = "treasure_it_holy_cart_of_nerthus"
 			icon = "treasure_it_holy_cart_of_nerthus"
@@ -1866,21 +1885,147 @@ treasure_manager = {
 				local_population_growth = 0.03
 			}
 		}
-
+		#Indian Buddhist and Hindu Texts/Treasures (Do modifiers)
+		##19 New
+		##Buddhist:
+		869 = { # MRY
+			key = "treasure_india_sutta_pitaka"
+			icon = "old_script_1"
+			state_modifier = {
+				local_unrest = -0.3
+			}
+		}
+		870 = { # MRY
+			key = "treasure_india_vinaya_pitaka"
+			icon = "old_script_2"
+			state_modifier = {
+				research_points_modifier = 0.10
+			}
+		}
+		871 = { # MRY
+			key = "treasure_india_adhidhamma_pitaka"
+			icon = "old_script_3"
+			state_modifier = {
+				happiness_for_same_religion_modifier = 0.05
+			}
+		}
+		872 = { # MRY
+			key = "treasure_india_dhammapada"
+			icon = "old_script_3"
+			state_modifier = {
+				local_population_growth = 0.03
+			}
+		}
+		873 = { # MRY
+			key = "treasure_india_milinda_panha"
+			icon = "old_script_3"
+			state_modifier = {
+				happiness_for_same_religion_modifier = 0.05
+			}
+		}
+		874 = { # MRY
+			key = "treasure_india_satipatthanavibhango"
+			icon = "old_script_1"
+			state_modifier = {
+				local_monthly_state_loyalty = 0.03
+			}
+		}
+		##Hindu
+		875 = { # MRY
+			key = "treasure_india_aitareya"
+			icon = "old_script_2"
+			state_modifier = {
+				happiness_for_same_religion_modifier = 0.05
+			}
+		}
+		876 = { # MRY
+			key = "treasure_india_kaushitakia"
+			icon = "old_script_2"
+			state_modifier = {
+				local_country_civilization_value = 10.0
+			}
+		}
+		877 = { # MRY
+			key = "treasure_india_chandogya"
+			icon = "old_script_2"
+			state_modifier = {
+				local_pop_conversion_speed_modifier = 0.03
+			}
+		}
+		878 = { # MRY
+			key = "treasure_india_kena"
+			icon = "treasure_it_iguvine_tablets"
+			state_modifier = {
+				local_citizen_output = 0.1
+			}
+		}
+		879 = { # MRY
+			key = "treasure_india_brihadaranyaka"
+			icon = "actual_paper"
+			state_modifier = {
+				local_country_civilization_value = 10.0
+			}
+		}
+		880 = { # MRY
+			key = "treasure_india_isha"
+			icon = "treasure_it_iguvine_tablets"
+			state_modifier = {
+				local_population_growth = 0.03
+				local_country_civilization_value = 5.0
+			}
+		}
+		881 = { # MRY
+			key = "treasure_india_taittiriya"
+			icon = "actual_paper"
+			state_modifier = {
+				local_country_civilization_value = 10.0
+			}
+		}
+		882 = { # MRY
+			key = "treasure_india_katha"
+			icon = "treasure_it_iguvine_tablets"
+			state_modifier = {
+				local_population_growth = 0.05
+			}
+		}
+		883 = { # MRY
+			key = "treasure_india_shvetashvatara"
+			icon = "old_script_3"
+			state_modifier = {
+				local_monthly_civilization = 0.03
+			}
+		}
+		884 = { # MRY
+			key = "treasure_india_maitri"
+			icon = "old_script_1"
+			state_modifier = {
+				research_points_modifier = 0.10
+				local_country_civilization_value = 5.0
+			}
+		}
+		885 = { # MRY
+			key = "treasure_india_mundaka"
+			icon = "old_script_1"
+			state_modifier = {
+				local_monthly_civilization = 0.03
+			}
+		}
+		886 = { # MRY
+			key = "treasure_india_mandukya"
+			icon = "old_script_1"
+			state_modifier = {
+				research_points_modifier = 0.10
+			}
+		}
+		887 = { # MRY
+			key = "treasure_india_prashna"
+			icon = "treasure_it_iguvine_tablets"
+			state_modifier = {
+				local_unrest = -0.3
+			}
+		}
     }
 }
-
-
-
-
-#Diplomacy
-
-diplomacy = {
-	
-}
-
-#Families
-
 family={
 	families={
 		#Numbers do not have to appear in numerical order but do have to be unique:
@@ -1918,7 +2063,7 @@ family={
 			key="Antigonid"
 			owner=PRY
 			culture = macedonian
-			prestige=300			
+			prestige=300
 			color = 0
 		}
 		5={
@@ -2064,7 +2209,7 @@ family={
 		}
 		#Carthage
 		25={
-			key = "Barcid"
+			key = "Barqid"
 			prestige=250
 			culture=carthaginian
 			owner=CAR
@@ -2076,13 +2221,13 @@ family={
 			owner=CAR
 		}
 		68 = { #Old "Royal" Dynasty
-			key = "Hannid" #Or Hannonid
+			key = "Hannonid" #Or Hannonid
 			prestige=250
 			culture=carthaginian
 			owner=CAR
 		}
 		69 = {
-			key = "Gisgoid"
+			key = "Giskonid"
 			prestige=300
 			culture=carthaginian
 			owner=CAR
@@ -2238,7 +2383,7 @@ family={
 		}
 		#Arados
 		45={
-			key = "Gerasthartid"
+			key = "Ger_ashtartid"
 			prestige=300
 			culture=phoenician
 			owner=ARA
@@ -2317,12 +2462,12 @@ family={
 		57={
 			key = "Wakekiye"
 			prestige=500
-			culture=egyptian
+			culture=lower_nubian
 			owner=DOD
 		}
 		#Samaria
 		58={
-			key = "Samarian"
+			key = "El_azarid"
 			prestige=300
 			culture=hebrew
 			owner=SMA
@@ -2336,7 +2481,7 @@ family={
 		}
 		#Judea
 		60={
-			key = "Zadokite"
+			key = "Tzadoqi"
 			prestige=500
 			culture=hebrew
 			owner=JUD
@@ -2459,10 +2604,73 @@ family={
 			culture=cretan
 			owner=ARS
 		}
+		#Chera Dynasty
+		250={
+			key = "Chera"
+			prestige=350
+			culture=cheran
+			owner=CHR
+		}
+		#Ruhunu-Vijaya
+		251={
+			key = "Ruhunu"
+			prestige=350
+			culture=lankan
+			owner=RHN
+		}
+		252 = {
+			key = "Osicanid"
+			prestige=350
+			culture =argolian
+			owner=ARG
+		}
+		#New Galatian families
+		1000 = {
+			key = "Tectosages"
+			prestige=300
+			culture=celtic_pannonian
+			owner=X07
+		}
+		1001 = {
+			key = "Trocmid"
+			prestige=300
+			culture=celtic_pannonian
+			owner=X09
+		}
+		1002 = {
+			key = "Boiorius"
+			prestige=300
+			culture=celtic_pannonian
+			owner=X09
+		}
+		1003 = {
+			key = "Volcaesus"
+			prestige=300
+			culture=celtic_pannonian
+			owner=X08
+		}
+		1004 = {
+			key = "Tylises"
+			prestige=300
+			culture=celtic_pannonian
+			owner=X08
+		}
+		1005 = {
+			key = "Belgiosus"
+			prestige=300
+			culture=celtic_pannonian
+			owner=SCD
+		}
+		1006 = {
+			key = "Acichorid"
+			prestige=300
+			culture=celtic_pannonian
+			owner=SCD
+		}
 	}
 }
-
-#Provinces
+diplomacy = {
+}
 
 provinces = { #Any entry must contain a comment with city name.
 	### TREASURES ###
@@ -2556,13 +2764,16 @@ provinces = { #Any entry must contain a comment with city name.
 	576 = { # Apollonopolis Magna
 		treasure_slots = { treasures = { 71 } }
 	}
+  680 = { # Shechem
+    temple_building = 1
+  }
 	687 = { # Jerusalem
 		treasure_slots = { treasures = { 199 } }
 	}
 	743 = { #Tyros
-		treasure_slots = { treasures = { 215 } }
+		treasure_slots = { treasures = { 451 215 } }
 	}
-	763 = { # Helopolitana 
+	763 = { # Helopolitana
 		treasure_slots = { treasures = {  203 207 } }
 	}
 	766 = { # Gebal/Byblos
@@ -2606,9 +2817,9 @@ provinces = { #Any entry must contain a comment with city name.
 	}
 	1254 = { # Salika
 		treasure_slots = { treasures = { 502 } }
-	}	
+	}
 	1287 = { # Salaria
-		treasure_slots = { treasures = { 503 17 } }
+		treasure_slots = { treasures = { 503 } }
 	}
 	1570 = { # Armaouira
 		treasure_slots = { treasures = { 29 219 } }
@@ -2659,9 +2870,12 @@ provinces = { #Any entry must contain a comment with city name.
 		treasure_slots = { treasures = { 13 } }
 	}
 	3256 = { # Carthage
-		treasure_slots = { treasures = { 12 } }
+		treasure_slots = { treasures = { 450 12 } }
 	}
-	3483 = { # Nora
+	3359 = { # Balagrai
+		treasure_slots = { treasures = { 241 } }
+	}
+	3485 = { # Metalla
 		treasure_slots = { treasures = { 501 } }
 	}
 	3828 = { # Tuliphurdum
@@ -2841,6 +3055,13 @@ provinces = { #Any entry must contain a comment with city name.
 	1954 ={
 		library_building = 1
 	}
+	3357 = { # Barce
+		barracks_building = 1
+		modifier = { modifier = cyr_libyan_influences always = yes }
+	}
+	3350 = { # Euesperides
+		modifier = { modifier = cyr_silted_harbour always = yes }
+	}
 	4475 = { #Ujjayini
 		library_building = 2
 		temple_building = 1
@@ -2850,23 +3071,23 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 3
 		library_building = 3
 	}
-	
+
 	6688 = { #Tarmita
 		aqueduct_building = 3
 	}
-	
+
 	6694 = {	 #Citadel of Ay Khanum
 		aqueduct_building = 1
 		commerce_building = 1
 		library_building = 2
 		modifier = { modifier = oskobara_palace_pmod always = yes }
 	}
-	
+
 	6611 = {	 #Indo Greek Capital
 		aqueduct_building = 2
 		modifier = { modifier = alexandria always = yes }
 	}
-	
+
 	6615 = { # Alexandreia Opiane
 		modifier = { modifier = alexandria always = yes }
 	}
@@ -2887,7 +3108,7 @@ provinces = { #Any entry must contain a comment with city name.
 		military_building = 1
 		fortress_building = 1
 	} #Veii
-	
+
 	407 = { #Chalchis
 		fortress_building = 2
 		modifier = { modifier = chalkis_province_modifier always = yes }
@@ -2899,670 +3120,639 @@ provinces = { #Any entry must contain a comment with city name.
 	835 = { #Hatra
 		fortress_building = 1
 	}
-	
+
 	743 = { #Tyre
 		fortress_building = 1
 	}
-	
+
 	266 = { #Rhodos
 		fortress_building = 1
 		library_building = 1
 		modifier = { modifier = fortifications_of_rhodes always = yes }
 	}
-	
+
 	#Peter beyond this point:
-	
+
 	8 = { #telesia
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	12 = { #velia
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	33 = { #bovinium
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	37 = { #Luceria, the key of Puglia
 		fortress_building = 1
 	}
-	
+
 	48 = { #terventum
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	52 = { #thurii
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	54 = { #heraclea
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	55 = { #metapontum
-		fortress_building = 1 
+		fortress_building = 1
 		modifier = { modifier = pythagoras_tomb_modifier always = yes }
 	}
-	
+
 	56 = { #tarentum
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	66 = { #barium
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	72 = { #rhegium
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	73 = { #locri
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	75 = { #hipponium
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	76 = { #tempsa
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	78 = { #croton
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	80 = { #messana
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	84 = { #syracusae
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	86 = { #acragas
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	94 = { #lilybaeum
 		fortress_building = 1
 		library_building = 1
 	}
-	
+
 	96 = { #panormus
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	114 = { #vetulonia
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	124 = { #cortona
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	135 = { #valvata
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	142 = { #ravenna
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	146 = { # Bononia
 		aqueduct_building = 1
 	}
 
 	149 = { #mutina
-		fortress_building = 1 
+		fortress_building = 1
 	}
 
 	412 = { # Lychnidos
 		fortress_building = 1
 	}
-	
+
 	681 = { #emporiae
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	702 = { #quseima
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	810 = { #zeugma
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	933 = { #apamea
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	1000 = { #emporiae
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	1029 = { #arse/saguntum
 		fortress_building = 1
 		commerce_building = 1
 	}
-	
+
 	1031 = { #hemeroskopeion
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	1339 = { #onuba
 		fortress_building = 1
 		commerce_building = 1
 	}
-	
+
 	1342 = { #asta regia
 		fortress_building = 1
 		commerce_building = 2
 	}
-	
+
 	1346 = { #asido/lascuta
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	1348 = { #carteia
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	1350 = { #acinipo
 		fortress_building = 1
 		commerce_building = 1
 	}
-	
+
 	1356 = { #orippo
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	1371 = { #astigi
 		commerce_building = 1
 	}
-	
+
 	1374 = { #carmo
 		fortress_building = 1
 		commerce_building = 1
 	}
-	
+
 	1377 = { #corduba
 		fortress_building = 1
 		commerce_building = 1
 	}
-	
+
 	1464 = { #ebusus/ibasim
 		fortress_building = 1
 		commerce_building = 1
 	}
-	
+
 	1471 = { #melita
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	1718 = { #aeclanum
-		fortress_building = 1 
+		fortress_building = 1
 	}
 
 	1911 = { #Sillyon
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	2260 = { #agatha
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	2284 = { #augustonometum
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	2325 = { #massalia
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	2347 = { #avaricum
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	2438 = { #bibracte
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	2440 = { #alesia
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3245 = { #neapolis
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3264 = { #septima
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3295 = { #meninge
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3303 = { #oea
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3549 = { #genua
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3584 = { #verona
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3572 = { #ticinum
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	3592 = { #feraria
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	4787 = {
 		barracks_building = 1
 	}
-	
+
 	4991 = { #49
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	6703 = { #cyropolis
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	6766 = { #yamchun
-		fortress_building = 1 
+		fortress_building = 1
 	}
-	
+
 	7506 = { #aksum
 		fortress_building = 1
 	}
-	
+
 	536 = { #Babylon (Egypt)
 		fortress_building = 1
 	}
 
-####
-
-	#Molon Labe changes
-
-	4682 = { #Sanaa (Arabia)
-		local_forum_building = 1
-	}
-	4662 = { #Timna (Arabia)
-		population_building = 1
-		academy_building = 1
-	}
-	4666 = { #Marib (Arabia)
-		population_building = 1
-		academy_building = 1
-	}
-	4674 = { #Qarnawu (Arabia)
-		population_building = 1
-		academy_building = 1
-	}		
-	4678 = { #Sabata (Arabia)
-		population_building = 1
-		commerce_building = 1
-	}
-	4667 = { #Athroula (Arabia)
-		basic_settlement_infratructure_building = 1
-	}
-
-	4721 = { #Durnatha (Arabia)
-		hill_fort = 1
-	}
-
-
-####
-	
 	#Isthmus of Corinth
 	418 = { #Corinth
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	#Alps
 	3530 = { #Mustiae Calmes
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3534 = { # Catorissium
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3534 = { # Scingomagus
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3537 = { # Maurienna
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3610 = { # Darantasia
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3612 = { # Eudracinum
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3615 = { # Mons Alpinus
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3618 = { # Sumus Lacus
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3659 = { # Vadena
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3654 = { # Foetes
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3656 = { # Alpinus Superioris
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3657 = { # Alpinus Inferioris
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3664 = { # Sebatum
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3666 = { # Mastiacum
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3667 = { #Virunum
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	3670 = { #Anisus
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	#Lesser Mountain Passes #
 	#Used for mountain passes that have an owner.
 	153 = { #Forum Novum
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	154 = { #Rubra
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	412 = { #Lychnidos
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	438 = { #Mantineia
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	448 = { #Stymphalos
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	449 = { #Kleitor
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	466 = { #Oichalia Aitolias
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	475 = { #Herakleia Trachinia
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	992 = { #Balales Pass
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1445 = { #Kodrion
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1076 = { #Iacca
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1574 = { #Kelishinian Gates
-		 modifier = { modifier = lesser_pass_modifier always = yes } 
+		 modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1603 = { #Zagros Gates
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1700 = { #Zekari Pass
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1701 = { #Goderdzi Pass
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1885 = { #Selge Valley
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1917 = { #Lakaine
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	2120 = { #Caledonia
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	2264 = { #Parthos
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	3081 = { #Visum Montis
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	3530 = { #Mustiae Calmes
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	3980 = { #Ad fines
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	3952 = { #Sudetia
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4892 = { #Ibadura
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4948 = { #Sousian Gates - TODO MAP CHANGE
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	5437 = { #Parthian Gates
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	1979 = { #Baka
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	3125 = { #Keletron
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4092 = { #Ad Picarias
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4102 = { #Anderva
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4103 = { #Sevastum
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4104 = { #Leusinium
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4280 = { #Arutela
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4283 = { #Iscronia
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4300 = { #Khyber
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4369 = { #Gandava
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4892 = { #Ibadura
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4987 = { #Shiman
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	4998 = { #Shirga
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	5595 = { #Hunza
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	5601 = { #Kusta
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6609 = { #Ortespane
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6612 = { #Nikaia Indike
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6625 = { #Kapissa
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6631 = { #Daroideia
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6639 = { #Rana
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6651 = { #Choatina
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6720 = { #Baskata
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6773 = { #Gulka
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6774 = { #Karamyk
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6775 = { #Kabyk
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6768 = { #Kokcha
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6771 = { #Kezhen
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6772 = { #Ikeshtam
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6785 = { #Shelji
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6787 = { #Narin
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	6788 = { #Shura
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	7386 = { #Badari
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	7891 = { #Tegea
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	7939 = { #Hyllarima
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	7964 = { #Koropissos
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
 	7968 = { #Kyinda
-		modifier = { modifier = lesser_pass_modifier always = yes } 
+		modifier = { modifier = lesser_pass_modifier always = yes }
 	}
-	
+
 	#Gates - These Mountain Passes do not have an owner.
 	1673 = { #Iberian Gates
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	1749 = { #Brili
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	1750 = { #Klukhor Pass
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	1870 = { #Amanian Gates
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	4992 = { #Caspian Gates
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5572 = { #Terrai
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5585 = { #Pakpa
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5586 = { #Mangyul Takmo Dzong
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5602 = { #Gondogor Pass
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5603 = { #Gondogor Pass
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5604 = { #Gondogor Pass
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5629 = { #Koryi
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5634 = { #Mon Shampo
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	5654 = { #Kongyul
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	7763 = { #Sophon Pass
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	7896 = { #Nikaia Lokri/Thermopylai
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	7914 = { #Modra Pass
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	7986 = { #Commagenian Gates
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	8021 = { #Syrian Gates
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	8022 = { #Cilician Gates
-		modifier = { modifier = gate_modifier always = yes } 
+		modifier = { modifier = gate_modifier always = yes }
 	}
 	8023 = { # Tempe pass
-		 modifier = { modifier = gate_modifier always = yes } 
+		 modifier = { modifier = gate_modifier always = yes }
 	}
 	8024 = { # Boloustrana pass
-		 modifier = { modifier = gate_modifier always = yes } 
+		 modifier = { modifier = gate_modifier always = yes }
 	}
 	8025 = { # Petra pass
-		 modifier = { modifier = gate_modifier always = yes } 
+		 modifier = { modifier = gate_modifier always = yes }
 	}
 	8299 = { # Atlas pass
-		 modifier = { modifier = gate_modifier always = yes } 
+		 modifier = { modifier = gate_modifier always = yes }
 	}
 	8324 = { # Atlas pass
-		 modifier = { modifier = gate_modifier always = yes } 
+		 modifier = { modifier = gate_modifier always = yes }
 	}
 	8325 = { # Atlas pass
-		 modifier = { modifier = gate_modifier always = yes } 
+		 modifier = { modifier = gate_modifier always = yes }
 	}
 	8335 = { # Atlas pass
-		 modifier = { modifier = gate_modifier always = yes } 
+		 modifier = { modifier = gate_modifier always = yes }
+	}
+	8791 = { # Burma pass
+		 modifier = { modifier = gate_modifier always = yes }
 	}
 
 	#Aksum Fort Mod (Invictus)
@@ -3678,13 +3868,7 @@ provinces = { #Any entry must contain a comment with city name.
 	5666 = { #Tarim passes
 		modifier = { modifier = desert_pass always = yes }
 	}
-	5667 = { #Tarim passes
-		modifier = { modifier = desert_pass always = yes }
-	}
 	5668 = { #Tarim passes
-		modifier = { modifier = desert_pass always = yes }
-	}
-	5669 = { #Tarim passes
 		modifier = { modifier = desert_pass always = yes }
 	}
 	#Desert Passes (Invictus) - These Minor Desert Passes DO have an owner
@@ -3700,10 +3884,10 @@ provinces = { #Any entry must contain a comment with city name.
 	8368 = { # Bayadh pass
 		modifier = { modifier = minor_desert_pass always = yes }
 	}
-	8312 = { # 
+	8312 = { #
 		modifier = { modifier = minor_desert_pass always = yes }
 	}
-	8313 = { # 
+	8313 = { #
 		modifier = { modifier = minor_desert_pass always = yes }
 	}
 	8314 = { #
@@ -3723,7 +3907,7 @@ provinces = { #Any entry must contain a comment with city name.
 	}
 	8196 = { # Gholaia pass
 		modifier = { modifier = minor_desert_pass always = yes }
-	}	
+	}
 	8195 = { # Jashalam pass
 		modifier = { modifier = minor_desert_pass always = yes }
 	}
@@ -3754,8 +3938,9 @@ provinces = { #Any entry must contain a comment with city name.
 	8613 = { #
 		modifier = { modifier = minor_desert_pass always = yes }
 	}
-	#Pirates
 	
+	#Pirates
+
 	12 = { modifier = { modifier = pirate_haven_modifier always = yes } } #Lucanians
 	35 = { modifier = { modifier = pirate_haven_modifier always = yes } } #Frentani
 	64 = { modifier = { modifier = pirate_haven_modifier always = yes } } #Mesapians
@@ -3812,6 +3997,7 @@ provinces = { #Any entry must contain a comment with city name.
 	7216 = { modifier = { modifier = pirate_haven_modifier always = yes } } #Omana
 	7500 = { modifier = { modifier = pirate_haven_modifier always = yes } } #Red Sea
 	7528 = { modifier = { modifier = pirate_haven_modifier always = yes } } #Opone
+	8769 = { modifier = { modifier = pirate_haven_modifier always = yes } } #Arakan
 
 	#Buildings
 	103 = { # Plestia
@@ -3835,7 +4021,7 @@ provinces = { #Any entry must contain a comment with city name.
 		barracks_building = 1
 	}
 	225 = { # Lagania
-		barracks_building = 1	
+		barracks_building = 1
 	}
 	266 = { #Rhodos
 		modifier = { modifier = rhodian_glass_workshops always = yes }
@@ -3873,7 +4059,7 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 1
 	}
 	353 = { #Kypsela
-		latifundia_building = 1	
+		latifundia_building = 1
 	}
 	365 = { # Amphipolis
 		fortress_building = 1
@@ -3881,12 +4067,12 @@ provinces = { #Any entry must contain a comment with city name.
 	}
 	373 = { #Thesalonica
 		court_building = 1
-		town_hall_building = 2	
+		town_hall_building = 2
 	}
 	379 = { #Pella
 		court_building = 2
 		military_building = 1
-		town_hall_building = 3	
+		town_hall_building = 3
 	}
 	380 = { # Dion
 		temple_building = 1
@@ -3898,7 +4084,7 @@ provinces = { #Any entry must contain a comment with city name.
 	389 = { #Larissa
 		military_building = 1
 		aqueduct_building = 1
-		town_hall_building = 1	
+		town_hall_building = 1
 	}
 	390 = { # Pherai
 		town_hall_building = 2
@@ -3987,7 +4173,7 @@ provinces = { #Any entry must contain a comment with city name.
 		library_building = 2
 	}
 	509 = { #Pelusium
-		fortress_building = 1	
+		fortress_building = 1
 	}
 	539 = { #Krokodilopolis
 		library_building = 1
@@ -4014,7 +4200,7 @@ provinces = { #Any entry must contain a comment with city name.
 		barracks_building = 1
 	}
 	641 = { #Meroe
-		aqueduct_building = 2	
+		aqueduct_building = 2
 	}
 	659 = { #Gaza
 		fortress_building = 1
@@ -4022,7 +4208,7 @@ provinces = { #Any entry must contain a comment with city name.
 	}
 	660 = {	#Ascalon
 		fortress_building = 1
-		commerce_building = 1	
+		commerce_building = 1
 	}
 	722 = {
 		fortress_building = 1
@@ -4035,13 +4221,13 @@ provinces = { #Any entry must contain a comment with city name.
 		modifier = { modifier = tyrian_purple always = yes }
 	}
 	747 = { #Sidon
-		commerce_building = 1 	
+		commerce_building = 1
 	}
 	749 = { #Brochoi
 		modifier = { modifier = cedars_of_lebanon always = yes }
 	}
 	750 = {
-		commerce_building = 1	
+		commerce_building = 1
 	}
 	754 = {
 		aqueduct_building = 2
@@ -4053,7 +4239,7 @@ provinces = { #Any entry must contain a comment with city name.
 		modifier = { modifier = cedars_of_lebanon always = yes }
 	}
 	779 = { #Arados
-		commerce_building = 1 
+		commerce_building = 1
 	}
 	829 = { # Doura
 		fortress_building = 1
@@ -4062,7 +4248,7 @@ provinces = { #Any entry must contain a comment with city name.
 		library_building = 1
 	}
 	843 = { # Cholmaron
-		fortress_building = 1	
+		fortress_building = 1
 	}
 	846 = {
 		fortress_building = 1
@@ -4072,9 +4258,9 @@ provinces = { #Any entry must contain a comment with city name.
 		library_building = 1
 	}
 	871 = { # Mard
-		fortress_building = 1	
+		fortress_building = 1
 	}
-	4791 = {
+	874 = {
 		fortress_building = 1
 	}
 	880 = { # Artela
@@ -4087,7 +4273,7 @@ provinces = { #Any entry must contain a comment with city name.
 		barracks_building = 1
 	}
 	896 = { # Artemita
-		barracks_building = 1	
+		barracks_building = 1
 	}
 	911 = {
 		aqueduct_building = 2
@@ -4099,14 +4285,14 @@ provinces = { #Any entry must contain a comment with city name.
 	915 = { # Cutha
 		barracks_building = 1
 	}
-	972 = { 
-		barracks_building = 1 
+	972 = {
+		barracks_building = 1
 	}
 	933 = { # Apameia
 		library_building = 1
 	}
 	937 = { #Uruk
-		barracks_building = 1	
+		barracks_building = 1
 	}
 	940 = { # Alexandria, Meshan
 		library_building = 2
@@ -4116,11 +4302,11 @@ provinces = { #Any entry must contain a comment with city name.
 	941 = { # Forat
 		barracks_building = 1
 	}
-	942 = { 
-		barracks_building = 1 
+	942 = {
+		barracks_building = 1
 	}
 	981 = { # Hulwan
-		aqueduct_building = 2	
+		aqueduct_building = 2
 	}
 	1036 = { #Mastia/Carthago Nova
 		town_hall_building = 2
@@ -4129,20 +4315,11 @@ provinces = { #Any entry must contain a comment with city name.
 	1209 = {
 		modifier = { modifier = lapis_specularis_segobriga always = yes }
 	}
-	1335 = { # Balsa/Baesuri
-		port_building = 1
-	}
-	1339 = { # Onuba
-		port_building = 1
-	}
 	1344 = {
 		modifier = { modifier = gades_garum always = yes }
 	}
 	1415 = { #Tharsis
 		modifier = { modifier = mines_of_tharsis always = yes }
-	}
-	1464 = { # Ibasim
-		port_building = 1
 	}
 	1532 = {
 		fortress_building = 1
@@ -4190,7 +4367,7 @@ provinces = { #Any entry must contain a comment with city name.
 	1579 = {
 		basic_settlement_infratructure_building = 1
 	}
-	1601 = {	
+	1601 = {
 		barracks_building = 1
 	}
 	1669 = { # Chahuk
@@ -4294,7 +4471,7 @@ provinces = { #Any entry must contain a comment with city name.
 		library_building = 2
 	}
 	4473 = {
-		aqueduct_building = 2 
+		aqueduct_building = 2
 	}
 	4479 = { # Dasapura
 		barracks_building = 1
@@ -4305,23 +4482,6 @@ provinces = { #Any entry must contain a comment with city name.
 	4498 = { # Dhammanahadika
 		barracks_building = 1
 	}
-
-	#Molon Labe Arabia Felix
-
-	4650 = { #Eudaimon
-		commerce_building = 1
-	}
-
-	4685 = { #Qana
-		modifier = { modifier = incense_fields_qana always = yes }
-	}
-
-	4690 = { #Nashaq
-		local_forum_building = 1
-	} 
-
-	##
-
 	4976 = {
 		barracks_building = 1
 	}
@@ -4383,7 +4543,7 @@ provinces = { #Any entry must contain a comment with city name.
 		barracks_building = 1
 	}
 	6560 = { #Zranka
-		barracks_building = 1	
+		barracks_building = 1
 	}
 	6612 = {
 		aqueduct_building = 3
@@ -4393,7 +4553,7 @@ provinces = { #Any entry must contain a comment with city name.
 		modifier = { modifier = alexandria always = yes }
 	}
 	6648 = { # Drapsaca
-		fortress_building = 1	
+		fortress_building = 1
 	}
 	6674 = { # Emshi
 		barracks_building = 1
@@ -4402,7 +4562,7 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 2
 	}
 	6686 = { # Alexandreia Tarmita
-		modifier = { modifier = alexandria always = yes }	
+		modifier = { modifier = alexandria always = yes }
 	}
 	6688 = { # Alexandria Oxiana
 		modifier = { modifier = alexandria always = yes }
@@ -4419,17 +4579,17 @@ provinces = { #Any entry must contain a comment with city name.
 	6744 = { # Kashgar
 		aqueduct_building = 3
 	}
-	6840 = { # Maltecoria 
+	6840 = { # Maltecoria
 		aqueduct_building = 1
 	}
 	6857 = {
 		aqueduct_building = 3
 	}
 	6862 = { # Nousaripa
-		barracks_building = 1	
+		barracks_building = 1
 	}
 	6865 = { # Paunar
-		barracks_building = 1	
+		barracks_building = 1
 	}
 	6932 = { # Koroula
 		barracks_building = 1
@@ -4457,7 +4617,7 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 2
 	}
 	7082 = { # Samapa
-		aqueduct_building = 2	
+		aqueduct_building = 2
 	}
 	7122 = { # Jagdalpur
 		aqueduct_building = 1
@@ -4471,15 +4631,6 @@ provinces = { #Any entry must contain a comment with city name.
 	7199 = { # Gerrha (Capital of Gerrha)
 		aqueduct_building = 1
 	}
-
-	#Molon Labe Arabia Felix
-
-	7202 = { #Tylos
-		modifier = { modifier = pearl_divers_tylos always = yes }
-		commerce_building = 2
-	}
-
-
 	7300 = { # Ayanakagraha
 		aqueduct_building = 4
 	}
@@ -4516,21 +4667,26 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 2
 	}
 
-	#Molon Labe Arabia Felix
+	### Arabia Felix additions
+
+	7202 = { #Tylos
+		modifier = { modifier = pearl_divers_tylos always = yes }
+		commerce_building = 2
+	}
 
 	7530 = { #Soqotra
 		modifier = { modifier = dragonsblood_soqotra always = yes }
 	}
 
-	#Molon Labe Arabia Felix
-
-	7576 = { #Ta'if
-		local_forum_building = 1
-	} 
-
 	7592 = { #Ganagaras
 		modifier = { modifier = royal_ironworks_ganagaras always = yes }
 	}
+
+	4685 = { #Qana
+		modifier = { modifier = incense_fields_qana always = yes }
+	}
+
+	###
 
 	7657 = {
 		aqueduct_building = 2
@@ -4546,9 +4702,12 @@ provinces = { #Any entry must contain a comment with city name.
 	8003 = { # Sikyon
 		fortress_building = 1
 	}
-	
+	8399 = { # Gelon
+		commerce_building = 1
+	}
+
 	#Special Places:
-	
+
 	#Alexandrias (ie greek Settlements founded by Alexander, small civilization boost.
 	516 = { #By the Nile
 		modifier = { modifier = alexandria always = yes }
@@ -4607,7 +4766,7 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 1
 	}
 	6895 = {
-		aqueduct_building = 2 
+		aqueduct_building = 2
 	}
 	6978 = {
 		modifier = { modifier = lion_of_sigiriya_pmod always = yes }
@@ -4628,10 +4787,10 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 1
 	}
 	7138 = {
-		aqueduct_building = 3 
+		aqueduct_building = 3
 	}
 	7307 = {
-		aqueduct_building = 2 
+		aqueduct_building = 2
 	}
 	7484 = { # Bhawaniganj
 		barracks_building = 1
@@ -4654,13 +4813,13 @@ provinces = { #Any entry must contain a comment with city name.
 		aqueduct_building = 1
 		library_building = 5
 	}
-	
+
 	#Pyramids of Giza
 	500 = {
 		#modifier = { modifier = pyramid_complex always = yes }
 	}
-	
-	
+
+
 	#Anu Temple of Uruk
 	937 = {
 		modifier = { modifier = anu_temple always = yes }
@@ -4674,7 +4833,7 @@ provinces = { #Any entry must contain a comment with city name.
 		temple_building = 1
 		#modifier = { modifier = mausoleum_of_mausolos always = yes }
 	}
-	
+
 	#Bosporus
 	1453 = {
 		modifier = { modifier = bosporus always = yes }
@@ -4685,7 +4844,7 @@ provinces = { #Any entry must contain a comment with city name.
 	241 = {
 		modifier = { modifier = bosporus always = yes }
 	}
-	
+
 	#Hellespont
 	256 = {
 		modifier = { modifier = hellespont always = yes }
@@ -4699,7 +4858,7 @@ provinces = { #Any entry must contain a comment with city name.
 	257 = {
 		modifier = { modifier = hellespont always = yes }
 	}
-	
+
 	#Pillars of Hercules
 	1347 = {
 		modifier = { modifier = pillars_of_hercules always = yes }
@@ -4707,26 +4866,27 @@ provinces = { #Any entry must contain a comment with city name.
 	3061 = {
 		modifier = { modifier = pillars_of_hercules always = yes }
 	}
-	
+
 	439 = { #Olympia
 		modifier = { modifier = olympic_games_modifier always = yes }
 		#modifier = { modifier = zeus_temple_at_olympia always = yes }
 	}
-	
+
+	3852 = { # Frisian Terp - added in Invictus
+		modifier = { modifier = north_sea_terps always = yes }
+	}
+
 	########################################
 	# Barbarian Spawn Spots
 	########################################
-	
-	#Egypt & Surroundings
-	
-	
+
+	#Egypt & Africa
+
+
 	5294 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
 	5293 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
-	5321 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
 	5334 = {
@@ -4750,25 +4910,19 @@ provinces = { #Any entry must contain a comment with city name.
 	5355 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	5366 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
-	5367 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
 	5947 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	5948 = {
+	5974 = {
+		modifier = { modifier = major_barbarian_spawn_place }
+	}
+	5975 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	5987 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
 	5989 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
-	5991 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
-	5992 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
 	5993 = {
@@ -4783,7 +4937,45 @@ provinces = { #Any entry must contain a comment with city name.
 	5157 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	
+	8115 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8116 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8117 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8118 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8119 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8692 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8694 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8717 = {
+		modifier = { modifier = major_barbarian_spawn_place }
+	}
+	8718 = {
+		modifier = { modifier = major_barbarian_spawn_place }
+	}
+	8719 = {
+		modifier = { modifier = minor_barbarian_spawn_place }
+	}
+	8720 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8737 = {
+		modifier = { modifier = minor_barbarian_spawn_place }
+	}
+
+
+
 	#Mauretania
 	5984 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
@@ -4794,10 +4986,7 @@ provinces = { #Any entry must contain a comment with city name.
 	5986 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	5987 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
-	
+
 	#Germany
 	5023 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
@@ -4857,12 +5046,12 @@ provinces = { #Any entry must contain a comment with city name.
 	5184 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	
-	
+
+
 	5093 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	
+
 	#East
 	5217 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
@@ -4936,7 +5125,7 @@ provinces = { #Any entry must contain a comment with city name.
 	6064 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	
+
 	#India
 	5248 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
@@ -4962,9 +5151,6 @@ provinces = { #Any entry must contain a comment with city name.
 	5313 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	5314 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
 	5315 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
@@ -4972,6 +5158,9 @@ provinces = { #Any entry must contain a comment with city name.
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
 	5378 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	5669 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
 	5962 = {
@@ -5016,17 +5205,8 @@ provinces = { #Any entry must contain a comment with city name.
 	6056 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	7051 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
-	7021 = {
-		modifier = { modifier = generic_barbarian_spawn_place }
-	}
 	7357 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
-	}
-	7299 = {
-		modifier = { modifier = major_barbarian_spawn_place }
 	}
 	7640 = {
 		modifier = { modifier = major_barbarian_spawn_place }
@@ -5034,18 +5214,25 @@ provinces = { #Any entry must contain a comment with city name.
 	7641 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	7642 = {
-		modifier = { modifier = major_barbarian_spawn_place }
-	}
 	7643 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
-	7644 = {
+	8792 = {
+		modifier = { modifier = generic_barbarian_spawn_place }
+	}
+	8794 = {
+		modifier = { modifier = minor_barbarian_spawn_place }
+	}
+	8803 = {
+		modifier = { modifier = major_barbarian_spawn_place }
+	}
+
+	#The North
+
+	8550 = {
 		modifier = { modifier = generic_barbarian_spawn_place }
 	}
 }
-
-#Road Network
 
 road_network = {
 	1 = 15		#Roma - Ostia
@@ -5055,7 +5242,7 @@ road_network = {
 	4 = 5		#Apii - Fundi
 	5 = 6		#Fundi - Volternum
 	6 = 8		#Volternum - Telesia
-	
+
 	#Persian Royal Road - Northern Route
 	287 = 292 #Smyrna - Sardis
 	292 = 300 #Sardis - Maionia
@@ -5097,14 +5284,17 @@ road_network = {
 	872 = 832 #Ta'idu
 	832 = 830 #Nisibis
 	830 = 873 #Hassu
+	873 = 868 #Dhahir
+	868 = 863 #Balad
 	863 = 862 #Niniveh
 	862 = 881 #Kilizu
 	881 = 880 #Arbela
 	881 = 957 #Tell Mahuz
 	957 = 886 #Nuzi
+	886 = 892 #Dura
 	892 = 893 #Samarra
 	893 = 895 #Awana
-	895 = 899 #Bagdata
+	895 = 898 #Nahrawan
 	898 = 914 #Opis
 	914 = 911 #Seleukia Magna
 	911 = 913 #Vologesias
@@ -5116,6 +5306,7 @@ road_network = {
 	929 = 930 #Tell Laham
 	930 = 962 #Tell Khay
 	962 = 933 #Apamea
+	933 = 934 #Kashkar
 	934 = 970 #Madhar
 	970 = 975 #Cissa
 	975 = 946 #Shushan/Susa
@@ -5139,7 +5330,7 @@ road_network = {
 	4976 = 4979 #Rahjerd
 	4979 = 4981 #Meyghan
 	4981 = 4982 #Tabarte
-	
+
 	# Mazaka - Cilicia
 	1799 = 1800 # Mazaka-Soandos
 	1800 = 1900 # Sasima
@@ -5261,7 +5452,7 @@ road_network = {
 	3454 = 6543 #Suphtha
 	6543 = 6663 #Serakhis
 	6663 = 6664 #Alexandria
-	
+
 	#Persepolis -> East
 	4799 = 3403 #Persepolis - Baktehgan
 	3403 = 3400 #Bakhtegan
@@ -5274,7 +5465,7 @@ road_network = {
 	6576 = 6575 #Basma
 	6575 = 6577 #Bampur
 	6577 = 6513 #Pura
-	
+
 	#Persian Royal Road - Southern Route
 	290 = 1969 #Ephesos - Leukophrys
 	1969 = 1966 #Tralles
@@ -5321,7 +5512,7 @@ road_network = {
 	1870 = 812 #Aliaria
 	812 = 811 #Doliche
 	811 = 810 #Zeugma
-	
+
 	#Syrian route
 	790 = 791 # Antiocha - Darkus
 	791 = 787 #Lysias
@@ -5364,23 +5555,33 @@ road_network = {
 	507 = 501 #Heliopolis
 	501 = 536 #Babylon (Egypt)
 	536 = 500 #Memphis
-	
+
 	#Euphrat route
 	793 = 798 #Gindaros - Beroia
 	798 = 808 #Beroia
 	808 = 807 #Hierapolis
+	807 = 809 #Europos
+	809 = 810 #Zeugma
+	814 = 847 #Dausara
 	807 = 805 #Hierapolis-Amphipolis
 	805 = 814 #Barbalissos
+	814 = 847 #Daurara
+	847 = 804 #Nikephorion
 	804 = 806 #Birtha
 	806 = 827 #Circesium
-	827 = 829 #Doura
-	829 = 906 #Anatho
+	827 = 828 #Terqa
+	828 = 829 #Doura
+	829 = 908 #Hindanu
+	908 = 907 #Haradu
+	907 = 906 #Anatho
 	906 = 953 #Bijan
 	953 = 954 #Haditha
-	954 = 903 #Kerbala
-	903 = 918 #Babilim
+	954 = 904 #Idu
+	904 = 902 #Mische
+	902 = 909 #Naarda
+	909 = 910 #Sippar
 	910 = 918 #Babylon
-	
+
 	###Mauryan Royal Road / Alexandria ad Caucasum - Tamralipti
 	#West Route/Alexandria-Ahicchatra
 	6611 = 6613 # Alexandria ad Caucasum - Hadda
@@ -5393,15 +5594,15 @@ road_network = {
 	7319 = 7314 # Taxila
 	7314 = 4322 # Nikaia
 	4322 = 4316 # Boukephalia
-	4316 = 7399 # Rajagrha
-	7399 = 4399 # Kalliope Indike
-	4399 = 4340 # Sakala
+	4316 = 4315 # Dyrte
+	4315 = 4340 # Sakala
 	4340 = 4346 # Madra
 	4346 = 4379 # Phegus
 	4379 = 4392 # Sarwmanpur
 	4392 = 4390 # Jalandhara
-	4390 = 4401 # Rupar
-	4401 = 4411 # Sthanishvara
+	4390 = 4418 # Satadru
+	4418 = 4416 # Sunam
+	4416 = 4411 # Sthanisvara
 	4411 = 4412 # Karnal
 	4412 = 4404 # Hastinapur
 	4404 = 4421 # Varana
@@ -5413,7 +5614,7 @@ road_network = {
 	7375 = 7376 # Asani
 	7376 = 4430 # Kosambi
 	4430 = 4428 # Prayaga
-	4428 = 4432 # Sajahati
+	4428 = 4431 # Sumsumaragiri
 	4431 = 4465 # Bhabua
 	4465 = 4441 # Alavi
 	4441 = 4440 # Pataliputra
@@ -5424,8 +5625,8 @@ road_network = {
 	4447 = 7327 # Karnasuvarna
 	7327 = 7328 # Vardhamana
 	7328 = 7345 # Nabadwipa
-	7345 = 7362 # Mallabhum
-	7362 = 7177 # Tamralipti
+	7345 = 7393 # Kasipur
+	7393 = 7177 # Tamralipti
 
 	# Ionia
 	252 = 254 # Kyzikos - Zeleia
@@ -5444,26 +5645,6 @@ road_network = {
 	1808 = 290 # Ephesos
 	1969 = 1972 # Magnesia-Priene
 	278 = 279 # Pergamon-Elaia
-	
-	892 = 955	#Dura-Sinn
-	886 = 955	#Nuzi-Sinn
-	
-	4428 = 4432	#Prayaga-Sajahati
-	4431 = 4432	#Sumsumaragiri-Sajahati
-	
-	895 = 896	#Asana-Artemita
-	933 = 973	#Apamea-Bakusaya
-	934 = 973	#Kashkar-Bakusaya
-	814 = 803	#Barbalissus-Resafa
-	804 = 803	#Nicephorium-Resafa
-	868 = 861	#Dhahir-Apqu
-	862 = 861	#Nineveh-Apqu
-}
-
-#Trade
-
-trade = { #If any are changed also change trade agreements.
-	
 }
 
 #Anatolia
@@ -6213,9 +6394,9 @@ country = {
 		#	government = tribal_kingdom
 		#	primary_culture = kennataian
 		#	religion = anatolian_religion
-#
+	#
 	#		capital = 1877
-#
+	#
 	#		own_control_core = {
 	#			1877 1878 1979 1982
 	#		}
@@ -6452,7 +6633,7 @@ country = {
 			}
 		}
 		
-#Arabia
+	#Arabia
 
 		#Arabia
 		
@@ -6755,7 +6936,7 @@ country = {
 		
 		SIR = {
 			government = tribal_kingdom
-			primary_culture = silurian ## HMO V2.1 DaFoogles Heritages
+			primary_culture = demetian ## HMO V2.1 DaFoogles Heritages
 			religion = druidism
 			centralization=5
 
@@ -8520,7 +8701,7 @@ country = {
 		}
 		
 		DAR = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = voluntian
 			religion = druidism
 			centralization = 0
@@ -8533,7 +8714,7 @@ country = {
 		}
 
 		ELA = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = voluntian
 			religion = druidism
 			centralization = 0
@@ -8546,7 +8727,7 @@ country = {
 		}
 
 		MNA = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = ivernian
 			religion = druidism
 			centralization = 0
@@ -8559,7 +8740,7 @@ country = {
 		}
 
 		CAU = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = voluntian
 			religion = druidism
 			centralization = 0
@@ -8572,7 +8753,7 @@ country = {
 		}
 
 		COR = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = ivernian
 			religion = druidism
 			centralization = 0
@@ -8585,7 +8766,7 @@ country = {
 		}
 
 		IVE = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = ivernian
 			religion = druidism
 			centralization = 0
@@ -8598,7 +8779,7 @@ country = {
 		}
 
 		USD = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = ivernian
 			religion = druidism
 			centralization = 0
@@ -8611,7 +8792,7 @@ country = {
 		}
 
 		ROB = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = voluntian
 			religion = druidism
 			centralization = 0
@@ -8624,7 +8805,7 @@ country = {
 		}
 
 		VEN = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = voluntian
 			religion = druidism
 			centralization = 0
@@ -8637,7 +8818,7 @@ country = {
 		}
 
 		BGA = {
-			government = tanist_chiefdom
+			government = tribal_chiefdom
 			primary_culture = ivernian
 			religion = druidism
 			centralization = 0
@@ -12436,7 +12617,7 @@ country = {
 			}
 		
 			own_control_core = 	{ 
-				6951 6965 6971 6982
+				6951 6965 6971 6982 8288 5314 8285 8286 8287 8290 8284 8289
 			}
 		}
 		
@@ -12608,7 +12789,7 @@ country = {
 		
 			own_control_core = 	{ 
 				7340 7331 7332 7333 7334 7356 7401 7490 7491 7494 7495 7496 #samatata_area
-				7330 7394 7395 7396
+				7330 7394 7395 7396 8766
 			}
 		}
 		
@@ -12796,7 +12977,7 @@ country = {
 			own_control_core = 	{ 
 				7339 7341 7342 7347 7348 7349 7350 7351 7352 7353 7354 7355 #kamarupa_region
 				7323 7343 7344 7346 7652 7653
-				7324 7654
+				7324 7654 8783 8790
 			}
 		}
 		
@@ -12973,7 +13154,7 @@ country = {
 			capital = 7184
 
 			own_control_core = 	{
-				7184 7183 6755 6754 6753
+				5665 7184 8761 8762 8763
 			}
 		}
 		
@@ -12991,25 +13172,7 @@ country = {
 			capital = 6741
 
 			own_control_core = 	{
-				6741 6743 6745 6747 6748
-			}
-		}
-		
-		LOL = {
-			government = despotic_monarchy
-			primary_culture = saka
-			religion = eastern_animism
-			technology={
-				military_tech={ level=1 progress=0 }
-				civic_tech={ level=1 progress=0 }
-				oratory_tech={ level=1 progress=0 }
-				religious_tech= { level=1 progress=0  }
-			}
-
-			capital = 6749
-
-			own_control_core = 	{
-				6749 6752 6750
+				6741 6743  
 			}
 		}
 		
@@ -13058,7 +13221,7 @@ country = {
 			capital = 6744
 			
 			own_control_core = {
-				6744 6761 6757 6758 6746
+				6744 6761 6757 6758 6746 8759 8760
 			}
 		}
 		
@@ -17100,6 +17263,203 @@ country = {
 						4862 4864 4863 6282 6286 6283 6287 6284 6288 6281
 					}
 				}
+
+				NYA = {
+					government = tribal_kingdom
+					primary_culture = pyu
+					religion = bon_religion
+					capital = 8777
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8777 8805 8781
+					}
+				}
+				
+				YHK = {
+					government = tribal_kingdom
+					primary_culture = pyu
+					religion = bon_religion
+					capital = 8774
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8774 8788
+					}
+				}
+
+				BKT = {
+					government = tribal_kingdom
+					primary_culture = pyu
+					religion = bon_religion
+					capital = 8772
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8772 8771 8770 8769 8786
+					}
+				}
+				
+				BNN = {
+					government = tribal_kingdom
+					primary_culture = pyu
+					religion = bon_religion
+					capital = 8773
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8773 8811
+					}
+				}
+
+				TTM = {
+					government = tribal_kingdom
+					primary_culture = pyu
+					religion = bon_religion
+					capital = 8775
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8775 8806 8808 8809 8807 8810
+					}
+				}
+				
+				HWK = {
+					government = tribal_kingdom
+					primary_culture = pyu
+					religion = bon_religion
+					capital = 8776
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8776 8804
+					}
+				}
+
+				HAL = {
+					government = tribal_kingdom
+					primary_culture = pyu
+					religion = bon_religion
+					capital = 8778
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8778 8789 8779 8780 
+					}
+				}
+
 				#Chattia
 				X01 = {
 					government = tribal_chiefdom
@@ -18180,7 +18540,7 @@ country = {
 				
 				#Nagnatia
 				X55 = {
-					government = tanist_chiefdom
+					government = tribal_chiefdom
 					primary_culture = voluntian
 					religion = druidism
 					centralization=0
@@ -18193,7 +18553,7 @@ country = {
 				}
 				#Auteinia
 				X56 = {
-					government = tanist_chiefdom
+					government = tribal_chiefdom
 					primary_culture = voluntian
 					religion = druidism
 					centralization=0
@@ -18206,7 +18566,7 @@ country = {
 				}
 				#Gangania
 				X57 = {
-					government = tanist_chiefdom
+					government = tribal_chiefdom
 					primary_culture = voluntian
 					religion = druidism
 					centralization=0
@@ -18220,7 +18580,7 @@ country = {
 				
 				#Monapia
 				X58 = {
-					government = tanist_chiefdom
+					government = tribal_chiefdom
 					primary_culture = monapian
 					religion = druidism
 					centralization=0
@@ -18232,5 +18592,177 @@ country = {
 					}
 				}
 
+				XIW = {
+					government = tribal_kingdom
+					primary_culture = tocharian
+					religion = eastern_animism
+					capital = 8764
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					own_control_core = {
+						8764
+					}
+				}
+				
+				WTO = {
+					government = tribal_kingdom
+					primary_culture = tocharian
+					religion = eastern_animism
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					capital = 6753
+					own_control_core = {
+						6753 6754
+					}
+				}
+				
+				GMO = {
+					government = tribal_kingdom
+					primary_culture = tocharian
+					religion = eastern_animism
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					capital = 6755
+					own_control_core = {
+						6755 7183
+					}
+				}
+				
+				YMI = {
+					government = tribal_kingdom
+					primary_culture = khotanese
+					religion = eastern_animism
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					capital = 6747
+					own_control_core = {
+						6745 6747
+					}
+				}
+				
+				JJE = {
+					government = tribal_kingdom
+					primary_culture = tocharian
+					religion = eastern_animism
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					capital = 8765
+					own_control_core = {
+						6748 6750 8765
+					}
+				}
+				
+				QIM = {
+					government = tribal_kingdom
+					primary_culture = tocharian
+					religion = eastern_animism
+					technology = {
+						military_tech = {
+							level = 1
+							progress = 0
+						}
+						civic_tech = {
+							level = 1
+							progress = 0
+						}
+						oratory_tech = {
+							level = 1
+							progress = 0
+						}
+						religious_tech = {
+							level = 1
+							progress = 0
+						}
+					}
+					capital = 6749
+					own_control_core = {
+						6749 6752
+					}
+				}
+
 	}
 }
+
+trade = { #If any are changed also change trade agreements.
+}
+

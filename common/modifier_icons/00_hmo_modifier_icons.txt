@@ -15,15 +15,6 @@ fiftykman_cost_modifier = {
 tributary_terrain_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
 }
-slave_move_yes = {
-    positive = "gfx/interface/icons/modifiers/slaves_move_cost_modifier.dds"
-}
-slave_move_no = {
-    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
-}
-slave_hub_move_no = {
-    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
-}
 civil_war_unrest = {
     positive = "gfx/interface/icons/modifiers/local_unrest.dds"
 }
@@ -65,6 +56,14 @@ aqueduct_maintenance = {
 
 navy_maint_cost = {
     positive = "gfx/interface/icons/modifiers/mercenary_naval_maintenance_cost.dds"
+}
+
+sufficient_ports_maintenance = {
+    positive = "gfx/interface/icons/modifiers/navy_maintenance_cost.dds"
+}
+
+insufficient_ports_maintenance = {
+    positive = "gfx/interface/icons/modifiers/navy_maintenance_cost.dds"
 }
 
 ## TERRAIN
@@ -207,7 +206,7 @@ industry_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
 
-
+### MISC
 subject_player_client_state_pays_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
@@ -270,4 +269,8 @@ cash2k_cost_modifier = {
 
 hill_fort_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+
+metropolitan_walls = {
+    positive = "gfx/interface/icons/modifiers/fort_level.dds"
 }

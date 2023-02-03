@@ -206,12 +206,12 @@
 
 1033={ #Akra Leuke
 	terrain="hills"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="dye"
+	culture="contestanian"
+	religion="animism"
+	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
-	province_rank="city"
+	province_rank="settlement"
 	citizen={
 		amount=1
 	}
@@ -221,7 +221,7 @@
 	tribesmen={
 		amount=4
 	}
-	port_building=3
+	port_building=1
 }
 
 1034={ #Ilici
@@ -258,12 +258,17 @@
 
 1036={ #Mastia
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="bastetanian"
+	religion="animism"
 	trade_goods="precious_metals"
 	civilization_value=19
 	barbarian_power=0
 	province_rank="city"
+	citizen={
+		culture="carthaginian"
+		religion="carthaginian_pantheon"
+		amount=2
+	}
 	citizen={
 		amount=2
 	}
@@ -276,7 +281,7 @@
 	tribesmen={
 		amount=8
 	}
-	port_building=3
+	port_building=1
 }
 
 1037={ #Alonis
@@ -1115,12 +1120,12 @@
 
 1274={ #Longuntica
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="dye"
-	civilization_value=20
+	culture="bastetanian"
+	religion="animism"
+	trade_goods="base_metals"
+	civilization_value=10
 	barbarian_power=0
-	province_rank="city"
+	province_rank="settlement"
 	freemen={
 		amount=1
 	}

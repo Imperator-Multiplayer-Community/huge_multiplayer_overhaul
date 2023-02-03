@@ -6,10 +6,10 @@ engineer_cohort = {
 
 	reduces_road_building_cost = yes
 	watercrossing_negation = 1.0
-	siege_impact = 1.0
+	siege_impact = 1.5
 
 	maneuver = 1
-	movement_speed = 2.5
+	movement_speed = 2.0
 
 	light_infantry = 0.1
 	heavy_infantry = 0.1
@@ -24,13 +24,13 @@ engineer_cohort = {
 	attrition_weight = 1.0
 	attrition_loss = 0.1
 	food_consumption = 0.05
-	food_storage = 5
+	food_storage = 10
 
 	morale_damage_taken = 2.0
 
 	build_time = 120
 	build_cost = {
-		gold = 45
+		gold = 68
 		manpower = 1
 	}
 

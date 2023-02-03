@@ -5,3 +5,11 @@
 opinion_embargo = {
 	value = -100
 }
+
+is_player_client_status = {
+	value = 100
+}
+
+is_player_client_overlord_status = {
+	value = 100
+}

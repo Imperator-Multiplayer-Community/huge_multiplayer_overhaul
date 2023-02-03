@@ -724,7 +724,7 @@ task.6 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = original_thinker
 								has_trait = brave
 							}
@@ -812,7 +812,7 @@ task.7 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = tactically_inflexible
 								has_trait = coward
 							}
@@ -898,7 +898,7 @@ task.8 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = improviser
 								has_trait = oarmaster
 							}
@@ -988,7 +988,7 @@ task.9 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = cautious
 								has_trait = paralysis
 							}
@@ -1075,7 +1075,7 @@ task.10 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = aggressive
 								has_trait = disciplined
 							}
@@ -1163,7 +1163,7 @@ task.11 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = arrogant
 								has_trait = maimed
 							}
@@ -1250,7 +1250,7 @@ task.12 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = tactician
 								has_trait = steadfast
 							}
@@ -1339,7 +1339,7 @@ task.13 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = weak_willed
 								has_trait = cancer
 							}
@@ -1426,7 +1426,7 @@ task.14 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = orator
 								has_trait = secure
 							}
@@ -1514,7 +1514,7 @@ task.15 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = cold
 								has_trait = one_eyed
 							}
@@ -1601,7 +1601,7 @@ task.16 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = orator
 								has_trait = secure
 							}
@@ -1690,7 +1690,7 @@ task.17 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = deceitful
 								has_trait = brain_damaged
 							}
@@ -1776,7 +1776,7 @@ task.18 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = poet
 								has_trait = intelligent
 							}
@@ -1865,7 +1865,7 @@ task.19 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = depressed
 								has_trait = lunatic
 							}
@@ -1952,7 +1952,7 @@ task.20 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = ambitious
 								has_trait = lustful
 							}
@@ -2039,7 +2039,7 @@ task.21 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = miserly
 								has_trait = gluttonous
 							}
@@ -2126,7 +2126,7 @@ task.22 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = shrewd
 								has_trait = obsessive
 							}
@@ -2214,7 +2214,7 @@ task.23 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = lazy
 								has_trait = corrupt
 							}
@@ -2301,7 +2301,7 @@ task.24 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = shrewd
 								has_trait = obsessive
 							}
@@ -2388,7 +2388,7 @@ task.25 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = wounded
 								has_trait = guileless
 							}
@@ -2475,7 +2475,7 @@ task.26 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = wise
 								has_trait = polymath
 							}
@@ -2562,7 +2562,7 @@ task.27 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = arbitrary
 								has_trait = pox
 							}
@@ -2648,7 +2648,7 @@ task.28 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = scholar
 								has_trait = honest
 							}
@@ -2737,7 +2737,7 @@ task.29 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = abrasive
 								has_trait = incapable
 							}
@@ -2823,7 +2823,7 @@ task.30 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = zealous
 								has_trait = righteous
 							}
@@ -2912,7 +2912,7 @@ task.31 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = lapsed
 								has_trait = epileptic
 							}
@@ -2999,7 +2999,7 @@ task.32 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = pious
 								has_trait = self_controlled
 							}
@@ -3088,7 +3088,7 @@ task.33 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = jealous
 								has_trait = plague
 							}
@@ -3175,7 +3175,7 @@ task.34 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = good_natured
 								has_trait = ambitious
 							}
@@ -3263,7 +3263,7 @@ task.35 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = sceptical
 								has_trait = dementia
 							}
@@ -3351,7 +3351,7 @@ task.36 = { # Final resolution
 				95 = {
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = devout
 								has_trait = trusting
 							}
@@ -3440,7 +3440,7 @@ task.37 = { # Final resolution
 				35 = { # awful result
 					trigger = {
 						scope:target = {
-							NOT = {
+							NAND = {
 								has_trait = foolish
 								has_trait = schizophrenic
 							}

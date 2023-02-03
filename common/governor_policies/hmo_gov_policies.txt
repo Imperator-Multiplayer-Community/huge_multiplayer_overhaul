@@ -1,0 +1,159 @@
+﻿#Scope is State when checked.
+
+
+bleed_them_dry = {
+	province = {
+		local_monthly_food_modifier = -0.25
+		local_monthly_state_loyalty = -0.25
+		local_tax_modifier = 0.3
+		state_commerce_modifier = 0.2
+		local_slaves_happyness = -0.1
+	}
+
+	ai_will_do = {
+		modifier = {
+			add = 10
+			governor_or_ruler = { corruption >= 50 }
+			governor_or_ruler = { finesse > 0 }
+		}
+		modifier = {
+			factor = 0
+			governor_or_ruler = { is_ruler = yes }
+		}
+		modifier = {
+			factor = 0
+			governor_or_ruler = { employer = { is_ai = yes } }
+		}
+		modifier = {
+			factor = 0
+			has_state_food <= 800
+		}
+	}
+}
+
+
+harsh_treatment = {
+	province = {
+		local_migration_speed = 1
+		local_migration_attraction = -6
+		local_monthly_state_loyalty = 0.3
+		local_output_modifier = -0.4
+		local_pop_demotion_speed_modifier = 1
+		local_slaves_happyness = -0.2
+	}
+
+	ai_will_do = {
+		modifier = {
+			add = 35
+			state_level_loyalty < 60
+		}
+
+		modifier = { # Won't do if province is contented
+			factor = 0
+			state_level_loyalty > 60
+		}
+	}
+	
+	
+	#on_action = acquisition_of_wealth_pulse
+}
+
+centralize_pops = {
+
+	province = {
+		local_migration_speed = 5
+	}
+	
+	capital = {
+		local_migration_attraction = 3
+	}
+	non_capital = {
+		local_migration_attraction = -10
+	}
+
+	ai_will_do = {
+		modifier = { #
+			add = 21
+			state_level_loyalty > 60
+			any_state_province = {
+				is_state_capital = yes
+				has_city_status = yes
+				total_population <= 36 
+			}
+			any_state_province = {
+				count = all
+				dominant_province_culture = governor_or_ruler.culture
+				owner = {
+					any_country_culture = {
+						is_integrated = yes
+						this.culture = prev.prev.culture
+					}
+				}
+			}
+		}
+
+		modifier = { # Won't do if state is disloyal
+			factor = 0
+			state_level_loyalty < 60
+		}
+
+		modifier = { # Won't do if state capital is overpopulated
+			factor = 0
+			any_state_province = {
+				is_state_capital = yes
+				has_city_status = yes
+				total_population >= population_cap
+			}
+		}
+	}
+
+	#deprecated on_action = centralize_pops_pulse
+
+}
+
+decentralize_pops = {
+
+	province = {
+		local_migration_speed = 5
+	}
+	
+	capital = {
+		local_migration_attraction = -10
+	}
+	non_capital = {
+		local_migration_attraction = 3
+	}
+
+
+	ai_will_do = {
+		modifier = { #
+			add = 21
+			state_level_loyalty > 60
+			any_state_province = {
+				is_state_capital = yes
+				has_city_status = yes
+				total_population >= population_cap
+			}
+		}
+
+		modifier = { # Won't do if state is disloyal
+			factor = 0
+			state_level_loyalty < 60
+		}
+
+		modifier = { # Won't do if state capital is underpopulated
+			factor = 0
+			any_state_province = {
+				is_state_capital = yes
+				has_city_status = yes
+				total_population < population_cap
+			}
+		}
+	}
+
+	#deprecatedon_action = decentralize_pops_pulse
+
+}
+
+
+

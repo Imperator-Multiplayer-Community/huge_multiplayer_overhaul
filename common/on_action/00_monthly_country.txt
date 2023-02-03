@@ -19,16 +19,15 @@
 		me_thrace_2_paper_kingdom.3 # Odrysia - revolt or not?
 		me_thrace_2_paper_kingdom.30 # Odrysia - losing war with Thrace, surrender or not?
 		#slave_revolts.3
-		OTG.1
-		slave_move.1
 		counterintel.1
 		hmo_civil_war.1 # civil war
 		high_tyranny.1 # adds high tyranny
 		high_tyranny.2 # removed high tyranny
 		high_tyranny.3 # adds low tyranny
 		high_tyranny.5 # removes low tyranny
-		aqueduct_maintenance.1 # adds maintenance to province
 		navy_maint.1 # scales navy maintenance
+		navy_maint.2 # gives navy maintenance modifiers per ports to ships ratio
+		food_share.1 # shares food with allies
 	}
 	
 	random_events = {

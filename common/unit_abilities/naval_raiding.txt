@@ -11,38 +11,41 @@
 		unit_owner = {
 			OR = {
 				num_of_cities < 1
-				NOR = {
-					heritage = pirate_heritage
-					is_tradition_tree_allowed = naval_traditions
-				}
+				#NOR = {
+				#	heritage = pirate_heritage
+				#	is_tradition_tree_allowed = naval_traditions
+				#}
 			}
 		}
 	}
 
 	allow = {
 		unit_owner = {
-			trigger_if = {
-				limit = {
-					heritage = pirate_heritage
-				}
-				heritage = pirate_heritage
-			}
-			trigger_else_if = {
-				limit = {
-					is_tradition_tree_allowed = naval_traditions
-				}
-				OR = {
-					has_military_bonus = greek_antigonid_path_4
-					has_military_bonus = aryan_river_path_3
-					has_military_bonus = illyrian_piracy_path_1
-					has_military_bonus = lydian_path_1
-					has_military_bonus = celt_iberian_path_c_3
-					has_military_bonus = arabian_path_4
-				}
-				
+			#trigger_if = {
+			#	limit = {
+			#		heritage = pirate_heritage
+			#	}
+			#	heritage = pirate_heritage
+			#}
+			#trigger_else_if = {
+			#	limit = {
+			#		is_tradition_tree_allowed = naval_traditions
+			#	}
+			#	OR = {
+			#		has_military_bonus = greek_antigonid_path_4
+			#		has_military_bonus = aryan_river_path_3
+			#		has_military_bonus = illyrian_piracy_path_1
+			#		has_military_bonus = lydian_path_1
+			#		has_military_bonus = celt_iberian_path_c_3
+			#		has_military_bonus = arabian_path_4
+			#	}
+			#	
+			#}
+			#trigger_else = {
+			#	always = no
 			}
 			trigger_else = {
-				always = no
+				always = yes # testing
 			}
 		}
 		unit_location = {

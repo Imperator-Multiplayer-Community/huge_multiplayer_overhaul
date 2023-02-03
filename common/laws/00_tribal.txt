@@ -266,7 +266,8 @@ tribal_super_decentralized_laws = {
 			centralization <= -80
 		}
 		modifier = {
-			land_morale = 0.375 # worth 5 levels of tech
+			land_morale_modifier = 0.1
+			discipline = -0.025
 			war_exhaustion = -0.05
 		}
 	}
