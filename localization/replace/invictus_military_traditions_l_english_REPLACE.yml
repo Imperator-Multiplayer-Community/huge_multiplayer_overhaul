@@ -68,6 +68,7 @@
 
  #New Military Trads
 
- levantine_philosophy:0 "Egyptian Traditions"
- levantine_philosophy_2:0 "Phoenician Traditions"
+ #Levantine traditions override
+ levantine_philosophy:0 "Levantine primary"
+ levantine_philosophy_2:0 "Levantine integrated"
 
