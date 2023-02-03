@@ -76,7 +76,7 @@
             }
         }
         on_activate = {
-            set variable = right_generic_tree
+            set_variable = right_generic_tree
         }
 		modifier = { 
 			camels_cost = -0.05
@@ -123,8 +123,8 @@
 		modifier = { 
 			light_cavalry_cost = -0.05
 			light_cavalry_movement_speed = 0.05
-			skirmishers_cost = -0.05
-			skirmishers_movement_speed = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		allow = {military_tech >= 7}
@@ -136,8 +136,8 @@
 		modifier = { 
 			light_cavalry_cost = -0.05
 			light_cavalry_movement_speed = 0.05
-			skirmishers_cost = -0.05
-			skirmishers_movement_speed = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		}
 		allow = {military_tech >= 7} 
@@ -149,8 +149,8 @@
 		modifier = { 
 			light_cavalry_offensive = 0.1
 			light_cavalry_morale = 0.1
-			skirmishers_offensive = 0.1
-			skirmishers_morale = 0.1
+			archers_offensive = 0.1
+			archers_morale = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
@@ -159,8 +159,8 @@
 
 	afro_arabian_generic_path_8 = { ### 
 		modifier = { 
-			skirmishers_defensive = 0.1
-			skirmishers_discipline = 0.1
+			archers_defensive = 0.1
+			archers_discipline = 0.1
 			light_cavalry_defensive = 0.1
 			light_cavalry_discipline = 0.1
 			army_maintenance_cost = 0.01

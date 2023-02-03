@@ -91,8 +91,8 @@
 		modifier = { 
 			heavy_infantry_cost = -0.05
 			heavy_infantry_movement_speed = 0.05
-			skirmishers_cost = -0.05
-			skirmishers_movement_speed = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		allow = {military_tech >= 7}
@@ -104,8 +104,8 @@
 		modifier = { 
 			heavy_infantry_cost = -0.05
 			heavy_infantry_movement_speed = 0.05
-			skirmishers_cost = -0.05
-			skirmishers_movement_speed = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		}
 		allow = {military_tech >= 7} 
@@ -117,8 +117,8 @@
 		modifier = { 
 			heavy_infantry_offensive = 0.1
 			heavy_infantry_morale = 0.1
-			skirmishers_offensive = 0.1
-			skirmishers_morale = 0.1
+			archers_offensive = 0.1
+			archers_morale = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
@@ -127,8 +127,8 @@
 
 	anatolian_generic_path_8 = { ### 
 		modifier = { 
-			skirmishers_defensive = 0.1
-			skirmishers_discipline = 0.1
+			archers_defensive = 0.1
+			archers_discipline = 0.1
 			heavy_infantry_defensive = 0.1
 			heavy_infantry_discipline = 0.1
 			army_maintenance_cost = 0.01
