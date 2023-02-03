@@ -7,7 +7,7 @@
 		asculum_area
 		pisae_area
 	}
-    color = rgb { 160 10 10 }
+    color = rgb { 243 22 22 }
 
 }
 
@@ -83,8 +83,8 @@ bithynia_region = { #8
 		paphlagonia_superior_area
 		heracleotis_area
 		paphlagonia_inferior_area
-		bithynia_area
 		mysia_area
+		#bithynia_area
 	}
 }
 
@@ -106,7 +106,6 @@ cappadocia_pontica_region = { #5
 		armenia_maior_area
 		pontus_area
 		machelonia_area
-		upper_armenia_area
 		sophene_area
 	}
 }
@@ -154,6 +153,7 @@ persian_coast_region = { #4
 		east_omana_area
 		gerrha_area
 		meshan_area
+		hadramut_orientalis_area
 	}
 }
 
@@ -165,18 +165,20 @@ persis_region = { #7
 		ardashir_area
 		media_felix_area
 		susiana_area
+		aspadana_area
 	}
 }
 
-media_region = { #9
+media_region = { #8
 	areas = {
-		aspadana_area
 		rhagai_area
 		media_area
 		media_choromithrene
 		ecbatana_area
 		kossioi_area
 		amardioi_area
+		media_atropatene_area
+		kadousioi_area
 	}
     color = rgb { 23 237 144 }
 }
@@ -258,7 +260,7 @@ arabia_region = {		#6 areas !
     color = rgb { 195 76 219 }
 }
 
-arabia_felix_region = { #7
+arabia_felix_region = { #6
 	areas = {
 		arabia_felix_centralis_area
 		arabia_felix_occidentalis_area
@@ -266,7 +268,6 @@ arabia_felix_region = { #7
 		sheba_area
 		qataba_area
 		hadramut_occidentalis_area
-		hadramut_orientalis_area
 	}
 }
 
@@ -509,9 +510,9 @@ germania_magna_region = { # 7 areas
 		chamavia_area
 		bructeria_area
 		sicambria_area
-		turonia_area
 		chasuaria_area
 		frisia_area
+		#turonia_area
 	}
     color = rgb { 28 200 35 }
 }
@@ -523,6 +524,8 @@ transalpine_gaul_region = {		#7 areas
 		allobrogia_area
 		tigurinia_area
 		alpes_graiae_area
+		alpes_rhodanus_area
+		arar_convallis_area
 	}
 	    color = rgb { 28 130 35 }
 }
@@ -610,12 +613,11 @@ pannonia_region = {		#9 areas
 		pannonia_prima_occidentalis_area
 		pannonia_prima_orientalis_area
 		pannonia_valeria_area
-		marsonia_area
-		carnuntia_area
 		pannonia_terminus_area
 		noricum_mediterranum_area
 		pannonia_secunda_area
 		savia_occidentalis_area
+		#carnuntia_area
 	}
     color = rgb { 121 146 0 }
 }
@@ -630,7 +632,7 @@ thrace_region = { #8 areas
 		moesia_occidentalis_area
 		scythia_area
 		dacia_inferioris_area
-		dacia_superioris_area
+		#dacia_superioris_area
 		dacia_mediterranea_area
 	}
     color = rgb { 52 211 140 }
@@ -762,21 +764,22 @@ sarmatia_europea_region = {			#9 areas
 		sarmatia_area
 		borysthenia_area
 		zargidava_area
-		clepia_area
+		#clepia_area
 		muradava_area
 		olbia_area
 	}
     color = rgb { 185 221 4 }
 }
-colchis_region = { #7
+colchis_region = { #8
 	areas = {
 		suaneti_area
 		colchis_area
-		bekhyria_area
 		caucasian_iberia_area
 		gugark_area
 		tayk_area
 		syracene_area
+		ayrarat_area
+		#bekhyria_area
 	}
     color = rgb { 255 140 203 }
 }
@@ -788,13 +791,12 @@ albania_region = { #7
 		paytankert_area
 		artshak_area
 		kahetia_area
-		ayrarat_area
 		scythia_trans_montem_area
 	}
     color = rgb { 255 164 28 }
 }
 
-armenia_region = {		#9 areas
+armenia_region = {		#7 areas
 	areas = {
 		tarawn_area
 		vaspurakan_area
@@ -802,8 +804,7 @@ armenia_region = {		#9 areas
 		parsatunik_area
 		parskahayk_area
 		syunik_area
-		media_atropatene_area
-		kadousioi_area
+		upper_armenia_area
 	}
 }
 
@@ -816,7 +817,7 @@ bohemia_region = {
 		transcarpathia_centralis_area
 		celamantia_area
 		marsignia_area
-		viadria_area
+		#viadria_area
 	}
     color = rgb { 255 36 0 }
 }
@@ -831,7 +832,8 @@ illyria_region = {			#7 regions
 		dardania_inferioris_area
 		dardania_superioris_area
 		moesia_prima_orientalis_area
-		moesia_prima_occidentalis_area
+		#moesia_prima_occidentalis_area
+		marsonia_area
 	}
     color = rgb { 255 181 241 }
 }
@@ -892,15 +894,15 @@ central_gaul_region = {	#8 areas
 
 germania_superior_region = { # 7 areas
 	areas = {
-		tribocia_area
-		vangionia_area
 		chattia_occidentalis_area
 		raurica_area
-		latobrigia_area
 		germanicum_area
 		chattia_orientalis_area
 		marcomannia_maiores_area
 		caluconia_area
+		#tribocia_area
+		#vangionia_area
+		#latobrigia_area
 	}
     color = rgb { 54 69 79 }
 }
@@ -1028,11 +1030,12 @@ cyrenaica_region = {		#7 areas
 
 akhtabar_region = { 
 	areas = { 
-		kharga_area
+		hameka_area
 		khargana_area
 		farfara_area
 		parva_area
 		ammon_area
+		#kharga_area
     }
 }
 
@@ -1122,9 +1125,11 @@ rhaetia_region = {		#7 areas
 		alpes_raetiae_orientalis
 		helvetia_inferioris_area
 		helvetia_superioris_area
-		tulingia_area
+        helvetia_ister_convallis_area
 		helvetia_orientalis_area
-		lauriacum_area
+		#tulingia_area
+		#lauriacum_area
+
 	}
 }
 
@@ -1326,12 +1331,5 @@ caspian_sea_region = {
 aral_sea_region = {
 	areas = {
 		mare_aral_area
-	}
-}
-
-#INR
-western_indo_region = {
-	areas = {
-		indus_river_area
 	}
 }
