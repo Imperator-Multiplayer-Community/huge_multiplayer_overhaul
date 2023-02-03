@@ -217,7 +217,7 @@ greek_antigonid_path_4 = {
 		enslavement_efficiency = 0.1
 	}
 	enable_ability = naval_raiding
-	requires = { greek_antigonid_path_2_octere }
+	requires = { }
 	icon = greek_antigonid_path_4
 }
 

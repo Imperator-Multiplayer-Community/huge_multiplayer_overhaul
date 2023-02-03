@@ -270,10 +270,10 @@
 	aryan_river_path_11 = { ###
 		on_activate = {
 			add_innovation = 3
-			manpower_recovery_speed = 0.05
 		}	
 		modifier = { 
 			global_nobles_output = 0.05
+			manpower_recovery_speed = 0.05
 		} 
 		icon = mauryan_noble_path_7
 		requires = { tibetan_path_5 }
