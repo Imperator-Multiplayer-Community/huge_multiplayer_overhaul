@@ -38,67 +38,356 @@
 
 	##### LIGHT CAV
 
-	celt_iberian_path_c_3A = { ###Celt-Iberian 3CA Cantabrian Circle
-		modifier = { 
-			light_cavalry_discipline = 0.05
-			army_maintenance_cost = 0.01
+	iberian_generic_path_1 = { ###
+	allow = {
+		NOT = {
+			has_variable = left_generic_tree
 		}
-		enable_tactic = cavalry_skirmish
-		icon = latin_support_path_7
-		requires = { }
 	}
+	on_activate = {
+		set_variable = left_generic_tree
+	}
+	modifier = { 
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = celtic_britannic_path_end_bonus
+	requires = { }
+}
 
-
-	##### LIGHT INF
-
-	iberian_left_path_1 = { ###Iberian 1A Phalaricae
-		modifier = { 
-			assault_ability = 0.1
-			light_infantry_offensive = 0.05
-			army_maintenance_cost = 0.01
+iberian_generic_path_2 = { ###
+	allow = {
+		NOT = {
+			has_variable = right_generic_tree
 		}
-		icon = celtic_gallic_path_1
-		requires = { }
 	}
+	on_activate = {
+		set_variable = right_generic_tree
+	}
+	modifier = { 
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = celtic_gallic_path_1
+	requires = { }
+}
 
-	iberian_right_path_1 = { ###Iberian 1C Machaera Hispaniensis
-		modifier = { 
-			light_infantry_discipline = 0.05
-			army_maintenance_cost = 0.01
+iberian_generic_path_3 = { ###
+	modifier = { 
+		light_infantry_offensive = 0.1
+		light_infantry_morale = 0.1
+		heavy_infantry_offensive = 0.1
+		heavy_infantry_morale = 0.1
+		light_cavalry_offensive = 0.1
+		light_cavalry_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = celtic_gallic_path_2
+	requires = {iberian_generic_path_1}
+}
+
+iberian_generic_path_4 = { ### 
+	modifier = { 
+		light_infantry_defensive = 0.1
+		light_infantry_discipline = 0.1
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_discipline = 0.1
+		light_cavalry_defensive = 0.1
+		light_cavalry_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = celtic_gallic_path_4
+	requires = {iberian_generic_path_2}
+}
+
+iberian_generic_path_5 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 7}
+	icon = celtic_gallic_path_6
+	requires = {iberian_generic_path_3}
+}
+
+iberian_generic_path_6 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	}
+	allow = {military_tech >= 7} 
+	icon = celtic_germanic_path_1
+	requires = {iberian_generic_path_4}
+}
+
+iberian_generic_path_7 = { ###
+	modifier = { 
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.1
+		archers_offensive = 0.1
+		archers_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = celtic_germanic_path_3
+	requires = {iberian_generic_path_5}
+}
+
+iberian_generic_path_8 = { ### 
+	modifier = { 
+		horse_archers_defensive = 0.1
+		horse_archers_discipline = 0.1
+		archers_defensive = 0.1
+		archers_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = celtic_germanic_path_end_bonus
+	requires = {iberian_generic_path_6}
+}
+
+iberian_generic_path_9 = { ###
+	modifier = { 
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 13}
+	icon = celtic_germanic_path_7
+	requires = {iberian_generic_path_7 }
+}
+
+iberian_generic_path_10 = { ###
+	modifier = { 
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		camels_archers_cost = -0.05
+		camels_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = greek_states_path_2
+	allow = {military_tech >= 13}
+	requires = {iberian_generic_path_8 }
+}
+
+iberian_generic_path_11 = { ###
+	modifier = { 
+		warelephant_offensive = 0.1
+		warelephant_morale = 0.1
+		heavy_cavalry_offensive = 0.1
+		heavy_cavalry_morale = 0.1
+		camels_offensive = 0.1
+		camels_morale = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	} 
+	icon = greek_states_path_7
+	requires = {iberian_generic_path_9}
+}
+
+iberian_generic_path_12 = { ### 
+	modifier = { 
+		warelephant_defensive = 0.1
+		warelephant_discipline = 0.1
+		heavy_cavalry_defensive = 0.1
+		heavy_cavalry_discipline = 0.1
+		camels_defensive = 0.1
+		camels_discipline = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	}
+	icon = latin_support_path_7
+	requires = {iberian_generic_path_10}
+}
+
+#civ
+
+iberian_central_2_path_2 = { ###Iberian 5A Levantine Constructions
+modifier = { 
+	build_cost = -0.05
+	price_found_city_cost_modifier = -0.05
+	local_forum_building_cost = -0.1
+}
+icon = celtic_germanic_path_2
+requires = { }
+on_activate = {
+	capital_scope = {
+		add_building_level = fortress_building
+	}
+}
+}
+
+iberian_right_2_path_1 = { ###Iberian 4B Iberian Pyrite Belt
+modifier = { 
+	global_goods_from_slaves = -1
+}
+on_activate = {
+	ordered_owned_province = {
+		limit = { has_minable_trade_good_trigger = yes }
+		order_by = {
+			value = 0
+			add = population_cap
+			subtract = total_population
 		}
-		icon = celtic_britannic_path_2
-		requires = { iberian_left_path_1 }
+		max = 2
+		check_range_bounds = no
+		create_3_slaves_effect = yes
 	}
+}
+icon = celtic_gallic_path_5
+requires = { iberian_central_2_path_2 }
+}
 
-	celt_iberian_path_b_1 = { ###Celt-Iberian 2A Barritus
-		modifier = {
-			light_infantry_morale = 0.05
-			army_maintenance_cost = 0.01
+iberian_left_2_path_2 = { ###Iberian 3C Importing Knowledge
+modifier = { 
+	global_capital_trade_routes = 2
+	global_export_commerce_modifier  = 0.125
+}
+icon = celtic_gallic_path_4
+requires = { iberian_central_path_2 iberian_central_2_path_1 }
+on_activate = {
+	add_innovation = 3
+}
+}
+
+iberian_central_2_path_1 = { ###Iberian 4A All Gods Are Welcome
+modifier = { 
+	happiness_for_wrong_culture_group_modifier = 0.03
+	global_monthly_civilization = 0.03
+}
+icon = celtic_gallic_path_3
+requires = { iberian_central_path_1 }
+}
+
+iberian_central_path_1 = { ###Iberian 1B Rich Farms
+modifier = { 
+	global_supply_limit_modifier = 0.1
+	global_migration_speed_modifier = 0.1
+}
+on_activate = {
+	add_innovation = 2
+}
+icon = celtic_britannic_path_4
+requires = { iberian_central_2_path_2 }
+}
+
+iberian_central_path_2 = { ###Iberian 2B Noble Generals
+modifier = { 
+	global_nobles_output = 0.06
+}
+icon = persian_achaemenid_path_4
+requires = { iberian_right_2_path_1 }
+}
+
+#fort
+
+iberian_central_path_2B = { ###Iberian 2BB Confederations
+modifier = { 
+	diplomatic_relations = 1
+	global_manpower_modifier = 0.1
+}
+icon = persian_bactrian_path_4
+requires = {}
+}
+
+iberian_left_path_1 = { ###Iberian 1A Phalaricae
+modifier = { 
+	assault_ability = 0.1
+	global_manpower_recovery_speed = 0.075
+	army_maintenance_cost = 0.01
+}
+icon = north_african_naval_path_2
+requires = { iberian_central_path_2B }
+}
+
+generic_ibrian_fort = { ###
+	on_activate = {
+		add_1_free_province_investments = yes
+	}
+	modifier = { 
+		garrison_size = 0.20
+		siege_ability = 0.1
+	} 
+	icon = celtic_gallic_path_7
+	requires = { iberian_left_path_1 }
+}
+
+
+#naval
+
+iberian_central_2_path_3 = { ###Iberian 4C Coastal Ports
+        modifier = { 
+	    ship_cost = -0.15
+        }
+        icon = default_test
+        requires = { }
+        on_activate = {
+	            ordered_owned_province = { #If you have none we make a new one, if you do have one we try to upgrade that.
+		                limit = {
+			                    owner = { num_of_ports < 1 }
+			                    is_coastal = yes
+			                    NOT = { has_building = port_building }
+			                    can_build_building = port_building
+						    }
+		                    alternative_limit = {
+			                        is_coastal = yes
+			                        has_building = port_building
+			                        can_build_building = port_building
+		                    }
+		                    alternative_limit = {
+			                        is_coastal = yes
+			                        can_build_building = port_building
 		}
-		icon = north_african_tribal_path_6
-		requires = { iberian_right_path_1 }
+		add_building_level = port_building
+	    
 	}
+}
+}
 
-	##### NAVAL
+iberian_north_african_enable = { ###Iberian 5B Quick Mendings
+modifier = { 
+	naval_damage_taken = -0.05
+	navy_maintenance_cost = 0.01
+}
+requires = { iberian_central_2_path_3 }
+icon = greek_seleucid_path_3
+}
 
-	celt_iberian_path_c_3 = { ###Celt-Iberian 3C Raids on Neighbours
-		modifier = { 
-			enslavement_efficiency = 0.1
-			global_slaves_output = 0.06
-		}
-		enable_ability = naval_raiding
-		icon = latin_tribal_path_4
-		requires = { }
-	}
+generic_iberian_naval_3 = { ###North Aftica 1B
+modifier = { 
+	naval_damage_done = 0.1
+	coastal_terrain_combat_bonus = 0.075
+	navy_maintenance_cost = 0.01
+}
+icon = levantine_egyptian_path_7
+requires = { iberian_north_african_enable }
+}
 
-	##### ARCHERS
-
-	iberian_central_path_4 = { ###Iberian 4B Talaiotic Slingers
-		modifier = { 
-			archers_offensive = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = celtic_germanic_path_7
-		requires = { }
-	}
+generic_iberian_naval_4 = { ###North Aftica 5BA
+modifier = { 
+	naval_morale = 0.5
+	navy_maintenance_cost = 0.01
+}
+icon = levantine_greco_path_6
+requires = { generic_iberian_naval_3 }
 }

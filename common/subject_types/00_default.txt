@@ -474,7 +474,7 @@ subject_mercenary_city_state = {
 	only_trade_with_overlord = yes
 	
 	overlord_modifier = {
-	  max_mercenary_stacks = 0.5  # Was mercenary_land_maintenance_cost = -0.03
+		max_mercenary_stacks = 0.5  # Was mercenary_land_maintenance_cost = -0.03
 	}
 	subject_modifier = {
 		global_manpower = 0.35 # Was 0.125
