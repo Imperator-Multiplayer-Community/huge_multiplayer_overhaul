@@ -8,16 +8,6 @@
 	map = yes
 	soundeffect ="event:/SFX/Animations/Units/Generic/sfx_anim_unit_build_colony"
 	
-	
-	hidden = {
-		always = yes
-        #unit_owner = { 
-        #    NOT = { 
-        #        is_tradition_tree_allowed = terrain_traditions 
-        #    } 
-        #}
-	}
-
 	allow = {
 		#unit_owner = { 
 		#	has_military_bonus = military_colonies_path_1
