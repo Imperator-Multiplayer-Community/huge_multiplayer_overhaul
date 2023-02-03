@@ -427,7 +427,7 @@ generic_greek_civic_4 = { ###Latin 1B
 
 generic_greek_civic_5 = { ###Latin 1B
     modifier = { 
-		global_export_commerce_modifier  = 0.1
+		global_export_commerce_modifier  = 0.075
 	    price_found_metropolis_cost_modifier = -0.15
 	}
 	
