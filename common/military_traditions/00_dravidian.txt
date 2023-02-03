@@ -107,7 +107,7 @@ dravidian_generic_path_5 = { ###
 		light_cavalry_cost = -0.05
 		light_cavalry_movement_speed = 0.05
 		heavy_infantry_cost = -0.05
-		heavy_infantry_speed = 0.05
+		heavy_infantry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}

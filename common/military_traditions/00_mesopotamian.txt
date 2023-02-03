@@ -45,7 +45,7 @@
 		heavy_cavalry_cost = -0.05
 		heavy_cavalry_movement_speed = 0.05
 		light_cavalry_cost = -0.05
-		hlight_cavalry_movement_speed = 0.05
+		light_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	icon = latin_roman_path_end_bonus
@@ -107,7 +107,7 @@ mesopotamian_generic_path_5 = { ###
 		horse_archers_cost = -0.05
 		horse_archers_movement_speed = 0.05
 		light_infantry_cost = -0.05
-		light_infantry_speed = 0.05
+		light_infantry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}

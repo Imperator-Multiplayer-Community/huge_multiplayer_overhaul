@@ -118,7 +118,7 @@ pracyan_generic_path_5 = { ###
 		light_cavalry_cost = -0.05
 		light_cavalry_movement_speed = 0.05
 		warelephant_cost = -0.05
-		warelephant_speed = 0.05
+		warelephant_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}

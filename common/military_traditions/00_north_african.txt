@@ -124,7 +124,7 @@ north_africa_generic_path_5 = { ###
 		archers_cost = -0.05
 		archers_movement_speed = 0.05
 		heavy_cavalry_cost = -0.05
-		heavy_cavalry_speed = 0.05
+		heavy_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}
