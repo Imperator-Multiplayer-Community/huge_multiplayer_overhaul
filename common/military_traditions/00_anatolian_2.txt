@@ -87,7 +87,7 @@
             }
         }
         on_activate = {
-            set variable = light_infantry_super_unit
+            set_variable = light_infantry_super_unit
         }	
         modifier = { 
 			light_infantry_offensive = 0.1
