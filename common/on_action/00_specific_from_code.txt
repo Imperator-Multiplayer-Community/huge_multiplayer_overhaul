@@ -1696,7 +1696,7 @@ on_ending_war = {
 					employer = ROOT
 				}
 			}
-			root = {
+		root = {
 				trigger_event = {
 					id = dhe_dde_pyrrhus.3
 				}
@@ -1705,7 +1705,6 @@ on_ending_war = {
 	}
 	events = {
 		ip_republic.34
-		OTG.2
 		looting_policy.2
 	}
 }
