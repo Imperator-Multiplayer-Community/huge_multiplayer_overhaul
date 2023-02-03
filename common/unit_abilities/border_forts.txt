@@ -8,23 +8,14 @@
 	army_only = yes
 	soundeffect ="event:/SFX/Animations/Units/Generic/sfx_anim_unit_build_border_fort"
 
-	hidden = {
-		always = yes
-		NOT = {
-			unit_owner = { 
-				is_tradition_tree_allowed = terrain_traditions   
-			}
-		}
-	}
-	
 	allow = {
 		unit_owner = { can_pay_price = build_border_fort }
 		custom_tooltip = {
 			text = "is_allowed_border_fortress_tt"
 			OR = {
-				root.unit_owner = {
-					has_military_bonus = border_fort_path_1
-				}
+				#root.unit_owner = {
+				#	has_military_bonus = border_fort_path_1
+				#}
 				root.unit_owner = {
 					is_tribal = yes
 				}
