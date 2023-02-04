@@ -31,7 +31,7 @@
 			OR = {
 				this.culture.culture_group = culture_group:numidian
 				this.culture.culture_group = culture_group:fezzani
-				is_culture = carthaginian
+				this.culture = carthaginian
 			}
 		}
 	}
