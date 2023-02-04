@@ -978,3 +978,54 @@ gw_effect_stonehenge_event = {
 		}
 	}
 }
+
+gw_effect_ay_khanum = {
+	icon = "gw_effect_civilization_builder"
+
+	allow = {
+		always = no
+	}
+
+	great_work_tier_effect_modifiers = {
+		gw_effect_ay_khanum_tier_1 = {
+			great_work_effect_tier = gw_effect_tier_1
+			country_modifier = {
+				max_research_efficiency = 0.05
+				happiness_for_wrong_culture_modifier = 0.01
+			}
+			state_modifier = {
+				local_monthly_food_modifier = 0.05
+			}
+		}
+		gw_effect_ay_khanum_tier_2 = {
+			great_work_effect_tier = gw_effect_tier_2
+			country_modifier = {
+				max_research_efficiency = 0.075
+				happiness_for_wrong_culture_modifier = 0.02
+			}
+			state_modifier = {
+				local_monthly_food_modifier = 0.075
+			}
+		}
+		gw_effect_ay_khanum_tier_3 = {
+			great_work_effect_tier = gw_effect_tier_3
+			country_modifier = {
+				max_research_efficiency = 0.1
+				happiness_for_wrong_culture_modifier = 0.04
+			}
+			state_modifier = {
+				local_monthly_food_modifier = 0.1
+			}
+		}
+		gw_effect_ay_khanum_tier_4 = {
+			great_work_effect_tier = gw_effect_tier_4
+			country_modifier = {
+				max_research_efficiency = 0.15
+				happiness_for_wrong_culture_modifier = 0.06
+			}
+			state_modifier = {
+				local_monthly_food_modifier = 0.15
+			}
+		}
+	}
+}
