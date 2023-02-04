@@ -241,7 +241,7 @@ modifier = {
 	army_maintenance_cost = 0.01
 }
 enable_ability = road_building
-requires = { latin_support_path_2 }
+requires = { latin_support_path_2 latin_roman_path_end_bonus }
 icon = latin_roman_path_4
 on_activate = {
 	add_innovation = 2
@@ -253,7 +253,7 @@ modifier = {
 	assault_ability = 0.1
 	army_maintenance_cost = 0.01
 }
-requires = { latin_roman_path_4 }
+requires = { latin_roman_path_9 }
 icon = latin_support_path_3
 }
 
@@ -262,7 +262,7 @@ modifier = {
 	max_war_exhaustion = -2.5
 	army_maintenance_cost = 0.01
 }
-requires = { latin_roman_path_end_bonus }
+requires = { latin_roman_path_5 }
 icon = latin_support_path_4
 }
 
@@ -272,7 +272,7 @@ modifier = {
 	global_supply_limit_modifier = 0.15
 	army_maintenance_cost = -0.01
 }
-requires = { latin_roman_path_9 }
+requires = { }
 icon = latin_support_path_5
 }
 
