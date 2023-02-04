@@ -10,37 +10,13 @@ navy_maint.1 = { # scale based on number of ships
 			has_variable = previous_navy_rank
 			num_of_ships >= 100
 		}
-		trigger_if = {
+		trigger_if = { # if rank has increased
 			limit = {
 				has_variable = previous_navy_rank
 			}
 
-			OR = {
-				num_of_ships < 100
-				NOT = {
-					var:previous_navy_rank = 1
-					num_of_ships >= 100
-					num_of_ships < 200
-				}
-				NOT = {
-					var:previous_navy_rank = 2
-					num_of_ships >= 200
-					num_of_ships < 300
-				}
-				NOT = {
-					var:previous_navy_rank = 3
-					num_of_ships >= 300
-					num_of_ships < 400
-				}
-				NOT = {
-					var:previous_navy_rank = 4
-					num_of_ships >= 400
-					num_of_ships < 500
-				}
-				NOT = {
-					var:previous_navy_rank = 5
-					num_of_ships >= 500
-				}
+			NOT = {
+				var:previous_navy_rank = large_navy_svalue
 			}
 		}
 	}
@@ -62,64 +38,14 @@ navy_maint.1 = { # scale based on number of ships
 			remove_country_modifier = navy_maint_cost_scaling
 		}
 
-		if = {
-			limit = {
-				num_of_ships >= 100
-				num_of_ships < 200
-			}
-
-			set_variable = {
-				name = previous_navy_rank
-				value = 1
-			}
-		}
-		else_if = {
-			limit = {
-				num_of_ships >= 200
-				num_of_ships < 300
-			}
-
-			set_variable = {
-				name = previous_navy_rank
-				value = 2
-			}
-		}
-		else_if = {
-			limit = {
-				num_of_ships >= 300
-				num_of_ships < 400
-			}
-
-			set_variable = {
-				name = previous_navy_rank
-				value = 3
-			}
-		}
-		else_if = {
-			limit = {
-				num_of_ships >= 400
-				num_of_ships < 500
-			}
-
-			set_variable = {
-				name = previous_navy_rank
-				value = 4
-			}
-		}
-		else_if = {
-			limit = {
-				num_of_ships >= 500
-			}
-
-			set_variable = {
-				name = previous_navy_rank
-				value = 5
-			}
+		set_variable = {
+			name = previous_navy_rank
+			value = large_navy_svalue
 		}
 
 		if = {
-			limit = {
-				exists = var:previous_navy_rank
+			limit = { # dont do anything if below 100 ships
+				var:previous_navy_rank > 0
 			}
 
 			while = {
@@ -152,50 +78,13 @@ navy_maint.2 = {
 			remove_country_modifier = sufficient_ports_maintenance
 		}
 
-		set_local_variable = {
-			name = total_port_buildings
-			value = 0
-		}
-
-		every_owned_province = {
-			limit = {
-				NOT = {
-					num_of_port_building = 0
-				}
-				num_of_port_building > 0
-			}
-
-			save_temporary_scope_as = current_province
-
-			owner = {
-				change_local_variable = {
-					name = total_port_buildings
-					add = scope:current_province.num_of_port_building
-				}
-			}
-
-			clear_saved_scope = current_province
-		}
-
-		change_local_variable = {
-			name = total_port_buildings
-			divide = 10
-		}
-
-		round_local_variable = {
-			name = total_port_buildings
-			nearest = 1
-		}
-
 		while = {
-			count = local_var:total_port_buildings
+			count = total_port_buildings_svalue
 			add_country_modifier = {
 				name = sufficient_ports_maintenance
 				mode = add
 				duration = -1
 			}
 		}
-
-		remove_local_variable = total_port_buildings
 	}
 }

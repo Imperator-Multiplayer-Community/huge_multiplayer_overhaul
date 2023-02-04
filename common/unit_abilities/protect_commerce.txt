@@ -76,7 +76,7 @@
 					name = starting_num_of_ships
 					value = num_of_ships_svalue
 				}
-				set_variable = is_navy_protected_commerce
+				set_variable = is_navy_protecting_commerce
 			}
 
 			show_as_tooltip = { 

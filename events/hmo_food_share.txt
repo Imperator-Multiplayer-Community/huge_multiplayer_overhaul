@@ -44,7 +44,7 @@ food_share.1 = {
 
 				set_variable = {
 					name = food
-					value = unit_food_share
+					value = unit_food_share_svalue
 				}
 
 				if = {

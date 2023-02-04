@@ -1,4 +1,4 @@
-﻿excess_aqueducts = { # province
+﻿excess_aqueducts_svalue = { # province
 	value = num_of_aqueduct_building
-	add = -4
+	subtract = 4
 }
