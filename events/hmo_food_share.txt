@@ -44,18 +44,7 @@ food_share.1 = {
 
 				set_variable = {
 					name = food
-					value = unit_size
-				}
-
-				change_variable = {
-					name = food
-					divide = 4
-					add = 5
-				}
-
-				round_variable = {
-					name = food
-					nearest = 1
+					value = unit_food_share
 				}
 
 				if = {
