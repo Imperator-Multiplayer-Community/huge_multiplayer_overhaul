@@ -313,7 +313,7 @@ north_african_tribal_path_end_bonus = { ###North Aftica 1A
 	}
 }
 
-north_african_latin_enable = { ###North Aftica 2A
+generic_north_african_fort_2 = { ###North Aftica 2A
 		modifier = {
 			global_freemen_output = 0.05
 			general_loyalty = 5
@@ -322,13 +322,13 @@ north_african_latin_enable = { ###North Aftica 2A
 		requires = { north_african_tribal_path_end_bonus }	
 }
 	
-north_african_tribal_path_5 = { ###North Aftica 1A
+generic_north_african_fort_3 = { ###North Aftica 1A
 		modifier = { 
 			land_unit_attrition = -0.15
 			desert_combat_bonus = 0.1
 		}
 		icon = north_african_tribal_path_5
-		requires = { north_african_latin_enable }
+		requires = { generic_north_african_fort_2 }
 
 }
 
@@ -339,7 +339,7 @@ modifier = {
 	fort_maintenance_cost = 0.01
 }
 icon = north_african_naval_path_6
-requires = {north_african_tribal_path_5}
+requires = {generic_north_african_fort_3}
 }
 
 
@@ -399,7 +399,7 @@ modifier = {
 	ship_cost = -0.1
 }
 icon = north_african_naval_path_7
-requires = {north_african_army_path_2}
+requires = { north_african_army_path_2 north_african_naval_path_4 }
 on_activate = {
 	if = {
 		limit = {
@@ -463,7 +463,7 @@ modifier = {
 	navy_maintenance_cost = 0.01
 }
 icon = north_african_naval_path_4
-requires = { north_african_naval_path_7 }
+requires = { north_african_naval_path_end_bonus }
 }
 
 north_african_naval_path_end_bonus = { ###North Aftica 4B
@@ -475,7 +475,7 @@ modifier = {
 	navy_maintenance_cost = 0.01
 }
 icon = north_african_naval_path_end_bonus
-requires = { north_african_naval_path_4 }
+requires = { north_african_naval_path_3 }
 }
 
 north_african_naval_path_3 = { ###North Aftica 5BB
@@ -484,7 +484,7 @@ modifier = {
 	navy_maintenance_cost = 0.01
 }
 icon = north_african_naval_path_3
-requires = { north_african_naval_path_end_bonus }
+requires = { }
 }
 
 }
