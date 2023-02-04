@@ -325,6 +325,7 @@ greek_seleucid_path_3 = {
 		global_ship_recruit_speed = 0.15 
 		navy_maintenance_cost = 0.01
 	}
+	allow_unit_type = octere
 	requires = { greek_antigonid_path_2_octere }
 	icon = greek_antigonid_path_2
 }
@@ -334,7 +335,7 @@ greek_antigonid_path_2_octere = {
 		naval_range = 0.1 
 		navy_maintenance_cost = 0.01
 	}
-	allow_unit_type = octere
+    allow_unit_type = mega_galley
 	requires = { }
 	icon = default_test
 	on_activate = {

@@ -462,6 +462,7 @@ modifier = {
 	naval_range = 0.1
 	navy_maintenance_cost = 0.01
 }
+allow_unit_type = octere
 icon = north_african_naval_path_4
 requires = { north_african_naval_path_end_bonus }
 }
@@ -474,6 +475,7 @@ modifier = {
 	liburnian_movement_speed = 0.1
 	navy_maintenance_cost = 0.01
 }
+allow_unit_type = mega_galley
 icon = north_african_naval_path_end_bonus
 requires = { north_african_naval_path_3 }
 }

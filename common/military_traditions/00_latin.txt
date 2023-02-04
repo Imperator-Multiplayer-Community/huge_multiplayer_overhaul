@@ -334,7 +334,7 @@ modifier = {
 	enslavement_efficiency = 0.1
 	global_slaves_output = output_large_svalue
 }
-
+allow_unit_type = octere
 requires = { latin_support_path_1 }
 icon = greek_states_path_5
 }

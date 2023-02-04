@@ -200,52 +200,58 @@ persian_generic_path_12 = { ###
 }
 
 ### NAVAL
-lydian_path_6 = { ###
-	modifier = { 
-		liburnian_discipline = 0.05
-		trireme_offensive = 0.1
-		trireme_coastal_terrain_combat_bonus = 0.1
-		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_3
-	requires = { }
+Persain_generic_naval_1 = { ###North Aftica 5BA
+modifier = { 
+	naval_morale = 0.5
+	navy_maintenance_cost = 0.01
 }
-lydian_path_12 = { ###
-	allow_unit_type = octere
-	on_activate = {
-		random_owned_province = {
-			limit = {
-				num_of_port_building > 0 
-			}
-			owner = {
-				create_unit = {
-					navy = yes
-					location = prev.prev
-					add_subunit = octere
-					add_subunit = octere
-				}
-			}
+allow_unit_type = octere
+icon = levantine_egyptian_path_2
+requires = { }
+on_activate = {
+	ordered_owned_province = { #If you have none we make a new one, if you do have one we try to upgrade that.
+		limit = {
+			owner = { num_of_ports < 1 }
+			is_coastal = yes
+			NOT = { has_building = port_building }
+			can_build_building = port_building
 		}
+		alternative_limit = {
+			is_coastal = yes
+			has_building = port_building
+			can_build_building = port_building
+		}
+		alternative_limit = {
+			is_coastal = yes
+			can_build_building = port_building
+		}
+		add_building_level = port_building
 	}
-	modifier = { 
-		naval_morale_modifier = 0.05
-		naval_damage_taken = -0.05
-		ocean_combat_bonus = 0.1
-		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_1
-	requires = { lydian_path_6 }
 }
-lydian_path_13 = { ###
-	modifier = { 
-		naval_range = 0.25
-		mercenary_naval_maintenance_cost = -0.3
-		max_mercenary_stacks = 1
-		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_end_bonus
-	requires = { lydian_path_12 }
 }
+
+Persain_generic_naval_2 = { ###North Aftica 4A
+icon = north_african_naval_path_end_bonus
+requires = { Persain_generic_naval_1 }
+modifier = { 
+	ocean_combat_bonus = 0.1
+	naval_range = 0.15
+	navy_maintenance_cost = 0.01
+}
+}
+
+Persain_generic_naval_3 = { ###North Aftica 1B
+modifier = { 
+	naval_damage_done = 0.1
+	coastal_terrain_combat_bonus = 0.1
+	naval_range = 0.1
+	navy_maintenance_cost = 0.01
+}
+allow_unit_type = mega_galley
+icon = persian_achaemenid_path_3
+requires = { Persain_generic_naval_2 }
+}
+
 ### CIVILIZATION
 Persian_civ_generic_path_1  = { ###
 	modifier = { 

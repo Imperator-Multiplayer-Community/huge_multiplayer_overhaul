@@ -388,6 +388,7 @@ modifier = {
 	naval_morale = 0.5
 	navy_maintenance_cost = 0.01
 }
+allow_unit_type = octere
 icon = levantine_greco_path_6
 requires = { generic_iberian_naval_3 }
 }
