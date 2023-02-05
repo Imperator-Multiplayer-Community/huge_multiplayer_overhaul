@@ -352,10 +352,10 @@ modifier = {
 	army_maintenance_cost = 0.01
 } 
 	icon = mauryan_mauryas_path_3
-	requires = { aryan_river_path_7 }
+	requires = { dravidian_city_generic_path_3 }
 }   
 ### FORTS
-aryan_river_path_7 = { ###
+aryan_river_fort_12 = { ###
 	on_activate = {
 		add_1_free_province_investments = yes
 	}
@@ -366,4 +366,74 @@ aryan_river_path_7 = { ###
 	icon = mauryan_coastal_path_2
 	requires = { }
 }
+
+tamil_generic_fort_2 = {
+	modifier = { 
+		global_cohort_start_experience = 5
+		experience_decay = -0.005
+		army_maintenance_cost = 0.01
+	}
+	requires = { aryan_river_fort_12 }
+	icon = greek_states_path_3
+	on_activate = {
+		custom_tooltip = "create_high_martial_rising_star"
+		hidden_effect = {
+			create_character = {
+				add_martial = 8
+				add_trait = steadfast
+			}
+		}
+	}
+}
+
+
+tamil_generic_fort_3 = {
+	modifier = { 
+		mercenary_land_maintenance_cost = -0.1
+		global_defensive = 0.1
+	}
+	on_activate = {
+		add_innovation = 3
+	}
+	requires = { tamil_generic_fort_2 }
+	icon = greek_states_path_7
+
+}
+
+tamil_generic_fort_4 = {
+	modifier = { 
+		global_defensive = 0.15
+		fort_limit = 1
+		fort_maintenance_cost = 0.01
+	}
+	requires = { tamil_generic_fort_3 }
+	icon = greek_states_path_6
+	on_activate = {
+		capital_scope = {
+			add_building_level = fortress_building
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
