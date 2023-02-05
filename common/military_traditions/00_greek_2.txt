@@ -11,7 +11,18 @@
 			country_culture_group = hellenic
 		}
 		trigger_else = {
-			this.culture.culture_group = culture_group:hellenic
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = greek_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_greek_ecd"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					this.culture.culture_group = culture_group:hellenic
+				}
+			}
 		}
 	}
 }

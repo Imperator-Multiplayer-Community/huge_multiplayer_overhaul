@@ -11,8 +11,19 @@
 			country_culture_group = persia
 		}
 		trigger_else = {
-			OR = {
-				this.culture.culture_group = culture_group:persia
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_cultural_decision"
+				has_variable = persian_influence
+			}
+			custom_tooltip = {
+				text = "tradition_unlock_requirement_persian"
+				any_country_culture = {
+					is_integrated = yes
+					country_culture_pop_count >= percent_size_culture_group_comparison
+					OR = {
+						this.culture.culture_group = culture_group:persia
+					}
+				}
 			}
 		}
 	}
