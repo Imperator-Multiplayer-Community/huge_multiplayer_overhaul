@@ -131,7 +131,7 @@
 			army_maintenance_cost = 0.03
 		} 
 		icon = mauryan_noble_path_3
-		requires = { andhra_path_3 }
+		requires = { andhra_path_1 }
 	}
 
 }
