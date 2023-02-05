@@ -290,7 +290,7 @@ requires = { iberian_right_2_path_1 }
 
 #fort
 
-iberian_central_path_2B = { ###Iberian 2BB Confederations
+generic_ibrian_fort_2 = { ###Iberian 2BB Confederations
 modifier = { 
 	diplomatic_relations = 1
 	global_manpower_modifier = 0.1
@@ -299,14 +299,14 @@ icon = persian_bactrian_path_4
 requires = {}
 }
 
-iberian_left_path_1 = { ###Iberian 1A Phalaricae
+generic_ibrian_fort_1 = { ###Iberian 1A Phalaricae
 modifier = { 
 	assault_ability = 0.1
 	manpower_recovery_speed = 0.075
 	army_maintenance_cost = 0.01
 }
 icon = north_african_naval_path_2
-requires = { iberian_central_path_2B }
+requires = { generic_ibrian_fort_2 }
 }
 
 generic_ibrian_fort = { ###
@@ -318,7 +318,7 @@ generic_ibrian_fort = { ###
 		siege_ability = 0.1
 	} 
 	icon = celtic_gallic_path_7
-	requires = { iberian_left_path_1 }
+	requires = { generic_ibrian_fort_1 }
 }
 
 

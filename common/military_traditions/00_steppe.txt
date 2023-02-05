@@ -392,7 +392,7 @@ requires = { bactrian_path_15 }
 }
 
 ### FORTS
-scythian_path_13 = { ###
+scythian_path_generic_fort_1 = { ###
 on_activate = {
 	ordered_owned_province = {
 		limit = {
@@ -424,11 +424,11 @@ modifier = {
 	army_maintenance_cost = 0.01
 } 
 icon = persian_achaemenid_path_end_bonus
-requires = { scythian_path_13 }
+requires = { scythian_path_generic_fort_1 }
 }
 
 
-scythian_path_2 = { ###
+scythian_path_generic_fort_2 = { ###
 on_activate = {
 	ordered_owned_province = {
 		order_by = {
@@ -447,7 +447,7 @@ modifier = {
 	army_maintenance_cost = 0.01
 } 
 icon = mauryan_mauryas_path_1
-requires = { scythian_path_14 }
+requires = { scythian_path_generic_fort_1 }
 
 }
 
@@ -466,11 +466,11 @@ modifier = {
 	army_maintenance_cost = 0.01
 } 
 icon = north_african_tribal_path_3
-requires = { scythian_path_2 }
+requires = { scythian_path_generic_fort_2 }
 
 }
 
-bactrian_path_9 = { ###
+scythian_path_generic_fort_3 = { ###
 		modifier = { 
 			global_supply_limit_modifier = 0.15
 			hostile_attrition = 1

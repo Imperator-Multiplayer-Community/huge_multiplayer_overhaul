@@ -346,7 +346,7 @@ modifier = {
 icon = celtic_britannic_path_4
 }
 
-illyrian_path_5 = { #Manpower recovery
+generic_illyrian_path_fort_2 = { #Manpower recovery
 requires = { illyrian_path_4 }		
 modifier = {
 	manpower_recovery_speed = 0.05
@@ -355,8 +355,8 @@ modifier = {
 icon = celtic_gallic_path_5
 }
 
-illyrian_path_6 = { #Freemen and investments
-requires = { illyrian_path_5 }		
+generic_illyrian_path_fort_3 = { #Freemen and investments
+requires = { generic_illyrian_path_fort_2 }		
 modifier = {
 	global_freemen_output = 0.05
 }
@@ -366,9 +366,9 @@ on_activate = {
 icon = celtic_germanic_path_2
 }
 
-illyrian_path_9 = { #Triplex Acies
+generic_illyrian_path_fort_4 = { #Triplex Acies
 enable_tactic = triplex_acies
-requires = { illyrian_path_6 }		
+requires = { generic_illyrian_path_fort_3 }		
 modifier = {
 	global_manpower_modifier = 0.05
 	army_maintenance_cost = 0.01
@@ -376,8 +376,8 @@ modifier = {
 icon = celtic_germanic_path_6
 }
 
-generic_illyrian_path_5 = { #Triplex Acies
-requires = { illyrian_path_9 }		
+generic_illyrian_path_fort_5 = { #Triplex Acies
+requires = { generic_illyrian_path_fort_4 }		
 modifier = {
 	enslavement_efficiency = 0.1
 	army_movement_speed = 0.075
