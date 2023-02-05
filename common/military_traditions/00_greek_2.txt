@@ -100,7 +100,7 @@
 			heavy_infantry_discipline = 0.1
 			heavy_infantry_farmland_combat_bonus = 0.1
 			heavy_infantry_mountain_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
+			army_maintenance_cost = 0.02
 		}
 		requires = { greek_states_path_1 } 
 		icon = greek_states_path_end_bonus 
@@ -111,7 +111,7 @@
 			heavy_infantry_offensive = 0.1
 			heavy_infantry_cost = -0.15
 			heavy_infantry_movement_speed = 0.1
-			army_maintenance_cost = 0.01
+			army_maintenance_cost = 0.02
 	 }
 		enable_tactic = greek_phalanx
 		requires = { greek_states_path_1 }
