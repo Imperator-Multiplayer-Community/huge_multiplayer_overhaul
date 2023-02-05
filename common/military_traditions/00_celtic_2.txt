@@ -125,16 +125,6 @@
         }
         on_activate = {
             set_variable = heavy_cavalry_super_unit
-        }
-        modifier = { 
-			heavy_cavalry_morale = 0.10
-            Heavy_cavalry_plains_combat_bonus = 0.10
-            Heavy_cavalry_forest_combat_bonus = 0.10
-			army_maintenance_cost = 0.01
-		}
-		icon = celtic_britannic_path_6
-		requires = { }
-		on_activate = {
 			ordered_owned_province = {
 				limit = {
 					NOT = { trade_goods = iron }
@@ -146,7 +136,15 @@
 				order_by = total_population
 				set_trade_goods = horses
 			}
+        }
+        modifier = { 
+			heavy_cavalry_morale = 0.10
+            Heavy_cavalry_plains_combat_bonus = 0.10
+            Heavy_cavalry_forest_combat_bonus = 0.10
+			army_maintenance_cost = 0.01
 		}
+		icon = celtic_britannic_path_6
+		requires = { }
 	}    
 
     celtic_britannic_path_end_bonus = { ###Celtic 4BA

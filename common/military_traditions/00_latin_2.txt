@@ -105,6 +105,13 @@
         }
         on_activate = {
             set_variable = heavy_infantry_super_unit
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
         }
 		modifier = { 
 			heavy_infantry_offensive = 0.1
@@ -113,15 +120,6 @@
 		}
 		icon = latin_roman_path_1
 		requires = {}
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = steadfast
-				}
-			}
-		}
 	}
 
 	latin_roman_path_3 = { ###Latin 2A

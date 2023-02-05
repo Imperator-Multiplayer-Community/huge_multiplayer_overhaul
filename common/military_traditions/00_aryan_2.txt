@@ -85,9 +85,7 @@
         }
         on_activate = {
             set_variable = warelephant_super_unit
-        }
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
+        	custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
