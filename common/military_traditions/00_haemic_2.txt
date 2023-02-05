@@ -1,1 +1,35 @@
-﻿
+﻿haemic_philosophy_2 = { #Daco-Thracian Tree
+	color = hsv { 1 1 0.3 }
+	image = north_african_tribal_path_6
+
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = illyrian_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = illyrian_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = dacia_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = dacia_group
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = thrace_group }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = thrace_group
+		}
+		trigger_else = {
+			OR = {
+				this.culture.culture_group = culture_group:illyrian_group
+				this.culture.culture_group = culture_group:dacia_group
+				this.culture.culture_group = culture_group:thrace_group
+			}
+		}
+	}
+}

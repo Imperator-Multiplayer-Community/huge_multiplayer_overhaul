@@ -1,1 +1,37 @@
-﻿
+﻿latin_philosophy_2 = { 
+	color = hsv { 0 0.88 0.5 }
+	image = latin_tribal_path_4
+	
+
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = latin }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = latin
+		}
+		trigger_else_if = {
+			limit = { primary_culture = lepontic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			primary_culture = lepontic
+		}
+		trigger_else_if = {
+			limit = { primary_culture = messapian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			primary_culture = messapian
+		}
+		trigger_else = {
+            OR = {
+				this.culture.culture_group = culture_group:latin
+                this.culture = lepontic
+                this.culture = messapian
+				}
+			}
+		}
+	}
+}

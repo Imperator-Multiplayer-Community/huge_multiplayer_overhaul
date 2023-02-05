@@ -1,1 +1,19 @@
-﻿
+﻿aryan_philosophy_2 = { #Aryan Plains Path
+	color = hsv { 1.72 0.64 0.7 }
+	image = mauryan_noble_path_7
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = aryan }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = aryan
+		}
+		trigger_else = {
+			OR = {
+				this.culture.culture_group = culture_group:aryan
+			}
+		}
+	}
+}

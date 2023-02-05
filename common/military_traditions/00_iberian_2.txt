@@ -1,1 +1,27 @@
-﻿
+﻿iberian_philosophy_2 = { 
+	color = hsv { 0.97 0.79 0.87 }
+	image = celtic_britannic_path_4
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = celt_iberia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = celt_iberia
+		}
+		trigger_else_if = {
+			limit = { country_culture_group = iberia }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = iberia
+		}
+		trigger_else = {
+			OR = {
+				this.culture.culture_group = culture_group:celt_iberia
+				this.culture.culture_group = culture_group:iberia
+			}
+		}		
+	}
+}

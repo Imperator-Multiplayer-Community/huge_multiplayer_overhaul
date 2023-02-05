@@ -1,1 +1,19 @@
-﻿
+﻿dravidian_philosophy_2 = { #Andhra Path
+	color = hsv { 1.72 0.64 0.7 }
+	image = mauryan_mauryas_path_7
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = indian }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = indian
+		}
+		trigger_else = {
+			OR = {
+				this.culture.culture_group = culture_group:indian
+			}
+		}
+	}
+}

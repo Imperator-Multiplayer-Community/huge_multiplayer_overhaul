@@ -32,7 +32,7 @@
 					country_culture_pop_count >= percent_size_culture_group_comparison
 					OR = {
 						this.culture.culture_group = culture_group:numidian
-						is_culture = carthaginian
+						this.culture = carthaginian
 					}
 				}
 			}

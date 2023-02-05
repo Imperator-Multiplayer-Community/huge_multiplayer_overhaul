@@ -1,1 +1,17 @@
-﻿
+﻿greek_philosophy_2 = { #Greek Kingdom Tree
+	color = hsv { 0.6 0.8 0.5 }
+	image = greek_seleucid_path_1
+	
+	allow = {
+		trigger_if = {
+			limit = { country_culture_group = hellenic }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = hellenic
+		}
+		trigger_else = {
+			this.culture.culture_group = culture_group:hellenic
+		}
+	}
+}
