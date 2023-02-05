@@ -45,7 +45,7 @@
 			heavy_infantry_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
-		icon = celtic_germanic_path_1
+		icon = celtic_britannic_path_2
 		requires = { }
 	}
 
@@ -67,7 +67,7 @@ germanic_generic_path_2 = { ###
 		heavy_infantry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = celtic_gallic_path_1
+	icon = celtic_britannic_path_7
 	requires = { }
 }
 
@@ -81,7 +81,7 @@ germanic_generic_path_3 = { ###
 		heavy_infantry_morale = 0.1
 		army_maintenance_cost = 0.01
 	} 
-	icon = celtic_germanic_path_6
+	icon = celtic_britannic_path_end_bonus
 	requires = {germanic_generic_path_1}
 }
 
@@ -95,7 +95,7 @@ germanic_generic_path_4 = { ###
 		heavy_infantry_discipline = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = celtic_germanic_path_7
+	icon = celtic_gallic_path_1
 	requires = {germanic_generic_path_2}
 }
 
@@ -108,7 +108,7 @@ germanic_generic_path_5 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}
-	icon = greek_antigonid_path_6
+	icon = celtic_gallic_path_4
 	requires = {germanic_generic_path_3}
 }
 
@@ -121,7 +121,7 @@ germanic_generic_path_6 = { ###
 		army_maintenance_cost = 0.01
 	}
 	allow = {military_tech >= 7} 
-	icon = celtic_germanic_path_end_bonus
+	icon = celtic_gallic_path_6
 	requires = {germanic_generic_path_4}
 }
 
@@ -133,7 +133,7 @@ germanic_generic_path_7 = { ###
 		light_cavalry_morale = 0.1
 		army_maintenance_cost = 0.01
 	} 
-	icon = persian_scythian_path_7
+	icon = celtic_gallic_path_end_bonus
 	requires = {germanic_generic_path_5}
 }
 
@@ -145,7 +145,7 @@ germanic_generic_path_8 = { ###
 		heavy_cavalry_discipline = 0.1
 		army_maintenance_cost = 0.01
 	}
-	icon = celtic_gallic_path_2
+	icon = celtic_germanic_path_1
 	requires = {germanic_generic_path_6}
 }
 
@@ -160,7 +160,7 @@ germanic_generic_path_9 = { ###
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 13}
-	icon = celtic_britannic_path_end_bonus
+	icon = celtic_germanic_path_3
 	requires = {germanic_generic_path_7}
 }
 
@@ -174,7 +174,7 @@ germanic_generic_path_10 = { ###
 		horse_archers_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
-	icon = celtic_gallic_path_4
+	icon = celtic_germanic_path_5
 	allow = {military_tech >= 13}
 	requires = {germanic_generic_path_8}
 }
@@ -189,7 +189,7 @@ germanic_generic_path_11 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	} 
-	icon = celtic_gallic_path_6
+	icon = celtic_germanic_path_7
 	requires = {germanic_generic_path_9}
 }
 germanic_generic_path_12 = { ### 
@@ -203,17 +203,214 @@ germanic_generic_path_12 = { ###
 		army_maintenance_cost = 0.01
 		global_population_happiness = -0.02	
 	}
-	icon = celtic_germanic_path_5
+	icon = celtic_germanic_path_end_bonus
 	requires = {germanic_generic_path_10}
 }
 
 ### NAVAL
 
+germanic_generic_sea_1 = { ###
+	modifier = {
+		naval_damage_done = 0.1
+		coastal_terrain_combat_bonus = 0.1
+		navy_maintenance_cost = 0.01
+    } 
+    icon = north_african_naval_path_3
+	requires = { }
+
+}
+
+germanic_generic_sea_2 = { ###
+	modifier = {
+		trireme_offensive = 0.15
+		liburnian_offensive = 0.15
+		trireme_movement_speed = 0.1
+		liburnian_movement_speed = 0.1
+		navy_maintenance_cost = 0.01
+    }
+	icon = default_test
+	requires = {germanic_generic_sea_1}
+
+}
+
+germanic_generic_sea_3 = { ###
+	modifier = {
+		liburnian_defensive = 0.15
+		liburnian_coastal_terrain_combat_bonus = 0.15
+	    navy_maintenance_cost = 0.01
+	} 
+	icon = north_african_naval_path_end_bonus
+	requires = {germanic_generic_sea_2}
+
+}
+
+germanic_generic_sea_4 = { ###
+	modifier = {
+		trireme_discipline = 0.1
+		trireme_offensive = 0.1
+		naval_range = 0.50
+		navy_maintenance_cost = 0.01
+	} 
+	icon = north_african_naval_path_4
+	requires = {germanic_generic_sea_3}
+
+}
 
 ### CIVILIZATION
 
+germanic_path_9 = { ###
+modifier = { 
+	global_nobles_output = 0.06
+}
+	on_activate = {
+		add_innovation = 3
+} 
+icon = celtic_britannic_path_4
+requires = {germanic_path_10}
 
+}
+
+germanic_path_11 = { ###
+modifier = { 
+	enact_holy_site_cost_modifier = -0.15
+	global_tribesmen_output = 0.10
+} 
+icon = celtic_britannic_path_3
+requires = {germanic_path_9}
+
+}
+
+germanic_civic_1 = { ###
+modifier = { 
+	build_cost = -0.1
+	global_nobles_happyness = 0.05
+} 
+icon = celtic_germanic_path_2
+requires = {}
+
+}
+
+germanic_civic_2 = { ###
+modifier = { 
+	global_pop_assimilation_speed = 0.10
+	global_tax_modifier = 0.05
+} 
+icon = celtic_gallic_path_5
+requires = {germanic_civic_1 }
+
+}
+
+germanic_civic_3 = { ###
+on_activate = {
+	add_innovation = 3
+}	
+modifier = { 
+	global_population_growth = 0.04
+	global_goods_from_slaves = -1
+} 
+icon = celtic_germanic_path_6
+requires = {germanic_civic_2 germanic_path_11 }
+
+}
+
+germanic_civic_4 = { ###
+modifier = { 
+	global_food_capacity = 250
+	global_capital_trade_routes = 1 
+} 
+icon = north_african_army_path_4
+requires = { germanic_civic_3 }
+
+} 
+germanic_civic_5 = { ###
+modifier = { 
+	global_supply_limit_modifier = 0.1
+	global_migration_speed_modifier = 0.1
+} 
+icon = persian_bactrian_path_7
+requires = { germanic_civic_3 }
+}
+
+germanic_civic_7 = { ###
+modifier = { 
+	global_food_capacity = 150
+	global_population_capacity_modifier = 0.2
+} 
+icon = persian_scythian_path_2
+requires = { germanic_civic_4 germanic_civic_5 }
+}
+
+germanic_civic_6 = { ###
+modifier = { 
+	price_found_city_cost_modifier = -0.2
+	global_export_commerce_modifier = 0.1
+} 
+icon = persian_scythian_path_6
+requires = { germanic_generic_fort_5 germanic_civic_7 }
+}
 
 ### FORTS
+
+germanic_generic_fort_1 = { ###
+modifier = {
+	siege_ability = 0.1
+	global_cohort_start_experience = 10
+	experience_decay = -0.005
+	army_maintenance_cost = 0.01
+} 
+icon = celtic_gallic_path_5
+requires = { }
+
+}
+
+
+germanic_generic_fort_2 = { ###
+modifier = {
+	war_exhaustion = -0.04
+	global_tribesmen_happyness = 0.08
+	manpower_recovery_speed = 0.10
+	
+} 
+icon = latin_support_path_7
+requires = { germanic_generic_fort_1 }
+
+}
+
+
+germanic_generic_fort_3 = { ###
+modifier = {
+	garrison_size = 0.15
+	fort_maintenance_cost = -0.15
+} 
+icon = latin_roman_path_end_bonus
+requires = { germanic_generic_fort_2 }
+
+}
+
+germanic_generic_fort_4 = { ###
+modifier = {
+	global_defensive = 0.15
+	fort_limit = 1
+} 
+icon = celtic_gallic_path_7
+requires = { germanic_generic_fort_3 }
+
+}
+
+germanic_generic_fort_5 = { ###
+modifier = { 
+	enslavement_efficiency = 0.1
+	global_manpower_modifier = 0.075
+} 
+icon = latin_tribal_path_4
+requires = {germanic_generic_fort_4}
+
+}
+
+
+
+
+
+
 
 }
