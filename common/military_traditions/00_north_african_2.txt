@@ -43,7 +43,7 @@
 
     north_african_latin_enable = { ###North Aftica 2A
 		modifier = {
-			light_infantry_defense = 0.05
+			light_infantry_defensive = 0.05
             light_infantry_desert_combat_bonus = 0.1
             light_infantry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01

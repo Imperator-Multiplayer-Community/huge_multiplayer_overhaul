@@ -45,7 +45,7 @@
 		modifier = {
 			archers_morale = 0.05
             archers_desert_combat_bonus = 0.10
-            archers_flood_plains_combat_bonus = 0.10
+            archers_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_tribal_path_7
@@ -56,7 +56,7 @@
 		modifier = { 
 			light_cavalry_offensive = 0.05
 			light_cavalry_desert_combat_bonus = 0.10
-            light_cavalry_flood_plains_combat_bonus = 0.10
+            light_cavalry_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_end_bonus
@@ -114,7 +114,7 @@
 			heavy_cavalry_cost = -0.15
             heavy_cavalry_movement_speed = 0.10
             heavy_cavalry_morale = 0.10
-			heavy_cavalry_flood_plains_combat_bonus = 0.10
+			heavy_cavalry_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.02
 		} 
 		icon = greek_seleucid_path_4

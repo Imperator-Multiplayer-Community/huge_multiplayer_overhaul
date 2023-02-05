@@ -363,7 +363,7 @@ modifier = {
 	global_tax_modifier = 0.075
 }
 icon = celtic_britannic_path_3
-requires = { celtic_gallic_path_2 }
+requires = { celtic_germanic_path_2 }
 on_activate = {
 	ordered_owned_province = {
 		limit = {

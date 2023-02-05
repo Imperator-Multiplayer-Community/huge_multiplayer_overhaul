@@ -400,7 +400,7 @@ icon = latin_support_path_7
 #civic
 
 thracian_path_3 = { #Civ value
-requires = { thracian_path_1 }
+requires = { }
 modifier = {
 	country_civilization_value = 5
 	global_monthly_civilization = 0.02

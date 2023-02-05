@@ -185,7 +185,7 @@
 		modifier = {
 			light_cavalry_cost = -0.15
 			light_cavalry_desert_combat_bonus = 0.1
-			light_cavalry_desert__hills_combat_bonus = 0.1
+			light_cavalry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		requires = { }

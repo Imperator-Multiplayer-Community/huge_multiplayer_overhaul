@@ -76,7 +76,7 @@
     tibetan_path_13 = { ###
 		modifier = { 
 			archers_morale = 0.05
-			archers_mountains_combat_bonus = 0.10
+			archers_mountain_combat_bonus = 0.10
             archers_hills_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
 		} 
