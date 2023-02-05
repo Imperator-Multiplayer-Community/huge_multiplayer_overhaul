@@ -239,6 +239,7 @@ germanic_generic_sea_3 = { ###
 		liburnian_coastal_terrain_combat_bonus = 0.15
 	    navy_maintenance_cost = 0.01
 	} 
+	allow_unit_type = octere
 	icon = north_african_naval_path_end_bonus
 	requires = {germanic_generic_sea_2}
 
