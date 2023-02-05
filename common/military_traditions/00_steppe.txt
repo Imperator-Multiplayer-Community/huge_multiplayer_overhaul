@@ -300,6 +300,7 @@ steppe_generic_naval_2 = { ###
 		naval_range = 0.25
 		navy_maintenance_cost = 0.01
 	} 
+	allow_unit_type = octere
 	icon = mauryan_coastal_path_end_bonus
 	requires = { steppe_generic_naval_1 }
 }
