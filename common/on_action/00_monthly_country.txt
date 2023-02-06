@@ -25,8 +25,6 @@
 		high_tyranny.2 # removed high tyranny
 		high_tyranny.3 # adds low tyranny
 		high_tyranny.5 # removes low tyranny
-		navy_maint.1 # scales navy maintenance
-		navy_maint.2 # gives navy maintenance modifiers per ports to ships ratio
 		food_share.1 # shares food with allies
 	}
 	
@@ -43,6 +41,8 @@
 		delay = { days = { 1 15 } }
 		passover_supported_characters_pulse
 		monthly_guarantee_pulse
+		delay = { days = { 5 20 } }
+		hmo_navy_maintenance_pulse
 	}
 
 	effect = {

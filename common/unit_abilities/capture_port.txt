@@ -93,20 +93,17 @@
 	
 	
 	start_effect = {
-		random_sub_unit = {
-			limit = {
-				ship_category = heavy
-				subunit_strength_percentage >= 0.50
+		while = {
+			count = 5
+			random_sub_unit = {
+				limit = {
+					ship_category = heavy
+					subunit_strength_percentage >= 0.50
+				}
+				add_subunit_strength = -0.50
 			}
-			add_subunit_strength = -0.50
 		}
-		random_sub_unit = {
-			limit = {
-				ship_category = heavy
-				subunit_strength_percentage >= 0.50
-			}
-			add_subunit_strength = -0.50
-		}
+		
 		if = {
 			limit = {
 				unit_location = {

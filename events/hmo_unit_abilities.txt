@@ -62,8 +62,8 @@ hmo_unit_abilties.1 = { # slave raid
 					owner = {
 						save_temporary_scope_as = target_nation
 					}
-					random_list = { # 25 percent chance raided player is notified
-						3 = { }
+					random_list = { # 20 percent chance raided player is notified
+						4 = { }
 						1 = {
 							scope:target_nation = {
 								trigger_event = {
@@ -85,7 +85,7 @@ hmo_unit_abilties.2 = { # slave raid warning
 	picture = revolt
 	
 	left_portrait = current_ruler
-	right_portrait = scope:slave_raiding_unit.owner.current_ruler 
+	right_portrait = scope:slave_raiding_unit.unit_owner.current_ruler 
 
 	goto_location = scope:slave_raiding_unit
 	
@@ -110,15 +110,14 @@ hmo_unit_abilties.2 = { # slave raid warning
 	    trigger = {
     		opinion = {
     			target = scope:slave_raiding_unit.unit_owner
-    			value < -100
+    			value < -150
 	    	}
 	    }
 
-	    scope:slave_raiding_unit.unit_owner = {
+	    root = {
 	    	declare_war_with_wargoal = {
 	    		war_goal = raiding_wargoal
-	    		target = root
-	    	}
+	    		target = scope:slave_raiding_unit.unit_owner	    	}
 	    }
 	}
 }

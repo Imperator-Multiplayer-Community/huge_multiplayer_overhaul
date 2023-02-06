@@ -1,0 +1,6 @@
+﻿hmo_navy_maintenance_pulse = {
+	events = {
+		navy_maint.1 # scales navy maintenance
+		navy_maint.2 # gives navy maintenance modifiers per ports to ships ratio
+	}
+}

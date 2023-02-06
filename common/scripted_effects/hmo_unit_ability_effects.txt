@@ -1,0 +1,49 @@
+﻿navy_action_effect = {
+	add_unit_modifier = {
+		name = naval_action
+		duration = -1
+	}
+}
+
+navy_protect_trade_nation_effect = { # navy unit
+	while = {
+		count = num_of_ships_svalue
+		unit_owner = {
+			add_country_modifier = {
+				name = protect_merchants
+				duration = -1
+				mode = add
+			}
+		}
+	}
+}
+
+navy_protect_trade_province_effect = {
+	unit_location = {
+		ordered_neighbor_province = {
+			limit = {
+				trading_partner_province_trigger = yes
+				owner = {
+					NOT = {
+						war_with = root.unit_owner
+					}
+				}
+				owner = controller
+				NOT = {
+					owner = root.unit_owner
+				}
+			}
+			max = 1
+			add_province_modifier = {
+				name = trading_partner
+				duration = -1
+			}
+		}
+	}
+}
+
+navy_protect_trade_effect = { # navy unit
+	navy_protect_trade_nation_effect = yes
+	navy_action_effect = yes
+	navy_protect_trade_province_effect = yes
+}
