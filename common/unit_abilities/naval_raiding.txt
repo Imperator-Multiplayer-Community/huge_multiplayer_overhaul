@@ -44,9 +44,9 @@
 			trigger_else = {
 				always = no
 			}
-			trigger_else = {
-				always = yes # testing
-			}
+			#trigger_else = {
+			#	always = yes # testing
+			#}
 		}
 		unit_location = {
 			custom_tooltip = {
