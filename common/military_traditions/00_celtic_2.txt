@@ -108,7 +108,7 @@
 		modifier = { 
 			light_infantry_defensive = 0.05
 			light_infantry_farmland_combat_bonus = 0.1
-            light_infantry_desert_hills_combat_bonus = 0.1
+            light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_britannic_path_2
