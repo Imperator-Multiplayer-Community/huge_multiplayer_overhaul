@@ -1,6 +1,6 @@
 ﻿north_african_philosophy = { 
 	color = hsv { 0.59 0.61 0.37 }
-	image = north_african_tribal_path_7
+	image = north_african_philosophy_start_bonus
 
 
 	allow = {
@@ -28,21 +28,9 @@
 			country_culture_group = fezzani
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = north_african_influence
-			}
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_north_african"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:numidian
-						this.culture.culture_group = culture_group:fezzani
-						is_culture = carthaginian
-					}
-				}
+			OR = {
+				this.culture.culture_group = culture_group:numidian
+				this.culture.culture_group = culture_group:fezzani
 			}
 		}
 	}
@@ -124,7 +112,7 @@ north_africa_generic_path_5 = { ###
 		archers_cost = -0.05
 		archers_movement_speed = 0.05
 		heavy_cavalry_cost = -0.05
-		heavy_cavalry_speed = 0.05
+		heavy_cavalry_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}
@@ -324,7 +312,7 @@ north_african_tribal_path_end_bonus = { ###North Aftica 1A
 	}
 }
 
-north_african_latin_enable = { ###North Aftica 2A
+generic_north_african_fort_2 = { ###North Aftica 2A
 		modifier = {
 			global_freemen_output = 0.05
 			general_loyalty = 5
@@ -333,13 +321,13 @@ north_african_latin_enable = { ###North Aftica 2A
 		requires = { north_african_tribal_path_end_bonus }	
 }
 	
-north_african_tribal_path_5 = { ###North Aftica 1A
+generic_north_african_fort_3 = { ###North Aftica 1A
 		modifier = { 
 			land_unit_attrition = -0.15
 			desert_combat_bonus = 0.1
 		}
 		icon = north_african_tribal_path_5
-		requires = { north_african_latin_enable }
+		requires = { generic_north_african_fort_2 }
 
 }
 
@@ -350,7 +338,7 @@ modifier = {
 	fort_maintenance_cost = 0.01
 }
 icon = north_african_naval_path_6
-requires = {north_african_tribal_path_5}
+requires = {generic_north_african_fort_3}
 }
 
 
@@ -410,7 +398,7 @@ modifier = {
 	ship_cost = -0.1
 }
 icon = north_african_naval_path_7
-requires = {north_african_army_path_2}
+requires = { north_african_army_path_2 north_african_naval_path_4 }
 on_activate = {
 	if = {
 		limit = {
@@ -473,8 +461,9 @@ modifier = {
 	naval_range = 0.1
 	navy_maintenance_cost = 0.01
 }
+allow_unit_type = octere
 icon = north_african_naval_path_4
-requires = { north_african_naval_path_7 }
+requires = { north_african_naval_path_end_bonus }
 }
 
 north_african_naval_path_end_bonus = { ###North Aftica 4B
@@ -485,8 +474,9 @@ modifier = {
 	liburnian_movement_speed = 0.1
 	navy_maintenance_cost = 0.01
 }
+allow_unit_type = mega_galley
 icon = north_african_naval_path_end_bonus
-requires = { north_african_naval_path_4 }
+requires = { north_african_naval_path_3 }
 }
 
 north_african_naval_path_3 = { ###North Aftica 5BB
@@ -495,7 +485,7 @@ modifier = {
 	navy_maintenance_cost = 0.01
 }
 icon = north_african_naval_path_3
-requires = { north_african_naval_path_end_bonus }
+requires = { }
 }
 
 }

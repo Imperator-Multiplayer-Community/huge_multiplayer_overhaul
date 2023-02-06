@@ -11,19 +11,8 @@
 			country_culture_group = aryan
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = aryan_influence
-			}
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_aryan"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:aryan
-					}
-				}
+			OR = {
+				this.culture.culture_group = culture_group:aryan
 			}
 		}
 	}
@@ -209,19 +198,37 @@
 	}
 	
 	### NAVAL
-	lydian_path_6 = { ###
-		modifier = { 
-			liburnian_discipline = 0.05
-			trireme_offensive = 0.1
-			trireme_coastal_terrain_combat_bonus = 0.1
-			navy_maintenance_cost = 0.01
-		} 
-		icon = mauryan_coastal_path_3
-		requires = { }
+	aryan_generic_path_naval_1 = { ###North Aftica 4A
+	icon = mauryan_coastal_path_1
+	requires = { }
+	modifier = { 
+		ocean_combat_bonus = 0.1
+		naval_range = 0.2
+		navy_maintenance_cost = 0.01
 	}
-	lydian_path_12 = { ###
-		allow_unit_type = octere
-		on_activate = {
+	}
+	
+	aryan_generic_path_naval_2 = { ###North Aftica 1B
+	modifier = { 
+		naval_damage_done = 0.1
+		coastal_terrain_combat_bonus = 0.1
+		navy_maintenance_cost = 0.01
+	}
+	icon = mauryan_coastal_path_3
+	requires = { aryan_generic_path_naval_1 }
+	}
+	
+	aryan_generic_path_naval_3 = { ###North Aftica 2B
+	modifier = { 
+		ship_cost = -0.1
+	}
+	icon = mauryan_coastal_path_end_bonus
+	requires = { aryan_generic_path_naval_2 }
+	on_activate = {
+		if = {
+			limit = {
+				any_owned_province = { num_of_port_building > 0  }
+			}
 			random_owned_province = {
 				limit = {
 					num_of_port_building > 0 
@@ -230,31 +237,73 @@
 					create_unit = {
 						navy = yes
 						location = prev.prev
-						add_subunit = octere
-						add_subunit = octere
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
 					}
 				}
 			}
 		}
-		modifier = { 
-			naval_morale_modifier = 0.05
-			naval_damage_taken = -0.05
-			ocean_combat_bonus = 0.1
-			navy_maintenance_cost = 0.01
-		} 
-		icon = mauryan_coastal_path_1
-		requires = { lydian_path_6 }
+		else = {
+			ordered_owned_province = {
+				limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+				add_building_level = port_building
+			}
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
+				}
+			}
+		}
 	}
-	lydian_path_13 = { ###
-		modifier = { 
-			naval_range = 0.25
-			mercenary_naval_maintenance_cost = -0.3
-			max_mercenary_stacks = 1
-			navy_maintenance_cost = 0.01
-		} 
-		icon = mauryan_coastal_path_end_bonus
-		requires = { lydian_path_12 }
 	}
+	
+	aryan_generic_path_naval_4 = { ###North Aftica 3B
+	modifier = { 
+		ship_repair_at_sea = 0.02
+		naval_range = 0.2
+		navy_maintenance_cost = 0.01
+	}
+	allow_unit_type = octere
+	icon = north_african_naval_path_4
+	requires = { aryan_generic_path_naval_3 }
+	}
+	
+	aryan_generic_path_naval_5 = { ###North Aftica 4B
+	modifier = { 
+		trireme_offensive = 0.15
+		liburnian_offensive = 0.15
+		trireme_movement_speed = 0.1
+		liburnian_movement_speed = 0.1
+		navy_maintenance_cost = 0.01
+	}
+	allow_unit_type = mega_galley
+	icon = north_african_naval_path_end_bonus
+	requires = { aryan_generic_path_naval_4 }
+	}
+	
 	### CIVILIZATION
 	
 	tibetan_path_5 = { ###
@@ -270,10 +319,10 @@
 	aryan_river_path_11 = { ###
 		on_activate = {
 			add_innovation = 3
-			manpower_recovery_speed = 0.05
 		}	
 		modifier = { 
 			global_nobles_output = 0.05
+			manpower_recovery_speed = 0.05
 		} 
 		icon = mauryan_noble_path_7
 		requires = { tibetan_path_5 }
@@ -319,7 +368,7 @@
 	requires = { aryan_river_path_11 }
 	}
 
-	tamil_path_6 = { ###
+	ayran_generic_civ_1 = { ###
 	on_activate = {
 		custom_tooltip = "create_high_martial_rising_star"
 		hidden_effect = {
@@ -330,21 +379,21 @@
 		}
 	}
 	modifier = { 
-		global_manpower_modifier = 0.075
+		global_manpower_modifier = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	    icon = mauryan_mauryas_path_3
-	    requires = { aryan_river_path_7 }
+	    requires = { aryan_plains_path_5 }
     }   
 	
 
-	babylonian_generic_city_path_1 = { ###
+	ayran_generic_civ_6 = { ###
 	modifier = { 
 		research_points_modifier = 0.075
 	    price_found_metropolis_cost_modifier = -0.20
 	} 
 	icon = mauryan_coastal_path_6
-	requires = { aryan_plains_path_5 }
+	requires = { ayran_generic_civ_1 }
     }
 
 	### FORTS
@@ -361,4 +410,29 @@
 		icon = mauryan_coastal_path_2
 		requires = { }
 	}
+
+
+    ayran_geneic_fort_2 = { ###
+    on_activate = {
+    capital_scope = {
+	    add_building_level = fortress_building
+    }
+    }	
+    modifier = { 
+      army_movement_speed = 0.05
+      army_maintenance_cost = 0.01
+    } 
+    icon = latin_support_path_3
+    requires = { aryan_river_path_7 }
+    }
+
+    ayran_geneic_fort_3 = { #
+    modifier = { 
+	   global_manpower_modifier = 0.05
+	   monthly_legitimacy = 0.01
+	   army_maintenance_cost = 0.01
+	}
+    icon = persian_scythian_path_7
+    requires = { ayran_geneic_fort_2 }
+    }
 }

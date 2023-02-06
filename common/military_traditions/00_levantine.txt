@@ -32,7 +32,6 @@
 			}
 			country_culture_group = north_african
 		}
-		
 		trigger_else = {
 			OR = {
 				primary_culture = hebrew
@@ -50,7 +49,7 @@
             }
         }
         on_activate = {
-            set variable = left_generic_tree
+            set_variable = left_generic_tree
         }
 		modifier = { 
 			archers_cost = -0.05
@@ -72,7 +71,7 @@
             }
         }
         on_activate = {
-            set variable = right_generic_tree
+            set_variable = right_generic_tree
         }
 		modifier = { 
 			archers_cost = -0.05
@@ -340,7 +339,7 @@
 			navy_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_5
-		requires = {levantine_egyptian_path_2}
+		requires = {levantine_greek_enable}
 	}
 
 		
@@ -359,7 +358,7 @@
 			fort_limit = 1
 		}
 		icon = levantine_egyptian_path_3
-		requires = {levantine_egyptian_path_6}
+		requires = {levantine_arabian_path_6}
 		on_activate = {
 			ordered_owned_province = {	#Upgrades a port, or creates one
 				limit = {
@@ -376,7 +375,7 @@
 		modifier = {
 		}
 		icon = levantine_greco_path_end_bonus
-		requires = {levantine_egyptian_path_1 levantine_egyptian_path_3}
+		requires = {levantine_arabian_path_6}
 		on_activate = {
 			add_4_free_province_investments = yes
 			custom_tooltip = "create_high_martial_rising_star"
