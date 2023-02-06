@@ -3168,7 +3168,7 @@ vandal_heritage = {
 argead_heritage = {
 	modifier = {
 		#good
-		heavy_infantry_discipline = 0.2
+		heavy_infantry_discipline = 0.1
 		happiness_for_same_culture_modifier = happiness_large_svalue
 		
 		#bad
@@ -3371,7 +3371,7 @@ brennusovian_heritage = {
 jalabhumi_heritage = {
 	modifier = {
 		#good
-		light_infantry_marsh_combat_bonus = 0.35
+		light_infantry_marsh_combat_bonus = 0.25
 		hostile_attrition = 0.10
 		
 		#bad
