@@ -71,6 +71,7 @@
     # Normal Units
 
     celtic_gallic_path_1 = { ###Celtic 1A
+	    enable_tactic = hit_and_run_tactics
 		modifier = { 
 			archers_offensive = 0.05
             archers_plains_combat_bonus = 0.10
