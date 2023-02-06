@@ -21,20 +21,9 @@
 			country_culture_group = tibetan
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = tibeto_pracyan_influence
-			}	
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_tibeto_pracyan"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:pracyan
-						this.culture.culture_group = culture_group:tibetan
-					}
-				}
+			OR = {
+				this.culture.culture_group = culture_group:pracyan
+				this.culture.culture_group = culture_group:tibetan
 			}
 		}
 	}
@@ -118,7 +107,7 @@ pracyan_generic_path_5 = { ###
 		light_cavalry_cost = -0.05
 		light_cavalry_movement_speed = 0.05
 		warelephant_cost = -0.05
-		warelephant_speed = 0.05
+		warelephant_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
 	allow = {military_tech >= 7}
@@ -222,18 +211,92 @@ pracyan_generic_path_12 = { ###
 }
 
 ### NAVAL
-lydian_path_6 = { ###
+tibet_generic_naval_1 = { 
 	modifier = { 
-		liburnian_discipline = 0.05
-		trireme_offensive = 0.1
-		trireme_coastal_terrain_combat_bonus = 0.1
+		trireme_offensive = 0.15
+		liburnian_offensive = 0.15
+		trireme_movement_speed = 0.1
+		liburnian_movement_speed = 0.1
+		coastal_terrain_combat_bonus = 0.1
 		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_3
-	requires = { }
+	}
+	requires = {  }
+	icon = mauryan_coastal_path_end_bonus
+	on_activate = {
+		if = {
+			limit = {
+				any_owned_province = { num_of_port_building > 0  }
+			}
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
+				}
+			}
+		}
+		else = {
+			ordered_owned_province = {
+				limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+				add_building_level = port_building
+			}
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
+				}
+			}
+		}
+	}
 }
-lydian_path_12 = { ###
+
+tibet_generic_naval_2 = { 
+	modifier = { 
+		naval_damage_done = 0.05
+		global_ship_recruit_speed = 0.15 
+		navy_maintenance_cost = 0.01
+	}
 	allow_unit_type = octere
+	requires = { tibet_generic_naval_1 }
+	icon = mauryan_coastal_path_3
+}
+
+tibet_generic_naval_3 = {
+	modifier = {
+		naval_range = 0.5
+		navy_maintenance_cost = 0.01
+	}
+    allow_unit_type = mega_galley
+	requires = { tibet_generic_naval_2 }
+	icon = mauryan_coastal_path_1
 	on_activate = {
 		random_owned_province = {
 			limit = {
@@ -249,25 +312,8 @@ lydian_path_12 = { ###
 			}
 		}
 	}
-	modifier = { 
-		naval_morale_modifier = 0.05
-		naval_damage_taken = -0.05
-		ocean_combat_bonus = 0.1
-		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_1
-	requires = { lydian_path_6 }
 }
-lydian_path_13 = { ###
-	modifier = { 
-		naval_range = 0.25
-		mercenary_naval_maintenance_cost = -0.3
-		max_mercenary_stacks = 1
-		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_end_bonus
-	requires = { lydian_path_12 }
-}
+
 ### CIVILIZATION
 
 pracyan_civ_generic_path_1  = { ###
@@ -327,9 +373,29 @@ modifier = {
 } 
 icon = mauryan_coastal_path_2
 requires = { pracyan_civ_generic_path_2 }
+}
 
+generic_tibet_civic_2 = { ###Latin 1B
+	modifier = { 
+		global_slaves_output = 0.1
+	    global_nobles_happyness = 0.05
+	}
+	
+    requires = { pracyan_civ_generic_path_3 }
+    icon = mauryan_noble_path_5
 
 }
+
+generic_tibet_civic_3 = { ###Latin 1B
+	modifier = { 
+		global_pop_assimilation_speed = 0.10
+		global_tax_modifier = 0.05
+	}
+	
+    requires = { generic_tibet_civic_2  }
+    icon = latin_roman_path_4
+}
+
 ### FORTS
 pracyan_fort_generic_path_1 = { #
 on_activate = {

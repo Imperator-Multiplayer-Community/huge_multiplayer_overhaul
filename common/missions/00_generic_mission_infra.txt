@@ -2533,7 +2533,13 @@
 			if = {
 				limit = {
 					OR = {
-						is_tradition_tree_allowed = naval_traditions
+						is_tradition_tree_allowed = greek_philosophy
+						is_tradition_tree_allowed = aryan_philosophy
+						is_tradition_tree_allowed = levantine_philosophy
+						is_tradition_tree_allowed = mesopotamian_philosophy
+						is_tradition_tree_allowed = north_african_philosophy
+						is_tradition_tree_allowed = persian_philosophy
+						is_tradition_tree_allowed = pracyan_philosophy
 					}
 				}
 				create_unit = {
