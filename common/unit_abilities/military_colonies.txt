@@ -10,9 +10,18 @@
 	
 	
 	allow = {
-		#unit_owner = { 
-		#	has_military_bonus = military_colonies_path_1
-		#}
+		unit_owner = { 
+			OR = {
+				has_military_bonus = aryan_plains_path_5
+				has_military_bonus = dravidian_city_generic_path_3
+				has_military_bonus = greek_states_path_4
+				has_military_bonus = thracian_path_6
+				has_military_bonus = levantine_egyptian_path_4
+				has_military_bonus = Persian_civ_generic_path_3
+				has_military_bonus = pracyan_civ_generic_path_3
+				has_military_bonus = bactrian_path_14
+			}
+		}
 		has_commander = yes
 		is_army = yes
 		in_combat = no
