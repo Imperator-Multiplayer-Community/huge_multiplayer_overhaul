@@ -1,0 +1,6 @@
+﻿unit_food_share_svalue = { # unit
+	value = unit_size
+	divide = 5
+	floor = yes
+	add = 5
+}

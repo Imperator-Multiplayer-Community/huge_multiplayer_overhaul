@@ -169,7 +169,7 @@ greek_generic_path_10 = { ###
 		warelephant_movement_speed = 0.05
 		horse_archers_cost = -0.05
 		horse_archers_movement_speed = 0.05
-		camels_archers_cost = -0.05
+		camels_cost = -0.05
 		camels_movement_speed = 0.05
 		army_maintenance_cost = 0.01
 	} 
@@ -217,12 +217,12 @@ greek_antigonid_path_4 = {
 		enslavement_efficiency = 0.1
 	}
 	enable_ability = naval_raiding
-	requires = { greek_antigonid_path_2_octere }
+	requires = { }
 	icon = greek_antigonid_path_4
 }
 
 greek_antigonid_path_2 = {
-	requires = { greek_naval_heritage }
+	requires = { greek_antigonid_path_4 }
 	icon = greek_seleucid_path_end_bonus
 	modifier = {
 		ship_cost = -0.15
@@ -251,7 +251,7 @@ greek_levantine_enable = {
 		naval_damage_taken = -0.1 
 		navy_maintenance_cost = 0.01
 	}
-	requires = { greek_antigonid_path_2 }
+	requires = { greek_antigonid_path_2 greek_naval_heritage }
 	icon = greek_states_path_5
 }
 
@@ -261,7 +261,7 @@ greek_naval_heritage = {
 		coastal_terrain_combat_bonus = 0.1
 		navy_maintenance_cost = 0.01
 	}
-	requires = { greek_levantine_enable }
+	requires = { greek_seleucid_path_3 }
 	icon = greek_seleucid_path_3
 	on_activate = {
 		if = {
@@ -325,7 +325,8 @@ greek_seleucid_path_3 = {
 		global_ship_recruit_speed = 0.15 
 		navy_maintenance_cost = 0.01
 	}
-	requires = { greek_naval_heritage }
+	allow_unit_type = octere
+	requires = { greek_antigonid_path_2_octere }
 	icon = greek_antigonid_path_2
 }
 
@@ -334,8 +335,8 @@ greek_antigonid_path_2_octere = {
 		naval_range = 0.1 
 		navy_maintenance_cost = 0.01
 	}
-	allow_unit_type = octere
-	requires = { greek_seleucid_path_3 }
+    allow_unit_type = mega_galley
+	requires = { }
 	icon = default_test
 	on_activate = {
 		random_owned_province = {

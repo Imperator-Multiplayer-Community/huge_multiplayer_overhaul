@@ -100,13 +100,15 @@
 				}
 
 				custom_tooltip = port_raid_explainer
-				random_neighbor_province = {
-					limit = {
-						raid_port_province_trigger = yes
-						NOT = { controller = root.unit_owner }
-						controller = { war_with = root.unit_owner }
+				unit_location = {
+					random_neighbor_province = {
+						limit = {
+							raid_port_province_trigger = yes
+							NOT = { controller = root.unit_owner }
+							controller = { war_with = root.unit_owner }
+						}
+						siege = { add_breach = 1 }
 					}
-					siege = { add_breach = 1 }
 				}
 			}
 

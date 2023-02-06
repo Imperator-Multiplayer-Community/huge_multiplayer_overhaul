@@ -204,7 +204,7 @@
             }
         }
         on_activate = {
-            set variable = camel_super_unit
+            set_variable = camel_super_unit
         }
         modifier = { 
 			camels_defensive = 0.10
@@ -248,7 +248,7 @@
             camels_desert_combat_bonus = 0.10
             camels_hills_combat_bonus = 0.10
             camels_mountain_combat_bonus = 0.10
-            camels_plain_combat_bonus = 0.10
+            camels_plains_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_7

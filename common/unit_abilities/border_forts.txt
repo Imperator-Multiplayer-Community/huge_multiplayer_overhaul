@@ -7,15 +7,15 @@
 
 	army_only = yes
 	soundeffect ="event:/SFX/Animations/Units/Generic/sfx_anim_unit_build_border_fort"
-	
+
 	allow = {
 		unit_owner = { can_pay_price = build_border_fort }
 		custom_tooltip = {
 			text = "is_allowed_border_fortress_tt"
 			OR = {
-				root.unit_owner = {
-					#has_military_bonus = border_fort_path_1
-				}
+				#root.unit_owner = {
+				#	has_military_bonus = border_fort_path_1
+				#}
 				root.unit_owner = {
 					is_tribal = yes
 				}
@@ -49,7 +49,7 @@
 						owner = root.unit_owner
 						any_neighbor_province = {
 							has_owner = yes
-							NOT = { owner = root.unit_owner	}
+							NOT = { owner = root.unit_owner }
 							is_uninhabitable = no
 						}
 					}
@@ -61,18 +61,6 @@
 				any_neighbor_province = {
 					owner =  root.unit_owner
 					controller = root.unit_owner
-				}
-			}
-			custom_tooltip = {
-				text = "neighboring_fort_province_tt"
-				NOT = {
-					any_neighbor_province = {
-						has_building = border_fortress_building
-						AND = {
-							has_owner = yes
-							owner = root.unit_owner
-						}
-					}	
 				}
 			}
 		}

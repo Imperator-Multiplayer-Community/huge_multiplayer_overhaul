@@ -136,7 +136,7 @@
 
 				unit_owner = {
 					while = {
-						count >= num_of_ships_svalue
+						count = num_of_ships_svalue
 						add_country_modifier = {
 							name = go_fish
 							duration = -1
@@ -167,7 +167,7 @@
 
 				unit_owner = {
 					while = {
-						count >= num_of_ships_svalue
+						count = num_of_ships_svalue
 						add_country_modifier = {
 							name = go_fish
 							duration = -1
@@ -238,7 +238,7 @@
 			}
 
 			while = {
-				count >= var:starting_num_of_ships
+				count = var:starting_num_of_ships
 				unit_owner = {
 					add_country_modifier = {
 						name = not_go_fish

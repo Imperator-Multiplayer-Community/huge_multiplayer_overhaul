@@ -66,7 +66,7 @@
  naval_raidingdesc:0 "Though outlawed in many states the 'old fashioned way of life' of piracy and maritime slave raiding, is vital to the economy of other societies."
  naval_raiding_explain_modifier_tooltip:0 "All Raided Provinces will get the following Modifiers:"
  naval_raiding_ae_gain_tooltip:1 "We will gain #R [SCOPE.ScriptValue('naval_raiding_ae_gain_tooltip_svalue')|0]#! Aggressive Expansion."
- explain_naval_raiding_tooltip:1 "This navy can raid up to #Y [SCOPE.ScriptValue('naval_raid_capacity_tooltip_svalue')|0]#! adjacent ports for #Y Slaves#! if they are protected by fewer than #Y [SCOPE.ScriptValue('naval_raid_fort_limit_tooltip_svalue')|0]#! fortress levels and have a population above #Y 5#!."
+ explain_naval_raiding_tooltip:1 "After 30 days this navy can raid up to #Y [SCOPE.ScriptValue('naval_raid_capacity_tooltip_svalue')|0]#! adjacent ports for #Y Slaves#! if they are protected by fewer than #Y [SCOPE.ScriptValue('naval_raid_fort_limit_tooltip_svalue')|0]#! fortress levels and have a population above #Y 5#!."
  naval_raiding_tooltip:2 "This navy can raid up to #Y [SCOPE.ScriptValue('naval_raid_capacity_tooltip_svalue')|0]#! adjacent ports for #Y Slaves#! if they are protected by fewer than #Y [SCOPE.ScriptValue('naval_raid_fort_limit_tooltip_svalue')|0]#! fortress levels and have a population above #Y 5#!.\nPerforming a Naval Raid will cause #R 1#! Aggressive Expansion point and an additional #R 1#! point per raided port (up to #R [SCOPE.ScriptValue('naval_raid_capacity_tooltip_svalue')|0]#!)."
  raze_city:0 "Raze City"
  raze_citydesc:0 "By razing the infrastructure of a developed city, we may find it a more suitable place to settle our faithful tribal population."

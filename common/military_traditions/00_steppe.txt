@@ -38,22 +38,11 @@
 			country_culture_group = caucasian
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = steppe_influence
-			}
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_steppe"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:scythia
-						this.culture.culture_group = culture_group:scythian_east
-						this.culture.culture_group = culture_group:bactrian
-						this.culture.culture_group = culture_group:caucasian
-					}
-				}
+			OR = {
+				this.culture.culture_group = culture_group:scythia
+				this.culture.culture_group = culture_group:scythian_east
+				this.culture.culture_group = culture_group:bactrian
+				this.culture.culture_group = culture_group:caucasian
 			}
 		}
 	}
@@ -239,51 +228,81 @@ steppe_generic_path_12 = { ###
 }
 
 ### NAVAL
-lydian_path_6 = { ###
+steppe_generic_naval_1 = { 
 	modifier = { 
-		liburnian_discipline = 0.05
-		trireme_offensive = 0.1
-		trireme_coastal_terrain_combat_bonus = 0.1
+		trireme_offensive = 0.15
+		liburnian_offensive = 0.15
+		trireme_movement_speed = 0.1
+		liburnian_movement_speed = 0.1
+		coastal_terrain_combat_bonus = 0.1
 		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_3
-	requires = { }
-}
-lydian_path_12 = { ###
-	allow_unit_type = octere
+	}
+	requires = {  }
+	icon = greek_seleucid_path_3
 	on_activate = {
-		random_owned_province = {
+		if = {
 			limit = {
-				num_of_port_building > 0 
+				any_owned_province = { num_of_port_building > 0  }
 			}
-			owner = {
-				create_unit = {
-					navy = yes
-					location = prev.prev
-					add_subunit = octere
-					add_subunit = octere
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
+				}
+			}
+		}
+		else = {
+			ordered_owned_province = {
+				limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+				add_building_level = port_building
+			}
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
 				}
 			}
 		}
 	}
-	modifier = { 
-		naval_morale_modifier = 0.05
-		naval_damage_taken = -0.05
-		ocean_combat_bonus = 0.1
-		navy_maintenance_cost = 0.01
-	} 
-	icon = mauryan_coastal_path_1
-	requires = { lydian_path_6 }
 }
-lydian_path_13 = { ###
+
+steppe_generic_naval_2 = { ###
 	modifier = { 
 		naval_range = 0.25
-		mercenary_naval_maintenance_cost = -0.3
-		max_mercenary_stacks = 1
 		navy_maintenance_cost = 0.01
 	} 
+	allow_unit_type = octere
 	icon = mauryan_coastal_path_end_bonus
-	requires = { lydian_path_12 }
+	requires = { steppe_generic_naval_1 }
 }
 ### CIVILIZATION
 
@@ -373,7 +392,7 @@ requires = { bactrian_path_15 }
 }
 
 ### FORTS
-scythian_path_13 = { ###
+scythian_path_generic_fort_1 = { ###
 on_activate = {
 	ordered_owned_province = {
 		limit = {
@@ -405,11 +424,11 @@ modifier = {
 	army_maintenance_cost = 0.01
 } 
 icon = persian_achaemenid_path_end_bonus
-requires = { scythian_path_13 }
+requires = { scythian_path_generic_fort_1 }
 }
 
 
-scythian_path_2 = { ###
+scythian_path_generic_fort_2 = { ###
 on_activate = {
 	ordered_owned_province = {
 		order_by = {
@@ -428,7 +447,7 @@ modifier = {
 	army_maintenance_cost = 0.01
 } 
 icon = mauryan_mauryas_path_1
-requires = { scythian_path_14 }
+requires = { scythian_path_generic_fort_1 }
 
 }
 
@@ -447,11 +466,11 @@ modifier = {
 	army_maintenance_cost = 0.01
 } 
 icon = north_african_tribal_path_3
-requires = { scythian_path_2 }
+requires = { scythian_path_generic_fort_2 }
 
 }
 
-bactrian_path_9 = { ###
+scythian_path_generic_fort_3 = { ###
 		modifier = { 
 			global_supply_limit_modifier = 0.15
 			hostile_attrition = 1
