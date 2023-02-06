@@ -16,6 +16,8 @@
  disallow_octere_rome_tt:0 "We lack the shipbuilders and plans to construct such a large vessel."
  disallow_octere_wood_tt:0 "We do not have enough wood for a vessel of this size."
 
+ explain_naval_action_tt:0 "Your navy will gain the following:"
+
  raid_commerce:0 "Raid Commerce"
  raid_commercedesc:0 "Attack economic activity along this coastline, bringing ruin to the local communities."
 
@@ -31,7 +33,9 @@
 
  trading_explain_modifier_tooltip:0 "All Provinces trading with you will gain the following Modifiers"
 
- explain_trading_tooltip:0 "This navy can escort your merchants as they do business with the ports nearby, making a fortune for them. The local communities will also prosper once they get their hands on our fine goods."
+ explain_trading_tooltip:0 "This navy can escort your merchants as they do business with the ports nearby. Protecting trade increases your nation's trade income based on the number of ships, and it also increases the income of a local province."
+ explain_trading_nation_tt:0 "Your nation will gain the following:"
+ explain_trading_provice_tt:0 "The adjacent provice with the highest population will gain the following:"
  trading_cooldown_tooltip:0 "All nearby markets are saturated with our goods. You'll find no buyers here for some time."
  trading_only_overlord_ports_tooltip:0 "Nearby ports are owned by the #Y Overlord#! of this navy's owner."
  trading_import_export:0 "Owner of province needs to have imported or exported goods from or to our nation."
