@@ -11,16 +11,29 @@
 		unit_owner = {
 			OR = {
 				num_of_cities < 1
+<<<<<<< Updated upstream
 				#NOR = {
 				#	heritage = pirate_heritage
 				#	is_tradition_tree_allowed = naval_traditions
 				#}
+=======
+				NOR = {
+					heritage = pirate_heritage
+					is_tradition_tree_allowed = aryan_philosophy
+					is_tradition_tree_allowed = levantine_philosophy
+					is_tradition_tree_allowed = mesopotamian_philosophy
+					is_tradition_tree_allowed = north_african_philosophy
+					is_tradition_tree_allowed = persian_philosophy
+					is_tradition_tree_allowed = pracyan_philosophy
+				}
+>>>>>>> Stashed changes
 			}
 		}
 	}
 
 	allow = {
 		unit_owner = {
+<<<<<<< Updated upstream
 			#trigger_if = {
 			#	limit = {
 			#		heritage = pirate_heritage
@@ -43,6 +56,32 @@
 			#}
 			#trigger_else = {
 			#	always = no
+=======
+			trigger_if = {
+				limit = {
+					heritage = pirate_heritage
+				}
+				heritage = pirate_heritage
+			}
+			trigger_else_if = {
+				limit = {
+					is_tradition_tree_allowed = aryan_philosophy
+					is_tradition_tree_allowed = levantine_philosophy
+					is_tradition_tree_allowed = mesopotamian_philosophy
+					is_tradition_tree_allowed = north_african_philosophy
+					is_tradition_tree_allowed = persian_philosophy
+					is_tradition_tree_allowed = pracyan_philosophy
+				}
+				OR = {
+					has_military_bonus = greek_antigonid_path_4
+					has_military_bonus = aryan_river_path_3
+					has_military_bonus = illyrian_piracy_path_1
+					has_military_bonus = lydian_path_1
+					has_military_bonus = celt_iberian_path_c_3
+					has_military_bonus = arabian_path_4
+				}
+				
+>>>>>>> Stashed changes
 			}
 			trigger_else = {
 				always = yes # testing
