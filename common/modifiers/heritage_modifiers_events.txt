@@ -1126,3 +1126,8 @@ Cimmeria_modifier = {
         global_population_capacity_modifier = 0.05
         global_import_commerce_modifier = -0.1
 }
+fezzani_modifier = {
+		desert_combat_bonus = 0.05
+		hostile_attrition = 1.0
+		global_commerce_modifier = -0.05
+}

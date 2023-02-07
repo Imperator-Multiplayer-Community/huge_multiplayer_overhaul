@@ -5971,6 +5971,51 @@ formable_heritage.155 = {
 	}
 }
 
+formable_heritage.156 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.156.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.156.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+    
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = FEZ
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.156.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = fezzani_heritage 
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = fezzani_modifier
+				#duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.156.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 125
+    }	
+    option = { # EFFECT FIELD - THIRD OPTION
+        name = formable_heritage.156.c # LOCALIZATION KEY - Option B text
+		hidden_effect = { 
+			set_country_heritage = tribal_heritage 
+		}
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = tribal_modifier
+				#duration = -1
+			}
+		}
+	}
+}
+
 formable_heritage.180 = {
     type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
     title = formable_heritage.180.t # LOCALIZATION KEY - Title of event
@@ -6015,3 +6060,4 @@ formable_heritage.180 = {
 		}
 	}
 }
+
