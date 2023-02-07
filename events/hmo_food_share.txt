@@ -32,6 +32,9 @@ food_share.1 = {
 							OR = {
 								alliance_with = scope:current_province.owner
 								is_subject_of = scope:current_province.owner
+								scope:current_province.owner = {
+									is_subject_of = root
+								}
 							}
 						}
 					}
