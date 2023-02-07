@@ -3,7 +3,6 @@
 	enable = yes
 	toggle = yes
 	navy_only = yes
-	cancel_on_combat_end = yes
 
 	map = no
 
@@ -60,15 +59,13 @@
 			}
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = explain_trading_tooltip
-				can_protect_trade = yes
-			}
+			custom_tooltip = explain_trading_tooltip
 		}
 	}
 	
 
 	start_effect = {
+		custom_tooltip = trading_explain_modifier_tooltip
 		if = {
 			limit = {
 				can_protect_trade = yes
@@ -76,12 +73,6 @@
 
 			hidden_effect = {
 				set_variable = is_navy_protecting_commerce
-			}
-
-			show_as_tooltip = {
-				navy_action_effect = yes
-				navy_protect_trade_nation_effect = yes
-				navy_protect_trade_province_effect = yes
 			}
 			
 			navy_protect_trade_effect = yes
@@ -93,18 +84,10 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			is_moving = yes
-			in_combat = yes
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
-			navy_drilling = yes
-			navy_slave_raiding = yes
-			navy_supplying = yes
-			navy_assaulting = yes
-			navy_fishing = yes
-			navy_raiding = yes
-			navy_raiding_commerce = yes
-			navy_protecting_commerce = no
+			in_combat = yes
 		}
 	}
 

@@ -2,11 +2,10 @@
 	duration = 61
 	enable = yes
 	toggle = yes
-	cancel_on_combat_end = yes
 	navy_only = yes
 
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_assualt"
-	map = yes
+	map = no
 
 	allow = {
 		is_navy = yes
@@ -138,17 +137,10 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			is_moving = yes
-			in_combat = yes
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
-			navy_drilling = yes
-			navy_slave_raiding = yes
-			navy_supplying = yes
-			navy_fishing = yes
-			navy_raiding = yes
-			navy_raiding_commerce = yes
-			navy_protecting_commerce = yes
+			in_combat = yes
 		}
 	}
 

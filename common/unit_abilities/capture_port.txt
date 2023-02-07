@@ -5,7 +5,7 @@
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_capture_port"
 
 	navy_only = yes
-
+	map = no
 
 	allow = {
 		is_navy = yes

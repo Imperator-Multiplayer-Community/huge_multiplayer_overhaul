@@ -3,9 +3,8 @@
 	enable = yes
 	toggle = yes
 	navy_only = yes
-	cancel_on_combat_end = yes
 
-	map = yes
+	map = no
 
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
@@ -67,6 +66,7 @@
 	}
 
 	start_effect = {
+		custom_tooltip = explain_raiding_commerce_tooltip
 		if = {
 			limit = {
 				can_mug_province_trigger = yes
@@ -199,13 +199,6 @@
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
-			navy_drilling = yes
-			navy_slave_raiding = yes
-			navy_supplying = yes
-			navy_assaulting = yes
-			navy_fishing = yes
-			navy_raiding = yes
-			navy_protecting_commerce = yes
 		}
 	}
 

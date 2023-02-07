@@ -1,80 +1,82 @@
 ﻿l_english:
- #
- drill_navy:0 "Naval Exercises"
- drill_navydesc:0 "A fleet that drills is always ready to engage the enemy. Of course we will need to cover the costs."
- double_time:0 "Double Time"
- double_timedesc:0 "Our seasoned crew can make this fleet move much faster, but they will not be ready for combat."
- fishing:0 "Fishing"
- fishingdesc:0 "Task this fleet with catching as many fish from the sea as it can. The territory producing fish must have at least 5 pops."
- protect_commerce:0 "Protect Trade"
- protect_commercedesc:0 "Order this fleet to make maritime trade safe for local merchants."
- #
- marines_explain_tt:0 "We must assign crew on this fleet to make full use of it."
- marines_ratio:0 "Our fleet needs at least #Y [SCOPE.ScriptValue('num_of_ships_10')|0]#! crew (#Y 1#! for every #Y 10#! ships)."
- no_marines_tt:0 "We lack properly trained crew to assume any stance."
- #
- disallow_octere_rome_tt:0 "We lack the shipbuilders and plans to construct such a large vessel."
- disallow_octere_wood_tt:0 "We do not have enough wood for a vessel of this size."
+#
+drill_navy:0 "Naval Exercises"
+drill_navydesc:0 "A fleet that drills is always ready to engage the enemy. Of course we will need to cover the costs."
+double_time:0 "Double Time"
+double_timedesc:0 "Our seasoned crew can make this fleet move much faster, but they will not be ready for combat."
+#
+marines_explain_tt:0 "We must assign crew on this fleet to make full use of it."
+marines_ratio:0 "Our fleet needs at least #Y [SCOPE.ScriptValue('num_of_ships_10')|0]#! crew (#Y 1#! for every #Y 10#! ships)."
+no_marines_tt:0 "We lack properly trained crew to assume any stance."
+#
+disallow_octere_rome_tt:0 "We lack the shipbuilders and plans to construct such a large vessel."
+disallow_octere_wood_tt:0 "We do not have enough wood for a vessel of this size."
+explain_naval_action_tt:0 "Your navy will gain the following:"
 
- explain_naval_action_tt:0 "Your navy will gain the following:"
+###
+raid_commerce:0 "Raid Commerce"
+raid_commercedesc:0 "Attack economic activity along this coastline, bringing ruin to the local communities.\nCancels if moved or attacked.\nNavy will be #R vulnerable while undertaking this action#!.\nConsidered a #R hostile action #! and may lead to #R war#!"
+raiding_commerce_explain_modifier_tooltip:0 "All Raided Provinces will suffer the following Modifiers:"
+raiding_commerce_ae_gain_tooltip:0 "We will gain #R [SCOPE.ScriptValue('naval_raiding_ae_gain_tooltip_svalue')|0]#! Aggressive Expansion."
+explain_raiding_commerce_tooltip:0 "Gain national taxes and greatly hamper target province."
+raiding_commerce_cooldown_tooltip:0 "All nearby ports have recently been raided and no ship will travel here until it is safe again."
+raiding_commerce_only_overlord_ports_tooltip:0 "Cannot raid your overlord's commerce."
+raid_commerce_ae:0 "Despised Pirate"
 
- raid_commerce:0 "Raid Commerce"
- raid_commercedesc:0 "Attack economic activity along this coastline, bringing ruin to the local communities."
+###
+protect_commerce:0 "Protect Trade"
+protect_commercedesc:0 "Order this fleet to make maritime trade safe for a local province's merchants and improve commerce.\nCancels if moved or attacked.\nOnly #Y 1#! navy can do this action at a time.\nLocal owner #Y must have a trade route with our nation#!.\nNavy will be #R vulnerable while undertaking this action#!."
+trading_explain_modifier_tooltip:0 "Gain national commerce per ship (up to 15%) in additional to adding extra taxes to local province."
+explain_trading_tooltip:0 "This navy can escort your merchants as they do business with the ports nearby. Protecting trade increases your nation's trade income based on the number of ships, and it also increases the income of a local province."
+explain_trading_nation_tt:0 "Your nation will gain the following:"
+explain_trading_provice_tt:0 "The adjacent provice with the highest population will gain the following:"
+trading_cooldown_tooltip:0 "All nearby markets are saturated with our goods. You'll find no buyers here for some time."
+trading_only_overlord_ports_tooltip:0 "Nearby ports are owned by the #Y Overlord#! of this navy's owner."
+trading_import_export:0 "Owner of province needs to have imported or exported goods from or to our nation."
 
- naval_supply:0 "Naval Supply"
- naval_supplydesc:0 "Deliver provisions and supplies to a friendly port under siege."
+###
+fishing:0 "Fishing"
+fishingdesc:0 "Task this fleet to fish off the coast of a nearby province.\nCancels if moved or attacked. \nThe province #Y must produce fish#!.\nThe province #Y must have at least 5 pops#!.\nOnly #Y 1#! navy can do this action at a time.\nNavy will be #R vulnerable while undertaking this action#!."
+explain_fishing_tooltip:0 "This fleet can focus all effort on fishing, hauling in as much fish as the gods will allow."
+fishing_cooldown_tooltip:0 "The fish stock has been devastated and will take time to return to healthy levels. You will not be able to fish here for some time."
+fishing_explain_modifier_tooltip:0 "Reduce good and happiness in local fishing province to gain national food income."
+fishing_not_enough_pops:0 "Fishing province requires at least 5 pops."
+fishing_needs_fish:0 "Fishing needs fish."
 
- raiding_commerce_explain_modifier_tooltip:0 "All Raided Provinces will suffer the following Modifiers:"
- raiding_commerce_ae_gain_tooltip:0 "We will gain #R [SCOPE.ScriptValue('naval_raiding_ae_gain_tooltip_svalue')|0]#! Aggressive Expansion."
+###
+naval_supply:0 "Naval Supply"
+naval_supplydesc:0 "Deliver provisions and supplies to a friendly port under siege after 90 days.\nCancels if moved or attacked.\nOnly #Y 1#! navy can do this action at a time.\nNavy will be #R vulnerable for 90 days#!."
+explain_naval_supply_tooltip:0 "This fleet can deliver food and su`pplies to a community in need." 
+naval_supply_cooldown_tooltip:0 "This Territory has just received a bounty in food and supplies. You will not be able to send fresh supplies for some time."
+naval_supply_explain_modifier_tooltip:0 "Reduces national food income by 50% for 90 days. After 90 days, local province will gain 300 food a month for 90 days." 
+naval_supply_explain_tt:0 "Navy must contain at least 1 Heavy Ship at 95% Health or more."
 
- explain_raiding_commerce_tooltip:0 "This navy can raid the coastline, making a fortune for its men. The local communities will hate you."
- raiding_commerce_cooldown_tooltip:0 "All nearby ports have recently been raided and no ship will travel here until it is safe again."
- raiding_commerce_only_overlord_ports_tooltip:0 "Cannot raid your overlord's commerce."
+###
+disband_levy:0 "Disband Levy"
+disband_levydesc:0 "Send levy troops home and gain experience from their campaigns. Only levies commanded by governors will yield military experience."
 
- trading_explain_modifier_tooltip:0 "All Provinces trading with you will gain the following Modifiers"
+###
+port_assault_explainer:0 "Reduces the fort level of an adjacent enemy port province by 1 after 60 days."
+port_raid_explainer:0 "Creates a Breach in one adjacent siege after 30 days."
+naval_raiding_days:0 "After 30 days pops from nearby defenseless ports will be sent to the capital region."
 
- explain_trading_tooltip:0 "This navy can escort your merchants as they do business with the ports nearby. Protecting trade increases your nation's trade income based on the number of ships, and it also increases the income of a local province."
- explain_trading_nation_tt:0 "Your nation will gain the following:"
- explain_trading_provice_tt:0 "The adjacent provice with the highest population will gain the following:"
- trading_cooldown_tooltip:0 "All nearby markets are saturated with our goods. You'll find no buyers here for some time."
- trading_only_overlord_ports_tooltip:0 "Nearby ports are owned by the #Y Overlord#! of this navy's owner."
- trading_import_export:0 "Owner of province needs to have imported or exported goods from or to our nation."
+###
+ports_being_slave_raided:0 "Slave raiding begun!"
+port_being_assaulted:0 "Port under assault!"
+port_being_raided:0 "Port being raided!"
+commerce_raided:0 "Commerce is being raided!"
+port_being_fished:0 "Begun fishing off the coast."
+commerce_protected:0 "Commerce is being protected!"
+port_supplied:0 "Port is being supplied!"
 
- explain_fishing_tooltip:0 "This fleet can focus all effort on fishing, hauling in as much fish as the gods will allow."
- fishing_cooldown_tooltip:0 "The fish stock has been devastated and will take time to return to healthy levels. You will not be able to fish here for some time."
- fishing_explain_modifier_tooltip:0 "All Provinces subsisting on Fish will suffer the following Modifiers"
- fishing_not_enough_pops:0 "Fishing province requires at least 5 pops."
- fishing_needs_fish:0 "Fishing needs fish."
-
- explain_naval_supply_tooltip:0 "This fleet can deliver food and supplies to a community in need." 
- naval_supply_cooldown_tooltip:0 "This Territory has just received a bounty in food and supplies. You will not be able to send fresh supplies for some time."
- naval_supply_explain_modifier_tooltip:0 "All provinces receiving supplies will gain the following modifiers after 90 days" 
- naval_supply_explain_tt:0 "Navy must contain at least 1 Heavy Ship at 95% Health or more."
-
- disband_levy:0 "Disband Levy"
- disband_levydesc:0 "Send levy troops home and gain experience from their campaigns. Only levies commanded by governors will yield military experience."
-
- port_assault_explainer:0 "Reduces the fort level of an adjacent enemy port province by 1 after 60 days."
- port_raid_explainer:0 "Creates a Breach in one adjacent siege after 30 days."
-
- naval_raiding_days:0 "After 30 days pops from nearby defenseless ports will be sent to the capital."
-
- ports_being_slave_raided:0 "Slave raiding begun!"
- port_being_assaulted:0 "Port under assault!"
- port_being_raided:0 "Port being raided!"
- commerce_raided:0 "Commerce is being raided!"
- port_being_fished:0 "Begun fishing off the coast."
- commerce_protected:0 "Commerce is being protected!"
- port_supplied:0 "Port is being supplied!"
-
- hmo_unit_abilties.2.t:0 "Slave Raids!"
- hmo_unit_abilties.2.desc:0 "Fleeing villagers tell you of the slave fleets stealing people from your shores."
- hmo_unit_abilties.2.a:0 "We have other pressing matters."
- hmo_unit_abilties.2.b:0 "Vile curs!"
- hmo_unit_abilties.2.c:0 "This means war!"
-
- hmo_unit_abilties.6.t:0 "Trade Raided!"
- hmo_unit_abilties.6.desc:0 "Distraught merchants tell tales of another nation pirating your shores."
- hmo_unit_abilties.6.a:0 "We have other pressing matters."
- hmo_unit_abilties.6.b:0 "Vile curs!"
- hmo_unit_abilties.6.c:0 "This means war!"
+###
+hmo_unit_abilties.2.t:0 "Slave Raids!"
+hmo_unit_abilties.2.desc:0 "Fleeing villagers tell you of the slave fleets stealing people from your shores."
+hmo_unit_abilties.2.a:0 "We have other pressing matters."
+hmo_unit_abilties.2.b:0 "Vile curs!"
+hmo_unit_abilties.2.c:0 "This means war!"
+hmo_unit_abilties.6.t:0 "Trade Raided!"
+hmo_unit_abilties.6.desc:0 "Distraught merchants tell tales of another nation pirating your shores."
+hmo_unit_abilties.6.a:0 "We have other pressing matters."
+hmo_unit_abilties.6.b:0 "Vile curs!"
+hmo_unit_abilties.6.c:0 "This means war!"

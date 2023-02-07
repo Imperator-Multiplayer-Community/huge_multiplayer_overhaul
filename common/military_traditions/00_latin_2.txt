@@ -125,7 +125,6 @@
 	latin_roman_path_3 = { ###Latin 2A
 	    enable_tactic = triplex_acies
 		modifier = { 
-			enable_tactic = triplex_acies
 			heavy_infantry_discipline = 0.1
 			heavy_infantry_forest_combat_bonus = 0.1
 			heavy_infantry_hills_combat_bonus = 0.1

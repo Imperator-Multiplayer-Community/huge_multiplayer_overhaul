@@ -90,6 +90,9 @@ navy_port_raid_finish_effect = { # navy unit
 navy_protect_commerce_finish_effect = { # navy unit
 	remove_variable = is_navy_protecting_commerce
 	remove_unit_modifier = naval_action
+	unit_owner = {
+		remove_country_modifier = protect_merchants
+	}
 
 	unit_location = {
 		every_neighbor_province = {
@@ -99,10 +102,6 @@ navy_protect_commerce_finish_effect = { # navy unit
 
 			remove_province_modifier = trading_partner
 		}
-	}
-
-	unit_owner = {
-		remove_country_modifier = protect_merchants
 	}
 }
 
@@ -122,7 +121,6 @@ navy_raid_commerce_finish_effect = { # navy unit
 
 	unit_owner = {
 		remove_country_modifier = naughty_mugger
-		remove_country_modifier = not_mugger
 		remove_country_modifier = raid_commerce_ae
 	}
 }
