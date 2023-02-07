@@ -1,0 +1,96 @@
+﻿country_decisions = {
+	
+	# Form Fezzan
+	# Created by Shinymewtwo99
+
+	form_fezzan = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = { tag = FEZ }
+			country_culture_group = fezzani
+			NOR = {
+				is_endgame_tag_trigger = yes
+				is_tier_2_formable_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = fezzan_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = fezzan_not_exists
+				NOT = {
+					any_country = {
+						tag = FEZ
+					}
+				}
+			}
+			owns_or_subject_owns_region = fezzan_region
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "FEZZAN_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "FEZZAN_ADJECTIVE"
+				change_country_color =  "fezzan_color"
+				trigger_event = {
+					id = formable_heritage.156
+				}
+				#change_country_flag = FEZZAN_FLAG
+				if = {
+					limit = { tag = GAR }
+					change_country_flag = FEZZAN_FLAG_GAR
+				}
+				else_if = {
+					limit = { tag = NAS }
+					change_country_flag = FEZZAN_FLAG_NAS
+				}
+				else_if = {
+					limit = { tag = PSY }
+					change_country_flag = FEZZAN_FLAG_PSY
+				}
+				else_if = {
+					limit = { tag = GIN }
+					change_country_flag = FEZZAN_FLAG_GIN
+				}
+				else = {
+					change_country_flag = FEZZAN_FLAG
+				}
+				change_country_tag = FEZ
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				current_date > 600.1.1
+			}
+		}
+	}
+
+} 
+
