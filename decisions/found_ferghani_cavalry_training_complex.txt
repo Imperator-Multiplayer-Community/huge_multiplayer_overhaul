@@ -13,7 +13,7 @@
 					country_culture_group = scythia
 					any_country_culture = {
 						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
+						country_culture_pop_count >= small_percent_size_culture_group_comparison
 						this.culture.culture_group = culture_group:bactrian
 						this.culture.culture_group = culture_group:scythia
 					}			
@@ -21,19 +21,19 @@
 		}
 		highlight = {
 			scope:province = {
-				province_id = 6731
+				province_id = 6731 #Massagetia
 			}
 		}
 		allow = {
 			treasury >= 100
-			military_experience >= 65
+			military_experience >= 80
 			owns = 6731
 		}
 		
 		effect = {
 			set_variable = founded_ferghani_cavalry_training_complex
 			add_treasury = -100
-			add_military_experience = -65
+			add_military_experience = -80
 			add_country_modifier = {
 				name = ferghani_cavalry_training_programme 
 				duration = -1
@@ -44,6 +44,7 @@
 						name = ferghani_cavalry_training_complex
 						duration = -1					
 					}
+					set_trade_goods = horses
 				}
 				
 		}

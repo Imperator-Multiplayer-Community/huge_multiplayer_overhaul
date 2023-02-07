@@ -1,6 +1,6 @@
 ﻿afro_arabian_philosophy = { #Nubian Path
 	color = hsv { 1.72 0.64 0.7 }
-	image = persian_achaemenid_path_6
+	image = levantine_arabian_path_end_bonus
 
 	allow = {
 		trigger_if = {
@@ -28,171 +28,343 @@
 			}
 			country_culture_group = aksumite_group
 		}
-		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = afro_arabian_influence
+		trigger_else_if = {
+			limit = {
+				country_culture_group = nilotic_group
 			}
 			custom_tooltip = {
-				text = "tradition_unlock_requirement_afro_arabian"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:south_levantine
-						this.culture.culture_group = culture_group:meroitic_group
-						this.culture.culture_group = culture_group:aksumite_group
-					}
-				}
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = nilotic_group
+		}
+		trigger_else = {
+			OR = {
+				country_culture_group = south_levantine
+				country_culture_group = meroitic_group
+				country_culture_group = aksumite_group
+				country_culture_group = nilotic_group
 			}
 		}
 	}
 
-	###### HORSE ARCHERS
-	nubian_path_6 = {
-		enable_tactic = hit_and_run_tactics
+	afro_arabian_generic_path_1 = { ###
+		allow = {
+            NOT = {
+                has_variable = left_generic_tree
+            }
+        }
+        on_activate = {
+            set_variable = left_generic_tree
+        }
 		modifier = { 
-			horse_archers_offensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = levantine_arabian_path_end_bonus
-
-		requires = { arabian_path_12 north_african_tribal_path_4}
-	}
-
-	arabian_path_12 = { ###
-		enable_tactic = cavalry_skirmish
-		modifier = { 
-			horse_archers_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_tribal_path_2
-		requires = { }
-	}
-
-	##### LIGHT CAV
-
-	nubian_path_3 = { ###
-		modifier = { 
-			light_cavalry_defensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_tribal_path_1
-		requires = {  }
-	}
-
-	arabian_path_12 = { ###
-		enable_tactic = cavalry_skirmish
-		modifier = { 
-			light_cavalry_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_tribal_path_2
-		requires = { nubian_path_3 }
-	}
-
-
-	##### ARCHERS
-
-	nubian_path_1 = { ### Ta Seti
-		modifier = { 
-			archers_discipline = 0.05
+			camels_cost = -0.05
+			camels_movement_speed = 0.05
+			light_infantry_cost = -0.05
+			light_infantry_movement_speed = 0.05
+			horse_archers_cost = -0.05
+			horse_archers_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = greek_antigonid_path_6
-		requires = { nubian_path_2 }		
+		requires = { }
 	}
 
-	nubian_path_2 = { ### Thumb Rings
+	afro_arabian_generic_path_2 = { ###
+		allow = {
+            NOT = {
+                has_variable = right_generic_tree
+            }
+        }
+        on_activate = {
+            set_variable = right_generic_tree
+        }
 		modifier = { 
-			archers_cost = -0.05
+			camels_cost = -0.05
+			camels_movement_speed = 0.05
+			light_infantry_cost = -0.05
+			light_infantry_movement_speed = 0.05
+			horse_archers_cost = -0.05
+			horse_archers_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = celtic_gallic_path_1
+		requires = { }
+	}
+	
+	afro_arabian_generic_path_3 = { ###
+		modifier = { 
+			camels_offensive = 0.1
+			camels_morale = 0.1
+			light_infantry_offensive = 0.1
+			light_infantry_morale = 0.1
+			horse_archers_offensive = 0.1
+			horse_archers_morale = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = mauryan_mauryas_path_5
+		requires = {afro_arabian_generic_path_1}
+	}
+
+	afro_arabian_generic_path_4 = { ### 
+		modifier = { 
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
+			horse_archers_defensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_germanic_path_7
+		requires = {afro_arabian_generic_path_2}
+	}
+
+	afro_arabian_generic_path_5 = { ###
+		modifier = { 
+			light_cavalry_cost = -0.05
+			light_cavalry_movement_speed = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		allow = {military_tech >= 7}
+		icon = greek_antigonid_path_6
+		requires = {afro_arabian_generic_path_3}
+	}
+
+	afro_arabian_generic_path_6 = { ###
+		modifier = { 
+			light_cavalry_cost = -0.05
+			light_cavalry_movement_speed = 0.05
+			archers_cost = -0.05
+			archers_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		}
+		allow = {military_tech >= 7} 
+		icon = celtic_gallic_path_1
+		requires = {afro_arabian_generic_path_4}
+	}
+	
+	afro_arabian_generic_path_7 = { ###
+		modifier = { 
+			light_cavalry_offensive = 0.1
+			light_cavalry_morale = 0.1
+			archers_offensive = 0.1
+			archers_morale = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = {afro_arabian_generic_path_5}
+	}
+
+	afro_arabian_generic_path_8 = { ### 
+		modifier = { 
+			archers_defensive = 0.1
+			archers_discipline = 0.1
+			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = celtic_germanic_path_7
+		requires = {afro_arabian_generic_path_6}
+	}
+
+	afro_arabian_generic_path_9 = { ###
+		modifier = { 
+			warelephant_cost = -0.05
+			warelephant_movement_speed = 0.05
+			heavy_cavalry_cost = -0.05
+			heavy_cavalry_movement_speed = 0.05
+			heavy_infantry_cost = -0.05
+			heavy_infantry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		allow = {military_tech >= 13}
+		icon = greek_antigonid_path_6
+		requires = {afro_arabian_generic_path_7 }
+	}
+
+	afro_arabian_generic_path_10 = { ###
+		modifier = { 
+			warelephant_cost = -0.05
+			warelephant_movement_speed = 0.05
+			heavy_cavalry_cost = -0.05
+			heavy_cavalry_movement_speed = 0.05
+			heavy_infantry_cost = -0.05
+			heavy_infantry_movement_speed = 0.05
+			army_maintenance_cost = 0.01
+		} 
+		icon = celtic_gallic_path_1
+		allow = {military_tech >= 13}
+		requires = {afro_arabian_generic_path_8 }
+	}
+	
+	afro_arabian_generic_path_11 = { ###
+		modifier = { 
+			warelephant_offensive = 0.1
+			warelephant_morale = 0.1
+			heavy_cavalry_offensive = 0.1
+			heavy_cavalry_morale = 0.1
+			heavy_infantry_offensive = 0.1
+			heavy_infantry_morale = 0.1
+			army_maintenance_cost = 0.01
+			global_population_happiness = -0.02	
+		} 
+		icon = mauryan_mauryas_path_5
+		requires = {afro_arabian_generic_path_9}
+	}
+
+	afro_arabian_generic_path_12 = { ### 
+		modifier = { 
+			warelephant_defensive = 0.1
+			warelephant_discipline = 0.1
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			heavy_infantry_defensive = 0.1
+			heavy_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
+			global_population_happiness = -0.02	
+		}
+		icon = celtic_germanic_path_7
+		requires = {afro_arabian_generic_path_10}
+	}
+
+	nubian_path_5 = { ###
+		modifier = { 
+			price_found_city_cost_modifier = -0.075
+			local_forum_building_cost = -0.1
+		}
+		on_activate = {
+			add_3_free_province_investments = yes
+		}
+		icon = levantine_egyptian_path_4
 		requires = { }
 	}
-		
-	nubian_path_6 = { ### Kushitic Longbow
-		enable_tactic = hit_and_run_tactics
-		icon = levantine_arabian_path_end_bonus
-		requires = { nubian_path_1 }
-	}
-	nubian_path_14 = { ### Kushitic Composite Bow
+
+	arabian_path_1 = { ###
 		modifier = { 
-			archers_offensive = 0.05
+			ship_cost = -0.15
+			global_state_trade_routes = 0.05
+		}
+		on_activate = {
+			ordered_owned_province = {	#Upgrades a port, or creates one
+				limit = {
+					owner = { num_of_ports < 1 }
+					is_coastal = yes
+					NOT = { has_building = port_building }
+					can_build_building = port_building
+				}
+				alternative_limit = {
+					is_coastal = yes
+					has_building = port_building
+					can_build_building = port_building
+				}
+				alternative_limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+				order_by = total_population
+				add_building_level = port_building
+				add_building_level = port_building
+			}
+		}
+		icon = latin_tribal_path_6
+		requires = { }
+	}
+
+	arabian_path_8 = { ###
+		modifier = { 
+			global_commerce_modifier = 0.05
+		}
+		icon = north_african_army_path_4
+		requires = { arabian_path_1 }
+		on_activate = {
+			add_innovation = 3
+		}	
+	}
+
+	arabian_path_7 = { ###
+		modifier = { 
+			global_defensive = 0.15
+			fort_limit = 1
+			garrison_size = 0.1
+			hostile_attrition = 1
+			fort_maintenance_cost = 0.01
+		} 
+		icon = north_african_naval_path_6
+		requires = { }
+	}
+
+	arabian_path_9 = { ###
+		modifier = { 
+			army_weight_modifier = -0.15
+			hostile_attrition = 1
 			army_maintenance_cost = 0.01
 		} 
-		icon = levantine_egyptian_path_3
-		requires = { nubian_path_6 }
-	}
-
-	##### WARELEPHANTS
-
-	nubian_path_4 = { ###
-		modifier = { 
-			warelephant_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_army_path_5
-		requires = { }		
-	}
-
-	nubian_path_7 = { ###
+		icon = north_african_tribal_path_end_bonus
+		requires = { arabian_path_7 }
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = confident
+					add_trait = steadfast
 				}
 			}
 		}
-		modifier = { 
-			warelephant_offensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = mauryan_mauryas_path_4
-		requires = { nubian_path_4 }
 	}
 
-	##### CAMELS
 
-	arabian_path_3 = { ###
+	nubian_path_8 = { ###
 		modifier = { 
-			camels_defensive = 0.05
-			army_maintenance_cost = 0.01
+			tetrere_offensive = 0.1
+			tetrere_defensive = 0.1
+			coastal_terrain_combat_bonus = 0.1
+			navy_maintenance_cost = 0.01
 		} 
-		icon = levantine_egyptian_path_6
+		icon = levantine_egyptian_path_5
 		requires = { }
 	}
 
-	arabian_path_6 = { ###
+	nubian_path_11 = { ###
 		modifier = { 
-			camels_morale = 0.05
-			army_maintenance_cost = 0.01
+			navy_maintenance_cost = -0.1
+			global_ship_recruit_speed = -0.2
+			naval_range = 0.15
 		} 
-		icon = levantine_arabian_path_3
-		requires = { arabian_path_3 }
+		icon = north_african_naval_path_7
+		requires = { nubian_path_8 }
 	}
 
-	arabian_path_10 = { ###
+	nubian_path_13 = { ###
+		allow_unit_type = octere
 		modifier = { 
-			camels_offensive = 0.05
-		} 
-		icon = north_african_tribal_path_5
-		requires = { arabian_path_6 }
-	}
-
-	##### NAVAL
-
-	arabian_path_4 = { ###
-		enable_ability = naval_raiding
-		modifier = {
-			trireme_offensive = 0.05
-			enslavement_efficiency = 0.1
+			naval_damage_taken = -0.1
 			navy_maintenance_cost = 0.01
 		}
-		icon = levantine_egyptian_path_2
-		requires = { }
+		on_activate = {
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = octere
+						add_subunit = octere
+					}
+				}
+			}
+		}
+		icon = persian_achaemenid_path_3
+		requires = { nubian_path_11 }
 	}
+
+
+
+
+
+
+	
 }

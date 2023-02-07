@@ -20,184 +20,472 @@
 			}
 			country_culture_group = numidian
 		}
+		trigger_else_if = {
+			limit = { country_culture_group = fezzani }
+			custom_tooltip = {
+				text = "began_with_tradition_group"
+			}
+			country_culture_group = fezzani
+		}
 		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = north_african_influence
-			}
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_north_african"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:numidian
-						is_culture = carthaginian
-					}
-				}
+			OR = {
+				this.culture.culture_group = culture_group:numidian
+				this.culture.culture_group = culture_group:fezzani
 			}
 		}
 	}
 
-	##### HORSE ARCHERS
-
-	north_african_tribal_path_4 = { ###North Aftica 4CB
-		modifier = { 
-			horse_archers_discipline = 0.05
-			army_maintenance_cost = 0.01
+	north_africa_generic_path_1 = { ###
+	allow = {
+		NOT = {
+			has_variable = left_generic_tree
 		}
-		enable_tactic = cavalry_skirmish
-		icon = north_african_tribal_path_4
+	}
+	on_activate = {
+		set_variable = left_generic_tree
+	}
+	modifier = { 
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = persian_bactrian_path_5
+	requires = { }
+}
+
+north_africa_generic_path_2 = { ###
+	allow = {
+		NOT = {
+			has_variable = right_generic_tree
+		}
+	}
+	on_activate = {
+		set_variable = right_generic_tree
+	}
+	modifier = { 
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_noble_path_6
+	requires = { }
+}
+
+north_africa_generic_path_3 = { ###
+	modifier = { 
+		light_cavalry_offensive = 0.1
+		light_cavalry_morale = 0.1
+		light_infantry_offensive = 0.1
+		light_infantry_morale = 0.1
+		warelephant_offensive = 0.1
+		warelephant_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_mauryas_path_5
+	requires = {north_africa_generic_path_1}
+}
+
+north_africa_generic_path_4 = { ### 
+	modifier = { 
+		light_cavalry_defensive = 0.1
+		light_cavalry_discipline = 0.1
+		light_infantry_defensive = 0.1
+		light_infantry_discipline = 0.1
+		warelephant_defensive = 0.1
+		warelephant_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = mauryan_mauryas_path_2
+	requires = {north_africa_generic_path_2}
+}
+
+north_africa_generic_path_5 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 7}
+	icon = levantine_arabian_path_4
+	requires = {north_africa_generic_path_3}
+}
+
+north_africa_generic_path_6 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	}
+	allow = {military_tech >= 7} 
+	icon = levantine_arabian_path_3
+	requires = {north_africa_generic_path_4}
+}
+
+north_africa_generic_path_7 = { ###
+	modifier = { 
+		archers_offensive = 0.1
+		archers_morale = 0.1
+		heavy_cavalry_offensive = 0.1
+		heavy_cavalry_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_mauryas_path_5
+	requires = {north_africa_generic_path_5}
+}
+
+north_africa_generic_path_8 = { ### 
+	modifier = { 
+		archers_defensive = 0.1
+		archers_discipline = 0.1
+		heavy_cavalry_defensive = 0.1
+		heavy_cavalry_morale = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = levantine_egyptian_path_6
+	requires = {north_africa_generic_path_6}
+}
+
+north_africa_generic_path_9 = { ###
+	modifier = { 
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 13}
+	icon = mauryan_mauryas_path_1
+	requires = {north_africa_generic_path_7 }
+}
+
+north_africa_generic_path_10 = { ###
+	modifier = { 
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_mauryas_path_3
+	allow = {military_tech >= 13}
+	requires = {north_africa_generic_path_8 }
+}
+north_africa_generic_path_11 = { ###
+	modifier = { 
+		camels_offensive = 0.1
+		camels_morale = 0.1
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.1
+		heavy_infantry_offensive = 0.1
+		heavy_infantry_morale = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	} 
+	icon = persian_philosophy_start_bonus
+	requires = {north_africa_generic_path_9}
+}
+north_africa_generic_path_12 = { ### 
+	modifier = { 
+		camels_defensive = 0.1
+		camels_discipline = 0.1
+		horse_archers_defensive = 0.1
+		horse_archers_discipline = 0.1
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_morale = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	}
+	icon = persian_achaemenid_path_end_bonus
+	requires = {north_africa_generic_path_10}
+}
+
+### CIVILIZATION
+
+north_african_army_path_end_bonus = { ###North Aftica 1B
+modifier = { 
+	mercenary_land_maintenance_cost = -0.15
+}
+icon = north_african_army_path_end_bonus
+requires = {}
+}
+
+north_african_army_path_1 = { ###North Aftica 2B
+modifier = { 
+	mercenary_land_maintenance_cost = -0.1
+	recruit_mercenary_cost_modifier = -0.25
+}
+icon = north_african_army_path_1
+requires = { north_african_army_path_end_bonus }
+on_activate = {
+	custom_tooltip = "create_high_martial_rising_star"
+	hidden_effect = {
+		create_character = {
+			add_martial = 8
+			add_trait = victorious
+		}
+	}
+}
+}
+
+north_africa_civ_generic_path_2 = { ###
+
+	modifier = { 
+		price_found_metropolis_cost_modifier = -0.15
+		global_nobles_happyness = 0.06
+	} 
+	icon = mauryan_coastal_path_6
+	requires = { north_african_army_path_1 }
+
+}
+
+north_africa_civ_generic_path_3  = { ###
+	modifier = { 
+		global_export_commerce_modifier = 0.05
+	} 
+	icon = mauryan_coastal_path_6
+	requires = { north_africa_civ_generic_path_2 }
+}
+
+north_africa_civ_generic_path_4 = { ###
+	on_activate = {
+		add_innovation = 3
+	}	
+	modifier = { 
+		build_time = 0.10
+		build_cost = -0.15
+	} 
+	icon = persian_bactrian_path_2
+	requires = { north_africa_civ_generic_path_3 }
+
+}
+
+north_africa_civ_generic_path_5 = { ###
+on_activate = {
+	ordered_owned_province = {
+		limit = {
+			has_city_status = no
+		}
+		order_by = {
+			value = 0
+			add = population_cap
+			subtract = total_population
+		}
+		max = 3
+		check_range_bounds = no
+		create_2_freemen_effect = yes
+	}
+}
+modifier = { 
+	global_food_capacity = 350
+} 
+icon = mauryan_coastal_path_6
+requires = { north_africa_civ_generic_path_4 }
+}
+
+
+### FORTS
+north_african_tribal_path_end_bonus = { ###North Aftica 1A
+		modifier = { 
+			global_freemen_output = output_small_svalue
+			global_freemen_happyness = happiness_small_svalue
+		}
+		icon = persian_achaemenid_path_4
 		requires = {}
-	}
-
-	##### LIGHT CAV
-
-	north_african_tribal_path_7 = { ###North Aftica 2CA
-		modifier = { 
-			light_cavalry_discipline = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_tribal_path_7
-		requires = { }
-	}
-
-	north_african_army_path_6 = { ###North Aftica 2CB
-		modifier = { 
-			light_cavalry_offensive = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_army_path_6
-		requires = {north_african_tribal_path_7}
-	}
-
-	north_african_tribal_path_1 = { ###North Aftica 4CA
-		modifier = { 
-			light_cavalry_morale = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_tribal_path_1
-		requires = {north_african_army_path_6}
-	}
-
-	##### NAVAL
-
-	north_african_naval_path_4 = { ###North Aftica 3B
-		modifier = { 
-			ship_repair_at_sea = 0.02
-			naval_range = 0.1
-			navy_maintenance_cost = 0.01
-		}
-		icon = north_african_naval_path_4
-		requires = { }
-		allow_unit_type = octere
-	}
-
-	north_african_naval_path_end_bonus = { ###North Aftica 4B
-		modifier = { 
-			trireme_offensive = 0.15
-			liburnian_offensive = 0.15
-			trireme_movement_speed = 0.1
-			liburnian_movement_speed = 0.1
-			navy_maintenance_cost = 0.01
-		}
-		icon = north_african_naval_path_end_bonus
-		requires = { north_african_naval_path_4 }
-	}
-
-	north_african_naval_path_3 = { ###North Aftica 5BB
-		modifier = { 
-			naval_damage_taken = -0.1
-			navy_maintenance_cost = 0.01
-		}
-		icon = north_african_naval_path_3
-		requires = {north_african_naval_path_end_bonus}
-	}
-
-
-	##### WARELEPHANTS
-
-	north_african_army_path_7 = { ###North Aftica 2AA
-		modifier = { 
-			warelephant_offensive = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_army_path_7
-		requires = { }
-	}
-
-	north_african_army_path_3 = { ###North Aftica 2AB
-		modifier = { 
-			warelephant_cost = -0.05
-			warelephant_morale = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_army_path_3
-		requires = { north_african_army_path_7 }
 		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = steadfast
-				}
-			}
-		}
+			add_4_free_province_investments = yes
 	}
+}
 
-	north_african_army_path_5 = { ###North Aftica 3AA
-		modifier = { 
-			warelephant_defensive = 0.05
-			warelephant_plains_combat_bonus = 0.05
-			warelephant_farmland_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
+generic_north_african_fort_2 = { ###North Aftica 2A
+		modifier = {
+			global_freemen_output = 0.05
+			general_loyalty = 5
 		}
-		icon = north_african_army_path_5
-		requires = {north_african_army_path_3}
-		allow = { # need afro arabian culture as well
-			trigger_if = {
-				limit = { country_culture_group = south_levantine }
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = south_levantine
+		icon = latin_tribal_path_end_bonus
+		requires = { north_african_tribal_path_end_bonus }	
+}
+	
+generic_north_african_fort_3 = { ###North Aftica 1A
+		modifier = { 
+			land_unit_attrition = -0.15
+			desert_combat_bonus = 0.1
+		}
+		icon = north_african_tribal_path_5
+		requires = { generic_north_african_fort_2 }
+
+}
+
+north_african_naval_path_6 = { ###North Aftica 3CB
+modifier = { 
+	global_defensive = 0.15
+	fort_limit = 1
+	fort_maintenance_cost = 0.01
+}
+icon = north_african_naval_path_6
+requires = {generic_north_african_fort_3}
+}
+
+
+
+#naval
+north_african_naval_path_1 = { ###North Aftica 5BA
+modifier = { 
+	naval_morale = 0.5
+	navy_maintenance_cost = 0.01
+}
+icon = north_african_naval_path_1
+requires = { }
+on_activate = {
+	ordered_owned_province = { #If you have none we make a new one, if you do have one we try to upgrade that.
+		limit = {
+			owner = { num_of_ports < 1 }
+			is_coastal = yes
+			NOT = { has_building = port_building }
+			can_build_building = port_building
+		}
+		alternative_limit = {
+			is_coastal = yes
+			has_building = port_building
+			can_build_building = port_building
+		}
+		alternative_limit = {
+			is_coastal = yes
+			can_build_building = port_building
+		}
+		add_building_level = port_building
+	}
+}
+}
+
+north_african_levantine_enable = { ###North Aftica 4A
+icon = levantine_philosophy_start_bonus
+requires = { north_african_naval_path_1 }
+modifier = { 
+	ocean_combat_bonus = 0.1
+	naval_range = 0.15
+	navy_maintenance_cost = 0.01
+}
+}
+
+north_african_army_path_2 = { ###North Aftica 1B
+modifier = { 
+	naval_damage_done = 0.1
+	coastal_terrain_combat_bonus = 0.1
+	navy_maintenance_cost = 0.01
+}
+icon = north_african_army_path_2
+requires = { north_african_levantine_enable }
+}
+
+north_african_naval_path_7 = { ###North Aftica 2B
+modifier = { 
+	ship_cost = -0.1
+}
+icon = north_african_naval_path_7
+requires = { north_african_army_path_2 north_african_naval_path_4 }
+on_activate = {
+	if = {
+		limit = {
+			any_owned_province = { num_of_port_building > 0  }
+		}
+		random_owned_province = {
+			limit = {
+				num_of_port_building > 0 
 			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = meroitic_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = meroitic_group
-			}
-			trigger_else_if = {
-				limit = {
-					country_culture_group = aksumite_group
-				}
-				custom_tooltip = {
-					text = "began_with_tradition_group"
-				}
-				country_culture_group = aksumite_group
-			}
-			trigger_else = {
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_cultural_decision"
-					has_variable = afro_arabian_influence
-				}
-				custom_tooltip = {
-					text = "tradition_unlock_requirement_afro_arabian"
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:south_levantine
-							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group
-						}
-					}
+			owner = {
+				create_unit = {
+					navy = yes
+					location = prev.prev
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
 				}
 			}
 		}
 	}
+	else = {
+		ordered_owned_province = {
+			limit = {
+				is_coastal = yes
+				can_build_building = port_building
+			}
+			add_building_level = port_building
+		}
+		random_owned_province = {
+			limit = {
+				num_of_port_building > 0 
+			}
+			owner = {
+				create_unit = {
+					navy = yes
+					location = prev.prev
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+					add_subunit = trireme
+				}
+			}
+		}
+	}
+}
+}
+
+north_african_naval_path_4 = { ###North Aftica 3B
+modifier = { 
+	ship_repair_at_sea = 0.02
+	naval_range = 0.1
+	navy_maintenance_cost = 0.01
+}
+allow_unit_type = octere
+icon = north_african_naval_path_4
+requires = { north_african_naval_path_end_bonus }
+}
+
+north_african_naval_path_end_bonus = { ###North Aftica 4B
+modifier = { 
+	trireme_offensive = 0.15
+	liburnian_offensive = 0.15
+	trireme_movement_speed = 0.1
+	liburnian_movement_speed = 0.1
+	navy_maintenance_cost = 0.01
+}
+allow_unit_type = mega_galley
+icon = north_african_naval_path_end_bonus
+requires = { north_african_naval_path_3 }
+}
+
+north_african_naval_path_3 = { ###North Aftica 5BB
+modifier = { 
+	naval_damage_taken = -0.1
+	navy_maintenance_cost = 0.01
+}
+icon = north_african_naval_path_3
+requires = { }
+}
+
 }

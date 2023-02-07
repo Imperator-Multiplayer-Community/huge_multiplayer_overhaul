@@ -1,0 +1,21 @@
+﻿num_of_ships_svalue = {
+   value = 0
+
+   every_sub_unit = {
+       limit = {
+           OR = {
+               sub_unit_type = liburnian
+               sub_unit_type = trireme
+               sub_unit_type = tetrere
+               sub_unit_type = hexere
+               sub_unit_type = octere
+               sub_unit_type = mega_galley
+           }
+           subunit_strength_percentage = 1
+       }
+       
+       add = 1
+   }
+       
+   max = 100
+}

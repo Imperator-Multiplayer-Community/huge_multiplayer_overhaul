@@ -1,0 +1,12 @@
+﻿total_port_buildings_svalue = { # country
+	value = 0
+	every_owned_province = {
+		limit = {
+			num_of_port_building > 0
+		}
+
+		add = num_of_port_building
+	}
+	divide = 10
+	floor = yes
+}

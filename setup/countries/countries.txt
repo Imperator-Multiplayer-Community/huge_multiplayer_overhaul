@@ -7,23 +7,6 @@ MER = "setup/countries/mercenaries.txt"
 #CRT = "setup/countries/crete.txt"
 
 #New:
-B39 = "setup/countries/africa/B39.txt" #TAMEFKAT
-C03 = "setup/countries/africa/C03.txt" #TINGITANIA
-C33 = "setup/countries/africa/C33.txt" #DELAS
-B34 = "setup/countries/africa/B34.txt" #MEMPHIS
-B40 = "setup/countries/africa/B40.txt" #WASET
-C64 = "setup/countries/africa/C64.txt" #AMMON
-C66 = "setup/countries/africa/C66.txt" #NEWKINGDOM
-C71 = "setup/countries/iberia/C71.txt"
-C74 = "setup/countries/britannia/C74.txt"
-C75 = "setup/countries/gaul/C75.txt"
-C76 = "setup/countries/gaul/C76.txt"
-C77 = "setup/countries/iberia/C77.txt"
-C78 = "setup/countries/gaul/C78.txt"
-C79 = "setup/countries/india/C79.txt"
-C80 = "setup/countries/arabia/C80.txt"
-C82 = "setup/countries/africa/C82.txt" 
-BGZ = "setup/countries/india/BGZ.txt" #BARYGAZA
 ATH = "setup/countries/greece/athens.txt"
 SPA = "setup/countries/greece/sparta.txt"
 EPI = "setup/countries/greece/epirus.txt"
@@ -76,14 +59,9 @@ TAN = "setup/countries/greece/tanagra.txt"
 HRM = "setup/countries/greece/hermione.txt"
 ORE = "setup/countries/greece/oreos.txt"
 
-#New By DOA MOD
-
-C16 = "setup/countries/greece/C16.txt" #Pelagonia
-C25 = "setup/countries/greece/C25.txt" #Thessaly
-C29 = "setup/countries/greece/C29.txt" #Chalkidiki
-C31 = "setup/countries/greece/C31.txt" #Odessos
-C14 = "setup/countries/greece/C14.txt" #Skyros
-A82 = "setup/countries/greece/A82.txt" #Corinth
+#Added Asia
+KAO = "setup/countries/anatolia/kaounos.txt"
+PYK = "setup/countries/anatolia/physkos.txt"
 
 # Crimea and Abkhazia
 
@@ -92,7 +70,6 @@ SRM = "setup/countries/greece/sarmatians.txt"
 OLB = "setup/countries/greece/olbia.txt"
 TYS = "setup/countries/greece/tyras.txt"
 TYG = "setup/countries/greece/tyrgetae.txt"
-C94 = "setup/countries/greece/C94.txt"
 MAE = "setup/countries/greece/maeotia.txt"
 CHS = "setup/countries/greece/chersonesus.txt"
 ORG = "setup/countries/greece/orgame.txt"
@@ -124,19 +101,8 @@ TRE = "setup/countries/greece/thrace.txt"
 ODR = "setup/countries/greece/odrysia.txt"
 
 ## Asia Minor
-COR = "setup/countries/syria/corduene.txt"
 
-#DoA added country
-CRA = "setup/countries/anatolia/carianew.txt" #CARIA
-B58 = "setup/countries/anatolia/B58.txt" #PERGAMON
-B62 = "setup/countries/anatolia/B62.txt" #LYDIA
-B66 = "setup/countries/anatolia/B66.txt" #PAMPHYLIA
-B68 = "setup/countries/anatolia/B68.txt" #CILICIA
-B70 = "setup/countries/anatolia/B70.txt" #PHYRGIA
-B72 = "setup/countries/anatolia/B72.txt" #ISAURIA
-C46 = "setup/countries/anatolia/C46.txt" #KARIN
-
-#VANILLA MESOPOTAMIA AND SYRIA
+#New
 PRY = "setup/countries/anatolia/phrygia.txt"
 RHO = "setup/countries/anatolia/rhodes.txt"
 BIT = "setup/countries/anatolia/bithynia.txt"
@@ -144,6 +110,8 @@ HCP = "setup/countries/anatolia/heraclea_pontica.txt"
 CAP = "setup/countries/anatolia/cappadocia.txt"
 PON = "setup/countries/anatolia/pontus.txt"
 PAP = "setup/countries/anatolia/paphlagonia.txt"
+
+#New
 SEL = "setup/countries/caucasiamesopotamia/seleucid empire.txt"
 ADI = "setup/countries/caucasiamesopotamia/adiabene.txt"
 ARM = "setup/countries/caucasiamesopotamia/armenia.txt"
@@ -155,23 +123,6 @@ TRZ = "setup/countries/caucasiamesopotamia/trapezous.txt"
 BAC = "setup/countries/bactria/bactria.txt"
 PAR = "setup/countries/caucasiamesopotamia/parthia.txt"
 
-#NEW BY DOA
-
-A51 = "setup/countries/caucasiamesopotamia/A51.txt" #babylon
-A54 = "setup/countries/caucasiamesopotamia/A54.txt" #HYRCANIA
-A60 = "setup/countries/caucasiamesopotamia/A60.txt" #ELAM
-A61 = "setup/countries/caucasiamesopotamia/A61.txt" #KELONAI
-A80 = "setup/countries/caucasiamesopotamia/A80.txt" #ARSACENE
-A65 = "setup/countries/caucasiamesopotamia/A65.txt" #PERSIS
-A69 = "setup/countries/caucasiamesopotamia/A69.txt" #CARMANIA
-A96 = "setup/countries/caucasiamesopotamia/A96.txt" #ANTIOCHEIA PERSIDOS
-C56 = "setup/countries/caucasiamesopotamia/C56.txt" #TIGRANAKERT
-C90 = "setup/countries/caucasiamesopotamia/C90.txt"
-
-# Arabia/Persia
-OSR = "setup/countries/syria/osroene.txt"
-SOP = "setup/countries/syria/sophene.txt"
-
 #Syria
 COM = "setup/countries/syria/commagene.txt"
 JUD = "setup/countries/syria/judea.txt"
@@ -180,15 +131,7 @@ BYB = "setup/countries/syria/byblos.txt"
 ARA = "setup/countries/syria/arados.txt"
 SID = "setup/countries/syria/sidon.txt"
 BMB = "setup/countries/syria/bambyce.txt"
-
-#DoA added country
-DCP = "setup/countries/syria/B12.txt" #DECAPOLIS
-B13 = "setup/countries/syria/B13.txt" #APPOLONIA
-A55 = "setup/countries/syria/A55.txt" #SOPHENE
-B17 = "setup/countries/syria/B17.txt" #OSROENE
-B19 = "setup/countries/syria/B19.txt" #SYRIA
-A53 = "setup/countries/syria/A53.txt" #NINEVEH
-B10 = "setup/countries/syria/B10.txt" #PALMYRA
+ISR = "setup/countries/syria/israel.txt"
 
 ####SULLA####
 
@@ -242,12 +185,6 @@ SIO = "setup/countries/italia/sipontum.txt"
 SYR = "setup/countries/italia/syracusae.txt"
 ACR = "setup/countries/italia/acragas.txt"
 
-#NEW BY DOA MOD CORSICA ETC
-C00 = "setup/countries/italia/C00.txt" #OLBIA RASNA
-C06 = "setup/countries/italia/C06.txt" #SULKI
-C63 = "setup/countries/italia/C63.txt" #ALALIE
-C36 = "setup/countries/italia/C36.txt" #LILYBAYA
-
 #Britannic
 
 CAT = "setup/countries/britannia/cantiaci.txt"
@@ -296,11 +233,13 @@ ILG = "setup/countries/iberia/ilergetes.txt"
 IDK = "setup/countries/iberia/indiketes.txt"
 LCT = "setup/countries/iberia/lacetani.txt"
 ORT = "setup/countries/iberia/oretani.txt"
+TUR = "setup/countries/iberia/turdetani.txt"
 VCI = "setup/countries/iberia/vaccaei.txt"
 VSC = "setup/countries/iberia/vascones.txt"
 VET = "setup/countries/iberia/vettones.txt"
 EPO = "setup/countries/iberia/emporion.txt"
 #MLK = "setup/countries/iberia/malaka.txt"
+TAT = "setup/countries/iberia/tartessos.txt"
 MST = "setup/countries/iberia/menesthei.txt"
 GAD = "setup/countries/iberia/gadir.txt"
 MAT = "setup/countries/iberia/mastia.txt"
@@ -340,6 +279,7 @@ NRI = "setup/countries/iberia/neri.txt"
 SUR = "setup/countries/iberia/seurri.txt"
 SLN = "setup/countries/iberia/sileni.txt"
 TMG = "setup/countries/iberia/tamagani.txt"
+VRR = "setup/countries/iberia/varrini.txt"
 CSS = "setup/countries/iberia/cessetani.txt"
 TDL = "setup/countries/iberia/turduli.txt"
 PAE = "setup/countries/iberia/paesuri.txt"
@@ -377,10 +317,7 @@ DEI = "setup/countries/iberia/deitania.txt"
 EBI = "setup/countries/iberia/eburania.txt"
 MTS = "setup/countries/iberia/mantesania.txt"
 GRM = "setup/countries/iberia/garmania.txt"
-
-#NEW BY DOA
-
-B90 = "setup/countries/iberia/B90.txt" # MALAKA
+IBA = "setup/countries/iberia/ibasim.txt"
 
 #African
 
@@ -414,14 +351,6 @@ IOL = "setup/countries/africa/iol.txt"
 KUA = "setup/countries/africa/kerkouane.txt"
 DOD = "setup/countries/africa/dodekaschoinos.txt"
 DAL = "setup/countries/africa/elaia.txt"
-
-#New by DoA mod
-
-B39 = "setup/countries/africa/B39.txt" #TAMEFKAT
-C03 = "setup/countries/africa/C03.txt" #TINGITANIA
-C33 = "setup/countries/africa/C33.txt" #AMMON
-B34 = "setup/countries/africa/B34.txt" #MEMPHIS
-B40 = "setup/countries/africa/B40.txt" #WASET
 
 #Gaul
 
@@ -577,12 +506,11 @@ WUS = "setup/countries/india/wusun.txt"
 TAY = "setup/countries/india/tayuan.txt"
 SOG = "setup/countries/india/sogdia.txt"
 KHT = "setup/countries/india/khotan.txt"
-LOL = "setup/countries/india/loulan.txt"
 KSA = "setup/countries/india/kusan.txt"
 PSH = "setup/countries/india/pishan.txt"
 PND = "setup/countries/india/pandyas.txt"
 CHR = "setup/countries/india/cheras.txt"
-C81 = "setup/countries/india/Phaedra.txt"
+AYY = "setup/countries/india/ay.txt"
 CHL = "setup/countries/india/cholas.txt"
 STY = "setup/countries/india/satiyaputa.txt"
 ANU = "setup/countries/india/anuradhapura.txt"
@@ -618,25 +546,7 @@ KSR = "setup/countries/india/kosar.txt"
 ADG = "setup/countries/india/adagaiman.txt"
 KHB = "setup/countries/india/khambojas.txt"
 KLS = "setup/countries/india/kalasas.txt"
-
-#NEW BY DOA MOD
-
-A06 = "setup/countries/india/A06.txt" #VARENDRA
-B31 = "setup/countries/india/B31.txt" #TAMRALIPTI
-A31 = "setup/countries/india/A31.txt" #AVANTI
-A01 = "setup/countries/india/A01.txt" #SAURASHTRA
-A48 = "setup/countries/india/A48.txt" #MADYHAMIKA
-A49 = "setup/countries/india/A49.txt" #ABHIRIA
-A13 = "setup/countries/india/A13.txt" #SINDH
-A44 = "setup/countries/india/A44.txt" #ANARTTA
-A76 = "setup/countries/india/A76.txt" #ALEXANDRIA LIMEN
-C39 = "setup/countries/india/C39.txt" #KURU
-C43 = "setup/countries/india/C43.txt" #SHURASENA
-C37 = "setup/countries/india/C37.txt" #MALLA
-C38 = "setup/countries/india/C38.txt" #PANCHALA
-C40 = "setup/countries/india/C40.txt" #PRAYAGA
-B86 = "setup/countries/india/B86.txt" #ALEXANDREIA INDOS
-C58 = "setup/countries/india/C58.txt" #PARECANIA
+MGT = "setup/countries/india/massagetae.txt"
 
 #Germanic
 BST = "setup/countries/germania/bastarnae.txt"
@@ -658,9 +568,6 @@ SMN = "setup/countries/germania/semnonia.txt"
 LGB = "setup/countries/germania/langobardia.txt"
 MCM = "setup/countries/germania/marcomannia.txt"
 CHC = "setup/countries/germania/chaucia.txt"
-C68 = "setup/countries/germania/C68.txt"
-C69 = "setup/countries/germania/C69.txt"
-C70 = "setup/countries/germania/C70.txt"
 
 #Bactrian
 PRN = "setup/countries/bactria/parni.txt"
@@ -669,17 +576,11 @@ PSS = "setup/countries/bactria/pissuri.txt"
 KRZ = "setup/countries/bactria/kharesmia.txt"
 ARS = "setup/countries/bactria/arachosia.txt"
 
-#new by doamod
-A89 = "setup/countries/bactria/A89.txt" #Alexandria Eschate
-B01 = "setup/countries/bactria/B01.txt" #SOGDIANA
-C59 = "setup/countries/bactria/C59.txt" #AGARTIA
-
 #Extra Crimea
 SCY = "setup/countries/greece/scythia_europea.txt"
 ZGY = "setup/countries/caucasiamesopotamia/zygia.txt"
 HNY = "setup/countries/caucasiamesopotamia/heniochia.txt"
 PHI = "setup/countries/caucasiamesopotamia/phasis.txt"
-
 
 #Extra Germany
 BUR = "setup/countries/germania/burgundia.txt"
@@ -905,3 +806,113 @@ CET = "setup/countries/africa/cetiani.txt"
 #New India
 MDP = "setup/countries/india/mahiladvipika.txt"
 GAE = "setup/countries/africa/gaetulia.txt"
+
+#Seleukid Satraps
+GED = "setup/countries/bactria/gedrosia.txt"
+PES = "setup/countries/caucasiamesopotamia/persis.txt"
+
+#New Tarim
+XIW = "setup/countries/bactria/xiaowan.txt"
+GMO = "setup/countries/bactria/gumo.txt"
+WTO = "setup/countries/bactria/weitou.txt"
+YMI = "setup/countries/bactria/yumi.txt"
+JJE = "setup/countries/bactria/jingjue.txt"
+QIM = "setup/countries/bactria/qiemo.txt"
+
+#New Burma
+NYA = "setup/countries/burma/nyaunggan.txt"
+BNN = "setup/countries/burma/beinnaka.txt"
+TTM = "setup/countries/burma/taungthaman.txt"
+YHK = "setup/countries/burma/ywahtinkon.txt"
+HWK = "setup/countries/burma/hnawkan.txt"
+BKT = "setup/countries/burma/beikthano.txt"
+AKN = "setup/countries/burma/arakan.txt"
+TGU = "setup/countries/burma/taguang.txt"
+HAL = "setup/countries/burma/halin.txt"
+FGD = "setup/countries/burma/fugandulu.txt"
+SHN = "setup/countries/burma/shan.txt"
+
+#Removed
+LOL = "setup/countries/india/loulan.txt"
+
+
+#new by doamod
+A89 = "setup/countries/bactria/A89.txt" #Alexandria Eschate
+B01 = "setup/countries/bactria/B01.txt" #SOGDIANA
+C59 = "setup/countries/bactria/C59.txt" #AGARTIA
+C68 = "setup/countries/germania/C68.txt"
+C69 = "setup/countries/germania/C69.txt"
+C70 = "setup/countries/germania/C70.txt"
+A06 = "setup/countries/india/A06.txt" #VARENDRA
+B31 = "setup/countries/india/B31.txt" #TAMRALIPTI
+A31 = "setup/countries/india/A31.txt" #AVANTI
+A01 = "setup/countries/india/A01.txt" #SAURASHTRA
+A48 = "setup/countries/india/A48.txt" #MADYHAMIKA
+A49 = "setup/countries/india/A49.txt" #ABHIRIA
+A13 = "setup/countries/india/A13.txt" #SINDH
+A44 = "setup/countries/india/A44.txt" #ANARTTA
+A76 = "setup/countries/india/A76.txt" #ALEXANDRIA LIMEN
+C39 = "setup/countries/india/C39.txt" #KURU
+C43 = "setup/countries/india/C43.txt" #SHURASENA
+C37 = "setup/countries/india/C37.txt" #MALLA
+C38 = "setup/countries/india/C38.txt" #PANCHALA
+C40 = "setup/countries/india/C40.txt" #PRAYAGA
+B86 = "setup/countries/india/B86.txt" #ALEXANDREIA INDOS
+C58 = "setup/countries/india/C58.txt" #PARECANIA
+C81 = "setup/countries/india/Phaedra.txt"
+B39 = "setup/countries/africa/B39.txt" #TAMEFKAT
+C03 = "setup/countries/africa/C03.txt" #TINGITANIA
+C33 = "setup/countries/africa/C33.txt" #AMMON
+B34 = "setup/countries/africa/B34.txt" #MEMPHIS
+B40 = "setup/countries/africa/B40.txt" #WASET
+B90 = "setup/countries/iberia/B90.txt" # MALAKA
+C00 = "setup/countries/italia/C00.txt" #OLBIA RASNA
+C06 = "setup/countries/italia/C06.txt" #SULKI
+C63 = "setup/countries/italia/C63.txt" #ALALIE
+C36 = "setup/countries/italia/C36.txt" #LILYBAYA
+DCP = "setup/countries/syria/B12.txt" #DECAPOLIS
+B13 = "setup/countries/syria/B13.txt" #APPOLONIA
+A55 = "setup/countries/syria/A55.txt" #SOPHENE
+B17 = "setup/countries/syria/B17.txt" #OSROENE
+B19 = "setup/countries/syria/B19.txt" #SYRIA
+A53 = "setup/countries/syria/A53.txt" #NINEVEH
+B10 = "setup/countries/syria/B10.txt" #PALMYRA
+OSR = "setup/countries/syria/osroene.txt"
+SOP = "setup/countries/syria/sophene.txt"
+A51 = "setup/countries/caucasiamesopotamia/A51.txt" #babylon
+A54 = "setup/countries/caucasiamesopotamia/A54.txt" #HYRCANIA
+A60 = "setup/countries/caucasiamesopotamia/A60.txt" #ELAM
+A61 = "setup/countries/caucasiamesopotamia/A61.txt" #KELONAI
+A80 = "setup/countries/caucasiamesopotamia/A80.txt" #ARSACENE
+A65 = "setup/countries/caucasiamesopotamia/A65.txt" #PERSIS
+A69 = "setup/countries/caucasiamesopotamia/A69.txt" #CARMANIA
+A96 = "setup/countries/caucasiamesopotamia/A96.txt" #ANTIOCHEIA PERSIDOS
+C56 = "setup/countries/caucasiamesopotamia/C56.txt" #TIGRANAKERT
+C90 = "setup/countries/caucasiamesopotamia/C90.txt"
+CRA = "setup/countries/anatolia/carianew.txt" #CARIA
+B58 = "setup/countries/anatolia/B58.txt" #PERGAMON
+B62 = "setup/countries/anatolia/B62.txt" #LYDIA
+B66 = "setup/countries/anatolia/B66.txt" #PAMPHYLIA
+B68 = "setup/countries/anatolia/B68.txt" #CILICIA
+B70 = "setup/countries/anatolia/B70.txt" #PHYRGIA
+B72 = "setup/countries/anatolia/B72.txt" #ISAURIA
+C46 = "setup/countries/anatolia/C46.txt" #KARIN
+C94 = "setup/countries/greece/C94.txt"
+C16 = "setup/countries/greece/C16.txt" #Pelagonia
+C25 = "setup/countries/greece/C25.txt" #Thessaly
+C29 = "setup/countries/greece/C29.txt" #Chalkidiki
+C31 = "setup/countries/greece/C31.txt" #Odessos
+C14 = "setup/countries/greece/C14.txt" #Skyros
+A82 = "setup/countries/greece/A82.txt" #Corinth
+C64 = "setup/countries/africa/C64.txt" #AMMON
+C66 = "setup/countries/africa/C66.txt" #NEWKINGDOM
+C71 = "setup/countries/iberia/C71.txt"
+C74 = "setup/countries/britannia/C74.txt"
+C75 = "setup/countries/gaul/C75.txt"
+C76 = "setup/countries/gaul/C76.txt"
+C77 = "setup/countries/iberia/C77.txt"
+C78 = "setup/countries/gaul/C78.txt"
+C79 = "setup/countries/india/C79.txt"
+C80 = "setup/countries/arabia/C80.txt"
+C82 = "setup/countries/africa/C82.txt" 
+BGZ = "setup/countries/india/BGZ.txt" #BARYGAZA

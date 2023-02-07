@@ -54,7 +54,7 @@
 	# Level 2
 	tribute_income_modifier_inv_1 = {
 		modifier = { monthly_wage_for_character = -0.075 }		
-		requires = { agressive_expansion_impact_inv_5 }
+		requires_or = { agressive_expansion_impact_inv_5 agressive_expansion_monthly_decay_inv_1}
 		on_activate = {
 			if = {
 				limit = {
@@ -108,8 +108,15 @@
 
 	# Level 2 Specific
 	intervene_inv = {
-		requires = { tribute_income_modifier_inv_1 } 
-		modifier = { enable_intervene = yes }
+		requires = { gw_effect_charisma_education_inv } 
+		modifier = { 
+			enable_intervene = yes
+			fabricate_claim_speed = 0.25
+			integrate_speed = 0.25
+		}
+		on_activate = {
+			add_innovation = 1
+		}
 		ai_will_do = {
 			modifier = {
 				add = -50
@@ -122,11 +129,11 @@
 	fabricate_claim_cost_modifier_inv = { 
 		modifier = { 
 			fabricate_claim_speed = 0.25 
-			monthly_political_influence_modifier = 0.05
-			control_range_modifier = 0.20
+			monthly_political_influence_modifier = 0.025
+			control_range_modifier = 0.3
 			diplomatic_range_modifier = 0.20
 		}
-		requires_or = { tribute_income_modifier_inv_1 }
+		requires = { tribute_income_modifier_inv_1 }
 		on_activate = {
 			custom_tooltip = "king_of_kings_law_tt"
 		}
@@ -134,7 +141,9 @@
 	
 	loosened_tributaries_inv = {
 		modifier = { 
-			subject_opinions = 5
+			subject_opinions = 10
+			monthly_political_influence_modifier = 0.05
+			change_diplomatic_stance_cost_modifier = -0.3
 		}
 		allow = {
 			is_ai = no
@@ -147,13 +156,18 @@
 	}
 
 	subject_loyalty_inv = {
-		modifier = { diplomatic_relations = 1  }
+		modifier = { control_range_modifier = 0.3
+					 integrate_speed = 0.25
+					 agressive_expansion_monthly_change = -0.04
+					 naval_range = 0.1 }
 		
 		requires = { agressive_expansion_impact_inv_3 }
 	}	
 
 	relation_inv_1 = {
-		modifier = { improve_relation_impact = 0.20 }
+		modifier = { improve_relation_impact = 0.20
+					 tribute_income_modifier = 0.15
+		}
 		
 		requires = { agressive_expansion_impact_inv_3 }
 		on_activate = {
@@ -162,8 +176,10 @@
 	}
 	
 	gw_effect_charisma_education_inv = {
+		modifier = { change_governor_policy_cost_modifier = -0.25
+					 monthly_governor_wage = -0.025 }
 		on_activate = { custom_tooltip = "allow_gw_effect_charisma_education" }
-		requires = { relation_inv_1 }
+		requires = { loosened_tributaries_inv }
 		icon_override = gw_icon
 		allow = { has_dlc = "Heirs of Alexander" }
 	}
@@ -219,6 +235,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -255,8 +272,7 @@
 		requires = { subject_loyalty_inv }
 		modifier = { max_research_efficiency = 0.25 }
 		on_activate = {
-			add_innovation = 2
-
+			add_innovation = 1
 		}
 	}
 
@@ -264,7 +280,7 @@
 		allow = { tag = ROM }
 		
 		requires = { subject_loyalty_inv }
-		modifier = { happiness_for_same_culture_modifier = 0.06 }
+		modifier = { happiness_for_same_culture_modifier = 0.05 }
 	}
 
 	imperial_calendar_invention = {
@@ -312,7 +328,7 @@
 			}
 		}
 		
-		modifier = { happiness_for_same_culture_modifier = 0.025 }
+		modifier = { global_pop_assimilation_speed_modifier = 0.15 }
 	}
 
 	channeled_irrigation_invention = {
@@ -347,7 +363,7 @@
 
 	#New Invictus invention
 	cosmetics_inv = {
-    	modifier = { global_nobles_happyness = 0.03 }
+    	modifier = { global_nobles_output = 0.03 }
         
         requires = { eternal_pyramids_inv }
         allow = {
@@ -405,6 +421,7 @@
 							is_integrated = yes
 							this.culture.culture_group = culture_group:meroitic_group
 							this.culture.culture_group = culture_group:aksumite_group
+							this.culture.culture_group = culture_group:nilotic_group
 						}	
 					}
 			}
@@ -432,6 +449,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -441,8 +459,9 @@
 	# Level 4
 	war_score_cost_inv_1 = { 
 		modifier = { 
-			war_score_cost = -0.10 
-		    war_exhaustion = -0.05
+			war_score_cost = -0.10
+		    war_exhaustion = -0.02
+		    monthly_military_experience_modifier = 0.025
 		}
 		keystone = yes
 		requires_or = { fabricate_claim_cost_modifier_inv subject_loyalty_inv }
@@ -463,7 +482,7 @@
 	}
 
 	agressive_expansion_monthly_decay_inv_3 = {
-		modifier = { agressive_expansion_monthly_change = -0.04 }
+		modifier = { happiness_for_same_culture_modifier = -0.05 }
 		keystone = yes
 		requires_or = { subject_loyalty_inv relation_inv_1 }
 		on_activate = { custom_tooltip = "unlocks_theater_tt" }
@@ -563,6 +582,7 @@
 						is_integrated = yes
 						this.culture.culture_group = culture_group:meroitic_group
 						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
 					}
 				}
 			}
@@ -572,7 +592,7 @@
     #New Invictus invention
     musnad_script_inv = { 
         modifier = {
-        	research_points_modifier = 0.05
+        	research_points_modifier = 0.025
         	country_civilization_value = 5
         }
         
@@ -595,12 +615,15 @@
 
 	# Level 5
 	agressive_expansion_impact_inv_4 = {
-		modifier = { agressive_expansion_impact = -0.05 }
+		modifier = { agressive_expansion_impact = -0.05
+					 agressive_expansion_monthly_change = -0.05
+					 army_maintenance_cost = -0.025  }
 		
-		requires = { war_score_cost_inv_1 }
+		requires_or = { war_score_cost_inv_1 loosened_tributaries_inv }
 		on_activate = {
 			current_ruler = {
 				add_charisma = 2
+				add_martial = 2
 			}
 		}
 		ai_will_do = {
@@ -620,7 +643,7 @@
 		
 		requires = { war_score_cost_inv_1 }
 		on_activate = {
-			add_manpower = 50
+			add_manpower = 30
 		}
 		ai_will_do = {
 			modifier = {
@@ -676,7 +699,7 @@
     ukaz_poetry_fair_inv = { 
         modifier = {
         	monthly_corruption = -0.01
-        	global_monthly_civilization = 0.01
+        	global_monthly_civilization = 0.02
         }
         
         requires = { musnad_script_inv }
@@ -702,8 +725,10 @@
 		modifier = { 
 			mercenary_land_maintenance_cost = -0.05
 			max_mercenary_stacks = 2
-			global_manpower_modifier = -0.1
-			manpower_recovery_speed = -0.05
+			global_manpower_modifier = -0.05
+			manpower_recovery_speed = -0.025
+			levy_size_multiplier = 0.0025
+			army_maintenance_cost = 0.01
 		}
 		keystone = yes
 		requires = { agressive_expansion_impact_inv_4 }
@@ -711,8 +736,7 @@
 
 	tribute_income_modifier_inv_2 = {
 		modifier = { 
-			tribute_income_modifier = 0.1   
-			diplomatic_reputation = 3
+			tribute_income_modifier = 0.1
 		}
 		keystone = yes
 		requires_or = { agressive_expansion_monthly_decay_inv_3 }
@@ -725,7 +749,7 @@
 
 	#New Invictus invention
 	cylinder_seals_inv = {
-    	modifier = { character_loyalty = 3 }
+    	modifier = { character_loyalty = 2 }
         
         requires = { cuneiform_inv }
         allow = {
@@ -747,10 +771,11 @@
 	# Level 7
 	relation_inv_3 = {
 		modifier = { 
-			max_war_exhaustion = -2.5
+			levy_size_multiplier = 0.0025
 	        manpower_recovery_speed = 0.05
 			global_population_happiness = -0.025
-
+			global_unrest = 0.25
+			army_maintenance_cost = 0.01
 	    }
 		keystone = yes
 		requires_or = { war_score_cost_inv_2 tribute_income_modifier_inv_2 }
@@ -814,10 +839,10 @@
 	# Level 8
 	recruit_general_inv = { 
 		modifier = { 
-			recruit_general_cost_modifier = -0.40 
-			improve_relation_impact = 0.2
-			monthly_political_influence_modifier = 0.10
+			#recruit_general_cost_modifier = -0.40
+			monthly_political_influence_modifier = 0.1
 			general_loyalty = 5
+			monthly_wage_modifier = 0.01
 		}
 		requires = { relation_inv_3 }
 		on_activate = {
@@ -840,21 +865,30 @@
 		modifier = { 
 			global_nobles_happyness = 0.05
 			global_citizen_happyness = 0.05
-		    monthly_tyranny = -0.05
+		    monthly_tyranny = -0.02
 
 		}
 		
-		requires = { recruit_general_inv }
+		requires = { tribute_income_modifier_inv_4 }
 		on_activate = {
-			add_manpower = 80
+			add_manpower = 50
 		}
 	}
 
 	relation_inv_4 = {
 		modifier = { 
 			improve_relation_impact = 0.20
-			diplomatic_relations = 1
+			diplomatic_relations = 2
 			subject_loyalty = 10
+		}
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = disciplined
+				}
+			}
 		}
 		
 		requires = { recruit_general_inv }
@@ -862,10 +896,10 @@
 
 	tribute_income_modifier_inv_4 = {
 		modifier = { 
-			monthly_military_experience_modifier = 0.05
-			land_morale = 0.25
+			army_movement_speed = 0.025
+			land_morale_modifier = 0.025
+			supply_train_movement_speed = 0.1
             army_maintenance_cost = 0.02
-
 		}
 		
 		requires = { relation_inv_3 }
@@ -873,9 +907,10 @@
 
 	monthly_general_loyalty_inv = { 
 		modifier = { 
-			general_loyalty = 5 
-		    army_maintenance_cost = -0.05
-			global_freemen_output = 0.05
+			general_loyalty = 5
+		    army_maintenance_cost = 0.01
+			land_morale_recovery = 0.02
+			monthly_wage_modifier = 0.01
 		}
 		
 		requires = { relation_inv_3 }
@@ -903,51 +938,54 @@
 		allow = {
 			is_ai = no
 		} 
-		requires = { relation_inv_5 }
+		on_activate = {
+			add_innovation = 1
+		}
+		requires = { tribute_income_modifier_inv_2 }
 	}
 
 	agressive_expansion_monthly_decay_inv_4 = {
 		modifier = { 
-			global_freemen_happyness = 0.05
-			global_manpower_modifier = 0.025
-		
+			global_freemen_output = 0.03
+			global_manpower_modifier = 0.03
+			army_maintenance_cost = 0.01
 		}
 		
-		requires = { tribute_income_modifier_inv_4 }
+		requires = { monthly_general_loyalty_inv }
 	}	
 
 	# Level 11
 	agressive_expansion_monthly_decay_inv_5 = {
 		modifier = { 
-			monthly_political_influence_modifier = 0.05
+			price_reward_veterans_cost_modifier = -0.25
 			monthly_wage_for_character = -0.05
 			
 		}
 		
-		requires = { relation_inv_5 }
+		requires_or = { agressive_expansion_monthly_decay_inv_4 relation_inv_4 }
 	}
 
 	tribute_income_modifier_inv_5 = {
 		modifier = { 
-			global_manpower_modifier = 0.075
-			loyalty_gain_chance_modifier = 0.025
-			global_population_happiness = -0.025
-
+			monthly_military_experience_modifier = 0.025
+			max_war_exhaustion = -0.02
+			global_population_happiness = -0.05
+			army_maintenance_cost = 0.01
 		}
 		keystone = yes
-		requires_or = { agressive_expansion_monthly_decay_inv_4 monthly_general_loyalty_inv }
+		requires = { subject_opinions_inv_3 }
 	}
 
 	# Level 12
 	war_score_cost_inv_3 = { 
 		modifier = { 
-			global_manpower_modifier = 0.025
+			global_manpower_modifier = 0.075
 			global_population_happiness = -0.05
-			levy_size_multiplier = 0.02
 			war_exhaustion = -0.02
+			army_maintenance_cost = 0.01
 		}
 		keystone = yes
-		requires_or = { agressive_expansion_monthly_decay_inv_5 relation_inv_4 }
+		requires = { agressive_expansion_monthly_decay_inv_5 }
 		ai_will_do = {
 			modifier = {
 				add = 50
@@ -960,9 +998,10 @@
 		modifier = { 
 			mercenary_land_maintenance_cost = -0.05
 			max_mercenary_stacks = 1
- 
+			global_manpower_modifier = -0.05
+ 			army_maintenance_cost = 0.01
 		}
-		requires = { tribute_income_modifier_inv_5 }
+		requires_or = { agressive_expansion_monthly_decay_inv_4 relation_inv_5 }
 		on_activate = {
 			if = {
 				limit = {
@@ -975,13 +1014,17 @@
 
 	# Special War Goal
 	land_won_by_the_spear = {
+		modifier = {
+			levy_size_multiplier = 0.01
+			global_unrest = 0.5
+		}
 		icon_override = war
 		on_activate = {
 			custom_tooltip = "unlocks_imperial_conquest_wargoal"
-			add_4_free_province_investments = yes
+			add_2_free_province_investments = yes
 		}
 		keystone = yes
-		requires_or = { war_score_cost_inv_3 subject_opinions_inv_3 }
+		requires_or = { war_score_cost_inv_3 tribute_income_modifier_inv_5 }
 		
 	}
 
@@ -990,8 +1033,8 @@
     ## Indian Specific - Level 0
     #Vanilla invention modified for Invictus
     indian_wootz_steel_inv = {
-        modifier = { global_tribesmen_output = 0.01
-                     global_population_growth = 0.01 }
+        modifier = { global_migration_speed_modifier = 0.15
+                     global_population_growth = 0.025 }
         requires = { brahmi_script_invention }
 		allow = {
 			OR = {
@@ -1032,9 +1075,10 @@
     ## Indian Specific - Level 1
     #Vanilla invention modified for Invictus
     indian_toe_stirrup_inv = {
-        modifier = { heavy_cavalry_discipline = 0.01
-        			 light_cavalry_discipline = 0.01
-        			 horse_archers_discipline = 0.01 }
+        modifier = { light_cavalry_movement_speed = 0.05
+        			 warelephant_movement_speed = 0.05
+        			 camels_movement_speed = 0.05
+        			 army_maintenance_cost = 0.01 }
         requires = { indian_wootz_steel_inv }
         allow = {
 			OR = {
@@ -1155,8 +1199,8 @@
 
     #Vanilla invention modified for Invictus
     indian_crucible_steel_inv = {
-        modifier = { light_infantry_offensive = 0.01
-					 heavy_infantry_offensive = 0.01 }
+        modifier = { monthly_military_experience_modifier = 0.025
+					 army_maintenance_cost = 0.01 }
 		requires = { indian_cataract_surgery_inv }
         allow = {
 			OR = {
@@ -1239,8 +1283,7 @@
     ## Indian Specific - Level 4
     #Vanilla invention modified for Invictus
     indian_indigo_dye_inv = {
-        modifier = { global_commerce_modifier = 0.05
-        			 global_capital_trade_routes = 1 }
+        modifier = { global_state_trade_routes = 0.3 }
         requires = { indian_hindu_number_system_inv }
 		allow = {
 			OR = {
@@ -1266,7 +1309,7 @@
     #Vanilla invention modified for Invictus
     #Vanilla invention modified for Invictus
     indian_tube_drawn_technology_inv = {
-        modifier = { global_commerce_modifier = 0.1 }
+        modifier = { global_commerce_modifier = 0.05 }
         requires = { indian_hindu_number_system_inv }
         allow = {
 			OR = {
@@ -1331,9 +1374,10 @@ oratory_2 = {
 
 	# Level 1
 	change_governor_policy_inv = { 
-		modifier = { change_governor_policy_cost_modifier = -0.2  }
+		modifier = { change_governor_policy_cost_modifier = -0.3
+					 monthly_governor_wage = -0.025  }
 		
-		requires_or = { monthly_character_loyalty_inv_1 diplomatic_reputation_inv_1 }
+		requires_or = { diplomatic_reputation_inv_1 }
 		ai_will_do = {
 			modifier = {
 				add = 30
@@ -1347,12 +1391,18 @@ oratory_2 = {
 			force_through_senate_cost_modifier = -0.05
 		}
 		
-		requires_or = { monthly_character_loyalty_inv_1 diplomatic_reputation_inv_1 }
+		requires_or = { monthly_character_loyalty_inv_1 }
 	}
 	
 	gw_effect_fantastic_ruler_inv = {
+		modifier = {
+			theathre_building_cost = -0.1
+			recruit_character_cost_modifier = -0.2
+		}
 		on_activate = { custom_tooltip = "allow_gw_effect_fantastic_ruler" }
-		requires = { tyranny_inv_1 }
+		requires_or = { monthly_character_loyalty_inv_1 diplomatic_reputation_inv_1
+
+		 }
 		icon_override = gw_icon
 		allow = { has_dlc = "Heirs of Alexander" }
 	}
@@ -1783,7 +1833,7 @@ oratory_2 = {
 			global_population_capacity_modifier = 0.05
 		}
 		keystone = yes
-		requires = { change_governor_policy_inv }
+		requires_or = { change_governor_policy_inv gw_effect_fantastic_ruler_inv  }
 		on_activate = {
 			add_1_free_province_investments = yes
 			capital_scope = {
@@ -1808,7 +1858,7 @@ oratory_2 = {
 			}
 		}
 		keystone = yes
-		requires = { tyranny_inv_1 }
+		requires_or = { tyranny_inv_1 gw_effect_fantastic_ruler_inv }
 	}	
 
 	# Level 2 Specific
@@ -1824,7 +1874,9 @@ oratory_2 = {
 
 	#New Invictus invention
 	kithara_inv = { 
-		modifier = { happiness_for_wrong_culture_group_modifier = 0.03 }
+		modifier = { 
+			happiness_for_wrong_culture_group_modifier = 0.05
+			diplomatic_relations = 1 }
 		
 		requires = { oratory_tech_investment_inv_1 }
 		allow = {
@@ -1850,7 +1902,9 @@ oratory_2 = {
 
 	#New Invictus invention
 	phrygian_mode_inv = {
-    	modifier = { happiness_for_wrong_culture_group_modifier = 0.03 }
+    	modifier = { 
+    		happiness_for_wrong_culture_group_modifier = 0.05
+    		diplomatic_relations = 1 }
         
         requires = { tyranny_inv_1 }
         allow = {
@@ -1872,13 +1926,21 @@ oratory_2 = {
 
 	# Level 3
 	diplomatic_relations_inv = { 
-		modifier = { diplomatic_relations = 1   }
+		modifier = { 
+			diplomatic_relations = 1 
+			buy_idea_cost_modifier = -0.15
+			max_friends = 1
+			give_relic_cost_modifier = -0.3
+		}
 		
 		requires = { oratory_tech_investment_inv_1 }
 	}
 
 	diplo_range_inv_1 = {
-		modifier = { diplomatic_range_modifier = 0.15 }
+		modifier = { 
+			diplomatic_range_modifier = 0.15
+			control_range_modifier = 0.3
+		}
 		
 		requires = { smear_character_cost_modifier_inv }
 
@@ -1916,7 +1978,7 @@ oratory_2 = {
 
 	#New Invictus invention
 	duduk_inv = {
-    	modifier = { global_unrest = -0.5 }
+    	modifier = { global_unrest = -0.25 }
         
         requires = { phrygian_mode_inv }
         allow = {
@@ -1937,15 +1999,19 @@ oratory_2 = {
 
 	# Level 4
 	control_range_modifier_inv = { 
-		modifier = { control_range_modifier = 0.05  }
+		modifier = { control_range_modifier = 0.3
+					 support_rebels_cost_modifier = -0.15
+		}
 		
-		requires = { diplomatic_relations_inv }
+		requires_or = { diplomatic_relations_inv diplo_range_inv_2 }
 		on_activate = { custom_tooltip = "exile_minority_decision" }
 
 	}
 
 	diplo_range_inv_2 = {
-		modifier = { diplomatic_range_modifier = 0.05 }
+		modifier = { diplomatic_range_modifier = 0.1
+					 fabricate_claim_cost_modifier = -0.25
+		 }
 		
 		requires_or = { smear_character_cost_modifier_inv oratory_tech_investment_inv_1}
 	}
@@ -1954,8 +2020,8 @@ oratory_2 = {
 	martial_dancing_inv = {
     	modifier = { 
     		global_freemen_output = 0.03 
-    		land_morale_modifier = 0.025
-    		land_morale_recovery = 0.025
+    		global_supply_limit_modifier = 0.1
+    		army_maintenance_cost = 0.01
     	}
         
         requires = { duduk_inv }
@@ -1979,17 +2045,17 @@ oratory_2 = {
 	inspire_disloyalty_cost_modifier_inv = { 
 		modifier = { character_loyalty = 2  }
 		
-		requires_or = { assassinate_attempt_cost_modifier_inv control_range_modifier_inv }
+		requires = { assassinate_attempt_cost_modifier_inv }
 		on_activate = { custom_tooltip = "allows_espionage_character_interaction" }
 	}
 
 	tyranny_inv_2 = {
 		modifier = { 
 			monthly_tyranny = -0.02
-			control_range_modifier = 0.15
+			diplomatic_relations = 1
 			diplomatic_range_modifier = 0.15
 		}
-		requires_or = { control_range_modifier_inv diplo_range_inv_2 }
+		requires = { control_range_modifier_inv }
 		on_activate = {
 			if = {
 				limit = { is_monarchy = yes }
@@ -1999,9 +2065,12 @@ oratory_2 = {
 	}
 
 	tyranny_inv_3 = {
-		modifier = { global_unrest = -0.25 }
+		modifier = { 
+			global_unrest = -0.25
+			global_manpower_modifier = -0.025
+		}
 		
-		requires =  { diplo_range_inv_2 }
+		requires_or =  { diplo_range_inv_2 diplo_range_inv_1 }
 	}
 
 	diplomatic_relations_inv_2 = { 
@@ -2027,17 +2096,19 @@ oratory_2 = {
 
 	diplomatic_reputation_inv_3 = {
 		modifier = { 
-			global_nobles_happyness = 0.05
-			monthly_political_influence_modifier = 0.025
+			monthly_political_influence_modifier = 0.05
+			secude_governor_cost_modifier = -0.15
 		}
 		
 		requires = { inspire_disloyalty_cost_modifier_inv }
 	}
 
 	monthly_governor_inv = { 
-		modifier = { governor_loyalty = 5 }
+		modifier = { governor_loyalty = 5
+					 monthly_governor_wage = 0.025 }
 		
-		requires = { tyranny_inv_2 }
+		requires_or = { monthly_character_loyalty_inv_5 diplomatic_reputation_inv_4 
+		}
 		on_activate = {
 			custom_tooltip = "governors_gain_finesse_invention"
 			hidden_effect = {
@@ -2055,12 +2126,12 @@ oratory_2 = {
 	oratory_tech_investment_inv_2 = { 
 		modifier = { 
 			price_state_investment_oratory_cost_modifier = -0.1
-			global_population_growth = 0.01
+			global_population_growth = 0.02
+			country_civilization_value = 3
 		}
 		requires_or = { tyranny_inv_3 diplomatic_relations_inv_2 }
 		on_activate = {
 			custom_tooltip = "counterespionage_defence"
-			add_1_free_province_investments = yes
 			if = {
 				limit = { 
 					has_dlc = "Heirs of Alexander"
@@ -2073,7 +2144,7 @@ oratory_2 = {
 	#New Invictus invention
 	ritual_suicide_inv = { 
 		modifier = { 
-			character_loyalty = 3
+			character_loyalty = 2
 		}
 		
 		requires = { diplomatic_relations_inv_2 }
@@ -2114,17 +2185,17 @@ oratory_2 = {
 		}
 		on_activate = { custom_tooltip = "counterespionage_defence" }
 		
-		requires_or = { diplomatic_reputation_inv_3 monthly_governor_inv }
+		requires = { diplomatic_reputation_inv_3 }
 	}
 
 	monthly_character_loyalty_inv_2 = {
 		modifier = { 
 			character_loyalty = 4
-			
-		
+			monthly_wage_modifier = 0.01
+			price_force_divorce_cost_modifier = -0.5
 		}
 		keystone = yes
-		requires_or = { monthly_governor_inv oratory_tech_investment_inv_2 }
+		requires = { tyranny_inv_2 }
 		on_activate = {
 			capital_scope = {
 				create_state_pop = nobles
@@ -2204,6 +2275,8 @@ oratory_2 = {
 		modifier = { 
 			monthly_corruption = -0.02
 			loyalty_gain_chance_modifier = -0.05
+			civil_war_threshold = 0.05
+			monthly_wage_modifier = 0.01
 		}
 		keystone = yes
 		requires = { bribe_character_cost_modifier_inv monthly_character_loyalty_inv_3 }
@@ -2229,11 +2302,15 @@ oratory_2 = {
 
 	tyranny_inv_4 = {
 		modifier = { 
-			monthly_tyranny = -0.01
-			character_loyalty = 1
+			global_population_capacity_modifier = 0.025 
+		}
+		on_activate = {
+			add_2_free_province_investments = yes
+
 		}
 		
-		requires = { monthly_character_loyalty_inv_2  }
+		requires = { oratory_tech_investment_inv_2
+		  }
 	}	
 
 	# Level 8 Specific
@@ -2241,13 +2318,17 @@ oratory_2 = {
 		allow = { is_monarchy = yes }
 		
 		requires = { monthly_character_loyalty_inv_2 }
-		modifier = { price_oaths_of_allegiance_button_cost_modifier = -0.2 }
+		modifier = { 
+			price_oaths_of_allegiance_button_cost_modifier = -0.5
+			price_test_loyalty_cost_modifier = -0.25
+			bribe_pi_cost_modifier = -0.3
+		}
 	}
 
 	#New Invictus invention
     polycentric_administration_inv = {
     	modifier = { 
-    		happiness_for_wrong_culture_group_modifier = 0.03 
+    		happiness_for_wrong_culture_group_modifier = 0.05
     		diplomatic_relations = 1
     	}
         
@@ -2271,8 +2352,9 @@ oratory_2 = {
 	# Level 9
 	diplomatic_reputation_inv_4 = {
 		modifier = { 
-			global_nobles_output = 0.05   
+			global_nobles_output = 0.03   
 			monthly_political_influence_modifier = 0.05
+			monthly_wage_modifier = 0.01
 		}
 		on_activate = {
 			if = {
@@ -2281,7 +2363,7 @@ oratory_2 = {
 			}
 		}
 		
-		requires = { tyranny_inv_4 }
+		requires = { tyranny_inv_2 }
 	}
 
 	# Level 9 Specific
@@ -2289,9 +2371,9 @@ oratory_2 = {
 		allow = { rank >= regional_power }
 		requires = { monthly_character_loyalty_inv_5 }
 		
-		modifier = { research_points_modifier = 0.1 }
+		modifier = { research_points_modifier = 0.15 }
 		on_activate = {
-			add_innovation = 3
+			add_innovation = 1
 		}
 	}
 
@@ -2300,9 +2382,10 @@ oratory_2 = {
 		modifier = { 
 			monthly_tyranny = -0.03
 			character_loyalty = 2
+			monthly_wage_modifier = 0.01
 		}
 		
-		requires_or = { monthly_character_loyalty_inv_5 diplomatic_reputation_inv_4 }
+		requires_or = { monthly_character_loyalty_inv_2 tyranny_inv_4 }
 	}
 
 	# Level 10 Specific
@@ -2310,15 +2393,13 @@ oratory_2 = {
 		allow = { rank >= major_power }
 		
 		requires = { scientific_patronage_inv }
-		modifier = { research_points_modifier = 0.1 }
-		on_activate = {
-			add_innovation = 2
-		}
+		modifier = { research_points_modifier = 0.15 }
 	}
 
 	#New Invictus invention
     pahlavi_script_inv = {
-    	modifier = { governor_loyalty = 5 }
+    	modifier = { governor_loyalty = 5
+    				 monthly_governor_wage = 0.025 }
         requires = { polycentric_administration_inv }
         allow = {
 			OR = {
@@ -2343,16 +2424,17 @@ oratory_2 = {
 			monthly_political_influence_modifier = 0.25
 		}
 		keystone = yes
-		requires = { tyranny_inv_5 }
+		requires_or = { monthly_governor_inv oaths_of_allegiance_inv }
 	}
 
 	diplo_range_inv_4 = {
 		modifier = { 
-			diplomatic_range_modifier = 0.25 
+			diplomatic_range_modifier = 0.3
+			control_range_modifier = 0.3
 			diplomatic_relations = 3
 		}
 		keystone = yes
-		requires_or = { tyranny_inv_5 }
+		requires_or = { tyranny_inv_5 oaths_of_allegiance_inv }
 		on_activate = {
 			every_character = {
 				limit = {
@@ -2366,8 +2448,11 @@ oratory_2 = {
 
 	# Level 12
 	scientific_patronage_3_inv = {
-		allow = { 
-			rank >= major_power 
+		allow = {
+			OR = {
+				rank >= major_power 
+				is_subject_type = player_client_state
+			} 
 			capital_scope = {
 				civilization_value >= 95
 			}

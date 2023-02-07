@@ -1,0 +1,24 @@
+﻿namespace = law_events
+
+law_events.1 = { 
+ 	type = country_event
+	title = "law_events.1.t"
+	desc = "law_events.1.desc"
+	left_portrait = scope:actor.current_ruler
+	right_portrait = scope:actor.current_ruler
+	picture = burning_alexandria
+
+	trigger = {
+
+	}
+
+	immediate = {
+	
+	}
+
+
+	option = {
+		name = "law_events.1.a"
+	 }
+}
+

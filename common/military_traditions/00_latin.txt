@@ -12,69 +12,390 @@
 			country_culture_group = latin
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = italic_influence
-			}	
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_latin"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					this.culture.culture_group = culture_group:latin	
-				}
-			}
+			this.culture.culture_group = culture_group:latin	
 		}
 	}
 
-	##### HEAVY INF
-
-	latin_roman_path_1 = { ###Latin 1A
-		modifier = { 
-			heavy_infantry_offensive = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = latin_roman_path_1
-		requires = {}
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = steadfast
-				}
-			}
+	
+	italic_generic_path_1 = { ###
+	allow = {
+		NOT = {
+			has_variable = left_generic_tree
 		}
 	}
-
-	latin_roman_path_2 = { ###Latin 4AA
-		modifier = { 
-			heavy_infantry_discipline = 0.05
-			army_maintenance_cost = 0.01
-		 }
-		enable_tactic = triplex_acies
-		requires = { latin_roman_path_1 }
-		icon = latin_roman_path_2
+	on_activate = {
+		set_variable = left_generic_tree
 	}
+	modifier = { 
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = latin_roman_path_1
+	requires = { }
+}
 
-	latin_roman_path_7 = { ###Latin 4AB
-		modifier = { 
-			heavy_infantry_morale = 0.05
-			army_maintenance_cost = 0.01
+italic_generic_path_2 = { ###
+	allow = {
+		NOT = {
+			has_variable = right_generic_tree
 		}
-		requires = { latin_roman_path_2 }
-		icon = latin_roman_path_7
 	}
+	on_activate = {
+		set_variable = right_generic_tree
+	}
+	modifier = { 
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = latin_roman_path_2
+	requires = { }
+}
 
-	##### MISC
+italic_generic_path_3 = { ###
+	modifier = { 
+		light_infantry_offensive = 0.1
+		light_infantry_morale = 0.1
+		heavy_infantry_offensive = 0.1
+		heavy_infantry_morale = 0.1
+		light_cavalry_offensive = 0.1
+		light_cavalry_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = latin_roman_path_3
+	requires = {italic_generic_path_1}
+}
 
-	latin_roman_path_4 = { ###Latin 3B
-		modifier = {
-			army_movement_speed = 0.05
-			army_maintenance_cost = 0.01
+italic_generic_path_4 = { ### 
+	modifier = { 
+		light_infantry_defensive = 0.1
+		light_infantry_discipline = 0.1
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_discipline = 0.1
+		light_cavalry_defensive = 0.1
+		light_cavalry_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = latin_roman_path_5
+	requires = {italic_generic_path_2}
+}
+
+italic_generic_path_5 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 7}
+	icon = latin_roman_path_7
+	requires = {italic_generic_path_3}
+}
+
+italic_generic_path_6 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	}
+	allow = {military_tech >= 7} 
+	icon = latin_roman_path_end_bonus
+	requires = {italic_generic_path_4}
+}
+
+italic_generic_path_7 = { ###
+	modifier = { 
+		heavy_cavalry_offensive = 0.1
+		heavy_cavalry_morale = 0.1
+		archers_offensive = 0.1
+		archers_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = latin_support_path_6
+	requires = {italic_generic_path_5}
+}
+
+italic_generic_path_8 = { ### 
+	modifier = { 
+		heavy_cavalry_defensive = 0.1
+		heavy_cavalry_discipline = 0.1
+		archers_defensive = 0.1
+		archers_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = latin_support_path_7
+	requires = {italic_generic_path_6}
+}
+
+italic_generic_path_9 = { ###
+	modifier = { 
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 13}
+	icon = latin_tribal_path_2
+	requires = {italic_generic_path_7 }
+}
+
+italic_generic_path_10 = { ###
+	modifier = { 
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = latin_tribal_path_4
+	allow = {military_tech >= 13}
+	requires = {italic_generic_path_8 }
+}
+
+italic_generic_path_11 = { ###
+	modifier = { 
+		warelephant_offensive = 0.1
+		warelephant_morale = 0.1
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.1
+		camels_offensive = 0.1
+		camels_morale = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	} 
+	icon = latin_tribal_path_end_bonus
+	requires = {italic_generic_path_9}
+}
+
+italic_generic_path_12 = { ### 
+	modifier = { 
+		warelephant_defensive = 0.1
+		warelephant_discipline = 0.1
+		horse_archers_defensive = 0.1
+		horse_archers_discipline = 0.1
+		camels_defensive = 0.1
+		camels_discipline = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	}
+	icon = greek_states_path_end_bonus
+	requires = {italic_generic_path_10}
+}
+
+
+#fort
+
+latin_support_path_3 = { ###Latin 1B
+modifier = { 
+	siege_ability = 0.1
+	army_maintenance_cost = 0.01
+}
+requires = {}
+icon = latin_support_path_2
+}
+
+latin_support_path_2 = { ###Latin 2B
+modifier = { 
+	siege_engineers = 1
+	army_maintenance_cost = 0.01
+}
+requires = { latin_support_path_3 }
+icon = latin_support_path_4
+
+on_activate = {
+	add_innovation = 2
+}
+}
+
+latin_roman_path_4 = { ###Latin 3B
+modifier = {
+	army_movement_speed = 0.05
+	army_maintenance_cost = 0.01
+}
+enable_ability = road_building
+requires = { latin_support_path_2 latin_roman_path_end_bonus }
+icon = latin_roman_path_4
+on_activate = {
+	add_innovation = 2
+}
+}
+
+latin_roman_path_end_bonus = { ###Latin 4B
+modifier = { 
+	assault_ability = 0.1
+	army_maintenance_cost = 0.01
+}
+requires = { latin_roman_path_9 }
+icon = latin_support_path_3
+}
+
+latin_roman_path_9 = {
+modifier = { 
+	max_war_exhaustion = -2.5
+	army_maintenance_cost = 0.01
+}
+enable_ability = border_forts
+requires = { latin_roman_path_5 }
+icon = latin_support_path_4
+}
+
+latin_roman_path_5 = { ###Latin 5AA
+modifier = { 
+	war_score_cost = -0.1
+	global_supply_limit_modifier = 0.15
+	army_maintenance_cost = -0.01
+}
+requires = { }
+icon = latin_support_path_5
+}
+
+
+#naval
+
+
+latin_tribal_path_6 = { ###Latin 1B
+modifier = { 
+	navy_maintenance_cost = -0.10
+}
+
+on_activate = {
+	ordered_owned_province = {
+		limit = {
+			is_coastal = yes
+			can_build_building = port_building
 		}
-		enable_ability = road_building
-		requires = { }
-		icon = latin_roman_path_4
+		add_building_level = port_building
 	}
 }
+
+requires = { }
+icon = latin_tribal_path_6
+}
+
+latin_support_path_1 = { ###Latin 2B
+modifier = { 
+	naval_damage_taken = -0.1
+	navy_maintenance_cost = 0.01
+}
+
+on_activate = {
+	random_owned_province = {
+		limit = {
+			num_of_port_building > 0 
+		}
+		owner = {
+			create_unit = {
+				navy = yes
+				location = prev.prev
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = trireme
+				add_subunit = tetrere
+				add_subunit = hexere
+			}
+		}
+	}
+}
+
+requires = { latin_tribal_path_6 }
+icon = latin_support_path_1
+}
+
+latin_tribal_path_4 = { ###Latin 4B
+modifier = { 
+	enslavement_efficiency = 0.1
+	global_slaves_output = output_large_svalue
+}
+allow_unit_type = octere
+requires = { latin_support_path_1 }
+icon = greek_states_path_5
+}
+
+
+#CIV
+
+generic_latin_civic_2 = { ###Latin 1B
+modifier = { 
+	manpower_recovery_speed = 0.05
+	price_found_city_cost_modifier = -0.05
+}
+
+requires = { latin_philosophy_start_bonus }
+icon = latin_support_path_end_bonus
+}
+
+generic_latin_civic_3 = { ###Latin 1B
+modifier = { 
+	global_manpower_modifier = 0.10
+	price_found_city_cost_modifier = -0.05
+}
+
+requires = { generic_latin_civic_2 }
+icon = latin_tribal_path_7
+
+}
+
+latin_tribal_path_3 = { ###Latin 5AC
+		modifier = { 
+			omen_power = 0.15
+		}
+		requires = { generic_latin_civic_3 }
+		icon = latin_tribal_path_3
+		on_activate = {
+			random_character = {
+				limit = {
+					has_high_priest_office_trigger = yes
+				}
+				alternative_limit = {
+					is_ruler = yes
+				}
+				add_zeal = 3
+			}
+		}
+	}
+
+	generic_latin_civic_4 = { ###Latin 1B
+	modifier = { 
+		global_slaves_output = 0.1
+		global_tax_modifier = 0.1
+	}
+	
+	requires = { latin_tribal_path_3 }
+	icon = levantine_greco_path_7
+	}
+
+
+	latin_philosophy_start_bonus = { ###Latin 6AB
+		modifier = { 
+			fort_limit = 1
+			global_defensive = 0.1
+			fort_maintenance_cost = 0.01
+		}
+		
+		on_activate = {
+			capital_scope = {
+				add_building_level = fortress_building
+			}
+		}
+		
+		requires = {  }
+		icon = latin_philosophy_start_bonus
+	}

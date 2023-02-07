@@ -9,18 +9,18 @@
 
 	is_flank = yes
 	
-	maneuver = 4
+	maneuver = 3
 	movement_speed = 3.5
 
 	build_time = 40
 	legions = no
-	light_infantry = 1.1
-	heavy_infantry = 0.6
-	heavy_cavalry = 1.1
-	light_cavalry = 1.25
-	warelephant = 0.65
-	horse_archers = 1.1
-	archers = 1.05
+	light_infantry = 1.15
+	heavy_infantry = 0.75
+	heavy_cavalry = 0.75
+	light_cavalry = 1.05
+	warelephant = 0.75
+	horse_archers = 1.05
+	archers = 1.2
 	camels = 1.0
 	build_cost = {
 		gold = 15
@@ -30,7 +30,7 @@
 	
 	
 	food_consumption = 0.20
-	food_storage = 15
+	food_storage = 5.3
 	
-	attrition_loss = 0.025
+	attrition_loss = 0.03
 }

@@ -1,0 +1,184 @@
+﻿navy_action_effect = {
+	add_unit_modifier = {
+		name = naval_action
+		duration = -1
+	}
+}
+
+navy_protect_trade_nation_effect = { # navy unit
+	while = {
+		count = num_of_ships_svalue
+		unit_owner = {
+			add_country_modifier = {
+				name = protect_merchants
+				duration = -1
+				mode = add
+			}
+		}
+	}
+}
+
+navy_protect_trade_province_effect = {
+	unit_location = {
+		ordered_neighbor_province = {
+			limit = {
+				trading_partner_province_trigger = yes
+				owner = {
+					NOT = {
+						war_with = root.unit_owner
+					}
+				}
+				owner = controller
+				NOT = {
+					owner = root.unit_owner
+				}
+			}
+			max = 1
+			add_province_modifier = {
+				name = trading_partner
+				duration = -1
+			}
+		}
+	}
+}
+
+navy_protect_trade_effect = { # navy unit
+	navy_protect_trade_nation_effect = yes
+	navy_action_effect = yes
+	navy_protect_trade_province_effect = yes
+}
+
+navy_fishing_finish_effect = { # navy unit
+	remove_variable = is_navy_fishing
+	remove_unit_modifier = naval_action
+
+	unit_location = {
+		every_neighbor_province = {
+			limit = {
+				has_province_modifier = getting_fished
+			}
+			remove_province_modifier = getting_fished
+		}
+	}
+
+	unit_owner = {
+		remove_country_modifier = go_fish
+		remove_country_modifier = not_go_fish
+	}
+}
+
+navy_raiding_finish_effect = { # navy unit
+	remove_variable = is_slave_raiding
+}
+
+navy_supply_finish_effect = { # navy unit
+	remove_variable = is_navy_supplying
+	unit_owner = {
+		remove_country_modifier = naval_supplier
+	}
+	remove_unit_modifier = naval_action
+}
+
+navy_port_assault_finish_effect = { # navy unit
+	remove_variable = is_navy_assaulting
+}
+
+navy_port_raid_finish_effect = { # navy unit
+	remove_variable = is_navy_raiding
+}
+
+navy_protect_commerce_finish_effect = { # navy unit
+	remove_variable = is_navy_protecting_commerce
+	remove_unit_modifier = naval_action
+	unit_owner = {
+		remove_country_modifier = protect_merchants
+	}
+
+	unit_location = {
+		every_neighbor_province = {
+			limit = {
+				has_province_modifier = trading_partner
+			}
+
+			remove_province_modifier = trading_partner
+		}
+	}
+}
+
+navy_raid_commerce_finish_effect = { # navy unit
+	remove_variable = is_navy_raiding_commerce
+	remove_unit_modifier = naval_action
+
+	unit_location = {
+		every_neighbor_province = {
+			limit = {
+				has_province_modifier = mugged_by_reality
+			}
+
+			remove_province_modifier = mugged_by_reality
+		}
+	}
+
+	unit_owner = {
+		remove_country_modifier = naughty_mugger
+		remove_country_modifier = raid_commerce_ae
+	}
+}
+
+navy_toggle_ability_finish_effect = { # navy unit
+	if = {
+		limit = {
+			navy_slave_raiding = yes
+		}
+
+		navy_raiding_finish_effect = yes
+	}
+
+	if = {
+		limit = {
+			navy_supplying = yes
+		}
+
+		navy_supply_finish_effect = yes
+	}
+
+	if = {
+		limit = {
+			navy_assaulting = yes
+		}
+
+		navy_port_assault_finish_effect = yes
+	}
+
+	if = {
+		limit = {
+			navy_fishing = yes
+		}
+
+		navy_fishing_finish_effect = yes
+	}
+
+	if = {
+		limit = {
+			navy_raiding = yes
+		}
+
+		navy_port_raid_finish_effect = yes
+	}
+
+	if = {
+		limit = {
+			navy_raiding_commerce = yes
+		}
+
+		navy_raid_commerce_finish_effect = yes
+	}
+
+	if = {
+		limit = {
+			navy_protecting_commerce = yes
+		}
+
+		navy_protect_commerce_finish_effect = yes
+	}
+}

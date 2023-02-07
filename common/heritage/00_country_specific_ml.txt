@@ -1073,8 +1073,8 @@ babylonian_heritage = {
 heritage_of_assur = {
 	modifier = {
 		#good
-		land_morale_modifier = 0.05
-		discipline = 0.05
+		siege_ability = 0.1
+		assault_ability = 0.1
 		#bad
 		monthly_political_influence_modifier = -0.05
 	}
@@ -1945,9 +1945,8 @@ mahameghavahani_heritage = {
 malavi_heritage = {
 	modifier = {
 		#good
-		siege_engineers = 0.1
-		heavy_infantry_maintenance_cost = -0.1
-		
+		siege_ability = 0.1
+		warelephant_maintenance_cost = -0.1
 		#bad
 		agressive_expansion_impact = 0.1
 	}
@@ -1961,7 +1960,7 @@ neo_lydian_heritage = {
 	modifier = {
 		#good
 		global_tax_modifier = 0.1
-		global_commerce_modifier = 0.1
+		global_commerce_modifier = 0.05
 		
 		#bad
 		character_loyalty = -2
@@ -2171,7 +2170,7 @@ hibernia_magna_heritage = {
 	modifier = {
 		#good
 		loyalty_gain_chance_modifier = -0.05
-		
+		global_commerce_modifier = 0.1
 		
 		#bad
 		global_manpower_modifier = -0.05
@@ -3169,7 +3168,7 @@ vandal_heritage = {
 argead_heritage = {
 	modifier = {
 		#good
-		heavy_infantry_discipline = 0.2
+		heavy_infantry_discipline = 0.1
 		happiness_for_same_culture_modifier = happiness_large_svalue
 		
 		#bad
@@ -3372,7 +3371,7 @@ brennusovian_heritage = {
 jalabhumi_heritage = {
 	modifier = {
 		#good
-		light_infantry_marsh_combat_bonus = 0.35
+		light_infantry_marsh_combat_bonus = 0.25
 		hostile_attrition = 0.10
 		
 		#bad
@@ -3898,5 +3897,114 @@ pannonian_pannonian_heritage = {
 	
 	trigger = {
 		tag = PAN
+	}
+}
+
+garamantes_heritage = {
+	modifier = {
+		#good
+		desert_combat_bonus = 0.1
+		global_commerce_modifier = 0.1
+		#bad
+		diplomatic_reputation = -2
+	}
+
+	trigger = {
+		tag = GAR
+	}
+}
+
+#Machylia
+Androgynous_heritage = {
+	modifier = {
+		#good
+		discipline = 0.05
+		global_start_experience = 5.0
+
+		#bad
+		diplomatic_reputation = -2.0
+	}
+
+	trigger = {
+		tag = MHY
+	}
+}
+
+Nasamonian_heritage = {
+	modifier = {
+		#good
+		army_movement_speed = 0.05
+		desert_combat_bonus = 0.1
+
+		#bad
+		global_population_growth = -0.02
+	}
+
+	trigger = {
+		tag = NAS
+	}
+}
+
+#Psyllia
+Snake_Bite_heritage = {
+	modifier = {
+		#good
+		diplomatic_reputation = 2.0
+		omen_power = 0.12
+
+		#bad
+		retreat_delay = 1.0
+	}
+
+	trigger = {
+		tag = PSY
+	}
+}
+
+#Makae
+Heritage_of_the_Ostrich_Shield = {
+	modifier = {
+		#good
+		hills_combat_bonus = 0.1
+		build_cost = -0.05
+
+		#bad
+		build_time = 0.1
+	}
+
+	trigger = {
+		tag = MKA
+	}
+}
+
+#Phazania
+Pheasant_heritage = {
+	modifier = {
+		#good
+		build_cost = -0.1
+		global_defensive = 0.1
+
+		#bad
+		happiness_for_wrong_culture_modifier = -0.04
+	}
+
+	trigger = {
+		tag = PHZ
+	}
+}
+
+#Gindania
+Heritage_of_the_Leather_Legged_Women = {
+	modifier = {
+		#good
+		global_population_growth = 0.03
+		global_tribesmen_happyness = 0.06
+
+		#bad
+		global_tribesmen_output = -0.05
+	}
+
+	trigger = {
+		tag = GIN
 	}
 }

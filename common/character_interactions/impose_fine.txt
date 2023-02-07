@@ -14,9 +14,6 @@
 		hidden:scope:target = {
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
-			NOT = {
-				has_character_modifier = commander_king
-			}
 		}
 	}
 	

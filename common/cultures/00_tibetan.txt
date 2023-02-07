@@ -2,9 +2,9 @@
 	#tibetan plateau
 	color = hsv { 0.95 1.0 0.8 }
 	
-	primary = light_infantry
+	primary = archers
 	second = heavy_infantry
-	flank = warelephant
+	flank = light_infantry
 
 	primary_navy = tetrere
 	secondary_navy = octere
@@ -83,8 +83,10 @@
 				Belpa Chudmar Dongkar Ge Kye Magyal Namra Rigo Samtho Sekhor Sunpo Supi Supiya Suvarnagotra Tong
 			}
 		}
+		
 		yarlung = {}
 		tsang = {}
+		pyu = {}
 	}
 	
 	barbarian_names = {

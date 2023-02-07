@@ -6,7 +6,7 @@
 		local_building_slot = 4
 		local_pop_promotion_speed_modifier = 0.10
 		local_migration_attraction = 2
-		base_resources = 2
+		base_resources = 1
 		local_state_trade_routes = 2
 		local_nobles_desired_pop_ratio = 0.1
 		local_citizen_desired_pop_ratio = 0.3
@@ -14,6 +14,7 @@
 		local_slaves_desired_pop_ratio = 0.05
 		local_output_modifier = 0.1
 		garrison_growth = 0.1
+		local_population_happiness = -0.1
 	}
 	
 	color = hsv { 0.333  0.8  0.5 }
@@ -31,6 +32,7 @@ city = {
 		local_citizen_desired_pop_ratio = 0.3
 		local_freemen_desired_pop_ratio = 0.4
 		local_slaves_desired_pop_ratio = 0.15
+		local_population_happiness = -0.05
 	}
 	
 	color = hsv { 0.6  0.8  0.8 }

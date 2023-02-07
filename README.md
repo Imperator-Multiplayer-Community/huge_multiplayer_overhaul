@@ -7,15 +7,14 @@ This mod is intended for Multiplayer use only, you can use it in Singleplayer bu
 HMO has been given permission to integrate the following mods:
 [list]
 [*]Field of Mars (Built off of)
-[*]Commander Kings
 [*]Great Wonders Refined
 [*]Bloodlines 2.0
-[*]Imperator Navigable Rivers
 [*]Legion Distinctions Overhaul
 [*]Map Modes Enhanced and Clear Skies
 [*]Metropolis Sprawl
 [*]Clear and Solid Borders
 [*]Invictus (Map)
+[*]Better Governor Policies
 [/list]
 
 Features Highlights:

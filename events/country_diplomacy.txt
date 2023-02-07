@@ -900,7 +900,7 @@ country_diplomacy.11 = {
 	goto_location = scope:vassal_country.capital_scope
 	
 	trigger = {
-
+		#has_province_modifier = permanent_province_modifier
 	}
 
 	immediate = {

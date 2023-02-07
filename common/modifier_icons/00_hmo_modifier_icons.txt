@@ -15,15 +15,6 @@ fiftykman_cost_modifier = {
 tributary_terrain_combat_bonus = {
     positive = "gfx/interface/icons/modifiers/riverine_terrain_combat_bonus.dds"
 }
-slave_move_yes = {
-    positive = "gfx/interface/icons/modifiers/slaves_move_cost_modifier.dds"
-}
-slave_move_no = {
-    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
-}
-slave_hub_move_no = {
-    positive = "gfx/interface/icons/modifiers/slave_workpower.dds"
-}
 civil_war_unrest = {
     positive = "gfx/interface/icons/modifiers/local_unrest.dds"
 }
@@ -65,6 +56,14 @@ aqueduct_maintenance = {
 
 navy_maint_cost = {
     positive = "gfx/interface/icons/modifiers/mercenary_naval_maintenance_cost.dds"
+}
+
+sufficient_ports_maintenance = {
+    positive = "gfx/interface/icons/modifiers/navy_maintenance_cost.dds"
+}
+
+insufficient_ports_maintenance = {
+    positive = "gfx/interface/icons/modifiers/navy_maintenance_cost.dds"
 }
 
 ## TERRAIN
@@ -206,15 +205,72 @@ vineyard_building_cost = {
 industry_town_building_cost = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
-send_letter_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/build_cost.dds"
-}
-go_hunting_cost_modifier = {
-    positive = "gfx/interface/icons/modifiers/build_cost.dds"
-}
+
+### MISC
 subject_player_client_state_pays_cost_modifier = {
     positive = "gfx/interface/icons/modifiers/build_cost.dds"
 }
+
 border_fortress_building_cost = {
     positive = "gfx/interface/icons/modifiers/fortress_building_cost.dds"
+}
+
+gift_slave_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/culture_slaves_output.dds"
+}
+
+give_relic_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+price_force_divorce_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_fam_prestige.dds"
+}
+
+price_tribal_duel_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_clan_chief_loyalty.dds"
+}
+
+price_test_loyalty_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_loyalty.dds"
+}
+
+send_letter_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/ruler_popularity_gain.dds"
+}
+
+go_hunting_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/diplomatic_reputation.dds"
+}
+
+price_humiliate_rival_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/smear_character_cost_modifier.dds"
+}
+
+price_task_character_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_prominence.dds"
+}
+
+secude_governor_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/monthly_character_prominence.dds"
+}
+
+cash500_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+cash1k_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+cash2k_cost_modifier = {
+    positive = "gfx/interface/icons/modifiers/tax_income.dds"
+}
+
+hill_fort_cost = {
+    positive = "gfx/interface/icons/modifiers/build_cost.dds"
+}
+
+metropolitan_walls = {
+    positive = "gfx/interface/icons/modifiers/fort_level.dds"
 }

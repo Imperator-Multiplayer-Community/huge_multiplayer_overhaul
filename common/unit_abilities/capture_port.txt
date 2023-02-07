@@ -5,7 +5,7 @@
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_capture_port"
 
 	navy_only = yes
-
+	map = no
 
 	allow = {
 		is_navy = yes
@@ -93,20 +93,17 @@
 	
 	
 	start_effect = {
-		random_sub_unit = {
-			limit = {
-				ship_category = heavy
-				subunit_strength_percentage >= 0.50
+		while = {
+			count = 5
+			random_sub_unit = {
+				limit = {
+					ship_category = heavy
+					subunit_strength_percentage >= 0.50
+				}
+				add_subunit_strength = -0.50
 			}
-			add_subunit_strength = -0.50
 		}
-		random_sub_unit = {
-			limit = {
-				ship_category = heavy
-				subunit_strength_percentage >= 0.50
-			}
-			add_subunit_strength = -0.50
-		}
+		
 		if = {
 			limit = {
 				unit_location = {
@@ -152,6 +149,4 @@
 			custom_tooltip = capture_port_explain_effect_tt
 		}
 	}
-	
-	
 }

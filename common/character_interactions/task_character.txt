@@ -22,7 +22,6 @@
 				this = scope:actor.current_ruler
 			}
 			NOR = {
-				has_character_modifier = commander_king
 				has_character_modifier = recently_tasked
 				has_character_modifier = on_espionage_mission_cmod
 				has_character_modifier = foreign_citizen
@@ -64,8 +63,7 @@
 		}
 
 		scope:target.employer = {
-			political_influence >= 15
-			treasury >= 35
+			can_pay_price = price_task_character
 		}
 
 		custom_tooltip = {
@@ -95,8 +93,7 @@
 		}
 	
 		scope:target.employer = {
-			add_political_influence = -15
-			add_treasury = -35
+			pay_price = price_task_character
 			trigger_event = {
 				id = task.1
 				days = 3

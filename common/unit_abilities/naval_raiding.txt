@@ -3,9 +3,8 @@
 	enable = yes
 	toggle = yes
 	navy_only = yes
-	cancel_on_combat_end = yes
 
-	map = yes
+	map = no
 	
 	hidden = {
 		unit_owner = {
@@ -13,7 +12,11 @@
 				num_of_cities < 1
 				NOR = {
 					heritage = pirate_heritage
-					is_tradition_tree_allowed = naval_traditions
+					is_tradition_tree_allowed = afro_arabian_philosophy_2
+					is_tradition_tree_allowed = anatolian_philosophy_2
+					is_tradition_tree_allowed = greek_philosophy
+					is_tradition_tree_allowed = haemic_philosophy
+					
 				}
 			}
 		}
@@ -29,21 +32,27 @@
 			}
 			trigger_else_if = {
 				limit = {
-					is_tradition_tree_allowed = naval_traditions
+					is_tradition_tree_allowed = afro_arabian_philosophy_2
+					is_tradition_tree_allowed = anatolian_philosophy_2
+					is_tradition_tree_allowed = greek_philosophy
+					is_tradition_tree_allowed = haemic_philosophy
+					
 				}
 				OR = {
-					has_military_bonus = greek_antigonid_path_4
-					has_military_bonus = aryan_river_path_3
-					has_military_bonus = illyrian_piracy_path_1
-					has_military_bonus = lydian_path_1
-					has_military_bonus = celt_iberian_path_c_3
 					has_military_bonus = arabian_path_4
+					has_military_bonus = lydian_path_1
+					has_military_bonus = greek_antigonid_path_4
+					has_military_bonus = illyrian_piracy_path_1
+					
 				}
 				
 			}
 			trigger_else = {
 				always = no
 			}
+			#trigger_else = {
+			#	always = yes # testing
+			#}
 		}
 		unit_location = {
 			custom_tooltip = {
@@ -193,28 +202,6 @@
 			}
 
 			hidden_effect = {
-				unit_location = {
-					every_neighbor_province = { 
-						limit = {
-							naval_raid_target_province_trigger = yes
-							NOT = { owner = root.unit_owner }
-							trigger_if = {
-								limit = { root.unit_owner = { is_subject = yes } }
-								NOT = { root.unit_owner.overlord = this.owner }
-							}
-							owner = {
-								NOT = { alliance_with = root.unit_owner }
-								NOT = { is_subject_of = root.unit_owner }
-								NOT = { has_truce_with = root.unit_owner }
-							}
-							NOT = { has_enemy_army = root.unit_owner }
-							NOT = {	has_province_modifier = port_province_raided }
-						}
-						
-						add_city_smoke_effect = yes
-					}
-				}
-
 				add_unit_modifier = {
 					name = naval_action
 					duration = 30
@@ -236,7 +223,7 @@
 	}
 
 	finish_effect = {
-		remove_variable = is_slave_raiding
+		navy_raiding_finish_effect = yes
 	}
 
 	finished_when = {
@@ -246,13 +233,6 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			has_commander = no
-			navy_drilling = yes
-			navy_supplying = yes
-			navy_assaulting = yes
-			navy_fishing = yes
-			navy_raiding = yes
-			navy_raiding_commerce = yes
-			navy_protecting_commerce = yes
 		}
 	}
 

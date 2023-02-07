@@ -26,25 +26,428 @@
 		}
 	}
 
-	### HEAVY INF
-
-	greek_philosophy_start_bonus = {
-		modifier = { 
-			heavy_infantry_cost = -0.05
-			army_maintenance_cost = 0.01
-	 	}
-		enable_tactic = greek_phalanx
-		requires = {  }
-		icon = greek_philosophy_start_bonus
+	greek_generic_path_1 = { ###
+	allow = {
+		NOT = {
+			has_variable = left_generic_tree
+		}
 	}
+	on_activate = {
+		set_variable = left_generic_tree
+	}
+	modifier = { 
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = greek_antigonid_path_5
+	requires = { }
+}
 
-	greek_states_path_7 = {
+greek_generic_path_2 = { ###
+	allow = {
+		NOT = {
+			has_variable = right_generic_tree
+		}
+	}
+	on_activate = {
+		set_variable = right_generic_tree
+	}
+	modifier = { 
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = greek_antigonid_path_4
+	requires = { }
+}
+
+greek_generic_path_3 = { ###
+	modifier = { 
+		light_infantry_offensive = 0.1
+		light_infantry_morale = 0.1
+		heavy_infantry_offensive = 0.1
+		heavy_infantry_morale = 0.1
+		light_cavalry_offensive = 0.1
+		light_cavalry_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = greek_antigonid_path_3
+	requires = {greek_generic_path_1}
+}
+
+greek_generic_path_4 = { ### 
+	modifier = { 
+		light_infantry_defensive = 0.1
+		light_infantry_discipline = 0.1
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_discipline = 0.1
+		light_cavalry_defensive = 0.1
+		light_cavalry_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = greek_seleucid_path_1
+	requires = {greek_generic_path_2}
+}
+
+greek_generic_path_5 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 7}
+	icon = greek_seleucid_path_2
+	requires = {greek_generic_path_3}
+}
+
+greek_generic_path_6 = { ###
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	}
+	allow = {military_tech >= 7} 
+	icon = greek_antigonid_path_end_bonus
+	requires = {greek_generic_path_4}
+}
+
+greek_generic_path_7 = { ###
+	modifier = { 
+		heavy_cavalry_offensive = 0.1
+		heavy_cavalry_morale = 0.1
+		archers_offensive = 0.1
+		archers_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = greek_seleucid_path_5
+	requires = {greek_generic_path_5}
+}
+
+greek_generic_path_8 = { ### 
+	modifier = { 
+		heavy_cavalry_defensive = 0.1
+		heavy_cavalry_discipline = 0.1
+		archers_defensive = 0.1
+		archers_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = greek_seleucid_path_7
+	requires = {greek_generic_path_6}
+}
+
+greek_generic_path_9 = { ###
+	modifier = { 
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 13}
+	icon = greek_states_path_1
+	requires = {greek_generic_path_7 }
+}
+
+greek_generic_path_10 = { ###
+	modifier = { 
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = greek_states_path_2
+	allow = {military_tech >= 13}
+	requires = {greek_generic_path_8 }
+}
+
+greek_generic_path_11 = { ###
+	modifier = { 
+		warelephant_offensive = 0.1
+		warelephant_morale = 0.1
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.1
+		camels_offensive = 0.1
+		camels_morale = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	} 
+	icon = greek_states_path_end_bonus
+	requires = {greek_generic_path_9}
+}
+
+greek_generic_path_12 = { ### 
+	modifier = { 
+		warelephant_defensive = 0.1
+		warelephant_discipline = 0.1
+		horse_archers_defensive = 0.1
+		horse_archers_discipline = 0.1
+		camels_defensive = 0.1
+		camels_discipline = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	}
+	icon = greek_states_path_7
+	requires = {greek_generic_path_10}
+}
+
+
+
+#naval
+
+greek_antigonid_path_4 = {
+	modifier = { 
+		enslavement_efficiency = 0.1
+	}
+	enable_ability = naval_raiding
+	requires = { }
+	icon = greek_antigonid_path_4
+}
+
+greek_antigonid_path_2 = {
+	requires = { greek_antigonid_path_4 }
+	icon = greek_seleucid_path_end_bonus
+	modifier = {
+		ship_cost = -0.15
+	}
+	on_activate = {
+		ordered_owned_province = {	#Upgrades a port, or creates one
+			limit = {
+				is_coastal = yes
+				has_building = port_building
+				can_build_building = port_building
+			}
+			alternative_limit = {
+				is_coastal = yes
+				can_build_building = port_building
+			}
+			order_by = total_population
+			add_building_level = port_building
+			add_building_level = port_building
+		}
+	}
+}
+
+greek_levantine_enable = {
+	modifier = {
+		coastal_terrain_combat_bonus = 0.1
+		naval_damage_taken = -0.1 
+		navy_maintenance_cost = 0.01
+	}
+	requires = { greek_antigonid_path_2 greek_naval_heritage }
+	icon = greek_states_path_5
+}
+
+greek_naval_heritage = { 
+	modifier = { 
+		ocean_combat_bonus = 0.1
+		coastal_terrain_combat_bonus = 0.1
+		navy_maintenance_cost = 0.01
+	}
+	requires = { greek_seleucid_path_3 }
+	icon = greek_seleucid_path_3
+	on_activate = {
+		if = {
+			limit = {
+				any_owned_province = { num_of_port_building > 0  }
+			}
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
+				}
+			}
+		}
+		else = {
+			ordered_owned_province = {
+				limit = {
+					is_coastal = yes
+					can_build_building = port_building
+				}
+				add_building_level = port_building
+			}
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
+				}
+			}
+		}
+	}
+}
+
+greek_seleucid_path_3 = { 
+	modifier = { 
+		naval_damage_done = 0.05
+		global_ship_recruit_speed = 0.15 
+		navy_maintenance_cost = 0.01
+	}
+	allow_unit_type = octere
+	requires = { greek_antigonid_path_2_octere }
+	icon = greek_antigonid_path_2
+}
+
+greek_antigonid_path_2_octere = {
+	modifier = {
+		naval_range = 0.1 
+		navy_maintenance_cost = 0.01
+	}
+    allow_unit_type = mega_galley
+	requires = { }
+	icon = default_test
+	on_activate = {
+		random_owned_province = {
+			limit = {
+				num_of_port_building > 0 
+			}
+			owner = {
+				create_unit = {
+					navy = yes
+					location = prev.prev
+					add_subunit = octere
+					add_subunit = octere
+				}
+			}
+		}
+	}
+}
+
+#civ
+
+greek_states_path_4 = {
+	modifier = {
+		price_found_city_cost_modifier = -0.1
+	}
+	enable_ability = military_colonies
+	requires = { }
+	icon = latin_philosophy_start_bonus
+	on_activate = {
+		ordered_owned_province = {
+			limit = {
+				NOT = { province_dominant_culture_group = hellenic }
+				any_neighbor_province = {
+					count > 1
+					NOT = { province_dominant_culture_group = hellenic }
+				}
+				state = {
+					NOT = {
+						any_state_province = {
+							is_capital = yes
+						}
+					}
+				}
+			}
+			order_by = {
+				value = 0
+				add = population_cap
+				subtract = total_population
+			}
+			add_province_modifier = {
+				name = "local_colonia"
+				duration = -1
+			}
+			custom_tooltip = military_colonia_here_tt
+			trigger_event = { id = cultural_integration.11 }
+		}
+	}
+}
+
+generic_greek_civic_2 = { ###Latin 1B
+	modifier = { 
+		global_slaves_output = 0.1
+	    global_nobles_happyness = 0.05
+	}
+	
+    requires = { greek_states_path_4 }
+    icon = greek_states_path_4
+
+}
+
+generic_greek_civic_3 = { ###Latin 1B
+	modifier = { 
+		global_pop_assimilation_speed = 0.10
+		global_tax_modifier = 0.05
+	}
+	
+    requires = { generic_greek_civic_2 }
+    icon = levantine_greco_path_5
+}
+
+generic_greek_civic_4 = { ###Latin 1B
+    modifier = { 
+		research_points_modifier = 0.10
+	    build_cost = -0.1
+	}
+	
+	requires = { generic_greek_civic_3 }
+	icon = persian_bactrian_path_2
+}
+
+generic_greek_civic_5 = { ###Latin 1B
+    modifier = { 
+		global_export_commerce_modifier  = 0.075
+	    price_found_metropolis_cost_modifier = -0.15
+	}
+	
+    requires = { generic_greek_civic_4 }
+    icon = levantine_greco_path_7
+}
+
+#fort
+
+
+
+greek_antigonid_path_1 = {
 		modifier = { 
-			heavy_infantry_discipline = 0.05
+			global_cohort_start_experience = 5
+			experience_decay = -0.005
 			army_maintenance_cost = 0.01
 		}
-		requires = { greek_philosophy_start_bonus }
-		icon = greek_states_path_7
+		requires = { greek_seleucid_path_2 }
+		icon = greek_states_path_3
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
@@ -54,62 +457,58 @@
 				}
 			}
 		}
-	}
+}
 
-	greek_states_path_end_bonus = {
+	
+greek_seleucid_path_end_bonus = {
 		modifier = { 
-			heavy_infantry_defensive = 0.05
-			army_maintenance_cost = 0.01
+			mercenary_land_maintenance_cost = -0.1
+			global_defensive = 0.1
 		}
-		requires = { greek_states_path_7 } 
-		icon = greek_states_path_end_bonus 
-	}
-
-
-	##### NAVAL
-
-	greek_seleucid_path_3 = { 
-		modifier = { 
-			naval_damage_done = 0.05
-			global_ship_recruit_speed = 0.15 
-			navy_maintenance_cost = 0.01
-		}
-		requires = { }
-		allow_unit_type = octere
-		icon = greek_seleucid_path_3
-	}
-
-	greek_antigonid_path_4 = {
-		modifier = { 
-			enslavement_efficiency = 0.1
-		}
-		enable_ability = naval_raiding
-		requires = { greek_seleucid_path_3 }
-		icon = greek_antigonid_path_4
-	}
-
-	greek_antigonid_path_2 = {
-		requires = { greek_antigonid_path_4 }
-		icon = greek_antigonid_path_2
-		modifier = {
-			ship_cost = -0.15
-		}
-		allow_unit_type = mega_galley
 		on_activate = {
-			ordered_owned_province = {	#Upgrades a port, or creates one
-				limit = {
-					is_coastal = yes
-					has_building = port_building
-					can_build_building = port_building
-				}
-				alternative_limit = {
-					is_coastal = yes
-					can_build_building = port_building
-				}
-				order_by = total_population
-				add_building_level = port_building
-				add_building_level = port_building
+			add_innovation = 3
+		}
+		requires = { greek_antigonid_path_1 }
+		icon = greek_states_path_7
+
+}
+
+greek_states_path_6 = {
+		modifier = { 
+			global_defensive = 0.15
+			fort_limit = 1
+			fort_maintenance_cost = 0.01
+		}
+		requires = { greek_seleucid_path_end_bonus }
+		icon = greek_states_path_6
+		on_activate = {
+			capital_scope = {
+				add_building_level = fortress_building
 			}
 		}
-	}
+}
+	
+
+greek_seleucid_path_2 = {
+		modifier = { 
+			fort_maintenance_cost = 0.01
+			garrison_size = 0.15
+		}
+		potential = {}
+		icon = latin_support_path_3
+		on_activate = {
+			ordered_owned_province = {
+				limit = {
+					province_dominant_culture_group = hellenic
+				}
+				order_by = {
+					value = 0
+					add = population_cap
+					subtract = total_population
+				}
+				max = 3
+				check_range_bounds = no
+				create_2_freemen_effect = yes
+			}
+		}
 }

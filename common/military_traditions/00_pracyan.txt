@@ -1,6 +1,6 @@
 ﻿pracyan_philosophy = { #Pracyan Path
 	color = hsv { 0.27 0.6 0.5 }
-	image = mauryan_coastal_path_1
+	image = mauryan_mauryas_path_5
 	
 
 	allow = {
@@ -21,59 +21,212 @@
 			country_culture_group = tibetan
 		}
 		trigger_else = {
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_cultural_decision"
-				has_variable = tibeto_pracyan_influence
-			}	
-			custom_tooltip = {
-				text = "tradition_unlock_requirement_tibeto_pracyan"
-				any_country_culture = {
-					is_integrated = yes
-					country_culture_pop_count >= percent_size_culture_group_comparison
-					OR = {
-						this.culture.culture_group = culture_group:pracyan
-						this.culture.culture_group = culture_group:tibetan
-					}
-				}
+			OR = {
+				this.culture.culture_group = culture_group:pracyan
+				this.culture.culture_group = culture_group:tibetan
 			}
 		}
 	}
 
 	##### HEAVY INF
 
-	tibetan_path_1 = { ###
-		modifier = { 
-			heavy_infantry_discipline = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_naval_path_2
-		requires = { }
+	pracyan_generic_path_1 = { ###
+	allow = {
+		NOT = {
+			has_variable = left_generic_tree
+		}
 	}
-
-	tibetan_path_4 = { ###
-		modifier = { 
-			heavy_infantry_morale = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = north_african_army_path_3
-		requires = { tibetan_path_1 }
+	on_activate = {
+		set_variable = left_generic_tree
 	}
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = persian_bactrian_path_5
+	requires = { }
+}
 
-	tibetan_path_9 = { ###
-		modifier = { 
-			heavy_infantry_offensive = 0.05
-			army_maintenance_cost = 0.01
-		} 
-		icon = greek_states_path_end_bonus
-		requires = { tibetan_path_4 }
+pracyan_generic_path_2 = { ###
+	allow = {
+		NOT = {
+			has_variable = right_generic_tree
+		}
 	}
+	on_activate = {
+		set_variable = right_generic_tree
+	}
+	modifier = { 
+		archers_cost = -0.05
+		archers_movement_speed = 0.05
+		light_infantry_cost = -0.05
+		light_infantry_movement_speed = 0.05
+		heavy_infantry_cost = -0.05
+		heavy_infantry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_noble_path_6
+	requires = { }
+}
 
+pracyan_generic_path_3 = { ###
+	modifier = { 
+		archers_offensive = 0.1
+		archers_morale = 0.1
+		light_infantry_offensive = 0.1
+		light_infantry_morale = 0.1
+		heavy_infantry_offensive = 0.1
+		heavy_infantry_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_mauryas_path_5
+	requires = {pracyan_generic_path_1}
+}
 
-	##### NAVAL
+pracyan_generic_path_4 = { ### 
+	modifier = { 
+		archers_defensive = 0.1
+		archers_discipline = 0.1
+		light_infantry_defensive = 0.1
+		light_infantry_discipline = 0.1
+		heavy_infantry_defensive = 0.1
+		heavy_infantry_discipline = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = mauryan_mauryas_path_2
+	requires = {pracyan_generic_path_2}
+}
 
-	pracyan_path_10 = { ###
-		allow_unit_type = octere
-		on_activate = {
+pracyan_generic_path_5 = { ###
+	modifier = { 
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 7}
+	icon = levantine_arabian_path_4
+	requires = {pracyan_generic_path_3}
+}
+
+pracyan_generic_path_6 = { ###
+	modifier = { 
+		light_cavalry_cost = -0.05
+		light_cavalry_movement_speed = 0.05
+		warelephant_cost = -0.05
+		warelephant_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	}
+	allow = {military_tech >= 7} 
+	icon = levantine_arabian_path_3
+	requires = {pracyan_generic_path_4}
+}
+
+pracyan_generic_path_7 = { ###
+	modifier = { 
+		light_cavalry_offensive = 0.1
+		light_cavalry_morale = 0.1
+		warelephant_offensive = 0.1
+		warelephant_morale = 0.1
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_mauryas_path_5
+	requires = {pracyan_generic_path_5}
+}
+
+pracyan_generic_path_8 = { ### 
+	modifier = { 
+		light_cavalry_defensive = 0.1
+		light_cavalry_discipline = 0.1
+		warelephant_defensive = 0.1
+		warelephant_morale = 0.1
+		army_maintenance_cost = 0.01
+	}
+	icon = levantine_egyptian_path_6
+	requires = {pracyan_generic_path_6}
+}
+
+pracyan_generic_path_9 = { ###
+	modifier = { 
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	allow = {military_tech >= 13}
+	icon = mauryan_mauryas_path_1
+	requires = {pracyan_generic_path_7 }
+}
+
+pracyan_generic_path_10 = { ###
+	modifier = { 
+		camels_cost = -0.05
+		camels_movement_speed = 0.05
+		horse_archers_cost = -0.05
+		horse_archers_movement_speed = 0.05
+		heavy_cavalry_cost = -0.05
+		heavy_cavalry_movement_speed = 0.05
+		army_maintenance_cost = 0.01
+	} 
+	icon = mauryan_mauryas_path_3
+	allow = {military_tech >= 13}
+	requires = {pracyan_generic_path_8 }
+}
+pracyan_generic_path_11 = { ###
+	modifier = { 
+		camels_offensive = 0.1
+		camels_morale = 0.1
+		horse_archers_offensive = 0.1
+		horse_archers_morale = 0.1
+		heavy_cavalry_offensive = 0.1
+		heavy_cavalry_morale = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	} 
+	icon = persian_philosophy_start_bonus
+	requires = {pracyan_generic_path_9}
+}
+pracyan_generic_path_12 = { ### 
+	modifier = { 
+		camels_defensive = 0.1
+		camels_discipline = 0.1
+		horse_archers_defensive = 0.1
+		horse_archers_discipline = 0.1
+		heavy_cavalry_defensive = 0.1
+		heavy_cavalry_morale = 0.1
+		army_maintenance_cost = 0.01
+		global_population_happiness = -0.02	
+	}
+	icon = persian_achaemenid_path_end_bonus
+	requires = {pracyan_generic_path_10}
+}
+
+### NAVAL
+tibet_generic_naval_1 = { 
+	modifier = { 
+		trireme_offensive = 0.15
+		liburnian_offensive = 0.15
+		trireme_movement_speed = 0.1
+		liburnian_movement_speed = 0.1
+		coastal_terrain_combat_bonus = 0.1
+		navy_maintenance_cost = 0.01
+	}
+	requires = {  }
+	icon = mauryan_coastal_path_end_bonus
+	on_activate = {
+		if = {
+			limit = {
+				any_owned_province = { num_of_port_building > 0  }
+			}
 			random_owned_province = {
 				limit = {
 					num_of_port_building > 0 
@@ -82,43 +235,207 @@
 					create_unit = {
 						navy = yes
 						location = prev.prev
-						add_subunit = octere
-						add_subunit = octere
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
 					}
 				}
 			}
 		}
-		modifier = { 
-			trireme_defensive = 0.15
-			navy_maintenance_cost = 0.01
-		} 
-		icon = persian_achaemenid_path_3
-		requires = { }
-	}
-
-	pracyan_path_5 = { ###
-		on_activate = {
-			ordered_owned_province = {	#Upgrades a port, or creates one
+		else = {
+			ordered_owned_province = {
 				limit = {
 					is_coastal = yes
-					has_building = port_building
 					can_build_building = port_building
 				}
-				alternative_limit = {
-					is_coastal = yes
-					can_build_building = port_building
-				}
-				order_by = total_population
-				add_building_level = port_building
 				add_building_level = port_building
 			}
+			random_owned_province = {
+				limit = {
+					num_of_port_building > 0 
+				}
+				owner = {
+					create_unit = {
+						navy = yes
+						location = prev.prev
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+						add_subunit = trireme
+					}
+				}
+			}
 		}
-		modifier = { 
-			naval_range = 0.15
-			trireme_morale = 0.1
-			navy_maintenance_cost = 0.01
-		} 
-		icon = mauryan_coastal_path_end_bonus
-		requires = { pracyan_path_10 }
 	}
+}
+
+tibet_generic_naval_2 = { 
+	modifier = { 
+		naval_damage_done = 0.05
+		global_ship_recruit_speed = 0.15 
+		navy_maintenance_cost = 0.01
+	}
+	allow_unit_type = octere
+	requires = { tibet_generic_naval_1 }
+	icon = mauryan_coastal_path_3
+}
+
+tibet_generic_naval_3 = {
+	modifier = {
+		naval_range = 0.5
+		navy_maintenance_cost = 0.01
+	}
+    allow_unit_type = mega_galley
+	requires = { tibet_generic_naval_2 }
+	icon = mauryan_coastal_path_1
+	on_activate = {
+		random_owned_province = {
+			limit = {
+				num_of_port_building > 0 
+			}
+			owner = {
+				create_unit = {
+					navy = yes
+					location = prev.prev
+					add_subunit = octere
+					add_subunit = octere
+				}
+			}
+		}
+	}
+}
+
+### CIVILIZATION
+
+pracyan_civ_generic_path_1  = { ###
+	modifier = { 
+		global_monthly_civilization = 0.03
+		global_export_commerce_modifier = 0.05
+		global_monthly_food_modifier = 0.05
+	} 
+	icon = mauryan_coastal_path_6
+	requires = {  }
+}
+pracyan_civ_generic_path_2 = { ###
+	on_activate = {
+		add_innovation = 1
+	}	
+	modifier = { 
+		build_cost = -0.10
+	} 
+	icon = mauryan_noble_path_7
+	requires = { pracyan_civ_generic_path_1 }
+
+}
+pracyan_civ_generic_path_3 = { ###
+enable_ability = military_colonies
+on_activate = {
+	ordered_owned_province = {
+		limit = {
+			NOT = { dominant_province_culture_group = root.culture_group }
+			any_neighbor_province = {
+				count > 1
+				NOT = { dominant_province_culture_group = root.culture_group }
+			}
+			state = {
+				NOT = {
+					any_state_province = {
+						is_capital = yes
+					}
+				}
+			}
+		}
+		order_by = {
+			value = 0
+			add = population_cap
+			subtract = total_population
+		}
+		add_province_modifier = {
+			name = "local_colonia"
+			duration = -1
+		}
+		custom_tooltip = military_colonia_here_tt
+		trigger_event = { id = cultural_integration.11 }
+	}
+}
+modifier = { 
+	build_time = -0.15
+	country_civilization_value = 5
+} 
+icon = mauryan_coastal_path_2
+requires = { pracyan_civ_generic_path_2 }
+}
+
+generic_tibet_civic_2 = { ###Latin 1B
+	modifier = { 
+		global_slaves_output = 0.1
+	    global_nobles_happyness = 0.05
+	}
+	
+    requires = { pracyan_civ_generic_path_3 }
+    icon = mauryan_noble_path_5
+
+}
+
+generic_tibet_civic_3 = { ###Latin 1B
+	modifier = { 
+		global_pop_assimilation_speed = 0.10
+		global_tax_modifier = 0.05
+	}
+	
+    requires = { generic_tibet_civic_2  }
+    icon = latin_roman_path_4
+}
+
+### FORTS
+pracyan_fort_generic_path_1 = { #
+on_activate = {
+	add_4_free_province_investments = yes
+}
+modifier = { 
+	global_defensive = 0.15
+	fort_limit = 1
+	garrison_size = 0.1
+	fort_maintenance_cost = 0.01
+}
+icon = north_african_naval_path_6
+requires = {  }
+}
+
+pracyan_fort_generic_path_2 = { #
+on_activate = {
+	custom_tooltip = "create_high_martial_rising_star"
+	hidden_effect = {
+		create_character = {
+			add_martial = 8
+			add_trait = conqueror
+		}
+	}
+}
+modifier = { 
+	global_freemen_output = 0.05
+	fortress_building_cost = -0.10
+	army_maintenance_cost = 0.01
+}
+icon = persian_scythian_path_3
+requires = { pracyan_fort_generic_path_1 }
+}
+
+
+pracyan_fort_generic_path_3 = { #
+modifier = { 
+	global_freemen_happyness = 0.05
+	hostile_attrition = 1
+}
+icon = persian_scythian_path_3
+requires = { pracyan_fort_generic_path_2 }
 }

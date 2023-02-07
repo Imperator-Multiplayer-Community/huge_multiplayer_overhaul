@@ -55,21 +55,22 @@
 					name = "exiled_community"
 					duration = 18262
 				}
-				add_state_loyalty = -20
+				add_state_loyalty = -10
 				#custom_tooltip = exiled_to_here_tt
 				trigger_event = { id = cultural_integration.12 }
 			}
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = "exiled_people" 
-					duration = 7305
+					duration = 5478
 				}
 			}
 			add_country_modifier = {
 				name = "exile_project"
-				duration = 1826
+				duration = 1460
 			}
-			add_tyranny = 15
+			add_tyranny = 10
+			add_treasury = 750
 			add_political_influence = -20
 		}
 		ai_will_do = {

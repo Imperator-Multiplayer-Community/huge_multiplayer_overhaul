@@ -69,6 +69,22 @@ wood = { #558 territories
 	color = hsv { 0.3 0.9 0.1 }
 }
 
+wild_game = { #190 territories
+	category = 5
+	
+	gold = 0.2
+	
+	province = {
+		local_monthly_food = 2
+		local_tribesmen_happyness = happiness_small_svalue
+	}
+	country = {
+		archers_discipline = 0.1
+	}
+
+	color = hsv { 0.1 0.4 0.25 }
+}
+
 elephants = { #82 territories
 	category = 0
 	allow_unit_type = warelephant
@@ -90,6 +106,7 @@ leather = { #338 territories
 	gold = 0.2
 
 	province = {
+		local_slaves_happyness = happiness_small_svalue
 		local_freemen_happyness = happiness_small_svalue
 	}
 	country = {
@@ -144,6 +161,22 @@ honey = { #86 territories
 	color = { 0.9 0.8 0.2 }
 }
 
+olive = { #143 territories
+	category = 5
+
+	gold = 0.25
+
+	province = {
+		local_slaves_happyness = happiness_small_svalue
+		local_monthly_food = 2
+	}
+	country = {
+		global_slaves_happyness = happiness_large_svalue
+	}
+	
+	color = { 0.57 0.7 0.2 }
+}
+
 vegetables = { #441 territories
 	category = 1
 	
@@ -181,6 +214,7 @@ dates = { #60 Territories
 	gold = 0.3
 
 	province = {
+		local_monthly_food = 2
 		local_freemen_happyness = happiness_small_svalue
 	}
 	country = {
@@ -230,4 +264,49 @@ cinnabar = {
 	}
 	
 	color = hsv { 1 0.95 0.8  }	
+}
+
+jade = {
+	category = 3
+	
+	gold = 0.5
+	
+	province = {
+		local_citizen_happyness = happiness_small_svalue
+	}
+	country = {
+		local_population_capacity_modifier = 0.05 #deify_ruler_cost_modifier = -0.1
+	}
+
+	color = { 0.1 0.63 0.2 }
+}
+
+sugar = {
+	category = 2
+	
+	gold = 0.5
+	
+	province = {
+		local_nobles_happyness = happiness_small_svalue
+		local_monthly_food_modifier = 0.03 
+	}
+	country = {
+		global_nobles_happyness = happiness_small_svalue
+	}
+	
+	color = hsv { 0.25 0.25 0.21  }
+}
+
+fruits = {
+	category = 1
+	gold = 0.3
+	
+	province = {
+		state_commerce_modifier = 0.01
+		local_monthly_food = 2
+	}
+	country = {
+		character_loyalty = 2
+	}
+	color = hsv { 0.38 0.84 0.87 }
 }

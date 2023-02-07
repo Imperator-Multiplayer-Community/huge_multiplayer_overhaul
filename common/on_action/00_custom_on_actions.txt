@@ -996,49 +996,6 @@ monthly_syracuse_war_pulse = {
 	}
 }
 
-#assassinate_setup = {
-#	random_events = {
-#		10 = assassinate.1
-#	}
-#	
-#	fallback = assassinate_fallback
-#}
-#
-#assassinate_step_two = {
-#	random_events = {
-#		10 = assassinate.5
-#		10 = assassinate.6
-#	}
-#	
-#	fallback = assassinate_fallback
-#}
-#
-#assassinate_preparations_being_made = {
-#	random_events = {
-#		10 = assassinate.7
-#	}
-#	
-#	fallback = assassinate_fallback
-#}
-#
-#assassinate_result = {
-#	random_events = {
-#		10 = assassinate.28
-#	}
-#	
-#	fallback = assassinate_fallback
-#}
-#
-#assassinate_fallback = {
-#	events = {
-#		assassinate.2
-#		assassinate.3
-#		assassinate.4
-#		assassinate.11
-#		assassinate.12
-#	}
-#}
-
 yearly_general_unit_purchase_pulse = {
 	trigger = {
 		is_general = yes

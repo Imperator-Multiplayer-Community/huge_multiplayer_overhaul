@@ -8,6 +8,8 @@
 }
 
 NCountry = {
+	MAXIMUM_MILITARY_EXPERIENCE = 200 ############################################ Hmmmmmm....
+
 	PIG_STAB_DURATION = 3650 # was 1825
 	BASE_NAVAL_RANGE = 650
 
@@ -34,6 +36,7 @@ NCombat = {
 	DAYS_PER_SIEGE_PHASE = 20 # Was 25
 	GARRISON_SIZE = 2 # Was 1
 	SIEGE_FORCE_NEEDED_MULTIPLIER  = 4 # was 4
+	SIEGE_BREACH_IMPACT = 2 # was 2
 }
 
 NUnit = {
@@ -42,6 +45,10 @@ NUnit = {
 	WAR_EXHAUSTION_ON_RAISE = 0 # was 0.5 can be exploited to keep WE high
 	OUTSIDE_OF_NAVAL_RANGE_ATTRITION = 8 #Was 4.0
 	NAVAL_ATTRITION_CHANCE = 1 #Was 0.4
+	LAND_MORALE = 4.0 #Was 3.0
+	NAVAL_MORALE = 2.0 #Was 3.0
+
+	WATERCROSSING_NEGATION_REQUIRED_PER_COHORT = 0.05
 }
 
 NPolitics = {
@@ -62,6 +69,15 @@ NDiplomacy = {
 NTrade = {
 
 	MINIMUM_SLAVES_PER_GOOD = 4 #Was 3
+}
+
+NProvince = {
+	#additional efficiency for supply limit. BaseSupplyLimit() * (1.0 + efficiency)
+	#THESE ARE MUTUALLy EXCLUSIVE
+	SUPPLY_LIMIT_OWNER = 0.25	 #Should be highest of these defines or AI will be confused.
+	SUPPLY_LIMIT_ACCESS = 0.2
+	SUPPLY_LIMIT_ALLY = 0.2
+	SUPPLY_LIMIT_CONTROLLER = 0.2
 }
 
 NLevy = {
