@@ -251,6 +251,7 @@ modifier = {
 	max_war_exhaustion = -2.5
 	army_maintenance_cost = 0.01
 }
+enable_ability = border_forts
 requires = { latin_roman_path_5 }
 icon = latin_support_path_4
 }

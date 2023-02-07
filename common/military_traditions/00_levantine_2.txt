@@ -142,14 +142,19 @@
 	}
 
 	levantine_greco_path_4 = { ###Levantine 1B
-			modifier = { }
+			modifier = {
+				land_unit_attrition = -0.1
+			}
 			enable_tactic = greek_phalanx
 			icon = levantine_greco_path_4
 			requires = {}
 	}
 
 	levantine_greco_path_3 = { ###Levantine 3BB
-		modifier = { }
+		modifier = { 
+		    cohort_reinforcement_speed = 0.1
+
+		}
 		icon = levantine_greco_path_3
 		requires = {levantine_greco_path_4}
 		on_activate = {

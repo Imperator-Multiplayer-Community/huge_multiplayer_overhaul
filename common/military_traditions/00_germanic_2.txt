@@ -122,6 +122,7 @@
         on_activate = {
             set_variable = heavy_infantry_super_unit
         }
+		enable_tactic = hit_and_run_tactics
 		modifier = {
 			heavy_infantry_offensive = 0.10
 			heavy_infantry_forest_combat_bonus = 0.10
