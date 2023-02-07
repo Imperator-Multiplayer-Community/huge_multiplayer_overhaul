@@ -4008,3 +4008,18 @@ Heritage_of_the_Leather_Legged_Women = {
 		tag = GIN
 	}
 }
+
+fezzani_heritage = {
+	modifier = {
+		#good
+		desert_combat_bonus = 0.05
+		hostile_attrition = 1.0
+		
+		#bad
+		global_commerce_modifier = -0.05
+	}
+	
+	trigger = {
+		tag = FEZ
+	}
+}
