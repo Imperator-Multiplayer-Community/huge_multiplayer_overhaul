@@ -112,10 +112,6 @@
 
 	start_effect = {
 		hidden_effect = {
-			set_variable = { 
-				name = starting_num_of_ships
-				value = num_of_ships_svalue
-			}
 			set_variable = is_navy_fishing			
 		}
 
@@ -217,45 +213,7 @@
 	}
 
 	finish_effect = {
-		remove_variable = is_navy_fishing
-
-		unit_location = {
-			every_neighbor_province = {
-				limit = {
-					has_province_modifier = getting_fished
-				}
-				remove_province_modifier = getting_fished
-			}
-		}
-
-		if = {
-			limit = {
-				unit_owner = {
-					any_navy = {
-						navy_fishing = yes
-					}
-				}
-			}
-
-			while = {
-				count = var:starting_num_of_ships
-				unit_owner = {
-					add_country_modifier = {
-						name = not_go_fish
-						duration = -1
-						mode = add
-					}
-				}
-			}
-		}
-		else = {
-			unit_owner = {
-				remove_country_modifier = go_fish
-				remove_country_modifier = not_go_fish
-			}
-		}
-
-		remove_variable = starting_num_of_ships
+		navy_fishing_finish_effect = yes
 	}
 	
 	ai_will_do = {

@@ -153,7 +153,7 @@
 	}
 
 	finish_effect = {
-		remove_variable = is_navy_assaulting
+		navy_port_assault_finish_effect = yes
 	}
 
 	idle_entity_state = combat

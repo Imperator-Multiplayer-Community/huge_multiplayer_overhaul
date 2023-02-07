@@ -22,12 +22,13 @@ template unit_action_item_round
 {
 	button_round_inverted_toggle = {
 		size = { 58 58 }
-
+		datacontext = "[GetScriptedGui('unit_ability_toggle_finish')]"
 		blockoverride "On_click"
 		{
 			onclick = "[UnitActionItem.Activate]"
 			shortcut = "[UnitActionItem.GetShortcut]"
 			down = "[UnitActionItem.IsActive]"
+			down = "[ScriptedGui.Execute( GuiScope.SetRoot( SingleUnitWindow.GetSelectedUnit.MakeScope ).End )]"
 			tooltip = "[UnitActionItem.GetTooltip]"
 		}
 		enabled = "[UnitActionItem.CanActivate]"

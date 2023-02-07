@@ -239,7 +239,7 @@
 	}
 
 	finish_effect = {
-		remove_variable = is_slave_raiding
+		navy_raiding_finish_effect = yes
 	}
 
 	finished_when = {

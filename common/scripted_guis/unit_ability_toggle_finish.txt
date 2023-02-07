@@ -1,0 +1,7 @@
+﻿unit_ability_toggle_finish = {
+	scope = unit
+
+	effect = {
+		navy_toggle_ability_finish_effect = yes
+	}
+}

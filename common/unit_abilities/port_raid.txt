@@ -165,7 +165,7 @@
 	}
 
 	finish_effect = {
-		remove_variable = is_navy_raiding
+		navy_port_raid_finish_effect = yes
 	}
 
 	idle_entity_state = combat

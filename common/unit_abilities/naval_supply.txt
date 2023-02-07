@@ -152,11 +152,7 @@
 	}
 
 	finish_effect = {
-		remove_variable = is_navy_supplying
-		unit_owner = {
-			remove_country_modifier = naval_supplier
-		}
-		remove_unit_modifier = naval_action
+		navy_supply_finish_effect = yes
 	}
 	
 	ai_will_do = {
