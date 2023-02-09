@@ -1,4 +1,39 @@
-﻿country_lexy_xp_set_start_value_event = {
+﻿country_single_levy_xp_set_start_value_event = {
+	scope = country
+
+	saved_scopes = {
+		levy_commander
+	}
+
+	effect = {
+		ordered_army = {
+			limit = {
+				commander = levy_commander
+				NOT = {
+					has_legion_trigger = yes
+				}
+			}
+			max = 1
+
+			set_variable = {
+				name = levy_start_xp
+				value = experience_percentage
+			}
+
+			change_variable = {
+				name = levy_start_xp
+				multiply = 100
+			}
+
+			# every raise levy causes ae
+			unit_owner = {
+				add_aggressive_expansion = 1
+			}
+		}
+	}
+}
+
+country_all_levy_xp_set_start_value_event = {
 	scope = country
 
 	saved_scopes = {
@@ -14,15 +49,15 @@
 
 			if = {
 				limit = {
-					has_variable = levy_start_xp
+					NOT = {
+						has_variable = levy_start_xp
+					}
 				}
 
-				remove_variable = levy_start_xp
-			}
-
-			set_variable = {
-				name = levy_start_xp
-				value = experience_percentage
+				set_variable = {
+					name = levy_start_xp
+					value = experience_percentage
+				}
 			}
 
 			change_variable = {
@@ -127,6 +162,7 @@ country_all_levy_xp_to_military_xp_event = {
 
 			scope:levy_unit = {
 				remove_variable = normalized_xp_percentage
+				remove_variable = levy_start_xp
 				destroy_unit = yes
 			}
 		}
