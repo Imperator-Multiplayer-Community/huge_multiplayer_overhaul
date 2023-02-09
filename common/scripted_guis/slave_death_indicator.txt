@@ -1,0 +1,18 @@
+﻿slave_death_indicator = { # province
+	scope = province
+
+	is_shown = {
+		trigger_if = {
+			debug_log_details = yes
+			limit = {
+				has_city_status = yes
+			}
+
+			are_province_city_slaves_overworked = yes
+		}
+		trigger_else = {
+			debug_log_details = yes
+			are_province_settlement_slaves_overworked = yes
+		}
+	}
+}

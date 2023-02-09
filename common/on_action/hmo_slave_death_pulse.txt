@@ -1,0 +1,6 @@
+﻿hmo_slave_death_pulse = {
+	events = {
+		slave_death.3 # triggers settlements slave death
+		slave_death.4 # triggers city slave death
+	}
+}

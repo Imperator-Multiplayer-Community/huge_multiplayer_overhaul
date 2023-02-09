@@ -43,6 +43,8 @@
 		monthly_guarantee_pulse
 		delay = { days = { 5 20 } }
 		hmo_navy_maintenance_pulse
+		delay = { days = { 1 30 }}
+		hmo_slave_death_pulse
 	}
 
 	effect = {

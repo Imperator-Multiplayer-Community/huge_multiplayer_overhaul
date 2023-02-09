@@ -318,7 +318,6 @@ types betterUITabs
 						parentanchor = vcenter
 						position = { -6 0 }
 						block "MarkerVisible" {}
-
 					}
 				}
 			}
@@ -5335,6 +5334,14 @@ window = {
 						flowcontainer = {
 							parentanchor = right
 							margin_right = 2
+
+							icon = {
+								size = { 30 @topline }
+								datacontext = "[GetScriptedGui('slave_death_indicator')]"
+								texture = "gfx/interface/icons/phalera/phalera_skull.dds"
+								tooltip = "SLAVES_OVERWORKED"
+								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( ProvinceWindow.GetProvince.MakeScope ).End )]"
+							}
 
 							icon_and_text = {
 								size = { @stats_icon_width @topline }
