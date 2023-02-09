@@ -1,4 +1,9 @@
-﻿city_slave_revolt_svalue = { # province
+﻿base_slave_revolt_svalue = { # province
 	value = slave_revolt_svalue
+	add = 10
+}
+
+city_slave_revolt_svalue = {
+	value = base_slave_revolt_svalue
 	add = 10
 }

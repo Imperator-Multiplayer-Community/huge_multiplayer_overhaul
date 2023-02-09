@@ -8,75 +8,31 @@ slave_death.1 = { # cities
 	goto_location = ROOT
 
 	trigger = {
-		are_province_settlement_slaves_overworked = yes
+		OR = {
+			are_province_settlement_slaves_overworked = yes
+			are_province_city_slaves_overworked = yes
+		}
 	}
 
 	immediate = {
 		add_city_smoke_effect = yes
 		add_city_fire_effect = yes
-		ordered_slaves = {
-			order_by = pop_hapiness 
-			max = {
-				value = num_of_slaves
-				divide = 4 # more painful than settlements
-			}
-			kill_pop = yes
-		}
-	}
 
-	option = {
-		name = "slave_death.1.a"
-		add_state_loyalty = -10
-		add_province_modifier = {
-			name = recent_slave_death
-			duration = 365
-		}
-		show_as_tooltip = {
+		if = {
+			limit = {
+				has_city_status = yes
+			}
+
 			ordered_slaves = {
 				order_by = pop_hapiness 
 				max = {
 					value = num_of_slaves
-					divide = 4
+					divide = 4 # more painful than settlements
 				}
 				kill_pop = yes
 			}
 		}
-	}
-}
-
-#The slaves are stressed!!
-slave_death.2 = { # provinces
-	type = province_event
-	title = "slave_death.2.t"
-	desc = "slave_death.2.desc"
-	picture = revolt
-	goto_location = ROOT
-	
-	trigger = {
-		are_province_settlement_slaves_overworked = yes
-	}
-	
-	immediate = {
-		add_city_smoke_effect = yes
-		add_city_fire_effect = yes
-		ordered_slaves = {
-			order_by = pop_hapiness 
-			max = {
-				value = num_of_slaves
-				divide = 6
-			}
-			kill_pop = yes
-		}
-	}
-	
-	option = {
-		name = "slave_death.2.a"
-		add_state_loyalty = -10
-		add_province_modifier = {
-			name = recent_slave_death
-			duration = 180
-		}
-		show_as_tooltip = {
+		else = {
 			ordered_slaves = {
 				order_by = pop_hapiness 
 				max = {
@@ -86,58 +42,79 @@ slave_death.2 = { # provinces
 				kill_pop = yes
 			}
 		}
+		
+
+	}
+
+	option = {
+		name = "slave_death.1.a"
+		add_state_loyalty = -10
+
+		if = {
+			limit = {
+				has_city_status = yes
+			}
+
+			add_province_modifier = {
+				name = recent_slave_death
+				duration = 365
+			}
+			show_as_tooltip = {
+				ordered_slaves = {
+					order_by = pop_hapiness 
+					max = {
+						value = num_of_slaves
+						divide = 4
+					}
+					kill_pop = yes
+				}
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = recent_slave_death
+				duration = 180
+			}
+			show_as_tooltip = {
+				ordered_slaves = {
+					order_by = pop_hapiness 
+					max = {
+						value = num_of_slaves
+						divide = 6
+					}
+					kill_pop = yes
+				}
+			}
+		}
 	}
 }
 
-slave_death.3 = { # actual trigger for province slave death
+slave_death.2 = { # actual trigger for slave death
 	type = country_event
 	hidden = yes
 
 	trigger = {
 		is_ai = no
-		are_country_settlement_slaves_overworked = yes
+		OR = {
+			are_country_settlement_slaves_overworked = yes
+			are_country_city_slaves_overworked = yes	
+		}
 	}
 
 	immediate = {
 		random_list = { # 10 percent change of triggering
-			90 = {}
-			10 = {
+			0 = {}
+			100 = {
 				random_owned_province = {
 					limit = {
-						are_province_settlement_slaves_overworked = yes
+						OR = {
+							are_province_settlement_slaves_overworked = yes
+							are_province_city_slaves_overworked = yes
+						}
 					}
 
 					trigger_event = {
-						id = slave_death.2
-					}
-				}
-				
-			}
-		}
-	}
-}
-
-slave_death.4 = { # actual trigger for city slave death
-	type = country_event
-	hidden = yes
-
-	trigger = {
-		is_ai = no
-		are_country_city_slaves_overworked = yes
-	}
-
-	immediate = {
-		random_list = { # 10 percent change of triggering
-			90 = {}
-			10 = {
-				random_owned_province = {
-					limit = {
-						are_province_city_slaves_overworked = yes
-					}
-
-					trigger_event = { # queue up event, but give time for promotion
 						id = slave_death.1
-						days = 550
 					}
 				}
 				
@@ -145,7 +122,6 @@ slave_death.4 = { # actual trigger for city slave death
 		}
 	}
 }
-
 
 
 
