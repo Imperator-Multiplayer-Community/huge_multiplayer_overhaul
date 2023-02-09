@@ -76,10 +76,6 @@
 	}
 	culture = {
 		carthaginian = {
-			primary = warelephants
-			second = light_infantry
-			flank = light_cavalry
-
 			levy_template = levy_punic
 
 			male_names = {

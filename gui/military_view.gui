@@ -1097,7 +1097,7 @@ base_window = {
 													blockoverride "On_click"
 													{
 														onclick = "[GovernorshipItem.OnRaiseLevy]"
-														onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).AddScope('levy_commander', GovernorshipItem.GetGovernorship.GetGovernorOrRuler.MakeScope ).End )]"
+														onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
 
 													}
 													tooltip = "[GovernorshipItem.GetRaiseTooltip]"

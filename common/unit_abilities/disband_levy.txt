@@ -54,7 +54,10 @@
 				AND = {
 					exists = commander
 					commander = {
-						is_governor = yes
+						OR = {
+							is_governor = yes
+							is_ruler = yes
+						}
 					}
 				}
 			}

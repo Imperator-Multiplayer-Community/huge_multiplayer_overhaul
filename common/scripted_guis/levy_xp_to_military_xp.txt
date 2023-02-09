@@ -2,23 +2,32 @@
 	scope = country
 
 	saved_scopes = {
-		levy_commander
 	}
 
 	effect = {
-		ordered_army = {
+		every_army = {
 			limit = {
-				commander = levy_commander
+				AND = {
+					has_commander = yes
+					commander = {
+						OR = {
+							is_governor = yes
+							is_ruler = yes
+						}
+					}
+				}
+				has_legion_trigger = no
 				NOT = {
-					has_legion_trigger = yes
+					has_variable = levy_start_xp
 				}
 			}
-			max = 1
 
 			set_variable = {
 				name = levy_start_xp
 				value = experience_percentage
 			}
+
+			# debug_log = "levystartxp [THIS.Var('levy_start_xp').GetValue]"
 
 			change_variable = {
 				name = levy_start_xp
@@ -42,22 +51,25 @@ country_all_levy_xp_set_start_value_event = {
 	effect = {
 		every_army = {
 			limit = {
+				AND = {
+					has_commander = yes
+					commander = {
+						OR = {
+							is_governor = yes
+							is_ruler = yes
+						}
+					}
+				}
+				has_legion_trigger = no
 				NOT = {
-					has_legion_trigger = yes
+					has_variable = levy_start_xp
 				}
 			}
 
-			if = {
-				limit = {
-					NOT = {
-						has_variable = levy_start_xp
-					}
-				}
 
-				set_variable = {
-					name = levy_start_xp
-					value = experience_percentage
-				}
+			set_variable = {
+				name = levy_start_xp
+				value = experience_percentage
 			}
 
 			change_variable = {
@@ -86,14 +98,17 @@ country_all_levy_xp_to_military_xp_event = {
 	effect = {
 		every_army = {
 			limit = {
-				NOT = {
-					has_legion_trigger = yes
-					AND = {
-						exists = commander
-						commander = {
-							is_mercenary = yes
+				has_legion_trigger = yes
+				AND = {
+					exists = commander
+					commander = {
+						OR = {
+							is_governor = yes
+							is_ruler = yes
 						}
 					}
+				}
+				NOT = {
 					any_sub_unit = {
 						is_migration = yes
 					}
@@ -113,7 +128,10 @@ country_all_levy_xp_to_military_xp_event = {
 					AND = {
 						exists = commander
 						commander = {
-							is_governor = yes
+							OR = {
+								is_governor = yes
+								is_ruler = yes
+							}
 						}
 					}
 				}
