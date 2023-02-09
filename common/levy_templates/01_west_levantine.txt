@@ -16,9 +16,9 @@ levy_west_levantine = {	#Levantine states
 levy_punic = {	#Punic states
 	default = no
 
-	archers = 0.3
 	light_infantry = 0.4
-	heavy_cavalry = 0.3
+	light_cavalry = 0.3
+	warelephants = 0.3
 }
 
 levy_nabatean = {
