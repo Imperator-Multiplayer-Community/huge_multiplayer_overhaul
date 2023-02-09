@@ -103,8 +103,8 @@ slave_death.2 = { # actual trigger for slave death
 
 	immediate = {
 		random_list = { # 10 percent change of triggering
-			0 = {}
-			100 = {
+			90 = {}
+			10 = {
 				random_owned_province = {
 					limit = {
 						OR = {
