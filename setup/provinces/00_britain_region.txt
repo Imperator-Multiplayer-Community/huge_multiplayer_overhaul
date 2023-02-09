@@ -1,6 +1,6 @@
 ﻿2000={ #Deventiasteno
 	terrain="forest"
-	culture="dumnonian"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="salt"
 	civilization_value=9
@@ -174,7 +174,7 @@
 
 2009={ #Aquae Sulis
 	terrain="farmland"
-	culture="dobunnian"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="stone"
 	civilization_value=12
@@ -266,7 +266,7 @@
 
 2014={ #Vectis
 	terrain="forest"
-	culture="durotrigan"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="precious_metals"
 	civilization_value=9
@@ -743,20 +743,20 @@
 
 2040={ #Glevum
 	terrain="forest"
-	culture="demetian"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="precious_metals"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
-		amount=1
+		amount=3
 	}
 	freemen={
-		amount=1
+		amount=4
 	}
 	tribesmen={
-		amount=5
+		amount=2
 	}
 	port_building=1
 }
@@ -1541,8 +1541,8 @@
 
 2092={ #Burrium
 	terrain="forest"
-	culture="demetian"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="base_metals"
 	civilization_value=8
 	barbarian_power=0
@@ -1557,28 +1557,31 @@
 
 2093={ #Bornium
 	terrain="forest"
-	culture="demetian"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="leather"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
-		amount=1
+		amount=3
 	}
 	tribesmen={
-		amount=3
+		amount=1
 	}
 }
 
 2094={ #Nidum
 	terrain="forest"
-	culture="demetian"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="fish"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
+	citizen={
+		amount=1
+	}
 	freemen={
 		amount=2
 	}
@@ -1638,8 +1641,8 @@
 
 2098={ #Gobannium
 	terrain="plains"
-	culture="demetian"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="wood"
 	civilization_value=10
 	barbarian_power=0

@@ -6936,14 +6936,14 @@ country = {
 		
 		SIR = {
 			government = tribal_kingdom
-			primary_culture = demetian ## HMO V2.1 DaFoogles Heritages
+			primary_culture = callaecian ## HMO V2.1 DaFoogles Heritages
 			religion = druidism
 			centralization=5
 
 			capital = 2093
 
 			own_control_core = 	{
-				2093
+				2093 2094
 			}
 		}
 		DEM = {
@@ -6955,7 +6955,7 @@ country = {
 			capital = 2096
 
 			own_control_core = 	{
-				2094 2095 2096 2097 2099
+				2095 2096 2097 2099
 			}
 		}
 		
@@ -7577,7 +7577,7 @@ country = {
 		
 		BTU = {
 			government = tribal_kingdom
-			primary_culture = biturigan
+			primary_culture = callaecian
 			religion = druidism
 			centralization=10
 
@@ -13314,10 +13314,10 @@ country = {
 				religious_tech= { level=2 progress=0  }
 			}
 			
-			capital = 7493
+			capital = 8785
 		
 			own_control_core =  {
-				7322 7325 7326 7335 7336 7337 7358 7359 7397 7398 7493 7497 7498 7499 7651 7650
+				8785 7322 7325 7326 7335 7336 7337 7358 7359 7397 7398 7493 7497 7498 7499 7651 7650
 				4446 4447 7327 7328 7345 7329 7393 7365 7392 7364 7368
 			}
 		}

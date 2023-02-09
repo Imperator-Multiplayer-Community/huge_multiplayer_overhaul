@@ -201,8 +201,8 @@
 
 2233={ #Noviomagus Aquitanum
 	terrain="marsh"
-	culture="biturigan"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="fish"
 	civilization_value=7
 	barbarian_power=0
@@ -236,7 +236,7 @@
 
 2235={ #Akroterion
 	terrain="forest"
-	culture="biturigan"
+	culture="callaecian"
 	religion="pre_indo_european_religion"
 	trade_goods="hemp"
 	civilization_value=9
@@ -252,8 +252,8 @@
 
 2236={ #Burdigala
 	terrain="marsh"
-	culture="biturigan"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="wine"
 	civilization_value=7
 	barbarian_power=0

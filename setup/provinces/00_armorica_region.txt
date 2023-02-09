@@ -1,6 +1,6 @@
 ﻿2134={ #Coriallum
 	terrain="plains"
-	culture="aremorican"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="fish"
 	civilization_value=11
@@ -224,7 +224,7 @@
 
 2147={ #Duretie
 	terrain="plains"
-	culture="aremorican"
+	culture="carthaginian"
 	religion="druidism"
 	trade_goods="base_metals"
 	civilization_value=11
@@ -289,7 +289,7 @@
 
 2151={ #Vorganium
 	terrain="forest"
-	culture="aremorican"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="amber"
 	civilization_value=9
@@ -325,17 +325,20 @@
 
 2153={ #Grannona
 	terrain="plains"
-	culture="aremorican"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="precious_metals"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
+	citizen={
+		amount=4
+	}
 	freemen={
-		amount=1
+		amount=3
 	}
 	tribesmen={
-		amount=4
+		amount=2
 	}
 	port_building=1
 }
@@ -474,17 +477,17 @@
 
 2212={ #Namnetum
 	terrain="plains"
-	culture="aremorican"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="hemp"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
-		amount=2
+		amount=4
 	}
 	tribesmen={
-		amount=4
+		amount=2
 	}
 	port_building=1
 }
@@ -1145,16 +1148,13 @@
 3308={ #Conbaristum
 	terrain="forest"
 	culture="aremorican"
-	religion="druidism"
+	religion="carthaginian_pantheon"
 	trade_goods="earthware"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
-	citizen={
-		amount=1
-	}
 	freemen={
-		amount=1
+		amount=3
 	}
 	slaves={
 		amount=1
@@ -1163,7 +1163,7 @@
 
 5431={ #Andion
 	terrain="plains"
-	culture="aremorican"
+	culture="callaecian"
 	religion="druidism"
 	trade_goods="fish"
 	civilization_value=11

@@ -924,8 +924,8 @@
 
 1314={ #Scallabis
 	terrain="plains"
-	culture="oppidanian"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="base_metals"
 	civilization_value=11
 	barbarian_power=0
@@ -975,8 +975,8 @@
 
 1317={ #Arabriga
 	terrain="plains"
-	culture="oppidanian"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="base_metals"
 	civilization_value=11
 	barbarian_power=0
@@ -1008,8 +1008,8 @@
 
 1319={ #Olisipo
 	terrain="plains"
-	culture="celtician"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="fish"
 	civilization_value=11
 	barbarian_power=0

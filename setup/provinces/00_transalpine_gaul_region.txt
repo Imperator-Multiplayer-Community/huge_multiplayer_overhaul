@@ -680,8 +680,8 @@
 
 2314={ #Nemausus
 	terrain="plains"
-	culture="volcae"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="grain"
 	civilization_value=11
 	barbarian_power=0
@@ -756,8 +756,8 @@
 
 2318={ #Rhodanousia
 	terrain="plains"
-	culture="volcae"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="fish"
 	civilization_value=11
 	barbarian_power=0
