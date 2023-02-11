@@ -800,10 +800,10 @@ local_forum_building = { #Provincial Legation as a town
 }
 
 workshop_building = { #Mill as a means of urban concentration of slaves
-	local_slaves_happyness = -0.03
+	local_slaves_happyness = 0.02
 	local_slaves_output = 0.06
 	local_goods_from_slaves = -2
-	local_slaves_desired_pop_ratio = 0.1
+	local_slaves_desired_pop_ratio = 0.2
 	local_country_civilization_value = 3
 	
 	cost = 150
@@ -816,8 +816,8 @@ workshop_building = { #Mill as a means of urban concentration of slaves
 	}
 	
 	modification_display = {
-		0 = value_num_of_goods_produced
 		1 = local_slaves_output
+		1 = local_slaves_desired_pop_ratio
 		2 = local_slaves_happyness
 	}
 
