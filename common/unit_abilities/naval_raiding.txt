@@ -17,7 +17,6 @@
 					is_tradition_tree_allowed = anatolian_philosophy_2
 					is_tradition_tree_allowed = greek_philosophy
 					is_tradition_tree_allowed = haemic_philosophy
-					
 				}
 			}
 		}
@@ -26,34 +25,28 @@
 	allow = {
 		unit_owner = {
 			trigger_if = {
-				limit = {
-					heritage = pirate_heritage
-				}
+				limit = {heritage = pirate_heritage}
 				heritage = pirate_heritage
 			}
 			trigger_else_if = {
-				limit = {
-					is_tradition_tree_allowed = afro_arabian_philosophy_2
-					is_tradition_tree_allowed = anatolian_philosophy_2
-					is_tradition_tree_allowed = greek_philosophy
-					is_tradition_tree_allowed = haemic_philosophy
-					
-				}
-				OR = {
-					has_military_bonus = arabian_path_4
-					has_military_bonus = lydian_path_1
-					has_military_bonus = greek_antigonid_path_4
-					has_military_bonus = illyrian_piracy_path_1
-					
-				}
-				
+				limit = {is_tradition_tree_allowed = afro_arabian_philosophy_2}
+				has_military_bonus = arabian_path_4
+			}
+			trigger_else_if = {
+				limit = {is_tradition_tree_allowed = anatolian_philosophy_2}
+				has_military_bonus = lydian_path_1
+			}
+			trigger_else_if = {
+				limit = {is_tradition_tree_allowed = greek_philosophy}
+				has_military_bonus = greek_antigonid_path_4
+			}
+			trigger_else_if = {
+				limit = {is_tradition_tree_allowed = haemic_philosophy}
+				has_military_bonus = illyrian_piracy_path_1
 			}
 			trigger_else = {
 				always = no
 			}
-			#trigger_else = {
-			#	always = yes # testing
-			#}
 		}
 		unit_location = {
 			custom_tooltip = {
