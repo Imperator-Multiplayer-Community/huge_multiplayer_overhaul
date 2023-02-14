@@ -218,10 +218,6 @@ modifier = {
 }
 requires = { latin_support_path_3 }
 icon = latin_support_path_4
-
-on_activate = {
-	add_innovation = 2
-}
 }
 
 latin_roman_path_4 = { ###Latin 3B
@@ -232,9 +228,6 @@ modifier = {
 enable_ability = road_building
 requires = { latin_support_path_2 latin_roman_path_end_bonus }
 icon = latin_roman_path_4
-on_activate = {
-	add_innovation = 2
-}
 }
 
 latin_roman_path_end_bonus = { ###Latin 4B
@@ -340,6 +333,9 @@ modifier = {
 
 requires = { latin_philosophy_start_bonus }
 icon = latin_support_path_end_bonus
+on_activate = {
+	add_innovation = 3
+}
 }
 
 generic_latin_civic_3 = { ###Latin 1B
@@ -385,9 +381,8 @@ latin_tribal_path_3 = { ###Latin 5AC
 
 	latin_philosophy_start_bonus = { ###Latin 6AB
 		modifier = { 
-			fort_limit = 1
-			global_defensive = 0.1
-			fort_maintenance_cost = 0.01
+			global_capital_trade_routes = 2
+	        global_export_commerce_modifier  = 0.075
 		}
 		
 		on_activate = {

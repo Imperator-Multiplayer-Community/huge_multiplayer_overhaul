@@ -328,19 +328,16 @@
 	culture="carthaginian"
 	religion="carthaginian_pantheon"
 	trade_goods="precious_metals"
-	civilization_value=11
+	civilization_value=15
 	barbarian_power=0
-	province_rank="settlement"
+	province_rank="city"
 	citizen={
-		amount=4
+		amount=6
 	}
 	freemen={
-		amount=3
+		amount=5
 	}
-	tribesmen={
-		amount=2
-	}
-	port_building=1
+	port_building=2
 }
 
 2154={ #Pollicum

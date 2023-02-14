@@ -229,6 +229,7 @@ on_activate = {
 iberian_right_2_path_1 = { ###Iberian 4B Iberian Pyrite Belt
 modifier = { 
 	global_goods_from_slaves = -1
+	global_population_happiness = -0.02	
 }
 on_activate = {
 	ordered_owned_province = {
@@ -249,7 +250,7 @@ requires = { iberian_central_2_path_2 }
 
 iberian_left_2_path_2 = { ###Iberian 3C Importing Knowledge
 modifier = { 
-	global_capital_trade_routes = 2
+	global_capital_trade_routes = 1
 	global_export_commerce_modifier  = 0.125
 }
 icon = celtic_gallic_path_4

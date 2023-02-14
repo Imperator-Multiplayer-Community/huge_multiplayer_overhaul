@@ -218,8 +218,12 @@ north_africa_generic_path_12 = { ###
 ### CIVILIZATION
 
 north_african_army_path_end_bonus = { ###North Aftica 1B
+on_activate = {
+	add_innovation = 3
+}	
 modifier = { 
 	mercenary_land_maintenance_cost = -0.15
+	recruit_mercenary_cost_modifier = -0.25
 }
 icon = north_african_army_path_end_bonus
 requires = {}
@@ -227,8 +231,8 @@ requires = {}
 
 north_african_army_path_1 = { ###North Aftica 2B
 modifier = { 
-	mercenary_land_maintenance_cost = -0.1
-	recruit_mercenary_cost_modifier = -0.25
+	global_food_capacity = 350
+	global_commerce_modifier = 0.1
 }
 icon = north_african_army_path_1
 requires = { north_african_army_path_end_bonus }
@@ -264,7 +268,7 @@ north_africa_civ_generic_path_3  = { ###
 
 north_africa_civ_generic_path_4 = { ###
 	on_activate = {
-		add_innovation = 3
+		add_innovation = 1
 	}	
 	modifier = { 
 		build_time = 0.10
@@ -293,6 +297,8 @@ on_activate = {
 }
 modifier = { 
 	global_food_capacity = 350
+	mercenary_land_maintenance_cost = -0.1
+	recruit_mercenary_cost_modifier = -0.25
 } 
 icon = mauryan_coastal_path_6
 requires = { north_africa_civ_generic_path_4 }
@@ -303,7 +309,7 @@ requires = { north_africa_civ_generic_path_4 }
 north_african_tribal_path_end_bonus = { ###North Aftica 1A
 		modifier = { 
 			global_freemen_output = output_small_svalue
-			global_freemen_happyness = happiness_small_svalue
+			siege_ability = 0.1
 		}
 		icon = persian_achaemenid_path_4
 		requires = {}
@@ -325,6 +331,7 @@ generic_north_african_fort_3 = { ###North Aftica 1A
 		modifier = { 
 			land_unit_attrition = -0.15
 			desert_combat_bonus = 0.1
+			global_defensive = 0.1
 		}
 		icon = north_african_tribal_path_5
 		requires = { generic_north_african_fort_2 }
@@ -348,6 +355,7 @@ north_african_naval_path_1 = { ###North Aftica 5BA
 modifier = { 
 	naval_morale = 0.5
 	navy_maintenance_cost = 0.01
+	enslavement_efficiency = 0.1
 }
 icon = north_african_naval_path_1
 requires = { }

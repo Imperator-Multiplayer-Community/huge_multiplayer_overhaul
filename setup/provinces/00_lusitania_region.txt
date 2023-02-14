@@ -1010,20 +1010,17 @@
 	terrain="plains"
 	culture="carthaginian"
 	religion="carthaginian_pantheon"
-	trade_goods="fish"
-	civilization_value=11
+	trade_goods="base_metals"
+	civilization_value=19
 	barbarian_power=0
-	province_rank="settlement"
+	province_rank="city"
 	citizen={
-		amount=1
+		amount=5
 	}
 	freemen={
-		amount=2
+		amount=9
 	}
-	tribesmen={
-		amount=6
-	}
-	port_building=1
+	port_building=2
 }
 
 1320={ #Malateca

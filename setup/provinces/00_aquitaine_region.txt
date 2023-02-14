@@ -257,14 +257,14 @@
 	trade_goods="wine"
 	civilization_value=7
 	barbarian_power=0
-	province_rank="settlement"
+	province_rank="city"
 	freemen={
-		amount=1
+		amount=5
 	}
 	tribesmen={
-		amount=4
+		amount=8
 	}
-	port_building=1
+	port_building=2
 }
 
 2237={ #Losa

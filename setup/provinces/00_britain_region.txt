@@ -746,19 +746,19 @@
 	culture="carthaginian"
 	religion="carthaginian_pantheon"
 	trade_goods="precious_metals"
-	civilization_value=8
+	civilization_value=15
 	barbarian_power=0
-	province_rank="settlement"
-	citizen={
-		amount=3
-	}
-	freemen={
-		amount=4
-	}
-	tribesmen={
+	province_rank="city"
+	nobles={
 		amount=2
 	}
-	port_building=1
+	citizen={
+		amount=5
+	}
+	freemen={
+		amount=6
+	}
+	port_building=3
 }
 
 2041={ #Alavna
