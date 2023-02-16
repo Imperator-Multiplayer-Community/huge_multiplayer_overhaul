@@ -296,7 +296,6 @@ on_activate = {
 	}
 }
 modifier = { 
-	global_food_capacity = 350
 	mercenary_land_maintenance_cost = -0.1
 	recruit_mercenary_cost_modifier = -0.25
 } 
