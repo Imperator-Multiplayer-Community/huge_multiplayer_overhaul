@@ -10,7 +10,7 @@ dhe_roman_warm_period.1 = {
 	left_portrait = current_ruler
 
 	trigger = {
-		current_date > 500.1.1	
+		current_date > 490.1.1	
 		NOT = { has_global_variable = roman_warm_period_started }
 		any_owned_province = { 
 			city_is_in_warm_region = yes
