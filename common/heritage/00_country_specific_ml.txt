@@ -247,8 +247,8 @@ athenian_heritage = {
 etruscan_heritage = {
 	modifier = {
 		#good
-		price_found_city_cost_modifier = -0.20
-		global_monthly_civilization = 0.02
+		price_found_city_cost_modifier = -0.15
+		global_monthly_civilization = 0.03
 		
 		#bad
 		price_state_investment_religious_cost_modifier = 0.05
@@ -3447,7 +3447,7 @@ carthago_nova_heritage = {
 	modifier = {
 		#good
 		global_export_commerce_modifier = 0.1
-		naval_range = 0.2
+		global_capital_trade_routes = 2
 		#bad
 		agressive_expansion_impact = 0.1
 	}

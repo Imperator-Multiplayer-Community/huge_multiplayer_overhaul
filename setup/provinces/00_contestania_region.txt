@@ -226,8 +226,8 @@
 
 1034={ #Ilici
 	terrain="plains"
-	culture="bastetanian"
-	religion="animism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="wine"
 	civilization_value=10
 	barbarian_power=0
@@ -242,8 +242,8 @@
 
 1035={ #Thiar
 	terrain="plains"
-	culture="bastetanian"
-	religion="animism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="wood"
 	civilization_value=10
 	barbarian_power=0
@@ -279,13 +279,13 @@
 	tribesmen={
 		amount=8
 	}
-	port_building=1
+	port_building=2
 }
 
 1037={ #Alonis
 	terrain="hills"
-	culture="contestanian"
-	religion="animism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="fish"
 	civilization_value=8
 	barbarian_power=0
@@ -300,8 +300,8 @@
 
 1038={ #Ilorci
 	terrain="plains"
-	culture="contestanian"
-	religion="animism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="hemp"
 	civilization_value=11
 	barbarian_power=0
