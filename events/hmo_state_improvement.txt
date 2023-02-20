@@ -25,6 +25,13 @@ state_improvement.6 = { #Toggles City Status
 					trade_goods = fish
 					trade_goods = cattle
 					trade_goods = vegetables
+					trade_goods = honey
+					trade_goods = fruits
+					trade_goods = dates
+					trade_goods = wild_game
+					trade_goods = fruits
+					trade_goods = sugar
+					trade_goods = olive
 				}
 			}
 			switch = { #Must not be cleared!
@@ -33,6 +40,12 @@ state_improvement.6 = { #Toggles City Status
 				fish = { set_variable = had_fish }
 				cattle = { set_variable = had_cattle  }
 				vegetables = { set_variable = had_vegetables }
+				honey = { set_variable = had_honey }
+				fruits = { set_variable = had_fruits }
+				dates = { set_variable = had_dates }
+				wild_game = { set_variable = had_wild_game }
+				sugar = { set_variable = had_sugar }
+				olive = { set_variable = had_olive }
 			}
 			hidden_effect = {
 				replace_food_after_city_upgrade_effect = { VARIABLE_OR_SET_TRADE_GOODS = set_variable } #See comments in scripted effect before tampering with this
