@@ -1,0 +1,327 @@
+﻿namespace = royal_marriage
+
+royal_marriage.6 = { #Normal marriage proposed
+	type = country_event
+	title = "royal_marriage.6.t"
+	desc = {
+		random_valid = {
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = "random_marriage_proposal_1"
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = "random_marriage_proposal_2"
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				} 
+				desc = "random_marriage_proposal_3"
+			}
+		}
+		random_valid = { 
+			### HOF disapproves block
+			triggered_desc = { 
+				trigger = {
+					hof_disapproves_loyalty = yes                     
+				} 
+				desc = "hof_disapproves_loyalty_desc"  
+			}
+			triggered_desc = {  
+				trigger = {
+					hof_disapproves_age = yes
+				}
+				desc = "hof_disapproves_age_desc"
+			}
+			### SELF disapproves block
+			triggered_desc = {
+				trigger = {
+					self_disapproves_loyalty = yes
+				}
+				desc = "self_disapproves_loyalty_desc"
+			}
+			triggered_desc = {
+				trigger = {
+					self_disapproves_age = yes
+				}
+				desc = "self_disapproves_age_desc"
+			}
+			### HOF approves block
+			triggered_desc = {
+				trigger = {
+					hof_approves = yes                               
+				}
+				desc = "hof_approves_desc"
+			}
+			### SELF approves block
+			triggered_desc = {
+				trigger = {
+					self_approves = yes
+				}
+				desc = "self_approves_desc"
+			} 
+		}
+	}
+	
+	picture = greek_court
+	
+	left_portrait = scope:suitor
+	right_portrait = scope:negotiator
+	right_portrait = scope:love_target
+	 
+	immediate = { 
+		if = { 
+			limit = {
+				scope:love_target = { is_minor_character = no }
+				exists = scope:love_target.family.head_of_family
+				scope:love_target.family.head_of_family = {
+					is_minor_character = no
+					employer = root
+					NOR = {
+						this = scope:love_target
+						this = scope:suitor
+						this = scope:suitor.family.head_of_family
+					}
+				}
+			}
+			scope:love_target.family.head_of_family = {
+				save_scope_as = negotiator
+			}
+		}
+		set_variable = {
+			name = suitor_age 
+			value = scope:suitor.age
+		} 
+		set_variable = {
+			name = love_target_age 
+			value = scope:love_target.age
+		}  
+		change_variable = {
+			name = love_target_age 
+			add = 30
+		}  
+	} 
+	
+	option = {
+		name = "royal_marriage.6.a"
+		trigger = {
+			trigger_if = {
+				limit = {
+					exists = scope:negotiator
+				}
+				hof_approves = yes
+			}
+			trigger_else = {
+				self_approves = yes
+			}
+		}
+		hidden_effect = {
+			if = {	
+				limit = {
+					scope:love_target = {
+						is_married = yes
+					}
+				}
+				scope:love_target = {
+					divorce_character = spouse
+				}
+			}
+			if = {	
+				limit = {
+					scope:suitor = {
+						is_married = yes
+					}
+				}
+				scope:suitor = {
+					divorce_character = spouse
+				}
+			}
+		}
+		scope:suitor = {
+			marry_character = scope:love_target
+		}
+		scope:love_target = {
+			add_loyalty = loyalty_marriage_arranged_1
+		}
+		if = {
+			limit = {
+				exists = scope:negotiator
+			}
+			scope:negotiator = {
+				add_loyalty = loyalty_marriage_arranged_2
+			}
+		}
+	}
+	
+	option = {
+		name = "royal_marriage.6.b"
+		trigger = {
+			trigger_if = {
+				limit = {
+					exists = scope:negotiator 
+				}
+				hof_disapproves_age = yes
+				NOT = {
+					hof_disapproves_loyalty = yes
+				}
+			}
+			trigger_else = {
+				self_disapproves_age = yes 
+				NOT = {
+					self_disapproves_loyalty = yes
+				}
+			}
+		}
+		if = {
+			limit = { 
+				exists = scope:negotiator
+			}
+			scope:negotiator = {
+				add_gold = {
+					value = root.has_monthly_income
+					multiply = 3
+				}
+			}
+		}
+		else = {
+			scope:love_target = {
+				add_gold = {
+					value = root.has_monthly_income
+					multiply = 3
+				}
+			}
+		}
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -3
+		}
+		hidden_effect = {
+			if = {	
+				limit = {
+					scope:love_target = {
+						is_married = yes
+					}
+				}
+				scope:love_target = {
+					divorce_character = spouse
+				}
+			}
+			if = {	
+				limit = {
+					scope:suitor = {
+						is_married = yes
+					}
+				}
+				scope:suitor = {
+					divorce_character = spouse
+				}
+			}
+		}
+		scope:suitor = {
+			marry_character = scope:love_target
+		}
+		scope:love_target = {
+			add_loyalty = loyalty_marriage_arranged_1
+		}
+		if = {
+			limit = {
+				exists = scope:negotiator
+			}
+			scope:negotiator = {
+				add_loyalty = loyalty_marriage_arranged_2
+			}
+		}
+	}
+	
+	option = {
+		name = "royal_marriage.6.c"
+		trigger = {
+			trigger_if = {
+				limit = {
+					exists = scope:negotiator
+				}
+				hof_disapproves_loyalty = yes
+				NOT = {
+					hof_disapproves_age = yes
+				}
+			}
+			trigger_else = {
+				self_disapproves_loyalty = yes
+				NOT = {
+					self_disapproves_age = yes
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:negotiator
+			}
+			scope:negotiator = {
+				add_gold = {
+					value = root.has_monthly_income
+					multiply = 6
+				}
+			}
+		}
+		else = {
+			scope:love_target = {
+				add_gold = {
+					value = root.has_monthly_income
+					multiply = 6
+				}
+			}
+		}
+		add_treasury = {
+			value = has_monthly_income
+			multiply = -6
+		}
+		hidden_effect = {
+			if = {	
+				limit = {
+					scope:love_target = {
+						is_married = yes
+					}
+				}
+				scope:love_target = {
+					divorce_character = spouse
+				}
+			}
+			if = {	
+				limit = {
+					scope:suitor = {
+						is_married = yes
+					}
+				}
+				scope:suitor = {
+					divorce_character = spouse
+				}
+			}
+		}
+		scope:suitor = {
+			marry_character = scope:love_target
+		}
+		scope:love_target = {
+			add_loyalty = loyalty_marriage_arranged_1
+		}
+		if = {
+			limit = {
+				exists = scope:negotiator
+			}
+			scope:negotiator = {
+				add_loyalty = loyalty_marriage_arranged_2
+			}
+		}
+	}
+	
+	option = {
+		name = "royal_marriage.6.d"
+		custom_tooltip = unable_to_propose_to_for_5_years
+		add_political_influence = subtract_influence_small
+	}
+	
+}

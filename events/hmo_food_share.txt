@@ -16,7 +16,7 @@ food_share.1 = {
 				}
 			}
 
-			save_temporary_scope_as = current_province
+			save_scope_as = current_province
 			every_unit_in_province = {
 				limit = {
 					is_army = yes
@@ -43,7 +43,7 @@ food_share.1 = {
 					in_combat = no
 				}
 
-				save_temporary_scope_as = current_unit
+				save_scope_as = current_unit
 
 				set_variable = {
 					name = food
