@@ -48,7 +48,7 @@ state_improvement.6 = { #Toggles City Status
 				olive = { set_variable = had_olive }
 			}
 			hidden_effect = {
-				replace_food_after_city_upgrade_effect = { VARIABLE_OR_SET_TRADE_GOODS = set_variable } #See comments in scripted effect before tampering with this
+				replace_food_after_city_upgrade_effect = { VARIABLE_OR_SET_TRADE_GOODS = set_variable }#See comments in scripted effect before tampering with this
 
 				# remove border fortress and replace with a city fortress
 				if = {
