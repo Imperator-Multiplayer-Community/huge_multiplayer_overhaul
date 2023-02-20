@@ -54,7 +54,10 @@
 				AND = {
 					exists = commander
 					commander = {
-						is_governor = yes
+						OR = {
+							is_governor = yes
+							is_ruler = yes
+						}
 					}
 				}
 			}
@@ -102,6 +105,7 @@
 
 		scope:levy_unit = {
 			remove_variable = normalized_xp_percentage
+			remove_variable = levy_start_xp
 			destroy_unit = yes
 		}
 	}
