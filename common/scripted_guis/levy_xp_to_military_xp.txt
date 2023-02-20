@@ -1,4 +1,4 @@
-﻿country_lexy_xp_set_start_value_event = {
+﻿country_single_levy_xp_set_start_value_event = {
 	scope = country
 
 	saved_scopes = {
@@ -7,18 +7,65 @@
 	effect = {
 		every_army = {
 			limit = {
-				NOT = {
-					has_legion_trigger = yes
+				AND = {
+					has_commander = yes
+					commander = {
+						OR = {
+							is_governor = yes
+							is_ruler = yes
+						}
+					}
 				}
-			}
-
-			if = {
-				limit = {
+				has_legion_trigger = no
+				NOT = {
 					has_variable = levy_start_xp
 				}
-
-				remove_variable = levy_start_xp
 			}
+
+			set_variable = {
+				name = levy_start_xp
+				value = experience_percentage
+			}
+
+			# debug_log = "levystartxp [THIS.Var('levy_start_xp').GetValue]"
+
+			change_variable = {
+				name = levy_start_xp
+				multiply = 100
+			}
+
+			# every raise levy causes ae
+			unit_owner = {
+				add_aggressive_expansion = 1
+			}
+		}
+	}
+}
+
+country_all_levy_xp_set_start_value_event = {
+	scope = country
+
+	saved_scopes = {
+	}
+
+	effect = {
+		every_army = {
+			limit = {
+				AND = {
+					has_commander = yes
+					commander = {
+						OR = {
+							is_governor = yes
+							is_ruler = yes
+						}
+					}
+				}
+				has_legion_trigger = no
+				NOT = {
+					has_variable = levy_start_xp
+				}
+			}
+
 
 			set_variable = {
 				name = levy_start_xp
@@ -51,14 +98,17 @@ country_all_levy_xp_to_military_xp_event = {
 	effect = {
 		every_army = {
 			limit = {
-				NOT = {
-					has_legion_trigger = yes
-					AND = {
-						exists = commander
-						commander = {
-							is_mercenary = yes
+				has_legion_trigger = yes
+				AND = {
+					exists = commander
+					commander = {
+						OR = {
+							is_governor = yes
+							is_ruler = yes
 						}
 					}
+				}
+				NOT = {
 					any_sub_unit = {
 						is_migration = yes
 					}
@@ -78,7 +128,10 @@ country_all_levy_xp_to_military_xp_event = {
 					AND = {
 						exists = commander
 						commander = {
-							is_governor = yes
+							OR = {
+								is_governor = yes
+								is_ruler = yes
+							}
 						}
 					}
 				}
@@ -127,6 +180,7 @@ country_all_levy_xp_to_military_xp_event = {
 
 			scope:levy_unit = {
 				remove_variable = normalized_xp_percentage
+				remove_variable = levy_start_xp
 				destroy_unit = yes
 			}
 		}

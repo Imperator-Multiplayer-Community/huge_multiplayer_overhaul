@@ -1436,7 +1436,6 @@ oratory_2 = {
 						government = aristocratic_republic
 						government = plutocratic_republic
 						government = theocratic_republic
-						government = punic_republic
 					}
 					OR = {
 						has_country_modifier = dictatorial_extension
