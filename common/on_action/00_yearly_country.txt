@@ -1,7 +1,7 @@
 ﻿yearly_country_pulse = {
 	on_actions = {
 		delay = { days = { 30 335 } }
-		main_event_pulse_country_fixed
+		hmo_main_event_pulse_country
 		delay = { days = { 1 364 } }
 		yearly_gambling_pulse
 		delay = { days = { 100 200 } }

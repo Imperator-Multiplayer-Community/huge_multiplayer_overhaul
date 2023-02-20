@@ -2115,6 +2115,7 @@ on_game_initialized = {
 		startup_events.7
 		startup_events.8
 		startup_events.9 # remove extra border forts
+		startup_events.10 # removes food trade goods from cities
 		tutorial.1
 		dhe_dde_pyrrhus.24
 		flavor_egy.8
@@ -2230,18 +2231,7 @@ on_game_initialized = {
 			char:97 = {
 				add_friend = char:38
 			} 
-			random_navy = {
-				add_subunit = mega_galley
-				add_subunit = mega_galley
-				add_subunit = mega_galley
-				add_subunit = octere
-				add_subunit = octere
-				add_subunit = octere
-				add_subunit = octere
-				add_subunit = octere
-			}
 			set_variable = me_ant_start_flag
-			antigonid_legion_setup_effect = yes
 			add_opinion = { target = c:MAC modifier = diadochi_rivals }
 			add_opinion = { target = c:TRE modifier = diadochi_rivals }
 			add_opinion = { target = c:EGY modifier = diadochi_rivals }
@@ -2272,7 +2262,6 @@ on_game_initialized = {
 			char:10 = { move_country = C:PRY } #Antipatrid mother
 			char:97 = { move_country = C:PRY } #Mithridates in Phrygia
 			set_variable = me_mac_start_flag
-			macedon_legion_setup_effect = yes
 			add_opinion = { target = c:PRY modifier = diadochi_rivals }
 			add_opinion = { target = c:TRE modifier = diadochi_rivals }
 			add_opinion = { target = c:EGY modifier = diadochi_rivals }
@@ -2284,7 +2273,6 @@ on_game_initialized = {
 				add_friend = C:MAC.current_ruler
 			}
 			set_variable = me_thrace_start_flag
-			thrace_legion_setup_effect = yes
 			add_opinion = { target = c:MAC modifier = diadochi_rivals }
 			add_opinion = { target = c:PRY modifier = diadochi_rivals }
 			add_opinion = { target = c:EGY modifier = diadochi_rivals }
@@ -2296,7 +2284,6 @@ on_game_initialized = {
 				add_rival = C:PRY.current_ruler
 				add_friend = C:SEL.current_ruler
 			}
-			egypt_legion_setup_effect = yes
 			trigger_event = dhe_body.4
 			add_opinion = { target = c:MAC modifier = diadochi_rivals }
 			add_opinion = { target = c:TRE modifier = diadochi_rivals }
@@ -2310,7 +2297,6 @@ on_game_initialized = {
 				add_friend = C:EGY.current_ruler
 			}
 			trigger_event = { id = country_rename.2 }
-			seleukid_legion_setup_effect = yes
 			add_opinion = { target = c:MAC modifier = diadochi_rivals }
 			add_opinion = { target = c:TRE modifier = diadochi_rivals }
 			add_opinion = { target = c:EGY modifier = diadochi_rivals }
@@ -2337,7 +2323,6 @@ on_game_initialized = {
 			}
 			current_ruler = { add_friend = c:TLN.current_ruler } # Pyrrhos and Glaukias
 			set_variable = me_epirus_start_flag
-			epirus_legion_setup_effect = yes
 		}
 		if = {
 			limit = { tag = TLN }
@@ -2352,10 +2337,6 @@ on_game_initialized = {
 		if = {
 			limit = { tag = SYR }
 			set_variable = me_syracuse_start_flag
-			random_navy = {
-				add_subunit = octere
-				add_subunit = octere
-			}
 			current_ruler = { 
 				add_friend = char:319
 				add_friend = char:264 
@@ -3401,7 +3382,15 @@ on_legion_raised = {
 	    	}
 	    }
 
-		add_distinction = distinction_legion_default
+	    if = {
+	    	limit = {
+	    		NOT = {
+	    			has_distinction = distinction_legion_default
+	    		}
+	    	}
+
+	    	add_distinction = distinction_legion_default
+	    }
 	}
 }
 

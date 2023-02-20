@@ -5541,6 +5541,12 @@ restore_food_effect = {
 		had_fish = { set_trade_goods = fish remove_variable = had_fish }
 		had_cattle = { set_trade_goods = cattle remove_variable = had_cattle }
 		had_vegetables = { set_trade_goods = vegetables remove_variable = had_vegetables  }
+		had_honey = { set_trade_goods = honey remove_variable = had_honey }
+		had_fruits = { set_trade_goods = fruits remove_variable = had_fruits }
+		had_dates = { set_trade_goods = dates remove_variable = had_dates }
+		had_wild_game = { set_trade_goods = wild_game remove_variable = had_wild_game }
+		had_sugar = { set_trade_goods = sugar remove_variable = had_sugar }
+		had_olive = { set_trade_goods = olive remove_variable = had_olive }
 	}
 }
 
