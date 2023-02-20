@@ -3383,8 +3383,10 @@ on_legion_raised = {
 	    }
 
 	    if = {
-	    	NOT = {
-	    		has_distinction = distinction_legion_default
+	    	limit = {
+	    		NOT = {
+	    			has_distinction = distinction_legion_default
+	    		}
 	    	}
 
 	    	add_distinction = distinction_legion_default
