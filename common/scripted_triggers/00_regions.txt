@@ -24,6 +24,7 @@ city_has_special_trade_goods_trigger = {
 city_is_in_warm_region = {
 	OR = {
 		is_in_region = central_italy_region
+		is_in_region = caledonia_region
 		is_in_region = magna_graecia_region
 		is_in_region = cisalpine_gaul_region
 		is_in_region = transalpine_gaul_region

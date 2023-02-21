@@ -393,23 +393,6 @@ requires = { bactrian_path_15 }
 
 ### FORTS
 scythian_path_generic_fort_1 = { ###
-on_activate = {
-	ordered_owned_province = {
-		limit = {
-			dominant_province_culture_group = root.culture_group
-		}
-		alternative_limit = {
-			always = yes
-		}
-		order_by = {
-			value = 0
-			add = population_cap
-			subtract = total_population
-		}
-		max = 3
-		create_2_nobles_effect = yes
-	}	
-}
 modifier = { 
 	siege_ability = 0.075
 } 

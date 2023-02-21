@@ -6936,14 +6936,14 @@ country = {
 		
 		SIR = {
 			government = tribal_kingdom
-			primary_culture = demetian ## HMO V2.1 DaFoogles Heritages
+			primary_culture = callaecian ## HMO V2.1 DaFoogles Heritages
 			religion = druidism
 			centralization=5
 
 			capital = 2093
 
 			own_control_core = 	{
-				2093
+				2093 2094
 			}
 		}
 		DEM = {
@@ -6955,7 +6955,7 @@ country = {
 			capital = 2096
 
 			own_control_core = 	{
-				2094 2095 2096 2097 2099
+				2095 2096 2097 2099
 			}
 		}
 		
@@ -7577,7 +7577,7 @@ country = {
 		
 		BTU = {
 			government = tribal_kingdom
-			primary_culture = biturigan
+			primary_culture = callaecian
 			religion = druidism
 			centralization=10
 
@@ -10382,7 +10382,7 @@ country = {
 			capital = 1465
 
 			own_control_core = 	{
-				1467 1468 1469 1466 1465
+				1467 1468 1466 1465
 			}
 		}
 		
@@ -11073,7 +11073,7 @@ country = {
 
 			own_control_core = 	{
 				1036 1035 1034 1275 1273 1274 1038 1259 1260 
-				1033 1464 1037 3481 3483 3484 3485 3482 3492 3490
+				1033 1464 1037 3481 3483 3484 3485 3482 3492 3490 1469 3486 3487 3491
 			}
 		}
 		
@@ -12789,7 +12789,7 @@ country = {
 		
 			own_control_core = 	{ 
 				7340 7331 7332 7333 7334 7356 7401 7490 7491 7494 7495 7496 #samatata_area
-				7330 7394 7395 7396 8766
+				7330 7394 7395 7396
 			}
 		}
 		
@@ -12977,7 +12977,7 @@ country = {
 			own_control_core = 	{ 
 				7339 7341 7342 7347 7348 7349 7350 7351 7352 7353 7354 7355 #kamarupa_region
 				7323 7343 7344 7346 7652 7653
-				7324 7654 8783 8790
+				7324 7654
 			}
 		}
 		
@@ -13314,7 +13314,7 @@ country = {
 				religious_tech= { level=2 progress=0  }
 			}
 			
-			capital = 7493
+			capital = 7364
 		
 			own_control_core =  {
 				7322 7325 7326 7335 7336 7337 7358 7359 7397 7398 7493 7497 7498 7499 7651 7650
@@ -17264,201 +17264,6 @@ country = {
 					}
 				}
 
-				NYA = {
-					government = tribal_kingdom
-					primary_culture = pyu
-					religion = bon_religion
-					capital = 8777
-					technology = {
-						military_tech = {
-							level = 1
-							progress = 0
-						}
-						civic_tech = {
-							level = 1
-							progress = 0
-						}
-						oratory_tech = {
-							level = 1
-							progress = 0
-						}
-						religious_tech = {
-							level = 1
-							progress = 0
-						}
-					}
-					own_control_core = {
-						8777 8805 8781
-					}
-				}
-				
-				YHK = {
-					government = tribal_kingdom
-					primary_culture = pyu
-					religion = bon_religion
-					capital = 8774
-					technology = {
-						military_tech = {
-							level = 1
-							progress = 0
-						}
-						civic_tech = {
-							level = 1
-							progress = 0
-						}
-						oratory_tech = {
-							level = 1
-							progress = 0
-						}
-						religious_tech = {
-							level = 1
-							progress = 0
-						}
-					}
-					own_control_core = {
-						8774 8788
-					}
-				}
-
-				BKT = {
-					government = tribal_kingdom
-					primary_culture = pyu
-					religion = bon_religion
-					capital = 8772
-					technology = {
-						military_tech = {
-							level = 1
-							progress = 0
-						}
-						civic_tech = {
-							level = 1
-							progress = 0
-						}
-						oratory_tech = {
-							level = 1
-							progress = 0
-						}
-						religious_tech = {
-							level = 1
-							progress = 0
-						}
-					}
-					own_control_core = {
-						8772 8771 8770 8769 8786
-					}
-				}
-				
-				BNN = {
-					government = tribal_kingdom
-					primary_culture = pyu
-					religion = bon_religion
-					capital = 8773
-					technology = {
-						military_tech = {
-							level = 1
-							progress = 0
-						}
-						civic_tech = {
-							level = 1
-							progress = 0
-						}
-						oratory_tech = {
-							level = 1
-							progress = 0
-						}
-						religious_tech = {
-							level = 1
-							progress = 0
-						}
-					}
-					own_control_core = {
-						8773 8811
-					}
-				}
-
-				TTM = {
-					government = tribal_kingdom
-					primary_culture = pyu
-					religion = bon_religion
-					capital = 8775
-					technology = {
-						military_tech = {
-							level = 1
-							progress = 0
-						}
-						civic_tech = {
-							level = 1
-							progress = 0
-						}
-						oratory_tech = {
-							level = 1
-							progress = 0
-						}
-						religious_tech = {
-							level = 1
-							progress = 0
-						}
-					}
-					own_control_core = {
-						8775 8806 8808 8809 8807 8810
-					}
-				}
-				
-				HWK = {
-					government = tribal_kingdom
-					primary_culture = pyu
-					religion = bon_religion
-					capital = 8776
-					technology = {
-						military_tech = {
-							level = 1
-							progress = 0
-						}
-						civic_tech = {
-							level = 1
-							progress = 0
-						}
-						oratory_tech = {
-							level = 1
-							progress = 0
-						}
-						religious_tech = {
-							level = 1
-							progress = 0
-						}
-					}
-					own_control_core = {
-						8776 8804
-					}
-				}
-
-				HAL = {
-					government = tribal_kingdom
-					primary_culture = pyu
-					religion = bon_religion
-					capital = 8778
-					technology = {
-						military_tech = {
-							level = 1
-							progress = 0
-						}
-						civic_tech = {
-							level = 1
-							progress = 0
-						}
-						oratory_tech = {
-							level = 1
-							progress = 0
-						}
-						religious_tech = {
-							level = 1
-							progress = 0
-						}
-					}
-					own_control_core = {
-						8778 8789 8779 8780 
-					}
-				}
 
 				#Chattia
 				X01 = {
@@ -18282,7 +18087,7 @@ country = {
 					capital = 3495
 					
 					own_control_core = {
-						3495 3498 3491
+						3495 3498 
 					}
 				}
 				#Rubrinsia
@@ -18302,7 +18107,7 @@ country = {
 					capital =  3488
 					
 					own_control_core = {
-						3488 3489 3487 3486
+						3488 3489
 					}
 				}	
 				

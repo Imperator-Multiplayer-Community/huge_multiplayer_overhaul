@@ -210,7 +210,7 @@
 	terrain="forest"
 	culture="caledonian"
 	religion="druidism"
-	trade_goods="wild_game"
+	trade_goods="lapis"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -262,7 +262,7 @@
 	terrain="forest"
 	culture="caledonian"
 	religion="druidism"
-	trade_goods="stone"
+	trade_goods="cinnabar"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
@@ -288,7 +288,7 @@
 	terrain="forest"
 	culture="taexalian"
 	religion="druidism"
-	trade_goods="woad"
+	trade_goods="cinnabar"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
@@ -418,7 +418,7 @@
 	terrain="forest"
 	culture="ivernian"
 	religion="druidism"
-	trade_goods="wood"
+	trade_goods="fruits"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -458,7 +458,7 @@
 	terrain="forest"
 	culture="ivernian"
 	religion="druidism"
-	trade_goods="fish"
+	trade_goods="fruits"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -471,7 +471,7 @@
 	terrain="plains"
 	culture="voluntian"
 	religion="druidism"
-	trade_goods="wood"
+	trade_goods="fruits"
 	civilization_value=0
 	barbarian_power=0
 	province_rank="settlement"

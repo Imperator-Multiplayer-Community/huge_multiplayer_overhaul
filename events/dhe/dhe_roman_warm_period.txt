@@ -10,19 +10,14 @@ dhe_roman_warm_period.1 = {
 	left_portrait = current_ruler
 
 	trigger = {
-		current_date > 465.1.1	
+		current_date > 490.1.1	
 		NOT = { has_global_variable = roman_warm_period_started }
-		NOT = { has_global_variable = roman_warm_period_ended }
 		any_owned_province = { 
 			city_is_in_warm_region = yes
 		}
 	}
 
 	immediate = {
-		trigger_event = {
-			id = dhe_roman_warm_period.4
-			days = 5475
-		}
 		set_global_variable = {
 			name = roman_warm_period_started
 		}
@@ -44,16 +39,16 @@ dhe_roman_warm_period.1 = {
 		name = "dhe_roman_warm_period.1.a"
 		every_province = {
 			limit = {
-				OR = {
-					owner = ROOT
-					has_owner = no
-				}
 				city_is_in_warm_region = yes
 			}
 			add_province_modifier = {
 				name = province_improvement_warm_period
-				duration = 5475 # 15 years
+				duration = 3650 # 10 years
 			}
+		}
+		trigger_event = { 
+			id = dhe_roman_warm_period.2999
+			days = 365
 		}
 	}
 }
@@ -76,62 +71,189 @@ dhe_roman_warm_period.2 = {
 
 	option = {
 		name = "dhe_roman_warm_period.1.a"
-		every_owned_province = {
-			limit = {
-				city_is_in_warm_region = yes
-			}
-			add_province_modifier = {
-				name = province_improvement_warm_period
-				duration = 5475 # 15 years
-			}
+		trigger_event = { 
+			id = dhe_roman_warm_period.2999
+			days = 365
 		}
 	}
 }
-dhe_roman_warm_period.3 = {
-	type = country_event
-	hidden = yes
-	trigger = {
-		any_owned_province = {
-			has_province_modifier = province_improvement_warm_period
-			NOT = {
-				city_is_in_warm_region = yes
-			}
-		}
-		any_owned_province = {
-			NOT = { has_province_modifier = province_improvement_warm_period }
-		}
-	}
-	immediate = {
-		every_owned_province = {
-			limit = {
-				NOT = {
-					has_province_modifier = province_improvement_warm_period
-				}
-				city_is_in_warm_region = yes
-			}
-			add_province_modifier = {
-				name = province_improvement_warm_period
-				duration = 5475
-			}
-		}
-	}
-}
-dhe_roman_warm_period.4 = {
-	type = country_event
-	hidden = yes
 
-	trigger = {
-		
-	}
-	immediate = {
-		set_global_variable = {
-			name = roman_warm_period_ended
-		}
-		every_province = {
-			limit = {
-				has_province_modifier = province_improvement_warm_period
+dhe_roman_warm_period.2999 = { #Hidden warm period fix
+    type = country_event
+    hidden = yes
+
+
+    immediate = {		
+		if = {
+            limit = {
+                NOT = { has_global_variable = global_warm_period_9 }
+            }
+            trigger_event = { 
+				id = dhe_roman_warm_period.2999
+				days = 365
 			}
-			remove_province_modifier = province_improvement_warm_period
-		}
-	}
+        }
+        if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_1
+					current_date > 500.12.29
+				}
+            }
+            set_global_variable = global_warm_period_1
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 3285 # 9 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_2
+					current_date > 501.12.29
+				}
+            }
+            set_global_variable = global_warm_period_2
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 2920 # 8 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_3
+					current_date > 502.12.29
+				}
+            }
+            set_global_variable = global_warm_period_3
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 2555 # 7 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_4
+					current_date > 503.12.29
+				}
+            }
+            set_global_variable = global_warm_period_4
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 2190 # 6 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_5
+					current_date > 504.12.29
+				}
+            }
+            set_global_variable = global_warm_period_5
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 1825 # 5 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_6
+					current_date > 505.12.29
+				}
+            }
+            set_global_variable = global_warm_period_6
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 1460 # 4 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_7
+					current_date > 506.12.29
+				}
+            }
+            set_global_variable = global_warm_period_7
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 1095 # 3 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_8
+					current_date > 507.12.29
+				}
+            }
+            set_global_variable = global_warm_period_8
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 730 # 2 years
+				}
+			}
+        }
+		else_if = {
+            limit = {
+                NOT = { 
+					has_global_variable = global_warm_period_9
+					current_date > 508.12.29
+				}
+            }
+            set_global_variable = global_warm_period_9
+			every_province = {
+				limit = {
+					city_is_in_warm_region = yes
+				}
+				add_province_modifier = {
+					name = province_improvement_warm_period
+					duration = 365 # 1 years
+				}
+			}
+        }
+    }
 }
