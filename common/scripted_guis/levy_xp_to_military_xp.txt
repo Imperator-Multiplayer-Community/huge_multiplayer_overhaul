@@ -13,8 +13,8 @@
 						OR = {
 							is_governor = yes
 							is_ruler = yes
-							is_mercenary = no
 						}
+						is_mercenary = no
 					}
 				}
 				has_legion_trigger = no
@@ -58,8 +58,8 @@ country_all_levy_xp_set_start_value_event = {
 						OR = {
 							is_governor = yes
 							is_ruler = yes
-							is_mercenary = no
 						}
+						is_mercenary = no
 					}
 				}
 				has_legion_trigger = no

@@ -57,9 +57,9 @@
 						OR = {
 							is_governor = yes
 							is_ruler = yes
-							is_mercenary = no
 						}
 					}
+					is_mercenary = no
 				}
 			}
 
@@ -67,7 +67,6 @@
 				name = normalized_xp_percentage
 				multiply = 100
 			}
-
 
 			if = {
 				limit = {
