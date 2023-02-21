@@ -4,8 +4,8 @@
 @buildings_per_pop_tier_3 = 2
 
 sea = {
-	graphical_culture = "south_indian_gfx"
-	center_building_mesh = "indian_center_mesh"
+	graphical_culture = "sea_gfx"
+	center_building_mesh = "sea_centre_mesh"
 	soundeffect = "event:/SFX/Ambience/3DMapEmitters/Urban/sfx_amb_3d_city_indian"
 	tier = {
 		priority = 0
