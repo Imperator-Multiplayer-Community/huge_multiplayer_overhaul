@@ -194,3 +194,32 @@ startup_events.9 = { # makes sure forts are on citys and border forts are on set
 		}
 	}
 }
+
+startup_events.10 = { # makes sure cities dont have food goods on their tile
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		every_owned_province = {
+			limit = {
+				has_city_status = yes
+				OR = {
+					trade_goods = grain
+					trade_goods = fish
+					trade_goods = cattle
+					trade_goods = vegetables
+					trade_goods = honey
+					trade_goods = fruits
+					trade_goods = dates
+					trade_goods = wild_game
+					trade_goods = fruits
+					trade_goods = sugar
+					trade_goods = olive
+				}
+			}
+
+			replace_food_after_city_upgrade_effect = { VARIABLE_OR_SET_TRADE_GOODS = set_variable }
+			replace_food_after_city_upgrade_finish_effect = yes
+		}
+	}
+}

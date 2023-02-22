@@ -64,7 +64,7 @@
 			}
 			custom_tooltip = "form_danmork_claims_tooltip"
 			hidden_effect = {
-				region:scandinavia_region = { formable_area_province_effect = yes }	
+				region:scandinavia_region = { formable_region_province_effect = yes }	
 				area:chaucia_area = { formable_area_province_effect = yes }	
 			}	
 			add_1_free_province_investments = yes

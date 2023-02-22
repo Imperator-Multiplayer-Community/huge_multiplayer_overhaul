@@ -1,7 +1,6 @@
 ﻿monthly_country_pulse = {
 
 	events = {
-		dhe_roman_warm_period.3
 		rel_flavor_druidic.10
 		dhe_rome.9
 		dhe_judea.2
@@ -43,6 +42,8 @@
 		monthly_guarantee_pulse
 		delay = { days = { 5 20 } }
 		hmo_navy_maintenance_pulse
+		delay = { days = { 1 30 }}
+		hmo_slave_death_pulse
 	}
 
 	effect = {

@@ -37,6 +37,8 @@ buy_idea = {
 
 recruit_mercenary = {
 	scaled_gold = 3
+	gold = 50
+	aggressive_expansion = 5
 }
 
 improve_relation = {

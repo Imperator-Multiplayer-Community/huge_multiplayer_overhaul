@@ -12,6 +12,8 @@
 			experience_decay = -0.02
 			monthly_military_experience = 0.15
 			army_maintenance_cost = 0.5
+			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
+			mercenary_naval_maintenance_cost = -0.25 
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -27,6 +29,8 @@
 			discipline = -0.025
 			monthly_military_experience = 0.20
 			army_maintenance_cost = 0.5
+			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
+			mercenary_naval_maintenance_cost = -0.25 
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -70,7 +74,7 @@
 			levy_size_multiplier = 0.015
 			army_maintenance_cost = -0.10
 			monthly_military_experience = 0.20
-			mercenary_land_maintenance_cost = 0.35
+			mercenary_land_maintenance_cost = 0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
@@ -87,7 +91,7 @@
 			monthly_military_experience = 0.15
 			army_maintenance_cost = 0.10
 			general_loyalty = -2
-			mercenary_land_maintenance_cost = 0.30
+			mercenary_land_maintenance_cost = 0.20
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region

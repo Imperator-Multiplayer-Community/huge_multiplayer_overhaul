@@ -27,7 +27,7 @@ not_mugger = {
 }
 
 naval_supplier = {
-    global_monthly_food_modifier = -0.50
+    global_monthly_food_modifier = -0.75
 }
 
 #province modifiers
@@ -48,7 +48,7 @@ mugged_by_reality = {
 }
 
 supplied_by_sea = {
-    local_monthly_food = 300
+    local_monthly_food = 150
 }
 
 naval_action = {

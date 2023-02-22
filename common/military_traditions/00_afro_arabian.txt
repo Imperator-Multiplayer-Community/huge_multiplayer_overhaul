@@ -275,6 +275,7 @@
 	arabian_path_8 = { ###
 		modifier = { 
 			global_commerce_modifier = 0.05
+			country_civilization_value = 5
 		}
 		icon = north_african_army_path_4
 		requires = { arabian_path_1 }

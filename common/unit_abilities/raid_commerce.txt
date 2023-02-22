@@ -3,8 +3,9 @@
 	enable = yes
 	toggle = yes
 	navy_only = yes
+	cancel_on_combat_end = yes
 
-	map = no
+	map = yes
 
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
@@ -66,7 +67,6 @@
 	}
 
 	start_effect = {
-		custom_tooltip = explain_raiding_commerce_tooltip
 		if = {
 			limit = {
 				can_mug_province_trigger = yes
@@ -74,6 +74,10 @@
 
 			hidden_effect = {
 				save_scope_as = raid_commerce_unit
+				set_variable = { 
+					name = starting_num_of_ships
+					value = num_of_ships_svalue
+				}
 				set_variable = is_navy_raiding_commerce
 			}
 
@@ -199,11 +203,59 @@
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
+			navy_drilling = yes
+			navy_slave_raiding = yes
+			navy_supplying = yes
+			navy_assaulting = yes
+			navy_fishing = yes
+			navy_raiding = yes
+			navy_protecting_commerce = yes
 		}
 	}
 
 	finish_effect = {
-		navy_raid_commerce_finish_effect = yes
+		remove_variable = is_navy_raiding_commerce
+		remove_unit_modifier = naval_action
+
+		unit_location = {
+			every_neighbor_province = {
+				limit = {
+					has_province_modifier = mugged_by_reality
+				}
+
+				remove_province_modifier = mugged_by_reality
+			}
+		}
+
+		if = {
+			limit = {
+				unit_owner = {
+					any_navy = {
+						navy_raiding_commerce = yes
+					}
+				}
+			}
+
+			while = {
+				count = var:starting_num_of_ships
+				unit_owner = {
+					add_country_modifier = {
+						name = not_mugger
+						duration = -1
+						mode = add
+					}
+				}
+			}
+		}
+		else = {
+			unit_owner = {
+				remove_country_modifier = naughty_mugger
+				remove_country_modifier = not_mugger
+				remove_country_modifier = raid_commerce_ae
+			}
+		}
+
+		remove_variable = starting_num_of_ships
 	}
 	
 	ai_will_do = {

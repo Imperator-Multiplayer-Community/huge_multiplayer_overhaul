@@ -105,7 +105,7 @@ onuban_heritage = {
 	modifier = {
 		#good
 		global_export_commerce_modifier = 0.1
-		local_goods_from_slaves = -1
+		global_goods_from_slaves = -1
 		
 		#bad
 		global_pop_assimilation_speed_modifier = -0.1

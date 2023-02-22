@@ -1,0 +1,10 @@
+﻿base_slave_revolt_svalue = {
+	value = total_population
+	subtract = num_of_slaves
+	min = 10
+}
+
+city_slave_revolt_svalue = { # province
+	value = slave_revolt_svalue
+	add = 10
+}

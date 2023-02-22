@@ -510,7 +510,7 @@
         highlight = {
 			scope:province = {
 				OR = {
-					is_in_area = bithynia_area
+					is_in_area = bithynia_superior_area  ## V6.0 HMO (DaFoogle) ##
 					is_in_area = bithynia_inferior_area
 					is_in_area = heracleotis_area
 				}
@@ -518,7 +518,7 @@
         }
 
         allow = {
-        	owns_or_subject_owns_area = bithynia_area
+        	owns_or_subject_owns_area = bithynia_superior_area  ## V6.0 HMO (DaFoogle) ##
         	owns_or_subject_owns_area = bithynia_inferior_area
         	owns_or_subject_owns_area = heracleotis_area
         }
@@ -532,7 +532,7 @@
         			any_subject = {
         				any_owned_province = {
         					OR = {
-        						is_in_area = bithynia_area
+								is_in_area = bithynia_superior_area  ## V6.0 HMO (DaFoogle) ##
         						is_in_area = bithynia_inferior_area
         						is_in_area = heracleotis_area
         					}
@@ -543,7 +543,7 @@
         			limit = {
         				any_owned_province = {
         					OR = {
-        						is_in_area = bithynia_area
+        						is_in_area = bithynia_superior_area  ## V6.0 HMO (DaFoogle) ##
         						is_in_area = bithynia_inferior_area
         						is_in_area = heracleotis_area
         					}
@@ -559,7 +559,7 @@
                 limit = {
                     any_state_province = {
                         OR = {
-                            is_in_area = bithynia_area
+                            is_in_area = bithynia_superior_area  ## V6.0 HMO (DaFoogle) ##
                             is_in_area = bithynia_inferior_area
                             is_in_area = heracleotis_area
                         }

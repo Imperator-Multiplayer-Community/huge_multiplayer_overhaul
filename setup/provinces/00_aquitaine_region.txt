@@ -201,8 +201,8 @@
 
 2233={ #Noviomagus Aquitanum
 	terrain="marsh"
-	culture="biturigan"
-	religion="druidism"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
 	trade_goods="fish"
 	civilization_value=7
 	barbarian_power=0
@@ -236,7 +236,7 @@
 
 2235={ #Akroterion
 	terrain="forest"
-	culture="biturigan"
+	culture="callaecian"
 	religion="pre_indo_european_religion"
 	trade_goods="hemp"
 	civilization_value=9
@@ -252,19 +252,19 @@
 
 2236={ #Burdigala
 	terrain="marsh"
-	culture="biturigan"
-	religion="druidism"
-	trade_goods="wine"
+	culture="carthaginian"
+	religion="carthaginian_pantheon"
+	trade_goods="jade"
 	civilization_value=7
 	barbarian_power=0
-	province_rank="settlement"
+	province_rank="city"
 	freemen={
-		amount=1
+		amount=5
 	}
 	tribesmen={
-		amount=4
+		amount=8
 	}
-	port_building=1
+	port_building=2
 }
 
 2237={ #Losa
@@ -716,7 +716,7 @@
 	terrain="plains"
 	culture="aquitani"
 	religion="pre_indo_european_religion"
-	trade_goods="wine"
+	trade_goods="fruits"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -735,7 +735,7 @@
 	terrain="plains"
 	culture="aquitani"
 	religion="pre_indo_european_religion"
-	trade_goods="cattle"
+	trade_goods="fruits"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -827,7 +827,7 @@
 	terrain="plains"
 	culture="santonian"
 	religion="druidism"
-	trade_goods="wine"
+	trade_goods="fruits"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -862,7 +862,7 @@
 	terrain="plains"
 	culture="santonian"
 	religion="druidism"
-	trade_goods="wine"
+	trade_goods="fruits"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -878,7 +878,7 @@
 	terrain="plains"
 	culture="santonian"
 	religion="druidism"
-	trade_goods="cattle"
+	trade_goods="fruits"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
