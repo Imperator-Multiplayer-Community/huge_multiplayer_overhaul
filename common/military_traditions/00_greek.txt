@@ -11,7 +11,7 @@
 			country_culture_group = hellenic
 		}
 		trigger_else = {
-			this.culture.country_culture_group = hellenic
+			country_culture_group = hellenic
 		}
 	}
 

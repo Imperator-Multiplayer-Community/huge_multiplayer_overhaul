@@ -11,7 +11,7 @@
 			country_culture_group = persia
 		}
 		trigger_else = {
-			this.culture.country_culture_group = persia
+			country_culture_group = persia
 		}
 	}
 
