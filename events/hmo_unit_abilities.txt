@@ -114,7 +114,7 @@ hmo_unit_abilties.2 = { # slave raid warning
 	    trigger = {
     		opinion = {
     			target = scope:slave_raiding_unit.unit_owner
-    			value < -150
+    			value < -200
 	    	}
 	    }
 

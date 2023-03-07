@@ -12,24 +12,16 @@
 				limit = {heritage = pirate_heritage}
 				heritage = pirate_heritage
 			}
-			trigger_else_if = {
-				limit = {is_tradition_tree_allowed = afro_arabian_philosophy_2}
-				has_military_bonus = arabian_path_4
-			}
-			trigger_else_if = {
-				limit = {is_tradition_tree_allowed = anatolian_philosophy_2}
-				has_military_bonus = lydian_path_1
-			}
-			trigger_else_if = {
-				limit = {is_tradition_tree_allowed = greek_philosophy}
-				has_military_bonus = greek_antigonid_path_4
-			}
-			trigger_else_if = {
-				limit = {is_tradition_tree_allowed = haemic_philosophy}
-				has_military_bonus = illyrian_piracy_path_1
-			}
 			trigger_else = {
-				always = no
+				custom_tooltip = {
+					text = requires_military_tradition
+					OR = {
+						has_military_bonus = arabian_path_4
+						has_military_bonus = lydian_path_1
+						has_military_bonus = greek_antigonid_path_4
+						has_military_bonus = illyrian_piracy_path_1
+					}
+				}
 			}
 		}
 		unit_location = {
@@ -183,6 +175,12 @@
 				add_unit_modifier = {
 					name = naval_action
 					duration = 30
+				}
+
+				unit_location = {
+					trigger_event = {
+						id = hmo_unit_abilties.7
+					}
 				}
 
 				root.unit_owner = {
