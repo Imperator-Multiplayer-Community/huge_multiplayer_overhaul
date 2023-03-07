@@ -3,9 +3,8 @@
 	enable = yes
 	toggle = yes
 	navy_only = yes
-	cancel_on_combat_end = yes
 
-	map = yes
+	map = no
 
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
@@ -73,6 +72,7 @@
 
 
 	start_effect = {
+		custom_tooltip = naval_supply_explain_modifier_tooltip
 		if = {
 			limit = {
 				can_naval_supply_trigger = yes
@@ -92,11 +92,13 @@
 				}
 
 				unit_location = {
-					every_neighbor_province = { 
+					ordered_neighbor_province = { 
 						limit = {
 							naval_supply_province_trigger = yes
 						}
-						custom = naval_supply_explain_modifier_tooltip
+						order_by = total_population
+						max = 1
+
 						add_province_modifier = {
 							name = supplied_by_sea
 							duration = 90
@@ -137,26 +139,15 @@
 			is_exiled = yes
 			unit_owner = { has_low_economic_policy = expense_navy }
 			is_moving = yes
-			in_combat = yes
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
-			navy_drilling = yes
-			navy_slave_raiding = yes
-			navy_assaulting = yes
-			navy_fishing = yes
-			navy_raiding = yes
-			navy_raiding_commerce = yes
-			navy_protecting_commerce = yes
+			in_combat = yes
 		}
 	}
 
 	finish_effect = {
-		remove_variable = is_navy_supplying
-		unit_owner = {
-			remove_country_modifier = naval_supplier
-		}
-		remove_unit_modifier = naval_action
+		navy_supply_finish_effect = yes
 	}
 	
 	ai_will_do = {

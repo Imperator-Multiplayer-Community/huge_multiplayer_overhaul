@@ -3,9 +3,8 @@
 	enable = yes
 	toggle = yes
 	navy_only = yes
-	cancel_on_combat_end = yes
 
-	map = yes
+	map = no
 
 	soundeffect ="event:/SFX/UI/Unit/sfx_ui_unit_reorganization"
 
@@ -111,14 +110,7 @@
 
 
 	start_effect = {
-		hidden_effect = {
-			set_variable = { 
-				name = starting_num_of_ships
-				value = num_of_ships_svalue
-			}
-			set_variable = is_navy_fishing			
-		}
-
+		custom_tooltip = fishing_explain_modifier_tooltip
 		if = {
 			limit = {
 				unit_location = {
@@ -128,73 +120,41 @@
 				}
 			}
 
-			show_as_tooltip = { 
-				add_unit_modifier = {
-					name = naval_action
-					duration = -1
-				}
-
-				unit_owner = {
-					while = {
-						count = num_of_ships_svalue
-						add_country_modifier = {
-							name = go_fish
-							duration = -1
-							mode = add
-						}
-					}
-				}
-
-				unit_location = {
-					every_neighbor_province = {
-						limit = {
-							fishing_province_trigger = yes
-						}
-						custom = fishing_explain_modifier_tooltip
-						add_province_modifier = {
-							name = getting_fished
-							duration = -1
-						}
-					}
-				}
-			}
-
 			hidden_effect = {
-				add_unit_modifier = {
-					name = naval_action
-					duration = -1
-				}
+				set_variable = is_navy_fishing			
+			}
 
-				unit_owner = {
-					while = {
-						count = num_of_ships_svalue
-						add_country_modifier = {
-							name = go_fish
-							duration = -1
-							mode = add
-						}
-					}
-				}
+			navy_action_effect = yes
 
-				unit_location = {
-					ordered_neighbor_province = {
-						limit = {
-							fishing_province_trigger = yes
-							NOT = {	has_province_modifier = getting_fished }
-						}
-						order_by = total_population
-						max = 1
-
-						add_province_modifier = {
-							name = getting_fished
-							duration = -1
-						}
+			unit_owner = {
+				while = {
+					count = root.num_of_ships_svalue
+					add_country_modifier = {
+						name = go_fish
+						duration = -1
+						mode = add
 					}
 				}
 			}
-		}
-		else = {
-			custom_tooltip = explain_fishing_tooltip
+
+			unit_location = {
+				ordered_neighbor_province = {
+					limit = {
+						fishing_province_trigger = yes
+						NOT = {	has_province_modifier = getting_fished }
+					}
+					order_by = total_population
+					max = 1
+					add_province_modifier = {
+						name = getting_fished
+						duration = -1
+					}
+
+					trigger_event = {
+						id = hmo_unit_abilties.11
+					}
+				}
+			}
 		}
 	}
 
@@ -206,56 +166,12 @@
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
-			navy_drilling = yes
-			navy_slave_raiding = yes
-			navy_supplying = yes
-			navy_assaulting = yes
-			navy_raiding = yes
-			navy_raiding_commerce = yes
-			navy_protecting_commerce = yes
+			in_combat = yes
 		}
 	}
 
 	finish_effect = {
-		remove_variable = is_navy_fishing
-
-		unit_location = {
-			every_neighbor_province = {
-				limit = {
-					has_province_modifier = getting_fished
-				}
-				remove_province_modifier = getting_fished
-			}
-		}
-
-		if = {
-			limit = {
-				unit_owner = {
-					any_navy = {
-						navy_fishing = yes
-					}
-				}
-			}
-
-			while = {
-				count = var:starting_num_of_ships
-				unit_owner = {
-					add_country_modifier = {
-						name = not_go_fish
-						duration = -1
-						mode = add
-					}
-				}
-			}
-		}
-		else = {
-			unit_owner = {
-				remove_country_modifier = go_fish
-				remove_country_modifier = not_go_fish
-			}
-		}
-
-		remove_variable = starting_num_of_ships
+		navy_fishing_finish_effect = yes
 	}
 	
 	ai_will_do = {
