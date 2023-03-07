@@ -39,10 +39,10 @@
 		}
 		trigger_else = {
 			OR = {
-				this.culture.culture_group = culture_group:scythia
-				this.culture.culture_group = culture_group:scythian_east
-				this.culture.culture_group = culture_group:bactrian
-				this.culture.culture_group = culture_group:caucasian
+				culture_group = culture_group:scythia
+				culture_group = culture_group:scythian_east
+				culture_group = culture_group:bactrian
+				culture_group = culture_group:caucasian
 			}
 		}
 	}
