@@ -11,7 +11,7 @@
 			country_culture_group = persia
 		}
 		trigger_else = {
-			OR = {this.culture.country_culture_group = persia}
+			this.culture.country_culture_group = persia
 		}
 	}
 
