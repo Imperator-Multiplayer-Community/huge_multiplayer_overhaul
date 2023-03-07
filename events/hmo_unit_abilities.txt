@@ -59,6 +59,10 @@ hmo_unit_abilties.1 = { # slave raid
 						}
 					}
 
+					trigger_event = {
+						id = hmo_unit_abilties.7
+					}
+
 					owner = {
 						save_temporary_scope_as = target_nation
 					}
