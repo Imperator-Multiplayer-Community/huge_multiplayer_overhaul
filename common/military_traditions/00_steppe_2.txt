@@ -39,6 +39,7 @@
 					is_integrated = yes
 					country_culture_pop_count >= percent_size_culture_group_comparison
 					OR = {
+						this.culture.culture_group = culture_group:scythian_east
 						this.culture.culture_group = culture_group:scythia
 						this.culture.culture_group = culture_group:bactrian
 						this.culture.culture_group = culture_group:caucasian
