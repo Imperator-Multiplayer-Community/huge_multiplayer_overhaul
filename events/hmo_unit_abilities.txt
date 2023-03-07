@@ -112,6 +112,9 @@ hmo_unit_abilties.2 = { # slave raid warning
 	    name = hmo_unit_abilties.2.c
 
 	    trigger = {
+	    	NOT = {
+	    		war_with = scope:slave_raiding_unit.unit_owner
+	    	}
     		opinion = {
     			target = scope:slave_raiding_unit.unit_owner
     			value < -200
@@ -121,7 +124,8 @@ hmo_unit_abilties.2 = { # slave raid warning
 	    root = {
 	    	declare_war_with_wargoal = {
 	    		war_goal = raiding_wargoal
-	    		target = scope:slave_raiding_unit.unit_owner	    	}
+	    		target = scope:slave_raiding_unit.unit_owner	    	
+	    	}
 	    }
 	}
 }
@@ -276,9 +280,12 @@ hmo_unit_abilties.6 = { # raid commerce warning
 	    name = hmo_unit_abilties.6.c
 
 	    trigger = {
+	    	NOT = {
+	    		war_with = scope:raid_commerce_unit.unit_owner
+	    	}
 	    	opinion = {
 	    		target = scope:raid_commerce_unit.unit_owner
-	    		value < -150
+	    		value < -200
 	    	}
 	    }
 
