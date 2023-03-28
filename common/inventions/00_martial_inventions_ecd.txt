@@ -1040,8 +1040,8 @@ military_inventions = {
 	# Level 6
 	siege_speed_inv_1 = { 
 		modifier = { engineer_cohort_maintenance_cost = -0.15
-					 engineer_cohort_defensive = 5
-					 supply_train_defensive = 5
+					 engineer_cohort_defensive = 0.3
+					 supply_train_defensive = 0.3
 					 supply_train_movement_speed = 0.2
 					 army_maintenance_cost = 0.01
 					  }
