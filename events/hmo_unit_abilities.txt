@@ -59,11 +59,15 @@ hmo_unit_abilties.1 = { # slave raid
 						}
 					}
 
+					trigger_event = {
+						id = hmo_unit_abilties.7
+					}
+
 					owner = {
 						save_temporary_scope_as = target_nation
 					}
-					random_list = { # 20 percent chance raided player is notified
-						4 = { }
+					random_list = { # 10 percent chance raided player is notified and slavers are unnoticed
+						9 = { }
 						1 = {
 							scope:target_nation = {
 								trigger_event = {
@@ -108,16 +112,20 @@ hmo_unit_abilties.2 = { # slave raid warning
 	    name = hmo_unit_abilties.2.c
 
 	    trigger = {
+	    	NOT = {
+	    		war_with = scope:slave_raiding_unit.unit_owner
+	    	}
     		opinion = {
     			target = scope:slave_raiding_unit.unit_owner
-    			value < -150
+    			value < -200
 	    	}
 	    }
 
 	    root = {
 	    	declare_war_with_wargoal = {
 	    		war_goal = raiding_wargoal
-	    		target = scope:slave_raiding_unit.unit_owner	    	}
+	    		target = scope:slave_raiding_unit.unit_owner	    	
+	    	}
 	    }
 	}
 }
@@ -195,6 +203,10 @@ hmo_unit_abilties.4 = { # port assault
 					order_by = fort_level
 					max = 1
 					remove_building_level = fortress_building
+
+					trigger_event = {
+						id = hmo_unit_abilties.8
+					}
 				}
 			}
 		}
@@ -229,6 +241,9 @@ hmo_unit_abilties.5 = { # port raid
 						controller = { war_with = scope:naval_raider_unit.unit_owner }
 					}
 					siege = { add_breach = 1 }
+					trigger_event = {
+						id = hmo_unit_abilties.9
+					}
 				}
 			}
 		}
@@ -265,16 +280,19 @@ hmo_unit_abilties.6 = { # raid commerce warning
 	    name = hmo_unit_abilties.6.c
 
 	    trigger = {
+	    	NOT = {
+	    		war_with = scope:raid_commerce_unit.unit_owner
+	    	}
 	    	opinion = {
 	    		target = scope:raid_commerce_unit.unit_owner
-	    		value < -100
+	    		value < -200
 	    	}
 	    }
 
-	    scope:raid_commerce_unit.unit_owner = {
+	    root = {
 	    	declare_war_with_wargoal = {
 	    		war_goal = raiding_wargoal
-	    		target = root
+	    		target = scope:raid_commerce_unit.unit_owner
 	    	}
 	    }
 	}

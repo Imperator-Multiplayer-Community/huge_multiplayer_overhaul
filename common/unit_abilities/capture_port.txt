@@ -5,7 +5,7 @@
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_capture_port"
 
 	navy_only = yes
-
+	map = no
 
 	allow = {
 		is_navy = yes
@@ -149,6 +149,4 @@
 			custom_tooltip = capture_port_explain_effect_tt
 		}
 	}
-	
-	
 }
