@@ -287,7 +287,7 @@
 	### FORTS
 	armenian_path_5 = { ###
 		modifier = { 
-			global_defensive = 0.1
+			global_defensive = 0.05
 			fort_limit = 1
 			garrison_size = 0.15
 			price_found_city_cost_modifier = -0.1

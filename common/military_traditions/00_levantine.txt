@@ -354,7 +354,7 @@
 
 	levantine_egyptian_path_3 = { ###Levantine 5B
 		modifier = { 
-			global_defensive = 0.15
+			global_defensive = 0.075
 			fort_limit = 1
 		}
 		icon = levantine_egyptian_path_3

@@ -391,7 +391,7 @@ requires = { germanic_generic_fort_2 }
 
 germanic_generic_fort_4 = { ###
 modifier = {
-	global_defensive = 0.15
+	global_defensive = 0.075
 	fort_limit = 1
 } 
 icon = celtic_gallic_path_7

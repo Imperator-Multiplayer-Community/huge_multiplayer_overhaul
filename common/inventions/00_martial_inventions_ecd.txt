@@ -744,7 +744,7 @@ military_inventions = {
 
 	global_defensive_inv_1 = {
 		modifier = { 
-			global_defensive = 0.05
+			global_defensive = 0.025
 			price_state_investment_military_cost_modifier = -0.1
 			fort_maintenance_cost = 0.01  }
 		requires = { buy_military_tradition_inv }
@@ -778,7 +778,7 @@ military_inventions = {
 
 	global_defensive_inv_2 = { 
 		modifier = { 
-			global_defensive = 0.1
+			global_defensive = 0.05
 			build_time = -0.05
 			fort_maintenance_cost = 0.01  }
 		requires = { global_defensive_inv_1 }
@@ -795,7 +795,7 @@ military_inventions = {
 	global_defensive_inv_4 = { 
 		requires_or = { global_defensive_inv_1  siege_engineers_inv_1 }
 		modifier = { 
-			global_defensive = 0.1 
+			global_defensive = 0.05 
 			garrison_size = 0.1
 			fort_maintenance_cost = 0.01 
 		}
@@ -833,7 +833,7 @@ military_inventions = {
 
 	global_defensive_inv_3 = { 
 		modifier = { 
-			global_defensive = 0.05
+			global_defensive = 0.025
 			garrison_size = 0.25
 			fort_maintenance_cost = 0.01  }
 		keystone = yes
@@ -917,7 +917,7 @@ military_inventions = {
 	#New HMO invention
 	castella_inv = { 
 		modifier = { 
-			global_defensive = 0.05 
+			global_defensive = 0.025 
 			garrison_size = 0.05
 			garrison_growth = 0.05
 			fort_maintenance_cost = 0.01 
@@ -992,7 +992,7 @@ military_inventions = {
 	global_defensive_inv_5 = { 
 		requires = { siege_speed_inv_4 }
 		modifier = { 
-			global_defensive = 0.2
+			global_defensive = 0.1
 			fortress_ramparts_building_cost = -0.1
 			fort_maintenance_cost = 0.01  
 		}
@@ -1067,7 +1067,7 @@ military_inventions = {
     #Vanilla invention modified for Invictus
     gallic_oppidum_inv = {
     	modifier = { 
-			global_defensive  = 0.1 
+			global_defensive  = 0.05 
     		fort_limit = 1
 			fort_maintenance_cost = 0.075
 		}

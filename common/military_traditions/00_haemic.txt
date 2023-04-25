@@ -413,7 +413,7 @@ thracian_path_9 = { #Forts
 requires = { thracian_path_5 }
 modifier = {
 	fort_limit = 1
-	global_defensive = 0.15
+	global_defensive = 0.075
 	fort_maintenance_cost = 0.01
 }
 icon = celtic_gallic_path_7

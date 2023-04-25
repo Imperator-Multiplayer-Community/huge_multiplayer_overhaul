@@ -286,7 +286,7 @@
 
 	arabian_path_7 = { ###
 		modifier = { 
-			global_defensive = 0.15
+			global_defensive = 0.075
 			fort_limit = 1
 			garrison_size = 0.1
 			hostile_attrition = 1
