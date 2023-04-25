@@ -325,7 +325,7 @@ temple_building = {
 }
 
 population_building = { #Improved granary food capacity
-	local_food_capacity = 225
+	local_food_capacity = 250
 	local_country_civilization_value = 2
 	local_monthly_food_modifier = 0.15 #Was 10
 	
@@ -622,6 +622,7 @@ town_hall_building = { #Want to do something else here Tax Office
 latifundia_building = { #New Slave Estate
 	local_slaves_output = 0.1 #New, to compensate the change from -5 to -4 
 	local_goods_from_slaves = -4 #Was -5
+	local_slaves_happyness = 0.08
 	local_country_civilization_value = 15
 	local_population_capacity_modifier = 0.05
 	local_slaves_desired_pop_ratio = 0.4
@@ -653,6 +654,7 @@ latifundia_building = { #New Slave Estate
 slave_mine_building = { #New Mine, worst place for a slave
 	max_amount = 1
 	local_goods_from_slaves = -6 #Was -5 in vanilla
+	local_slaves_happyness = 0.08
 	local_slaves_desired_pop_ratio = 0.3
 	local_slaves_output = 0.06
 	local_slaves_happyness = -0.05 ###Read dev note above "New Mine..." Shouldn't this be reflected? Slaves should be dying in the mines...
@@ -688,6 +690,7 @@ slave_mine_building = { #New Mine, worst place for a slave
 basic_settlement_infratructure_building = { #Farming Settlements reflecting the free farming population
 	local_monthly_food_modifier = 1.5
 	local_goods_from_slaves = -5 #Restoring it to its vanilla value, -5
+	local_slaves_happyness = 0.08
 	local_country_civilization_value = 10
 	local_food_capacity = 150
 	max_amount = 1
@@ -800,7 +803,7 @@ local_forum_building = { #Provincial Legation as a town
 }
 
 workshop_building = { #Mill as a means of urban concentration of slaves
-	local_slaves_happyness = 0.02
+	local_slaves_happyness = 0.03
 	local_slaves_output = 0.06
 	local_goods_from_slaves = -2
 	local_slaves_desired_pop_ratio = 0.2
