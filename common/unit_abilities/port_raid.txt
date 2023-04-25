@@ -4,7 +4,7 @@
 	toggle = yes
 	soundeffect = "event:/SFX/UI/Unit/sfx_ui_unit_port_raid"
 
-	map = yes
+	map = no
 
 	navy_only = yes
 
@@ -154,18 +154,11 @@
 			has_commander = no
 			strength_percentage < 0.3
 			morale_percentage < 0.3
-			navy_drilling = yes
-			navy_slave_raiding = yes
-			navy_supplying = yes
-			navy_assaulting = yes
-			navy_fishing = yes
-			navy_raiding_commerce = yes
-			navy_protecting_commerce = yes
 		}
 	}
 
 	finish_effect = {
-		remove_variable = is_navy_raiding
+		navy_port_raid_finish_effect = yes
 	}
 
 	idle_entity_state = combat
