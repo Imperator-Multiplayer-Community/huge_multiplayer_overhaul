@@ -179,7 +179,7 @@ idea_grain_admin = {
 		civic_tech >= idea_tier_3
 	}
 	global_monthly_food_modifier = 0.2 #Was 0.15
-	global_food_capacity = 800 #Was 600
+	global_food_capacity = 600 #Was 600
 	group = civic_ideas
 	soundeffect = "event:/SFX/UI/Actions/sfx_ui_action_select_idea_civic"
 }

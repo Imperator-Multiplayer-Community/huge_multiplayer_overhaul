@@ -231,7 +231,7 @@ requires = {}
 
 north_african_army_path_1 = { ###North Aftica 2B
 modifier = { 
-	global_food_capacity = 350
+	global_food_capacity = 175
 	global_commerce_modifier = 0.1
 }
 icon = north_african_army_path_1

@@ -321,7 +321,7 @@ requires = {   }
 bactrian_path_13 = { ###
 modifier = { 
 	fort_limit = 1
-	global_food_capacity = 200
+	global_food_capacity = 125
 	fort_maintenance_cost = 0.01
 }
 on_activate = {

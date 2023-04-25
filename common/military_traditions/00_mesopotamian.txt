@@ -323,7 +323,7 @@ on_activate = {
 	}
 }
 modifier = { 
-	global_food_capacity = 350
+	global_food_capacity = 175
 } 
 icon = mauryan_coastal_path_6
 requires = { }
