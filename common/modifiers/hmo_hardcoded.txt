@@ -114,10 +114,9 @@ total_blockaded = {
 }
 
 war_exhaustion = {
-	global_population_happiness = -0.02
-	ruler_popularity_gain = -0.02
-	monthly_military_experience_modifier = 0.0125
-	character_loyalty = -1
+	global_population_happiness = -0.005
+	ruler_popularity_gain = -0.01
+	monthly_military_experience_modifier = 0.0125 # was 0.025
 }
 
 nation_rank_0 = {
