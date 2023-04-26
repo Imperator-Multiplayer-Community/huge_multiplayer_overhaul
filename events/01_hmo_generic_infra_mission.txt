@@ -1,0 +1,650 @@
+﻿namespace = generic_infra_mission
+#Iron Found
+generic_infra_mission.22 = {
+	type = country_event
+    title = generic_infra_mission.22.t
+    desc = generic_infra_mission.22.desc
+    picture = quarry
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.22.a
+		scope:find_struck_here = {
+			if = {
+				limit = { has_building = basic_settlement_infratructure_building }
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -50 }
+			}
+			set_trade_goods = iron
+		}
+    }
+    option = {
+		name = generic_infra_mission.22.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}
+
+#Gold Found
+generic_infra_mission.23 = {
+	type = country_event
+    title = generic_infra_mission.23.t
+    desc = generic_infra_mission.23.desc
+    picture = war_chest
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.23.a
+		scope:find_struck_here = {
+			if = {
+				limit = { has_building = basic_settlement_infratructure_building }
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -50 }
+			}
+			set_trade_goods = precious_metals
+		}
+    }
+    option = {
+		name = generic_infra_mission.23.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}
+
+#Gems Found
+generic_infra_mission.24 = {
+	type = country_event
+    title = generic_infra_mission.24.t
+    desc = generic_infra_mission.24.desc
+    picture = war_chest
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.24.a
+		scope:find_struck_here = {
+			if = {
+				limit = { has_building = basic_settlement_infratructure_building }
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -100 }
+			}
+			set_trade_goods = gems
+		}
+    }
+    option = {
+		name = generic_infra_mission.24.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}
+
+#Base Metals Found
+generic_infra_mission.25 = {
+	type = country_event
+    title = generic_infra_mission.25.t
+    desc = generic_infra_mission.25.desc
+    picture = quarry
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.25.a
+		scope:find_struck_here = {
+			if = {
+				limit = { has_building = basic_settlement_infratructure_building }
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -25 }
+			}
+			set_trade_goods = base_metals
+		}
+    }
+    option = {
+		name = generic_infra_mission.25.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}
+
+#Minor Deposit
+generic_infra_mission.26 = {
+	type = country_event
+    title = generic_infra_mission.26.t
+    desc = generic_infra_mission.26.desc
+    picture = war_chest
+	goto_location = scope:governorship_capital
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.26.a
+		add_treasury = 300
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+    }
+}
+
+#No Find
+generic_infra_mission.27 = {
+	type = country_event
+    title = generic_infra_mission.27.t
+    desc = generic_infra_mission.27.desc
+    picture = quarry
+	goto_location = scope:governorship_capital
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.27.a
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+    }
+}
+
+#Marble Found
+generic_infra_mission.50 = {
+	type = country_event
+    title = generic_infra_mission.50.t
+    desc = generic_infra_mission.50.desc
+    picture = quarry
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.50.a
+		scope:find_struck_here = {
+			if = {
+				limit = { 
+					has_building = basic_settlement_infratructure_building 
+				}
+				
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -50 }
+			}
+			set_trade_goods = marble
+		}
+    }
+    option = {
+		name = generic_infra_mission.50.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}
+
+#Cinnabar Found
+generic_infra_mission.51 = {
+	type = country_event
+    title = generic_infra_mission.51.t
+    desc = generic_infra_mission.51.desc
+    picture = quarry
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.51.a
+		scope:find_struck_here = {
+			if = {
+				limit = { 
+					has_building = basic_settlement_infratructure_building 
+				}
+				
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -100 }
+			}
+			set_trade_goods = cinnabar
+		}
+    }
+    option = {
+		name = generic_infra_mission.51.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}
+
+#Lapis Found
+generic_infra_mission.52 = {
+	type = country_event
+    title = generic_infra_mission.52.t
+    desc = generic_infra_mission.52.desc
+    picture = quarry
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.52.a
+		scope:find_struck_here = {
+			if = {
+				limit = { 
+					has_building = basic_settlement_infratructure_building 
+				}
+				
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -100 }
+			}
+			set_trade_goods = lapis
+		}
+    }
+    option = {
+		name = generic_infra_mission.52.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}
+
+#Jade Found
+generic_infra_mission.53 = {
+	type = country_event
+    title = generic_infra_mission.53.t
+    desc = generic_infra_mission.53.desc
+    picture = quarry
+	goto_location = scope:find_struck_here
+	
+	left_portrait = current_ruler
+    right_portrait = current_ruler
+	
+	trigger = {
+		exists = scope:mining_province
+		scope:mining_province = {
+			any_state_province = {
+				has_city_status = no
+				OR = {
+					terrain = hills
+					terrain = mountains
+					terrain = desert
+				}
+				NOT = { has_variable = found_something_but_did_not_mine }
+				has_unminable_trade_good_trigger = yes
+			}
+		}
+	}
+	
+	immediate = {
+		scope:mining_province = {
+			random_state_province = {
+				limit = {
+					has_city_status = no
+					OR = {
+						terrain = hills
+						terrain = mountains
+						terrain = desert
+					}
+					NOT = { has_variable = found_something_but_did_not_mine }
+					has_unminable_trade_good_trigger = yes
+				}
+				save_scope_as = find_struck_here
+			}
+		}
+	}
+
+    option = {
+		name = generic_infra_mission.53.a
+		scope:find_struck_here = {
+			if = {
+				limit = { 
+					has_building = basic_settlement_infratructure_building 
+				}
+				
+				remove_building_level = basic_settlement_infratructure_building
+			}
+			else = {
+				ROOT = { add_treasury = -100 }
+			}
+			set_trade_goods = jade
+		}
+    }
+    option = {
+		name = generic_infra_mission.53.b
+		scope:find_struck_here = {
+			set_variable = found_something_but_did_not_mine
+		}
+		custom_tooltip = no_thanks_prospector
+    }
+}

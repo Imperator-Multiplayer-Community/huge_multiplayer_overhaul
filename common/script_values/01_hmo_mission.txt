@@ -1,0 +1,23 @@
+﻿potential_farms_in_province_svalue = {
+	value = 0
+	every_state_province = {
+		limit = { 
+			has_food_trade_good_trigger = yes 
+			has_city_status = no
+		}
+		add = 1
+	}
+}
+
+farms_in_province_svalue = {
+	value = 0
+	every_state_province = {
+		limit = { 
+			OR = {
+				has_building = basic_settlement_infratructure_building 
+				has_building = latifundia_building
+			}
+		}
+		add = 1
+	}
+}

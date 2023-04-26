@@ -1,0 +1,13 @@
+﻿#Generic Food Depot Mission  - Always change food_depot_price_pay as well if this is changed
+food_depot_price = {
+	value = scope:food_province_capital.total_population
+	multiply = 15
+	min = 100
+	max = 300
+}
+
+#Generic Religious Shrines Mission - Always change food_depot_price as well if this is changed
+food_depot_price_pay = {
+	value = food_depot_price
+	multiply = -1
+}

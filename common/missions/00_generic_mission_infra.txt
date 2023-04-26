@@ -685,7 +685,11 @@
 						owner = ROOT
 					}
 					has_city_status = yes
-					num_of_library_building >= 3
+
+					OR = {
+						has_building = temple_building
+						can_pay_price = generic_build_special_building
+					}
 				}
 			}
 		}
@@ -702,10 +706,10 @@
 				limit = { is_ai = yes }
 				add_treasury = -100
 				scope:shrine_territory = {
-					add_building_level = library_building
-					add_building_level = library_building
+					add_building_level = temple_building
 				}
 			}
+			add_building_level = temple_building
 			add_country_modifier = {
 				name = temples_built 
 				duration = 3650
@@ -783,7 +787,7 @@
 								limit = {
 									has_variable = endowments_made
 								}
-								var:endowments_made >= 4
+								var:endowments_made >= 1
 							}
 							trigger_else = {
 								always = no
@@ -936,7 +940,8 @@
 				limit = { is_ai = yes }
 				is_ai = no #AI should always pick first option
 			}
-			treasury >= 800
+			treasury >= 300
+			political_influence >= 25
 			scope:shrine_territory = {
 				controller = ROOT
 				owner = ROOT
@@ -953,7 +958,8 @@
 		on_completion = { #These are guaranteed to exist if you have this task.
 			remove_variable = shrine_mission_ongoing #Must be cleared in both abort and complete!
 			set_variable = shrine_mission_over
-			add_treasury = -800
+			add_treasury = -300
+			add_political_influence = -25
 			custom_tooltip = ceremony_event.tooltip
 			trigger_event = { id = generic_infra_mission.4 }
 			scope:shrine_territory = {
@@ -1197,12 +1203,12 @@
 					}
 					hidden:state = {
 						custom_tooltip = {
-							text = "have_3_trade_goods_tooltip"
+							text = "have_1_trade_goods_tooltip"
 							trigger_if = {
 								limit = {
 									has_variable = trade_routes_added
 								}
-								var:trade_routes_added >= 3
+								var:trade_routes_added >= 1
 							}
 							trigger_else = {
 								always = no
@@ -1277,11 +1283,10 @@
 				scope:governorship_capital = {
 					trigger_if = {
 						limit = { has_variable = capital_fort_needed }
-						fort_level >= 1
+						fort_level >= 2
 					}
 					has_city_status = yes
-					has_building = library_building
-					has_building = commerce_building
+					num_of_commerce_building >= 3
 				}
 			}
 			trigger_else = { #if AI
@@ -1301,7 +1306,11 @@
 			show_as_tooltip = {
 				scope:governorship_capital = { 
 					create_state_pop = freemen
+					create_state_pop = freemen
 					create_state_pop = citizen
+					create_state_pop = citizen
+					create_state_pop = citizen
+
 					add_province_modifier = {
 						name = colonia_underway
 						duration = 365
@@ -1315,7 +1324,8 @@
 				add_treasury = -100
 				scope:governorship_capital = {
 					add_building_level = commerce_building
-					add_building_level = library_building
+					add_building_level = commerce_building
+					add_building_level = commerce_building
 				}
 			}
 		}
@@ -1349,10 +1359,10 @@
 				scope:governorship_capital = {
 					trigger_if = {
 						limit = { has_variable = capital_fort_needed }
-						fort_level >= 1
+						fort_level >= 2
 					}
 					has_city_status = yes
-					num_of_town_hall_building >= 2
+					num_of_military_building >= 3
 				}
 			}
 			trigger_else = {
@@ -1382,8 +1392,9 @@
 				}
 				add_treasury = -150
 				scope:governorship_capital = {
-					add_building_level = town_hall_building
-					add_building_level = town_hall_building
+					add_building_level = military_building
+					add_building_level = military_building
+					add_building_level = military_building
 					add_building_level = fortress_building
 				}
 			}
@@ -1405,6 +1416,12 @@
 				}
 			}
 			scope:governorship_capital = {
+				create_state_pop = freemen
+				create_state_pop = freemen
+				create_state_pop = freemen
+				create_state_pop = slave
+				create_state_pop = slave
+
 				add_province_modifier = {
 					name = governorship_secured
 					duration = 1825
@@ -1455,8 +1472,7 @@
 			trigger_else = {
 				scope:governorship_capital = {
 					has_city_status = yes
-					num_of_military_building >= 1
-					num_of_commerce_building >= 1
+					num_of_forum_building >= 2
 				}
 			}
 		}
@@ -1469,8 +1485,8 @@
 				}
 				add_treasury = -150
 				scope:governorship_capital = {
-					add_building_level = military_building
-					add_building_level = commerce_building
+					add_building_level = forum_building
+					add_building_level = forum_building
 				}
 			}
 			
@@ -1526,8 +1542,7 @@
 			trigger_else = {
 				scope:governorship_capital = {
 					has_city_status = yes
-					num_of_commerce_building >= 1
-					num_of_library_building >= 2
+					num_of_court_building >= 2
 				}
 			}
 		}
@@ -1539,9 +1554,8 @@
 				}
 				add_treasury = -150
 				scope:governorship_capital = {
-					add_building_level = commerce_building
-					add_building_level = commerce_building
-					add_building_level = library_building
+					add_building_level = court_building
+					add_building_level = court_building
 				}
 			}
 			scope:governorship_capital = {
@@ -1597,9 +1611,7 @@
 			} #needs to expire first
 			trigger_else = {
 				scope:governorship_capital = {
-					has_building = aqueduct_building
-					has_building = court_building
-					has_building = population_building
+					num_of_aqueduct_building >= 4
 				}
 			}
 		}
@@ -1613,27 +1625,10 @@
 				scope:governorship_capital = {
 					if = {
 						limit = {
-							NOT = { has_building = aqueduct_building }
-							free_building_slots >= 1
+							NOT = { num_of_aqueduct_building >= 4 }
 						}
 						add_building_level = aqueduct_building
-						owner = { add_treasury = -50 }
-					}
-					if = {
-						limit = {
-							NOT = { has_building = population_building }
-							free_building_slots >= 1
-						}
-						add_building_level = population_building
-						owner = { add_treasury = -50 }
-					}
-					if = {
-						limit = {
-							NOT = { has_building = commerce_building }
-							free_building_slots >= 1
-						}
-						add_building_level = commerce_building
-						owner = { add_treasury = -50 }
+						owner = { add_treasury = -100 }
 					}
 				}
 			}
@@ -1646,6 +1641,8 @@
 			}
 			custom_tooltip = governorship_success_char
 			scope:governorship_capital = {
+				create_state_pop = nobles
+				create_state_pop = nobles
 				create_state_pop = nobles
 			}
 			trigger_event = { id = generic_infra_mission.28 }
@@ -1678,7 +1675,7 @@
 		}
 		allow = {
 			scope:governorship_capital = {
-				fort_level >= 1
+				fort_level >= 2
 			}
 		}
 
@@ -1838,7 +1835,7 @@
 				}
 			}
 			trigger_else = {
-				treasury > 300
+				treasury > 200
 			}
 		}
 		
@@ -1861,7 +1858,7 @@
 		on_completion = {
 			if = {
 				limit = { is_ai = yes }
-				add_treasury = -300
+				add_treasury = -200
 				every_owned_province = {
 					limit = {
 						state = scope:food_province
@@ -2020,7 +2017,7 @@
 			}
 		}
 		allow = {
-			treasury > 800
+			treasury > 50
 			trigger_if = {
 				limit = {
 					heritage = steppe_heritage
@@ -2043,7 +2040,7 @@
 		}
 		
 		on_completion = {
-			add_treasury = -800
+			add_treasury = -50
 			if = {
 				limit = { heritage = steppe_heritage }
 				scope:food_province_capital = {
@@ -2083,7 +2080,7 @@
 				}
 			}
 			trigger_else = {
-				treasury > 300
+				treasury > 200
 			}
 		}
 		
@@ -2106,7 +2103,7 @@
 		on_completion = {
 			if = {
 				limit = { is_ai = yes }
-				add_treasury = -300
+				add_treasury = -200
 				every_owned_province = {
 					limit = {
 						state = scope:mining_province
@@ -2254,11 +2251,15 @@
 		}
 
 		on_completion = {
-			add_treasury = slave_cost_pay_svalue #Payment for the Slaves
+			add_treasury = -50 #Payment for the Slaves
 			scope:mining_province = {
 				every_state_province = {
 					limit = { has_minable_trade_good_trigger = yes }
-					create_3_slaves_effect = yes
+					create_state_pop = slave
+					create_state_pop = slave
+					create_state_pop = slave
+					create_state_pop = slave
+					create_state_pop = slave
 				}
 			}
 		}
