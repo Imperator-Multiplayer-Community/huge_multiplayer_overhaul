@@ -27,7 +27,7 @@ generic_mission_conquer_region = { #Conquer Region
 				exists = region
 				region = {
 					any_region_province = {
-						percent < 0.50
+						percent < 0.75
 						has_owner = yes
 						OR = {
 							owner = ROOT
@@ -55,18 +55,12 @@ generic_mission_conquer_region = { #Conquer Region
 	} 
 	
 	on_potential = {
-		random_owned_province = {
+		if = { # if capital region is not controlled, get a mission to conquer it first
 			limit = {
-				any_neighbor_province = {
-					is_sea = no
-					has_owner = yes
-					NOT = { 
-						owner = root
-					}
-					exists = region
+				capital_scope = {
 					region = {
 						any_region_province = {
-							percent < 0.50
+							percent < 0.90
 							has_owner = yes
 							OR = {
 								owner = ROOT
@@ -74,35 +68,80 @@ generic_mission_conquer_region = { #Conquer Region
 							}
 						}
 					}
-					generic_block_trigger = yes
 				}
-			} 
-			random_neighbor_province = {
-				limit = {
-					is_sea = no
-					has_owner = yes
-					NOT = { 
-						owner = root
-					}
-					exists = region
-					region = {
-						any_region_province = {
-							percent < 0.50
-							has_owner = yes
-							OR = {
-								owner = ROOT
-								owner = { is_subject_of = ROOT }
-							}
+			}
+
+			capital_scope = {
+				random_neighbor_province = {
+					limit = {
+						is_sea = no
+						has_owner = yes
+						NOT = { 
+							owner = root
 						}
+						exists = region
+						region = capital_scope.region
+						generic_block_trigger = yes
 					}
-					generic_block_trigger = yes
+
+					save_scope_as = conquer_region_target
 				}
-				save_scope_as = conquer_region_target
 				region = {
 					save_scope_as = region_target
 				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						is_sea = no
+						has_owner = yes
+						NOT = { 
+							owner = root
+						}
+						exists = region
+						region = {
+							any_region_province = {
+								percent < 0.75
+								has_owner = yes
+								OR = {
+									owner = ROOT
+									owner = { is_subject_of = ROOT }
+								}
+							}
+						}
+						generic_block_trigger = yes
+					}
+				} 
+				random_neighbor_province = {
+					limit = {
+						is_sea = no
+						has_owner = yes
+						NOT = { 
+							owner = root
+						}
+						exists = region
+						region = {
+							any_region_province = {
+								percent < 0.75
+								has_owner = yes
+								OR = {
+									owner = ROOT
+									owner = { is_subject_of = ROOT }
+								}
+							}
+						}
+						generic_block_trigger = yes
+					}
+					save_scope_as = conquer_region_target
+					region = {
+						save_scope_as = region_target
+					}
+				} 
 			} 
-		} 
+		}
+
 		random_list = {
 			1 = {
 				trigger = {
@@ -193,7 +232,7 @@ generic_mission_conquer_region = { #Conquer Region
 							any_neighbor_province = {
 								exists = owner
 								owner = {
-									is_tribal = yes
+									is_ai = no
 								}
 							}
 						}
@@ -217,7 +256,7 @@ generic_mission_conquer_region = { #Conquer Region
 							any_neighbor_province = {
 								exists = owner
 								owner = {
-									is_tribal = yes
+									is_ai = no
 								}
 							}
 						}
@@ -1328,7 +1367,7 @@ generic_mission_conquer_region = { #Conquer Region
 								owner = root
 								exists = state
 								state = {
-									state_level_loyalty >= 90
+									state_level_loyalty >= 60
 								}
 							}
 						}
@@ -1420,7 +1459,7 @@ generic_mission_conquer_region = { #Conquer Region
 								owner = root
 								exists = state
 								state = {
-									state_level_loyalty >= 90
+									state_level_loyalty >= 60
 								}
 							}
 						}
@@ -1967,14 +2006,18 @@ generic_mission_conquer_region = { #Conquer Region
 				text = generic_mission_conquer_region_branch_develop_owned_follow_1_tt
 				scope:development_branch_area = {
 					any_area_province = {
-						count >= 3
+						count >= 1
 						owner = root
 						trigger_if = {
 							limit = {
 								ROOT = { is_ai = no }
 							}
 							has_city_status = yes
-							free_building_slots = 0
+							OR = {
+								num_of_academy_building >= 2
+								num_of_forum_building >= 2
+								num_of_workshop_building >= 2
+							}
 							has_construction = no
 						}
 						trigger_else = {
@@ -2015,7 +2058,7 @@ generic_mission_conquer_region = { #Conquer Region
 						limit = {
 							ROOT = { can_pay_price = price_found_city }
 							any_area_province = {
-								count < 3
+								count < 2
 								owner = root
 								has_city_status = yes
 							}
@@ -2064,12 +2107,15 @@ generic_mission_conquer_region = { #Conquer Region
 				scope:development_branch_area = {
 					any_area_province = {
 						calc_true_if = {
-							amount >= 2
+							amount >= 1
 							is_importing_trade_good = grain
 							is_importing_trade_good = vegetables
 							is_importing_trade_good = salt
 							is_importing_trade_good = fish
 							is_importing_trade_good = cattle
+							is_importing_trade_good = fruits
+							is_importing_trade_good = sugar
+							is_importing_trade_good = dates
 						}
 					}
 				}
@@ -2207,7 +2253,7 @@ generic_mission_conquer_region = { #Conquer Region
 						state = {
 							trade_good_imports = {
 								target = iron
-								value >= 2
+								value >= 1
 							}
 						}
 					}
