@@ -27,7 +27,7 @@ generic_mission_conquer_region = { #Conquer Region
 				exists = region
 				region = {
 					any_region_province = {
-						percent < 0.75
+						percent < 0.50
 						has_owner = yes
 						OR = {
 							owner = ROOT
@@ -66,7 +66,7 @@ generic_mission_conquer_region = { #Conquer Region
 					exists = region
 					region = {
 						any_region_province = {
-							percent < 0.75
+							percent < 0.50
 							has_owner = yes
 							OR = {
 								owner = ROOT
@@ -87,7 +87,7 @@ generic_mission_conquer_region = { #Conquer Region
 					exists = region
 					region = {
 						any_region_province = {
-							percent < 0.75
+							percent < 0.50
 							has_owner = yes
 							OR = {
 								owner = ROOT
