@@ -615,7 +615,7 @@ player_client_state = {
 		monthly_wage_modifier = 0.040
 		build_cost = -0.05
 		max_mercenary_stacks = 2
-		levy_size_multiplier = -0.08 # should result in .09 multiplier, which is a slight increase over normal major power
+		levy_size_multiplier = -0.09 # should result in .07 multiplier, major power is .07
 	}
 	
 	allow = { # dont show this as an option. only through character interactions
