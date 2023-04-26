@@ -25,7 +25,7 @@ hmo_civil_war.1 = {
 					owner = ROOT
 
 					any_state_province = {
-						state_loyalty < 50
+						state_loyalty < 25
 					}
 
 					NOT = {
@@ -38,18 +38,6 @@ hmo_civil_war.1 = {
 			add_state_modifier = {
 				name = civil_war_unrest
 				duration = 720
-			}
-
-			random_state_province = {
-				if = {
-					limit = {
-						owner = ROOT
-						is_state_capital = yes
-					}
-				}
-
-				#for some reason this is province scope
-				add_state_loyalty = -25
 			}
 		}
 	}
