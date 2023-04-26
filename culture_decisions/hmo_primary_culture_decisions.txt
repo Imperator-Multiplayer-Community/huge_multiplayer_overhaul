@@ -30,7 +30,6 @@
 				name = "social_change"
 				duration = 1460
 			}
-			add_stability = -10
 			add_political_influence = -25
 			add_4_free_province_investments = yes #############################################
 			approval_effect = {
@@ -85,7 +84,6 @@
 				name = "expanded_citizenship"
 				duration = -1
 			}
-			add_stability = -10
 			add_political_influence = -25
 			custom_tooltip = non_state_culture_adoption
 			approval_effect = {
@@ -142,7 +140,6 @@
 				name = "social_change"
 				duration = 1460
 			}
-			add_stability = -10
 			add_political_influence = -25
 			add_tyranny = -30 #############################################
 			trigger_event = {
@@ -176,7 +173,6 @@
 				name = "social_change"
 				duration = 1460
 			}
-			add_stability = -10
 			add_political_influence = -25
 			capital_scope = {
 				create_state_pop = nobles
