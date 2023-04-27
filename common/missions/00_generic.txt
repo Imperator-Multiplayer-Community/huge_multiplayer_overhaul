@@ -55,7 +55,7 @@ generic_mission_conquer_region = { #Conquer Region
 	} 
 	
 	on_potential = {
-		if = { # if capital region is not controlled, get a mission to conquer it first
+		if = { # if capital area is not controlled, get a mission to conquer it first
 			limit = {
 				capital_scope = {
 					region = {
@@ -72,21 +72,21 @@ generic_mission_conquer_region = { #Conquer Region
 			}
 
 			capital_scope = {
-				random_neighbor_province = {
-					limit = {
-						is_sea = no
-						has_owner = yes
-						NOT = { 
-							owner = root
-						}
-						exists = region
-						region = capital_scope.region
-						generic_block_trigger = yes
-					}
-
-					save_scope_as = conquer_region_target
-				}
 				region = {
+					ordered_region_province = {
+						limit = {
+							is_sea = no
+							has_owner = yes
+							NOT = { 
+								owner = root
+								owner = { is_subject_of = ROOT }
+							}
+							exists = region
+						}
+						order_by = total_population
+	
+						save_scope_as = conquer_region_target
+					}
 					save_scope_as = region_target
 				}
 			}
@@ -225,7 +225,7 @@ generic_mission_conquer_region = { #Conquer Region
 					}
 					any_country_state = {
 						any_state_province = {
-							count >= 3
+							count >= 1
 							exists = this
 						}
 						any_state_province = {
@@ -249,7 +249,7 @@ generic_mission_conquer_region = { #Conquer Region
 				random_country_state = {
 					limit = {
 						any_state_province = {
-							count >= 3
+							count >= 1
 							exists = this
 						}
 						any_state_province = {
@@ -361,7 +361,7 @@ generic_mission_conquer_region = { #Conquer Region
 								owner = root
 							}
 							any_area_province = {
-								count < 3
+								count < 1
 								has_city_status = yes
 							}
 						}
@@ -374,7 +374,7 @@ generic_mission_conquer_region = { #Conquer Region
 								owner = root
 							}
 							any_area_province = {
-								count < 3
+								count < 1
 								has_city_status = yes
 							}
 						}
@@ -1913,7 +1913,7 @@ generic_mission_conquer_region = { #Conquer Region
 				text = generic_mission_conquer_region_branch_develop_owned_tt
 				scope:development_branch_area = {
 					any_area_province = {
-						count >= 3
+						count >= 1
 						owner = root 
 						trigger_if = {
 							limit = {
@@ -1978,7 +1978,7 @@ generic_mission_conquer_region = { #Conquer Region
 							has_city_status = no
 							area = {
 								any_area_province = {
-									count < 3
+									count < 1
 									has_city_status = yes
 								}
 							}
@@ -2049,7 +2049,7 @@ generic_mission_conquer_region = { #Conquer Region
 							can_pay_price = price_found_city
 						}
 						any_area_province = {
-							count < 3
+							count < 1
 							owner = root
 							has_city_status = yes
 						}
@@ -2192,8 +2192,8 @@ generic_mission_conquer_region = { #Conquer Region
 					text = generic_mission_conquer_region_branch_defend_area_tt
 					scope:defend_target = {
 						any_state_province = {
-							count >= 3
-							fort_level >= 1 
+							count >= 1
+							fort_level >= 2 
 						}
 					}
 				}
@@ -2299,7 +2299,7 @@ generic_mission_conquer_region = { #Conquer Region
 		}
 	
 		on_completion = {
-			add_aggressive_expansion = -2.5
+			add_aggressive_expansion = -5
 		} 
 	}
 	
