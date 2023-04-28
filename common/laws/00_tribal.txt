@@ -334,6 +334,13 @@ tribal_super_decentralized_military_laws = {
 		on_enact = {
 			custom_tooltip = legions_in_any_region
 			set_legion_recruitment = enabled
+			if = {
+				limit = {
+					has_law = super_centralized_military_law_two
+				}
+				
+				change_law = super_centralized_military_law_one
+			}
 		}
 	}
 }
@@ -352,6 +359,9 @@ tribal_super_centralized_military_laws = {
 	super_centralized_military_law_two = {
 		allow = {
 			centralization >= 90
+			NOT = {
+				has_law = super_decentralized_military_law_two
+			}
 		}
 
 		modifier = {
