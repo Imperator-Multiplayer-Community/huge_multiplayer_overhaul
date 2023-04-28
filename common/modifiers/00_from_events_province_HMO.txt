@@ -4,7 +4,8 @@
 
 
 stormy_seas = {
-	attrition = 30
+	movement_cost = 6
+	attrition = 0.5
 	max_attrition = 5
 }
 
@@ -13,12 +14,14 @@ ravaged_by_storms = {
 }
 
 snow_storm = {
-	attrition = 30
+	movement_cost = 6
+	attrition = 0.5
 	max_attrition = 5
 }
 
 desert_storm = {
-	attrition = 30
+	movement_cost = 6
+	attrition = 0.5
 	max_attrition = 5
 }
 
