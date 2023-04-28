@@ -77,6 +77,33 @@ manpower = {
 	garrison_growth = 0.01	# was 0.01
 }
 
+is_capital_city = {
+	supply_limit_modifier = 0.1
+	local_monthly_civilization = 0.02
+	local_output_modifier = 0.05
+	local_nobles_desired_pop_ratio = 0.1
+	local_citizen_desired_pop_ratio = 0.04
+	local_freemen_desired_pop_ratio = 0.04
+	local_nobles_happyness = happiness_large_svalue
+	local_citizen_happyness = happiness_large_svalue
+	local_population_capacity = 10
+	local_building_slot = 1
+	local_pop_promotion_speed_modifier = 0.25
+	local_migration_attraction = 2
+	local_pop_conversion_speed_modifier = 0.20
+	local_pop_assimilation_speed_modifier = 0.20
+	local_monthly_food = 1.5
+	local_defensive = 0.1
+}
+
+is_state_capital = {
+	local_population_capacity = 6
+	local_pop_promotion_speed_modifier = 0.1
+	local_migration_attraction = 1
+	local_monthly_food = 1
+	local_defensive = 0.05
+}
+
 
 ##########################################################################
 # Unit Static Modifiers
@@ -236,7 +263,7 @@ is_tribe = {
 	price_revoke_city_status_cost_modifier = -0.2
     price_revoke_metropolis_status_cost_modifier = -0.2
 	monthly_military_experience = 0.2
-	global_defensive = -0.25
+	global_defensive = -0.125
 	experience_decay = -0.02 # this will get removed by tribal legion laws once enacted, so makes tribal levies better until they get legions
 	global_nobles_city_desired_pop_ratio = 0.05 # slight increase
 	global_freemen_city_desired_pop_ratio = -0.35 # replace freemen with tribesmen in city. Allows 1% of freemen to let POPs promote to freemen and then to citizen or nobles
