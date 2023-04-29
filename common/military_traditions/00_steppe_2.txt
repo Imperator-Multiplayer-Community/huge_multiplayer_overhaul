@@ -52,8 +52,16 @@
 # Normal Units
 
     bactrian_path_3 = { ###
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = { 
-			light_infantry_offensive = 0.05
+			light_infantry_offensive = 0.1
             light_infantry_plains_combat_bonus = 0.1
 			light_infantry_desert_combat_bonus = 0.1
             army_maintenance_cost = 0.01
@@ -64,7 +72,7 @@
 
     bactrian_path_9 = { ###
 		modifier = { 
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			light_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -74,8 +82,16 @@
 	}
 
     scythian_path_8 = { ###
+		allow = {
+            NOT = {
+                has_variable = light_cavalry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_cavalry_super_unit
+        }
 		modifier = { 
-			light_cavalry_discipline = 0.05
+			light_cavalry_discipline = 0.1
 			light_cavalry_plains_combat_bonus = 0.1
 			light_cavalry_desert_combat_bonus = 0.1
             army_maintenance_cost = 0.01
@@ -103,7 +119,7 @@
 			}	
 		}
 		modifier = { 
-			light_cavalry_morale = 0.05
+			light_cavalry_morale = 0.1
 			light_cavalry_hills_combat_bonus = 0.1
 			light_cavalry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -117,11 +133,11 @@
     bactrian_path_1 = { ###     
 		allow = {
             NOT = {
-                has_variable = horse_archer_super_unit
+                has_variable = horse_archers_super_unit
             }
         }
         on_activate = {
-            set_variable = horse_archer_super_unit
+            set_variable = horse_archers_super_unit
         }
         modifier = { 
 			horse_archers_morale = 0.1

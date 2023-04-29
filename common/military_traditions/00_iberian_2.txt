@@ -36,11 +36,17 @@
 		}	
 	}
 
-	# Normal Units LI HI Terrain Hills Forest Plains
-
 	celt_iberian_path_b_1 = { ###Celt-Iberian 2A Barritus
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }			
 		modifier = {
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
@@ -50,7 +56,7 @@
 	
 	iberian_central_path_2A = { ###Iberian 2BA Light Armour
 		modifier = { 
-			light_infantry_offensive = 0.05
+			light_infantry_offensive = 0.1
 			light_infantry_forest_combat_bonus = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -60,8 +66,16 @@
 	}
 
 	iberian_left_path_1 = { ###Iberian 1A Phalaricae
+		allow = {
+            NOT = {
+                has_variable = heavy_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = heavy_infantry_super_unit
+        }			
 		modifier = { 
-			heavy_infantry_offensive = 0.05
+			heavy_infantry_offensive = 0.1
 			heavy_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
@@ -71,7 +85,7 @@
 
 	iberian_right_path_1 = { ###Iberian 1C Machaera Hispaniensis
 		modifier = { 
-			heavy_infantry_morale = 0.05
+			heavy_infantry_morale = 0.1
 			heavy_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}

@@ -28,11 +28,19 @@
 		}
 	}
 
-	# Normal Units
+	# Light Infantry
 
 	aryan_plains_path_2 = { ###
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = { 
-			light_infantry_defensive = 0.05
+			light_infantry_defensive = 0.1
 			light_infantry_desert_combat_bonus = 0.1
 			light_infantry_marsh_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -43,7 +51,7 @@
 
 	aryan_plains_path_8 = { ###
 		modifier = { 
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -54,8 +62,16 @@
 	}
 
 	aryan_plains_path_3 = { ###
+		allow = {
+            NOT = {
+                has_variable = archers_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = archers_super_unit
+        }
 		modifier = { 
-			archers_offensive = 0.05
+			archers_offensive = 0.1
 			archers_desert_combat_bonus = 0.1
 			archers_marsh_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -66,7 +82,7 @@
 
 	aryan_river_path_2 = { ###
 		modifier = { 
-			archers_morale = 0.05
+			archers_morale = 0.1
 			archers_plains_combat_bonus = 0.1
 			archers_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01

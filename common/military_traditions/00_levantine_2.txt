@@ -53,8 +53,16 @@
 	}
 	
 	levantine_arabian_path_4 = { ###Levantine 2A
+		allow = {
+            NOT = {
+                has_variable = camel_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = camel_super_unit
+        }
 		modifier = { 
-			camels_defensive = 0.05
+			camels_defensive = 0.1
 			camels_desert_combat_bonus = 0.10
 			camels_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -65,7 +73,7 @@
 
 	levantine_philosophy_start_bonus = { ###
 		modifier = { 
-			camels_defensive = 0.05
+			camels_defensive = 0.1
 			camels_oasis_combat_bonus = 0.10
 			camels_desert_hills_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -111,6 +119,14 @@
 	}
 	
 	levantine_egyptian_path_1 = { ###Levantine 2BA
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = {
 			light_infantry_offensive = 0.05
 			light_infantry_desert_combat_bonus = 0.1

@@ -26,11 +26,17 @@
 		}
 	}
 
-	# Normal Units
-
 	greek_seleucid_path_1 = {
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = {
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -41,7 +47,7 @@
 
 	greek_antigonid_path_end_bonus = {
 		modifier = { 
-			light_infantry_offensive = 0.05
+			light_infantry_offensive = 0.1
 			light_infantry_farmland_combat_bonus = 0.1
 			light_infantry_mountain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -51,8 +57,16 @@
 	}
 
 	greek_seleucid_path_5 = {
+		allow = {
+            NOT = {
+                has_variable = light_cavalry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_cavalry_super_unit
+        }	
 		modifier = { 
-			light_cavalry_offensive = 0.05
+			light_cavalry_offensive = 0.1
 			light_cavalry_hills_combat_bonus = 0.1
 			light_cavalry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -63,7 +77,7 @@
 
 	greek_antigonid_path_3 = {
 		modifier = {
-			light_cavalry_morale = 0.05
+			light_cavalry_morale = 0.1
 			light_cavalry_farmland_combat_bonus = 0.1
 			light_cavalry_mountain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
