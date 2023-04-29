@@ -102,6 +102,7 @@
         on_activate = {
             set_variable = warelephant_super_unit
         }
+		enable_tactic = padma_vyuha
 		modifier = { 
 			warelephant_cost = -0.15
 			warelephant_jungle_combat_bonus = 0.1

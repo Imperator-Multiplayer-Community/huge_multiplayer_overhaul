@@ -104,6 +104,7 @@
         on_activate = {
             set_variable = warelephant_super_unit
         }
+		enable_tactic = greek_phalanx
 		modifier = { 
 			warelephant_cost = -0.15
             warelephant_morale = 0.1

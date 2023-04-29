@@ -87,7 +87,8 @@
         on_activate = {
             set_variable = heavy_infantry_super_unit
         }
-        modifier = { 
+        enable_ability = greek_phalanx
+		modifier = { 
 			heavy_infantry_defensive = 0.05
             heavy_infantry_movement_speed = 0.1
             heavy_infantry_desert_combat_bonus = 0.1

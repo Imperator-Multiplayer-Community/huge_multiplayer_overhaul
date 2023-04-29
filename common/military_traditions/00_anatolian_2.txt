@@ -158,6 +158,7 @@
 	}
     ### LIGHT CAVALRY
     armenian_path_1 = { ###
+		enable_tactic = hit_and_run_tactics
 		modifier = { 
 			light_cavalry_defensive = 0.05
 			army_maintenance_cost = 0.01

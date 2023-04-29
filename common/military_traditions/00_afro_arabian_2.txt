@@ -216,6 +216,7 @@
         on_activate = {
             set_variable = camel_super_unit
         }
+		enable_tactic = cavalry_skirmish
         modifier = { 
 			camels_defensive = 0.10
 			army_maintenance_cost = 0.01
