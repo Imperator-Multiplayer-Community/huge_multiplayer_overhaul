@@ -686,10 +686,14 @@
 					}
 					has_city_status = yes
 
-					OR = {
+					
+				}
+				
+				OR = {
+					scope:shrine_territory = {
 						has_building = temple_building
-						can_pay_price = generic_build_special_building
 					}
+					can_pay_price = generic_build_special_building
 				}
 			}
 		}
@@ -706,10 +710,31 @@
 				limit = { is_ai = yes }
 				add_treasury = -100
 				scope:shrine_territory = {
+					if = {
+						limit = {
+							num_of_temple_building = 0
+							free_building_slots >= 1
+						}
+					}
+
 					add_building_level = temple_building
 				}
+			} 
+			else = {
+				scope:shrine_territory = {
+					if = {
+						limit = {
+							num_of_temple_building = 0
+						}
+
+						add_building_level = temple_building
+						owner = {
+							pay_price = generic_build_special_building
+						}
+					}
+				}
 			}
-			add_building_level = temple_building
+
 			add_country_modifier = {
 				name = temples_built 
 				duration = 3650
@@ -725,7 +750,7 @@
 			exists = scope:shrine_province
 		}
 		allow = {
-			treasury >= shrine_cost_afford_svalue 
+			treasury >= shrine_cost_afford_svalue_hmo 
 			
 			trigger_if = {
 				limit = { scope:shrine_territory = { NOT = { owner = ROOT } } }
@@ -747,7 +772,7 @@
 		duration = 365
 		
 		on_start = {
-			add_treasury = shrine_cost_svalue
+			add_treasury = shrine_cost_svalue_hmo
 			trigger_event = { id = generic_infra_mission.5 }
 			show_as_tooltip = {
 				scope:shrine_territory = {
@@ -1238,9 +1263,11 @@
 					pay_price = generic_build_special_building
 				}
 
-				add_building_level = academy_building
-				add_building_level = academy_building
-				add_building_level = academy_building	
+				scope:governorship_capital = {
+					add_building_level = academy_building
+					add_building_level = academy_building
+					add_building_level = academy_building	
+				}
 			}
 			if = {
 				limit = { has_variable = capital_trade_mission_ongoing }
@@ -1432,8 +1459,8 @@
 				create_state_pop = freemen
 				create_state_pop = freemen
 				create_state_pop = freemen
-				create_state_pop = slave
-				create_state_pop = slave
+				create_state_pop = slaves
+				create_state_pop = slaves
 
 				add_province_modifier = {
 					name = governorship_secured
@@ -1926,7 +1953,7 @@
 			exists = scope:food_province_capital
 		}
 		allow = {
-			treasury >= food_depot_price_hmo
+			treasury >= food_depot_price_svalue_hmo
 			trigger_if = {
 				limit = { is_ai = no }
 				scope:food_province_capital = {
@@ -1940,7 +1967,7 @@
 		
 		on_completion = {
 			set_variable = food_done
-			add_treasury = food_depot_price_pay_hmo
+			add_treasury = food_depot_price_pay_svalue_hmo
 			scope:food_province_capital = {
 				add_province_modifier = {
 					name = "food_depot"
@@ -2182,7 +2209,7 @@
 		allow = {
 			trigger_if = {
 				limit = { is_ai = no }
-				can_pay_price = slave_cost_svalue_hmo
+				treasury >= slave_cost_svalue_hmo
 				scope:mining_capital = {
 					OR = {
 						custom_tooltip = {
@@ -2270,16 +2297,15 @@
 		}
 
 		on_completion = {
-			pay_price = slave_cost_pay_svalue_hmo
+			add_treasury = slave_cost_pay_svalue_hmo
 
 			scope:mining_province = {
 				every_state_province = {
 					limit = { has_minable_trade_good_trigger = yes }
 
-					while = {
-						count = 3
-						create_state_pop = slaves
-					}
+					create_state_pop = slaves
+					create_state_pop = slaves
+					create_state_pop = slaves
 				}
 			}
 		}
@@ -2480,15 +2506,17 @@
 				limit = { is_ai = yes }
 				add_treasury = -100
 
-				ordered_state_province = {
-					limit = {
-						is_port = yes
-						num_of_port_building >= 3
-					}
-					order_by = total_population
+				scope:port_province = {
+					ordered_state_province = {
+						limit = {
+							is_port = yes
+							num_of_port_building >= 3
+						}
+						order_by = total_population
 
-					add_building_level = port_building
-					add_building_level = port_building
+						add_building_level = port_building
+						add_building_level = port_building
+					}
 				}
 			}
 			scope:port_province = {
@@ -2518,13 +2546,13 @@
 							any_state_province = {
 								OR = {
 									trade_goods = wood
-									trade_goods = ceder
+									trade_goods = cedar
 								}
 							}
 						}
 						OR = {
 							is_importing_trade_good = wood
-							is_importing_trade_good = ceder
+							is_importing_trade_good = cedar
 						}
 					}
 				}
@@ -2689,9 +2717,13 @@
 			scope:urbanize_area_city = { has_city_status = yes }
 			trigger_if = {
 				limit = { is_ai = no }
-				scope:urbanize_area_city = {
-					num_of_theathre_building >= 1
+				OR = {
+					can_pay_price = generic_build_special_building
+					scope:urbanize_area_city = {
+						num_of_theathre_building >= 1
+					}
 				}
+				
 			}
 			trigger_else = { treasury >= 100 }
 		}
@@ -2710,13 +2742,28 @@
 				scope:urbanize_area_city = {
 					while = {
 						limit = {
-							num_of_commerce_building < 2
+							num_of_theathre_building = 0
 							free_building_slots >= 1
 						}
-						add_building_level = commerce_building
+						add_building_level = theathre_building
+					}
+				}
+			} 
+			else = {
+				scope:urbanize_area_city = {
+					if = {
+						limit = {
+							num_of_theathre_building = 0
+						}
+
+						add_building_level = theathre_building
+						owner = {
+							pay_price = generic_build_special_building
+						}
 					}
 				}
 			}
+
 			scope:urbanize_area_city = {
 				add_province_modifier = {
 					name = "cultural_assimilation_trend"

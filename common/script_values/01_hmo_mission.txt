@@ -21,3 +21,52 @@ farms_in_province_svalue = {
 		add = 1
 	}
 }
+
+#Generic Food Depot Mission  - Always change food_depot_price_pay as well if this is changed
+food_depot_price_svalue_hmo = {
+	value = scope:food_province_capital.total_population
+	multiply = 10
+	min = 100
+	max = 300
+}
+
+#Generic Religious Shrines Mission - Always change food_depot_price as well if this is changed
+food_depot_price_pay_svalue_hmo = {
+	value = food_depot_price_svalue_hmo
+	multiply = -1
+}
+
+slave_cost_svalue_hmo = {
+	value = 0
+	scope:mining_province = {
+		every_state_province = {
+			limit = {
+				has_city_status = no
+				has_minable_trade_good_trigger = yes
+			}
+			
+			add = 30
+		}
+	}
+	min = 100
+	max = 300
+}
+
+slave_cost_pay_svalue_hmo = {
+	value = slave_cost_svalue_hmo
+	multiply = -1
+}
+
+#Generic Religious Shrines Mission  - Always change shrine_cost_svalue as well if this is changed
+shrine_cost_afford_svalue_hmo = {
+	value = scope:shrine_territory.total_population
+	multiply = 20
+	min = 150
+	max = 300
+}
+
+#Generic Religious Shrines Mission - Always change shrine_cost_afford_svalue as well if this is changed
+shrine_cost_svalue_hmo = {
+	value = shrine_cost_afford_svalue_hmo
+	multiply = -1
+}
