@@ -210,10 +210,9 @@
                 has_variable = heavy_infantry_super_unit
             }
         }
-        on_activate = {
-            set_variable = heavy_infantry_super_unit
-        }
+
 		on_activate = {
+            set_variable = heavy_infantry_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {

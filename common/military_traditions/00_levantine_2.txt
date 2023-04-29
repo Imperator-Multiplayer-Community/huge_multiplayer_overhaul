@@ -124,9 +124,6 @@
                 has_variable = light_infantry_super_unit
             }
         }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }	
 		modifier = {
 			light_infantry_offensive = 0.05
 			light_infantry_desert_combat_bonus = 0.1
@@ -136,6 +133,8 @@
 		icon = levantine_egyptian_path_1
 		requires = {}
 		on_activate = {
+            set_variable = light_infantry_super_unit
+		
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
