@@ -38,11 +38,19 @@
 		}
 	}
 
-# Normal Units
+# Light Infantry
 
 	germanic_sea_path_5 = { ###
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = {
-			light_infantry_offensive = 0.05
+			light_infantry_offensive = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		} 
@@ -52,7 +60,7 @@
 
 	germanic_sea_6 = { ###
 		modifier = {
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
 			light_infantry_forest_combat_bonus = 0.1
 			light_infantry_marsh_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -62,9 +70,17 @@
 	}
 
 	germanic_sea_path_14 = { ###
+		allow = {
+            NOT = {
+                has_variable = archers_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = archers_super_unit
+        }
 		modifier = {
-			archers_defensive = 0.05
-			archers_plains_combat_bonus = 0.10
+			archers_defensive = 0.1
+			archers_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		} 
 		icon = celtic_gallic_path_5
@@ -73,8 +89,8 @@
 
 	germanic_path_1 = { ###
 		modifier = { 
-			archers_morale = 0.05
-			archers_forest_combat_bonus = 0.1
+			archers_morale = 0.1
+			archers_plains_combat_bonus = 0.10
 			archers_marsh_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		} 

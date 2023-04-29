@@ -47,11 +47,17 @@
 		}
 	}
 
-# Normal units
-
     north_african_latin_enable = { ###North Aftica 2A
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = {
-			light_infantry_defensive = 0.05
+			light_infantry_defensive = 0.1
             light_infantry_desert_combat_bonus = 0.1
             light_infantry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -62,7 +68,7 @@
 
     north_african_tribal_path_2 = { ###North Aftica 1C
 		modifier = {
-			light_infantry_discipline = 0.05
+			light_infantry_discipline = 0.1
 			light_infantry_hills_combat_bonus = 0.1
             light_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -72,8 +78,16 @@
 	}
 
     north_african_tribal_path_7 = { ###North Aftica 2CA
+		allow = {
+            NOT = {
+                has_variable = light_cavalry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_cavalry_super_unit
+        }
 		modifier = { 
-			light_cavalry_discipline = 0.05
+			light_cavalry_discipline = 0.1
             light_cavalry_desert_combat_bonus = 0.1
             light_cavalry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -84,7 +98,7 @@
 
     north_african_army_path_6 = { ###North Aftica 2CB
 		modifier = { 
-			light_cavalry_offensive = 0.05
+			light_cavalry_offensive = 0.1
             light_cavalry_hills_combat_bonus = 0.1
             light_cavalry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -104,6 +118,7 @@
         on_activate = {
             set_variable = warelephant_super_unit
         }
+		enable_tactic = greek_phalanx
 		modifier = { 
 			warelephant_cost = -0.15
             warelephant_morale = 0.1

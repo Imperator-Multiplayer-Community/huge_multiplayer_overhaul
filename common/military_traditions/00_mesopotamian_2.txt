@@ -28,11 +28,17 @@
 		}
 	}
 
-# Normal units   
-
     assyrian_path_1 = { ###
+		allow = {
+            NOT = {
+                has_variable = archers_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = archers_super_unit
+        }
 		modifier = { 
-			archers_defensive = 0.05
+			archers_defensive = 0.1
             archers_plains_combat_bonus = 0.10 
             archers_hills_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -43,7 +49,7 @@
 
     assyrian_path_2 = { ###
 		modifier = {
-			archers_morale = 0.05
+			archers_morale = 0.1
             archers_desert_combat_bonus = 0.10
             archers_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -53,8 +59,16 @@
 	}
 
     assyrian_path_8 = { ###
+		allow = {
+            NOT = {
+                has_variable = light_cavalry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_cavalry_super_unit
+        }	
 		modifier = { 
-			light_cavalry_offensive = 0.05
+			light_cavalry_offensive = 0.1
 			light_cavalry_desert_combat_bonus = 0.10
             light_cavalry_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -66,7 +80,7 @@
     assyrian_path_11 = { ###
 		enable_tactic = cavalry_skirmish
 		modifier = { 
-			light_cavalry_morale = 0.05
+			light_cavalry_morale = 0.1
 			light_cavalry_plains_combat_bonus = 0.10
             light_cavalry_hills_combat_bonus = 0.10
 			army_maintenance_cost = 0.01

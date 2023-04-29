@@ -28,11 +28,18 @@
 		}
 	}
 
-	# Normal Units
 
 	andhra_path_2 = { ###
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = { 
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
 			light_infantry_jungle_combat_bonus = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -43,7 +50,7 @@
 
 	andhra_path_4 = { ###
 		modifier = { 
-			light_infantry_offensive = 0.05
+			light_infantry_offensive = 0.1
 			light_infantry_farmland_combat_bonus = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -53,6 +60,14 @@
 	}
 
 	andhra_path_5 = { ###
+		allow = {
+            NOT = {
+                has_variable = archers_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = archers_super_unit
+        }
 		modifier = { 
 			archers_offensive = 0.1
 			archers_jungle_combat_bonus = 0.1
@@ -65,7 +80,7 @@
 
 	andhra_path_8 = { ###
 		modifier = { 
-			archers_morale = 0.05
+			archers_morale = 0.1
 			archers_farmland_combat_bonus = 0.1
 			archers_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -102,6 +117,7 @@
         on_activate = {
             set_variable = warelephant_super_unit
         }
+		enable_tactic = padma_vyuha
 		modifier = { 
 			warelephant_cost = -0.15
 			warelephant_jungle_combat_bonus = 0.1
