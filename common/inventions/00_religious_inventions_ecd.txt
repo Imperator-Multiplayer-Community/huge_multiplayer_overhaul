@@ -125,7 +125,7 @@ religious_1 = {
 		modifier = { 
 			global_population_growth = 0.03
 			global_monthly_food_modifier = 0.03
-			global_food_capacity = 300
+			global_food_capacity = 175
 		}
 		requires = { technology_cost_inv_1 }
 	} 	
@@ -1201,7 +1201,7 @@ religious_1 = {
 
 	global_population_growth_inv_5 = {
 		modifier = { global_monthly_food_modifier = 0.15
-					 global_food_capacity = 250
+					 global_food_capacity = 125
 					 supply_train_movement_speed = 0.15 }
 		requires = { religious_tech_investment_inv_2 }
 	} 	

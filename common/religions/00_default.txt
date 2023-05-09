@@ -127,6 +127,7 @@ germanic_religion = { # Tuistic
 	modifier = { 
 		start_migration_cost_modifier = -0.15 
 		raid_cost_modifier = -0.15
+		global_food_capacity = 125
 		global_commerce_modifier = -0.025
 	}
 	religion_category = pantheon

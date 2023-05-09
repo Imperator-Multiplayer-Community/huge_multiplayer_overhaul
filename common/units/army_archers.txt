@@ -11,7 +11,7 @@
 	light_infantry = 1.25
 	heavy_infantry = 1.15
 	heavy_cavalry = 1.05
-	warelephant = 1.05
+	warelephant = 1.15
 	horse_archers = 1.25
 	archers = 1.0
 	camels = 1.1
@@ -27,7 +27,7 @@
 	attrition_loss = 0.05
 	ai_max_percentage = 15
 	build_cost = {
-		gold = 11
+		gold = 13.2
 		manpower = 1
 	}
 	food_consumption = 0.1

@@ -402,7 +402,7 @@
 			add_1_free_province_investments = yes
 		}
 		modifier = { 
-			global_defensive = 0.1
+			global_defensive = 0.05
 			fort_limit = 1
 			fort_maintenance_cost = -0.1
 			siege_ability = 0.1

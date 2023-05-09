@@ -1288,7 +1288,7 @@ civic_2 = {
     # Level 4
     civic_tech_investment_inv_1 = { 
         modifier = { price_state_investment_civic_cost_modifier = -0.1
-        			 global_defensive = 0.05
+        			 global_defensive = 0.025
         			 build_time = -0.075
         			  }
         on_activate = {

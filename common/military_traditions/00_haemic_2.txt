@@ -44,11 +44,17 @@
 		}
 	}
 
-	# Normal Units LI and HI terrain Hills Forest Farmland Plains
-
 	thracian_path_1 = { #Falx and sica
+		allow = {
+            NOT = {
+                has_variable = heavy_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = heavy_infantry_super_unit
+        }	
 		modifier = {
-			heavy_infantry_offensive = 0.05
+			heavy_infantry_offensive = 0.1
 			heavy_infantry_hills_combat_bonus = 0.1
 			heavy_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -60,7 +66,7 @@
 		requires = { thracian_path_1 }		
 		enable_tactic = triplex_acies
 		modifier = {
-			heavy_infantry_cost = -0.05
+			heavy_infantry_cost = -0.1
 			heavy_infantry_farmland_combat_bonus = 0.1
 			heavy_infantry_Plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -69,9 +75,17 @@
 	}
 
 	thracian_path_7 = { #Peltasts
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		requires = { }
 		modifier = {
-			light_infantry_defensive = 0.05
+			light_infantry_defensive = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			light_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
@@ -83,7 +97,7 @@
 		enable_tactic = triplex_acies
 		requires = { thracian_path_7 }		
 		modifier = {
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
 			light_infantry_farmland_combat_bonus = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01

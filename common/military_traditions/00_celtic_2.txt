@@ -68,12 +68,20 @@
 		}
 	}
 
-    # Normal Units
+    # Skirmishers
 
     celtic_gallic_path_1 = { ###Celtic 1A
-	    enable_tactic = hit_and_run_tactics
+	    allow = {
+            NOT = {
+                has_variable = archers_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = archers_super_unit
+        }
+		enable_tactic = hit_and_run_tactics
 		modifier = { 
-			archers_offensive = 0.05
+			archers_offensive = 0.1
             archers_plains_combat_bonus = 0.10
             archers_forest_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -84,7 +92,7 @@
 
     celtic_germanic_path_7 = { ###Celtic 3A
 		modifier = { 
-			archers_morale = 0.05
+			archers_morale = 0.1
 			archers_farmland_combat_bonus = 0.1
             archers_hills_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -94,8 +102,16 @@
 	}
 
     celtic_germanic_path_1 = { ###Celtic 1B
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = { 
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
             light_infantry_plains_combat_bonus = 0.10
             light_infantry_forest_combat_bonus = 0.10
 			navy_maintenance_cost = 0.01
@@ -106,7 +122,7 @@
 
     celtic_britannic_path_2 = { ###Celtic 3BA
 		modifier = { 
-			light_infantry_defensive = 0.05
+			light_infantry_defensive = 0.1
 			light_infantry_farmland_combat_bonus = 0.1
             light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01

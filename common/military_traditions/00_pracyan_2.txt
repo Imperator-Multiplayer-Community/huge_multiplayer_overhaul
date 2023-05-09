@@ -38,11 +38,17 @@
 		}
     }    
 	
-    # normal units
-
     pracyan_path_1 = { ###
+		allow = {
+            NOT = {
+                has_variable = light_infantry_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = light_infantry_super_unit
+        }	
 		modifier = { 
-			light_infantry_morale = 0.05
+			light_infantry_morale = 0.1
             light_infantry_jungle_combat_bonus = 0.10
             light_infantry_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -63,8 +69,16 @@
 	}
 
     pracyan_path_3 = { ###
+		allow = {
+            NOT = {
+                has_variable = archers_super_unit
+            }
+        }
+        on_activate = {
+            set_variable = archers_super_unit
+        }
 		modifier = { 
-			archers_offensive = 0.05
+			archers_offensive = 0.1
             archers_jungle_combat_bonus = 0.10
             archers_flood_plain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
@@ -75,7 +89,7 @@
 
     tibetan_path_13 = { ###
 		modifier = { 
-			archers_morale = 0.05
+			archers_morale = 0.1
 			archers_mountain_combat_bonus = 0.10
             archers_hills_combat_bonus = 0.10
 			army_maintenance_cost = 0.01

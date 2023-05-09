@@ -1350,8 +1350,13 @@ prospecting_pulse = {
 		10 = generic_infra_mission.23 #Gold Found
 		5 = generic_infra_mission.24 #Gems Found
 		10 = generic_infra_mission.25 #Base Metals Found
-		25 = generic_infra_mission.26 #Minor Deposit Found
-		30 = generic_infra_mission.27 #False Lead
+		30 = generic_infra_mission.26 #Minor Deposit Found
+		25 = generic_infra_mission.27 #False Lead
+		10 = generic_infra_mission.50 # Marble
+		5 = generic_infra_mission.51 # Cinnabar
+		5 = generic_infra_mission.52 # Lapis
+		5 = generic_infra_mission.53 # Jade
+
 	}
 	effect = {
 		set_variable = {

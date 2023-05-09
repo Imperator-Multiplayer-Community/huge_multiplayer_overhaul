@@ -323,7 +323,7 @@ on_activate = {
 	}
 }
 modifier = { 
-	global_food_capacity = 350
+	global_food_capacity = 175
 } 
 icon = mauryan_coastal_path_6
 requires = { }
@@ -376,8 +376,8 @@ requires = { babylonian_generic_city_path_1 }
 
 assyrian_path_13 = { ###
     modifier = { 
-	  siege_ability = 0.1
-	  assault_ability = 0.05
+	  siege_ability = 0.05
+	  assault_ability = 0.025
 	  army_maintenance_cost = 0.01
 	}
     icon = latin_support_path_3
@@ -387,7 +387,7 @@ assyrian_path_13 = { ###
 
 assyrian_path_12 = { ###
     modifier = { 
-	  assault_ability = 0.1
+	  assault_ability = 0.05
 	  global_supply_limit_modifier = 0.15
 	  army_maintenance_cost = 0.01
 	}
@@ -400,7 +400,7 @@ assyrian_path_9 = { ###
 	modifier = { 
 		siege_engineers = 1
 		engineer_cohort_cost = -0.15
-		assault_ability = 0.05
+		assault_ability = 0.025
 	} 
 	icon = greek_states_path_3
 	requires = { assyrian_path_12 }
@@ -409,7 +409,7 @@ assyrian_path_9 = { ###
 
 assyrian_path_4 = { ###s
     modifier = { 
-	  siege_ability = 0.1
+	  siege_ability = 0.10
 	  army_maintenance_cost = 0.01
 	}
     icon = persian_achaemenid_path_end_bonus

@@ -134,3 +134,12 @@ price_support_primary_heir = {
 price_arena_match = {
 	tyranny = 5
 }
+
+generic_build_special_building = {
+	gold = 250
+	political_influence = 25
+}
+
+price_mission_metropolis = {
+	gold = 400
+}

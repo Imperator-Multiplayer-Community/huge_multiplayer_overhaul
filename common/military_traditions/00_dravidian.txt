@@ -279,7 +279,7 @@ dravidian_city_generic_path_2 = { ###
 		
 	}	
 	modifier = { 
-		global_food_capacity = 250
+		global_food_capacity = 125
 		global_capital_trade_routes = 1 
 	} 
 	icon = mauryan_noble_path_7
@@ -379,7 +379,7 @@ tamil_generic_fort_2 = {
 tamil_generic_fort_3 = {
 	modifier = { 
 		mercenary_land_maintenance_cost = -0.1
-		global_defensive = 0.1
+		global_defensive = 0.05
 	}
 	on_activate = {
 		add_innovation = 3
@@ -391,7 +391,7 @@ tamil_generic_fort_3 = {
 
 tamil_generic_fort_4 = {
 	modifier = { 
-		global_defensive = 0.15
+		global_defensive = 0.075
 		fort_limit = 1
 		fort_maintenance_cost = 0.01
 	}
