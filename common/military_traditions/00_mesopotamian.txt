@@ -409,7 +409,7 @@ assyrian_path_9 = { ###
 
 assyrian_path_4 = { ###s
     modifier = { 
-	  siege_ability = 0.01
+	  siege_ability = 0.10
 	  army_maintenance_cost = 0.01
 	}
     icon = persian_achaemenid_path_end_bonus
