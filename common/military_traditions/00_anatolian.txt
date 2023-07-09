@@ -315,8 +315,8 @@
 
     Anatolian_Generic_Mil = { ###
 	modifier = { 
-		garrison_size = 0.15
-		assault_ability = 0.025
+		enslavement_efficiency = 0.075
+	    army_movement_speed = 0.05
 	} 
 	icon = levantine_egyptian_path_end_bonus
 	requires = { }
@@ -325,6 +325,7 @@
     Anatolian_Generic_Mil_1 = { ###
 	modifier = { 
 		siege_engineers = 1
+		fabricate_claim_speed = 0.25
 	} 
 	icon = greek_states_path_3
 	requires = { Anatolian_Generic_Mil armenian_path_5 }
@@ -333,7 +334,7 @@
     Anatolian_Generic_Mil_2 = { ###
 	modifier = { 
 		assault_ability = 0.05
-		siege_ability = 0.05
+		general_loyalty = 5
 	} 
 	icon = latin_tribal_path_4
 	requires = { Anatolian_Generic_Mil_1 }

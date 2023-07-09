@@ -316,7 +316,7 @@
 	arabian_path_9 = { ###
 		modifier = { 
 			army_weight_modifier = -0.15
-			hostile_attrition = 1
+			army_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_tribal_path_end_bonus
@@ -352,7 +352,8 @@
 
     arabian_Generic_Mil_2 = { ###
         modifier = { 
-	        enslavement_efficiency = 0.1
+	        enslavement_efficiency = 0.075
+			global_supply_limit_modifier = 0.1
         } 
     icon = levantine_arabian_path_3
     requires = { arabian_Generic_Mil_1 }

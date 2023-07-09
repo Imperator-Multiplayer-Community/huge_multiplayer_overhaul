@@ -377,7 +377,7 @@ requires = { babylonian_generic_city_path_1 }
 assyrian_path_13 = { ###
     modifier = { 
 	  siege_ability = 0.05
-	  assault_ability = 0.025
+	  max_war_exhaustion = -2.5
 	  army_maintenance_cost = 0.01
 	}
     icon = latin_support_path_3
@@ -400,7 +400,7 @@ assyrian_path_9 = { ###
 	modifier = { 
 		siege_engineers = 1
 		engineer_cohort_cost = -0.15
-		assault_ability = 0.025
+		war_score_cost = -0.10
 	} 
 	icon = greek_states_path_3
 	requires = { assyrian_path_12 }
