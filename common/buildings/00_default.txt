@@ -30,7 +30,7 @@ fortress_building = {
 border_fortress_building = {
 	fort_level = 1
 	local_defensive = 0.1
-	local_population_capacity_modifier = -0.5
+	local_population_capacity_modifier = -0.25
 	local_manpower_modifier = -0.05
 
 	cost = 150
