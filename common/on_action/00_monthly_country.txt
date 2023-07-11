@@ -44,6 +44,8 @@
 		hmo_navy_maintenance_pulse
 		delay = { days = { 1 30 }}
 		hmo_slave_death_pulse
+		delay = { days = { 1 5 }}
+		hmo_wrath_of_aries_pulse
 	}
 
 	effect = {
