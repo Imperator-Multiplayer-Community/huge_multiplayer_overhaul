@@ -443,8 +443,7 @@ requires = { celtic_britannic_path_3 }
 celtic_gallic_path_4 = { ###Celtic 4A
 modifier = {
 	fort_limit = 1
-	fort_maintenance_cost = -0.15
-	global_defensive = 0.075
+	war_score_cost = -0.10
 }
 allow_unit_type = octere
 icon = celtic_gallic_path_7

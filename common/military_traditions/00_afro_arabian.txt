@@ -241,6 +241,23 @@
 		requires = { }
 	}
 
+	Arabian_Generic = { ###
+	modifier = { 
+		global_food_capacity = 200
+	}
+	icon = levantine_egyptian_path_7
+	requires = { nubian_path_5 }
+}
+
+    Arabian_Generic_1 = { ###
+    modifier = { 
+	    global_monthly_food_modifier = 0.15
+		global_population_capacity_modifier = 0.1
+    }
+    icon = north_african_army_path_1
+    requires = { Arabian_Generic arabian_path_8 }
+}
+
 	arabian_path_1 = { ###
 		modifier = { 
 			ship_cost = -0.15
@@ -299,7 +316,7 @@
 	arabian_path_9 = { ###
 		modifier = { 
 			army_weight_modifier = -0.15
-			hostile_attrition = 1
+			army_movement_speed = 0.05
 			army_maintenance_cost = 0.01
 		} 
 		icon = north_african_tribal_path_end_bonus
@@ -315,6 +332,32 @@
 		}
 	}
 
+	arabian_Generic_Mil= { ###
+		modifier = { 
+			assault_ability = 0.05                	
+			siege_ability = 0.05
+		} 
+		icon = latin_support_path_3
+		requires = { arabian_path_9 }
+	}
+
+	arabian_Generic_Mil_1 = { ###
+	modifier = { 
+        mercenary_land_maintenance_cost = -0.15
+		mercenary_naval_maintenance_cost = -0.15
+	} 
+	icon = levantine_greco_path_7
+	requires = { arabian_Generic_Mil }
+}
+
+    arabian_Generic_Mil_2 = { ###
+        modifier = { 
+	        enslavement_efficiency = 0.075
+			global_supply_limit_modifier = 0.1
+        } 
+    icon = levantine_arabian_path_3
+    requires = { arabian_Generic_Mil_1 }
+}
 
 	nubian_path_8 = { ###
 		modifier = { 

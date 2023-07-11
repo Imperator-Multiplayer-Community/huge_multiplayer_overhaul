@@ -354,9 +354,9 @@ on_activate = {
 	}
 }	
 modifier = { 
-	global_defensive = 0.05
-	garrison_size = 0.15
-	fort_maintenance_cost = 0.01
+	army_maintenance_cost = -0.05
+	war_exhaustion = -0.04
+	experience_decay = -0.005
 } 
 icon = latin_support_path_3
 requires = { iranian_path_14 }
@@ -365,7 +365,7 @@ requires = { iranian_path_14 }
 persian_path_9 = { #
     modifier = { 
 	   global_manpower_modifier = 0.05
-	   monthly_legitimacy = 0.01
+	   max_war_exhaustion = -2.5
 	   army_maintenance_cost = 0.01
 	}
     icon = persian_scythian_path_7
