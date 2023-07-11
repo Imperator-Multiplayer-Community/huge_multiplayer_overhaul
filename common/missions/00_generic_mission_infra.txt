@@ -2514,6 +2514,12 @@
 							duration = -1
 						}
 					}
+
+					create_state_pop = freemen
+					create_state_pop = freemen
+					create_state_pop = freemen
+					create_state_pop = freemen
+					create_state_pop = freemen
 				}
 
 				add_state_modifier = {
@@ -2585,6 +2591,8 @@
 					name = "regional_center_of_trade"
 					duration = -1
 				}
+
+				create_5_citizens_effect = yes
 
 				add_building_level = commerce_building
 				add_building_level = commerce_building
