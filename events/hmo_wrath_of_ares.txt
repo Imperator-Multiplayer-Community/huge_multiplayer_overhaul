@@ -1,6 +1,6 @@
-﻿namespace = hmo_wrath_of_aries
+﻿namespace = hmo_wrath_of_ares
 
-hmo_wrath_of_aries.1 = {
+hmo_wrath_of_ares.1 = {
 	type = country_event
 	hidden = yes
 
@@ -27,7 +27,7 @@ hmo_wrath_of_aries.1 = {
 	}
 }
 
-hmo_wrath_of_aries.2 = { # this is just for testing
+hmo_wrath_of_ares.2 = { # this is just for testing
 	type = country_event
 	hidden = yes
 
