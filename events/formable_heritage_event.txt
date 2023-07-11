@@ -6061,3 +6061,46 @@ formable_heritage.180 = {
 	}
 }
 
+formable_heritage.158 = {
+    type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = formable_heritage.158.t # LOCALIZATION KEY - Title of event
+    desc = formable_heritage.158.desc # LOCALIZATION KEY - Description of event
+    picture = aqueducts # EVENT PICTURE
+    
+    left_portrait = current_ruler # LEFT PORTRAIT - Ruler shown at the left hand side in event
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+    	tag = WIG
+    }
+
+    immediate = {
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION
+        name = formable_heritage.158.a # LOCALIZATION KEY - Option A text
+        hidden_effect = { 
+			set_country_heritage = wigazan_heritage
+		} # EFFECT
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = wigazan_modifier
+				duration = -1
+			}
+		}
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+        name = formable_heritage.158.b # LOCALIZATION KEY - Option B text
+        add_political_influence = 200
+    }
+    option = { # EFFECT FIELD - THIRD OPTION
+        name = formable_heritage.158.c # LOCALIZATION KEY - Option B text
+		hidden_effect = { set_country_heritage = horde_heritage }
+		show_as_tooltip = {
+			add_country_modifier = {
+				name = horde_modifier
+				duration = -1
+			}
+		}
+	}	
+}
+
