@@ -501,3 +501,13 @@ greek_seleucid_path_2 = {
 			}
 		}
 }
+
+Greek_Generic_Mil_1 = { 
+	modifier = { 
+		war_score_cost = -0.10
+		
+	}
+	icon = greek_seleucid_path_5
+	requires = { greek_seleucid_path_2 }
+	}
+}

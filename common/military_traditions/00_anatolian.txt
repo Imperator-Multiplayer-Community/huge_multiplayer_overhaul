@@ -248,10 +248,8 @@
 			add_innovation = 3
 		}	
 		modifier = { 
-			global_tax_modifier = 0.05
-			global_commerce_modifier = 0.05
+			global_tax_modifier = 0.075
 			global_capital_trade_routes = 1
-			global_state_trade_routes = 0.05
 		} 
 		icon = latin_tribal_path_6
 		requires = { }
@@ -261,41 +259,87 @@
 			add_3_free_province_investments = yes
 		}
 		modifier = { 
-			global_population_capacity_modifier = 0.01
+			global_population_capacity_modifier = 0.1
+			global_state_trade_routes = 0.05
 		}
 		icon = persian_bactrian_path_7
-		requires = { lydian_path_9 }
+		requires = {  }
 
 	}
 	armenian_path_8 = { ###
 		modifier = {
 			culture_freemen_happiness = 0.05
 		} 
-		icon = persian_achaemenid_path_4
-		requires = { armenian_path_7 }
+		icon = north_african_army_path_1
+		requires = { lydian_path_9 }
 
-	}
+    }
+
+	Anatolian_Generic_Civ_1 = { ###
+	modifier = {
+		global_commerce_modifier = 0.10
+	} 
+	icon = north_african_army_path_4
+	requires = { armenian_path_7 }
+
+    }
+
 	armenian_path_15 = { ###
 		modifier = { 
 			ruler_popularity_gain = 0.05
-			monthly_legitimacy = 0.03
-			army_maintenance_cost = 0.01
+			global_food_capacity = 125
+			
 		} 
 		icon = persian_scythian_path_6
 		requires = { armenian_path_8 }
-	}
+    }
+
+	Anatolian_Generic_Civ = { ###
+	modifier = { 
+		price_found_city_cost_modifier = -0.1
+		
+	} 
+	icon = levantine_greco_path_7
+	requires = { armenian_path_15 Anatolian_Generic_Civ_1 }
+    }
 	### FORTS
 	armenian_path_5 = { ###
-		modifier = { 
-			global_defensive = 0.05
-			fort_limit = 1
-			garrison_size = 0.15
-			price_found_city_cost_modifier = -0.1
-			local_forum_building_cost = -0.1
-			fort_maintenance_cost = 0.01
-		} 
-		icon = persian_bactrian_path_2
-		requires = { }
-
-	}
+	modifier = { 
+		global_defensive = 0.05
+		fort_limit = 1
+		fort_maintenance_cost = 0.01
+	} 
+	icon = persian_bactrian_path_2
+	requires = { }
 }
+
+    Anatolian_Generic_Mil = { ###
+	modifier = { 
+		enslavement_efficiency = 0.075
+	    army_movement_speed = 0.05
+	} 
+	icon = levantine_egyptian_path_end_bonus
+	requires = { }
+}
+
+    Anatolian_Generic_Mil_1 = { ###
+	modifier = { 
+		siege_engineers = 1
+		fabricate_claim_speed = 0.25
+	} 
+	icon = greek_states_path_3
+	requires = { Anatolian_Generic_Mil armenian_path_5 }
+
+}
+    Anatolian_Generic_Mil_2 = { ###
+	modifier = { 
+		assault_ability = 0.05
+		general_loyalty = 5
+	} 
+	icon = latin_tribal_path_4
+	requires = { Anatolian_Generic_Mil_1 }
+
+}
+
+}
+

@@ -425,8 +425,8 @@ on_activate = {
 	}
 }
 modifier = { 
-	supply_train_movement_speed = 0.05
-	monthly_military_experience_modifier = 0.05
+	army_movement_speed = 0.075
+	monthly_military_experience_modifier = 0.02
 	army_maintenance_cost = 0.01
 } 
 icon = mauryan_mauryas_path_1
@@ -445,8 +445,7 @@ on_activate = {
 	}
 }
 modifier = { 
-	siege_engineers = 1
-	army_maintenance_cost = 0.01
+	max_war_exhaustion = -2.5
 } 
 icon = north_african_tribal_path_3
 requires = { scythian_path_generic_fort_2 }

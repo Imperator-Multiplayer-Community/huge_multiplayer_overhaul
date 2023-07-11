@@ -764,7 +764,7 @@ greaterscythia_heritage = {
 bithynia_heritage = {
 	modifier = {
 		#good
-		price_found_city_cost_modifier = -0.25
+		price_found_city_cost_modifier = -0.1
 		siege_ability = 0.1
 
 		#bad
