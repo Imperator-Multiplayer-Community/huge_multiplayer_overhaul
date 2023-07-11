@@ -1,0 +1,39 @@
+﻿namespace = hmo_wrath_of_aries
+
+hmo_wrath_of_aries.1 = {
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_character = {
+			martial > 16
+		}
+	}
+
+	immediate = {
+		every_character = {
+			limit = {
+				martial > 16
+			}
+
+			while = {
+				limit = {
+					martial > 16
+				}
+
+				add_martial = -1
+			}
+		}
+	}
+}
+
+hmo_wrath_of_aries.2 = { # this is just for testing
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		create_character = {
+			add_martial = 20
+		}
+	}
+}
