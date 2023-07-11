@@ -187,7 +187,7 @@
 					check_range_bounds = no
 					order_by = {
 						value = 0
-						every_state_province = {
+						ordered_state_province = {
 							if = {
 								limit = { is_port = yes }
 								add = 1
@@ -201,17 +201,6 @@
 							name = "infra_mission_branches"
 						}
 						ROOT = { set_variable = port_var }
-					}
-					ordered_state_province = {
-						limit = {
-							is_port = yes
-						}
-						order_by = total_population
-						save_scope_as = ship_building_center
-					}
-					random_sea_and_river_zone = {
-						limit = { is_neighbor = scope:ship_building_center }
-						save_scope_as = valid_sea_or_river_place
 					}
 					random_state_province = {
 						limit = { is_port = yes } 
@@ -2380,29 +2369,12 @@
 		allow = {
 			trigger_if = {
 				limit = { is_ai = no }
-				hidden:scope:port_province = {
-					custom_tooltip = {
-						text = tooltip_num_ports
-						OR = {
-							any_state_province = { #Either own a state with at least 3 ports.
-								count >= 3
-								is_port = yes
-							}
-							any_state_province = { #Or Own a state with at least one port where your subjects and you have at least 3 ports together.
-								count >= 1
-								is_port = yes
-								ports_in_subjects_svalue >= 2
-							}
-						}
+				scope:port_province = {
+					any_state_province = { #own a state with at least 1 port and is a city
+						count >= 1 
+						is_port = yes
+						has_city_status = yes
 					}
-				}
-				custom_tooltip = {
-					text = tooltip_building_ports
-					port_cities_in_province_svalue >= port_cities_potential_tooltip_svalue
-				}
-				custom_tooltip = {
-					text = tooltip_fort_ports
-					port_forts_province_svalue >= port_cities_potential_tooltip_svalue
 				}
 			}
 			trigger_else = {
@@ -2426,40 +2398,124 @@
 				scope:port_province = {
 					ordered_state_province = {
 						limit = {
+							has_city_status = no
 							is_port = yes
-							free_building_slots >= 4
 						}
 						order_by = total_population
 
-						add_building_level = fortress_building
-						add_building_level = port_building
+						trigger_event = {
+							id = state_improvement.6
+						}
+
 						add_building_level = port_building
 						add_building_level = port_building
 					}
 				}
 			}
 			scope:port_province = {
-				every_state_province = {
-					limit = { is_port = yes }
-					create_2_citizens_effect = yes
-				}
-				area = {
-					every_area_province = {
-						limit = {
-							is_port = yes
-							owner = { is_subject_of = ROOT }
+				ordered_state_province = {
+					limit = { 
+						has_city_status = yes
+						is_port = yes 
+					}
+					order_by = total_population
+
+					create_2_nobles_effect = yes
+					
+					state = {
+						add_state_modifier = {
+							name = state_improvement_oratory
+							duration = -1
+							mode = add
 						}
-						create_2_citizens_effect = yes
 					}
 				}
 			}
 		}
+	}
 
+	port_branch_fort = {
+		icon = task_expansion
+		requires = { port_branch_1 } #Skips to port_branch_1
+		potential = {
+			exists = scope:port_province
+		}
+
+		allow = {
+			trigger_if = {
+				limit = { is_ai = no }
+				hidden:scope:port_province = {
+					custom_tooltip = {
+						text = tooltip_num_ports
+						OR = {
+							any_state_province = { #own city province with a port
+								count >= 1
+								is_port = yes
+								has_city_status = yes
+								has_building = fortress_building
+							}
+						}
+					}
+				}
+			}
+			trigger_else = {
+				treasury > 100
+			}
+		}
+
+		highlight = {
+			scope:province = {
+				exists = scope:port_province
+				exists = state
+				state = scope:port_province
+				is_port = yes
+				has_city_status = yes
+			}
+		}
+
+		on_completion = {
+			if = {
+				limit = { is_ai = yes }
+				add_treasury = -100
+				scope:port_province = {
+					ordered_state_province = {
+						limit = {
+							is_port = yes
+							has_city_status = yes
+						}
+						order_by = total_population
+
+						add_building_level = fortress_building
+						add_province_modifier = important_port_province
+					}
+				}
+			}
+			scope:port_province = {
+				ordered_state_province = {
+					limit = { 
+						has_city_status = yes
+						is_port = yes 
+						has_building = fortress_building
+					}
+					order_by = total_population
+
+					add_province_modifier = important_port_province
+					
+					state = {
+						add_state_modifier = {
+							name = state_improvement_oratory
+							duration = -1
+							mode = add
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	port_branch_2 = {
 		icon = task_expansion
-		requires = { port_branch_1 } #Skips to port_branch_1
+		requires = { port_branch_fort } #Skips to port_branch_1
 		potential = {
 			exists = scope:port_province
 		}
@@ -2470,21 +2526,15 @@
 					custom_tooltip = {
 						text = tooltip_num_ports
 						OR = {
-							any_state_province = { #Either own a state with at least 3 ports.
-								count >= 5
+							any_state_province = { #own city province with a port
+								count >= 1
 								is_port = yes
-							}
-							any_state_province = { #Or Own a state with at least one port where your subjects and you have at least 3 ports together.
-								count >= 3
-								is_port = yes
-								ports_in_subjects_svalue >= 2
+								has_city_status = yes
+								has_building = fortress_building
+								num_of_port_building >= 3
 							}
 						}
 					}
-				}
-				custom_tooltip = {
-					text = tooltip_building_ports_markets
-					port_markets_in_province_svalue >= port_cities_potential_tooltip_svalue
 				}
 			}
 			trigger_else = {
@@ -2498,6 +2548,8 @@
 				exists = state
 				state = scope:port_province
 				is_port = yes
+				has_city_status = yes
+				has_building = fortress_building
 			}
 		}
 
@@ -2510,7 +2562,8 @@
 					ordered_state_province = {
 						limit = {
 							is_port = yes
-							num_of_port_building >= 3
+							has_building = fortress_building
+							has_city_status = yes
 						}
 						order_by = total_population
 
@@ -2524,6 +2577,9 @@
 					name = "regional_center_of_trade"
 					duration = -1
 				}
+
+				add_building_level = commerce_building
+				add_building_level = commerce_building
 			}
 		}
 
@@ -2534,11 +2590,9 @@
 		requires = { port_branch_2 }
 		potential = {
 			exists = scope:port_province
-			exists = scope:ship_building_center
-			scope:ship_building_center = { owner = ROOT }
 		}
 		allow = {
-			hidden:scope:ship_building_center = {
+			hidden:scope:port_province = {
 				custom_tooltip = {
 					text = bring_the_wood_tooltip
 					OR = {
@@ -2557,21 +2611,37 @@
 					}
 				}
 			}
-			scope:ship_building_center = {
-				num_of_foundry_building >= 1
+			scope:port_province = {
+				any_state_province = {
+					count >= 1
+					has_city_status = yes
+					num_of_port_building >= 5
+					has_building = fortress_building
+				}
 			}
 		}
 		highlight = {
 			scope:province = {
-				exists = scope:ship_building_center
-				THIS = scope:ship_building_center
+				exists = scope:port_province
+				THIS = scope:port_province
 			}
 		}
 		on_completion = {
-			scope:ship_building_center = {
-				add_province_modifier = {
-					name = ship_building_center_modifier
-					duration = -1
+			scope:port_province = {
+				ordered_state_province = {
+					limit = {
+						num_of_port_building >= 5
+						has_building = fortress_building
+						has_city_status = yes
+					}
+					order_by = total_population
+
+					add_province_modifier = {
+						name = ship_building_center_modifier
+						duration = -1
+					}
+
+					save_scope_as = ship_building_center
 				}
 			}
 		}
@@ -2601,6 +2671,11 @@
 		on_start = { add_treasury = -100 }
 
 		on_completion = {
+			random_sea_and_river_zone = {
+				limit = { is_neighbor = scope:ship_building_center }
+				save_scope_as = valid_sea_or_river_place
+			}
+
 			create_unit = {
 				location = scope:valid_sea_or_river_place
 				navy = yes

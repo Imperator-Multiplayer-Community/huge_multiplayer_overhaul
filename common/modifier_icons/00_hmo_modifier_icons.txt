@@ -274,3 +274,7 @@ hill_fort_cost = {
 metropolitan_walls = {
     positive = "gfx/interface/icons/modifiers/fort_level.dds"
 }
+
+important_port_province = {
+    positive = "gfx/interface/icons/modifiers/fort_defense.dds"
+}
