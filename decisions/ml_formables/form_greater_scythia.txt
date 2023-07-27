@@ -56,7 +56,7 @@
 			hidden_effect = {
 				change_country_adjective = "GREATER_SCYTHIA_ADJECTIVE"
 				change_country_color =  "Greater_Scythia_color"
-				change_country_tag = GCS
+				change_country_tag = GSC
 				change_country_flag = ISI
 				trigger_event = {
 					id = formable_heritage.150
