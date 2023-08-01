@@ -155,14 +155,9 @@
 					limit = {
 						#Number of Areas with 3 ports or more is very limited.
 						OR = {
-							any_state_province = { #Either own a state with at least 3 ports.
-								count >= 3
-								is_port = yes
-							}
-							any_state_province = { #Or Own a state with at least one port where your subjects and you have at least 3 ports together.
+							any_state_province = { #Either own a state with at least 1 ports.
 								count >= 1
 								is_port = yes
-								ports_in_subjects_svalue >= 2
 							}
 						}
 						NOT = { THIS = scope:governorship_capital_area }
@@ -190,7 +185,9 @@
 						ordered_state_province = {
 							limit = {
 								NOT = {
-									has_province_modifier = important_port_state
+									state = {
+										has_province_modifier = important_port_state
+									}
 								}
 							}
 
@@ -198,7 +195,9 @@
 								limit = { 
 									is_port = yes 
 									NOT = {
-										has_state_modifier = regional_center_of_trade
+										state = {
+											has_state_modifier = regional_center_of_trade
+										}
 									}
 								}
 								add = 1
@@ -237,60 +236,6 @@
 						}
 						ROOT = { set_variable = port_var }
 					}
-					scope:port_state = {
-						value = 0
-						ordered_state_province = {
-							limit = {
-								NOT = {
-									has_province_modifier = important_port_state
-								}
-							}
-
-							if = {
-								limit = { 
-									is_port = yes 
-									NOT = {
-										has_state_modifier = regional_center_of_trade
-									}
-								}
-								add = 1
-
-								if = {
-									limit = {
-										is_state_capital = yes
-									}
-
-									add = 1
-								}
-
-								if = {
-									limit = {
-										is_capital = yes
-									}
-
-									add = 2
-								}
-
-								if = {
-									limit = {
-										free_building_slots >= 5
-									}
-
-									add = 1
-
-									if = {
-										limit = {
-											has_building = fortress_building
-										}
-
-										add = 1
-									}
-								}
-							}
-
-							save_scope_as = port_province
-						}
-					}
 					random_state_province = {
 						limit = { is_port = yes } 
 						random_sea_and_river_zone = {
@@ -298,6 +243,69 @@
 							save_scope_as = trade_sea
 						}
 					}
+				}
+			}
+
+			scope:port_state = {
+				ordered_state_province = {
+					limit = {
+						NOT = {
+							state = {
+								has_province_modifier = important_port_state
+							}
+						}
+					}
+
+					max = 1
+					check_range_bounds = no
+					order_by = {
+						value = 0
+						if = {
+							limit = { 
+								is_port = yes 
+								NOT = {
+									state = {
+										has_state_modifier = regional_center_of_trade
+									}
+								}
+							}
+							add = 1
+
+							if = {
+								limit = {
+									is_state_capital = yes
+								}
+
+								add = 1
+							}
+
+							if = {
+								limit = {
+									is_capital = yes
+								}
+
+								add = 2
+							}
+
+							if = {
+								limit = {
+									free_building_slots >= 5
+								}
+
+								add = 1
+
+								if = {
+									limit = {
+										has_building = fortress_building
+									}
+
+									add = 1
+								}
+							}
+						}
+					}
+
+					save_scope_as = port_province
 				}
 			}
 		}
