@@ -185,9 +185,7 @@
 						ordered_state_province = {
 							limit = {
 								NOT = {
-									state = {
-										has_province_modifier = important_port_state
-									}
+									has_province_modifier = important_port_province
 								}
 							}
 
@@ -244,68 +242,66 @@
 						}
 					}
 				}
-			}
 
-			scope:port_state = {
-				ordered_state_province = {
-					limit = {
-						NOT = {
-							state = {
-								has_province_modifier = important_port_state
+				scope:port_state = {
+					ordered_state_province = {
+						limit = {
+							NOT = {
+								has_province_modifier = important_port_province
 							}
 						}
-					}
 
-					max = 1
-					check_range_bounds = no
-					order_by = {
-						value = 0
-						if = {
-							limit = { 
-								is_port = yes 
-								NOT = {
-									state = {
-										has_state_modifier = regional_center_of_trade
+						max = 1
+						check_range_bounds = no
+						order_by = {
+							value = 0
+							if = {
+								limit = { 
+									is_port = yes 
+									NOT = {
+										state = {
+											has_state_modifier = regional_center_of_trade
+										}
 									}
 								}
-							}
-							add = 1
-
-							if = {
-								limit = {
-									is_state_capital = yes
-								}
-
-								add = 1
-							}
-
-							if = {
-								limit = {
-									is_capital = yes
-								}
-
-								add = 2
-							}
-
-							if = {
-								limit = {
-									free_building_slots >= 5
-								}
-
 								add = 1
 
 								if = {
 									limit = {
-										has_building = fortress_building
+										is_state_capital = yes
 									}
 
 									add = 1
 								}
+
+								if = {
+									limit = {
+										is_capital = yes
+									}
+
+									add = 2
+								}
+
+								if = {
+									limit = {
+										free_building_slots >= 5
+									}
+
+									add = 1
+
+									if = {
+										limit = {
+											has_building = fortress_building
+										}
+
+										add = 1
+									}
+								}
 							}
 						}
-					}
 
-					save_scope_as = port_province
+						save_scope_as = port_province
+					}
 				}
 			}
 		}
@@ -2472,23 +2468,22 @@
 				}
 			}
 			trigger_else = {
-				treasury > 200
+				treasury > 100
 			}
 		}
 		
 		highlight = {
-			scope:port_province
+			scope:province = {
+				exists = scope:port_province
+				THIS = scope:port_province
+			}
 		}
 
 		on_completion = {
 			if = {
 				limit = { is_ai = yes }
-				add_treasury = -200
+				add_treasury = -100
 				scope:port_province = {
-					trigger_event = {
-						id = state_improvement.6
-					}
-
 					add_building_level = port_building
 					add_building_level = port_building
 				}
@@ -2529,7 +2524,10 @@
 		}
 
 		highlight = {
-			scope:port_province
+			scope:province = {
+				exists = scope:port_province
+				THIS = scope:port_province
+			}
 		}
 
 		on_completion = {
@@ -2539,7 +2537,7 @@
 				scope:port_province = {
 					add_building_level = fortress_building
 					add_province_modifier = {
-						name = important_port_state
+						name = important_port_province
 						duration = -1
 					}
 				}
@@ -2548,11 +2546,11 @@
 				if = {
 					limit = {
 						NOT = {
-							has_province_modifier = important_port_state
+							has_province_modifier = important_port_province
 						}
 					}
 					add_province_modifier = {
-						name = important_port_state
+						name = important_port_province
 						duration = -1
 					}
 				}
@@ -2597,7 +2595,10 @@
 		}
 		
 		highlight = {
-			scope:port_province
+			scope:province = {
+				exists = scope:port_province
+				THIS = scope:port_province
+			}
 		}
 
 		on_completion = {
@@ -2644,8 +2645,9 @@
 								any_state_province = {
 									trade_goods = wood
 								}
-								is_importing_trade_good = wood
 							}
+							
+							is_importing_trade_good = wood
 						}
 					}
 					custom_tooltip = {
@@ -2655,9 +2657,9 @@
 								any_state_province = {
 									trade_goods = cedar
 								}
-
-								is_importing_trade_good = cedar
 							}
+
+							is_importing_trade_good = cedar
 						}
 					}
 				}	
@@ -2669,7 +2671,10 @@
 			}
 		}
 		highlight = {
-			scope:port_province
+			scope:province = {
+				exists = scope:port_province
+				THIS = scope:port_province
+			}
 		}
 		on_completion = {
 			scope:port_province = {
@@ -2677,8 +2682,6 @@
 					name = ship_building_center_modifier
 					duration = -1
 				}
-
-				save_scope_as = ship_building_center
 			}
 		}
 	}
@@ -2695,8 +2698,8 @@
 		
 		highlight = {
 			scope:province = {
-				exists = scope:ship_building_center
-				THIS = scope:ship_building_center
+				exists = scope:port_province
+				THIS = scope:port_province
 			}
 		}
 		
@@ -2706,7 +2709,7 @@
 
 		on_completion = {
 			random_sea_and_river_zone = {
-				limit = { is_neighbor = scope:ship_building_center }
+				limit = { is_neighbor = scope:port_province }
 				save_scope_as = valid_sea_or_river_place
 			}
 
