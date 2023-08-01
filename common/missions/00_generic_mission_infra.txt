@@ -2355,7 +2355,7 @@
 		monthly_on_action = prospecting_pulse 
 
 		on_start = {
-			add_treasury = 150
+			add_treasury = -150
 		}
 
 		on_completion = {
@@ -2609,23 +2609,28 @@
 		}
 		allow = {
 			hidden:scope:port_province = {
-				custom_tooltip = {
-					text = bring_the_wood_tooltip
-					OR = {
+				OR = {
+					custom_tooltip = {
+						text = bring_the_wood_tooltip
 						state = {
 							any_state_province = {
-								OR = {
-									trade_goods = wood
-									trade_goods = cedar
-								}
+								trade_goods = wood
 							}
 						}
-						OR = {
-							is_importing_trade_good = wood
-							is_importing_trade_good = cedar
-						}
+						is_importing_trade_good = wood
 					}
-				}
+										}
+					custom_tooltip = {
+						text = bring_the_cedar_tooltip
+						state = {
+							any_state_province = {
+									trade_goods = cedar
+							}
+						}
+
+						is_importing_trade_good = cedar
+					}
+				}	
 			}
 			scope:port_province = {
 				any_state_province = {
