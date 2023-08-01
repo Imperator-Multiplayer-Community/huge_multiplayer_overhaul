@@ -196,6 +196,30 @@
 									}
 								}
 								add = 1
+
+								if = {
+									limit = {
+										is_state_capital = yes
+									}
+
+									add = 1
+								}
+
+								if = {
+									limit = {
+										is_capital = yes
+									}
+
+									add = 2
+								}
+
+								if = {
+									limit = {
+										free_building_slots > 5
+									}
+
+									add = 1
+								}
 							}
 						}
 					}
@@ -2612,20 +2636,16 @@
 				OR = {
 					custom_tooltip = {
 						text = bring_the_wood_tooltip
-						state = {
-							any_state_province = {
-								trade_goods = wood
-							}
+						any_state_province = {
+							trade_goods = wood
 						}
 						is_importing_trade_good = wood
 					}
 										}
 					custom_tooltip = {
 						text = bring_the_cedar_tooltip
-						state = {
-							any_state_province = {
-									trade_goods = cedar
-							}
+						any_state_province = {
+							trade_goods = cedar
 						}
 
 						is_importing_trade_good = cedar
