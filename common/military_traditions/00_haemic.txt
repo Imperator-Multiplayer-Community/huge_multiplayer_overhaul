@@ -349,8 +349,7 @@ icon = celtic_britannic_path_4
 generic_illyrian_path_fort_2 = { #Manpower recovery
 requires = { illyrian_path_4 }		
 modifier = {
-	manpower_recovery_speed = 0.05
-	army_maintenance_cost = 0.01
+	war_score_cost = -0.10
 }
 icon = celtic_gallic_path_5
 }

@@ -764,7 +764,7 @@ greaterscythia_heritage = {
 bithynia_heritage = {
 	modifier = {
 		#good
-		price_found_city_cost_modifier = -0.25
+		price_found_city_cost_modifier = -0.1
 		siege_ability = 0.1
 
 		#bad
@@ -4021,5 +4021,20 @@ fezzani_heritage = {
 	
 	trigger = {
 		tag = FEZ
+	}
+}
+
+wigazan_heritage = {
+	modifier = {
+		#good
+		mercenary_land_maintenance_cost = -0.10
+		manpower_recovery_speed = 0.05
+		
+		#bad
+		general_loyalty = -5
+	}
+	
+	trigger = {
+		tag = WIG
 	}
 }

@@ -373,11 +373,13 @@
 
 	levantine_greco_path_end_bonus = { ###Levantine 4BB
 		modifier = {
+		    fort_limit = 1
+		    fort_maintenance_cost = -0.10
 		}
 		icon = levantine_greco_path_end_bonus
 		requires = {levantine_arabian_path_6}
 		on_activate = {
-			add_4_free_province_investments = yes
+			add_2_free_province_investments = yes
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -387,4 +389,74 @@
 			}
 		}
 	}
+	
+	Levantine_Generic_Mil = { 
+	modifier = { 
+		hostile_attrition = 1
+	
+	}
+	icon = levantine_arabian_path_6
+	requires = { levantine_greco_path_end_bonus levantine_egyptian_path_3 }
+    }
+
+	Levantine_Generic_Mil_1 = { 
+	modifier = { 
+		global_supply_limit_modifier = 0.1
+		
+	}
+	icon = latin_support_path_5
+	requires = { Levantine_Generic_Mil }
+	}
+
+
+    Levantine_Generic_Civ = { 
+	modifier = { 
+	    global_population_capacity_modifier = 0.1
+
+    }
+    icon = levantine_greco_path_7
+    requires = {  }
+    }
+
+    Levantine_Generic_Civ_1 = { 
+	modifier = { 
+		global_monthly_food_modifier = 0.15
+	    global_citizen_happyness = 0.06
+	}
+	icon = levantine_arabian_path_3
+	requires = { }
+	} 
+
+	Levantine_Generic_Civ_2 = { 
+	modifier = { 
+	    price_found_city_cost_modifier = -0.075
+	}
+	icon = greek_states_path_4
+	requires = { Levantine_Generic_Civ_1 }
+	} 
+
+	Levantine_Generic_Civ_3 = { 
+	modifier = { 
+		global_slaves_output = output_large_svalue
+	}
+	icon = levantine_arabian_path_2
+	requires = { Levantine_Generic_Civ }
+	} 
+	
+	Levantine_Generic_Civ_4 = { 
+	modifier = { 
+		global_export_commerce_modifier  = 0.075
+	}
+	icon = levantine_arabian_path_1
+	requires = { Levantine_Generic_Civ_3 Levantine_Generic_Civ_2 }
+	} 
+
+	Levantine_Generic_Civ_5 = { 
+	modifier = { 
+        deify_ruler_cost_modifier = -0.1 
+		global_food_capacity = 200
+    }
+	icon = latin_tribal_path_3
+	requires = { Levantine_Generic_Civ_4 }
+	} 
 }

@@ -2252,3 +2252,31 @@ FEZZAN_FLAG_GAR = {
 		}
 	}
 }
+
+WIGAZA_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = rust_brown
+	color2 = ck2_black
+
+	colored_emblem = {
+		texture = "ce_border_checker_01.tga"
+		color1 = "roman_gold"
+		color2 = "ck2_black"
+		instance = { 
+			rotation = 0
+		}
+		instance = { 
+			rotation = 180
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_12.dds"
+		color1 = "offwhite"
+		color2 = "blood_red"
+		instance = { 
+			scale = { 1.0 1.0 } 
+			rotation = 0
+		}
+	}
+}

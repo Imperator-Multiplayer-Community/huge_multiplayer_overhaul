@@ -285,13 +285,13 @@ hmo_unit_abilties.6 = { # raid commerce warning
 	    	}
 	    	opinion = {
 	    		target = scope:raid_commerce_unit.unit_owner
-	    		value < -200
+	    		value >= -200
 	    	}
 	    }
 
 	    root = {
 	    	declare_war_with_wargoal = {
-	    		war_goal = raiding_wargoal
+	    		war_goal = naval_wargoal
 	    		target = scope:raid_commerce_unit.unit_owner
 	    	}
 	    }

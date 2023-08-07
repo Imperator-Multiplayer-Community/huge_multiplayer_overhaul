@@ -1,0 +1,95 @@
+﻿country_decisions = {
+	
+	# Form Wigaza
+	# Created by Shinymewtwo99, inspired by Aries' Germanic migration into Anatolia
+
+	form_wigaza = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = { tag = WIG }
+			country_culture_group = germanic
+			NOR = {
+				is_endgame_tag_trigger = yes
+				is_tier_2_formable_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = asia_region
+					is_in_region = galatia_region
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = wigaza_not_exists
+				NOT = {
+					any_country = {
+						tag = WIG
+					}
+				}
+			}
+			owns_or_subject_owns_region = asia_region
+			owns_or_subject_owns_region = galatia_region
+			custom_tooltip = {
+				text = formable_wigaza_capital
+				capital_scope = {
+						OR = {
+							is_in_region = asia_region
+							is_in_region = bithynia_region
+							is_in_region = galatia_region
+							is_in_region = cappadocia_region
+							is_in_region = cilicia_region
+							is_in_region = cappadocia_pontica_region
+							is_in_region = greece_region
+							is_in_region = macedonia_region
+							is_in_region = thrace_region
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "WIGAZA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "WIGAZA_ADJECTIVE"
+				change_country_color =  "wigaza_color"
+				trigger_event = {
+					id = formable_heritage.158
+				}
+				change_country_flag = WIGAZA_FLAG
+				change_country_tag = WIG
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				current_date > 600.1.1
+			}
+		}
+	}
+
+} 
+

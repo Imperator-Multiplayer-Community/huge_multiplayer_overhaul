@@ -251,7 +251,7 @@ requires = { iberian_central_2_path_2 }
 iberian_left_2_path_2 = { ###Iberian 3C Importing Knowledge
 modifier = { 
 	global_capital_trade_routes = 1
-	global_export_commerce_modifier  = 0.125
+	global_export_commerce_modifier  = 0.075
 }
 icon = celtic_gallic_path_4
 requires = { iberian_central_path_2 iberian_central_2_path_1 }

@@ -15,3 +15,5 @@
  generic_infra_mission.53.desc:0 "Our surveyors report finding sizable deposits of Jade in the settlement of [SCOPE.sP('find_struck_here').GetName] in [SCOPE.sState('mining_province').GetShortName]. Should we choose to develop this find we could make the territory export the metal in short time.\nIf we invest in this it means a very marked change to the local economy which is currently based around the export of [SCOPE.sP('find_struck_here').GetTradeGoods.GetName]."
  generic_infra_mission.53.a:0 "We need the Jade!"
  generic_infra_mission.53.b:0 "We are not interested in developing this find."
+ port_branch_fort:0 "Fortify The Port"
+ bring_the_cedar_tooltip:0 "[THIS.GetProvince.GetArea.GetName] Produces or Imports @cedar! #Y Cedar#!"

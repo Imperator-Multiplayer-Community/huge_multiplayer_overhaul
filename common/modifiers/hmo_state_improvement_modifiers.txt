@@ -1,3 +1,12 @@
 ﻿metropolitan_walls = { # state
-	local_fort_limit = 1
+	local_fort_limit = 2
+}
+
+state_improvement_military = { 
+	local_fort_limit = 2
+	local_monthly_state_loyalty = 0.01
+}
+
+important_port_province = {
+	local_defensive = 0.2
 }
