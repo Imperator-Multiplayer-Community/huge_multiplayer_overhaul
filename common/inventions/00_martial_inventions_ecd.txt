@@ -1355,7 +1355,6 @@ naval_tree = {
 
 	katapharct_inv = {
 		modifier = { 
-			tetrere_defensive = 0.1
 			port_building_cost = -0.1
 		}
 		requires = { pirate_spawn_chance_inv_1 }
@@ -1449,7 +1448,6 @@ naval_tree = {
 	# Level 2
 	naval_tactic_inv_1 = { 
 		modifier = {
-			naval_damage_taken = -0.05
 			navy_movement_speed = 0.1
 		}
 		on_activate = {
@@ -1457,14 +1455,6 @@ naval_tree = {
 		}
 				
 		requires = { liburnian_invention_2 }
-	}
-
-	naval_weapon_platform_inv_2 = {
-		modifier = { 
-			tetrere_offensive = 0.05
-			tetrere_discipline = 0.05
-		}
-		requires = { katapharct_inv }
 	}
 
 	navy_maintenance_cost_inv_1 = {
@@ -1591,7 +1581,8 @@ naval_tree = {
 		} 
     }
 
-        #New Invictus invention
+    #New Invictus invention
+
     dhow_inv = { 
         modifier = { 
         	global_ship_recruit_speed = 0.2
@@ -1614,30 +1605,27 @@ naval_tree = {
     }
 
 	# Level 3
-		liburnian_invention_1 = {
+	liburnian_invention_1 = {
 		modifier = { 
-			liburnian_offensive = 0.05
 			navy_weight_modifier = -0.05
-			naval_damage_taken = -0.05
+		}
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = oarmaster
+				}
+			}
 		}
 		requires = { naval_tactic_inv_1 }
 	}
 
 	naval_rostra_inv_1 = {
 		modifier = { 
-			liburnian_defensive = 0.075
 			navy_movement_speed = 0.05
 		}
 		requires = { liburnian_invention_2 }		
-	}	
-
-	trireme_discipline_inv_2 = { 
-		modifier = { 
-			tetrere_discipline = 0.05
-			hexere_offensive = 0.05
-			naval_damage_done = 0.05
-		}
-		requires = { navy_maintenance_cost_inv_1 }
 	}	
 
 	# Level 4
@@ -1646,35 +1634,24 @@ naval_tree = {
 		modifier = { 
 			naval_range = 0.1
 			navy_weight_modifier = -0.1
-			liburnian_defensive = 0.025
 		}
 	}
 
 	trireme_discipline_inv_4 = { 
-		requires_or = { naval_rostra_inv_1  naval_weapon_platform_inv_2 }
+		requires_or = { naval_rostra_inv_1 }
 		modifier = { 		 
 			naval_range = 0.1
-			naval_damage_done = 0.05
 		}
 		keystone = yes
 	}
 
-	naval_tactic_inv_3 = {
-		modifier = { 
-			naval_damage_done = 0.05
-			hexere_discipline = 0.1
-		}
-		requires = { naval_weapon_platform_inv_2 }
-	}
-
 	trireme_discipline_inv_1 = { 
 		modifier = {
-			hexere_defensive = 0.05
 			naval_range = 0.1
 			mercenary_naval_maintenance_cost = -0.15
 			max_mercenary_stacks = 1
 		}
-		requires_or = { trireme_discipline_inv_2  naval_tactic_inv_3 }
+		requires_or = {navy_maintenance_cost_inv_1 }
 		keystone = yes
 		on_activate = {
 
@@ -1696,46 +1673,17 @@ naval_tree = {
 	naval_new_inv_4 = { 
 		modifier = { 
 			naval_morale_recovery = 0.05
-			hexere_offensive = 0.05
-			naval_damage_done = 0.025
 		}
-		requires = { naval_tactic_inv_3 trireme_discipline_inv_4 } ##############################################
+		requires = { trireme_discipline_inv_4 } ##############################################
 	}	
-
-
-	trireme_discipline_inv_3 = { 
-		modifier = { 
-			trireme_discipline = 0.1
-		}
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = oarmaster
-				}
-			}
-		}
-		requires = { liburnian_invention_1  }
-	}
 
 	naval_weapon_platform_inv_1 = {
 		modifier = { 
-			trireme_offensive = 0.1
 			enslavement_efficiency = 0.025
 		}
 		requires = { pirate_spawn_chance_inv_2 }		
 	}	
 	
-
-	double_bow_and_stern_inv_1 = {
-		modifier = { 
-			octere_defensive = 0.05 
-			hexere_defensive = 0.05
-			naval_damage_done = 0.025
-		}
-		requires_or = { trireme_discipline_inv_1 naval_new_inv_4 } #######################################
-	}	
 
 	#New Invictus invention
 	serial_production_inv = {
@@ -1790,7 +1738,6 @@ naval_tree = {
 		modifier = { 
 			naval_range = 0.05
 			retreat_delay = -1
-			naval_damage_taken = -0.05
 			navy_movement_speed = 0.05
 		}
 	}
@@ -1799,7 +1746,6 @@ naval_tree = {
 		modifier = { 
 			ship_capture_chance = 0.025 
 			naval_range = 0.1
-			naval_damage_done = 0.025
 		}
 		requires_or = { trireme_discipline_inv_4 liburnian_invention_1 }		
 	}	
@@ -1807,9 +1753,6 @@ naval_tree = {
 	blockade_efficiency_inv = {
 		requires = { trireme_discipline_inv_1  }
 		modifier = { 
-			octere_discipline = 0.05
-			octere_offensive = 0.05 
-			naval_damage_taken = -0.025
 			retreat_delay = -1
 		}
 	}	
@@ -1843,15 +1786,13 @@ naval_tree = {
 		modifier = { 
 			naval_morale_recovery = 0.05
 			ship_capture_chance = 0.025
-			trireme_defensive = 0.05
 		}
-		requires = { trireme_discipline_inv_3 }
+		requires = { liburnian_invention_1}
 	}
 
 	naval_new_inv_2 = {
 		modifier = { 
 			admiral_loyalty = 5
-			naval_damage_done = 0.05
 			monthly_wage_modifier = 0.01
 		}
 		on_activate = {
@@ -1866,13 +1807,11 @@ naval_tree = {
 		requires_or = { naval_tactic_inv_2  global_ship_recruit_speed_inv }
 	}
 
-		naval_tactic_inv_2 = {
-		modifier = { 
-			liburnian_offensive = 0.05
-			naval_damage_taken = -0.05 
+	naval_tactic_inv_2 = {
+		modifier = {  
 			navy_movement_speed = 0.1
 		}
-		requires_or = { navy_movement_speed_inv navy_maintenance_cost_inv_2 }
+		requires_or = { navy_movement_speed_inv }
 	}
 	
 	siege_engineers_inv_2 = { 
@@ -1887,9 +1826,7 @@ naval_tree = {
 	trireme_discipline_inv_5 = { 
 		requires = { naval_tactic_inv_2 }
 		modifier = { 
-			naval_damage_taken = -0.025
 			ship_capture_chance = 0.025
-			tetrere_offensive = 0.05
 		}
 	}		
 
@@ -1898,16 +1835,10 @@ naval_tree = {
 			navy_movement_speed = 0.15
 			naval_range = 0.1
 		}
-		requires = { double_bow_and_stern_inv_1 }
+		requires = {pirate_spawn_chance_inv_2 }
 	}
-############################################################### Honesta Missio ###########################################
-	navy_maintenance_cost_inv_2 = { 
-		modifier = { 
-			naval_damage_taken = -0.05
-			liburnian_discipline = 0.1
-		}
-		requires_or = { naval_new_inv_1 naval_new_inv_3 }
-	}		
+
+ ############################################################### Honesta Missio ###########################################
 
 	# Level 7 Country Specific
 	
@@ -1935,7 +1866,6 @@ naval_tree = {
 		modifier = { 
 			navy_movement_speed = 0.1 #Was morale
 			naval_range = 0.1
-			naval_damage_done = 0.025 
 		}
 		keystone = yes
 		requires = { naval_new_inv_2 }	
@@ -1986,26 +1916,10 @@ naval_tree = {
 	}
 
 	# Level 10
-	double_bow_and_stern_inv_2 = {
-		modifier = { 
-			octere_defensive = 0.05 
-			mega_galley_defensive = 0.1
-			naval_damage_done = 0.025
-		}
-		requires_or = { global_ship_recruit_speed_inv siege_engineers_inv_2 }			 
-	}
 
-	naval_weapon_platform_inv_3 = {
-		modifier = { 
-			mega_galley_offensive = 0.1
-		}
-		keystone = yes
-		requires_or = { naval_rostra_inv_4 double_bow_and_stern_inv_2 }			
-	}
 
 	mega_catamaran_inv = {
 		modifier = { 
-			octere_offensive = 0.05 
 			blockade_efficiency = 0.3
 			siege_ability = 0.05
 			naval_range = 0.1
@@ -2014,20 +1928,10 @@ naval_tree = {
 	}	
 
 	# Level 11
-	naval_rostra_inv_4 = {
-		modifier = { 
-			octere_discipline = 0.05
-			mega_galley_discipline = 0.1
-			naval_damage_done = 0.025
-		}
-		requires = { global_ship_recruit_speed_inv }		
-	}
-
 
 	naval_new_inv_3 = {
 		modifier = { 
 			admiral_loyalty = 5
-			naval_damage_taken = -0.05
 			monthly_wage_modifier = 0.01
 		}
 		requires_or = { naval_rostra_inv_2 naval_new_inv_4 }
@@ -2037,10 +1941,8 @@ naval_tree = {
 	naval_new_inv_5 = {
 		modifier = { 
 			naval_morale_recovery = 0.05
-			trireme_defensive = 0.05
 			navy_movement_speed = 0.05
 		}
 		requires = { naval_new_inv_3  }
 	}
-
 }

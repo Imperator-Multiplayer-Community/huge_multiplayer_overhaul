@@ -58,6 +58,8 @@
 		}
 	}
 
+	# Horse Archers
+	
 	nubian_path_6 = { ###
 		allow = {
             NOT = {
@@ -81,7 +83,7 @@
     arabian_path_12 = { ###
 		enable_tactic = cavalry_skirmish
 		modifier = { 
-			horse_archers_offensive = 0.1
+			horse_archers_defensive = 0.1
 			horse_archers_plains_combat_bonus = 0.10
 			horse_archers_mountain_combat_bonus = 0.10
             army_maintenance_cost = 0.01
@@ -90,7 +92,19 @@
 		requires = { nubian_path_6 }
 	}
 
-    arabian_path_11 = { ###
+	arabian_path_15 = { ###
+		modifier = { 
+			horse_archers_morale = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = levantine_arabian_path_7
+		requires = { arabian_path_12 }
+	}
+
+    # Naval
+	
+	arabian_path_11 = { ###
 		on_activate = {
 			if = {
 				limit = {
@@ -176,7 +190,9 @@
 		requires = { arabian_path_11 arabian_path_13 }
 	}
 
-    arabian_path_2 = { ###
+    # Light Infantry
+	
+	arabian_path_2 = { ###
 		allow = {
             NOT = {
                 has_variable = light_infantry_super_unit
@@ -222,7 +238,18 @@
 		requires = { arabian_path_2 }
 	}
 
-   
+	arabian_path_14 = { ###
+		modifier = { 
+			light_infantry_morale = 0.1
+			light_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
+		} 
+		icon = levantine_arabian_path_4
+		requires = { arabian_path_5 }
+	}	
+
+    # Camels  
+    
     arabian_path_3 = { ###
 		allow = {
             NOT = {
@@ -235,6 +262,8 @@
 		enable_tactic = cavalry_skirmish
         modifier = { 
 			camels_defensive = 0.10
+			camels_cost = -0.15
+			camels_desert_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_egyptian_path_6
@@ -244,6 +273,9 @@
     arabian_path_6 = { ###
 		modifier = { 
 			camels_morale = 0.10
+			camels_movement_speed = 0.10
+			camels_hills_combat_bonus = 0.10
+            camels_mountain_combat_bonus = 0.10
 			army_maintenance_cost = 0.01
 		} 
 		icon = levantine_arabian_path_3
@@ -253,32 +285,13 @@
     arabian_path_10 = { ###
 		modifier = { 
 			camels_offensive = 0.10
-			camels_cost = -0.15
+			camels_discipline = 0.10      
+            camels_plains_combat_bonus = 0.10
             army_maintenance_cost = 0.01
 		} 
 		icon = north_african_tribal_path_5
 		requires = { arabian_path_6 }
 	}
 
-    arabian_path_14 = { ###
-		modifier = { 
-			camels_discipline = 0.10
-			army_maintenance_cost = 0.01
-		} 
-		icon = levantine_arabian_path_4
-		requires = { arabian_path_10 }
-	}	
-
-    arabian_path_15 = { ###
-		modifier = { 
-			camels_movement_speed = 0.10
-            camels_desert_combat_bonus = 0.10
-            camels_hills_combat_bonus = 0.10
-            camels_mountain_combat_bonus = 0.10
-            camels_plains_combat_bonus = 0.10
-			army_maintenance_cost = 0.01
-		} 
-		icon = levantine_arabian_path_7
-		requires = { arabian_path_14 }
-	}
+        
 }
