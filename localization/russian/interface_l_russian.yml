@@ -1413,7 +1413,7 @@
  WIP:0 "Работа не завершена.\nПредставленное качество не является окончательным."
  TUTORIAL_RECOMMENDED_TT:0 "#t Обучение#!\nВ учебной кампании вы будете играть за #v Рим#! и получите список целей, которых надо достигнуть. Достигать их можно в любом порядке. Вы сможете продолжить игру, достигнув всех целей.\n\n#i Рекомендуется для новых игроков#!"
  TUTORIAL_MENU:0 "#t Цели учебной кампании#!"
- Game_Paused:0 "Пауза"
+ Game_Paused:0 "Пауза. Постарайстесь не совершать никаких действий. Это может вызвать рассинхроны или другие ошибки."
  PDX_TOOLTIP_SHORTCUT:0 "#T $MODS$$SHORTCUT$#!"
  SHORTCUT_KEY:0 "$KEY$"
  ABORTANNEXTITLE:0 "Отменить присоединение"
@@ -1804,13 +1804,13 @@
  COHORT_STATS:0 "Статистика земли"
  NAVY_STATS_TITLE:0 "Статистика флота"
  ###Character Rightclick Menu
- CHARACTER_INTERACTIONS_SUBTITLE:0 "Взаимодействия с персонажами"
+ CHARACTER_INTERACTIONS_SUBTITLE:0 "Взаимодействия"
  SORT_POP_COUNT_TT:0 "#t По населению этой культуры#!"
  SHOW_INTEGRATED_TT:0 "#t Показывать только интегрированные культуры#!\n#TF Интегрированными называются культуры, получившие гражданские права уровня граждан или выше."
  SHOW_CULTURE_GROUPS_TT:1 "#t Показать только выбранные культурные группы#!"
  CULTURE_GROUPS_BUTTON:0 "Культурные группы"
  INTEGRATED_POPS_BUTTON:0 "Статус интеграции"
- CHARACTER_INTERACTIONS_LIST_TITLE:0 "Взаимодействия с персонажами"
+ CHARACTER_INTERACTIONS_LIST_TITLE:0 "Взаимодействия"
  THE_SENATE_TITLE:0 "[GovernmentView.GetPlayer.Custom('get_court_type')|U]"
  nobles_header:0 "#T Аристократы#!"
  SORT_NOBLES_TT:0 "#t По числу аристократов#!"
@@ -2148,9 +2148,16 @@
  POP_RELIGION_SLICE_TT:1 "[PopReligionItem.GetName]\n\nВнутренний процент показывает долю [Concept( 'pops', 'населения' )|E] этой [Concept( 'province', 'провинции' )|E], исповедующего государственную [Concept( 'religion', 'религию' )|E].\n\n#G Щёлкните, чтобы закрепить центральную информацию.#!"
  POP_TYPE_TOTAL_TT:0 "[PopTypeItem.GetName]\n\nВнутреннее значение показывает суммарное население [Concept( 'province', 'провинции' )|E].\n\n#G Щёлкните, чтобы закрепить центральную информацию.#!"
 
-
+ SLAVES_OVERWORKED:0 "Рабы перегружены работой и могут погибнуть"
+ 
 # === [LocEditor:OrphanedKeys] Keys that do not exist in English ===
  RAISE_LEVY_HAS_LEVY:0 "Ополчения этого губернаторства уже собраны."
  RAISE_LEVY_MIN_SIZE:0 "Это губернаторство либо слишком мало, чтобы поддерживать минимальное количество ополчения, либо поддерживает слишком много когорт [Concept( 'legion', 'легиона' )|E]."
  RAISE_POTENTIAL_SUBUNIT_AMOUNT:0 "$AMOUNT|+=$"
  RAISE_LEVY_SUBUNIT_AMOUNT:0 "$RAISED_AMOUNT$ ($POTENTIAL_AMOUNT|+=$)"
+ LEGION_DISTINCTION_TEXT:0 "Модификатор легиона:"
+
+ TOO_MANY_MERC_STACKS:0 "@trigger_no! Мы можем содержать только $VAL|Y$ Наёмников. Это значение растёт с ростом статуса державы и других модификаторов."
+ max_merc_stacks:0 "Максимум наёмных армий"
+ MODIFIER_MAX_MERC_STACKS:0 "Максимум наёмных армий"
+ MODIFIER_MAX_MERC_STACKS_desc:0 "Количество армий наёмников, которые держава может содержать."
