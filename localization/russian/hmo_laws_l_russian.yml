@@ -1,0 +1,65 @@
+﻿l_russian:
+#Generic Laws
+
+bureaucracy_law:0 "Административное право"
+default_bureaucracy_law:0 "Наследственное бюрократическое право"
+default_bureaucracy_law_desc:0 "Ни один закон не был выбран. У нас та же бюрократия, которая досталась нам от наших предшественников"
+bureaucracy_kleptocracy_law:0 "Разграбление государственной казны"
+bureaucracy_kleptocracy_law_desc:0 "Конфисковывать и присваивать государственные средства в интересах самых знатных семей"
+bureaucracy_reform_law:0 "Инициировать реформу"
+bureaucracy_reform_law_desc:0 "Поручить государственным чиновникам периодически проверять бухгалтерские книги... не ворочая слишком много камней"
+bureaucracy_purge_law:0 "Очистить бюрократов"
+bureaucracy_purge_law_desc:0 "Борьба с коррупцией и восстановление веры населения в местные власти"
+
+social_law:0 "Закон о социальном обеспечении"
+default_social_law:0 "Традиционная система социального обеспечения"
+default_social_law_desc:0 "Закон не выбран"
+social_capital_primacy_law:0 " Главенство капитала"
+social_capital_primacy_law_desc:0 "Поскольку капитал так необходим для достижения целей государства, мы будем проводить политику, направленную на стимулирование накопления богатства, и отдавать приоритет его достижению перед всеми остальными вопросами"
+social_tax_exemption_law:0 "Налоговые льготы"
+social_tax_exemption_law_desc:0 "Давайте ослабим налоговое бремя для некоторых категорий граждан, помогая им процветать и развиваться."
+socialism_law:0 "Питание и пансион за счет государства"
+socialism_law_desc:0 "Давайте кормить тех, кто не в состоянии прокормить себя сам"
+
+merc_reliance_monthly_cost_tt:0 "Общие ежемесячные расходы наемников снижаются на 25 процентов"
+
+#New Republic Laws
+
+republican_recruitment_5:0 "Наемничество"
+republican_recruitment_5_desc:0 "Мы полагаемся на наемников"
+
+
+#New Monarchy Laws
+
+new_friends_law:0 "Личная дипломатия"
+new_friends_law_desc:0 "Личный контакт помогает согласовать интересы"
+pay_the_crown_law:0 "Обременительная дань"
+pay_the_crown_law_desc:0 "Подданные будут платить столько, сколько должны, чтобы обеспечить защиту своего повелителя"
+monarchy_recruitment_5:0 "Наемничество"
+monarchy_recruitment_5_desc:0 "Мы полагаемся на наемников"
+
+already_enacted_marian_reforms:0 "Марианские реформы еще не введены в действие"
+marian_reforms_warning:0 "После введения Марианских реформ нельзя вернуться к законам легиона."
+already_enacted_military_modernization:0 "Марианские реформы еще не введены в действие"
+military_modernization_warning:0 "После введения Марианской реформы нельзя вернуться к закону о легионе только в столице"
+already_enacted_standing_army:0 "Постоянная армия еще не введена в действие"
+standing_army_warning:0 "#R После принятия закона о Постоянной армии нельзя вернуться к закону о легионе только в столице. #!"
+
+# Tribal Legion Laws
+
+tribal_super_decentralized_military_laws:0 "Сила многих"
+super_decentralized_military_law_one:0 "Мигранты"
+super_decentralized_military_law_one_desc:0 "Племена предпочитают старые методы, когда каждый член племени носит свое оружие"
+super_decentralized_military_law_two:0 "Многоголовый зверь"
+super_decentralized_military_law_two_desc:0 "Перед лицом более организованных угроз каждое племя начало готовить постоянную армию"
+tribal_super_centralized_military_laws:0 "Орда"
+super_centralized_military_law_one:0 "Сельская местность"
+super_centralized_military_law_one_desc:0 "Племена предпочитают старые порядки, когда каждый член племени носит свое оружие."
+super_centralized_military_law_two:0 "Мы - легион"
+super_centralized_military_law_two_desc:0 "Племена отбросили свои различия и объединились под одним знаменем. Никто не устоит перед нашей мощью"
+   
+
+#Law events
+law_events.1.t:0 "Пиратство!"
+law_events.1.desc:0 "С тех пор как мы помиловали пиратов, они стали только наглее в своих нападениях"
+law_events.1.a:0 "Эти мерзавцы нападают на наших купцов и грабят наши порты!"
