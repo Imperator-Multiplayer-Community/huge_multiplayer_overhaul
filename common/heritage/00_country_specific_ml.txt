@@ -4038,3 +4038,108 @@ wigazan_heritage = {
 		tag = WIG
 	}
 }
+
+nyguylanian_heritage = {
+	modifier = {
+		#good
+		happiness_for_wrong_culture_group_modifier = wrong_culture_group_large
+		manpower_recovery_speed = 0.05
+		
+		#bad
+		general_loyalty = -5
+	}
+	
+	trigger = {
+		tag = NYG
+	}
+}
+
+atrebatian_heritage = {
+	modifier = {
+		#good
+		basic_settlement_infratructure_building_cost = -0.20
+		enslavement_efficiency = 0.05
+		
+		#bad
+		global_defensive = -0.1
+	}
+	
+	trigger = {
+		tag = ATR
+	}
+}
+
+belgica_magnan_heritage = {
+	modifier = {
+		#good
+		land_morale_modifier = 0.10
+		enslavement_efficiency = 0.05
+		
+		#bad
+		country_civilization_value = -5
+	}
+	
+	trigger = {
+		tag = BEM
+	}
+}
+
+zvejian_heritage = {
+	modifier = {
+		#good
+		naval_damage_done = 0.1
+		omen_power = 0.05
+		
+		#bad
+		global_freemen_happyness = negative_happiness_small_svalue
+	}
+	
+	trigger = {
+		tag = ZVE
+	}
+}
+
+olovian_heritage = {
+	modifier = {
+		#good
+		global_goods_from_slaves = -1
+		global_population_capacity_modifier = 0.05
+		
+		#bad
+		enslavement_efficiency = -0.05
+	}
+	
+	trigger = {
+		tag = OLO
+	}
+}
+
+pannonia_berber_heritage = {
+	modifier = {
+		#good
+		light_cavalry_plains_combat_bonus = 0.1
+		global_pop_assimilation_speed_modifier = 0.05
+		
+		#bad
+		land_unit_attrition = 0.05
+	}
+	
+	trigger = {
+		tag = PAN
+	}
+}
+
+vapian_heritage = {
+	modifier = {
+		#good
+		heavy_infantry_hills_combat_bonus = 0.1
+		ship_cost = -0.05
+		
+		#bad
+		manpower_recovery_speed = -0.05
+	}
+	
+	trigger = {
+		tag = PAN
+	}
+}

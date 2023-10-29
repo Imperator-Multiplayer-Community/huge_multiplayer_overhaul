@@ -1,0 +1,118 @@
+﻿country_decisions = {
+	
+	# Form Belgica Magna
+	# Created by Shinymewtwo99
+
+	form_belgica_magna = {
+		
+		potential = {
+			num_of_cities >= 1
+			NOT = { tag = BEM }
+			country_culture_group = belgae_group
+			NOT = {
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_region = belgica_region
+					is_in_region = germania_magna_region
+					is_in_region = britain_region
+					is_in_area = suaeuconia_area
+					is_in_area = remia_area
+					is_in_area = leucia_area
+					is_in_area = mediomatricia_area
+					is_in_area = chattia_occidentalis_area
+					is_in_area = chattia_orientalis_area
+					is_in_area = germanicum_area
+					is_in_area = raurica_area
+					is_in_area = sequania_area
+					is_in_area = lingonia_area
+
+					is_in_area = senonia_area
+					is_in_area = parisia_area
+					is_in_area = carnutia_area
+					is_in_area = cenomannia_area
+					is_in_area = armorica_maioris_area
+					
+					
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = belgica_magna_not_exists
+				NOT = {
+					any_country = {
+						tag = BEM
+					}
+				}
+			}
+
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_region = belgica_region
+			owns_or_subject_owns_region = germania_magna_region
+			owns_or_subject_owns_region = britain_region
+			owns_or_subject_owns_area = suaeuconia_area
+			owns_or_subject_owns_area = remia_area
+			owns_or_subject_owns_area = leucia_area
+			owns_or_subject_owns_area = mediomatricia_area
+			owns_or_subject_owns_area = chattia_occidentalis_area
+			owns_or_subject_owns_area = chattia_orientalis_area
+			owns_or_subject_owns_area = germanicum_area
+			owns_or_subject_owns_area = raurica_area
+			owns_or_subject_owns_area = sequania_area
+			owns_or_subject_owns_area = lingonia_area
+
+			owns_or_subject_owns_area = senonia_area
+			owns_or_subject_owns_area = parisia_area
+			owns_or_subject_owns_area = carnutia_area
+			owns_or_subject_owns_area = cenomannia_area
+			owns_or_subject_owns_area = armorica_maioris_area
+
+		}
+		
+		effect = {
+			custom_tooltip = "tier_3_formable_tooltip"
+			change_country_name = "BELGICA_MAGNA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}			
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_large_effect = yes
+				formable_capital_modifier_large_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "BELGICA_MAGNA_ADJECTIVE"
+				change_country_color =  "belgica_magna_color"
+				change_country_tag = BEM
+				change_country_flag = BELGICA_MAGNA_FLAG
+				trigger_event = {
+					id = formable_heritage.161
+				}
+			}
+			add_5_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 10
+				current_date > 600.1.1
+			}
+		}
+	}
+
+} 
+
