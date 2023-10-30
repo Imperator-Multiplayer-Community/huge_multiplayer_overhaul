@@ -46,6 +46,7 @@
 		tag = LOE #Lower Egypt
 		tag = UPE #Upper Egypt
 		tag = ARM #armenia
+		tag = ATR #Atrebatia
 	}
 }
 
@@ -125,6 +126,9 @@ is_tier_2_formable_trigger = {
 		tag = BTC #Baratanac
 		tag = FEZ #Fezzan
 		tag = WIG #Wigaza
+		tag = OLO #Olovia
+		tag = ZVE #Zvejia
+		tag = VAP #Vapia
 	}
 }
 
@@ -182,6 +186,8 @@ is_endgame_tag_trigger = {
 		tag = HEK #Hekamet
 		tag = SLA #Slavia
 		tag = TIB #Tibetan Empire
+		tag = NYG #Iberoalania -Nyguylania
+		tag = BEM #Belgica Magna
 		#tag = ITO #Italiotian League
 	}
 }

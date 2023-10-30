@@ -2002,32 +2002,29 @@ generic_mission_conquer_region = { #Conquer Region
 			var:side_branch_selector = 1
 		} 
 		allow = {
-			custom_tooltip = {
-				text = generic_mission_conquer_region_branch_develop_owned_follow_1_tt
-				scope:development_branch_area = {
-					any_area_province = {
-						count >= 1
-						owner = root
-						trigger_if = {
-							limit = {
-								ROOT = { is_ai = no }
-							}
-							has_city_status = yes
-							OR = {
-								num_of_academy_building >= 2
-								num_of_forum_building >= 2
-								num_of_workshop_building >= 2
-								num_of_court_building >= 2
-							}
-							has_construction = no
+			scope:development_branch_area = {
+				any_area_province = {
+					count >= 1
+					owner = root
+					trigger_if = {
+						limit = {
+							ROOT = { is_ai = no }
 						}
-						trigger_else = {
-							total_population >= 10
-							ROOT = { can_pay_price = price_found_city }
+						has_city_status = yes
+						OR = {
+							num_of_academy_building >= 2
+							num_of_forum_building >= 2
+							num_of_workshop_building >= 2
+							num_of_court_building >= 2
 						}
+						has_construction = no
+					}
+					trigger_else = {
+						total_population >= 10
+						ROOT = { can_pay_price = price_found_city }
 					}
 				}
-			}
+			}	
 		} 
 
 		bypass = {
@@ -2103,22 +2100,19 @@ generic_mission_conquer_region = { #Conquer Region
 				}
 				owns_area = scope:development_branch_area
 			}
-			custom_tooltip = {
-				text = generic_mission_conquer_region_branch_develop_owned_follow_2_tt
-				scope:development_branch_area = {
-					any_area_province = {
-						calc_true_if = {
-							amount >= 1
-							is_importing_trade_good = grain
-							is_importing_trade_good = vegetables
-							is_importing_trade_good = salt
-							is_importing_trade_good = fish
-							is_importing_trade_good = cattle
-							is_importing_trade_good = fruits
-							is_importing_trade_good = sugar
-							is_importing_trade_good = dates
-						}
-					}
+
+			scope:development_branch_area = {
+				any_area_province = {
+					OR = {
+						is_importing_trade_good = grain
+						is_importing_trade_good = vegetables
+						is_importing_trade_good = salt
+						is_importing_trade_good = fish
+						is_importing_trade_good = cattle
+						is_importing_trade_good = fruits
+						is_importing_trade_good = sugar
+						is_importing_trade_good = dates
+					}	
 				}
 			}
 		} 
