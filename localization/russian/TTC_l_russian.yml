@@ -1,0 +1,58 @@
+﻿l_russian:
+
+########################################
+#Buildings
+########################################
+large_town_building:0 "Большой город"
+Market_Town_Building:0 "Рыночный городок"
+Farming_Town_building:0 "Фермерский городок"
+Mining_Town_Building:0 "Шахтерский город"
+Horse_Ranch_building:0 "Конное ранчо"
+Steppe_Horse_Ranch_building:0 "Ранчо степных лошадей"
+Elephant_Ranch_building:0 "Слоновье ранчо"
+camel_ranch_building:0 "Верблюжье ранчо"
+Vineyard_building:0 "Фруктовый город"
+Industry_Town_building:0 "Промышленный город"
+
+########################################
+#Events
+########################################
+TTC.1.t:0 "Основать [cityscope.GetName]"
+TTC.1.d:0 "Природные богатства [cityscope.getName] привел к процветанию этой земли. Ведомый любящей рукой своего правителя, он достиг перекрестка в своем существовании. Ваш выбор сейчас определит наследие этого города. Ваша воля определит путь, который она пройдет на протяжении всей истории.\n\n Итак, что же это будет?"
+TTC.1.a:0 "[cityscope.GetName] станет городом."
+TTC.1.b:0 "[cityscope.GetName] станет рыбацким городком."
+TTC.1.c:0 "[cityscope.GetName] станет центром торговли."
+TTC.1.n:0 "[cityscope.GetName] станет центром торговли."
+TTC.1.e:0 "[cityscope.GetName] следует сосредоточиться на своей сельскохозяйственной отрасли."
+TTC.1.f:0 "[cityscope.GetName] следует сосредоточиться на своей горнодобывающей промышленности."
+TTC.1.g:0 "[cityscope.GetName] у нас будут самые знаменитые лошади в мире!"
+TTC.1.h:0 "[cityscope.GetName] у нас будут самые знаменитые степные лошади в мире!"
+TTC.1.i:0 "[cityscope.GetName] у нас будут самые знаменитые слоны в мире!"
+TTC.1.j:0 "[cityscope.GetName] у нас будут самые знаменитые верблюды в мире!"
+TTC.1.k:0 "[cityscope.GetName] имеет предметы роскоши, мир будет нам завидовать."
+TTC.1.l:0 "[cityscope.GetName] Промышленность станет основой нашей экономики."
+TTC.1.m:0 "Возможно [cityscope.getName] еще не совсем там. Позвольте ему расшириться и стать большим городом."
+
+TTC.1.MT_TOOLTIP:0 "Территория [cityscope.getName] становится #v рыночным городом."
+TTC.1.FP_TOOLTIP:0 "Территория [cityscope.getName] становится #v рыболовным портом."
+TTC.1.MP_TOOLTIP:0 "Территория [cityscope.getName] становится #v рыночным портом."
+TTC.1.FT_TOOLTIP:0 "Территория [cityscope.getName] становится #v фермерским городом."
+TTC.1.MiT_TOOLTIP:0 "Территория [cityscope.getName] становится #v шахтерским городом."
+TTC.1.HR_TOOLTIP:0 "Территория [cityscope.getName] становится #v конным ранчо."
+TTC.1.SHR_TOOLTIP:0 "Территория [cityscope.getName] становится #v ранчо степных лошадей."
+TTC.1.ER_TOOLTIP:0 "Территория [cityscope.getName] становится #v ранчо слонов."
+TTC.1.CR_TOOLTIP:0 "Территория [cityscope.getName] становится #v верблюжьим ранчо."
+TTC.1.LT_TOOLTIP:0 "Территория [cityscope.getName] становится #v роскошным городом."
+TTC.1.IT_TOOLTIP:0 "Территория [cityscope.getName] становится #v промышленным городом."
+TTC.1.LaT_TOOLTIP:0 "Территория [cityscope.getName] становится #v Большим городом."
+
+
+########################################
+#Modifiers
+########################################
+MarketPort:0 "Рыночный Порт"
+FishingPort:0 "Рыболовный порт"
+
+#Build Town Modifier
+local_forum_building_cost:0 "Модификатор Стоимости полученного Города"
+local_forum_building_cost_desc:0 "."
