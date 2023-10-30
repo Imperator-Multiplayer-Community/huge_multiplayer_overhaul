@@ -1,0 +1,115 @@
+﻿country_decisions = {
+	
+	# Form Olovia
+	# Created by Shinymewtwo99
+	form_olovia = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				country_culture_group = baltic
+			}
+			NOT = {
+				tag = OLO
+			}
+			NOT = {
+				primary_culture = aestian
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = cantiacia_area
+					is_in_area = durotrigia_area
+					is_in_area = dumnonia_area
+					is_in_area = icenia_area
+					is_in_area = dobunnia_area
+					is_in_area = britannia_secunda_meridionalis_area
+					is_in_area = britannia_secunda_septentrionalis_area
+					is_in_area = cornovia_area
+					is_in_area = coritania_area
+					#is_in_area = brigantia_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = olovia_not_exists
+				NOT = {
+					any_country = {
+						tag = OLO
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = cantiacia_area
+			owns_or_subject_owns_area = durotrigia_area
+			owns_or_subject_owns_area = dumnonia_area
+			owns_or_subject_owns_area = icenia_area
+			owns_or_subject_owns_area = dobunnia_area
+			owns_or_subject_owns_area = britannia_secunda_meridionalis_area
+			owns_or_subject_owns_area = britannia_secunda_septentrionalis_area
+			owns_or_subject_owns_area = cornovia_area
+			owns_or_subject_owns_area = coritania_area
+			#owns_or_subject_owns_area = brigantia_area
+
+			custom_tooltip = {
+				text = formable_olovia_capital
+				capital_scope = {
+						OR = {
+							is_in_region = britain_region
+							is_in_region = caledonia_region
+					}
+				}
+			}
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "OLOVIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "OLOVIA_ADJECTIVE"
+				change_country_color = "olovia_color"
+				change_country_tag = OLO
+				change_country_flag = OLOVIA_FLAG
+				trigger_event = {
+					id = formable_heritage.163
+				}					
+			}
+				capital_scope = {
+					establish_city_effect = yes
+					capital_formable_medium_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = "form_olovia_claims_tooltip"
+			hidden_effect = {			
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+
