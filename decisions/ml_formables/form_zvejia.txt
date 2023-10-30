@@ -1,0 +1,99 @@
+﻿country_decisions = {
+	
+	# Form Zvejia
+	# Created by Shinymewtwo99
+	form_zvejia = {
+		
+		potential = {
+			num_of_cities >= 1
+			OR = {
+				primary_culture = aestian
+			}
+			NOT = {
+				tag = ZVE
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = cornovia_area
+					is_in_area = coritania_area
+					is_in_area = brigantia_area
+					is_in_area = caledonia_meridionalis_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = zvejia_not_exists
+				NOT = {
+					any_country = {
+						tag = ZVE
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+			owns_or_subject_owns_area = cornovia_area
+			owns_or_subject_owns_area = coritania_area
+			owns_or_subject_owns_area = brigantia_area
+			owns_or_subject_owns_area = caledonia_meridionalis_area
+
+			custom_tooltip = {
+				text = formable_zvejia_capital
+				capital_scope = {
+						OR = {
+							is_in_region = britain_region
+							is_in_region = caledonia_region
+						}
+					}
+				}
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "ZVEJIA_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "ZVEJIA_ADJECTIVE"
+				change_country_color = "zvejia_color"
+				change_country_tag = ZVE
+				change_country_flag = ZVEJIA_FLAG
+				trigger_event = {
+					id = formable_heritage.162
+				}					
+			}
+			capital_scope = {
+				establish_city_effect = yes
+				capital_formable_medium_effect = yes
+				formable_capital_modifier_normal_effect = yes
+			}
+			hidden_effect = {			
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+} 
+

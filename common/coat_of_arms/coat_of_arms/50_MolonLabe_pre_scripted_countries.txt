@@ -2280,3 +2280,330 @@ WIGAZA_FLAG = {
 		}
 	}
 }
+
+NYGUYLANIA_FLAG = {
+	pattern = "pattern_horizontal_bar_01.tga"
+	color1 = "nyguylania_flag_color"
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_block.dds"
+		color1 = "offwhite"
+		color2 = "offwhite"
+		instance = { 
+			scale = { 1.0 0.6 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_border_zigzag_01.dds"
+		color1 = "offwhite"
+		color2 = "athens_blue"
+		instance = { 
+			rotation = 180
+		}
+		instance = { 
+			rotation = 0
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_bull_02.dds"
+		color1 = "phrygia_red"
+		color2 = "blood_red"
+		instance = { 
+			scale = { 0.70 0.65 } 
+		}
+	}
+}
+
+ATREBATIA_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = "atrebatia_flag_color"
+	color2 = "ck2_black"
+
+	colored_emblem = {
+		texture = "ce_circle_01.dds"
+		color1 = "ck2_black"
+		color2 = "ck2_black"
+		instance = { 
+			scale = { 1.2 1.2 } 
+		}
+		instance = { 
+			scale = { 0.27 0.27 } 
+		}
+	}
+	colored_emblem = {
+		texture = "ce_circle_01.dds"
+		color1 = "atrebatia_flag_color"
+		color2 = "atrebatia_flag_color"
+		instance = { 
+			scale = { 1.05 1.05 } 
+		}
+	}
+	colored_emblem = {
+		texture = "ce_whirl_01.dds"
+		color1 = "ck2_black"
+		color2 = "atrebatia_flag_color"
+		instance = { 
+			scale = { 0.70 0.70 } 
+			position = { 0.52 0.50 }
+		}
+	}
+	colored_emblem = {
+		texture = "ce_circle_01.dds"
+		color1 = "atrebatia_flag_color"
+		color2 = "atrebatia_flag_color"
+		instance = { 
+			scale = { 0.27 0.27 } 
+		}
+	}
+	colored_emblem = {
+		texture = "ce_circle_01.dds"
+		color1 = "ck2_black"
+		color2 = "ck2_black"
+		instance = { 
+			scale = { 0.20 0.20 } 
+		}
+	}
+	colored_emblem = {
+		texture = "ce_circle_01.dds"
+		color1 = "atrebatia_flag_color"
+		color2 = "atrebatia_flag_color"
+		instance = { 
+			scale = { 0.09 0.09 } 
+		}
+	}
+	
+}
+
+BELGICA_MAGNA_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = "belgica_magna_color"
+	color2 = "ck2_black"
+
+	colored_emblem = {
+		texture = "ce_belgae_formable.dds"
+		color1 = "ck2_white"
+		color2 = "belgica_magna_orange"
+		instance = { 
+			scale = { 0.75 0.75 } 
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_border_leaves_02.dds"
+		color1 = "belgica_magna_orange"
+		color2 = "ck2_white"
+		instance = { 
+			rotation = 0
+		}
+		instance = { 
+			rotation = 180
+		}
+	}
+	
+}
+
+ZVEJIA_FLAG = {
+	pattern = "pattern_checkers_diagonal_02.tga"
+	color1 = "zvejia_color"
+	color2 = "ck2_black"
+
+	colored_emblem = {
+		texture = "ce_diamond_03.dds"
+		color1 = "offwhite"
+		color2 = "belgica_magna_orange"
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 315
+			position = { 0.15 0.15 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 315
+			position = { 0.32 0.32 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 315
+			position = { 0.50 0.50 }
+		}
+
+##############
+
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 45
+			position = { 0.85 0.15 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 45
+			position = { 0.68 0.32 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 45
+			position = { 0.50 0.50 }
+		}
+
+##############
+
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 135
+			position = { 0.85 0.85 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 135
+			position = { 0.68 0.68 }
+		}
+
+##############
+
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 225
+			position = { 0.15 0.85 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 } 
+			rotation = 225
+			position = { 0.32 0.68 }
+		}
+	}
+}
+
+
+OLOVIA_FLAG = {
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "offwhite"
+	color2 = "olovia_color"
+
+
+	colored_emblem = {
+		texture = "ce_circle_01.dds"
+		color1 = "olovia_color"
+		color2 = "belgica_magna_orange"
+		instance = { 
+			scale = { 1.1 1.1 } 
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_slavia.dds"
+		color1 = "offwhite"
+		color2 = "olovia_color"
+		instance = { 
+			scale = { 0.65 0.65 } 
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_border_triangles_02.dds"
+		color1 = "olovia_color"
+		color2 = "offwhite"
+		instance = { 
+			rotation = 0
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_border_triangles_02.dds"
+		color1 = "offwhite"
+		color2 = "olovia_color"
+		instance = { 
+			rotation = 180
+		}
+	}
+	
+}
+
+PANNONIA_BERBER_FLAG = {
+	pattern = "pattern_vertical_bar_01.tga"
+	color1 = "offwhite"
+	color2 = "pannonia_berber_flag_color"
+
+	colored_emblem = {
+		texture = "ce_border_simple_01.tga"
+		color1 = "pannonia_berber_flag_color"
+		instance = { 
+			rotation = 90
+			position={ 0.25 0.50 }
+		}
+		instance = { 
+			rotation = 270
+			position={ 0.75 0.50 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_border_leaves_01.dds"
+		color1 = "pannonia_berber_flag_color"
+		color2 = "ck2_black"
+		instance = { 
+			rotation = 90
+		}
+		instance = { 
+			rotation = 270
+		}
+
+	}
+
+	colored_emblem = {
+		texture = "ce_numidian_04.dds"
+		color1 = "ck2_black"
+		instance = {
+		scale = { 0.50 0.50 }
+		}
+	}
+}
+
+VAPIA_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = "vapia_color"
+	color2 = "roman_gold"
+
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = "navy_blue"
+		color2 = "roman_gold"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_diamond_03.dds"
+		color1 = "navy_blue"
+		color2= "ck2_black"
+		instance = { scale = { 1.2 0.75 } }
+		instance = {
+			scale = { 0.75 0.56 }
+			position = { 0.20 0.50 }
+		}
+		instance = {
+			scale = { 0.75 0.56 }
+			position = { 0.80 0.50 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_ship_01.dds"
+		color1 = "roman_gold"
+		color2= "offwhite"
+		instance = { 
+			scale = { 0.40 0.40 }
+			position = { 0.50 0.47 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 }
+			position = { 0.19 0.49 }
+		}
+		instance = { 
+			scale = { 0.25 0.25 }
+			position = { 0.81 0.49 }
+		}
+	}
+}
