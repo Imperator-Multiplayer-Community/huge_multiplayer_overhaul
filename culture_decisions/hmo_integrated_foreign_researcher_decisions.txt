@@ -1,14 +1,17 @@
-﻿culture_decisions = {	
+﻿culture_decisions = {
 	#Patronise Greek Literature and the Arts:	
 	patronize_greek_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = greek_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:hellenic								
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:hellenic
+				}
 			}
 		}
 		allow = {
@@ -17,15 +20,15 @@
 					text = tradition_unlock_requirement_greek
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:hellenic							
-						}
+					OR = {
+						this.culture.culture_group = culture_group:hellenic
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_greek_literature
 				}
 			}
@@ -37,7 +40,7 @@
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "patronizing_greek_literature" 
+					name = "patronizing_greek_literature"
 					duration = -1
 				}
 			}
@@ -50,7 +53,7 @@
 			set_variable = {
 				name = greek_science
 				days = -1
-				}
+			}
 			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
@@ -66,10 +69,12 @@
 			approval_effect = {
 				PARTY = democratic_party
 				VALUE = party_approval_small_svalue
-			}			
+			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -77,13 +82,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -92,21 +97,23 @@
 					}
 				}
 			}
-		}	
+		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
 	patronize_latin_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = latin_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:latin											
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:latin
+				}
 			}
 		}
 		allow = {
@@ -116,15 +123,15 @@
 					text = tradition_unlock_requirement_latin
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {	
-							this.culture.culture_group = culture_group:latin	
-						}
+					OR = {
+						this.culture.culture_group = culture_group:latin
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_latin_literature
 				}
 			}
@@ -136,7 +143,7 @@
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "patronizing_latin_literature" 
+					name = "patronizing_latin_literature"
 					duration = -1
 				}
 			}
@@ -149,8 +156,8 @@
 			set_variable = {
 				name = latin_science
 				days = -1
-				}
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -168,7 +175,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -176,13 +185,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -191,23 +200,25 @@
 					}
 				}
 			}
-		}	
+		}
 		ai_will_do = {
 			factor = 0
 		}
-	}	
-	
+	}
 	patronize_celtic_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = celtic_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
 				OR = {
 					this.culture.culture_group = culture_group:gallic
 					this.culture.culture_group = culture_group:celto_pannonian_group
-					this.culture.culture_group = culture_group:belgae_group							
-				}	
+					this.culture.culture_group = culture_group:belgae_group
+				}
 			}
 		}
 		allow = {
@@ -216,17 +227,17 @@
 					text = tradition_unlock_requirement_celtic
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:gallic
-							this.culture.culture_group = culture_group:celto_pannonian_group
-							this.culture.culture_group = culture_group:belgae_group							
-						}
+					OR = {
+						this.culture.culture_group = culture_group:gallic
+						this.culture.culture_group = culture_group:celto_pannonian_group
+						this.culture.culture_group = culture_group:belgae_group
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_celtic_literature
 				}
 			}
@@ -238,7 +249,7 @@
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "patronizing_celtic_literature" 
+					name = "patronizing_celtic_literature"
 					duration = -1
 				}
 			}
@@ -251,8 +262,8 @@
 			set_variable = {
 				name = celtic_science
 				days = -1
-				}
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -270,7 +281,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -278,13 +291,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -293,23 +306,25 @@
 					}
 				}
 			}
-		}	
+		}
 		ai_will_do = {
 			factor = 0
 		}
-	}	
-
+	}
 	patronize_indian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = indian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
 					this.culture.culture_group = culture_group:aryan
 					this.culture.culture_group = culture_group:pracyan
-					this.culture.culture_group = culture_group:indian							
-				}	
+					this.culture.culture_group = culture_group:indian
+				}
 			}
 		}
 		allow = {
@@ -318,17 +333,17 @@
 					text = tradition_unlock_requirement_indian
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:aryan
-							this.culture.culture_group = culture_group:pracyan
-							this.culture.culture_group = culture_group:indian							
-						}
+					OR = {
+						this.culture.culture_group = culture_group:aryan
+						this.culture.culture_group = culture_group:pracyan
+						this.culture.culture_group = culture_group:indian
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_indian_literature
 				}
 			}
@@ -340,7 +355,7 @@
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "patronizing_indian_literature" 
+					name = "patronizing_indian_literature"
 					duration = -1
 				}
 			}
@@ -353,8 +368,8 @@
 			set_variable = {
 				name = indian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -372,7 +387,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -380,13 +397,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -394,23 +411,25 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_iberian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = iberian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
 					this.culture.culture_group = culture_group:celt_iberia
-					this.culture.culture_group = culture_group:iberia							
-				}	
+					this.culture.culture_group = culture_group:iberia
+				}
 			}
 		}
 		allow = {
@@ -419,16 +438,16 @@
 					text = tradition_unlock_requirement_iberian
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:celt_iberia
-							this.culture.culture_group = culture_group:iberia						
-						}
+					OR = {
+						this.culture.culture_group = culture_group:celt_iberia
+						this.culture.culture_group = culture_group:iberia
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_iberian_literature
 				}
 			}
@@ -440,7 +459,7 @@
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "patronizing_iberian_literature" 
+					name = "patronizing_iberian_literature"
 					duration = -1
 				}
 			}
@@ -453,8 +472,8 @@
 			set_variable = {
 				name = iberian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -472,7 +491,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -480,13 +501,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -494,24 +515,26 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_haemic_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = haemic_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
 					this.culture.culture_group = culture_group:illyrian_group
 					this.culture.culture_group = culture_group:dacia_group
-					this.culture.culture_group = culture_group:thrace_group					
-				}	
+					this.culture.culture_group = culture_group:thrace_group
+				}
 			}
 		}
 		allow = {
@@ -520,17 +543,17 @@
 					text = tradition_unlock_requirement_haemic
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:illyrian_group
-							this.culture.culture_group = culture_group:dacia_group
-							this.culture.culture_group = culture_group:thrace_group							
-						}
+					OR = {
+						this.culture.culture_group = culture_group:illyrian_group
+						this.culture.culture_group = culture_group:dacia_group
+						this.culture.culture_group = culture_group:thrace_group
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_haemic_literature
 				}
 			}
@@ -542,7 +565,7 @@
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "patronizing_haemic_literature" 
+					name = "patronizing_haemic_literature"
 					duration = -1
 				}
 			}
@@ -555,8 +578,8 @@
 			set_variable = {
 				name = haemic_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -574,7 +597,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -582,13 +607,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -596,22 +621,24 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_punic_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = punic_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:west_levantine				
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:west_levantine
+				}
 			}
 		}
 		allow = {
@@ -620,15 +647,15 @@
 					text = tradition_unlock_requirement_punic
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:west_levantine					
-						}
+					OR = {
+						this.culture.culture_group = culture_group:west_levantine
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_punic_literature
 				}
 			}
@@ -653,8 +680,8 @@
 			set_variable = {
 				name = punic_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -672,7 +699,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -680,13 +709,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -694,23 +723,25 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_numidian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = numidian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
 					this.culture.culture_group = culture_group:numidian
-					this.culture.culture_group = culture_group:fezzani			
-				}	
+					this.culture.culture_group = culture_group:fezzani
+				}
 			}
 		}
 		allow = {
@@ -719,16 +750,16 @@
 					text = tradition_unlock_requirement_numidian
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:numidian
-							this.culture.culture_group = culture_group:fezzani				
-						}
+					OR = {
+						this.culture.culture_group = culture_group:numidian
+						this.culture.culture_group = culture_group:fezzani
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_numidian_literature
 				}
 			}
@@ -753,8 +784,8 @@
 			set_variable = {
 				name = numidian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -772,7 +803,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -780,13 +813,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -794,22 +827,24 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_egyptian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = egyptian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:north_african		
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:north_african
+				}
 			}
 		}
 		allow = {
@@ -818,15 +853,15 @@
 					text = tradition_unlock_requirement_egyptian
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:north_african			
-						}
+					OR = {
+						this.culture.culture_group = culture_group:north_african
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_egyptian_literature
 				}
 			}
@@ -851,8 +886,8 @@
 			set_variable = {
 				name = egyptian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -870,7 +905,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -878,13 +915,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -892,22 +929,24 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_mesopotamian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = mesopotamian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:east_levantine		
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:east_levantine
+				}
 			}
 		}
 		allow = {
@@ -916,15 +955,15 @@
 					text = tradition_unlock_requirement_east_levantine
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:east_levantine				
-						}
+					OR = {
+						this.culture.culture_group = culture_group:east_levantine
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_mesopotamian_literature
 				}
 			}
@@ -949,8 +988,8 @@
 			set_variable = {
 				name = mesopotamian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -968,7 +1007,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -976,13 +1017,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -990,22 +1031,24 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
 	patronize_persian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = persian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:persia		
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:persia
+				}
 			}
 		}
 		allow = {
@@ -1014,15 +1057,15 @@
 					text = tradition_unlock_requirement_persian
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:persia			
-						}
+					OR = {
+						this.culture.culture_group = culture_group:persia
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_persian_literature
 				}
 			}
@@ -1047,8 +1090,8 @@
 			set_variable = {
 				name = persian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -1066,7 +1109,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -1074,13 +1119,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -1088,24 +1133,26 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_nubian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = nubian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
 					this.culture.culture_group = culture_group:meroitic_group
 					this.culture.culture_group = culture_group:aksumite_group
-					this.culture.culture_group = culture_group:nilotic_group		
-				}	
+					this.culture.culture_group = culture_group:nilotic_group
+				}
 			}
 		}
 		allow = {
@@ -1114,17 +1161,17 @@
 					text = tradition_unlock_requirement_nubian
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:meroitic_group
-							this.culture.culture_group = culture_group:aksumite_group
-							this.culture.culture_group = culture_group:nilotic_group				
-						}
+					OR = {
+						this.culture.culture_group = culture_group:meroitic_group
+						this.culture.culture_group = culture_group:aksumite_group
+						this.culture.culture_group = culture_group:nilotic_group
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_nubian_literature
 				}
 			}
@@ -1149,8 +1196,8 @@
 			set_variable = {
 				name = nubian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -1168,7 +1215,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -1176,13 +1225,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -1190,22 +1239,24 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_arabian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = arabian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:south_levantine		
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:south_levantine
+				}
 			}
 		}
 		allow = {
@@ -1214,15 +1265,15 @@
 					text = tradition_unlock_requirement_south_levantine
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:south_levantine				
-						}
+					OR = {
+						this.culture.culture_group = culture_group:south_levantine
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_arabian_literature
 				}
 			}
@@ -1247,8 +1298,8 @@
 			set_variable = {
 				name = arabian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -1266,7 +1317,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -1274,13 +1327,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -1288,22 +1341,24 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	patronize_anatolian_literature_and_arts = {
 		potential = {
-			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
+			NOT = {
+				root.culture.culture_group = scope:target_culture.culture.culture_group
+				has_variable = anatolian_science
+			}
 			scope:target_culture = {
-			is_integrated = yes
-			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:anatolian		
-				}	
+				is_integrated = yes
+				#I need help limiting the potential so this decision only appears if you have integrated the culture
+				OR = {
+					this.culture.culture_group = culture_group:anatolian
+				}
 			}
 		}
 		allow = {
@@ -1312,15 +1367,15 @@
 					text = tradition_unlock_requirement_anatolian
 					is_integrated = yes
 					country_culture_pop_count >= 300
-						OR = {
-							this.culture.culture_group = culture_group:anatolian				
-						}
+					OR = {
+						this.culture.culture_group = culture_group:anatolian
+					}
 				}
 			}
 			num_of_cities >= 1
 			stability > 40
 			NOT = {
-				scope:target_culture = { 
+				scope:target_culture = {
 					has_country_culture_modifier = patronizing_anatolian_literature
 				}
 			}
@@ -1345,8 +1400,8 @@
 			set_variable = {
 				name = anatolian_science
 				days = -1
-				}	
-						approval_effect = {
+			}
+			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_disapproval_small_svalue
 			}
@@ -1364,7 +1419,9 @@
 			}
 			custom_tooltip = brilliant_foreign_researcher_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -1372,13 +1429,13 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = intelligent
 								}
 								10 = {
 									add_trait = polymath
-								}					
-							}				
+								}
+							}
 							add_character_modifier = {
 								name = "brilliant_foreign_researcher_character"
 								duration = -1
@@ -1386,11 +1443,10 @@
 						}
 					}
 				}
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 }
