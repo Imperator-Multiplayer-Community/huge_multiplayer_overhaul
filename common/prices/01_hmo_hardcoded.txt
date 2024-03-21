@@ -1,5 +1,4 @@
-﻿
-enact_holy_site = {
+﻿enact_holy_site = {
 	political_influence = 40
 	gold = 200
 }
@@ -36,9 +35,8 @@ buy_idea = {
 }
 
 recruit_mercenary = {
-	scaled_gold = 3
-	gold = 50
-	aggressive_expansion = 5
+	gold = 100
+	aggressive_expansion = 2
 }
 
 improve_relation = {
@@ -46,5 +44,5 @@ improve_relation = {
 }
 
 insult = {
-	aggressive_expansion = 8
+	aggressive_expansion = 4
 }

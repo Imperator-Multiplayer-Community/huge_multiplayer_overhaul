@@ -1,0 +1,85 @@
+army_size_merc_estimation = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:target
+		}
+		scope:target = {
+			ordered_character_unit = {
+				limit = {
+					unit_size > 0
+					in_combat = no
+				}
+				order_by = unit_size
+				add = unit_size
+			}
+		}
+	}
+	multiply = 4	#maintenance
+	multiply = 6	#months
+	if = {
+		limit = {
+			scope:target.employer = {
+				rank = regional_power
+			}
+			multiply = 2
+		}
+	}
+	else_if = {
+		limit = {
+			scope:target.employer = {
+				rank = major_power
+			}
+			multiply = 3
+		}
+	}
+	else_if = {
+		limit = {
+			scope:target.employer = {
+				rank = great_power
+			}
+			multiply = 4
+		}
+	}
+	min = 100
+}
+
+army_size_merc_estimation_sg = {
+	value = 0
+	ROOT = {
+		ordered_character_unit = {
+			limit = {
+				unit_size > 0
+				in_combat = no
+			}
+			order_by = unit_size
+			add = unit_size
+		}
+	}
+	multiply = 4	#maintenance
+	multiply = 6	#months
+	if = {
+		limit = {
+			root.employer = {
+				rank = regional_power
+			}
+			multiply = 2
+		}
+	}
+	else_if = {
+		limit = {
+			root.employer = {
+				rank = major_power
+			}
+			multiply = 3
+		}
+	}
+	else_if = {
+		limit = {
+			root.employer = {
+				rank = great_power
+			}
+			multiply = 4
+		}
+	}
+}

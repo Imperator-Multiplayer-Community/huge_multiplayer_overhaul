@@ -56,12 +56,15 @@ price_force_divorce = {
 price_state_investment_military = {
 	political_influence = 60
 }
+
 price_state_investment_civic = {
 	political_influence = 60
 }
+
 price_state_investment_oratory = {
 	political_influence = 60
 }
+
 price_state_investment_religious = {
 	political_influence = 60
 }
@@ -97,11 +100,10 @@ price_task_character = {
 	treasury = 50
 }
 
-create_merc_state_price = { 
+create_merc_state_price = {
 	political_influence = 50
 	military_experience = 5
 }
-
 
 assassinate_attempt_foreign = {
 	aggressive_expansion = 20
@@ -113,14 +115,13 @@ subject_player_client_state_pays = {
 	scaled_manpower = 0.025
 }
 
-
 build_border_fort = {
 	gold = 150
 	manpower = 3
 }
 
 raid = {
-	aggressive_expansion = 3 #5 #Aries says this is too harsh. It was 2 in vanilla
+	aggressive_expansion = 3	#5 #Aries says this is too harsh. It was 2 in vanilla
 }
 
 raise_levies = {
