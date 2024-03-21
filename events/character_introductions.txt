@@ -1,6 +1,5 @@
 ﻿namespace = character_introductions
-
-character_introductions.1 = { 
+character_introductions.1 = {
 	type = country_event
 	title = character_introductions.1.t
 	desc = character_introductions.1.desc
@@ -8,16 +7,14 @@ character_introductions.1 = {
 	right_portrait = scope:new_debutante
 	picture = great_library
 	interface_lock = no
-	
 	immediate = {
 	}
-
 	option = {
 		name = "character_introductions.1.a"
 	}
 }
 
-character_introductions.2 = { 
+character_introductions.2 = {
 	type = country_event
 	title = character_introductions.2.t
 	desc = character_introductions.2.desc
@@ -25,16 +22,14 @@ character_introductions.2 = {
 	right_portrait = scope:new_talent
 	picture = great_library
 	interface_lock = no
-	
 	immediate = {
 	}
-
 	option = {
 		name = "character_introductions.2.a"
 	}
 }
 
-character_introductions.3 = { 
+character_introductions.3 = {
 	type = country_event
 	title = character_introductions.3.t
 	desc = character_introductions.3.desc
@@ -42,16 +37,14 @@ character_introductions.3 = {
 	right_portrait = scope:war_hero_char
 	picture = great_library
 	interface_lock = no
-	
 	immediate = {
 	}
-
 	option = {
 		name = "character_introductions.3.a"
 	}
 }
 
-character_introductions.4 = { 
+character_introductions.4 = {
 	type = country_event
 	title = character_introductions.4.t
 	desc = character_introductions.4.desc
@@ -59,16 +52,14 @@ character_introductions.4 = {
 	right_portrait = scope:naval_war_hero_char
 	picture = great_library
 	interface_lock = no
-	
 	immediate = {
 	}
-
 	option = {
 		name = "character_introductions.4.a"
 	}
 }
 
-character_introductions.5 = { 
+character_introductions.5 = {
 	type = country_event
 	title = character_introductions.5.t
 	desc = character_introductions.5.desc
@@ -76,16 +67,60 @@ character_introductions.5 = {
 	right_portrait = scope:root.current_ruler
 	picture = elephant_battle
 	interface_lock = no
-	
-	immediate = {
+	trigger = {
+		NOT = {
+			has_variable = war_hero_arises
+		}
 	}
-
+	immediate = {
+		set_variable = {
+			name = war_hero_arises
+			days = 720
+		}
+	}
 	option = {
 		name = "character_introductions.5.a"
+		create_character = {
+			culture = scope:root.culture
+			religion = scope:root.religion
+			hidden_effect = {
+				random_list = {
+					10 = {
+						add_trait = original_thinker
+					}
+					10 = {
+						add_trait = confident
+					}
+					10 = {
+						add_trait = tactician
+					}
+					10 = {
+						add_trait = disciplined
+					}
+					10 = {
+						add_trait = steadfast
+					}
+					10 = {
+						add_trait = aggressive
+					}
+					10 = {
+						add_trait = brave
+					}
+				}
+				add_character_modifier = {
+					name = "war_hero_character"
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = "character_introductions.5.b"
+		add_military_experience = 50
 	}
 }
 
-character_introductions.6 = { 
+character_introductions.6 = {
 	type = country_event
 	title = character_introductions.6.t
 	desc = character_introductions.6.desc
@@ -93,11 +128,55 @@ character_introductions.6 = {
 	right_portrait = scope:root.current_ruler
 	picture = naval_battle
 	interface_lock = no
-	
-	immediate = {
+	trigger = {
+		NOT = {
+			has_variable = naval_war_hero_arises
+		}
 	}
-
+	immediate = {
+		set_variable = {
+			name = naval_hero_arises
+			days = 720
+		}
+	}
 	option = {
 		name = "character_introductions.6.a"
+		create_character = {
+			culture = scope:root.culture
+			religion = scope:root.religion
+			hidden_effect = {
+				random_list = {
+					10 = {
+						add_trait = coastal_raider
+					}
+					10 = {
+						add_trait = squadron_leader
+					}
+					10 = {
+						add_trait = princeps
+					}
+					10 = {
+						add_trait = oarmaster
+					}
+					10 = {
+						add_trait = seadog
+					}
+					10 = {
+						add_trait = daring
+					}
+					10 = {
+						add_trait = tough
+					}
+					10 = {
+						add_trait = improviser
+					}
+				}
+				add_character_modifier = {
+					name = "naval_war_hero_character"
+					duration = -1
+				}
+				save_scope_as = naval_war_hero_char
+			}
+		}
 	}
 }

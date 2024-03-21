@@ -1,10 +1,7 @@
-﻿tribal_reform = { 
-
+﻿tribal_reform = {
 	header = "mission_image_general"
 	icon = "general_2"
-
-	repeatable = no 
-
+	repeatable = no
 	potential = {
 		is_tribal = yes
 		has_variable = can_tribal_reform
@@ -12,18 +9,15 @@
 			has_variable = reform_cooldown
 		}
 		has_civil_war = no
-	} 
-
+	}
 	abort = {
 		ai_mission_back_out_trigger = yes
 	}
-
 	chance = {
 		factor = 100
-	} 
-
-	on_potential = {} 
-
+	}
+	on_potential = {
+	}
 	on_start = {
 		start_mission_ai_effect = yes
 		random_family = {
@@ -67,32 +61,33 @@
 		trigger_event = {
 			id = tribal_reform.1
 		}
-	}  
-
+	}
 	on_abort = {
 		custom_tooltip = "on_abort_tribal_reform_tt"
 		set_variable = {
 			name = reform_cooldown
 			days = 7300
 		}
-	}  
-
+	}
 	on_completion = {
 		complete_mission_effect = yes
 		if = {
 			limit = {
-				any_owned_province = { has_province_modifier = tribal_civilization_pmod }
+				any_owned_province = {
+					has_province_modifier = tribal_civilization_pmod
+				}
 			}
 			every_owned_province = {
-				limit = { has_province_modifier = tribal_civilization_pmod }
+				limit = {
+					has_province_modifier = tribal_civilization_pmod
+				}
 				remove_province_modifier = tribal_civilization_pmod
 			}
 		}
 	}
-
-	tribal_reform_1 = { #monarchy chain
+	tribal_reform_1 = {
+		#monarchy chain
 		icon = "task_political"
-
 		allow = {
 			trigger_if = {
 				limit = {
@@ -100,7 +95,7 @@
 				}
 				hidden:scope:monarchy_family = {
 					custom_tooltip = {
-						text = tribal_monarchy_family_raised_up_tt 
+						text = tribal_monarchy_family_raised_up_tt
 						num_of_jobs >= monarchy_family_num_of_expected_jobs_plus_svalue
 					}
 				}
@@ -108,39 +103,35 @@
 			trigger_else = {
 				tyranny >= 60
 			}
-		} 
-		
+		}
 		bypass = {
 			is_tribal = no
-		} 
-		
-		prevented_by = { tribal_reform_2 }
-
+		}
+		prevented_by = {
+			tribal_reform_2
+		}
 		on_completion = {
 			add_country_modifier = {
 				name = tribal_reform_law_modifier
-				duration = 3650
+				duration = 365
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_1_b = { 
+	tribal_reform_1_b = {
 		icon = "task_political"
-
-		requires = { tribal_reform_1 } 
-
+		requires = {
+			tribal_reform_1
+		}
 		allow = {
 			has_law = absolute_authority
 			NOT = {
 				has_law = increased_council_powers
 			}
 			political_influence >= 50
-		} 
-		
+		}
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			add_political_influence = -50
 			if = {
@@ -171,14 +162,13 @@
 					}
 				}
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_1_c = { 
+	tribal_reform_1_c = {
 		icon = "task_economical"
-
-		requires = { tribal_reform_1 } 
-
+		requires = {
+			tribal_reform_1
+		}
 		allow = {
 			capital_scope = {
 				civilization_value >= 35
@@ -189,12 +179,10 @@
 					has_city_status = yes
 				}
 			}
-		} 
-		
+		}
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			capital_scope = {
 				if = {
@@ -204,7 +192,7 @@
 						}
 					}
 					add_permanent_province_modifier = {
-						name = civilized_tribe_ppmod 
+						name = civilized_tribe_ppmod
 						duration = -1
 					}
 				}
@@ -214,12 +202,10 @@
 					}
 				}
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_2 = { 
+	tribal_reform_2 = {
 		icon = "task_political"
-
 		allow = {
 			trigger_if = {
 				limit = {
@@ -227,7 +213,7 @@
 				}
 				hidden:scope:republic_family = {
 					custom_tooltip = {
-						text = tribal_republic_family_raised_up_tt 
+						text = tribal_republic_family_raised_up_tt
 						num_of_jobs >= republic_family_num_of_expected_jobs_plus_svalue
 					}
 				}
@@ -235,39 +221,35 @@
 			trigger_else = {
 				stability >= 65
 			}
-		} 
-		
+		}
 		bypass = {
 			is_tribal = no
-		} 
-		
-		prevented_by = { tribal_reform_1 }
-
+		}
+		prevented_by = {
+			tribal_reform_1
+		}
 		on_completion = {
 			add_country_modifier = {
 				name = tribal_reform_law_modifier
-				duration = 3650
+				duration = 365
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_2_b = { 
+	tribal_reform_2_b = {
 		icon = "task_political"
-
-		requires = { tribal_reform_2 } 
-
+		requires = {
+			tribal_reform_2
+		}
 		allow = {
 			has_law = increased_council_powers
 			NOT = {
 				has_law = absolute_authority
 			}
 			political_influence >= 50
-		} 
-		
+		}
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			add_political_influence = -50
 			if = {
@@ -298,14 +280,13 @@
 					}
 				}
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_2_c = { 
+	tribal_reform_2_c = {
 		icon = "task_economical"
-
-		requires = { tribal_reform_2 } 
-
+		requires = {
+			tribal_reform_2
+		}
 		allow = {
 			capital_scope = {
 				civilization_value >= 35
@@ -316,12 +297,10 @@
 					has_city_status = yes
 				}
 			}
-		} 
-		
+		}
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			capital_scope = {
 				if = {
@@ -331,7 +310,7 @@
 						}
 					}
 					add_permanent_province_modifier = {
-						name = civilized_tribe_republic_ppmod 
+						name = civilized_tribe_republic_ppmod
 						duration = -1
 					}
 				}
@@ -341,94 +320,73 @@
 					}
 				}
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_2_d = { 
+	tribal_reform_2_d = {
 		icon = "task_diplomatic"
-
-		requires = { 
+		requires = {
 			tribal_reform_2_b
 			tribal_reform_2_c
-		} 
-		
+		}
 		on_start = {
 			add_country_modifier = {
 				name = administrative_purge
 				duration = 365
 			}
 		}
-		
 		duration = 365
-		
 		monthly_on_action = tribal_reform_monarchy_pulse
-		
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			add_country_modifier = {
 				name = civilized_tribe
 				duration = 3650
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_1_d = { 
+	tribal_reform_1_d = {
 		icon = "task_diplomatic"
-
-		requires = { 
+		requires = {
 			tribal_reform_1_b
 			tribal_reform_1_c
-		} 
-		
+		}
 		on_start = {
 			add_country_modifier = {
 				name = administrative_purge_rep
 				duration = 365
 			}
 		}
-		
 		duration = 365
-		
 		monthly_on_action = tribal_reform_monarchy_pulse
-		
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			add_country_modifier = {
 				name = civilized_tribe
 				duration = 3650
 			}
-		} 
+		}
 	}
-	
-	tribal_reform_1_e = { 
+	tribal_reform_1_e = {
 		icon = "task_political"
-
-		requires = { 
+		requires = {
 			tribal_reform_1_d
-		} 
-
+		}
 		allow = {
 			exists = current_ruler
 			current_ruler = {
 				popularity >= 80
 			}
-		} 
-		
+		}
 		final = yes
-		
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			add_2_free_province_investments = yes
-			
 			change_government = despotic_monarchy
 			switch_government_type_event_clearup_effect = yes
 			if = {
@@ -611,30 +569,23 @@
 			}
 		}
 	}
-	
-	tribal_reform_2_e = { 
+	tribal_reform_2_e = {
 		icon = "task_political"
-
-		requires = { 
+		requires = {
 			tribal_reform_2_d
-		} 
-
+		}
 		allow = {
 			exists = current_ruler
 			current_ruler = {
 				popularity >= 80
 			}
-		} 
-		
+		}
 		final = yes
-		
 		bypass = {
 			is_tribal = no
-		} 
-
+		}
 		on_completion = {
 			add_2_free_province_investments = yes
-			
 			change_government = democratic_republic
 			switch_government_type_event_clearup_effect = yes
 			if = {
@@ -825,6 +776,6 @@
 					}
 				}
 			}
-		} 
+		}
 	}
 }

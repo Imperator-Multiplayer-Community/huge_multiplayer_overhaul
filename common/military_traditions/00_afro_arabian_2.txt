@@ -1,10 +1,16 @@
-﻿afro_arabian_philosophy_2 = { #Arabian Path
-	color = hsv { 1.72 0.64 0.7 }
+﻿afro_arabian_philosophy_2 = {
+	#Arabian Path
+	color = {
+		1.72
+		0.64
+		0.7
+	}
 	image = levantine_arabian_path_2
-	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = south_levantine }
+			limit = {
+				country_culture_group = south_levantine
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -57,48 +63,53 @@
 			}
 		}
 	}
-
-	nubian_path_6 = { ###
+	nubian_path_6 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = horse_archers_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = horse_archers_super_unit
-        }
+			NOT = {
+				has_variable = horse_archers_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = horse_archers_super_unit
+		}
 		enable_tactic = hit_and_run_tactics
-		modifier = { 
+		modifier = {
 			horse_archers_offensive = 0.1
-            horse_archers_hills_combat_bonus = 0.10
-            horse_archers_desert_combat_bonus = 0.10
+			horse_archers_hills_combat_bonus = 0.1
+			horse_archers_desert_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_arabian_path_end_bonus
-		requires = { }
+		requires = {
+		}
 	}
-
-    arabian_path_12 = { ###
+	arabian_path_12 = {
+		###
 		enable_tactic = cavalry_skirmish
-		modifier = { 
+		modifier = {
 			horse_archers_offensive = 0.1
-			horse_archers_plains_combat_bonus = 0.10
-			horse_archers_mountain_combat_bonus = 0.10
-            army_maintenance_cost = 0.01
-		} 
+			horse_archers_plains_combat_bonus = 0.1
+			horse_archers_mountain_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
+		}
 		icon = north_african_tribal_path_2
-		requires = { nubian_path_6 }
+		requires = {
+			nubian_path_6
+		}
 	}
-
-    arabian_path_11 = { ###
+	arabian_path_11 = {
+		###
 		on_activate = {
 			if = {
 				limit = {
-					any_owned_province = { num_of_port_building > 0  }
+					any_owned_province = {
+						num_of_port_building > 0
+					}
 				}
 				random_owned_province = {
 					limit = {
-						num_of_port_building > 0 
+						num_of_port_building > 0
 					}
 					owner = {
 						create_unit = {
@@ -126,7 +137,7 @@
 				}
 				random_owned_province = {
 					limit = {
-						num_of_port_building > 0 
+						num_of_port_building > 0
 					}
 					owner = {
 						create_unit = {
@@ -145,27 +156,29 @@
 				}
 			}
 		}
-		modifier = { 
+		modifier = {
 			naval_damage_done = 0.1
 			naval_range = 0.15
 			navy_maintenance_cost = 0.01
-		} 
+		}
 		icon = north_african_naval_path_3
-		requires = { }
-	} 
-
-    arabian_path_13 = { ###
-		modifier = { 
+		requires = {
+		}
+	}
+	arabian_path_13 = {
+		###
+		modifier = {
 			ocean_combat_bonus = 0.1
 			octere_defensive = 0.1
 			tetrere_defensive = 0.05
 			navy_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_arabian_path_5
-		requires = { }
+		requires = {
+		}
 	}
-
-    arabian_path_4 = { ###
+	arabian_path_4 = {
+		###
 		enable_ability = naval_raiding
 		modifier = {
 			trireme_offensive = 0.05
@@ -173,29 +186,33 @@
 			navy_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_2
-		requires = { arabian_path_11 arabian_path_13 }
+		requires = {
+			arabian_path_11
+			arabian_path_13
+		}
 	}
-
-    arabian_path_2 = { ###
+	arabian_path_2 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_infantry_super_unit
+		}
+		modifier = {
 			light_infantry_offensive = 0.1
-			light_infantry_desert_combat_bonus = 0.10
-            light_infantry_hills_combat_bonus = 0.10
+			light_infantry_desert_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = celtic_gallic_path_2
-		requires = { }
+		requires = {
+		}
 	}
-
-    arabian_path_5 = { ###
+	arabian_path_5 = {
+		###
 		on_activate = {
 			ordered_owned_province = {
 				limit = {
@@ -211,74 +228,84 @@
 				create_2_freemen_effect = yes
 			}
 		}
-		modifier = { 
+		modifier = {
 			light_infantry_defensive = 0.1
 			light_infantry_cost = -0.15
-            light_infantry_plains_combat_bonus = 0.10
-            light_infantry_mountain_combat_bonus = 0.10
-            army_maintenance_cost = 0.01
-		} 
+			light_infantry_plains_combat_bonus = 0.1
+			light_infantry_mountain_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
+		}
 		icon = levantine_egyptian_path_7
-		requires = { arabian_path_2 }
+		requires = {
+			arabian_path_2
+		}
 	}
-
-   
-    arabian_path_3 = { ###
+	arabian_path_3 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = camel_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = camel_super_unit
-        }
+			NOT = {
+				has_variable = camel_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = camel_super_unit
+		}
 		enable_tactic = cavalry_skirmish
-        modifier = { 
-			camels_defensive = 0.10
+		modifier = {
+			camels_defensive = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_egyptian_path_6
-		requires = { }
+		requires = {
+		}
 	}
-
-    arabian_path_6 = { ###
-		modifier = { 
-			camels_morale = 0.10
+	arabian_path_6 = {
+		###
+		modifier = {
+			camels_morale = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_arabian_path_3
-		requires = { arabian_path_3 }
+		requires = {
+			arabian_path_3
+		}
 	}
-
-    arabian_path_10 = { ###
-		modifier = { 
-			camels_offensive = 0.10
+	arabian_path_10 = {
+		###
+		modifier = {
+			camels_offensive = 0.1
 			camels_cost = -0.15
-            army_maintenance_cost = 0.01
-		} 
+			army_maintenance_cost = 0.01
+		}
 		icon = north_african_tribal_path_5
-		requires = { arabian_path_6 }
+		requires = {
+			arabian_path_6
+		}
 	}
-
-    arabian_path_14 = { ###
-		modifier = { 
-			camels_discipline = 0.10
+	arabian_path_14 = {
+		###
+		modifier = {
+			camels_discipline = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_arabian_path_4
-		requires = { arabian_path_10 }
-	}	
-
-    arabian_path_15 = { ###
-		modifier = { 
-			camels_movement_speed = 0.10
-            camels_desert_combat_bonus = 0.10
-            camels_hills_combat_bonus = 0.10
-            camels_mountain_combat_bonus = 0.10
-            camels_plains_combat_bonus = 0.10
+		requires = {
+			arabian_path_10
+		}
+	}
+	arabian_path_15 = {
+		###
+		modifier = {
+			camels_movement_speed = 0.1
+			camels_desert_combat_bonus = 0.1
+			camels_hills_combat_bonus = 0.1
+			camels_mountain_combat_bonus = 0.1
+			camels_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_arabian_path_7
-		requires = { arabian_path_14 }
+		requires = {
+			arabian_path_14
+		}
 	}
 }
