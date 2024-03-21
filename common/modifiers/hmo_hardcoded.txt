@@ -149,11 +149,11 @@ nation_rank_1 = {
 	num_of_clan_chiefs = 1
 	integrate_speed = 0.05
 	monthly_wage_modifier = 0.015
-	levy_size_multiplier = 0.22
 	mercenary_land_maintenance_cost = -0.15
 	build_cost = -0.15
 	max_mercenary_stacks = 1
 	agressive_expansion_impact = -0.15
+	levy_size_multiplier = 0.12
 }
 
 nation_rank_2 = {
@@ -166,8 +166,8 @@ nation_rank_2 = {
 	build_cost = -0.1
 	max_mercenary_stacks = 1
 	num_of_clan_chiefs = 1
-	levy_size_multiplier = 0.155
 	agressive_expansion_impact = -0.1
+	levy_size_multiplier = 0.04
 }
 
 nation_rank_3 = {
@@ -186,7 +186,6 @@ nation_rank_3 = {
 	max_mercenary_stacks = 2
 	agressive_expansion_impact = 0.05
 	agressive_expansion_monthly_change = 0.025
-	levy_size_multiplier = 0.105
 	recruit_mercenary_cost_modifier = 1
 }
 
@@ -208,7 +207,6 @@ nation_rank_4 = {
 	max_mercenary_stacks = 3
 	agressive_expansion_impact = 0.15
 	agressive_expansion_monthly_change = 0.05
-	levy_size_multiplier = 0.04
 	recruit_mercenary_cost_modifier = 2
 }
 
@@ -230,7 +228,6 @@ nation_rank_5 = {
 	max_mercenary_stacks = 4
 	agressive_expansion_impact = 0.3
 	agressive_expansion_monthly_change = 0.075
-	levy_size_multiplier = 0.04
 	recruit_mercenary_cost_modifier = 3
 }
 
