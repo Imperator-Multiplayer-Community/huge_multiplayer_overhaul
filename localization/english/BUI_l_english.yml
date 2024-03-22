@@ -86,3 +86,5 @@
 	#added 12/03/2021
 	performance_mm_MAPMODE: "Performance"
 	performance_mm_MAPMODE_DESC: "#T Perfromance Mapmode#!\nSame as #Y Political Mapmode#!, but always uses the flat map.\nThis will help if you experience lower FPS when zooming in."
+	#hmo fixes
+	topbar_research_points: "Research points: [InGameTopbar.GetPlayer.GetResearch|1]"

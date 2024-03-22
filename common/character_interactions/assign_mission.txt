@@ -1,11 +1,8 @@
 ﻿assign_mission = {
-
 	on_other_nation = yes
 	on_own_nation = no
 	message = no
-	
 	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
-	
 	potential_trigger = {
 		hidden:scope:target = {
 			is_mercenary = no
@@ -20,27 +17,23 @@
 			NOT = {
 				this = scope:actor.current_ruler
 			}
-
 			has_character_modifier = spy_recruit_character
 			has_character_modifier = on_espionage_mission_cmod
 			has_character_modifier = foreign_citizen
-			
-			
 			NOT = {
 				is_co_ruler = yes
-			}		
+			}
 		}
 	}
-	
 	allowed_trigger = {
 		scope:target = {
 			loyalty >= 35
 			NOT = {
 				has_character_modifier = getting_oriented
- 				has_character_modifier = in_hiding
- 				has_character_modifier = assigned_mission
- 				has_character_modifier = counterintelligence
- 			} 
+				has_character_modifier = in_hiding
+				has_character_modifier = assigned_mission
+				has_character_modifier = counterintelligence
+			}
 		}
 		scope:actor = {
 			in_diplomatic_range = scope:target.employer
@@ -51,29 +44,31 @@
 			treasury >= 25
 		}
 		scope:actor = {
-			NOT = { 
+			NOT = {
 				has_variable = ongoing_assassination
 			}
 		}
-
 		custom_tooltip = {
 			text = ready_for_mission_tt
 			scope:target = {
 				is_adult = yes
 				prisoner = no
-				NOT = { has_character_modifier = disloyal_successor_cmod }
-				NOT = { is_rival = scope:actor.current_ruler }
+				NOT = {
+					has_character_modifier = disloyal_successor_cmod
+				}
+				NOT = {
+					is_rival = scope:actor.current_ruler
+				}
 				custom_tooltip = {
 					text = recently_busy_tt
-					NOT = { has_character_modifier = assigned_mission }
+					NOT = {
+						has_character_modifier = recent_assigned_mission
+					}
 				}
 			}
 		}
 	}
-	
-	
 	effect = {
-		
 		scope:actor = {
 			#hidden_effect = {
 			#	set_variable = {
@@ -81,9 +76,8 @@
 			#		days = 180
 			#	}
 			#}
-		save_scope_as = mission_origin_country
+			save_scope_as = mission_origin_country
 		}
-		
 		scope:target = {
 			#hidden_effect = {
 			#	set_variable = {
@@ -91,7 +85,7 @@
 			#		days = 180
 			#	}
 			#}
-		save_scope_as = mission_spy
+			save_scope_as = mission_spy
 		}
 		scope:target.employer = {
 			#hidden_effect = {
@@ -100,16 +94,14 @@
 			#		days = 180
 			#	}
 			#}
-		save_scope_as = mission_target_country
+			save_scope_as = mission_target_country
 		}
-
 		scope:target = {
 			add_character_modifier = {
 				name = "assigned_mission"
 				duration = 275
 			}
 		}
-	
 		scope:actor = {
 			add_treasury = -25
 			trigger_event = {
@@ -118,4 +110,4 @@
 			}
 		}
 	}
-}	
+}

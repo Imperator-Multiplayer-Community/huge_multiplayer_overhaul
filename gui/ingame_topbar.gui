@@ -1792,7 +1792,7 @@ vbox = {
 							size = { 110 36 }
 							onclick = "[ToggleGameView('technology')]"
 
-							tooltip = "Research points: [InGameTopbar.GetPlayer.GetResearch|1]"
+							tooltip = "topbar_research_points"
 
 
 							blockoverride "Icon"
