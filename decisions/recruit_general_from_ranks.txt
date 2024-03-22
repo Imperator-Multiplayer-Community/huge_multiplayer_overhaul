@@ -9,9 +9,11 @@
 		}
 		allow = {
 			military_experience >= 100
+			political_influence >= 35
 		}
 		effect = {
 			add_military_experience = -100
+			add_political_influence = -35
 			create_character = {
 				culture = root.culture
 				religion = root.religion

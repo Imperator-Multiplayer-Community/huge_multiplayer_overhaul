@@ -80,6 +80,8 @@ character_introductions.5 = {
 	}
 	option = {
 		name = "character_introductions.5.a"
+		add_political_influence = -35
+		add_military_experience = -5
 		create_character = {
 			culture = scope:root.culture
 			religion = scope:root.religion

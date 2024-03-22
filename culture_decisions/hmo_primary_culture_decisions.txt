@@ -524,11 +524,11 @@
 					}
 				}
 				stability > 10
-				political_influence >= 10
+				political_influence >= 35
 			}
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = -35
 			custom_tooltip = recruit_talent_tt
 			ordered_owned_province = {
 				limit = {
@@ -613,11 +613,11 @@
 					}
 				}
 				stability > 10
-				political_influence >= 10
+				political_influence >= 35
 			}
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = -35
 			custom_tooltip = present_debutante_tt
 			ordered_owned_province = {
 				limit = {
