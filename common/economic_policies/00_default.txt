@@ -1,18 +1,15 @@
 ﻿# These are hardcoded connections!
-
 #ai_will_do applies to default; ai_will_do_low and ai_will_do_high apply to low and high respectively
 #If no ai_will_do has been supplied or all returning a weight <= 0, AI will try to compute best modifier according to plan and use that.
-
 income_tax = {
 	low = {
-		global_tax_modifier = -0.50
+		global_tax_modifier = -0.5
 		global_population_happiness = 0.1
 	}
 	default = {
 	}
-	
 	high = {
-		global_tax_modifier = 0.20
+		global_tax_modifier = 0.2
 		research_points_modifier = -0.2
 	}
 }
@@ -46,21 +43,18 @@ income_tribute = {
 
 expense_army = {
 	#war_minimum = default
-
 	low = {
 		war_exhaustion = -0.04
-		
 		land_morale_modifier = -0.25
-		army_maintenance_cost = -0.25 #Legion Maintenance
+		army_maintenance_cost = -0.25		#Legion Maintenance
 	}
 	default = {
 	}
 	high = {
 		war_exhaustion = 0.06
-		land_morale_modifier = 0.1
-		army_maintenance_cost = 0.25 #Legion Maintenance
+		land_morale_modifier = 0.05
+		army_maintenance_cost = 0.25		#Legion Maintenance
 	}
-	
 	ai_will_do_low = {
 		modifier = {
 			add = 250
@@ -71,7 +65,6 @@ expense_army = {
 			}
 		}
 	}
-	
 	ai_will_do = {
 		modifier = {
 			add = 20
@@ -82,7 +75,6 @@ expense_army = {
 			has_monthly_income < 0
 		}
 	}
-	
 	ai_will_do_high = {
 		modifier = {
 			add = 8
@@ -98,11 +90,28 @@ expense_army = {
 	}
 }
 
+looting_policy = {
+	low = {
+		land_morale_modifier = -0.05
+		discipline = 0.05
+		enslavement_efficiency = -0.075
+		army_movement_speed = 0.025
+	}
+	default = {
+		army_weight_modifier = -0.1
+	}
+	high = {
+		land_morale_modifier = 0.05
+		discipline = -0.05
+		enslavement_efficiency = 0.075
+		army_movement_speed = -0.025
+	}
+}
+
 expense_navy = {
 	low = {
 		naval_morale_modifier = -0.8
 		navy_maintenance_cost = -0.5
-	
 	}
 	default = {
 	}
@@ -110,14 +119,12 @@ expense_navy = {
 		naval_morale_modifier = 0.05
 		navy_maintenance_cost = 0.5
 	}
-	
 	ai_will_do_low = {
 		modifier = {
 			add = 1
 			months_to_war >= 6
 		}
 	}
-	
 	#TOOD PH: remove when understands the concept of temporary navy strength during wars
 	ai_will_do = {
 		modifier = {
@@ -129,7 +136,6 @@ expense_navy = {
 
 expense_fort = {
 	war_minimum = default
-
 	low = {
 		global_defensive = -0.5
 		fort_maintenance_cost = -0.15
@@ -138,11 +144,10 @@ expense_fort = {
 	default = {
 	}
 	high = {
-		global_defensive = 0.10
+		global_defensive = 0.1
 		fort_maintenance_cost = 0.25
-		garrison_size = 0.10
+		garrison_size = 0.1
 	}
-	
 	ai_will_do_low = {
 		modifier = {
 			add = 1
@@ -155,7 +160,6 @@ expense_fort = {
 			safety >= 100
 		}
 	}
-	
 	ai_will_do = {
 		modifier = {
 			add = 1.5
@@ -185,17 +189,14 @@ expense_wages = {
 		monthly_local_governor_wage = 0.5
 		monthly_corruption = -0.15
 	}
-	
 	ai_will_do_low = {
 		modifier = {
-			add = -1337 #AI will never pick the low option.
+			add = -1337			#AI will never pick the low option.
 		}
 	}
-	
 	ai_will_do = {
 		modifier = {
 			add = 10
 		}
 	}
 }
-
