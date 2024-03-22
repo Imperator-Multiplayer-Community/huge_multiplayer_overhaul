@@ -69,7 +69,7 @@ NProvince = {
 }
 
 NLevy = {
-	MIN_SIZE = 4	# minimum number of cohorts raised as levy
+	MIN_SIZE = 2	# minimum number of cohorts raised as levy
 	DISBAND_MILITARY_EXP_MULT = 0	# when disbanding a levy military experience will be added to the country
 	WAR_EXHAUSTION_ON_RAISE = 0	# set to 0 to avoid exploiting
 }

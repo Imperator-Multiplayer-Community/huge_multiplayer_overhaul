@@ -2,7 +2,6 @@
 	recruit_general_from_ranks = {
 		potential = {
 			num_of_cities >= 1
-			has_legion_trigger = yes
 			NOT = {
 				has_variable = "recruited_general"
 			}
