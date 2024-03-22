@@ -15,6 +15,7 @@
 			add_military_experience = -100
 			add_political_influence = -35
 			create_character = {
+				age = 16
 				culture = root.culture
 				religion = root.religion
 				hidden_effect = {
@@ -29,9 +30,6 @@
 							add_trait = tactician
 						}
 						10 = {
-							add_trait = disciplined
-						}
-						10 = {
 							add_trait = steadfast
 						}
 						10 = {
@@ -41,6 +39,7 @@
 							add_trait = brave
 						}
 					}
+					add_trait = disciplined
 					add_character_modifier = {
 						name = "war_hero_character"
 						duration = -1
