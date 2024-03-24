@@ -90,7 +90,7 @@ expense_army = {
 	}
 }
 
-looting_policy = {
+expense_looting_policy = {
 	low = {
 		land_morale_modifier = -0.05
 		discipline = 0.05

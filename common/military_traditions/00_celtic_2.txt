@@ -1,45 +1,60 @@
-﻿celtic_philosophy_2 = { 
-	color = hsv { 1.1 1 0.5 }
+﻿celtic_philosophy_2 = {
+	color = {
+		1.1
+		1
+		0.5
+	}
 	image = celtic_germanic_path_1
-	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = gallic }
+			limit = {
+				country_culture_group = gallic
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = gallic
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = celto_pannonian_group }
+			limit = {
+				country_culture_group = celto_pannonian_group
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = celto_pannonian_group
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = belgae_group }
+			limit = {
+				country_culture_group = belgae_group
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = belgae_group
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = britannic }
+			limit = {
+				country_culture_group = britannic
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = britannic
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = gaelic }
+			limit = {
+				country_culture_group = gaelic
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = gaelic
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = proto_european }
+			limit = {
+				country_culture_group = proto_european
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -67,108 +82,118 @@
 			}
 		}
 	}
-
-    # Skirmishers
-
-    celtic_gallic_path_1 = { ###Celtic 1A
-	    allow = {
-            NOT = {
-                has_variable = archers_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = archers_super_unit
-        }
+	# Skirmishers
+	celtic_gallic_path_1 = {
+		###Celtic 1A
+		allow = {
+			NOT = {
+				has_variable = archers_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = archers_super_unit
+		}
 		enable_tactic = hit_and_run_tactics
-		modifier = { 
+		modifier = {
 			archers_offensive = 0.1
-            archers_plains_combat_bonus = 0.10
-            archers_forest_combat_bonus = 0.10
+			archers_plains_combat_bonus = 0.1
+			archers_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_gallic_path_1
-		requires = { }
+		requires = {
+		}
 	}
-
-    celtic_germanic_path_7 = { ###Celtic 3A
-		modifier = { 
+	celtic_germanic_path_7 = {
+		###Celtic 3A
+		modifier = {
 			archers_morale = 0.1
 			archers_farmland_combat_bonus = 0.1
-            archers_hills_combat_bonus = 0.10
+			archers_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_7
-		requires = {celtic_gallic_path_1}
+		requires = {
+			celtic_gallic_path_1
+		}
 	}
-
-    celtic_germanic_path_1 = { ###Celtic 1B
+	celtic_germanic_path_1 = {
+		###Celtic 1B
 		allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }	
-		modifier = { 
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_infantry_super_unit
+		}
+		modifier = {
 			light_infantry_morale = 0.1
-            light_infantry_plains_combat_bonus = 0.10
-            light_infantry_forest_combat_bonus = 0.10
+			light_infantry_plains_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
 			navy_maintenance_cost = 0.01
 		}
 		icon = celtic_germanic_path_1
-		requires = {  }
+		requires = {
+		}
 	}
-
-    celtic_britannic_path_2 = { ###Celtic 3BA
-		modifier = { 
+	celtic_britannic_path_2 = {
+		###Celtic 3BA
+		modifier = {
 			light_infantry_defensive = 0.1
 			light_infantry_farmland_combat_bonus = 0.1
-            light_infantry_hills_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_britannic_path_2
-		requires = {celtic_germanic_path_1}
+		requires = {
+			celtic_germanic_path_1
+		}
 	}
-
-
-    # Super Units
-
-    celtic_britannic_path_6 = { ###Celtic 1B
+	# Super Units
+	celtic_britannic_path_6 = {
+		###Celtic 1B
 		allow = {
-            NOT = {
-                has_variable = heavy_cavalry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = heavy_cavalry_super_unit
+			NOT = {
+				has_variable = heavy_cavalry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = heavy_cavalry_super_unit
 			ordered_owned_province = {
 				limit = {
-					NOT = { trade_goods = iron }
-					NOT = { trade_goods = horses }
-					NOT = { trade_goods = steppe_horses }
+					NOT = {
+						trade_goods = iron
+					}
+					NOT = {
+						trade_goods = horses
+					}
+					NOT = {
+						trade_goods = steppe_horses
+					}
 					is_capital = no
 					has_non_food_trade_good_trigger = yes
 				}
 				order_by = total_population
 				set_trade_goods = horses
 			}
-        }
-        modifier = { 
-			heavy_cavalry_morale = 0.10
-            Heavy_cavalry_plains_combat_bonus = 0.10
-            Heavy_cavalry_forest_combat_bonus = 0.10
+		}
+		modifier = {
+			heavy_cavalry_morale = 0.1
+			Heavy_cavalry_plains_combat_bonus = 0.1
+			Heavy_cavalry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = celtic_britannic_path_6
-		requires = { }
-	}    
-
-    celtic_britannic_path_end_bonus = { ###Celtic 4BA
-		modifier = { 
+		requires = {
+		}
+	}
+	celtic_britannic_path_end_bonus = {
+		###Celtic 4BA
+		modifier = {
 			heavy_cavalry_offensive = 0.1
-			heavy_cavalry_farmland_combat_bonus = 0.10
-            heavy_cavalry_hills_combat_bonus = 0.10
+			heavy_cavalry_farmland_combat_bonus = 0.1
+			heavy_cavalry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.02
 		}
 		on_activate = {
@@ -176,24 +201,27 @@
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = disciplined
+					add_trait = confident
 				}
 			}
 		}
 		icon = celtic_britannic_path_end_bonus
-		requires = { celtic_britannic_path_6 }
+		requires = {
+			celtic_britannic_path_6
+		}
 	}
-
-    celtic_north_african_enable = { ###Celtic 4BB
-		modifier = { 
-			heavy_cavalry_defensive = 0.10
-			heavy_cavalry_discipline = 0.10
-            heavy_cavalry_cost = -0.15
-            heavy_cavalry_movement_speed = 0.10
+	celtic_north_african_enable = {
+		###Celtic 4BB
+		modifier = {
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			heavy_cavalry_cost = -0.15
+			heavy_cavalry_movement_speed = 0.1
 			army_maintenance_cost = 0.02
 		}
 		icon = north_african_tribal_path_3
-		requires = { celtic_britannic_path_end_bonus }
+		requires = {
+			celtic_britannic_path_end_bonus
+		}
 	}
-
-}		
+}

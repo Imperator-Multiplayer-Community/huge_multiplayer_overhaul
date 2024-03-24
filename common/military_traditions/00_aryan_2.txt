@@ -1,10 +1,16 @@
-﻿aryan_philosophy_2 = { #Aryan Plains Path
-	color = hsv { 1.72 0.64 0.7 }
+﻿aryan_philosophy_2 = {
+	#Aryan Plains Path
+	color = {
+		1.72
+		0.64
+		0.7
+	}
 	image = mauryan_mauryas_path_1
-	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = aryan }
+			limit = {
+				country_culture_group = aryan
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -27,81 +33,84 @@
 			}
 		}
 	}
-
 	# Light Infantry
-
-	aryan_plains_path_2 = { ###
+	aryan_plains_path_2 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }	
-		modifier = { 
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_infantry_super_unit
+		}
+		modifier = {
 			light_infantry_defensive = 0.1
 			light_infantry_desert_combat_bonus = 0.1
 			light_infantry_marsh_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_mauryas_path_6
-		requires = { }
+		requires = {
+		}
 	}
-
-	aryan_plains_path_8 = { ###
-		modifier = { 
+	aryan_plains_path_8 = {
+		###
+		modifier = {
 			light_infantry_morale = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_mauryas_path_1
-		requires = { aryan_plains_path_2 }
-
+		requires = {
+			aryan_plains_path_2
+		}
 	}
-
-	aryan_plains_path_3 = { ###
+	aryan_plains_path_3 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = archers_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = archers_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = archers_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = archers_super_unit
+		}
+		modifier = {
 			archers_offensive = 0.1
 			archers_desert_combat_bonus = 0.1
 			archers_marsh_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_coastal_path_7
-		requires = { }
+		requires = {
+		}
 	}
-
-	aryan_river_path_2 = { ###
-		modifier = { 
+	aryan_river_path_2 = {
+		###
+		modifier = {
 			archers_morale = 0.1
 			archers_plains_combat_bonus = 0.1
 			archers_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_coastal_path_7
-		requires = { aryan_plains_path_3 }
+		requires = {
+			aryan_plains_path_3
+		}
 	}
-
 	# Super Unit
-
-	aryan_plains_path_6 = { ###
+	aryan_plains_path_6 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = warelephant_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = warelephant_super_unit
-        	custom_tooltip = "create_high_martial_rising_star"
+			NOT = {
+				has_variable = warelephant_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = warelephant_super_unit
+			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
@@ -110,39 +119,42 @@
 			}
 		}
 		enable_tactic = padma_vyuha
-		modifier = { 
+		modifier = {
 			warelephant_discipline = 0.1
 			warelephant_cost = -0.15
 			warelephant_desert_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_coastal_path_5
-		requires = { }
+		requires = {
+		}
 	}
-
-	aryan_plains_path_12 = { ###
-		modifier = { 
+	aryan_plains_path_12 = {
+		###
+		modifier = {
 			warelephant_morale = 0.1
 			warelephant_defensive = 0.1
 			warelephant_marsh_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_mauryas_path_4
-		requires = { aryan_plains_path_6 }
+		requires = {
+			aryan_plains_path_6
+		}
 	}
-
-	aryan_plains_path_14 = { ###
-		modifier = { 
+	aryan_plains_path_14 = {
+		###
+		modifier = {
 			warelephant_offensive = 0.05
 			warelephant_movement_speed = 0.1
 			warelephant_hills_combat_bonus = 0.1
 			warelephant_plains_combat_bonus = 0.1
 			warelephant_farmland_combat_bonus = 0.1
 			army_maintenance_cost = 0.03
-		} 
+		}
 		icon = mauryan_noble_path_end_bonus
-		requires = { aryan_plains_path_6 }
-
+		requires = {
+			aryan_plains_path_6
+		}
 	}
-
 }

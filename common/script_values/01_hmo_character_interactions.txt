@@ -22,24 +22,24 @@
 			scope:target.employer = {
 				rank = regional_power
 			}
-			multiply = 2
 		}
+		multiply = 2
 	}
 	else_if = {
 		limit = {
 			scope:target.employer = {
 				rank = major_power
 			}
-			multiply = 3
 		}
+		multiply = 3
 	}
 	else_if = {
 		limit = {
 			scope:target.employer = {
 				rank = great_power
 			}
-			multiply = 4
 		}
+		multiply = 4
 	}
 	min = 100
 }
@@ -63,23 +63,23 @@ army_size_merc_estimation_sg = {
 			root.employer = {
 				rank = regional_power
 			}
-			multiply = 2
 		}
+		multiply = 2
 	}
 	else_if = {
 		limit = {
 			root.employer = {
 				rank = major_power
 			}
-			multiply = 3
 		}
+		multiply = 3
 	}
 	else_if = {
 		limit = {
 			root.employer = {
 				rank = great_power
 			}
-			multiply = 4
 		}
+		multiply = 4
 	}
 }

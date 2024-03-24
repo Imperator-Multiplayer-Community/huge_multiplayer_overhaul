@@ -62,7 +62,7 @@
 				custom_tooltip = {
 					text = recently_busy_tt
 					NOT = {
-						has_character_modifier = recent_assigned_mission
+						has_character_modifier = recently_tasked
 					}
 				}
 			}
