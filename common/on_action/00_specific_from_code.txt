@@ -129,7 +129,7 @@ on_battle_lost = {
 		50 = after_battle.27		# Pompey Victorious lost
 		50 = after_battle.29		# Pompey Daring lost
 		50 = after_battle.30		# Pompey Tough lost
-		50 = after_battle.41		# Pompey Wounded 
+		50 = after_battle.41		# Pompey Wounded
 	}
 }
 
@@ -909,7 +909,7 @@ on_civil_war_won = {
 				}
 				change_law = standing_army_law
 			}
-			#else = { #What was this doing? 
+			#else = { #What was this doing?
 			#	every_governorships = {
 			#		limit = { has_legion_trigger = yes }
 			#		disband_legion = yes
@@ -2443,6 +2443,7 @@ on_game_initialized = {
 		startup_events.8
 		startup_events.9		# remove extra border forts
 		startup_events.10		# removes food trade goods from cities
+		startup_events.11		# adds looting policy
 		tutorial.1
 		dhe_dde_pyrrhus.24
 		flavor_egy.8
@@ -2497,7 +2498,7 @@ on_game_initialized = {
 		bloodlines_startup.3		#Athens
 		bloodlines_startup.4		#Armenia
 		bloodlines_startup.5		#Bactria
-		bloodlines_startup.6		#Bosporan 
+		bloodlines_startup.6		#Bosporan
 		bloodlines_startup.7		#Heraclea
 		bloodlines_startup.8		#Judea
 		bloodlines_startup.9		#Atropatene
@@ -3899,7 +3900,7 @@ on_legion_raised = {
 
 on_disband_legion_unit = {
 	# what: when units belonging to a legion are disbanded.
-	# scope country, 
+	# scope country,
 	# scope:target legion,
 	# scope:unit unit,
 }

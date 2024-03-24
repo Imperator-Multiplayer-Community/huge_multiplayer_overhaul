@@ -135,8 +135,9 @@
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
-					first_name = "Scipio"
-					last_name = "Africanus"
+					first_name = "Publius"
+					add_nickname = "Africanus"
+					family_name = "Scipio"
 					add_martial = 8
 					add_trait = steadfast
 				}

@@ -1,0 +1,101 @@
+﻿low_looting_policy_button = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	is_shown = {
+		has_country_modifier = low_looting_policy
+	}
+	is_valid = {
+		NOT = {
+			has_country_modifier = low_looting_policy
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_modifier = default_looting_policy
+			}
+			remove_country_modifier = default_looting_policy
+		}
+		if = {
+			limit = {
+				has_country_modifier = high_looting_policy
+			}
+			remove_country_modifier = high_looting_policy
+		}
+		add_country_modifier = {
+			name = low_looting_policy
+			duration = -1
+		}
+		debug_log = "low"
+	}
+}
+
+default_looting_policy_button = {
+	scope = country
+	ai_is_valid = {
+		always = yes
+	}
+	is_shown = {
+		has_country_modifier = default_looting_policy
+	}
+	is_valid = {
+		NOT = {
+			has_country_modifier = default_looting_policy
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_modifier = high_looting_policy
+			}
+			remove_country_modifier = high_looting_policy
+		}
+		if = {
+			limit = {
+				has_country_modifier = low_looting_policy
+			}
+			remove_country_modifier = low_looting_policy
+		}
+		add_country_modifier = {
+			name = default_looting_policy
+			duration = -1
+		}
+		debug_log = "default"
+	}
+}
+
+high_looting_policy_button = {
+	scope = country
+	ai_is_valid = {
+		always = no
+	}
+	is_shown = {
+		has_country_modifier = high_looting_policy
+	}
+	is_valid = {
+		NOT = {
+			has_country_modifier = high_looting_policy
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_modifier = default_looting_policy
+			}
+			remove_country_modifier = default_looting_policy
+		}
+		if = {
+			limit = {
+				has_country_modifier = low_looting_policy
+			}
+			remove_country_modifier = low_looting_policy
+		}
+		add_country_modifier = {
+			name = high_looting_policy
+			duration = -1
+		}
+		debug_log = "high"
+	}
+}

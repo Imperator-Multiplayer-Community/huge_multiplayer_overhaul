@@ -90,24 +90,6 @@ expense_army = {
 	}
 }
 
-expense_looting_policy = {
-	low = {
-		land_morale_modifier = -0.05
-		discipline = 0.05
-		enslavement_efficiency = -0.075
-		army_movement_speed = 0.025
-	}
-	default = {
-		army_weight_modifier = -0.1
-	}
-	high = {
-		land_morale_modifier = 0.05
-		discipline = -0.05
-		enslavement_efficiency = 0.075
-		army_movement_speed = -0.025
-	}
-}
-
 expense_navy = {
 	low = {
 		naval_morale_modifier = -0.8

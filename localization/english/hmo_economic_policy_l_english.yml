@@ -1,4 +1,8 @@
 ﻿l_english:
- expense_looting_policy_low:0 "Restricted Looting"
- expense_looting_policy_default:0 "Default"
- expense_looting_policy_high:0 "Encouraged Looting"a
+ looting_policy:0 "Looting Policy"
+ low_looting_policy:0 "Restricted Looting"
+ low_looting_policy_tt:0 "Restricted Looting"
+ default_looting_policy:0 "Balanced Looting"
+ default_looting_policy_tt:0 "Balanced Looting"
+ high_looting_policy:0 "Encouraged Looting"
+ high_looting_policy_tt:0 "Encouraged Looting"

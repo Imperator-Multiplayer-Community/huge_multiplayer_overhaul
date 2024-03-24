@@ -329,3 +329,15 @@ metropolitan_walls = {
 important_port_province = {
 	positive = "gfx/interface/icons/modifiers/fort_defence.dds"
 }
+
+low_looting_policy = {
+	positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+default_looting_policy = {
+	positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
+
+high_looting_policy = {
+	positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
+}
