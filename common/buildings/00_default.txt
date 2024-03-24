@@ -223,7 +223,7 @@ foundry_building = {
 aqueduct_building = {
 	#Changed this to Public Housing for now
 	local_population_capacity = 4
-	local_tax_modifier = -0.1
+	local_tax_modifier = -0.025
 	cost = 150
 	time = 180
 	potential = {
