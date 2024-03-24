@@ -271,19 +271,13 @@
 		modifier = {
 			global_food_capacity = 175
 			global_commerce_modifier = 0.1
+			army_weight_modifier = -0.1
 		}
 		icon = north_african_army_path_1
 		requires = {
 			north_african_army_path_end_bonus
 		}
 		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = victorious
-				}
-			}
 		}
 	}
 	north_africa_civ_generic_path_2 = {
