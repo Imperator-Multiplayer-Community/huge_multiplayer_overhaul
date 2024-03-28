@@ -1,9 +1,7 @@
 ﻿##################################################################################################
 # scriptable and usable for event-system below.
 ##################################################################################################
-
 ### Tutorials ###
-
 impressive_greek_culture_literature = {
 	happiness_for_same_culture_modifier = -0.025
 	research_points_modifier = 0.05
@@ -119,12 +117,13 @@ homeland_insecurity = {
 	character_loyalty = -1
 }
 
-civilized_tribe = { #Reward for changing from tribal government.
-    global_monthly_civilization = 0.1
-    global_pop_promotion_speed = 2.5
-    happiness_for_same_culture_modifier = 0.1
-    price_found_city_cost_modifier = -0.15
-    local_forum_building_cost = -0.15
+civilized_tribe = {
+	#Reward for changing from tribal government.
+	global_monthly_civilization = 0.1
+	global_pop_promotion_speed = 2.5
+	happiness_for_same_culture_modifier = 0.1
+	price_found_city_cost_modifier = -0.15
+	local_forum_building_cost = -0.15
 }
 
 gov_confiscation = {
@@ -148,7 +147,7 @@ failed_venture = {
 }
 
 parthian_hordes = {
-    fabricate_claim_cost_modifier = -0.5
+	fabricate_claim_cost_modifier = -0.5
 }
 
 unhappy_people = {
@@ -191,21 +190,16 @@ colonia_project = {
 	global_tax_modifier = -0.05
 }
 
-
 corrupt_research_modifier = {
-    research_points_modifier = -0.2 #was 0.35
+	research_points_modifier = -0.2	#was 0.35
 }
-
 
 civil_war_benefits = {
-    character_loyalty = 10 # Was 10
-	stability_monthly_change = 0.05 # Was 0.05
+	character_loyalty = 10	# Was 10
+	stability_monthly_change = 0.05	# Was 0.05
 }
 
-
-
 #Primary
-
 extended_land_protection = {
 	build_cost = -0.05
 	global_monthly_state_loyalty = 0.04
@@ -226,22 +220,21 @@ extended_trial_rights = {
 }
 
 social_change = {
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.05
 	character_loyalty = -4
-	stability_monthly_change = -0.20
+	stability_monthly_change = -0.1
 	happiness_for_same_culture_modifier = -0.05
 	global_pop_promotion_speed_modifier = 0.1
 }
 
-expanded_citizenship = { ############################################################
+expanded_citizenship = {
+	############################################################
 	levy_size_multiplier = 0.02
 	discipline = -0.03
 	army_maintenance_cost = 0.01
 }
 
-
 #Integrated
-
 pandered_project = {
 	happiness_for_same_culture_modifier = -0.05
 }
@@ -280,7 +273,6 @@ barbarian_soldiers = {
 }
 
 #Unintegrated
-
 extended_right_of_marriage = {
 	character_loyalty = -4
 	stability_monthly_change = -0.15
@@ -321,7 +313,6 @@ extended_officer_right = {
 	discipline = -0.03
 	global_pop_promotion_speed_modifier = 0.1
 }
-
 
 persecution_project = {
 	global_tax_modifier = 0.2
@@ -414,4 +405,9 @@ regional_trading_center = {
 qat_consumption = {
 	charisma = 1
 	finesse = 1
+}
+
+tribal_reform_law_modifier = {
+	enact_law_cost_modifier = -0.25
+	civil_war_threshold = -0.05
 }

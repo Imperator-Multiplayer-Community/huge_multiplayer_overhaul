@@ -1,11 +1,8 @@
 ﻿task_character = {
-
 	on_other_nation = no
 	on_own_nation = yes
 	message = no
-	
 	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
-	
 	potential_trigger = {
 		hidden:scope:target = {
 			is_mercenary = no
@@ -27,7 +24,7 @@
 				has_character_modifier = foreign_citizen
 				has_character_modifier = assigned_mission
 				has_character_modifier = getting_oriented
- 				has_character_modifier = in_hiding
+				has_character_modifier = in_hiding
 			}
 			OR = {
 				has_any_office = yes
@@ -38,22 +35,19 @@
 				is_admiral = yes
 				is_governor = yes
 			}
-			
 			NOT = {
 				#has_tech_office = yes
 				#is_general = yes
 				#is_admiral = yes
 				#is_governor = yes
 				is_co_ruler = yes
-			}		
+			}
 		}
 	}
-
-	
 	allowed_trigger = {
 		scope:target = {
 			custom_tooltip = {
-			text = "task_character_skill_tt"
+				text = "task_character_skill_tt"
 				loyalty >= 50
 				martial <= 16
 				finesse <= 16
@@ -61,37 +55,36 @@
 				zeal <= 16
 			}
 		}
-
 		scope:target.employer = {
 			can_pay_price = price_task_character
 		}
-
 		custom_tooltip = {
 			text = ready_for_task_tt
 			scope:target = {
 				is_adult = yes
 				prisoner = no
-				NOT = { has_character_modifier = disloyal_successor_cmod }
-				NOT = { is_rival = scope:actor.current_ruler }
+				NOT = {
+					has_character_modifier = disloyal_successor_cmod
+				}
+				NOT = {
+					is_rival = scope:actor.current_ruler
+				}
 				custom_tooltip = {
 					text = recently_busy_tt
-					NOT = { has_character_modifier = recently_tasked }
+					NOT = {
+						has_character_modifier = recently_tasked
+					}
 				}
 			}
 		}
 	}
-	
-	
 	effect = {
-		
 		scope:target = {
 			add_character_modifier = {
 				name = "recently_tasked"
 				duration = 1825
 			}
-
 		}
-	
 		scope:target.employer = {
 			pay_price = price_task_character
 			trigger_event = {
@@ -100,4 +93,4 @@
 			}
 		}
 	}
-}	
+}

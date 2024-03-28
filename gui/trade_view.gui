@@ -2,7 +2,7 @@ base_window = {
 	gfxtype = windowgfx
 	name = "trade_view"
 	size = { 740 915 }
-	
+
 	using = main_window_template
 
 	### Audio ###
@@ -17,13 +17,13 @@ base_window = {
 		start_sound = {
 			soundeffect = "event:/SFX/UI/Generic/2.0/sfx_ui_window_tab_close"
 		}
-	}	
+	}
 
 	vbox = {
 		using = MainWindowHeaderBox
-		
+
 		blockoverride "Title_text" { text = "TRADE_MENU_HEADER" }
-		
+
 		blockoverride "White_buttons"
 		{
 			button_back = {
@@ -31,7 +31,7 @@ base_window = {
 				onclick = "[TradeView.OnPrevious]"
 				tooltip = "PREVIOUS_TRADE_VIEW"
 			}
-		
+
 			button_close = {
 				onclick = "[TradeView.OnClose]"
 				tooltip = "CLOSE"
@@ -53,16 +53,16 @@ base_window = {
 				}
 			}
 		}
-		
+
 		vbox = {
 			layoutpolicy_vertical = expanding
 			layoutpolicy_horizontal = expanding
-			margin = { 14 10 } 
-			
+			margin = { 14 10 }
+
 			margin_widget = {
 				size = { 0 80 }
 				layoutpolicy_horizontal = expanding
-				
+
 				hbox = {
 					spacing = 16
 					vbox = {
@@ -71,7 +71,7 @@ base_window = {
 							size = { 124 0 }
 							blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/global_import_commerce_modifier.dds" }
 							blockoverride "Text" { text = "[TradeView.GetPlayer.GetModifierValue('global_import_commerce_modifier')]" }
-							tooltip = "[TradeView.GetPlayer.GetModifierTooltip('global_import_commerce_modifier')]" 
+							tooltip = "[TradeView.GetPlayer.GetModifierTooltip('global_import_commerce_modifier')]"
 						}
 						icon_and_text = {
 							size = { 124 0 }
@@ -113,7 +113,7 @@ base_window = {
 							blockoverride "On_click" { onclick = "[TradeView.ToggleAutoAcceptTrade]" }
 							blockoverride "Text" { text = "ACCEPT_ALL_TRADES" }
 						}
-						
+
 						checkbox_entry = {
 							size = { 200 0 }
 							tooltip = "[SelectLocalization(TradeView.GetPlayer.NeverGiveUpTradeSurplus,'BLOCK_TRADE_SURPLUS','ALLOW_TRADE_SURPLUS')]"
@@ -124,7 +124,7 @@ base_window = {
 					}
 				}
 			}
-			
+
 			margin_widget = {
 				size = { 0 94 }
 				layoutpolicy_horizontal = expanding
@@ -132,7 +132,7 @@ base_window = {
 					layoutpolicy_vertical = expanding
 					margin_widget = {
 						size = { 0 84 }
-						
+
 						layoutpolicy_horizontal = expanding
 						sub_header = {
 							size = { 100% 0 }
@@ -142,9 +142,9 @@ base_window = {
 							position = { 4 37 }
 							name = "capital_surplus_grid"
 							size = { 94% 60 }
-							
+
 							datamodel = "[TradeView.GetCapitalSurplus]"
-							
+
 							item = {
 								widget = {
 									size = { 48 48 }
@@ -157,19 +157,19 @@ base_window = {
 								}
 							}
 						}
-						
+
 					}
 				}
 			}
 			margin_widget = {
 				size = { 0 385 }
 				layoutpolicy_horizontal = expanding
-				
+
 				sub_header = {
 					size = { 100% 0 }
 					blockoverride "Title_text" { text = "NATIONAL_TRADEROUTES" }
 				}
-				
+
 				flowcontainer = {
 					spacing = 12
 					position = { 4 35 }
@@ -177,31 +177,31 @@ base_window = {
 						blockoverride "On_click" { onclick = "[TradeView.Filter('export')]"}
 						blockoverride "FilterYes" { visible = "[TradeView.IsFilterYes('export')]" }
 						blockoverride "FilterNo" { visible = "[TradeView.IsFilterNo('export')]" }
-						blockoverride "TagText" 
-						{ 
-							text = "TRADE_VIEW_FILTER_BY_EXPORTS" 
+						blockoverride "TagText"
+						{
+							text = "TRADE_VIEW_FILTER_BY_EXPORTS"
 							max_width = 100
 						}
 					}
-					
+
 					check_cross_filter = {
 						blockoverride "On_click" { onclick = "[TradeView.Filter('import')]"}
 						blockoverride "FilterYes" { visible = "[TradeView.IsFilterYes('import')]" }
 						blockoverride "FilterNo" { visible = "[TradeView.IsFilterNo('import')]" }
-						blockoverride "TagText" 
-						{ 
-							text = "TRADE_VIEW_FILTER_BY_IMPORTS" 
+						blockoverride "TagText"
+						{
+							text = "TRADE_VIEW_FILTER_BY_IMPORTS"
 							max_width = 100
 						}
 					}
-					
+
 					check_cross_filter = {
 						blockoverride "On_click" { onclick = "[TradeView.Filter('domestic')]"}
 						blockoverride "FilterYes" { visible = "[TradeView.IsFilterYes('domestic')]" }
 						blockoverride "FilterNo" { visible = "[TradeView.IsFilterNo('domestic')]" }
-						blockoverride "TagText" 
-						{ 
-							text = "TRADE_VIEW_FILTER_BY_DOMESTIC" 
+						blockoverride "TagText"
+						{
+							text = "TRADE_VIEW_FILTER_BY_DOMESTIC"
 							max_width = 100
 						}
 					}
@@ -211,15 +211,15 @@ base_window = {
 						blockoverride "On_click" { onclick = "[ScriptedGui.Execute(GuiScope.SetRoot(Player.MakeScope).End )]"}
 						blockoverride "FilterYes" { visible = "[Player.MakeScope.Var('embargo_filter').IsSet]" }
 						blockoverride "FilterNo" { visible = "[Not(Player.MakeScope.Var('embargo_filter').IsSet)]" }
-						blockoverride "TagText" 
-						{ 
-							text = "Embargo" 
+						blockoverride "TagText"
+						{
+							text = "embargo"
 							max_width = 100
 						}
 					}
-					
+
 				}
-				
+
 				flowcontainer = {
 					position = { 450 35 }
 					spacing = 4
@@ -229,27 +229,27 @@ base_window = {
 						blockoverride "Icon" { visible = no }
 						blockoverride "On_click" { onclick = "[TradeView.SortRoutes('goods')]" }
 						blockoverride "DownState" { down = "[TradeView.IsRoutesSorted('goods')]" }
-					}					
+					}
 					text_button_sort = {
 						size = { 68 32 }
 						blockoverride "Button_text" { text = "INCOME" }
 						blockoverride "Icon" { visible = no }
 						blockoverride "On_click" { onclick = "[TradeView.SortRoutes('income')]" }
 						blockoverride "DownState" { down = "[TradeView.IsRoutesSorted('income')]" }
-					}		
+					}
 				}
-				
+
 				scrollarea = {
 					position = { 2 70 }
 					size = { 708 312 }
 					scrollbarpolicy_horizontal = always_off
-					
+
 					using = VerticalScrollAreaCutOff
-					
+
 					scrollbar_vertical = {
 						using = VerticalScrollBar
 					}
-					
+
 					scrollwidget = {
 						dynamicgridbox = {
 							size = { 100% 100% }
@@ -265,13 +265,13 @@ base_window = {
 									visible = "[ScriptedGui.IsShown(GuiScope.SetRoot(ActiveTradeRoute.GetFrom.GetCountry.MakeScope).AddScope('player', Player.MakeScope ).End )]"
 									flowcontainer = {
 										widget = {
-											size = { 34 34 }	
-											
+											size = { 34 34 }
+
 											country_flag = {
 												datacontext = "[ActiveTradeRoute.GetFrom.GetCountry]"
 												tooltip = "COUNTRY_SHORTHAND_INFO"
 												parentanchor = vcenter
-												
+
 												blockoverride "flag"
 												{
 													texture = "[ActiveTradeRoute.GetFrom.GetCountry.AccessCoatOfArms.GetTexture('(int32)56','(int32)56')]"
@@ -282,12 +282,12 @@ base_window = {
 												{
 													size = { 34 34 }
 												}
-												
+
 												blockoverride "click"
 												{
 													onclick = "[OpenDiplomacy(ActiveTradeRoute.GetFrom.GetCountry)]"
 												}
-												
+
 												blockoverride "hover_leave"
 												{
 													onmousehierarchyleave = "[ClearHighlightColors]"
@@ -303,7 +303,7 @@ base_window = {
 												}
 											}
 										}
-										
+
 										widget = {
 											size = { 200 100% }
 											onmousehierarchyenter = "[SetHighlightArea( ActiveTradeRoute.GetFrom.GetArea )]"
@@ -319,13 +319,13 @@ base_window = {
 												fontsize_min = 12
 												max_width = 130
 											}
-											
+
 											goto_button = { #TODO
 												name = "zoom_to_FROM_button"
 												position = { 2 0 }
 												parentanchor = right|vcenter
 												datacontext = [ActiveTradeRoute.GetFrom]
-												tooltip = "zoom_to_getfrom" 
+												tooltip = "zoom_to_getfrom"
 												blockoverride "On_click" { onclick = "[OnClickOnState(ActiveTradeRoute.GetFrom)]" }
 											}
 										}
@@ -345,20 +345,20 @@ base_window = {
 												fontsize_min = 12
 												max_width = 130
 											}
-											
+
 											goto_button = { #TODO
 												name = "zoom_to_TO_button"
 												position = { 2 0 }
 												parentanchor = right|vcenter
 												datacontext = [ActiveTradeRoute.GetFrom]
-												tooltip = "zoom_to_getto" 
+												tooltip = "zoom_to_getto"
 												blockoverride "On_click" { onclick = "[OnClickOnState(ActiveTradeRoute.GetTo)]"  }
 											}
 										}
-										
+
 										widget = {
 											size = { 130 100% }
-											
+
 											container = {
 												parentanchor = vcenter
 												position = { 0 0 }
@@ -380,9 +380,9 @@ base_window = {
 													max_width = 88
 												}
 											}
-											
-										}										
-										
+
+										}
+
 										container = {
 											parentanchor = vcenter
 											textbox = {
@@ -420,7 +420,7 @@ base_window = {
 						}
 					}
 				}
-				
+
 			}
 			margin_widget = {
 				size = { 0 292 }
@@ -428,20 +428,20 @@ base_window = {
 				sub_header_v = {
 					blockoverride "Title_text" { text = "TRADE_VIEW_REQUEST_DENY" }
 					size = { 50% 100% }
-					
+
 					dynamicgridbox = {
 						name = "capital_surplus_grid"
 						position = { 2 36 }
 						size = { 100% 100% }
 						maxhorizontalslots = 7
 						datamodel_wrap = 6
-						
+
 						datamodel = "[TradeView.GetAvailableTradeGoods]"
-						
+
 						item = {
 							trade_good_entry = {
-								blockoverride "Icon" { 
-									texture = "[GetTradeGoodsIcon(TradeGoodsGlue.GetTradeGood)]" 
+								blockoverride "Icon" {
+									texture = "[GetTradeGoodsIcon(TradeGoodsGlue.GetTradeGood)]"
 									size = { 38 38 }
 								}
 								blockoverride "Text" { visible = no }
@@ -452,27 +452,27 @@ base_window = {
 							}
 						}
 					}
-					
+
 				}
-				
+
 				sub_header_v = {
 					blockoverride "Title_text" { text = "TRADE_VIEW_REQUEST_DENIED" }
 					size = { 50% 100% }
 					position = { 362 0 }
-					
+
 					dynamicgridbox = {
 						name = "capital_surplus_grid"
 						position = { 2 36 }
 						size = { 100% 100% }
 						maxhorizontalslots = 7
 						datamodel_wrap = 6
-						
+
 						datamodel = "[TradeView.GetDeniedTradeGoods]"
-						
+
 						item = {
 							trade_good_entry = {
-								blockoverride "Icon" { 
-									texture = "[GetTradeGoodsIcon(TradeGoodsGlue.GetTradeGood)]" 
+								blockoverride "Icon" {
+									texture = "[GetTradeGoodsIcon(TradeGoodsGlue.GetTradeGood)]"
 									size = { 38 38 }
 								}
 								blockoverride "Text" { visible = no }
@@ -483,14 +483,14 @@ base_window = {
 							}
 						}
 					}
-					
-				}	
+
+				}
 			}
 			vbox = {
 				layoutpolicy_vertical = expanding
 			}
 		}
-		
+
 	}
 }
 

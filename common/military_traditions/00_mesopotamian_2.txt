@@ -1,10 +1,16 @@
-﻿mesopotamian_philosophy_2 = { #Assyrian Path
-	color = hsv { 1.72 0.64 0.7 }
+﻿mesopotamian_philosophy_2 = {
+	#Assyrian Path
+	color = {
+		1.72
+		0.64
+		0.7
+	}
 	image = latin_roman_path_end_bonus
-	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = east_levantine }
+			limit = {
+				country_culture_group = east_levantine
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -27,113 +33,126 @@
 			}
 		}
 	}
-
-    assyrian_path_1 = { ###
+	assyrian_path_1 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = archers_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = archers_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = archers_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = archers_super_unit
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = confident
+				}
+			}
+		}
+		modifier = {
 			archers_defensive = 0.1
-            archers_plains_combat_bonus = 0.10 
-            archers_hills_combat_bonus = 0.10
+			archers_plains_combat_bonus = 0.1
+			archers_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_achaemenid_path_7
-		requires = { }
+		requires = {
+		}
 	}
-
-    assyrian_path_2 = { ###
+	assyrian_path_2 = {
+		###
 		modifier = {
 			archers_morale = 0.1
-            archers_desert_combat_bonus = 0.10
-            archers_flood_plain_combat_bonus = 0.10
+			archers_desert_combat_bonus = 0.1
+			archers_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = north_african_tribal_path_7
-		requires = { assyrian_path_1 }
+		requires = {
+			assyrian_path_1
+		}
 	}
-
-    assyrian_path_8 = { ###
+	assyrian_path_8 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = light_cavalry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_cavalry_super_unit
-        }	
-		modifier = { 
+			NOT = {
+				has_variable = light_cavalry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_cavalry_super_unit
+		}
+		modifier = {
 			light_cavalry_offensive = 0.1
-			light_cavalry_desert_combat_bonus = 0.10
-            light_cavalry_flood_plain_combat_bonus = 0.10
+			light_cavalry_desert_combat_bonus = 0.1
+			light_cavalry_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_arabian_path_end_bonus
-		requires = { }
+		requires = {
+		}
 	}
-
-    assyrian_path_11 = { ###
+	assyrian_path_11 = {
+		###
 		enable_tactic = cavalry_skirmish
-		modifier = { 
+		modifier = {
 			light_cavalry_morale = 0.1
-			light_cavalry_plains_combat_bonus = 0.10
-            light_cavalry_hills_combat_bonus = 0.10
+			light_cavalry_plains_combat_bonus = 0.1
+			light_cavalry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = greek_antigonid_path_4
-		requires = { assyrian_path_8 }
-
+		requires = {
+			assyrian_path_8
+		}
 	}
-
-
-# Super Units
-
-    assyrian_path_3 = { ###
+	# Super Units
+	assyrian_path_3 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = heavy_cavalry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = heavy_cavalry_super_unit
-        }
-        modifier = { 
+			NOT = {
+				has_variable = heavy_cavalry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = heavy_cavalry_super_unit
+		}
+		modifier = {
 			heavy_cavalry_discipline = 0.1
-            heavy_cavalry_desert_combat_bonus = 0.1
+			heavy_cavalry_desert_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_4
-		requires = { }
+		requires = {
+		}
 	}
-
-    assyrian_path_14 = { ###
-		modifier = { 
+	assyrian_path_14 = {
+		###
+		modifier = {
 			heavy_cavalry_offensive = 0.1
-            heavy_cavalry_defensive = 0.1
-			heavy_cavalry_hills_combat_bonus = 0.10
-            heavy_cavalry_plains_combat_bonus = 0.10
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_hills_combat_bonus = 0.1
+			heavy_cavalry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.02
-		} 
+		}
 		icon = latin_support_path_7
-		requires = { assyrian_path_3 }
+		requires = {
+			assyrian_path_3
+		}
 	}
-
-    assyrian_path_15 = { ###
-		modifier = { 
+	assyrian_path_15 = {
+		###
+		modifier = {
 			heavy_cavalry_cost = -0.15
-            heavy_cavalry_movement_speed = 0.10
-            heavy_cavalry_morale = 0.10
-			heavy_cavalry_flood_plain_combat_bonus = 0.10
+			heavy_cavalry_movement_speed = 0.1
+			heavy_cavalry_morale = 0.1
+			heavy_cavalry_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.02
-		} 
+		}
 		icon = greek_seleucid_path_4
-		requires = { assyrian_path_14 }
-
+		requires = {
+			assyrian_path_14
+		}
 	}
-
-}    
+}

@@ -1,24 +1,25 @@
 ﻿culture_decisions = {
-
-
 	#Primary Culture Rights and Privileges:
-	
 	protected_land_rights = {
 		potential = {
 			primary_culture = scope:target_culture.culture
 		}
 		allow = {
 			scope:target_culture = {
-				NOT = { has_country_culture_modifier = land_protection }
+				NOT = {
+					has_country_culture_modifier = land_protection
+				}
 			}
-			NOT = { has_country_modifier = extended_land_protection }
+			NOT = {
+				has_country_modifier = extended_land_protection
+			}
 			stability > 10
 			political_influence >= 25
 		}
 		effect = {
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "land_protection" 
+					name = "land_protection"
 					duration = -1
 				}
 			}
@@ -26,12 +27,13 @@
 				name = "extended_land_protection"
 				duration = -1
 			}
-			add_country_modifier = { #############################################
+			add_country_modifier = {
+				#############################################
 				name = "social_change"
 				duration = 1460
 			}
 			add_political_influence = -25
-			add_4_free_province_investments = yes #############################################
+			add_4_free_province_investments = yes			#############################################
 			approval_effect = {
 				PARTY = optimates_party
 				VALUE = party_approval_medium_svalue
@@ -51,20 +53,21 @@
 			trigger_event = {
 				id = social_change_events.1
 				days = 5
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
 	allow_citizenship_by_adoption = {
 		potential = {
 			primary_culture = scope:target_culture.culture
 		}
 		allow = {
 			scope:target_culture = {
-				NOT = { has_country_culture_modifier = citizenship_by_adoption }
+				NOT = {
+					has_country_culture_modifier = citizenship_by_adoption
+				}
 			}
 			stability > 10
 			political_influence >= 25
@@ -72,15 +75,17 @@
 		effect = {
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "citizenship_by_adoption" 
+					name = "citizenship_by_adoption"
 					duration = -1
 				}
 			}
-			add_country_modifier = { #############################################
+			add_country_modifier = {
+				#############################################
 				name = "social_change"
 				duration = 1460
 			}
-			add_country_modifier = { #############################################
+			add_country_modifier = {
+				#############################################
 				name = "expanded_citizenship"
 				duration = -1
 			}
@@ -105,29 +110,32 @@
 			trigger_event = {
 				id = social_change_events.1
 				days = 5
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
 	right_of_trial = {
 		potential = {
 			primary_culture = scope:target_culture.culture
 		}
 		allow = {
 			scope:target_culture = {
-				NOT = { has_country_culture_modifier = trial_right }
+				NOT = {
+					has_country_culture_modifier = trial_right
+				}
 			}
-			NOT = { has_country_modifier = extended_trial_rights }
+			NOT = {
+				has_country_modifier = extended_trial_rights
+			}
 			stability > 10
 			political_influence >= 25
 		}
 		effect = {
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "trial_right" 
+					name = "trial_right"
 					duration = -1
 				}
 			}
@@ -136,26 +144,29 @@
 				name = "extended_trial_rights"
 				duration = -1
 			}
-			add_country_modifier = { #############################################
+			add_country_modifier = {
+				#############################################
 				name = "social_change"
 				duration = 1460
 			}
 			add_political_influence = -25
-			add_tyranny = -30 #############################################
+			add_tyranny = -30			#############################################
 			trigger_event = {
 				id = social_change_events.1
 				days = 5
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
 	exemption_from_census_tax = {
 		potential = {
 			primary_culture = scope:target_culture.culture
-			NOT = { has_country_modifier = citizen_exemption_from_census_tax } #Has revoke version.
+			NOT = {
+				has_country_modifier = citizen_exemption_from_census_tax
+			}
+			#Has revoke version.
 		}
 		allow = {
 			NOT = {
@@ -166,10 +177,11 @@
 		}
 		effect = {
 			add_country_modifier = {
-				name = "citizen_exemption_from_census_tax" #Applies to all integrated cultures
+				name = "citizen_exemption_from_census_tax"				#Applies to all integrated cultures
 				duration = -1
 			}
-			add_country_modifier = { #############################################
+			add_country_modifier = {
+				#############################################
 				name = "social_change"
 				duration = 1460
 			}
@@ -199,13 +211,12 @@
 			trigger_event = {
 				id = social_change_events.1
 				days = 5
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
 	revoke_exemption_from_census_tax = {
 		potential = {
 			primary_culture = scope:target_culture.culture
@@ -219,7 +230,7 @@
 			remove_country_modifier = citizen_exemption_from_census_tax
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "revoked_tax_exemption" 
+					name = "revoked_tax_exemption"
 					duration = 1825
 				}
 			}
@@ -248,29 +259,32 @@
 			trigger_event = {
 				id = social_change_events.1
 				days = 5
-			}	
+			}
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	protection_against_torture_primary = {
 		potential = {
 			primary_culture = scope:target_culture.culture
 		}
 		allow = {
 			scope:target_culture = {
-				NOT = { has_country_culture_modifier = torture_protection }
+				NOT = {
+					has_country_culture_modifier = torture_protection
+				}
 			}
-			NOT = { has_country_modifier = extended_torture_protection }
+			NOT = {
+				has_country_modifier = extended_torture_protection
+			}
 		}
 		effect = {
 			add_political_influence = -20
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
-					name = "torture_protection" 
+					name = "torture_protection"
 					duration = -1
 				}
 			}
@@ -310,195 +324,52 @@
 			}
 		}
 	}
-
-
-
-	#HMO Primary Culture Rights and Privileges:
-	
-	promote_war_hero = {
-		potential = {
-			primary_culture = scope:target_culture.culture
-			has_variable = war_hero_arises ##################################################################
-		}
-		allow = {
-			NOT = { 
-				has_country_modifier = war_hero 
-			}	
-			stability > 10
-			military_experience >= 5
-		}
-			
-		effect = {
-			add_military_experience = -5
-			add_country_modifier = {
-					name = "war_hero"
-					duration = 9131
-			}			
-			custom_tooltip = war_hero_tt
-			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
-				order_by = total_population
-				ROOT = {
-					create_character = {
-						culture = scope:target_culture.culture
-						religion = prev.prev.religion
-						hidden_effect = {
-							random_list = {
-								10 = { 
-									add_trait = original_thinker
-								}
-								10 = {
-									add_trait = confident
-								}
-								10 = {
-									add_trait = tactician
-								}
-								10 = {
-									add_trait = disciplined
-								}
-								10 = {
-									add_trait = steadfast
-								}
-								10 = {
-									add_trait = aggressive
-								}
-								10 = {
-									add_trait = brave
-								}
-							}
-							add_character_modifier = {
-								name = "war_hero_character"
-								duration = -1
-							}
-							save_scope_as = war_hero_char
-						}
-					}
-				}
-            }
-            trigger_event = {
-				id = character_introductions.3
-				days = 5
-			}
-        }	
-		ai_will_do = {
-			factor = 0
-		}
-	}	
-	
-	promote_naval_war_hero = {
-		potential = {
-			primary_culture = scope:target_culture.culture
-			has_variable = naval_hero_arises ##################################################################
-		}
-		allow = {
-			NOT = { 
-				has_country_modifier = naval_war_hero 
-			}	
-			stability > 10
-			military_experience >= 5
-		}
-		
-		effect = {
-			add_military_experience = -5
-			add_country_modifier = {
-					name = "naval_war_hero"
-					duration = 9131
-			}			
-			custom_tooltip = naval_war_hero_tt
-			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
-				order_by = total_population
-				ROOT = {
-					create_character = {
-						culture = scope:target_culture.culture
-						religion = prev.prev.religion
-						hidden_effect = {
-							random_list = {
-								10 = { 
-									add_trait = coastal_raider
-								}
-								10 = {
-									add_trait = squadron_leader
-								}
-								10 = {
-									add_trait = princeps
-								}
-								10 = {
-									add_trait = oarmaster
-								}
-								10 = {
-									add_trait = seadog
-								}
-								10 = {
-									add_trait = daring
-								}
-								10 = {
-									add_trait = tough
-								}
-								10 = {
-									add_trait = improviser
-								}
-							}
-							add_character_modifier = {
-								name = "naval_war_hero_character"
-								duration = -1
-							}
-							save_scope_as = naval_war_hero_char
-						}
-					}
-				}
-            }
-            trigger_event = {
-				id = character_introductions.4
-				days = 5
-			}
-        }	
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
+	#HMO Primary Culture Rights and Privileges:	
 	recruit_spymaster = {
 		potential = {
 			primary_culture = scope:target_culture.culture
 			NOT = {
-				has_country_modifier = kautilyas_espionage_programme 
+				has_country_modifier = kautilyas_espionage_programme
 			}
 		}
 		allow = {
-			NOT = { 
+			NOT = {
 				has_variable = spy_recruit_cooldown
-			}	
+			}
 			stability > 10
 			treasury >= 50
 			military_experience >= 5
 		}
-			
 		effect = {
 			add_military_experience = -5
 			add_treasury = -50
 			add_country_modifier = {
-					name = "spy_recruited"
-					duration = 3650
-					mode = add
+				name = "spy_recruited"
+				duration = 3650
+				mode = add
 			}
 			set_variable = {
-					name = "spy_recruit_cooldown"
-					days = 548
-			}				
+				name = "spy_recruit_cooldown"
+				days = 548
+			}
 			custom_tooltip = recruit_spymaster_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
 						female = yes
-						age = { 18 22 }
+						age = {
+							18
+							22
+						}
 						culture = scope:target_culture.culture
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = unnoticeable
 								}
 								10 = {
@@ -533,56 +404,59 @@
 						}
 					}
 				}
-            }
+			}
 			trigger_event = {
 				id = counterintel.8
 				days = 5
 			}
-        }	
+		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 	recruit_aryan_spy = {
 		potential = {
 			primary_culture = scope:target_culture.culture
-			has_country_modifier = kautilyas_espionage_programme 
+			has_country_modifier = kautilyas_espionage_programme
 		}
 		allow = {
-			NOT = { 
+			NOT = {
 				has_variable = aryan_spy_recruit_cooldown
-			}	
+			}
 			stability > 10
 			treasury >= 40
 			military_experience >= 4
 		}
-			
 		effect = {
 			add_military_experience = -4
 			add_treasury = -40
 			add_country_modifier = {
-					name = "spy_recruited"
-					duration = 3650
-					mode = add
+				name = "spy_recruited"
+				duration = 3650
+				mode = add
 			}
 			set_variable = {
-					name = "aryan_spy_recruit_cooldown"
-					days = 365
-			}				
+				name = "aryan_spy_recruit_cooldown"
+				days = 365
+			}
 			custom_tooltip = recruit_spymaster_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
 						female = yes
-						age = { 18 22 }
+						age = {
+							18
+							22
+						}
 						culture = scope:target_culture.culture
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = unnoticeable
 									add_charisma = 1
 								}
@@ -621,18 +495,16 @@
 						}
 					}
 				}
-            }
+			}
 			trigger_event = {
 				id = counterintel.8
 				days = 5
 			}
-        }	
+		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
-	
 	promote_talent = {
 		potential = {
 			primary_culture = scope:target_culture.culture
@@ -652,14 +524,16 @@
 					}
 				}
 				stability > 10
-				political_influence >= 10
+				political_influence >= 35
 			}
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = -35
 			custom_tooltip = recruit_talent_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
@@ -667,7 +541,7 @@
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = energetic
 								}
 								10 = {
@@ -695,7 +569,7 @@
 									add_trait = loving
 								}
 								10 = {
-								add_trait = benefactor
+									add_trait = benefactor
 								}
 							}
 							add_character_modifier = {
@@ -706,8 +580,8 @@
 						}
 					}
 				}
-            }
-            trigger_event = {
+			}
+			trigger_event = {
 				id = character_introductions.2
 				days = 5
 			}
@@ -715,14 +589,11 @@
 				name = recently_promoted_talent
 				days = 365
 			}
-        }	
-			
+		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
-
 	present_debutante = {
 		potential = {
 			primary_culture = scope:target_culture.culture
@@ -742,24 +613,29 @@
 					}
 				}
 				stability > 10
-				political_influence >= 10
+				political_influence >= 35
 			}
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = -35
 			custom_tooltip = present_debutante_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
+				}
 				order_by = total_population
 				ROOT = {
 					create_character = {
 						female = yes
-						age = { 16 20 }
+						age = {
+							16
+							20
+						}
 						culture = scope:target_culture.culture
 						religion = prev.prev.religion
 						hidden_effect = {
 							random_list = {
-								10 = { 
+								10 = {
 									add_trait = energetic
 								}
 								10 = {
@@ -804,8 +680,8 @@
 						}
 					}
 				}
-            }
-            trigger_event = {
+			}
+			trigger_event = {
 				id = character_introductions.1
 				days = 5
 			}
@@ -813,11 +689,9 @@
 				name = recently_presented_debutante
 				days = 365
 			}
-        }	
-			
+		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
 }

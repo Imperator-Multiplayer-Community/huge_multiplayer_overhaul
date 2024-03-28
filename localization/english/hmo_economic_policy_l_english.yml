@@ -1,0 +1,8 @@
+﻿l_english:
+ looting_policy:0 "Looting Policy"
+ low_looting_policy:0 "Restricted Looting"
+ low_looting_policy_tt:0 "Restricted Looting\nMorale of Armies: #R -5.00%#!\nDiscipline: #G +5.00%#!\nEnslavement Efficiency: #R -7.50%#!\nArmy Movement Speed: #G +2.50%#!"
+ default_looting_policy:0 "Balanced Looting"
+ default_looting_policy_tt:0 "Balanced Looting\nArmy Weight: #G -10.00%#!"
+ high_looting_policy:0 "Encouraged Looting"
+ high_looting_policy_tt:0 "Encouraged Looting\nMorale of Armies: #G +5.00% #!\nDiscipline: #R -5.00%#!\nEnslavement Efficiency: #G +7.50%#!\nArmy Movement Speed: #R -2.50%#!"

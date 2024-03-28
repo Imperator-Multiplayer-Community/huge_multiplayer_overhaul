@@ -1,19 +1,17 @@
 ﻿country_decisions = {
-	
 	# Form the Visigothic Kingdom
 	# Created by Shinymewtwo99
-
 	form_visigothic_kingdom = {
-		
 		potential = {
 			num_of_cities >= 1
-			NOT = { tag = VGK }
+			NOT = {
+				tag = VGK
+			}
 			primary_culture = gothonic
 			NOT = {
 				is_endgame_tag_trigger = yes
 			}
 		}
-		
 		highlight = {
 			scope:province = {
 				OR = {
@@ -29,7 +27,6 @@
 				}
 			}
 		}
-		
 		allow = {
 			custom_tooltip = {
 				text = ostrogoth_not_exists
@@ -49,21 +46,21 @@
 			owns_area = mastiania_area
 			owns_region = tarraconensis_region
 		}
-		
 		effect = {
 			custom_tooltip = "tier_3_formable_tooltip"
 			change_country_name = "VISIGOTH_NAME"
-			change_country_flag = VISIGOTH_FLAG
 			#set_primary_culture = parthian
 			if = {
-				limit = { is_tribal = yes }
+				limit = {
+					is_tribal = yes
+				}
 				add_country_modifier = {
 					name = civilized_tribe
 					duration = 5475
 				}
 				change_government = tribal_federation
 				switch_government_type_event_clearup_effect = yes
-			}			
+			}
 			capital_scope = {
 				establish_city_effect = yes
 				capital_formable_medium_effect = yes
@@ -71,8 +68,9 @@
 			}
 			hidden_effect = {
 				change_country_adjective = "VISIGOTH_ADJECTIVE"
-				change_country_color =  "visigoth_color"
+				change_country_color = "visigoth_color"
 				change_country_tag = VGK
+				change_country_flag = VISIGOTH_FLAG
 				trigger_event = {
 					id = formable_heritage.109
 				}
@@ -83,7 +81,6 @@
 			#}
 			add_5_free_province_investments = yes
 		}
-		
 		ai_will_do = {
 			base = 1
 			modifier = {
@@ -92,6 +89,4 @@
 			}
 		}
 	}
-
-} 
-
+}

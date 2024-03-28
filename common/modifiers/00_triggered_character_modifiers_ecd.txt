@@ -27,6 +27,7 @@ war_hero_character = {
 	monthly_wage_for_character = 0.001
 	monthly_character_experience = 0.15
 	monthly_character_experience_decay = -0.15
+	monthly_character_popularity = 0.1
 }
 
 naval_war_hero_character = {
@@ -34,6 +35,7 @@ naval_war_hero_character = {
 	monthly_wage_for_character = 0.001
 	monthly_character_experience = 0.15
 	monthly_character_experience_decay = -0.15
+	monthly_character_popularity = 0.1
 }
 
 petty_noble_character = {

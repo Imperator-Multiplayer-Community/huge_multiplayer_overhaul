@@ -1,10 +1,16 @@
-﻿pracyan_philosophy_2 = { #Pracyan Path
-	color = hsv { 0.27 0.6 0.5 }
+﻿pracyan_philosophy_2 = {
+	#Pracyan Path
+	color = {
+		0.27
+		0.6
+		0.5
+	}
 	image = mauryan_noble_path_end_bonus
-
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = pracyan }
+			limit = {
+				country_culture_group = pracyan
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -23,7 +29,7 @@
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
 				has_variable = tibeto_pracyan_influence
-			}	
+			}
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_tibeto_pracyan"
 				any_country_culture = {
@@ -36,118 +42,137 @@
 				}
 			}
 		}
-    }    
-	
-    pracyan_path_1 = { ###
+	}
+	pracyan_path_1 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }	
-		modifier = { 
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_infantry_super_unit
+		}
+		modifier = {
 			light_infantry_morale = 0.1
-            light_infantry_jungle_combat_bonus = 0.10
-            light_infantry_flood_plain_combat_bonus = 0.10
+			light_infantry_jungle_combat_bonus = 0.1
+			light_infantry_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_greco_path_1
-		requires = { }
+		requires = {
+		}
 	}
-
-    pracyan_path_12 = { ###
-		modifier = { 
+	pracyan_path_12 = {
+		###
+		modifier = {
 			light_infantry_offensive = 0.1
-            light_infantry_mountain_combat_bonus = 0.10
-            light_infantry_hills_combat_bonus = 0.10
+			light_infantry_mountain_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_noble_path_6
-		requires = { pracyan_path_1 }
+		requires = {
+			pracyan_path_1
+		}
 	}
-
-    pracyan_path_3 = { ###
+	pracyan_path_3 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = archers_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = archers_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = archers_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = archers_super_unit
+		}
+		modifier = {
 			archers_offensive = 0.1
-            archers_jungle_combat_bonus = 0.10
-            archers_flood_plain_combat_bonus = 0.10
+			archers_jungle_combat_bonus = 0.1
+			archers_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_achaemenid_path_7
-		requires = { }
+		requires = {
+		}
 	}
-
-    tibetan_path_13 = { ###
-		modifier = { 
+	tibetan_path_13 = {
+		###
+		modifier = {
 			archers_morale = 0.1
-			archers_mountain_combat_bonus = 0.10
-            archers_hills_combat_bonus = 0.10
+			archers_mountain_combat_bonus = 0.1
+			archers_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = greek_antigonid_path_6
-		requires = { pracyan_path_3 }
+		requires = {
+			pracyan_path_3
+		}
 	}
-
-    # Super Unit
-
-    pracyan_path_14 = { ###
-        allow = {
-            NOT = {
-                has_variable = heavy_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = heavy_infantry_super_unit
-        }
-        enable_tactic = padma_vyuha
-        modifier = { 
-            heavy_infantry_defensive = 0.1
-            heavy_infantry_jungle_combat_bonus = 0.1
-            army_maintenance_cost = 0.01
-        } 
-            icon = mauryan_noble_path_7
-            requires = { }
+	# Super Unit
+	pracyan_path_14 = {
+		###
+		allow = {
+			NOT = {
+				has_variable = heavy_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = heavy_infantry_super_unit
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
+		}
+		enable_tactic = padma_vyuha
+		modifier = {
+			heavy_infantry_defensive = 0.1
+			heavy_infantry_jungle_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_noble_path_7
+		requires = {
+		}
 	}
-
-    pracyan_path_15 = { ###
-		modifier = { 
+	pracyan_path_15 = {
+		###
+		modifier = {
 			heavy_infantry_offensive = 0.1
-            heavy_infantry_plains_combat_bonus = 0.1
+			heavy_infantry_plains_combat_bonus = 0.1
 			heavy_infantry_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = greek_antigonid_path_end_bonus
-		requires = { pracyan_path_14 }
+		requires = {
+			pracyan_path_14
+		}
 	}
-
-    tibetan_path_12 = { ###
-		modifier = { 
+	tibetan_path_12 = {
+		###
+		modifier = {
 			heavy_infantry_morale = 0.1
-            heavy_infantry_mountain_combat_bonus = 0.1
+			heavy_infantry_mountain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = celtic_gallic_path_3
-		requires = { pracyan_path_15 }
-	}    
-
-    tibetan_path_11 = { ###
-		modifier = { 
+		requires = {
+			pracyan_path_15
+		}
+	}
+	tibetan_path_11 = {
+		###
+		modifier = {
 			heavy_infantry_discipline = 0.1
-            heavy_infantry_movement_speed = 0.1
+			heavy_infantry_movement_speed = 0.1
 			heavy_infantry_cost = -0.15
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = mauryan_noble_path_3
-		requires = { tibetan_path_12 }
+		requires = {
+			tibetan_path_12
+		}
 	}
 }

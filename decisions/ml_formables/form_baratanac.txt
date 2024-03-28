@@ -1,13 +1,12 @@
 ﻿country_decisions = {
-	
 	# Form Baratanac
 	# Created by Shinymewtwo99
-
 	form_baratanac = {
-		
 		potential = {
 			num_of_cities >= 1
-			NOT = { tag = BTC }
+			NOT = {
+				tag = BTC
+			}
 			OR = {
 				primary_culture = carthaginian
 				primary_culture = phoenician
@@ -17,7 +16,6 @@
 				is_tier_2_formable_trigger = yes
 			}
 		}
-		
 		highlight = {
 			scope:province = {
 				OR = {
@@ -28,8 +26,6 @@
 					is_in_area = nervia_area
 					is_in_area = morinia_area
 					is_in_area = ganuenta_area
-
-
 					is_in_area = cornovia_area
 					is_in_area = coritania_area
 					is_in_area = icenia_area
@@ -39,13 +35,11 @@
 					is_in_area = britannia_secunda_meridionalis_area
 					is_in_area = durotrigia_area
 					is_in_area = dumnonia_area
-
 					is_in_region = armorica_region
 					#province_id = 1
 				}
 			}
 		}
-		
 		allow = {
 			custom_tooltip = {
 				text = baratanac_not_exists
@@ -62,8 +56,6 @@
 			owns_or_subject_owns_area = nervia_area
 			owns_or_subject_owns_area = morinia_area
 			owns_or_subject_owns_area = ganuenta_area
-
-
 			owns_or_subject_owns_area = cornovia_area
 			owns_or_subject_owns_area = coritania_area
 			owns_or_subject_owns_area = icenia_area
@@ -74,24 +66,23 @@
 			owns_or_subject_owns_area = britannia_secunda_meridionalis_area
 			owns_or_subject_owns_area = durotrigia_area
 			owns_or_subject_owns_area = dumnonia_area
-
 			owns_or_subject_owns_region = armorica_region
 		}
-		
 		effect = {
 			custom_tooltip = "tier_2_formable_tooltip"
 			change_country_name = "BARATANAC_NAME"
-			change_country_flag = BARATANAC_FLAG
 			#set_primary_culture = parthian
 			if = {
-				limit = { is_tribal = yes }
+				limit = {
+					is_tribal = yes
+				}
 				add_country_modifier = {
 					name = civilized_tribe
 					duration = 5475
 				}
 				change_government = tribal_federation
 				switch_government_type_event_clearup_effect = yes
-			}			
+			}
 			capital_scope = {
 				establish_city_effect = yes
 				capital_formable_medium_effect = yes
@@ -99,8 +90,9 @@
 			}
 			hidden_effect = {
 				change_country_adjective = "BARATANAC_ADJECTIVE"
-				change_country_color =  "baratanac_color"
+				change_country_color = "baratanac_color"
 				change_country_tag = BTC
+				change_country_flag = BARATANAC_FLAG
 				trigger_event = {
 					id = formable_heritage.153
 				}
@@ -111,7 +103,6 @@
 			#}
 			add_3_free_province_investments = yes
 		}
-		
 		ai_will_do = {
 			base = 1
 			modifier = {
@@ -120,6 +111,4 @@
 			}
 		}
 	}
-
-} 
-
+}

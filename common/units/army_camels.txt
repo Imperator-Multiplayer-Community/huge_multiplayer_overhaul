@@ -1,36 +1,31 @@
 ﻿camels = {
 	army = yes
-
 	levy_tier = basic
-
 	allow = {
-		trade_good_surplus = { target = camel value > 0 }
+		trade_good_surplus = {
+			target = camel
+			value > 0
+		}
 	}
-
 	is_flank = yes
-	
 	maneuver = 3
 	movement_speed = 3.5
-
 	build_time = 40
 	legions = no
 	light_infantry = 1.15
 	heavy_infantry = 0.75
 	heavy_cavalry = 0.75
 	light_cavalry = 1.05
-	warelephant = 1.10
+	warelephant = 1.05
 	horse_archers = 1.05
 	archers = 1.2
-	camels = 1.0
+	camels = 1
 	build_cost = {
 		gold = 18
 		manpower = 1
 	}
-	supply_train = 2.0
-	
-	
-	food_consumption = 0.20
+	supply_train = 2
+	food_consumption = 0.2
 	food_storage = 5.3
-	
 	attrition_loss = 0.03
 }

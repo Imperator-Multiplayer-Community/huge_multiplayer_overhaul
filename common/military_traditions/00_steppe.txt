@@ -436,15 +436,9 @@ requires = { scythian_path_generic_fort_1 }
 
 scythian_path_3 = { ###
 on_activate = {
-	custom_tooltip = "create_high_martial_rising_star"
-	hidden_effect = {
-		create_character = {
-			add_martial = 8
-			add_trait = conqueror
-		}
-	}
 }
 modifier = { 
+	army_movement_speed = 0.075
 	max_war_exhaustion = -2.5
 } 
 icon = north_african_tribal_path_3

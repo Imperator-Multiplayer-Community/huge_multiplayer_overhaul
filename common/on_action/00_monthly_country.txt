@@ -1,5 +1,4 @@
 ﻿monthly_country_pulse = {
-
 	events = {
 		rel_flavor_druidic.10
 		dhe_rome.9
@@ -8,46 +7,63 @@
 		dhe_judea.4
 		dhe_judea.5
 		dhe_judea.7
-		family_events.1 #Rise of a Family
-		family_events.2 #Prune Family
-		family_events.5 #Rise of new Royal Dynasty
-		family_events.6 #Tribal family rise
-		family_events.7 #Tribal family fall
-		family_events.9 #Rise of Family in Republics
+		family_events.1		#Rise of a Family
+		family_events.2		#Prune Family
+		family_events.5		#Rise of new Royal Dynasty
+		family_events.6		#Tribal family rise
+		family_events.7		#Tribal family fall
+		family_events.9		#Rise of Family in Republics
 		flavor_egy.15
-		me_thrace_2_paper_kingdom.3 # Odrysia - revolt or not?
-		me_thrace_2_paper_kingdom.30 # Odrysia - losing war with Thrace, surrender or not?
+		me_thrace_2_paper_kingdom.3		# Odrysia - revolt or not?
+		me_thrace_2_paper_kingdom.30		# Odrysia - losing war with Thrace, surrender or not?
 		#slave_revolts.3
 		counterintel.1
-		hmo_civil_war.1 # civil war
-		high_tyranny.1 # adds high tyranny
-		high_tyranny.2 # removed high tyranny
-		high_tyranny.3 # adds low tyranny
-		high_tyranny.5 # removes low tyranny
-		food_share.1 # shares food with allies
+		hmo_civil_war.1		# civil war
+		high_tyranny.1		# adds high tyranny
+		high_tyranny.2		# removed high tyranny
+		high_tyranny.3		# adds low tyranny
+		high_tyranny.5		# removes low tyranny
+		food_share.1		# shares food with allies
+		migrant_women_and_children.1		# migrant army debuff at war
+		migrant_women_and_children.2		# migrant army debuff remove not at war
 	}
-	
 	random_events = {
 		550 = 0
 		5 = comet.4
 	}
-	
-	on_actions = {		
+	on_actions = {
 		dictatorship_power_held_pulse
 		consul_conspiracy_pulse
-		delay = { days = { 1 15 } }
+		delay = {
+			days = {
+				1
+				15
+			}
+		}
 		dictator_rise_pulse
-		delay = { days = { 1 15 } }
+		delay = {
+			days = {
+				1
+				15
+			}
+		}
 		passover_supported_characters_pulse
 		monthly_guarantee_pulse
-		delay = { days = { 5 20 } }
+		delay = {
+			days = {
+				5
+				20
+			}
+		}
 		hmo_navy_maintenance_pulse
-		delay = { days = { 1 30 }}
-		hmo_slave_death_pulse
-		delay = { days = { 1 5 }}
+		delay = {
+			days = {
+				1
+				5
+			}
+		}
 		hmo_wrath_of_ares_pulse
 	}
-
 	effect = {
 		if = {
 			limit = {

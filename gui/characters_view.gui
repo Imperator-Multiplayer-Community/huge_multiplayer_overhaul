@@ -1238,12 +1238,13 @@ base_window = {
 
 													blockoverride "Title_text"
 													{
-														text = "[FamilyGlue.GetFamily.GetName]"
+														text = "[SelectLocalization(FamilyGlue.GetFamily.IsMinor,'CHARACTERS_FROM_MINOR_FAMILY','')][AddTextIf(Not(FamilyGlue.GetFamily.IsMinor), FamilyGlue.GetFamily.GetName)]"
 													}
 												}
 											}
 
 											container = {
+												visible = "[Not(FamilyGlue.GetFamily.IsMinor)]"
 												flowcontainer = {
 													position = { 16 -2 }
 													spacing = 26

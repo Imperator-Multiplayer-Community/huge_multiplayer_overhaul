@@ -1,11 +1,15 @@
-﻿north_african_philosophy_2 = { 
-	color = hsv { 0.59 0.61 0.37 }
+﻿north_african_philosophy_2 = {
+	color = {
+		0.59
+		0.61
+		0.37
+	}
 	image = north_african_tribal_path_7
-	
-	
 	allow = {
 		trigger_if = {
-			limit = { primary_culture = carthaginian }
+			limit = {
+				primary_culture = carthaginian
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -21,7 +25,9 @@
 			country_culture_group = numidian
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = fezzani }
+			limit = {
+				country_culture_group = fezzani
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -40,109 +46,125 @@
 					OR = {
 						this.culture.culture_group = culture_group:numidian
 						this.culture.culture_group = culture_group:fezzani
-						is_culture = carthaginian		
+						is_culture = carthaginian
 					}
 				}
 			}
 		}
 	}
-
-    north_african_latin_enable = { ###North Aftica 2A
+	north_african_latin_enable = {
+		###North Aftica 2A
 		allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }	
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_infantry_super_unit
+		}
 		modifier = {
 			light_infantry_defensive = 0.1
-            light_infantry_desert_combat_bonus = 0.1
-            light_infantry_desert_hills_combat_bonus = 0.1
+			light_infantry_desert_combat_bonus = 0.1
+			light_infantry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = latin_tribal_path_end_bonus
-		requires = { }	
+		requires = {
+		}
 	}
-
-    north_african_tribal_path_2 = { ###North Aftica 1C
+	north_african_tribal_path_2 = {
+		###North Aftica 1C
 		modifier = {
 			light_infantry_discipline = 0.1
 			light_infantry_hills_combat_bonus = 0.1
-            light_infantry_forest_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_2
-		requires = { north_african_latin_enable}
+		requires = {
+			north_african_latin_enable
+		}
 	}
-
-    north_african_tribal_path_7 = { ###North Aftica 2CA
+	north_african_tribal_path_7 = {
+		###North Aftica 2CA
 		allow = {
-            NOT = {
-                has_variable = light_cavalry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_cavalry_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = light_cavalry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_cavalry_super_unit
+		}
+		modifier = {
 			light_cavalry_discipline = 0.1
-            light_cavalry_desert_combat_bonus = 0.1
-            light_cavalry_desert_hills_combat_bonus = 0.1
+			light_cavalry_desert_combat_bonus = 0.1
+			light_cavalry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_7
-		requires = { }
+		requires = {
+		}
 	}
-
-    north_african_army_path_6 = { ###North Aftica 2CB
-		modifier = { 
+	north_african_army_path_6 = {
+		###North Aftica 2CB
+		modifier = {
 			light_cavalry_offensive = 0.1
-            light_cavalry_hills_combat_bonus = 0.1
-            light_cavalry_forest_combat_bonus = 0.1
+			light_cavalry_hills_combat_bonus = 0.1
+			light_cavalry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_army_path_6
-		requires = {north_african_tribal_path_7}
+		requires = {
+			north_african_tribal_path_7
+		}
 	}
-
-# Super unit
-
-    north_african_army_path_7 = { ###North Aftica 2AA
-        allow = {
-            NOT = {
-                has_variable = warelephant_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = warelephant_super_unit
-        }
+	# Super unit
+	north_african_army_path_7 = {
+		###North Aftica 2AA
+		allow = {
+			NOT = {
+				has_variable = warelephant_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = warelephant_super_unit
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					first_name = "Hannibal"
+					family_name = "Barca"
+					add_martial = 8
+					add_trait = steadfast
+				}
+			}
+		}
 		enable_tactic = greek_phalanx
-		modifier = { 
+		modifier = {
 			warelephant_cost = -0.15
-            warelephant_morale = 0.1
-            warelephant_discipline = 0.1
-            warelephant_hills_combat_bonus = 0.1
-            warelephant_forest_combat_bonus = 0.1
+			warelephant_morale = 0.1
+			warelephant_discipline = 0.1
+			warelephant_hills_combat_bonus = 0.1
+			warelephant_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.02
 		}
 		icon = north_african_army_path_7
-		requires = {  }
-    }
-
-    north_african_army_path_5 = { ###North Aftica 3AA
-		modifier = { 
+		requires = {
+		}
+	}
+	north_african_army_path_5 = {
+		###North Aftica 3AA
+		modifier = {
 			warelephant_defensive = 0.1
-            warelephant_offensive = 0.1
-            warelephant_movement_speed = 0.1
+			warelephant_offensive = 0.1
+			warelephant_movement_speed = 0.1
 			warelephant_desert_combat_bonus = 0.1
 			warelephant_desert_hills_combat_bonus = 0.1
-            warelephant_plains_combat_bonus = 0.1
+			warelephant_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.03
 		}
 		icon = north_african_army_path_5
-		requires = {north_african_army_path_7}
+		requires = {
+			north_african_army_path_7
+		}
 	}
-
 }

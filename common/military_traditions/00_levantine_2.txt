@@ -1,43 +1,52 @@
-﻿levantine_philosophy_2 = { 
-	color = hsv { 2.7 0.6 0.5 }
+﻿levantine_philosophy_2 = {
+	color = {
+		2.7
+		0.6
+		0.5
+	}
 	image = levantine_philosophy_start_bonus
-	
-
 	allow = {
 		trigger_if = {
-			limit = { primary_culture = hebrew }
+			limit = {
+				primary_culture = hebrew
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			primary_culture = hebrew
 		}
 		trigger_else_if = {
-			limit = { primary_culture = nabatean }
+			limit = {
+				primary_culture = nabatean
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			primary_culture = nabatean
 		}
 		trigger_else_if = {
-			limit = { primary_culture = phoenician }
+			limit = {
+				primary_culture = phoenician
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			primary_culture = phoenician
 		}
 		trigger_else_if = {
-			limit = { country_culture_group = north_african }
+			limit = {
+				country_culture_group = north_african
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
 			country_culture_group = north_african
 		}
-		
 		trigger_else = {
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_cultural_decision"
 				has_variable = levantine_influence
-			}	
+			}
 			custom_tooltip = {
 				text = "tradition_unlock_requirement_levantine"
 				any_country_culture = {
@@ -51,49 +60,58 @@
 			}
 		}
 	}
-	
-	levantine_arabian_path_4 = { ###Levantine 2A
+	levantine_arabian_path_4 = {
+		###Levantine 2A
 		allow = {
-            NOT = {
-                has_variable = camel_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = camel_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = camel_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = camel_super_unit
+		}
+		modifier = {
 			camels_defensive = 0.1
-			camels_desert_combat_bonus = 0.10
-			camels_flood_plain_combat_bonus = 0.10
+			camels_desert_combat_bonus = 0.1
+			camels_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = levantine_arabian_path_4
-		requires = {}
+		requires = {
+		}
 	}
-
-	levantine_philosophy_start_bonus = { ###
-		modifier = { 
+	levantine_philosophy_start_bonus = {
+		###
+		modifier = {
 			camels_defensive = 0.1
-			camels_oasis_combat_bonus = 0.10
-			camels_desert_hills_combat_bonus = 0.10
+			camels_oasis_combat_bonus = 0.1
+			camels_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-			}
+		}
 		icon = levantine_arabian_path_2
-		requires = { levantine_arabian_path_4 }
+		requires = {
+			levantine_arabian_path_4
+		}
 	}
-	
-	levantine_egyptian_path_4 = { ###Levantine 4B
-		modifier = { }
+	levantine_egyptian_path_4 = {
+		###Levantine 4B
+		modifier = {
+		}
 		enable_ability = military_colonies
 		icon = levantine_egyptian_path_4
-		requires = {}
+		requires = {
+		}
 		on_activate = {
 			ordered_owned_province = {
 				limit = {
-					NOT = { dominant_province_culture_group = root.culture_group }
+					NOT = {
+						dominant_province_culture_group = root.culture_group
+					}
 					any_neighbor_province = {
 						count > 1
-						NOT = { dominant_province_culture_group = root.culture_group }
+						NOT = {
+							dominant_province_culture_group = root.culture_group
+						}
 					}
 					state = {
 						NOT = {
@@ -113,17 +131,19 @@
 					duration = -1
 				}
 				custom_tooltip = military_colonia_here_tt
-				trigger_event = { id = cultural_integration.11 }
+				trigger_event = {
+					id = cultural_integration.11
+				}
 			}
 		}
 	}
-	
-	levantine_egyptian_path_1 = { ###Levantine 2BA
+	levantine_egyptian_path_1 = {
+		###Levantine 2BA
 		allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
 		modifier = {
 			light_infantry_offensive = 0.05
 			light_infantry_desert_combat_bonus = 0.1
@@ -131,10 +151,10 @@
 			army_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_1
-		requires = {}
+		requires = {
+		}
 		on_activate = {
-            set_variable = light_infantry_super_unit
-		
+			set_variable = light_infantry_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -144,8 +164,8 @@
 			}
 		}
 	}
-
-	levantine_egyptian_path_end_bonus = { ###Levantine 4BA
+	levantine_egyptian_path_end_bonus = {
+		###Levantine 4BA
 		modifier = {
 			light_infantry_offensive = 0.05
 			light_infantry_oasis_combat_bonus = 0.1
@@ -153,25 +173,29 @@
 			army_maintenance_cost = 0.01
 		}
 		icon = levantine_egyptian_path_end_bonus
-		requires = {levantine_egyptian_path_1}
+		requires = {
+			levantine_egyptian_path_1
+		}
 	}
-
-	levantine_greco_path_4 = { ###Levantine 1B
-			modifier = {
-				land_unit_attrition = -0.1
-			}
-			enable_tactic = greek_phalanx
-			icon = levantine_greco_path_4
-			requires = {}
+	levantine_greco_path_4 = {
+		###Levantine 1B
+		modifier = {
+			land_unit_attrition = -0.1
+		}
+		enable_tactic = greek_phalanx
+		icon = levantine_greco_path_4
+		requires = {
+		}
 	}
-
-	levantine_greco_path_3 = { ###Levantine 3BB
-		modifier = { 
-		    cohort_reinforcement_speed = 0.1
-
+	levantine_greco_path_3 = {
+		###Levantine 3BB
+		modifier = {
+			cohort_reinforcement_speed = 0.1
 		}
 		icon = levantine_greco_path_3
-		requires = {levantine_greco_path_4}
+		requires = {
+			levantine_greco_path_4
+		}
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
@@ -182,18 +206,17 @@
 			}
 		}
 	}
-
-# Super Unit
-
-	egyptian_path_8 = { #
+	# Super Unit
+	egyptian_path_8 = {
+		#
 		allow = {
-            NOT = {
-                has_variable = light_cavalry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_cavalry_super_unit
-        }
+			NOT = {
+				has_variable = light_cavalry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_cavalry_super_unit
+		}
 		icon = north_african_army_path_6
 		modifier = {
 			light_cavalry_cost = -0.15
@@ -201,10 +224,11 @@
 			light_cavalry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
-		requires = { }
+		requires = {
+		}
 	}
-
-	egyptian_path_10 = { #
+	egyptian_path_10 = {
+		#
 		icon = greek_philosophy_start_bonus
 		modifier = {
 			light_cavalry_movement_speed = 0.1
@@ -213,16 +237,18 @@
 			light_cavalry_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
-		requires = { egyptian_path_8 }
+		requires = {
+			egyptian_path_8
+		}
 	}
-
-	egyptian_path_11 = { #
+	egyptian_path_11 = {
+		#
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = steadfast
+					add_trait = confident
 				}
 			}
 		}
@@ -232,27 +258,20 @@
 			experience_decay = -0.005
 			army_maintenance_cost = 0.01
 		}
-		requires = { egyptian_path_10 }
+		requires = {
+			egyptian_path_10
+		}
 	}
-
-	egyptian_path_14 = { #
+	egyptian_path_14 = {
+		#
 		icon = levantine_arabian_path_3
 		modifier = {
 			light_cavalry_offensive = 0.1
 			light_cavalry_discipline = 0.1
 			army_maintenance_cost = 0.02
 		}
-		requires = { egyptian_path_11 }
+		requires = {
+			egyptian_path_11
+		}
 	}
-
-
-
-
-
-
-
-
-
-
-
 }

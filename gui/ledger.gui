@@ -138,7 +138,7 @@ base_window = {
 					blockoverride "MaxVisible" { visible = "[GetVariableSystem.HasValue('ledger_pages', 'territories')]" }
 					######## Shared Overrides
 					blockoverride "Center_text" {
-						text = "Territories"
+						text = "territories"
 					}
 					######## Small Button Overrides
 					datacontext = "[GetScriptedGui('territories')]"

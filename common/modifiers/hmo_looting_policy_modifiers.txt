@@ -1,0 +1,17 @@
+﻿low_looting_policy = {
+	land_morale_modifier = -0.05
+	discipline = 0.05
+	enslavement_efficiency = -0.075
+	army_movement_speed = 0.025
+}
+
+default_looting_policy = {
+	army_weight_modifier = -0.1
+}
+
+high_looting_policy = {
+	land_morale_modifier = 0.05
+	discipline = -0.05
+	enslavement_efficiency = 0.075
+	army_movement_speed = -0.025
+}

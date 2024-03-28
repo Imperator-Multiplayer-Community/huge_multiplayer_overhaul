@@ -1,10 +1,16 @@
-﻿anatolian_philosophy_2 = { #Integrated Path
-	color = hsv { 1.72 0.64 0.7 }
+﻿anatolian_philosophy_2 = {
+	#Integrated Path
+	color = {
+		1.72
+		0.64
+		0.7
+	}
 	image = persian_achaemenid_path_1
-	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = anatolian }
+			limit = {
+				country_culture_group = anatolian
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -27,175 +33,205 @@
 			}
 		}
 	}
-    ### NAVAL INTEGRATED
-    lydian_path_3 = { ###
-		modifier = { 
+	### NAVAL INTEGRATED
+	lydian_path_3 = {
+		###
+		modifier = {
 			ship_cost = -0.1
 			global_ship_recruit_speed = -0.15
 			global_ship_start_experience = 0.5
-            navy_maintenance_cost = 0.01
-		} 
+			navy_maintenance_cost = 0.01
+		}
 		icon = persian_achaemenid_path_3
-		requires = { }
+		requires = {
+		}
 	}
-    lydian_path_1 = { ###
+	lydian_path_1 = {
+		###
 		enable_ability = naval_raiding
-		modifier = { 
+		modifier = {
 			liburnian_offensive = 0.05
 			enslavement_efficiency = 0.1
 			navy_maintenance_cost = 0.01
-		} 
+		}
 		icon = default_test
-		requires = { lydian_path_3 }
+		requires = {
+			lydian_path_3
+		}
 	}
-    ### ARCHERS
-	lydian_path_2 = { ###
+	### ARCHERS
+	lydian_path_2 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = archers_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = archers_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = archers_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = archers_super_unit
+		}
+		modifier = {
 			archers_defensive = 0.1
-            archers_hills_combat_bonus = 0.05
-            archers_forest_combat_bonus = 0.05
+			archers_hills_combat_bonus = 0.05
+			archers_forest_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = greek_antigonid_path_6
-		requires = { }
+		requires = {
+		}
 	}
-    lydian_path_8 = { ###
-		modifier = { 
+	lydian_path_8 = {
+		###
+		modifier = {
 			archers_discipline = 0.1
 			archers_plains_combat_bonus = 0.05
-            archers_hills_combat_bonus = 0.05
+			archers_hills_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = greek_antigonid_path_5
-		requires = { lydian_path_2 }
+		requires = {
+			lydian_path_2
+		}
 	}
-    lydian_path_11 = { ###
-		modifier = { 
+	lydian_path_11 = {
+		###
+		modifier = {
 			archers_defensive = 0.1
-            archers_forest_combat_bonus = 0.05
-            archers_plains_combat_bonus = 0.05
+			archers_forest_combat_bonus = 0.05
+			archers_plains_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_achaemenid_path_7
-		requires = { lydian_path_8 }
+		requires = {
+			lydian_path_8
+		}
 	}
-    ### LIGHT INFANTRY
-    lydian_path_4 = { ###
-	    allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }	
-        modifier = { 
+	### LIGHT INFANTRY
+	lydian_path_4 = {
+		###
+		allow = {
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_infantry_super_unit
+		}
+		modifier = {
 			light_infantry_offensive = 0.1
-            light_infantry_hills_combat_bonus = 0.05
-            light_infantry_forest_combat_bonus = 0.05
+			light_infantry_hills_combat_bonus = 0.05
+			light_infantry_forest_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_achaemenid_path_1
-		requires = { }
+		requires = {
+		}
 	}
-	lydian_path_5 = { ###
-		modifier = { 
+	lydian_path_5 = {
+		###
+		modifier = {
 			light_infantry_discipline = 0.1
-            light_infantry_plains_combat_bonus = 0.05
-            light_infantry_forest_combat_bonus = 0.05
+			light_infantry_plains_combat_bonus = 0.05
+			light_infantry_forest_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = celtic_germanic_path_end_bonus
-		requires = { lydian_path_4 }
+		requires = {
+			lydian_path_4
+		}
 	}
-    lydian_path_7 = { ###
-		modifier = { 
+	lydian_path_7 = {
+		###
+		modifier = {
 			light_infantry_cost = -0.15
-            light_infantry_plains_combat_bonus = 0.05
-            light_infantry_hills_combat_bonus = 0.05
+			light_infantry_plains_combat_bonus = 0.05
+			light_infantry_hills_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = greek_seleucid_path_6
-		requires = { lydian_path_5 }
+		requires = {
+			lydian_path_5
+		}
 	}
-    lydian_path_14 = { ###
+	lydian_path_14 = {
+		###
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = conqueror
+					add_trait = tactician
 				}
 			}
 		}
-		modifier = { 
+		modifier = {
 			light_infantry_defensive = 0.1
 			light_infantry_morale = 0.1
-            light_infantry_marsh_combat_bonus = 0.1
-            light_infantry_farmland_combat_bonus = 0.1
+			light_infantry_marsh_combat_bonus = 0.1
+			light_infantry_farmland_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = levantine_greco_path_2
-		requires = { lydian_path_7 }
+		requires = {
+			lydian_path_7
+		}
 	}
-    
-    ### LIGHT CAVALRY
-    armenian_path_1 = { ###
+	### LIGHT CAVALRY
+	armenian_path_1 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = light_cavalry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_cavalry_super_unit
-        }
+			NOT = {
+				has_variable = light_cavalry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_cavalry_super_unit
+		}
 		enable_tactic = hit_and_run_tactics
-		modifier = { 
+		modifier = {
 			light_cavalry_defensive = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_bactrian_path_1
-		requires = { }
+		requires = {
+		}
 	}
-	armenian_path_3 = { ###
+	armenian_path_3 = {
+		###
 		modifier = {
 			light_cavalry_discipline = 0.1
-            light_cavalry_plains_combat_bonus = 0.05
-            light_cavalry_hills_combat_bonus = 0.05
+			light_cavalry_plains_combat_bonus = 0.05
+			light_cavalry_hills_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_2
-		requires = { armenian_path_1 }
+		requires = {
+			armenian_path_1
+		}
 	}
-    armenian_path_6 = { ###
-		modifier = { 
+	armenian_path_6 = {
+		###
+		modifier = {
 			light_cavalry_offensive = 0.1
-            light_cavalry_plains_combat_bonus = 0.05
-            light_cavalry_forest_combat_bonus = 0.05
+			light_cavalry_plains_combat_bonus = 0.05
+			light_cavalry_forest_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_end_bonus
-		requires = { armenian_path_3 }
+		requires = {
+			armenian_path_3
+		}
 	}
-    
-    ### HEAVY INFANTRY
-    armenian_path_4 = { ###
+	### HEAVY INFANTRY
+	armenian_path_4 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = heavy_infantry_super_unit
-            }
-        }
-
+			NOT = {
+				has_variable = heavy_infantry_super_unit
+			}
+		}
 		on_activate = {
-            set_variable = heavy_infantry_super_unit
+			set_variable = heavy_infantry_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -204,32 +240,40 @@
 				}
 			}
 		}
-		modifier = { 
+		modifier = {
 			heavy_infantry_offensive = 0.1
-            heavy_infantry_forest_combat_bonus = 0.05 
+			heavy_infantry_forest_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_7
-		requires = { }
+		requires = {
+		}
 	}
-    armenian_path_9 = { ###
-		modifier = { 
+	armenian_path_9 = {
+		###
+		modifier = {
 			heavy_infantry_discipline = 0.1
-			heavy_infantry_hills_combat_bonus = 0.05 
+			heavy_infantry_hills_combat_bonus = 0.05
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_achaemenid_path_2
-		requires = { armenian_path_4 }
+		requires = {
+			armenian_path_4
+		}
 	}
-    
-    armenian_path_2 = { ###
-		modifier = { 
+	armenian_path_2 = {
+		###
+		modifier = {
 			archers_movement_speed = 0.1
 			light_cavalry_movement_speed = 0.1
-            heavy_infantry_movement_speed = 0.1
+			heavy_infantry_movement_speed = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_bactrian_path_end_bonus
-		requires = { armenian_path_6 armenian_path_9 lydian_path_11 }
+		requires = {
+			armenian_path_6
+			armenian_path_9
+			lydian_path_11
+		}
 	}
 }

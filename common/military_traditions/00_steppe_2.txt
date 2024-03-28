@@ -1,10 +1,16 @@
-﻿steppe_philosophy_2 = { #Bactrian Path
-	color = hsv { 1.72 0.64 0.7 }
+﻿steppe_philosophy_2 = {
+	#Bactrian Path
+	color = {
+		1.72
+		0.64
+		0.7
+	}
 	image = persian_scythian_path_3
-	
 	allow = {
 		trigger_if = {
-			limit = { country_culture_group = scythia }
+			limit = {
+				country_culture_group = scythia
+			}
 			custom_tooltip = {
 				text = "began_with_tradition_group"
 			}
@@ -57,59 +63,62 @@
 			}
 		}
 	}
-
-# Normal Units
-
-    bactrian_path_3 = { ###
+	# Normal Units
+	bactrian_path_3 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = light_infantry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_infantry_super_unit
-        }	
-		modifier = { 
+			NOT = {
+				has_variable = light_infantry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_infantry_super_unit
+		}
+		modifier = {
 			light_infantry_offensive = 0.1
-            light_infantry_plains_combat_bonus = 0.1
+			light_infantry_plains_combat_bonus = 0.1
 			light_infantry_desert_combat_bonus = 0.1
-            army_maintenance_cost = 0.01
-		} 
+			army_maintenance_cost = 0.01
+		}
 		icon = persian_achaemenid_path_1
-		requires = { }
+		requires = {
+		}
 	}
-
-    bactrian_path_9 = { ###
-		modifier = { 
+	bactrian_path_9 = {
+		###
+		modifier = {
 			light_infantry_morale = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			light_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_6
-		requires = { bactrian_path_3 }
+		requires = {
+			bactrian_path_3
+		}
 	}
-
-    scythian_path_8 = { ###
+	scythian_path_8 = {
+		###
 		allow = {
-            NOT = {
-                has_variable = light_cavalry_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = light_cavalry_super_unit
-        }
-		modifier = { 
+			NOT = {
+				has_variable = light_cavalry_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = light_cavalry_super_unit
+		}
+		modifier = {
 			light_cavalry_discipline = 0.1
 			light_cavalry_plains_combat_bonus = 0.1
 			light_cavalry_desert_combat_bonus = 0.1
-            army_maintenance_cost = 0.01
-		} 
+			army_maintenance_cost = 0.01
+		}
 		icon = persian_bactrian_path_end_bonus
-		requires = { }
+		requires = {
+		}
 	}
-
-    scythian_path_13 = { ###
+	scythian_path_13 = {
+		###
 		on_activate = {
 			ordered_owned_province = {
 				limit = {
@@ -125,77 +134,85 @@
 				}
 				max = 3
 				create_2_nobles_effect = yes
-			}	
+			}
 		}
-		modifier = { 
+		modifier = {
 			light_cavalry_morale = 0.1
 			light_cavalry_hills_combat_bonus = 0.1
 			light_cavalry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = greek_seleucid_path_5
-		requires = { scythian_path_8 }
+		requires = {
+			scythian_path_8
+		}
 	}
-
-# Super Unit
-
-    bactrian_path_1 = { ###     
+	# Super Unit
+	bactrian_path_1 = {
+		###     
 		allow = {
-            NOT = {
-                has_variable = horse_archers_super_unit
-            }
-        }
-        on_activate = {
-            set_variable = horse_archers_super_unit
-        }
-        modifier = { 
+			NOT = {
+				has_variable = horse_archers_super_unit
+			}
+		}
+		on_activate = {
+			set_variable = horse_archers_super_unit
+		}
+		modifier = {
 			horse_archers_morale = 0.1
-            horse_archers_plains_combat_bonus = 0.1
-            horse_archers_desert_combat_bonus = 0.1
+			horse_archers_plains_combat_bonus = 0.1
+			horse_archers_desert_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
 		}
 		icon = persian_scythian_path_1
-		requires = { }
+		requires = {
+		}
 	}
-
-    bactrian_path_7 = { ### 
+	bactrian_path_7 = {
+		### 
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
 					add_martial = 8
-					add_trait = steadfast
+					add_trait = tactician
 				}
 			}
 		}
-		modifier = { 
+		modifier = {
 			horse_archers_defensive = 0.1
 			horse_archers_forest_combat_bonus = 0.1
-            horse_archers_hills_combat_bonus = 0.1
+			horse_archers_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_3
-		requires = { bactrian_path_1 }
+		requires = {
+			bactrian_path_1
+		}
 	}
-
-    scythian_path_1 = { ###
-		modifier = { 
+	scythian_path_1 = {
+		###
+		modifier = {
 			horse_archers_offensive = 0.1
 			horse_archers_discipline = 0.1
-            army_maintenance_cost = 0.01
+			army_maintenance_cost = 0.01
 		}
 		icon = persian_bactrian_path_6
-		requires = { bactrian_path_7 }
-    }
-
-    scythian_path_5 = { ###
+		requires = {
+			bactrian_path_7
+		}
+	}
+	scythian_path_5 = {
+		###
 		enable_tactic = cavalry_skirmish
-		modifier = { 
+		modifier = {
 			horse_archers_movement_speed = 0.1
-            horse_archers_cost = -0.15
+			horse_archers_cost = -0.15
 			army_maintenance_cost = 0.01
-		} 
+		}
 		icon = persian_scythian_path_1
-		requires = { scythian_path_1 }
+		requires = {
+			scythian_path_1
+		}
 	}
 }

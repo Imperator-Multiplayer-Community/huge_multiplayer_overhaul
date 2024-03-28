@@ -20,12 +20,6 @@ types economy_types {
 			{
 				trigger_when = "[Not(EconomicPolicyGlue.IsSelected)]"
 			}
-
-			#icon = { #TODO Red King stuff?
-			#	using = highlight_button_circle_45
-			#	visible = "[ShouldHighlight(EconomicPolicyGlue.GetHighlightKey)]"
-			#}
-
 		}
 	}
 }
@@ -357,6 +351,111 @@ base_window = {
 				}
 				vbox = {
 					layoutpolicy_vertical = expanding
+				}
+			}
+		}
+	}
+
+	# LOOTING POLICY
+	vbox = {
+		name = "Looting Policy"
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		margin = { 0 0 }
+
+		margin_widget = {
+			layoutpolicy_horizontal = expanding
+			size = { 0 400 }
+			# using = NoninteractableBG
+
+			flowcontainer = {
+				position = { 30 340 }
+				margin_left = 10
+				margin_right = 145
+				using = NoninteractableBG
+				parentanchor = left
+				direction = vertical
+
+				container = {
+					textbox = {
+						position = { 0 0 }
+						autoresize = yes
+						using = BaseFontS
+						using = Black_FontColor
+						text = "looting_policy"
+					}
+				}
+
+				widget = { size = { 4 12 } }
+
+				flowcontainer = {
+					parentanchor = left
+					direction = horizontal
+					spacing = 3
+
+					widget = {
+						size = { 40 40 }
+						datacontext = "[GetScriptedGui('low_looting_policy_button')]"
+
+						button_radial = {
+							tooltip = "low_looting_policy_tt"
+
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							}
+							blockoverride "ShowDot"
+							{
+								trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							}
+							blockoverride "HideDot"
+							{
+								trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+							}
+						}
+					}
+					widget = {
+						size = { 40 40 }
+						datacontext = "[GetScriptedGui('default_looting_policy_button')]"
+
+						button_radial = {
+							tooltip = "default_looting_policy_tt"
+
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							}
+							blockoverride "ShowDot"
+							{
+								trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							}
+							blockoverride "HideDot"
+							{
+								trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+							}
+						}
+					}
+					widget = {
+						size = { 40 40 }
+						datacontext = "[GetScriptedGui('high_looting_policy_button')]"
+
+						button_radial = {
+							tooltip = "high_looting_policy_tt"
+
+							blockoverride "On_click"
+							{
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							}
+							blockoverride "ShowDot"
+							{
+								trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+							}
+							blockoverride "HideDot"
+							{
+								trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+							}
+						}
+					}
 				}
 			}
 		}
