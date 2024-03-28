@@ -1,0 +1,146 @@
+﻿inspire_disloyalty = {
+	aggressive_expansion = 5
+	political_influence = 10
+	scaled_gold = 1
+}
+
+inspire_disloyalty_black_widow = {
+	aggressive_expansion = 5
+	political_influence = 10
+	scaled_gold = 1
+}
+
+recruit_character = {
+	aggressive_expansion = 5
+	political_influence = 10
+	scaled_gold = 1
+}
+
+recruit_general = {
+	aggressive_expansion = 10
+	political_influence = 10
+	scaled_gold = 1
+}
+
+secude_governor = {
+	aggressive_expansion = 20
+	political_influence = 35
+	scaled_gold = 2
+}
+
+gift_slave = {
+	gold = 75
+	political_influence = 15
+}
+
+give_relic = {
+	gold = 75
+	political_influence = 15
+}
+
+send_letter = {
+	gold = 75
+	political_influence = 15
+}
+
+go_hunting = {
+	gold = 75
+	political_influence = 15
+}
+
+price_force_divorce = {
+	political_influence = 20
+	tyranny = 5
+}
+
+price_state_investment_military = {
+	political_influence = 60
+}
+
+price_state_investment_civic = {
+	political_influence = 60
+}
+
+price_state_investment_oratory = {
+	political_influence = 60
+}
+
+price_state_investment_religious = {
+	political_influence = 60
+}
+
+price_oaths_of_allegiance_button = {
+	political_influence = 50
+}
+
+price_patron_of_arts_button = {
+	political_influence = 50
+}
+
+price_assemble_raiding_party_button = {
+	political_influence = 60
+}
+
+price_tribal_duel = {
+	political_influence = 8
+	tyranny = 4
+}
+
+price_test_loyalty = {
+	political_influence = 8
+	tyranny = 4
+}
+
+price_humiliate_rival = {
+	political_influence = 10
+}
+
+price_task_character = {
+	political_influence = 15
+	treasury = 50
+}
+
+create_merc_state_price = {
+	political_influence = 50
+	military_experience = 5
+}
+
+assassinate_attempt_foreign = {
+	aggressive_expansion = 20
+	scaled_gold = 1
+}
+
+subject_player_client_state_pays = {
+	scaled_gold = 0.025
+	scaled_manpower = 0.025
+}
+
+build_border_fort = {
+	gold = 150
+	manpower = 3
+}
+
+raid = {
+	aggressive_expansion = 3	#5 #Aries says this is too harsh. It was 2 in vanilla
+}
+
+raise_levies = {
+	tyranny = 2
+}
+
+price_support_primary_heir = {
+	tyranny = 5
+}
+
+price_arena_match = {
+	tyranny = 5
+}
+
+generic_build_special_building = {
+	gold = 250
+	political_influence = 25
+}
+
+price_mission_metropolis = {
+	gold = 400
+}

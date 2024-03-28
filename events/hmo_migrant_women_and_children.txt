@@ -1,0 +1,58 @@
+﻿namespace = migrant_women_and_children
+# adds women and children modifiers to the migrant unit if at war with a player
+migrant_women_and_children.1 = {
+	type = country_event
+	hidden = yes
+	trigger = {
+		is_ai = no
+		government = tribal_chiefdom
+		war = yes
+		trigger_if = {
+			limit = {
+				war = yes
+			}
+			any_countries_at_war_with = {
+				is_ai = no
+			}
+		}
+		any_army = {
+			num_of_migrants > 0
+		}
+	}
+	immediate = {
+		every_army = {
+			limit = {
+				num_of_migrants > 0
+			}
+			add_unit_modifier = {
+				name = women_and_children
+				duration = -1
+			}
+		}
+	}
+}
+
+migrant_women_and_children.2 = {
+	type = country_event
+	hidden = yes
+	trigger = {
+		is_ai = no
+		government = tribal_chiefdom
+		war = no
+		any_army = {
+			AND = {
+				num_of_migrants > 0
+				has_unit_modifier = women_and_children
+			}
+		}
+	}
+	immediate = {
+		every_army = {
+			limit = {
+				num_of_migrants > 0
+				has_unit_modifier = women_and_children
+			}
+			remove_unit_modifier = women_and_children
+		}
+	}
+}

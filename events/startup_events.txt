@@ -1,7 +1,5 @@
 ﻿namespace = startup_events
-
 startup_events.1 = {
-	
 	type = country_event
 	title = "startup_events.1.t"
 	desc = "startup_events.1.desc"
@@ -10,7 +8,7 @@ startup_events.1 = {
 	trigger = {
 		is_ai = no
 		country_culture_group = hellenic
-		NOT = { 
+		NOT = {
 			tag = HCP
 		}
 		capital_scope = {
@@ -43,17 +41,15 @@ startup_events.1 = {
 			has_variable = hellenic_1_flag
 		}
 	}
-	
 	immediate = {
-		set_variable = {    
+		set_variable = {
 			name = hellenic_1_flag
 		}
 	}
-	
 	option = {
 		name = startup_events.1.a
 		#if = {
-		 #   limit = {
+		#   limit = {
 		#		tag = PRY
 		#    }
 		#	trigger_event = {
@@ -62,13 +58,11 @@ startup_events.1 = {
 		#	}
 		#}
 	}
-
 }
 
-startup_events.2 = { 
-	
+startup_events.2 = {
 	type = country_event
-	title = "startup_events.2.t" 
+	title = "startup_events.2.t"
 	desc = "startup_events.2.desc"
 	picture = naval_battle
 	goto_location = root
@@ -79,21 +73,17 @@ startup_events.2 = {
 			has_variable = carthage_startup_flag
 		}
 	}
-	
 	immediate = {
 		set_variable = {
 			name = carthage_startup_flag
 		}
 	}
-	
 	option = {
 		name = startup_events.2.a
 	}
-	
 }
- 
+
 startup_events.7 = {
-	
 	type = country_event
 	title = "startup_events.7.t"
 	desc = "startup_events.7.desc"
@@ -104,7 +94,6 @@ startup_events.7 = {
 	right_portrait = c:SAM.current_ruler
 	right_portrait = c:ETR.current_ruler
 	right_portrait = c:CAR.current_ruler
-
 	trigger = {
 		tag = ROM
 		is_tutorial_active = no
@@ -112,13 +101,11 @@ startup_events.7 = {
 			has_variable = hellenic_7_flag
 		}
 	}
-	
 	immediate = {
 		set_variable = {
 			name = hellenic_7_flag
 		}
 	}
-	
 	option = {
 		name = startup_events.7.a
 		add_truce = {
@@ -126,20 +113,21 @@ startup_events.7 = {
 			duration = 1
 		}
 	}
-	
 }
 
 startup_events.8 = {
 	type = country_event
 	hidden = yes
-	
 	trigger = {
 		tag = ROM
-		NOT = { has_variable = shown_wonders }
+		NOT = {
+			has_variable = shown_wonders
+		}
 	}
-	
 	immediate = {
-		set_variable = { name = shown_wonders }
+		set_variable = {
+			name = shown_wonders
+		}
 		hidden_effect = {
 			p:536 = {
 				show_model = "wonder_giza"
@@ -151,20 +139,18 @@ startup_events.8 = {
 	}
 }
 
-startup_events.9 = { # makes sure forts are on citys and border forts are on settlements
+startup_events.9 = {
+	# makes sure forts are on citys and border forts are on settlements
 	type = country_event
 	hidden = yes
-	
 	immediate = {
 		every_owned_province = {
 			limit = {
 				has_city_status = yes
 				has_building = border_fortress_building
 			}
-
 			remove_building_level = border_fortress_building
 		}
-
 		every_owned_province = {
 			limit = {
 				is_capital = yes;
@@ -172,37 +158,36 @@ startup_events.9 = { # makes sure forts are on citys and border forts are on set
 					has_building = fortress_building
 				}
 			}
-
 			add_building_level = fortress_building
 		}
-
 		every_owned_province = {
 			limit = {
 				has_city_status = no
 				has_building = fortress_building
 			}
-
 			while = {
 				limit = {
 					has_building = fortress_building
 				}
-
 				remove_building_level = fortress_building
 			}
-
 			add_building_level = border_fortress_building
 		}
 	}
 }
 
-startup_events.10 = { # makes sure cities dont have food goods on their tile
+startup_events.10 = {
+	# makes sure cities dont have food goods on their tile
 	type = country_event
 	hidden = yes
-
 	immediate = {
 		every_owned_province = {
 			limit = {
 				has_city_status = yes
+				NOT = {
+					# ignore if oasis
+					terrain = oasis
+				}
 				OR = {
 					trade_goods = grain
 					trade_goods = fish
@@ -217,9 +202,22 @@ startup_events.10 = { # makes sure cities dont have food goods on their tile
 					trade_goods = olive
 				}
 			}
-
-			replace_food_after_city_upgrade_effect = { VARIABLE_OR_SET_TRADE_GOODS = set_variable }
+			replace_food_after_city_upgrade_effect = {
+				VARIABLE_OR_SET_TRADE_GOODS = set_variable
+			}
 			replace_food_after_city_upgrade_finish_effect = yes
+		}
+	}
+}
+
+startup_events.11 = {
+	# enable default looting policy
+	type = country_event
+	hidden = yes
+	immediate = {
+		add_country_modifier = {
+			name = default_looting_policy
+			duration = -1
 		}
 	}
 }

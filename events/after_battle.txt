@@ -1,22 +1,17 @@
 ﻿namespace = after_battle
-
 # UPDATE when generals are in.
-
 #Tactical Supremacy
 after_battle.1 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
+		is_adult = yes
 		NOR = {
 			has_trait = victorious
 			has_trait = conqueror
 		}
-		number_of_traits < max_number_of_traits_svalue
-		is_adult = yes
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -25,25 +20,20 @@ after_battle.1 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_1_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.11
 				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.5
 					days = 5
-				}		
+				}
 			}
 		}
 	}
@@ -54,17 +44,14 @@ after_battle.11 = {
 	title = "after_battle.1.t"
 	desc = "after_battle.1.d"
 	picture = elephant_battle
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_1_target
-	
 	trigger = {
 		scope:after_battle_1_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.1.a"
 		scope:after_battle_1_target = {
@@ -78,23 +65,20 @@ after_battle.2 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
 		has_trait = victorious
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			factor = 0.25
 			martial >= 8
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_2_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
@@ -110,17 +94,14 @@ after_battle.12 = {
 	title = "after_battle.2.t"
 	desc = "after_battle.2.d"
 	picture = army_desert
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_2_target
-	
 	trigger = {
 		scope:after_battle_2_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.2.a"
 		scope:after_battle_2_target = {
@@ -134,14 +115,11 @@ after_battle.3 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
 		NOT = {
 			has_trait = conqueror
 		}
-		number_of_status_traits < max_number_of_status_traits_svalue
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -150,21 +128,16 @@ after_battle.3 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_3_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.13
 				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.5
 					days = 5
@@ -179,17 +152,14 @@ after_battle.13 = {
 	title = "after_battle.3.t"
 	desc = "after_battle.3.d"
 	picture = romans_marching
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_3_target
-	
 	trigger = {
 		scope:after_battle_3_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.3.a"
 		scope:after_battle_3_target = {
@@ -203,26 +173,23 @@ after_battle.4 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
 		is_ruler = no
 		OR = {
-			number_of_traits < max_number_of_traits_svalue
 			has_trait = coward
 			has_trait = brave
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_4_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.14
-				}			
+				}
 			}
 		}
 	}
@@ -233,23 +200,22 @@ after_battle.14 = {
 	title = "after_battle.4.t"
 	desc = "after_battle.4.d"
 	picture = revolt
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_4_target
-	
 	trigger = {
 		scope:after_battle_4_target = {
 			is_alive = yes
-			NOT = { has_loyalty = loyalty_fled_battle }
+			NOT = {
+				has_loyalty = loyalty_fled_battle
+			}
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.4.a"
 		scope:after_battle_4_target = {
 			random_list = {
-				0 = { 
+				0 = {
 					if = {
 						limit = {
 							has_trait = brave
@@ -266,13 +232,18 @@ after_battle.14 = {
 						add_trait = brave
 					}
 				}
-				0 = { add_popularity = 10 }
+				0 = {
+					add_popularity = 10
+				}
 				2 = {
 					if = {
-						limit = { has_legion_trigger = yes }
+						limit = {
+							has_legion_trigger = yes
+						}
 						hidden_effect = {
 							legion = {
-								add_legion_history = { #
+								add_legion_history = {
+									#
 									key = commander_death_history
 									commander = scope:after_battle_4_target
 									province = scope:after_battle_4_target.location
@@ -280,7 +251,9 @@ after_battle.14 = {
 							}
 						}
 					}
-					death = { death_reason = death_battle }
+					death = {
+						death_reason = death_battle
+					}
 				}
 			}
 		}
@@ -313,11 +286,11 @@ after_battle.5 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
-		number_of_military_traits < max_number_of_military_traits_svalue
+		NOT = {
+			has_trait = confident
+		}
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -326,21 +299,16 @@ after_battle.5 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_5_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.15
 				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.5
 					days = 5
@@ -348,7 +316,6 @@ after_battle.5 = {
 			}
 		}
 	}
-
 }
 
 after_battle.15 = {
@@ -356,17 +323,14 @@ after_battle.15 = {
 	title = "after_battle.5.t"
 	desc = "after_battle.5.d"
 	picture = elephant_battle
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_5_target
-	
 	trigger = {
 		scope:after_battle_5_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.5.a"
 		scope:after_battle_5_target = {
@@ -380,7 +344,7 @@ after_battle.15 = {
 			}
 			else = {
 				employer = {
-					add_stability = stability_after_battle
+					add_military_experience = 10
 				}
 			}
 		}
@@ -392,11 +356,11 @@ after_battle.6 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
-		number_of_military_traits < max_number_of_military_traits_svalue
+		NOT = {
+			has_trait = tactician
+		}
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -405,21 +369,16 @@ after_battle.6 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_6_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.16
 				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.5
 					days = 5
@@ -434,17 +393,14 @@ after_battle.16 = {
 	title = "after_battle.6.t"
 	desc = "after_battle.6.d"
 	picture = elephant_battle
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_6_target
-	
 	trigger = {
 		scope:after_battle_6_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.6.a"
 		scope:after_battle_6_target = {
@@ -453,7 +409,7 @@ after_battle.16 = {
 					has_trait = tactician
 				}
 				employer = {
-					add_stability = stability_after_battle
+					add_military_experience = 10
 				}
 			}
 			else = {
@@ -468,11 +424,11 @@ after_battle.7 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
-		number_of_military_traits < max_number_of_military_traits_svalue
+		NOT = {
+			has_trait = disciplined
+		}
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -481,17 +437,20 @@ after_battle.7 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_7_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.17
-				}	
+				}
+				trigger_event = {
+					id = character_introductions.5
+					days = 5
+				}
 			}
 		}
 	}
@@ -502,17 +461,14 @@ after_battle.17 = {
 	title = "after_battle.7.t"
 	desc = "after_battle.7.d"
 	picture = romans_marching
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_7_target
-	
 	trigger = {
 		scope:after_battle_7_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.7.a"
 		scope:after_battle_7_target = {
@@ -521,7 +477,7 @@ after_battle.17 = {
 					has_trait = disciplined
 				}
 				employer = {
-					add_stability = stability_after_battle
+					add_military_experience = 10
 				}
 			}
 			else = {
@@ -536,11 +492,11 @@ after_battle.8 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
-		number_of_military_traits < max_number_of_military_traits_svalue
+		NOT = {
+			has_trait = steadfast
+		}
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -549,21 +505,16 @@ after_battle.8 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_8_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.18
 				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.5
 					days = 5
@@ -578,17 +529,14 @@ after_battle.18 = {
 	title = "after_battle.8.t"
 	desc = "after_battle.8.d"
 	picture = elephant_battle
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_8_target
-	
 	trigger = {
 		scope:after_battle_8_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.8.a"
 		scope:after_battle_8_target = {
@@ -597,7 +545,7 @@ after_battle.18 = {
 					has_trait = steadfast
 				}
 				employer = {
-					add_stability = stability_after_battle
+					add_military_experience = 10
 				}
 			}
 			else = {
@@ -612,11 +560,11 @@ after_battle.9 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	trigger = {
-		number_of_military_traits < max_number_of_military_traits_svalue
+		NOT = {
+			has_trait = aggressive
+		}
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -625,21 +573,16 @@ after_battle.9 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_9_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.19
 				}
-				set_variable = {  ###########################################################
-					name = war_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.5
 					days = 5
@@ -647,7 +590,6 @@ after_battle.9 = {
 			}
 		}
 	}
-
 }
 
 after_battle.19 = {
@@ -655,17 +597,14 @@ after_battle.19 = {
 	title = "after_battle.9.t"
 	desc = "after_battle.9.d"
 	picture = elephant_battle
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_9_target
-	
 	trigger = {
 		scope:after_battle_9_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.9.a"
 		scope:after_battle_9_target = {
@@ -674,7 +613,7 @@ after_battle.19 = {
 					has_trait = aggressive
 				}
 				employer = {
-					add_stability = stability_after_battle
+					add_military_experience = 10
 				}
 			}
 			else = {
@@ -688,7 +627,6 @@ after_battle.10 = {
 	type = character_event
 	hidden = yes
 	picture = elephant_battle
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -696,7 +634,6 @@ after_battle.10 = {
 			has_trait = tactically_inflexible
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_20_target
 		if = {
@@ -711,7 +648,6 @@ after_battle.10 = {
 			}
 		}
 	}
-	
 }
 
 after_battle.20 = {
@@ -719,46 +655,52 @@ after_battle.20 = {
 	title = "after_battle.10.t"
 	desc = "after_battle.10.d"
 	picture = looting
-	
 	left_portrait = current_ruler
 	right_portrait = scope:after_battle_20_target
-	
 	trigger = {
 		scope:after_battle_20_target = {
 			is_alive = yes
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.10.a"
 		#Increased amount of injuries also increases chance to die.
 		scope:after_battle_20_target = {
 			random_list = {
-				20 = { 
+				20 = {
 					trigger = {
-						NOT = { has_trait = wounded }
+						NOT = {
+							has_trait = wounded
+						}
 					}
 					add_trait = wounded
 				}
-				20 = { 
+				20 = {
 					trigger = {
-						NOT = { has_trait = maimed }
+						NOT = {
+							has_trait = maimed
+						}
 					}
 					add_trait = maimed
 				}
-				20 = { 
+				20 = {
 					trigger = {
-						NOT = { has_trait = limp }
+						NOT = {
+							has_trait = limp
+						}
 					}
 					add_trait = limp
 				}
 				40 = {
 					if = {
-						limit = { has_legion_trigger = yes }
+						limit = {
+							has_legion_trigger = yes
+						}
 						hidden_effect = {
 							legion = {
-								add_legion_history = { #
+								add_legion_history = {
+									#
 									key = commander_death_history
 									commander = scope:after_battle_20_target
 									province = scope:after_battle_20_target.location
@@ -780,7 +722,6 @@ after_battle.21 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
@@ -789,9 +730,7 @@ after_battle.21 = {
 			has_trait = squadron_leader
 			has_trait = princeps
 		}
-		number_of_military_traits < max_number_of_military_traits_svalue
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -800,7 +739,6 @@ after_battle.21 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_21_target
 		if = {
@@ -812,10 +750,6 @@ after_battle.21 = {
 					id = after_battle.31
 					days = 1
 				}
-				set_variable = {  ###########################################################
-					name = naval_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.6
 					days = 5
@@ -823,7 +757,6 @@ after_battle.21 = {
 			}
 		}
 	}
-	
 }
 
 after_battle.31 = {
@@ -831,10 +764,8 @@ after_battle.31 = {
 	title = "after_battle.21.t"
 	desc = "after_battle.21.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_21_target
 	right_portrait = scope:after_battle_21_target
-		
 	trigger = {
 		scope:after_battle_21_target = {
 			is_admiral = yes
@@ -842,21 +773,18 @@ after_battle.31 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.21.a"
 		scope:after_battle_21_target = {
 			add_trait = coastal_raider
 		}
 	}
-	
 	option = {
 		name = "after_battle.21.b"
 		scope:after_battle_21_target = {
 			add_trait = squadron_leader
 		}
 	}
-	
 	option = {
 		name = "after_battle.21.c"
 		scope:after_battle_21_target = {
@@ -870,7 +798,6 @@ after_battle.22 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
@@ -879,9 +806,7 @@ after_battle.22 = {
 			has_trait = oarmaster
 			has_trait = improviser
 		}
-		number_of_military_traits < max_number_of_military_traits_svalue
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -890,7 +815,6 @@ after_battle.22 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_22_target
 		if = {
@@ -902,10 +826,6 @@ after_battle.22 = {
 					id = after_battle.32
 					days = 1
 				}
-				set_variable = {  ###########################################################
-					name = naval_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.6
 					days = 5
@@ -913,7 +833,6 @@ after_battle.22 = {
 			}
 		}
 	}
-	
 }
 
 after_battle.32 = {
@@ -921,10 +840,8 @@ after_battle.32 = {
 	title = "after_battle.22.t"
 	desc = "after_battle.22.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_22_target
 	right_portrait = scope:after_battle_22_target
-		
 	trigger = {
 		scope:after_battle_22_target = {
 			is_admiral = yes
@@ -932,21 +849,18 @@ after_battle.32 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.22.a"
 		scope:after_battle_22_target = {
 			add_trait = seadog
 		}
 	}
-	
 	option = {
 		name = "after_battle.22.b"
 		scope:after_battle_22_target = {
 			add_trait = oarmaster
 		}
 	}
-	
 	option = {
 		name = "after_battle.22.c"
 		scope:after_battle_22_target = {
@@ -960,7 +874,6 @@ after_battle.23 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		NOR = {
@@ -968,9 +881,7 @@ after_battle.23 = {
 			has_trait = tough
 		}
 		is_adult = yes
-		number_of_military_traits < max_number_of_military_traits_svalue
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -979,7 +890,6 @@ after_battle.23 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_23_target
 		if = {
@@ -991,10 +901,6 @@ after_battle.23 = {
 					id = after_battle.33
 					days = 1
 				}
-				set_variable = {  ###########################################################
-					name = naval_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.6
 					days = 5
@@ -1009,10 +915,8 @@ after_battle.33 = {
 	title = "after_battle.23.t"
 	desc = "after_battle.23.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_23_target
 	right_portrait = scope:after_battle_23_target
-		
 	trigger = {
 		scope:after_battle_23_target = {
 			is_admiral = yes
@@ -1020,7 +924,6 @@ after_battle.33 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.23.a"
 		scope:after_battle_23_target = {
@@ -1034,7 +937,6 @@ after_battle.24 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
@@ -1042,9 +944,7 @@ after_battle.24 = {
 			has_trait = daring
 			has_trait = tough
 		}
-		number_of_military_traits < max_number_of_military_traits_svalue
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -1053,7 +953,6 @@ after_battle.24 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_24_target
 		if = {
@@ -1065,10 +964,6 @@ after_battle.24 = {
 					id = after_battle.34
 					days = 1
 				}
-				set_variable = {  ###########################################################
-					name = naval_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.6
 					days = 5
@@ -1083,10 +978,8 @@ after_battle.34 = {
 	title = "after_battle.24.t"
 	desc = "after_battle.24.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_24_target
 	right_portrait = scope:after_battle_24_target
-		
 	trigger = {
 		scope:after_battle_24_target = {
 			is_admiral = yes
@@ -1094,7 +987,6 @@ after_battle.34 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.24.a"
 		scope:after_battle_24_target = {
@@ -1108,17 +1000,14 @@ after_battle.25 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
 		OR = {
 			has_trait = coward
 			has_trait = brave
-			number_of_military_traits < max_number_of_military_traits_svalue
 		}
 	}
-	
 	weight_multiplier = {
 		base = 2
 		modifier = {
@@ -1128,7 +1017,6 @@ after_battle.25 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_25_target
 		if = {
@@ -1140,10 +1028,6 @@ after_battle.25 = {
 					id = after_battle.35
 					days = 1
 				}
-				set_variable = {  ###########################################################
-					name = naval_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.6
 					days = 5
@@ -1158,10 +1042,8 @@ after_battle.35 = {
 	title = "after_battle.25.t"
 	desc = "after_battle.25.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_25_target
 	right_portrait = scope:after_battle_25_target
-		
 	trigger = {
 		scope:after_battle_25_target = {
 			is_admiral = yes
@@ -1169,12 +1051,11 @@ after_battle.35 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.25.a"
 		scope:after_battle_25_target = {
 			random_list = {
-				40 = { 
+				40 = {
 					if = {
 						limit = {
 							has_trait = brave
@@ -1191,13 +1072,18 @@ after_battle.35 = {
 						add_trait = brave
 					}
 				}
-				40 = { add_popularity = 10 }
+				40 = {
+					add_popularity = 10
+				}
 				20 = {
 					if = {
-						limit = { has_legion_trigger = yes }
+						limit = {
+							has_legion_trigger = yes
+						}
 						hidden_effect = {
 							legion = {
-								add_legion_history = { #
+								add_legion_history = {
+									#
 									key = commander_death_history
 									commander = scope:after_battle_25_target
 									province = scope:after_battle_25_target.location
@@ -1205,12 +1091,13 @@ after_battle.35 = {
 							}
 						}
 					}
-					death = { death_reason = death_battle }
+					death = {
+						death_reason = death_battle
+					}
 				}
 			}
 		}
 	}
-	
 	option = {
 		name = "after_battle.25.b"
 		scope:after_battle_25_target = {
@@ -1239,7 +1126,6 @@ after_battle.26 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
@@ -1247,9 +1133,7 @@ after_battle.26 = {
 			has_trait = victorious
 			has_trait = conqueror
 		}
-		number_of_status_traits < max_number_of_status_traits_svalue
 	}
-	
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -1258,21 +1142,16 @@ after_battle.26 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_26_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
 				trigger_event = {
 					id = after_battle.36
 				}
-				set_variable = {  ###########################################################
-					name = naval_hero_arises
-					days = 720
-				} ############################################################################
 				trigger_event = {
 					id = character_introductions.6
 					days = 5
@@ -1287,10 +1166,8 @@ after_battle.36 = {
 	title = "after_battle.26.t"
 	desc = "after_battle.26.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_26_target
 	right_portrait = scope:after_battle_26_target
-	
 	trigger = {
 		scope:after_battle_26_target = {
 			is_alive = yes
@@ -1298,7 +1175,6 @@ after_battle.36 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.26.a"
 		scope:after_battle_26_target = {
@@ -1312,13 +1188,11 @@ after_battle.27 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		has_trait = victorious
 		is_adult = yes
 	}
-	
 	weight_multiplier = {
 		base = 2
 		modifier = {
@@ -1328,15 +1202,14 @@ after_battle.27 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_27_target
 		if = {
 			limit = {
-				exists = employer 
+				exists = employer
 			}
 			employer = {
-			trigger_event = {
+				trigger_event = {
 					id = after_battle.37
 				}
 			}
@@ -1349,10 +1222,8 @@ after_battle.37 = {
 	title = "after_battle.27.t"
 	desc = "after_battle.27.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_27_target
 	right_portrait = scope:after_battle_27_target
-	
 	trigger = {
 		scope:after_battle_27_target = {
 			is_alive = yes
@@ -1360,7 +1231,6 @@ after_battle.37 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.27.a"
 		scope:after_battle_27_target = {
@@ -1374,13 +1244,11 @@ after_battle.28 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		number_of_personality_traits < max_number_of_traits_svalue
 		is_adult = yes
 	}
-	
 	weight_multiplier = {
 		base = 2
 		modifier = {
@@ -1390,7 +1258,6 @@ after_battle.28 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_28_target
 		if = {
@@ -1412,19 +1279,18 @@ after_battle.38 = {
 	title = "after_battle.28.t"
 	desc = "after_battle.28.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_28_target
 	right_portrait = scope:after_battle_28_target
-		
 	trigger = {
 		scope:after_battle_28_target = {
 			is_admiral = yes
 			is_alive = yes
-			NOT = { has_loyalty = loyalty_reckless_leader }
+			NOT = {
+				has_loyalty = loyalty_reckless_leader
+			}
 			is_adult = yes
 		}
 	}
-		
 	option = {
 		name = "after_battle.28.a"
 		scope:after_battle_28_target = {
@@ -1447,12 +1313,10 @@ after_battle.29 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
 	}
-	
 	weight_multiplier = {
 		base = 2
 		modifier = {
@@ -1462,7 +1326,6 @@ after_battle.29 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_29_target
 		if = {
@@ -1484,10 +1347,8 @@ after_battle.39 = {
 	title = "after_battle.29.t"
 	desc = "after_battle.29.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_29_target
 	right_portrait = scope:after_battle_29_target
-		
 	trigger = {
 		scope:after_battle_29_target = {
 			is_admiral = yes
@@ -1495,7 +1356,6 @@ after_battle.39 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.29.a"
 		if = {
@@ -1522,12 +1382,10 @@ after_battle.30 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
 	}
-	
 	weight_multiplier = {
 		base = 2
 		modifier = {
@@ -1537,7 +1395,6 @@ after_battle.30 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_30_target
 		if = {
@@ -1559,10 +1416,8 @@ after_battle.40 = {
 	title = "after_battle.30.t"
 	desc = "after_battle.30.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_30_target
 	right_portrait = scope:after_battle_30_target
-		
 	trigger = {
 		scope:after_battle_30_target = {
 			is_admiral = yes
@@ -1570,7 +1425,6 @@ after_battle.40 = {
 			is_adult = yes
 		}
 	}
-	
 	option = {
 		name = "after_battle.30.a"
 		scope:after_battle_30_target = {
@@ -1593,12 +1447,10 @@ after_battle.41 = {
 	type = character_event
 	hidden = yes
 	picture = naval_battle
-	
 	trigger = {
 		is_admiral = yes
 		is_adult = yes
 	}
-	
 	weight_multiplier = {
 		base = 2
 		modifier = {
@@ -1608,7 +1460,6 @@ after_battle.41 = {
 			}
 		}
 	}
-	
 	immediate = {
 		save_scope_as = after_battle_41_target
 		if = {
@@ -1630,10 +1481,8 @@ after_battle.51 = {
 	title = "after_battle.41.t"
 	desc = "after_battle.41.d"
 	picture = naval_battle
-	
 	left_portrait = scope:after_battle_41_target
 	right_portrait = scope:after_battle_41_target
-		
 	trigger = {
 		scope:after_battle_41_target = {
 			is_admiral = yes
@@ -1641,7 +1490,6 @@ after_battle.51 = {
 			is_adult = yes
 		}
 	}
-	
 	weight_multiplier = {
 		base = 1
 		modifier = {
@@ -1649,36 +1497,44 @@ after_battle.51 = {
 			has_trait = daring
 		}
 	}
-	
 	option = {
 		name = "after_battle.41.a"
 		#Increased amount of injuries also increases chance to die.
 		scope:after_battle_41_target = {
 			random_list = {
-				20 = { 
+				20 = {
 					trigger = {
-						NOT = { has_trait = wounded }
+						NOT = {
+							has_trait = wounded
+						}
 					}
 					add_trait = wounded
 				}
-				20 = { 
+				20 = {
 					trigger = {
-						NOT = { has_trait = maimed }
+						NOT = {
+							has_trait = maimed
+						}
 					}
 					add_trait = maimed
 				}
-				20 = { 
+				20 = {
 					trigger = {
-						NOT = { has_trait = limp }
+						NOT = {
+							has_trait = limp
+						}
 					}
 					add_trait = limp
 				}
-				40 = { 
+				40 = {
 					if = {
-						limit = { has_legion_trigger = yes }
+						limit = {
+							has_legion_trigger = yes
+						}
 						hidden_effect = {
 							legion = {
-								add_legion_history = { #
+								add_legion_history = {
+									#
 									key = commander_death_history
 									commander = scope:after_battle_41_target
 									province = scope:after_battle_41_target.location

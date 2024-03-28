@@ -1,9 +1,9 @@
 ﻿bribe_mercenary_button = {
-    scope = character
+	scope = character
 	saved_scopes = {
 		player
 	}
-    is_shown = {
+	is_shown = {
 		is_mercenary = yes
 		OR = {
 			is_general = yes
@@ -17,11 +17,11 @@
 				}
 			}
 		}
-    }
+	}
 	ai_is_valid = {
 		always = no
 	}
-    is_valid = {
+	is_valid = {
 		is_mercenary = yes
 		in_command = yes
 		custom_tooltip = {
@@ -31,14 +31,14 @@
 				in_combat = no
 			}
 		}
-		scope:target.employer = {
+		employer = {
 			NOT = {
 				invention = recruit_mercenary_inv
 			}
 		}
 		scope:player = {
 			war_with = root.employer
-			treasury >= army_size_merc_estimation_sg 
+			treasury >= army_size_merc_estimation_sg
 		}
 		custom_tooltip = {
 			text = merc_1_year_buyoff_tt
@@ -48,9 +48,9 @@
 				}
 			}
 		}
-    }
-    effect = {
-		custom_tooltip = merc_buyoff_effect_tooltip_sg 
+	}
+	effect = {
+		custom_tooltip = merc_buyoff_effect_tooltip_sg
 		scope:player = {
 			add_treasury = {
 				value = 0
@@ -76,5 +76,5 @@
 				}
 			}
 		}
-    }
+	}
 }

@@ -6,7 +6,7 @@
  assign_mission_act_past:0 "The sleeping spider awakens"
  ready_for_mission_tt:0 "Ready for a new mission."
  recently_busy_tt:0 "Is still recovering from the last task."
- assigned_mission:0 "Recently Completed Mission"
+ recent_assigned_mission:0 "Recently Completed Mission"
 
  assign_mission.1.t:0 "A Snake in the Grass"
  assign_mission.1.desc:0 "Our faithful servant [target.GetName] is ensconced abroad and awaiting orders. How could [target.GetSheHe] gain us advantage over her host nation?"

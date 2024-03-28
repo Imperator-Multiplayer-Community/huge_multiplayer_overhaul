@@ -1,8 +1,6 @@
 ﻿##################################################################################################
 # scriptable and usable for event-system below.
 ##################################################################################################
-
-
 stormy_seas = {
 	movement_cost = 6
 	attrition = 0.5
@@ -42,13 +40,15 @@ persecuted_community = {
 	local_pop_demotion_speed = 1
 }
 
-expanded_campus_martius = { #Now a country modifier
+expanded_campus_martius = {
+	#Now a country modifier
 	manpower_recovery_speed = 0.05
 	global_manpower_modifier = 0.05
 	global_cohort_start_experience = 10
 }
 
-embellished_temple_jupiter_optimus_maximus = { #Now a country modifier
+embellished_temple_jupiter_optimus_maximus = {
+	#Now a country modifier
 	happiness_for_same_religion_modifier = 0.025
 	omen_power = 0.1
 }
@@ -59,14 +59,11 @@ exiled_community = {
 	local_population_capacity_modifier = 0.25
 }
 
-recent_convert_modifier = { #Country Modifier
-	global_pop_conversion_speed_modifier = 0.50
+recent_convert_modifier = {
+	#Country Modifier
+	global_pop_conversion_speed_modifier = 0.5
 	change_pantheon_cost_modifier = -0.75
 	stability_monthly_change = -0.05
 	local_unrest = 1
 	omen_power = -0.2
-}
-
-recent_slave_death = {
-	local_tax_modifier = -0.25
 }
