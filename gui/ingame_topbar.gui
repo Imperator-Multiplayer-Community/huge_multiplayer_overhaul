@@ -1145,7 +1145,7 @@ vbox = {
 								}
 								blockoverride "line" {}
 								blockoverride "BotText" {
-									text = "#g Right-click to toggle Auto-trade"
+									text = "rmb_trade_toggle"
 								}
 							}
 							shortcut = "top_bar_6"
@@ -2295,11 +2295,11 @@ vbox = {
 					button_radial = {
 						size = { 28 28 }
 						blockoverride "On_click" { visible = no }
-						tooltip = "Mod settings"
+						tooltip = "mod_settings"
 
 						button = {
 							onclick = "[GetVariableSystem.Toggle( 'settings')]"
-							tooltip = "Mod settings"
+							tooltip = "mod_settings"
 
 							size = { 26 26 }
 							using = button_tiled_texture

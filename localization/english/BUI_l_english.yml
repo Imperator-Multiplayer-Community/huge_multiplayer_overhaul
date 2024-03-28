@@ -88,3 +88,5 @@
 	performance_mm_MAPMODE_DESC: "#T Perfromance Mapmode#!\nSame as #Y Political Mapmode#!, but always uses the flat map.\nThis will help if you experience lower FPS when zooming in."
 	#hmo fixes
 	topbar_research_points: "Research points: [InGameTopbar.GetPlayer.GetResearch|1]"
+  rmb_trade_toggle: "#g Right-click to toggle Auto-trade#!"
+  mod_settings: "Mod Settings"
