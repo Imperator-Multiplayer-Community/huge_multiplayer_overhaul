@@ -3858,7 +3858,7 @@ tibetan_empire_heritage = {
 baratanac_heritage = {
 	modifier = {
 		#good
-		gloabl_state_trade_routes = 0.5
+		global_state_trade_routes = 0.5
 		global_export_commerce_modifier = 0.1
 
 		#bad
