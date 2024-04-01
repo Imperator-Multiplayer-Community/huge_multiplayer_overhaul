@@ -1,8 +1,8 @@
 ﻿country_decisions = {
-	#Modded Molon Labe		
+	#Modded Molon Labe
 	# Form Helvetia
 	form_helvetia = {
-		
+
 		potential = {
 			num_of_cities >= 1
 			primary_culture = helvetian
@@ -19,21 +19,17 @@
 				is_tier_2_formable_trigger = yes
 			}
 		}
-		
+
 		highlight = {
 			scope:province = {
 				OR = {
 					is_in_area = helvetia_inferioris_area
 					is_in_area = tigurinia_area
 				}
-				NOT = {
-					province_id = 3637
-					province_id = 3739
-					province_id = 3639
-				}
+
 			}
 		}
-		
+
 		allow = {
 			custom_tooltip = {
 				text = formable_not_helvetia_exists
@@ -45,15 +41,9 @@
 			}
 			can_form_nation_trigger = yes
 			owns_or_subject_owns_area = tigurinia_area
-			owns_or_subject_owns = 3631
-			owns_or_subject_owns = 3632
-			owns_or_subject_owns = 3633
-			owns_or_subject_owns = 3731
-			owns_or_subject_owns = 3634
-			owns_or_subject_owns = 3635
-			owns_or_subject_owns = 3732
+			owns_or_subject_owns_area = helvetia_inferioris_area
 		}
-		
+
 		effect = {
 			custom_tooltip = "tier_2_formable_tooltip"
 			change_country_name = "HELVETIA_NAME"
@@ -65,14 +55,14 @@
 				}
 				change_government = tribal_federation
 				switch_government_type_event_clearup_effect = yes
-			}							
+			}
 			hidden_effect = {
 				change_country_adjective = "HELVETIA_ADJECTIVE"
 				change_country_color =  "helvetia_color"
 				change_country_tag = HVL
 				trigger_event = {
 					id = formable_heritage.69
-				}				
+				}
 			}
 			custom_tooltip = inherit_helvetia_provinces_tooltip
 			hidden_effect = {
@@ -86,11 +76,10 @@
 			}
 			add_2_free_province_investments = yes
 		}
-		
+
 		ai_will_do = {
 			base = 1
 		}
 	}
 
-} 
-
+}

@@ -129,7 +129,7 @@
 	#		}
 	#		allow = {
 	#			NOT = {
-	#				scope:target_culture = { 
+	#				scope:target_culture = {
 	#					has_country_culture_modifier = patronizing_literature
 	#				}
 	#			}
@@ -141,7 +141,7 @@
 	#			culture_state_loyalty_effect = yes
 	#			scope:target_culture = {
 	#				add_country_culture_modifier = {
-	#					name = "patronizing_literature" 
+	#					name = "patronizing_literature"
 	#					duration = -1
 	#				}
 	#			}
@@ -592,7 +592,7 @@
 			}
 		}
 		effect = {
-			add_political_influence = -35
+			add_political_influence = -25
 			custom_tooltip = recruit_talent_tt
 			ordered_owned_province = {
 				limit = {
@@ -690,7 +690,7 @@
 			}
 		}
 		effect = {
-			add_political_influence = -35
+			add_political_influence = -25
 			custom_tooltip = present_debutante_tt
 			ordered_owned_province = {
 				limit = {
@@ -795,7 +795,7 @@
 		effect = {
 			add_military_experience = -5
 			add_treasury = -50
-			add_political_influence = -35
+			add_political_influence = -25
 			add_country_modifier = {
 				name = "spy_recruited"
 				duration = 7305
@@ -893,7 +893,7 @@
 		effect = {
 			add_military_experience = -3
 			add_treasury = -35
-			add_political_influence = -35
+			add_political_influence = -25
 			add_country_modifier = {
 				name = "spy_recruited"
 				duration = 3650
@@ -1073,7 +1073,7 @@
 				}
 			}
 			else = {
-				add_political_influence = -35
+				add_political_influence = -25
 				add_stability = -5
 			}
 			custom_tooltip = petty_noble_tt

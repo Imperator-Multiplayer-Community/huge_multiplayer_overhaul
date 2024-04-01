@@ -324,7 +324,7 @@
 			}
 		}
 	}
-	#HMO Primary Culture Rights and Privileges:	
+	#HMO Primary Culture Rights and Privileges:
 	recruit_spymaster = {
 		potential = {
 			primary_culture = scope:target_culture.culture
@@ -528,7 +528,7 @@
 			}
 		}
 		effect = {
-			add_political_influence = -35
+			add_political_influence = -25
 			custom_tooltip = recruit_talent_tt
 			ordered_owned_province = {
 				limit = {
@@ -617,7 +617,7 @@
 			}
 		}
 		effect = {
-			add_political_influence = -35
+			add_political_influence = -25
 			custom_tooltip = present_debutante_tt
 			ordered_owned_province = {
 				limit = {

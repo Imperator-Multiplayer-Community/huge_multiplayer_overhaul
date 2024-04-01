@@ -12,7 +12,7 @@
 		}
 		effect = {
 			add_military_experience = -100
-			add_political_influence = -35
+			add_political_influence = -25
 			create_character = {
 				age = 16
 				culture = root.culture
