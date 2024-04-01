@@ -1,18 +1,13 @@
 ﻿##########################################################################
 ## THIS FILE IS FOR OVERRIDES NOT NEW VALUES ##
 ##########################################################################
-
 # All global modifiers are here.  They are applied from certain game-features.
 #
 # Effects are fully scriptable here.
-
-
 #these names can NOT be removed or changes, as the code uses them....
-
 ##########################################################################
 # Difficulty Modifiers
 ##########################################################################
-
 mercenary_captain = {
 	martial = 4
 	ship_capture_chance = -1
@@ -23,9 +18,8 @@ mercenary_captain = {
 ##########################################################################
 # Province Static Modifiers
 ##########################################################################
-
 number_of_prisoners_abroad = {
-	stability_monthly_change = -0.0
+	stability_monthly_change = 0
 }
 
 corruption = {
@@ -42,16 +36,14 @@ land_province = {
 ##########################################################################
 # City Static Modifiers
 ##########################################################################
-
 civilization_value = {
 	local_nobles_happyness = 0.003
 	local_citizen_happyness = 0.002
 	local_freemen_happyness = 0.001
 	local_tribesmen_happyness = -0.001
 	local_output_modifier = 0.01
-	
 	barbarian_growth = -0.005
-	local_population_capacity_modifier = 0.0025 
+	local_population_capacity_modifier = 0.0025
 	supply_limit_modifier = 0.01
 	local_migration_attraction = 0.05
 	local_population_growth = 0.001
@@ -66,11 +58,11 @@ roads_in_province = {
 	local_pop_demotion_speed_modifier = 0.01
 	local_migration_attraction = 0.05
 	local_migration_speed_modifier = 0.1
-	local_base_trade_routes_modifier = 0.1 #0.05
+	local_base_trade_routes_modifier = 0.1	#0.05
 }
 
 forts_over_limit = {
-	fort_maintenance_cost = 0.8 # was 0.5
+	fort_maintenance_cost = 0.8	# was 0.5
 }
 
 manpower = {
@@ -90,8 +82,8 @@ is_capital_city = {
 	local_building_slot = 1
 	local_pop_promotion_speed_modifier = 0.25
 	local_migration_attraction = 2
-	local_pop_conversion_speed_modifier = 0.20
-	local_pop_assimilation_speed_modifier = 0.20
+	local_pop_conversion_speed_modifier = 0.2
+	local_pop_assimilation_speed_modifier = 0.2
 	local_monthly_food = 1.5
 	local_defensive = 0.1
 }
@@ -104,30 +96,25 @@ is_state_capital = {
 	local_defensive = 0.05
 }
 
-
 ##########################################################################
 # Unit Static Modifiers
 ##########################################################################
-
 in_combat = {
 	experience_decay = -0.05
-	monthly_experience_gain = 0.10
+	monthly_experience_gain = 0.1
 }
 
 in_siege = {
 	experience_decay = -0.05
-	monthly_experience_gain = 0.20
+	monthly_experience_gain = 0.2
 }
 
 ##########################################################################
 # Country Static Modifiers
 ##########################################################################
-
 #
 # Order of War modifiers, offensive_war OR defensive_war OR civil_war then peace.
 #
-
-
 defensive_war = {
 	max_war_exhaustion = 25
 	war_exhaustion = -0.03
@@ -137,13 +124,13 @@ defensive_war = {
 }
 
 total_blockaded = {
-	war_exhaustion = 0.20				#increases exhaustion.
+	war_exhaustion = 0.2	#increases exhaustion.
 }
 
 war_exhaustion = {
 	global_population_happiness = -0.005
 	ruler_popularity_gain = -0.01
-	monthly_military_experience_modifier = 0.0125 # was 0.025
+	monthly_military_experience_modifier = 0.0125	# was 0.025
 }
 
 nation_rank_0 = {
@@ -151,24 +138,22 @@ nation_rank_0 = {
 	num_of_clan_chiefs = 1
 	army_weight_modifier = -0.25
 	max_mercenary_stacks = 1
-
 	agressive_expansion_impact = -0.15
 }
 
 nation_rank_1 = {
-	global_commerce_modifier = 0.2	
+	global_commerce_modifier = 0.2
 	global_defensive = 0.2
 	diplomatic_relations = 2
 	diplomatic_range_modifier = 0.25
 	num_of_clan_chiefs = 1
 	integrate_speed = 0.05
 	monthly_wage_modifier = 0.015
-	levy_size_multiplier = 0.22
 	mercenary_land_maintenance_cost = -0.15
 	build_cost = -0.15
 	max_mercenary_stacks = 1
-
 	agressive_expansion_impact = -0.15
+	levy_size_multiplier = 0.12
 }
 
 nation_rank_2 = {
@@ -181,9 +166,8 @@ nation_rank_2 = {
 	build_cost = -0.1
 	max_mercenary_stacks = 1
 	num_of_clan_chiefs = 1
-
-	levy_size_multiplier = 0.155
 	agressive_expansion_impact = -0.1
+	levy_size_multiplier = 0.04
 }
 
 nation_rank_3 = {
@@ -194,17 +178,15 @@ nation_rank_3 = {
 	integrate_speed = 0.15
 	monthly_political_influence_modifier = 0.05
 	happiness_for_same_culture_modifier = 0.08
-	monthly_wage_modifier = 0.040
+	monthly_wage_modifier = 0.04
 	build_cost = -0.05
 	civil_war_threshold = -0.03
 	global_monthly_state_loyalty = -0.01
 	war_score_cost = -0.05
-
 	max_mercenary_stacks = 2
-
 	agressive_expansion_impact = 0.05
 	agressive_expansion_monthly_change = 0.025
-	levy_size_multiplier = 0.105
+	recruit_mercenary_cost_modifier = 1
 }
 
 nation_rank_4 = {
@@ -223,12 +205,10 @@ nation_rank_4 = {
 	governor_loyalty = -2.5
 	monthly_wage_modifier = 0.075
 	max_mercenary_stacks = 3
-
 	agressive_expansion_impact = 0.15
 	agressive_expansion_monthly_change = 0.05
-	levy_size_multiplier = 0.04
+	recruit_mercenary_cost_modifier = 2
 }
-
 
 nation_rank_5 = {
 	diplomatic_relations = 2
@@ -244,12 +224,11 @@ nation_rank_5 = {
 	general_loyalty = -5
 	admiral_loyalty = -5
 	governor_loyalty = -5
-	monthly_wage_modifier = 0.10
+	monthly_wage_modifier = 0.1
 	max_mercenary_stacks = 4
-
 	agressive_expansion_impact = 0.3
 	agressive_expansion_monthly_change = 0.075
-	levy_size_multiplier = 0.04
+	recruit_mercenary_cost_modifier = 3
 }
 
 is_tribe = {
@@ -260,17 +239,15 @@ is_tribe = {
 	global_tribesmen_desired_pop_ratio = 0.1
 	hill_fort_cost = -0.25
 	price_found_city_cost_modifier = 0.25
-	price_revoke_city_status_cost_modifier = -0.2
-    price_revoke_metropolis_status_cost_modifier = -0.2
 	monthly_military_experience = 0.2
 	global_defensive = -0.125
-	experience_decay = -0.02 # this will get removed by tribal legion laws once enacted, so makes tribal levies better until they get legions
-	global_nobles_city_desired_pop_ratio = 0.05 # slight increase
-	global_freemen_city_desired_pop_ratio = -0.35 # replace freemen with tribesmen in city. Allows 1% of freemen to let POPs promote to freemen and then to citizen or nobles
-	global_tribesmen_city_desired_pop_ratio = 0.45 # replace freemen, citizens with tribesmen in city 
-	global_citizen_city_desired_pop_ratio = -0.25 # nothing unless centralizing- Allows 1% of citizens in decentralized tribes to let POPs promote to citizen and then to nobles
-	global_slaves_city_desired_pop_ratio = -0.1 # reduced so we get more nobles and tribesmen (base is already .1 so total here is .15)
-	global_pop_demotion_speed_modifier = 0.25 # speed up demotion of civilized pops
+	experience_decay = -0.02	# this will get removed by tribal legion laws once enacted, so makes tribal levies better until they get legions
+	global_nobles_city_desired_pop_ratio = 0.05	# slight increase
+	global_freemen_city_desired_pop_ratio = -0.35	# replace freemen with tribesmen in city. Allows 1% of freemen to let POPs promote to freemen and then to citizen or nobles
+	global_tribesmen_city_desired_pop_ratio = 0.45	# replace freemen, citizens with tribesmen in city 
+	global_citizen_city_desired_pop_ratio = -0.25	# nothing unless centralizing- Allows 1% of citizens in decentralized tribes to let POPs promote to citizen and then to nobles
+	global_slaves_city_desired_pop_ratio = -0.1	# reduced so we get more nobles and tribesmen (base is already .1 so total here is .15)
+	global_pop_demotion_speed_modifier = 0.25	# speed up demotion of civilized pops
 }
 
 is_monarchy = {
@@ -282,7 +259,6 @@ is_republic = {
 	max_loyalty = 100
 	change_governor_policy_cost_modifier = -0.1
 	max_mercenary_stacks = 2
-	
 	global_freemen_desired_pop_ratio = 0.025
 	global_freemen_city_desired_pop_ratio = 0.075
 	global_citizen_city_desired_pop_ratio = 0.05
@@ -303,7 +279,7 @@ negative_centralization = {
 positive_centralization = {
 	global_pop_promotion_speed = 2.5
 	country_civilization_value = 15
-	global_tribesmen_happyness = 0.015 # offsets unhappyness from civilization value gain
+	global_tribesmen_happyness = 0.015	# offsets unhappyness from civilization value gain
 	research_points_modifier = 0.5
 	oratory_tech_investment = 0.1
 	military_tech_investment = 0.1
@@ -311,17 +287,14 @@ positive_centralization = {
 	religious_tech_investment = 0.1
 	discipline = 0.05
 	monthly_military_experience = -0.15
-	price_found_city_cost_modifier = -0.15 # still should be 10% more expensive
-	global_citizen_city_desired_pop_ratio = 0.34 # on par with monarchy
-	global_tribesmen_city_desired_pop_ratio = -0.34 # reduce this a little bit to make citizens and nobles more prevelant
+	price_found_city_cost_modifier = -0.15	# still should be 10% more expensive
+	global_citizen_city_desired_pop_ratio = 0.34	# on par with monarchy
+	global_tribesmen_city_desired_pop_ratio = -0.34	# reduce this a little bit to make citizens and nobles more prevelant
 }
-
-
 
 #########################################################################
 # Ruler, CoRuler or Consort, highest value picked, and then multiplied
 #########################################################################
-
 ruler_finesse_mod = {
 	global_commerce_modifier = 0.01
 	build_cost = -0.01
@@ -348,13 +321,13 @@ positive_state_food_growth = {
 	local_defensive = 0.025
 }
 
-
 #### Culture Modifiers
-
-number_of_integrated_cultures = { #Scaled by number of current integrated cultures 
-	culture_happiness_modifier = -0.04 #Was -0.04
+number_of_integrated_cultures = {
+	#Scaled by number of current integrated cultures 
+	culture_happiness_modifier = -0.04	#Was -0.04
 }
 
-number_of_noble_cultures = { #Scaled by number of cultures with noble civic right. Affects primary culture
-	culture_happiness_modifier = -0.05 #Was -0.05
+number_of_noble_cultures = {
+	#Scaled by number of cultures with noble civic right. Affects primary culture
+	culture_happiness_modifier = -0.05	#Was -0.05
 }

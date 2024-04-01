@@ -98,7 +98,7 @@
  knife_fighter:0 "Knife Fighter"
  gifted_slave:0 "Gifted Slave"
  counterintelligence:0 "Counterintelligence"
- assigned_mission:0 "Assigned Mission"
+ assigned_intel_mission:0 "Assigned Mission"
 
  worse_martial_01:0 "Clumsy"
  worse_finesse_01:0 "Ignorant"
@@ -163,9 +163,6 @@
 #Country culture modifiers
  petty_noble_other:0 "Joys of Condescension"
  petty_noble:0 "Indulged Nobility"
-
-#Province modifiers
- recent_slave_death:0 "Slave Population Collapsed"
 
 #Country modifiers
  spy_recruited:0 "Expanding State Intelligence"

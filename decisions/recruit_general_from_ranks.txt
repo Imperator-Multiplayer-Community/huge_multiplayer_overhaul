@@ -1,0 +1,57 @@
+﻿country_decisions = {
+	recruit_general_from_ranks = {
+		potential = {
+			num_of_cities >= 1
+			NOT = {
+				has_variable = "recruited_general"
+			}
+		}
+		allow = {
+			military_experience >= 100
+			political_influence >= 35
+		}
+		effect = {
+			add_military_experience = -100
+			add_political_influence = -25
+			create_character = {
+				age = 16
+				culture = root.culture
+				religion = root.religion
+				hidden_effect = {
+					random_list = {
+						10 = {
+							add_trait = original_thinker
+						}
+						10 = {
+							add_trait = confident
+						}
+						10 = {
+							add_trait = tactician
+						}
+						10 = {
+							add_trait = steadfast
+						}
+						10 = {
+							add_trait = aggressive
+						}
+						10 = {
+							add_trait = brave
+						}
+					}
+					add_trait = disciplined
+					add_character_modifier = {
+						name = "war_hero_character"
+						duration = -1
+					}
+				}
+			}
+			set_variable = {
+				name = "recruited_general"
+				days = 18250
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

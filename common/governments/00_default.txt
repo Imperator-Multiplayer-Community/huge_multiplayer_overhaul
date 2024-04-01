@@ -2,7 +2,7 @@
 	oratory_ideas = 1
 	military_ideas = 2
 	type = republic
-	
+
 	bonus = {
 		global_freemen_happyness = happiness_large_svalue
 		character_loyalty = 5
@@ -10,15 +10,15 @@
 	base = {
 		country_civilization_value = 20
 	}
-	
+
 	minimum_electable_age = 35
 	election_delay = 10
 	ruler_term = 5
-	
+
 	has_co_ruler = yes
-	
+
 	color = hsv { 0.6  0.8  0.7 }
-	
+
 	can_deify_ruler = no
 }
 
@@ -26,7 +26,7 @@ theocratic_republic = { #religious party
 	oratory_ideas = 1
 	religious_ideas = 2
 	type = republic
-	
+
 	bonus = {
 		omen_power = 0.15
 		happiness_for_same_religion_modifier = 0.1
@@ -34,12 +34,12 @@ theocratic_republic = { #religious party
 	base = {
 		country_civilization_value = 20
 	}
-	
+
 	minimum_electable_age = 35
 
 	election_delay = 10
 	ruler_term = 5
-	
+
 	color = hsv { 0.6  0.7  0.5 }
 }
 
@@ -47,22 +47,22 @@ oligarchic_republic = { #civic party
 	oratory_ideas = 2
 	civic_ideas = 1
 	type = republic
-	
-	bonus = {	
+
+	bonus = {
 		global_citizen_happyness = happiness_large_svalue
 		monthly_wage_modifier = -0.10
 	}
 	base = {
 		country_civilization_value = 20
 	}
-	
+
 	minimum_electable_age = 40
-	
+
 	can_deify_ruler = no
-	
+
 	election_delay = 10
 	ruler_term = 5
-	
+
 	color = hsv { 0.6  0.75  0.6 }
 }
 
@@ -71,29 +71,29 @@ democratic_republic = { #populist/stepping stone party
 	civic_ideas = 1
 	oratory_ideas = 1
 	type = republic
-	
+
 	bonus = {
 		global_freemen_happyness = happiness_large_svalue
 	}
 	base = {
 		country_civilization_value = 15
 	}
-	
+
 	minimum_electable_age = 25
 
 	election_delay = 10
 	ruler_term = 5
-	
+
 	color = hsv { 0.6  0.85  0.9 }
-	
+
 	can_deify_ruler = no
 }
 
 plutocratic_republic = { #mercantile party
 	civic_ideas = 2
-	religious_ideas = 1			
+	religious_ideas = 1
 	type = republic
-	
+
 	bonus = {
 		global_commerce_modifier = 0.1
 		global_capital_trade_routes = 1
@@ -101,14 +101,14 @@ plutocratic_republic = { #mercantile party
 	base = {
 		country_civilization_value = 20
 	}
-	
+
 	minimum_electable_age = 35
 
 	election_delay = 10
 	ruler_term = 5
-	
+
 	can_deify_ruler = no
-	
+
 	color = hsv { 0.6  0.9  0.8 }
 }
 
@@ -118,7 +118,7 @@ athenian_republic = { # Mission Reward
 	oratory_ideas = 1
 	religious_ideas = 1
 	type = republic
-	
+
 	bonus = {
 		enact_law_cost_modifier = -0.25
 		global_citizen_happyness = happiness_huge_svalue
@@ -126,12 +126,12 @@ athenian_republic = { # Mission Reward
 	base = {
 		country_civilization_value = 25
 	}
-	
+
 	minimum_electable_age = 25
 
 	election_delay = 10
 	ruler_term = 5
-	
+
 	color = hsv { 0.62  0.87  0.88 }
 }
 
@@ -142,7 +142,7 @@ dictatorship = {
 	religious_ideas = 1
 	type = monarchy
 	revolt = no
-	
+
 	bonus = {
 		global_freemen_happyness = happiness_huge_svalue
 		global_citizen_output = output_huge_svalue
@@ -150,11 +150,11 @@ dictatorship = {
 	base = {
 		country_civilization_value = 20
 	}
-	
+
 	ruler_consort_benefits = yes
-	
+
 	election_delay = 0
-	
+
 	color = hsv { 0  0.8  0.5 }
 }
 
@@ -177,7 +177,7 @@ grand_republic = { #Empire form for Republics
 	minimum_electable_age = 30
 	election_delay = 5
 	ruler_term = 5
-	
+
 	has_co_ruler = yes
 
 	color = hsv { 0.63  0.87  0.88 }
@@ -191,21 +191,21 @@ despotic_monarchy = { #stepping stone/starting type
 	civic_ideas = 1
 	religious_ideas = 1
 	type = monarchy
-	
+
 	bonus = {
 		global_slaves_output = output_large_svalue
 	}
 	base = {
 		country_civilization_value = 15
 	}
-	
+
 	election_delay = 0
-	
+
 	use_regnal_numbers = yes
-	
-	
+
+
 	ruler_consort_benefits = yes
-	
+
 	color = hsv { 0  0.85  0.4 }
 }
 
@@ -213,7 +213,7 @@ aristocratic_monarchy = {
 	military_ideas = 1
 	oratory_ideas = 2
 	type = monarchy
-	
+
 	bonus = {
 		monthly_tyranny = -0.05
 		global_citizen_happyness = happiness_large_svalue
@@ -223,11 +223,11 @@ aristocratic_monarchy = {
 		country_civilization_value = 20
 	}
 	election_delay = 0
-	
+
 	use_regnal_numbers = yes
-	
+
 	ruler_consort_benefits = yes
-	
+
 	color = hsv { 0  0.8  0.3 }
 }
 
@@ -235,7 +235,7 @@ stratocratic_monarchy = {
 	military_ideas = 2
 	oratory_ideas = 1
 	type = monarchy
-	
+
 	bonus = {
 		global_freemen_output = output_large_svalue
 		character_loyalty = 5
@@ -244,19 +244,19 @@ stratocratic_monarchy = {
 		country_civilization_value = 20
 		global_freemen_city_desired_pop_ratio = 0.1
 	}
-	
+
 	election_delay = 0
 	use_regnal_numbers = yes
-	
+
 	ruler_consort_benefits = yes
-	
+
 	color = hsv { 0  0.75  0.2 }
 }
 
 theocratic_monarchy = {
 	oratory_ideas = 1
 	religious_ideas = 2
-	
+
 	bonus = {
 		omen_power = 0.15
 		happiness_for_same_religion_modifier = 0.1
@@ -264,18 +264,18 @@ theocratic_monarchy = {
 	base = {
 		country_civilization_value = 20
 	}
-	
+
 	use_regnal_numbers = yes
-	
+
 	ruler_consort_benefits = yes
-	
+
 	color = hsv { 0  0.7  0.1 }
 }
 
 plutocratic_monarchy = {
 	religious_ideas = 1
 	civic_ideas = 2
-	
+
 	bonus = {
 		global_commerce_modifier = 0.1
 		global_capital_trade_routes = 1
@@ -283,11 +283,11 @@ plutocratic_monarchy = {
 	base = {
 		country_civilization_value = 20
 	}
-	
+
 	use_regnal_numbers = yes
-	
+
 	ruler_consort_benefits = yes
-	
+
 	color = hsv { 0  0.9  0.5 }
 }
 
@@ -298,7 +298,7 @@ imperium = {
 	religious_ideas = 1
 	revolt = no
 	type = monarchy
-	
+
 	bonus = {
 		global_freemen_output = output_huge_svalue
 		global_slaves_output = output_huge_svalue
@@ -309,12 +309,12 @@ imperium = {
 	}
 
 	use_regnal_numbers = yes
-	
-	
+
+
 	election_delay = 0
 	ruler_consort_benefits = yes
-	
-	
+
+
 	color = hsv { 0.9  0.8  0.1 }
 }
 
@@ -325,7 +325,7 @@ imperial_cult = {
 	religious_ideas = 1
 	type = monarchy
 	revolt = no
-		
+
 	bonus = {
 		global_slaves_output = output_huge_svalue
 		global_freemen_output = output_huge_svalue
@@ -336,11 +336,11 @@ imperial_cult = {
 	}
 
 	use_regnal_numbers = yes
-	
-	
+
+
 	election_delay = 0
 	ruler_consort_benefits = yes
-	
+
 	color = hsv { 0.9  0.7  0.12 }
 }
 
@@ -350,9 +350,9 @@ imperial_cult = {
 tribal_chiefdom = {
 	military_ideas = 2
 	type = tribal
-	
+
 	allows_migration = yes
-	
+
 	bonus = {
 		global_tribesmen_output = output_huge_svalue
 		levy_size_multiplier = 0.02
@@ -360,13 +360,13 @@ tribal_chiefdom = {
 	base = {
 		global_tribesmen_happyness = happiness_large_svalue
 		levy_size_multiplier = 0.02
-		global_manpower_modifier = 0.15 
+		global_manpower_modifier = 0.15
 		manpower_recovery_speed = 0.2
 		land_morale_recovery = 0.05
 	}
 
 	election_delay = 0
-	
+
 	color = hsv { 0.333  0.8  0.2 }
 }
 
@@ -374,20 +374,20 @@ tribal_kingdom = {
 	military_ideas = 1
 	oratory_ideas = 1
 	type = tribal
-	
+
 	bonus = {
 		global_tribesmen_happyness = happiness_huge_svalue
 	}
 	base = {
 		country_civilization_value = 5
 		levy_size_multiplier = 0.03
-		global_manpower_modifier = 0.15   
+		global_manpower_modifier = 0.15
 		manpower_recovery_speed = 0.2
 		land_morale_recovery = 0.05
 	}
 
 	election_delay = 0
-	
+
 	color = hsv { 0.333  0.85  0.35 }
 }
 
@@ -396,7 +396,7 @@ tribal_federation = {
 	civic_ideas = 1
 	military_ideas = 1
 	type = tribal
-	
+
 	bonus = {
 		global_tribesmen_output = 0.2
 		global_pop_promotion_speed_modifier = 0.25
@@ -405,13 +405,13 @@ tribal_federation = {
 	base = {
 		country_civilization_value = 12
 		levy_size_multiplier = 0.04
-		global_manpower_modifier = 0.15   
+		global_manpower_modifier = 0.15
 		manpower_recovery_speed = 0.2
 		land_morale_recovery = 0.05
 		army_maintenance_cost = -0.15
 	}
 
 	election_delay = 0
-	
+
 	color = hsv { 0.333  0.7  0.5 }
 }
