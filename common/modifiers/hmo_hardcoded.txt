@@ -139,7 +139,7 @@ nation_rank_0 = {
 	army_weight_modifier = -0.25
 	max_mercenary_stacks = 1
 	agressive_expansion_impact = -0.15
-	levy_size_multiplier = 0.1
+	levy_size_multiplier = 0.12
 }
 
 nation_rank_1 = {
@@ -168,7 +168,7 @@ nation_rank_2 = {
 	max_mercenary_stacks = 1
 	num_of_clan_chiefs = 1
 	agressive_expansion_impact = -0.1
-	levy_size_multiplier = 0.1
+	levy_size_multiplier = 0.075
 }
 
 nation_rank_3 = {
@@ -188,7 +188,7 @@ nation_rank_3 = {
 	agressive_expansion_impact = 0.05
 	agressive_expansion_monthly_change = 0.025
 	recruit_mercenary_cost_modifier = 1
-	levy_size_multiplier = 0.1
+	levy_size_multiplier = 0.075
 }
 
 nation_rank_4 = {
@@ -209,7 +209,7 @@ nation_rank_4 = {
 	agressive_expansion_impact = 0.15
 	agressive_expansion_monthly_change = 0.05
 	recruit_mercenary_cost_modifier = 2
-	levy_size_multiplier = 0.1
+	levy_size_multiplier = 0.075
 }
 
 nation_rank_5 = {
@@ -230,7 +230,7 @@ nation_rank_5 = {
 	agressive_expansion_impact = 0.3
 	agressive_expansion_monthly_change = 0.075
 	recruit_mercenary_cost_modifier = 3
-	levy_size_multiplier = 0.1
+	levy_size_multiplier = 0.075
 }
 
 is_tribe = {
