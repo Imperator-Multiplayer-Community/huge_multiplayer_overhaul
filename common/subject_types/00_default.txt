@@ -1,16 +1,16 @@
 ﻿vassal_tribe = { #Tribal Vassal
 	subject_pays = subject_pays_vassal
-	
+
 	joins_overlord_in_war = no
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = no
 	costs_diplomatic_slot = no
 	subject_can_cancel = yes
-	
+
 	has_limited_diplomacy = yes
-	
+
 	overlord_modifier = {
 		global_tribesmen_happyness = happiness_small_svalue
 	}
@@ -18,7 +18,7 @@
 		country_civilization_value = 10
 		global_monthly_civilization = 0.01
 	}
-	
+
 	allow = {
 		is_tribal = yes
 		scope:future_overlord = {
@@ -33,7 +33,7 @@
 			}
 		}
 	}
-	
+
 	on_enable = {
 		add_opinion = {
 			modifier = is_client_protectorate_status
@@ -43,7 +43,7 @@
 			add_opinion = {
 				modifier = is_overlord_protectorate_status
 				target = root
-			} 
+			}
 		}
 	}
 	on_disable = {
@@ -67,7 +67,7 @@
 		}
 	}
 	#on_monthly = { }
-	
+
 	diplo_chance = {
 		base = {
 			offset = -90
@@ -95,17 +95,17 @@
 
 tributary = {
 	subject_pays = subject_pays_tributary
-	
+
 	joins_overlord_in_war = no
-	
+
 	protected_when_attacked = yes
 	costs_diplomatic_slot = no
 	subject_can_cancel = yes
 	has_limited_diplomacy = yes
-	
+
 	# overlord_modifier = {}
 	# subject_modifier = {}
-	
+
 	allow = {
 		scope:future_overlord = {
 			is_subject = no
@@ -121,11 +121,11 @@ tributary = {
 			num_of_cities < 20
 		}
 	}
-	
+
 	# on_enable = {}
 	# on_disable = {}
 	# on_monthly = {}
-	
+
 	diplo_chance = {
 		base = {
 			offset = -80
@@ -158,24 +158,24 @@ feudatory = { #Latin Allies
 	subject_pays = subject_pays_feudatory
 
 	joins_overlord_in_war = yes
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = yes
 	costs_diplomatic_slot = no
 	subject_can_cancel = no
-	
+
 	has_limited_diplomacy = yes
-	
-	
+
+
 	overlord_modifier = {
-		
+
 	}
 	subject_modifier = {
 		global_citizen_happyness = negative_happiness_small_svalue
 		army_maintenance_cost = -0.1
 	}
-	
+
 	allow = {
 		num_of_cities <= 10
 		scope:future_overlord = {
@@ -185,7 +185,7 @@ feudatory = { #Latin Allies
 			this.culture_group = root.culture_group
 		}
 	}
-	
+
 	# on_enable = {}
 	 on_disable = {
 	 	root = {
@@ -228,7 +228,7 @@ feudatory = { #Latin Allies
 	 	}
 	 }
 	# on_monthly = {}
-	
+
 	diplo_chance = {
 		base = {
 			offset = -100
@@ -259,25 +259,25 @@ feudatory = { #Latin Allies
 
 satrapy = {
 	subject_pays = subject_pays_satrapy
-	
+
 	joins_overlord_in_war = yes
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = yes
 	costs_diplomatic_slot = yes
 	subject_can_cancel = no
-	
+
 	has_limited_diplomacy = yes
-	
-	
+
+
 	overlord_modifier = {
 		monthly_legitimacy = 0.02
 	}
 	subject_modifier = {
-		
+
 	}
-	
+
 	allow = {
 		always = no
 		#is_tradition_tree_allowed = persian_philosophy #subjected state is Persian.
@@ -289,11 +289,11 @@ satrapy = {
 		#	is_monarchy = yes
 		#}
 	}
-	
+
 	# on_enable = {}
 	# on_disable = {}
 	# on_monthly = {}
-	
+
 	diplo_chance = {
 		base = {
 			offset = -130
@@ -324,26 +324,26 @@ satrapy = {
 
 client_state = {
 	subject_pays = subject_client_state_pays
-	
+
 	joins_overlord_in_war = yes
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = yes
 	costs_diplomatic_slot = yes
 	subject_can_cancel = no
-	
+
 	has_limited_diplomacy = yes
 	only_trade_with_overlord=  yes
-	
+
 	overlord_modifier = {
-		
+
 	}
 	subject_modifier = {
 		ruler_popularity_gain = -0.05
 		global_commerce_modifier = 0.1
 	}
-	
+
 	allow = {
 		num_of_cities < 150
 		is_tribal = no
@@ -352,7 +352,7 @@ client_state = {
 			is_tribal = no
 		}
 	}
-	
+
 	# on_enable = {}
 	on_disable = {
 		hidden_effect = {
@@ -365,7 +365,7 @@ client_state = {
 		}
 	}
 	# on_monthly = {}
-	
+
 	diplo_chance = {
 		base = {
 			offset = -110
@@ -395,19 +395,19 @@ client_state = {
 }
 
 subject_colony = {
-	subject_pays = subject_colony_pays 
-	
+	subject_pays = subject_colony_pays
+
 	joins_overlord_in_war = no
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = no
 	costs_diplomatic_slot = no
 	subject_can_cancel = no
-	
+
 	has_limited_diplomacy = yes
 	only_trade_with_overlord = no
-	
+
 	overlord_modifier = {
 		global_commerce_modifier = 0.05
 	}
@@ -415,11 +415,11 @@ subject_colony = {
 		loyalty_to_overlord = 25
 		global_commerce_modifier = 0.1
 	}
-	
+
 	allow = {
 		always = no
 	}
-	
+
 	# on_enable = {}
 	on_disable = {
 		if = {
@@ -430,7 +430,7 @@ subject_colony = {
 	 	}
 	}
 	# on_monthly = {}
-	
+
 	diplo_chance = {
 		base = {
 			offset = -130
@@ -459,20 +459,20 @@ subject_colony = {
 	}
 }
 
-subject_mercenary_city_state = { 
+subject_mercenary_city_state = {
 	subject_pays = subject_merc_city_state
-	
+
 	joins_overlord_in_war = yes
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = yes
 	costs_diplomatic_slot = yes
 	subject_can_cancel = no
-	
+
 	has_limited_diplomacy = yes
 	only_trade_with_overlord = yes
-	
+
 	overlord_modifier = {
 		max_mercenary_stacks = 0.5  # Was mercenary_land_maintenance_cost = -0.03
 	}
@@ -480,17 +480,17 @@ subject_mercenary_city_state = {
 		global_manpower = 0.35 # Was 0.125
 		army_maintenance_cost = -0.2
 	}
-	
+
 	allow = {
 		always = no
 	}
-	
+
 	# on_enable = {}
 	on_disable = {
-		
+
 	}
 	# on_monthly = {}
-	
+
 	diplo_chance = {
 		base = {
 			offset = -130
@@ -519,20 +519,20 @@ subject_mercenary_city_state = {
 	}
 }
 
-subject_league_city_state = { 
+subject_league_city_state = {
 	subject_pays = subject_merc_city_state
-	
+
 	joins_overlord_in_war = no
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = no
 	costs_diplomatic_slot = no
 	subject_can_cancel = no
-	
+
 	has_limited_diplomacy = yes
 	only_trade_with_overlord = yes
-	
+
 	overlord_modifier = {
 		global_capital_trade_routes = 0.5 #was global_import_commerce_modifier = 0.05
 	}
@@ -543,17 +543,17 @@ subject_league_city_state = {
 		global_population_growth = 0.1
 		diplomatic_range_modifier = -0.9
 	}
-	
+
 	allow = {
 		always = no
 	}
-	
+
 	# on_enable = {}
 	on_disable = {
-		
+
 	}
 	# on_monthly = {}
-	
+
 	diplo_chance = {
 		base = {
 			offset = -130
@@ -584,18 +584,18 @@ subject_league_city_state = {
 
 player_client_state = {
 	subject_pays = subject_player_client_state_pays
-	
+
 	joins_overlord_in_war = yes
-	
+
 	protected_when_attacked = yes
 	has_overlords_ruler = no
 	can_be_integrated = no
 	costs_diplomatic_slot = yes
 	subject_can_cancel = yes
-	
+
 	has_limited_diplomacy = no
 	only_trade_with_overlord = no
-	
+
 	overlord_modifier = {
 		stability_monthly_change = -0.02
 	}
@@ -615,13 +615,13 @@ player_client_state = {
 		monthly_wage_modifier = 0.040
 		build_cost = -0.05
 		max_mercenary_stacks = 2
-		levy_size_multiplier = -0.09 # should result in .07 multiplier, major power is .07
+		levy_size_multiplier = -0.02 # should result in .07 multiplier, major power is .07
 	}
-	
+
 	allow = { # dont show this as an option. only through character interactions
 		always = no
 	}
-	
+
 	on_enable = {
 		# add military access to all other subjects
 		# this just crashes the game. not sure add_military_access is functional
@@ -641,7 +641,7 @@ player_client_state = {
 			add_opinion = {
 				modifier = is_player_client_overlord_status
 				target = root
-			} 
+			}
 		}
 	}
 	on_disable = {
@@ -660,7 +660,7 @@ player_client_state = {
 				target = root
 			}
 		}
-			
+
 	}
 	on_monthly = {
 		# break if too many cities
@@ -679,7 +679,7 @@ player_client_state = {
 			}
 		}
 	}
-	
+
 	diplo_chance = {
 		base = {
 			offset = 1000

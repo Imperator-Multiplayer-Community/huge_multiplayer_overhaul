@@ -1,5 +1,5 @@
 ﻿democracy_reform_modifier = {
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	global_monthly_state_loyalty = 0.05
 }
 noble_rebellion = {
@@ -9,5 +9,5 @@ noble_rebellion = {
 
 supreme_court = {
 	global_freemen_happyness = 0.05
-	
+
 }
