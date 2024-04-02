@@ -31,6 +31,7 @@
 				#############################################
 				name = "social_change"
 				duration = 1460
+				mode = add
 			}
 			add_political_influence = -25
 			add_4_free_province_investments = yes			#############################################
@@ -83,6 +84,7 @@
 				#############################################
 				name = "social_change"
 				duration = 1460
+				mode = add
 			}
 			add_country_modifier = {
 				#############################################
@@ -148,6 +150,7 @@
 				#############################################
 				name = "social_change"
 				duration = 1460
+				mode = add
 			}
 			add_political_influence = -25
 			add_tyranny = -30			#############################################
@@ -184,6 +187,7 @@
 				#############################################
 				name = "social_change"
 				duration = 1460
+				mode = add
 			}
 			add_political_influence = -25
 			capital_scope = {

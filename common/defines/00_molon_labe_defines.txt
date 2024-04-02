@@ -49,7 +49,7 @@ NPolitics = {
 NDiplomacy = {
 	DEFAULT_WARGOAL_TICKINGWARSCORE_BONUS = 0.8
 	DEFAULT_WARGOAL_BATTLESCORE_BONUS = 8	#Was 3
-	WARSCORE_MAX_FROM_BATTLES = 80	#Was 40	
+	WARSCORE_MAX_FROM_BATTLES = 80	#Was 40
 	WARGOAL_MAX_BONUS = 50	#Was 25
 	TRUCE_YEARS = 6	#Was 3
 	SCALED_TRUCE_YEARS = 10	#Was 5
@@ -69,7 +69,7 @@ NProvince = {
 }
 
 NLevy = {
-	MIN_SIZE = 2	# minimum number of cohorts raised as levy
+	MIN_SIZE = 4	# minimum number of cohorts raised as levy
 	DISBAND_MILITARY_EXP_MULT = 0	# when disbanding a levy military experience will be added to the country
 	WAR_EXHAUSTION_ON_RAISE = 0	# set to 0 to avoid exploiting
 }

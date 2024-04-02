@@ -3,7 +3,7 @@ dharana_modifier = {
 	global_pop_conversion_speed_modifier = 0.15
 	happiness_for_same_religion_modifier = 0.05
 	change_pantheon_cost_modifier = -0.2
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	character_loyalty = -3
 	stability_monthly_change = -0.12
 }
@@ -12,7 +12,7 @@ dhyana_modifier = {
 	global_pop_conversion_speed_modifier = 0.25
 	happiness_for_same_religion_modifier = 0.05
 	change_pantheon_cost_modifier = -0.25
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	character_loyalty = -3
 	stability_monthly_change = -0.12
 }
@@ -21,7 +21,7 @@ samadhi_modifier = {
 	global_pop_conversion_speed_modifier = 0.35
 	happiness_for_same_religion_modifier = 0.05
 	change_pantheon_cost_modifier = -0.3
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	character_loyalty = -3
 	stability_monthly_change = -0.12
 }

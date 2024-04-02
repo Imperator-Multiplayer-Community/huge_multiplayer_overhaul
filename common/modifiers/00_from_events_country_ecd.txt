@@ -162,7 +162,7 @@ reforming_bureaucracy = {
 	monthly_corruption = -0.15
 	monthly_wage_modifier = 0.05
 	stability_monthly_change = -0.15
-	civil_war_threshold = -0.125
+	civil_war_threshold = -0.05
 	global_monthly_state_loyalty = 0.05
 	monthly_tyranny = 0.03
 	price_bring_to_trial_cost_modifier = -0.25
@@ -172,7 +172,7 @@ purging_bureaucrats = {
 	monthly_corruption = -0.3
 	monthly_wage_modifier = 0.05
 	stability_monthly_change = -0.3
-	civil_war_threshold = -0.2
+	civil_war_threshold = -0.05
 	global_monthly_state_loyalty = 0.1
 	monthly_tyranny = 0.06
 	price_bring_to_trial_cost_modifier = -0.5
@@ -220,7 +220,7 @@ extended_trial_rights = {
 }
 
 social_change = {
-	civil_war_threshold = -0.05
+	civil_war_threshold = -0.025
 	character_loyalty = -4
 	stability_monthly_change = -0.1
 	happiness_for_same_culture_modifier = -0.05
@@ -246,7 +246,7 @@ beacon_of_civ = {
 }
 
 new_admin_team = {
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	character_loyalty = -3
 	stability_monthly_change = -0.2
 	research_points_modifier = -0.1
@@ -255,7 +255,7 @@ new_admin_team = {
 }
 
 granted_autonomy = {
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	character_loyalty = -3
 	stability_monthly_change = -0.2
 	global_commerce_modifier = -0.05
@@ -264,7 +264,7 @@ granted_autonomy = {
 }
 
 barbarian_soldiers = {
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	character_loyalty = -3
 	stability_monthly_change = -0.2
 	discipline = -0.03
@@ -338,7 +338,7 @@ social_stability = {
 }
 
 civil_war_risk = {
-	civil_war_threshold = -0.1
+	civil_war_threshold = -0.025
 	character_loyalty = -3
 }
 
@@ -357,7 +357,7 @@ indian_social_stability = {
 }
 
 indian_civil_war_risk = {
-	civil_war_threshold = -0.15
+	civil_war_threshold = -0.025
 	character_loyalty = -5
 	happiness_for_same_culture_modifier = -0.05
 }
@@ -409,5 +409,5 @@ qat_consumption = {
 
 tribal_reform_law_modifier = {
 	enact_law_cost_modifier = -0.25
-	civil_war_threshold = -0.05
+	civil_war_threshold = -0.025
 }
