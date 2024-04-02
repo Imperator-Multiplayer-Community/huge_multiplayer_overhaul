@@ -1,8 +1,8 @@
 ﻿country_decisions = {
-	
+
 	# Found Aryan Spy Complex
 	indian_espionage_bureau = {
-	
+
 		potential = {
 			num_of_cities >= 1
 			NOT = {
@@ -13,14 +13,14 @@
 					#	is_integrated = yes
 					#	country_culture_pop_count >= percent_size_culture_group_comparison
 					#	this.culture.culture_group = culture_group:aryan
-					#}			
+					#}
 			}
 		}
 		allow = {
 			treasury >= 100
 			military_experience >= 80
 		}
-		
+
 		effect = {
 			set_variable = founded_espionage_bureau
 			add_treasury = -100
@@ -29,16 +29,16 @@
 				name = kautilyas_espionage_programme
 				duration = -1
 			}
-			
+
 			capital_scope = {
 				add_province_modifier = {
 					name = espionage_bureau
-					duration = -1					
+					duration = -1
 				}
 			}
-			add_innovation = 4	
+			add_innovation = 1
 		}
-		
+
 		ai_will_do = {
 			base = 100
 		}

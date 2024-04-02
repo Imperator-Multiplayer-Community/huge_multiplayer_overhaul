@@ -1,5 +1,5 @@
 ﻿culture_decisions = {
-	#Patronise Greek Literature and the Arts:	
+	#Patronise Greek Literature and the Arts:
 	patronize_greek_literature_and_arts = {
 		potential = {
 			NOT = {
@@ -45,7 +45,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_greek_culture_literature"
 				duration = -1
@@ -148,7 +147,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_latin_culture_literature"
 				duration = -1
@@ -254,7 +252,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_celtic_culture_literature"
 				duration = -1
@@ -360,7 +357,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_indian_culture_literature"
 				duration = -1
@@ -464,7 +460,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_iberian_culture_literature"
 				duration = -1
@@ -570,7 +565,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_haemic_culture_literature"
 				duration = -1
@@ -672,7 +666,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_punic_culture_literature"
 				duration = -1
@@ -776,7 +769,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_numidian_culture_literature"
 				duration = 1825
@@ -878,7 +870,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_egyptian_culture_literature"
 				duration = 1825
@@ -980,7 +971,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_mesopotamian_culture_literature"
 				duration = 1825
@@ -1082,7 +1072,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_persian_culture_literature"
 				duration = 1825
@@ -1188,7 +1177,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_nubian_culture_literature"
 				duration = 1825
@@ -1290,7 +1278,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_arabian_culture_literature"
 				duration = 1825
@@ -1392,7 +1379,6 @@
 				}
 			}
 			add_political_influence = -30
-			add_innovation = 2
 			add_country_modifier = {
 				name = "impressive_anatolian_culture_literature"
 				duration = 1825

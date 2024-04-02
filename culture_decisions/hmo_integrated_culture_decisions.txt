@@ -43,7 +43,6 @@
 		}
 		effect = {
 			add_political_influence = -25
-			add_innovation = 1
 			add_country_modifier = {
 				name = "beacon_of_civ"
 				duration = -1
@@ -117,52 +116,6 @@
 			}
 		}
 	}
-	#	patronize_literature_and_arts = {
-	#		potential = {
-	#			NOT = { primary_culture = scope:target_culture.culture }
-	#			scope:target_culture = {
-	#				OR = {
-	#					has_pop_type_right = citizen
-	#					has_pop_type_right = nobles
-	#				}
-	#			}
-	#		}
-	#		allow = {
-	#			NOT = {
-	#				scope:target_culture = {
-	#					has_country_culture_modifier = patronizing_literature
-	#				}
-	#			}
-	#			NOT = {
-	#				has_country_modifier = impressive_culture_literature
-	#			}
-	#		}
-	#		effect = {
-	#			culture_state_loyalty_effect = yes
-	#			scope:target_culture = {
-	#				add_country_culture_modifier = {
-	#					name = "patronizing_literature"
-	#					duration = -1
-	#				}
-	#			}
-	#			add_political_influence = -30
-	#			add_innovation = 2
-	#			add_country_modifier = {
-	#				name = "impressive_culture_literature"
-	#				duration = 1825
-	#			}
-	#		}
-	#		ai_will_do = {
-	#			factor = 1
-	#			modifier = {
-	#				factor = 0
-	#				culture_pops_in_country = {
-	#					target = scope:target_culture
-	#					value <= 10
-	#				}
-	#			}
-	#		}
-	#	}
 	city_self_rule = {
 		potential = {
 			NOT = {
