@@ -1,6 +1,6 @@
 ﻿l_english:
 
- #North Afican 
+ #North Afican
  north_african_philosophy:0 "North African Primary"
  north_african_philosophy_desc:0 ""
  north_african_philosophy_2_:0 "North African Integrated"
@@ -137,7 +137,7 @@
  thracian_path_12_desc:0 "Nobles played a very important role in the highly militarised Dacian society. Only Dacian aristocrats had the right to cover their heads and wore felt Phrygian caps. In battle, they might wear a bronze Phrygian helmet, iron scale armour and an oval wooden shield."
  thracian_path_13:0 "Offence Is the Best Defence"
  thracian_path_13_desc:0 "Many of our warriors do not even fight with shields, preferring instead to focus all their energy on relentlessly attacking the enemy."
- 
+
  ###New Afro-Arabian Traditions###
  afro_arabian_philosophy:0 "Afro Arabian Primary"
  afro_arabian_philosophy_desc:0 "."
@@ -174,7 +174,7 @@
  nubian_path_14:0 "Kushitic Longbow Nubian Tradition"
  nubian_path_14_desc:0 "So from the battlements as though on the walls of a citadel, the archers kept up with a continual discharge of well aimed shafts, so dense that the Persians had the sensation of a cloud descending upon them, especially when the Kushites made their enemies' eyes the targets. So unerring was their aim that those who they pierced with their shafts rushed about wildly in the throngs with the arrows projecting from their eyes like double flutes."
 
- 
+
  #Arabian Tree
  arabian_path_1:0 "Arabia Felix"
  arabian_path_1_desc:0 "Commonly misunderstood to mean 'happy', the name 'Felix' stressed the fertility of South Arabia. The name was given by Greeks and Romans because of the area’s pleasant climate and great wealth in agricultural products, incense and spices."
@@ -193,7 +193,7 @@
  arabian_path_8:0 "Riches of the Souq"
  arabian_path_8_desc:0 "The markets and bazaars of the east offered anything that money could buy... for a price."
  arabian_path_9:0 "Death by 1,000 Scorpion Stings"
- arabian_path_9_desc:0 "If the sun does not kill you and the heat does not kill you and hunger does not kill you and thirst does not kill you and hyenas do not kill you and scrorpions do not kill you... then we surely will." 
+ arabian_path_9_desc:0 "If the sun does not kill you and the heat does not kill you and hunger does not kill you and thirst does not kill you and hyenas do not kill you and scrorpions do not kill you... then we surely will."
  arabian_path_10:0 "The Most Complete Beast"
  arabian_path_10_desc:0 "One of the most common of the many Arabic names for the camel, 'jamal', is derived from the concept of 'completeness', indicating the great esteem in which the Arabs held this remarkable beast."
  arabian_path_11:0 "Sailing the Seven Seas"
@@ -206,8 +206,8 @@
  arabian_path_14_desc:0 "Eventually they will die in this brutal land, succumbing to the final prickings of the sun, the vultures and the spear."
  arabian_path_15:0 "Lightning Strikes"
  arabian_path_15_desc:0 "Swiftly and lightly we gallop across the landscape."
- 
- 
+
+
  ###New Mesopotamian Traditions###
  mesopotamian_philosophy:0 "Babylonian Primary"
  mesopotamian_philosophy_desc:0 ""
@@ -245,7 +245,7 @@
  babylonian_path_14:0 "Legacy of Gilgamesh"
  babylonian_path_14_desc:0 "Only the gods dwell forever in sunlight. As for man, his days are numbered, whatever he may do, it is but wind."
 
- 
+
  #Assyrian Tree
  assyrian_path_1:0 "SKIRMISHER SUPER UNIT: Armoured Archers"
  assyrian_path_1_desc:0 "Since they were also skilled at melee combat, Assyrian archers were known to wear coats of mail armour and conical helmets."
@@ -278,12 +278,12 @@
  assyrian_path_15:0 "The Land Between the Rivers"
  assyrian_path_15_desc:0 "In strife and conflict I besieged and conquered the city. I felled 3,000 of their fighting men with the sword. I captured many troops alive. I cut off of some their arms and hands; I cut off others' noses, ears and extremities. I gouged out the eyes of many troops. I made one pile of the living and one of heads. I hung their heads on trees around the city."
 
- 
+
  ###New Anatolian Traditions###
  anatolian_philosophy:0 "Anatolian Primary"
  anatolian_philosophy_desc:0 "Describe"
  anatolian_philosophy_2:0 "Anatolian Integrated"
- anatolian_philosophy_2_desc:0 "Describe" 
+ anatolian_philosophy_2_desc:0 "Describe"
 
 
  #Lydo-Cilician Tree
@@ -299,6 +299,8 @@
  lydian_path_5_desc:0 "LI/archer discipline."
  lydian_path_6:0 "Swarming Tactics"
  lydian_path_6_desc:0 "Light ship combat."
+ anatolian_naval_path_1:0 "Swarming Tactics"
+ anatolian_naval_path_1_desc:0 "Light ship combat."
  lydian_path_7:0 "Military Administration"
  lydian_path_7_desc:0 "LI/archer cost."
  lydian_path_8:0 "Esprit de Corps"
@@ -309,6 +311,10 @@
  lydian_path_10_desc:0 "MP recovery, LI."
  lydian_path_11:0 "Lydian Archers"
  lydian_path_11_desc:0 "Archers defence."
+ anatolian_naval_path_2:0 "Masters of the Euxine"
+ anatolian_naval_path_2_desc:0 "Octeres."
+ anatolian_naval_path_3:0 "Lords of the Mediterranean"
+ anatolian_naval_path_3_desc:0 "Pirate mercs."
  lydian_path_12:0 "Masters of the Euxine"
  lydian_path_12_desc:0 "Octeres."
  lydian_path_13:0 "Lords of the Mediterranean"
@@ -348,9 +354,9 @@
  armenian_path_15:0 "Legacy of Mithridates"
  armenian_path_15_desc:0 "The man, the myth, the legend."
 
- 
+
  ###New Persian Traditions###
- 
+
  #Persian Tree
  persian_path_1:0 "Satrapy Administration"
  persian_path_1_desc:0 "The satrap served as viceroy to the king, though with considerable autonomy."
@@ -367,7 +373,7 @@
  persian_path_7:0 "Warriors of Ahura Mazda"
  persian_path_7_desc:0 "The sheer quantity of our troops can overwhelm any pitiful resistance. If our rivals do not bend to our will, they will surely break. The source of all goodness and the reason we fight is the uncreated god Ahura Mazda, worthy of the highest worship."
  persian_path_8:0 "The Immortals"
- persian_path_8_desc:0 "A legendary unit of soldiers known as the Immortals, supposedly named due to the constant size of the unit at 10,000 strong, the Immortals utilised a diverse array of weaponry, and heavy armor, providing a backbone of heavy infantry around which the rest of the army was formed." 
+ persian_path_8_desc:0 "A legendary unit of soldiers known as the Immortals, supposedly named due to the constant size of the unit at 10,000 strong, the Immortals utilised a diverse array of weaponry, and heavy armor, providing a backbone of heavy infantry around which the rest of the army was formed."
  persian_path_9:0 "Royal Line"
  persian_path_9_desc:0 "The Achaemenid line ran, unbroken from Cyrus to the fall of the Empire at the hands of Alexander the Great. Despite the recent subjujation, the glory days of the Persian empire remains strong and within living memory."
  persian_path_10:0 "Titans of Battle"
@@ -382,7 +388,7 @@
  persian_path_14_desc:0 "The huge hosts of the Achaemenid empire instilled the Hellenic civilisations to the west with the utmost fear. The vast territory controlled by his empire, and the willingness of his people to serve, guaranteed a high throughput of soldiers."
 
  #Iranian Tree
- 
+
  iranian_path_1:0 "SKIRMISHER SUPER UNIT: To Blot Out the Sun"
  iranian_path_1_desc:0 "Praised for their prowess in archery by Herodotus, Achaemenid soldiers made use of the ubiquitous composite bow. In the famous Battle of Thermopylae, the sheer quantity of archers used by the native Persian troops were said to be able to blot out the very sun itself."
  iranian_path_2:0 "Sagartian Lasso"
@@ -414,13 +420,13 @@
  iranian_path_15:0 "Cataphracts"
  iranian_path_15_desc:0 "Many cultures with a history of equine mastery developed usage of heavy cavalry, or cataphracts, as a means of countering small arms. With both horse and rider clad in heavy scale or mail, nothing short of total rout would break the charge of a unit of cataphracts."
 
- 
+
  ###New Steppe Traditions###
  steppe_philosophy:0 "Steppe Primary"
  steppe_philosophy_desc:0 "."
  steppe_philosophy_2:0 "Steppe Integrated"
- steppe_philosophy_2_desc:0 "." 
- 
+ steppe_philosophy_2_desc:0 "."
+
  #Scythian Traditions
 
  scythian_path_1:0 "Quilted Leather Armour"
@@ -451,9 +457,9 @@
  scythian_path_13_desc:0 "."
  scythian_path_14:0 "Formalised Female Warriors"
  scythian_path_14_desc:0 "."
- 
+
  #Bactrian Traditions
- 
+
  bactrian_path_1:0 "HA SUPER UNIT: Buzkashi"
  bactrian_path_1_desc:0 "'Goat pulling' is a sport in which players mounted on horses try to score a goal with the dead body of a goat or calf".
  bactrian_path_2:0 "Archery Drill"
@@ -484,13 +490,13 @@
  bactrian_path_14_desc:0 "."
  bactrian_path_15:0 "Silk Road"
  bactrian_path_15_desc:0 "."
- 
+
  ###New Aryan Traditions###
  aryan_philosophy:0 "Aryan River Primary"
  aryan_philosophy_desc:0 "."
  aryan_philosophy_2:0 "Aryan Plains Military Traditions"
  aryan_philosophy_2_desc:0 "."
- 
+
  #Aryan River Traditions
  aryan_river_path_1:0 "Turbaned Warriors"
  aryan_river_path_1_desc:0 "Indian soldiers were often lightly armoured and were often more likely to wear a tightly wrapped turban than an iron helmet."
@@ -524,7 +530,7 @@
  aryan_river_path_15_desc:0 "Let us incorporate a fleet of galleys into our military establishment to guarantee the security of the Indus River from pirates and invaders."
 
  #Aryan Plains Traditions
- 
+
  aryan_plains_path_1:0 "Sannahyam Karma"
  aryan_plains_path_1_desc:0 "The training of soldiers on their mounts was considered very important and known by the term sannahyam karma. This included various forms of circular movement (valgana), slow movement (nichairgata), jumping (langhana), trotting (vikrama), galloping (kanka) and signal response (neroshtra)."
  aryan_plains_path_2:0 "LI SUPER UNIT: Quilted Cotton Armour"
@@ -824,7 +830,7 @@
  egyptian_path_15:0 "Rank Upon Rank"
  egyptian_path_15_desc:0 "The great hordes of Egypt, as if assembled by the Pharaohs of old, strike fear into the hearts of those who dare oppose us!"
 
- 
+
  # Unlock Military Tradition Requirements
  unlocks_levantine_traditions_tt:0 "Unlocks #Y Levantine#! Tradition Groups"
  unlocks_persian_traditions_tt:0 "Unlocks #Y Iranian#! Tradition Groups"
@@ -834,9 +840,9 @@
  unlocks_celtic_traditions_tt:0 "Unlocks #Y Barbarian#! Tradition Groups"
  unlocks_north_african_traditions_tt:0 "Unlocks #Y North African#! Tradition Groups"
  unlocks_mauryan_traditions_tt:0 "Unlocks #Y Indian#! Tradition Groups"
- 
+
  #Random
- 
+
  tradition_unlock_requirement_celtic_invictus:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('gallic').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('celto_pannonian_group').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('belgae_group').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('britannic').GetName|Y] Culture Group\n    @trigger_no![GetCultureGroup('gaelic').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('proto_european').GetName|Y] Culture Group"
  tradition_unlock_requirement_germanic:0 "$tradition_unlock_requirement_base$\n   @trigger_no![GetCultureGroup('germanic').GetName|Y] Culture Group\n    @trigger_no![GetCultureGroup('baltic').GetName|Y] Culture Group"
  tradition_unlock_requirement_levantine:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('west_levantine').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('north_african').GetName|Y] Culture Group"
@@ -846,10 +852,10 @@
  tradition_unlock_requirement_persian:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('persia').GetName|Y] Culture Group"
  tradition_unlock_requirement_latin:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('latin').GetName|Y] Culture Group"
  tradition_unlock_requirement_numidian:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('numidian').GetName|Y] Culture Group\n   @trigger_no! [GetCulture('carthaginian').GetName|Y] Culture"
- tradition_unlock_requirement_haemic:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('thrace_group').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('dacia_group').GetName|Y] Culture Group\n    @trigger_no![GetCultureGroup('illyrian_group').GetName|Y] Culture Group" 
- tradition_unlock_requirement_punic:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('west_levantine').GetName|Y] Culture Group" 
- tradition_unlock_requirement_egyptian:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('north_african').GetName|Y] Culture Group" 
- tradition_unlock_requirement_east_levantine:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('east_levantine').GetName|Y] Culture Group"  
+ tradition_unlock_requirement_haemic:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('thrace_group').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('dacia_group').GetName|Y] Culture Group\n    @trigger_no![GetCultureGroup('illyrian_group').GetName|Y] Culture Group"
+ tradition_unlock_requirement_punic:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('west_levantine').GetName|Y] Culture Group"
+ tradition_unlock_requirement_egyptian:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('north_african').GetName|Y] Culture Group"
+ tradition_unlock_requirement_east_levantine:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('east_levantine').GetName|Y] Culture Group"
  tradition_unlock_requirement_persian:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('persia').GetName|Y] Culture Group"
  tradition_unlock_requirement_nubian:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('meroitic_group').GetName|Y] Culture Group\n   @trigger_no! [GetCultureGroup('aksumite_group').GetName|Y] Culture Group"
  tradition_unlock_requirement_south_levantine:0 "$tradition_unlock_requirement_base$\n   @trigger_no! [GetCultureGroup('south_levantine').GetName|Y] Culture Group"
@@ -880,7 +886,7 @@
  tradition_unlock_requirement_warelephants.2:0 "$tradition_unlock_requirement_base$\n    @trigger_no! [GetCultureGroup('indian').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('aryan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('numidian').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('west_levantine').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('fezzani').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('tibetan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('meroitic_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('nilotic_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('north_african').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('pracyan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('celt_iberia').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('iberia').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('aksumite_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('south_levantine').GetName|Y] Culture Group\n"
  tradition_unlock_requirement_heavy_infantry.1:0 "$tradition_unlock_requirement_base$\n    @trigger_no! [GetCultureGroup('north_african').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('latin').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('hellenic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('tibetan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('pracyan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('gallic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('celto_pannonian_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('belgae_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('germanic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('gaelic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('proto_european').GetName|Y] Culture Group\n"
  tradition_unlock_requirement_heavy_infantry.2:0 "$tradition_unlock_requirement_base$\n    @trigger_no! [GetCultureGroup('north_african').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('latin').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('hellenic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('tibetan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('pracyan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('gallic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('celto_pannonian_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('belgae_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('germanic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('gaelic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('proto_european').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('aksumite_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('south_levantine').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('persia').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('thrace_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('dacia_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('illyrian_group').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('aryan').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('numidian').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('west_levantine').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('east_levantine').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('indian').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('baltic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('britannic').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('anatolian').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('celt_iberia').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('iberia').GetName|Y] Culture Group\n    @trigger_no! [GetCultureGroup('meroitic_group').GetName|Y] Culture Group\n"
- 
+
  tradition_unlock_requirement_cultural_decision:0 "We have studied their ways of war by enacting the corresponding cultural decision."
 
  light_cavalry_farmland_combat_bonus:0 "Light Cavalry Farmland Combat Bonus"
@@ -965,7 +971,7 @@
  heavy_infantry_path_6:0 "Unit Generic Tradition"
  heavy_infantry_path_6_desc:0 "Here your description"
  heavy_infantry_path_7:0 "Unit Generic Tradition"
- heavy_infantry_path_7_desc:0 "Here your description" 
+ heavy_infantry_path_7_desc:0 "Here your description"
 
 ###New Horse Archers Traditions###
  horse_archers_traditions:0 "Horse Archers"
@@ -985,7 +991,7 @@
  horse_archers_path_6:0 "Unit Generic Tradition"
  horse_archers_path_6_desc:0 "Here your description"
  horse_archers_path_7:0 "Unit Generic Tradition"
- horse_archers_path_7_desc:0 "Here your description" 
+ horse_archers_path_7_desc:0 "Here your description"
 
  ###New Light Cavalry Traditions###
  light_cavalry_traditions:0 "Light Cavalry"
@@ -1005,7 +1011,7 @@
  light_cavalry_path_6:0 "Unit Generic Tradition"
  light_cavalry_path_6_desc:0 "Here your description"
  light_cavalry_path_7:0 "Unit Generic Tradition"
- light_cavalry_path_7_desc:0 "Here your description" 
+ light_cavalry_path_7_desc:0 "Here your description"
 
 ###New Light Infantry Traditions###
  light_infantry_traditions:0 "Light Infantry"
@@ -1025,7 +1031,7 @@
  light_infantry_path_6:0 "Unit Generic Tradition"
  light_infantry_path_6_desc:0 "Here your description"
  light_infantry_path_7:0 "Unit Generic Tradition"
- light_infantry_path_7_desc:0 "Here your description" 
+ light_infantry_path_7_desc:0 "Here your description"
 
  ###New War Elephants Traditions###
  war_elephant_traditions:0 "War Elephants"
@@ -1062,7 +1068,7 @@
  terrain_wet_path_desc:0 "Here your description"
  terrain_close_path:0 "Let's get physical"
  terrain_close_path_desc:0 "Here your description"
- 
+
 ###New Naval Traditions###
  naval_traditions:0 "Naval"
  naval_traditions_desc:0 ""
@@ -1116,7 +1122,7 @@
  egyptian_generic_path_11_desc:0 ""
  egyptian_generic_path_12:0 "Levantine Defensive Path 6"
  egyptian_generic_path_12_desc:0 ""
- 
+
 
 latin_philosophy:0 "Italic Primary"
 latin_philosophy_desc:0 ""
@@ -1157,7 +1163,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  germanic_generic_path_11_desc:0 ""
  germanic_generic_path_12:0 "Germanic Defensive Path 6"
  germanic_generic_path_12_desc:0 ""
- 
+
 #Celtic celtic
  celtic_generic_path_1:0 "Celtic Aggressive Path 1"
  celtic_generic_path_1_desc:0 ""
@@ -1186,7 +1192,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  celtic_gallic_path_1:0 "SKIRMISHER SUPER UNIT: Strike from Afar"
  celtic_germanic_path_1:0 "LI SUPER UNIT: Strike and Withdraw"
  celtic_britannic_path_6:0 "HC SUPER UNIT: Selective Breeding"
- 
+
 
 #italic
  italic_generic_path_1:0 "Italic Aggressive Path 1"
@@ -1213,7 +1219,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  italic_generic_path_11_desc:0 ""
  italic_generic_path_12:0 "Italic Defensive Path 6"
  italic_generic_path_12_desc:0 ""
- 
+
 #Greek greek
  greek_generic_path_1:0 "Greek Aggressive Path 1"
  greek_generic_path_1_desc:0 ""
@@ -1244,7 +1250,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
   greek_seleucid_path_1:0 "LI SUPER UNIT: Agema"
   greek_seleucid_path_5:0 "LC SUPER UNIT: Kataphraktoi"
   greek_states_path_1:0 "HI SUPER UNIT: The Sarissa"
- 
+
 #iberian Iberian
  iberian_generic_path_1:0 "Iberian Aggressive Path 1"
  iberian_generic_path_1_desc:0 ""
@@ -1270,7 +1276,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  iberian_generic_path_11_desc:0 ""
  iberian_generic_path_12:0 "Iberian Defensive Path 6"
  iberian_generic_path_12_desc:0 ""
- 
+
 
 #steppe Steppe
  steppe_generic_path_1:0 "Steppe Aggressive Path 1"
@@ -1297,7 +1303,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  steppe_generic_path_11_desc:0 ""
  steppe_generic_path_12:0 "Steppe Defensive Path 6"
  steppe_generic_path_12_desc:0 ""
- 
+
 
 #north_africa North African
  north_africa_generic_path_1:0 "North African Aggressive Path 1"
@@ -1324,7 +1330,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  north_africa_generic_path_11_desc:0 ""
  north_africa_generic_path_12:0 "North African Defensive Path 6"
  north_africa_generic_path_12_desc:0 ""
- 
+
 
 #illyrian Illyrian
  illyrian_generic_path_1:0 "Illyrian Aggressive Path 1"
@@ -1351,7 +1357,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  illyrian_generic_path_11_desc:0 ""
  illyrian_generic_path_12:0 "Illyrian Defensive Path 6"
  illyrian_generic_path_12_desc:0 ""
- 
+
 #mesopotamian Mesopotamian
  mesopotamian_generic_path_1:0 "Mesopotamian Aggressive Path 1"
  mesopotamian_generic_path_1_desc:0 ""
@@ -1377,7 +1383,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  mesopotamian_generic_path_11_desc:0 ""
  mesopotamian_generic_path_12:0 "Mesopotamian Defensive Path 6"
  mesopotamian_generic_path_12_desc:0 ""
- 
+
 
 #persian Persian
  persian_generic_path_1:0 "Persian Aggressive Path 1"
@@ -1404,7 +1410,7 @@ latin_roman_path_1:0 "HI SUPER UNIT: Principes"
  persian_generic_path_11_desc:0 ""
  persian_generic_path_12:0 "Persian Defensive Path 6"
  persian_generic_path_12_desc:0 ""
- 
+
 #dravidian Dravidian
  dravidian_generic_path_1:0 "Dravidian Aggressive Path 1"
  dravidian_generic_path_1_desc:0 ""

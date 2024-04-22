@@ -15,7 +15,7 @@
  humiliate_rival_cooldown_recently:0 "You recently attempted to humiliate [SCOPE.sChar('target').GetName], and will be unable to do so again until [SCOPE.sChar('target').GetVariableExpiry('humiliate_rival_cooldown')|Y]\n"
  loving_cooldown_recently:0 "You recently seduced [SCOPE.sChar('target').GetName] and will be unable to do so again until [SCOPE.sChar('target').GetVariableExpiry('loving_cooldown')|Y]\n"
  too_much_assassination_tt:0 "A character from this nation was recently assassinated from abroad. They will be on high alert until [SCOPE.sChar('target').GetVariableExpiry('assassination_chill')|Y]\n"
- 
+
  spy_recruit_cooldown:0 "You may only recruit one Intelligence Agent every 18 months."
  aryan_spy_recruit_cooldown:0 "You may only recruit one Intelligence Agent every 12 months."
 
@@ -58,7 +58,7 @@
 
  loyalty_test.5.t:0 "Backlash"
  loyalty_test.5.desc:0 "Pressuring this person to show more loyalty has only made their suspicions and resentment grow."
- loyalty_test.5.a:0 "I seem to have pushed them away" 
+ loyalty_test.5.a:0 "I seem to have pushed them away"
 
  humiliate_rival:0 "Humiliate Rival"
  humiliate_rival_past:0 "Find out who the gods love best"
@@ -71,13 +71,13 @@
 
  rival_challenge.5.t:0 "Humiliation!"
  rival_challenge.5.desc:0 "Your rival seems to have won the gods' favour as you stumble about impotently and blindly, unable to meet the challenge and feeling the rush of defeat."
- rival_challenge.5.a:0 "Hubris has got the best of me" 
+ rival_challenge.5.a:0 "Hubris has got the best of me"
 
  challenge_duel:0 "Challenge to a Duel"
  challenge_duel_act:0 "Challenge your rival to a duel for honour and glory"
  challenge_duel_act_past:0 "You have naturally taken up the challenge"
  challenge_duel_past:0 "There can only be one"
- 
+
  tribal_duel.1.t:0 "Trial by Combat"
  tribal_duel.1.desc:0 "Your rival's continued existence is an insult against you that demands satisfaction. This will be a duel to the death. Will you challenge your rival in the field, personally, sword in hand, or appoint a champion to fight on your behalf?"
  tribal_duel.1.a:0 "I will face them myself and fight with all my honour!"
@@ -164,7 +164,7 @@
 
  come_out_of_hiding:0 "Emerge from Hiding"
  come_out_of_hiding_act:0 "Open the door and squint in the daylight"
- 
+
  plow_the_wife:0 "Seduce Wife"
  plow_the_wife_past:0 "In Her Loving Arms"
  plow_the_wife_act:0 "Seduce your wife"
@@ -191,7 +191,7 @@
  loyalty_test_passed:0 "Proven Loyal"
  loyalty_test_failed:0 "Loyalty in Doubt"
 
- 
+
  ##LOYALTY#########
 
  seduce_husband:0 "Seduce Husband"
@@ -281,11 +281,11 @@
  counterintel.23.desc:0 "Cornered by your counterintelligence agents, a foreign spy will do anything to escape."
  counterintel.23.a:0 "When the cat's away..."
 
- counterintel.25.t:0 "Your Agent Falls" 
+ counterintel.25.t:0 "Your Agent Falls"
  counterintel.25.desc:0 "Your guards attempted to arrest the spy, who fought back to avoid capture and wounded one of your agents. We regret that the spy then escaped."
  counterintel.25.a:0 "This did not go as planned" #Spy rekt
 
- counterintel.26.t:0 "Their Agent Falls" 
+ counterintel.26.t:0 "Their Agent Falls"
  counterintel.26.desc:0 "Our adversaries attempted to arrest your spy, who fought back to avoid capture and wounded one of their agents. Our brave spy then escaped."
  counterintel.26.a:0 "This did not go as planned" #Spy rekt
 
@@ -293,11 +293,11 @@
  counterintel.27.desc:0 "Your guards attempted to arrest the spy, who was wounded but managed to escape."
  counterintel.27.a:0 "Let's hope they bleed to death" #Spy rekt
 
- counterintel.28.t:0 "Making a Rushed Exit" 
+ counterintel.28.t:0 "Making a Rushed Exit"
  counterintel.28.desc:0 "Our adversaries attempted to arrest your spy, who was wounded but managed to escape."
  counterintel.28.a:0 "This did not go as planned" #Spy rekt
 
- counterintel.29.t:0 "Dead End" 
+ counterintel.29.t:0 "Dead End"
  counterintel.29.desc:0 "Your attempt to arrest the foreign spy has been unsuccessful and your leads have dried up. You will have to reopen the investigation later."
  counterintel.29.a:0 "Hopefully a clue will turn up soon..."
 
@@ -316,18 +316,18 @@
  counterintel.32.desc:0 "Your ambassadors and intelligence agents are unable to even get the foreign governor's attention, much less entice him to defect to your side."
  counterintel.32.a:0 "We were never serious about it anyway"
 
- counterintel.33.t:0 "Whispers in the Shadows" 
+ counterintel.33.t:0 "Whispers in the Shadows"
  counterintel.33.desc:0 "Be careful. A foreign spy has been trying to entice a governor of yours to defect."
  counterintel.33.a:0 "The walls have ears"
 
 
 #Inspire Disloyalty
 
- counterintel.34.t:0 "Disloyalty Inspired" 
+ counterintel.34.t:0 "Disloyalty Inspired"
  counterintel.34.desc:0 "Your spies have successfully isolated this person and are now attempting to turn them against the state and all they once held dear."
  counterintel.34.a:0 "Keep up the pressure"
 
- counterintel.35.t:0 "Losing Perspective" 
+ counterintel.35.t:0 "Losing Perspective"
  counterintel.35.desc:0 "Be careful. A subject of yours has recently been fraternising with foreigners and is becoming more critical of the government."
  counterintel.35.a:0 "The walls have ears"
 
@@ -356,20 +356,20 @@
  character_introductions.4.a:0 "The state extends its gratitude"
 
  character_introductions.5.t:0 "Valour in the Field"
- character_introductions.5.desc:0 "A junior officer recently assisted your army in victory. You have two years to promote him in the Cultural Decisions menu under your Primary Culture."
+ character_introductions.5.desc:0 "A junior officer recently assisted your army in victory."
  character_introductions.5.a:0 "Our nation needs a hero"
  character_introductions.5.b:0 "We will learn from their example"
 
  character_introductions.6.t:0 "Valour at Sea"
- character_introductions.6.desc:0 "A junior officer recently assisted you fleet in victory. You have two years to promote him in the Cultural Decisions menu under your Primary Culture."
- character_introductions.6.a:0 "Our nation needs a hero" 
+ character_introductions.6.desc:0 "A junior officer recently assisted you fleet in victory."
+ character_introductions.6.a:0 "Our nation needs a hero"
 
  temptress_bribe_character:0 "Titillate"
  temptress_bribe_character_past:0 "Charm Offensive"
  temptress_bribe_character_act:0 "Use your feminine wiles to win his heart and mind"
  temptress_bribe_character_act_past:0 "Stroke his ego and gain the world"
  temptress_bribe_character_tt:0 "Tempt this man with the anticipation of an unspoken promise that you have never denied. You strive to keep it under wraps, as you could really do without a scandal."
- 
+
  temptress.1.t:0 "Under your Spell"
  temptress.1.desc:0 "Your artful use of suggestion and innuendo have captured his attention and your open flirting and flattery have strung him like a puppet. He is yours to toy with."
  temptress.1.a:0 "Always leave them wanting..."
@@ -394,11 +394,11 @@
  temptress.6.b:0 "Ask him to support his government's opposition."
  temptress.6.c:0 "Encourage him to bring down his government's best men."
  temptress.6.d:0 "Pay him to stir up the population."
- 
+
  temptress.7.t:0 "A Gift from an Admirer" # Steal money for Queen success
  temptress.7.desc:0 "This man has become so infatuated with you that he captured a donkey train carrying gold belonging to his nation's government and has sent it to you, to profess his undying love."
  temptress.7.a:0 "How sweet! I'm sure he'll find that special someone one day"
- temptress.8.t:0 "A Sad Gift" # Steal money for Queen success but rekt 
+ temptress.8.t:0 "A Sad Gift" # Steal money for Queen success but rekt
  temptress.8.desc:0 "This man has become so infatuated with you that he captured a donkey train carrying gold belonging to his nation's government and has sent it to you, to profess his undying love. Unfortunately, he has since been apprehended by the authorities in his country of jailed."
  temptress.8.a:0 "Oh really? Such a pity..."
  temptress.9.t:0 "My Enemy's Enemy Is My Friend" # Strengthen enemy king's rival success
@@ -406,7 +406,7 @@
  temptress.9.a:0 "May they consume each other"
  temptress.10.t:0 "Easy Come, Easy Go" # Strengthen enemy king's rival success but rekt
  temptress.10.desc:0 "You have convinced your admirer to gather support for one of the strongest opposition figures in his nation. Though our man is indeed growing stronger, it turns out that your admirer is rather clumsy at this business. He was beated and arrested, his assets seized, though he has been released from jail in the meantime. He writes to you, telling you that he needs your comfort..."
- temptress.10.a:0 "Surely he has me confused with someone else" 
+ temptress.10.a:0 "Surely he has me confused with someone else"
  temptress.11.t:0 "Stabbing in Broad Daylight" # Weaken friend of enemy king success
  temptress.11.desc:0 "Your brave paramour, or so he aspires, was so emboldened by his feelings for you and your stated hatred for his nation's leadership that carried a dagger to the forum and knifed a friend of the ruler, then vanished in the crowds. His victim survived, but was weakened by the attack."
  temptress.11.a:0 "I must admit, he is starting to gain some appeal"
@@ -423,16 +423,16 @@
 
  temptress.15.t:0 "The Failed Thief" # Steal money for Queen failure
  temptress.15.desc:0 "This man has become so infatuated with you that he captured a donkey train carrying gold belonging to his nation's government and tried to escort it to you, to profess his undying love. Unfortunately, he has since been apprehended by the authorities in his country and now sits in jail."
- temptress.15.a:0 "Did any of the gold make it through?"  
+ temptress.15.a:0 "Did any of the gold make it through?"
  temptress.16.t:0 "He Has Lost His Head Over You" # Steal money for Queen failure and rekt
  temptress.16.desc:0 "This man became so infatuated with you that he captured a donkey train carrying gold belonging to his nation's government and tried to escort it to you, to profess his undying love. Unfortunately, he took a wrong turn and walked right into the authorities, who beheaded him on the spot."
  temptress.16.a:0 "It pains me to hear it"
  temptress.17.t:0 "Diplomatic Stumble" # Strengthen enemy king's rival failure
  temptress.17.desc:0 "The opposition figure chafes under our demands and says he is tired of the meddling of foreigners. We may have overplayed our hand here."
- temptress.17.a:0 "Let them go on wallowing in the muck"  
+ temptress.17.a:0 "Let them go on wallowing in the muck"
  temptress.18.t:0 "Foreign Backlash" # Strengthen enemy king's rival failure and rekt
  temptress.18.desc:0 "The opposition figure has turned sharply against us in a great swelling of national pride. He now says that he is tired of the meddling of foreigners and pledges to defend his nation's leadership."
- temptress.18.a:0 "That did not go as planned"  
+ temptress.18.a:0 "That did not go as planned"
  temptress.19.t:0 "Assassination Attempt" # Weaken friend of enemy king success but rekt
  temptress.19.desc:0 "Your brave paramour, or so he aspired, was so emboldened by his feelings for you and your stated hatred for his nation's leadership that carried a dagger to the forum and tried to knife a friend of the ruler, but the man was a better fighter and killed him with a blow to the temple from his staff. He is being celebrated as a hero."
  temptress.19.a:0 "I certainly never approved of anything like that!"
@@ -449,13 +449,13 @@
 
  temptress.23.t:0 "My Kingdom for a Woman's Love"
  temptress.23.desc:0 "Not since the days of Helen have men of fortune and might seen anything like this. Besotted with your attentions, a certain foreign governor now rejects his overlord's sovereignty and offers his lands to you, asking for your hand in marriage."
- temptress.23.a:0 "The governor has brought his gold and troops, rushing to be at your side."  
+ temptress.23.a:0 "The governor has brought his gold and troops, rushing to be at your side."
  temptress.24.t:0 "Betrayal"
  temptress.24.desc:0 "Your former governor has turned his back on your beneficence and is hiding under the skirts of his shameless foreign wife. It is time to teach them both a lesson!"
- temptress.24.a:0 "The bastard has stolen our subjects and our property and has stained our honour"   
+ temptress.24.a:0 "The bastard has stolen our subjects and our property and has stained our honour"
  temptress.25.t:0 "Cold Feet"
  temptress.25.desc:0 "Promised your hand if he rejected his overlord and placed his governorship under your realm, the foreign governor that you have been enticing has suddenly withdrawn and ceased communicating with you. All the funds that we had promised for this venture are lost."
- temptress.25.a:0 "The nerve!" 
+ temptress.25.a:0 "The nerve!"
  temptress.26.t:0 "Foolish Vanity"
  temptress.26.desc:0 "Your former governor rejects your rule and has attempted to flee the country with his treasury and men, but saner men have arrested him. He is in prison, awaiting your judgement, and we have begun liquidating his estate."
  temptress.26.a:0 "What unexpected news to wake up to this morning..."
@@ -506,7 +506,7 @@
  letter_friend.3.t:0 "An Epistolary Friendship"
  letter_friend.3.desc:0 "You open the letter, beginning what you hope to be a profitable exchange of intellectual stimulus and pleasure."
  letter_friend.3.a:0 "What a delight"
- 
+
  letter_friend.4.t:0 "Royal Correspondence"
  letter_friend.4.desc:0 "A few months after sending your letter, you are delighted to receive a lengthy response from [target.GetName]. [target.GetSheHe] shows a great depth of knowledge about areas of keen interest to you. You begin writing your next letter immediately, hoping to learn all you can from this learned soul."
  letter_friend.4.a:0 "Express an interest in military matters"
@@ -522,7 +522,7 @@
  letter_friend.11.t:0 "Failed to Impress"
  letter_friend.11.desc_1:0 "The next letter is very brief, speaking only of superficial matters and ending by warning you not expect any further correspondence, due to a sudden and very urgent lack of time."
  letter_friend.11.a:0 "You'll just have to wait and see."
- letter_friend.11.b:0 "You don't even know this person anymore. They are nothing to you."  
+ letter_friend.11.b:0 "You don't even know this person anymore. They are nothing to you."
 
  letter_friend.21.t:0 "A Fruitful Correspondence"
  letter_friend.21.desc:0 "You find yourself applying lessons learned in your friend's letters in your daily affairs. You feel fortunate to have such an intelligent friend."
@@ -537,7 +537,7 @@
  letter_friend.24.t:0 "A Shameful Display"
  letter_friend.24.desc:0 "Your eagerness to engage your friend in what you indulgently like to think of as 'elevated conversation' is straining your friendship and driving you to error."
  letter_friend.24.a:0 "You do feel like a bit of a pest."
- letter_friend.24.b:0 "You don't even know this person anymore. They are nothing to you." 
+ letter_friend.24.b:0 "You don't even know this person anymore. They are nothing to you."
  letter_friend.25.t:0 "A Fruitful Correspondence"
  letter_friend.25.desc:0 "You find yourself applying lessons learned in your friend's letters in your daily affairs. You feel fortunate to have such an intelligent friend."
  letter_friend.25.a:0 "Life is good"
@@ -857,7 +857,7 @@
  hunting.107.a:0 "Nobody will speak of this"
  hunting.108.t:0 "Kraken Attack"
  hunting.108.desc:0 "As you cower in fear, you men hack at the tentacle with their swords and axes. Terribly wounded, the sea monster now relents and sinks back beneath the waves. The men ask you if you are all right, and you cannot fail to notice that you have trouble looking at each other."
- hunting.108.a:0 "Nobody will speak of this" 
+ hunting.108.a:0 "Nobody will speak of this"
 
 
 ####################################################
@@ -910,7 +910,7 @@
 
  slave_gift_event.9.t:0 "Ready to Serve"
  slave_gift_event.9.desc:0 "The slave gifted to you by your friend is eager to be of service."
- slave_gift_event.9.a:0 "I'm sure the new help will fit right in" 
+ slave_gift_event.9.a:0 "I'm sure the new help will fit right in"
 
  letter_friend.1.t:0 "A Letter from a Friend"
  letter_friend.1.desc:0 "You have received a personal message, written in earnest and sent to you from far away."
@@ -962,7 +962,7 @@
  relic_gift_event.16.a:0 "An exotic meal"
  relic_gift_event.16.b:0 "A dusty book"
  relic_gift_event.16.c:0 "A strange device"
- relic_gift_event.16.d:0 "A roll of papyrus"     
+ relic_gift_event.16.d:0 "A roll of papyrus"
  relic_gift_event.17.t:0 "A Gift Worthy of the Gods"
  relic_gift_event.17.desc:0 "Give your friend something divine, like ambrosia, only better"
  relic_gift_event.17.a:0 "A roll of papyrus"
@@ -984,7 +984,7 @@
  relic_gift_event.20.t:0 "A Gift for Influence"
  relic_gift_event.20.desc:0 "Give your friend something that will change hearts and minds"
  relic_gift_event.20.a:0 "Something colourful"
- relic_gift_event.20.b:0 "Something pickled" 
+ relic_gift_event.20.b:0 "Something pickled"
  relic_gift_event.20.c:0 "A roll of papyrus"
  relic_gift_event.20.d:0 "A sea shell"
 
@@ -1010,7 +1010,7 @@
  relic_gift_event.26.a:0 "What a gift! What a friend!"
  relic_gift_event.27.t:0 "Shitty Mechanic"
  relic_gift_event.27.desc:0 "This shitty mechanic never should have made it into the game in the first place. Fucking Paradox."
- relic_gift_event.27.a:0 "What a gift! What a friend!" 
+ relic_gift_event.27.a:0 "What a gift! What a friend!"
  relic_gift_event.28.t:0 "Nakama Server"
  relic_gift_event.28.desc:0 "This relic once aroused strong feelings, as it was created with great expectation but sometimes seemed to have been designed by its enemies. Its stated function having since faded from memory, it is now mostly valuable as a device for cultivating patience."
  relic_gift_event.28.a:0 "What a gift! What a friend!"
@@ -1123,7 +1123,7 @@ BREAK_player_client_stateTITLE:0 "Break Player Vassal Status"
 BREAK_player_client_state_TOOLTIP_HEADER:0 "Break Player Vassal Status with $NAME$"
 BREAK_player_client_state_DESC:0 "Cease being a Player Vassal"
 BREAK_player_client_state_FLAVOR:0 "Breaking our relationship with our overlord will make us independent and our payments to them will stop, and we will no longer receive their protection. They will also have a Casus Belli on us for 5 years."
-CANCEL_player_client_state_TOOLTIP_HEADER:0 "Cancel Player Vassal Status with $NAME$" 
+CANCEL_player_client_state_TOOLTIP_HEADER:0 "Cancel Player Vassal Status with $NAME$"
 CANCEL_player_client_state_DESC:0 "Release your Player Vassal"
 CANCEL_player_client_state_FLAVOR:0 "Breaking our relationship with our subject will make them independent and we will no longer protect them."
 offer_vassalage.1.t:0 "Vassalage Offered"

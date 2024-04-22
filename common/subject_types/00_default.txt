@@ -595,6 +595,7 @@ player_client_state = {
 
 	has_limited_diplomacy = no
 	only_trade_with_overlord = no
+	allowed_to_declare_war_against_others = yes
 
 	overlord_modifier = {
 		stability_monthly_change = -0.02

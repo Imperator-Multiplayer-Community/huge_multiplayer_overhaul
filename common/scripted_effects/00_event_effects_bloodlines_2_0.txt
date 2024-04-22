@@ -167,7 +167,7 @@ pass_down_traits_effect = {
 						has_trait = demosthenid
 					}
 				}
-				add_trait = pyrrhus
+				add_trait = demosthenid
 			}
 			if = {
 				limit = {
@@ -315,7 +315,7 @@ pass_down_traits_effect = {
 		}
 		if = {
 			limit = {
-				father = {	
+				father = {
 					has_trait = mithridates
 				}
 				NOT = {
@@ -358,7 +358,7 @@ pass_down_traits_effect = {
 		# 	}
 		# 	add_trait = aeacidae
 
-		# }	
+		# }
 		# #if = {
 		# 	limit = {
 		# 		exists = mother
@@ -382,7 +382,7 @@ pass_down_traits_effect = {
 # 					has_trait = agiad
 # 				}
 # 			}
-# 			add_trait = agiad	
+# 			add_trait = agiad
 # 		}
 # 		#if = {
 # 			limit = {
@@ -394,7 +394,7 @@ pass_down_traits_effect = {
 # 					has_trait = maurya
 # 				}
 # 			}
-# 			add_trait = maurya	
+# 			add_trait = maurya
 # 		}
 # 		#if = {
 # 			limit = {
@@ -406,7 +406,7 @@ pass_down_traits_effect = {
 # 					has_trait = achaemenid
 # 				}
 # 			}
-# 			add_trait = achaemenid	
+# 			add_trait = achaemenid
 # 		}
 # 		#if = {
 # 			limit = {
@@ -418,7 +418,7 @@ pass_down_traits_effect = {
 # 					has_trait = seleucids
 # 				}
 # 			}
-# 			add_trait = seleucids	
+# 			add_trait = seleucids
 # 		}
 # 		#if = {
 # 			limit = {
@@ -430,7 +430,7 @@ pass_down_traits_effect = {
 # 					has_trait = lagids
 # 				}
 # 			}
-# 			add_trait = lagids	
+# 			add_trait = lagids
 # 		}
 # 		#if = {
 # 			limit = {
@@ -442,7 +442,7 @@ pass_down_traits_effect = {
 # 					has_trait = antipatrid
 # 				}
 # 			}
-# 			add_trait = antipatrid	
+# 			add_trait = antipatrid
 # 		}
 # 		#if = {
 # 			limit = {
@@ -454,7 +454,7 @@ pass_down_traits_effect = {
 # 					has_trait = antigonids
 # 				}
 # 			}
-# 			add_trait = antigonids	
+# 			add_trait = antigonids
 # 		}
 # 		#if = {
 # 			limit = {
@@ -466,7 +466,7 @@ pass_down_traits_effect = {
 # 					has_trait = alcimachid
 # 				}
 # 			}
-# 			add_trait = alcimachid	
+# 			add_trait = alcimachid
 # 		}
 # 		#if = {
 # 			limit = {
@@ -478,7 +478,7 @@ pass_down_traits_effect = {
 # 					has_trait = zadok
 # 				}
 # 			}
-# 			add_trait = zadok	
+# 			add_trait = zadok
 # 		}
 # 		#if = {
 # 			limit = {
@@ -502,7 +502,7 @@ pass_down_traits_effect = {
 # 					has_trait = agathocles
 # 				}
 # 			}
-# 			add_trait = agathocles	
+# 			add_trait = agathocles
 # 		}
 # 		#if = {
 # 			limit = {
@@ -514,7 +514,7 @@ pass_down_traits_effect = {
 # 					has_trait = orontid
 # 				}
 # 			}
-# 			add_trait = orontid	
+# 			add_trait = orontid
 # 		}
 # 		#if = {
 # 			limit = {
@@ -526,7 +526,7 @@ pass_down_traits_effect = {
 # 					has_trait = atropates
 # 				}
 # 			}
-# 			add_trait = atropates	
+# 			add_trait = atropates
 # 		}
 # 		#if = {
 # 			limit = {
@@ -538,7 +538,7 @@ pass_down_traits_effect = {
 # 					has_trait = barca
 # 				}
 # 			}
-# 			add_trait = barca	
+# 			add_trait = barca
 # 		}
 # 		#if = {
 # 			limit = {
@@ -550,7 +550,7 @@ pass_down_traits_effect = {
 # 					has_trait = arsaces
 # 				}
 # 			}
-# 			add_trait = arsaces	
+# 			add_trait = arsaces
 # 		}
 # 		#if = {
 # 			limit = {
@@ -562,7 +562,7 @@ pass_down_traits_effect = {
 # 					has_trait = spartocid
 # 				}
 # 			}
-# 			add_trait = spartocid	
+# 			add_trait = spartocid
 # 		}
 # 		#if = {
 # 			limit = {
@@ -574,7 +574,7 @@ pass_down_traits_effect = {
 # 					has_trait = sophytid
 # 				}
 # 			}
-# 			add_trait = sophytid	
+# 			add_trait = sophytid
 # 		}
 # 		#if = {
 # 			limit = {
@@ -586,7 +586,7 @@ pass_down_traits_effect = {
 # 					has_trait = diodotus
 # 				}
 # 			}
-# 			add_trait = diodotus	
+# 			add_trait = diodotus
 # 		}
 # 		#if = {
 # 			limit = {
@@ -598,7 +598,7 @@ pass_down_traits_effect = {
 # 					has_trait = brennus
 # 				}
 # 			}
-# 			add_trait = brennus	
+# 			add_trait = brennus
 # 		}
 # 		#if = {
 # 			limit = {
@@ -610,7 +610,7 @@ pass_down_traits_effect = {
 # 					has_trait = illyrius
 # 				}
 # 			}
-# 			add_trait = illyrius	
+# 			add_trait = illyrius
 # 		}
 # 		#if = {
 # 			limit = {

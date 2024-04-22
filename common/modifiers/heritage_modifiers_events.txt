@@ -564,7 +564,7 @@ clan_modifier = {
 }
 
 tribal_modifier = {
-	light_infantry_discipline = 0.05
+	light_infantry_discipline = 0.1
 	land_morale_modifier = 0.05
 	global_citizen_output = negative_output_small_svalue
 }
@@ -655,7 +655,7 @@ punic_modifier = {
 }
 
 ziqanmakom_modifier = {
-	global_export_commerce_modifier = 0.1
+	global_commerce_modifier = 0.1
 	price_found_city_cost_modifier = -0.15
 	general_loyalty = -5
 }
@@ -691,7 +691,7 @@ brennusovia_modifier = {
 }
 
 jalabhumi_modifier = {
-	light_infantry_marsh_combat_bonus = 0.35
+	light_infantry_marsh_combat_bonus = 0.25
 	hostile_attrition = 0.1
 	build_time = 0.15
 }
@@ -871,8 +871,8 @@ tibetan_empire_modifier = {
 }
 
 baratanac_modifier = {
-	global_capital_trade_routes = 1
-	global_export_commerce_modifier = 0.05
+	global_state_trade_routes = 0.5
+	global_export_commerce_modifier = 0.1
 	happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
 }
 
