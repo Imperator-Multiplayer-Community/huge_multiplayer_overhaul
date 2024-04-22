@@ -411,7 +411,6 @@ distinction_heavy_cavalry_defensive_20 = {
 distinction_heavy_cavalry_discipline_1 = {
 	icon = "phalera_horse"
 	commander = {
-		martial = 0
 	}
 	unit = {
 		loyalty_gain_chance_modifier = 0.025
@@ -423,7 +422,6 @@ distinction_heavy_cavalry_discipline_1 = {
 distinction_heavy_cavalry_discipline_2 = {
 	icon = "phalera_horse"
 	commander = {
-		martial = 0
 	}
 	unit = {
 		loyalty_gain_chance_modifier = 0.05
