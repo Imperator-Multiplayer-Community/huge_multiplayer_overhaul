@@ -3794,14 +3794,14 @@ liguria_heritage = {
 	}
 }
 
-Cimmeria_heritage = {
+cimmeria_heritage = {
     modifier = {
         #good
-		price_found_city_cost_modifier = -0.15
-        global_population_capacity_modifier = 0.05
+		light_cavalry_morale = 0.05
+        global_population_growth = 0.08
 
         #bad
-        global_import_commerce_modifier = -0.1
+        global_pop_assimilation_speed_modifier = -0.15
     }
 
     trigger = {
@@ -4141,5 +4141,75 @@ vapian_heritage = {
 
 	trigger = {
 		tag = PAN
+	}
+}
+
+troan_kingdom_heritage = {
+	modifier = {
+		#good
+		global_defensive = 0.2
+		global_commerce_modifier = 0.1
+
+		#bad
+		global_manpower_modifier = -0.1
+	}
+	trigger = {
+		tag = TRK
+	}
+}
+
+greco_bactrian_kingdom_heritage = {
+	modifier = {
+		#good
+		global_tax_modifier = 0.05
+		global_pop_assimilation_speed_modifier = 0.1
+
+		#bad
+		agressive_expansion_impact = 0.1
+	}
+	trigger = {
+		tag = GBK
+	}
+}
+
+magna_delta_heritage = {
+	modifier = {
+		#good
+		camels_morale = 0.05
+		character_loyalty = 5
+
+		#bad
+		global_pop_conversion_speed_modifier = -0.1
+	}
+	trigger = {
+		tag = MGD
+	}
+}
+
+mithridatic_kingdom_heritage = {
+	modifier = {
+		#good
+		build_cost = -0.1
+		omen_power = 0.05
+
+		#bad
+		research_points_modifier = -0.05
+	}
+	trigger = {
+		tag = MTK
+	}
+}
+
+marcomannia_bois_heritage = {
+	modifier = {
+		#good
+		light_infantry_discipline = 0.05
+		monthly_political_influence_modifier = 0.1
+
+		#bad
+		omen_power = -0.05
+	}
+	trigger = {
+		tag = MMB
 	}
 }
