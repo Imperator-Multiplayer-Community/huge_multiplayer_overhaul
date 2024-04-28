@@ -83,7 +83,7 @@
 		}
 	}
 	anatolian_generic_path_4 = {
-		### 
+		###
 		modifier = {
 			light_cavalry_defensive = 0.1
 			light_cavalry_discipline = 0.1
@@ -147,7 +147,7 @@
 		}
 	}
 	anatolian_generic_path_8 = {
-		### 
+		###
 		modifier = {
 			archers_defensive = 0.1
 			archers_discipline = 0.1
@@ -216,7 +216,7 @@
 		}
 	}
 	anatolian_generic_path_12 = {
-		### 
+		###
 		modifier = {
 			warelephant_defensive = 0.1
 			warelephant_discipline = 0.1
@@ -233,8 +233,9 @@
 		}
 	}
 	### NAVAL
-	lydian_path_6 = {
-		###
+	anatolian_naval_path_1 = {
+		on_activate = {
+		}
 		modifier = {
 			liburnian_discipline = 0.05
 			trireme_offensive = 0.1
@@ -245,8 +246,7 @@
 		requires = {
 		}
 	}
-	lydian_path_12 = {
-		###
+	anatolian_naval_path_2 = {
 		allow_unit_type = octere
 		on_activate = {
 			random_owned_province = {
@@ -271,11 +271,10 @@
 		}
 		icon = north_african_naval_path_end_bonus
 		requires = {
-			lydian_path_6
+			anatolian_naval_path_1
 		}
 	}
-	lydian_path_13 = {
-		###
+	anatolian_naval_path_3 = {
 		modifier = {
 			naval_range = 0.25
 			mercenary_naval_maintenance_cost = -0.3
@@ -284,7 +283,7 @@
 		}
 		icon = north_african_naval_path_7
 		requires = {
-			lydian_path_12
+			anatolian_naval_path_2
 		}
 	}
 	### CIVILIZATION
