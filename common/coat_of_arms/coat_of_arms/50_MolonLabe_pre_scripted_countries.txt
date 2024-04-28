@@ -2607,3 +2607,144 @@ VAPIA_FLAG = {
 		}
 	}
 }
+
+TROAN_KINGDOM_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_green"
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_border_meander_05.dds"
+		color1 = "bone_white"
+		color2 = "ck2_green"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_aeolia_ilion_athena_ilias.dds"
+		color1 = "roman_red"
+		color2 = "roman_gold"
+		instance = {
+			position = { 0.5 0.5 }
+		}
+	}
+}
+
+MAGNA_DELTA_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 105 102 99 }
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_border_meander_02.tga"
+		color1 = "pitch_black"
+		color2 = "sardinia_color"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_nabatea.dds"
+		color1 = "pitch_black"
+		color2 = "sardinia_color"
+		instance = {
+			position = { 0.5 0.5 }
+		}
+	}
+}
+
+GRECO_BACTRIAN_KINGDOM_FLAG = {
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = rgb { 127 14 13 }
+	color2 = "pitch_black"
+
+	colored_emblem = {
+		texture = "ce_hellenic_4.dds"
+		color1 = "sardinia_color"
+		color2 = "pitch_black"
+		instance = {
+			position = { 0.2 0.2 }
+		    scale={ 0.600000 0.600000 }
+		}
+}
+	colored_emblem = {
+		texture = "ce_dodekaschoinos_elephantine.dds"
+		color1 = "sardinia_color"
+		color2 = "pitch_black"
+		instance = {
+			position = { 0.5 0.6 }
+		    scale={ 1.350000 1.350000 }
+		}
+	}
+}
+
+CIMMERIA_FLAG = {
+	pattern = "pattern_vertical_split_01.tga"
+	color1 = rgb { 71 7 54 }
+	color2 = "pitch_black"
+
+	colored_emblem = {
+		texture = "ce_border_meander_02.tga"
+		color1 = "pitch_black"
+		color2 = "sardinia_color"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_nuceria_alfaterna.dds"
+		color1 = "sardinia_color"
+		color2 = "offwhite"
+		instance = {
+			position = { 0.5 0.5 }
+		    scale={ 0.900000 0.900000 }
+		}
+	}
+}
+
+MITHRIDATIC_KINGDOM_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = "ck2_purple"
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_border_meander_01.tga"
+		color1 = "ck2_purple"
+		color2 = "roman_gold"
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_water_nymph_01.dds"
+		color1 = "roman_gold"
+		color2= "roman_gold"
+		instance = {
+			scale={ 1 1 }
+		}
+	}
+}
+
+MARCOMANNIA_BOIS_FLAG = {
+	pattern = "pattern_solid.tga"
+	color1 = rgb { 53 94 59 }
+	color2 = "offwhite"
+
+	colored_emblem = {
+		texture = "ce_border_checker_02.dds"
+		color1 = rgb { 199 199 199 }
+		color2 = rgb { 53 94 59 }
+		instance = { rotation = 0 }
+		instance = { rotation = 180 }
+	}
+
+	colored_emblem = {
+		texture = "ce_boiihaemia.dds"
+		color1 = rgb { 157 161 170 }
+		color2 = rgb { 219 215 210 }
+		instance = {
+			scale={ 1 1.1 }
+		}
+	}
+}
