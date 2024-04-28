@@ -1,6 +1,6 @@
 ﻿### General Deity Checks ###
 
-deity_diwali = { # WAR 
+deity_diwali = { # WAR
 	trigger = {
 		religion = jainism
 	}
@@ -158,7 +158,7 @@ deity_arghya = { # FERTILITY
 deity_bhadrabahu = { # CULTURE
 	trigger = {
 		religion = jainism
-		has_global_variable = bhadrabahu_deified
+		#has_global_variable = bhadrabahu_deified
 	}
 	icon = deity_eloquence
 	passive_modifier = { happiness_for_same_culture_modifier = deity_happiness_for_same_culture_modifier_svalue }

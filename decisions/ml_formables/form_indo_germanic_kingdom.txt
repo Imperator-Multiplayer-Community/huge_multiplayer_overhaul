@@ -88,7 +88,8 @@
 				change_country_flag = INDGER_FLAG
 				trigger_event = {
 					id = formable_heritage.91
-				}				
+				}			
+				set_variable = indo_germanic_gods	
 			}
 			capital_scope = {
 				establish_city_effect = yes
