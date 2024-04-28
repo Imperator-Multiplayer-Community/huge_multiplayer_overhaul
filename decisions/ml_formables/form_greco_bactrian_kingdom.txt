@@ -1,0 +1,97 @@
+﻿country_decisions = {
+	
+	# Greco Bactria
+	# Designed by Neidhardt, created by Neidhardt
+	form_greco_bactrian_kingdom = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = hellenic
+			tag = BAC
+			NOT = {
+				tag = GBK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = candara_area
+					is_in_area = oxiana_area
+					is_in_area = bactria_area
+					is_in_area = transoxus_area
+					is_in_area = sogdiana_area
+					is_in_area = cyropolis_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = greco_bactrian_kingdom_not_exists
+				NOT = {
+					any_country = {
+						tag = GBK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = candara_area
+				owns_or_subject_owns_area = oxiana_area
+				owns_or_subject_owns_area = bactria_area
+				owns_or_subject_owns_area = transoxus_area
+				owns_or_subject_owns_area = sogdiana_area
+				owns_or_subject_owns_area = cyropolis_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "GRECO_BACTRIAN_KINGDOM_NAME"
+			hidden_effect = {
+				change_country_adjective = "GRECO_BACTRIAN_KINGDOM_ADJECTIVE"
+				change_country_color = "greco_bactrian_kingdom_color"
+				change_country_tag = GBK
+				change_country_flag = GRECO_BACTRIAN_KINGDOM_FLAG
+				trigger_event = {
+					id = formable_heritage.167
+				}				
+			}
+			custom_tooltip = greco_bactrian_kingdom_claims_tooltip
+			hidden_effect = {
+				region:parthia_region = { formable_region_province_effect = yes }
+				region:scythia_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			set_capital = 6694
+			hidden_effect = {
+				p:6694.state = {
+					set_state_capital = 6694
+				}
+			}
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			p:6694 = { change_province_name = "Alexandreia Ochou" }
+			p:6694 = {
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

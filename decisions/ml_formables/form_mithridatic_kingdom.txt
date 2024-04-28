@@ -1,0 +1,107 @@
+﻿country_decisions = {
+	
+	# Mithridatic Kingdom
+	# Designed by Neidhardt, created by Neidhardt
+	form_mithridatic_kingdom = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = anatolian
+			tag = PON
+			NOT = {
+				tag = MTK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = pontus_colopene_area
+					is_in_area = pontus_area
+					is_in_area = cappadocia_saravene_area
+					is_in_area = armenia_maior_area
+					is_in_area = armenia_minor_area
+					is_in_area = cappadocia_area
+
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = mithridatic_kingdom_not_exists
+				NOT = {
+					any_country = {
+						tag = MTK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+					owns_or_subject_owns_area = pontus_colopene_area
+					owns_or_subject_owns_area = pontus_area
+					owns_or_subject_owns_area = cappadocia_saravene_area
+					owns_or_subject_owns_area = armenia_maior_area
+					owns_or_subject_owns_area = armenia_minor_area
+					owns_or_subject_owns_area = cappadocia_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "MITHRIDATIC_KINGDOM_NAME"
+			if = {
+				limit = {
+					NOR = { 
+						government = despotic_monarchy
+					}
+				}
+				change_government = despotic_monarchy
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "MITHRIDATIC_KINGDOM_ADJECTIVE"
+				change_country_color = "mithridatic_kingdom_color"
+				change_country_tag = MTK
+				change_country_flag = MITHRIDATIC_KINGDOM_FLAG
+				trigger_event = {
+					id = formable_heritage.169
+				}				
+			}
+			custom_tooltip = mithridatic_kingdom_claims_tooltip
+			hidden_effect = {
+				region:armenia_region = { formable_region_province_effect = yes }
+				region:cilicia_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			set_capital = 1789
+			hidden_effect = {
+				p:1789.state = {
+					set_state_capital = 1789
+				}
+			}
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			p:1789 = { change_province_name = "Syderos Pontike" }
+			p:1789 = {
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

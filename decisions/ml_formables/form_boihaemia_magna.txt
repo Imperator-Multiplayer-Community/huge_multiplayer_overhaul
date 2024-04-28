@@ -17,41 +17,20 @@
 		highlight = {
 			scope:province = {
 				OR = {
-					province_id = 3761
-					province_id = 3760
-					province_id = 3759
-					province_id = 3758
-					province_id = 3756
-					province_id = 3053
-					is_in_area = chattia_occidentalis_area
-					###is_in_area = vangionia_area
-					is_in_area = mediomatricia_area
-					is_in_area = treveria_area
-					is_in_area = menapia_orientalis
-					#is_in_region = germania_region
-					#is_in_region = bohemia_area
-					#is_in_region = venedia_region
+					is_in_region = germania_superior_region
 					is_in_region = germania_magna_region
-					#Old Venedia region
-					is_in_region = elysia_region
-					is_in_area = marsignia_area
-					is_in_area = lugia_area
-					is_in_area = venedia_area
-					is_in_area = vistulia_area
-					#amadocia_occidentalis_area
-					is_in_area = ossioia_area
-					is_in_area = chrononis_area
-					is_in_area = galindia_area
-					is_in_area = turuntia_area
-					#Southern Germania and Boihaemia
-					is_in_area = chattia_orientalis_area
 					is_in_area = marcomannia_maiores_area
 					is_in_area = boioa_meridionalis_area
 					is_in_area = boioa_septentrionalis_area
 					is_in_area = marcomannia_minores_area
-					is_in_area = germanicum_area
-					
-
+					is_in_area = marsignia_area
+					is_in_area = buria_area
+					is_in_area = semnonia_area
+					is_in_area = pharodenia_area	
+					is_in_area = suradonia_area
+					is_in_area = elysia_area
+					is_in_area = helveconia_area
+					is_in_area = rugia_area
 				}
 			}
 		}
@@ -67,52 +46,33 @@
 			}
 
 			can_form_nation_trigger = yes
-			owns_or_subject_owns = 3761
-			owns_or_subject_owns = 3760
-			owns_or_subject_owns = 3759
-			owns_or_subject_owns = 3758
-			owns_or_subject_owns = 3756
-			owns_or_subject_owns = 3053
-			owns_or_subject_owns_area = chattia_occidentalis_area
-			###owns_or_subject_owns_area = vangionia_area
-			owns_or_subject_owns_area = mediomatricia_area
-			owns_or_subject_owns_area = treveria_area
-			owns_or_subject_owns_area = menapia_orientalis
-			#owns_or_subject_owns_region = germania_region
-			#owns_or_subject_owns_region = bohemia_area
-			#owns_or_subject_owns_region = venedia_region
-			owns_or_subject_owns_region = germania_magna_region
-			#Old Venedia region
-			owns_or_subject_owns_region = elysia_region
-			owns_or_subject_owns_area = marsignia_area
-			owns_or_subject_owns_area = lugia_area
-			owns_or_subject_owns_area = venedia_area
-			owns_or_subject_owns_area = vistulia_area
-			#amadocia_occidentalis_area
-			owns_or_subject_owns_area = ossioia_area
-			owns_or_subject_owns_area = chrononis_area
-			owns_or_subject_owns_area = galindia_area
-			owns_or_subject_owns_area = turuntia_area
-			#Southern Germania and Boihaemia
-			owns_or_subject_owns_area = chattia_orientalis_area
+			owns_or_subject_owns_area = elysia_area
+			owns_or_subject_owns_area = helveconia_area
+			owns_or_subject_owns_area = rugia_area
 			owns_or_subject_owns_area = marcomannia_maiores_area
 			owns_or_subject_owns_area = boioa_meridionalis_area
 			owns_or_subject_owns_area = boioa_septentrionalis_area
 			owns_or_subject_owns_area = marcomannia_minores_area
-			owns_or_subject_owns_area = germanicum_area
-
+			owns_or_subject_owns_area = marsignia_area
+			owns_or_subject_owns_area = buria_area
+			owns_or_subject_owns_area = semnonia_area
+			owns_or_subject_owns_area = pharodenia_area	
+			owns_or_subject_owns_area = suradonia_area
+			owns_or_subject_owns_region = germania_superior_region
+			owns_or_subject_owns_region = germania_magna_region
 		}
 		
 		effect = {
 			custom_tooltip = "tier_3_formable_tooltip"
 			change_country_name = "BOIHAEMIA_MAGNA_NAME"
 			if = {
-				limit = { is_tribal = yes }
-				add_country_modifier = {
-					name = civilized_tribe
-					duration = 5475
+				limit = {
+					NOR = { 
+						government = imperium 
+						government = imperial_cult
+					}
 				}
-				change_government = tribal_federation
+				change_government = imperium
 				switch_government_type_event_clearup_effect = yes
 			}			
 			capital_scope = {

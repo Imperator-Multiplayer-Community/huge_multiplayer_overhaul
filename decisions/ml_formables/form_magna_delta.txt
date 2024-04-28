@@ -1,0 +1,101 @@
+﻿country_decisions = {
+	
+	# Magna Delta
+	# Designed by Neidhardt, created by Neidhardt
+	form_magna_delta = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = hellenic
+			tag = CYR
+			NOT = {
+				tag = MGD
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = cyrenaica_inferioris_area
+					is_in_area = cyrenaica_superioris_area
+					is_in_area = marmarica_occidentalis_area
+					is_in_area = marmarica_orientalis_area
+					is_in_area = western_delta_area
+					is_in_area = central_delta_area
+					is_in_area = eastern_delta_area
+					is_in_area = memphis_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = magna_delta_not_exists
+				NOT = {
+					any_country = {
+						tag = MGD
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = cyrenaica_inferioris_area
+				owns_or_subject_owns_area = cyrenaica_superioris_area
+				owns_or_subject_owns_area = marmarica_occidentalis_area
+				owns_or_subject_owns_area = marmarica_orientalis_area
+				owns_or_subject_owns_area = western_delta_area
+				owns_or_subject_owns_area = central_delta_area
+				owns_or_subject_owns_area = eastern_delta_area
+				owns_or_subject_owns_area = memphis_area
+
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "MAGNA_DELTA_NAME"
+			hidden_effect = {
+				change_country_adjective = "MAGNA_DELTA_ADJECTIVE"
+				change_country_color = "magna_delta_color"
+				change_country_tag = MGD
+				change_country_flag = MAGNA_DELTA_FLAG
+				trigger_event = {
+					id = formable_heritage.168
+				}				
+			}
+
+			custom_tooltip = magna_delta_claims_tooltip
+			hidden_effect = {
+				region:akhtabar_region = { formable_region_province_effect = yes }
+				region:aegyptus_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			set_capital = 516
+			hidden_effect = {
+				p:516.state = {
+					set_state_capital = 516
+				}
+			}
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			p:516 = { change_province_name = "Alexandria" }
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
