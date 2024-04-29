@@ -47,6 +47,7 @@
 		tag = UPE #Upper Egypt
 		tag = ARM #armenia
 		tag = ATR #Atrebatia
+		tag = TGK #Troan Kingdom
 	}
 }
 
@@ -73,7 +74,6 @@ is_tier_2_formable_trigger = {
 		tag = NUM #Numidia
 		tag = PRG #Phrygia Formable
 		tag = PTU #Pontus Formable
-		tag = PON #Pontus
 		tag = SII #Sicily
 		tag = SYA #Syria
 		tag = YMN #Yamnat
@@ -129,6 +129,10 @@ is_tier_2_formable_trigger = {
 		tag = OLO #Olovia
 		tag = ZVE #Zvejia
 		tag = VAP #Vapia
+		tag = MGD #Magna Delta
+		tag = GBK #Greco Bactrian Kingdom
+		tag = MTK #Mithridatic Kingdom
+		tag = MMB #Marcomannia Bois
 	}
 }
 
