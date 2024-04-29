@@ -26,7 +26,7 @@
 		is_monarchy = yes
 		is_subject = no
 		has_civil_war = no
-		NOT = { has_global_variable = antigonus_the_failure }
+		#NOT = { has_global_variable = antigonus_the_failure }
 	}
 	
 	abort = {	
@@ -38,10 +38,10 @@
 				has_variable = me_ant_start_flag
 				current_ruler = { has_trait = antigonids }
 			}
-			custom_tooltip = {
-				text = antigonid_01_vision_abort_tt
-				has_global_variable = antigonus_the_failure
-			}
+			# custom_tooltip = {
+			# 	text = antigonid_01_vision_abort_tt
+			# 	has_global_variable = antigonus_the_failure
+			# }
 			ai_mission_back_out_trigger = yes
 		}
 	}
@@ -126,7 +126,7 @@
 		bypass = {
 			OR = {
 				has_variable = antigonid_01_vision_1_bypass
-				has_variable = seleukid_deal_flag
+				#has_variable = seleukid_deal_flag
 				AND = {
 					has_variable = antigonid_01_vision_1_start
 					NOT = {	owns = 790 }
@@ -200,7 +200,7 @@
 				NOT = { owns = 789 }
 				NOT = { owns = 795 }
 				NOT = { owns = 1871 }
-				has_variable = seleukid_deal_flag
+				#has_variable = seleukid_deal_flag
 			}
 		}
 
@@ -295,7 +295,7 @@
 
 		bypass = {	
 			has_variable = antigonid_01_vision_3_bypass_flag
-			has_variable = seleukid_deal_flag
+			#has_variable = seleukid_deal_flag
 			NOR = {
 				any_subject = {
 					country_culture_group = west_levantine

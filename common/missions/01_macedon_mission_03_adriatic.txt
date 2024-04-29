@@ -26,7 +26,7 @@
 			}
 			AND = {
 				has_variable = me_ant_start_flag
-				has_global_variable = antigonus_the_failure
+				#has_global_variable = antigonus_the_failure
 				has_completed_mission = antigonid_02_aspiration
 			}			
 		}
@@ -45,7 +45,7 @@
 				current_ruler = { has_trait = antipatrid }
 				AND = {
 					has_variable = me_ant_start_flag
-					has_global_variable = antigonus_the_failure
+					#has_global_variable = antigonus_the_failure
 					has_completed_mission = antigonid_02_aspiration
 				}
 			}
@@ -148,27 +148,27 @@
 		icon = task_economical
 		duration = 730
 
-		allow = {
-			custom_tooltip = {
-				text = macedon_03_adiratic_1_allow_tt
-				any_owned_province = {
-					is_in_area = illyria_graeca_area
-					is_port = yes
-					trigger_if = {
-						limit = {
-							ROOT = { is_ai = no }
-						}
-						has_city_status = yes
-						total_population >= 20
-					}
-					trigger_else = {
-						OR = {
-							has_city_status = yes
-							ROOT = { can_pay_price = price_found_city }
-						}
-					}
-				}
-			}
+		allow = { # since not getting used anyway, disable errors
+			# custom_tooltip = {
+			# 	text = macedon_03_adiratic_1_allow_tt
+			# 	any_owned_province = {
+			# 		is_in_area = illyria_graeca_area
+			# 		is_port = yes
+			# 		trigger_if = {
+			# 			limit = {
+			# 				ROOT = { is_ai = no }
+			# 			}
+			# 			has_city_status = yes
+			# 			total_population >= 20
+			# 		}
+			# 		trigger_else = {
+			# 			OR = {
+			# 				has_city_status = yes
+			# 				ROOT = { can_pay_price = price_found_city }
+			# 			}
+			# 		}
+			# 	}
+			# }
 			trigger_if = {
 				limit = {
 					NOT = { owns_or_subject_owns_area = illyria_graeca_area }

@@ -353,13 +353,13 @@
 						remove_loyalty = antidemocracy_sentiment_2 
 					}
 				}
+				# if = {
+				# 	limit = {
+				# 		has_variable = olig_republic_complete
+				# 	}
+				# 	change_government = oligarchic_republic
+				# }
 				if = {
-					limit = {
-						has_variable = olig_republic_complete
-					}
-					change_government = oligarchic_republic
-				}
-				else_if = {
 					limit = {
 						has_variable = demo_civil_war
 					}
