@@ -269,7 +269,7 @@ deity_athtar = {
         OR = {
             country_culture_group = south_levantine
             country_culture_group = aksumite_group
-            country_culture_group = south_arabian
+            # country_culture_group = south_arabian
         }
         polytheistic_check_religion_trigger = yes
         OR = {
