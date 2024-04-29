@@ -1090,6 +1090,89 @@ on_character_death = {
 			value = 0
 			subtract = wealth
 		}
+		###Section 0: Mummification	
+		if = {
+			limit = {
+				employer = {
+					OR = {
+						country_culture_group = meroitic_group
+						country_culture_group = north_african
+						tag = EGY
+						tag = EGT
+					}
+				}
+				is_ruler = yes
+				martial >= 10
+			}
+			employer = {
+				set_variable = {
+					name = martial_mummy_candidate
+					days = 180
+				}
+			}
+			
+		}
+		if = {
+			limit = {
+				employer = {
+					OR = {
+						country_culture_group = meroitic_group
+						country_culture_group = north_african
+						tag = EGY
+						tag = EGT
+					}
+				}
+				is_ruler = yes
+				zeal >= 10
+			}
+			employer = {
+				set_variable = {
+					name = zeal_mummy_candidate
+					days = 180
+				}
+			}
+			
+		}
+		if = {
+			limit = {
+				employer = {
+					OR = {
+						country_culture_group = meroitic_group
+						country_culture_group = north_african
+						tag = EGY
+						tag = EGT
+					}
+				}
+				is_ruler = yes
+				charisma >= 10
+			}
+			employer = {
+				set_variable = {
+					name = charisma_mummy_candidate
+					days = 180
+				}
+			}	
+		}
+		if = {
+			limit = {
+				employer = {
+					OR = {
+						country_culture_group = meroitic_group
+						country_culture_group = north_african
+						tag = EGY
+						tag = EGT
+					}
+				}
+				is_ruler = yes
+				finesse >= 10
+			}
+			employer = {
+				set_variable = {
+					name = finesse_mummy_candidate
+					days = 180
+				}
+			}	
+		}
 		# Holding Inheritance
 		if = {
 			limit = {
