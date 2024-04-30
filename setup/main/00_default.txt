@@ -2382,13 +2382,13 @@ family={
 			owner=BIT
 		}
 		#Arados
-		45={
-			key = "Ger_ashtartid"
-			prestige=300
-			culture=phoenician
-			owner=ARA
-		}
-		#Arados
+		# 45={
+		# 	key = "Ger_ashtartid"
+		# 	prestige=300
+		# 	culture=phoenician
+		# 	owner=BYB
+		# }
+		#Byblos
 		46={
 			key = "Aynelid"
 			prestige=300
@@ -2396,12 +2396,12 @@ family={
 			owner=BYB
 		}
 		#Sidon
-		47={
-			key = "Elonimid"
-			prestige=300
-			culture=phoenician
-			owner=SID
-		}
+		# 47={
+		# 	key = "Elonimid"
+		# 	prestige=300
+		# 	culture=phoenician
+		# 	owner=BYB
+		# }
 		#Rhodes
 		48={
 			key = "Demaratid"
@@ -2459,12 +2459,12 @@ family={
 			owner=MSY
 		}
 		#Wakekiye
-		57={
-			key = "Wakekiye"
-			prestige=500
-			culture=lower_nubian
-			owner=DOD
-		}
+		# 57={
+		# 	key = "Wakekiye"
+		# 	prestige=500
+		# 	culture=lower_nubian
+		# 	owner=B40
+		# }
 		#Samaria
 		58={
 			key = "El_azarid"
@@ -2473,12 +2473,12 @@ family={
 			owner=SMA
 		}
 		#Bambyce
-		59={
-			key = "Atargatid"
-			prestige=400
-			culture=aramaic
-			owner=BMB
-		}
+		# 59={
+		# 	key = "Atargatid"
+		# 	prestige=400
+		# 	culture=aramaic
+		# 	owner=B19
+		# }
 		#Judea
 		60={
 			key = "Tzadoqi"
