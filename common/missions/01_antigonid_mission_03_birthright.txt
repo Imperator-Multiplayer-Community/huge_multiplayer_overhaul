@@ -23,7 +23,7 @@
 					current_ruler = { has_trait = antigonids }
 				}
 			}
-			has_global_variable = antigonus_the_failure
+			# has_global_variable = antigonus_the_failure
 			has_completed_mission = antigonid_02_aspiration
 		}
 		is_monarchy = yes
@@ -562,24 +562,24 @@
 		icon = task_conquest
 		requires = { antigonid_03_birthright_12 }
 
-		allow = {
-			owns_or_subject_owns_area = philistia_area
-		}
+		# allow = { # disabled for error log
+		# 	owns_or_subject_owns_area = philistia_area
+		# }
 
-		highlight = {
-			scope:province = {
-				is_in_area = philistia_area
-				trigger_if = {
-					limit = { has_owner = yes }
-					owner = {
-						NOR = {
-							THIS = ROOT
-							is_subject_of = ROOT
-						}
-					}
-				}
-			}
-		}
+		# highlight = {
+		# 	scope:province = {
+		# 		is_in_area = philistia_area
+		# 		trigger_if = {
+		# 			limit = { has_owner = yes }
+		# 			owner = {
+		# 				NOR = {
+		# 					THIS = ROOT
+		# 					is_subject_of = ROOT
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
 
 		on_completion = {
 			trigger_event = { id = me_antigonid_3_birthright.91 }

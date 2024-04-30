@@ -33,16 +33,16 @@ income = {
 	value = has_monthly_income
 }
 
-free_pops = {
-	value = 0
+# free_pops = {
+# 	value = 0
 
-	if = {
-		limit = {
-			has_variable = free_pops
-		}
-		add = var:free_pops
-	}
-}
+# 	if = {
+# 		limit = {
+# 			has_variable = free_pops
+# 		}
+# 		add = var:free_pops
+# 	}
+# }
 
 province_research = {
 	value = 0

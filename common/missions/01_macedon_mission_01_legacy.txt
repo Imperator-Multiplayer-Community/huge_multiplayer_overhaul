@@ -402,10 +402,10 @@
 
 		allow = {
 			treasury >= 50
-			custom_tooltip = {
-				text = macedon_01_legacy_7_allow_tt
-				has_global_variable = antigonus_the_failure
-			}
+			# custom_tooltip = {
+			# 	text = macedon_01_legacy_7_allow_tt
+			# 	has_global_variable = antigonus_the_failure
+			# }
 			custom_tooltip = {
 				text = macedon_01_legacy_7_allow_tt_2
 				c:ATH = { has_land = yes }

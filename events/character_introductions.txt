@@ -132,7 +132,7 @@ character_introductions.6 = {
 	interface_lock = no
 	trigger = {
 		NOT = {
-			has_variable = naval_war_hero_arises
+			has_variable = naval_hero_arises
 		}
 	}
 	immediate = {

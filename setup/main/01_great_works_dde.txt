@@ -7,8 +7,17 @@ provinces={
 	278={ #Pergamon
 		great_work=4
 	}
+	#425={ #Dodona
+	#	great_work=6
+	#}
 	428={ # Aigeai
 		great_work=7
+	}
+	#516={ # Alexandreia
+	#	great_work=9
+	#}
+	6694={
+		great_work=15
 	}
 }
 
@@ -60,6 +69,24 @@ great_work_manager={
 				}
 			}
 		}
+		#6={
+		#	ancient_wonder = yes
+		#	key="dodona_oracle"
+		#	great_work_category="building"
+		#	great_work_state=great_work_state_completed
+		#	finished_date=450.10.1
+			
+		#	great_work_name={
+		#		name="wonder_dodona_oracle"
+		#	}
+		#	great_work_components={
+		#		{
+		#			great_work_module="wonder_dodona_oracle"
+		#		}
+		#	}
+		#	great_work_effect_selections={
+		#	}
+		#}
 		7={
 			dlc = "Hellenistic World Flavor Pack"
 			ancient_wonder = yes
@@ -79,6 +106,59 @@ great_work_manager={
 			great_work_effect_selections={
 				{
 					great_work_effect="gw_effect_argead_palace"
+					great_work_effect_tier = "gw_effect_tier_4"
+				}
+			}
+		}
+		#9={
+		#	ancient_wonder = yes
+		#	key="wonder_library_of_alexandria"
+		#	great_work_state=great_work_state_completed
+		#	finished_date=450.10.1
+		#	great_work_category="building"
+			
+		#	great_work_name={
+		#		name="wonder_library_of_alexandria"
+		#	}
+		#	great_work_components={
+		#		{
+		#			great_work_module="wonder_library_of_alexandria"
+		#		}
+		#	}
+		#	great_work_effect_selections={
+		#		{
+		#			great_work_effect="gw_effect_martial_science_doctrine"
+		#			great_work_effect_tier = "gw_effect_tier_1"
+		#		}
+		#		{
+		#			great_work_effect="gw_effect_civic_science_doctrine"
+		#			great_work_effect_tier = "gw_effect_tier_1"
+		#		}
+		#		{
+		#			great_work_effect="gw_effect_oratory_science_doctrine"
+		#			great_work_effect_tier = "gw_effect_tier_1"
+		#		}
+		#	}
+		#}
+		15={
+			dlc = "Hellenistic World Flavor Pack"
+			ancient_wonder = yes
+			key="ay_khanum"
+			great_work_state=great_work_state_completed
+			finished_date=450.10.1
+			great_work_category="building"
+			
+			great_work_name={
+				name="wonder_ay_khanum"
+			}
+			great_work_components={
+				{
+					great_work_module="wonder_ay_khanum"
+				}
+			}
+			great_work_effect_selections={
+				{
+					great_work_effect="gw_effect_ay_khanum"
 					great_work_effect_tier = "gw_effect_tier_4"
 				}
 			}
