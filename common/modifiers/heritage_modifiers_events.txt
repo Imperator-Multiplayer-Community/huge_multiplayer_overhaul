@@ -949,9 +949,9 @@ vapian_modifier = {
 }
 
 troan_kingdom_modifier = {
-		global_defensive = 0.2
+		global_defensive = 0.1
 		global_commerce_modifier = 0.1
-		global_manpower_modifier = -0.1
+		global_manpower_modifier = -0.05
 }
 greco_bactrian_kingdom_modifier = {
 		global_tax_modifier = 0.05
@@ -961,7 +961,7 @@ greco_bactrian_kingdom_modifier = {
 magna_delta_modifier = {
 		camels_morale = 0.05
 		character_loyalty = 5
-		global_pop_conversion_speed_modifier = -0.1
+		global_pop_conversion_speed_modifier = -0.05
 }
 mithridatic_kingdom_modifier = {
 		build_cost = -0.1
@@ -970,6 +970,6 @@ mithridatic_kingdom_modifier = {
 }
 marcomannia_bois_modifier = {
 		light_infantry_discipline = 0.05
-		monthly_political_influence_modifier = 0.1
+		monthly_political_influence_modifier = 0.05
 		omen_power = -0.05
 }
