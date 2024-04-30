@@ -1084,14 +1084,14 @@ me_antigonid_1_vision.39 = {                            # Phoenician Timber - SH
         has_dlc = "Heirs of Alexander"
         has_land = yes
         OR = {
-            c:SID = {
-                has_land = yes
-                any_owned_province = { is_port = yes }
-            }
-            c:ARA = {
-                has_land = yes
-                any_owned_province = { is_port = yes }
-            }
+            # c:SID = {
+            #     has_land = yes
+            #     any_owned_province = { is_port = yes }
+            # }
+            # c:ARA = {
+            #     has_land = yes
+            #     any_owned_province = { is_port = yes }
+            # }
             c:BYB = {
                 has_land = yes
                 any_owned_province = { is_port = yes }
