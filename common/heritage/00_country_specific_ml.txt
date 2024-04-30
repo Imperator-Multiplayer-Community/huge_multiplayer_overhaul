@@ -4147,11 +4147,11 @@ vapian_heritage = {
 troan_kingdom_heritage = {
 	modifier = {
 		#good
-		global_defensive = 0.2
+		global_defensive = 0.1
 		global_commerce_modifier = 0.1
 
 		#bad
-		global_manpower_modifier = -0.1
+		global_manpower_modifier = -0.05
 	}
 	trigger = {
 		tag = TRK
@@ -4179,7 +4179,7 @@ magna_delta_heritage = {
 		character_loyalty = 5
 
 		#bad
-		global_pop_conversion_speed_modifier = -0.1
+		global_pop_conversion_speed_modifier = -0.05
 	}
 	trigger = {
 		tag = MGD
@@ -4204,7 +4204,7 @@ marcomannia_bois_heritage = {
 	modifier = {
 		#good
 		light_infantry_discipline = 0.05
-		monthly_political_influence_modifier = 0.1
+		monthly_political_influence_modifier = 0.05
 
 		#bad
 		omen_power = -0.05
