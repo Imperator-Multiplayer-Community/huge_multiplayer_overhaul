@@ -547,6 +547,246 @@ assassinate.7 = {
 	}
 }
 
+assassinate.8 = { # this event doesnt get used atm 
+# but it sets a variable another event uses that I am unsure if it's used or not. otherwise error.log spams
+	type = country_event
+	title = "assassinate.8.t"
+	desc = "assassinate.8.desc"
+	
+	left_portrait = current_ruler
+	left_portrait = scope:foreign_agent
+	right_portrait = scope:target
+	right_portrait = scope:scapegoat
+	
+	picture = dagger_behind_back
+	
+	goto_location = scope:target
+	
+	trigger = {
+		exists = scope:target
+		scope:target = {
+			is_alive = yes
+		}
+		exists = scope:foreign_agent
+		scope:foreign_agent = {
+			is_alive = yes
+			prisoner = no
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = scope:scapegoat
+					scope:scapegoat = {
+						is_alive = yes
+						employer = scope:target.employer
+					}
+				}
+				set_local_variable = {
+					name = scapegoat_killed
+					value = {
+						integer_range = { min = 1 max = 10 }
+					}
+				}
+			}
+			set_local_variable = {
+				name = implication_discovered
+				value = {
+					integer_range = { min = 1 max = 10 }
+				}
+			}
+			if = {
+				limit = {
+					has_local_variable = scapegoat_killed
+					local_var:scapegoat_killed > 5
+					scope:scapegoat = {
+						is_alive = yes
+					}
+				}
+				scope:scapegoat = {
+					death = {
+						death_reason = death_battering
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:target.employer = {
+						OR = {
+							is_tribal = yes
+							is_monarchy = yes
+						}
+						any_character = {
+							OR = {
+								has_office = office_bodyguard
+								has_office = office_master_of_the_guard
+							}
+						}
+					}
+				}
+				scope:target.employer = {
+					random_character = {
+						limit = {
+							OR = {
+								has_office = office_bodyguard
+								has_office = office_master_of_the_guard
+							}
+						}
+						save_scope_as = bodyguard
+					}
+				}
+				set_local_variable = {
+					name = assassination_result_calc
+					value = {
+						integer_range = { min = 20 max = 100 }
+					}
+				}
+				change_local_variable = {
+					name = assassination_result_calc
+					subtract = {
+						value = scope:bodyguard.martial
+						multiply = 5
+					}
+				}
+			}
+			else = {
+				set_local_variable = {
+					name = assassination_result_calc
+					value = {
+						integer_range = { min = 1 max = 75 }
+					}
+				}
+			}
+			# if = {
+			# 	limit = {
+			# 		has_local_variable = assassinate_malus
+			# 	}
+			# 	change_local_variable = {
+			# 		name = assassination_result_calc
+			# 		add = local_var:assassinate_malus
+			# 	}
+			# }
+		}
+		if = {
+			limit = {
+				local_var:assassination_result_calc > 10 
+				scope:target = {
+					is_ruler = yes
+					NOT = {
+						employer = root
+					}
+				}
+			}
+			scope:target = {
+				employer = {
+					trigger_event = {
+						id = assassinate.9 #inform of murder. Check for local_var implication_discovered > 5 to see if they realise who did it.
+					}
+				}
+				appropriate_death_effect_assassination = yes
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target = {
+					is_ruler = yes
+					NOT = {
+						employer = root
+					}
+				}
+				local_var:assassination_result_calc <= 10
+			}
+			scope:target.employer = {
+				trigger_event = {
+					id = assassinate.10
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				local_var:assassination_result_calc > 10
+			}
+			scope:target = {
+				appropriate_death_effect_assassination = yes
+			}
+		}
+		if = {
+			limit = {
+				local_var:implication_discovered > 5 
+			}
+			add_aggressive_expansion = 5
+			scope:target.employer = {
+				add_opinion = {
+					target = root
+					modifier = attempted_assassination_on_us
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.8.a" #offered asylum and agent got away, grant asylum
+		trigger = {
+			has_local_variable = asylum_promised
+			scope:foreign_agent = {
+				is_alive = yes
+				employer = scope:target.employer
+			}
+		}
+		scope:foreign_agent = {
+			hidden_effect = {
+				remove_all_positions = yes
+			}
+			move_country = root
+			hidden_effect = {
+				remove_character_modifier = foreign_citizen
+			}
+			set_as_minor_character = this
+		}
+	}
+	
+	option = {
+		name = "assassinate.8.b" #offered asylum and agent got away, refused asylum
+		trigger = {
+			has_local_variable = asylum_promised
+			scope:foreign_agent = {
+				is_alive = yes
+				employer = scope:target.employer
+			}
+		}
+		current_ruler = {
+			add_popularity = subtract_popularity_medium
+			if = {
+				limit = {
+					is_friend = scope:foreign_agent
+				}
+				remove_friend = scope:foreign_agent
+			}
+		}
+	}
+	
+	option = {
+		name = "assassinate.8.c"
+		trigger = {
+			NOT = {
+				has_local_variable = asylum_promised
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				has_variable = ongoing_assassination
+			}
+			remove_variable = ongoing_assassination
+		}
+	}
+	
+}
+
 assassinate.40 = {
 	type = country_event
 	title = "assassinate.40.t"

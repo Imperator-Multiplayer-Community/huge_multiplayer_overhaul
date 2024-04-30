@@ -584,10 +584,10 @@ reduced_rights_cleanup_effect = {
 				limit = { has_country_modifier = impressive_culture_literature }
 				remove_country_modifier = impressive_culture_literature
 			}
-			if = {
-				limit = { has_variable = impressive_culture_literature }
-				remove_variable = impressive_culture_literature
-			}
+			# if = {
+			# 	limit = { has_variable = impressive_culture_literature }
+			# 	remove_variable = impressive_culture_literature
+			# }
 		}
 
 

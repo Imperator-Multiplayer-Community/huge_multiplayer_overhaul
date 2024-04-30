@@ -9,7 +9,7 @@ deity_shiva = { # WAR
 			deity:omen_shiva = {
 				holy_site_deity_check_trigger = yes
 			}
-			has_variable = shiva_unlocked_variable
+			# has_variable = shiva_unlocked_variable
 		}
 	}
 	icon = deity_hindu_war
@@ -81,7 +81,7 @@ deity_saraswati = { # ECONOMY
 deity_indra = { # FERTILITY
 	trigger = {
 		OR = {
-		    has_variable = unlocked_indra_variable
+		    # has_variable = unlocked_indra_variable
 			common_deity_trigger = {
 				RELIGION = hindu
 			}

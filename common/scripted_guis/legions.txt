@@ -16,14 +16,14 @@
 	}
 
 	# not using but save for later
-	effect = { # populate variable list for valid commanders
-		every_valid_commander = {
-			add_to_variable_list = {
-				name = valid_commanders_list
-				target = this
-			}
-		}
-	}
+	# effect = { # populate variable list for valid commanders
+	# 	every_valid_commander = {
+	# 		add_to_variable_list = {
+	# 			name = valid_commanders_list
+	# 			target = this
+	# 		}
+	# 	}
+	# }
 } 
 
 # not using but save for later

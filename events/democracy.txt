@@ -1,7 +1,7 @@
 ﻿namespace = democracy
-democracy.1 = {
-	type = country_event
-}
+# democracy.1 = {
+# 	type = country_event
+# }
 democracy.2 = {
 	type = country_event
 	hidden = yes
