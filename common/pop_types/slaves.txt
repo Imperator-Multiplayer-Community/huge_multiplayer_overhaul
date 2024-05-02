@@ -10,7 +10,7 @@
 	
 	can_promote_to = freemen
 	demotes_to = slaves	#doesnt demote really
-	political_weight = 1
+	political_weight = 1	#it was 0.35
 	
 	conquest_demote_chance = 0
 	
