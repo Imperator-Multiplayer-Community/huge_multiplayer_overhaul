@@ -630,17 +630,23 @@
 }
 
 1133={ #Varrinia
-	terrain="plains"
+	terrain="hills"
 	culture="carthaginian"
 	religion="carthaginian_pantheon"
 	trade_goods="cinnabar"
-	civilization_value=11
+	civilization_value=26
 	barbarian_power=0
-	province_rank="settlement"
+	province_rank="city"
+	nobles={
+		amount=3
+	}
 	citizen={
-		amount=2
+		amount=6
 	}
 	freemen={
+		amount=7
+	}
+	slaves={
 		amount=3
 	}
 	tribesmen={

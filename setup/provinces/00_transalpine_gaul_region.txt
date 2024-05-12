@@ -683,17 +683,23 @@
 	culture="carthaginian"
 	religion="carthaginian_pantheon"
 	trade_goods="grain"
-	civilization_value=11
+	civilization_value=31
 	barbarian_power=0
-	province_rank="settlement"
-	freemen={
+	province_rank="city"
+	nobles={
 		amount=4
+	}
+	citizen={
+		amount=8
+	}
+	freemen={
+		amount=6
 	}
 	slaves={
-		amount=1
+		amount=3
 	}
 	tribesmen={
-		amount=4
+		amount=1
 	}
 }
 
