@@ -27,7 +27,7 @@
 			set_variable = mastered_dharana
 			add_treasury = -100
 			add_political_influence = -20
-			add_stability = -10
+			add_stability = -8
 			random_character = {
 				limit = {
 					has_high_priest_office_trigger = yes

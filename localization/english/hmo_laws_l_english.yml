@@ -28,6 +28,16 @@ merc_reliance_monthly_cost_tt:0 "Overall monthly Mercenary costs are reduced by 
 republican_recruitment_5:0 "Mercenary Reliance"
 republican_recruitment_5_desc:0 "We rely in Mercs"
 
+rep_pantheon_law:0 "State Religion"
+rep_def_pantheon_law:0 "Ancestral Customs"
+rep_def_pantheon_law_desc:0 "No law has been selected."
+rep_syncretism_law:0 "State Syncretism"
+rep_syncretism_law_desc:0 "We shall mandate respect and veneration for all deities and divinities in our realm, regardless of their provenance."
+rep_state_pantheon_law:0 "State Pantheon"
+rep_state_pantheon_law_desc:0 "We shall consecrate an official and unmoveable pantheon based on the gods of our forefathers."
+rep_henotheism_law:0 "Henotheism"
+rep_henotheism_law_desc:0 "We shall adore one god and one god alone from among the many in existence."
+
 
 #New Monarchy Laws
 
@@ -44,6 +54,28 @@ already_enacted_military_modernization:0 "Has not already enacted Marian Reforms
 military_modernization_warning:0 "Once Marian Reforms has been enacted, cannot go back to capital only legion law."
 already_enacted_standing_army:0 "Has not already enacted Standing Army."
 standing_army_warning:0 "#R Once Standing Army has been enacted, cannot go back to capital only legion law. #!"
+
+monarchy_pantheon_law:0 "State Religion"
+default_pantheon_law:0 "Ancestral Customs"
+default_pantheon_law_desc:0 "No law has been selected."
+syncretism_law:0 "State Syncretism"
+syncretism_law_desc:0 "We shall mandate respect and veneration for all deities and divinities in our realm, regardless of their provenance."
+state_pantheon_law:0 "State Pantheon"
+state_pantheon_law_desc:0 "We shall consecrate an official and unmoveable pantheon based on the gods of our forefathers."
+henotheism_law:0 "Henotheism"
+henotheism_law_desc:0 "We shall adore one god and one god alone from among the many in existence."
+
+#New Tribal Laws
+
+tribe_pantheon_law:0 "State Religion"
+tribe_def_pantheon_law:0 "Ancestral Customs"
+tribe_def_pantheon_law_desc:0 "No law has been selected."
+tribe_syncretism_law:0 "State Syncretism"
+tribe_syncretism_law_desc:0 "We shall mandate respect and veneration for all deities and divinities in our realm, regardless of their provenance."
+tribe_state_pantheon_law:0 "State Pantheon"
+tribe_state_pantheon_law_desc:0 "We shall consecrate an official and unmoveable pantheon based on the gods of our forefathers."
+tribe_henotheism_law:0 "Henotheism"
+tribe_henotheism_law_desc:0 "We shall adore one god and one god alone from among the many in existence."
 
 # Tribal Legion Laws
 

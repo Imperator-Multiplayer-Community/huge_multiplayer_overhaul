@@ -29,7 +29,7 @@ religious_1 = {
 		on_activate = { custom_tooltip = "unlocks_temple_tt" }
 	}
 	
-	gw_effect_zeal_education_inv = {
+	gw_effect_zeal_education_inv = {  #theological colleges ##################################################
 		on_activate = { 
 			if = {
 				limit = {
@@ -39,9 +39,10 @@ religious_1 = {
 			}
 		}
 		modifier = { max_research_efficiency = 0.25
-					 temple_building_cost = -0.1
+					 temple_building_cost = -0.15
+					 global_pop_conversion_speed_modifier = 0.1
 						 }
-		requires = { global_unrest_inv_2 }
+		requires = { global_unrest_inv_2 } 
 		icon_override = gw_icon
 		keystone = yes
 	}
@@ -88,20 +89,24 @@ religious_1 = {
     }		
 
 	# Level 3
-	omen_power_inv_1 = { 
-		modifier = { omen_power = 0.05
-					 deify_ruler_cost_modifier = -0.1 }
+	omen_power_inv_1 = {  #hierarchical haruspication ##################################################
+		modifier = {
+					global_pop_conversion_speed_modifier = 0.1
+					deify_ruler_cost_modifier = -0.1 }
 		requires = { global_unrest_inv_2 }		
 	}
 
-	happiness_for_wrong_group_modifier_inv_2 = { 
+	happiness_for_wrong_group_modifier_inv_2 = { #minor syncretism ##################################################
 		modifier = { 
 			#happiness_for_wrong_culture_group_modifier = 0.05
-			happiness_for_wrong_religion_modifier = 0.06 # replaces the above
+			happiness_for_wrong_religion_modifier = 0.05 # replaces the above
 			cultural_integration_speed_modifier = 0.15
-			global_pop_conversion_speed_modifier = -0.2
+			global_pop_conversion_speed_modifier = -0.3
 			global_pop_assimilation_speed_modifier = 0.1
 			change_pantheon_cost_modifier = -0.15
+		}
+		on_activate = {
+			custom_tooltip = "syncretism_law_tt"
 		}
 		requires = { global_unrest_inv_2 }
 	}		
@@ -133,8 +138,8 @@ religious_1 = {
 	} 	
 
 	technology_cost_inv_2 = {
-		modifier = { price_state_investment_religious_cost_modifier = -0.1
-					 global_population_capacity_modifier = 0.025 }
+		modifier = {
+					 global_population_capacity_modifier = 0.05 }
 		on_activate = {
 			add_1_free_province_investments = yes
 		}
@@ -183,32 +188,33 @@ religious_1 = {
     }
 
 	# Level 4
-	stability_inv_1 = {
-		modifier = { stability_cost_modifier = -0.05
-					 deify_ruler_cost_modifier = -0.15 }
+	stability_inv_1 = {  #contractual obligation ##################################################
+		modifier = { 
+				deify_ruler_cost_modifier = -0.15
+				global_pop_conversion_speed_modifier = 0.15 }
 		requires = { omen_power_inv_1 }
 	}	
 
-	stability_inv_2 = {
+	stability_inv_2 = {  #tolerated cults ##################################################
 		modifier = { 
 			global_unrest = -0.25
-			global_pop_conversion_speed_modifier = -0.3
-			change_pantheon_cost_modifier = -0.25
+			global_pop_conversion_speed_modifier = -0.2
+			change_pantheon_cost_modifier = -0.2
 			cultural_integration_speed_modifier = 0.15
-			global_pop_assimilation_speed_modifier = 0.15
-			happiness_for_wrong_religion_modifier = 0.06
+			global_pop_assimilation_speed_modifier = 0.1
+			happiness_for_wrong_religion_modifier = 0.05
 		}
 		requires = { happiness_for_wrong_group_modifier_inv_2 }
 	}	
 
 	stability_inv_3 = {
 		modifier = { 
-			stability_cost_modifier = -0.05 
+			stability_cost_modifier = -0.1 
 			price_state_investment_religious_cost_modifier = -0.1
 			ruler_popularity_gain = 0.03
 		}
 		on_activate = {
-			add_1_free_province_investments = yes
+			add_2_free_province_investments = yes
 		}
 		keystone = yes
 		requires_or = { war_exhaustion_inv global_slaves_happyness_inv }
@@ -407,9 +413,10 @@ religious_1 = {
 	}	
 
 	ruler_popularity_gain_inv_4 = {
-		modifier = { ruler_popularity_gain = 0.03
-					 global_monthly_state_loyalty = 0.02
+		modifier = { ruler_popularity_gain = 0.04
+					 global_monthly_state_loyalty = 0.03
 					 price_anabasis_cost_modifier = -0.25
+					 build_time = -0.05
 					 monthly_wage_modifier = 0.01 }
 		on_activate = {
 			add_1_free_province_investments = yes
@@ -561,17 +568,13 @@ religious_1 = {
 
 
 	# Level 6
-	omen_duration_inv_1 = {
+	omen_duration_inv_1 = {  #grand temples ##################################################
 		modifier = { build_cost = -0.05
-					 enact_holy_site_cost_modifier = -0.20   }
+					 enact_holy_site_cost_modifier = -0.20
+					 global_pop_conversion_speed_modifier = 0.1   }
 		requires_or = { omen_power_inv_4 global_unrest_inv_3 }
 		on_activate = {
-			if = {
-				limit = {
-					has_dlc = "Heirs of Alexander"
-				}
-				custom_tooltip = "allow_gw_effect_omen_doctrine"
-			}
+			custom_tooltip = "state_pantheon_law_tt"
 		}
 	}
 
@@ -904,7 +907,7 @@ religious_1 = {
     embalming_inv = {
     	modifier = { 
     		omen_power = 0.05
-    		deify_ruler_cost_modifier = -0.25
+    		deify_ruler_cost_modifier = -0.2
     	}
         
         requires = { book_of_the_dead_inv }
@@ -959,6 +962,14 @@ religious_1 = {
 		modifier = { price_found_city_cost_modifier = -0.1
 					 country_civilization_value = 3
 					 omen_power = 0.05 }
+		on_activate = {
+			if = {
+				limit = {
+					has_dlc = "Heirs of Alexander"
+				}
+				custom_tooltip = "allow_gw_effect_omen_doctrine"
+			}
+		}
 		requires_or = { omen_duration_inv_1 global_population_growth_inv_4 }
 	}
 
@@ -966,13 +977,16 @@ religious_1 = {
 		modifier = { monthly_political_influence_modifier = 0.05
 					 character_loyalty = 1 }
 		requires_or = { global_population_growth_inv_4 ruler_popularity_gain_inv_3 }
+		on_activate = {
+			add_1_free_province_investments = yes
+		}
 	}
 		
 	monthly_corruption_inv = { 
 		modifier = { 
 			monthly_corruption = -0.01
 			max_rivals = 1
-			price_humiliate_rival_cost_modifier = -0.25		
+			price_humiliate_rival_cost_modifier = -0.3		
 		}
 		requires_or = { ruler_popularity_gain_inv_3 global_citizen_happyness_inv }
 	} 
@@ -1058,22 +1072,21 @@ religious_1 = {
 	land_morale_recovery_inv_2 = {
 		modifier = { 
 			monthly_military_experience_modifier = 0.025
-			hold_triumph_cost_modifier = -0.2
+			hold_triumph_cost_modifier = -0.3
 			army_maintenance_cost = 0.01 }
 		requires = { land_morale_recovery_inv_1 }
 	}	
 
 	stability_inv_4 = {
-		modifier = { stability_cost_modifier = -0.075 }
+		modifier = {
+			stability_cost_modifier = -0.1
+			global_pop_conversion_speed_modifier = 0.15	}
 		requires = { omen_duration_inv_4 }
-		on_activate = {
-			add_1_free_province_investments = yes
-		}
 	}	
 
 	omen_duration_inv_3 = {
 		modifier = { global_pop_conversion_speed_modifier = 0.15
-					 temple_building_cost = -0.1 }
+					stability_cost_modifier = -0.1 }
 		requires_or = { omen_duration_inv_4 ruler_popularity_gain_inv_5 }
 	}		
 	
@@ -1090,14 +1103,13 @@ religious_1 = {
 		requires_or = { land_morale_recovery_inv_3 land_morale_recovery_inv_2 }
 	}
 
-	happiness_for_wrong_group_modifier_inv_3 = { 
+	happiness_for_wrong_group_modifier_inv_3 = {  #major syncretism ##################################################
 		modifier = { 
 			#happiness_for_wrong_culture_group_modifier = 0.1
-			happiness_for_wrong_religion_modifier = 0.12 # replaces the above
-			omen_power = 0.15
-			global_pop_conversion_speed_modifier = -1
-			global_pop_assimilation_speed_modifier = 0.33
-			change_pantheon_cost_modifier = -0.35
+			happiness_for_wrong_religion_modifier = 0.1 # replaces the above
+			global_pop_conversion_speed_modifier = -0.3
+			global_pop_assimilation_speed_modifier = 0.25
+			change_pantheon_cost_modifier = -0.25
 			cultural_integration_speed_modifier = 0.15
 		}
 		keystone = yes
@@ -1112,7 +1124,7 @@ religious_1 = {
 		}
 	}	
 
-	global_unrest_inv_5 = {
+	global_unrest_inv_5 = {  #assemblies ##################################################
 		modifier = { happiness_for_same_culture_modifier = 0.05
 					 happiness_for_wrong_culture_group_modifier = 0.05
 		}
@@ -1122,10 +1134,10 @@ religious_1 = {
 
 	global_unrest_inv_4 = {
 		modifier = { 
-			happiness_for_same_culture_modifier = 0.03
-			ruler_popularity_gain = 0.03
-			theathre_building_cost = -0.1
-			global_pop_assimilation_speed_modifier = 0.1
+			happiness_for_same_culture_modifier = 0.05
+			ruler_popularity_gain = 0.05
+			theathre_building_cost = -0.05
+			global_pop_assimilation_speed_modifier = 0.15
 		}
 		on_activate = {
 			add_innovation = 1
@@ -1139,6 +1151,7 @@ religious_1 = {
 		modifier = {
 			happiness_for_wrong_culture_group_modifier = 0.05
 			diplomatic_relations = 1
+			monthly_legitimacy = 0.02
 		}
 		requires = { global_manpower_modifier_inv_1 }
 		allow = {
@@ -1191,13 +1204,13 @@ religious_1 = {
 		requires_or = { global_manpower_modifier_inv_3 land_morale_recovery_inv_4 }
 	}	
 
-	stability_inv_5 = {
+	stability_inv_5 = {  #formulaic worship ##################################################
 		modifier = { 
-			global_pop_conversion_speed = 0.5
-			global_pop_conversion_speed_modifier = 0.1
+			global_pop_conversion_speed_modifier = 0.15
+			global_monthly_civilization = 0.01
 		}
 		on_activate = {
-			add_innovation = 1
+			custom_tooltip = "henotheism_law_tt"
 		}
 		keystone = yes
 		requires = { global_unrest_inv_5 }
@@ -1261,7 +1274,7 @@ religious_1 = {
 		modifier = { 
 			manpower_recovery_speed = 0.025
 			levy_size_multiplier = 0.0025
-			global_unrest = 0.25
+			global_unrest = 0.15
 			army_maintenance_cost = 0.01
 			 }	  
 		requires_or = { global_unrest_inv_5 omen_power_inv_2 }
@@ -1270,7 +1283,7 @@ religious_1 = {
 	# Level 15
 	technology_cost_inv_5 = {
 		modifier = { 
-			global_unrest = 0.5
+			global_unrest = 0.35
 			levy_size_multiplier = 0.01
 		}
 		keystone = yes

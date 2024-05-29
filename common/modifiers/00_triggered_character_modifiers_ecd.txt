@@ -3,20 +3,20 @@
 #New Characters
 
 brilliant_foreign_researcher_character = {
-	martial = 4
-	finesse = 4
-	zeal = 4
-	charisma = 4
+	martial = 5
+	finesse = 5
+	zeal = 5
+	charisma = 5
 	monthly_wage_for_character = 0.001
 	monthly_character_experience = 0.15
 	monthly_character_experience_decay = -0.15
 }
 
 brilliant_foreign_admin_character = {
-	martial = 4
-	finesse = 4
-	zeal = 4
-	charisma = 4
+	martial = 5
+	finesse = 5
+	zeal = 5
+	charisma = 5
 	monthly_wage_for_character = 0.001
 	monthly_character_experience = 0.15
 	monthly_character_experience_decay = -0.15
@@ -39,10 +39,10 @@ naval_war_hero_character = {
 }
 
 petty_noble_character = {
-	martial = 4
-	charisma = 4
-	finesse = 4
-	zeal = 4
+	martial = 5
+	charisma = 5
+	finesse = 5
+	zeal = 5
 	monthly_wage_for_character = 0.0025
 	monthly_character_experience = 0.15
 	monthly_character_experience_decay = -0.15
@@ -51,6 +51,20 @@ petty_noble_character = {
 
 spy_recruit_character = {
 	charisma = 7
+	monthly_wage_for_character = 0.001
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.15
+}
+
+conversion_character = {
+	zeal = 7
+	monthly_wage_for_character = 0.001
+	monthly_character_experience = 0.15
+	monthly_character_experience_decay = -0.15
+}
+
+assimilation_character = {
+	finesse = 7
 	monthly_wage_for_character = 0.001
 	monthly_character_experience = 0.15
 	monthly_character_experience_decay = -0.15
