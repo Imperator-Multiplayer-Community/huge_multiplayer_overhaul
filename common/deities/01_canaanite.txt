@@ -177,7 +177,7 @@ deity_yam = {
 		}
 	}
 	icon = deity_cr_car_yam
-	passive_modifier = { ship_repair_at_sea = deity_ship_repair_at_sea }
+	passive_modifier = { monthly_military_experience_modifier = deity_monthly_military_experience_modifier_svalue }
 	omen = { naval_damage_done = omen_naval_damage_done_svalue } #Bonus from Omen
 	religion = carthaginian_pantheon
 	deity_category = war #This Deity uses a War slot
