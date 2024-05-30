@@ -96,7 +96,7 @@ religious_1 = {
 		requires = { global_unrest_inv_2 }		
 	}
 
-	happiness_for_wrong_group_modifier_inv_2 = { #minor syncretism ##################################################
+happiness_for_wrong_group_modifier_inv_2 = { #minor syncretism ##################################################
 		modifier = { 
 			#happiness_for_wrong_culture_group_modifier = 0.05
 			happiness_for_wrong_religion_modifier = 0.05 # replaces the above
