@@ -1697,14 +1697,20 @@
 			add_political_influence = -25
 			custom_tooltip = recruit_talent_tt
 			ordered_owned_province = {
-				limit = { dominant_province_culture = scope:target_culture.culture }
-				order_by = total_population
-				ROOT = {
-					create_character = {
-						culture = scope:target_culture.culture
-						religion = prev.prev.religion
-					}
+				limit = {
+					dominant_province_culture = scope:target_culture.culture
 				}
+				order_by = total_population
+				dominant_province_culture = {
+					save_scope_as = char_target_culture_scope
+				}
+				dominant_province_religion = {
+					save_scope_as = char_target_religion_scope
+				}
+			}
+			trigger_event = {
+				id = character_introductions.2
+				days = -1
 			}
 			set_variable = {
 				name = recently_promoted_talent
