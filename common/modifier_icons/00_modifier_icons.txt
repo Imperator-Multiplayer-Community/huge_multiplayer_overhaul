@@ -1829,6 +1829,10 @@ local_happiness_for_wrong_religion_modifier = {
 	positive = "gfx/interface/icons/modifiers/local_happiness_for_wrong_religion_modifier.dds"
 }
 
+cultural_assimilation_speed_modifier = {
+    positive = "gfx/interface/icons/modifiers/cultural_assimilation_speed_modifier.dds"
+}
+
 global_population_happiness = {
 	positive = "gfx/interface/icons/modifiers/global_population_happiness.dds"
 }
