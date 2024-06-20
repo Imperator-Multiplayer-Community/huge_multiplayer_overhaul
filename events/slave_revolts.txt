@@ -647,13 +647,13 @@ slave_revolts.6 = { # rumours of unhappy slaves
 	option = { # satisfy their demands
 		name = slave_revolts.6.a
 		custom_tooltip = slaves_are_pacified_for_now_tt
-		add_treasury = {
-			value = has_monthly_income
-			multiply = -24
-			max = -1200
-			min = -60
-		}
 		owner = {
+			add_treasury = {
+				value = has_monthly_income
+				multiply = -24
+				max = -1200
+				min = -60
+			}
 			add_country_modifier = {
 				name = satisified_initial_slaves_demands
 				duration = 3650
@@ -681,7 +681,9 @@ slave_revolts.6 = { # rumours of unhappy slaves
 	option = { # kill the leaders
 		name = slave_revolts.6.c
 		custom_tooltip = this_can_lead_to_slave_rebellion_tt
-		add_tyranny = 5
+		owner = {
+			add_tyranny = 5
+		}
 		while = {
 			count = 2
 			random_pops_in_province = {

@@ -2534,6 +2534,7 @@ on_game_initialized = {
 		#free_inventions.1 #Please keep this event here, useful for testing purposes, as it adds 40 inventions
 		fighting_ground_military_events.1		#Combat terrain modifier events
 		fighting_ground_military_events.2
+		fighting_ground_military_events.3 # cultural assimilation debuff
 		iberian_starting_country_events.1
 		iberian_starting_country_events.2
 		iberian_starting_country_events.3
@@ -3363,8 +3364,8 @@ on_province_occupied = {
 	}
 	events = {
 		fire_events.1
-		#slave_revolts.2 #Interactive Looting
-		#slave_revolts.5 #Interactive Looting of capital
+		slave_revolts.2 #Interactive Looting
+		slave_revolts.5 #Interactive Looting of capital
 	}
 }
 

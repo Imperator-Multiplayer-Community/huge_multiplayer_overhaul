@@ -115,3 +115,29 @@ INR_Tributary_Terrain = {
 	octere_tributary_terrain_combat_bonus = -0.3
 	mega_galley_tributary_terrain_combat_bonus = -0.5
 }
+
+
+# cultural_assimilation_debuff
+cultural_assimilation_debuff_1 = {
+	cultural_assimilation_speed_modifier = -0.1
+}
+
+cultural_assimilation_debuff_2 = {
+	cultural_assimilation_speed_modifier = -0.2
+}
+
+cultural_assimilation_debuff_3 = {
+	cultural_assimilation_speed_modifier = -0.3
+}
+
+cultural_assimilation_debuff_4 = {
+	cultural_assimilation_speed_modifier = -0.4
+}
+
+cultural_assimilation_debuff_5 = {
+	cultural_assimilation_speed_modifier = -0.5
+}
+
+cultural_assimilation_debuff_6 = {
+	cultural_assimilation_speed_modifier = -0.6
+}

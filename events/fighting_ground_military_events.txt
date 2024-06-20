@@ -75,3 +75,33 @@ fighting_ground_military_events.2 = { # AI
 		}
     }
 }
+
+fighting_ground_military_events.3 = {
+    type = country_event
+	hidden = yes
+
+	immediate = {
+		every_country_culture = {
+			limit = {
+				NOT = {
+					this.culture = root.culture
+				}
+			}
+			add_country_culture_modifier = {
+				name = cultural_assimilation_debuff_3
+				duration = -1
+				mode = add
+			}
+			if = {
+				limit = {
+					NOT = { this.culture.culture_group = root.culture.culture_group }
+				}
+				add_country_culture_modifier = {
+					name = cultural_assimilation_debuff_6
+					duration = -1
+					mode = add
+				}
+			}
+		}
+	}
+}	
