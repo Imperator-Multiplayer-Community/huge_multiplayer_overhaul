@@ -231,7 +231,7 @@ official_language = {
 				state = {
 					add_state_modifier = {
 						name = "official_language_state"
-						duration = 4380
+						duration = -1
 					}
 				}
 			}
@@ -311,7 +311,7 @@ official_language = {
 				state = {
 					add_state_modifier = {
 						name = "intermarriage_spree"
-						duration = 4380
+						duration = -1
 					}
 				}
 			}

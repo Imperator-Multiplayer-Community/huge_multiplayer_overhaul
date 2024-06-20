@@ -120,6 +120,9 @@
  pandered_project:0 "Promoting Minority"
  pandered_project_desc:0 ""
 
+ protection_against_torture_integrated:0 "Protection against Torture"
+ protection_against_torture_integrated_desc:0 ""
+
  create_petty_nobles:0 "Indulge Petty Nobles"
  create_petty_nobles_desc:0 "Flatter the fallen nobility of this subject people, helping them to cling to their former glory."
  petty_noble_tt:0 "Flatter the fallen nobility of the #Y [SCOPE.sCountryCulture('target_culture').GetCulture.GetName]#! culture, helping them to cling to their former glory."

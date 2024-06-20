@@ -303,6 +303,17 @@ free_ports_monarchy_law = {
 			global_citizen_happyness = 0.04
 		}
 	}
+
+	customs_tariffs = {
+		allow = {
+			num_of_ports >= 1
+			invention = commerce_inv_5
+		}
+		
+		modifier = {
+			global_state_trade_routes = 0.4
+		}
+	}
 	
 }
 

@@ -716,6 +716,10 @@
         modifier = { 
 			global_commerce_modifier = 0.05 
 		}
+
+		on_activate = {
+			custom_tooltip = "customs_tariffs_law_tt"
+		}
         requires = { state_trade_inv_3 }
     }
 

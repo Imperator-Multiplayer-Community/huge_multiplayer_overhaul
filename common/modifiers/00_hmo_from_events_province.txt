@@ -1,4 +1,4 @@
-##################################################################################################
+﻿##################################################################################################
 # scriptable and usable for event-system below.
 ##################################################################################################
 stormy_seas = {
@@ -24,16 +24,16 @@ desert_storm = {
 }
 
 intermarriage_spree = {
-	local_pop_assimilation_speed_modifier = 0.5
+	local_pop_assimilation_speed_modifier = 0.25
 }
 
 official_language_state = {
-	local_pop_assimilation_speed_modifier = 0.5
+	local_pop_assimilation_speed_modifier = 0.25
 }
 
 local_colonia = {
-	local_pop_assimilation_speed_modifier = 1
-	local_migration_attraction = 2
+	local_pop_assimilation_speed_modifier = 1.5
+	local_migration_attraction = 3
 }
 
 persecuted_community = {

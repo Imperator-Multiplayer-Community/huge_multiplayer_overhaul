@@ -1,4 +1,4 @@
-
+﻿
 foreign_traditions_embraced = {
 	culture_freemen_happiness = 0.05
 	culture_freemen_output = 0.05
@@ -246,7 +246,7 @@ integration_status_removed = {
 
 
 honor_guard = {
-	culture_happiness_modifier = 0.05
+	culture_happiness_modifier = 0.06
 	culture_freemen_happiness = 0.05
 	culture_freemen_output = 0.5
 	culture_citizen_output = -0.2
@@ -258,7 +258,7 @@ honor_guard_other = {
 }
 
 petty_noble = {
-	culture_happiness_modifier = 0.04
+	culture_happiness_modifier = 0.03
 	culture_nobles_happiness = 0.05
 	culture_nobles_output = 0.15
 	culture_freemen_output = -0.05
@@ -271,7 +271,7 @@ petty_noble_other = {
 
 
 promoted_administrators_in_subcultures = {
-	culture_happiness_modifier = 0.05
+	culture_happiness_modifier = 0.06
 	culture_citizen_happiness = 0.05
 	culture_citizen_output = 0.5
 	culture_freemen_output = -0.2
@@ -300,22 +300,26 @@ pandered_people = {
 torture_protection = {
 	culture_slaves_happiness = 0.2
 	culture_slaves_output = 0.05
+	culture_happiness_modifier = 0.03
 	cultural_integration_speed_modifier = 0.2
 }
 
 inheritance_right = {
 	culture_nobles_happiness = 0.2
 	culture_nobles_output = 0.2
+	culture_happiness_modifier = 0.03
 	cultural_integration_speed_modifier = 0.2
 }
 
 right_of_marriage = {
-	cultural_assimilation_speed_modifier = 0.5 ###################################
+	#cultural_assimilation_speed_modifier = 0.35 ###################################
+	culture_happiness_modifier = 0.05
 	cultural_integration_speed_modifier = 0.2
 }
 
 official_language_mod = {
-	cultural_assimilation_speed_modifier = 0.5 ###################################
+	#cultural_assimilation_speed_modifier = 0.35 ###################################
+	culture_happiness_modifier = 0.05
 	cultural_integration_speed_modifier = 0.2
 }
 
@@ -326,8 +330,9 @@ right_to_enter_contracts = {
 }
 
 officer_right = {
-	culture_freemen_happiness = 0.1
+	culture_freemen_happiness = 0.08
 	culture_freemen_output = 0.1
+	culture_happiness_modifier = 0.03
 	cultural_integration_speed_modifier = 0.2
 }
 
@@ -344,7 +349,7 @@ exiled_people = {
 
 colonia_founded = {
 	culture_happiness_modifier = -0.05
-	cultural_assimilation_speed_modifier = 0.5
+	#cultural_assimilation_speed_modifier = 0.35
 	cultural_integration_speed_modifier = -0.2
 }
 
