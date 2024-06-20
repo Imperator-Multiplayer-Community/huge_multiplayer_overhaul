@@ -219,6 +219,7 @@ official_language = {
 					name = official_language_mod
 					duration = -1
 				}
+				improve_country_assimilation_debuff_effect = yes
 			}
 			add_country_modifier = {
 				name = "extended_official_language"
@@ -299,6 +300,7 @@ official_language = {
 					name = right_of_marriage
 					duration = -1
 				}
+				improve_country_assimilation_debuff_effect = yes
 			}
 			add_country_modifier = {
 				name = "extended_right_of_marriage"
@@ -487,6 +489,7 @@ official_language = {
 					name = "colonia_founded" 
 					duration = -1
 				}
+				improve_country_assimilation_debuff_effect = yes
 			}
 			add_country_modifier = {
 				name = "colonia_project"
