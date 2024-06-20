@@ -290,7 +290,7 @@ republican_religious_laws_rom = { # Religious Laws
 		}
 		
 		modifier = {
-			global_pop_conversion_speed_modifier = 0.3
+			global_pop_conversion_speed_modifier = 0.25 #Was 0.3
 		}
 	}
 	
