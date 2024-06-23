@@ -26,7 +26,7 @@
 				}
 			}
 			stability > 40
-			political_influence > 25
+			political_influence > 20
 			invention = assassinate_attempt_cost_modifier_inv
 		}
 		effect = {
@@ -44,7 +44,7 @@
 				}
 				add_city_smoke_effect = yes
 				add_city_fire_effect = yes
-				add_state_loyalty = 20
+				add_state_loyalty = 25
 				ordered_pops_in_province = {
 					limit = {
 						OR = {
@@ -58,7 +58,7 @@
 					order_by = pop_hapiness #total_population
 					max = {
 						value = total_population
-						divide = 5
+						divide = 7
 					}
 					kill_pop = yes
 				}		
@@ -73,9 +73,30 @@
 				name = "persecution_project"
 				duration = 1460
 			}
-			add_tyranny = 10
-			add_treasury = 500
-			add_political_influence = -25
+			add_tyranny = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = 0.05
+  				min = 1
+				max = 8
+			}
+			add_treasury = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = 3
+  				min = 3
+				max = 9999
+			}
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = 0.05
+  				max = 8
+				min = 1
+			}
 		}
 		ai_will_do = {
 			modifier = {

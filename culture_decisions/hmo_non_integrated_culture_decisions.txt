@@ -16,7 +16,13 @@
 			NOT = { has_country_modifier = extended_inheritance_right }
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = -1
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -76,7 +82,13 @@
 			NOT = { has_country_modifier = extended_contract_rights }
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = -1
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -124,7 +136,13 @@
 			NOT = { has_country_modifier = extended_torture_protection }
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = -1
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -168,6 +186,88 @@
 			}
 		}
 	}
+
+
+official_language = {
+		potential = {
+			root.culture.culture_group = scope:target_culture.culture.culture_group
+			scope:target_culture = {
+				NOT = { has_pop_type_right = citizen }
+				NOT = { has_pop_type_right = nobles }
+			}
+			scope:target_culture = {
+				NOT = { has_country_culture_modifier = official_language_mod }
+			}
+		}
+		allow = {
+			scope:target_culture = {
+				NOT = { has_country_culture_modifier = official_language_mod }
+			}
+			NOT = { has_country_modifier = extended_official_language }
+		}
+		effect = {
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -500
+			}
+			add_stability = -1
+			culture_state_loyalty_effect = yes
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = official_language_mod
+					duration = -1
+				}
+				improve_country_assimilation_debuff_effect = yes
+			}
+			add_country_modifier = {
+				name = "extended_official_language"
+				duration = 1095
+			}
+			ordered_owned_province = {
+				limit = { dominant_province_culture = scope:target_culture.culture }
+				max = 1
+				order_by = total_population
+				state = {
+					add_state_modifier = {
+						name = "official_language_state"
+						duration = -1
+					}
+				}
+			}
+			approval_effect = {
+				PARTY = populares_party
+				VALUE = party_disapproval_small_svalue
+			}
+			approval_effect = {
+				PARTY = boni_party
+				VALUE = party_approval_small_svalue
+			}
+			approval_effect = {
+				PARTY = oligarchic_party
+				VALUE = party_disapproval_small_svalue
+			}
+			approval_effect = {
+				PARTY = democratic_party
+				VALUE = party_approval_small_svalue
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				culture_pops_in_country = {
+					target = scope:target_culture
+					value <= 25
+				}
+			}
+			modifier = {
+				factor = 0
+				stability < 50
+			}
+		}
+	}	
 	
 	right_of_intermarriage = {
 		potential = {
@@ -187,13 +287,20 @@
 			NOT = { has_country_modifier = extended_right_of_marriage }
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -500
+			}
+			add_stability = -1
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
 					name = right_of_marriage
 					duration = -1
 				}
+				improve_country_assimilation_debuff_effect = yes
 			}
 			add_country_modifier = {
 				name = "extended_right_of_marriage"
@@ -242,6 +349,7 @@
 			}
 		}
 	}
+
 	right_to_commission = {
 		potential = {
 			NOT = { primary_culture = scope:target_culture.culture }
@@ -259,8 +367,13 @@
 			military_experience >= 5
 		}
 		effect = {
-			add_political_influence = -20
-			add_military_experience = -5
+			add_military_experience = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.01
+  				max = -1
+				min = -5
+			}
+			add_stability = -1
 			culture_state_loyalty_effect = yes
 			scope:target_culture = {
 				add_country_culture_modifier = {
@@ -336,7 +449,13 @@
 			}
 		}
 		effect = {
-			add_political_influence = -20
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = -1
 			ordered_owned_province = {
 				limit = {
 					dominant_province_culture = scope:target_culture.culture
@@ -361,7 +480,7 @@
 					name = "local_colonia"
 					duration = -1
 				}
-				add_state_loyalty = -15
+				add_state_loyalty = -10
 				custom_tooltip = colonia_here_tt
 				trigger_event = { id = cultural_integration.11 }
 			}
@@ -370,6 +489,7 @@
 					name = "colonia_founded" 
 					duration = -1
 				}
+				improve_country_assimilation_debuff_effect = yes
 			}
 			add_country_modifier = {
 				name = "colonia_project"

@@ -300,7 +300,7 @@ republican_religious_laws = { # Religious Laws
 			civic_tech >= 3
 		}
 		modifier = {
-			global_pop_conversion_speed_modifier = 0.3
+			global_pop_conversion_speed_modifier = 0.25 #Was 0.3
 		}
 	}
 	
@@ -437,4 +437,64 @@ republican_land_reforms = { # Land Reforms
 		}
 	}
 }
+
+rep_pantheon_law = {
+	potential = {
+		is_republic = yes
+		#NOT = {
+		#	tag = ROM
+		#}
+	}
+	
+	rep_def_pantheon_law = {
+
+	}
+	
+	rep_syncretism_law = {
+		
+		allow = {
+			invention = happiness_for_wrong_group_modifier_inv_2
+		}
+		modifier = {
+			happiness_for_wrong_religion_modifier = 0.1
+			change_pantheon_cost_modifier = -0.15
+			omen_duration = -0.5
+			global_pop_conversion_speed_modifier = -0.2
+			enact_holy_site_cost_modifier = -0.2
+		}
+		# shorter omen time + add deities per decision
+	}
+	
+	rep_state_pantheon_law = {
+	
+		allow = {
+			invention = omen_duration_inv_1
+		}
+		modifier = {
+			global_pop_conversion_speed = 0.25
+			global_pop_assimilation_speed_modifier = -0.2
+			stability_cost_modifier = -0.05
+			omen_power = 0.05
+			deify_ruler_cost_modifier = -0.1
+		}
+	}
+
+	rep_henotheism_law = {
+		
+		allow = {
+			invention = stability_inv_5
+		}
+		modifier = {
+			omen_power = 0.5
+			omen_duration = 100
+			country_civilization_value = 5
+			happiness_for_wrong_religion_modifier = -0.1
+			happiness_for_same_religion_modifier = 0.05
+			deify_ruler_cost_modifier = 5
+		}
+		# cannot change deity
+	}
+	
+}
+
 

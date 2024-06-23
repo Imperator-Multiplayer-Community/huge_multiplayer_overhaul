@@ -69,9 +69,30 @@
 				name = "exile_project"
 				duration = 1460
 			}
-			add_tyranny = 10
-			add_treasury = 750
-			add_political_influence = -20
+			add_tyranny = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = 0.05
+  				min = 1
+				max = 8
+			}
+			add_treasury = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = 4
+  				min = 4
+				max = 9999
+			}
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = 0.05
+  				max = 8
+				min = 1
+			}
 		}
 		ai_will_do = {
 			modifier = {

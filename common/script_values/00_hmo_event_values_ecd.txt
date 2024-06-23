@@ -47,16 +47,16 @@ veterans_fight_svalue = {
 grand_assault_svalue = {
 	value = max_manpower
 	multiply = -0.25
-	max = -100
-	min = -20
+	min = -100
+	max = -20
 }
 
 
 grand_siege_svalue = {
 	value = max_manpower
 	multiply = -0.125
-	max = -100
-	min = -20
+	min = -100
+	max = -20
 }
 
 veterans_fight_svalue_slaves = {

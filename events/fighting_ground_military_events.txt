@@ -75,3 +75,26 @@ fighting_ground_military_events.2 = { # AI
 		}
     }
 }
+
+fighting_ground_military_events.3 = { # also gets triggered bi yearly
+    type = country_event
+	hidden = yes
+
+	immediate = {
+		every_country_culture = {
+			limit = {
+				NOR = {
+					this.culture = root.culture
+					has_country_culture_modifier = cultural_assimilation_debuff_1
+					has_country_culture_modifier = cultural_assimilation_debuff_2
+					has_country_culture_modifier = cultural_assimilation_debuff_3
+				}
+			}
+			add_country_culture_modifier = {
+				name = cultural_assimilation_debuff_1
+				duration = -1
+				mode = add
+			}
+		}
+	}
+}	

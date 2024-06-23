@@ -24,8 +24,196 @@ character_introductions.2 = {
 	interface_lock = no
 	immediate = {
 	}
-	option = {
+	option = { # martial
 		name = "character_introductions.2.a"
+		hidden_effect = {
+			create_character = {
+				culture = scope:char_target_culture_scope
+				religion = scope:char_target_religion_scope
+				add_martial = 3
+				random_list = {
+					10 = {
+						add_trait = energetic
+					}
+					10 = {
+						add_trait = silver_tongued
+					}
+					10 = {
+						add_trait = assertive
+					}
+					10 = {
+						add_trait = cruel
+					}
+					10 = {
+						add_trait = founder
+					}
+					10 = {
+						add_trait = just
+					}
+					10 = {
+						add_trait = prominent
+					}
+					10 = {
+						add_trait = merciful
+					}
+					10 = {
+						add_trait = loving
+					}
+					10 = {
+						add_trait = benefactor
+					}
+				}
+				add_character_modifier = {
+					name = "promoted_talent_character"
+					duration = -1
+				}
+				save_scope_as = new_talent
+			}
+		}
+	}
+
+	option = { # finesse
+		name = "character_introductions.2.b"
+		hidden_effect = {
+			create_character = {
+				culture = scope:char_target_culture_scope
+				religion = scope:char_target_religion_scope
+				add_finesse = 3
+				random_list = {
+					10 = {
+						add_trait = energetic
+					}
+					10 = {
+						add_trait = silver_tongued
+					}
+					10 = {
+						add_trait = assertive
+					}
+					10 = {
+						add_trait = cruel
+					}
+					10 = {
+						add_trait = founder
+					}
+					10 = {
+						add_trait = just
+					}
+					10 = {
+						add_trait = prominent
+					}
+					10 = {
+						add_trait = merciful
+					}
+					10 = {
+						add_trait = loving
+					}
+					10 = {
+						add_trait = benefactor
+					}
+				}
+				add_character_modifier = {
+					name = "promoted_talent_character"
+					duration = -1
+				}
+				save_scope_as = new_talent
+			}
+		}
+	}
+
+	option = { # zeal
+		name = "character_introductions.2.c"
+		hidden_effect = {
+			create_character = {
+				culture = scope:char_target_culture_scope
+				religion = scope:char_target_religion_scope
+				add_zeal = 3
+				random_list = {
+					10 = {
+						add_trait = energetic
+					}
+					10 = {
+						add_trait = silver_tongued
+					}
+					10 = {
+						add_trait = assertive
+					}
+					10 = {
+						add_trait = cruel
+					}
+					10 = {
+						add_trait = founder
+					}
+					10 = {
+						add_trait = just
+					}
+					10 = {
+						add_trait = prominent
+					}
+					10 = {
+						add_trait = merciful
+					}
+					10 = {
+						add_trait = loving
+					}
+					10 = {
+						add_trait = benefactor
+					}
+				}
+				add_character_modifier = {
+					name = "promoted_talent_character"
+					duration = -1
+				}
+				save_scope_as = new_talent
+			}
+		}
+	}
+
+	option = { # charisma
+		name = "character_introductions.2.d"
+		hidden_effect = {
+			create_character = {
+				culture = scope:char_target_culture_scope
+				religion = scope:char_target_religion_scope
+				add_charisma = 3
+				random_list = {
+					10 = {
+						add_trait = energetic
+					}
+					10 = {
+						add_trait = silver_tongued
+					}
+					10 = {
+						add_trait = assertive
+					}
+					10 = {
+						add_trait = cruel
+					}
+					10 = {
+						add_trait = founder
+					}
+					10 = {
+						add_trait = just
+					}
+					10 = {
+						add_trait = prominent
+					}
+					10 = {
+						add_trait = merciful
+					}
+					10 = {
+						add_trait = loving
+					}
+					10 = {
+						add_trait = benefactor
+					}
+				}
+				add_character_modifier = {
+					name = "promoted_talent_character"
+					duration = -1
+				}
+				save_scope_as = new_talent
+			}
+		}
 	}
 }
 

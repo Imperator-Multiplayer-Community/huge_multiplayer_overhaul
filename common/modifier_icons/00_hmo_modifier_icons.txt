@@ -341,3 +341,10 @@ default_looting_policy = {
 high_looting_policy = {
 	positive = "gfx/interface/icons/modifiers/agressive_expansion_impact.dds"
 }
+
+
+cultural_assimilation_speed_modifier = { positive = "gfx/interface/icons/modifiers/global_pop_assimilation_speed_modifier.dds" }
+
+generic_build_special_building_cost_modifier = { positive = "gfx/interface/icons/modifiers/build_cost.dds" }
+
+price_mission_metropolis_cost_modifier = { positive = "gfx/interface/icons/modifiers/price_found_city_cost_modifier.dds" }

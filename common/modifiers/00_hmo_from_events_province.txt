@@ -24,17 +24,21 @@ desert_storm = {
 }
 
 intermarriage_spree = {
-	local_pop_assimilation_speed_modifier = 0.2
+	local_pop_assimilation_speed_modifier = 0.25
+}
+
+official_language_state = {
+	local_pop_assimilation_speed_modifier = 0.25
 }
 
 local_colonia = {
-	local_pop_assimilation_speed_modifier = 0.2
-	local_migration_attraction = 2
+	local_pop_assimilation_speed_modifier = 1.5
+	local_migration_attraction = 3
 }
 
 persecuted_community = {
-	local_pop_assimilation_speed_modifier = -0.2
-	local_unrest = 2
+	local_pop_assimilation_speed_modifier = -0.5
+	local_unrest = 0.5
 	local_migration_attraction = -10
 	local_migration_speed = 5
 	local_pop_demotion_speed = 1

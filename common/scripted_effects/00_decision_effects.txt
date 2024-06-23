@@ -1211,3 +1211,29 @@ republic_to_monarchy_law_change_effect = {
 		}
 	}
 }
+
+improve_country_assimilation_debuff_effect = { # culture scope
+	if = {
+		limit = {
+			has_country_culture_modifier = cultural_assimilation_debuff_1
+		}
+		custom_tooltip = improve_assimilation_tt
+		hidden_effect = {
+			remove_country_culture_modifier = cultural_assimilation_debuff_1
+			add_country_culture_modifier = cultural_assimilation_debuff_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_culture_modifier = cultural_assimilation_debuff_2
+		}
+		custom_tooltip = improve_assimilation_tt
+		hidden_effect = {
+			remove_country_culture_modifier = cultural_assimilation_debuff_2
+			add_country_culture_modifier = cultural_assimilation_debuff_3
+		}
+	}
+	else = { # fallback
+		add_stability = 1
+	}
+}
