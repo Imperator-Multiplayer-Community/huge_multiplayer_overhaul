@@ -107,7 +107,7 @@ slaves_suppressed_mod:0 "Suppressing Rebellious Sentiments"
 satisified_riot_demands:0 "Gave in to Slaves Rioting"
 
 slave_revolts.6.t:0 "Disgruntled Slaves in [ROOT.GetProvince.GetName]" # 1st warning event for slave revolt
-slave_revolts.6.desc:0 "Slaves in [ROOT.GetProvince.GetName] have been complaining about their working conditions and how tehy are treated in general. The dissastisfaction has spread so much among the slaves, that productivity has been seriously impacted. Some slaves even speak of open rebellion, of defying us, their rightful owners. \All of our advisors agree that somethung must be done, but their opinions differ and diverge. Some advocate for some strict oversight by guards and maybe some executions of some of the ringleaders, while others support the idea that a happy slave is a productive slave and as such won't revolt."
+slave_revolts.6.desc:0 "Slaves in [ROOT.GetProvince.GetName] have been complaining about their working conditions and how they are treated in general. The dissastisfaction has spread so much among the slaves, that productivity has been seriously impacted. Some slaves even speak of open rebellion, of defying us, their rightful owners. \nAll of our advisors agree that something must be done, but their opinions differ and diverge. Some advocate for some strict oversight by guards and maybe some executions of some of the ringleaders, while others support the idea that a happy slave is a productive slave and as such won't revolt."
 slave_revolts.6.a:0 "Improve their working conditions."
 slave_revolts.6.b:0 "Heavily regulate their day-do-day life."
 slave_revolts.6.c:0 "Kill the leaders of this charade."

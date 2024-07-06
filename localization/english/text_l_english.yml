@@ -61,6 +61,11 @@
  
  puntic_religion:0 "Waaqi"
  desc_puntic_religion:0 "Waaq, the all-powerful Creator god and Father to us all, has been faithfully venerated by the peoples living in the Horn of Africa for thousands of years, with their steadfast devotion to the Supreme Being ensuring his all-encompassing peace and harmonious blessings. An ancient monotheistic religion with a complex hierarchy and set of beliefs, the Waaq supersedes all and commands the many angelic intermediaries he sends to his people, showering his followers with good fortune and shielding them from their enemies with his power and glory."
+ uralic_pantheon:0 "Ilmaric"
+ desc_uralic_pantheon:0 "Ilmaric represents the Finno-Ugric culture group's religion. It includes a vast array of cultures and beliefs, all revolving around the lead god, Ilma, who was most certainly venerated in all Finno-Ugric cultures. Along with Ilma, Ilmaric beliefs include an emphasis on the light of the Night and Day skies—the Moon and Sun."
+
+ convert_to_uralic_pantheon:0 "Adopt Ilmaric Beliefs"
+ convert_to_uralic_pantheon_desc:0 "The supreme god of the sky, Ilma, has been adopted by many of our people. They talk of the vibrant light of the first dawn and the deafening black of the last ray of the sun. From the Finns to the Ugrics, and to us as well now, the lights shine. It is time to open the curtains of the nation and adopt the Ilamric religion."
 
  ######TRADEGOODS######:0 ""
  TRADE_GOODS_CATEGORY_0:3 "@iron! Strategic Resources"
@@ -357,13 +362,16 @@
  war_goal_horde_conquest_desc:0 "Steppe hordes brutally attack their opponents in war. Any province taken by the horde will fall under the hordes control immediately."
 
  #New Terrain
-oasis:0 "Oasis"
-oasis_desc:0 "A desert Oasis, full of life in a land surrounded by endless desert."
-desert_hills:0 "Desert Hills"
-desert_hills_desc:0 "The rolling hills of the desert stretch for endless lengths in all directions in this unforgiving land."
-flood_plain:0 "Floodplain"
-flood_plain_desc:0 "Prosperous floodplains lay on the edge of many rivers and provide life to the surrounding communities."
+ oasis:0 "Oasis"
+ oasis_desc:0 "A desert Oasis, full of life in a land surrounded by endless desert."
+ desert_hills:0 "Desert Hills"
+ desert_hills_desc:0 "The rolling hills of the desert stretch for endless lengths in all directions in this unforgiving land."
+ flood_plain:0 "Floodplain"
+ flood_plain_desc:0 "Prosperous floodplains lay on the edge of many rivers and provide life to the surrounding communities."
+ steppes:0 "Steppe"
+ steppes_desc:0  "An endless sea of grass, stretching far beyond the horizon."
 
 get_oasis:0 "in an oasis."
 get_desert_hills:0 "in desert hills."
 get_flood_plain:0 "in floodplains."
+get_steppes:0 "in steppes."

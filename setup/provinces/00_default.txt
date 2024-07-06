@@ -3928,26 +3928,6 @@
 	province_rank=""
 }
 
-5407={ #Arabia Deserta
-	terrain="desert"
-	culture="makan"
-	religion="arabian_pantheon"
-	trade_goods=""
-	civilization_value=0
-	barbarian_power=0
-	province_rank=""
-}
-
-5414={ #Arabia Deserta
-	terrain="desert"
-	culture="makan"
-	religion="arabian_pantheon"
-	trade_goods=""
-	civilization_value=0
-	barbarian_power=0
-	province_rank=""
-}
-
 5439={ #Kavir Desert
 	terrain="desert"
 	culture="median"
@@ -6778,16 +6758,6 @@
 	province_rank=""
 }
 
-7357={ #Sundarbans
-	terrain="impassable_terrain"
-	culture="pandra"
-	religion="hindu"
-	trade_goods=""
-	civilization_value=0
-	barbarian_power=0
-	province_rank=""
-}
-
 7640={ #Caspica
 	terrain="impassable_terrain"
 	culture="thyssagetaen"
@@ -7068,16 +7038,6 @@
 	province_rank=""
 }
 
-7796={ #Sundarbans
-	terrain="impassable_terrain"
-	culture="bangli"
-	religion="hindu"
-	trade_goods=""
-	civilization_value=0
-	barbarian_power=0
-	province_rank=""
-}
-
 7797={ #Parnassus Mons
 	terrain="impassable_terrain"
 	culture="boeotian"
@@ -7170,8 +7130,8 @@
 
 7853={ #
 	terrain="impassable_terrain"
-	culture=""
-	religion=""
+	culture="massylian"
+	religion="berber_religion"
 	trade_goods=""
 	civilization_value=0
 	barbarian_power=0
@@ -7180,8 +7140,8 @@
 
 7854={ #
 	terrain="impassable_terrain"
-	culture=""
-	religion=""
+	culture="massylian"
+	religion="berber_religion"
 	trade_goods=""
 	civilization_value=0
 	barbarian_power=0
@@ -7190,8 +7150,8 @@
 
 7855={ #
 	terrain="impassable_terrain"
-	culture=""
-	religion=""
+	culture="massylian"
+	religion="berber_religion"
 	trade_goods=""
 	civilization_value=0
 	barbarian_power=0
@@ -7200,8 +7160,8 @@
 
 7856={ #
 	terrain="impassable_terrain"
-	culture=""
-	religion=""
+	culture="massylian"
+	religion="berber_religion"
 	trade_goods=""
 	civilization_value=0
 	barbarian_power=0
@@ -7210,8 +7170,8 @@
 
 7857={ #
 	terrain="impassable_terrain"
-	culture=""
-	religion=""
+	culture="massylian"
+	religion="berber_religion"
 	trade_goods=""
 	civilization_value=0
 	barbarian_power=0
@@ -7220,8 +7180,8 @@
 
 7858={ #
 	terrain="impassable_terrain"
-	culture=""
-	religion=""
+	culture="massylian"
+	religion="berber_religion"
 	trade_goods=""
 	civilization_value=0
 	barbarian_power=0
@@ -7230,8 +7190,8 @@
 
 7859={ #
 	terrain="impassable_terrain"
-	culture=""
-	religion=""
+	culture="massylian"
+	religion="berber_religion"
 	trade_goods=""
 	civilization_value=0
 	barbarian_power=0
