@@ -1866,7 +1866,6 @@ hadramut_occidentalis_area = { #10
 
 hadramut_orientalis_area = {
     provinces = { 4704 4705 4706 4708 4707 8852 8853 8856 8857 8859 8860 8861 8862 8863
-        #7568 7569 7570 7571 # Uninhabitables
     }
 }
 
@@ -2226,7 +2225,6 @@ omana_area = { #10
 
 east_omana_area = { #10 +1
     provinces = { 7213 5418 7212 5419 5420 7215 5421 7214 7217 8865 8866 8851
-        #7573 #7572 # Uninhabitables
     }
 }
 

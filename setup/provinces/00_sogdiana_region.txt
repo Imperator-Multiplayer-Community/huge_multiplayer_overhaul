@@ -2535,3 +2535,456 @@
 		amount=1
 	}
 }
+
+8970={ #Zhanatalap
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="grain"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+}
+
+8971={ #Enbekshi
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="wild_game"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8972={ #Orazbay
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="woad"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8973={ #Baikonur
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="cattle"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8974={ #Zharagash
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="steppe_horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8975={ #Abay
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="grain"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8976={ #Kumsuat
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="steppe_horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8977={ #Taldyk
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="woad"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	slaves={
+		culture="sakan"
+		amount=1
+	}
+}
+
+8978={ #Tuzkol
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="cattle"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	slaves={
+		culture="sakan"
+		amount=1
+	}
+}
+
+8979={ #Toghayy
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="leather"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+}
+
+8980={ #Kuduk
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8981={ #Berdaly
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="hemp"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+}
+
+8982={ #Tatan
+	terrain="steppes"
+	culture="massagetaean"
+	religion="indo_iranian_religion"
+	trade_goods="steppe_horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+}
+
+8995={ #Tulya
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="fur"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+}
+
+8996={ #Kassi
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="steppe_horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+8997={ #Mazgi
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="hemp"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+}
+
+8998={ #Tigri
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="steppe_horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+}
+
+8999={ #Axsini
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+9000={ #Sturi
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="cattle"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+9001={ #Tigdi
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="iron"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+}
+
+9002={ #Kafkasos
+	terrain="steppes"
+	culture="sakan"
+	religion="indo_iranian_religion"
+	trade_goods="grain"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+}
+
+9236={ #Qarako'l
+	terrain="steppes"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="hemp"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		religion="indo_iranian_religion"
+		amount=1
+	}
+}
+
+9237={ #Nar Gyz
+	terrain="desert"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="wild_game"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+9238={ #Sho'rtakli
+	terrain="steppes"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="steppe_horses"
+	civilization_value=6
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=3
+	}
+	tribesmen={
+		religion="indo_iranian_religion"
+		amount=1
+	}
+}
+
+9239={ #Sarymay
+	terrain="desert"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="leather"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+9240={ #Sokkul
+	terrain="plains"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="grain"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	tribesmen={
+		religion="indo_iranian_religion"
+		amount=2
+	}
+	slaves={
+		amount=2
+	}
+	holy_site=omen_yamsh
+}
+
+9241={ #Qo'yqirilgan
+	terrain="plains"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="dye"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="city"
+	nobles={
+		religion="indo_iranian_religion"
+		amount=1
+	}
+	citizen={
+		religion="indo_iranian_religion"
+		amount=2
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	freemen={
+		amount=4
+	}
+	freemen={
+		culture="sogdian"
+		amount=1
+	}
+	slaves={
+		amount=4
+	}
+	slaves={
+		culture="sakan"
+		religion="indo_iranian_religion"
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+9242={ #Kukcha
+	terrain="steppes"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="camel"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+9243={ #Nazarkhan
+	terrain="marsh"
+	culture="kharesmian"
+	religion="vaksh_religion"
+	trade_goods="vegetables"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
