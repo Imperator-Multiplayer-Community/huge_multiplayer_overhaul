@@ -5,9 +5,9 @@ deity_horon = { # FERTILITY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			# common_deity_trigger = {
-			# 	RELIGION = nuragic_pantheon
-			# }
+			common_deity_trigger = {
+				RELIGION = nuragic_pantheon
+			}
 			rare_deity_trigger = {
 				RELIGION = carthaginian_pantheon
 			}
@@ -21,7 +21,7 @@ deity_horon = { # FERTILITY
 	}
 	icon = deity_kemetic_eloquence
 	passive_modifier = { recruit_mercenary_cost_modifier = -0.2 }
-	omen = { culture_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = carthaginian_pantheon
 	deity_category = culture #This Deity uses a Culture Slot
 	deification_trigger = {
@@ -37,9 +37,9 @@ deity_shadrapa = { # FERTILITY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			# common_deity_trigger = {
-			# 	RELIGION = nuragic_pantheon
-			# }
+			common_deity_trigger = {
+				RELIGION = nuragic_pantheon
+			}
 			very_rare_deity_trigger = {
 				RELIGION = carthaginian_pantheon
 			}

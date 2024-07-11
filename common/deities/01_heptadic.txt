@@ -659,9 +659,9 @@ deity_missa_baka = { # CULTURE
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		is_monarchy = yes
-		# NOT = {
-		# 	religion = mithra_religion
-		# }
+		NOT = {
+			religion = mithra_religion
+		}
 		OR = {
 			rare_deity_trigger = {
 				RELIGION = indo_iranian_religion

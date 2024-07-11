@@ -296,9 +296,9 @@ deity_diana = {
 			primary_culture = etruscan
 			primary_culture = rhaetian
 		}
-		# NOT = {
-		# 	has_deity_in_pantheon = deity:omen_diana_nemorensis
-		# }
+		NOT = {
+			has_deity_in_pantheon = deity:omen_diana_nemorensis
+		}
 		country_culture_group = latin
 		OR = {
 			rare_deity_trigger = {
@@ -750,7 +750,7 @@ deity_proserpina = {
 
 deity_sulis_minerva = {
 	trigger = {
-		# has_variable = deity_unlocked_sulis_minerva
+		has_variable = deity_unlocked_sulis_minerva
 		polytheistic_check_religion_trigger = yes
 		country_culture_group = latin
 		OR = {

@@ -324,9 +324,9 @@ deity_medaurus = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			# common_deity_trigger = {
-			# 	RELIGION = illyrian_pantheon
-			# }
+			common_deity_trigger = {
+				RELIGION = illyrian_pantheon
+			}
 			rare_deity_trigger = {
 				RELIGION = shamanism
 			}

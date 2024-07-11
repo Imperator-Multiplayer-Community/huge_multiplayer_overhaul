@@ -6,9 +6,9 @@ deity_verethragna = {
 			rare_deity_trigger = {
 				RELIGION = zoroaster
 			}
-			# rare_deity_trigger = {
-			# 	RELIGION = mithra_religion
-			# }
+			rare_deity_trigger = {
+				RELIGION = mithra_religion
+			}
 			deity:omen_verethragna = {
 				holy_site_deity_check_trigger = yes
 			}
@@ -166,16 +166,16 @@ deity_anahita = {
 			common_deity_trigger = {
 				RELIGION = zoroaster
 			}
-			# rare_deity_trigger = {
-			# 	RELIGION = mithra_religion
-			# }
+			rare_deity_trigger = {
+				RELIGION = mithra_religion
+			}
 			deity:omen_anahita = {
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# NOT = {
-		# 	RELIGION = anahitic_religion
-		# }
+		NOT = {
+			RELIGION = anahitic_religion
+		}
 	}
 	icon = deity_love
 	passive_modifier = { monthly_wage_modifier = deity_monthly_wage_modifier_svalue }
@@ -517,9 +517,9 @@ deity_mithra_baga = { # CULTURE
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		is_monarchy = yes
-		# NOT = {
-		# 	religion = mithra_religion
-		# }
+		NOT = {
+			religion = mithra_religion
+		}
 		OR = {
 			common_deity_trigger = {
 				RELIGION = zoroaster
@@ -545,78 +545,6 @@ deity_mithra_baga = { # CULTURE
 	}
 	religion = zoroaster
 	deity_category = culture #This Deity uses a Culture Slot
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_mithra = { # CULTURE
-	trigger = {
-		polytheistic_check_religion_trigger = yes
-		OR = {
-			rare_deity_trigger = {
-				RELIGION = zoroaster
-			}
-			# common_deity_culture_trigger = {
-			# 	RELIGION = hindu
-			# 	CULTURE = mitanni
-			# }
-			common_deity_culture_trigger = {
-				RELIGION = zoroaster
-				CULTURE = median
-			}
-			# very_common_deity_trigger = {
-			# 	RELIGION = mithra_religion
-			# }
-			deity:omen_mithra = {
-				holy_site_deity_check_trigger = yes
-			}
-			tag = PRN
-		}
-	}
-	icon = deity_eloquence
-	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
-	omen = { monthly_corruption = omen_monthly_corruption } #Bonus from Omen
-	on_activate = {
-		culture_apotheosis_characters_effect = yes
-
-		if = {
-			limit = {
-				is_monarchy = yes
-			}
-			add_legitimacy = 5
-		}
-	}
-	religion = zoroaster
-	deity_category = culture #This Deity uses a Culture Slot
-
-	deification_trigger = {
-		can_deify_trigger = yes
-	}
-}
-
-deity_cyrus = { # WAR
-	trigger = {
-		OR = {
-			rare_deity_trigger = {
-				RELIGION = zoroaster
-			}
-			tag = HCP
-			deity:omen_cyrus = {
-				holy_site_deity_check_trigger = yes
-			}
-			religion = judaism
-		}
-	}
-	icon = deity_war
-	passive_modifier = { agressive_expansion_impact = deity_aggressive_expansion_impact_svalue }
-	omen = { monthly_tyranny = omen_monthly_tyranny_svalue } #Bonus from Omen
-	on_activate = {
-		military_apotheosis_military_experience_effect = yes
-	}
-	religion = zoroaster
-	deity_category = war #This Deity uses a War Slot
 
 	deification_trigger = {
 		can_deify_trigger = yes

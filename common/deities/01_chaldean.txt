@@ -762,7 +762,7 @@ deity_inzak = {
 			deity:omen_inzak = {
 				holy_site_deity_check_trigger = yes
 			}
-			# has_variable = flower_of_enzak_unlocked_tylos
+			has_variable = flower_of_enzak_unlocked_tylos
 		}
 	}
 	icon = deity_eloquence
@@ -792,7 +792,7 @@ deity_meskilak = {
 			deity:omen_meskilak = {
 				holy_site_deity_check_trigger = yes
 			}
-			# has_variable = flower_of_enzak_unlocked_tylos
+			has_variable = flower_of_enzak_unlocked_tylos
 		}
 	}
 	icon = deity_love
@@ -917,7 +917,7 @@ deity_adamma = { # Gods of the Dead Kings
 			deity:omen_adamma = {
 				holy_site_deity_check_trigger = yes
 			}
-			# has_variable = ebla_pantheon
+			has_variable = ebla_pantheon
 		}
 	}
 	icon = deity_eloquence
@@ -933,8 +933,6 @@ deity_adamma = { # Gods of the Dead Kings
 	}
 }
 
-#### These all are unlocked via a mission tree that digs into the past - since no MTs, they are not available at all
-
 ## Eblaite ##
 deity_hadabal = { # Gods of the Dead Kings
 	trigger = {
@@ -947,8 +945,7 @@ deity_hadabal = { # Gods of the Dead Kings
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# has_variable = ebla_pantheon
-		always = no
+		has_variable = ebla_pantheon
 	}
 	icon = deity_wealth
 	passive_modifier = { global_goods_from_slaves = -1 }
@@ -973,8 +970,7 @@ deity_belatu = { # Gods of the Dead Kings
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# has_variable = ebla_pantheon
-		always = no
+		has_variable = ebla_pantheon
 	}
 	icon = deity_love
 	passive_modifier = { global_monthly_food_modifier = omen_global_monthly_food_modifier }
@@ -999,8 +995,7 @@ deity_agu = { # Gods of the Dead Kings
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# has_variable = ebla_pantheon
-		always = no
+		has_variable = ebla_pantheon
 	}
 	icon = deity_love
 	passive_modifier = { global_capital_trade_routes = deity_global_capital_trade_routes_svalue }
@@ -1025,8 +1020,7 @@ deity_guladu = { # Gods of the Dead Kings
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# has_variable = ebla_pantheon
-		always = no
+		has_variable = ebla_pantheon
 	}
 	icon = deity_war
 	passive_modifier = { assault_ability = 0.05 }
@@ -1051,8 +1045,7 @@ deity_dariba = { # Gods of the Dead Kings
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# has_variable = ebla_pantheon
-		always = no
+		has_variable = ebla_pantheon
 	}
 	icon = deity_eloquence
 	passive_modifier = { governor_loyalty = 3 }
@@ -1079,8 +1072,7 @@ deity_kura = { # Divine Couple of Ebla
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# has_variable = ebla_pantheon
-		always = no
+		has_variable = ebla_pantheon
 	}
 	icon = deity_war
 	passive_modifier = { monthly_legitimacy = deity_monthly_legitimacy_svalue }
@@ -1106,8 +1098,7 @@ deity_barama = { # Divine Couple of Ebla
 				holy_site_deity_check_trigger = yes
 			}
 		}
-		# has_variable = ebla_pantheon
-		always = no
+		has_variable = ebla_pantheon
 	}
 	icon = deity_love
 	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
@@ -1125,8 +1116,7 @@ deity_gordys = { # 'Founder' God of Gordyene
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
-			# primary_culture = cardukoi # doesnt exist in this mod
-			primary_culture = assyrian # instead of cardukoi
+			primary_culture = cardukoi
 			primary_culture = euboean
 			primary_culture = aramaic
 		}

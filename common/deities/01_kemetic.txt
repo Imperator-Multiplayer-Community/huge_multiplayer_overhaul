@@ -124,9 +124,9 @@ deity_amun = { # CULTURE
 					religion = berber_religion
 				}
 			}
-			# rare_deity_trigger = {
-			# 	RELIGION = nuragic_pantheon
-			# }
+			rare_deity_trigger = {
+				RELIGION = nuragic_pantheon
+			}
 		}
 	}
 	icon = deity_kemetic_eloquence
@@ -235,7 +235,7 @@ deity_resheph = { # WAR
 			deity:omen_resheph = {
 				holy_site_deity_check_trigger = yes
 			}
-			# has_variable = ebla_pantheon
+			has_variable = ebla_pantheon
 		}
 	}
 	icon = deity_kemetic_war
