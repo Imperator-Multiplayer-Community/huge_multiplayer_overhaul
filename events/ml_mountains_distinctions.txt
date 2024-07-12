@@ -9,7 +9,7 @@ ml_mountains_distinctions.1 = {
     	scope:actor = {
             has_legion_trigger = yes
             unit_location = {
-            	terrain = mountains
+            	terrain = mountain
             }
         }
 	}
@@ -212,7 +212,7 @@ ml_mountains_distinctions.2 = {
 		scope:actor = {
 			has_legion_trigger = yes
         	unit_location = {
-            	terrain = mountains
+            	terrain = mountain
             }
 		}
 	}

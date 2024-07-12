@@ -126,7 +126,7 @@ ml_drill_distinctions.2 = {
 			1 = {
 					trigger = {
 						scope:actor.unit_location = {
-							terrain = mountains
+							terrain = mountain
 						}
 					}
 
