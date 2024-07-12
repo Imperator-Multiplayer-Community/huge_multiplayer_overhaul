@@ -59,10 +59,10 @@ deity_indra = { # FERTILITY
 			common_deity_trigger = {
 				RELIGION = hindu
 			}
-			common_deity_culture_trigger = {
-				RELIGION = hindu
-				CULTURE = mitanni
-			}
+			#common_deity_culture_trigger = {
+#				RELIGION = hindu
+#				CULTURE = mitanni
+#			}
 			deity:omen_indra = {
 				holy_site_deity_check_trigger = yes
 			}
@@ -141,10 +141,10 @@ deity_soma = { # CULTURE
 			rare_deity_trigger = {
 				RELIGION = hindu
 			}
-			common_deity_culture_trigger = {
-				RELIGION = hindu
-				CULTURE = mitanni
-			}
+			#common_deity_culture_trigger = {
+#				RELIGION = hindu
+#				CULTURE = mitanni
+#			}
 			deity:omen_soma = {
 				holy_site_deity_check_trigger = yes
 			}
@@ -344,10 +344,10 @@ deity_varuna = { # Fertility
 			common_deity_trigger = {
 				RELIGION = hindu
 			}
-			common_deity_culture_trigger = {
-				RELIGION = hindu
-				CULTURE = mitanni
-			}
+			#common_deity_culture_trigger = {
+#				RELIGION = hindu
+#				CULTURE = mitanni
+#			}
 			deity:omen_varuna = {
 				holy_site_deity_check_trigger = yes
 			}
@@ -714,10 +714,10 @@ deity_vayu = {
 			deity:omen_vayu = {
 				holy_site_deity_check_trigger = yes
 			}
-			common_deity_culture_trigger = {
-				RELIGION = hindu
-				CULTURE = mitanni
-			}
+			#common_deity_culture_trigger = {
+#				RELIGION = hindu
+#				CULTURE = mitanni
+#			}
 			
 		}
 	}

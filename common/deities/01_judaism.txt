@@ -338,7 +338,7 @@ deity_samuel = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			##heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -363,7 +363,7 @@ deity_david = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			##heritage = samaria_heritage
 		}
 	}
 	icon = deity_wealth
@@ -387,7 +387,7 @@ deity_solomon = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			##heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -426,7 +426,7 @@ deity_esther = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			##heritage = samaria_heritage
 		}
 	}
 	icon = deity_love
@@ -492,7 +492,7 @@ deity_daniel = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_wealth
@@ -545,7 +545,7 @@ deity_ezekiel = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_war
@@ -574,7 +574,7 @@ deity_ezra = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -596,7 +596,7 @@ deity_ruth = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -618,7 +618,7 @@ deity_nehemiah = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_war
@@ -640,7 +640,7 @@ deity_job = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -662,7 +662,7 @@ deity_isaiah = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_wealth
@@ -684,7 +684,7 @@ deity_jeremiah = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_love
@@ -706,7 +706,7 @@ deity_elijah = {
 		religion = judaism
 		NOR = {
 		  tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -731,7 +731,7 @@ deity_abishua = {
 		religion = judaism
 		OR = {
 			tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -754,7 +754,7 @@ deity_uzzi = {
 		religion = judaism
 		OR = {
 			tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_eloquence
@@ -777,7 +777,7 @@ deity_abdel = {
 		religion = judaism
 		OR = {
 			tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_love
@@ -800,7 +800,7 @@ deity_manasseh = {
 		religion = judaism
 		OR = {
 			tag = SMA
-			heritage = samaria_heritage
+			#heritage = samaria_heritage
 		}
 	}
 	icon = deity_wealth

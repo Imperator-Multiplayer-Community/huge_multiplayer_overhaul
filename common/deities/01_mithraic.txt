@@ -5,10 +5,10 @@
 			rare_deity_trigger = {
 				RELIGION = zoroaster
 			}
-			common_deity_culture_trigger = {
-				RELIGION = hindu
-				CULTURE = mitanni
-			}
+			#common_deity_culture_trigger = {
+			#	RELIGION = hindu
+			#	CULTURE = mitanni
+			#}
 			common_deity_culture_trigger = {
 				RELIGION = zoroaster
 				CULTURE = median
