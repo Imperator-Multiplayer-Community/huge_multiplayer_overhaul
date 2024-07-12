@@ -318,7 +318,7 @@ avanti_region = { #7
     color = rgb { 255 135 15 }
 }
 
-madhyadesa_region { #6
+madhyadesa_region = { #6
 	areas = {
 		ahicchatra_area
 		pancala_area
@@ -330,7 +330,7 @@ madhyadesa_region { #6
     color = rgb { 255 68 227 }
 }
 
-vindhyachala_region { #8
+vindhyachala_region = { #8
 	areas = {
 		east_cedi_area
 		dahala_area
