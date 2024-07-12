@@ -20,3 +20,12 @@ levy_albanian = {
 	archers = 0.3
 	horse_archers = 0.3
 }
+
+levy_legian = {
+	default = no
+
+	light_infantry = 0.4
+	archers = 0.1
+	heavy_infantry = 0.1
+	horse_archers = 0.4
+}

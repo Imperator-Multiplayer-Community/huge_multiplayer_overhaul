@@ -58,11 +58,16 @@
 
 	culture = {
 		albanian = { levy_template = levy_albanian }
+		caspian = { levy_template = levy_albanian }
 		ibero = {}
-		colchian = {}
-		legian = {} #moved from scythian
 		sindi = {}
 		maeotian = {}
+		colchian = {}
+		abasgoi = {} 
+		suani = {}
+		lazi = {}
+		sasperian = {}
+		legian = { levy_template = levy_legian } #moved from scythian
 	}
 	
 	barbarian_names = { AMARDI ANARIACAE AUGASII CASPII CHORASMII CYRTII DAHAE DERBICII ISSEDONES LEGAE MATIANI MASSAGETAE PARNI SACAE SARMATAE SOANES VITII }
