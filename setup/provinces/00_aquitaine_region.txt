@@ -42,6 +42,7 @@
 		amount=3
 	}
 	slaves={
+		culture="aremorican"
 		amount=1
 	}
 	tribesmen={
@@ -93,7 +94,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	slaves={
+		culture="santonian"
+		amount=1
 	}
 }
 
@@ -144,6 +149,7 @@
 		amount=1
 	}
 	slaves={
+		culture="pictonian"
 		amount=1
 	}
 	tribesmen={
@@ -201,8 +207,8 @@
 
 2233={ #Noviomagus Aquitanum
 	terrain="marsh"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="biturigan"
+	religion="druidism"
 	trade_goods="fish"
 	civilization_value=7
 	barbarian_power=0
@@ -236,7 +242,7 @@
 
 2235={ #Akroterion
 	terrain="forest"
-	culture="callaecian"
+	culture="biturigan"
 	religion="pre_indo_european_religion"
 	trade_goods="hemp"
 	civilization_value=9
@@ -246,25 +252,36 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aquitani"
+		amount=1
 	}
 }
 
 2236={ #Burdigala
 	terrain="marsh"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="jade"
+	culture="biturigan"
+	religion="druidism"
+	trade_goods="wine"
 	civilization_value=7
 	barbarian_power=0
-	province_rank="city"
+	province_rank="settlement"
 	freemen={
-		amount=5
+		amount=1
 	}
 	tribesmen={
+		amount=3
+	}
+	slaves={
+		culture="santonian"
+		amount=1
+	}
+	port_building=1
+	slaves={
 		amount=8
 	}
-	port_building=2
 }
 
 2237={ #Losa
@@ -279,7 +296,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="biturigan"
+		amount=1
 	}
 	port_building=1
 }
@@ -333,6 +354,7 @@
 	tribesmen={
 		amount=4
 	}
+	holy_site=omen_sorginak
 }
 
 2241={ #Telonnum
@@ -531,6 +553,7 @@
 	tribesmen={
 		amount=4
 	}
+	holy_site=omen_lurraberri
 }
 
 2269={ #Divona
@@ -567,7 +590,11 @@
 		amount=2
 	}
 	tribesmen={
-		amount=5
+		amount=4
+	}
+	slaves={
+		culture="aquitani"
+		amount=1
 	}
 }
 
@@ -586,7 +613,11 @@
 		amount=2
 	}
 	tribesmen={
-		amount=5
+		amount=4
+	}
+	slaves={
+		culture="santonian"
+		amount=1
 	}
 }
 
@@ -716,7 +747,7 @@
 	terrain="plains"
 	culture="aquitani"
 	religion="pre_indo_european_religion"
-	trade_goods="fruits"
+	trade_goods="wine"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -727,7 +758,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="volcae"
+		amount=1
 	}
 }
 
@@ -735,7 +770,7 @@
 	terrain="plains"
 	culture="aquitani"
 	religion="pre_indo_european_religion"
-	trade_goods="fruits"
+	trade_goods="cattle"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -762,7 +797,11 @@
 		amount=2
 	}
 	slaves={
-		amount=3
+		amount=2
+	}
+	slaves={
+		culture="biturigan"
+		amount=1
 	}
 	tribesmen={
 		amount=5
@@ -827,15 +866,20 @@
 	terrain="plains"
 	culture="santonian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="wine"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
+		culture="aquitani"
+		religion="pre_indo_european_religion"
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	slaves={
+		amount=1
 	}
 }
 
@@ -862,7 +906,7 @@
 	terrain="plains"
 	culture="santonian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="wine"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -878,7 +922,7 @@
 	terrain="plains"
 	culture="santonian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="cattle"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -918,7 +962,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		religion="pre_indo_european_religion"
+		amount=1
 	}
 }
 
@@ -969,6 +1017,7 @@
 		amount=1
 	}
 	slaves={
+		culture="arverni"
 		amount=1
 	}
 	tribesmen={
@@ -1039,7 +1088,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="santonian"
+		amount=1
 	}
 }
 
@@ -1055,7 +1108,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="arverni"
+		amount=1
 	}
 }
 
@@ -1135,7 +1192,11 @@
 	barbarian_power=0
 	province_rank="settlement"
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="santonian"
+		amount=1
 	}
 }
 
@@ -1208,7 +1269,11 @@
 		amount=2
 	}
 	slaves={
-		amount=2
+		amount=1
+	}
+	slaves={
+		culture="arverni"
+		amount=1
 	}
 	tribesmen={
 		amount=3
@@ -1249,7 +1314,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=5
+		amount=4
+	}
+	slaves={
+		culture="biturigan"
+		amount=1
 	}
 }
 
@@ -1303,6 +1372,7 @@
 		amount=1
 	}
 	slaves={
+		culture="biturigan"
 		amount=1
 	}
 	tribesmen={
@@ -1373,7 +1443,15 @@
 		amount=1
 	}
 	tribesmen={
-		amount=5
+		amount=3
+	}
+	slaves={
+		culture="santonian"
+		amount=1
+	}
+	slaves={
+		culture="pictonian"
+		amount=1
 	}
 }
 
@@ -1563,7 +1641,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=5
+		amount=4
+	}
+	slaves={
+		culture="arverni"
+		amount=1
 	}
 }
 
@@ -1611,7 +1693,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="biturigan"
+		amount=1
 	}
 }
 

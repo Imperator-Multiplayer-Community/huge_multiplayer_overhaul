@@ -1,4 +1,4 @@
-﻿724={ #Ankale
+﻿724={ #Haqla
 	terrain="desert"
 	culture="nabatean"
 	religion="arabian_pantheon"
@@ -14,7 +14,7 @@
 	}
 }
 
-725={ #Makna
+725={ #Maqna
 	terrain="desert"
 	culture="nabatean"
 	religion="arabian_pantheon"
@@ -46,6 +46,26 @@
 		amount=2
 	}
 	slaves={
+		amount=2
+	}
+}
+
+944={ #Arethousa
+	terrain="desert"
+	culture="gerrhan"
+	religion="zoroaster"
+	trade_goods="fish"
+	civilization_value=28
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		religion="arabian_pantheon"
 		amount=2
 	}
 }
@@ -541,7 +561,7 @@
 	}
 }
 
-4625={ #Yanbu
+4625={ #Charamithas
 	terrain="desert"
 	culture="nabatean"
 	religion="arabian_pantheon"
@@ -747,22 +767,6 @@
 	}
 }
 
-4637={ #Devada
-	terrain="plains"
-	culture="minaean"
-	religion="arabian_pantheon"
-	trade_goods="gems"
-	civilization_value=0
-	barbarian_power=0
-	province_rank="settlement"
-	slaves={
-		amount=1
-	}
-	tribesmen={
-		amount=4
-	}
-}
-
 4638={ #Marma
 	terrain="plains"
 	culture="minaean"
@@ -782,28 +786,6 @@
 	}
 	tribesmen={
 		amount=2
-	}
-}
-
-4639={ #Baitus
-	terrain="plains"
-	culture="minaean"
-	religion="arabian_pantheon"
-	trade_goods="fish"
-	civilization_value=10
-	barbarian_power=0
-	province_rank="settlement"
-	citizen={
-		amount=1
-	}
-	freemen={
-		amount=2
-	}
-	slaves={
-		amount=2
-	}
-	tribesmen={
-		amount=3
 	}
 }
 
@@ -831,25 +813,6 @@
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
-	tribesmen={
-		amount=3
-	}
-}
-
-4699={ #Aksumia
-	terrain="desert_hills"
-	culture="minaean"
-	religion="arabian_pantheon"
-	trade_goods="leather"
-	civilization_value=8
-	barbarian_power=0
-	province_rank="settlement"
-	freemen={
-		amount=2
-	}
-	slaves={
-		amount=3
-	}
 	tribesmen={
 		amount=3
 	}
@@ -938,7 +901,7 @@
 	}
 }
 
-4717={ #Gaiopolis
+4717={ #Gaiapolis
 	terrain="desert"
 	culture="qedarite"
 	religion="arabian_pantheon"
@@ -1018,18 +981,142 @@
 }
 
 4721={ #Durnatha
-	terrain="plains"
+	terrain="oasis"
 	culture="qedarite"
 	religion="arabian_pantheon"
-	trade_goods="dates"
-	civilization_value=10
+	trade_goods="fruits"
+	civilization_value=11
 	barbarian_power=0
-	province_rank="settlement"
+	province_rank="city"
 	nobles={
 		amount=1
 	}
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="thamudi"
+		amount=1
+	}
 	tribesmen={
-		amount=10
+		amount=7
+	}
+	slaves={
+		amount=0
+	}
+}
+
+5400={ #Mahzul
+	terrain="desert"
+	culture="babylonian"
+	religion="mesopotamian_religion"
+	trade_goods="wild_game"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+5401={ #Hamatiyat
+	terrain="desert"
+	culture="babylonian"
+	religion="mesopotamian_religion"
+	trade_goods="leather"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+5402={ #Kabrit
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="camel"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+5403={ #Niqirah
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="leather"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=3
+	}
+}
+
+5404={ #Mulayjah
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="cattle"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=5
+	}
+}
+
+5405={ #Thaj
+	terrain="oasis"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="earthware"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="city"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="macedonian"
+		religion="roman_pantheon"
+		amount=1
+	}
+	freemen={
+		culture="babylonian"
+		religion="mesopotamian_religion"
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+	slaves={
+		amount=2
+	}
+	slaves={
+		culture="yamama"
+		amount=2
+	}
+}
+
+5406={ #Urayarah
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="camel"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=3
 	}
 }
 
@@ -1066,6 +1153,96 @@
 	#holy_site=omen_inzak - Removed as holy site to omen_inzak is established in Ikaros by Tylos mission tree
 }
 
+5408={ #Efa
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="cattle"
+	civilization_value=15
+	barbarian_power=0
+	province_rank="settlement"
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+5409={ #Largis
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="vegetables"
+	civilization_value=15
+	barbarian_power=0
+	province_rank="settlement"
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=1
+	}
+}
+
+5410={ #Utea
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="vegetables"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+5411={ #Ghirban
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="leather"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+5412={ #Suwaytiyah
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="wild_game"
+	civilization_value=5
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+}
+
+5413={ #Liwa
+	terrain="oasis"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="fruits"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=2
+	}
+	slaves={
+		amount=2
+	}
+}
+
 5414={ #Murkhan
 	terrain="desert"
 	culture="makan"
@@ -1076,6 +1253,600 @@
 	province_rank="settlement"
 	tribesmen={
 		amount=2
+	}
+}
+
+5415={ #Saruq
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="dates"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+}
+
+5416={ #Ecrune
+	terrain="hills"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="cattle"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+5417={ #Ialla
+	terrain="hills"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="camel"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+5418={ #Vatum
+	terrain="hills"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="base_metals"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+5419={ #Samad
+	terrain="plains"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="earthware"
+	civilization_value=14
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=4
+	}
+	tribesmen={
+		amount=0
+	}
+	slaves={
+		amount=0
+	}
+}
+
+5420={ #Zirne
+	terrain="plains"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="horses"
+	civilization_value=10
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=3
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+}
+
+5421={ #Acte
+	terrain="desert"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="cattle"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=1
+	}
+}
+
+5429={ #Iepana
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="honey"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	slaves={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+}
+
+5430={ #Trazel
+	terrain="plains"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="wood"
+	civilization_value=10
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=3
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+}
+
+7196={ #Adros
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="dates"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+}
+
+7197={ #Itamos
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="fish"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+7198={ #Istana
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="cattle"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+}
+
+7199={ #Gerrha
+	terrain="plains"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="earthware"
+	civilization_value=25
+	barbarian_power=0
+	province_rank="city"
+	nobles={
+		amount=2
+	}
+	citizen={
+		amount=11
+	}
+	freemen={
+		amount=12
+	}
+	slaves={
+		amount=10
+	}
+	tribesmen={
+		amount=1
+	}
+	port_building=1
+}
+
+7200={ #Theppra
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="fish"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=3
+	}
+}
+
+7201={ #Atta
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="incense"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=3
+	}
+}
+
+7202={ #Tylos
+	terrain="plains"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="gems"
+	civilization_value=32
+	barbarian_power=0
+	province_rank="city"
+	nobles={
+		culture="babylonian"
+		religion="carthaginian_pantheon"
+		amount=2
+	}
+	nobles={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=1
+	}
+	citizen={
+		culture="babylonian"
+		religion="carthaginian_pantheon"
+		amount=3
+	}
+	citizen={
+		amount=5
+	}
+	citizen={
+		culture="hebrew"
+		religion="judaism"
+		amount=1
+	}
+	citizen={
+		culture="pasargadi"
+		religion="zoroaster"
+		amount=3
+	}
+	citizen={
+		culture="macedonian"
+		religion="roman_pantheon"
+		amount=5
+	}
+	freemen={
+		amount=3
+	}
+	freemen={
+		culture="hebrew"
+		religion="judaism"
+		amount=2
+	}
+	freemen={
+		culture="babylonian"
+		amount=3
+	}
+	slaves={
+		amount=6
+	}
+	tribesmen={
+		amount=1
+	}
+	port_building=1
+}
+
+7203={ #Gylus
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="dye"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	tribesmen={
+		amount=4
+	}
+}
+
+7204={ #Sarkoi
+	terrain="desert"
+	culture="gerrhan"
+	religion="arabian_pantheon"
+	trade_goods="dye"
+	civilization_value=17
+	barbarian_power=0
+	province_rank="settlement"
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+7205={ #Labrys Omana
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="camel"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=4
+	}
+}
+
+7206={ #Attiaca
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="camel"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=2
+	}
+	port_building=1
+}
+
+7207={ #Kanepsa
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="salt"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=3
+	}
+	slaves={
+		amount=4
+	}
+}
+
+7208={ #Regna
+	terrain="hills"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="salt"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=3
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+7209={ #Omana
+	terrain="plains"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="earthware"
+	civilization_value=15
+	barbarian_power=0
+	province_rank="city"
+	nobles={
+		amount=1
+	}
+	citizen={
+		amount=10
+	}
+	freemen={
+		amount=6
+	}
+	slaves={
+		amount=6
+	}
+	tribesmen={
+		amount=8
+	}
+	port_building=1
+}
+
+7210={ #Heliou Limen
+	terrain="hills"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="gems"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=4
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=4
+	}
+}
+
+7211={ #Kalas
+	terrain="desert"
+	culture="makan"
+	religion="arabian_pantheon"
+	trade_goods="fish"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=3
+	}
+	tribesmen={
+		amount=3
+	}
+	port_building=1
+}
+
+7212={ #Kryptos Limen
+	terrain="hills"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="cattle"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=3
+	}
+	freemen={
+		amount=2
+	}
+	port_building=1
+}
+
+7213={ #Dirma Omana
+	terrain="hills"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="salt"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	tribesmen={
+		amount=3
+	}
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=3
+	}
+}
+
+7214={ #Artemidos
+	terrain="desert"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="fish"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	freemen={
+		amount=2
+	}
+	tribesmen={
+		amount=3
+	}
+}
+
+7215={ #Metas
+	terrain="hills"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="fish"
+	civilization_value=8
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=2
+	}
+	slaves={
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+}
+
+7217={ #Ganta
+	terrain="desert"
+	culture="samad"
+	religion="arabian_pantheon"
+	trade_goods="incense"
+	civilization_value=7
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		amount=1
+	}
+	tribesmen={
+		amount=4
 	}
 }
 
@@ -1240,26 +2011,26 @@
 }
 
 7576={ #Ta'if
-	terrain="plains"
+	terrain="oasis"
 	culture="taif"
 	religion="arabian_pantheon"
 	trade_goods="cattle"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
-	nobles={
-		amount=1
-	}
 	freemen={
-		amount=3
+		amount=2
 	}
 	slaves={
-		amount=5
+		amount=3
 	}
 	tribesmen={
 		amount=7
 	}
 	holy_site=omen_al_uzza
+	slaves={
+		amount=4
+	}
 }
 
 7577={ #Attaba
@@ -2219,3 +2990,4 @@
 		amount=3
 	}
 }
+

@@ -137,6 +137,7 @@
 	slaves={
 		amount=3
 	}
+	holy_site=omen_qetesh
 }
 
 745={ #Gelil
@@ -174,7 +175,7 @@
 	}
 }
 
-747={ #Sidun
+747={ #Tzidon
 	terrain="forest"
 	culture="phoenician"
 	religion="carthaginian_pantheon"
@@ -256,7 +257,7 @@
 }
 
 750={ #Damaskos
-	terrain="plains"
+	terrain="oasis"
 	culture="aramaic"
 	religion="carthaginian_pantheon"
 	trade_goods="cloth"
@@ -293,6 +294,7 @@
 	tribesmen={
 		amount=10
 	}
+	holy_site=omen_ashima
 }
 
 751={ #Leukas Chrysorrhoai
@@ -360,7 +362,7 @@
 }
 
 754={ #Palmyra
-	terrain="hills"
+	terrain="oasis"
 	culture="qedarite"
 	religion="arabian_pantheon"
 	trade_goods="dates"
@@ -593,7 +595,7 @@
 	}
 }
 
-766={ #Gebal
+766={ #Gebol
 	terrain="forest"
 	culture="phoenician"
 	religion="carthaginian_pantheon"
@@ -850,7 +852,7 @@
 	}
 }
 
-779={ #Arpad
+779={ #'Arwod
 	terrain="forest"
 	culture="phoenician"
 	religion="carthaginian_pantheon"
@@ -877,7 +879,7 @@
 	port_building=3
 }
 
-780={ #Karna
+780={ #Qarn
 	terrain="hills"
 	culture="phoenician"
 	religion="carthaginian_pantheon"
@@ -988,6 +990,7 @@
 		culture="aramaic"
 		amount=1
 	}
+	holy_site=omen_shahar
 }
 
 785={ #Pelleta
@@ -1286,7 +1289,7 @@
 	terrain="plains"
 	culture="aramaic"
 	religion="roman_pantheon"
-	trade_goods="dates"
+	trade_goods="cedar"
 	civilization_value=31
 	barbarian_power=0
 	province_rank="city"
@@ -1432,7 +1435,7 @@
 	}
 }
 
-807={ #Mabbog
+807={ #Manbugh
 	terrain="plains"
 	culture="aramaic"
 	religion="carthaginian_pantheon"
@@ -1479,7 +1482,7 @@
 	}
 }
 
-809={ #Charchemish
+809={ #Karkemish
 	terrain="plains"
 	culture="aramaic"
 	religion="carthaginian_pantheon"
@@ -1512,7 +1515,7 @@
 	}
 }
 
-810={ #Nisibyn
+810={ #Zuqarra
 	terrain="plains"
 	culture="macedonian"
 	religion="roman_pantheon"
@@ -1544,6 +1547,7 @@
 		religion="carthaginian_pantheon"
 		amount=3
 	}
+	holy_site=omen_hadad
 }
 
 811={ #Doliche
@@ -1635,6 +1639,7 @@
 	slaves={
 		amount=3
 	}
+	holy_site=omen_amurru
 }
 
 815={ #Seriane
@@ -1829,3 +1834,4 @@
 		amount=3
 	}
 }
+

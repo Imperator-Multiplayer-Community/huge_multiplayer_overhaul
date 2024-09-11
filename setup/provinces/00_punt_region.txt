@@ -1,14 +1,14 @@
 ﻿651={ #Sumita
 	terrain="hills"
 	culture="athagaun"
-	religion="egyptian_pantheon"
+	religion="nilotic_pantheon"
 	trade_goods="steppe_horses"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
 		culture="aksumite"
-		religion="arabian_pantheon"
+		religion="egyptian_pantheon"
 		amount=1
 	}
 	freemen={
@@ -16,7 +16,7 @@
 	}
 	freemen={
 		culture="aksumite"
-		religion="arabian_pantheon"
+		religion="egyptian_pantheon"
 		amount=1
 	}
 	slaves={
@@ -462,9 +462,9 @@
 		amount=2
 	}
 	freemen={
-		amount=1
 		culture="sheban"
 		religion="arabian_pantheon"
+		amount=1
 	}
 	slaves={
 		amount=2
@@ -600,16 +600,16 @@
 	culture="avalitian"
 	religion="puntic_religion"
 	trade_goods="myrrh"
-	civilization_value=19.5
+	civilization_value=19
 	barbarian_power=0
 	province_rank="city"
 	citizen={
 		amount=2
 	}
 	citizen={
-		amount=1
 		culture="sheban"
 		religion="arabian_pantheon"
+		amount=1
 	}
 	freemen={
 		amount=2
@@ -651,8 +651,8 @@
 		amount=3
 	}
 	slaves={
-		amount=2
 		culture="avalitian"
+		amount=2
 	}
 	tribesmen={
 		amount=3

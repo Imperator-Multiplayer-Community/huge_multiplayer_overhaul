@@ -840,7 +840,7 @@
 	terrain="hills"
 	culture="paphlagonian"
 	religion="anatolian_religion"
-	trade_goods="wood"
+	trade_goods="base_metals"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"
@@ -1076,6 +1076,7 @@
 	tribesmen={
 		amount=2
 	}
+	holy_site=omen_sangarios
 }
 
 314={ #Nakoleia
@@ -1894,7 +1895,7 @@
 	terrain="hills"
 	culture="phrygian"
 	religion="anatolian_religion"
-	trade_goods="olive"
+	trade_goods="marble"
 	civilization_value=29
 	barbarian_power=0
 	province_rank="city"

@@ -7,11 +7,18 @@
 	barbarian_power=0
 	province_rank="settlement"
 	tribesmen={
-		amount=7
+		amount=5
+	}
+	freemen={
+		amount=1
+	}
+	citizen={
+		amount=1
 	}
 	slaves={
 		amount=2
 	}
+	holy_site=omen_agathyrus
 }
 
 4771={ #Leucaristus

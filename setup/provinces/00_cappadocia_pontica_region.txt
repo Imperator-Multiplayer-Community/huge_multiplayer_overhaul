@@ -1,48 +1,96 @@
 ﻿1729={ #Athenai Pontikai
 	terrain="hills"
-	culture="colchian"
+	culture="lazi"
 	religion="caucasian_religion"
 	trade_goods="hemp"
-	civilization_value=18
+	civilization_value=19
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
 		amount=1
 	}
-	slaves={
-		amount=1
-	}
-	tribesmen={
-		amount=1
-	}
-}
-
-1730={ #Rhizaion
-	terrain="hills"
-	culture="colchian"
-	religion="caucasian_religion"
-	trade_goods="wood"
-	civilization_value=23
-	barbarian_power=0
-	province_rank="city"
 	citizen={
-		amount=7
+		culture="greco_pontic"
+		religion="roman_pantheon"
+		amount=2
 	}
 	freemen={
-		amount=4
+		culture="greco_pontic"
+		religion="roman_pantheon"
+		amount=0
 	}
 	slaves={
-		amount=3
+		amount=0
+	}
+	slaves={
+		culture="greco_pontic"
+		religion="roman_pantheon"
+		amount=0
 	}
 	tribesmen={
-		amount=3
+		amount=0
+	}
+	tribesmen={
+		culture="colchian"
+		religion="roman_pantheon"
+		amount=0
 	}
 	port_building=1
 }
 
+1730={ #Rhizaion
+	terrain="hills"
+	culture="lazi"
+	religion="caucasian_religion"
+	trade_goods="wood"
+	civilization_value=22
+	barbarian_power=0
+	province_rank="settlement"
+	citizen={
+		amount=1
+	}
+	citizen={
+		culture="greco_pontic"
+		religion="roman_pantheon"
+		amount=3
+	}
+	freemen={
+		amount=2
+	}
+	freemen={
+		culture="greco_pontic"
+		religion="roman_pantheon"
+		amount=2
+	}
+	slaves={
+		amount=1
+	}
+	slaves={
+		culture="greco_pontic"
+		religion="roman_pantheon"
+		amount=2
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		culture="colchian"
+		religion="roman_pantheon"
+		amount=1
+	}
+	tribesmen={
+		culture="colchian"
+		amount=1
+	}
+	port_building=1
+	slaves={
+		amount=2
+	}
+}
+
 1731={ #Ophis
 	terrain="hills"
-	culture="colchian"
+	culture="lazi"
 	religion="caucasian_religion"
 	trade_goods="fish"
 	civilization_value=18
@@ -82,17 +130,27 @@
 		amount=1
 	}
 	slaves={
-		amount=2
+		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=1
+	}
+	tribesmen={
+		culture="lazi"
+		religion="caucasian_religion"
+		amount=2
+	}
+	slaves={
+		culture="colchian"
+		religion="caucasian_religion"
+		amount=1
 	}
 }
 
 1733={ #Pisingara
 	terrain="hills"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="cattle"
 	civilization_value=18
 	barbarian_power=0
@@ -101,6 +159,7 @@
 		amount=1
 	}
 	slaves={
+		religion="roman_pantheon"
 		amount=1
 	}
 	tribesmen={
@@ -122,14 +181,31 @@
 	citizen={
 		amount=3
 	}
+	citizen={
+		culture="colchian"
+		religion="caucasian_religion"
+		amount=1
+	}
 	freemen={
+		religion="mithra_religion"
 		amount=4
+	}
+	freemen={
+		culture="colchian"
+		religion="caucasian_religion"
+		amount=2
 	}
 	slaves={
 		amount=4
 	}
 	tribesmen={
-		amount=4
+		religion="mithra_religion"
+		amount=1
+	}
+	tribesmen={
+		culture="lazi"
+		religion="caucasian_religion"
+		amount=0
 	}
 	holy_site=omen_mithra
 	port_building=1
@@ -144,17 +220,29 @@
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
+		amount=1
+	}
+	freemen={
+		religion="roman_pantheon"
+		amount=1
+	}
+	tribesmen={
 		amount=2
 	}
 	tribesmen={
-		amount=4
+		religion="arabian_pantheon"
+		amount=1
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=1
 	}
 }
 
 1767={ #Eriza
 	terrain="hills"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="cattle"
 	civilization_value=18
 	barbarian_power=0
@@ -178,7 +266,7 @@
 1768={ #Til
 	terrain="plains"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="vegetables"
 	civilization_value=20
 	barbarian_power=0
@@ -192,12 +280,13 @@
 	tribesmen={
 		amount=3
 	}
+	holy_site=omen_nane #Removed duplicate in Ibora
 }
 
 1769={ #Sabos
 	terrain="hills"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="vegetables"
 	civilization_value=18
 	barbarian_power=0
@@ -220,55 +309,8 @@
 1771={ #Analibna
 	terrain="hills"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="vegetables"
-	civilization_value=18
-	barbarian_power=0
-	province_rank="settlement"
-	freemen={
-		amount=1
-	}
-	slaves={
-		amount=1
-	}
-	tribesmen={
-		amount=2
-	}
-	tribesmen={
-		religion="armenian_religion"
-		amount=1
-	}
-}
-
-1772={ #Sediska
-	terrain="hills"
-	culture="colchian"
-	religion="armenian_religion"
-	trade_goods="wood"
-	civilization_value=18
-	barbarian_power=0
-	province_rank="settlement"
-	freemen={
-		amount=1
-	}
-	slaves={
-		amount=1
-	}
-	tribesmen={
-		amount=3
-	}
-	tribesmen={
-		culture="armenian"
-		religion="armenian_religion"
-		amount=1
-	}
-}
-
-1773={ #Zigana
-	terrain="hills"
-	culture="colchian"
-	religion="roman_pantheon"
-	trade_goods="stone"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"
@@ -287,9 +329,76 @@
 	}
 }
 
+1772={ #Sediska
+	terrain="hills"
+	culture="lazi"
+	religion="anahitic_religion"
+	trade_goods="wood"
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		religion="roman_pantheon"
+		amount=1
+	}
+	slaves={
+		culture="colchian"
+		religion="roman_pantheon"
+		amount=1
+	}
+	slaves={
+		culture="colchian"
+		amount=1
+	}
+	tribesmen={
+		amount=1
+	}
+	tribesmen={
+		culture="armenian"
+		amount=1
+	}
+	tribesmen={
+		culture="armenian"
+		religion="caucasian_religion"
+		amount=0
+	}
+	tribesmen={
+		culture="armenian"
+		religion="roman_pantheon"
+		amount=0
+	}
+}
+
+1773={ #Zigana
+	terrain="hills"
+	culture="lazi"
+	religion="roman_pantheon"
+	trade_goods="stone"
+	civilization_value=18
+	barbarian_power=0
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	slaves={
+		culture="greco_pontic"
+		amount=1
+	}
+	tribesmen={
+		amount=2
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=1
+	}
+}
+
 1775={ #Magnana
 	terrain="hills"
-	culture="colchian"
+	culture="lazi"
 	religion="roman_pantheon"
 	trade_goods="wood"
 	civilization_value=18
@@ -313,7 +422,7 @@
 1776={ #Arauraka
 	terrain="hills"
 	culture="cappadocian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="cattle"
 	civilization_value=18
 	barbarian_power=0
@@ -324,19 +433,29 @@
 	slaves={
 		amount=1
 	}
-	tribesmen={
-		amount=2
+	slaves={
+		culture="lazi"
+		religion="caucasian_religion"
+		amount=1
 	}
 	tribesmen={
-		religion="armenian_religion"
 		amount=1
+	}
+	tribesmen={
+		culture="lazi"
+		religion="caucasian_religion"
+		amount=1
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=0
 	}
 }
 
 1778={ #Chorsabia
 	terrain="hills"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="leather"
 	civilization_value=18
 	barbarian_power=0
@@ -349,13 +468,13 @@
 		amount=1
 	}
 	slaves={
+		religion="roman_pantheon"
 		amount=1
 	}
 	tribesmen={
 		amount=1
 	}
 	tribesmen={
-		religion="anatolian_religion"
 		amount=1
 	}
 }
@@ -363,20 +482,19 @@
 1779={ #Olotoedariza
 	terrain="hills"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="cattle"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
-		religion="armenian_religion"
 		amount=1
 	}
 	tribesmen={
 		amount=2
 	}
 	tribesmen={
-		religion="armenian_religion"
+		religion="roman_pantheon"
 		amount=2
 	}
 }
@@ -384,7 +502,7 @@
 1781={ #Kogoniya
 	terrain="hills"
 	culture="cappadocian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="stone"
 	civilization_value=18
 	barbarian_power=0
@@ -393,6 +511,7 @@
 		amount=1
 	}
 	slaves={
+		religion="roman_pantheon"
 		amount=1
 	}
 	tribesmen={
@@ -417,22 +536,28 @@
 		amount=1
 	}
 	freemen={
+		religion="roman_pantheon"
 		amount=2
 	}
 	tribesmen={
-		amount=6
+		amount=4
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=2
 	}
 }
 
 1783={ #Anniaka
 	terrain="hills"
 	culture="cappadocian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="earthware"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
+		religion="roman_pantheon"
 		amount=1
 	}
 	tribesmen={
@@ -486,7 +611,7 @@
 	terrain="hills"
 	culture="cappadocian"
 	religion="anatolian_religion"
-	trade_goods="cloth"
+	trade_goods="precious_metals"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -581,14 +706,13 @@
 	tribesmen={
 		amount=3
 	}
-	holy_site=omen_nane
 }
 
 1792={ #Kabeira
 	terrain="hills"
 	culture="cappadocian"
 	religion="anatolian_religion"
-	trade_goods="wood"
+	trade_goods="olive"
 	civilization_value=14
 	barbarian_power=0
 	province_rank="city"
@@ -694,8 +818,23 @@
 	freemen={
 		amount=1
 	}
-	slaves={
+	freemen={
+		culture="lazi"
+		religion="roman_pantheon"
 		amount=1
+	}
+	tribesmen={
+		culture="lazi"
+		religion="anatolian_religion"
+		amount=0
+	}
+	tribesmen={
+		culture="lazi"
+		religion="caucasian_religion"
+		amount=0
+	}
+	slaves={
+		amount=0
 	}
 }
 
@@ -703,7 +842,7 @@
 	terrain="forest"
 	culture="greco_pontic"
 	religion="roman_pantheon"
-	trade_goods="fish"
+	trade_goods="fruits"
 	civilization_value=24
 	barbarian_power=0
 	province_rank="settlement"
@@ -974,7 +1113,7 @@
 	terrain="hills"
 	culture="paphlagonian"
 	religion="anatolian_religion"
-	trade_goods="wood"
+	trade_goods="base_metals"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -1145,7 +1284,7 @@
 1842={ #Zara
 	terrain="forest"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="cloth"
 	civilization_value=18
 	barbarian_power=0
@@ -1154,7 +1293,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=1
 	}
 }
 
@@ -1167,6 +1310,7 @@
 	barbarian_power=0
 	province_rank="city"
 	citizen={
+		religion="roman_pantheon"
 		amount=1
 	}
 	citizen={
@@ -1179,10 +1323,15 @@
 	}
 	freemen={
 		culture="armenian"
+		religion="roman_pantheon"
 		amount=1
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="anahitic_religion"
+		amount=1
 	}
 	tribesmen={
 		religion="zoroaster"
@@ -1199,6 +1348,7 @@
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
+		religion="anahitic_religion"
 		amount=1
 	}
 	citizen={
@@ -1207,6 +1357,7 @@
 		amount=1
 	}
 	freemen={
+		religion="roman_pantheon"
 		amount=1
 	}
 	freemen={
@@ -1223,6 +1374,7 @@
 	}
 	tribesmen={
 		culture="armenian"
+		religion="roman_pantheon"
 		amount=1
 	}
 }
@@ -1258,7 +1410,7 @@
 	terrain="hills"
 	culture="cappadocian"
 	religion="anatolian_religion"
-	trade_goods="vegetables"
+	trade_goods="precious_metals"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -1290,9 +1442,11 @@
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
+		religion="roman_pantheon"
 		amount=1
 	}
 	slaves={
+		religion="zoroaster"
 		amount=1
 	}
 	tribesmen={
@@ -1304,6 +1458,7 @@
 	}
 	tribesmen={
 		culture="cappadocian"
+		religion="roman_pantheon"
 		amount=1
 	}
 }
@@ -1325,7 +1480,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=1
 	}
 }
 
@@ -1338,6 +1497,7 @@
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
+		religion="roman_pantheon"
 		amount=1
 	}
 	freemen={
@@ -1349,6 +1509,7 @@
 	}
 	tribesmen={
 		culture="cataonian"
+		religion="roman_pantheon"
 		amount=1
 	}
 }
@@ -1365,6 +1526,7 @@
 		amount=2
 	}
 	tribesmen={
+		religion="roman_pantheon"
 		amount=1
 	}
 }
@@ -1372,7 +1534,7 @@
 7844={ #Zimara
 	terrain="mountain"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="fur"
 	civilization_value=16
 	barbarian_power=0
@@ -1381,6 +1543,7 @@
 		amount=2
 	}
 	tribesmen={
+		religion="roman_pantheon"
 		amount=1
 	}
 }
@@ -1388,7 +1551,7 @@
 7845={ #Ani
 	terrain="mountain"
 	culture="armenian"
-	religion="armenian_religion"
+	religion="anahitic_religion"
 	trade_goods="wood"
 	civilization_value=21
 	barbarian_power=0
@@ -1405,6 +1568,7 @@
 	tribesmen={
 		amount=3
 	}
+	holy_site=omen_barshamin
 }
 
 7994={ #Kizari
@@ -1454,7 +1618,7 @@
 	terrain="hills"
 	culture="cappadocian"
 	religion="anatolian_religion"
-	trade_goods="wood"
+	trade_goods="cinnabar"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"

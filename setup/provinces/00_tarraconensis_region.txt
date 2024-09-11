@@ -322,13 +322,14 @@
 	tribesmen={
 		amount=6
 	}
+	holy_site=omen_lobegi
 }
 
 1017={ #Oiasso
 	terrain="plains"
 	culture="vasconian"
 	religion="pre_indo_european_religion"
-	trade_goods="salt"
+	trade_goods="precious_metals"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"

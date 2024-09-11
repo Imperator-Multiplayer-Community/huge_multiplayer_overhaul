@@ -924,8 +924,8 @@
 
 1314={ #Scallabis
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="oppidanian"
+	religion="druidism"
 	trade_goods="base_metals"
 	civilization_value=11
 	barbarian_power=0
@@ -975,8 +975,8 @@
 
 1317={ #Arabriga
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="oppidanian"
+	religion="druidism"
 	trade_goods="base_metals"
 	civilization_value=11
 	barbarian_power=0
@@ -1008,19 +1008,25 @@
 
 1319={ #Olisipo
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="fruits"
-	civilization_value=19
+	culture="celtician"
+	religion="druidism"
+	trade_goods="fish"
+	civilization_value=11
 	barbarian_power=0
-	province_rank="city"
+	province_rank="settlement"
 	citizen={
-		amount=5
+		amount=1
 	}
 	freemen={
-		amount=9
+		amount=2
 	}
-	port_building=2
+	tribesmen={
+		amount=6
+	}
+	port_building=1
+	slaves={
+		amount=5
+	}
 }
 
 1320={ #Malateca
@@ -1544,7 +1550,7 @@
 	terrain="plains"
 	culture="celtician"
 	religion="druidism"
-	trade_goods="olive"
+	trade_goods="fruits"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"

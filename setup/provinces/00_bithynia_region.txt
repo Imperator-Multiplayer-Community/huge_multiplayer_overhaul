@@ -55,6 +55,7 @@
 	tribesmen={
 		amount=3
 	}
+	holy_site=omen_hera_kandarene
 }
 
 200={ #Kimiata
@@ -103,7 +104,7 @@
 	terrain="hills"
 	culture="paphlagonian"
 	religion="anatolian_religion"
-	trade_goods="earthware"
+	trade_goods="base_metals"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"
@@ -122,7 +123,7 @@
 	terrain="forest"
 	culture="paphlagonian"
 	religion="roman_pantheon"
-	trade_goods="fish"
+	trade_goods="wood"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"
@@ -686,6 +687,7 @@
 		culture="mariandynian"
 		amount=2
 	}
+	holy_site=omen_nana
 }
 
 237={ #Embolos
@@ -950,13 +952,14 @@
 		religion="anatolian_religion"
 		amount=1
 	}
+	holy_site=omen_nicaea
 }
 
 245={ #Kios
 	terrain="hills"
 	culture="thracian"
 	religion="roman_pantheon"
-	trade_goods="olive"
+	trade_goods="cloth"
 	civilization_value=29
 	barbarian_power=0
 	province_rank="city"
@@ -966,12 +969,27 @@
 		amount=1
 	}
 	citizen={
-		amount=5
+		amount=3
 	}
 	freemen={
-		amount=4
+		amount=2
 	}
 	slaves={
+		amount=2
+	}
+	freemen={
+		culture="pasargadi"
+		religion="mithra_religion"
+		amount=1
+	}
+	citizen={
+		culture="median"
+		religion="mithra_religion"
+		amount=2
+	}
+	freemen={
+		culture="median"
+		religion="mithra_religion"
 		amount=2
 	}
 	slaves={
@@ -992,7 +1010,7 @@
 	tribesmen={
 		culture="phrygian"
 		religion="anatolian_religion"
-		amount=2
+		amount=1
 	}
 	port_building=1
 }
@@ -1001,7 +1019,7 @@
 	terrain="hills"
 	culture="thracian"
 	religion="roman_pantheon"
-	trade_goods="cloth"
+	trade_goods="olive"
 	civilization_value=24
 	barbarian_power=0
 	province_rank="settlement"
@@ -1076,10 +1094,12 @@
 	citizen={
 		amount=1
 	}
-	freemen={
-		amount=2
-	}
 	slaves={
+		amount=3
+	}
+	freemen={
+		culture="median"
+		religion="zoroaster"
 		amount=2
 	}
 	slaves={
@@ -1095,7 +1115,7 @@
 	tribesmen={
 		culture="phrygian"
 		religion="anatolian_religion"
-		amount=1
+		amount=0
 	}
 }
 
@@ -1368,7 +1388,7 @@
 	terrain="forest"
 	culture="greco_pontic"
 	religion="roman_pantheon"
-	trade_goods="hemp"
+	trade_goods="grain"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -1550,7 +1570,7 @@
 	terrain="hills"
 	culture="cappadocian"
 	religion="roman_pantheon"
-	trade_goods="cloth"
+	trade_goods="wood"
 	civilization_value=18
 	barbarian_power=0
 	province_rank="settlement"

@@ -7,7 +7,7 @@
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
-		amount=1
+		amount=2
 	}
 	citizen={
 		culture="hebrew"
@@ -28,8 +28,10 @@
 		amount=1
 	}
 	tribesmen={
-		amount=1
+		culture="middle_egyptian"
+		amount=0
 	}
+	holy_site=omen_thoth #Moved from Hermoupolis Mikra
 }
 
 551={ #Monkanei
@@ -92,13 +94,13 @@
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
-		amount=1
+		amount=2
 	}
 	slaves={
 		amount=2
 	}
 	tribesmen={
-		amount=1
+		amount=0
 	}
 	holy_site=omen_anubis
 }
@@ -115,13 +117,13 @@
 		amount=1
 	}
 	freemen={
-		amount=1
+		amount=2
 	}
 	slaves={
 		amount=3
 	}
 	tribesmen={
-		amount=1
+		amount=0
 	}
 }
 
@@ -137,13 +139,13 @@
 		amount=1
 	}
 	freemen={
-		amount=1
+		amount=2
 	}
 	slaves={
 		amount=1
 	}
 	tribesmen={
-		amount=1
+		amount=0
 	}
 }
 
@@ -156,7 +158,7 @@
 	barbarian_power=0
 	province_rank="city"
 	citizen={
-		amount=1
+		amount=2
 	}
 	freemen={
 		amount=3
@@ -165,7 +167,7 @@
 		amount=2
 	}
 	tribesmen={
-		amount=2
+		amount=1
 	}
 }
 
@@ -181,13 +183,13 @@
 		amount=1
 	}
 	freemen={
-		amount=1
+		amount=2
 	}
 	slaves={
 		amount=1
 	}
 	tribesmen={
-		amount=1
+		amount=0
 	}
 }
 
@@ -205,8 +207,11 @@
 	slaves={
 		amount=1
 	}
-	tribesmen={
+	freemen={
 		amount=1
+	}
+	tribesmen={
+		amount=0
 	}
 }
 
@@ -235,7 +240,7 @@
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
-		amount=1
+		amount=2
 	}
 	freemen={
 		amount=1
@@ -244,7 +249,7 @@
 		amount=1
 	}
 	tribesmen={
-		amount=1
+		amount=0
 	}
 	holy_site=omen_anhur
 }
@@ -263,8 +268,11 @@
 	slaves={
 		amount=1
 	}
-	tribesmen={
+	freemen={
 		amount=1
+	}
+	tribesmen={
+		amount=0
 	}
 	holy_site=omen_osiris
 }
@@ -280,11 +288,14 @@
 	citizen={
 		amount=3
 	}
+	freemen={
+		amount=3
+	}
 	slaves={
-		amount=2
+		amount=0
 	}
 	tribesmen={
-		amount=1
+		amount=0
 	}
 }
 
@@ -299,11 +310,14 @@
 	citizen={
 		amount=3
 	}
+	freemen={
+		amount=4
+	}
 	slaves={
-		amount=1
+		amount=0
 	}
 	tribesmen={
-		amount=3
+		amount=0
 	}
 	holy_site=omen_hathor
 }
@@ -321,6 +335,9 @@
 	}
 	tribesmen={
 		amount=2
+	}
+	slaves={
+		amount=0
 	}
 }
 
@@ -354,6 +371,10 @@
 	tribesmen={
 		amount=3
 	}
+	slaves={
+		amount=0
+	}
+	holy_site=omen_min
 }
 
 567={ #Apollonopolis Mikra
@@ -373,6 +394,7 @@
 	tribesmen={
 		amount=1
 	}
+	holy_site=omen_heqet
 }
 
 568={ #Kerameia
@@ -400,10 +422,10 @@
 	barbarian_power=0
 	province_rank="city"
 	nobles={
-		amount=1
+		amount=2
 	}
 	citizen={
-		amount=1
+		amount=4
 	}
 	citizen={
 		culture="hebrew"
@@ -416,10 +438,13 @@
 		amount=4
 	}
 	freemen={
-		amount=3
+		amount=1
 	}
 	tribesmen={
-		amount=2
+		amount=0
+	}
+	slaves={
+		amount=0
 	}
 	holy_site=omen_amun
 }
@@ -522,7 +547,10 @@
 	tribesmen={
 		amount=2
 	}
-	holy_site=omen_neith
+	slaves={
+		amount=0
+	}
+	holy_site=omen_heka #Changed to Heka, Temple was dedicated to a triad of Khnum, Neith and Heka
 }
 
 575={ #Eileithyias Polis
@@ -541,7 +569,7 @@
 	}
 }
 
-578={ #Hydreuma Troglodytikai
+578={ #Hydreuma Troglodytikon
 	terrain="desert"
 	culture="blemmyan"
 	religion="egyptian_pantheon"
@@ -849,7 +877,7 @@
 
 5500={ #Erebe
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="vegetables"
 	civilization_value=28
@@ -859,6 +887,7 @@
 		amount=1
 	}
 	freemen={
+		culture="upper_egyptian"
 		amount=2
 	}
 	slaves={
@@ -868,7 +897,7 @@
 
 5501={ #Pohe
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="camel"
 	civilization_value=28
@@ -881,7 +910,7 @@
 
 5502={ #Gebara
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="dates"
 	civilization_value=28
@@ -894,7 +923,7 @@
 
 5503={ #Gibra
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="wild_game"
 	civilization_value=28
@@ -905,15 +934,16 @@
 	}
 }
 
-5504={ #Hybis
+5504={ #Hibis
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="cloth"
 	civilization_value=31
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
+		culture="upper_egyptian"
 		amount=1
 	}
 	tribesmen={
@@ -924,7 +954,7 @@
 
 5505={ #Amoura
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="dates"
 	civilization_value=31
@@ -941,9 +971,9 @@
 	}
 }
 
-5506={ #Tchonemiris
+5506={ #Tchonemyris
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="earthware"
 	civilization_value=28
@@ -959,13 +989,14 @@
 
 5507={ #Tabenesse
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="fur"
 	civilization_value=31
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
+		culture="upper_egyptian"
 		amount=1
 	}
 	slaves={
@@ -978,7 +1009,7 @@
 
 5508={ #Kysis
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="fur"
 	civilization_value=28
@@ -994,7 +1025,7 @@
 
 5509={ #Kellis
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="cattle"
 	civilization_value=28
@@ -1013,7 +1044,7 @@
 
 5510={ #Mothis
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="camel"
 	civilization_value=28
@@ -1035,7 +1066,7 @@
 
 5511={ #Trimithis
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="dates"
 	civilization_value=28
@@ -1057,7 +1088,7 @@
 
 5512={ #Thenete
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="honey"
 	civilization_value=28
@@ -1076,7 +1107,7 @@
 
 5513={ #Parammon
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="precious_metals"
 	civilization_value=31
@@ -1086,6 +1117,7 @@
 		amount=2
 	}
 	freemen={
+		culture="upper_egyptian"
 		amount=1
 	}
 	slaves={
@@ -1096,15 +1128,16 @@
 	}
 }
 
-5514={ #Siwa
+5514={ #Farafra
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="salt"
 	civilization_value=31
 	barbarian_power=0
 	province_rank="settlement"
 	citizen={
+		culture="upper_egyptian"
 		amount=1
 	}
 	freemen={
@@ -1117,7 +1150,7 @@
 
 5515={ #Sykaminia
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="wood"
 	civilization_value=28
@@ -1130,7 +1163,7 @@
 
 5516={ #Perusekh
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="wild_game"
 	civilization_value=28
@@ -1143,7 +1176,7 @@
 
 5517={ #Prekariton
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="stone"
 	civilization_value=28
@@ -1217,7 +1250,7 @@
 
 5522={ #Isis
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="dates"
 	civilization_value=28
@@ -1227,6 +1260,7 @@
 		amount=1
 	}
 	freemen={
+		culture="upper_egyptian"
 		amount=1
 	}
 	slaves={
@@ -1239,7 +1273,7 @@
 
 5523={ #Pharaphra
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="fur"
 	civilization_value=28
@@ -1255,7 +1289,7 @@
 
 5524={ #Bishaya
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="wild_game"
 	civilization_value=28
@@ -1271,7 +1305,7 @@
 
 5525={ #Tawar
 	terrain="desert"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="wild_game"
 	civilization_value=28
@@ -1287,7 +1321,7 @@
 
 5526={ #Minqar
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="stone"
 	civilization_value=28
@@ -1297,6 +1331,7 @@
 		amount=2
 	}
 	slaves={
+		culture="upper_egyptian"
 		amount=1
 	}
 	tribesmen={
@@ -1306,7 +1341,7 @@
 
 5527={ #Tablamon
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="cattle"
 	civilization_value=28
@@ -1332,23 +1367,24 @@
 
 5529={ #Poka
 	terrain="oasis"
-	culture="libyan"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="vegetables"
 	civilization_value=28
 	barbarian_power=0
 	province_rank="settlement"
-	slaves={
+	tribesmen={
 		amount=2
 	}
-	tribesmen={
+	slaves={
+		culture="libyan"
 		amount=2
 	}
 }
 
 5530={ #Mandish
 	terrain="oasis"
-	culture="upper_egyptian"
+	culture="oasis_egyptian"
 	religion="egyptian_pantheon"
 	trade_goods="woad"
 	civilization_value=28

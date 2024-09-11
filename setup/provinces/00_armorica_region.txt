@@ -1,6 +1,6 @@
 ﻿2134={ #Coriallum
 	terrain="plains"
-	culture="callaecian"
+	culture="aremorican"
 	religion="druidism"
 	trade_goods="fish"
 	civilization_value=11
@@ -78,7 +78,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aremorican"
+		amount=1
 	}
 }
 
@@ -94,7 +98,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aulercian"
+		amount=1
 	}
 }
 
@@ -224,7 +232,7 @@
 
 2147={ #Duretie
 	terrain="plains"
-	culture="carthaginian"
+	culture="aremorican"
 	religion="druidism"
 	trade_goods="base_metals"
 	civilization_value=11
@@ -289,7 +297,7 @@
 
 2151={ #Vorganium
 	terrain="forest"
-	culture="callaecian"
+	culture="aremorican"
 	religion="druidism"
 	trade_goods="amber"
 	civilization_value=9
@@ -325,19 +333,22 @@
 
 2153={ #Grannona
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="jade"
-	civilization_value=15
+	culture="aremorican"
+	religion="druidism"
+	trade_goods="precious_metals"
+	civilization_value=11
 	barbarian_power=0
-	province_rank="city"
-	citizen={
+	province_rank="settlement"
+	freemen={
+		amount=1
+	}
+	tribesmen={
+		amount=4
+	}
+	port_building=1
+	slaves={
 		amount=6
 	}
-	freemen={
-		amount=5
-	}
-	port_building=2
 }
 
 2154={ #Pollicum
@@ -474,17 +485,21 @@
 
 2212={ #Namnetum
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="aremorican"
+	religion="druidism"
 	trade_goods="hemp"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
-		amount=4
+		amount=2
 	}
 	tribesmen={
-		amount=2
+		amount=3
+	}
+	slaves={
+		culture="pictonian"
+		amount=1
 	}
 	port_building=1
 }
@@ -501,7 +516,11 @@
 		amount=2
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	slaves={
+		culture="aremorican"
+		amount=1
 	}
 }
 
@@ -517,7 +536,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aulercian"
+		amount=1
 	}
 }
 
@@ -555,6 +578,7 @@
 		amount=1
 	}
 	slaves={
+		culture="aremorican"
 		amount=1
 	}
 	tribesmen={
@@ -666,7 +690,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="veliocassian"
+		amount=1
 	}
 }
 
@@ -685,6 +713,7 @@
 		amount=1
 	}
 	slaves={
+		culture="aulercian"
 		amount=1
 	}
 	tribesmen={
@@ -704,7 +733,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=8
+		amount=7
+	}
+	slaves={
+		culture="sennonian"
+		amount=1
 	}
 }
 
@@ -761,7 +794,11 @@
 		amount=5
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aulercian"
+		amount=1
 	}
 }
 
@@ -777,7 +814,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="pictonian"
+		amount=1
 	}
 }
 
@@ -793,7 +834,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="pictonian"
+		amount=1
 	}
 }
 
@@ -809,6 +854,7 @@
 		amount=1
 	}
 	slaves={
+		culture="aremorican"
 		amount=1
 	}
 	tribesmen={
@@ -828,7 +874,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aulercian"
+		amount=1
 	}
 }
 
@@ -844,7 +894,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="pictonian"
+		amount=1
 	}
 }
 
@@ -860,7 +914,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	slaves={
+		culture="pictonian"
+		amount=1
 	}
 }
 
@@ -884,7 +942,7 @@
 	terrain="plains"
 	culture="biturigan"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="woad"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
@@ -908,7 +966,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aulercian"
+		amount=1
 	}
 }
 
@@ -927,6 +989,7 @@
 		amount=4
 	}
 	slaves={
+		culture="veliocassian"
 		amount=1
 	}
 	tribesmen={
@@ -946,7 +1009,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="biturigan"
+		amount=1
 	}
 }
 
@@ -978,7 +1045,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	slaves={
+		culture="aulercian"
+		amount=1
 	}
 }
 
@@ -986,7 +1057,7 @@
 	terrain="forest"
 	culture="aulercian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="fur"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -994,7 +1065,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="biturigan"
+		amount=1
 	}
 }
 
@@ -1010,7 +1085,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	slaves={
+		culture="aulercian"
+		amount=1
 	}
 }
 
@@ -1018,7 +1097,7 @@
 	terrain="forest"
 	culture="biturigan"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="cattle"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -1066,7 +1145,7 @@
 	terrain="forest"
 	culture="aulercian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="vegetables"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -1074,7 +1153,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=5
+		amount=4
+	}
+	slaves={
+		culture="biturigan"
+		amount=1
 	}
 }
 
@@ -1082,7 +1165,7 @@
 	terrain="forest"
 	culture="aulercian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="wine"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -1145,13 +1228,19 @@
 3308={ #Conbaristum
 	terrain="forest"
 	culture="aremorican"
-	religion="carthaginian_pantheon"
+	religion="druidism"
 	trade_goods="earthware"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
+	citizen={
+		amount=1
+	}
 	freemen={
-		amount=3
+		amount=1
+	}
+	slaves={
+		amount=1
 	}
 	slaves={
 		amount=1
@@ -1160,9 +1249,9 @@
 
 5431={ #Andion
 	terrain="plains"
-	culture="callaecian"
+	culture="aremorican"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="fish"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"

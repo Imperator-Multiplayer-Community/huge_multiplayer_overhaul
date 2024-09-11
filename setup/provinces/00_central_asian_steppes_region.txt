@@ -65,11 +65,11 @@
 	barbarian_power=0
 	province_rank="settlement"
 	tribesmen={
-		amount=7
+		amount=1
 	}
 	slaves={
 		culture="siraci"
-		amount=3
+		amount=0
 	}
 }
 
@@ -99,6 +99,9 @@
 	}
 	tribesmen={
 		amount=2
+	}
+	slaves={
+		amount=1
 	}
 }
 

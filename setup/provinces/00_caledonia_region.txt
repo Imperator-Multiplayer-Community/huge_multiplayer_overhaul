@@ -71,6 +71,7 @@
 	tribesmen={
 		amount=1
 	}
+	port_building=1
 }
 
 2109={ #Novantae
@@ -210,7 +211,7 @@
 	terrain="forest"
 	culture="caledonian"
 	religion="druidism"
-	trade_goods="lapis"
+	trade_goods="wild_game"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -262,7 +263,7 @@
 	terrain="forest"
 	culture="caledonian"
 	religion="druidism"
-	trade_goods="cinnabar"
+	trade_goods="stone"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
@@ -288,7 +289,7 @@
 	terrain="forest"
 	culture="taexalian"
 	religion="druidism"
-	trade_goods="cinnabar"
+	trade_goods="woad"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
@@ -418,7 +419,7 @@
 	terrain="forest"
 	culture="ivernian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="wood"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -458,7 +459,7 @@
 	terrain="forest"
 	culture="ivernian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="fish"
 	civilization_value=10
 	barbarian_power=0
 	province_rank="settlement"
@@ -471,7 +472,7 @@
 	terrain="plains"
 	culture="voluntian"
 	religion="druidism"
-	trade_goods="fruits"
+	trade_goods="wood"
 	civilization_value=0
 	barbarian_power=0
 	province_rank="settlement"
@@ -855,7 +856,10 @@
 	barbarian_power=0
 	province_rank="settlement"
 	tribesmen={
-		amount=5
+		amount=3
+	}
+	slaves={
+		amount=2
 	}
 }
 

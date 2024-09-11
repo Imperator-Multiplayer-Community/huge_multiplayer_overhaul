@@ -139,7 +139,7 @@
 	terrain="forest"
 	culture="callaecian"
 	religion="druidism"
-	trade_goods="horses"
+	trade_goods="steppe_horses"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -215,7 +215,7 @@
 	terrain="hills"
 	culture="cantabrian"
 	religion="druidism"
-	trade_goods="cinnabar"
+	trade_goods="fish"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -351,7 +351,7 @@
 	terrain="hills"
 	culture="asturian"
 	religion="druidism"
-	trade_goods="precious_metals"
+	trade_goods="cinnabar"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -501,7 +501,7 @@
 	terrain="hills"
 	culture="asturian"
 	religion="druidism"
-	trade_goods="horses"
+	trade_goods="steppe_horses"
 	civilization_value=9
 	barbarian_power=0
 	province_rank="settlement"
@@ -631,19 +631,19 @@
 
 1133={ #Varrinia
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="cinnabar"
+	culture="callaecian"
+	religion="druidism"
+	trade_goods="fish"
 	civilization_value=11
 	barbarian_power=0
 	province_rank="settlement"
-	citizen={
-		amount=2
-	}
 	freemen={
-		amount=3
+		amount=1
 	}
 	tribesmen={
+		amount=4
+	}
+	slaves={
 		amount=1
 	}
 }
@@ -666,8 +666,8 @@
 
 1135={ #Cibarcia
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="callaecian"
+	religion="druidism"
 	trade_goods="base_metals"
 	civilization_value=11
 	barbarian_power=0

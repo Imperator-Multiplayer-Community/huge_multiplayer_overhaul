@@ -1,7 +1,7 @@
 ﻿1144={ #Skodra
 	terrain="forest"
 	culture="taulantian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="olive"
 	civilization_value=18
 	barbarian_power=0
@@ -17,7 +17,7 @@
 4018={ #Tergeste
 	terrain="plains"
 	culture="histrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wine"
 	civilization_value=10
 	barbarian_power=0
@@ -26,17 +26,25 @@
 		amount=2
 	}
 	freemen={
+		amount=1
+	}
+	freemen={
+		religion="italic_pantheon"
+		amount=1
+	}
+	tribesmen={
 		amount=2
 	}
 	tribesmen={
-		amount=3
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
-4019={ #Parenthos
+4019={ #Parentium
 	terrain="farmland"
 	culture="histrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fish"
 	civilization_value=12
 	barbarian_power=0
@@ -51,14 +59,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=2
 	}
 }
 
-4020={ #Polai
+4020={ #Pola
 	terrain="farmland"
 	culture="histrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wine"
 	civilization_value=12
 	barbarian_power=0
@@ -67,18 +79,27 @@
 		amount=2
 	}
 	freemen={
+		amount=1
+	}
+	freemen={
+		religion="roman_pantheon"
+		amount=1
+	}
+	tribesmen={
 		amount=2
 	}
 	tribesmen={
-		amount=3
+		amount=1
+		religion="italic_pantheon"
 	}
+	holy_site=omen_histria
 	port_building=1
 }
 
-4021={ #Albona
+4021={ #Flanona
 	terrain="forest"
 	culture="histrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wine"
 	civilization_value=8
 	barbarian_power=0
@@ -87,17 +108,22 @@
 		amount=2
 	}
 	freemen={
-		amount=3
+		amount=2
+	}
+	freemen={
+		religion="italic_pantheon"
+		amount=1
 	}
 	tribesmen={
 		amount=2
 	}
+	holy_site=omen_ica
 }
 
-4022={ #Pikenton
+4022={ #Piquentum
 	terrain="hills"
 	culture="histrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="olive"
 	civilization_value=8
 	barbarian_power=0
@@ -112,14 +138,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=2
 	}
 }
 
 4023={ #Tarsatica
 	terrain="hills"
 	culture="iapodian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="cloth"
 	civilization_value=8
 	barbarian_power=0
@@ -134,14 +164,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4032={ #Kyrista
 	terrain="hills"
 	culture="iapodian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fish"
 	civilization_value=8
 	barbarian_power=0
@@ -156,14 +190,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4033={ #Athyinites
 	terrain="hills"
 	culture="iapodian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="vegetables"
 	civilization_value=8
 	barbarian_power=0
@@ -175,10 +213,22 @@
 		amount=1
 	}
 	slaves={
-		amount=7
+		amount=3
+	}
+	slaves={
+		religion="italic_pantheon"
+		amount=2
+	}
+	slaves={
+		religion="roman_pantheon"
+		amount=2
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
@@ -198,10 +248,16 @@
 	}
 	tribesmen={
 		culture="histrian"
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		culture="histrian"
+		religion="italic_pantheon"
+		amount=1
 	}
 	slaves={
 		culture="histrian"
+		religion="illyrian_pantheon"
 		amount=1
 	}
 }
@@ -209,7 +265,7 @@
 4035={ #Ortopla
 	terrain="hills"
 	culture="iapodian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="salt"
 	civilization_value=8
 	barbarian_power=0
@@ -224,14 +280,18 @@
 		amount=2
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4036={ #Tetrapones
 	terrain="forest"
 	culture="iapodian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fur"
 	civilization_value=8
 	barbarian_power=0
@@ -243,14 +303,18 @@
 		amount=2
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4038={ #Andautonion
 	terrain="hills"
 	culture="catari"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -262,14 +326,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"	
+		amount=1
 	}
 }
 
 4040={ #Kataraia
 	terrain="forest"
 	culture="catari"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="vegetables"
 	civilization_value=8
 	barbarian_power=0
@@ -281,14 +349,19 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
 	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
+	}
+	holy_site=omen_vidasus
 }
 
 4041={ #Segestike
 	terrain="hills"
 	culture="catari"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="cattle"
 	civilization_value=8
 	barbarian_power=0
@@ -304,7 +377,7 @@
 4042={ #Rhaitinion
 	terrain="forest"
 	culture="catari"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -323,7 +396,7 @@
 4043={ #Klandate
 	terrain="forest"
 	culture="pannonian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="horses"
 	civilization_value=8
 	barbarian_power=0
@@ -342,7 +415,7 @@
 4044={ #Kroukion
 	terrain="hills"
 	culture="catari"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -358,7 +431,7 @@
 4045={ #Kolapia
 	terrain="forest"
 	culture="catari"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fur"
 	civilization_value=8
 	barbarian_power=0
@@ -377,7 +450,7 @@
 4046={ #Oualdasos
 	terrain="farmland"
 	culture="catari"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="horses"
 	civilization_value=12
 	barbarian_power=0
@@ -396,7 +469,7 @@
 4049={ #Ouegion
 	terrain="hills"
 	culture="liburnian_culture"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="olive"
 	civilization_value=8
 	barbarian_power=0
@@ -405,14 +478,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4050={ #Aroupion
 	terrain="hills"
 	culture="iapodian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="leather"
 	civilization_value=8
 	barbarian_power=0
@@ -424,14 +501,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4051={ #Ankos
 	terrain="forest"
 	culture="liburnian_culture"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -440,14 +521,18 @@
 		amount=2
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4052={ #Kissa
 	terrain="plains"
 	culture="liburnian_culture"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="salt"
 	civilization_value=10
 	barbarian_power=0
@@ -462,14 +547,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4053={ #Ainona
 	terrain="farmland"
 	culture="liburnian_culture"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fish"
 	civilization_value=12
 	barbarian_power=0
@@ -486,12 +575,13 @@
 	tribesmen={
 		amount=5
 	}
+	holy_site=omen_latra
 }
 
 4054={ #Idassa
 	terrain="plains"
 	culture="liburnian_culture"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fish"
 	civilization_value=15
 	barbarian_power=0
@@ -503,7 +593,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=1
 	}
 	port_building=1
 }
@@ -511,7 +605,7 @@
 4055={ #Arkyrounton
 	terrain="hills"
 	culture="liburnian_culture"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="leather"
 	civilization_value=8
 	barbarian_power=0
@@ -526,14 +620,18 @@
 		amount=2
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4056={ #Asseria
 	terrain="farmland"
 	culture="liburnian_culture"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="grain"
 	civilization_value=12
 	barbarian_power=0
@@ -545,14 +643,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4057={ #Bournion
 	terrain="farmland"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="cattle"
 	civilization_value=12
 	barbarian_power=0
@@ -571,7 +673,7 @@
 4058={ #Skardon
 	terrain="plains"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="hemp"
 	civilization_value=10
 	barbarian_power=0
@@ -580,14 +682,18 @@
 		amount=2
 	}
 	tribesmen={
-		amount=2
+		amount=1
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4059={ #Synodion
 	terrain="farmland"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="olive"
 	civilization_value=12
 	barbarian_power=0
@@ -599,14 +705,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4060={ #Tragyrion
 	terrain="farmland"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="hemp"
 	civilization_value=12
 	barbarian_power=0
@@ -615,7 +725,11 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="roman_pantheon"
+		amount=1
 	}
 	port_building=1
 }
@@ -623,7 +737,7 @@
 4061={ #Splaunon
 	terrain="mountain"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fur"
 	civilization_value=6
 	barbarian_power=0
@@ -639,7 +753,7 @@
 4062={ #Salona
 	terrain="hills"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="marble"
 	civilization_value=8
 	barbarian_power=0
@@ -654,14 +768,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=3
+		amount=2
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4063={ #Osinion
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="cattle"
 	civilization_value=8
 	barbarian_power=0
@@ -680,7 +798,7 @@
 4064={ #Pelba
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="vegetables"
 	civilization_value=8
 	barbarian_power=0
@@ -699,7 +817,7 @@
 4065={ #Salouia
 	terrain="hills"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="vegetables"
 	civilization_value=8
 	barbarian_power=0
@@ -718,7 +836,7 @@
 4066={ #Delminion
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="cattle"
 	civilization_value=8
 	barbarian_power=0
@@ -732,12 +850,13 @@
 	tribesmen={
 		amount=4
 	}
+	holy_site=omen_tadenus
 }
 
 4067={ #Baridouon
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="cattle"
 	civilization_value=8
 	barbarian_power=0
@@ -759,7 +878,7 @@
 4068={ #Nea Bistoua
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -778,7 +897,7 @@
 4069={ #Ad Matricem
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -797,7 +916,7 @@
 4070={ #Baloia
 	terrain="hills"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -819,7 +938,7 @@
 4071={ #Leusaba
 	terrain="hills"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="vegetables"
 	civilization_value=8
 	barbarian_power=0
@@ -838,7 +957,7 @@
 4072={ #Aimate
 	terrain="forest"
 	culture="pannonian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="woad"
 	civilization_value=8
 	barbarian_power=0
@@ -860,7 +979,7 @@
 4073={ #Praitorion
 	terrain="forest"
 	culture="pannonian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="stone"
 	civilization_value=8
 	barbarian_power=0
@@ -879,7 +998,7 @@
 4074={ #Serbinon
 	terrain="hills"
 	culture="pannonian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="stone"
 	civilization_value=8
 	barbarian_power=0
@@ -901,7 +1020,7 @@
 4075={ #Kastra
 	terrain="plains"
 	culture="pannonian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="woad"
 	civilization_value=10
 	barbarian_power=0
@@ -920,7 +1039,7 @@
 4076={ #Ourbate
 	terrain="forest"
 	culture="pannonian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -942,7 +1061,7 @@
 4078={ #Berkellon
 	terrain="hills"
 	culture="deraemestian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="horses"
 	civilization_value=8
 	barbarian_power=0
@@ -958,7 +1077,7 @@
 4079={ #Stanekloi
 	terrain="forest"
 	culture="deraemestian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=8
 	barbarian_power=0
@@ -974,7 +1093,7 @@
 4080={ #Hydata Theiika
 	terrain="forest"
 	culture="deraemestian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="cattle"
 	civilization_value=8
 	barbarian_power=0
@@ -993,7 +1112,7 @@
 4081={ #Angeliai
 	terrain="hills"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="grain"
 	civilization_value=8
 	barbarian_power=0
@@ -1008,14 +1127,18 @@
 		amount=1
 	}
 	tribesmen={
-		amount=4
+		amount=3
+	}
+	tribesmen={
+		religion="italic_pantheon"
+		amount=1
 	}
 }
 
 4082={ #Narona
 	terrain="farmland"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fish"
 	civilization_value=12
 	barbarian_power=0
@@ -1034,7 +1157,7 @@
 4083={ #Dilenton
 	terrain="farmland"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="olive"
 	civilization_value=12
 	barbarian_power=0
@@ -1073,6 +1196,7 @@
 	}
 	slaves={
 		culture="greco_illyrian"
+		religion="illyrian_pantheon"
 		amount=2
 	}
 	port_building=1
@@ -1105,6 +1229,7 @@
 	}
 	tribesmen={
 		culture="greco_illyrian"
+		religion="illyrian_pantheon"
 		amount=2
 	}
 	port_building=1
@@ -1113,7 +1238,7 @@
 4086={ #Salthoua
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wine"
 	civilization_value=8
 	barbarian_power=0
@@ -1129,7 +1254,7 @@
 4087={ #Enderon
 	terrain="forest"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="olive"
 	civilization_value=8
 	barbarian_power=0
@@ -1148,7 +1273,7 @@
 4088={ #Rhizon
 	terrain="hills"
 	culture="taulantian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="fish"
 	civilization_value=8
 	barbarian_power=0
@@ -1159,12 +1284,13 @@
 	slaves={
 		amount=1
 	}
+	holy_site=omen_medaurus
 }
 
 4089={ #Medeon
 	terrain="forest"
 	culture="taulantian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="earthware"
 	civilization_value=8
 	barbarian_power=0
@@ -1183,7 +1309,7 @@
 4090={ #Bouthoe
 	terrain="hills"
 	culture="taulantian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="salt"
 	civilization_value=8
 	barbarian_power=0
@@ -1200,7 +1326,7 @@
 4091={ #Askrebion
 	terrain="hills"
 	culture="taulantian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wine"
 	civilization_value=8
 	barbarian_power=0
@@ -1216,7 +1342,7 @@
 4104={ #Leusinion
 	terrain="mountain"
 	culture="greco_illyrian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="stone"
 	civilization_value=6
 	barbarian_power=0
@@ -1235,7 +1361,7 @@
 4105={ #Pekina
 	terrain="mountain"
 	culture="deraemestian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="wood"
 	civilization_value=6
 	barbarian_power=0
@@ -1254,7 +1380,7 @@
 4107={ #Haidon
 	terrain="forest"
 	culture="deraemestian"
-	religion="roman_pantheon"
+	religion="illyrian_pantheon"
 	trade_goods="woad"
 	civilization_value=8
 	barbarian_power=0

@@ -1,6 +1,6 @@
 ﻿2000={ #Deventiasteno
 	terrain="forest"
-	culture="callaecian"
+	culture="dumnonian"
 	religion="druidism"
 	trade_goods="salt"
 	civilization_value=9
@@ -174,7 +174,7 @@
 
 2009={ #Aquae Sulis
 	terrain="farmland"
-	culture="callaecian"
+	culture="dobunnian"
 	religion="druidism"
 	trade_goods="stone"
 	civilization_value=12
@@ -266,7 +266,7 @@
 
 2014={ #Vectis
 	terrain="forest"
-	culture="callaecian"
+	culture="durotrigan"
 	religion="druidism"
 	trade_goods="precious_metals"
 	civilization_value=9
@@ -645,7 +645,7 @@
 	}
 }
 
-2034={ #Camboritum
+2034={ #Duroliponte
 	terrain="marsh"
 	culture="iceni"
 	religion="druidism"
@@ -743,22 +743,25 @@
 
 2040={ #Glevum
 	terrain="forest"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
-	trade_goods="jade"
-	civilization_value=15
+	culture="demetian"
+	religion="druidism"
+	trade_goods="precious_metals"
+	civilization_value=8
 	barbarian_power=0
-	province_rank="city"
-	nobles={
-		amount=2
-	}
+	province_rank="settlement"
 	citizen={
-		amount=5
+		amount=1
 	}
 	freemen={
+		amount=1
+	}
+	tribesmen={
+		amount=5
+	}
+	port_building=1
+	slaves={
 		amount=6
 	}
-	port_building=3
 }
 
 2041={ #Alavna
@@ -925,7 +928,7 @@
 	}
 }
 
-2051={ #Duroliponte
+2051={ #Durocobrivae
 	terrain="plains"
 	culture="iceni"
 	religion="druidism"
@@ -1541,8 +1544,8 @@
 
 2092={ #Burrium
 	terrain="forest"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="demetian"
+	religion="druidism"
 	trade_goods="base_metals"
 	civilization_value=8
 	barbarian_power=0
@@ -1557,36 +1560,36 @@
 
 2093={ #Bornium
 	terrain="forest"
-	culture="callaecian"
+	culture="demetian"
 	religion="druidism"
 	trade_goods="leather"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
 	freemen={
-		amount=3
+		amount=1
 	}
 	tribesmen={
-		amount=1
+		amount=3
 	}
 }
 
 2094={ #Nidum
 	terrain="forest"
-	culture="callaecian"
+	culture="demetian"
 	religion="druidism"
 	trade_goods="fish"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"
-	citizen={
-		amount=1
-	}
 	freemen={
 		amount=2
 	}
 	tribesmen={
 		amount=2
+	}
+	slaves={
+		amount=1
 	}
 }
 
@@ -1641,8 +1644,8 @@
 
 2098={ #Gobannium
 	terrain="plains"
-	culture="carthaginian"
-	religion="carthaginian_pantheon"
+	culture="demetian"
+	religion="druidism"
 	trade_goods="wood"
 	civilization_value=10
 	barbarian_power=0
@@ -1764,7 +1767,7 @@
 	terrain="forest"
 	culture="ordovitian"
 	religion="druidism"
-	trade_goods="cinnabar"
+	trade_goods="base_metals"
 	civilization_value=8
 	barbarian_power=0
 	province_rank="settlement"

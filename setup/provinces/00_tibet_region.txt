@@ -84,28 +84,6 @@
 	}
 }
 
-5584={ #Tshongdu
-	terrain="mountain"
-	culture="himalayan"
-	religion="bon_religion"
-	trade_goods="wild_game"
-	civilization_value=6
-	barbarian_power=0
-	province_rank="settlement"
-	citizen={
-		amount=1
-	}
-	slaves={
-		amount=2
-	}
-	tribesmen={
-		amount=3
-	}
-	freemen={
-		amount=2
-	}
-}
-
 5585={ #Pakpa
 	terrain="mountain"
 	culture="himalayan"
@@ -124,25 +102,6 @@
 	civilization_value=0
 	barbarian_power=0
 	province_rank="settlement"
-}
-
-5587={ #Chomolangma
-	terrain="mountain"
-	culture="himalayan"
-	religion="bon_religion"
-	trade_goods="stone"
-	civilization_value=6
-	barbarian_power=0
-	province_rank="settlement"
-	freemen={
-		amount=1
-	}
-	slaves={
-		amount=3
-	}
-	tribesmen={
-		amount=2
-	}
 }
 
 5588={ #Lhayul
@@ -345,6 +304,7 @@
 	tribesmen={
 		amount=6
 	}
+	holy_site=omen_tonpa_shenrab
 }
 
 5616={ #Jangteng
@@ -405,7 +365,7 @@
 	tribesmen={
 		amount=7
 	}
-	#holy_site=omen_insight
+	holy_site=omen_lha_mo
 }
 
 5619={ #Tanglha
@@ -555,22 +515,6 @@
 	}
 }
 
-5628={ #Paro Kerchu
-	terrain="mountain"
-	culture="himalayan"
-	religion="bon_religion"
-	trade_goods="wood"
-	civilization_value=6
-	barbarian_power=0
-	province_rank="settlement"
-	freemen={
-		amount=1
-	}
-	tribesmen={
-		amount=3
-	}
-}
-
 5629={ #Koryi
 	terrain="mountain"
 	culture="himalayan"
@@ -601,6 +545,7 @@
 	tribesmen={
 		amount=1
 	}
+	holy_site=omen_shenlha_okar
 }
 
 5631={ #Mon Bumtang
@@ -617,6 +562,7 @@
 	slaves={
 		amount=2
 	}
+	holy_site=omen_sangpo_bumtri
 }
 
 5632={ #Khoting
@@ -954,6 +900,7 @@
 	tribesmen={
 		amount=3
 	}
+	holy_site=omen_yeshe_walmo
 }
 
 5651={ #Shyri
@@ -1123,7 +1070,7 @@
 	tribesmen={
 		amount=1
 	}
-	#holy_site=omen_spirits_inspiration
+	holy_site=omen_the_elements
 }
 
 5661={ #Rabten
