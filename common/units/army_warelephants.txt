@@ -11,23 +11,26 @@
 	movement_speed = 2.5
 	build_time = 365
 	legions = no
-	light_infantry = 0.85
-	heavy_infantry = 1.25
-	heavy_cavalry = 0.9
+	
+	light_infantry = 1.25
+	heavy_infantry = 1.50
+	heavy_cavalry = 1.50
 	warelephant = 1
-	horse_archers = 0.75
-	archers = 0.95
-	light_cavalry = 0.8
-	camels = 0.75
+	horse_archers = 1.0
+	archers = 1.0
+	light_cavalry = 1.25
+	camels = 1.25
 	supply_train = 2
 	setup_fraction = 0.1
 	attrition_weight = 3
-	strength_damage_taken = 0.45
-	morale_damage_taken = 1.35
-	morale_damage_done = 2
+	
+	strength_damage_taken = 0.50
+	morale_damage_taken = 1.0
+	morale_damage_done = 1.0
+
 	ai_max_percentage = 15
 	build_cost = {
-		gold = 36
+		gold = 50
 		manpower = 1
 	}
 	attrition_loss = 0.1

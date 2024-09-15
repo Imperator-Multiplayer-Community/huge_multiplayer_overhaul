@@ -12,22 +12,25 @@
 	movement_speed = 4
 	build_time = 45
 	
-	light_infantry = 1.15
-	heavy_infantry = 0.75
-	heavy_cavalry = 0.75
+	light_infantry = 1.50
+	heavy_infantry = 1.0
+	heavy_cavalry = 0.90
 	warelephant = 1.0
 	light_cavalry = 1.0
-	horse_archers = 1.05
-	archers = 1.20
-	camels = 1.05
+	horse_archers = 1.25
+	archers = 1.50
+	camels = 1.00
 	supply_train = 2.0
 	
+	morale_damage_taken = 0.85
+	strength_damage_taken = 0.85
+
 	attrition_weight = 1.5
 	attrition_loss = 0.05
 	
 	ai_max_percentage = 15
 	build_cost = {
-		gold = 18
+		gold = 25
 		manpower = 1
 	}
 	food_consumption = 0.25
