@@ -946,7 +946,7 @@ military_inventions = {
     bloomeries_inv = { 
         modifier = {
         	slaves_move_cost_modifier -0.1
-        	global_tax_income = 0.05
+        	global_tax_modifier = 0.05
         }
         
         requires = { heavy_infantry_cost_inv }
