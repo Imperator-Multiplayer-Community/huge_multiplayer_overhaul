@@ -1,0 +1,88 @@
+﻿country_decisions = {
+	
+	# Puno-Gallic Republic
+	# Designed by Neidhardt, created by Neidhardt
+	form_puno_gallic_republic = {
+		
+		potential = {
+			num_of_cities >= 1
+			is_republic = yes
+			country_culture_group = west_levantine
+			NOT = {
+				tag = PGR
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = armorica_centralis_area
+					is_in_area = armorica_minoris_area
+					is_in_area = armorica_maioris_area
+					is_in_area = pictonia_septentrionalis_area
+					is_in_area = cenomannia_area
+					is_in_area = bituriga_occidentalis_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = puno_celtiberian_republic_not_exists
+				NOT = {
+					any_country = {
+						tag = PGR
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+					owns_or_subject_owns_area = armorica_centralis_area
+					owns_or_subject_owns_area = armorica_minoris_area
+					owns_or_subject_owns_area = armorica_maioris_area
+					owns_or_subject_owns_area = pictonia_septentrionalis_area
+					owns_or_subject_owns_area = cenomannia_area
+					owns_or_subject_owns_area = bituriga_occidentalis_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "PUNO_GALLIC_REPUBLIC_NAME"
+			hidden_effect = {
+				change_country_adjective = "PUNO_GALLIC_REPUBLIC_ADJECTIVE"
+				change_country_color = "puno_gallic_republic_color"
+				change_country_tag = PGR
+				change_country_flag = PUNO_GALLIC_REPUBLIC_FLAG
+				trigger_event = {
+					id = formable_heritage.174
+				}				
+			}
+			custom_tooltip = puno_celtiberian_republic_claims_tooltip
+			hidden_effect = {
+				region:lusitania_region = { formable_region_province_effect = yes }
+				region:tarraconensis_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

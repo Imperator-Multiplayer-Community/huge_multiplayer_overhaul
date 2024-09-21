@@ -1,0 +1,89 @@
+﻿country_decisions = {
+	
+	# Puno-Brittonic Republic
+	# Designed by Neidhardt, created by Neidhardt
+	form_puno_brittonic_republic = {
+		
+		potential = {
+			num_of_cities >= 1
+			is_republic = yes
+			country_culture_group = west_levantine
+			NOT = {
+				tag = PBR
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = britannia_secunda_meridionalis_area
+					is_in_area = britannia_secunda_septentrionalis_area
+					is_in_area = dobunnia_area
+					is_in_area = durotrigia_area
+					is_in_area = dumnonia_area
+					is_in_area = cantiacia_area
+					is_in_area = icenia_area
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = puno_brittonic_republic_not_exists
+				NOT = {
+					any_country = {
+						tag = PGL
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = britannia_secunda_meridionalis_area
+				owns_or_subject_owns_area = britannia_secunda_septentrionalis_area
+				owns_or_subject_owns_area = dobunnia_area
+				owns_or_subject_owns_area = durotrigia_area
+				owns_or_subject_owns_area = dumnonia_area
+				owns_or_subject_owns_area = cantiacia_area
+				owns_or_subject_owns_area = icenia_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "PUNO_BRITTONIC_REPUBLIC_NAME"
+			hidden_effect = {
+				change_country_adjective = "PUNO_BRITTONIC_REPUBLIC_ADJECTIVE"
+				change_country_color = "puno_brittonic_republic_color"
+				change_country_tag = PBR
+				change_country_flag = PUNO_BRITTONIC_REPUBLIC_FLAG
+				trigger_event = {
+					id = formable_heritage.176
+				}				
+			}
+			custom_tooltip = puno_brittonic_republic_claims_tooltip
+			hidden_effect = {
+				region:Caledonia_region = { formable_region_province_effect = yes }
+				region:Belgica_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

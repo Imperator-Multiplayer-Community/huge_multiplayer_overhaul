@@ -81,27 +81,16 @@
 				region:cilicia_region = { formable_region_province_effect = yes }
 			}
 			add_3_free_province_investments = yes
-			set_capital = 1789
-			hidden_effect = {
-				p:1789.state = {
-					set_state_capital = 1789
-				}
-			}
 			capital_scope = {
 				establish_city_effect = yes
-			}
-			p:1789 = { change_province_name = "Syderos Pontike" }
-			p:1789 = {
 			}
 			capital_scope = {
 					capital_formable_large_effect = yes
 					formable_capital_modifier_normal_effect = yes
 			}
 		}
-		
 		ai_will_do = {
 			base = 1
 		}
 	}
-
-}
+  }

@@ -1,0 +1,91 @@
+﻿country_decisions = {
+	
+	# Makan League
+	# Designed by Neidhardt, created by Neidhardt
+	form_makan_league = {
+		
+		potential = {
+			num_of_cities >= 1
+			is_republic = yes
+			primary_culture = makan
+			NOT = {
+				tag = MNL
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_1_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = east_omana_area
+					is_in_area = omana_area
+					is_in_area = gerrha_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = makan_league_not_exists
+				NOT = {
+					any_country = {
+						tag = MNL
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = east_omana_area
+				owns_or_subject_owns_area = omana_area
+				owns_or_subject_owns_area = gerrha_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "MAKAN_LEAGUE_NAME"
+			hidden_effect = {
+				change_country_adjective = "MAKAN_LEAGUE_ADJECTIVE"
+				change_country_color = "makan_league_color"
+				change_country_tag = MNL
+				change_country_flag = MAKAN_LEAGUE_FLAG
+				trigger_event = {
+					id = formable_heritage.184
+				}				
+			}
+			custom_tooltip = makan_league_claims_tooltip
+			hidden_effect = {
+				region:western_arabia = { formable_region_province_effect = yes }
+				region:eastern_arabia = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			set_capital = 7202
+			hidden_effect = {
+				p:7202.state = {
+					set_state_capital = 7202
+				}
+			}
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			p:7202 = { change_province_name = "Makan Tylos" }
+			p:7202 = {
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

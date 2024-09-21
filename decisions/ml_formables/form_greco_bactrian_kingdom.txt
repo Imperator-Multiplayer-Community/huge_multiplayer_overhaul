@@ -71,17 +71,8 @@
 				region:scythia_region = { formable_region_province_effect = yes }
 			}
 			add_3_free_province_investments = yes
-			set_capital = 6694
-			hidden_effect = {
-				p:6694.state = {
-					set_state_capital = 6694
-				}
-			}
 			capital_scope = {
 				establish_city_effect = yes
-			}
-			p:6694 = { change_province_name = "Alexandreia Ochou" }
-			p:6694 = {
 			}
 			capital_scope = {
 					capital_formable_large_effect = yes

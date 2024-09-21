@@ -2609,26 +2609,23 @@ VAPIA_FLAG = {
 }
 
 TROAN_KINGDOM_FLAG = {
-	pattern = "pattern_solid.tga"
-	color1 = "ck2_green"
-	color2 = "offwhite"
-
-	colored_emblem = {
-		texture = "ce_border_meander_05.dds"
-		color1 = "bone_white"
-		color2 = "ck2_green"
-		instance = { rotation = 0 }
-		instance = { rotation = 180 }
-	}
-
-	colored_emblem = {
-		texture = "ce_aeolia_ilion_athena_ilias.dds"
-		color1 = "roman_red"
-		color2 = "roman_gold"
-		instance = {
-			position = { 0.5 0.5 }
-		}
-	}
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 165 38 10 }
+    color2 = "roman_gold"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = rgb { 165 38 10 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_aeolia_ilion_athena_ilias.dds"
+        color1 = rgb { 250 235 215 }
+        color2 = "roman_gold"
+    }
 }
 
 MAGNA_DELTA_FLAG = {
@@ -2655,28 +2652,24 @@ MAGNA_DELTA_FLAG = {
 }
 
 GRECO_BACTRIAN_KINGDOM_FLAG = {
-	pattern = "pattern_horizontal_split_01.tga"
-	color1 = rgb { 127 14 13 }
-	color2 = "pitch_black"
-
-	colored_emblem = {
-		texture = "ce_hellenic_4.dds"
-		color1 = "sardinia_color"
-		color2 = "pitch_black"
-		instance = {
-			position = { 0.2 0.2 }
-		    scale={ 0.600000 0.600000 }
-		}
-}
-	colored_emblem = {
-		texture = "ce_dodekaschoinos_elephantine.dds"
-		color1 = "sardinia_color"
-		color2 = "pitch_black"
-		instance = {
-			position = { 0.5 0.6 }
-		    scale={ 1.350000 1.350000 }
-		}
-	}
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 89 24 23 }
+    color2 = "roman_gold"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = rgb { 89 24 23 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_macedonian_sun.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 0.9 0.9 }  }
+    }
 }
 
 CIMMERIA_FLAG = {
@@ -2709,17 +2702,18 @@ MITHRIDATIC_KINGDOM_FLAG = {
 	color2 = "offwhite"
 
 	colored_emblem = {
-		texture = "ce_border_meander_01.tga"
+		texture = "ce_border_meander_02.tga"
 		color1 = "ck2_purple"
 		color2 = "roman_gold"
 		instance = { rotation = 0 }
 		instance = { rotation = 180 }
+
 	}
 
 	colored_emblem = {
 		texture = "ce_water_nymph_01.dds"
 		color1 = "roman_gold"
-		color2= "roman_gold"
+		color2 = "roman_gold"
 		instance = {
 			scale={ 1 1 }
 		}
@@ -2747,4 +2741,367 @@ MARCOMANNIA_BOIS_FLAG = {
 			scale={ 1 1.1 }
 		}
 	}
+}
+
+PUNO_NUMIDIAN_REPUBLIC_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 155 47 31 }
+    color2 = rgb { 255 255 255 }
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = rgb { 255 255 255 }
+        color2 = rgb { 155 47 31 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = rgb { 255 255 255 }
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+PUNO_CELTIBERIAN_REPUBLIC_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 216 169 3 }
+    color2 = rgb { 255 255 255 }
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = rgb { 255 255 255 }
+        color2 = rgb { 216 169 3 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = rgb { 255 255 255 }
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+PUNO_IBERIAN_LEAGUE_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 26 71 128 }
+    color2 = rgb { 255 255 255 }
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = rgb { 255 255 255 }
+        color2 = rgb { 26 71 128 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = rgb { 255 255 255 }
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+PUNO_GALLIC_REPUBLIC_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 34 139 34 }
+    color2 = rgb { 255 255 255 }
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = rgb { 255 255 255 }
+        color2 = rgb { 34 139 34 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = rgb { 255 255 255 }
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+PUNO_GREEK_LEAGUE_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 138 127 142 }
+    color2 = rgb { 255 255 255 }
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = rgb { 255 255 255 }
+        color2 = rgb { 138 127 142 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = rgb { 255 255 255 }
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+PUNO_BRITTONIC_REPUBLIC_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 128 0 128 }
+    color2 = rgb { 255 255 255 }
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = rgb { 255 255 255 }
+        color2 = rgb { 128 0 128 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_tanit_01.dds"
+        color1 = rgb { 255 255 255 }
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+GRECO_GALLIC_LEAGUE_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 42 92 3 }
+    color2 = rgb { 255 255 255 }
+   
+    colored_emblem = {
+        texture = "ce_border_meander_02.tga"
+        color1 = rgb { 42 92 3 }
+        color2 = rgb { 255 255 255 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_nasamones_ammon.dds"
+        color1 = rgb { 255 255 255 }
+        color2 = "roman_gold"
+        instance = { scale = { 0.75 0.75 }  }
+    }
+}
+
+ARYAN_KINGDOM_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_black"
+    color2 = "roman_gold"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = "ck2_black"
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_parthia_sun_banner.dds"
+        color1 = "roman_gold"
+        instance = { scale = { 0.9 0.9 }  }
+    }
+}
+
+ARYAN_REPUBLIC_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_black"
+    color2 = "roman_gold"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = "ck2_black"
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_parthia_sun_banner.dds"
+        color1 = "roman_gold"
+        instance = { scale = { 0.9 0.9 }  }
+    }
+}
+
+GRECO_LEVANTINE_KINGDOM_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 100 28 52 }
+    color2 = "roman_gold"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = rgb { 100 28 52 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_phrygia.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 0.9 0.9 }  }
+    }
+}
+
+GREAT_PARSA_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_green"
+    color2 = "ck2_green"
+    
+    colored_emblem = {
+        texture = "ce_eagle_02.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 1.1 1.1 }  }
+    }
+}
+
+GREAT_KARMANA_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_purple"
+    color2 = "ck2_purple"
+    
+    colored_emblem = {
+        texture = "ce_eagle_02.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 1.1 1.1 }  }
+    }
+}
+
+MAKAN_LEAGUE_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_blue"
+    color2 = "roman_gold"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = "ck2_blue"
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_ship_01.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 0.9 0.9 }  }
+    }
+}
+
+SOUTHERN_TRIBES_FEDERATION_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 181 184 177 }
+    color2 = "ck2_black"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "ck2_black"
+        color2 = rgb { 181 184 177 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_wheel_01.dds"
+        color1 = "ck2_black"
+        color2 = "ck2_black"
+        instance = { scale = { 0.8 0.8 }  }
+    }
+}
+
+NORTHERN_TRIBES_FEDERATION_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_blue"
+    color2 = "bone_white"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "bone_white"
+        color2 = "ck2_blue"
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_triskelion_01.dds"
+        color1 = "bone_white"
+        color2 = "bone_white"
+        instance = { scale = { 1 1 }  }
+    }
+}
+
+MAGNA_CELTAE_FLAG = {
+    pattern = "pattern_diagonal_line_fat_03.tga"
+    color1 = "bone_white"
+    color2 = rgb { 0 49 83 }
+    
+    colored_emblem = {
+        texture = "ce_celtic_knot_02.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 1 1 }  }
+    }
+}
+
+ACHAEMENID_KINGDOM_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = "ck2_red"
+    color2 = "ck2_red"
+    
+    colored_emblem = {
+        texture = "ce_eagle_02.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 1.1 1.1 }  }
+    }
+}
+
+MAGNA_THESSALAE_FLAG = {
+    pattern = "pattern_diagonal_line_fat_03.tga"
+    color1 = "bone_white"
+    color2 = "ck2_green"
+
+        colored_emblem = {
+        texture = "ce_horse_03.dds"
+        color1 = "roman_gold"
+        color2 = "roman_gold"
+        instance = { scale = { 1.1 1.1 }  }
+    }
+}
+
+#REGNUM_GOTHORUM_FLAG = {
+#    pattern = "pattern_diagonal_line_fat_03.tga"
+#    color1 = "bone_white"
+#    color2 = "ck2_green"
+#
+#        colored_emblem = {
+#        texture = "ce_horse_03.dds"
+#        color1 = "roman_gold"
+#        color2 = "roman_gold"
+#        instance = { scale = { 1.1 1.1 }  }
+#    }
+#}
+
+TROAN_REPUBLIC_FLAG = {
+    pattern = "pattern_solid.tga"
+    color1 = rgb { 165 38 10 }
+    color2 = "roman_gold"
+   
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = rgb { 165 38 10 }
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
+ 
+    colored_emblem = {
+        texture = "ce_aeolia_ilion_athena_ilias.dds"
+        color1 = rgb { 250 235 215 }
+        color2 = "roman_gold"
+    }
 }

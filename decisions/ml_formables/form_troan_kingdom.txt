@@ -62,6 +62,7 @@
 			}
 			hidden_effect = {
 				change_country_adjective = "TROAN_KINGDOM_ADJECTIVE"
+				change_country_color = "troan_kingdom_color"
 				change_country_tag = TRK
 				change_country_flag = TROAN_KINGDOM_FLAG
 				trigger_event = {
@@ -72,7 +73,7 @@
 					capital_formable_large_effect = yes
 					formable_capital_modifier_normal_effect = yes
 			}
-			custom_tooltip = phrygia_claims_tooltip
+			custom_tooltip = troan_kingdom_claims_tooltip
 			hidden_effect = {
 				region:galatia_region = { formable_region_province_effect = yes }
 				region:cilicia_region = { formable_region_province_effect = yes }

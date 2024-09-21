@@ -402,9 +402,9 @@ gallic_modifier = {
 }
 
 illyrian_modifier = {
-	liburnian_coastal_terrain_combat_bonus = 0.1
-	enslavement_efficiency = 0.05
-	build_time = 0.05
+	light_cavalry_morale = 0.05
+	enslavement_efficiency = 0.1
+	build_cost = 0.05
 }
 
 median_modifier = {
@@ -655,7 +655,7 @@ punic_modifier = {
 }
 
 ziqanmakom_modifier = {
-	global_commerce_modifier = 0.1
+	global_export_commerce_modifier = 0.1
 	price_found_city_cost_modifier = -0.15
 	general_loyalty = -5
 }
@@ -691,7 +691,7 @@ brennusovia_modifier = {
 }
 
 jalabhumi_modifier = {
-	light_infantry_marsh_combat_bonus = 0.25
+	light_infantry_marsh_combat_bonus = 0.35
 	hostile_attrition = 0.1
 	build_time = 0.15
 }
@@ -871,8 +871,8 @@ tibetan_empire_modifier = {
 }
 
 baratanac_modifier = {
-	global_state_trade_routes = 0.5
-	global_export_commerce_modifier = 0.1
+	global_capital_trade_routes = 1
+	global_export_commerce_modifier = 0.05
 	happiness_for_wrong_culture_group_modifier = negative_output_small_svalue
 }
 
@@ -889,9 +889,9 @@ pannonian_pannonian_modifier = {
 }
 
 cimmeria_modifier = {
-	light_cavalry_morale = 0.05
-	global_population_growth = 0.08
-	global_pop_assimilation_speed_modifier = -0.15
+	light_cavalry_discipline = 0.05
+	global_population_growth = 0.06
+	global_pop_assimilation_speed_modifier = -0.1
 }
 
 fezzani_modifier = {
@@ -950,26 +950,126 @@ vapian_modifier = {
 
 troan_kingdom_modifier = {
 		global_defensive = 0.1
-		global_commerce_modifier = 0.1
-		global_manpower_modifier = -0.05
+		stability_monthly_change = 0.06
+		build_time = 0.05
 }
 greco_bactrian_kingdom_modifier = {
-		global_tax_modifier = 0.05
+		global_slaves_output = 0.6
 		global_pop_assimilation_speed_modifier = 0.1
 		agressive_expansion_impact = 0.1
 }
 magna_delta_modifier = {
-		camels_morale = 0.05
+		camels_discipline = 0.05
 		character_loyalty = 5
 		global_pop_conversion_speed_modifier = -0.05
 }
 mithridatic_kingdom_modifier = {
-		build_cost = -0.1
-		omen_power = 0.05
+		heavy_cavalry_discipline = 0.05
+		omen_power = 0.1
 		research_points_modifier = -0.05
 }
 marcomannia_bois_modifier = {
 		light_infantry_discipline = 0.05
-		monthly_political_influence_modifier = 0.05
+		monthly_political_influence_modifier = 0.25
 		omen_power = -0.05
+}
+puno_numidian_republic_modifier = {
+		warelephant_discipline = 0.05
+		global_export_commerce_modifier = 0.1
+		recruit_mercenary_cost_modifier = 0.1
+}
+puno_celtiberian_republic_modifier = {
+		happiness_for_same_religion_modifier = 0.05
+		global_export_commerce_modifier = 0.1
+		fort_maintenance_cost = 0.05
+}
+puno_iberian_league_modifier = {
+		global_export_commerce_modifier = 0.1
+		global_population_capacity_modifier = 0.05
+		build_time = 0.05
+}
+puno_gallic_republic_modifier = {
+		global_export_commerce_modifier = 0.1
+		light_infantry_discipline = 0.05
+		research_points_modifier = -0.05
+}
+puno_greek_league_modifier = {
+		global_export_commerce_modifier = 0.1
+		character_loyalty = 5
+		global_pop_promotion_speed_modifier = -0.05
+}
+puno_brittonic_republic_modifier = {
+		global_export_commerce_modifier = 0.1
+		global_population_growth = 0.03
+		global_pop_assimilation_speed_modifier = -0.1
+}
+greco_gallic_league_modifier = {
+		happiness_for_same_religion_modifier = 0.05
+		siege_ability = 0.1
+		global_pop_conversion_speed_modifier = -0.1
+}
+aryan_kingdom_modifier = {
+		warelephant_morale = 0.05
+		stability_monthly_change = 0.06
+		global_manpower_modifier = -0.05
+}
+aryan_republic_modifier = {
+		warelephant_morale = 0.05
+		stability_monthly_change = 0.06
+		global_manpower_modifier = -0.05
+}
+greco_levantine_kingdom_modifier = {
+		global_freemen_output = 0.6
+		omen_power = 0.1
+		global_pop_assimilation_speed_modifier = -0.1
+}
+great_parsa_modifier = {
+		army_maintenance_cost = -0.1
+		archers_discipline = 0.05
+		global_pop_assimilation_speed_modifier = -0.1
+}
+great_karmana_modifier = {
+		fort_maintenance_cost = -0.1
+		heavy_cavalry_morale = 0.05
+		global_pop_conversion_speed_modifier = -0.1
+}
+makan_league_modifier = {
+		enslavement_efficiency = 0.1
+		global_population_capacity_modifier = 0.05
+		global_defensive = -0.05
+}
+southern_tribes_federation_modifier = {
+		global_tax_modifier = 0.05
+		price_found_city_cost_modifier = -0.15
+		navy_movement_speed = -0.05
+}
+northern_tribes_federation_modifier = {
+		manpower_recovery_speed = 0.1
+		heavy_cavalry_morale = 0.05
+		global_nobles_output = -0.04
+}
+magna_celtae_modifier = {
+		army_maintenance_cost = -0.1
+		enslavement_efficiency = 0.05
+		happiness_for_same_religion_modifier = -0.03
+}
+achaemenid_kingdom_modifier = {
+		price_found_city_cost_modifier = -0.2
+		global_pop_conversion_speed_modifier = 0.05
+		monthly_wage_modifier = 0.05
+}
+magna_thessalae_modifier = {
+		global_freemen_happyness = 0.06
+		heavy_cavalry_discipline = 0.05
+		naval_damage_taken = 0.05
+}
+#regnum_gothorum_modifier = {
+#		global_freemen_happyness = 0.06
+#		heavy_cavalry_discipline = 0.05
+#		naval_damage_taken = 0.05
+}
+troan_republic_modifier = {
+		global_defensive = 0.1
+		stability_monthly_change = 0.06
+		build_time = 0.05
 }

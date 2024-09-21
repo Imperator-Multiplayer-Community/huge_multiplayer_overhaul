@@ -7,7 +7,6 @@
 		potential = {
 			num_of_cities >= 1
 			country_culture_group = hellenic
-			tag = CYR
 			NOT = {
 				tag = MGD
 			}
@@ -77,16 +76,9 @@
 				region:aegyptus_region = { formable_region_province_effect = yes }
 			}
 			add_3_free_province_investments = yes
-			set_capital = 516
-			hidden_effect = {
-				p:516.state = {
-					set_state_capital = 516
-				}
-			}
 			capital_scope = {
 				establish_city_effect = yes
 			}
-			p:516 = { change_province_name = "Alexandria" }
 			capital_scope = {
 					capital_formable_large_effect = yes
 					formable_capital_modifier_normal_effect = yes
