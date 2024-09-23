@@ -7,7 +7,6 @@
 	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
 
 	harassment = 0.2
-	close_ranks = 0.0
 
 	effective_composition = {
 		liburnian = 0.5
@@ -26,7 +25,6 @@ naval_envelopment = {
 	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
 
 	close_ranks = 0.2
-	probing_attack = 0.0
 	
 	effective_composition = {
 		liburnian = 0.0
@@ -45,7 +43,6 @@ close_ranks = {
 	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
 
 	frontal_assault = 0.2
-	naval_envelopment = 0.0
 	
 	effective_composition = {
 		liburnian = 0.0
@@ -64,7 +61,6 @@ harassment = {
 	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
 
 	probing_attack = 0.2
-	frontal_assault = 0.0
 	
 	effective_composition = {
 		liburnian = 1.0
@@ -84,7 +80,6 @@ probing_attack = {
 	sound = "event:/SFX/UI/Unit/sfx_ui_unit_tactic_set_offensive"
 
 	naval_envelopment = 0.2
-	harassment = 0.0
 	
 	effective_composition = {
 		liburnian = 1.0
