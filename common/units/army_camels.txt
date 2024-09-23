@@ -12,16 +12,18 @@
 	movement_speed = 3.5
 	build_time = 40
 	legions = no
-	light_infantry = 1.15
-	heavy_infantry = 0.75
-	heavy_cavalry = 0.75
-	light_cavalry = 1.05
-	warelephant = 1.05
-	horse_archers = 1.05
+	light_infantry = 1.25
+	heavy_infantry = 1.0
+	heavy_cavalry = 1.0
+	light_cavalry = 1.20
+	warelephant = 1.0
+	horse_archers = 1.0
 	archers = 1.2
 	camels = 1
+	morale_damage_taken = 0.9
+	strength_damage_taken = 0.9
 	build_cost = {
-		gold = 18
+		gold = 25
 		manpower = 1
 	}
 	supply_train = 2
