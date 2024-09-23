@@ -856,3 +856,203 @@
  VAPIA_ADJECTIVE:0 "Vapian"
  vapia_not_exists:0 "#Y Vapia#! must NOT exist."
  formable_vapia_capital:0 "Our capital must be located in Anatolia, the region of Armenia, or the region of Colchis."
+
+ #Troan Kingdom
+ form_troan_kingdom:0 "Form Troan Kingdom"
+ form_troan_kingdom_desc:0 "The Troan kingdom will be an impregnable fortress protecting our riches. #Y Troan Kingdom#!"
+ formable_troan_kingdom:0 "Troan Kingdom"
+ TROAN_KINGDOM_NAME:0 "Troan Kingdom"
+ TROAN_KINGDOM_ADJECTIVE:0 "Troans"
+ troan_kingdom_not_exists:0 "#Y Troan Kingdom#! must NOT exist."
+
+ #Greco-Bactrian Kingdom
+ form_greco_bactrian_kingdom:0 "Form Greco Bactrian Kingdom"
+ form_greco_bactrian_kingdom_desc:0 "The Greco Bactrian Kingdom the realm #Y Bactriana#!"
+ formable_greco_bactrian_kingdom:0 "Greco-Bactrian Kingdom"
+ GRECO_BACTRIAN_KINGDOM_NAME:0 "Greco-Bactrian Kingdom"
+ GRECO_BACTRIAN_KINGDOM_ADJECTIVE:0 "Greco-bactrian"
+ greco_bactrian_kingdom_not_exists:0 "#Y Greco-Bactrian Kingdom#! must NOT exist."
+
+ #Magna Delta
+ form_magna_delta:0 "Form Magna Delta"
+ form_magna_delta_desc:0 "The Magna Delta the realm #Y The Delta#!"
+ formable_magna_delta:0 "Magna Delta"
+ MAGNA_DELTA_NAME:0 "Magna Delta"
+ MAGNA_DELTA_ADJECTIVE:0 "Magna Deltas"
+ magna_delta_not_exists:0 "#Y Magna Delta#! must NOT exist."
+
+ #Mithridatic Kingdom
+ form_mithridatic_kingdom:0 "Form Mithridatic Kingdom"
+ form_mithridatic_kingdom_desc:0 "The Mithridatic Kingdom the realm #Y The Pontica#!"
+ formable_mithridatic_kingdom:0 "Mithridatic Kingdom"
+ MITHRIDATIC_KINGDOM_NAME:0 "Mithridatic Kingdom"
+ MITHRIDATIC_KINGDOM_ADJECTIVE:0 "Mithridatic"
+ mithridatic_kingdom_not_exists:0 "#Y Mithridatic Kingdom#! must NOT exist."
+
+ #Marcomannia Bois
+ form_macromannia_bois:0 "Form Marcomannia Bois"
+ form_macromannia_bois_desc:0 "The Marcomannia Bois the realm #Y The Boiohaemum#!"
+ formable_macromannia_bois:0 "Marcomannia Bois"
+ MARCOMANNIA_BOIS_NAME:0 "Marcomannia Bois"
+ MARCOMANNIA_BOIS_ADJECTIVE:0 "Marcomannians"
+ macromannia_bois_not_exists:0 "#Y Marcomannia Bois#! must NOT exist."
+
+ #Puno-Numidian Republic
+ form_puno_numidian_republic:0 "Form Puno-Numidian Republic"
+ form_puno_numidian_republic_desc:0 "Puno-Numidian Republic the realm #Y Mauretania#!"
+ formable_puno_numidian_republic:0 "Puno-Numidian Republic"
+ PUNO_NUMIDIAN_REPUBLIC_NAME:0 "Puno-Numidian Republic"
+ PUNO_NUMIDIAN_REPUBLIC_ADJECTIVE:0 "Puno-Numidians"
+ puno_numidian_republic_not_exists:0 "#Y Puno-Numidian Republic#! must NOT exist."
+
+ #Puno-Celtiberian Republic
+ form_puno_celtiberian_republic:0 "Form Puno-Celtiberian Republic"
+ form_puno_celtiberian_republic_desc:0 "Puno-Celtiberian Republic the realm #Y Gallaecia#!"
+ formable_puno_celtiberian_republic:0 "Puno-Celtiberian Republic"
+ PUNO_CELTIBERIAN_REPUBLIC_NAME:0 "Puno-Celtiberian Republic"
+ PUNO_CELTIBERIAN_REPUBLIC_ADJECTIVE:0 "Puno-Celtiberians"
+ puno_celtiberian_republic_not_exists:0 "#Y Puno-Celtiberian Republic#! must NOT exist."
+
+ #Puno-Iberian League
+ form_puno_iberian_league:0 "Form Puno-Iberian League"
+ form_puno_iberian_league_desc:0 "Puno-Iberian League the realm #Y Aquitania#!"
+ formable_puno_iberian_league:0 "Puno-Iberian League"
+ PUNO_IBERIAN_LEAGUE_NAME:0 "Puno-Iberian League"
+ PUNO_IBERIAN_LEAGUE_ADJECTIVE:0 "Puno-Iberians"
+ puno_iberian_league_not_exists:0 "#Y Puno-Iberian League#! must NOT exist."
+
+ #Puno-Gallic Republic
+ form_puno_gallic_republic:0 "Form Puno-Gallic Republic"
+ form_puno_gallic_republic_desc:0 "Puno-Gallic Republic the realm #Y Armorica#!"
+ formable_puno_gallic_republic:0 "Puno-Gallic Republic"
+ PUNO_GALLIC_REPUBLIC_NAME:0 "Puno-Gallic Republic"
+ PUNO_GALLIC_REPUBLIC_ADJECTIVE:0 "Puno-Gallic"
+ puno_gallic_republic_not_exists:0 "#Y Puno-Gallic Republic#! must NOT exist."
+
+ #Puno-Greek League
+ form_puno_greek_league:0 "Form Puno-Greek League"
+ form_puno_greek_league_desc:0 "Puno-Greek League the realm #Y Rhodania#!"
+ formable_puno_greek_league:0 "Puno-Greek League"
+ PUNO_GREEK_LEAGUE_NAME:0 "Puno-Greek League"
+ PUNO_GREEK_LEAGUE_ADJECTIVE:0 "Puno-Greeks"
+ puno_greek_league_not_exists:0 "#Y Puno-Greek League#! must NOT exist."
+
+ #Puno-Brittonic Republic
+ form_puno_brittonic_republic:0 "Form Puno-Brittonic Republic"
+ form_puno_brittonic_republic_desc:0 "Puno-Brittonic Republic the realm #Y Armorica#!"
+ formable_puno_brittonic_republic:0 "Puno-Brittonic Republic"
+ PUNO_BRITTONIC_REPUBLIC_NAME:0 "Puno-Brittonic Republic"
+ PUNO_BRITTONIC_REPUBLIC_ADJECTIVE:0 "Puno-Brittonic"
+ puno_brittonic_republic_not_exists:0 "#Y Puno-Brittonic Republic#! must NOT exist."
+
+ #Greco-Gallic League
+ form_greco_gallic_league:0 "Form Greco-Gallic League"
+ form_greco_gallic_league_desc:0 "Greco-Gallic League the realm #Y Rhodania#!"
+ formable_greco_gallic_league:0 "Greco-Gallic League"
+ GRECO_GALLIC_LEAGUE_NAME:0 "Greco-Gallic League"
+ GRECO_GALLIC_LEAGUE_ADJECTIVE:0 "Greco-Gallic"
+ greco_gallic_league_not_exists:0 "#Y Greco-Gallic League#! must NOT exist."
+
+ #Aryan Kingdom
+ form_aryan_kingdom:0 "Form Aryan Kingdom"
+ form_aryan_kingdom_desc:0 "Aryan Kingdom the realm #Y Gandhara#!"
+ formable_aryan_kingdom:0 "Aryan Kingdom"
+ ARYAN_KINGDOM_NAME:0 "Aryan Kingdom"
+ ARYAN_KINGDOM_ADJECTIVE:0 "Aryans"
+ aryan_kingdom_not_exists:0 "#Y Aryan Kingdom#! must NOT exist."
+
+ #Aryan Republic
+ form_aryan_republic:0 "Form Aryan Republic"
+ form_aryan_republic_desc:0 "Aryan Republic the realm #Y Gandhara#!"
+ formable_aryan_republic:0 "Aryan Republic"
+ ARYAN_REPUBLIC_NAME:0 "Aryan Republic"
+ ARYAN_REPUBLIC_ADJECTIVE:0 "Aryans"
+ aryan_republic_not_exists:0 "#Y Aryan Republic#! must NOT exist."
+
+ #Greco-Levantine Kingdom
+ form_greco_levantine_kingdom:0 "Form Greco Levantine Kingdom"
+ form_greco_levantine_kingdom_desc:0 "The Greco Levantine Kingdom the realm #Y Syria#!"
+ formable_greco_levantine_kingdom:0 "Greco-Levantine Kingdom"
+ GRECO_LEVANTINE_KINGDOM_NAME:0 "Greco-Levantine Kingdom"
+ GRECO_LEVANTINE_KINGDOM_ADJECTIVE:0 "Greco-Levantine"
+ greco_levantine_kingdom_not_exists:0 "#Y Greco-levantine Kingdom#! must NOT exist."
+
+ #Great Parsa
+ form_great_parsa:0 "Form Great Parsa"
+ form_great_parsa_desc:0 "The Great Parsa the realm #Y Persis#!"
+ formable_great_parsa:0 "Great Parsa"
+ GREAT_PARSA_NAME:0 "Great Parsa"
+ GREAT_PARSA_ADJECTIVE:0 "Parsite"
+ great_parsa_not_exists:0 "#Y Great Parsa#! must NOT exist."
+
+ #Great Karmana
+ form_great_karmana:0 "Form Great Karmana"
+ form_great_karmana_desc:0 "The Great Parsa the realm #Y Ariana#!"
+ formable_great_karmana:0 "Great Karmana"
+ GREAT_KARMANA_NAME:0 "Great Karmana"
+ GREAT_KARMANA_ADJECTIVE:0 "Karmanite"
+ great_karmana_not_exists:0 "#Y Great Karmana#! must NOT exist."
+
+ #Great Makan League
+ form_makan_league:0 "Form Makan League"
+ form_makan_league_desc:0 "The Makan League the realm #Y Persica#!"
+ formable_makan_league:0 "Makan League"
+ MAKAN_LEAGUE_NAME:0 "Makan League"
+ MAKAN_LEAGUE_ADJECTIVE:0 "Makanite"
+ makan_league_not_exists:0 "#Y Makan League#! must NOT exist."
+
+ #Londinium Federation
+ form_southern_tribes_federation:0 "Form Southern Tribes Federation"
+ form_southern_tribes_federation_desc:0 "The Southern Tribes Federation the realm #Y Britannia#!"
+ formable_southern_tribes_federation:0 "Southern Tribes Federation"
+ SOUTHERN_TRIBES_FEDERATION_NAME:0 "Southern Tribes Federation"
+ SOUTHERN_TRIBES_FEDERATION_ADJECTIVE:0 "Southerns"
+ southern_tribes_federation_not_exists:0 "#Y Southern Tribes Federation#! must NOT exist."
+
+ #Northern Tribes Federation
+ form_northern_tribes_federation:0 "Form Northern Tribes Federation"
+ form_northern_tribes_federation_desc:0 "The Northern Tribes Federation the realm #Y Britannia#!"
+ formable_northern_tribes_federation:0 "Northern Tribes Federation"
+ NORTHERN_TRIBES_FEDERATION_NAME:0 "Northern Tribes Federation"
+ NORTHERN_TRIBES_FEDERATION_ADJECTIVE:0 "Northerns"
+ northern_tribes_federation_not_exists:0 "#Y Northern Tribes Federation#! must NOT exist."
+
+ #Magna Celtae
+ form_magna_celtae:0 "Form Magna Celtae"
+ form_magna_celtae_desc:0 "The Magna Celtae the realm #Y Celtica#!"
+ formable_magna_celtae:0 "Magna Celtae"
+ MAGNA_CELTAE_NAME:0 "Magna Celtae"
+ MAGNA_CELTAE_ADJECTIVE:0 "Celts"
+ magna_celtae_not_exists:0 "#Y Magna Celtae#! must NOT exist."
+
+ #Achaemenid Kingdom
+ form_achaemenid_kingdom:0 "Form Achaemenid Kingdom"
+ form_achaemenid_kingdom_desc:0 "The Achaemenid Kingdom the realm #Y Bythinia et Paphlagonia#!"
+ formable_achaemenid_kingdom:0 "Achaemenid Kingdom"
+ ACHAEMENID_KINGDOM_NAME:0 "Achaemenid Kingdom"
+ ACHAEMENID_KINGDOM_ADJECTIVE:0 "Achaemenids"
+ achaemenid_kingdom_not_exists:0 "#Y Achaemenid Kingdom#! must NOT exist."
+
+ #Magna Thessalae
+ form_magna_thessalae:0 "Form Magna Thessalae"
+ form_magna_thessalae_desc:0 "The Magna Thessalae the realm #Y Macedonia#!"
+ formable_magna_thessalae:0 "Magna Thessalae"
+ MAGNA_THESSALAE_NAME:0 "Magna Thessalae"
+ MAGNA_THESSALAE_ADJECTIVE:0 "Thessalaen"
+ magna_thessalae_not_exists:0 "#Y Magna Thessalae#! must NOT exist."
+
+ #Regnum Gothorum
+ #form_regnum_gothorum:0 "Form Regnum Gothorum"
+ #form_regnum_gothorum_desc:0 "The Regnum Gothorum the realm #Y Scandia#!"
+ #formable_regnum_gothorum:0 "Regnum Gothorum"
+ #REGNUM_GOTHORUM_NAME:0 "Regnum Gothorum"
+ #REGNUM_GOTHORUM_ADJECTIVE:0 "Goths"
+ #regnum_gothorum_not_exists:0 "#Y Regnum Gothorum#! must NOT exist."
+
+ #Troan Kingdom
+ form_troan_republic:0 "Form Troan Republic"
+ form_troan_republic_desc:0 "The Troan Republic will be an impregnable fortress protecting our riches. #Y Troan Republic#!"
+ formable_troan_republic:0 "Troan Republic"
+ TROAN_REPUBLIC_NAME:0 "Troan Republic"
+ TROAN_REPUBLIC_ADJECTIVE:0 "Troans"
+ troan_republic_not_exists:0 "#Y Troan Republic#! must NOT exist."

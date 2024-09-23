@@ -1,0 +1,89 @@
+﻿country_decisions = {
+	
+	# Troan kingdom
+	# Designed by Neidhardt, created by Neidhardt
+	form_troan_kingdom = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = hellenic
+			tag = IOA
+			NOT = {
+				tag = TRK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_1_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = aeolia_area
+					is_in_area = mysia_area
+					is_in_area = ionia_area
+
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = troan_kingdom_not_exists
+				NOT = {
+					any_country = {
+						tag = TRK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+					owns_or_subject_owns_area = aeolia_area
+					owns_or_subject_owns_area = mysia_area
+					owns_or_subject_owns_area = ionia_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			change_country_name = "TROAN_KINGDOM_NAME"
+			if = {
+				limit = {
+					NOR = { 
+						government = despotic_monarchy
+					}
+				}
+				change_government = despotic_monarchy
+				switch_government_type_event_clearup_effect = yes
+			}
+			hidden_effect = {
+				change_country_adjective = "TROAN_KINGDOM_ADJECTIVE"
+				change_country_color = "troan_kingdom_color"
+				change_country_tag = TRK
+				change_country_flag = TROAN_KINGDOM_FLAG
+				trigger_event = {
+					id = formable_heritage.166
+				}				
+			}
+				capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			custom_tooltip = troan_kingdom_claims_tooltip
+			hidden_effect = {
+				region:galatia_region = { formable_region_province_effect = yes }
+				region:cilicia_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

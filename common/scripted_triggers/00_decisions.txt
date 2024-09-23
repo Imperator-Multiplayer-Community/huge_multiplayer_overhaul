@@ -47,6 +47,11 @@
 		tag = UPE #Upper Egypt
 		tag = ARM #armenia
 		tag = ATR #Atrebatia
+		tag = TRK #Troan Kingdom
+		tag = TRR #Troan Republic
+		tag = MNL #Makan League
+		tag = STF #Southern_tribes_federation
+		tag = NTF #Northern Tribes Federation
 	}
 }
 
@@ -73,7 +78,6 @@ is_tier_2_formable_trigger = {
 		tag = NUM #Numidia
 		tag = PRG #Phrygia Formable
 		tag = PTU #Pontus Formable
-		tag = PON #Pontus
 		tag = SII #Sicily
 		tag = SYA #Syria
 		tag = YMN #Yamnat
@@ -129,6 +133,25 @@ is_tier_2_formable_trigger = {
 		tag = OLO #Olovia
 		tag = ZVE #Zvejia
 		tag = VAP #Vapia
+		tag = MGD #Magna Delta
+		tag = GBK #Greco Bactrian Kingdom
+		tag = MTK #Mithridatic Kingdom
+		tag = MMB #Marcomannia Bois
+		tag = PNR #Puno-Numidian Republic
+		tag = PCR #Puno-Celtiberian Republic
+		tag = PIL #Puno-Iberian League
+		tag = PGR #Puno-Gallic Republic
+		tag = PGL #Puno-Greek League
+		tag = PBR #Puno-Brittonic Republic
+		tag = GGL #Greco-Gallic League
+		tag = AKD #Aryan Kingdom
+		tag = ARP #Aryan Republic
+		tag = GLK #Greco-Levantine Kingdom
+		tag = GPA #Great Parsa
+		tag = GKA #Great Karmana
+		tag = MGC #Magna Celtae
+		tag = ADK #Achaemenid Kingdom
+		tag = MGT #Magna Thessalae
 	}
 }
 
@@ -189,6 +212,7 @@ is_endgame_tag_trigger = {
 		tag = NYG #Iberoalania -Nyguylania
 		tag = BEM #Belgica Magna
 		#tag = ITO #Italiotian League
+		#tag = RGM #Regnum Gothorum
 	}
 }
 

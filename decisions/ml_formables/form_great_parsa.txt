@@ -1,0 +1,91 @@
+﻿country_decisions = {
+	
+	# Great Parsa
+	# Designed by Neidhardt, created by Neidhardt
+	form_great_parsa = {
+		
+		potential = {
+			num_of_cities >= 1
+			primary_culture = pasargadi
+			NOT = {
+				tag = GLK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = veshapur_area
+					is_in_area = pars_area
+					is_in_area = persepolis_area
+					is_in_area = media_felix_area
+					is_in_area = ardashir_area
+					is_in_area = aspadana_area
+					is_in_area = utia_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = great_parsa_not_exists
+				NOT = {
+					any_country = {
+						tag = GPA
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = veshapur_area
+				owns_or_subject_owns_area = pars_area
+				owns_or_subject_owns_area = persepolis_area
+				owns_or_subject_owns_area = media_felix_area
+				owns_or_subject_owns_area = ardashir_area
+				owns_or_subject_owns_area = aspadana_area
+				owns_or_subject_owns_area = utia_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "GREAT_PARSA_NAME"
+			hidden_effect = {
+				change_country_adjective = "GREAT_PARSA_ADJECTIVE"
+				change_country_color = "great_parsa_color"
+				change_country_tag = GPA
+				change_country_flag = GREAT_PARSA_FLAG
+				trigger_event = {
+					id = formable_heritage.182
+				}				
+			}
+			custom_tooltip = great_parsa_claims_tooltip
+			hidden_effect = {
+				region:ariana_region = { formable_region_province_effect = yes }
+				region:gedrosia_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			hidden_effect = {
+			}
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
