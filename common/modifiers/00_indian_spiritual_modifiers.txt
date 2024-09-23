@@ -5,7 +5,7 @@ dharana_modifier = {
 	change_pantheon_cost_modifier = -0.2
 	civil_war_threshold = -0.025
 	character_loyalty = -3
-	stability_monthly_change = -0.12
+	stability_monthly_change = -0.1
 }
 
 dhyana_modifier = {
@@ -14,7 +14,7 @@ dhyana_modifier = {
 	change_pantheon_cost_modifier = -0.25
 	civil_war_threshold = -0.025
 	character_loyalty = -3
-	stability_monthly_change = -0.12
+	stability_monthly_change = -0.1
 }
 
 samadhi_modifier = {
@@ -23,5 +23,5 @@ samadhi_modifier = {
 	change_pantheon_cost_modifier = -0.3
 	civil_war_threshold = -0.025
 	character_loyalty = -3
-	stability_monthly_change = -0.12
+	stability_monthly_change = -0.1
 }

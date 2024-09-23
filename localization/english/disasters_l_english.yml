@@ -97,3 +97,22 @@ blessed_monsoon:0 "Blessed Monsoon"
 bad_monsoon:0 "Harsh Monsoon"
 terrible_moonsoon:0 "Fearsome Monsoon"
 destructive_monsoon:0 "Ferocious Monsoon"
+
+
+# Slave revolt extra events
+this_can_lead_to_slave_rebellion_tt:0 "This can lead to a #R Slave Rebellion#!."
+slaves_are_pacified_for_now_tt:0 "The slaves are now #G pacified#! and will not continue to rebel."
+satisified_initial_slaves_demands:0 "Satisified Slaves"
+slaves_suppressed_mod:0 "Suppressing Rebellious Sentiments"
+satisified_riot_demands:0 "Gave in to Slaves Rioting"
+
+slave_revolts.6.t:0 "Disgruntled Slaves in [ROOT.GetProvince.GetName]" # 1st warning event for slave revolt
+slave_revolts.6.desc:0 "Slaves in [ROOT.GetProvince.GetName] have been complaining about their working conditions and how tehy are treated in general. The dissastisfaction has spread so much among the slaves, that productivity has been seriously impacted. Some slaves even speak of open rebellion, of defying us, their rightful owners. \All of our advisors agree that somethung must be done, but their opinions differ and diverge. Some advocate for some strict oversight by guards and maybe some executions of some of the ringleaders, while others support the idea that a happy slave is a productive slave and as such won't revolt."
+slave_revolts.6.a:0 "Improve their working conditions."
+slave_revolts.6.b:0 "Heavily regulate their day-do-day life."
+slave_revolts.6.c:0 "Kill the leaders of this charade."
+
+slave_revolts.7.t:0 "Slaves in [ROOT.GetProvince.GetName] are rioting" # 2nd warning event for slave revolt
+slave_revolts.7.desc:0 "After the crack down in [ROOT.GetProvince.GetName], the slaves have abandoned completely working and are angrier than ever. Today, some managed to overpower the new overseers and then swiftly took care of the others. Now, they are rioting across the city and no one is truly safe. \nWhen they reached the local magistrate's palace, they have formulated their demands again, threatening an armed insurrection."
+slave_revolts.7.a:0 "Appease to their demands."
+slave_revolts.7.b:0 "Send in the guards. No quarters."

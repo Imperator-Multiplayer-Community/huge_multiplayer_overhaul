@@ -1,8 +1,8 @@
 ﻿#Rules for religious conversions can be found in 00_religions in common/scripted_triggers, the effect for changing religion is in common/00_religions in scripted_effects.
-# add_deity_to_pantheon = { deity = deity:omen_medjed }
+
 country_decisions = {
 	
-	convert_to_buddhist = {
+	sync_to_buddhist = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -12,15 +12,13 @@ country_decisions = {
 		}
 
 		allow = {
-			could_change_religion_trigger = {
-				RELIGION = buddhism
-			}
+			#could_change_religion_trigger = {
+			#	RELIGION = buddhism
+			#}
 		}
 		
 		effect = {
-			change_religion_effect = {
-				RELIGION = buddhism
-			}
+			add_deity_to_pantheon = { deity = deity_mercury }
 		}
 		
 		ai_will_do = {
@@ -43,7 +41,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_jainism = {
+	sync_to_jainism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -75,7 +73,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_hinduism = {
+	sync_to_hinduism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -107,7 +105,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_kemeticism = {
+	sync_to_kemeticism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -139,7 +137,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_hellenic = {
+	sync_to_hellenic = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -171,7 +169,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_canaanite = {
+	sync_to_canaanite = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -203,7 +201,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_shamanism = {
+	sync_to_shamanism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -235,7 +233,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_caucasian_religion = {
+	sync_to_caucasian_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -267,7 +265,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_mesopotamian_religion = {
+	sync_to_mesopotamian_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -299,7 +297,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_armenian_religion = {
+	sync_to_armenian_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -331,7 +329,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_anatolian_religion = {
+	sync_to_anatolian_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -363,7 +361,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_druidism = {
+	sync_to_druidism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -395,7 +393,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_animism = {
+	sync_to_animism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -427,7 +425,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_judaism = {
+	sync_to_judaism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -459,7 +457,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_zoroastrianism = {
+	sync_to_zoroastrianism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -491,7 +489,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_berber_religion = {
+	sync_to_berber_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -523,7 +521,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_germanic_religion = {
+	sync_to_germanic_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -555,7 +553,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_indo_iranian_religion = {
+	sync_to_indo_iranian_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -587,7 +585,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_arabian_pantheon = {
+	sync_to_arabian_pantheon = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -619,7 +617,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_eastern_animism = {
+	sync_to_eastern_animism = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -651,7 +649,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_bon_religion = {
+	sync_to_bon_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -683,7 +681,7 @@ country_decisions = {
 		}
 	}
 	
-	convert_to_matrist_religion = {
+	sync_to_matrist_religion = {
 		
 		potential = {
 			num_of_cities >= 1
@@ -710,38 +708,6 @@ country_decisions = {
 				add = 1
 				capital_scope = {
 					dominant_province_religion = matrist_religion
-				}
-			}
-		}
-	}
-	
-	convert_to_pre_indo_european_religion = {
-		
-		potential = {
-			num_of_cities >= 1
-			potential_change_religion_trigger = {
-				RELIGION = pre_indo_european_religion
-			}
-		}
-
-		allow = {
-			could_change_religion_trigger = {
-				RELIGION = pre_indo_european_religion
-			}
-		}
-		
-		effect = {
-			change_religion_effect = {
-				RELIGION = pre_indo_european_religion
-			}
-		}
-		
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 1
-				capital_scope = {
-					dominant_province_religion = pre_indo_european_religion
 				}
 			}
 		}

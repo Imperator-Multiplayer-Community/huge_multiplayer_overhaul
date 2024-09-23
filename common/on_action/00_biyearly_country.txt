@@ -1,4 +1,7 @@
 ﻿biyearly_country_pulse = {
+	events = {
+		fighting_ground_military_events.3 # culture assimilation debuff
+	}
 	random_events = {
 		90 = 0
 		10 = state_improvement.9

@@ -11,7 +11,7 @@
 		}
 		
 		allow = {
-			political_influence >= 25
+			political_influence >= 20
 		}
 		
 		effect = {
@@ -23,7 +23,12 @@
 				add_loyalty = corruption_probe						
 			}
 
-			add_political_influence = -25
+			add_political_influence = {
+  				value = current_ruler.corruption
+  				multiply = -1
+  				max = -10
+				min = -500
+			}
 			add_country_modifier = {
 				name = reforming_bureaucracy
 				duration = 1826
@@ -46,7 +51,7 @@
 		}
 		
 		allow = {
-			political_influence >= 25
+			political_influence >= 20
 		}
 		
 		effect = {
@@ -58,7 +63,12 @@
 				add_loyalty = corruption_probe						
 			}
 	
-			add_political_influence = -25
+			add_political_influence = {
+  				value = current_ruler.corruption
+  				multiply = -2
+  				max = -20
+				min = -500
+			}
 			add_country_modifier = {
 				name = purging_bureaucrats
 				duration = 1826

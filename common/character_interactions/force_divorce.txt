@@ -81,12 +81,6 @@
 		}
 
 		scope:actor = { 
-			add_tyranny = {
-				value = scope:target.power_base
-				divide = 2
-				add = 5
-				min = 10
-			}
 			pay_price = price_force_divorce
 		}	
 	}	
