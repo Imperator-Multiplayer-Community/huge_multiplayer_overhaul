@@ -9,8 +9,6 @@ shock_action = {
 
 	envelopment = 0.20
 	padma_vyuha = 0.20
-	bottleneck = 0.0
-	greek_phalanx = 0.0
 	
 	casualties = 0.1
 
@@ -33,8 +31,6 @@ envelopment = {
 
 	deception = 0.20
 	greek_phalanx = 0.20
-	shock_action = 0.0
-	padma_vyuha = 0.0
 	
 	effective_composition = {
 		archers = 0
@@ -55,8 +51,6 @@ skirmishing = {
 	
 	bottleneck = 0.20
 	cavalry_skirmish = 0.20
-	deception = 0.0
-	triplex_acies = 0.0
 		
 	casualties = -0.25
 
@@ -79,8 +73,6 @@ deception = {
 
 	skirmishing = 0.2
 	triplex_acies = 0.2
-	envelopment = 0.0
-	hit_and_run_tactics = 0.0
 
 	effective_composition = {
 		archers = 1.0
@@ -101,8 +93,6 @@ bottleneck = {
 
 	shock_action = 0.2
 	hit_and_run_tactics = 0.2
-	skirmishing = 0.0
-	cavalry_skirmish = 0.0
 
 	effective_composition = {
 		archers = 1
@@ -125,8 +115,6 @@ greek_phalanx = { #Good vs Shock - Bad vs Envelopment
 
 	shock_action = 0.25
 	cavalry_skirmish = 0.25
-	envelopment = 0.0
-	triplex_acies = 0.0
 	
 	casualties = -0.1
 
@@ -150,8 +138,6 @@ triplex_acies = { #Good vs Envelopment - Bad vs Skirmishing
 
 	skirmishing = 0.25
 	greek_phalanx = 0.25
-	deception = 0.0
-	hit_and_run_tactics = 0.0
 	
 	effective_composition = { #
 		archers = 0
@@ -173,8 +159,6 @@ cavalry_skirmish = {
 
 	bottleneck = 0.25
 	padma_vyuha = 0.25
-	skirmishing = 0.0
-	greek_phalanx = 0.0
 	
 	casualties = -0.1
 
@@ -198,8 +182,6 @@ padma_vyuha = {
 
 	envelopment = 0.25
 	hit_and_run_tactics = 0.25
-	shock_action = 0.0
-	cavalry_skirmish = 0.0
 	
 	casualties = -0.1
 
@@ -224,8 +206,6 @@ hit_and_run_tactics = {
 
 	deception = 0.25
 	triplex_acies = 0.25
-	bottleneck = 0.0
-	padma_vyuha = 0.0
 	
 	casualties = -0.1
 
