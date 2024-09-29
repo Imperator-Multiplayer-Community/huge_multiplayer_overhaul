@@ -65,12 +65,24 @@ on_republic_ruler_change = {
 						}
 					}
 				}
+				every_party = {
+					limit = {
+						this = root.current_ruler.character_party
+					}
+					ROOT = {
+						add_party_approval = {
+							party = PREV
+							value = 60					# boost the ruling party's approval after winning a big election
+						}
+					}
+				}
 			}
 			yes = {
 				every_party = {
 					limit = {
 						NOT = {
 							this = root.current_ruler.character_party
+							this = root.current_co_ruler.character_party
 						}
 					}
 					ROOT = {
@@ -93,16 +105,16 @@ on_republic_ruler_change = {
 						}
 					}
 				}
-			}
-		}
-		every_party = {
-			limit = {
-				this = root.current_ruler.character_party
-			}
-			ROOT = {
-				add_party_approval = {
-					party = PREV
-					value = 60					# boost the ruling party's approval after winning a big election
+				every_party = {
+					limit = {
+						this = root.current_ruler.character_party
+					}
+					ROOT = {
+						add_party_approval = {
+							party = PREV
+							value = 45					# boost the ruling party's approval after winning a big election
+						}
+					}
 				}
 			}
 		}
