@@ -1,5 +1,4 @@
 ﻿namespace = slave_revolts
-
 #The slaves rise
 slave_revolts.1 = {
 	type = province_event
@@ -7,7 +6,6 @@ slave_revolts.1 = {
 	desc = "slave_revolts.1.desc"
 	picture = revolt
 	goto_location = ROOT
-	
 	# trigger = { # start for event chain is now nbr 6; this is the actual rebellion
 	# 	always = no # New events give options to deal with unhappy slaves. Rebellion only if demands not met.
 	# 	has_owner = yes
@@ -21,7 +19,6 @@ slave_revolts.1 = {
 	# 		NOT = { has_variable = slave_moratorium } # Protected
 	# 	}
 	# }
-	
 	# weight_multiplier = {
 	# 	modifier = {
 	# 		add = {
@@ -31,19 +28,24 @@ slave_revolts.1 = {
 	# 		}
 	# 	}
 	# }
-	
 	immediate = {
 		owner = {
 			add_country_modifier = {
-				name = "ongoing_slave_revolt" #Inspires other slaves
+				name = "ongoing_slave_revolt"				#Inspires other slaves
 				duration = 3650
+			}
+			hidden_effect = {
+				remove_variable = brewing_slave_revolt
 			}
 		}
 		random_pops_in_province = {
-			limit = { pop_type = slaves }
-			set_pop_type = freemen #You don't join but we do set you free!
+			limit = {
+				pop_type = slaves
+			}
+			set_pop_type = freemen			#You don't join but we do set you free!
 		}
-		c:REB = { #This is our snowball
+		c:REB = {
+			#This is our snowball
 			create_unit = {
 				location = ROOT
 			}
@@ -57,7 +59,8 @@ slave_revolts.1 = {
 					value = root.owner
 				}
 				hidden_effect = {
-					while = { #One light infantry per slave.
+					while = {
+						#One light infantry per slave.
 						limit = {
 							unit_location = {
 								num_of_slaves >= 1
@@ -65,7 +68,9 @@ slave_revolts.1 = {
 						}
 						unit_location = {
 							random_pops_in_province = {
-								limit = { pop_type = slaves }
+								limit = {
+									pop_type = slaves
+								}
 								kill_pop = yes
 							}
 						}
@@ -75,12 +80,11 @@ slave_revolts.1 = {
 			}
 		}
 	}
-	
 	option = {
 		name = "slave_revolts.1.a"
 		custom_tooltip = slave_revolts.1.a.tt
 		add_province_modifier = {
-			name = recent_slave_revolt #Blocks for this province
+			name = recent_slave_revolt			#Blocks for this province
 			duration = 3650
 		}
 	}
@@ -92,28 +96,31 @@ slave_revolts.2 = {
 	title = "slave_revolts.2.t"
 	desc = "slave_revolts.2.desc"
 	picture = revolt
-	
 	goto_location = root
-	
 	trigger = {
-		num_of_slaves > 1 #No slaves can join if there are no slaves
-		NOT = { has_province_modifier = recent_slave_revolt } #Let us spare the same place from being hit twice in short time.
+		num_of_slaves > 1		#No slaves can join if there are no slaves
+		NOT = {
+			has_province_modifier = recent_slave_revolt
+		}
+		#Let us spare the same place from being hit twice in short time.
 		is_capital = no
-		any_unit_in_province = { #Snowball was here
+		any_unit_in_province = {
+			#Snowball was here
 			unit_owner = c:REB
 		}
 	}
-	
 	immediate = {
 		if = {
 			limit = {
 				owner = {
-					NOT = { has_country_modifier = ongoing_slave_revolt }
+					NOT = {
+						has_country_modifier = ongoing_slave_revolt
+					}
 				}
 			}
 			owner = {
 				add_country_modifier = {
-					name = "ongoing_slave_revolt" #Inspires other slaves
+					name = "ongoing_slave_revolt"					#Inspires other slaves
 					duration = 3650
 				}
 			}
@@ -141,10 +148,11 @@ slave_revolts.2 = {
 		}
 		custom_tooltip = slave_army_growth_tooltip
 		hidden_effect = {
-			
 			random_pops_in_province = {
-				limit = { pop_type = slaves }
-				set_pop_type = freemen #You don't join but we do set you free!
+				limit = {
+					pop_type = slaves
+				}
+				set_pop_type = freemen				#You don't join but we do set you free!
 			}
 			random_unit_in_province = {
 				limit = {
@@ -159,20 +167,22 @@ slave_revolts.2 = {
 					}
 					unit_location = {
 						random_pops_in_province = {
-							limit = { pop_type = slaves }
+							limit = {
+								pop_type = slaves
+							}
 							kill_pop = yes
 						}
 					}
-					add_subunit = light_infantry #Now we add to the army
+					add_subunit = light_infantry					#Now we add to the army
 				}
 			}
 		}
 	}
-	
 	#Reaction:
 	option = {
-		name = "slave_revolts.2.a" #We do not negotiate with slaves!
-		ai_chance = { #AI should play this very safe.
+		name = "slave_revolts.2.a"		#We do not negotiate with slaves!
+		ai_chance = {
+			#AI should play this very safe.
 			factor = 1
 			modifier = {
 				factor = 2
@@ -191,9 +201,12 @@ slave_revolts.2 = {
 			name = recent_slave_revolt
 			duration = 3650
 		}
-		ordered_pops_in_province = { #Slaves kill masters
+		ordered_pops_in_province = {
+			#Slaves kill masters
 			limit = {
-				NOT = { pop_type = slaves }
+				NOT = {
+					pop_type = slaves
+				}
 			}
 			order_by = pop_hapiness
 			max = {
@@ -205,18 +218,19 @@ slave_revolts.2 = {
 		hidden_effect = {
 			random_list = {
 				80 = {
-				
 				}
 				20 = {
-					trigger_event = { id = slave_revolts.4 }
+					trigger_event = {
+						id = slave_revolts.4
+					}
 				}
 			}
 		}
 	}
-	
 	option = {
-		name = "slave_revolts.2.b" #Give in to demands
-		ai_chance = { #AI should play it safe
+		name = "slave_revolts.2.b"		#Give in to demands
+		ai_chance = {
+			#AI should play it safe
 			factor = 1
 			modifier = {
 				factor = 2
@@ -232,8 +246,8 @@ slave_revolts.2 = {
 			}
 		}
 		owner = {
-			add_stability = -10 #Negotiation is not expected
-			add_treasury = -250 #Money to the slaves
+			add_stability = -10			#Negotiation is not expected
+			add_treasury = -250			#Money to the slaves
 			custom_tooltip = allow_slaves_to_settle
 			if = {
 				limit = {
@@ -243,7 +257,9 @@ slave_revolts.2 = {
 			}
 			hidden_effect = {
 				every_owned_province = {
-					limit = { controller = c:REB }
+					limit = {
+						controller = c:REB
+					}
 					set_controller = owner
 				}
 			}
@@ -253,13 +269,16 @@ slave_revolts.2 = {
 			}
 		}
 		hidden_effect = {
-			scope:rebel_army = { #Freedom to the Slaves!
+			scope:rebel_army = {
+				#Freedom to the Slaves!
 				every_sub_unit = {
 					owning_unit.unit_location = {
 						owner = {
 							random_owned_province = {
-								limit = { is_in_region = owner.capital_scope }
-								create_state_pop = freemen									
+								limit = {
+									is_in_region = owner.capital_scope
+								}
+								create_state_pop = freemen
 								weight = {
 									modifier = {
 										factor = 10
@@ -281,18 +300,15 @@ slave_revolts.2 = {
 	}
 }
 
-
 #Slaves defeated
 slave_revolts.3 = {
 	type = country_event
 	title = "slave_revolts.3.t"
 	desc = "slave_revolts.3.desc"
 	picture = crucifixion
-	
 	trigger = {
 		always = yes
 	}
-	
 	immediate = {
 		if = {
 			limit = {
@@ -301,13 +317,17 @@ slave_revolts.3 = {
 			remove_country_modifier = ongoing_slave_revolt
 		}
 		every_owned_province = {
-			limit = { controller = c:REB }
+			limit = {
+				controller = c:REB
+			}
 			set_controller = scope:country_dealing_with_slave_revolt
 		}
 		c:REB = {
 			every_unit = {
 				limit = {
-					unit_location = { owner = scope:country_dealing_with_slave_revolt }
+					unit_location = {
+						owner = scope:country_dealing_with_slave_revolt
+					}
 					unit_owner = c:REB
 				}
 				every_sub_unit = {
@@ -317,9 +337,8 @@ slave_revolts.3 = {
 			}
 		}
 	}
-	
 	option = {
-		name = "slave_revolts.3.a" #Time to make an example
+		name = "slave_revolts.3.a"		#Time to make an example
 		set_variable = {
 			name = slave_moratorium
 			value = 1
@@ -331,9 +350,8 @@ slave_revolts.3 = {
 			duration = 5475
 		}
 	}
-	
 	option = {
-		name = "slave_revolts.3.b" #Let us be lenient
+		name = "slave_revolts.3.b"		#Let us be lenient
 		custom_tooltip = slave_revolts.3.b.tt
 		set_variable = {
 			name = slave_moratorium
@@ -347,7 +365,7 @@ slave_revolts.3 = {
 		}
 		hidden_effect = {
 			while = {
-				count = root.slaves_defeated_svalue #How many slaves remain to be resettled.
+				count = root.slaves_defeated_svalue				#How many slaves remain to be resettled.
 				random_owned_province = {
 					limit = {
 						is_in_region = root.capital_scope
@@ -366,11 +384,8 @@ slave_revolts.3 = {
 				}
 			}
 		}
-		
 	}
 }
-
-
 
 #Charismatic Slave revolt leader
 slave_revolts.4 = {
@@ -378,19 +393,16 @@ slave_revolts.4 = {
 	title = "slave_revolts.4.t"
 	desc = "slave_revolts.4.desc"
 	picture = gladiators
-	
 	left_portrait = scope:spartacus_character
-	
 	goto_location = scope:rebel_army
-	
 	trigger = {
 		total_population >= 1
-		any_unit_in_province = { #Snowball is here
+		any_unit_in_province = {
+			#Snowball is here
 			unit_owner = c:REB
 			has_commander = no
 		}
 	}
-
 	weight_multiplier = {
 		modifier = {
 			add = {
@@ -400,7 +412,6 @@ slave_revolts.4 = {
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			owner = {
@@ -423,10 +434,9 @@ slave_revolts.4 = {
 			}
 		}
 	}
-	
 	#Reaction:
 	option = {
-		name = "slave_revolts.4.a" #We do not negotiate with slaves!
+		name = "slave_revolts.4.a"		#We do not negotiate with slaves!
 		hidden_effect = {
 			scope:spartacus_character = {
 				move_country = REB
@@ -439,35 +449,37 @@ slave_revolts.4 = {
 	}
 }
 
-
 #Slave revolt reaches capital
 slave_revolts.5 = {
 	type = province_event
 	title = "slave_revolts.5.t"
 	desc = "slave_revolts.5.desc"
 	picture = looting
-	
 	goto_location = scope:rebel_army
-	
 	trigger = {
-		num_of_slaves >= 1 #No slaves can join if there are no slaves
-		NOT = { has_province_modifier = recent_slave_revolt } #Let us spare the same place from being hit twice in short time.
-		is_capital = yes #This just got real
-		any_unit_in_province = { #Snowball was here
+		num_of_slaves >= 1		#No slaves can join if there are no slaves
+		NOT = {
+			has_province_modifier = recent_slave_revolt
+		}
+		#Let us spare the same place from being hit twice in short time.
+		is_capital = yes		#This just got real
+		any_unit_in_province = {
+			#Snowball was here
 			unit_owner = c:REB
 		}
 	}
-	
 	immediate = {
 		if = {
 			limit = {
 				owner = {
-					NOT = { has_country_modifier = ongoing_slave_revolt }
+					NOT = {
+						has_country_modifier = ongoing_slave_revolt
+					}
 				}
 			}
 			owner = {
 				add_country_modifier = {
-					name = "ongoing_slave_revolt" #Inspires other slaves
+					name = "ongoing_slave_revolt"					#Inspires other slaves
 					duration = 3650
 				}
 			}
@@ -481,7 +493,7 @@ slave_revolts.5 = {
 					is_at_location = root
 				}
 				order_by = prominence
-				max = 5				
+				max = 5
 				remove_all_positions = yes
 				death = {
 					death_reason = death_crucified
@@ -490,8 +502,10 @@ slave_revolts.5 = {
 		}
 		hidden_effect = {
 			random_pops_in_province = {
-				limit = { pop_type = slaves }
-				set_pop_type = freemen #You don't join but we do set you free!
+				limit = {
+					pop_type = slaves
+				}
+				set_pop_type = freemen				#You don't join but we do set you free!
 			}
 			random_unit_in_province = {
 				limit = {
@@ -506,20 +520,22 @@ slave_revolts.5 = {
 					}
 					unit_location = {
 						random_pops_in_province = {
-							limit = { pop_type = slaves }
+							limit = {
+								pop_type = slaves
+							}
 							kill_pop = yes
 						}
 					}
-					add_subunit = light_infantry #Now we add to the army
+					add_subunit = light_infantry					#Now we add to the army
 				}
 			}
 		}
 	}
-	
 	#Reaction:
 	option = {
-		name = "slave_revolts.5.a" #We do not negotiate with slaves!
-		ai_chance = { #AI should play this very safe.
+		name = "slave_revolts.5.a"		#We do not negotiate with slaves!
+		ai_chance = {
+			#AI should play this very safe.
 			factor = 1
 			modifier = {
 				factor = 2
@@ -534,14 +550,19 @@ slave_revolts.5 = {
 				}
 			}
 		}
-		owner = { add_stability = -2 }
+		owner = {
+			add_stability = -2
+		}
 		add_province_modifier = {
 			name = recent_slave_revolt
 			duration = 3650
 		}
-		ordered_pops_in_province = { #Slaves kill masters
+		ordered_pops_in_province = {
+			#Slaves kill masters
 			limit = {
-				NOT = { pop_type = slaves }
+				NOT = {
+					pop_type = slaves
+				}
 			}
 			order_by = pop_hapiness
 			max = {
@@ -551,13 +572,15 @@ slave_revolts.5 = {
 			kill_pop = yes
 		}
 		hidden_effect = {
-			trigger_event = { id = slave_revolts.4 }
+			trigger_event = {
+				id = slave_revolts.4
+			}
 		}
 	}
-	
 	option = {
-		name = "slave_revolts.5.b" #Give in to demands
-		ai_chance = { #AI should play it safe
+		name = "slave_revolts.5.b"		#Give in to demands
+		ai_chance = {
+			#AI should play it safe
 			factor = 1
 			modifier = {
 				factor = 2
@@ -573,8 +596,8 @@ slave_revolts.5 = {
 			}
 		}
 		owner = {
-			add_stability = -30 #Negotiation is not expected
-			add_treasury = -250 #Money to the slaves
+			add_stability = -30			#Negotiation is not expected
+			add_treasury = -250			#Money to the slaves
 			custom_tooltip = allow_slaves_to_settle
 			if = {
 				limit = {
@@ -584,7 +607,9 @@ slave_revolts.5 = {
 			}
 			hidden_effect = {
 				every_owned_province = {
-					limit = { controller = c:REB }
+					limit = {
+						controller = c:REB
+					}
 					set_controller = owner
 				}
 			}
@@ -594,13 +619,16 @@ slave_revolts.5 = {
 			}
 		}
 		hidden_effect = {
-			scope:rebel_army = { #Freedom to the Slaves!
+			scope:rebel_army = {
+				#Freedom to the Slaves!
 				every_sub_unit = {
 					owning_unit.unit_location = {
 						owner = {
 							random_owned_province = {
-								limit = { is_in_region = owner.capital_scope }
-								create_state_pop = freemen									
+								limit = {
+									is_in_region = owner.capital_scope
+								}
+								create_state_pop = freemen
 								weight = {
 									modifier = {
 										factor = 10
@@ -623,28 +651,39 @@ slave_revolts.5 = {
 }
 
 # Added by HMO
-slave_revolts.6 = { # rumours of unhappy slaves
+slave_revolts.6 = {
+	# rumours of unhappy slaves
 	type = province_event
 	title = "slave_revolts.6.t"
 	desc = "slave_revolts.6.desc"
 	picture = gladiators
-
 	trigger = {
 		has_owner = yes
 		num_of_slaves >= 25
-		slaves_happiness <= 0.15 #Less than 15% Happiness
-		num_of_slaves >= slave_revolt_svalue #Ratio of slaves and minimum size
-		NOT = { has_province_modifier = recent_slave_revolt } #Safe for a bit
+		slaves_happiness <= 0.15		#Less than 15% Happiness
+		num_of_slaves >= slave_revolt_svalue		#Ratio of slaves and minimum size
 		owner = {
-			NOT = { has_country_modifier = satisified_riot_demands }
-			NOT = { has_country_modifier = satisified_initial_slaves_demands }
-			NOT = { has_country_modifier = slave_revolt_succesful } #protected
-			NOT = { has_country_modifier = ongoing_slave_revolt } #only one snowball at a time
-			NOT = { has_variable = slave_moratorium } # Protected
+			NOT = {
+				has_country_modifier = brewing_slave_revolt				#only one revolt at a time
+				has_country_modifier = satisified_riot_demands
+				has_country_modifier = satisified_initial_slaves_demands
+				has_country_modifier = slave_revolt_succesful				#protected
+				has_country_modifier = ongoing_slave_revolt				#only one snowball at a time
+				has_province_modifier = recent_slave_revolt				#Safe for a bit
+				has_variable = slave_moratorium				# Protected
+			}
 		}
 	}
-
-	option = { # satisfy their demands
+	immediate = {
+		owner = {
+			set_variable = {
+				name = brewing_slave_revolt
+				value = 1
+			}
+		}
+	}
+	option = {
+		# satisfy their demands
 		name = slave_revolts.6.a
 		custom_tooltip = slaves_are_pacified_for_now_tt
 		owner = {
@@ -658,10 +697,13 @@ slave_revolts.6 = { # rumours of unhappy slaves
 				name = satisified_initial_slaves_demands
 				duration = 3650
 			}
+			hidden_effect = {
+				remove_variable = brewing_slave_revolt
+			}
 		}
 	}
-
-	option = { # suppress them
+	option = {
+		# suppress them
 		name = slave_revolts.6.b
 		custom_tooltip = this_can_lead_to_slave_rebellion_tt
 		owner = {
@@ -671,14 +713,16 @@ slave_revolts.6 = { # rumours of unhappy slaves
 			name = slaves_suppressed_mod
 			duration = 1825
 		}
-
 		trigger_event = {
 			id = slave_revolts.7
-			days = { 15 30 }
+			days = {
+				15
+				30
+			}
 		}
 	}
-
-	option = { # kill the leaders
+	option = {
+		# kill the leaders
 		name = slave_revolts.6.c
 		custom_tooltip = this_can_lead_to_slave_rebellion_tt
 		owner = {
@@ -693,20 +737,22 @@ slave_revolts.6 = { # rumours of unhappy slaves
 				kill_pop = yes
 			}
 		}
-
 		trigger_event = {
 			id = slave_revolts.7
-			days = { 15 30 }
+			days = {
+				15
+				30
+			}
 		}
 	}
-}	
+}
 
-slave_revolts.7 = { # slaves rioting (not yet revolt)
+slave_revolts.7 = {
+	# slaves rioting (not yet revolt)
 	type = province_event
 	title = "slave_revolts.7.t"
 	desc = "slave_revolts.7.desc"
 	picture = gladiators
-
 	option = {
 		name = slave_revolts.7.a
 		custom_tooltip = slaves_are_pacified_for_now_tt
@@ -717,14 +763,16 @@ slave_revolts.7 = { # slaves rioting (not yet revolt)
 				name = satisified_riot_demands
 				duration = 3650
 			}
+			hidden_effect = {
+				remove_variable = brewing_slave_revolt
+			}
 		}
 	}
-
 	option = {
 		name = slave_revolts.7.b
 		custom_tooltip = this_can_lead_to_slave_rebellion_tt
 		while = {
-			count = 5 # at start of chain there are at least 25; max 2 are killed previously, so over 5 should remain
+			count = 5			# at start of chain there are at least 25; max 2 are killed previously, so over 5 should remain
 			random_pops_in_province = {
 				limit = {
 					pop_type = slaves
@@ -732,10 +780,12 @@ slave_revolts.7 = { # slaves rioting (not yet revolt)
 				kill_pop = yes
 			}
 		}
-
 		trigger_event = {
-			id = slave_revolts.1 # slave rebellion
-			days = { 15 30 }
+			id = slave_revolts.1			# slave rebellion
+			days = {
+				15
+				30
+			}
 		}
 	}
 }

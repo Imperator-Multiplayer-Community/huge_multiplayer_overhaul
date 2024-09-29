@@ -1,4 +1,8 @@
 ﻿hmo_province_pulse = {
 	events = {
 	}
+	random_events = {
+		90 = 0
+		10 = slave_revolts.6
+	}
 }
