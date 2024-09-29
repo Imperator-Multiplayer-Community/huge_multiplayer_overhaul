@@ -1,52 +1,46 @@
-﻿country_decisions = {
-	
-	found_egyptian_infantry_training_complex = {
-	
-		potential = {
-			num_of_cities >= 1
-			owns = 5535
-			NOR = {
-				has_variable = founded_egyptian_infantry_training_complex
-			}
-			OR = { 	country_culture_group = north_african
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= small_percent_size_culture_group_comparison
-						this.culture.culture_group = culture_group:north_african
-					}			
-			}
-		}
-		highlight = {
-			scope:province = {
-				province_id = 5535 #Colira Base metals
-			}
-		}
-		allow = {
-			treasury >= 100
-			military_experience >= 80
-			owns = 5535
-		}
-		
-		effect = {
-			set_variable = founded_egyptian_infantry_training_complex
-			add_treasury = -100
-			add_military_experience = -80
-			add_country_modifier = {
-				name = egyptian_infantry_training_programme 
-				duration = -1
-			}
-			
-			p:5535 = {
-					add_province_modifier = {
-						name = egyptian_infantry_training_complex
-						duration = -1					
-					}
-				}
-				
-			}
-		
-		ai_will_do = {
-			base = 100
-		}
-	}
-}
+﻿# country_decisions = {
+# 	found_egyptian_infantry_training_complex = {
+# 		potential = {
+# 			num_of_cities >= 1
+# 			owns = 5535
+# 			NOR = {
+# 				has_variable = founded_egyptian_infantry_training_complex
+# 			}
+# 			OR = { 	country_culture_group = north_african
+# 					any_country_culture = {
+# 						is_integrated = yes
+# 						country_culture_pop_count >= small_percent_size_culture_group_comparison
+# 						this.culture.culture_group = culture_group:north_african
+# 					}
+# 			}
+# 		}
+# 		highlight = {
+# 			scope:province = {
+# 				province_id = 5535 #Colira Base metals
+# 			}
+# 		}
+# 		allow = {
+# 			treasury >= 100
+# 			military_experience >= 80
+# 			owns = 5535
+# 		}
+# 		effect = {
+# 			set_variable = founded_egyptian_infantry_training_complex
+# 			add_treasury = -100
+# 			add_military_experience = -80
+# 			add_country_modifier = {
+# 				name = egyptian_infantry_training_programme
+# 				duration = -1
+# 			}
+# 			p:5535 = {
+# 					add_province_modifier = {
+# 						name = egyptian_infantry_training_complex
+# 						duration = -1
+# 					}
+# 				}
+# 			}
+# 		ai_will_do = {
+# 			base = 100
+# 		}
+# 	}
+# }
