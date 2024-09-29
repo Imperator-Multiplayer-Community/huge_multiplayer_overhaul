@@ -13,13 +13,7 @@
 					count >= 1
 					prisoner = yes
 				}
-				OR = {
-					NOT = { has_variable = ritual_sacrifice_cooldown }
-					AND = {
-						has_variable = ritual_sacrifice_cooldown
-						stability < 35
-					}
-				}
+				NOT = { has_variable = ritual_sacrifice_cooldown }
 			}
 		}
 

@@ -1,57 +1,51 @@
-﻿country_decisions = {
-	
-	# Found Asian Elephant Training Complex
-	found_asian_elephant_training_complex = {
-	
-		potential = {
-			num_of_cities >= 1
-			owns = 6977
-			NOR = {
-				has_variable = founded_asian_elephant_training_complex
-			}
-			OR = { 	country_culture_group = indian
-					primary_culture = lankan
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= small_percent_size_culture_group_comparison
-						OR = {
-							this.culture.culture_group = culture_group:indian
-							is_culture = lankan
-						}
-					}			
-			}
-		}
-		highlight = {
-			scope:province = {
-				province_id = 6977 #Dighavapi Elephants
-			}
-		}
-		allow = {
-			treasury >= 100
-			military_experience >= 80
-			owns = 6977
-		}
-		
-		effect = {
-			set_variable = founded_asian_elephant_training_complex
-			add_treasury = -100
-			add_military_experience = -80
-			add_country_modifier = {
-				name = asian_elephant_training_programme 
-				duration = -1
-			}
-			
-			p:6977 = {
-					add_province_modifier = {
-						name = asian_elephant_training_complex
-						duration = -1					
-					}
-			}
-				
-		}
-		
-		ai_will_do = {
-			base = 100
-		}
-	}
-}
+﻿# country_decisions = {
+# 	# Found Asian Elephant Training Complex
+# 	found_asian_elephant_training_complex = {
+# 		potential = {
+# 			num_of_cities >= 1
+# 			owns = 6977
+# 			NOR = {
+# 				has_variable = founded_asian_elephant_training_complex
+# 			}
+# 			OR = { 	country_culture_group = indian
+# 					primary_culture = lankan
+# 					any_country_culture = {
+# 						is_integrated = yes
+# 						country_culture_pop_count >= small_percent_size_culture_group_comparison
+# 						OR = {
+# 							this.culture.culture_group = culture_group:indian
+# 							is_culture = lankan
+# 						}
+# 					}
+# 			}
+# 		}
+# 		highlight = {
+# 			scope:province = {
+# 				province_id = 6977 #Dighavapi Elephants
+# 			}
+# 		}
+# 		allow = {
+# 			treasury >= 100
+# 			military_experience >= 80
+# 			owns = 6977
+# 		}
+# 		effect = {
+# 			set_variable = founded_asian_elephant_training_complex
+# 			add_treasury = -100
+# 			add_military_experience = -80
+# 			add_country_modifier = {
+# 				name = asian_elephant_training_programme
+# 				duration = -1
+# 			}
+# 			p:6977 = {
+# 					add_province_modifier = {
+# 						name = asian_elephant_training_complex
+# 						duration = -1
+# 					}
+# 			}
+# 		}
+# 		ai_will_do = {
+# 			base = 100
+# 		}
+# 	}
+# }

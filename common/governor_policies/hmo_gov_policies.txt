@@ -53,8 +53,8 @@ harsh_treatment = {
 			state_level_loyalty > 60
 		}
 	}
-	
-	
+
+
 	#on_action = acquisition_of_wealth_pulse
 }
 
@@ -63,7 +63,7 @@ centralize_pops = {
 	province = {
 		local_migration_speed = 5
 	}
-	
+
 	capital = {
 		local_migration_attraction = 3
 	}
@@ -78,7 +78,7 @@ centralize_pops = {
 			any_state_province = {
 				is_state_capital = yes
 				has_city_status = yes
-				total_population <= 36 
+				total_population <= 36
 			}
 			any_state_province = {
 				count = all
@@ -116,7 +116,7 @@ decentralize_pops = {
 	province = {
 		local_migration_speed = 5
 	}
-	
+
 	capital = {
 		local_migration_attraction = -10
 	}
@@ -173,6 +173,16 @@ religious_conversion = {
 			any_state_province = {
 				count = all
 				dominant_province_religion = governor_or_ruler.religion
+			}
+		}
+
+
+		modifier = {
+			factor = 0
+			governor_or_ruler = {
+				employer = {
+					invention = happiness_for_wrong_group_modifier_inv_3
+				}
 			}
 		}
 	}
