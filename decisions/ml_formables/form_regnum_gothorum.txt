@@ -1,8 +1,8 @@
-﻿country_decisions = {		
+﻿country_decisions = {
 	# Regnum Gothorum
 	# Designed by Neidhardt, created by Neidhardt
 	form_regnum_gothorum = {
-		
+
 		potential = {
 			num_of_cities >= 1
 			country_culture_group = germanic
@@ -18,7 +18,7 @@
 				is_endgame_tag_trigger = yes
 			}
 		}
-		
+
 		highlight = {
 			scope:province = {
 				OR = {
@@ -31,7 +31,7 @@
 				}
 			}
 		}
-		
+
 		allow = {
 			custom_tooltip = {
 				text = achaemenid_kingdom_not_exists
@@ -50,7 +50,7 @@
 				owns_or_subject_owns_region = bohemia_region
 
 		}
-		
+
 		effect = {
 			custom_tooltip = "tier_1_formable_tooltip"
 			change_country_name = "REGNUM_GOTHORUM_NAME"
@@ -62,7 +62,7 @@
 				}
 				change_government = tribal_federation
 				switch_government_type_event_clearup_effect = yes
-			}		
+			}
 			hidden_effect = {
 				change_country_adjective = "REGNUM_GOTHORUM_ADJECTIVE"
 				change_country_color =  "regnum_gothorum_color"
@@ -70,12 +70,12 @@
 				change_country_flag = REGNUM_GOTHORUM_FLAG
 				trigger_event = {
 					id = formable_heritage.190
-				}				
+				}
 			}
 			add_country_modifier = {
 				name = formable_country_huge_modifier
 				duration = 7600
-			}			
+			}
 			custom_tooltip = southern_tribes_federation_claims_tooltip
 			hidden_effect = {
 				region:belgica_region = { formable_region_province_effect = yes }
@@ -86,12 +86,12 @@
 				capital_formable_huge_effect = yes
 				formable_capital_modifier_large_effect = yes
 			}
-		}			
 			add_5_free_province_investments = yes
-		
+		}
+
 		ai_will_do = {
 			base = 1
 		}
 	}
-} 
+}
 
