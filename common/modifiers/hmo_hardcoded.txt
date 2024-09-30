@@ -234,14 +234,15 @@ nation_rank_5 = {
 }
 
 is_tribe = {
-	max_loyalty = 100
+	max_loyalty = 90
 	enslavement_efficiency = 0.025
 	change_governor_policy_cost_modifier = 0.1
-	army_maintenance_cost = 0.3
 	global_tribesmen_desired_pop_ratio = 0.1
-	hill_fort_cost = -0.25
-	price_found_city_cost_modifier = 0.25
-	monthly_military_experience = 0.2
+	price_found_city_cost_modifier = 0.3
+	research_points_modifier = -0.1
+	army_maintenance_cost = 0.3
+	monthly_military_experience = 0.15
+	discipline = -0.025
 	global_defensive = -0.125
 	experience_decay = -0.02	# this will get removed by tribal legion laws once enacted, so makes tribal levies better until they get legions
 	global_nobles_city_desired_pop_ratio = 0.05	# slight increase
@@ -270,11 +271,12 @@ negative_centralization = {
 	global_tribesmen_output = -0.25
 	levy_size_multiplier = -0.05
 	global_manpower_modifier = -0.05
-	land_morale_modifier = -0.1
 	start_migration_cost_modifier = 0.5
-	price_found_city_cost_modifier = -0.5
-	hill_fort_cost = 0.15
+	price_found_city_cost_modifier = -0.2	# total 50% more expensive
+	hill_fort_cost = -0.5
+	research_points_modifier = -0.1
 	monthly_military_experience = -0.05
+	land_morale_modifier = -0.1
 	land_morale = -0.15
 }
 
@@ -282,14 +284,11 @@ positive_centralization = {
 	global_pop_promotion_speed = 2.5
 	country_civilization_value = 15
 	global_tribesmen_happyness = 0.015	# offsets unhappyness from civilization value gain
-	research_points_modifier = 0.5
-	oratory_tech_investment = 0.1
-	military_tech_investment = 0.1
-	civic_tech_investment = 0.1
-	religious_tech_investment = 0.1
-	discipline = 0.05
-	monthly_military_experience = -0.15
-	price_found_city_cost_modifier = -0.15	# still should be 10% more expensive
+	research_points_modifier = 0.125	# total 0.025
+	discipline = 0.05	# total 0.25
+	monthly_military_experience = -0.1	# total of .05 as tribe
+	price_found_city_cost_modifier = -0.15	# still should be 15% more expensive
+	hill_fort_cost = -0.15	# cost 170
 	global_citizen_city_desired_pop_ratio = 0.34	# on par with monarchy
 	global_tribesmen_city_desired_pop_ratio = -0.34	# reduce this a little bit to make citizens and nobles more prevelant
 }

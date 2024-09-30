@@ -1,14 +1,11 @@
-﻿custom_on_action_imprison =
-{
-	random_events =
-	{
+﻿custom_on_action_imprison = {
+	random_events = {
 		90 = 0
 		10 = ip_generic.14
 	}
 }
 
-passover_supported_characters_pulse = 
-{
+passover_supported_characters_pulse = {
 	trigger = {
 		has_civil_war = yes
 		any_character = {
@@ -57,12 +54,25 @@ on_republic_ruler_change = {
 			no = {
 				every_party = {
 					limit = {
-						NOT = { this = root.current_ruler.character_party }
+						NOT = {
+							this = root.current_ruler.character_party
+						}
 					}
 					ROOT = {
 						add_party_approval = {
 							party = PREV
-							value = party_disapproval_medium_svalue
+							value = -20
+						}
+					}
+				}
+				every_party = {
+					limit = {
+						this = root.current_ruler.character_party
+					}
+					ROOT = {
+						add_party_approval = {
+							party = PREV
+							value = 60					# boost the ruling party's approval after winning a big election
 						}
 					}
 				}
@@ -70,12 +80,39 @@ on_republic_ruler_change = {
 			yes = {
 				every_party = {
 					limit = {
-						NOT = { this = root.current_ruler.character_party }
+						NOT = {
+							this = root.current_ruler.character_party
+							this = root.current_co_ruler.character_party
+						}
 					}
 					ROOT = {
-						add_party_approval = { #For the losing party + co rulers party.
+						add_party_approval = {
+							#For the losing party shut out of power
 							party = PREV
-							value = party_disapproval_small_svalue
+							value = -30
+						}
+					}
+				}
+				every_party = {
+					limit = {
+						this = root.current_co_ruler.character_party
+					}
+					ROOT = {
+						add_party_approval = {
+							#For the winning co-ruler party
+							party = PREV
+							value = 15
+						}
+					}
+				}
+				every_party = {
+					limit = {
+						this = root.current_ruler.character_party
+					}
+					ROOT = {
+						add_party_approval = {
+							party = PREV
+							value = 45					# boost the ruling party's approval after winning a big election
 						}
 					}
 				}
@@ -120,24 +157,23 @@ disloyal_powerful_characters_pulse = {
 custom_on_great_battle_commander = {
 	random_events = {
 		600 = 0
-		5 = after_battle.10 #Disaster!
-		10 = after_battle.9 #Aggressive
-		10 = after_battle.8 #Steadfast
-		10	= after_battle.7 #Disciplined		
-		10	= after_battle.6 #Tactician		
-		10	= after_battle.5 #Confident	
-		10	= after_battle.3 #Conqueror		
-		10  = after_battle.1 #Victorious Trait
-		10 = after_battle.21 # Pompey Ships
-		10 = after_battle.22 # Pompey Admiral
-		10 = after_battle.23 # Pompey Daring
-		10 = after_battle.24 # Pompey Tough
-		10 = after_battle.25 # Pompey Brave/Coward
-		10 = after_battle.26 # Pompey Victorious
-		10 = after_battle.28 # Pompey Reckless
+		5 = after_battle.10		#Disaster!
+		10 = after_battle.9		#Aggressive
+		10 = after_battle.8		#Steadfast
+		10 = after_battle.7		#Disciplined
+		10 = after_battle.6		#Tactician
+		10 = after_battle.5		#Confident
+		10 = after_battle.3		#Conqueror
+		10 = after_battle.1		#Victorious Trait
+		10 = after_battle.21		# Pompey Ships
+		10 = after_battle.22		# Pompey Admiral
+		10 = after_battle.23		# Pompey Daring
+		10 = after_battle.24		# Pompey Tough
+		10 = after_battle.25		# Pompey Brave/Coward
+		10 = after_battle.26		# Pompey Victorious
+		10 = after_battle.28		# Pompey Reckless
 	}
 	events = {
-		
 	}
 	on_actions = {
 		nickname_from_battle
@@ -178,10 +214,8 @@ nickname_from_battle = {
 	}
 }
 
-custom_on_action_execute =
-{
-	random_events =
-	{
+custom_on_action_execute = {
+	random_events = {
 		95 = 0
 	}
 }
@@ -204,12 +238,8 @@ yuezhi_pulse = {
 	}
 }
 
-custom_on_action_sacrifice =
-{
-	random_events =
-	{
-		
-		
+custom_on_action_sacrifice = {
+	random_events = {
 	}
 }
 
@@ -248,9 +278,6 @@ yearly_debt_recovery_pulse = {
 	}
 }
 
-
-
-
 dictatorship_power_held_pulse = {
 	trigger = {
 		has_country_modifier = electoral_extension_mod
@@ -267,8 +294,12 @@ plot_outcome_rep_37 = {
 		current_ruler = {
 			OR = {
 				has_variable = dictator_holding_power
-				employer = { has_law = republican_election_4 }
-				employer = { has_law = princeps_civitatis }
+				employer = {
+					has_law = republican_election_4
+				}
+				employer = {
+					has_law = princeps_civitatis
+				}
 			}
 		}
 	}
@@ -376,23 +407,23 @@ main_event_pulse_country = {
 		flavor_arm.5
 		dhe_carthage.15
 		diadochi_flavor.100
-		dhe_mithridates.8 # Mithridates heritage choice
-		me_macedon_2_mastery.63 # Vibrant periodic event
-		me_macedon_2_mastery.83 # Oracular periodic event
-		dhe_mithridates.5 # Mithridates demands Pontus
+		dhe_mithridates.8		# Mithridates heritage choice
+		me_macedon_2_mastery.63		# Vibrant periodic event
+		me_macedon_2_mastery.83		# Oracular periodic event
+		dhe_mithridates.5		# Mithridates demands Pontus
 	}
 	random_events = {
 		500 = 0
 		100 = comet.5
-		250 = character_events.27 # Ruler religion switch
-		250 = character_events.25 # Heir religion switch
-		250 = character_events.26 # Heir culture switch
-		100 = ip_monarchy.1 #Monarchy Event Plot Etc.
+		250 = character_events.27		# Ruler religion switch
+		250 = character_events.25		# Heir religion switch
+		250 = character_events.26		# Heir culture switch
+		100 = ip_monarchy.1		#Monarchy Event Plot Etc.
 		100 = ip_monarchy.2
 		75 = ip_monarchy.13
-		100 = ip_monarchy.15 
+		100 = ip_monarchy.15
 		100 = ip_monarchy.18
-		100 = stability.1 #Stability Events
+		100 = stability.1		#Stability Events
 		100 = stability.2
 		100 = stability.3
 		100 = stability.4
@@ -402,22 +433,22 @@ main_event_pulse_country = {
 		100 = stability.8
 		100 = stability.9
 		100 = stability.10
-		100 = architect.1 #Architect Events
+		100 = architect.1		#Architect Events
 		100 = architect.2
 		100 = architect.3
 		100 = architect.4
 		100 = office.2
 		100 = office.3
-		100 = character_events.3 #Character Events
-		100 = ip_generic.6 #Internal Politics Events
+		100 = character_events.3		#Character Events
+		100 = ip_generic.6		#Internal Politics Events
 		200 = ip_generic.7
 		100 = ip_republic.8
-		100 = ip_generic.19 #Add traderoute oneshot
-		100 = ip_generic.21 #Bad farmlands event
-		200 = ip_generic.15 #War Exhaustion Events
+		100 = ip_generic.19		#Add traderoute oneshot
+		100 = ip_generic.21		#Bad farmlands event
+		200 = ip_generic.15		#War Exhaustion Events
 		200 = ip_generic.17
 		200 = ip_generic.18
-		100 = city.1 #City/Province Events
+		100 = city.1		#City/Province Events
 		100 = city.2
 		100 = city.3
 		100 = city.4
@@ -432,16 +463,16 @@ main_event_pulse_country = {
 		100 = city.13
 		100 = city.15
 		100 = city.16
-		100 = city.17 #City Rivalry Events
+		100 = city.17		#City Rivalry Events
 		100 = city.19
 		100 = city.20
 		100 = ip_republic.20
-		100 = ip_republic.21 #Commander Loyalty/Disloyalty Events
+		100 = ip_republic.21		#Commander Loyalty/Disloyalty Events
 		100 = ip_republic.22
 		100 = commander_loyalty.1
 		100 = commander_loyalty.2
 		100 = commander_loyalty.3
-		100 = tribal_pol.1 # Tribal Politics Events
+		100 = tribal_pol.1		# Tribal Politics Events
 		100 = tribal_pol.2
 		100 = tribal_pol.3
 		100 = tribal_pol.4
@@ -474,7 +505,7 @@ main_event_pulse_country = {
 		100 = tribal_pol.37
 		100 = tribal_pol.38
 		100 = tribal_flavour_events.1
-		40 = ip_republic.25 #Law support events
+		40 = ip_republic.25		#Law support events
 		40 = ip_republic.26
 		40 = ip_republic.27
 		40 = ip_republic.28
@@ -506,7 +537,7 @@ main_event_pulse_country = {
 		100 = monarchy_events.45
 		100 = ip_republic.40
 		100 = ip_republic.41
-		20 = rel_flavor_hellenic.1 # Rel Flavor Hellenic
+		20 = rel_flavor_hellenic.1		# Rel Flavor Hellenic
 		25 = rel_flavor_hellenic.3
 		50 = rel_flavor_hellenic.6
 		50 = rel_flavor_hellenic.7
@@ -517,7 +548,7 @@ main_event_pulse_country = {
 		50 = rel_flavor_hellenic.14
 		100 = rel_flavor_hellenic.15
 		20 = rel_flavor_hellenic.16
-		100 = rel_flavor_canaanite.1 # Rel Flavor Canaanite
+		100 = rel_flavor_canaanite.1		# Rel Flavor Canaanite
 		100 = rel_flavor_canaanite.2
 		100 = rel_flavor_canaanite.3
 		100 = rel_flavor_canaanite.4
@@ -527,7 +558,7 @@ main_event_pulse_country = {
 		100 = rel_flavor_canaanite.8
 		100 = rel_flavor_canaanite.9
 		100 = rel_flavor_canaanite.10
-		100 = rel_flavor_druidic.1 # Rel Flavor Druidic
+		100 = rel_flavor_druidic.1		# Rel Flavor Druidic
 		100 = rel_flavor_druidic.2
 		100 = rel_flavor_druidic.3
 		100 = rel_flavor_druidic.4
@@ -537,73 +568,73 @@ main_event_pulse_country = {
 		100 = rel_flavor_druidic.8
 		100 = rel_flavor_druidic.9
 		100 = rel_flavor_druidic.12
-		100 = rel_flavor_kemetic.1 # Rel Flavor Kemetic
+		100 = rel_flavor_kemetic.1		# Rel Flavor Kemetic
 		100 = rel_flavor_kemetic.2
 		100 = rel_flavor_kemetic.3
 		100 = rel_flavor_kemetic.4
 		100 = rel_flavor_kemetic.5
-		100 = rel_flavor_cybelene.1 # Rel Flavor Cybelene
+		100 = rel_flavor_cybelene.1		# Rel Flavor Cybelene
 		100 = rel_flavor_cybelene.2
 		100 = rel_flavor_cybelene.3
 		50 = rel_flavor_cybelene.4
 		100 = rel_flavor_cybelene.5
-		100 = rel_flavor_zoro.1 # Rel Flavor Zoroastrian
+		100 = rel_flavor_zoro.1		# Rel Flavor Zoroastrian
 		100 = rel_flavor_zoro.2
 		100 = rel_flavor_zoro.3
 		100 = rel_flavor_zoro.4
 		100 = rel_flavor_zoro.5
-		100 = rel_flavor_eastern.1 # Rel Flavor Eastern
+		100 = rel_flavor_eastern.1		# Rel Flavor Eastern
 		100 = rel_flavor_eastern.2
 		100 = rel_flavor_eastern.3
 		100 = rel_flavor_eastern.4
 		20 = rel_flavor_eastern.5
-		100 = rel_flavor_northern.1 # Rel Flavor Northern
+		100 = rel_flavor_northern.1		# Rel Flavor Northern
 		100 = rel_flavor_northern.2
 		100 = rel_flavor_northern.3
 		100 = rel_flavor_northern.4
 		100 = rel_flavor_northern.5
-		100 = rel_flavor_hindu.1 # Rel Flavor Hindu
+		100 = rel_flavor_hindu.1		# Rel Flavor Hindu
 		100 = rel_flavor_hindu.2
 		100 = rel_flavor_hindu.3
 		100 = rel_flavor_hindu.4
 		100 = rel_flavor_hindu.5
-		100 = rel_flavor_buddhist.1 # Rel Flavor Buddhist 
+		100 = rel_flavor_buddhist.1		# Rel Flavor Buddhist
 		100 = rel_flavor_buddhist.2
 		100 = rel_flavor_buddhist.3
 		3 = rel_flavor_buddhist.4
-		100 = rel_flavor_arabian.1 # Rel Flavor Arabian
+		100 = rel_flavor_arabian.1		# Rel Flavor Arabian
 		100 = rel_flavor_arabian.2
 		100 = rel_flavor_arabian.3
 		100 = rel_flavor_arabian.4
 		100 = rel_flavor_arabian.5
-		100 = rel_flavor_judaism.1 # Rel Flavor Judaism
+		100 = rel_flavor_judaism.1		# Rel Flavor Judaism
 		100 = rel_flavor_judaism.2
-		100 = rel_flavor_judaism.3 
+		100 = rel_flavor_judaism.3
 		100 = rel_flavor_judaism.4
 		100 = rel_flavor_judaism.5
-		100 = rel_flavor_thracian.1 # Rel Flavor Thracian
+		100 = rel_flavor_thracian.1		# Rel Flavor Thracian
 		100 = rel_flavor_thracian.2
 		100 = rel_flavor_thracian.3
 		100 = rel_flavor_thracian.4
 		100 = rel_flavor_thracian.5
-		50 = dhe_museion.20 # Recurring Events Museion
+		50 = dhe_museion.20		# Recurring Events Museion
 		50 = dhe_museion.21
 		100 = dhe_museion.22
-		50 = dhe_fortune_cult.1 # Cult of Fortune
+		50 = dhe_fortune_cult.1		# Cult of Fortune
 		50 = dhe_fortune_cult.2
 		50 = dhe_fortune_cult.3
 		10 = dhe_fortune_cult.4
-		50 = dhe_isis_cult.1 # Isis Cult
+		50 = dhe_isis_cult.1		# Isis Cult
 		50 = dhe_isis_cult.2
 		50 = dhe_isis_cult.3
 		30 = dhe_isis_cult.4
 		50 = dhe_isis_cult.5
 		50 = dhe_isis_cult.6
-		100 = dhe_buddhism.1 # Buddhism event
-		100 = dhe_jainism.1 # Jainism event
+		100 = dhe_buddhism.1		# Buddhism event
+		100 = dhe_jainism.1		# Jainism event
 		200 = character_events.6
 		200 = character_events.7
-		100 = country_diplomacy.1 # Country Diplomacy Events
+		100 = country_diplomacy.1		# Country Diplomacy Events
 		100 = country_diplomacy.2
 		100 = country_diplomacy.3
 		100 = country_diplomacy.4
@@ -629,21 +660,21 @@ main_event_pulse_country = {
 		100 = dhe_bactria.1
 		150 = dhe_bactria.2
 		25 = ip_republic.44
-		50 = ip_republic.45 # marius
-        ### Diplomacy
-        50 = dip_friends_rivals.1
-        50 = dip_friends_rivals.3
-        50 = dip_friends_rivals.5
-        50 = dip_friends_rivals.7
-        50 = dip_friends_rivals.9
-        50 = dip_friends_rivals.10
-        50 = dip_friends_rivals.11
-        50 = dip_friends_rivals.12
-        50 = dip_friends_rivals.13
-        50 = dip_friends_rivals.14
-        50 = dip_friends_rivals.15
-        50 = dip_friends_rivals.17
-        50 = dip_friends_rivals.19
+		50 = ip_republic.45		# marius
+		### Diplomacy
+		50 = dip_friends_rivals.1
+		50 = dip_friends_rivals.3
+		50 = dip_friends_rivals.5
+		50 = dip_friends_rivals.7
+		50 = dip_friends_rivals.9
+		50 = dip_friends_rivals.10
+		50 = dip_friends_rivals.11
+		50 = dip_friends_rivals.12
+		50 = dip_friends_rivals.13
+		50 = dip_friends_rivals.14
+		50 = dip_friends_rivals.15
+		50 = dip_friends_rivals.17
+		50 = dip_friends_rivals.19
 		### Digital Deluxe Edition ###
 		100 = dde_hellenistic.1
 		100 = dde_hellenistic.2
@@ -794,13 +825,12 @@ yearly_disaster_pulse = {
 		current_date > 480.1.1
 	}
 	events = {
-
 	}
 	random_events = {
 		1500 = 0
-		4 = dhe_earthquake.1 # Minor Earthquake
-		2 = dhe_earthquake.3 # Major Earthquake
-		2 = dhe_volcano.1 # Volcano DHE
+		4 = dhe_earthquake.1		# Minor Earthquake
+		2 = dhe_earthquake.3		# Major Earthquake
+		2 = dhe_volcano.1		# Volcano DHE
 	}
 }
 
@@ -820,9 +850,7 @@ befriend_pulse = {
 		1 = befriend.5
 		1 = befriend.6
 	}
-	
 	fallback = befriend_fail
-	
 }
 
 befriend_resolution = {
@@ -854,9 +882,7 @@ yearly_subject_pulse = {
 		}
 	}
 	events = {
-
 	}
-
 	random_events = {
 		500 = 0
 		100 = country_diplomacy.32
@@ -878,7 +904,6 @@ prominent_actors_setup = {
 			has_variable = prominent_actor
 		}
 	}
-	
 	effect = {
 		while = {
 			count = 5
@@ -932,7 +957,6 @@ prominent_actors_setup = {
 	}
 }
 
-
 commander_loyalty_demand_picker = {
 	random_events = {
 		10 = commander_loyalty.5
@@ -947,9 +971,11 @@ commander_loyalty_demand_picker = {
 monthly_tarentum_war_pulse = {
 	trigger = {
 		exists = this
-		NOT = { tag = EPI }
+		NOT = {
+			tag = EPI
+		}
 		country_culture_group = hellenic
-		capital_scope = { 
+		capital_scope = {
 			OR = {
 				is_in_area = neapolis_area
 				is_in_area = cannae_area
@@ -969,8 +995,12 @@ monthly_tarentum_war_pulse = {
 							is_in_region = carthage_area
 						}
 					}
-					any_owned_province = { is_in_region = magna_graecia_region }
-					NOT = { country_culture_group = hellenic } 
+					any_owned_province = {
+						is_in_region = magna_graecia_region
+					}
+					NOT = {
+						country_culture_group = hellenic
+					}
 				}
 			}
 			save_temporary_scope_as = rome_temp_scope
@@ -1010,7 +1040,6 @@ yearly_general_unit_purchase_pulse = {
 }
 
 ### Crisis Framework
-
 yearly_crisis_start_pulse = {
 	trigger = {
 		num_of_cities > 200
@@ -1018,12 +1047,10 @@ yearly_crisis_start_pulse = {
 			has_variable = crisis_ongoing
 		}
 	}
-	
 	random_events = {
 		1160 = 0
 		40 = ip_republic.46
 	}
-	
 }
 
 mercenary_adventurer_pulse = {
@@ -1053,7 +1080,6 @@ consul_conspiracy_pulse = {
 			has_character_modifier = character_modifier_ambitious_politician
 		}
 	}
-
 	random_events = {
 		100 = 0
 		30 = roman_flavor.2
@@ -1067,13 +1093,14 @@ yearly_italian_flavor = {
 		current_date < 500.1.1
 	}
 	events = {
-		italian_flavor.1 # Tarantine event chain
-		italian_flavor.6 # Marsian Rebellion
-		italian_flavor.11 # Frentani Fidelity
-		italian_flavor.12 # Samnite Aggression
-		italian_flavor.14 # Nucerian Trade
+		italian_flavor.1		# Tarantine event chain
+		italian_flavor.6		# Marsian Rebellion
+		italian_flavor.11		# Frentani Fidelity
+		italian_flavor.12		# Samnite Aggression
+		italian_flavor.14		# Nucerian Trade
 	}
 }
+
 dictator_rise_pulse = {
 	trigger = {
 		tag = ROM
@@ -1083,7 +1110,6 @@ dictator_rise_pulse = {
 			has_character_modifier = character_modifier_ambitious_general
 		}
 	}
-
 	random_events = {
 		100 = 0
 		30 = roman_flavor.9
@@ -1100,7 +1126,6 @@ trial_step = {
 			is_alive = yes
 		}
 	}
-	
 	random_events = {
 		10 = trial.2
 		10 = trial.3
@@ -1109,7 +1134,6 @@ trial_step = {
 		6 = trial.6
 		10 = trial.7
 	}
-	
 }
 
 trial_end = {
@@ -1120,7 +1144,6 @@ trial_end = {
 			is_alive = yes
 		}
 	}
-	
 	events = {
 		trial.8
 	}
@@ -1226,8 +1249,8 @@ ip_rep_66_development_on_action = {
 		10 = ip_republic.68
 		10 = ip_republic.69
 		10 = ip_republic.72
-		10 = ip_republic.73	
-		15 = ip_republic.74	
+		10 = ip_republic.73
+		15 = ip_republic.74
 		15 = ip_republic.75
 		10 = ip_republic.78
 		10 = ip_republic.80
@@ -1256,7 +1279,7 @@ generic_1_pulse = {
 	effect = {
 		set_variable = {
 			name = oa_pulse_toggle
-			days = 75 
+			days = 75
 		}
 	}
 }
@@ -1268,10 +1291,10 @@ generic_infra_temple_pulse = {
 		}
 	}
 	random_events = {
-		10 = generic_infra_mission.1 #Governor Stealing
-		10 = generic_infra_mission.2 #Influx of People
-		10 = generic_infra_mission.3 #Contributions from Governor
-		10 = generic_infra_mission.7 #Pilgrim Traders
+		10 = generic_infra_mission.1		#Governor Stealing
+		10 = generic_infra_mission.2		#Influx of People
+		10 = generic_infra_mission.3		#Contributions from Governor
+		10 = generic_infra_mission.7		#Pilgrim Traders
 	}
 	effect = {
 		set_variable = {
@@ -1288,9 +1311,9 @@ generic_infra_colonia_pulse = {
 		}
 	}
 	random_events = {
-		10 = generic_infra_mission.8 #Incoming Settlers
-		10 = generic_infra_mission.9 #Locals move from surroundings to center
-		10 = provincial_events.1 #Settlers vs locals
+		10 = generic_infra_mission.8		#Incoming Settlers
+		10 = generic_infra_mission.9		#Locals move from surroundings to center
+		10 = provincial_events.1		#Settlers vs locals
 	}
 	effect = {
 		set_variable = {
@@ -1307,10 +1330,10 @@ generic_infra_governor_residence_pulse = {
 		}
 	}
 	random_events = {
-		10 = provincial_events.1 #Settlers vs locals
-		10 = generic_infra_mission.17 #Strongmen of X
-		10 = generic_infra_mission.18 #Establishing a Local Bureaucracy
-		10 = generic_infra_mission.19 #Cadastral Survey
+		10 = provincial_events.1		#Settlers vs locals
+		10 = generic_infra_mission.17		#Strongmen of X
+		10 = generic_infra_mission.18		#Establishing a Local Bureaucracy
+		10 = generic_infra_mission.19		#Cadastral Survey
 	}
 	effect = {
 		set_variable = {
@@ -1327,9 +1350,9 @@ generic_infra_monument_pulse = {
 		}
 	}
 	random_events = {
-		10 = generic_infra_mission.13 #
-		10 = generic_infra_mission.14 #
-		10 = generic_infra_mission.15 #
+		10 = generic_infra_mission.13		#
+		10 = generic_infra_mission.14		#
+		10 = generic_infra_mission.15		#
 	}
 	effect = {
 		set_variable = {
@@ -1346,17 +1369,16 @@ prospecting_pulse = {
 		}
 	}
 	random_events = {
-		15 = generic_infra_mission.22 #Iron Found
-		10 = generic_infra_mission.23 #Gold Found
-		5 = generic_infra_mission.24 #Gems Found
-		10 = generic_infra_mission.25 #Base Metals Found
-		30 = generic_infra_mission.26 #Minor Deposit Found
-		25 = generic_infra_mission.27 #False Lead
-		10 = generic_infra_mission.50 # Marble
-		5 = generic_infra_mission.51 # Cinnabar
-		5 = generic_infra_mission.52 # Lapis
-		5 = generic_infra_mission.53 # Jade
-
+		15 = generic_infra_mission.22		#Iron Found
+		10 = generic_infra_mission.23		#Gold Found
+		5 = generic_infra_mission.24		#Gems Found
+		10 = generic_infra_mission.25		#Base Metals Found
+		30 = generic_infra_mission.26		#Minor Deposit Found
+		25 = generic_infra_mission.27		#False Lead
+		10 = generic_infra_mission.50		# Marble
+		5 = generic_infra_mission.51		# Cinnabar
+		5 = generic_infra_mission.52		# Lapis
+		5 = generic_infra_mission.53		# Jade
 	}
 	effect = {
 		set_variable = {
@@ -1402,8 +1424,12 @@ yearly_good_advisor_pulse = {
 monthly_syracuse_revolution_pulse = {
 	trigger = {
 		tag = SYR
-		current_ruler = { has_variable = me_syr_current_tyrant_flag }
-		any_character = { has_variable = me_syr_democracy_leader }
+		current_ruler = {
+			has_variable = me_syr_current_tyrant_flag
+		}
+		any_character = {
+			has_variable = me_syr_democracy_leader
+		}
 	}
 	random_events = {
 		5 = me_syracuse_1_democracy.25
@@ -1420,22 +1446,19 @@ content_clear_holdings = {
 
 great_work_yearly_pulse = {
 	trigger = {
-        any_owned_province = {
+		any_owned_province = {
 			has_great_work = yes
-        }   
+		}
 	}
-
 	effect = {
-	    random_owned_province = {
-            limit = {
-                has_great_work = yes
-            }
-            save_scope_as = province
-        }
-    }  
+		random_owned_province = {
+			limit = {
+				has_great_work = yes
+			}
+			save_scope_as = province
+		}
+	}
 	events = {
-		
-
 	}
 	random_events = {
 		35 = 0
@@ -1459,7 +1482,6 @@ great_work_five_yearly_pulse = {
 		}
 	}
 	events = {
-
 	}
 	random_events = {
 		1000 = 0
@@ -1477,7 +1499,6 @@ no_great_work_pulse = {
 		}
 	}
 	events = {
-
 	}
 	random_events = {
 		11 = 0
@@ -1488,27 +1509,29 @@ no_great_work_pulse = {
 great_work_ai_construction_yearly_pulse = {
 	trigger = {
 		has_dlc = "Heirs of Alexander"
-		is_ai = yes		
-		NOT = { has_variable = gw_built_var }
+		is_ai = yes
+		NOT = {
+			has_variable = gw_built_var
+		}
 	}
 	events = {
 		gw_ai_build.1
-	}	
+	}
 }
 
 great_work_misc_yearly_pulse = {
-	trigger = {		
+	trigger = {
 		is_ai = no
-		NOT = { has_variable = stonehenge_happened }
+		NOT = {
+			has_variable = stonehenge_happened
+		}
 	}
-	
 	events = {
 	}
-	
 	random_events = {
 		50000 = 0
 		1 = stonehenge.1
-	}	
+	}
 }
 
 content_clear_holdings = {
@@ -1519,22 +1542,28 @@ content_clear_holdings = {
 }
 
 me_epi_royal_wedding_step_1_country_on_action = {
-	events = { me_epirus_1_epirus.16 }
+	events = {
+		me_epirus_1_epirus.16
+	}
 	fallback = me_epi_royal_wedding_restart_fallback
 }
 
 me_epi_royal_wedding_step_2_groom_on_action = {
-	events = { me_epirus_1_epirus.17 }
+	events = {
+		me_epirus_1_epirus.17
+	}
 	fallback = me_epi_royal_wedding_restart_fallback
 }
 
 me_epi_royal_wedding_step_3_proposal_on_action = {
-	events = { me_epirus_1_epirus.18 }
+	events = {
+		me_epirus_1_epirus.18
+	}
 	fallback = me_epi_royal_wedding_restart_fallback
 }
 
 me_epi_royal_wedding_step_4_wedding_on_action = {
-	events = { 
+	events = {
 		me_epirus_1_epirus.19
 		me_epirus_1_epirus.20
 	}
@@ -1542,7 +1571,9 @@ me_epi_royal_wedding_step_4_wedding_on_action = {
 }
 
 me_epi_royal_wedding_restart_fallback = {
-	events = { me_epirus_1_epirus.21 }
+	events = {
+		me_epirus_1_epirus.21
+	}
 }
 
 random_cultural_integration_event_25 = {
@@ -1591,5 +1622,4 @@ babylonian_priest_yearly_pulse = {
 }
 
 espionage_character_pulse = {
-
 }

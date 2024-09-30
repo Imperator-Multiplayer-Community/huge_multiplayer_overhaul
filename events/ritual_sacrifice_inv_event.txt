@@ -9,7 +9,7 @@ ritual_sacrifice_inv.1 = { #Sacrifice of a prisoner to improve the prosperity of
 	right_portrait = current_ruler
 	right_portrait = scope:officiating_priest
 	left_portrait = scope:ritual_sacrifice
-	
+
 	trigger = {
 		has_law = adopt_human_sacrifice_law_tribal
 	}
@@ -29,7 +29,7 @@ ritual_sacrifice_inv.1 = { #Sacrifice of a prisoner to improve the prosperity of
 		}
 	}
 
-	option = { 
+	option = {
 		name = ritual_sacrifice_inv.1.a
 		scope:ritual_sacrifice = {
 			death = {
@@ -38,7 +38,7 @@ ritual_sacrifice_inv.1 = { #Sacrifice of a prisoner to improve the prosperity of
 			}
 		}
 		scope:officiating_priest = {
-			add_zeal = 1
+			improve_zeal_effect = yes
 			random = {
 				chance = 15
 				add_trait = lunatic
@@ -175,7 +175,7 @@ ritual_sacrifice_inv.1 = { #Sacrifice of a prisoner to improve the prosperity of
 						}
 					}
 					modifier = {
-						factor = 2 
+						factor = 2
 						trigger = {
 							scope:ritual_sacrifice = {
 								is_female = yes
@@ -201,7 +201,7 @@ ritual_sacrifice_inv.2 = { #Tribe approves
 	right_portrait = current_ruler
 	right_portrait = scope:officiating_priest
 	left_portrait = scope:ritual_sacrifice
-	
+
 	trigger = {
 		has_law = adopt_human_sacrifice_law_tribal
 	}
@@ -238,7 +238,7 @@ ritual_sacrifice_inv.3 = { #Tribe disapproves
 	right_portrait = current_ruler
 	right_portrait = scope:officiating_priest
 	left_portrait = scope:ritual_sacrifice
-	
+
 	trigger = {
 		has_law = adopt_human_sacrifice_law_tribal
 	}
@@ -264,4 +264,4 @@ ritual_sacrifice_inv.3 = { #Tribe disapproves
 			duration = 3650
 		}
 	}
-}	
+}
