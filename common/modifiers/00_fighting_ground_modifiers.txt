@@ -3,10 +3,10 @@
 	heavy_infantry_plains_combat_bonus = 0.25
 	heavy_infantry_farmland_combat_bonus = 0.25
 	heavy_infantry_oasis_combat_bonus = 0.25
-}	
+}
 
-light_mounted_terrain_boni = {	
-	
+light_mounted_terrain_boni = {
+
 	light_cavalry_plains_combat_bonus = 1.0
 	light_cavalry_mountain_combat_bonus = -0.25
 	light_cavalry_hills_combat_bonus = 0.25
@@ -27,10 +27,10 @@ light_mounted_terrain_boni = {
 	horse_archers_jungle_combat_bonus = -0.25
 	horse_archers_farmland_combat_bonus = 1.0
 	horse_archers_oasis_combat_bonus = 1.0
-	horse_archers_forest_combat_bonus = 0.25	
-}	
+	horse_archers_forest_combat_bonus = 0.25
+}
 
-heavy_mounted_terrain_boni = {	
+heavy_mounted_terrain_boni = {
 
 	heavy_cavalry_plains_combat_bonus = 1.0
 	heavy_cavalry_mountain_combat_bonus = -0.25
@@ -42,7 +42,7 @@ heavy_mounted_terrain_boni = {
 	heavy_cavalry_farmland_combat_bonus = 1.0
 	heavy_cavalry_oasis_combat_bonus = 1.0
 	heavy_cavalry_forest_combat_bonus = 0.25
-	
+
 	camels_plains_combat_bonus = 0.75
 	camels_mountain_combat_bonus = -0.50
 	camels_desert_combat_bonus = 1.50
@@ -51,8 +51,8 @@ heavy_mounted_terrain_boni = {
 	camels_jungle_combat_bonus = -0.50
 	camels_farmland_combat_bonus = 0.75
 	camels_oasis_combat_bonus = 1.50
-	camels_forest_combat_bonus = 0.0	
-	
+	camels_forest_combat_bonus = 0.0
+
 	warelephant_plains_combat_bonus = 1.0
 	warelephant_hills_combat_bonus = 0.25
 	warelephant_desert_combat_bonus = 1.0
@@ -66,13 +66,13 @@ heavy_mounted_terrain_boni = {
 }
 
 naval_terrain_boni = {
-	
+
 	liburnian_riverine_terrain_combat_bonus = 0.25
 	trireme_riverine_terrain_combat_bonus = 0.15
 	hexere_riverine_terrain_combat_bonus = -0.1
 	octere_riverine_terrain_combat_bonus = -0.2
-	mega_galley_riverine_terrain_combat_bonus = -0.3 
-	
+	mega_galley_riverine_terrain_combat_bonus = -0.3
+
 	liburnian_ocean_combat_bonus = -0.2
 	hexere_ocean_combat_bonus = 0.15
 	octere_ocean_combat_bonus = 0.2
@@ -85,18 +85,4 @@ INR_Tributary_Terrain = {
 	hexere_tributary_terrain_combat_bonus = -0.15
 	octere_tributary_terrain_combat_bonus = -0.3
 	mega_galley_tributary_terrain_combat_bonus = -0.5
-}
-
-
-# cultural_assimilation_debuff
-cultural_assimilation_debuff_1 = {
-	cultural_assimilation_speed_modifier = -0.6 # starting
-}
-
-cultural_assimilation_debuff_2 = {
-	cultural_assimilation_speed_modifier = -0.4 # after one decision
-}
-
-cultural_assimilation_debuff_3 = {
-	cultural_assimilation_speed_modifier = -0.2 # after 2 decisions
 }

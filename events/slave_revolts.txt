@@ -664,9 +664,9 @@ slave_revolts.6 = {
 		num_of_slaves >= slave_revolt_svalue		#Ratio of slaves and minimum size
 		owner = {
 			NOT = {
-				has_country_modifier = brewing_slave_revolt				#only one revolt at a time
-				has_country_modifier = satisified_riot_demands
-				has_country_modifier = satisified_initial_slaves_demands
+				has_variable = brewing_slave_revolt				#only one revolt at a time
+				has_country_modifier = satisfied_riot_demands
+				has_country_modifier = satisfied_initial_slaves_demands
 				has_country_modifier = slave_revolt_succesful				#protected
 				has_country_modifier = ongoing_slave_revolt				#only one snowball at a time
 				has_province_modifier = recent_slave_revolt				#Safe for a bit
@@ -694,7 +694,7 @@ slave_revolts.6 = {
 				min = -60
 			}
 			add_country_modifier = {
-				name = satisified_initial_slaves_demands
+				name = satisfied_initial_slaves_demands
 				duration = 3650
 			}
 			hidden_effect = {
@@ -760,7 +760,7 @@ slave_revolts.7 = {
 			add_stability = -10
 			add_political_influence = -25
 			add_country_modifier = {
-				name = satisified_riot_demands
+				name = satisfied_riot_demands
 				duration = 3650
 			}
 			hidden_effect = {

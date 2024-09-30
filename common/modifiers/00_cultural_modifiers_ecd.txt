@@ -373,3 +373,16 @@ annexed_my_home_culture_lenient = {
 annexed_my_home_culture = {
 	culture_happiness_modifier = -0.12
 }
+
+# cultural_assimilation_debuff
+cultural_assimilation_debuff_1 = {
+	cultural_assimilation_speed_modifier = -0.6 # starting
+}
+
+cultural_assimilation_debuff_2 = {
+	cultural_assimilation_speed_modifier = -0.4 # after one decision
+}
+
+cultural_assimilation_debuff_3 = {
+	cultural_assimilation_speed_modifier = -0.2 # after 2 decisions
+}
