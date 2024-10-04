@@ -5,12 +5,12 @@
 #	3rd NOTE: If a specific subunit cannot be constructed for some reason another one that can from that tier will replace it ( if possible )
 #
 
-levy_caucasian = {	#Iberia, Kartli & Colchis 
+levy_caucasian = {	#Iberia, Kartli & Colchis
 	default = no
 
-	light_infantry = 0.4	
+	light_infantry = 0.6
 	light_cavalry = 0.3
-	heavy_cavalry = 0.3
+	heavy_cavalry = 0.1
 }
 
 levy_albanian = {
