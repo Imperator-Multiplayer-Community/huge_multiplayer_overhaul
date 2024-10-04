@@ -94,12 +94,21 @@ base_window = {
 							blockoverride "Text" { text = "[TradeView.GetPlayer.GetModifierValue('global_commerce_modifier')]" }
 							tooltip = "[TradeView.GetPlayer.GetModifierTooltip('global_commerce_modifier')]"
 						}
-						#icon_and_text = {
-						#	size = { 124 0 }
-						#	blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/global_state_trade_routes.dds" }
-						#	blockoverride "Text" { text = "[TradeView.GetPlayer.GetModifierValue('global_state_trade_routes')]" }
-						#	tooltip = "[TradeView.GetPlayer.GetModifierTooltip('global_state_trade_routes')]"
-						#}
+					}
+					vbox = {
+						layoutpolicy_vertical = expanding
+						icon_and_text = {
+							size = { 124 0 }
+							blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/global_state_trade_routes.dds" }
+							blockoverride "Text" { text = "[TradeView.GetPlayer.GetModifierValue('global_state_trade_routes')|2]" }
+							tooltip = "[TradeView.GetPlayer.GetModifierTooltip('global_state_trade_routes')]"
+						}
+						icon_and_text = {
+							size = { 124 0 }
+							blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/empty.dds" }
+							blockoverride "Text" { text = "" }
+							tooltip = ""
+						}
 					}
 					vbox = {
 						layoutpolicy_horizontal = expanding
@@ -257,7 +266,7 @@ base_window = {
 							datamodel = "[TradeView.GetCurrentTradeRoutes]"
 							item = {
 								widget = {
-									size = { 658 38 }
+									size = { 698 38 }
 									list_entry = {
 										size = { 100% 100% }
 									}
@@ -305,19 +314,19 @@ base_window = {
 										}
 
 										widget = {
-											size = { 200 100% }
+											size = { 196 100% }
 											onmousehierarchyenter = "[SetHighlightArea( ActiveTradeRoute.GetFrom.GetArea )]"
 											textbox = {
 												using = BaseFontS
 												using = Black_FontColor
 												text = "[ActiveTradeRoute.GetFrom.GetShortName]"
-												size = { 130 28 }
+												size = { 160 28 }
 												align = left
 												alwaystransparent = no
 												parentanchor = vcenter
 												elide = right
 												fontsize_min = 12
-												max_width = 130
+												max_width = 160
 											}
 
 											goto_button = { #TODO
@@ -329,21 +338,60 @@ base_window = {
 												blockoverride "On_click" { onclick = "[OnClickOnState(ActiveTradeRoute.GetFrom)]" }
 											}
 										}
-										#widget = {}
+
 										widget = {
-											size = { 200 100% }
+											size = { 34 34 }
+
+											country_flag = {
+												datacontext = "[ActiveTradeRoute.GetTo.GetCountry]"
+												tooltip = "COUNTRY_SHORTHAND_INFO"
+												parentanchor = vcenter
+
+												blockoverride "flag"
+												{
+													texture = "[ActiveTradeRoute.GetTo.GetCountry.AccessCoatOfArms.GetTexture('(int32)56','(int32)56')]"
+													frame = "[ActiveTradeRoute.GetTo.GetCountry.AccessCoatOfArms.GetFrame('(int32)56','(int32)56')]"
+													framesize = { 56 56 }
+												}
+												blockoverride "size"
+												{
+													size = { 34 34 }
+												}
+
+												blockoverride "click"
+												{
+													onclick = "[OpenDiplomacy(ActiveTradeRoute.GetTo.GetCountry)]"
+												}
+
+												blockoverride "hover_leave"
+												{
+													onmousehierarchyleave = "[ClearHighlightColors]"
+												}
+
+												blockoverride "show_as_button"
+												{
+													visible = no
+												}
+												blockoverride "show_as_icon"
+												{
+													visible = yes
+												}
+											}
+										}
+										widget = {
+											size = { 196 100% }
 											onmousehierarchyenter = "[SetHighlightArea( ActiveTradeRoute.GetTo.GetArea )]"
 											textbox = {
 												using = BaseFontS
 												using = Black_FontColor
 												text = "[ActiveTradeRoute.GetTo.GetShortName]"
-												size = { 130 28 }
+												size = { 160 28 }
 												align = left
 												alwaystransparent = no
 												parentanchor = vcenter
 												elide = right
 												fontsize_min = 12
-												max_width = 130
+												max_width = 160
 											}
 
 											goto_button = { #TODO
