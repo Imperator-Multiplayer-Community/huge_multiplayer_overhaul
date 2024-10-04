@@ -1,263 +1,275 @@
 ﻿
-alcimachid = { 
+alcimachid = {
 	type = status
-	
+
 	prominence = 20
 	country = {
 		diplomatic_reputation = 1
 		price_execute_cost_modifier = -0.25
 	}
 	province = {
-		local_tax_modifier = 0.05
+		local_tax_modifier = 0.025
 	}
 }
 
-antigonids = { 
+antigonids = {
 	type = status
-	
+
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		agressive_expansion_monthly_change = -0.02
-		civic_tech_investment = 0.05
+		agressive_expansion_monthly_change = -0.025
+		civic_tech_investment = 0.025
 	}
 	province = {
-		local_monthly_state_loyalty = 0.05
+		local_monthly_state_loyalty = 0.025
 	}
 }
 
-antipatrid = { 
+antipatrid = {
 	type = status
-	
+
 	character_loyalty = -5
 	prominence = 20
 	charisma = 1
+	health = -0.1
 	country = {
-		build_cost = -0.01
-		monthly_legitimacy = 0.03
+		build_cost = -0.015
+		monthly_legitimacy = 0.025
 	}
 	province = {
-		local_slaves_output = 0.05
+		local_slaves_output = 0.025
 	}
 }
 
-argeads = { 
+argeads = {
 	type = status
-	
+
 	prominence = 20
 	martial = 1
 	support_for_character_as_heir = 5
-	
+	health = -0.1
+
 	country = {
-		agressive_expansion_impact = -0.1
-		monthly_legitimacy = 0.05
+		agressive_expansion_impact = -0.025
+		monthly_legitimacy = 0.025
 	}
 	province = {
-		local_monthly_civilization = 0.02
+		local_monthly_civilization = 0.025
 	}
 }
 
-lagids = { 
+lagids = {
 	type = status
-	
+
 	prominence = 20
 	zeal = 1
+	health = -0.1
 	country = {
-		happiness_for_wrong_culture_group_modifier = 0.05
-		research_points_modifier = 0.05
+		happiness_for_wrong_culture_group_modifier = 0.025
+		research_points_modifier = 0.025
 	}
 	province = {
-		local_nobles_output = 0.1
+		local_nobles_output = 0.025
 	}
 }
 
-seleucids = { 
+seleucids = {
 	type = status
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		change_governor_policy_cost_modifier = -0.20
-		global_monthly_state_loyalty = 0.05
+		change_governor_policy_cost_modifier = -0.1
+		global_monthly_state_loyalty = 0.025
 	}
 	province = {
-		state_commerce_modifier = 0.05
-	}
-}
-	
-agiad = { 
-	type = status
-	
-	prominence = 20
-	country = {
-		military_tech_investment = 0.05
-	}
-	province = {
-		 local_manpower_modifier = 0.1
+		state_commerce_modifier = 0.025
 	}
 }
 
-achaemenid = { 
+agiad = {
 	type = status
-	
+
+	prominence = 20
+	country = {
+		military_tech_investment = 0.025
+	}
+	province = {
+		 local_manpower_modifier = 0.025
+	}
+}
+
+achaemenid = {
+	type = status
+
 	prominence = 20
 	charisma = 1
+	health = -0.1
 	country = {
-		war_score_cost = -0.1
-		agressive_expansion_impact = -0.1
+		war_score_cost = -0.025
+		agressive_expansion_impact = -0.025
 	}
 	province = {
-		local_unrest = -1
+		local_unrest = -0.025
 	}
 }
 
-maurya = { 
+maurya = {
 	type = status
-	
+
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		civic_tech_investment = 0.05
-		build_time = -0.2
+		civic_tech_investment = 0.025
+		build_time = -0.025
 	}
 	province = {
-		local_population_growth = 0.05
+		local_population_growth = 0.025
 	}
 }
 
-aeacidae = { 
+aeacidae = {
 	type = status
 	prominence = 20
 	country = {
-		military_tech_investment = 0.05
-		siege_ability = 0.1
+		military_tech_investment = 0.025
+		siege_ability = 0.025
 	}
 	province = {
-		local_cohort_start_experience = 10 	
+		local_cohort_start_experience = 10
 	}
 }
 
-zadok = { 
+zadok = {
 	type = status
 	prominence = 20
 	zeal = 1
+	health = -0.1
 	country = {
-		omen_power = 0.1
-		religious_tech_investment = 0.05
+		omen_power = 0.025
+		religious_tech_investment = 0.025
 	}
 	province = {
-		local_defensive = 0.1
+		local_defensive = 0.025
 	}
 }
 
-agathocles = { 
+agathocles = {
 	type = status
 	prominence = 20
 	charisma = 1
+	health = -0.1
 	country = {
 		monthly_tyranny = -0.02
-		oratory_tech_investment = 0.1
+		oratory_tech_investment = 0.025
 	}
 	province = {
-		local_slaves_output = 0.1
+		local_slaves_output = 0.025
 	}
 }
 
-orontid = { 
+orontid = {
 	type = status
 	prominence = 20
 	country = {
-		garrison_size = 0.2
-		fort_maintenance_cost = -0.2
+		garrison_size = 0.025
+		fort_maintenance_cost = -0.025
 	}
 	province = {
-		local_defensive = 0.10
+		local_defensive = 0.025
 	}
 }
 
-atropates = { 
+atropates = {
 	type = status
 	prominence = 20
 	zeal = 1
+	health = -0.1
 	country = {
-		religious_tech_investment = 0.05
-		omen_power = 0.1
+		religious_tech_investment = 0.025
+		omen_power = 0.025
 	}
 	province = {
-		local_happiness_for_same_religion_modifier = 0.05
+		local_happiness_for_same_religion_modifier = 0.025
 	}
 }
 
-barca = { 
+barca = {
 	type = status
 	prominence = 20
 	country = {
-		siege_ability = 0.1
+		siege_ability = 0.025
 	}
 	province = {
-		supply_limit_modifier = 0.1
+		supply_limit_modifier = 0.025
 	}
 }
 
-arsaces = { 
+arsaces = {
 	type = status
 	prominence = 20
 	country = {
-		happiness_for_same_culture_modifier = 0.01
-		global_unrest = -0.2	
+		happiness_for_same_culture_modifier = 0.025
+		global_unrest = -0.025
 	}
 	province = {
-		local_tax_modifier = 0.05
+		local_tax_modifier = 0.025
 	}
 }
 
-spartocid = { 
+spartocid = {
 	type = status
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		global_population_growth = 0.03
-		global_commerce_modifier = 0.05	
+		global_population_growth = 0.015
+		global_commerce_modifier = 0.025
 	}
 	province = {
-		local_citizen_output = 0.1
+		local_citizen_output = 0.05
 	}
 }
 
-sophytid = { 
+sophytid = {
 	type = status
 	prominence = 20
 	charisma = 1
+	health = -0.1
 	country = {
 		diplomatic_reputation = 1
-		oratory_tech_investment = 0.05
+		oratory_tech_investment = 0.025
 	}
 	province = {
-		local_tax_modifier = 0.05
+		local_tax_modifier = 0.025
 	}
 }
 
-diodotus = { 
+diodotus = {
 	type = status
 	prominence = 20
 	country = {
 		loyalty_to_overlord = -50
-		happiness_for_same_culture_modifier = 0.01
-		army_maintenance_cost = -0.05
+		happiness_for_same_culture_modifier = 0.025
+		army_maintenance_cost = -0.025
 	}
 	province = {
-		local_manpower_modifier = 0.1
+		local_manpower_modifier = 0.025
 	}
 }
 
-brennus = { 
+brennus = {
 	type = status
 	prominence = 20
 	country = {
-		siege_ability = 0.1
-		garrison_size = 0.1	
+		siege_ability = 0.025
+		garrison_size = 0.025
 	}
 	province = {
-		local_tribesmen_output = 0.1
+		local_tribesmen_output = 0.025
 	}
 }
 
@@ -265,21 +277,23 @@ illyrius = {
 	type = status
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		happiness_for_same_culture_modifier = 0.01
-		monthly_legitimacy = 0.03
+		happiness_for_same_culture_modifier = 0.025
+		monthly_legitimacy = 0.025
 	}
 	province = {
-		local_freemen_output = 0.05
+		local_freemen_output = 0.025
 	}
 }
 
 ashokalegendary = {
 	type = status
 	zeal = 1
+	health = -0.1
 	country = {
-		agressive_expansion_impact = -0.1
-		research_points_modifier = 0.05
+		agressive_expansion_impact = -0.025
+		research_points_modifier = 0.025
 	}
 
 }
@@ -287,6 +301,7 @@ ashokalegendary = {
 pyrrhuslegendary = {
 	type = status
 	zeal = 1
+	health = -0.1
 	country = {
 		diplomatic_range_modifier = 1.2
 	}
@@ -295,9 +310,10 @@ pyrrhuslegendary = {
 chandraguptalegendary = {
 	type = status
 	zeal = 1
+	health = -0.1
 	country = {
-		omen_power = 0.1
-		global_population_growth = 0.05
+		omen_power = 0.025
+		global_population_growth = 0.015
 	}
 
 }
@@ -306,12 +322,13 @@ claudii = {
 	type = status
 	prominence = 20
 	zeal = 1
+	health = -0.1
 	country = {
-		garrison_size = 0.1
-		omen_power = 0.1
+		garrison_size = 0.025
+		omen_power = 0.025
 	}
 	province = {
-		local_defensive = 0.1
+		local_defensive = 0.025
 	}
 }
 
@@ -319,12 +336,13 @@ cornelii = {
 	type = status
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		build_cost = -0.02
-		global_commerce_modifier = 0.05	
+		build_cost = -0.015
+		global_commerce_modifier = 0.025
 	}
 	province = {
-		local_freemen_output = 0.1
+		local_freemen_output = 0.025
 	}
 }
 
@@ -332,12 +350,13 @@ fabii = {
 	type = status
 	prominence = 20
 	charisma = 1
+	health = -0.1
 	country = {
-		monthly_tyranny = -0.02
-		agressive_expansion_monthly_change = -0.03
+		monthly_tyranny = -0.025
+		agressive_expansion_monthly_change = -0.025
 	}
 	province = {
-		local_manpower_modifier = 0.1
+		local_manpower_modifier = 0.025
 	}
 }
 
@@ -345,52 +364,55 @@ demosthenid = {
 	type = status
 	prominence = 20
 	charisma = 1
+	health = -0.1
 	country = {
 		diplomatic_reputation = 1
-		garrison_size = 0.1
+		garrison_size = 0.025
 	}
 	province = {
-		local_defensive = 0.1
+		local_defensive = 0.025
 	}
 }
 
-mithridates = { 
+mithridates = {
 	type = status
-	
+
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		technology_investment = 0.05
-		global_commerce_modifier = 0.05
+		technology_investment = 0.025
+		global_commerce_modifier = 0.025
 	}
 	province = {
-		local_research_points_modifier = 0.05
+		local_research_points_modifier = 0.025
 	}
 }
 
-superbus = { 
+superbus = {
 	type = status
-	
+
 	prominence = 20
 	finesse = 1
+	health = -0.1
 	country = {
-		build_cost = -0.02
-		build_time = -0.15
+		build_cost = -0.015
+		build_time = -0.025
 	}
 	province = {
-		local_tax_modifier = 0.05
+		local_tax_modifier = 0.025
 	}
 }
 
-vercingetorix = { 
+vercingetorix = {
 	type = status
-	
+
 	prominence = 20
 	country = {
-		global_manpower_modifier = 0.05
-		monthly_centralization = 0.05
+		global_manpower_modifier = 0.025
+		monthly_centralization = 0.025
 	}
 	province = {
-		local_monthly_civilization = 0.02
+		local_monthly_civilization = 0.025
 	}
 }
