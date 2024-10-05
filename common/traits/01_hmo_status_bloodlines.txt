@@ -1,0 +1,418 @@
+﻿
+alcimachid = {
+	type = status
+
+	prominence = 20
+	country = {
+		diplomatic_reputation = 1
+		price_execute_cost_modifier = -0.25
+	}
+	province = {
+		local_tax_modifier = 0.025
+	}
+}
+
+antigonids = {
+	type = status
+
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		agressive_expansion_monthly_change = -0.025
+		civic_tech_investment = 0.025
+	}
+	province = {
+		local_monthly_state_loyalty = 0.025
+	}
+}
+
+antipatrid = {
+	type = status
+
+	character_loyalty = -5
+	prominence = 20
+	charisma = 1
+	health = -0.1
+	country = {
+		build_cost = -0.015
+		monthly_legitimacy = 0.025
+	}
+	province = {
+		local_slaves_output = 0.025
+	}
+}
+
+argeads = {
+	type = status
+
+	prominence = 20
+	martial = 1
+	support_for_character_as_heir = 5
+	health = -0.1
+
+	country = {
+		agressive_expansion_impact = -0.025
+		monthly_legitimacy = 0.025
+	}
+	province = {
+		local_monthly_civilization = 0.025
+	}
+}
+
+lagids = {
+	type = status
+
+	prominence = 20
+	zeal = 1
+	health = -0.1
+	country = {
+		happiness_for_wrong_culture_group_modifier = 0.025
+		research_points_modifier = 0.025
+	}
+	province = {
+		local_nobles_output = 0.025
+	}
+}
+
+seleucids = {
+	type = status
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		change_governor_policy_cost_modifier = -0.1
+		global_monthly_state_loyalty = 0.025
+	}
+	province = {
+		state_commerce_modifier = 0.025
+	}
+}
+
+agiad = {
+	type = status
+
+	prominence = 20
+	country = {
+		military_tech_investment = 0.025
+	}
+	province = {
+		 local_manpower_modifier = 0.025
+	}
+}
+
+achaemenid = {
+	type = status
+
+	prominence = 20
+	charisma = 1
+	health = -0.1
+	country = {
+		war_score_cost = -0.025
+		agressive_expansion_impact = -0.025
+	}
+	province = {
+		local_unrest = -0.025
+	}
+}
+
+maurya = {
+	type = status
+
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		civic_tech_investment = 0.025
+		build_time = -0.025
+	}
+	province = {
+		local_population_growth = 0.025
+	}
+}
+
+aeacidae = {
+	type = status
+	prominence = 20
+	country = {
+		military_tech_investment = 0.025
+		siege_ability = 0.025
+	}
+	province = {
+		local_cohort_start_experience = 10
+	}
+}
+
+zadok = {
+	type = status
+	prominence = 20
+	zeal = 1
+	health = -0.1
+	country = {
+		omen_power = 0.025
+		religious_tech_investment = 0.025
+	}
+	province = {
+		local_defensive = 0.025
+	}
+}
+
+agathocles = {
+	type = status
+	prominence = 20
+	charisma = 1
+	health = -0.1
+	country = {
+		monthly_tyranny = -0.02
+		oratory_tech_investment = 0.025
+	}
+	province = {
+		local_slaves_output = 0.025
+	}
+}
+
+orontid = {
+	type = status
+	prominence = 20
+	country = {
+		garrison_size = 0.025
+		fort_maintenance_cost = -0.025
+	}
+	province = {
+		local_defensive = 0.025
+	}
+}
+
+atropates = {
+	type = status
+	prominence = 20
+	zeal = 1
+	health = -0.1
+	country = {
+		religious_tech_investment = 0.025
+		omen_power = 0.025
+	}
+	province = {
+		local_happiness_for_same_religion_modifier = 0.025
+	}
+}
+
+barca = {
+	type = status
+	prominence = 20
+	country = {
+		siege_ability = 0.025
+	}
+	province = {
+		supply_limit_modifier = 0.025
+	}
+}
+
+arsaces = {
+	type = status
+	prominence = 20
+	country = {
+		happiness_for_same_culture_modifier = 0.025
+		global_unrest = -0.025
+	}
+	province = {
+		local_tax_modifier = 0.025
+	}
+}
+
+spartocid = {
+	type = status
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		global_population_growth = 0.015
+		global_commerce_modifier = 0.025
+	}
+	province = {
+		local_citizen_output = 0.05
+	}
+}
+
+sophytid = {
+	type = status
+	prominence = 20
+	charisma = 1
+	health = -0.1
+	country = {
+		diplomatic_reputation = 1
+		oratory_tech_investment = 0.025
+	}
+	province = {
+		local_tax_modifier = 0.025
+	}
+}
+
+diodotus = {
+	type = status
+	prominence = 20
+	country = {
+		loyalty_to_overlord = -50
+		happiness_for_same_culture_modifier = 0.025
+		army_maintenance_cost = -0.025
+	}
+	province = {
+		local_manpower_modifier = 0.025
+	}
+}
+
+brennus = {
+	type = status
+	prominence = 20
+	country = {
+		siege_ability = 0.025
+		garrison_size = 0.025
+	}
+	province = {
+		local_tribesmen_output = 0.025
+	}
+}
+
+illyrius = {
+	type = status
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		happiness_for_same_culture_modifier = 0.025
+		monthly_legitimacy = 0.025
+	}
+	province = {
+		local_freemen_output = 0.025
+	}
+}
+
+ashokalegendary = {
+	type = status
+	zeal = 1
+	health = -0.1
+	country = {
+		agressive_expansion_impact = -0.025
+		research_points_modifier = 0.025
+	}
+
+}
+
+pyrrhuslegendary = {
+	type = status
+	zeal = 1
+	health = -0.1
+	country = {
+		diplomatic_range_modifier = 1.2
+	}
+}
+
+chandraguptalegendary = {
+	type = status
+	zeal = 1
+	health = -0.1
+	country = {
+		omen_power = 0.025
+		global_population_growth = 0.015
+	}
+
+}
+
+claudii = {
+	type = status
+	prominence = 20
+	zeal = 1
+	health = -0.1
+	country = {
+		garrison_size = 0.025
+		omen_power = 0.025
+	}
+	province = {
+		local_defensive = 0.025
+	}
+}
+
+cornelii = {
+	type = status
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		build_cost = -0.015
+		global_commerce_modifier = 0.025
+	}
+	province = {
+		local_freemen_output = 0.025
+	}
+}
+
+fabii = {
+	type = status
+	prominence = 20
+	charisma = 1
+	health = -0.1
+	country = {
+		monthly_tyranny = -0.025
+		agressive_expansion_monthly_change = -0.025
+	}
+	province = {
+		local_manpower_modifier = 0.025
+	}
+}
+
+demosthenid = {
+	type = status
+	prominence = 20
+	charisma = 1
+	health = -0.1
+	country = {
+		diplomatic_reputation = 1
+		garrison_size = 0.025
+	}
+	province = {
+		local_defensive = 0.025
+	}
+}
+
+mithridates = {
+	type = status
+
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		technology_investment = 0.025
+		global_commerce_modifier = 0.025
+	}
+	province = {
+		local_research_points_modifier = 0.025
+	}
+}
+
+superbus = {
+	type = status
+
+	prominence = 20
+	finesse = 1
+	health = -0.1
+	country = {
+		build_cost = -0.015
+		build_time = -0.025
+	}
+	province = {
+		local_tax_modifier = 0.025
+	}
+}
+
+vercingetorix = {
+	type = status
+
+	prominence = 20
+	country = {
+		global_manpower_modifier = 0.025
+		monthly_centralization = 0.025
+	}
+	province = {
+		local_monthly_civilization = 0.025
+	}
+}

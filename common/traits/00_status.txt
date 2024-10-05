@@ -54,87 +54,12 @@ olympic_competitor = {
 	disallow_job = yes
 	disallow_office = yes
 	disallow_command = yes
-	
-}
 
-alcimachid = {
-	type = status
-	
-	prominence = 20
-	martial = 1
-	country = {
-		diplomatic_reputation = 1
-		price_execute_cost_modifier = -0.25
-	}
-	
-}
-
-antigonids = {
-	type = status
-	
-	prominence = 20
-	finesse = 1
-	country = {
-		agressive_expansion_monthly_change = -0.01
-		global_defensive = 0.05
-	}
-	
-}
-
-antipatrid = {
-	type = status
-	
-	character_loyalty = -5
-	prominence = 20
-	charisma = 1
-	country = {
-		build_cost = -0.01
-		monthly_legitimacy = 0.1
-	}
-	
-}
-
-argeads = {
-	type = status
-	
-	prominence = 20
-	martial = 1
-	
-	support_for_character_as_heir = 5
-
-	country = {
-		agressive_expansion_impact = -0.1
-		monthly_legitimacy = 0.05
-		stability_monthly_change = 0.05
-	}
-	
-}
-
-lagids = {
-	type = status
-	
-	prominence = 20
-	zeal = 1
-	country = {
-		happiness_for_wrong_culture_group_modifier = wrong_culture_group_large
-		research_points_modifier = 0.05
-	}
-	
-}
-
-seleucids = {
-	type = status
-	prominence = 20
-	finesse = 1
-	country = {
-		change_governor_policy_cost_modifier = -0.25
-		global_monthly_state_loyalty = 0.05
-	}
 }
 
 mercenary_trait = {
 	type = status
-	
+
 	martial = 5
 }
 
