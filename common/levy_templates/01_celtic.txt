@@ -8,7 +8,7 @@
 levy_gallic = {
 	default = no
 
-	archers = 0.4	
+	archers = 0.4
 	heavy_infantry = 0.3
 	light_cavalry = 0.3
 }
@@ -23,7 +23,7 @@ levy_italian_gallic = {
 
 levy_northern_gallic = {
 	default = no
-	
+
 	light_infantry = 0.4
 	light_cavalry = 0.3
 	heavy_infantry = 0.3
@@ -34,7 +34,7 @@ levy_gallic_panonian = {
 
 	light_infantry = 0.5
 	light_cavalry = 0.2
-	heavy_infantry = 0.2
+	heavy_infantry = 0.3
 }
 
 levy_norican = {
@@ -55,8 +55,8 @@ levy_britannic = {
 
 levy_celtiberian = {
 	default = no
-	
+
 	light_infantry = 0.4
-	heavy_infantry = 0.3	
+	heavy_infantry = 0.3
 	light_cavalry = 0.3
 }

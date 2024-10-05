@@ -15,7 +15,7 @@ levy_general_greek = {	#Poleis with Hoplites
 
 levy_cretan = {
 	default = no
-	
+
 	#Basic:
 	archers = 0.6
 	#Advanced:
@@ -25,7 +25,7 @@ levy_cretan = {
 
 levy_macedonian = {
 	default = no
-	
+
 	light_infantry = 0.4
 	heavy_infantry = 0.3
 	light_cavalry = 0.3
@@ -34,7 +34,7 @@ levy_macedonian = {
 
 levy_magna_graecia = {
 	default = no
-	
+
 	light_infantry = 0.5
 	heavy_infantry = 0.3
 	light_cavalry = 0.2
@@ -42,7 +42,7 @@ levy_magna_graecia = {
 
 levy_spartan = {
 	default = no
-	
+
 	light_infantry = 0.5
 	heavy_infantry = 0.4
 	light_cavalry = 0.1
@@ -50,7 +50,7 @@ levy_spartan = {
 
 levy_argolis = {
 	default = no
-	
+
 	light_infantry = 0.5
 	heavy_infantry = 0.3
 	light_cavalry = 0.2
@@ -58,18 +58,18 @@ levy_argolis = {
 
 levy_thessalian = {
 	default = no
-	
-	light_infantry = 0.45
-	heavy_cavalry = 0.3
-	light_cavalry = 0.25
+
+	light_infantry = 0.6
+	heavy_cavalry = 0.1
+	light_cavalry = 0.3
 }
 
 levy_cyrene = {
 	default = no
 
-	light_infantry = 0.7
-	heavy_infantry = 0.15
-	camels = 0.15
+	light_infantry = 0.4
+	heavy_infantry = 0.3
+	camels = 0.3
 }
 
 levy_bosporan_greek = {

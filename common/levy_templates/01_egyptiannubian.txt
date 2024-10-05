@@ -32,7 +32,7 @@ levy_blemmyan = {	#Blemmyan
 levy_ethiopian = {	#Axumite
 	default = no
 
-	light_infantry = 0.3
-	heavy_cavalry = 0.3
-	camels = 0.4
+	light_infantry = 0.6
+	heavy_cavalry = 0.1
+	camels = 0.3
 }
