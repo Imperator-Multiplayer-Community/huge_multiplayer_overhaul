@@ -1,0 +1,511 @@
+﻿### Dacian ###
+
+deity_pleistoros = { # WAR
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_pleistoros = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_war
+	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
+	omen = { land_morale_modifier = omen_land_morale_modifier_svalue } #Bonus from Omen
+	on_activate = {
+		military_apotheosis_defensive_effect = yes
+	}
+	religion = shamanism
+	deity_category = war #This Deity uses a War slot.
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_zalmoxis = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_zalmoxis = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { research_points_modifier = deity_research_points_modifier_svalue }
+	omen = { global_monthly_civilization = omen_global_monthly_civilization_svalue } #Bonus from Omen
+	on_activate = {
+		culture_apotheosis_assimilate_effect = yes
+	}
+	religion = shamanism
+	deity_category = culture #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+### Thracian ###
+
+deity_derzelas = { # ECONOMY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_derzelas = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_tax_modifier = deity_global_tax_modifier_svalue }
+	omen = { global_population_growth = 0.05 }
+	on_activate = {
+		economy_income_effect = yes
+	}
+	religion = shamanism
+	deity_category = economy #This Deity uses an Economy Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_bassareus = { # FERTILITY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_bassareus = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_love
+	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
+	omen = { global_slaves_output = omen_global_slaves_output_svalue }
+	on_activate = {
+		fertility_apotheosis_capital_slaves_effect = yes
+	}
+	religion = shamanism
+	deity_category = fertility #This Deity uses a Fertility Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_sabazios = { # WAR
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_sabazios = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_war
+	passive_modifier = { land_morale_modifier = deity_land_morale_modifier_svalue }
+	omen = { light_cavalry_discipline = 0.08 }
+	on_activate = {
+		military_apotheosis_military_experience_effect = yes
+	}
+	religion = shamanism
+	deity_category = war #This Deity uses a War slot.
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_bendis = { # ECONOMY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_bendis = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+			has_variable = ath_unique_mech
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
+	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+	}
+	religion = shamanism
+	deity_category = economy #This Deity uses an Economy Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_zibelthiurdos = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_zibelthiurdos = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { agressive_expansion_monthly_change = deity_aggressive_expansion_monthly_change_svalue }
+	omen = { agressive_expansion_monthly_change = omen_aggressive_expansion_monthly_change_svalue }
+	on_activate = {
+		culture_apotheosis_capital_effect = yes
+	}
+	religion = shamanism
+	deity_category = culture #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_semele = { # FERTILITY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_semele = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_love
+	passive_modifier = { global_food_capacity = deity_global_food_capacity_svalue }
+	omen = { global_monthly_food_modifier = omen_global_monthly_food_modifier } #Bonus from Omen
+	on_activate = {
+		fertility_apotheosis_food_effect = yes
+	}
+	religion = shamanism
+	deity_category = fertility #This Deity uses a Fertility Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+### Invictus ###
+deity_zichos = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_zichos = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_tribal_eloquence
+	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
+	omen = { research_points_modifier = omen_research_points_modifier_svalue }
+	on_activate = {
+		culture_apotheosis_capital_effect = yes
+	}
+	religion = shamanism
+	deity_category = culture #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+deity_kandaon = { # ECONOMY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_kandaon = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_tribal_wealth
+	passive_modifier = { land_morale_modifier = deity_land_morale_modifier_svalue }
+	omen = { global_pop_assimilation_speed_modifier = omen_global_pop_assimilation_speed_modifier_svalue }
+	on_activate = {
+		economy_apotheosis_capital_noble_effect = yes
+	}
+	religion = shamanism
+	deity_category = economy #This Deity uses an Economy Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+deity_kotyto = { # FERTILITY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_kandaon = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_tribal_love
+	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
+	omen = { global_population_growth = omen_global_population_growth } #Bonus from Omen
+	on_activate = {
+		fertility_apotheosis_food_effect= yes
+	}
+	religion = shamanism
+	deity_category = fertility #This Deity uses a Fertility Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_tis = { # WAR
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_tis = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_tribal_war
+	passive_modifier = { siege_ability = 0.1 }
+	omen = { discipline = omen_discipline_svalue }
+	on_activate = {
+		military_apotheosis_manpower_effect = yes
+	}
+	religion = shamanism
+	deity_category = war #This Deity uses a War Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+deity_medaurus = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			# common_deity_trigger = {
+			# 	RELIGION = illyrian_pantheon
+			# }
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_medaurus = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_tribal_war
+	passive_modifier = { army_maintenance_cost = deity_army_maintenance_cost_svalue }
+	omen = { light_cavalry_discipline = 0.08 }
+	religion = shamanism
+	deity_category = war #This Deity uses a War Slot
+
+	on_activate = {
+		military_apotheosis_military_experience_effect = yes
+	}
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+deity_thrax = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_thrax = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_pop_assimilation_speed_modifier = deity_global_pop_assimilation_speed_modifier_svalue }
+	omen = { civic_tech_investment = omen_civic_tech_investment_svalue }
+	on_activate = {
+		culture_apotheosis_oratory_tech_effect = yes
+	}
+	religion = shamanism
+	deity_category = culture #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+###########################################
+##########Added_by_Neidhardt###############
+########################################### 
+
+deity_kapnobatai = { # WAR
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_kapnobatai = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_tribal_war
+	passive_modifier = { global_defensive = 0.06 }
+	omen = { fort_maintenance_cost = omen_fort_maintenance_cost_svalue } #Bonus from Omen
+	on_activate = {
+		military_apotheosis_manpower_effect = yes
+	}
+	religion = shamanism
+	deity_category = war #This Deity uses a War Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_polistai = { # ECONOMY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_polistai = {
+				holy_site_deity_check_trigger = yes
+			}
+			primary_culture = thracian
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { build_cost = deity_build_cost_svalue }
+	omen = { monthly_wage_modifier = omen_monthly_wage_modifier_svalue }
+	on_activate = {
+		culture_apotheosis_capital_effect = yes
+	}
+	religion = shamanism
+	deity_category = economy #This Deity uses an Economy Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_ktistai = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_ktistai = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { happiness_for_same_culture_modifier = deity_happiness_for_same_culture_modifier_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue }
+	on_activate = {
+		culture_apotheosis_assimilate_effect = yes
+	}
+	religion = shamanism
+	deity_category = culture #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_hestia = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_hestia = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_love
+	passive_modifier = { happiness_for_same_culture_modifier = deity_happiness_for_same_culture_modifier_svalue }
+	omen = { global_monthly_food_modifier = omen_global_monthly_food_modifier }
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+	}
+	religion = shamanism
+	deity_category = fertility #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_orfeu = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			common_deity_trigger = {
+				RELIGION = shamanism
+			}
+			deity:omen_orfeu = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_love
+	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
+	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue }
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+	}
+	religion = shamanism
+	deity_category = fertility #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}

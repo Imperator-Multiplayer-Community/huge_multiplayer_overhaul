@@ -142,7 +142,7 @@ deity_latra = {
 	}
 	icon = deity_wealth
 	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
-	omen = { global_citizen_happyness = omen_global_citizen_happiness_svalue } #Bonus from Omen
+	omen = { global_pop_assimilation_speed_modifier = omen_global_pop_assimilation_speed_modifier_svalue }
 	religion = roman_pantheon
 	deity_category = economy 
 	
@@ -172,7 +172,7 @@ deity_tadenus = {
 	}
 	icon = deity_eloquence
 	passive_modifier = { happiness_for_same_culture_modifier = deity_happiness_for_same_culture_modifier_svalue }
-	omen = { ruler_popularity_gain = omen_ruler_popularity_gain_svalue } #Bonus from Omen
+	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue }
 	religion = roman_pantheon
 	deity_category = culture #This Deity uses a Culture Slot
 	
@@ -229,8 +229,8 @@ deity_vidasus = {
 		}
 	}
 	icon = deity_wealth
-	passive_modifier = { global_monthly_food_modifier = deity_global_monthly_food_modifier_svalue }
-	omen = { hostile_attrition = omen_hostile_attrition_svalue } #Bonus from Omen
+	passive_modifier = { light_cavalry_discipline = 0.04 }
+	omen = { global_freemen_output = omen_global_freemen_output_svalue }
 	religion = roman_pantheon
 	deity_category = economy #This Deity uses an Economy Slot
 	
@@ -388,7 +388,7 @@ deity_deipatros = {
 		}
 	}
 	icon = deity_eloquence
-	passive_modifier = { ruler_popularity_gain = deity_ruler_popularity_gain_svalue }
+	passive_modifier = { manpower_recovery_speed = deity_global_manpower_recovery_speed_svalue }
 	omen = { agressive_expansion_monthly_change = omen_aggressive_expansion_monthly_change_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = culture #This Deity uses a Culture Slot
@@ -486,3 +486,155 @@ deity_lahona = {
 	}
 }
 ### Exclusive Deity Checks ###
+
+
+###########################################
+##########Added_by_Neidhardt###############
+########################################### 
+
+deity_latra = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		country_culture_group = illyrian_group
+		NOT = { primary_culture = messapian }
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = roman_pantheon
+			}
+			deity:omen_latra = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
+	omen = { global_tax_modifier = omen_global_tax_modifier_svalue }
+	religion = roman_pantheon
+	deity_category = economy 
+	
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		fertility_apotheosis_capital_slaves_effect = yes
+	}
+	
+}
+
+deity_thekuker = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		country_culture_group = illyrian_group
+		NOT = { primary_culture = messapian }
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = roman_pantheon
+			}
+			deity:omen_thekuker = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
+	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue }
+	religion = roman_pantheon
+	deity_category = economy 
+	
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		fertility_apotheosis_capital_slaves_effect = yes
+	}
+	
+}
+
+deity_cadmus = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		country_culture_group = illyrian_group
+		NOT = { primary_culture = messapian }
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = roman_pantheon
+			}
+			deity:omen_cadmus = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
+	omen = { global_slaves_output = omen_global_slaves_output_svalue }
+	religion = roman_pantheon
+	deity_category = economy 
+	
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		culture_apotheosis_assimilate_effect = yes
+	}
+}
+
+deity_thedrakon = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		country_culture_group = illyrian_group
+		NOT = { primary_culture = messapian }
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = roman_pantheon
+			}
+			deity:omen_thedrakon = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { global_pop_assimilation_speed_modifier = deity_global_pop_assimilation_speed_modifier_svalue }
+	omen = { civic_tech_investment = omen_civic_tech_investment_svalue }
+	religion = roman_pantheon
+	deity_category = culture
+	
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+	}
+}
+
+deity_apollodrakania = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		country_culture_group = illyrian_group
+		NOT = { primary_culture = messapian }
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = roman_pantheon
+			}
+			deity:omen_apollodrakania = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_pop_assimilation_speed_modifier = deity_global_pop_assimilation_speed_modifier_svalue }
+	omen = { global_commerce_modifier = omen_global_commerce_modifier_svalue }
+	religion = roman_pantheon
+	deity_category = economy 
+	
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+	
+	on_activate = {
+		culture_apotheosis_assimilate_effect = yes
+	}
+}

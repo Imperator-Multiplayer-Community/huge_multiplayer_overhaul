@@ -1,0 +1,81 @@
+﻿"BYB"={
+	country="BYB"
+	92={
+		first_name="Gerasthart"
+		family_name="Garashtratid"
+		birth_date=384.8.7
+		culture="phoenician"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=5
+		add_finesse=5
+		add_zeal=7
+		no_traits=yes
+		add_trait="devout"
+		add_gold=400
+		add_popularity=80
+		# c:ARA={
+		# 	set_as_ruler=char:92
+		# }
+		dna="aexp7LOCs4LSzNLMAnsCewJ3AncCfgJ+AmYCZgJ0AnQCbwJvApYClgJvAm8CaAJoAooCigOnA6cBcAFwAooCigSyBLICcgJyAnsCewKKAooCdAJ0An4CfgJtAm0CcAJwAm0CbQTMBMwCjAKMABUAFQKLAosCawJrAoACgAJ/An8CbAJsACIAIgJsAmwCmAKYAmkCaQJ/An8CgwKDAo4CjgKCAoICfAJ8AoMCgwKOAo4CmQKZAo0CjQKQApACigKKApECkQOqA6oCbQJtAnUCdQKbApsCagJqAmcCZwKJAokCaAJoADAAMAFiAWIABQAFAIAAgAFDAUMAFAAUARIBEgCdAJ0ALwAvAMMAwwFGAUYBVgFWAXoBegAAAAAAxQDFAIEAgQEtAS0AUgBSAXEBcQFKAUoDXgNeAD8APwAAAAAAzwDPAuYC5gEHAQcALAAsAMcAxwFKAUoBeQF5AQQBBADYANgDCAMIAUcBRwEJAQkDewN7AAAAAAVRBVEEcARwAbABsALqAuoDiQOJAzsDOwAAAAAAAAAAAAAAAA=="
+	}
+	93={
+		first_name="Abd-'Ashtart"
+		family_name="Garashtratid"
+		birth_date=400.4.7
+		culture="phoenician"
+		religion="carthaginian_pantheon"
+		father="char:92"
+		no_stats=yes
+		add_martial=5
+		add_charisma=5
+		add_finesse=6
+		add_zeal=4
+		no_traits=yes
+		add_trait="ambitious"
+		add_gold=400
+		add_popularity=80
+		dna="Te1N7bOJs4nu2u7aAWIBYgKMAowCegJ6AoYChgJ9An0CgQKBAnoCegKIAogCkwKTAokCiQKNAo0CkgKSAm4CbgBLAEsChQKFAoACgAKRApECbgJuAnkCeQJ+An4ARABEAo0CjQJ1AnUCZgJmAmsCawKPAo8CbgJuAnkCeQKLAosCkQKRAosCiwKJAokBTwFPA7IDsgJpAmkCbQJtAooCigJrAmsChgKGAmYCZgJuAm4CfwJ/AmsCawOtA60CgwKDAm8CbwKQApACbwJvAVMBUwKZApkCmQKZAnwCfAJrAmsCgAKAAn4CfgQgBCAA+AD4AGQAZAKhAqEAmgCaAO0A7QAaABoASQBJAIcAhwBJAEkBcQFxAVQBVAAAAAAANQA1AuIC4gKTApMBEQERASoBKgCTAJMDZwNnAKAAoAAAAAAAZQBlAWwBbALQAtAAcwBzANwA3ADJAMkBAwEDAx4DHgKfAp8ClwKXAwkDCQM4AzgL4QvhAAAAAAUdBR0E/gT+AeEB4QKKAooDqgOqAw0DDQAAAAAAAAAAAAAAAA=="
+	}
+	94={
+		first_name="Aynel"
+		family = c:BYB.fam:Aynelid
+		birth_date=374.7.4
+		culture="phoenician"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=6
+		add_charisma=5
+		add_finesse=5
+		add_zeal=4
+		no_traits=yes
+		add_trait="devout"
+		add_gold=400
+		add_popularity=80
+		c:BYB={
+			set_as_ruler=char:94
+		}
+		dna="f+9/74CMgIzk9eT1AnQCdAKGAoYDsgOyAmkCaQKBAoECfgJ+Am8CbwJuAm4ARgBGAosCiwJoAmgDwQPBApUClQKGAoYAHAAcAo0CjQJsAmwClAKUAocChwJ8AnwCkQKRAnACcAKGAoYCeQJ5ABEAEQKSApIChQKFBLsEuwKLAosCiQKJApcClwKDAoMCkAKQAn4CfgFiAWICZwJnAVsBWwJvAm8CaQJpAnACcAJrAmsCcgJyApkCmQKVApUCmAKYAoQChAJ7AnsAMQAxAnECcQKbApsCjAKMAD4APgKNAo0CjQKNAnICcgKhAqEAWwBbAAMAAwC1ALUAkwCTAHgAeAK4ArgAxgDGAO0A7QCvAK8EnQSdABEAEQB/AH8AnQCdAoICggCaAJoABQAFAUQBRAE+AT4BbwFvAPMA8wB/AH8AAQABAA0ADQAHAAcA3ADcAEoASgF4AXgA6gDqBNUE1QDSANIC3ALcBIYEhgB3AHcMZwxnAH8AfwXiBeIDdQN1AY0BjQLVAtUDSANIABcAFwAAAAAAAAAA"
+	}
+	95={
+		first_name="Abd-Elonim"
+		family_name = "Elonimid"
+		birth_date=380.6.14
+		culture="phoenician"
+		religion="carthaginian_pantheon"
+		no_stats=yes
+		add_martial=4
+		add_charisma=3
+		add_finesse=6
+		add_zeal=6
+		no_traits=yes
+		add_trait="scholar"
+		add_gold=500
+		add_popularity=80
+		# c:SID={
+		# 	set_as_ruler=char:95
+		# }
+		dna="XfVd9aOIo4j+xf7FAnoCegJwAnACkgKSApMCkwKXApcCiwKLAnECcQKGAoYCiwKLAWYBZgAjACMChgKGAmsCawKSApICggKCAnUCdQJ9An0E3gTeAn4CfgJ7AnsCggKCApMCkwKQApACawJrAVUBVQOZA5kChQKFApYClgKAAoACkwKTAokCiQBJAEkCcAJwAm0CbQTZBNkCmAKYAngCeAKYApgCjQKNAosCiwJ4AngDqAOoAn4CfgKMAowBcwFzAnUCdQJzAnMCiwKLAokCiQKaApoCawJrAnUCdQOcA5wChgKGAosCiwIVAhUApQClAJAAkAFeAV4AKgAqAuAC4AAvAC8BMQExAQ8BDwEaARoDEAMQAH4AfgAAAAAAHwAfAE8ATwA+AD4BIwEjAO4A7gEqASoACQAJAOYA5gAAAAABOwE7AtoC2gArACsAMQAxABUAFQC0ALQBJAEkAkgCSAAAAAABFQEVAyYDJgA1ADUF8AXwAAAAAAX1BfUELwQvAcYBxgJAAkADzwPPA/gD+AAAAAAAAAAAAAAAAA=="
+	}
+}

@@ -1,6 +1,6 @@
 ﻿### General Deity Checks ###
 
-deity_semnocosus = { # WAR 
+deity_semnocosus = { # WAR
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
@@ -77,7 +77,7 @@ deity_eacus = { # CULTURE
 		}
 	}
 	icon = deity_iberian_culture
-	passive_modifier = { diplomatic_reputation = deity_diplomatic_reputation_svalue }
+	passive_modifier = { country_civilization_value = 3 }
 	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue } #Bonus from Omen
 	on_activate = {
 		culture_apotheosis_assimilate_effect = yes
@@ -150,6 +150,38 @@ deity_endouellicus = { # FERTILITY
 	}
 }
 
+deity_aqueloo = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			primary_culture = edetanian
+			#primary_culture = contestani
+		}
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = animism
+			}
+			deity:omen_aqueloo = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_iberian_fertility
+	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
+	omen = { global_citizen_happyness = omen_global_citizen_happiness_svalue } #Bonus from Omen
+	religion = animism
+	deity_category = fertility #This Deity uses a Fertility Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+
+	on_activate = {
+		fertility_apotheosis_capital_slaves_effect = yes
+	}
+
+}
+
 deity_candamius = { # WAR
 	trigger = {
 		polytheistic_check_religion_trigger = yes
@@ -210,7 +242,7 @@ deity_ataecina = { # CULTURE
 	}
 }
 
-deity_cariocecus = { # WAR 
+deity_cariocecus = { # WAR
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
@@ -288,7 +320,7 @@ deity_nabia = { # ECONOMY
 	}
 	icon = deity_iberian_economy
 	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
-	omen = { naval_damage_done = omen_naval_damage_done_svalue } #Bonus from Omen
+	omen = { naval_morale_modifier = omen_naval_morale_modifier_svalue } #Bonus from Omen
 	on_activate = {
 		naval_apotheosis_effect = yes
 	}
@@ -300,7 +332,7 @@ deity_nabia = { # ECONOMY
 	}
 }
 
-deity_neto = { # WAR 
+deity_neto = { # WAR
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
@@ -360,4 +392,123 @@ deity_borvo = { # ECONOMY
 	}
 }
 
+deity_bandua = { # ECONOMY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = animism
+			}
+			deity:omen_bandua = {
+				holy_site_deity_check_trigger = yes
+			}
+			country_culture_group = celt_iberia
+			primary_culture = turdetanian
+			primary_culture = turdulian
+			primary_culture = oretanian
+		}
+	}
+	icon = deity_iberian_economy
+	passive_modifier = { global_tax_modifier = deity_global_tax_modifier_svalue }
+	omen = { global_nobles_output = omen_global_nobles_output_svalue }
+	on_activate = {
+		naval_apotheosis_effect = yes
+	}
+	religion = animism
+	deity_category = economy #This Deity uses an Economy Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_bormanicus = { # FERTILITY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = animism
+			}
+			deity:omen_bormanicus = {
+				holy_site_deity_check_trigger = yes
+			}
+			country_culture_group = celt_iberia
+			primary_culture = turdetanian
+			primary_culture = turdulian
+			primary_culture = oretanian
+		}
+	}
+	icon = deity_iberian_fertility
+	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
+	omen = { global_slaves_output = omen_global_slaves_output_svalue }
+	on_activate = {
+		fertility_apotheosis_food_effect = yes
+	}
+	religion = animism
+	deity_category = fertility #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_cossus = { # FERTILITY
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = animism
+			}
+			deity:omen_cossus = {
+				holy_site_deity_check_trigger = yes
+			}
+			country_culture_group = celt_iberia
+			primary_culture = turdetanian
+			primary_culture = turdulian
+			primary_culture = oretanian
+		}
+	}
+	icon = deity_iberian_fertility
+	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
+	omen = { global_population_happiness = omen_global_population_happiness }
+	on_activate = {
+		economy_apotheosis_province_improvement_effect = yes
+	}
+	religion = animism
+	deity_category = fertility #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_reue = { # CULTURE
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = animism
+			}
+			deity:omen_reue = {
+				holy_site_deity_check_trigger = yes
+			}
+			country_culture_group = celt_iberia
+			primary_culture = turdetanian
+			primary_culture = turdulian
+			primary_culture = oretanian
+		}
+	}
+	icon = deity_iberian_culture
+	passive_modifier = { happiness_for_same_culture_modifier = deity_happiness_for_same_culture_modifier_svalue }
+	omen = { global_pop_assimilation_speed_modifier = omen_global_pop_assimilation_speed_modifier_svalue }
+	on_activate = {
+		culture_apotheosis_capital_effect = yes
+	}
+	religion = animism
+	deity_category = culture #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
 ### Exclusive Deity Checks ###

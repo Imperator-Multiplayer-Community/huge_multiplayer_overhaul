@@ -221,8 +221,8 @@ deity_ahura_mazda = {
 		}
 	}
 	icon = deity_war
-	passive_modifier = { land_morale_modifier = deity_land_morale_modifier_svalue }
-	omen = { army_maintenance_cost = deity_army_maintenance_cost_svalue }
+	passive_modifier = { agressive_expansion_monthly_change = deity_aggressive_expansion_monthly_change_svalue }
+	omen = { discipline = omen_discipline_svalue }
 	on_activate = {
 		military_apotheosis_military_experience_effect = yes
 	}
@@ -271,8 +271,8 @@ deity_vahista = {
 		}
 	}
 	icon = deity_love
-	passive_modifier = { global_monthly_food_modifier = omen_global_monthly_food_modifier }
-	omen = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier } #Bonus from Omen
+	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
+	omen = { happiness_for_same_religion_modifier = omen_happiness_for_same_religion_modifier_svalue }
 	on_activate = {
 		fertility_apotheosis_capital_effect = yes
 	}
@@ -347,7 +347,7 @@ deity_spenta_mainyu = {
 	}
 	icon = deity_wealth
 	passive_modifier = { global_citizen_output = deity_global_citizen_output_svalue }
-	omen = { global_commerce_modifier = deity_global_commerce_modifier_svalue } #Bonus from Omen
+	omen = { global_commerce_modifier = omen_global_commerce_modifier_svalue } #Bonus from Omen
 	on_activate = {
 		economy_apotheosis_province_improvement_effect = yes
 	}
@@ -371,7 +371,7 @@ deity_haurvatat = {
 		}
 	}
 	icon = deity_wealth
-	passive_modifier = { happiness_for_wrong_culture_group_modifier = deity_happiness_for_wrong_culture_group_modifier_svalue }
+	passive_modifier = { stability_monthly_change = deity_stability_monthly_change }
 	omen = { global_population_happiness = omen_global_population_happiness }
 	on_activate = {
 		economy_apotheosis_province_improvement_effect = yes
@@ -384,8 +384,6 @@ deity_haurvatat = {
 	}
 }
 
-### Exclusive Deity Checks ###
-
 deity_mithra = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
@@ -396,11 +394,10 @@ deity_mithra = {
 			deity:omen_mithra = {
 				holy_site_deity_check_trigger = yes
 			}
-			tag = PRN
 		}
 	}
 	icon = deity_eloquence
-	passive_modifier = { happiness_for_same_religion_modifier = deity_happiness_for_same_religion_modifier }
+	passive_modifier = { happiness_for_same_culture_modifier = deity_happiness_for_same_culture_modifier_svalue }
 	omen = { monthly_corruption = omen_monthly_corruption } #Bonus from Omen
 	on_activate = {
 		culture_apotheosis_characters_effect = yes
@@ -409,11 +406,145 @@ deity_mithra = {
 			limit = {
 				is_monarchy = yes
 			}
-			add_legitimacy = 5
+			add_legitimacy = 15
 		}
 	}
 	religion = zoroaster
 	deity_category = culture #This Deity uses a Culture Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+###########################################
+##########Added_by_Neidhardt###############
+########################################### 
+
+deity_darius = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = zoroaster
+			}
+			deity:omen_darius = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_war
+	passive_modifier = { global_freemen_output = deity_global_freemen_output_svalue }
+	omen = { discipline = omen_discipline_svalue }
+	on_activate = {
+		military_apotheosis_capital_freemen_effect = yes
+	}
+	religion = zoroaster
+	deity_category = war #This Deity uses a War Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_cyrus = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = zoroaster
+			}
+			deity:omen_cyrus = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_love
+	passive_modifier = { country_civilization_value = 3 }
+	omen = { global_tax_modifier = omen_global_tax_modifier_svalue }
+	on_activate = {
+		fertility_apotheosis_capital_slaves_effect = yes
+	}
+	religion = zoroaster
+	deity_category = fertility #This Deity uses a fertility slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_mainyu = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = zoroaster
+			}
+			deity:omen_mainyu = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_war
+	passive_modifier = { archers_discipline = 0.04 }
+	omen = { land_morale_modifier = omen_land_morale_modifier_svalue }
+	on_activate = {
+		military_apotheosis_defensive_effect = yes
+		}
+	religion = zoroaster
+	deity_category = war #This Deity uses a war slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_haaoma = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = zoroaster
+			}
+			deity:omen_haaoma = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_wealth
+	passive_modifier = { global_slaves_output = deity_global_slaves_output_svalue }
+	omen = { global_population_growth = 0.05 }
+	on_activate = {
+		fertility_apotheosis_capital_effect  = yes
+	}
+	religion = zoroaster
+	deity_category = economy #This Deity uses an Economy Slot
+
+	deification_trigger = {
+		can_deify_trigger = yes
+	}
+}
+
+deity_tiri_and_tishtrya = {
+	trigger = {
+		polytheistic_check_religion_trigger = yes
+		OR = {
+			rare_deity_trigger = {
+				RELIGION = zoroaster
+			}
+			deity:omen_tiri_and_tishtrya = {
+				holy_site_deity_check_trigger = yes
+			}
+		}
+	}
+	icon = deity_eloquence
+	passive_modifier = { price_found_city_cost_modifier = -0.15 }
+	omen = { price_found_metropolis_cost_modifier = -0.25 }
+	on_activate = {
+		culture_apotheosis_rel_tech_effect = yes
+	}
+	religion = zoroaster
+	deity_category = culture #This Deity uses an Economy Slot
 
 	deification_trigger = {
 		can_deify_trigger = yes

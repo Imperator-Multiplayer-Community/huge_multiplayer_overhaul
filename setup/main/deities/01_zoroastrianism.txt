@@ -70,6 +70,36 @@ deity_manager = {
 			key = omen_mithra
 			deity = deity_mithra
 		}
+
+		326 = {
+			key = omen_darius
+			deity = deity_darius
+			deify_ruler = 431
+			deify_ruler_permanent = yes
+			is_universal_deity = yes
+		}
+
+		327 = {
+			key = omen_cyrus
+			deity = deity_cyrus
+			deify_ruler = 432
+			deify_ruler_permanent = yes
+			is_universal_deity = yes
+		}
+
+		328 = {
+			key = omen_mainyu
+			deity = deity_mainyu
+		}
+
+		329 = {
+			key = omen_haaoma
+			deity = deity_haaoma
+		}
+
+		330 = {
+			key = omen_tiri_and_tishtrya
+			deity = deity_tiri_and_tishtrya
+		}
 	}
 }
-

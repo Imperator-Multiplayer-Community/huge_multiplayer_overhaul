@@ -63,6 +63,30 @@ deity_manager = {
 		99115 = {
 			key = omen_lahona
 			deity = deity_lahona
+
+###########################################
+##########Added_by_Neidhardt###############
+########################################### 
+		}
+		99116 = {
+			key = omen_enji
+			deity = deity_enji
+		}
+		99117 = {
+			key = omen_thekuker
+			deity = deity_thekuker
+		}
+		99118 = {
+			key = omen_cadmus
+			deity = deity_cadmus
+		}
+		99119 = {
+			key = omen_thedrakon
+			deity = deity_thedrakon
+		}
+		99120 = {
+			key = omen_apollodrakania
+			deity = deity_apollodrakania
 		}
 	}
 }
