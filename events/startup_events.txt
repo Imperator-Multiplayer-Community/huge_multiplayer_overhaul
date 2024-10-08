@@ -221,3 +221,13 @@ startup_events.11 = {
 		}
 	}
 }
+
+# set free recruitment law
+startup_events.12 = {
+		type = country_event
+		hidden = yes
+		immediate = {
+			set_free_recruitment_law = yes
+		}
+	}
+}

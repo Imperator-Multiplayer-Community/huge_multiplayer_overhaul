@@ -1225,6 +1225,30 @@ widget = {
 			}
 		}
 
+		###########################
+		#Unspent civ points
+		###########################
+		alert = {
+			datacontext = "[GetScriptedGui('free_recruitment_law')]"
+			visible = "[And(ScriptedGui.IsShown(GuiScope.SetRoot(AlertManager.GetPlayer.MakeScope).End), AlertManager.ShowAlert('free_recruitment_law'))]"
+			tooltip = "ALERT_FREE_RECRUITMENT_LAW"
+			blockoverride "Color"
+			{
+				frame = 8
+			}
+			using = green_alert
+			blockoverride "On_click"
+			{
+				onclick = "[OpenGameView('government')]"
+				onrightclick = "[AlertManager.ToggleShowAlert('free_recruitment_law')]"
+			}
+
+			blockoverride "Icon"
+			{
+				texture = "gfx/interface/icons/shared_icons/civilization.dds"
+			}
+		}
+
 		dynamicgridbox = {
 			name = "diploicon_grid"
 			size = { 580 200 }

@@ -17,6 +17,12 @@
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -42,6 +48,12 @@
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -71,6 +83,12 @@
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
 			hidden_effect = {
 				if = {
 					limit = {

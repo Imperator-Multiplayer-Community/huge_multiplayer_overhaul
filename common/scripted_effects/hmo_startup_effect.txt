@@ -1,0 +1,26 @@
+set_free_recruitment_law = {
+	if = {
+		limit = {
+			NOT = {
+				has_variable = free_recruitment_law
+			}
+		}
+
+		set_variable = {
+			name = free_recruitment_law
+			days = 90
+		}
+	}
+}
+
+refund_enact_recruitment_law = {
+	if = {
+		limit = {
+			has_variable = free_recruitment_law
+		}
+
+		add_political_influence = 25
+		add_stability = 10
+		remove_variable = free_recruitment_law
+	}
+}
