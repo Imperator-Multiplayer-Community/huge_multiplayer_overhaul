@@ -2528,6 +2528,7 @@ on_game_initialized = {
 		startup_events.10		# removes food trade goods from cities
 		startup_events.11		# adds looting policy
 		startup_events.12		# adds free recruitment law
+		startup_events.13		# sets starting gold, influence, manpower, and laws
 		tutorial.1
 		dhe_dde_pyrrhus.24
 		flavor_egy.8
