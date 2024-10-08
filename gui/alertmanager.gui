@@ -1226,7 +1226,7 @@ widget = {
 		}
 
 		###########################
-		#Unspent civ points
+		#Fre Recruitment Law
 		###########################
 		alert = {
 			datacontext = "[GetScriptedGui('free_recruitment_law')]"

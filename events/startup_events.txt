@@ -231,3 +231,14 @@ startup_events.12 = {
 		}
 	}
 }
+
+# set starting gold and influence and laws
+startup_events.12 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		set_starting_gold = yes
+		set_starting_influence = yes
+		set_starting_laws = yes
+	}
+}

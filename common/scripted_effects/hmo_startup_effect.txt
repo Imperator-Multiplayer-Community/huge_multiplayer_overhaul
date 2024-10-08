@@ -24,3 +24,78 @@ refund_enact_recruitment_law = {
 		remove_variable = free_recruitment_law
 	}
 }
+
+set_starting_gold = {
+	if = {
+		limit = {
+			treasury < 200
+		}
+
+		while = {
+			limit = {
+				treasury < 200
+			}
+
+			add_treasury = 1
+		}
+	}
+	else_if = {
+		limit = { treasury > 200 }
+		while = {
+			limit = { treasury > 200 }
+			add_treasury = -1
+		}
+	}
+}
+
+set_starting_influence = {
+	if = {
+		limit = {
+			political_influence < 100
+		}
+
+		while = {
+			limit = {
+				political_influence < 100
+			}
+
+			add_political_influence = 1
+		}
+	}
+	else_if = {
+		limit = { political_influence > 100 }
+		while = {
+			limit = { political_influence > 100 }
+			add_political_influence = -1
+		}
+	}
+}
+
+set_starting_laws = {
+	if = {
+		limit = {
+			is_monarchy = yes
+		}
+
+		change_law = relaxed_recruiting_standards
+	}
+
+	if = {
+		limit = {
+			is_republic = yes
+			NOT = {
+				tag = ROM
+			}
+		}
+
+		change_law = republican_recruitment_3
+	}
+
+	if = {
+		limit = {
+			tag = ROM
+		}
+
+		change_law = testamentum_militis
+	}
+}
