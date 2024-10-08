@@ -226,6 +226,17 @@ startup_events.11 = {
 startup_events.12 = {
 	type = country_event
 	hidden = yes
+	trigger = {
+		OR = {
+			NOT = {
+				is_ai = yes
+			}
+			NOT = {
+				is_tribal = yes
+			}
+		}
+
+	}
 	immediate = {
 		set_free_recruitment_law = yes
 	}

@@ -74,12 +74,14 @@ monarchy_military_reforms = {
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+
 			if = {
 				limit = {
 					has_variable = free_recruitment_law
 				}
 				refund_enact_recruitment_law = yes
 			}
+
 			hidden_effect = {
 				if = {
 					limit = {
@@ -88,7 +90,6 @@ monarchy_military_reforms = {
 
 					remove_variable = has_enacted_standing_army
 				}
-				refund_enact_recruitment_law = yes
 			}
 		}
 	}
@@ -132,13 +133,13 @@ monarchy_military_reforms = {
 			}
 		}
 		modifier = {
+			levy_size_multiplier = -0.03
+			max_mercenary_stacks = 1
+			cohort_reinforcement_speed = 0.075
+			land_morale_recovery = 0.075
 			recruit_mercenary_cost_modifier = -0.25
 			mercenary_land_maintenance_cost = -0.25
 			mercenary_naval_maintenance_cost = -0.25
-			max_mercenary_stacks = 1
-			levy_size_multiplier = -0.03
-			cohort_reinforcement_speed = 0.075
-			land_morale_recovery = 0.075
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region

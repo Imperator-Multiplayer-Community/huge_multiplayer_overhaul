@@ -1,4 +1,4 @@
-set_free_recruitment_law = {
+﻿set_free_recruitment_law = {
 	if = {
 		limit = {
 			NOT = {
@@ -63,9 +63,9 @@ set_starting_influence = {
 		}
 	}
 	else_if = {
-		limit = { political_influence > 100 }
+		limit = { political_influence > 125 }
 		while = {
-			limit = { political_influence > 100 }
+			limit = { political_influence > 125 }
 			add_political_influence = -1
 		}
 	}
@@ -97,5 +97,9 @@ set_starting_laws = {
 		}
 
 		change_law = testamentum_militis
+	}
+
+	trigger_event = {
+		id = startup_events.12
 	}
 }

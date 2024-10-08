@@ -25,6 +25,7 @@
 		food_share.1		# shares food with allies
 		migrant_women_and_children.1		# migrant army debuff at war
 		migrant_women_and_children.2		# migrant army debuff remove not at war
+		fighting_ground_military_events.1		# terrain bonuses // ensures they are always active
 	}
 	random_events = {
 		550 = 0

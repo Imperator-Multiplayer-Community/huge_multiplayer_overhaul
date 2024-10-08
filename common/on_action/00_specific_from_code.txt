@@ -2527,15 +2527,14 @@ on_game_initialized = {
 		startup_events.9		# remove extra border forts
 		startup_events.10		# removes food trade goods from cities
 		startup_events.11		# adds looting policy
-		startup_events.12		# adds free recruitment law
 		startup_events.13		# sets starting gold, influence, manpower, and laws
+		#startup_events.12		# adds free recruitment law (triggered by startup_events.13)
 		tutorial.1
 		dhe_dde_pyrrhus.24
 		flavor_egy.8
 		dhe_heraclea_pontica.1
 		#free_inventions.1 #Please keep this event here, useful for testing purposes, as it adds 40 inventions
 		fighting_ground_military_events.1		#Combat terrain modifier events
-		fighting_ground_military_events.2
 		fighting_ground_military_events.3 # cultural assimilation debuff
 		iberian_starting_country_events.1
 		iberian_starting_country_events.2
@@ -2613,12 +2612,6 @@ on_game_initialized = {
 		### Cultural Minority Rights ###
 		startup_cultural_decisions_effect = yes
 		### Other ###
-		if = {
-			limit = {
-				has_law = work_for_the_best
-			}
-			set_legion_recruitment = capital
-		}
 		add_innovation = {
 			value = oratory_tech
 		}
