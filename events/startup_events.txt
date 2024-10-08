@@ -221,3 +221,35 @@ startup_events.11 = {
 		}
 	}
 }
+
+# set free recruitment law
+startup_events.12 = {
+	type = country_event
+	hidden = yes
+	trigger = {
+		OR = {
+			NOT = {
+				is_ai = yes
+			}
+			NOT = {
+				is_tribal = yes
+			}
+		}
+
+	}
+	immediate = {
+		set_free_recruitment_law = yes
+	}
+}
+
+# set starting gold and influence and laws and manpower
+startup_events.13 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		set_starting_gold = yes
+		set_starting_influence = yes
+		set_starting_laws = yes
+		add_manpower = 10
+	}
+}

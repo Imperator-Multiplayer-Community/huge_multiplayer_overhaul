@@ -46,14 +46,16 @@ new_friends_law_desc:0 "A personal touch helps to align interests."
 pay_the_crown_law:0 "Burdensome Tribute"
 pay_the_crown_law_desc:0 "Subjects will pay what they must to ensure their overlord's protection."
 monarchy_recruitment_5:0 "Mercenary Reliance"
-monarchy_recruitment_5_desc:0 "We rely in Mercs"
+monarchy_recruitment_5_desc:0 "We rely on Mercenaries."
 
+legion_law_warning:0 "#R Once a legion has been established, cannot go back to levy laws. #!"
 already_enacted_marian_reforms:0 "Has not already enacted Marian Reforms."
 marian_reforms_warning:0 "Once Marian Reforms has been enacted, cannot go back to capital only legion law."
 already_enacted_military_modernization:0 "Has not already enacted Marian Reforms."
 military_modernization_warning:0 "Once Marian Reforms has been enacted, cannot go back to capital only legion law."
 already_enacted_standing_army:0 "Has not already enacted Standing Army."
 standing_army_warning:0 "#R Once Standing Army has been enacted, cannot go back to capital only legion law. #!"
+
 
 monarchy_pantheon_law:0 "State Religion"
 default_pantheon_law:0 "Ancestral Customs"
@@ -92,7 +94,7 @@ super_centralized_military_law_one:0 "Rural"
 super_centralized_military_law_one_desc:0 "The tribes prefer the old ways, with each member of the tribes carrying their own weapon."
 super_centralized_military_law_two:0 "We Are Legion"
 super_centralized_military_law_two_desc:0 "The tribes have set aside their difference and have united under one banner. None shall withstand our power."
-   
+
 
 #Law events
 law_events.1.t:0 "Piracy!"

@@ -6,53 +6,101 @@
 		}
 	}
 	republican_recruitment_3 = {
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			levy_size_multiplier = 0.025
-			global_population_happiness = 0.05
-			discipline = 0.025
-			land_morale_modifier = 0.05
-			experience_decay = -0.02
-			monthly_military_experience = 0.15
-			army_maintenance_cost = 0.5
-			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
-			mercenary_naval_maintenance_cost = -0.25 
+			land_morale_recovery = 0.1
+			global_cohort_start_experience = 0.5
+			experience_decay = -0.9
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
 	}
-	republican_recruitment_1 = { 
+	republican_recruitment_1 = {
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			levy_size_multiplier = 0.035
-			global_population_happiness = -0.05
-			manpower_recovery_speed = 0.2
-			global_manpower_modifier = 0.1 
-			discipline = -0.025
-			monthly_military_experience = 0.20
-			army_maintenance_cost = 0.5
-			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
-			mercenary_naval_maintenance_cost = -0.25 
+			levy_size_multiplier = 0.03
+			global_manpower_modifier = 0.1
+			experience_decay = -0.9
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
 	}
 
 	republican_recruitment_5 = {
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			mercenary_land_maintenance_cost = -0.35
+			levy_size_multiplier = -0.03
 			max_mercenary_stacks = 1
-			levy_size_multiplier = -0.025
 			cohort_reinforcement_speed = 0.075
 			land_morale_recovery = 0.075
-			monthly_military_experience = 0.125
-			army_maintenance_cost = 0.5
+			recruit_mercenary_cost_modifier = -0.25
+			mercenary_land_maintenance_cost = -0.25
+			mercenary_naval_maintenance_cost = -0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
 	}
 
@@ -75,14 +123,15 @@
 		}
 		modifier = {
 			global_manpower_modifier = 0.10
-			levy_size_multiplier = 0.025
 			army_maintenance_cost = -0.10
-			monthly_military_experience = 0.20
+			monthly_military_experience = 0.10
 			mercenary_land_maintenance_cost = 0.25
+			mercenary_naval_maintenance_cost = 0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
 			set_legion_recruitment = capital
+			custom_tooltip = "legion_law_warning"
 		}
 	}
 	republican_recruitment_4 = {
@@ -95,11 +144,13 @@
 			monthly_military_experience = 0.15
 			army_maintenance_cost = 0.10
 			general_loyalty = -2
-			mercenary_land_maintenance_cost = 0.20
+			mercenary_land_maintenance_cost = 0.25
+			mercenary_naval_maintenance_cost = 0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region
 			set_legion_recruitment = enabled
+			custom_tooltip = "legion_law_warning"
 			custom_tooltip = "military_modernization_warning"
 			hidden_effect = {
 				if = {
@@ -118,7 +169,7 @@
 
 republic_election_reforms = { # Electoral Reforms
 	potential = {
-		is_republic = yes 
+		is_republic = yes
 		NOT = {
 			tag = ROM
 		}
@@ -165,20 +216,20 @@ corruption_laws = { # Endorse Legislative Body
 			tag = ROM
 		}
 	}
-	
-	republic_corruption_2 = { 
+
+	republic_corruption_2 = {
 		modifier = {
 			monthly_corruption = -0.1
 		}
 	}
-	
+
 	republic_corruption_3 = {
 		modifier = {
 			fabricate_claim_cost_modifier = -0.5
 			war_exhaustion = -0.04
 		}
 	}
-	
+
 	republic_corruption_1 = {
 		modifier = {
 			monthly_tyranny = -0.10
@@ -187,8 +238,8 @@ corruption_laws = { # Endorse Legislative Body
 			custom_tooltip = "enables_curiate_assembly_tt"
 		}
 	}
-	
-	republic_corruption_4 = { 
+
+	republic_corruption_4 = {
 		modifier = {
 			monthly_political_influence_modifier = 0.075
 		}
@@ -206,13 +257,13 @@ republican_mediterranean_laws = { # Maritime Laws
 			tag = ROM
 		}
 	}
-	
+
 	republican_mediterranean_1 = {
 		modifier = {
 			manpower_recovery_speed = 0.075
 		}
 	}
-	
+
 	republican_mediterranean_2 = {
 		allow  = {
 			num_of_ports >= 1
@@ -221,7 +272,7 @@ republican_mediterranean_laws = { # Maritime Laws
 			global_import_commerce_modifier = 0.25
 		}
 	}
-	
+
 	republican_mediterranean_3 = {
 		allow  = {
 			num_of_ports >= 1
@@ -257,17 +308,17 @@ republican_mediterranean_laws = { # Maritime Laws
 			}
 		}
 	}
-	
+
 	republican_mediterranean_4 = {
 		allow  = {
 			num_of_ports >= 1
 		}
 		modifier = {
 			anti_piracy_cb = yes
-			global_population_happiness = 0.03 
+			global_population_happiness = 0.03
 		}
 	}
-	
+
 }
 
 republican_religious_laws = { # Religious Laws
@@ -277,15 +328,15 @@ republican_religious_laws = { # Religious Laws
 			tag = ROM
 		}
 	}
-	
+
 	republican_religious_1 = {
 		modifier = {
 			happiness_for_same_religion_modifier = 0.06
 		}
 	}
-	
+
 	republican_religious_2 = {
-		
+
 		allow = {
 			civic_tech >= 3
 		}
@@ -293,9 +344,9 @@ republican_religious_laws = { # Religious Laws
 			omen_power = 0.15
 		}
 	}
-	
+
 	republican_religious_3 = {
-		
+
 		allow = {
 			civic_tech >= 3
 		}
@@ -303,9 +354,9 @@ republican_religious_laws = { # Religious Laws
 			global_pop_conversion_speed_modifier = 0.25 #Was 0.3
 		}
 	}
-	
+
 	republican_religious_4 = {
-	
+
 		allow = {
 			civic_tech >= 3
 		}
@@ -314,7 +365,7 @@ republican_religious_laws = { # Religious Laws
 			stability_monthly_change = 0.03
 		}
 	}
-	
+
 }
 
 republic_integration_laws = { # Integration Laws
@@ -377,7 +428,7 @@ republic_citizen_laws = { # Citizenship Laws
 		}
 	}
 	republican_citizen_3 = {
-	
+
 		allow = {
 			civic_tech >= 9
 		}
@@ -386,7 +437,7 @@ republic_citizen_laws = { # Citizenship Laws
 		}
 	}
 	republican_citizen_4 = {
-	
+
 		allow = {
 			civic_tech >= 9
 		}
@@ -409,7 +460,7 @@ republican_land_reforms = { # Land Reforms
 		}
 	}
 	republican_land_reform_2 = {
-	
+
 		allow = {
 			civic_tech >= 12
 		}
@@ -419,7 +470,7 @@ republican_land_reforms = { # Land Reforms
 		}
 	}
 	republican_land_reform_3 = {
-	
+
 		allow = {
 			civic_tech >= 12
 		}
@@ -428,7 +479,7 @@ republican_land_reforms = { # Land Reforms
 		}
 	}
 	republican_land_reform_4 = {
-		
+
 		allow = {
 			civic_tech >= 12
 		}
@@ -445,13 +496,13 @@ rep_pantheon_law = {
 		#	tag = ROM
 		#}
 	}
-	
+
 	rep_def_pantheon_law = {
 
 	}
-	
+
 	rep_syncretism_law = {
-		
+
 		allow = {
 			invention = happiness_for_wrong_group_modifier_inv_2
 		}
@@ -464,9 +515,9 @@ rep_pantheon_law = {
 		}
 		# shorter omen time + add deities per decision
 	}
-	
+
 	rep_state_pantheon_law = {
-	
+
 		allow = {
 			invention = omen_duration_inv_1
 		}
@@ -480,7 +531,7 @@ rep_pantheon_law = {
 	}
 
 	rep_henotheism_law = {
-		
+
 		allow = {
 			invention = stability_inv_5
 		}
@@ -494,7 +545,7 @@ rep_pantheon_law = {
 		}
 		# cannot change deity
 	}
-	
+
 }
 
 

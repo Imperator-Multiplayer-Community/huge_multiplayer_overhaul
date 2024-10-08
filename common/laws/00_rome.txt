@@ -1,55 +1,103 @@
 ﻿republic_military_recruitment_laws_rom = { # Military Reforms
 	potential = {
-		is_republic = yes 
+		is_republic = yes
 		tag = ROM
 	}
 	testamentum_militis = { #Servian System / nobles levy
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			levy_size_multiplier = 0.025
-			global_population_happiness = 0.05
-			discipline = 0.025
-			land_morale_modifier = 0.05
-			experience_decay = -0.02
-			monthly_military_experience = 0.15
-			army_maintenance_cost = 0.5
-			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
-			mercenary_naval_maintenance_cost = -0.25 
+			land_morale_recovery = 0.1
+			global_cohort_start_experience = 0.5
+			experience_decay = -0.9
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
-	} 
+	}
 	lex_porcia = { #Polybian System / general levy
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			levy_size_multiplier = 0.035
-			global_population_happiness = -0.05
-			manpower_recovery_speed = 0.2
-			global_manpower_modifier = 0.1 
-			discipline = -0.025
-			monthly_military_experience = 0.20
-			army_maintenance_cost = 0.5
-			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
-			mercenary_naval_maintenance_cost = -0.25 
+			levy_size_multiplier = 0.03
+			global_manpower_modifier = 0.1
+			experience_decay = -0.9
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
 	}
 	mercenary_reliance = {
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			mercenary_land_maintenance_cost = -0.35
+			levy_size_multiplier = -0.03
 			max_mercenary_stacks = 1
-			levy_size_multiplier = -0.025
 			cohort_reinforcement_speed = 0.075
 			land_morale_recovery = 0.075
-			monthly_military_experience = 0.125
-			army_maintenance_cost = 0.5
+			recruit_mercenary_cost_modifier = -0.25
+			mercenary_land_maintenance_cost = -0.25
+			mercenary_naval_maintenance_cost = -0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
 	}
 	punic_reforms = {
@@ -71,14 +119,15 @@
 		}
 		modifier = {
 			global_manpower_modifier = 0.10
-			levy_size_multiplier = 0.015
 			army_maintenance_cost = -0.10
-			monthly_military_experience = 0.20
+			monthly_military_experience = 0.10
 			mercenary_land_maintenance_cost = 0.25
+			mercenary_naval_maintenance_cost = 0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
 			set_legion_recruitment = capital
+			custom_tooltip = "legion_law_warning"
 		}
 	}
 	marian_reforms = {
@@ -91,11 +140,13 @@
 			monthly_military_experience = 0.15
 			army_maintenance_cost = 0.10
 			general_loyalty = -2
-			mercenary_land_maintenance_cost = 0.20
+			mercenary_land_maintenance_cost = 0.25
+			mercenary_naval_maintenance_cost = 0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region
 			set_legion_recruitment = enabled
+			custom_tooltip = "legion_law_warning"
 			custom_tooltip = "marian_reforms_warning"
 			hidden_effect = {
 				if = {
@@ -157,21 +208,21 @@ corruption_laws_rom = { # Assembly Endorsement
 		is_republic = yes
 		tag = ROM
 	}
-	
-	lex_acilia_repetundarum = { 
+
+	lex_acilia_repetundarum = {
 		modifier = {
 			monthly_corruption = -0.1
 		}
 	}
-	
+
 	lex_cassia_de_senatu = {
 		modifier = {
 			fabricate_claim_cost_modifier = -0.5
 			war_exhaustion = -0.04
 		}
 	}
-	
-	no_laws_on_corruption = { 
+
+	no_laws_on_corruption = {
 		modifier = {
 			monthly_tyranny = -0.10
 		}
@@ -179,8 +230,8 @@ corruption_laws_rom = { # Assembly Endorsement
 			custom_tooltip = "enables_curiate_assembly_tt"
 		}
 	}
-	
-	lex_calpurnia = { 
+
+	lex_calpurnia = {
 		modifier = {
 			monthly_political_influence_modifier = 0.075
 		}
@@ -196,13 +247,13 @@ republican_mediterranean_laws_rom = { # Maritime Laws
 		is_republic = yes
 		tag = ROM
 	}
-	
+
 	lex_terentia_cassia = {
 		modifier = {
 			manpower_recovery_speed = 0.075
 		}
 	}
-	
+
 	lex_gabinia = {
 		allow  = {
 			num_of_ports >= 1
@@ -211,7 +262,7 @@ republican_mediterranean_laws_rom = { # Maritime Laws
 			global_export_commerce_modifier = 0.20
 		}
 	}
-	
+
 	lex_caecilia = {
 		allow  = {
 			num_of_ports >= 1
@@ -247,7 +298,7 @@ republican_mediterranean_laws_rom = { # Maritime Laws
 			}
 		}
 	}
-	
+
 	lex_claudia = {
 		allow  = {
 			num_of_ports >= 1
@@ -257,7 +308,7 @@ republican_mediterranean_laws_rom = { # Maritime Laws
 			global_population_happiness = 0.03
 		}
 	}
-	
+
 }
 
 republican_religious_laws_rom = { # Religious Laws
@@ -265,47 +316,47 @@ republican_religious_laws_rom = { # Religious Laws
 		is_republic = yes
 		tag = ROM
 	}
-	
+
 	grant_religious_freedoms = {
 		modifier = {
 			happiness_for_same_religion_modifier = 0.06
 		}
 	}
-	
+
 	lex_ogulnia = {
-		
+
 		allow = {
 			civic_tech >= 3
 		}
-		
+
 		modifier = {
 			omen_power = 0.15
 		}
 	}
-	
+
 	lex_aelia_et_fufia = {
-		
+
 		allow = {
 			civic_tech >= 3
 		}
-		
+
 		modifier = {
 			global_pop_conversion_speed_modifier = 0.25 #Was 0.3
 		}
 	}
-	
+
 	lex_domitia_de_sacerdotiis = {
-	
+
 		allow = {
 			civic_tech >= 3
 		}
-	
+
 		modifier = {
 			stability_cost_modifier = -0.33
 			stability_monthly_change = 0.02
 		}
 	}
-	
+
 }
 
 republic_integration_laws_rom = { # Integration Laws
@@ -359,30 +410,30 @@ republic_citizen_laws_rom = { # Citizenship Laws
 		allow = {
 			civic_tech >= 9
 		}
-		
+
 		modifier = {
 			global_slaves_city_desired_pop_ratio = 0.15
 		}
 	}
 	lex_plautia_papiria = {
-	
+
 		allow = {
 			civic_tech >= 9
 		}
-	
+
 		modifier = {
 			global_citizen_city_desired_pop_ratio = 0.1
 		}
 	}
 	lex_aelia_sentia = {
-	
+
 		allow = {
 			civic_tech >= 9
 		}
 		modifier = {
 			global_freemen_city_desired_pop_ratio = 0.1
 		}
-		
+
 	}
 }
 
@@ -397,7 +448,7 @@ republican_land_reforms_rom = { # Land Reforms
 		}
 	}
 	lex_servilia_glaucia = {
-	
+
 		allow = {
 			civic_tech >= 12
 		}
@@ -407,7 +458,7 @@ republican_land_reforms_rom = { # Land Reforms
 		}
 	}
 	lex_sempronia_agraria = {
-	
+
 		allow = {
 			civic_tech >= 12
 		}
@@ -416,7 +467,7 @@ republican_land_reforms_rom = { # Land Reforms
 		}
 	}
 	gracchus_reforms = {
-		
+
 		allow = {
 			civic_tech >= 12
 		}
