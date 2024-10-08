@@ -3,7 +3,6 @@
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = oligarchic_party
@@ -369,7 +368,6 @@ senate_objective_change_law_dem_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = democratic_party
@@ -750,7 +748,6 @@ senate_objective_change_law_tra_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = traditionalist_party
@@ -1118,7 +1115,6 @@ senate_objective_declare_war_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = oligarchic_party
@@ -1453,7 +1449,6 @@ senate_objective_grant_holdings_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = oligarchic_party
@@ -1535,7 +1530,6 @@ senate_objective_revoke_holdings_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = democratic_party
@@ -1628,7 +1622,6 @@ senate_objective_lengthen_terms_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = oligarchic_party
@@ -1766,7 +1759,6 @@ senate_objective_shorten_terms_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = democratic_party
@@ -1927,8 +1919,8 @@ senate_objective_build_temple_generic = {
 	# Build Temple Generic - Traditionalist
 	potential = {
 		party_country = {
-			NOT = {
-				tag = CAR
+			NOR = {
+				invention = global_unrest_inv_2
 			}
 		}
 		is_party_type = traditionalist_party
@@ -1952,12 +1944,6 @@ senate_objective_build_temple_generic = {
 				has_city_status = yes
 				free_building_slots >= 1
 				num_of_temple_building < 1
-			}
-		}
-		modifier = {
-			factor = 0
-			party_country = {
-				invention = global_unrest_inv_2
 			}
 		}
 	}
@@ -2031,7 +2017,6 @@ senate_objective_imprison_head_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = democratic_party
@@ -2210,7 +2195,6 @@ senate_objective_integrate_culture_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = democratic_party
@@ -2363,7 +2347,6 @@ senate_objective_reduce_tyranny_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = democratic_party
@@ -2450,7 +2433,6 @@ senate_objective_increase_stability_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = traditionalist_party
@@ -2505,7 +2487,6 @@ senate_objective_convert_province_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = traditionalist_party
@@ -2635,7 +2616,6 @@ senate_objective_state_investment_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = traditionalist_party
@@ -2888,7 +2868,6 @@ senate_objective_acquire_subject_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = oligarchic_party
@@ -3032,7 +3011,6 @@ senate_objective_revoke_rights_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = traditionalist_party
@@ -3144,7 +3122,6 @@ senate_objective_appoint_member_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = oligarchic_party
@@ -3302,8 +3279,8 @@ senate_objective_destroy_shrine_generic = {
 	# Destroy Shrine - Traditionalist
 	potential = {
 		party_country = {
-			NOT = {
-				tag = CAR
+			NOR = {
+				invention = happiness_for_wrong_group_modifier_inv_3
 			}
 		}
 		is_party_type = traditionalist_party
@@ -3322,12 +3299,6 @@ senate_objective_destroy_shrine_generic = {
 	}
 	chance = {
 		factor = 3
-		modifier = {
-			factor = 0
-			party_country = {
-				invention = happiness_for_wrong_group_modifier_inv_3
-			}
-		}
 	}
 	on_start = {
 		save_scope_as = sen_obj_des_shr_party
@@ -3397,8 +3368,8 @@ senate_objective_enemy_shrine_generic = {
 	# Enemy Shrine - Traditionalist
 	potential = {
 		party_country = {
-			NOT = {
-				tag = CAR
+			NOR = {
+				invention = happiness_for_wrong_group_modifier_inv_3
 			}
 		}
 		is_party_type = traditionalist_party
@@ -3427,12 +3398,6 @@ senate_objective_enemy_shrine_generic = {
 	}
 	chance = {
 		factor = 3
-		modifier = {
-			factor = 0
-			party_country = {
-				invention = happiness_for_wrong_group_modifier_inv_3
-			}
-		}
 	}
 	on_start = {
 		save_scope_as = sen_obj_ene_shr_party
@@ -3562,7 +3527,6 @@ senate_objective_province_city_generic = {
 	potential = {
 		party_country = {
 			NOT = {
-				tag = CAR
 			}
 		}
 		is_party_type = democratic_party
