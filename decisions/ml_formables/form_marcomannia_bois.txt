@@ -69,7 +69,7 @@
 					id = formable_heritage.170
 				}					
 			}
-			custom_tooltip = "form_marcomannia_bois_claims_tooltip"
+			custom_tooltip = form_marcomannia_bois_claims_tooltip
 			hidden_effect = {
 				region:germania_superior_region = { formable_region_province_effect = yes }
 				region:germania_magna_region = { formable_region_province_effect = yes }

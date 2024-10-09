@@ -72,7 +72,7 @@
 					id = formable_heritage.187
 				}				
 			}
-			custom_tooltip = magna_celtae_tooltip
+			custom_tooltip = magna_celtae_claims_tooltip
 			hidden_effect = {
 				region:belgica_region = { formable_region_province_effect = yes }
 				region:celtica_minor_region = { formable_region_province_effect = yes }

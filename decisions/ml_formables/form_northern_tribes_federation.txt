@@ -67,7 +67,7 @@
 					id = formable_heritage.186
 				}				
 			}
-			custom_tooltip = northern_tribes_federation_tooltip
+			custom_tooltip = northern_tribes_federation_claims_tooltip
 			hidden_effect = {
 				region:britannia_region = { formable_region_province_effect = yes }
 				region:caledonia_region = { formable_region_province_effect = yes }
