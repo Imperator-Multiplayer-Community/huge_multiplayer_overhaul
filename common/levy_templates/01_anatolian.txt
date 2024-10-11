@@ -8,17 +8,18 @@
 levy_anatolian = {	#General Anatolian
 	default = no
 
-	light_infantry = 0.9
-	light_cavalry = 0.05
-	heavy_cavalry = 0.05
+	light_infantry = 0.8
+	light_cavalry = 0.1
+	heavy_cavalry = 0.1
 }
 
 levy_armenian = {	#Armenians
 	default = no
 
-	light_infantry = 0.9
+	light_infantry = 0.7
+	archers = 0.1
 	horse_archers = 0.1
-	heavy_cavalry = 0.0
+	heavy_cavalry = 0.1
 }
 
 levy_pontus = {	#Pontus
@@ -32,9 +33,9 @@ levy_pontus = {	#Pontus
 levy_cappadocia = {	#Cappadocia
 	default = no
 
-	light_infantry = 0.9
-	heavy_cavalry = 0.05
-	light_cavalry = 0.05
+	light_infantry = 0.8
+	heavy_cavalry = 0.1
+	light_cavalry = 0.1
 }
 
 levy_cilician = {	#Cilicia

@@ -8,8 +8,8 @@
 levy_east_levantine = {	#Mesopotamian states
 	default = no
 
-	light_infantry = 0.9
-	light_cavalry = 0.05
+	light_infantry = 0.8
+	light_cavalry = 0.15
 
 	heavy_cavalry = 0.05
 }
@@ -17,9 +17,9 @@ levy_east_levantine = {	#Mesopotamian states
 levy_babylonian = {	#Babylonian states
 	default = no
 
-	archers = 0.7
+	archers = 0.6
 	light_infantry = 0.2
-	light_cavalry = 0.05
+	light_cavalry = 0.15
 
 	heavy_cavalry = 0.05
 }

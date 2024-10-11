@@ -16,24 +16,24 @@ levy_egyptian = {	#Egyptian
 levy_nubian = {	#Nubian
 	default = no
 
-	archers = 0.8
+	archers = 0.7
 	light_infantry = 0.1
-	camels = 0.05
+	camels = 0.15
 	horse_archers = 0.05
 }
 
 levy_blemmyan = {	#Blemmyan
 	default = no
 
-	archers = 0.5
-	heavy_infantry = 0.4
+	archers = 0.6
+	heavy_infantry = 0.3
 	camels = 0.1
 }
 
 levy_ethiopian = {	#Axumite
 	default = no
 
-	light_infantry = 0.9
+	light_infantry = 0.8
 	heavy_cavalry = 0.05
-	camels = 0.05
+	camels = 0.15
 }
