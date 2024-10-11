@@ -8,8 +8,7 @@
 levy_northwestern_indian = {
 	default = no
 
-	light_infantry = 0.4
-	archers = 0.4
+	light_infantry = 0.8
 	light_cavalry = 0.15
 	warelephant = 0.05
 }
@@ -33,8 +32,7 @@ levy_gandhari = {
 levy_northeastern_indian = {
 	default = no
 
-	archers = 0.4
-	light_infantry = 0.2
+	archers = 0.6
 	heavy_infantry = 0.3
 	light_cavalry = 0.1
 }
@@ -42,8 +40,7 @@ levy_northeastern_indian = {
 levy_jungle_indian = {
 	default = no
 
-	archers = 0.3
-	light_infantry = 0.5
+	light_infantry = 0.8
 	warelephant = 0.05
 	light_cavalry = 0.15
 }
@@ -51,8 +48,7 @@ levy_jungle_indian = {
 levy_southern_indian = {
 	default = no
 
-	archers = 0.5
-	light_infantry = 0.3
+	archers = 0.8
 	warelephant = 0.05
 	light_cavalry = 0.15
 }

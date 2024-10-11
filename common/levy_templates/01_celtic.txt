@@ -48,8 +48,7 @@ levy_norican = {
 levy_britannic = {
 	default = no
 
-	light_infantry = 0.3
-	archers = 0.3
+	archers = 0.6
 	light_cavalry = 0.1
 	heavy_infantry = 0.3
 }
