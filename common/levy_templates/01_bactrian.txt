@@ -9,14 +9,14 @@ levy_bactrian = {
 	default = no
 
 	archers = 0.8
-	warelephant = 0.05
-	horse_archers = 0.15
+	warelephant = 0.1
+	horse_archers = 0.1
 }
 
 levy_central_asia = {
 	default = no
 
 	light_infantry = 0.8
-	light_cavalry = 0.05
-	horse_archers = 0.15
+	light_cavalry = 0.1
+	horse_archers = 0.1
 }

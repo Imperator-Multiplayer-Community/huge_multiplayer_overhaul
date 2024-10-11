@@ -2,7 +2,7 @@
 	OR = {
 		this = deity:omen_artemis
 		this = deity:omen_diana
-		this = deity:omen_artume
+		#this = deity:omen_artume
 		this = deity:omen_diktynna
 		this = deity:omen_bendis
 		this = deity:omen_dali
@@ -18,7 +18,7 @@ deity_is_sea_deity_trigger = {
 	OR = {
 		this = deity:omen_poseidon
 		this = deity:omen_neptune
-		this = deity:omen_nethuns
+		#this = deity:omen_nethuns
 		this = deity:omen_yam
 		this = deity:omen_nodens
 		this = deity:omen_dsvininaue
