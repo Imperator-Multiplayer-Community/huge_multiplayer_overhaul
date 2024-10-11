@@ -200,7 +200,7 @@ monarchy_military_reforms = {
 		}
 		modifier = {
 			levy_size_multiplier = 0.015
-			gloabl_manpower_modifier = 0.05
+			gloabl_manpower_modifier = 0.025
 			army_maintenance_cost = 0.10
 			monthly_military_experience = 0.15
 			general_loyalty = -2
