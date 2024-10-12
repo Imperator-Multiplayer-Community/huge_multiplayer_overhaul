@@ -8,23 +8,23 @@
 levy_arabian = {	#General Arabian
 	default = no
 
-	light_infantry = 0.4
-	camels = 0.3
-	horse_archers = 0.3
+	light_infantry = 0.8
+	camels = 0.1
+	horse_archers = 0.1
 }
 
 levy_south_arabian = {	#Yemeni
 	default = no
 
 	heavy_cavalry = 0.1
-	light_infantry = 0.6
-	camels = 0.3
+	light_infantry = 0.8
+	camels = 0.1
 }
 
 levy_hadrami = {	#Hadramut
 	default = no
 
-	light_infantry = 0.6
+	light_infantry = 0.8
 	heavy_cavalry = 0.1
-	camels = 0.3
+	camels = 0.1
 }

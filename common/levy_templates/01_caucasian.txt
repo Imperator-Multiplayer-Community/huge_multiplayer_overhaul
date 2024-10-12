@@ -8,15 +8,15 @@
 levy_caucasian = {	#Iberia, Kartli & Colchis
 	default = no
 
-	light_infantry = 0.6
-	light_cavalry = 0.3
+	light_infantry = 0.8
+	light_cavalry = 0.1
 	heavy_cavalry = 0.1
 }
 
 levy_albanian = {
 	default = no
 
-	light_infantry = 0.4
+	light_infantry = 0.5
 	archers = 0.3
-	horse_archers = 0.3
+	horse_archers = 0.2
 }
