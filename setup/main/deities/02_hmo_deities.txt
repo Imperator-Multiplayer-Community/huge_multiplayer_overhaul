@@ -1,6 +1,6 @@
 deity_manager = {
-	deities_database = { 
-#ZOROASTRIAN#
+	deities_database = {
+		#ZOROASTRIAN
 		326 = {
 			key = omen_darius
 			deity = deity_darius
@@ -8,7 +8,6 @@ deity_manager = {
 			deify_ruler_permanent = yes
 			is_universal_deity = yes
 		}
-
 		327 = {
 			key = omen_cyrus
 			deity = deity_cyrus
@@ -16,49 +15,46 @@ deity_manager = {
 			deify_ruler_permanent = yes
 			is_universal_deity = yes
 		}
-
 		328 = {
 			key = omen_mainyu
 			deity = deity_mainyu
 		}
-
 		329 = {
 			key = omen_haaoma
 			deity = deity_haaoma
 		}
-
 		330 = {
 			key = omen_tiri_and_tishtrya
 			deity = deity_tiri_and_tishtrya
 		}
-#CYBELE#
-		388 = { #Added
+		#CYBELE
+		388 = {
+			#Added
 			key = omen_croesus
 			deity = deity_croesus
 			deify_ruler = 433
 			deify_ruler_permanent = yes
 			is_universal_deity = yes
 		}
-
-		389 = { #Added
+		389 = {
+			#Added
 			key = omen_manes
 			deity = deity_manes
 			deify_ruler = 434
 			deify_ruler_permanent = yes
 			is_universal_deity = yes
 		}
-
-		390 = { #Added
+		390 = {
+			#Added
 			key = omen_attix
 			deity = deity_attix
-	}
-
-	    391 = { #Added
+		}
+		391 = {
+			#Added
 			key = omen_galli
 			deity = deity_galli
-	}
-
-#zalmoxian#
+		}
+		#zalmoxian
 		663 = {
 			key = omen_kapnobatai
 			deity = deity_kapnobatai
@@ -79,8 +75,7 @@ deity_manager = {
 			key = omen_orfeu
 			deity = deity_orfeu
 		}
-
-#helenic illyrian#
+		#helenic illyrian
 		99116 = {
 			key = omen_enji
 			deity = deity_enji
@@ -101,50 +96,41 @@ deity_manager = {
 			key = omen_apollodrakania
 			deity = deity_apollodrakania
 		}
-
-#arabic#
-        825 = {
-            key = omen_ara
-            deity = deity_ara
-        }
-
-        826 = {
-            key = omen_abgal
-            deity = deity_abgal
-        }
-
-        827 = {
-            key = omen_abirillu
-            deity = deity_abirillu
-        }
-
-        828 = {
-            key = omen_arsu
-            deity = deity_arsu
-        }
-
-#iberic#
-
+		#arabic
+		825 = {
+			key = omen_ara
+			deity = deity_ara
+		}
+		826 = {
+			key = omen_abgal
+			deity = deity_abgal
+		}
+		827 = {
+			key = omen_abirillu
+			deity = deity_abirillu
+		}
+		828 = {
+			key = omen_arsu
+			deity = deity_arsu
+		}
+		#iberic
 		863 = {
 			key = omen_bandua
 			deity = deity_bandua
 		}
-
 		864 = {
 			key = omen_bormanicus
 			deity = deity_bormanicus
 		}
-
 		865 = {
 			key = omen_cossus
 			deity = deity_cossus
 		}
-
 		866 = {
 			key = omen_reue
 			deity = deity_reue
 		}
-#megalithic#
+		#megalithic
 		969 = {
 			key = omen_xacab
 			deity = deity_xacab

@@ -1,9 +1,9 @@
 ﻿country_decisions = {
-	
+
 	# Marcomannia bois
 	# Designed by Neidhardt, created by Neidhardt
 	form_macromannia_bois = {
-		
+
 		potential = {
 			num_of_cities >= 1
 			country_culture_group = gallic
@@ -20,7 +20,7 @@
 				is_endgame_tag_trigger = yes
 			}
 		}
-		
+
 		highlight = {
 			scope:province = {
 				OR = {
@@ -31,7 +31,7 @@
 				}
 			}
 		}
-		
+
 		allow = {
 			custom_tooltip = {
 				text = marcomannia_bois_not_exists
@@ -44,10 +44,10 @@
 			can_form_nation_trigger = yes
 			owns_or_subject_owns_area = marcomannia_maiores_area
 			owns_or_subject_owns_area = marcomannia_minores_area
-			owns_or_subject_owns_area = boioa_meridionalis_area		
+			owns_or_subject_owns_area = boioa_meridionalis_area
 			owns_or_subject_owns_area = boioa_septentrionalis_area
 		}
-		
+
 		effect = {
 			custom_tooltip = "tier_2_formable_tooltip"
 			change_country_name = "MARCOMANNIA_BOIS_NAME"
@@ -67,13 +67,13 @@
 				change_country_flag = MARCOMANNIA_BOIS_FLAG
 				trigger_event = {
 					id = formable_heritage.170
-				}					
+				}
 			}
-			custom_tooltip = form_marcomannia_bois_claims_tooltip
+			custom_tooltip = marcomannia_bois_claims_tooltip
 			hidden_effect = {
 				region:germania_superior_region = { formable_region_province_effect = yes }
 				region:germania_magna_region = { formable_region_province_effect = yes }
-			}	
+			}
 			add_3_free_province_investments = yes
 			capital_scope = {
 				establish_city_effect = yes
@@ -83,11 +83,11 @@
 					formable_capital_modifier_normal_effect = yes
 			}
 		}
-		
+
 		ai_will_do = {
 			base = 1
 		}
 	}
 
-} 
+}
 
