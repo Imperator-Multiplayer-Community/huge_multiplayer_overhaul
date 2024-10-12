@@ -1,77 +1,83 @@
 ﻿namespace = fighting_ground_military_events
-
-fighting_ground_military_events.1 = { # Players
-	
-    type = country_event
-    title = "fighting_ground_military_events.1.t"
-    desc = "fighting_ground_military_events.1.desc"
-    picture = romans_marching
+fighting_ground_military_events.1 = {
+	# Players
+	type = country_event
 	hidden = yes
-    goto_location = root
-
-    trigger = {
-        is_ai = no
-    }
-
-    option = {
-        name = fighting_ground_military_events.1.a
-        add_country_modifier = {
-			name = infantry_terrain_boni
-			duration = -1
+	trigger = {
+		NOR = {
+			has_country_modifier = infantry_terrain_boni
+			has_country_modifier = light_mounted_terrain_boni
+			has_country_modifier = heavy_mounted_terrain_boni
+			has_country_modifier = naval_terrain_boni
 		}
-        add_country_modifier = {
-			name = light_mounted_terrain_boni
-			duration = -1
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_modifier = infantry_terrain_boni
+				}
+			}
+			add_country_modifier = {
+				name = infantry_terrain_boni
+				duration = -1
+			}
 		}
-		add_country_modifier = {
-			name = heavy_mounted_terrain_boni
-			duration = -1
+		if = {
+			limit = {
+				NOT = {
+					has_country_modifier = light_mounted_terrain_boni
+				}
+			}
+			add_country_modifier = {
+				name = light_mounted_terrain_boni
+				duration = -1
+			}
 		}
-        add_country_modifier = {
-			name = naval_terrain_boni
-			duration = -1
-		}	
-		add_country_modifier = {
-			name = INR_Tributary_Terrain
-			duration = -1
+		if = {
+			limit = {
+				NOT = {
+					has_country_modifier = heavy_mounted_terrain_boni
+				}
+			}
+			add_country_modifier = {
+				name = heavy_mounted_terrain_boni
+				duration = -1
+			}
 		}
-    }
+		if = {
+			limit = {
+				NOT = {
+					has_country_modifier = naval_terrain_boni
+				}
+			}
+			add_country_modifier = {
+				name = naval_terrain_boni
+				duration = -1
+			}
+		}
+	}
 }
 
-fighting_ground_military_events.2 = { # AI
-    
-    type = country_event
-    title = "fighting_ground_military_events.2.t"
-    desc = "fighting_ground_military_events.2.desc"
-    picture = romans_marching
+fighting_ground_military_events.3 = {
+	# also gets triggered bi yearly
+	type = country_event
 	hidden = yes
-    goto_location = root
-
-    trigger = {
-        is_ai = yes
-    }
-
-    option = {
-        name = fighting_ground_military_events.2.a
-        add_country_modifier = {
-			name = infantry_terrain_boni
-			duration = -1
+	immediate = {
+		every_country_culture = {
+			limit = {
+				NOR = {
+					this.culture = root.culture
+					has_country_culture_modifier = cultural_assimilation_debuff_1
+					has_country_culture_modifier = cultural_assimilation_debuff_2
+					has_country_culture_modifier = cultural_assimilation_debuff_3
+				}
+			}
+			add_country_culture_modifier = {
+				name = cultural_assimilation_debuff_1
+				duration = -1
+				mode = add
+			}
 		}
-        add_country_modifier = {
-			name = light_mounted_terrain_boni
-			duration = -1
-		}
-		add_country_modifier = {
-			name = heavy_mounted_terrain_boni
-			duration = -1
-		}
-        add_country_modifier = {
-			name = naval_terrain_boni
-			duration = -1
-		}
-		add_country_modifier = {
-			name = INR_Tributary_Terrain
-			duration = -1
-		}
-    }
+	}
 }

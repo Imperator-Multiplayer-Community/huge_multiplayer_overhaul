@@ -1340,40 +1340,23 @@ GALATIA_FLAG = {
 
 ILLYRIA_FLAG = {
 	pattern = "pattern_solid.tga"
-	color1 = "offwhite"
-	color2 = "ck2_red"
+	color1 = "ck2_black"
+	color2 = "roman_gold"
 
 	colored_emblem = {
-		texture = "ce_border_leaves_01.dds"
-		color1 = "ck2_red"
-		color2 = "offwhite"
-		instance = { 
-			rotation = 0 
-			scale = { 0.5 0.5 }
-			position = { 0.25 0.25 }
-		}
-		instance = { 
-			rotation = 0 
-			scale = { 0.5 0.5 }
-			position = { 0.75 0.25 }
-		}
-		instance = { 
-			rotation = 180 
-			scale = { 0.5 0.5 }
-			position = { 0.25 0.75 }
-		}
-		instance = { 
-			rotation = 180 
-			scale = { 0.5 0.5 }
-			position = { 0.75 0.75 }
-		}
+		texture = "ce_pirates.dds"
+		color1 = "roman_gold"
+		color2 = "roman_gold"
+		instance = {  scale = { 0.8 0.8 } }
 	}
-
-	colored_emblem = {
-		texture = "ce_illyrian_1.dds"
-		color1 = "ck2_red"
-		instance = {  scale = { 1 1 } }
-	}
+	
+    colored_emblem = {
+        texture = "ce_border_simple_02.tga"
+        color1 = "roman_gold"
+        color2 = "ck2_black"
+        instance = { rotation = 0 }
+        instance = { rotation = 180 }
+    }
 }
 
 ALBION_FLAG = {

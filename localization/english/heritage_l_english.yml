@@ -400,7 +400,7 @@
  dacian_heritage:0 "Gallic Heritage"
  gallic_heritage_desc:0 "Our ancestors have shown us the way forward."
  gallic_heritage:0 "Gallic Heritage"
- illyrian_heritage_desc:0 "Our ancestors have shown us the way forward."
+ illyrian_heritage_desc:0 "All sorts of brigands and ruiners have gathered under our banners. Like our ancestors, we will ravage the neighboring lands until there is no one left to plunder."
  illyrian_heritage:0 "Illyrian Heritage"
  median_heritage_desc:0 "Our ancestors have shown us the way forward."
  median_heritage:0 "Median Heritage"
@@ -560,8 +560,8 @@
  pannonian_pannonian_heritage_desc:0 "Our ancestors have shown us the way forward." 
  italiotian_league_heritage:0 "Italiotian League Heritage" 
  italiotian_league_heritage_desc:0 "Our ancestors have shown us the way forward." 
- Cimmeria_heritage:0 "Cimmeria heritage"
- Cimmeria_heritage_desc:0 "Let the trade once again flow from Cimmeria now we stand united."
+ cimmeria_heritage:0 "Cimmeria Heritage"
+ cimmeria_heritage_desc:0 "Let the trade once again flow from Cimmeria now we stand united."
  fezzani_heritage:0 "Fezzani Heritage" 
  fezzani_heritage_desc:0 "Our ancestors have shown us the way forward." 
  wigazan_heritage:0 "Wigazan Heritage" 
@@ -623,3 +623,80 @@
  ###Nasamonia
  Nasamonian_heritage:0 "Nasamonian Heritage"
  Nasamonian_heritage_desc:0 "A nomadic Numidian tribe traveling along the eastern deserts, stopping at the rich Augila and Siwa oases where the only life in the area grows far to the south of lush Cyrenaica (there they pick dates and pour crushed locust remains over milk), the Nasamones were a fierce tribe who once lived near the coastline of the Mediterranean but were forced out of the area by the many Greek colonists such as those Therans who founded Cyrene. Noted for supposedly defeating the snake charmer Psylli in war, the Nasamones were never truly subject to anyone, and would be great obstacles for any future conquerors in the region."
+ 
+ #Neidhardt Heritages
+ #Troan Kingdom
+ troan_kingdom_heritage:0 "Troan Kingdom Heritage"
+ troan_kingdom_heritage_desc:0 "The ancient Troan Kingdom is known throughout the civilized world for its ability to build impregnable fortifications."
+ #Greco-bactria
+ greco_bactrian_kingdom_heritage:0 "Greco-Bactrian Heritage"
+ greco_bactrian_kingdom_heritage_desc:0 "The meeting of the Eastern and Hellenistic cultures, a strong country, located at the gates of India, Bactria is a strategic region, fertile and heavily urbanized, leaving a mark on Bactria and India by building cities, mixing Greco-Indian art and spreading Buddhism."
+ #Magna Delta
+ magna_delta_heritage:0 "Magna Delta Heritage"
+ magna_delta_heritage_desc:0 "The Greek colony of Cyrenaica has crushed its powerful neighbors and has spread its influence throughout the Delta and is ready to move into a metropolitan state."
+ #Mithridatic Kingdom
+ mithridatic_kingdom_heritage:0 "Mithridatic Kingdom Heritage"
+ mithridatic_kingdom_heritage_desc:0 "Our forefathers ruled here before these petty usurpers first sucked air; we must now look to the survival of the Mithridatic dynasty. Some argue we head into the disputed regions of Pontus and gather a following there."
+ #Marcomannia Bois
+ marcomannia_bois_heritage:0 "Marcomannia Bois Heritage"
+ marcomannia_bois_heritage_desc:0 "Our great tribe has conquered this forest, but there are also other forests ahead that we must occupy."
+ #Puno-Numidian Republic
+ puno_numidian_republic_heritage:0 "Puno-Numidian Republic Heritage"
+ puno_numidian_republic_heritage_desc:0 "Puno-Numidian Republic will transform from a small colony to a prosperous region capable of rivaling its distant kin."
+ #Puno-Celtiberian Republic
+ puno_celtiberian_republic_heritage:0 "Puno-Celtiberian Republic Heritage"
+ puno_celtiberian_republic_heritage_desc:0 "The Puno-Celtiberian Republic has come a long way from the entrenched oppressive foundations of the old republic, to the new Celtiberian innovations that will lead our people to prosperity."
+ #Puno-Iberian League
+ puno_iberian_league_heritage:0 "Puno-Iberian League Heritage"
+ puno_iberian_league_heritage_desc:0 "Since we left our home harbor we have changed enough to adapt to life in the harsh forests of Gaul. Our way have also become more flexible, allowing us to subdue the local tribes."
+ #Puno-Gallic Republic
+ puno_gallic_republic_heritage:0 "Puno-Gallic Republic Heritage"
+ puno_gallic_republic_heritage_desc:0 "By dominating the tribes, we were also able to adopt local military expertise, allowing us to spread our influence over most of Gaul."
+ #Puno-Greek League
+ puno_greek_league_heritage:0 "Puno-Greek League Heritage"
+ puno_greek_league_heritage_desc:0 "Our close proximity to the Greeks allowed us to combine colonization and trade instead of feuding, and now we rightfully own many metals that are for sale."
+ #Puno-Brittonic Republic
+ puno_brittonic_republic_heritage:0 "Puno-Brittonic Republic Heritage"
+ puno_brittonic_republic_heritage_desc:0 "Having established ourselves in a peaceful and metal-rich place, we began to spread our influence to all neighboring tribes, allowing us to grow from a mere colony to a metropolis."
+ #Greco-Gallic League
+ greco_gallic_league_heritage:0 "Greco-Gallic League Heritage"
+ greco_gallic_league_heritage_desc:0 "After joining the local tribes, we have paved the way for ourselves to gain a foothold in a distant and dangerous land, far from our homeland we preserve the Hellenic way of life and our culture, spreading it to the undeveloped tribes."
+ #Aryan Kingdom
+ aryan_kingdom_heritage:0 "Aryan Kingdom Heritage"
+ aryan_kingdom_heritage_desc:0 "Having conquered all the tribes of the Aryan River we have reached an economic and military level of dominance."
+ #Aryan Republic
+ aryan_republic_heritage:0 "Aryan Republic Heritage"
+ aryan_republic_heritage_desc:0 "By gaining the recognition of our neighbors, we were able to form a large republic that included many of the peoples of the Aryan River."
+ #Greco-Levantine Kingdom
+ greco_levantine_kingdom_heritage:0 "Greco-Levantine Kingdom Heritage"
+ greco_levantine_kingdom_heritage_desc:0 "Having asserted our influence over the entire Levant we entered the Hellenistic era, subjugating foreign peoples and giving them a chance to live "the Greek way."
+ #Great Parsa
+ great_parsa_heritage:0 "Great Parsa Heritage"
+ great_parsa_heritage_desc:0 "Like the great kings of antiquity, their descendants, the parasagdis, we must regain the influence and approval of our ancestors. After establishing a strong kingdom in Persia, we wish to conquer the rest of the satrapies of the Achaemenid Empire."
+ #Great Karmana
+ great_karmana_heritage:0 "Great Karmana Heritage"
+ great_karmana_heritage_desc:0 "The great horsemen of the Carmanites were renowned for their skill and bravery. Now, we will demonstrate the clatter of our cavalry to the world."
+ #Great Makan League
+ makan_league_heritage:0 "Makan League Heritage"
+ makan_league_heritage_desc:0 "The famous sea robbers and traders of the Persian Gulf formed a Makan league and began to reach the coasts of even the most distant countries."
+ #Londinium Federation
+ southern_tribes_federation_heritage:0 "Southern Tribes Federation Heritage"
+ southern_tribes_federation_heritage_desc:0 "The people of southern Britain have always been sophisticated in terms of economics. Civilization brought them the ability to build cities everywhere."
+ #Northern Tribes Federation
+ northern_tribes_federation_heritage:0 "Northern Tribes Federation"
+ northern_tribes_federation_heritage_desc:0 "From the embracing tribes of the great north, we have come to the borders of the weak and unprotected south. Our tribes are numerous, our cavalry is lightning fast, let our wrath fall upon them."
+ #Magna Celtae
+ magna_celtae_heritage:0 "Magna Celtae"
+ magna_celtae_heritage_desc:0 "The northern tribes of Galia achieved consolidation and formed Magna Celtae, which became the bulwark of our power in Galia."
+ #Achaemenid Kingdom
+ achaemenid_kingdom_heritage:0 "Achaemenid Kingdom"
+ achaemenid_kingdom_heritage_desc:0 "The greatest kings of kings of antiquity, the Achaemenids, are experiencing another golden age. Isolated in a distant satrapy, they were able to launch the revival of their great power."
+ #Magna Thessalae
+ magna_thessalae_heritage:0 "Magna Thessalae"
+ magna_thessalae_heritage_desc:0 "The Thessalians are famous throughout Hellas as excellent horsemen and stablemen. Having achieved fame in our homeland, we ride beyond its borders."
+ #Regnum Gothorum
+ #regnum_gothorum_heritage:0 "Regnum Gothorum"
+ #regnum_gothorum_heritage_desc:0 "The mighty power of all the Goths is ready to reveal itself to the world. The scourge of God on the borders of the civilized world."
+ #Troan Republic
+ troan_republic_heritage:0 "Troan Republic Heritage"
+ troan_republic_heritage_desc:0 "The ancient Troan Republic is known throughout the civilized world for its ability to build impregnable fortifications."

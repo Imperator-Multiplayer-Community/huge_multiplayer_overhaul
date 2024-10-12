@@ -1,0 +1,90 @@
+﻿country_decisions = {
+	
+	# Southern Tribes Federation
+	# Designed by Neidhardt, created by Neidhardt
+	form_southern_tribes_federation = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = britannic
+			NOT = {
+				tag = STF
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = icenia_area
+					is_in_area = cantiacia_area
+					is_in_area = dobunnia_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = southern_tribes_federation_not_exists
+				NOT = {
+					any_country = {
+						tag = STF
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = icenia_area
+				owns_or_subject_owns_area = cantiacia_area
+				owns_or_subject_owns_area = dobunnia_area
+
+		}
+		
+		effect = {
+			custom_tooltip = "tier_1_formable_tooltip"
+			change_country_name = "SOUTHERN_TRIBES_FEDERATION_NAME"
+			if = {
+				limit = { is_tribal = yes }
+				add_country_modifier = {
+					name = civilized_tribe
+					duration = 5475
+				}
+				change_government = tribal_federation
+				switch_government_type_event_clearup_effect = yes
+			}		
+			hidden_effect = {
+				change_country_adjective = "SOUTHERN_TRIBES_FEDERATION_ADJECTIVE"
+				change_country_color =  "southern_tribes_federation_color"
+				change_country_tag = STF
+				change_country_flag = SOUTHERN_TRIBES_FEDERATION_FLAG
+				trigger_event = {
+					id = formable_heritage.185
+				}				
+			}
+			custom_tooltip = southern_tribes_federation_claims_tooltip
+			hidden_effect = {
+				region:belgica_region = { formable_region_province_effect = yes }
+				region:caledonia_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+} 

@@ -1,4 +1,65 @@
 base_sub_window = {
-	
+	gfxtype = windowgfx
+	name = "enforce_peace_window"
+	parentanchor = top|left
+	size = { 430 396 }
+	position = { 387 460 }
+	widgetanchor = top|left
+
+	blockoverride "Title_text" { text = "ENFORCE_PEACETITLE" }
+	blockoverride "White_buttons"
+	{
+		button_close = {
+			onclick = "[EnforcePeaceView.OnClose]"
+			tooltip = "CLOSE"
+		}
+	}
+
+	scrollarea = {
+		position = { 0 40 }
+		parentanchor = hcenter
+		size = { 410 340 }
+		scrollbarpolicy_horizontal = always_off
+
+		using = VerticalScrollAreaCutOff
+
+		scrollbar_vertical = {
+			using = VerticalScrollBar
+		}
+
+		scrollwidget = {
+			dynamicgridbox = {
+				position = { 10 0 }
+				size = { 410 200 }
+
+
+				datamodel = "[EnforcePeaceView.GetWars]"
+
+				item = {
+					widget = {
+						size = { 400 40 }
+						flowcontainer = {
+							spacing = 16
+							text_button_square = {
+								size = { 340 0 }
+								blockoverride "Center_text" { text = "[SelectEnforcePeace.GetName]" }
+								tooltip = "[SelectEnforcePeace.GetTooltip]"
+								blockoverride "On_click" { onclick = "[SelectEnforcePeace.OnClick]" }
+								parentanchor = vcenter
+							}
+							icon = {
+								framesize = { 46 46 }
+								size = { 38 38 }
+								texture = "gfx/interface/diplomacy/ai_accept_decline_icon.dds"
+								frame = "[SelectEnforcePeace.GetAcceptanceFrame]"
+								tooltip = "[SelectEnforcePeace.GetAcceptanceTooltip]"
+								parentanchor = vcenter
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 

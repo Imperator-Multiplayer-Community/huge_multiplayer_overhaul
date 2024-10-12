@@ -39,10 +39,21 @@
 			}
 			num_of_cities >= 20
 			stability > 40
-			political_influence > 25
+			political_influence > 20
 		}
 		effect = {
-			add_political_influence = -25
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -2
+			}
 			add_country_modifier = {
 				name = "beacon_of_civ"
 				duration = -1
@@ -156,7 +167,19 @@
 			political_influence > 20
 		}
 		effect = {
-			add_political_influence = -25
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -2
+			}
+			add_war_exhaustion = -5
 			add_aggressive_expansion = -20
 			add_country_modifier = {
 				name = "granted_autonomy"
@@ -325,7 +348,7 @@
 						is_integrated = yes
 					}
 				}
-				military_experience >= 15
+				military_experience >= 10
 			}
 		}
 		effect = {
@@ -349,7 +372,18 @@
 					duration = -1
 				}
 			}
-			add_military_experience = -15
+			add_military_experience = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.02
+  				max = -2
+				min = -8
+			}
+			add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -2
+			}
 			add_country_modifier = {
 				name = "barbarian_soldiers"
 				duration = 1095
@@ -455,7 +489,7 @@
 				}
 			}
 			stability > 40
-			political_influence > 25
+			political_influence > 20
 			invention = happiness_for_wrong_culture_modifier_inv_2
 		}
 		effect = {
@@ -483,7 +517,18 @@
 					duration = 10950
 				}
 			}
-			add_political_influence = -25
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -2
+			}
 			add_country_modifier = {
 				name = "pandered_project"
 				duration = 10950
@@ -541,7 +586,7 @@
 					}
 				}
 				stability > 10
-				political_influence >= 35
+				political_influence >= 25
 			}
 		}
 		effect = {
@@ -552,55 +597,16 @@
 					dominant_province_culture = scope:target_culture.culture
 				}
 				order_by = total_population
-				ROOT = {
-					create_character = {
-						culture = scope:target_culture.culture
-						religion = prev.prev.religion
-						hidden_effect = {
-							random_list = {
-								10 = {
-									add_trait = energetic
-								}
-								10 = {
-									add_trait = silver_tongued
-								}
-								10 = {
-									add_trait = assertive
-								}
-								10 = {
-									add_trait = cruel
-								}
-								10 = {
-									add_trait = founder
-								}
-								10 = {
-									add_trait = just
-								}
-								10 = {
-									add_trait = prominent
-								}
-								10 = {
-									add_trait = merciful
-								}
-								10 = {
-									add_trait = loving
-								}
-								10 = {
-									add_trait = benefactor
-								}
-							}
-							add_character_modifier = {
-								name = "promoted_talent_character"
-								duration = -1
-							}
-							save_scope_as = new_talent
-						}
-					}
+				dominant_province_culture = {
+					save_scope_as = char_target_culture_scope
+				}
+				dominant_province_religion = {
+					save_scope_as = char_target_religion_scope
 				}
 			}
 			trigger_event = {
 				id = character_introductions.2
-				days = 5
+				days = -1
 			}
 			set_variable = {
 				name = recently_promoted_talent_int
@@ -639,7 +645,7 @@
 					}
 				}
 				stability > 10
-				political_influence = 35
+				political_influence = 25
 			}
 		}
 		effect = {
@@ -743,12 +749,10 @@
 			stability > 10
 			treasury >= 50
 			military_experience >= 5
-			political_influence >= 35
 		}
 		effect = {
 			add_military_experience = -5
 			add_treasury = -50
-			add_political_influence = -25
 			add_country_modifier = {
 				name = "spy_recruited"
 				duration = 7305
@@ -839,14 +843,12 @@
 				has_variable = aryan_spy_recruit_cooldown
 			}
 			stability > 10
-			treasury >= 35
-			military_experience >= 3
-			political_influence >= 35
+			treasury >= 40
+			military_experience >= 4
 		}
 		effect = {
-			add_military_experience = -3
-			add_treasury = -35
-			add_political_influence = -25
+			add_military_experience = -4
+			add_treasury = -40
 			add_country_modifier = {
 				name = "spy_recruited"
 				duration = 3650
@@ -973,7 +975,7 @@
 					}
 				}
 				stability > 40
-				political_influence >= 35
+				political_influence >= 20
 			}
 		}
 		effect = {
@@ -1026,8 +1028,18 @@
 				}
 			}
 			else = {
-				add_political_influence = -25
-				add_stability = -5
+				add_political_influence = {
+  					value = scope:target_culture.country_culture_pop_count
+  					multiply = -0.05
+  					max = -2
+					min = -500
+				}
+				add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -2
+				}
 			}
 			custom_tooltip = petty_noble_tt
 			ordered_owned_province = {
@@ -1060,4 +1072,82 @@
 			}
 		}
 	}
+
+	protection_against_torture_integrated = {
+		potential = {
+			NOT = {
+				primary_culture = scope:target_culture.culture
+			}
+			scope:target_culture = {
+				is_integrated = yes
+				OR = {
+					has_pop_type_right = citizen
+					has_pop_type_right = nobles
+				}
+			}
+			
+		}
+		allow = {
+			scope:target_culture = {
+				NOT = { has_country_culture_modifier = torture_protection }
+			}
+			NOT = { has_country_modifier = extended_torture_protection }
+		}
+		effect = {
+			add_political_influence = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -2
+				min = -500
+			}
+			add_stability = {
+  				value = scope:target_culture.country_culture_pop_count
+  				multiply = -0.05
+  				max = -1
+				min = -2
+			}
+			culture_state_loyalty_effect = yes
+			scope:target_culture = {
+				add_country_culture_modifier = {
+					name = "torture_protection" 
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "extended_torture_protection"
+				duration = 730
+			}
+			approval_effect = {
+				PARTY = optimates_party
+				VALUE = party_disapproval_small_svalue
+			}
+			approval_effect = {
+				PARTY = boni_party
+				VALUE = party_approval_small_svalue
+			}
+			approval_effect = {
+				PARTY = democratic_party
+				VALUE = party_approval_small_svalue
+			}
+			approval_effect = {
+				PARTY = traditionalist_party
+				VALUE = party_disapproval_small_svalue
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				culture_pops_in_country = {
+					target = scope:target_culture
+					value <= 15
+				}
+			}
+			modifier = {
+				factor = 0
+				stability < 50
+			}
+		}
+	}
+
 }

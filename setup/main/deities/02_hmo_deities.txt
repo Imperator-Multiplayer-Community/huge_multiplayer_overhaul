@@ -1,0 +1,136 @@
+deity_manager = {
+	deities_database = {
+		#zoraastrianism
+		331 = {
+			key = omen_aphrodite_anaitis
+			deity = deity_aphrodite_anaitis
+		}
+		332 = {
+			key = omen_cyrus
+			deity = deity_cyrus
+			deify_ruler = 432
+			deify_ruler_permanent = yes
+			is_universal_deity = yes
+		}
+		333 = {
+			key = omen_mainyu
+			deity = deity_mainyu
+		}
+		334 = {
+			key = omen_haaoma
+			deity = deity_haaoma
+		}
+		335 = {
+			key = omen_tiri_and_tishtrya
+			deity = deity_tiri_and_tishtrya
+		}
+		#CYBELE
+		388 = {
+			#Added
+			key = omen_croesus
+			deity = deity_croesus
+			deify_ruler = 433
+			deify_ruler_permanent = yes
+			is_universal_deity = yes
+		}
+		389 = {
+			#Added
+			key = omen_manes
+			deity = deity_manes
+			deify_ruler = 434
+			deify_ruler_permanent = yes
+			is_universal_deity = yes
+		}
+		390 = {
+			#Added
+			key = omen_attix
+			deity = deity_attix
+		}
+		391 = {
+			#Added
+			key = omen_galli
+			deity = deity_galli
+		}
+		#zalmoxian
+		663 = {
+			key = omen_kapnobatai
+			deity = deity_kapnobatai
+		}
+		664 = {
+			key = omen_polistai
+			deity = deity_polistai
+		}
+		665 = {
+			key = omen_ktistai
+			deity = deity_ktistai
+		}
+		# 666 = {
+		# 	key = omen_hestia
+		# 	deity = deity_hestia
+		# }
+		667 = {
+			key = omen_orfeu
+			deity = deity_orfeu
+		}
+		#helenic illyrian
+		# 99116 = {
+		# 	key = omen_enji
+		# 	deity = deity_enji
+		# }
+		99117 = {
+			key = omen_thekuker
+			deity = deity_thekuker
+		}
+		99118 = {
+			key = omen_cadmus
+			deity = deity_cadmus
+		}
+		99119 = {
+			key = omen_thedrakon
+			deity = deity_thedrakon
+		}
+		99120 = {
+			key = omen_apollodrakania
+			deity = deity_apollodrakania
+		}
+		#arabic
+		825 = {
+			key = omen_ara
+			deity = deity_ara
+		}
+		826 = {
+			key = omen_abgal
+			deity = deity_abgal
+		}
+		827 = {
+			key = omen_abirillu
+			deity = deity_abirillu
+		}
+		828 = {
+			key = omen_arsu
+			deity = deity_arsu
+		}
+		#iberic
+		863 = {
+			key = omen_bandua
+			deity = deity_bandua
+		}
+		864 = {
+			key = omen_bormanicus
+			deity = deity_bormanicus
+		}
+		865 = {
+			key = omen_cossus
+			deity = deity_cossus
+		}
+		866 = {
+			key = omen_reue
+			deity = deity_reue
+		}
+		#megalithic
+		969 = {
+			key = omen_xacab
+			deity = deity_xacab
+		}
+	}
+}

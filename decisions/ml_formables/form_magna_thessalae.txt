@@ -1,0 +1,122 @@
+﻿country_decisions = {
+	
+	# Magna Thessalae
+	# Designed by Neidhardt, created by Neidhardt
+	form_magna_thessalae = {
+		
+		potential = {
+			num_of_cities >= 1
+			primary_culture = thessalian
+			NOT = {
+				tag = MGT
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = thessaly_area
+					is_in_area = macedonia_area
+					is_in_area = upper_macedonia_area
+					is_in_area = epirus_area
+					is_in_area = aetolia_area
+					is_in_area = boeotia_area
+					is_in_area = illyria_graeca_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = magna_thessalae_not_exists
+				NOT = {
+					any_country = {
+						tag = MGT
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = thessaly_area
+				owns_or_subject_owns_area = macedonia_area
+				owns_or_subject_owns_area = upper_macedonia_area
+				owns_or_subject_owns_area = epirus_area
+				owns_or_subject_owns_area = aetolia_area
+				owns_or_subject_owns_area = boeotia_area
+				owns_or_subject_owns_area = illyria_graeca_area
+
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "MAGNA_THESSALAE_NAME"
+			hidden_effect = {
+				change_country_adjective = "MAGNA_THESSALAE_ADJECTIVE"
+				change_country_color = "magna_thessalae_color"
+				change_country_tag = MGT
+				change_country_flag = MAGNA_THESSALAE_FLAG
+				trigger_event = {
+					id = formable_heritage.189
+				}				
+			}
+
+			custom_tooltip = magna_thessalae_claims_tooltip
+			hidden_effect = {
+				region:hellas_region = { formable_region_province_effect = yes }
+				region:asia_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			hidden_effect = {
+			}
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+			hidden_effect = {
+						create_character = {
+							first_name = "Argeadum"
+							family_name = "Bucephalus"
+							culture = thessalian
+							religion = roman_pantheon
+							no_stats=yes
+							add_martial=14
+							add_charisma=5
+							add_finesse=5
+							add_zeal=5
+							female = no
+							birth_province = 389
+							age = 21
+						}
+						create_character = {
+							first_name = "Hardtos"
+							family_name = "Thessalid"
+							culture = thessalian
+							religion = roman_pantheon
+							no_stats=yes
+							add_martial=5
+							add_charisma=5
+							add_finesse=14
+							add_zeal=5
+							female = no
+							birth_province = 389
+							age = 21
+						}
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

@@ -245,5 +245,35 @@ colors = {
 
 	vapia_map_color = rgb { 16 137 38 }
 	vapia_color = rgb { 48 150 75 }
+
+	#Neidhardt Colours
+	troan_kingdom_color = rgb { 165 38 10 }
+	magna_delta_color = rgb { 105 102 99 }
+	greco_bactrian_kingdom_color = rgb { 89 24 23 }
+	cimmeria_color = rgb { 78 9 57 }
+	mithridatic_kingdom_color = rgb { 116 66 200 }
+	marcomannia_bois_color = rgb { 19 39 18 }
+	puno_numidian_republic_color = rgb { 155 47 31 }
+	puno_celtiberian_republic_color = rgb { 216 169 3 }
+	puno_iberian_league_color = rgb { 26 71 128 }
+	puno_gallic_republic_color = rgb { 34 139 34 }
+	puno_greek_league_color = rgb { 138 127 142 }
+	puno_brittonic_republic_color = rgb { 128 0 128 }
+	greco_gallic_league_color = rgb { 42 92 3 }
+	illyrian_color = "ck2_black"
+	aryan_kingdom_color = "ck2_black"
+	aryan_republic_color = "ck2_black"
+	greco_levantine_kingdom_color = rgb { 100 28 52 }
+	great_parsa_color = "ck2_green"
+	great_karmana_color = "ck2_purple"
+	makan_league_color = "ck2_blue"
+	southern_tribes_federation_color = rgb { 181 184 177 }
+	northern_tribes_federation_color = "ck2_blue"
+	magna_celtae_color = rgb { 0 49 83 }
+	achaemenid_kingdom_color = "ck2_red"
+	magna_thessalae_color = "ck2_green"
+	magna_thessalae_color = "ck2_gray"
+	#regnum_gothorum_color = NO
+	troan_republic_color = rgb { 165 38 10 }
 }
 

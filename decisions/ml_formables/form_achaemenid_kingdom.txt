@@ -1,0 +1,87 @@
+﻿country_decisions = {
+	
+	# Achaemenid Kingdom
+	# Designed by Neidhardt, created by Neidhardt
+	form_achaemenid_kingdom = {
+		
+		potential = {
+			num_of_cities >= 1
+			country_culture_group = persia
+			tag = HCP
+			NOT = {
+				tag = ADK
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = heracleotis_area
+					is_in_area = bithynia_inferior_area
+					is_in_area = bithynia_superior_area
+					is_in_area = galatia_trocmi_area
+					is_in_area = paphlagonia_superior_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = achaemenid_kingdom_not_exists
+				NOT = {
+					any_country = {
+						tag = ADK
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = heracleotis_area
+				owns_or_subject_owns_area = bithynia_inferior_area
+				owns_or_subject_owns_area = bithynia_superior_area
+				owns_or_subject_owns_area = galatia_trocmi_area
+				owns_or_subject_owns_area = paphlagonia_superior_area
+
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "ACHAEMENID_KINGDOM_NAME"
+			hidden_effect = {
+				change_country_adjective = "ACHAEMENID_KINGDOM_ADJECTIVE"
+				change_country_color = "achaemenid_kingdom_color"
+				change_country_tag = ADK
+				change_country_flag = ACHAEMENID_KINGDOM_FLAG
+				trigger_event = {
+					id = formable_heritage.188
+				}				
+			}
+
+			custom_tooltip = achaemenid_kingdom_claims_tooltip
+			hidden_effect = {
+				region:phrygia_region = { formable_region_province_effect = yes }
+				region:cilicia_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			capital_scope = {
+			establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

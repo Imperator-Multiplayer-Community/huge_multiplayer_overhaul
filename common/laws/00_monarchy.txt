@@ -2,31 +2,31 @@
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	agnatic_succession_law = {
 		allow = {
 		}
 		succession = agnatic
 	}
-	
+
 	cognatic_succession_law = {
 		allow = {
 		}
 		succession = cognatic
 	}
-	
+
 	agnatic_seniority_succession_law = {
 		allow = {
 		}
 		succession = agnatic_seniority
 	}
-	
+
 	elective_succession_law = {
 		allow = {
 		}
 		succession = elective_monarchy
 	}
-	
+
 	egyption_succession_law = {
 		allow = {
 			has_primary_heir = yes
@@ -59,59 +59,110 @@ monarchy_military_reforms = {
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	relaxed_recruiting_standards = { #Noble Retinues - Macedon
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			levy_size_multiplier = 0.025
-			global_population_happiness = 0.05
-			discipline = 0.025
-			land_morale_modifier = 0.05
-			experience_decay = -0.02
-			monthly_military_experience = 0.15
-			army_maintenance_cost = 0.5
-			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
-			mercenary_naval_maintenance_cost = -0.25 
+			land_morale_recovery = 0.1
+			global_cohort_start_experience = 0.5
+			experience_decay = -0.9
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
 	}
-	
+
 	recruit_from_nobles = {	#Military Service - Sparta
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			levy_size_multiplier = 0.035
-			global_population_happiness = -0.05
-			manpower_recovery_speed = 0.2
-			global_manpower_modifier = 0.1 
-			discipline = -0.025
-			monthly_military_experience = 0.20
-			army_maintenance_cost = 0.5
-			mercenary_land_maintenance_cost = -0.25 # breaks about even with army_maintence_cost increase
-			mercenary_naval_maintenance_cost = -0.25 
+			levy_size_multiplier = 0.03
+			global_manpower_modifier = 0.1
+			experience_decay = -0.9
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+			}
 		}
 	}
-	
+
 	monarchy_recruitment_5 = {
+		allow = {
+			any_legion = {
+				count < 1
+			}
+		}
 		modifier = {
-			mercenary_land_maintenance_cost = -0.35
+			levy_size_multiplier = -0.03
 			max_mercenary_stacks = 1
-			levy_size_multiplier = -0.025
 			cohort_reinforcement_speed = 0.075
 			land_morale_recovery = 0.075
-			monthly_military_experience = 0.125
-			army_maintenance_cost = 0.5
+			recruit_mercenary_cost_modifier = -0.25
+			mercenary_land_maintenance_cost = -0.25
+			mercenary_naval_maintenance_cost = -0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
 			set_legion_recruitment = disabled
+			if = {
+				limit = {
+					has_variable = free_recruitment_law
+				}
+				refund_enact_recruitment_law = yes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						has_variable = has_enacted_standing_army
+					}
+
+					remove_variable = has_enacted_standing_army
+				}
+				refund_enact_recruitment_law = yes
+			}
 		}
 	}
-	
+
 	work_for_the_best = { #Royal Guard - Diadochi
 		allow = {
 			OR = {
@@ -121,7 +172,7 @@ monarchy_military_reforms = {
 					num_of_cities > 100
 				}
 			}
-			
+
 			NOT = { # once standing army has been enacted, cannot go back
 				custom_tooltip = {
 					text = "already_enacted_standing_army"
@@ -131,32 +182,35 @@ monarchy_military_reforms = {
 		}
 		modifier = {
 			discipline = 0.05
-			levy_size_multiplier = 0.025
-			monthly_military_experience = 0.20
+			monthly_military_experience = 0.10
 			mercenary_land_maintenance_cost = 0.25
 			mercenary_naval_maintenance_cost = 0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
 			set_legion_recruitment = capital
+			custom_tooltip = "legion_law_warning"
 		}
 	}
-	
+
 	standing_army_law = { #Roman Empire
 		allow = {
 			invention = discipline_inv_5
 			rank >= major_power
 		}
 		modifier = {
+			levy_size_multiplier = 0.015
+			global_manpower_modifier = 0.025
 			army_maintenance_cost = 0.10
-			monthly_military_experience = 0.25
+			monthly_military_experience = 0.15
 			general_loyalty = -2
-			mercenary_land_maintenance_cost = 0.20
-			mercenary_naval_maintenance_cost = 0.20
+			mercenary_land_maintenance_cost = 0.25
+			mercenary_naval_maintenance_cost = 0.25
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region
 			set_legion_recruitment = enabled
+			custom_tooltip = "legion_law_warning"
 			custom_tooltip = "standing_army_warning"
 			hidden_effect = {
 				if = {
@@ -177,13 +231,13 @@ monarchy_maritime_laws = {
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	slave_oarsmen = {
 		modifier = {
 			price_state_investment_oratory_cost_modifier = -0.1
 		}
 	}
-	
+
 free_ports_monarchy_law = {
 	allow  = {
 		num_of_ports >= 1
@@ -233,15 +287,15 @@ free_ports_monarchy_law = {
 					}
 				}
 				ordered_owned_province = {
-					limit = { 
-						is_port = yes 
+					limit = {
+						is_port = yes
 					}
 					order_by = num_of_port_building
 					while = {
 						count = { 2  3 }
                 		remove_building_level = port_building
          	      		add_city_smoke_effect = yes
-						add_city_fire_effect = yes	
+						add_city_fire_effect = yes
 					}
 				}
 				ordered_country_sub_unit = {
@@ -281,7 +335,7 @@ free_ports_monarchy_law = {
 	       		trigger_event = {
 						id = law_events.1
 						days = 5
-					}		
+					}
 				}
 			}
 		}
@@ -289,7 +343,7 @@ free_ports_monarchy_law = {
 			global_commerce_modifier = 0.15
 		}
 	}
-	
+
 	antipiracy_edict = {
 		allow = {
 			num_of_ports >= 1
@@ -303,20 +357,31 @@ free_ports_monarchy_law = {
 			global_citizen_happyness = 0.04
 		}
 	}
-	
+
+	customs_tariffs = {
+		allow = {
+			num_of_ports >= 1
+			invention = commerce_inv_5
+		}
+
+		modifier = {
+			global_state_trade_routes = 0.4
+		}
+	}
+
 }
 
 monarchy_economic_law = {
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	land_tithe = {
 
 	}
-	
+
 	local_investment_policy = {
-		
+
 		allow = {
 			invention = global_tribesmen_output_inv_3
 		}
@@ -326,21 +391,21 @@ monarchy_economic_law = {
 			global_tax_modifier = -0.025
 		}
 	}
-	
+
 	heritage_tax_exemption = {
-	
+
 		allow = {
 			invention = global_tribesmen_output_inv_3
 		}
 		modifier = {
 			global_tax_modifier = -0.025
-			global_freemen_happyness = -0.025 
+			global_freemen_happyness = -0.025
 			global_nobles_output = 0.03
 		}
 	}
 
 	socialism_law = { #Here's How Bernie Can Still Win
-		
+
 		allow = {
 			invention = global_population_growth_inv_2
 		}
@@ -350,20 +415,20 @@ monarchy_economic_law = {
 			global_tax_modifier = -0.025
 		}
 	}
-	
+
 }
 
 monarchy_citizen_law = {
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	foreign_law_for_minorities = {
-		
+
 	}
-	
+
 	increased_citizenship_quotas = {
-		
+
 		allow  = {
 			invention = citizen_promotion_cost_modifier_inv
 		}
@@ -371,9 +436,9 @@ monarchy_citizen_law = {
 			global_citizen_city_desired_pop_ratio = 0.10
 		}
 	}
-	
+
 	established_courts_for_landholders = {
-	
+
 		allow  = {
 			invention = citizen_promotion_cost_modifier_inv
 		}
@@ -381,14 +446,14 @@ monarchy_citizen_law = {
 			global_freemen_city_desired_pop_ratio = 0.10
 		}
 	}
-	
+
 }
 
 monarchy_religious_laws = {
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	religious_tolerance_monarchy = {
 
 		allow  = {
@@ -399,58 +464,61 @@ monarchy_religious_laws = {
 		}
 
 	}
-	
+
 	religious_integration_efforts = {
-		
+
 		allow  = {
 			invention = omen_power_inv_4
 		}
 		modifier = {
-			global_pop_conversion_speed = 0.25
-			global_pop_conversion_speed_modifier = 0.3
+			#global_pop_conversion_speed = 0.25
+			global_pop_conversion_speed_modifier = 0.25 #Was 0.3
+			temple_building_cost = -0.15
+			monthly_political_influence_modifier = 0.05
 		}
 	}
-	
-	monarchy_religious_mandate_military = { 
+
+	monarchy_religious_mandate_military = {
 		allow  = {
 			invention = omen_power_inv_4
 		}
 		modifier = {
-			global_pop_assimilation_speed = 0.25
-			global_pop_assimilation_speed_modifier = 0.3
-			
+			#global_pop_assimilation_speed = 0.25
+			global_pop_assimilation_speed_modifier = 0.25 #Was 0.3
+			theathre_building_cost = -0.15
+			monthly_political_influence_modifier = 0.05
 		}
 	}
-	
+
 }
 
 monarchy_legitimacy_laws = {
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	renowned_lineage = {
-		
+
 	}
-	
+
 	scholarly_pursuits_law = {
-	
+
 		allow = {
-			invention = research_points_modifier_inv_5 
+			invention = research_points_modifier_inv_5
 		}
 		modifier = {
 			research_points_modifier = 0.2
 			global_citizen_happyness = 0.06
 		}
 	}
-	
+
 	royal_bureaucracy = {
-	
+
 		allow = {
-			invention = research_points_modifier_inv_5 
+			invention = research_points_modifier_inv_5
 		}
 		modifier = {
-			monthly_legitimacy = 0.2
+			monthly_legitimacy = 0.4 #Was 0.2
 			global_nobles_happyness = 0.06
 		}
 	}
@@ -460,11 +528,11 @@ monarchy_contract_law = {
 	potential = {
 		is_monarchy = yes
 	}
-	
+
 	no_contract_law = {
-	
+
 	}
-	
+
 	public_notaries_law = {
 		allow = {
 			invention = tribute_income_modifier_inv_2
@@ -474,7 +542,7 @@ monarchy_contract_law = {
 			character_loyalty = -5
 		}
 	}
-	
+
 	vast_bureaucracy = {
 		allow = {
 			invention = tribute_income_modifier_inv_2
@@ -493,24 +561,24 @@ monarchy_divinity_statutes = {
 			religion = judaism
 		}
 	}
-	
-	humility_status_law = { 
-	
+
+	humility_status_law = {
+
 		allow = {
 			always = yes
 		}
-	
+
 		modifier = {
 			global_freemen_happyness = happiness_large_svalue
 		}
-		
+
 		on_enact = {
 			custom_tooltip = can_nominate_heir_at_high_legitimacy
 		}
 	}
-	
+
 	elevate_monarch_monarchy = {
-		
+
 		allow  = {
 			current_ruler = {
 				zeal >= 8
@@ -518,17 +586,17 @@ monarchy_divinity_statutes = {
 			}
 			legitimacy >= 95
 		}
-		
+
 		modifier = {
 			ruler_popularity_gain = 0.25
 			agressive_expansion_impact = -0.2
 		}
-			
+
 		on_enact = {
 			custom_tooltip = can_always_nominate_heirs
 		}
 	}
-	
+
 }
 
 #jewish_monarchy_divinity_statutes = {
@@ -536,19 +604,19 @@ monarchy_divinity_statutes = {
 #		is_monarchy = yes
 #		religion = judaism
 #	}
-#	
-#	humility_status_law = { 
+#
+#	humility_status_law = {
 #		modifier = {
 #			global_freemen_happyness = happiness_large_svalue
 #		}
-#		
+#
 #		on_enact = {
 #			custom_tooltip = can_nominate_heir_at_high_legitimacy
 #		}
 #	}
-#	
+#
 #	elevate_prophet_monarch_monarchy = {
-#		
+#
 #		allow  = {
 #			current_ruler = {
 #				zeal >= 10
@@ -556,12 +624,12 @@ monarchy_divinity_statutes = {
 #			}
 #			legitimacy >= 90
 #		}
-#		
+#
 #		modifier = {
 #			ruler_popularity_gain = 0.25
 #			agressive_expansion_impact = -0.2
 #		}
-#			
+#
 #		on_enact = {
 #			custom_tooltip = can_always_nominate_heirs
 #		}
@@ -569,12 +637,12 @@ monarchy_divinity_statutes = {
 #}
 
 monarchy_subject_laws = {
-	potential = { 
+	potential = {
 		is_monarchy = yes
 	}
-	
+
 	trusted_beyond_measure = {
-		
+
 		allow = {
 
 		}
@@ -584,10 +652,10 @@ monarchy_subject_laws = {
 			diplomatic_relations = 1
 			tribute_income_modifier = 0.05
 		}
-	} 
-	
+	}
+
 	king_of_kings = {
-		
+
 		allow = {
 			invention = fabricate_claim_cost_modifier_inv
 		}
@@ -600,7 +668,7 @@ monarchy_subject_laws = {
 	}
 
 	pay_the_crown_law = {
-		
+
 		allow = {
 			invention = relation_inv_1
 		}
@@ -623,6 +691,59 @@ monarchy_subject_laws = {
 			tribute_income_modifier = 0.15
 		}
 	}
-	
+}
+
+monarchy_pantheon_law = {
+	potential = {
+		is_monarchy = yes
+	}
+
+	default_pantheon_law = {
+
+	}
+
+	syncretism_law = {
+
+		allow = {
+			invention = happiness_for_wrong_group_modifier_inv_2
+		}
+		modifier = {
+			happiness_for_wrong_religion_modifier = 0.1
+			change_pantheon_cost_modifier = -0.15
+			omen_duration = -0.5
+			global_pop_conversion_speed_modifier = -0.2
+			enact_holy_site_cost_modifier = -0.2
+		}
+		# shorter omen time + add deities per decision
+	}
+
+	state_pantheon_law = {
+
+		allow = {
+			invention = omen_duration_inv_1
+		}
+		modifier = {
+			global_pop_conversion_speed = 0.25
+			global_pop_assimilation_speed_modifier = -0.2
+			stability_cost_modifier = -0.05
+			omen_power = 0.05
+			deify_ruler_cost_modifier = -0.1
+		}
+	}
+
+	henotheism_law = {
+
+		allow = {
+			invention = stability_inv_5
+		}
+		modifier = {
+			omen_power = 0.5
+			omen_duration = 100
+			country_civilization_value = 5
+			happiness_for_wrong_religion_modifier = -0.1
+			happiness_for_same_religion_modifier = 0.05
+			deify_ruler_cost_modifier = 5
+		}
+	}
 }
 

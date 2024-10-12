@@ -300,7 +300,7 @@ formable_province_conquest_effect = {
 
 theocratic_party_approval_effect = {
 	if = {
-		limit = { 
+		limit = {
 			is_republic = yes
 			government = theocratic_republic
 			has_party_type = traditionalist_party
@@ -314,7 +314,7 @@ theocratic_party_approval_effect = {
 
 democratic_party_approval_effect = {
 	if = {
-		limit = { 
+		limit = {
 			is_republic = yes
 			government = democratic_republic
 			has_party_type = democratic_party
@@ -328,7 +328,7 @@ democratic_party_approval_effect = {
 
 oligarchic_party_approval_effect = {
 	if = {
-		limit = { 
+		limit = {
 			is_republic = yes
 			government = oligarchic_republic
 			has_party_type = oligarchic_party
@@ -342,7 +342,7 @@ oligarchic_party_approval_effect = {
 
 traditionalist_party_approval_effect = {
 	if = {
-		limit = { 
+		limit = {
 			is_republic = yes
 			government = theocratic_republic
 			has_party_type = traditionalist_party
@@ -353,7 +353,7 @@ traditionalist_party_approval_effect = {
 		}
 	}
 	else_if = {
-		limit = { 
+		limit = {
 			is_republic = yes
 			has_party_type = traditionalist_party
 		}
@@ -367,9 +367,9 @@ traditionalist_party_approval_effect = {
 increased_rights_cleanup_effect = {
 	#ROOT = Country
 	#scope:target_culture = Country culture being degraded
-	
+
 	#Here we remove rights that can only be granted to non-integrated once a culture is integrated or primary
-	
+
 	if = {
 		limit = {
 			scope:target = { #Now Nobles or Citizens
@@ -379,7 +379,7 @@ increased_rights_cleanup_effect = {
 				}
 			}
 		}
-		
+
 		#Intermarriage:
 		if = {
 			limit = {
@@ -395,7 +395,7 @@ increased_rights_cleanup_effect = {
 				remove_country_modifier = extended_right_of_marriage
 			}
 		}
-		
+
 		#Torture:
 		if = {
 			limit = {
@@ -411,9 +411,9 @@ increased_rights_cleanup_effect = {
 				remove_country_modifier = extended_torture_protection
 			}
 		}
-		
+
 		#Contracts:
-		if = { 
+		if = {
 			limit = {
 				scope:target_culture = {
 					has_country_culture_modifier = right_to_enter_contracts
@@ -427,7 +427,7 @@ increased_rights_cleanup_effect = {
 				remove_country_modifier = extended_contract_rights
 			}
 		}
-		
+
 		#Inheritance:
 		if = {
 			limit = {
@@ -443,7 +443,7 @@ increased_rights_cleanup_effect = {
 				remove_country_modifier = extended_inheritance_right
 			}
 		}
-		
+
 		#Colonial Occupation:
 		#We don't clear the local modifier.
 		if = {
@@ -460,8 +460,8 @@ increased_rights_cleanup_effect = {
 				remove_country_modifier = colonia_project
 			}
 		}
-		
-		
+
+
 		#Officer rights
 		if = {
 			limit = {
@@ -484,10 +484,10 @@ reduced_rights_cleanup_effect = {
 	#ROOT = Country
 	#scope:target = New target poptype, target_culture contains the current one
 	#scope:target_culture = Country culture being degraded
-	
+
 	#Here we remove rights that can only be granted to Integrated or Primary culture if a culture drops to non-integrated
 
-	
+
 	if = {
 		limit = {
 			scope:target = { #Not Nobles, Not Citizens
@@ -495,12 +495,12 @@ reduced_rights_cleanup_effect = {
 				NOT = { is_pop_type_right = nobles }
 			}
 		}
-		
+
 		#State culture Dropping:
-		
-		
+
+
 		#Trial Rights
-		if = { 
+		if = {
 			limit = {
 				scope:target_culture = {
 					has_country_culture_modifier = trial_right
@@ -514,10 +514,10 @@ reduced_rights_cleanup_effect = {
 				remove_country_modifier = extended_trial_rights
 			}
 		}
-		
+
 		#Eased Restrictions on Citizenship
-		
-		if = { 
+
+		if = {
 			limit = {
 				scope:target_culture = {
 					has_country_culture_modifier = citizenship_by_adoption
@@ -527,10 +527,10 @@ reduced_rights_cleanup_effect = {
 				remove_country_culture_modifier = citizenship_by_adoption
 			}
 		}
-		
+
 		#Protected Land Rights:
-		
-		if = { 
+
+		if = {
 			limit = {
 				scope:target_culture = {
 					has_country_culture_modifier = land_protection
@@ -539,18 +539,18 @@ reduced_rights_cleanup_effect = {
 			scope:target_culture = {
 				remove_country_culture_modifier = land_protection
 			}
-			
+
 			if = {
 				limit = { has_country_modifier = extended_land_protection }
 				remove_country_modifier = extended_land_protection
 			}
 		}
-		
+
 		#Integrated Cultures dropping:
-		
+
 		#Municipal Rule: We don't clean up the Municipal self rule since it expires on its own and the subject still likely exists.
-		
-		
+
+
 		#Honor Guard
 		if = {
 			limit = {
@@ -569,7 +569,7 @@ reduced_rights_cleanup_effect = {
 			}
 			#The character modifier clears itself.
 		}
-		
+
 		#Patronage for all Culture Groups ########################################################################
 		if = {
 			limit = {
@@ -604,7 +604,7 @@ reduced_rights_cleanup_effect = {
 				limit = { has_country_modifier = impressive_greek_culture_literature }
 				remove_country_modifier = impressive_greek_culture_literature
 			}
-			
+
 		}
 
 		if = {
@@ -803,8 +803,6 @@ reduced_rights_cleanup_effect = {
 			}
 		}
 
-######################################################################
-		
 		if = { #Promote Administrators
 			limit = {
 				scope:target_culture = {
@@ -852,7 +850,7 @@ slavery_unhappiness_cleanup = {
 				has_country_culture_modifier = slave_rights_imposed
 			}
 		}
-		scope:target_culture = { 
+		scope:target_culture = {
 			remove_country_culture_modifier = slave_rights_imposed
 		}
 	}
@@ -862,9 +860,9 @@ set_primary_culture_cleanup_effect = {
 	#THIS = Country, so inside random country culture PREV = Country
 	#NEW_PRIMARY_CULTURE = The tag of the culture
 	#MAKE_OLD_CULTURE_INTEGRATED = Check for if the dropping culture should remain integrated or not.
-	
+
 	#This clears all modifiers on the old primary culture as well as the new primary culture.
-	
+
 	hidden_effect = { #The tooltip already says you are changing primary culture.
 		random_country_culture = { #Old Primary Culture modifier removal
 			limit = { this.culture = prev.culture }#Country culture tag
@@ -881,19 +879,19 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#Eased Restrictions on Citizenship
-			
-			if = { 
+
+			if = {
 				limit = {
 					has_country_culture_modifier = citizenship_by_adoption
 				}
 				remove_country_culture_modifier = citizenship_by_adoption
 			}
-			
+
 			#Protected Land Rights:
-			
-			if = { 
+
+			if = {
 				limit = {
 					has_country_culture_modifier = land_protection
 				}
@@ -905,21 +903,21 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#We do not remove the exemption from Census Tax, since it has a specific decision to repeal.
 			save_scope_as = old_primary_culture
 		}
-		
+
 		random_country_culture = { #New country culture
 			limit = {
 				is_culture = $NEW_PRIMARY_CULTURE$
 			}
-			
+
 			if = {
 				limit = { is_integrated = no }
 				ROOT = { integrate_country_culture = PREV }
 			}
-			
+
 			#Patronage
 			if = {
 				limit = {
@@ -933,7 +931,7 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#Municipal self rule should not be a thing your primary culture needs to be happy about.
 			if = {
 				limit = {
@@ -941,7 +939,7 @@ set_primary_culture_cleanup_effect = {
 				}
 				remove_country_culture_modifier = bestowed_city_rights
 			}
-			
+
 			#Promote Administrators
 			if = {
 				limit = {
@@ -958,9 +956,9 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#Honor Guard
-			
+
 			if = {
 				limit = {
 					has_country_culture_modifier = honor_guard
@@ -976,10 +974,10 @@ set_primary_culture_cleanup_effect = {
 				}
 				#The character modifier clears itself.
 			}
-			
+
 			#If the culture was not integrated we still need to clear stuff:
-			
-			
+
+
 			#Intermarriage:
 			if = {
 				limit = {
@@ -993,7 +991,7 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#Torture:
 			if = {
 				limit = {
@@ -1007,9 +1005,9 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#Contracts:
-			if = { 
+			if = {
 				limit = {
 					has_country_culture_modifier = right_to_enter_contracts
 				}
@@ -1021,7 +1019,7 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#Inheritance:
 			if = {
 				limit = {
@@ -1035,7 +1033,7 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 			#Colonial Occupation:
 			#We don't clear the local modifier.
 			if = {
@@ -1050,8 +1048,8 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
-			
+
+
 			#Officer rights
 			if = {
 				limit = {
@@ -1065,7 +1063,7 @@ set_primary_culture_cleanup_effect = {
 					}
 				}
 			}
-			
+
 		}
 	}
 	set_primary_culture = $NEW_PRIMARY_CULTURE$
@@ -1097,7 +1095,7 @@ set_primary_culture_cleanup_effect = {
 
 culture_state_loyalty_effect = {
 	#custom_tooltip = decision_state_loyalty_tt
-	#Biggest 5 are displayed 
+	#Biggest 5 are displayed
 	ordered_country_state = {
 		limit = {
 			any_state_province = {
@@ -1209,5 +1207,37 @@ republic_to_monarchy_law_change_effect = {
 			}
 			remove_variable = gov_change_legion_law
 		}
+	}
+}
+
+improve_country_assimilation_debuff_effect = { # culture scope
+	if = {
+		limit = {
+			has_country_culture_modifier = cultural_assimilation_debuff_1
+		}
+		custom_tooltip = improve_assimilation_tt
+		hidden_effect = {
+			remove_country_culture_modifier = cultural_assimilation_debuff_1
+			add_country_culture_modifier = {
+				name = cultural_assimilation_debuff_2
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_culture_modifier = cultural_assimilation_debuff_2
+		}
+		custom_tooltip = improve_assimilation_tt
+		hidden_effect = {
+			remove_country_culture_modifier = cultural_assimilation_debuff_2
+			add_country_culture_modifier = {
+				name = cultural_assimilation_debuff_3
+				duration = -1
+			}
+		}
+	}
+	else = { # fallback
+		add_stability = 1
 	}
 }

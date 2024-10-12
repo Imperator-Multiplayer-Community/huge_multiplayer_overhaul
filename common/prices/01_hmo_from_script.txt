@@ -23,33 +23,33 @@ recruit_general = {
 }
 
 secude_governor = {
-	aggressive_expansion = 20
-	political_influence = 35
-	scaled_gold = 2
+	aggressive_expansion = 15
+	political_influence = 25
+	scaled_gold = 1.5
 }
 
 gift_slave = {
-	gold = 75
-	political_influence = 15
+	gold = 50
+	political_influence = 5
 }
 
 give_relic = {
-	gold = 75
-	political_influence = 15
+	gold = 50
+	political_influence = 5
 }
 
 send_letter = {
-	gold = 75
-	political_influence = 15
+	gold = 50
+	political_influence = 5
 }
 
 go_hunting = {
-	gold = 75
-	political_influence = 15
+	gold = 50
+	political_influence = 5
 }
 
 price_force_divorce = {
-	political_influence = 20
+	political_influence = 10
 	tyranny = 5
 }
 
@@ -70,25 +70,25 @@ price_state_investment_religious = {
 }
 
 price_oaths_of_allegiance_button = {
-	political_influence = 50
+	political_influence = 30
 }
 
 price_patron_of_arts_button = {
-	political_influence = 50
+	political_influence = 30
 }
 
 price_assemble_raiding_party_button = {
-	political_influence = 60
+	political_influence = 50
 }
 
 price_tribal_duel = {
-	political_influence = 8
-	tyranny = 4
+	political_influence = 5
+	tyranny = 2
 }
 
 price_test_loyalty = {
-	political_influence = 8
-	tyranny = 4
+	political_influence = 5
+	tyranny = 2
 }
 
 price_humiliate_rival = {
@@ -96,8 +96,8 @@ price_humiliate_rival = {
 }
 
 price_task_character = {
-	political_influence = 15
-	treasury = 50
+	political_influence = 10
+	treasury = 25
 }
 
 create_merc_state_price = {
@@ -106,7 +106,7 @@ create_merc_state_price = {
 }
 
 assassinate_attempt_foreign = {
-	aggressive_expansion = 20
+	aggressive_expansion = 15
 	scaled_gold = 1
 }
 

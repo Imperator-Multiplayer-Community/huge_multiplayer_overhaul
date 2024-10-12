@@ -2052,7 +2052,7 @@ JominiMultiplayerLobby_BUI = {
 	}
 
 	base_window = {
-		size = { 500 106 }
+		size = { 600 106 }
 		parentanchor = top|hcenter
 		filter_mouse = left|right
 		alwaystransparent = no
@@ -2163,6 +2163,30 @@ JominiMultiplayerLobby_BUI = {
 							blockoverride "IconTexture" { texture = "gfx/interface/icons/minimap/population.dds" }
 							onclick = "[SetMapMode('population')]"
 							tooltip = "population_MAPMODE_DESC"
+						}
+
+						button = {
+							shortcut = "map_mode_11"
+							using = droptargetbutton
+							blockoverride "IconTexture" { texture = "gfx/interface/icons/minimap/area.dds" }
+							onclick = "[SetMapMode('area')]"
+							tooltip = "area_MAPMODE_DESC"
+						}
+
+						button = {
+							shortcut = "map_mode_12"
+							using = droptargetbutton
+							blockoverride "IconTexture" { texture = "gfx/interface/icons/minimap/region.dds" }
+							onclick = "[SetMapMode('region')]"
+							tooltip = "region_MAPMODE_DESC"
+						}
+
+						button = {
+							shortcut = "map_mode_13"
+							using = droptargetbutton
+							blockoverride "IconTexture" { texture = "gfx/interface/icons/minimap/naval_range.dds" }
+							onclick = "[SetMapMode('naval_range')]"
+							tooltip = "naval_range_MAPMODE_DESC"
 						}
 
 					}

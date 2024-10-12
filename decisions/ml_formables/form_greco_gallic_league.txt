@@ -1,0 +1,88 @@
+﻿country_decisions = {
+	
+	# Greco-Gallic League
+	# Designed by Neidhardt, created by Neidhardt
+	form_greco_gallic_league = {
+		
+		potential = {
+			num_of_cities >= 1
+			is_republic = yes
+			country_culture_group = hellenic
+			NOT = {
+				tag = GGL
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = narbonensis_occidentalis_area
+					is_in_area = alpes_maritimae_area
+					is_in_area = alpes_maritimae_two_area
+					is_in_area = alpes_rhodanus_area
+					is_in_area = narbonensis_orientalis_area
+					is_in_area = narbonensis_centralis_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = greco_gallic_league_not_exists
+				NOT = {
+					any_country = {
+						tag = GGL
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+				owns_or_subject_owns_area = narbonensis_occidentalis_area
+				owns_or_subject_owns_area = alpes_maritimae_area
+				owns_or_subject_owns_area = alpes_maritimae_two_area
+				owns_or_subject_owns_area = alpes_rhodanus_area
+				owns_or_subject_owns_area = narbonensis_orientalis_area
+				owns_or_subject_owns_area = narbonensis_centralis_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "GRECO_GALLIC_LEAGUE_NAME"
+			hidden_effect = {
+				change_country_adjective = "GRECO_GALLIC_LEAGUE_ADJECTIVE"
+				change_country_color = "greco_gallic_league_color"
+				change_country_tag = GGL
+				change_country_flag = GRECO_GALLIC_LEAGUE_FLAG
+				trigger_event = {
+					id = formable_heritage.177
+				}				
+			}
+			custom_tooltip = greco_gallic_league_claims_tooltip
+			hidden_effect = {
+				region:aquitania_region = { formable_region_province_effect = yes }
+				region:rhodania_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

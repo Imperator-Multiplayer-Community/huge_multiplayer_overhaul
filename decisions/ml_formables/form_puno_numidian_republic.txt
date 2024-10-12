@@ -1,0 +1,88 @@
+﻿country_decisions = {
+	
+	# Puno-Numidian Republic
+	# Designed by Neidhardt, created by Neidhardt
+	form_puno_numidian_republic = {
+		
+		potential = {
+			num_of_cities >= 1
+			is_republic = yes
+			country_culture_group = west_levantine
+			NOT = {
+				tag = PNR
+			}
+			OR = {
+				is_ai = no
+				num_of_cities >= 12
+			}
+			NOR = {
+				is_tier_2_formable_trigger = yes
+				is_endgame_tag_trigger = yes
+			}
+		}
+		
+		highlight = {
+			scope:province = {
+				OR = {
+					is_in_area = mauretania_tingitana_septentrionalis_area
+					is_in_area = mauretania_tingitana_meridionalis_area
+					is_in_area = rif_area
+					is_in_area = rutubis_area
+					is_in_area = lower_moulouya_area
+					is_in_area = tadla_area
+
+				}
+			}
+		}
+		
+		allow = {
+			custom_tooltip = {
+				text = puno_numidian_republic_not_exists
+				NOT = {
+					any_country = {
+						tag = PNR
+					}
+				}
+			}
+			can_form_nation_trigger = yes
+					owns_or_subject_owns_area = mauretania_tingitana_septentrionalis_area
+					owns_or_subject_owns_area = mauretania_tingitana_meridionalis_area
+					owns_or_subject_owns_area = rif_area
+					owns_or_subject_owns_area = rutubis_area
+					owns_or_subject_owns_area = lower_moulouya_area
+					owns_or_subject_owns_area = tadla_area
+		}
+		
+		effect = {
+			custom_tooltip = "tier_2_formable_tooltip"
+			change_country_name = "PUNO_NUMIDIAN_REPUBLIC_NAME"
+			hidden_effect = {
+				change_country_adjective = "PUNO_NUMIDIAN_REPUBLIC_ADJECTIVE"
+				change_country_color = "puno_numidian_republic_color"
+				change_country_tag = PNR
+				change_country_flag = PUNO_NUMIDIAN_REPUBLIC_FLAG
+				trigger_event = {
+					id = formable_heritage.171
+				}				
+			}
+			custom_tooltip = puno_numidian_republic_claims_tooltip
+			hidden_effect = {
+				region:atlas_region = { formable_region_province_effect = yes }
+				region:baetica_region = { formable_region_province_effect = yes }
+			}
+			add_3_free_province_investments = yes
+			capital_scope = {
+				establish_city_effect = yes
+			}
+			capital_scope = {
+					capital_formable_large_effect = yes
+					formable_capital_modifier_normal_effect = yes
+			}
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

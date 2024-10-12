@@ -16,7 +16,6 @@
 		flavor_egy.15
 		me_thrace_2_paper_kingdom.3		# Odrysia - revolt or not?
 		me_thrace_2_paper_kingdom.30		# Odrysia - losing war with Thrace, surrender or not?
-		#slave_revolts.3
 		counterintel.1
 		hmo_civil_war.1		# civil war
 		high_tyranny.1		# adds high tyranny
@@ -26,6 +25,7 @@
 		food_share.1		# shares food with allies
 		migrant_women_and_children.1		# migrant army debuff at war
 		migrant_women_and_children.2		# migrant army debuff remove not at war
+		fighting_ground_military_events.1		# terrain bonuses // ensures they are always active
 	}
 	random_events = {
 		550 = 0

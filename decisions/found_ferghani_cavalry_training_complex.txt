@@ -1,56 +1,50 @@
-﻿country_decisions = {
-	
-	# Found Ferghani Cavalry Training Complex
-	found_ferghani_cavalry_training_complex = {
-	
-		potential = {
-			num_of_cities >= 1
-			owns = 6731
-			NOR = {
-				has_variable = founded_ferghani_cavalry_training_complex
-			}
-			OR = { 	country_culture_group = bactrian
-					country_culture_group = scythia
-					any_country_culture = {
-						is_integrated = yes
-						country_culture_pop_count >= small_percent_size_culture_group_comparison
-						this.culture.culture_group = culture_group:bactrian
-						this.culture.culture_group = culture_group:scythia
-					}			
-			}
-		}
-		highlight = {
-			scope:province = {
-				province_id = 6731 #Massagetia
-			}
-		}
-		allow = {
-			treasury >= 100
-			military_experience >= 80
-			owns = 6731
-		}
-		
-		effect = {
-			set_variable = founded_ferghani_cavalry_training_complex
-			add_treasury = -100
-			add_military_experience = -80
-			add_country_modifier = {
-				name = ferghani_cavalry_training_programme 
-				duration = -1
-			}
-			
-			p:6731 = {
-					add_province_modifier = {
-						name = ferghani_cavalry_training_complex
-						duration = -1					
-					}
-					set_trade_goods = horses
-				}
-				
-		}
-		
-		ai_will_do = {
-			base = 100
-		}
-	}
-}
+﻿# country_decisions = {
+# 	# Found Ferghani Cavalry Training Complex
+# 	found_ferghani_cavalry_training_complex = {
+# 		potential = {
+# 			num_of_cities >= 1
+# 			owns = 6731
+# 			NOR = {
+# 				has_variable = founded_ferghani_cavalry_training_complex
+# 			}
+# 			OR = { 	country_culture_group = bactrian
+# 					country_culture_group = scythia
+# 					any_country_culture = {
+# 						is_integrated = yes
+# 						country_culture_pop_count >= small_percent_size_culture_group_comparison
+# 						this.culture.culture_group = culture_group:bactrian
+# 						this.culture.culture_group = culture_group:scythia
+# 					}
+# 			}
+# 		}
+# 		highlight = {
+# 			scope:province = {
+# 				province_id = 6731 #Massagetia
+# 			}
+# 		}
+# 		allow = {
+# 			treasury >= 100
+# 			military_experience >= 80
+# 			owns = 6731
+# 		}
+# 		effect = {
+# 			set_variable = founded_ferghani_cavalry_training_complex
+# 			add_treasury = -100
+# 			add_military_experience = -80
+# 			add_country_modifier = {
+# 				name = ferghani_cavalry_training_programme
+# 				duration = -1
+# 			}
+# 			p:6731 = {
+# 					add_province_modifier = {
+# 						name = ferghani_cavalry_training_complex
+# 						duration = -1
+# 					}
+# 					set_trade_goods = horses
+# 				}
+# 		}
+# 		ai_will_do = {
+# 			base = 100
+# 		}
+# 	}
+# }

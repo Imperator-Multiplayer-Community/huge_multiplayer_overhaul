@@ -70,3 +70,16 @@ locust_plague_non_plant = {
 	local_monthly_food_modifier = -1
 	supply_limit_modifier = -0.8
 }
+
+satisfied_initial_slaves_demands = {
+	global_slaves_happyness = 0.12
+}
+
+satisfied_riot_demands = {
+	global_slaves_happyness = 0.18
+	monthly_political_influence_modifier = -0.05
+}
+
+slaves_suppressed_mod = {
+	local_slaves_happyness = -0.12
+}

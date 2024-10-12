@@ -11,37 +11,37 @@ social_change_events.1 = {
 	immediate = {
 		hidden_effect = {
 				random_list = {
-					15 = {
+					10 = {
 						trigger_event = {
 							id = social_change_events.2 
 							days = { 365 730 }
 						}
 					}
-					15 = {
+					10 = {
 						trigger_event = {
 							id = social_change_events.3
 							days = { 365 730 }
 						}
 					}
-					15 = {
+					10 = {
 						trigger_event = {
 							id = social_change_events.4 
 							days = { 365 730 }
 						}
 					}
-					15 = {
+					10 = {
 						trigger_event = {
 							id = social_change_events.5 
 							days = { 365 730 }
 						}
 					}
-					15 = {
+					10 = {
 						trigger_event = {
 							id = social_change_events.6 
 							days = { 365 730 }
 						}
 					}
-					25 = { 
+					50 = { 
 					}
 				}
 		}		
@@ -67,7 +67,7 @@ social_change_events.2 = {
 
 	option = {
 		name = "social_change_events.2.a"
-		add_stability = -5
+		add_stability = -2
 		add_country_modifier = { 
 			name = "social_stability"
 			duration = 730
@@ -94,7 +94,7 @@ social_change_events.3 = {
 
 	option = {
 		name = "social_change_events.3.a"
-		add_stability = -5
+		add_stability = -2
 		add_country_modifier = { 
 			name = "social_stability"
 			duration = 730
@@ -123,7 +123,7 @@ social_change_events.4 = {
 
 	option = {
 		name = "social_change_events.4.a"
-		add_stability = -5
+		add_stability = -2
 		add_country_modifier = { 
 			name = "civil_war_risk"
 			duration = 730
@@ -149,7 +149,7 @@ social_change_events.5 = {
 
 	option = {
 		name = "social_change_events.5.a"
-		add_stability = -5
+		add_stability = -2
 		add_country_modifier = { 
 			name = "social_disloyalty"
 			duration = 730
@@ -175,7 +175,7 @@ social_change_events.6 = {
 
 	option = {
 		name = "social_change_events.6.a"
-		add_stability = -5
+		add_stability = -2
 		add_country_modifier = { 
 			name = "social_unrest"
 			duration = 730

@@ -6,21 +6,26 @@
 	maneuver = 1
 	movement_speed = 2.5
 	build_time = 30
-	light_infantry = 1.05
-	heavy_infantry = 0.85
-	heavy_cavalry = 0.8
+	light_infantry = 1.0
+	heavy_infantry = 0.75
+	heavy_cavalry = 1.0
 	warelephant = 1
-	horse_archers = 0.95
-	archers = 1.1
-	camels = 0.95
-	light_cavalry = 0.95
+	horse_archers = 0.50
+	archers = 1.0
+	camels = 1.0
+	light_cavalry = 1.0
 	supply_train = 2
+
 	attrition_weight = 0.5
 	attrition_loss = 0.025
+
+	morale_damage_taken = 0.65
+	strength_damage_taken = 1.0
+	
 	food_consumption = 0.1
 	food_storage = 2.4
 	build_cost = {
-		gold = 13.2
+		gold = 10.0
 		manpower = 1
 	}
 }
