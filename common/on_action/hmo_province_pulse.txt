@@ -1,8 +1,8 @@
 ﻿hmo_province_pulse = {
-	on_actions = {
-		delay = { days = { 1 30 } }
-		hmo_province_pulse
-	}
+	#on_actions = {
+	#	delay = { days = { 1 30 } }
+	#	hmo_province_pulse
+	#}
 	events = {
 	}
 	random_events = {
