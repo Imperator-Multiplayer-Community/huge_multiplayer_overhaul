@@ -1779,7 +1779,7 @@ deity_eacus = { # CULTURE
 	}
 }
 
-eity_bandua = { # ECONOMY
+deity_bandua = { # ECONOMY
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {

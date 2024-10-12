@@ -1,29 +1,26 @@
 deity_manager = {
 	deities_database = {
-		#ZOROASTRIAN
-		326 = {
-			key = omen_darius
-			deity = deity_darius
-			deify_ruler = 431
-			deify_ruler_permanent = yes
-			is_universal_deity = yes
+		#zoraastrianism
+		331 = {
+			key = omen_aphrodite_anaitis
+			deity = deity_aphrodite_anaitis
 		}
-		327 = {
+		332 = {
 			key = omen_cyrus
 			deity = deity_cyrus
 			deify_ruler = 432
 			deify_ruler_permanent = yes
 			is_universal_deity = yes
 		}
-		328 = {
+		333 = {
 			key = omen_mainyu
 			deity = deity_mainyu
 		}
-		329 = {
+		334 = {
 			key = omen_haaoma
 			deity = deity_haaoma
 		}
-		330 = {
+		335 = {
 			key = omen_tiri_and_tishtrya
 			deity = deity_tiri_and_tishtrya
 		}
@@ -67,19 +64,19 @@ deity_manager = {
 			key = omen_ktistai
 			deity = deity_ktistai
 		}
-		666 = {
-			key = omen_hestia
-			deity = deity_hestia
-		}
+		# 666 = {
+		# 	key = omen_hestia
+		# 	deity = deity_hestia
+		# }
 		667 = {
 			key = omen_orfeu
 			deity = deity_orfeu
 		}
 		#helenic illyrian
-		99116 = {
-			key = omen_enji
-			deity = deity_enji
-		}
+		# 99116 = {
+		# 	key = omen_enji
+		# 	deity = deity_enji
+		# }
 		99117 = {
 			key = omen_thekuker
 			deity = deity_thekuker
