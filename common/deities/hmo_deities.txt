@@ -137,8 +137,9 @@ deity_ahura_mazda = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
+}
 
-	deity_haurvatat = {
+deity_haurvatat = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		OR = {
@@ -797,7 +798,7 @@ deity_ainina_and_danina = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		fertility_apotheosis_capital_slaves_effect = yes
 	}
@@ -823,7 +824,7 @@ deity_zadeni = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		military_apotheosis_defensive_effect = yes
 	}
@@ -849,7 +850,7 @@ deity_dali = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		economy_apotheosis_province_improvement_effect = yes
 	}
@@ -875,7 +876,7 @@ deity_ghmerti = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		culture_apotheosis_assimilate_effect = yes
 	}
@@ -901,7 +902,7 @@ deity_gacim = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		fertility_apotheosis_food_effect = yes
 	}
@@ -927,7 +928,7 @@ deity_armazi = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		culture_apotheosis_capital_effect = yes
 	}
@@ -953,7 +954,7 @@ deity_kopala = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		military_apotheosis_defensive_effect = yes
 	}
@@ -979,7 +980,7 @@ deity_ga = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		fertility_apotheosis_capital_effect = yes
 	}
@@ -1005,7 +1006,7 @@ deity_adgilis_deda = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		economy_apotheosis_province_improvement_effect = yes
 	}
@@ -1031,7 +1032,7 @@ deity_vakhs = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		military_apotheosis_military_experience_effect = yes
 	}
@@ -1057,7 +1058,7 @@ deity_kuara = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		military_apotheosis_military_experience_effect = yes
 	}
@@ -1083,7 +1084,7 @@ deity_izamra = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		culture_apotheosis_civic_tech_effect = yes
 	}
@@ -1109,7 +1110,7 @@ deity_ag = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		fertility_apotheosis_capital_effect = yes
 	}
@@ -1135,7 +1136,7 @@ deity_aded = {
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		economy_income_effect = yes
 	}
@@ -1483,22 +1484,22 @@ deity_latra = {
 	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
 	omen = { global_pop_assimilation_speed_modifier = omen_global_pop_assimilation_speed_modifier_svalue }
 	religion = roman_pantheon
-	deity_category = economy 
-	
+	deity_category = economy
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		fertility_apotheosis_capital_slaves_effect = yes
 	}
-	
+
 }
 
 deity_vidasus = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
-		country_culture_group = illyrian_group 
+		country_culture_group = illyrian_group
 		NOT = { primary_culture = messapian }
 		OR = {
 			rare_deity_trigger = {
@@ -1514,7 +1515,7 @@ deity_vidasus = {
 	omen = { global_freemen_output = omen_global_freemen_output_svalue }
 	religion = roman_pantheon
 	deity_category = economy #This Deity uses an Economy Slot
-	
+
 	on_activate = {
 		economy_apotheosis_province_improvement_effect = yes
 		if = {
@@ -1528,14 +1529,14 @@ deity_vidasus = {
 						is_ruler = no
 						is_head_of_family = no
 					}
-					death = { 
+					death = {
 						death_reason = death_mysteriously_retired
 					}
 				}
 			}
 		}
 	}
-	
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
@@ -1545,7 +1546,7 @@ deity_tadenus = {
 	trigger = {
 		polytheistic_check_religion_trigger = yes
 		country_culture_group = illyrian_group
-		NOT = { primary_culture = messapian }		
+		NOT = { primary_culture = messapian }
 		OR = {
 			rare_deity_trigger = {
 				RELIGION = roman_pantheon
@@ -1560,11 +1561,11 @@ deity_tadenus = {
 	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue }
 	religion = roman_pantheon
 	deity_category = culture #This Deity uses a Culture Slot
-	
+
 	on_activate = {
 		military_apotheosis_capital_freemen_effect = yes
 	}
-	
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
@@ -1589,11 +1590,11 @@ deity_deipatros = {
 	omen = { agressive_expansion_monthly_change = omen_aggressive_expansion_monthly_change_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = culture #This Deity uses a Culture Slot
-	
+
 	on_activate = {
 		culture_apotheosis_rel_tech_effect = yes
 	}
-	
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
@@ -1617,16 +1618,16 @@ deity_thekuker = {
 	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
 	omen = { global_pop_conversion_speed_modifier = omen_global_pop_conversion_speed_modifier_svalue }
 	religion = roman_pantheon
-	deity_category = economy 
-	
+	deity_category = economy
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		fertility_apotheosis_capital_slaves_effect = yes
 	}
-	
+
 }
 
 deity_cadmus = {
@@ -1647,12 +1648,12 @@ deity_cadmus = {
 	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
 	omen = { global_slaves_output = omen_global_slaves_output_svalue }
 	religion = roman_pantheon
-	deity_category = economy 
-	
+	deity_category = economy
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		culture_apotheosis_assimilate_effect = yes
 	}
@@ -1677,11 +1678,11 @@ deity_thedrakon = {
 	omen = { civic_tech_investment = omen_civic_tech_investment_svalue }
 	religion = roman_pantheon
 	deity_category = culture
-	
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		economy_apotheosis_province_improvement_effect = yes
 	}
@@ -1705,12 +1706,12 @@ deity_apollodrakania = {
 	passive_modifier = { global_pop_assimilation_speed_modifier = deity_global_pop_assimilation_speed_modifier_svalue }
 	omen = { global_commerce_modifier = omen_global_commerce_modifier_svalue }
 	religion = roman_pantheon
-	deity_category = economy 
-	
+	deity_category = economy
+
 	deification_trigger = {
 		can_deify_trigger = yes
 	}
-	
+
 	on_activate = {
 		culture_apotheosis_assimilate_effect = yes
 	}

@@ -662,6 +662,9 @@ slave_revolts.6 = {
 		num_of_slaves >= 25
 		slaves_happiness <= 0.15		#Less than 15% Happiness
 		num_of_slaves >= slave_revolt_svalue		#Ratio of slaves and minimum size
+		NOT = {
+			has_province_modifier = recent_slave_revolt				#Safe for a bit
+		}
 		owner = {
 			NOT = {
 				has_variable = brewing_slave_revolt				#only one revolt at a time
@@ -669,7 +672,6 @@ slave_revolts.6 = {
 				has_country_modifier = satisfied_initial_slaves_demands
 				has_country_modifier = slave_revolt_succesful				#protected
 				has_country_modifier = ongoing_slave_revolt				#only one snowball at a time
-				has_province_modifier = recent_slave_revolt				#Safe for a bit
 				has_variable = slave_moratorium				# Protected
 			}
 		}
