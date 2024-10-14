@@ -4161,7 +4161,7 @@ troan_kingdom_heritage = {
 greco_bactrian_kingdom_heritage = {
 	modifier = {
 		#good
-		global_slaves_output = 0.6
+		global_slaves_output = 0.06
 		global_pop_assimilation_speed_modifier = 0.1
 
 		#bad
@@ -4343,7 +4343,7 @@ aryan_republic_heritage = {
 greco_levantine_kingdom_heritage = {
 	modifier = {
 		#good
-		global_freemen_output = 0.6
+		global_freemen_output = 0.06
 		omen_power = 0.1
 
 		#bad

@@ -954,7 +954,7 @@ troan_kingdom_modifier = {
 		build_time = 0.05
 }
 greco_bactrian_kingdom_modifier = {
-		global_slaves_output = 0.6
+		global_slaves_output = 0.06
 		global_pop_assimilation_speed_modifier = 0.1
 		agressive_expansion_impact = 0.1
 }
@@ -1019,7 +1019,7 @@ aryan_republic_modifier = {
 		global_manpower_modifier = -0.05
 }
 greco_levantine_kingdom_modifier = {
-		global_freemen_output = 0.6
+		global_freemen_output = 0.06
 		omen_power = 0.1
 		global_pop_assimilation_speed_modifier = -0.1
 }
@@ -1067,7 +1067,7 @@ magna_thessalae_modifier = {
 #		global_freemen_happyness = 0.06
 #		heavy_cavalry_discipline = 0.05
 #		naval_damage_taken = 0.05
-#}
+}
 troan_republic_modifier = {
 		global_defensive = 0.1
 		stability_monthly_change = 0.06
