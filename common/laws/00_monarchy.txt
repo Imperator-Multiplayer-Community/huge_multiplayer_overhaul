@@ -68,7 +68,7 @@ monarchy_military_reforms = {
 		}
 		modifier = {
 			land_morale_recovery = 0.1
-			global_cohort_start_experience = 0.5
+			global_cohort_start_experience = 50
 			experience_decay = -0.9
 		}
 		on_enact = {

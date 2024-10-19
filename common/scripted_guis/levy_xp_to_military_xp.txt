@@ -159,7 +159,7 @@ country_all_levy_xp_to_military_xp_event = {
 					ROOT = {
 						set_variable = {
 							name = country_levy_start_xp
-							value = 10
+							value = 0
 						}
 					}
 				}
@@ -170,7 +170,7 @@ country_all_levy_xp_to_military_xp_event = {
 						subtract = var:country_levy_start_xp
 						multiply = 0.075
 						min = 0
-						max = 8
+						max = 20
 					}
 					remove_variable = country_levy_start_xp
 				}

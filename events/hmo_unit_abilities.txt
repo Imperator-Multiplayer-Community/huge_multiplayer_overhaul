@@ -1,16 +1,16 @@
-﻿namespace = hmo_unit_abilties
+﻿namespace = hmo_unit_abilities
 
-hmo_unit_abilties.1 = { # slave raid
+hmo_unit_abilities.1 = { # slave raid
 	type = country_event
 	hidden = yes
-		
+
 	trigger = {
 		scope:slave_raiding_unit = {
 			has_variable = is_slave_raiding
 			unit_location = scope:slave_raiding_location
 		}
 	}
-	
+
 	immediate = {
 		if = {
 			limit = {
@@ -19,7 +19,7 @@ hmo_unit_abilties.1 = { # slave raid
 					unit_location = scope:slave_raiding_location
 				}
 			}
-			
+
 			scope:slave_raiding_location = {
 				ordered_neighbor_province = {
 					limit = {
@@ -41,7 +41,7 @@ hmo_unit_abilties.1 = { # slave raid
 					add_city_fire_effect = yes
 					order_by = total_population
 					max = scope:slave_raiding_unit.naval_raid_capacity_svalue
-					
+
 					scope:slave_raiding_unit.unit_owner = {
 						add_aggressive_expansion = 1
 					}
@@ -60,7 +60,7 @@ hmo_unit_abilties.1 = { # slave raid
 					}
 
 					trigger_event = {
-						id = hmo_unit_abilties.7
+						id = hmo_unit_abilities.7
 					}
 
 					owner = {
@@ -71,7 +71,7 @@ hmo_unit_abilties.1 = { # slave raid
 						1 = {
 							scope:target_nation = {
 								trigger_event = {
-									id = hmo_unit_abilties.2
+									id = hmo_unit_abilities.2
 								}
 							}
 						}
@@ -82,34 +82,34 @@ hmo_unit_abilties.1 = { # slave raid
 	}
 }
 
-hmo_unit_abilties.2 = { # slave raid warning
+hmo_unit_abilities.2 = { # slave raid warning
 	type = minor_country_event
-	title = hmo_unit_abilties.2.t
-	desc = hmo_unit_abilties.2.desc
+	title = hmo_unit_abilities.2.t
+	desc = hmo_unit_abilities.2.desc
 	picture = revolt
-	
+
 	left_portrait = current_ruler
-	right_portrait = scope:slave_raiding_unit.unit_owner.current_ruler 
+	right_portrait = scope:slave_raiding_unit.unit_owner.current_ruler
 
 	goto_location = scope:slave_raiding_unit
-	
+
 	immediate = {
-	
+
 	}
-	
+
 	option = { # do nothing
-		name = hmo_unit_abilties.2.a
+		name = hmo_unit_abilities.2.a
 	}
 	option = { # insult
-	    name = hmo_unit_abilties.2.b
+	    name = hmo_unit_abilities.2.b
 
 	    add_opinion = {
 	    	modifier = "opinion_insult"
 	    	target = scope:slave_raiding_unit.unit_owner
 	    }
 	}
-	option = { # declare war 
-	    name = hmo_unit_abilties.2.c
+	option = { # declare war
+	    name = hmo_unit_abilities.2.c
 
 	    trigger = {
 	    	NOT = {
@@ -124,13 +124,13 @@ hmo_unit_abilties.2 = { # slave raid warning
 	    root = {
 	    	declare_war_with_wargoal = {
 	    		war_goal = raiding_wargoal
-	    		target = scope:slave_raiding_unit.unit_owner	    	
+	    		target = scope:slave_raiding_unit.unit_owner
 	    	}
 	    }
 	}
 }
 
-hmo_unit_abilties.3 = { # naval supply
+hmo_unit_abilities.3 = { # naval supply
 	type = country_event
 	hidden = yes
 
@@ -149,7 +149,7 @@ hmo_unit_abilties.3 = { # naval supply
 					unit_location = scope:naval_supplier_location
 				}
 			}
-			
+
 			scope:naval_supplier_unit.unit_location = {
 				ordered_neighbor_province = {
 					limit = {
@@ -172,7 +172,7 @@ hmo_unit_abilties.3 = { # naval supply
 	}
 }
 
-hmo_unit_abilties.4 = { # port assault
+hmo_unit_abilities.4 = { # port assault
 	type = country_event
 	hidden = yes
 
@@ -191,7 +191,7 @@ hmo_unit_abilties.4 = { # port assault
 					unit_location = scope:naval_assaulter_location
 				}
 			}
-			
+
 			scope:naval_assaulter_unit.unit_location = {
 				ordered_neighbor_province = {
 					limit = {
@@ -205,7 +205,7 @@ hmo_unit_abilties.4 = { # port assault
 					remove_building_level = fortress_building
 
 					trigger_event = {
-						id = hmo_unit_abilties.8
+						id = hmo_unit_abilities.8
 					}
 				}
 			}
@@ -213,7 +213,7 @@ hmo_unit_abilties.4 = { # port assault
 	}
 }
 
-hmo_unit_abilties.5 = { # port raid
+hmo_unit_abilities.5 = { # port raid
 	type = country_event
 	hidden = yes
 
@@ -232,7 +232,7 @@ hmo_unit_abilties.5 = { # port raid
 					unit_location = scope:naval_raider_location
 				}
 			}
-			
+
 			scope:naval_raider_unit.unit_location = {
 				random_neighbor_province = {
 					limit = {
@@ -242,7 +242,7 @@ hmo_unit_abilties.5 = { # port raid
 					}
 					siege = { add_breach = 1 }
 					trigger_event = {
-						id = hmo_unit_abilties.9
+						id = hmo_unit_abilities.9
 					}
 				}
 			}
@@ -250,34 +250,34 @@ hmo_unit_abilties.5 = { # port raid
 	}
 }
 
-hmo_unit_abilties.6 = { # raid commerce warning
+hmo_unit_abilities.6 = { # raid commerce warning
 	type = minor_country_event
-	title = hmo_unit_abilties.6.t
-	desc = hmo_unit_abilties.6.desc
+	title = hmo_unit_abilities.6.t
+	desc = hmo_unit_abilities.6.desc
 	picture = revolt
-	
+
 	left_portrait = current_ruler
-	right_portrait = scope:raid_commerce_unit.owner.current_ruler 
+	right_portrait = scope:raid_commerce_unit.owner.current_ruler
 
 	goto_location = scope:raid_commerce_unit
-	
+
 	immediate = {
-	
+
 	}
-	
+
 	option = { # do nothing
-		name = hmo_unit_abilties.6.a
+		name = hmo_unit_abilities.6.a
 	}
 	option = { # insult
-	    name = hmo_unit_abilties.6.b
+	    name = hmo_unit_abilities.6.b
 
 	    add_opinion = {
 	    	modifier = "opinion_insult"
 	    	target = scope:raid_commerce_unit.unit_owner
 	    }
 	}
-	option = { # declare war 
-	    name = hmo_unit_abilties.6.c
+	option = { # declare war
+	    name = hmo_unit_abilities.6.c
 
 	    trigger = {
 	    	NOT = {
@@ -298,7 +298,7 @@ hmo_unit_abilties.6 = { # raid commerce warning
 	}
 }
 
-hmo_unit_abilties.7 = { # slave raid text
+hmo_unit_abilities.7 = { # slave raid text
 	type = province_event
 	hidden = yes
 
@@ -307,7 +307,7 @@ hmo_unit_abilties.7 = { # slave raid text
 	}
 }
 
-hmo_unit_abilties.8 = { # port assault text
+hmo_unit_abilities.8 = { # port assault text
 	type = province_event
 	hidden = yes
 
@@ -316,7 +316,7 @@ hmo_unit_abilties.8 = { # port assault text
 	}
 }
 
-hmo_unit_abilties.9 = { # port raid text
+hmo_unit_abilities.9 = { # port raid text
 	type = province_event
 	hidden = yes
 
@@ -325,7 +325,7 @@ hmo_unit_abilties.9 = { # port raid text
 	}
 }
 
-hmo_unit_abilties.10 = { # raid commerce
+hmo_unit_abilities.10 = { # raid commerce
 	type = province_event
 	hidden = yes
 
@@ -334,7 +334,7 @@ hmo_unit_abilties.10 = { # raid commerce
 	}
 }
 
-hmo_unit_abilties.11 = { # fishing
+hmo_unit_abilities.11 = { # fishing
 	type = province_event
 	hidden = yes
 
@@ -343,8 +343,8 @@ hmo_unit_abilties.11 = { # fishing
 	}
 }
 
-						
-hmo_unit_abilties.12 = { # protect commerce
+
+hmo_unit_abilities.12 = { # protect commerce
 	type = province_event
 	hidden = yes
 
@@ -353,7 +353,7 @@ hmo_unit_abilties.12 = { # protect commerce
 	}
 }
 
-hmo_unit_abilties.13 = { # supply
+hmo_unit_abilities.13 = { # supply
 	type = province_event
 	hidden = yes
 
@@ -362,5 +362,49 @@ hmo_unit_abilties.13 = { # supply
 	}
 }
 
+hmo_unit_abilities.14 = { # ensure protect merchants modifier is handled
+	type = country_event
+	hidden = yes
 
+	trigger = {
+		has_country_modifier = protect_merchants
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_navy = {
+						navy_protecting_commerce = yes
+					}
+				}
+			}
+
+			remove_country_modifier = protect_merchants
+		}
+	}
+}
+
+hmo_unit_abilities.15 = { # ensure raid commerce  modifier is handled
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_country_modifier = naughty_mugger
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_navy = {
+						navy_raiding_commerce = yes
+					}
+				}
+			}
+
+			remove_country_modifier = naughty_mugger
+		}
+	}
+}
 

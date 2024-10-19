@@ -73,11 +73,11 @@
 							has_breach = no
 						}
 					}
-				}	
+				}
 			}
 		}
 	}
-	
+
 	start_effect = {
 		save_scope_as = naval_raider_unit
 		if = {
@@ -134,7 +134,7 @@
 
 				unit_owner = {
 					trigger_event = {
-						id = hmo_unit_abilties.5
+						id = hmo_unit_abilities.5
 						days = 30
 					}
 				}
@@ -144,7 +144,7 @@
 			custom_tooltip = port_raid_explainer
 		}
 	}
-	
+
 	finished_when = {
 		OR = {
 			is_exiled = yes
