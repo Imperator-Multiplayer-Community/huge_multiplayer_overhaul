@@ -408,3 +408,27 @@ hmo_unit_abilities.15 = { # ensure raid commerce  modifier is handled
 	}
 }
 
+hmo_unit_abilities.16 = { # ensure fishing modifier is handled
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		has_country_modifier = go_fish
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					any_navy = {
+						navy_fishing = yes
+					}
+				}
+			}
+
+			remove_country_modifier = go_fish
+		}
+	}
+}
+
+
