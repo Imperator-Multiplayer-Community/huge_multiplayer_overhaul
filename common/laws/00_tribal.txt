@@ -281,7 +281,7 @@ tribal_super_decentralized_military_laws = {
 			general_loyalty = 2
 			army_maintenance_cost = -0.25			# tribes start with +30, so this should put them on +5 which is slightly better than civ govt laws
 			manpower_recovery_speed = 0.1
-			experience_decay = 0.015			# this offsets a tribe's natural experience decay to +0.005 natural
+			experience_decay = 0.035			# this offsets a tribe's natural experience decay to +0.005 natural
 		}
 		on_enact = {
 			custom_tooltip = legions_in_any_region
@@ -315,7 +315,7 @@ tribal_super_centralized_military_laws = {
 			levy_size_multiplier = 0.03
 			discipline = 0.05
 			army_weight_modifier = -0.2
-			experience_decay = 0.015			# this offsets a tribe's natural experience decay to +0.005 natural
+			experience_decay = 0.035			# this offsets a tribe's natural experience decay to +0.005 natural
 		}
 		on_enact = {
 			custom_tooltip = legions_in_capital_region
@@ -328,13 +328,13 @@ tribe_pantheon_law = {
 	potential = {
 		is_tribal = yes
 	}
-	
+
 	tribe_def_pantheon_law = {
 
 	}
-	
+
 	tribe_syncretism_law = {
-		
+
 		allow = {
 			centralization <= -40
 		}
@@ -347,9 +347,9 @@ tribe_pantheon_law = {
 		}
 		# shorter omen time + add deities per decision
 	}
-	
+
 	tribe_state_pantheon_law = {
-	
+
 		allow = {
 			centralization >= 20
 		}
@@ -363,7 +363,7 @@ tribe_pantheon_law = {
 	}
 
 	tribe_henotheism_law = {
-		
+
 		allow = {
 			centralization >= 80
 		}
@@ -377,5 +377,5 @@ tribe_pantheon_law = {
 		}
 		# cannot change deity
 	}
-	
+
 }
