@@ -68,8 +68,8 @@ monarchy_military_reforms = {
 		}
 		modifier = {
 			land_morale_recovery = 0.1
-			global_cohort_start_experience = 0.5
-			experience_decay = -0.9
+			global_cohort_start_experience = 40
+			experience_decay = -0.04 # base is -4.5 decay, so with this and furs or tech you can nullify decay
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region
@@ -103,7 +103,7 @@ monarchy_military_reforms = {
 		modifier = {
 			levy_size_multiplier = 0.03
 			global_manpower_modifier = 0.1
-			experience_decay = -0.9
+			experience_decay = -0.04
 		}
 		on_enact = {
 			custom_tooltip = legions_in_no_region

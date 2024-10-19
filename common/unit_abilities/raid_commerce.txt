@@ -19,10 +19,10 @@
 
 		NOT = {
 			OR = {
-				unit_owner = { has_country_modifier = naughty_mugger }  
+				unit_owner = { has_country_modifier = naughty_mugger }
 				unit_owner = { has_low_economic_policy = expense_navy }
-			} 
-		}	
+			}
+		}
 
 		trigger_if = {
 			limit = {
@@ -40,7 +40,7 @@
 						muggable_province_trigger = yes
 						root.unit_owner.overlord = this.owner
 					}
-				}				
+				}
 			}
 
 			custom_tooltip = {
@@ -172,15 +172,15 @@
 						add_city_fire_effect = yes
 						order_by = total_population
 						max = 1
-						
+
 						add_province_modifier = {
 							name = mugged_by_reality
 							duration = -1
 						}
-						
+
 						owner = {
 							trigger_event = {
-								id = hmo_unit_abilties.6
+								id = hmo_unit_abilities.6
 								days = 5
 							}
 						}
@@ -205,7 +205,7 @@
 	finish_effect = {
 		navy_raid_commerce_finish_effect = yes
 	}
-	
+
 	ai_will_do = {
 		modifier = {
 			add = {
@@ -214,7 +214,7 @@
 			}
 			trigger = {
 				experience_percentage < 0.65
-				
+
 				unit_owner = {
 					treasury > 50
 					manpower > 20
@@ -222,7 +222,7 @@
 			}
 		}
 	}
-	
+
 	ai_will_revoke = {
 		OR = {
 			is_idle = no

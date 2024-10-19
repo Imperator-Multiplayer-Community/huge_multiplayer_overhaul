@@ -70,7 +70,7 @@
 			}
 		}
 	}
-	
+
 	start_effect = {
 		save_scope_as = naval_assaulter_unit
 
@@ -82,8 +82,8 @@
 					}
 				}
 			}
- 
-			custom_tooltip = port_assault_explainer 
+
+			custom_tooltip = port_assault_explainer
 			show_as_tooltip = { #All fake for the tooltips sake
 				random_sub_unit = {
 					limit = {
@@ -92,7 +92,7 @@
 					}
 					add_subunit_strength = -0.70
 				}
-				
+
 				add_unit_modifier = {
 					name = naval_action
 					duration = 60
@@ -118,10 +118,10 @@
 				unit_location = {
 					save_scope_as = naval_assaulter_location
 				}
-				
+
 				unit_owner = {
 					trigger_event = {
-						id = hmo_unit_abilties.4
+						id = hmo_unit_abilities.4
 						days = 60
 					}
 				}

@@ -99,7 +99,7 @@ retiring_general_ambition = {
 }
 
 character_improvement_blessing_of_tanit = {
-	fertility = 0.25	
+	fertility = 0.25
 	zeal = 1
 }
 
@@ -142,11 +142,11 @@ naughty_thief = {
 }
 
 wounded_during_plot = {
-	health = -0.1
+	health = -0.02
 }
 
 debt_payoff_toggle = {
-	health = -0.1
+	health = -0.02
 }
 
 debt_paid_off = {
@@ -400,9 +400,9 @@ defeated_consort_charmod = {
 
 ongoing_scheme = {
 	finesse = -1
-} 
+}
 
-patronage_cmod = { 
+patronage_cmod = {
 	prominence = 10
 }
 
@@ -419,7 +419,7 @@ adopted_into_great_family = {
 	monthly_democratic_party_conviction = 0.06 #Half of what a minor char gets.
 }
 
-self_made_man_family = { 
+self_made_man_family = {
 	finesse = 1
 	monthly_populares_party_conviction = 0.15
 	monthly_democratic_party_conviction = 0.13
@@ -464,7 +464,7 @@ proposal_refused = {
 }
 
 on_espionage_mission_cmod = {
-	health = -0.1
+	health = -0.02
 	monthly_corruption = 0.1
 }
 

@@ -1,20 +1,21 @@
 ﻿potential_farms_in_province_svalue = {
 	value = 0
 	every_state_province = {
-		limit = { 
-			has_food_trade_good_trigger = yes 
+		limit = {
+			has_food_trade_good_trigger = yes
 			has_city_status = no
 		}
 		add = 1
 	}
+	max = 3
 }
 
 farms_in_province_svalue = {
 	value = 0
 	every_state_province = {
-		limit = { 
+		limit = {
 			OR = {
-				has_building = basic_settlement_infratructure_building 
+				has_building = basic_settlement_infratructure_building
 				has_building = latifundia_building
 			}
 		}
@@ -44,7 +45,7 @@ slave_cost_svalue_hmo = {
 				has_city_status = no
 				has_minable_trade_good_trigger = yes
 			}
-			
+
 			add = 30
 		}
 	}

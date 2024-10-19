@@ -36,7 +36,7 @@
 			limit = {
 				NOT = {
 					unit_location = {
-						any_neighbor_province = {					
+						any_neighbor_province = {
 							trade_goods = fish
 						}
 					}
@@ -58,7 +58,7 @@
 							has_province_modifier = getting_fished
 						}
 						total_population <= 4
-						trade_goods = fish	
+						trade_goods = fish
 					}
 				}
 			}
@@ -121,7 +121,7 @@
 			}
 
 			hidden_effect = {
-				set_variable = is_navy_fishing			
+				set_variable = is_navy_fishing
 			}
 
 			navy_action_effect = yes
@@ -151,7 +151,7 @@
 					}
 
 					trigger_event = {
-						id = hmo_unit_abilties.11
+						id = hmo_unit_abilities.11
 					}
 				}
 			}
@@ -173,13 +173,13 @@
 	finish_effect = {
 		navy_fishing_finish_effect = yes
 	}
-	
+
 	ai_will_do = {
 		modifier = {
 			trigger = {
 
 				experience_percentage < 0.65
-				
+
 				unit_owner = {
 					treasury > 50
 					manpower > 20
@@ -191,7 +191,7 @@
 			}
 		}
 	}
-	
+
 	ai_will_revoke = {
 		OR = {
 			is_idle = no

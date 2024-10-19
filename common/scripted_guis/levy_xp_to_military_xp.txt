@@ -170,7 +170,7 @@ country_all_levy_xp_to_military_xp_event = {
 						subtract = var:country_levy_start_xp
 						multiply = 0.075
 						min = 0
-						max = 8
+						max = 10
 					}
 					remove_variable = country_levy_start_xp
 				}

@@ -32,7 +32,7 @@ inbred = {
 	finesse = -1
 	martial = -1
 	fertility = -0.3
-	health = -0.1
+	health = -0.02
 }
 limp = {
 	type = health
@@ -65,7 +65,7 @@ stressed = { #
 schizophrenic = { #
 	type = health
 	congenital = yes
-	health = -0.1
+	health = -0.02
 	charisma = -2
 	finesse = 2
 }
@@ -88,7 +88,7 @@ epileptic = { #
 
 ### PLAGUES
 
-hemorrhagic_fever = { 
+hemorrhagic_fever = {
 	type = health
 	health = -2
 	martial = -4
@@ -105,27 +105,27 @@ plague = { #
 
 ### MINOR AILMENTS
 
-mentagra = { 
+mentagra = {
 	type = health
 	charisma = -2
 	health = -0.05
 }
 
-arthritis = { 
+arthritis = {
 	type = health
 	finesse = -1
 	martial = -1
 	health = -0.05
 }
 
-pox = { 
+pox = {
 	type = health
 	charisma = -2
 	fertility = -0.2
-	health = -0.1
+	health = -0.02
 }
 
-dysentery = { 
+dysentery = {
 	type = health
 	health = -0.5
 	martial = -1
@@ -135,12 +135,12 @@ dysentery = {
 
 ### Long term ailments
 
-infection = { 
+infection = {
 	type = health
 	health = -0.2
 }
 
-inflammation = { 
+inflammation = {
 	type = health
 	finesse = -1
 	charisma = -1
@@ -149,7 +149,7 @@ inflammation = {
 
 wounded = { #
 	type = health
-	health = -0.1
+	health = -0.02
 	martial = -1
 }
 
@@ -160,7 +160,7 @@ pneumonia = { #
 	health = -1
 }
 
-gangrene = { 
+gangrene = {
 	type = health
 	health = -3
 	martial = -3
@@ -176,19 +176,19 @@ leper = { #
 
 ###Result traits
 
-barren = { 
+barren = {
 	type = health
 	fertility = -10
 	support_for_character_as_heir = -5
 }
 
-castrated = { 
+castrated = {
 	type = health
 	fertility = -10
 	support_for_character_as_heir = -10
 }
 
-blind = { 
+blind = {
 	type = health
 	opposites =  {
 		one_eyed
@@ -199,11 +199,11 @@ blind = {
 	dna_modifiers = {
 		accessory = {
 			mode = replace     #overwrite this gene in the dna with the specified template and value
-		 
+
 			gene = eye_accessory
 			template = blindfold_1
 			value = 1
-		}	
+		}
     }
 }
 
@@ -212,7 +212,7 @@ maimed = { #
 	martial = -2
 }
 
-one_eyed = { 
+one_eyed = {
 	type = health
 	opposites =  {
 		blind
@@ -221,11 +221,11 @@ one_eyed = {
 	dna_modifiers = {
 		accessory = {
 			mode = replace     #overwrite this gene in the dna with the specified template and value
-		 
+
 			gene = eye_accessory
 			template = eyepatch_1
 			value = 1
-		}	
+		}
 	}
 }
 
@@ -262,7 +262,7 @@ seeking_treatment_trait = {
 
 mourning = {
 	type = health
-	
+
 	charisma = -2
 	zeal = -2
 	health = -0.2
@@ -270,18 +270,18 @@ mourning = {
 
 depressed = {
 	type = health
-	
+
 	charisma = -1
 	finesse = -1
-	
-	health = -0.1
+
+	health = -0.02
 }
 
 ### Terminal Diseases
 
 dementia = {
 	type = health
-	
+
 	charisma = -2
 	finesse = -2
 	zeal = -2
@@ -293,7 +293,7 @@ dementia = {
 
 cancer = {
 	type = health
-	
+
 	charisma = -2
 	finesse = -2
 	zeal = -2
@@ -303,15 +303,15 @@ cancer = {
 
 diphtheria = {
 	type = health
-	
+
 	health = -2
 }
 
 gout = {
 	type = health
-	
+
 	finesse = -1
 	martial = -1
-	
+
 	health = -1
 }

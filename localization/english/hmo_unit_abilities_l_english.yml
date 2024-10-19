@@ -46,9 +46,9 @@
  fishing_not_enough_pops:0 "Fishing province requires at least 5 pops."
  fishing_needs_fish:0 "Fishing needs fish."
 
- explain_naval_supply_tooltip:0 "This fleet can deliver food and supplies to a community in need." 
+ explain_naval_supply_tooltip:0 "This fleet can deliver food and supplies to a community in need."
  naval_supply_cooldown_tooltip:0 "This Territory has just received a bounty in food and supplies. You will not be able to send fresh supplies for some time."
- naval_supply_explain_modifier_tooltip:0 "All provinces receiving supplies will gain the following modifiers after 90 days" 
+ naval_supply_explain_modifier_tooltip:0 "All provinces receiving supplies will gain the following modifiers after 90 days"
  naval_supply_explain_tt:0 "Navy must contain at least 1 Heavy Ship at 95% Health or more."
 
  disband_levy:0 "Disband Levy"
@@ -67,16 +67,16 @@
  commerce_protected:0 "Commerce is being protected!"
  port_supplied:0 "Port is being supplied!"
 
- hmo_unit_abilties.2.t:0 "Slave Raids!"
- hmo_unit_abilties.2.desc:0 "Fleeing villagers tell you of the slave fleets stealing people from your shores."
- hmo_unit_abilties.2.a:0 "We have other pressing matters."
- hmo_unit_abilties.2.b:0 "Vile curs!"
- hmo_unit_abilties.2.c:0 "This means war!"
+ hmo_unit_abilities.2.t:0 "Slave Raids!"
+ hmo_unit_abilities.2.desc:0 "Fleeing villagers tell you of the slave fleets stealing people from your shores."
+ hmo_unit_abilities.2.a:0 "We have other pressing matters."
+ hmo_unit_abilities.2.b:0 "Vile curs!"
+ hmo_unit_abilities.2.c:0 "This means war!"
 
- hmo_unit_abilties.6.t:0 "Trade Raided!"
- hmo_unit_abilties.6.desc:0 "Distraught merchants tell tales of another nation pirating your shores."
- hmo_unit_abilties.6.a:0 "We have other pressing matters."
- hmo_unit_abilties.6.b:0 "Vile curs!"
- hmo_unit_abilties.6.c:0 "This means war!"
+ hmo_unit_abilities.6.t:0 "Trade Raided!"
+ hmo_unit_abilities.6.desc:0 "Distraught merchants tell tales of another nation pirating your shores."
+ hmo_unit_abilities.6.a:0 "We have other pressing matters."
+ hmo_unit_abilities.6.b:0 "Vile curs!"
+ hmo_unit_abilities.6.c:0 "This means war!"
 
  requires_military_tradition:0 "Requires military tradition."

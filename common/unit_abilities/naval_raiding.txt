@@ -57,7 +57,7 @@
 				NOT = {
 					can_slave_raid_trigger = yes
 				}
-				
+
 				unit_location = {
 					any_neighbor_province = {
 						has_owner = yes
@@ -112,7 +112,7 @@
 			can_slave_raid_trigger = yes
 		}
 	}
-	
+
 	start_effect = {
 		if = {
 			limit = {
@@ -179,7 +179,7 @@
 
 				unit_location = {
 					trigger_event = {
-						id = hmo_unit_abilties.7
+						id = hmo_unit_abilities.7
 					}
 				}
 
@@ -187,7 +187,7 @@
 					add_aggressive_expansion = 1
 
 					trigger_event = {
-						id = hmo_unit_abilties.1
+						id = hmo_unit_abilities.1
 						days = 30
 					}
 				}
