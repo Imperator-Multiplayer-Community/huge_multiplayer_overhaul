@@ -431,4 +431,33 @@ hmo_unit_abilities.16 = { # ensure fishing modifier is handled
 	}
 }
 
+hmo_unit_abilities.17 = { # ensure raised levies all have starting xp set
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		any_army = {
+			count >= 1
+			AND = {
+				has_commander = yes
+				commander = {
+					OR = {
+						is_governor = yes
+						is_ruler = yes
+					}
+					is_mercenary = no
+				}
+			}
+			has_legion_trigger = no
+			NOT = {
+				has_variable = levy_start_xp
+			}
+		}
+	}
+
+	immediate = {
+		set_levy_starting_xp_effect = yes
+	}
+}
+
 

@@ -29,6 +29,7 @@
 		hmo_unit_abilities.14		# ensures unit abilities arent stuck
 		hmo_unit_abilities.15		# ensures unit abilities arent stuck
 		hmo_unit_abilities.16 	# ensures unit abilities arent stuck
+		hmo_unit_abilities.17   # ensures levys have their start xp set
 	}
 	random_events = {
 		550 = 0
