@@ -73,8 +73,8 @@ country_all_levy_xp_to_military_xp_event = {
 					multiply = 100
 				}
 
-				debug_log = "levy normalized [THIS.Var('normalized_xp_percentage').GetValue]"
-				debug_log = "levy start [THIS.Var('levy_start_xp').GetValue]"
+				# debug_log = "levy normalized [THIS.Var('normalized_xp_percentage').GetValue]"
+				# debug_log = "levy start [THIS.Var('levy_start_xp').GetValue]"
 
 				ROOT = {
 					disband_levy_xp_effect = yes

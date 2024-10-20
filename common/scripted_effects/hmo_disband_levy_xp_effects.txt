@@ -42,7 +42,7 @@ disband_levy_xp_effect = {
 			exists = scope:levy_unit.var:normalized_xp_percentage
 		}
 
-		debug_log = "levy TEST"
+		# debug_log = "levy TEST"
 
 		add_military_experience = {
 			value = scope:levy_unit.var:normalized_xp_percentage
