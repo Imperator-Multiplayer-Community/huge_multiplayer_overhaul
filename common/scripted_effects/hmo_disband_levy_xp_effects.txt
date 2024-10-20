@@ -1,0 +1,55 @@
+set_levy_starting_xp_effect = {
+	#scope: country
+	every_army = {
+		limit = {
+			AND = {
+				has_commander = yes
+				commander = {
+					OR = {
+						is_governor = yes
+						is_ruler = yes
+					}
+					is_mercenary = no
+				}
+			}
+			has_legion_trigger = no
+			NOT = {
+				has_variable = levy_start_xp
+			}
+		}
+		set_variable = {
+			name = levy_start_xp
+			value = experience_percentage
+		}
+		change_variable = {
+			name = levy_start_xp
+			multiply = 100
+		}
+		debug_log = "levystartxp [THIS.Var('levy_start_xp').GetValue]"
+		# every raise levy causes ae
+		unit_owner = {
+			add_aggressive_expansion = 1
+		}
+	}
+}
+
+disband_levy_xp_effect = {
+	#scope: country
+	if = {
+		# do not add mil xp if levy units arent properly initialized
+		limit = {
+			exists = scope:levy_unit.var:levy_start_xp
+			exists = scope:levy_unit.var:normalized_xp_percentage
+		}
+
+		# debug_log = "levy TEST"
+
+		add_military_experience = {
+			value = scope:levy_unit.var:normalized_xp_percentage
+			subtract = scope:levy_unit.var:levy_start_xp
+			multiply = 0.075
+			min = 0
+			max = 10
+		}
+	}
+}

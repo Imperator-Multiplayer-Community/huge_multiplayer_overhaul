@@ -68,47 +68,11 @@
 				multiply = 100
 			}
 
-			if = {
-				limit = {
-					has_variable = levy_start_xp
-				}
-
-				scope:levy_unit.unit_owner = {
-					set_variable = {
-						name = country_levy_start_xp
-						value = scope:levy_unit.var:levy_start_xp
-					}
-				}
-			}
-			else = {
-				scope:levy_unit.unit_owner = {
-					set_variable = {
-						name = country_levy_start_xp
-						value = 10
-					}
-				}
-			}
-
-			# debug_log = "levy [THIS.Var('country_levy_start_xp').GetValue]"
+			# debug_log = "levy normalized [THIS.Var('normalized_xp_percentage').GetValue]"
+			# debug_log = "levy start [THIS.Var('levy_start_xp').GetValue]"
 
 			scope:levy_unit.unit_owner = {
-				hidden_effect = {
-					if = {
-						limit = {
-							exists = scope:levy_unit.var:normalized_xp_percentage
-						}
-
-						add_military_experience = {
-							value = scope:levy_unit.var:normalized_xp_percentage
-							subtract = var:country_levy_start_xp
-							multiply = 0.075
-							min = 0
-							max = 10
-						}
-					}
-				}
-
-				remove_variable = country_levy_start_xp
+				disband_levy_xp_effect = yes
 			}
 		}
 

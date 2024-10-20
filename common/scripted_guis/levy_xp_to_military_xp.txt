@@ -5,41 +5,7 @@
 	}
 
 	effect = {
-		every_army = {
-			limit = {
-				AND = {
-					has_commander = yes
-					commander = {
-						OR = {
-							is_governor = yes
-							is_ruler = yes
-						}
-						is_mercenary = no
-					}
-				}
-				has_legion_trigger = no
-				NOT = {
-					has_variable = levy_start_xp
-				}
-			}
-
-			set_variable = {
-				name = levy_start_xp
-				value = experience_percentage
-			}
-
-			# debug_log = "levystartxp [THIS.Var('levy_start_xp').GetValue]"
-
-			change_variable = {
-				name = levy_start_xp
-				multiply = 100
-			}
-
-			# every raise levy causes ae
-			unit_owner = {
-				add_aggressive_expansion = 1
-			}
-		}
+		set_levy_starting_xp_effect = yes
 	}
 }
 
@@ -50,40 +16,7 @@ country_all_levy_xp_set_start_value_event = {
 	}
 
 	effect = {
-		every_army = {
-			limit = {
-				AND = {
-					has_commander = yes
-					commander = {
-						OR = {
-							is_governor = yes
-							is_ruler = yes
-						}
-						is_mercenary = no
-					}
-				}
-				has_legion_trigger = no
-				NOT = {
-					has_variable = levy_start_xp
-				}
-			}
-
-
-			set_variable = {
-				name = levy_start_xp
-				value = experience_percentage
-			}
-
-			change_variable = {
-				name = levy_start_xp
-				multiply = 100
-			}
-
-			# every raise levy causes ae
-			unit_owner = {
-				add_aggressive_expansion = 1
-			}
-		}
+		set_levy_starting_xp_effect = yes
 	}
 }
 
@@ -140,41 +73,12 @@ country_all_levy_xp_to_military_xp_event = {
 					multiply = 100
 				}
 
-
-				# debug_log = "levy [THIS.Var('normalized_xp_percentage').GetValue]"
-
-				if = {
-					limit = {
-						has_variable = levy_start_xp
-					}
-
-					ROOT = {
-						set_variable = {
-							name = country_levy_start_xp
-							value = scope:levy_unit.var:levy_start_xp
-						}
-					}
-				}
-				else = {
-					ROOT = {
-						set_variable = {
-							name = country_levy_start_xp
-							value = 10
-						}
-					}
-				}
+				# debug_log = "levy normalized [THIS.Var('normalized_xp_percentage').GetValue]"
+				# debug_log = "levy start [THIS.Var('levy_start_xp').GetValue]"
 
 				ROOT = {
-					add_military_experience = {
-						value = scope:levy_unit.var:normalized_xp_percentage
-						subtract = var:country_levy_start_xp
-						multiply = 0.075
-						min = 0
-						max = 10
-					}
-					remove_variable = country_levy_start_xp
+					disband_levy_xp_effect = yes
 				}
-
 			}
 
 			scope:levy_unit = {
