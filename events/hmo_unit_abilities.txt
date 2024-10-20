@@ -436,6 +436,7 @@ hmo_unit_abilities.17 = { # ensure raised levies all have starting xp set
 	hidden = yes
 
 	trigger = {
+		is_ai = no # save some cpu cycles
 		any_army = {
 			count >= 1
 			AND = {

@@ -25,7 +25,7 @@ set_levy_starting_xp_effect = {
 			name = levy_start_xp
 			multiply = 100
 		}
-		# debug_log = "levystartxp [THIS.Var('levy_start_xp').GetValue]"
+		debug_log = "levystartxp [THIS.Var('levy_start_xp').GetValue]"
 		# every raise levy causes ae
 		unit_owner = {
 			add_aggressive_expansion = 1
@@ -38,9 +38,12 @@ disband_levy_xp_effect = {
 	if = {
 		# do not add mil xp if levy units arent properly initialized
 		limit = {
-			exists = scope:levy_unit.var:country_levy_start_xp
+			exists = scope:levy_unit.var:levy_start_xp
 			exists = scope:levy_unit.var:normalized_xp_percentage
 		}
+
+		debug_log = "levy TEST"
+
 		add_military_experience = {
 			value = scope:levy_unit.var:normalized_xp_percentage
 			subtract = scope:levy_unit.var:levy_start_xp
