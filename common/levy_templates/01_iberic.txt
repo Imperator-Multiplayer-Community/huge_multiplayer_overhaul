@@ -16,13 +16,13 @@ levy_iberic = {
 levy_cantabric = {
 	default = no
 	
-	archers = 0.6
+	light_infantry = 0.6
 	heavy_infantry = 0.3
 	light_cavalry = 0.1
 }
 
 levy_sardinian = {	
-	archers = 0.6
+	light_infantry = 0.6
 	heavy_infantry = 0.3
 	light_cavalry = 0.1
 }
@@ -30,15 +30,15 @@ levy_sardinian = {
 levy_asturian = {
 	default = no
 	
-	light_infantry = 0.8
+	light_infantry = 0.6
+	heavy_infantry = 0.3
 	light_cavalry = 0.1
-	horse_archers = 0.1
 }
 
 levy_turdetanian = {
 	default = no
 	
 	light_infantry = 0.6
-	light_cavalry = 0.1
 	heavy_infantry = 0.3
+	light_cavalry = 0.1
 }
