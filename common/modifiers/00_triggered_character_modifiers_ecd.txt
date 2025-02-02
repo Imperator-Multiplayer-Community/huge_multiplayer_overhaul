@@ -74,7 +74,7 @@ assigned_mission = {
 	monthly_wage_for_character = 0.0025
 	monthly_character_experience = 0.15
 	monthly_character_experience_decay = -0.15
-	health = 1
+	
 }
 
 in_hiding = {
@@ -97,11 +97,11 @@ knife_fighter = {
 
 counterintelligence = {
 	martial = 2
-	health = 1
+	
 }
 
 state_detective = {
-	health = 1
+	
 	charisma = 1
 	martial = 1
 }
