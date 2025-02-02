@@ -1,7 +1,7 @@
 ﻿citizen = {
 	output_modifier = {
 		local_manpower = 0.003
-		research_points = 0.2
+		research_points = 0.05 #it was 0.2 
 	}
 	
 	count_modifier = {
