@@ -48,38 +48,70 @@
 			}
 		}
 	}
-	latin_tribal_path_2 = {
-		###Latin 1A
-		allow = {
-			NOT = {
-				has_variable = light_cavalry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_cavalry_super_unit
-		}
+	
+
+	#New trads
+	latin_path_li = {
+		###
+		enable_ability = military_colonies	
 		modifier = {
-			light_cavalry_offensive = 0.1
-			light_cavalry_plains_combat_bonus = 0.1
-			light_cavalry_farmland_combat_bonus = 0.1
+			light_infantry_offensive = 0.1
+			light_infantry_discipline = 0.1
+			light_infantry_plains_combat_bonus = 0.1
+			light_infantry_farmland_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = latin_tribal_path_2
+		icon = persian_scythian_path_7
 		requires = {
 		}
 	}
-	latin_support_path_7 = {
-		###Latin 3A
+	latin_path_s = {
+		###
 		modifier = {
-			light_cavalry_morale = 0.1
-			light_cavalry_forest_combat_bonus = 0.1
-			light_cavalry_hills_combat_bonus = 0.1
+			archers_offensive = 0.1
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+		}
+	}
+	latin_path_ha = {
+		###
+		
+		modifier = {
+			horse_archers_offensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
+		}
+		icon = persian_scythian_path_1
+		requires = {
+			latin_path_s
+			latin_path_li
+		}
+	}
+	latin_path_c = {
+		###
+				
+		modifier = {
+			camels_offensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
+		icon = north_african_tribal_path_2
 		requires = {
-			latin_tribal_path_2
+			latin_path_s
+			latin_path_li
 		}
-		icon = latin_support_path_7
+	}
+	latin_path_lc = {
+		###
 		on_activate = {
 			every_subject = {
 				add_opinion = {
@@ -88,50 +120,56 @@
 				}
 			}
 		}
-	}
-	latin_tribal_path_1 = {
-		###Latin 5AA
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-		}
 		modifier = {
-			light_infantry_defensive = 0.1
-			light_infantry_plains_combat_bonus = 0.1
-			light_infantry_farmland_combat_bonus = 0.1
+			light_cavalry_offensive = 0.1
+			light_cavalry_discipline = 0.1
+			light_cavalry_plains_combat_bonus = 0.1
+			light_cavalry_farmland_combat_bonus = 0.1
+			light_cavalry_forest_combat_bonus = 0.1
+			light_cavalry_hills_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
+		icon = persian_bactrian_path_1
 		requires = {
+			latin_path_s
+			latin_path_li
 		}
-		icon = latin_tribal_path_1
 	}
-	latin_roman_path_6 = {
-		###Latin 5AB
+	latin_path_hc = {
+		###
+		
 		modifier = {
-			light_infantry_morale = 0.1
-			light_infantry_hills_combat_bonus = 0.1
-			light_infantry_forest_combat_bonus = 0.1
+			heavy_cavalry_offensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
+		icon = persian_bactrian_path_end_bonus
 		requires = {
-			latin_tribal_path_1
+			latin_path_ha
+			latin_path_c
+			latin_path_lc
 		}
-		icon = latin_roman_path_6
 	}
-	# Super Unit HI Terrain: hills Plains Farmland Forest
-	latin_roman_path_1 = {
-		###Latin 1A
-		allow = {
-			NOT = {
-				has_variable = heavy_infantry_super_unit
-			}
+	latin_path_we = {
+		###
+		modifier = {
+			warelephant_offensive = 0.1
+			warelephant_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
 		}
+		icon = mauryan_mauryas_path_4
+		requires = {
+			latin_path_ha
+			latin_path_c
+			latin_path_lc
+		}
+	}
+	latin_path_hi = {
+		###
 		on_activate = {
-			set_variable = heavy_infantry_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -143,52 +181,22 @@
 				}
 			}
 		}
-		modifier = {
-			heavy_infantry_offensive = 0.1
-			heavy_infantry_farmland_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = latin_roman_path_1
-		requires = {
-		}
-	}
-	latin_roman_path_3 = {
-		###Latin 2A
 		enable_tactic = triplex_acies
 		modifier = {
+			heavy_infantry_offensive = 0.1
 			heavy_infantry_discipline = 0.1
+			heavy_infantry_farmland_combat_bonus = 0.1
 			heavy_infantry_forest_combat_bonus = 0.1
 			heavy_infantry_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		requires = {
-			latin_roman_path_1
-		}
-		icon = latin_roman_path_3
-	}
-	latin_support_path_6 = {
-		###Latin 3A
-		modifier = {
-			heavy_infantry_defensive = 0.1
 			heavy_infantry_plains_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
+		icon = persian_achaemenid_path_1
 		requires = {
-			latin_roman_path_3
+			latin_path_ha
+			latin_path_c
+			latin_path_lc
 		}
-		icon = latin_support_path_6
-	}
-	latin_roman_path_7 = {
-		###Latin 4AB
-		modifier = {
-			heavy_infantry_morale = 0.1
-			heavy_infantry_cost = -0.15
-			heavy_infantry_movement_speed = 0.1
-			army_maintenance_cost = 0.02
-		}
-		requires = {
-			latin_support_path_6
-		}
-		icon = latin_roman_path_7
 	}
 }

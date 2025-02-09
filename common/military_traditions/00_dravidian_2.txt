@@ -33,73 +33,103 @@
 			}
 		}
 	}
-	andhra_path_2 = {
+	
+	#New trads
+	dravidian_path_li = {
 		###
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-		}
+		
 		modifier = {
-			light_infantry_morale = 0.1
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
 			light_infantry_jungle_combat_bonus = 0.1
 			light_infantry_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = mauryan_mauryas_path_end_bonus
-		requires = {
-		}
-	}
-	andhra_path_4 = {
-		###
-		modifier = {
-			light_infantry_offensive = 0.1
 			light_infantry_farmland_combat_bonus = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = persian_achaemenid_path_1
+		icon = persian_scythian_path_7
 		requires = {
-			andhra_path_2
 		}
 	}
-	andhra_path_5 = {
+	dravidian_path_s = {
 		###
-		allow = {
-			NOT = {
-				has_variable = archers_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = archers_super_unit
-		}
 		modifier = {
-			archers_offensive = 0.1
+			archers_defensive = 0.1
+			archers_discipline = 0.1
 			archers_jungle_combat_bonus = 0.1
 			archers_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = mauryan_mauryas_path_5
-		requires = {
-		}
-	}
-	andhra_path_8 = {
-		###
-		modifier = {
-			archers_morale = 0.1
 			archers_farmland_combat_bonus = 0.1
 			archers_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = mauryan_coastal_path_7
+		icon = greek_antigonid_path_6
 		requires = {
-			andhra_path_5
 		}
 	}
-	andhra_path_13 = {
+	dravidian_path_ha = {
+		###
+		
+		modifier = {
+			horse_archers_defensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
+		}
+		icon = persian_scythian_path_1
+		requires = {
+			dravidian_path_s
+			dravidian_path_li
+		}
+	}
+	dravidian_path_c = {
+		###
+				
+		modifier = {
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
+		}
+		icon = north_african_tribal_path_2
+		requires = {
+			dravidian_path_s
+			dravidian_path_li
+		}
+	}
+	dravidian_path_lc = {
+		###
+		
+		modifier = {
+			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_1
+		requires = {
+			dravidian_path_s
+			dravidian_path_li
+		}
+	}
+	dravidian_path_hc = {
+		###
+		
+		modifier = {
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_end_bonus
+		requires = {
+			dravidian_path_ha
+			dravidian_path_c
+			dravidian_path_lc
+		}
+	}
+	dravidian_path_we = {
 		###
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
@@ -111,60 +141,34 @@
 			}
 		}
 		modifier = {
-			manpower_recovery_speed = 0.05
-		}
-		icon = mauryan_coastal_path_2
-		requires = {
-			andhra_path_8
-			andhra_path_4
-		}
-	}
-	# Super Unit
-	andhra_path_1 = {
-		###
-		allow = {
-			NOT = {
-				has_variable = warelephant_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = warelephant_super_unit
-		}
-		enable_tactic = padma_vyuha
-		modifier = {
-			warelephant_cost = -0.15
+			warelephant_defensive = 0.1
+			warelephant_discipline = 0.1
 			warelephant_jungle_combat_bonus = 0.1
+			warelephant_hills_combat_bonus = 0.1
+			warelephant_farmland_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
 		icon = mauryan_mauryas_path_4
 		requires = {
+			dravidian_path_ha
+			dravidian_path_c
+			dravidian_path_lc
 		}
 	}
-	andhra_path_3 = {
+	dravidian_path_hi = {
 		###
 		modifier = {
-			warelephant_discipline = 0.1
-			warelephant_hills_combat_bonus = 0.1
-			warelephant_farmland_combat_bonus = 0.1
+			heavy_infantry_defensive = 0.1
+			heavy_infantry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
-		icon = mauryan_noble_path_end_bonus
+		icon = persian_achaemenid_path_1
 		requires = {
-			andhra_path_1
-		}
-	}
-	andhra_path_6 = {
-		###
-		modifier = {
-			warelephant_morale = 0.1
-			warelephant_movement_speed = 0.1
-			warelephant_defensive = 0.1
-			warelephant_offensive = 0.1
-			army_maintenance_cost = 0.03
-		}
-		icon = mauryan_noble_path_3
-		requires = {
-			andhra_path_1
+			dravidian_path_ha
+			dravidian_path_c
+			dravidian_path_lc
 		}
 	}
 }

@@ -60,47 +60,63 @@
 			}
 		}
 	}
-	levantine_arabian_path_4 = {
-		###Levantine 2A
-		allow = {
-			NOT = {
-				has_variable = camel_super_unit
+	
+
+	#New trads
+	levantine_path_li = {
+		###
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = steadfast
+				}
 			}
 		}
-		on_activate = {
-			set_variable = camel_super_unit
-		}
 		modifier = {
-			camels_defensive = 0.1
-			camels_desert_combat_bonus = 0.1
-			camels_flood_plain_combat_bonus = 0.1
+			light_infantry_offensive = 0.1
+			light_infantry_discipline = 0.1
+			light_infantry_desert_combat_bonus = 0.1
+			light_infantry_flood_plain_combat_bonus = 0.1
+			light_infantry_oasis_combat_bonus = 0.1
+			light_infantry_desert_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = levantine_arabian_path_4
+		icon = persian_scythian_path_7
 		requires = {
 		}
 	}
-	levantine_philosophy_start_bonus = {
+	levantine_path_s = {
 		###
 		modifier = {
-			camels_defensive = 0.1
-			camels_oasis_combat_bonus = 0.1
-			camels_desert_hills_combat_bonus = 0.1
+			archers_offensive = 0.1
+			archers_discipline = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = levantine_arabian_path_2
+		icon = greek_antigonid_path_6
 		requires = {
-			levantine_arabian_path_4
 		}
 	}
-	levantine_egyptian_path_4 = {
-		###Levantine 4B
+	levantine_path_ha = {
+		###
+		
 		modifier = {
+			horse_archers_offensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
 		}
-		enable_ability = military_colonies
-		icon = levantine_egyptian_path_4
+		icon = persian_scythian_path_1
 		requires = {
+			levantine_path_s
+			levantine_path_li
 		}
+	}
+	levantine_path_c = {
+		###
 		on_activate = {
 			ordered_owned_province = {
 				limit = {
@@ -136,66 +152,25 @@
 				}
 			}
 		}
-	}
-	levantine_egyptian_path_1 = {
-		###Levantine 2BA
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
+		enable_ability = military_colonies		
 		modifier = {
-			light_infantry_offensive = 0.05
-			light_infantry_desert_combat_bonus = 0.1
-			light_infantry_flood_plain_combat_bonus = 0.1
+			camels_offensive = 0.1
+			camels_discipline = 0.1
+			camels_desert_combat_bonus = 0.1
+			camels_flood_plain_combat_bonus = 0.1
+			camels_oasis_combat_bonus = 0.1
+			camels_desert_hills_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
-		icon = levantine_egyptian_path_1
+		icon = north_african_tribal_path_2
 		requires = {
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = steadfast
-				}
-			}
+			levantine_path_s
+			levantine_path_li
 		}
 	}
-	levantine_egyptian_path_end_bonus = {
-		###Levantine 4BA
-		modifier = {
-			light_infantry_offensive = 0.05
-			light_infantry_oasis_combat_bonus = 0.1
-			light_infantry_desert_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = levantine_egyptian_path_end_bonus
-		requires = {
-			levantine_egyptian_path_1
-		}
-	}
-	levantine_greco_path_4 = {
-		###Levantine 1B
-		modifier = {
-			land_unit_attrition = -0.1
-		}
-		enable_tactic = greek_phalanx
-		icon = levantine_greco_path_4
-		requires = {
-		}
-	}
-	levantine_greco_path_3 = {
-		###Levantine 3BB
-		modifier = {
-			cohort_reinforcement_speed = 0.1
-		}
-		icon = levantine_greco_path_3
-		requires = {
-			levantine_greco_path_4
-		}
+	levantine_path_lc = {
+		###
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
@@ -205,73 +180,66 @@
 				}
 			}
 		}
-	}
-	# Super Unit
-	egyptian_path_8 = {
-		#
-		allow = {
-			NOT = {
-				has_variable = light_cavalry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_cavalry_super_unit
-		}
-		icon = north_african_army_path_6
-		modifier = {
-			light_cavalry_cost = -0.15
-			light_cavalry_desert_combat_bonus = 0.1
-			light_cavalry_desert_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		requires = {
-		}
-	}
-	egyptian_path_10 = {
-		#
-		icon = greek_philosophy_start_bonus
-		modifier = {
-			light_cavalry_movement_speed = 0.1
-			light_cavalry_morale = 0.1
-			light_cavalry_oasis_combat_bonus = 0.1
-			light_cavalry_flood_plain_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		requires = {
-			egyptian_path_8
-		}
-	}
-	egyptian_path_11 = {
-		#
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = confident
-				}
-			}
-		}
-		icon = greek_seleucid_path_1
-		modifier = {
-			light_cavalry_defensive = 0.1
-			experience_decay = -0.005
-			army_maintenance_cost = 0.01
-		}
-		requires = {
-			egyptian_path_10
-		}
-	}
-	egyptian_path_14 = {
-		#
-		icon = levantine_arabian_path_3
 		modifier = {
 			light_cavalry_offensive = 0.1
 			light_cavalry_discipline = 0.1
-			army_maintenance_cost = 0.02
+			light_cavalry_desert_combat_bonus = 0.1
+			light_cavalry_desert_hills_combat_bonus = 0.1
+			light_cavalry_oasis_combat_bonus = 0.1
+			light_cavalry_flood_plain_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
 		}
+		icon = persian_bactrian_path_1
 		requires = {
-			egyptian_path_11
+			levantine_path_s
+			levantine_path_li
+		}
+	}
+	levantine_path_hc = {
+		###
+		
+		modifier = {
+			heavy_cavalry_offensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_end_bonus
+		requires = {
+			levantine_path_ha
+			levantine_path_c
+			levantine_path_lc
+		}
+	}
+	levantine_path_we = {
+		###
+		modifier = {
+			warelephant_offensive = 0.1
+			warelephant_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_4
+		requires = {
+			levantine_path_ha
+			levantine_path_c
+			levantine_path_lc
+		}
+	}
+	levantine_path_hi = {
+		###
+		modifier = {
+			heavy_infantry_offensive = 0.1
+			heavy_infantry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = {
+			levantine_path_ha
+			levantine_path_c
+			levantine_path_lc
 		}
 	}
 }

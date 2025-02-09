@@ -52,82 +52,106 @@
 			}
 		}
 	}
-	north_african_latin_enable = {
-		###North Aftica 2A
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-		}
+
+
+	#New trads
+	north_african_path_li = {
+		###
+		
 		modifier = {
 			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
 			light_infantry_desert_combat_bonus = 0.1
 			light_infantry_desert_hills_combat_bonus = 0.1
+			light_infantry_hills_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = latin_tribal_path_end_bonus
+		icon = persian_scythian_path_7
 		requires = {
 		}
 	}
-	north_african_tribal_path_2 = {
-		###North Aftica 1C
+	north_african_path_s = {
+		###
 		modifier = {
-			light_infantry_discipline = 0.1
-			light_infantry_hills_combat_bonus = 0.1
-			light_infantry_forest_combat_bonus = 0.1
+			archers_defensive = 0.1
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+		}
+	}
+	north_african_path_ha = {
+		###
+		
+		modifier = {
+			horse_archers_defensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
+		}
+		icon = persian_scythian_path_1
+		requires = {
+			north_african_path_s
+			north_african_path_li
+		}
+	}
+	north_african_path_c = {
+		###
+				
+		modifier = {
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
 		icon = north_african_tribal_path_2
 		requires = {
-			north_african_latin_enable
+			north_african_path_s
+			north_african_path_li
 		}
 	}
-	north_african_tribal_path_7 = {
-		###North Aftica 2CA
-		allow = {
-			NOT = {
-				has_variable = light_cavalry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_cavalry_super_unit
-		}
+	north_african_path_lc = {
+		###
+		
 		modifier = {
+			light_cavalry_defensive = 0.1
 			light_cavalry_discipline = 0.1
 			light_cavalry_desert_combat_bonus = 0.1
 			light_cavalry_desert_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_tribal_path_7
-		requires = {
-		}
-	}
-	north_african_army_path_6 = {
-		###North Aftica 2CB
-		modifier = {
-			light_cavalry_offensive = 0.1
 			light_cavalry_hills_combat_bonus = 0.1
 			light_cavalry_forest_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
-		icon = north_african_army_path_6
+		icon = persian_bactrian_path_1
 		requires = {
-			north_african_tribal_path_7
+			north_african_path_s
+			north_african_path_li
 		}
 	}
-	# Super unit
-	north_african_army_path_7 = {
-		###North Aftica 2AA
-		allow = {
-			NOT = {
-				has_variable = warelephant_super_unit
-			}
+	north_african_path_hc = {
+		###
+		
+		modifier = {
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
 		}
+		icon = persian_bactrian_path_end_bonus
+		requires = {
+			north_african_path_ha
+			north_african_path_c
+			north_african_path_lc
+		}
+	}
+	north_african_path_we = {
+		###
 		on_activate = {
-			set_variable = warelephant_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -140,31 +164,36 @@
 		}
 		enable_tactic = greek_phalanx
 		modifier = {
-			warelephant_cost = -0.15
-			warelephant_morale = 0.1
+			warelephant_defensive = 0.1
 			warelephant_discipline = 0.1
 			warelephant_hills_combat_bonus = 0.1
 			warelephant_forest_combat_bonus = 0.1
-			army_maintenance_cost = 0.02
-		}
-		icon = north_african_army_path_7
-		requires = {
-		}
-	}
-	north_african_army_path_5 = {
-		###North Aftica 3AA
-		modifier = {
-			warelephant_defensive = 0.1
-			warelephant_offensive = 0.1
-			warelephant_movement_speed = 0.1
 			warelephant_desert_combat_bonus = 0.1
 			warelephant_desert_hills_combat_bonus = 0.1
 			warelephant_plains_combat_bonus = 0.1
-			army_maintenance_cost = 0.03
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
 		}
-		icon = north_african_army_path_5
+		icon = mauryan_mauryas_path_4
 		requires = {
-			north_african_army_path_7
+			north_african_path_ha
+			north_african_path_c
+			north_african_path_lc
+		}
+	}
+	north_african_path_hi = {
+		###
+		modifier = {
+			heavy_infantry_defensive = 0.1
+			heavy_infantry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = {
+			north_african_path_ha
+			north_african_path_c
+			north_african_path_lc
 		}
 	}
 }
