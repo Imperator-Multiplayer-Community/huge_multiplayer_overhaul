@@ -118,8 +118,7 @@
 		}
 		icon = persian_scythian_path_1
 		requires = {
-			steppe_path_s
-			steppe_path_li
+			
 		}
 	}
 	steppe_path_c = {
@@ -133,8 +132,7 @@
 		}
 		icon = north_african_tribal_path_2
 		requires = {
-			steppe_path_s
-			steppe_path_li
+			
 		}
 	}
 	steppe_path_lc = {
@@ -168,8 +166,7 @@
 		}
 		icon = persian_bactrian_path_1
 		requires = {
-			steppe_path_s
-			steppe_path_li
+			
 		}
 	}
 	steppe_path_hc = {
@@ -183,9 +180,7 @@
 		}
 		icon = persian_bactrian_path_end_bonus
 		requires = {
-			steppe_path_ha
-			steppe_path_c
-			steppe_path_lc
+			
 		}
 	}
 	steppe_path_we = {
@@ -198,9 +193,7 @@
 		}
 		icon = mauryan_mauryas_path_4
 		requires = {
-			steppe_path_ha
-			steppe_path_c
-			steppe_path_lc
+			
 		}
 	}
 	steppe_path_hi = {
@@ -213,9 +206,7 @@
 		}
 		icon = persian_achaemenid_path_1
 		requires = {
-			steppe_path_ha
-			steppe_path_c
-			steppe_path_lc
+			
 		}
 	}
 }

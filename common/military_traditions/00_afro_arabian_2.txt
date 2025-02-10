@@ -217,8 +217,7 @@ afro_arabian_philosophy_2 = {
 		}
 		icon = levantine_arabian_path_end_bonus
 		requires = {
-			arabian_path_s
-			arabian_path_li
+			
 		}
 	}
 	arabian_path_c = {
@@ -246,8 +245,7 @@ afro_arabian_philosophy_2 = {
 		}
 		icon = north_african_tribal_path_2
 		requires = {
-			arabian_path_s
-			arabian_path_li
+			
 		}
 	}
 	arabian_path_lc = {
@@ -261,8 +259,7 @@ afro_arabian_philosophy_2 = {
 		}
 		icon = levantine_egyptian_path_6
 		requires = {
-			arabian_path_s
-			arabian_path_li
+			
 		}
 	}
 	arabian_path_hc = {
@@ -276,9 +273,7 @@ afro_arabian_philosophy_2 = {
 		}
 		icon = levantine_arabian_path_3
 		requires = {
-			arabian_path_ha
-			arabian_path_c
-			arabian_path_lc
+			
 		}
 	}
 	arabian_path_we = {
@@ -291,9 +286,7 @@ afro_arabian_philosophy_2 = {
 		}
 		icon = mauryan_mauryas_path_4
 		requires = {
-			arabian_path_ha
-			arabian_path_c
-			arabian_path_lc
+			
 		}
 	}
 	arabian_path_hi = {
@@ -306,9 +299,7 @@ afro_arabian_philosophy_2 = {
 		}
 		icon = levantine_arabian_path_4
 		requires = {
-			arabian_path_ha
-			arabian_path_c
-			arabian_path_lc
+			
 		}
 	}
 	

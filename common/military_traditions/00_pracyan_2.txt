@@ -90,8 +90,7 @@
 		}
 		icon = persian_scythian_path_1
 		requires = {
-			pracyan_path_s
-			pracyan_path_li
+			
 		}
 	}
 	pracyan_path_c = {
@@ -105,8 +104,7 @@
 		}
 		icon = north_african_tribal_path_2
 		requires = {
-			pracyan_path_s
-			pracyan_path_li
+			
 		}
 	}
 	pracyan_path_lc = {
@@ -120,8 +118,7 @@
 		}
 		icon = persian_bactrian_path_1
 		requires = {
-			pracyan_path_s
-			pracyan_path_li
+			
 		}
 	}
 	pracyan_path_hc = {
@@ -135,9 +132,7 @@
 		}
 		icon = persian_bactrian_path_end_bonus
 		requires = {
-			pracyan_path_ha
-			pracyan_path_c
-			pracyan_path_lc
+			
 		}
 	}
 	pracyan_path_we = {
@@ -150,9 +145,7 @@
 		}
 		icon = mauryan_mauryas_path_4
 		requires = {
-			pracyan_path_ha
-			pracyan_path_c
-			pracyan_path_lc
+			
 		}
 	}
 	pracyan_path_hi = {
@@ -177,9 +170,7 @@
 		}
 		icon = persian_achaemenid_path_1
 		requires = {
-			pracyan_path_ha
-			pracyan_path_c
-			pracyan_path_lc
+			
 		}
 	}
 }

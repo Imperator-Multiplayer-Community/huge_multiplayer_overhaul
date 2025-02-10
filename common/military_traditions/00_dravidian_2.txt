@@ -79,8 +79,7 @@
 		}
 		icon = persian_scythian_path_1
 		requires = {
-			dravidian_path_s
-			dravidian_path_li
+			
 		}
 	}
 	dravidian_path_c = {
@@ -94,8 +93,7 @@
 		}
 		icon = north_african_tribal_path_2
 		requires = {
-			dravidian_path_s
-			dravidian_path_li
+			
 		}
 	}
 	dravidian_path_lc = {
@@ -109,8 +107,7 @@
 		}
 		icon = persian_bactrian_path_1
 		requires = {
-			dravidian_path_s
-			dravidian_path_li
+			
 		}
 	}
 	dravidian_path_hc = {
@@ -124,9 +121,7 @@
 		}
 		icon = persian_bactrian_path_end_bonus
 		requires = {
-			dravidian_path_ha
-			dravidian_path_c
-			dravidian_path_lc
+			
 		}
 	}
 	dravidian_path_we = {
@@ -151,9 +146,7 @@
 		}
 		icon = mauryan_mauryas_path_4
 		requires = {
-			dravidian_path_ha
-			dravidian_path_c
-			dravidian_path_lc
+			
 		}
 	}
 	dravidian_path_hi = {
@@ -166,9 +159,7 @@
 		}
 		icon = persian_achaemenid_path_1
 		requires = {
-			dravidian_path_ha
-			dravidian_path_c
-			dravidian_path_lc
+			
 		}
 	}
 }
