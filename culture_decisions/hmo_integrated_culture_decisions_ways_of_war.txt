@@ -1,4 +1,4 @@
-﻿culture_decisions = {	
+﻿culture_decisions = {
 
 	#Integrate Military Traditions - Italians
 	study_italic_ways_of_war = {
@@ -26,7 +26,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -44,9 +44,9 @@
 				}
 			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_italics"
@@ -99,7 +99,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - Celts
 	study_celtic_ways_of_war = {
@@ -115,7 +115,7 @@
 					this.culture.culture_group = culture_group:britannic
 					this.culture.culture_group = culture_group:gaelic
 					this.culture.culture_group = culture_group:proto_european
-				}	
+				}
 			}
 		}
 		allow = {
@@ -140,7 +140,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -156,11 +156,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_celts"
@@ -212,7 +212,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - Germans
 	study_germanic_ways_of_war = {
@@ -223,7 +223,7 @@
 				OR = {
 					this.culture.culture_group = culture_group:germanic
 					this.culture.culture_group = culture_group:baltic
-				}	
+				}
 			}
 		}
 		allow = {
@@ -244,7 +244,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -260,11 +260,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_germans"
@@ -316,7 +316,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - Iberians
 	study_iberian_ways_of_war = {
@@ -328,7 +328,7 @@
 				OR = {
 					this.culture.culture_group = culture_group:celt_iberia
 					this.culture.culture_group = culture_group:iberia
-				}	
+				}
 			}
 		}
 		allow = {
@@ -349,7 +349,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -365,11 +365,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_iberians"
@@ -421,7 +421,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - North Africans
 	study_north_african_ways_of_war = {
@@ -433,8 +433,8 @@
 				OR = {
 					this.culture.culture_group = culture_group:numidian
 					this.culture.culture_group = culture_group:fezzani
-					is_culture = carthaginian					
-				}	
+					is_culture = carthaginian
+				}
 			}
 		}
 		allow = {
@@ -446,7 +446,7 @@
 						OR = {
 							this.culture.culture_group = culture_group:numidian
 							this.culture.culture_group = culture_group:fezzani
-							is_culture = carthaginian		
+							is_culture = carthaginian
 						}
 				}
 			}
@@ -456,7 +456,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -472,11 +472,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_north_africans"
@@ -528,7 +528,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - Levantines
 	study_levantine_ways_of_war = {
@@ -537,10 +537,12 @@
 			scope:target_culture = {
 			is_integrated = yes
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				OR = {	
-					this.culture.culture_group = culture_group:west_levantine
-					this.culture.culture_group = culture_group:north_african				
-				}	
+				OR = {
+					is_culture = hebrew
+					is_culture = nabatean
+					is_culture = phoenician
+					this.culture.culture_group = culture_group:north_african
+				}
 			}
 		}
 		allow = {
@@ -550,8 +552,10 @@
 					is_integrated = yes
 					country_culture_pop_count >= tiny_percent_size_culture_group_comparison
 						OR = {
-							this.culture.culture_group = culture_group:west_levantine
-							this.culture.culture_group = culture_group:north_african							
+							is_culture = hebrew
+							is_culture = nabatean
+							is_culture = phoenician
+							this.culture.culture_group = culture_group:north_african
 						}
 				}
 			}
@@ -561,7 +565,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -577,11 +581,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_levantines"
@@ -633,7 +637,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - Persians
 	study_persian_ways_of_war = {
@@ -642,7 +646,7 @@
 			scope:target_culture = {
 			is_integrated = yes
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				this.culture.culture_group = culture_group:persia						
+				this.culture.culture_group = culture_group:persia
 			}
 		}
 		allow = {
@@ -660,7 +664,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -676,11 +680,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_persians"
@@ -732,7 +736,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - Greeks
 	study_greek_ways_of_war = {
@@ -740,7 +744,7 @@
 			NOT = { root.culture.culture_group = scope:target_culture.culture.culture_group }
 			scope:target_culture = {
 			is_integrated = yes
-			this.culture.culture_group = culture_group:hellenic							
+			this.culture.culture_group = culture_group:hellenic
 			}
 		}
 		allow = {
@@ -758,7 +762,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -774,11 +778,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_greeks"
@@ -831,7 +835,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 	#Integrate Military Traditions - Dravidians
 	study_indian_ways_of_war = {
@@ -840,7 +844,7 @@
 			scope:target_culture = {
 			is_integrated = yes
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
-				this.culture.culture_group = culture_group:indian							
+				this.culture.culture_group = culture_group:indian
 			}
 		}
 		allow = {
@@ -858,7 +862,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -874,11 +878,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_indians"
@@ -931,7 +935,7 @@
 				}
 			}
 		}
-	}	
+	}
 
 
 	#Integrate Military Traditions - Illyro-Daco-Thracian (Haemic)
@@ -945,7 +949,7 @@
 					this.culture.culture_group = culture_group:illyrian_group
 					this.culture.culture_group = culture_group:dacia_group
 					this.culture.culture_group = culture_group:thrace_group
-				}	
+				}
 			}
 		}
 		allow = {
@@ -967,7 +971,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -983,11 +987,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_haemics"
@@ -1055,7 +1059,7 @@
 					this.culture.culture_group = culture_group:meroitic_group
 					this.culture.culture_group = culture_group:aksumite_group
 					this.culture.culture_group = culture_group:nilotic_group
-				}	
+				}
 			}
 		}
 		allow = {
@@ -1078,7 +1082,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -1094,11 +1098,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_afro_arabians"
@@ -1176,7 +1180,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -1192,11 +1196,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_mesopotamians"
@@ -1275,7 +1279,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -1291,11 +1295,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_anatolians"
@@ -1358,7 +1362,7 @@
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
 				OR = {
 					this.culture.culture_group = culture_group:aryan
-				}	
+				}
 			}
 		}
 		allow = {
@@ -1378,7 +1382,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -1394,11 +1398,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_aryans"
@@ -1461,8 +1465,8 @@
 			#I need help limiting the potential so this decision only appears if you have integrated the culture
 				OR = {
 					this.culture.culture_group = culture_group:pracyan
-					this.culture.culture_group = culture_group:tibetan	
-				}	
+					this.culture.culture_group = culture_group:tibetan
+				}
 			}
 		}
 		allow = {
@@ -1473,7 +1477,7 @@
 					country_culture_pop_count >= tiny_percent_size_culture_group_comparison
 						OR = {
 							this.culture.culture_group = culture_group:pracyan
-							this.culture.culture_group = culture_group:tibetan	
+							this.culture.culture_group = culture_group:tibetan
 						}
 				}
 			}
@@ -1483,7 +1487,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -1499,11 +1503,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_tibeto_pracyans"
@@ -1568,8 +1572,8 @@
 					this.culture.culture_group = culture_group:bactrian
 					this.culture.culture_group = culture_group:scythia
 					this.culture.culture_group = culture_group:scythian_east
-					this.culture.culture_group = culture_group:caucasian	
-				}	
+					this.culture.culture_group = culture_group:caucasian
+				}
 			}
 		}
 		allow = {
@@ -1592,7 +1596,7 @@
 			num_of_cities >= 10
 			stability > 40
 			military_experience >= 50
-		}	
+		}
 		effect = {
 			add_stability = -5
 			add_military_experience = -10
@@ -1608,11 +1612,11 @@
 					name = "foreign_traditions_embraced"
 					duration = 10950
 				}
-			}	
+			}
 			every_integrated_culture = {
-				limit = { 
+				limit = {
 					is_culture = root.culture
-					is_integrated = yes 
+					is_integrated = yes
 				}
 				add_country_culture_modifier = {
 					name = "too_many_steppes"
@@ -1717,10 +1721,10 @@
 				days = 730
 			}
 		}
-			
+
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
+
 }
