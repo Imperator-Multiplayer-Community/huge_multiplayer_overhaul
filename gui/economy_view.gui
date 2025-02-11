@@ -253,6 +253,164 @@ base_window = {
 								}
 							}
 						}
+
+						# LOOTING POLICY
+						container = {
+							position = { 0 330 }
+
+							container = {
+								using = NoninteractableBG
+								name = "looting header"
+
+								position = { 5 0 }
+								sub_header = {
+									size = { 260 0 }
+									position = { -8 -2 }
+									blockoverride "Title_text" { text = "looting_policy" }
+								}
+								textbox = {
+									position = { 1 1 }
+									parentanchor = top|right
+									autoresize = yes
+									text = " "
+									using = BaseFontM
+									icon = {
+										position = { -26 -4 }
+										size = { 32 32 }
+										texture = "gfx/interface/icons/shared_icons/attrition.dds"
+										tooltip = ""
+									}
+								}
+								widget = {
+									position = { 273 0 }
+								}
+							}
+
+							container = {
+								position = { 0 44 }
+
+								blockoverride "Margins"
+								{
+									margin = { 4 4 }
+									margin_bottom = 0
+									margin_top = 6
+								}
+
+								using = NoninteractableBG
+								flowcontainer = {
+									direction = vertical
+
+									container = {
+										ignoreinvisible = yes
+
+										icon_and_text = {
+											position = { 152 0 }
+											size = { 132 0 }
+											tooltip = "[EconomyView.GetPlayer.GetDefaultLandMoraleTooltip]"
+											blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/land_morale.dds" }
+											blockoverride "Text" { text = "[EconomyView.GetPlayer.GetDefaultLandMorale|Y]" }
+										}
+
+										icon_and_text = {
+											position = { 152 32 }
+											size = { 132 0 }
+											tooltip = "[EconomyView.GetPlayer.GetModifierTooltip('discipline')]"
+											blockoverride "Icon" { texture = "gfx/interface/icons/shared_icons/discipline.dds" }
+											blockoverride "Text" { text = "[EconomyView.GetPlayer.GetModifierValue('discipline')]" }
+										}
+
+										icon_and_text = {
+											position = { 152 68 }
+											size = { 132 0 }
+											tooltip = "[EconomyView.GetPlayer.GetModifierTooltip('enslavement_efficiency')]"
+											blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/enslavement_efficiency.dds" }
+											blockoverride "Text" { text = "[EconomyView.GetPlayer.GetModifierPureValue('enslavement_efficiency')|2Y%]" }
+										}
+
+										icon_and_text = {
+											position = { 152 104 }
+											size = { 132 0 }
+											tooltip = "[EconomyView.GetPlayer.GetModifierTooltip('army_movement_speed')]"
+											blockoverride "Icon" { texture = "gfx/interface/icons/modifiers/army_movement_speed.dds" }
+											blockoverride "Text" { text = "[EconomyView.GetPlayer.GetModifierValue('army_movement_speed')|2Y%]" }
+										}
+
+										flowcontainer = {
+											position = { 6 8 }
+											direction = horizontal
+											spacing = 3
+
+											widget = {
+												size = { 40 40 }
+												datacontext = "[GetScriptedGui('low_looting_policy_button')]"
+
+												button_radial = {
+													tooltip = "low_looting_policy_tt"
+
+													blockoverride "On_click"
+													{
+														onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+													}
+													blockoverride "ShowDot"
+													{
+														trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+													}
+													blockoverride "HideDot"
+													{
+														trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+													}
+												}
+											}
+											widget = {
+												size = { 40 40 }
+												datacontext = "[GetScriptedGui('default_looting_policy_button')]"
+
+												button_radial = {
+													tooltip = "default_looting_policy_tt"
+
+													blockoverride "On_click"
+													{
+														onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+													}
+													blockoverride "ShowDot"
+													{
+														trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+													}
+													blockoverride "HideDot"
+													{
+														trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+													}
+												}
+											}
+											widget = {
+												size = { 40 40 }
+												datacontext = "[GetScriptedGui('high_looting_policy_button')]"
+
+												button_radial = {
+													tooltip = "high_looting_policy_tt"
+
+													blockoverride "On_click"
+													{
+														onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
+													}
+													blockoverride "ShowDot"
+													{
+														trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
+													}
+													blockoverride "HideDot"
+													{
+														trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
+													}
+												}
+											}
+										}
+									}
+
+									widget = { size = { 4 12 } }
+								}
+							}
+						}
+						# }
 					}
 					container = {
 						position = { 307 0 }
@@ -356,108 +514,4 @@ base_window = {
 		}
 	}
 
-	# LOOTING POLICY
-	vbox = {
-		name = "Looting Policy"
-		layoutpolicy_horizontal = expanding
-		layoutpolicy_vertical = expanding
-		margin = { 0 0 }
-
-		margin_widget = {
-			layoutpolicy_horizontal = expanding
-			size = { 0 400 }
-			# using = NoninteractableBG
-
-			flowcontainer = {
-				position = { 30 340 }
-				margin_left = 10
-				margin_right = 145
-				using = NoninteractableBG
-				parentanchor = left
-				direction = vertical
-
-				container = {
-					textbox = {
-						position = { 0 0 }
-						autoresize = yes
-						using = BaseFontS
-						using = Black_FontColor
-						text = "looting_policy"
-					}
-				}
-
-				widget = { size = { 4 12 } }
-
-				flowcontainer = {
-					parentanchor = left
-					direction = horizontal
-					spacing = 3
-
-					widget = {
-						size = { 40 40 }
-						datacontext = "[GetScriptedGui('low_looting_policy_button')]"
-
-						button_radial = {
-							tooltip = "low_looting_policy_tt"
-
-							blockoverride "On_click"
-							{
-								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
-							}
-							blockoverride "ShowDot"
-							{
-								trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
-							}
-							blockoverride "HideDot"
-							{
-								trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
-							}
-						}
-					}
-					widget = {
-						size = { 40 40 }
-						datacontext = "[GetScriptedGui('default_looting_policy_button')]"
-
-						button_radial = {
-							tooltip = "default_looting_policy_tt"
-
-							blockoverride "On_click"
-							{
-								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
-							}
-							blockoverride "ShowDot"
-							{
-								trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
-							}
-							blockoverride "HideDot"
-							{
-								trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
-							}
-						}
-					}
-					widget = {
-						size = { 40 40 }
-						datacontext = "[GetScriptedGui('high_looting_policy_button')]"
-
-						button_radial = {
-							tooltip = "high_looting_policy_tt"
-
-							blockoverride "On_click"
-							{
-								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Player.MakeScope ).End )]"
-							}
-							blockoverride "ShowDot"
-							{
-								trigger_when = "[ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End )]"
-							}
-							blockoverride "HideDot"
-							{
-								trigger_when = "[Not(ScriptedGui.IsShown( GuiScope.SetRoot( Player.MakeScope ).End ))]"
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 }

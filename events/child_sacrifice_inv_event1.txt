@@ -27,7 +27,7 @@ child_sacrifice_inv.1 = {
 				age < 12
 				NOT = {
 					has_same_family = scope:sacrifice_1
-					
+
 				}
 			}
 			save_scope_as = sacrifice_2
@@ -79,24 +79,28 @@ child_sacrifice_inv.1 = {
 					id = child_sacrifice_inv.2
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.2.t"
 			}
 			50 = {
 				trigger_event = {
 					id = child_sacrifice_inv.3
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.3.t"
 			}
 			35 = {
 				trigger_event = {
 					id = child_sacrifice_inv.4
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.4.t"
 			}
 			5 = {
 				trigger_event = {
 					id = child_sacrifice_inv.5
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.5.t"
 			}
 		}
 	}
@@ -129,24 +133,28 @@ child_sacrifice_inv.1 = {
 					id = child_sacrifice_inv.2
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.2.t"
 			}
 			50 = {
 				trigger_event = {
 					id = child_sacrifice_inv.3
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.3.t"
 			}
 			35 = {
 				trigger_event = {
 					id = child_sacrifice_inv.4
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.4.t"
 			}
 			5 = {
 				trigger_event = {
 					id = child_sacrifice_inv.5
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.5.t"
 			}
 		}
 	}
@@ -179,24 +187,28 @@ child_sacrifice_inv.1 = {
 					id = child_sacrifice_inv.2
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.2.t"
 			}
 			50 = {
 				trigger_event = {
 					id = child_sacrifice_inv.3
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.3.t"
 			}
 			35 = {
 				trigger_event = {
 					id = child_sacrifice_inv.4
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.4.t"
 			}
 			5 = {
 				trigger_event = {
 					id = child_sacrifice_inv.5
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.5.t"
 			}
 		}
 	}
@@ -237,29 +249,33 @@ child_sacrifice_inv.1 = {
 			}
 		}
 		random_list = {
-			10 = {
+			20 = {
 				trigger_event = {
 					id = child_sacrifice_inv.2
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.2.t"
 			}
-			50 = {
+			40 = {
 				trigger_event = {
 					id = child_sacrifice_inv.3
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.3.t"
 			}
-			35 = {
+			30 = {
 				trigger_event = {
 					id = child_sacrifice_inv.4
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.4.t"
 			}
-			5 = {
+			10 = {
 				trigger_event = {
 					id = child_sacrifice_inv.5
 					days = {1 14}
 				}
+				custom_tooltip = "child_sacrifice_inv.5.t"
 			}
 		}
 		add_tyranny = 5
