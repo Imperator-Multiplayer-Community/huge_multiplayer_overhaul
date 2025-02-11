@@ -295,7 +295,8 @@ afro_arabian_philosophy_2 = {
 			light_infantry_desert_combat_bonus = 0.1
 			horse_archers_desert_combat_bonus = 0.1
 			camels_desert_combat_bonus = 0.1
-			
+			monthly_military_experience_modifier = -0.03
+			army_maintenance_cost = 0.01
 		}
 		icon = levantine_arabian_path_4
 		requires = {
@@ -313,6 +314,8 @@ afro_arabian_philosophy_2 = {
 			horse_archers_mountain_combat_bonus = 0.1
 			camels_mountain_combat_bonus = 0.1
 			camels_hills_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.03
+			army_maintenance_cost = 0.01
 		}
 		icon = levantine_arabian_path_4
 		requires = {
@@ -328,6 +331,8 @@ afro_arabian_philosophy_2 = {
 			horse_archers_plains_combat_bonus = 0.1
 			camels_plains_combat_bonus = 0.1
 			camels_flood_plain_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.03
+			army_maintenance_cost = 0.01
 		}
 		icon = levantine_arabian_path_4
 		requires = {
