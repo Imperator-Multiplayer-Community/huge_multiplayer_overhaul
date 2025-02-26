@@ -8,22 +8,22 @@
 		trade_good_surplus = { target = horses value > 0 }
 	}
 
-	maneuver = 3
+	maneuver = 4
 	movement_speed = 4
 	build_time = 45
 	
-	light_infantry = 1.50
-	heavy_infantry = 1.0
-	heavy_cavalry = 0.90
-	warelephant = 1.0
+	light_infantry = 1.1
+	heavy_infantry = 0.9
+	heavy_cavalry = 0.95
+	warelephant = 0.9
 	light_cavalry = 1.0
-	horse_archers = 1.25
-	archers = 1.50
-	camels = 1.00
+	horse_archers = 1.1
+	archers = 1.1
+	camels = 1.05
 	supply_train = 2.0
 	
-	morale_damage_taken = 0.85
-	strength_damage_taken = 0.85
+	morale_damage_taken = 1.0
+	strength_damage_taken = 1.0
 
 	attrition_weight = 1.5
 	attrition_loss = 0.05

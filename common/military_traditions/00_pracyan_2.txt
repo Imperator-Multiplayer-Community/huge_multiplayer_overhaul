@@ -43,82 +43,114 @@
 			}
 		}
 	}
-	pracyan_path_1 = {
+	
+
+	#New trads
+	pracyan_path_li = {
 		###
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-		}
+		
 		modifier = {
-			light_infantry_morale = 0.1
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
 			light_infantry_jungle_combat_bonus = 0.1
 			light_infantry_flood_plain_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = levantine_greco_path_1
-		requires = {
-		}
-	}
-	pracyan_path_12 = {
-		###
-		modifier = {
-			light_infantry_offensive = 0.1
 			light_infantry_mountain_combat_bonus = 0.1
 			light_infantry_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = mauryan_noble_path_6
+		icon = persian_scythian_path_7
 		requires = {
-			pracyan_path_1
 		}
 	}
-	pracyan_path_3 = {
+	pracyan_path_s = {
 		###
-		allow = {
-			NOT = {
-				has_variable = archers_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = archers_super_unit
-		}
 		modifier = {
-			archers_offensive = 0.1
+			archers_defensive = 0.1
+			archers_discipline = 0.1
 			archers_jungle_combat_bonus = 0.1
 			archers_flood_plain_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = persian_achaemenid_path_7
-		requires = {
-		}
-	}
-	tibetan_path_13 = {
-		###
-		modifier = {
-			archers_morale = 0.1
 			archers_mountain_combat_bonus = 0.1
 			archers_hills_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
 		icon = greek_antigonid_path_6
 		requires = {
-			pracyan_path_3
 		}
 	}
-	# Super Unit
-	pracyan_path_14 = {
+	pracyan_path_ha = {
 		###
-		allow = {
-			NOT = {
-				has_variable = heavy_infantry_super_unit
-			}
+		
+		modifier = {
+			horse_archers_defensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
 		}
+		icon = persian_scythian_path_1
+		requires = {
+			
+		}
+	}
+	pracyan_path_c = {
+		###
+				
+		modifier = {
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
+		}
+		icon = north_african_tribal_path_2
+		requires = {
+			
+		}
+	}
+	pracyan_path_lc = {
+		###
+		
+		modifier = {
+			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_1
+		requires = {
+			
+		}
+	}
+	pracyan_path_hc = {
+		###
+		
+		modifier = {
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_end_bonus
+		requires = {
+			
+		}
+	}
+	pracyan_path_we = {
+		###
+		modifier = {
+			warelephant_defensive = 0.1
+			warelephant_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_4
+		requires = {
+			
+		}
+	}
+	pracyan_path_hi = {
+		###
 		on_activate = {
-			set_variable = heavy_infantry_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -130,49 +162,15 @@
 		enable_tactic = padma_vyuha
 		modifier = {
 			heavy_infantry_defensive = 0.1
-			heavy_infantry_jungle_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = mauryan_noble_path_7
-		requires = {
-		}
-	}
-	pracyan_path_15 = {
-		###
-		modifier = {
-			heavy_infantry_offensive = 0.1
-			heavy_infantry_plains_combat_bonus = 0.1
-			heavy_infantry_flood_plain_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = greek_antigonid_path_end_bonus
-		requires = {
-			pracyan_path_14
-		}
-	}
-	tibetan_path_12 = {
-		###
-		modifier = {
-			heavy_infantry_morale = 0.1
-			heavy_infantry_mountain_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = celtic_gallic_path_3
-		requires = {
-			pracyan_path_15
-		}
-	}
-	tibetan_path_11 = {
-		###
-		modifier = {
 			heavy_infantry_discipline = 0.1
-			heavy_infantry_movement_speed = 0.1
-			heavy_infantry_cost = -0.15
+			heavy_infantry_jungle_combat_bonus = 0.1
+			heavy_infantry_mountain_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
-		icon = mauryan_noble_path_3
+		icon = persian_achaemenid_path_1
 		requires = {
-			tibetan_path_12
+			
 		}
 	}
 }

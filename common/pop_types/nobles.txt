@@ -1,11 +1,11 @@
 ﻿nobles = {
 	output_modifier = {
-		research_points = 0.5
+		research_points = 0.7 #it was 0.5
 	}
 	
 	count_modifier = {
 		pop_food_consumption = -0.5
-		local_base_trade_routes = 0.15
+		local_base_trade_routes = 0.03
 	}
 	levy_tier = advanced
 
@@ -13,7 +13,7 @@
 	
 	conquest_demote_chance = 5 #5% - Nobles will stay a nuisance.
 	
-	base_happyness = -0.2
+	base_happyness = -0.3 #it was -0.2
 	political_weight = 3
 	score = yes
 	

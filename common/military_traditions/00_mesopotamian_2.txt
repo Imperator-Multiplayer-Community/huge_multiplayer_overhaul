@@ -33,15 +33,25 @@
 			}
 		}
 	}
-	assyrian_path_1 = {
+
+
+	#New trads
+	mesopotamian_path_li = {
 		###
-		allow = {
-			NOT = {
-				has_variable = archers_super_unit
-			}
+		
+		modifier = {
+			light_infantry_defensive = 0.1
+			light_infantry_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
+		icon = persian_scythian_path_7
+		requires = {
+		}
+	}
+	mesopotamian_path_s = {
+		###
 		on_activate = {
-			set_variable = archers_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -52,107 +62,106 @@
 		}
 		modifier = {
 			archers_defensive = 0.1
+			archers_discipline = 0.1
 			archers_plains_combat_bonus = 0.1
 			archers_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = persian_achaemenid_path_7
-		requires = {
-		}
-	}
-	assyrian_path_2 = {
-		###
-		modifier = {
-			archers_morale = 0.1
 			archers_desert_combat_bonus = 0.1
 			archers_flood_plain_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = north_african_tribal_path_7
+		icon = greek_antigonid_path_6
 		requires = {
-			assyrian_path_1
 		}
 	}
-	assyrian_path_8 = {
+	mesopotamian_path_ha = {
 		###
-		allow = {
-			NOT = {
-				has_variable = light_cavalry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_cavalry_super_unit
-		}
+		
 		modifier = {
-			light_cavalry_offensive = 0.1
-			light_cavalry_desert_combat_bonus = 0.1
-			light_cavalry_flood_plain_combat_bonus = 0.1
+			horse_archers_defensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
+		}
+		icon = persian_scythian_path_1
+		requires = {
+			
+		}
+	}
+	mesopotamian_path_c = {
+		###
+				
+		modifier = {
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
-		icon = levantine_arabian_path_end_bonus
+		icon = north_african_tribal_path_2
 		requires = {
+			
 		}
 	}
-	assyrian_path_11 = {
+	mesopotamian_path_lc = {
 		###
 		enable_tactic = cavalry_skirmish
 		modifier = {
-			light_cavalry_morale = 0.1
+			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
+			light_cavalry_desert_combat_bonus = 0.1
+			light_cavalry_flood_plain_combat_bonus = 0.1
 			light_cavalry_plains_combat_bonus = 0.1
 			light_cavalry_hills_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
-		icon = greek_antigonid_path_4
+		icon = persian_bactrian_path_1
 		requires = {
-			assyrian_path_8
+			
 		}
 	}
-	# Super Units
-	assyrian_path_3 = {
+	mesopotamian_path_hc = {
 		###
-		allow = {
-			NOT = {
-				has_variable = heavy_cavalry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = heavy_cavalry_super_unit
-		}
+		
 		modifier = {
-			heavy_cavalry_discipline = 0.1
-			heavy_cavalry_desert_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = persian_scythian_path_4
-		requires = {
-		}
-	}
-	assyrian_path_14 = {
-		###
-		modifier = {
-			heavy_cavalry_offensive = 0.1
 			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
 			heavy_cavalry_hills_combat_bonus = 0.1
 			heavy_cavalry_plains_combat_bonus = 0.1
-			army_maintenance_cost = 0.02
+			heavy_cavalry_desert_combat_bonus = 0.1
+			heavy_cavalry_flood_plain_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
 		}
-		icon = latin_support_path_7
+		icon = persian_bactrian_path_end_bonus
 		requires = {
-			assyrian_path_3
+			
 		}
 	}
-	assyrian_path_15 = {
+	mesopotamian_path_we = {
 		###
 		modifier = {
-			heavy_cavalry_cost = -0.15
-			heavy_cavalry_movement_speed = 0.1
-			heavy_cavalry_morale = 0.1
-			heavy_cavalry_flood_plain_combat_bonus = 0.1
-			army_maintenance_cost = 0.02
+			warelephant_defensive = 0.1
+			warelephant_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
 		}
-		icon = greek_seleucid_path_4
+		icon = mauryan_mauryas_path_4
 		requires = {
-			assyrian_path_14
+			
+		}
+	}
+	mesopotamian_path_hi = {
+		###
+		modifier = {
+			heavy_infantry_defensive = 0.1
+			heavy_infantry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = {
+			
 		}
 	}
 }

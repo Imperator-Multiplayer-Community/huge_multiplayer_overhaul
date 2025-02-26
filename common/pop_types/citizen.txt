@@ -1,12 +1,12 @@
 ﻿citizen = {
 	output_modifier = {
 		local_manpower = 0.003
-		research_points = 0.2
+		research_points = 0.05 #it was 0.2 
 	}
 	
 	count_modifier = {
 		pop_food_consumption = -0.3
-		local_base_trade_routes = 0.03
+		local_base_trade_routes = 0.15
 	}
 	levy_tier = advanced
 	
@@ -17,7 +17,7 @@
 	
 	is_citizen = yes
 
-	base_happyness = -0.1
+	base_happyness = -0.2
 	political_weight = 1.5
 	
 	score = yes

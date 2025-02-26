@@ -3,23 +3,23 @@
 	army = yes
 	assault = yes
 	levy_tier = basic
-	maneuver = 1
+	maneuver = 2
 	movement_speed = 2.5
 	build_time = 30
 	light_infantry = 1.0
-	heavy_infantry = 0.75
-	heavy_cavalry = 1.0
-	warelephant = 1
-	horse_archers = 0.50
-	archers = 1.0
-	camels = 1.0
-	light_cavalry = 1.0
+	heavy_infantry = 0.9
+	heavy_cavalry = 0.9
+	warelephant = 1.15
+	horse_archers = 0.95
+	archers = 1.05
+	camels = 0.95
+	light_cavalry = 0.95
 	supply_train = 2
 
 	attrition_weight = 0.5
 	attrition_loss = 0.025
 
-	morale_damage_taken = 0.65
+	morale_damage_taken = 1.0
 	strength_damage_taken = 1.0
 	
 	food_consumption = 0.1

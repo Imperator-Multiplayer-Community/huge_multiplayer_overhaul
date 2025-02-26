@@ -53,82 +53,11 @@
 			}
 		}
 	}
-	thracian_path_1 = {
-		#Falx and sica
-		allow = {
-			NOT = {
-				has_variable = heavy_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = heavy_infantry_super_unit
-		}
-		modifier = {
-			heavy_infantry_offensive = 0.1
-			heavy_infantry_hills_combat_bonus = 0.1
-			heavy_infantry_forest_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = greek_seleucid_path_6
-	}
-	illyrian_path_8 = {
-		#Dardanian hoplites
-		requires = {
-			thracian_path_1
-		}
-		enable_tactic = triplex_acies
-		modifier = {
-			heavy_infantry_cost = -0.1
-			heavy_infantry_farmland_combat_bonus = 0.1
-			heavy_infantry_Plains_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = greek_seleucid_path_2
-	}
-	thracian_path_7 = {
-		#Peltasts
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-		}
-		requires = {
-		}
-		modifier = {
-			light_infantry_defensive = 0.1
-			light_infantry_hills_combat_bonus = 0.1
-			light_infantry_forest_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = latin_roman_path_6
-	}
-	illyrian_path_9 = {
-		#Triplex Acies
-		enable_tactic = triplex_acies
-		requires = {
-			thracian_path_7
-		}
-		modifier = {
-			light_infantry_morale = 0.1
-			light_infantry_farmland_combat_bonus = 0.1
-			light_infantry_plains_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = latin_roman_path_3
-	}
-	thracian_path_4 = {
-		#Tribesmen, mountains
-		requires = {
-			illyrian_path_9
-			illyrian_path_8
-		}
-		modifier = {
-			mountain_combat_bonus = 0.1
-			hills_combat_bonus = 0.1
-		}
+	
+
+	#New trads
+	haemic_path_li = {
+		###
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
@@ -138,57 +67,123 @@
 				}
 			}
 		}
-		icon = celtic_gallic_path_3
-	}
-	# Super Unit LC terrain Hills Forest Farlmand Plains Marsh Mountain
-	thracian_path_10 = {
-		#Thracian Cavalry
-		allow = {
-			NOT = {
-				has_variable = light_cavalry_super_unit
-			}
+		modifier = {
+			light_infantry_offensive = 0.1
+			light_infantry_discipline = 0.1
+			light_infantry_hills_combat_bonus = 0.1
+			light_infantry_forest_combat_bonus = 0.1
+			light_infantry_farmland_combat_bonus = 0.1
+			light_infantry_plains_combat_bonus = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		on_activate = {
-			set_variable = light_cavalry_super_unit
-		}
+		icon = persian_scythian_path_7
 		requires = {
 		}
+	}
+	haemic_path_s = {
+		###
 		modifier = {
-			light_cavalry_defensive = 0.1
-			light_cavalry_morale = 0.1
-			light_cavalry_hills_combat_bonus = 0.1
-			light_cavalry_forest_combat_bonus = 0.1
+			archers_offensive = 0.1
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+		}
+	}
+	haemic_path_ha = {
+		###
+		
+		modifier = {
+			horse_archers_offensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
+		}
+		icon = persian_scythian_path_1
+		requires = {
+			
+		}
+	}
+	haemic_path_c = {
+		###
+				
+		modifier = {
+			camels_offensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
-		icon = persian_scythian_path_end_bonus
-	}
-	thracian_path_2 = {
-		#Thracian Horsemanship
+		icon = north_african_tribal_path_2
 		requires = {
-			thracian_path_10
+			
 		}
+	}
+	haemic_path_lc = {
+		###
+		enable_tactic = cavalry_skirmish
 		modifier = {
 			light_cavalry_offensive = 0.1
 			light_cavalry_discipline = 0.1
+			light_cavalry_hills_combat_bonus = 0.1
+			light_cavalry_forest_combat_bonus = 0.1
 			light_cavalry_farmland_combat_bonus = 0.1
 			light_cavalry_plains_combat_bonus = 0.1
-			army_maintenance_cost = 0.02
-		}
-		icon = greek_states_path_2
-	}
-	thracian_path_11 = {
-		#Cavalry again
-		enable_tactic = cavalry_skirmish
-		requires = {
-			thracian_path_10
-		}
-		modifier = {
-			light_cavalry_cost = -0.15
-			light_cavalry_movement_speed = 0.1
 			light_cavalry_Marsh_combat_bonus = 0.1
 			light_cavalry_mountain_combat_bonus = 0.1
-			army_maintenance_cost = 0.02
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
 		}
-		icon = greek_seleucid_path_1
+		icon = persian_bactrian_path_1
+		requires = {
+			
+		}
+	}
+	haemic_path_hc = {
+		###
+		
+		modifier = {
+			heavy_cavalry_offensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_end_bonus
+		requires = {
+			
+		}
+	}
+	haemic_path_we = {
+		###
+		modifier = {
+			warelephant_offensive = 0.1
+			warelephant_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_4
+		requires = {
+			
+		}
+	}
+	haemic_path_hi = {
+		###
+		enable_tactic = triplex_acies
+		modifier = {
+			heavy_infantry_offensive = 0.1
+			heavy_infantry_discipline = 0.1
+			heavy_infantry_hills_combat_bonus = 0.1
+			heavy_infantry_forest_combat_bonus = 0.1
+			heavy_infantry_farmland_combat_bonus = 0.1
+			heavy_infantry_Plains_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = {
+			
+		}
 	}
 }

@@ -15,9 +15,9 @@ small_percent_size_culture_group_comparison = {
 
 tiny_percent_size_culture_group_comparison = {
 	value = root.country_culture.country_culture_pop_count
-	multiply = 0.1
+	multiply = 0.01
 	max = 25
-	min = 5
+	min = 1
 }
 
 administrators_in_subcultures_cost_svalue = {

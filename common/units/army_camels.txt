@@ -8,20 +8,20 @@
 		}
 	}
 	is_flank = yes
-	maneuver = 3
+	maneuver = 4
 	movement_speed = 3.5
 	build_time = 40
 	legions = no
-	light_infantry = 1.25
-	heavy_infantry = 1.0
-	heavy_cavalry = 1.0
-	light_cavalry = 1.20
-	warelephant = 1.0
-	horse_archers = 1.0
-	archers = 1.2
+	light_infantry = 1.1
+	heavy_infantry = 0.9
+	heavy_cavalry = 0.95
+	light_cavalry = 1.05
+	warelephant = 0.9
+	horse_archers = 1.1
+	archers = 1.1
 	camels = 1
-	morale_damage_taken = 0.9
-	strength_damage_taken = 0.9
+	morale_damage_taken = 1
+	strength_damage_taken = 1
 	build_cost = {
 		gold = 40
 		manpower = 1

@@ -42,139 +42,67 @@
 			}
 		}
 	}
-	celt_iberian_path_b_1 = {
-		###Celt-Iberian 2A Barritus
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-		}
-		modifier = {
-			light_infantry_morale = 0.1
-			light_infantry_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = north_african_tribal_path_6
-		requires = {
-		}
-	}
-	iberian_central_path_2A = {
-		###Iberian 2BA Light Armour
+	
+
+	#New trads
+	iberian_path_li = {
+		###
+		enable_tactic = hit_and_run_tactics
 		modifier = {
 			light_infantry_offensive = 0.1
+			light_infantry_discipline = 0.1
+			light_infantry_hills_combat_bonus = 0.1
 			light_infantry_forest_combat_bonus = 0.1
 			light_infantry_plains_combat_bonus = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = latin_roman_path_1
+		icon = persian_scythian_path_7
 		requires = {
-			celt_iberian_path_b_1
 		}
 	}
-	iberian_left_path_1 = {
-		###Iberian 1A Phalaricae
-		allow = {
-			NOT = {
-				has_variable = heavy_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = heavy_infantry_super_unit
-		}
+	iberian_path_s = {
+		###
 		modifier = {
-			heavy_infantry_offensive = 0.1
-			heavy_infantry_forest_combat_bonus = 0.1
+			archers_offensive = 0.1
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
+		}
+		icon = greek_antigonid_path_6
+		requires = {
+		}
+	}
+	iberian_path_ha = {
+		###
+		
+		modifier = {
+			horse_archers_offensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
+		}
+		icon = persian_scythian_path_1
+		requires = {
+			
+		}
+	}
+	iberian_path_c = {
+		###
+				
+		modifier = {
+			camels_offensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
-		icon = celtic_gallic_path_1
+		icon = north_african_tribal_path_2
 		requires = {
+			
 		}
 	}
-	iberian_right_path_1 = {
-		###Iberian 1C Machaera Hispaniensis
-		modifier = {
-			heavy_infantry_morale = 0.1
-			heavy_infantry_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = celtic_britannic_path_2
-		requires = {
-			iberian_left_path_1
-		}
-		on_activate = {
-			custom_tooltip = "create_high_martial_rising_star"
-			hidden_effect = {
-				create_character = {
-					add_martial = 8
-					add_trait = disciplined
-				}
-			}
-		}
-	}
-	celt_iberian_path_a_1 = {
-		###Celt-Iberian 1A The Plateau
-		modifier = {
-			hills_combat_bonus = 0.1
-			plains_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = persian_bactrian_path_7
-		requires = {
-			iberian_central_path_2A
-			iberian_right_path_1
-		}
-	}
-	# Super Unit Light Cavalry Terrain Hills Forest Plains
-	celt_iberian_path_b_2 = {
-		###Celt-Iberian 2B Concursare
-		allow = {
-			NOT = {
-				has_variable = light_cavalry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_cavalry_super_unit
-		}
-		enable_tactic = hit_and_run_tactics
-		modifier = {
-			light_cavalry_offensive = 0.1
-			light_cavalry_morale = 0.1
-			light_cavalry_plains_combat_bonus = 0.1
-			army_maintenance_cost = 0.01
-		}
-		icon = celtic_germanic_path_1
-		requires = {
-		}
-	}
-	celt_iberian_path_c_3A = {
-		###Celt-Iberian 3CA Cantabrian Circle
-		modifier = {
-			light_cavalry_discipline = 0.1
-			light_cavalry_defensive = 0.1
-			light_cavalry_hills_combat_bonus = 0.1
-			army_maintenance_cost = 0.02
-		}
-		enable_tactic = cavalry_skirmish
-		icon = latin_support_path_7
-		requires = {
-			celt_iberian_path_b_2
-		}
-	}
-	celt_iberian_path_d_1 = {
-		###Celt-Iberian 4A Just the best Horses
-		modifier = {
-			light_cavalry_cost = -0.15
-			light_cavalry_movement_speed = 0.1
-			light_cavalry_forest_combat_bonus = 0.1
-			army_maintenance_cost = 0.02
-		}
-		icon = persian_scythian_path_end_bonus
-		requires = {
-			celt_iberian_path_b_2
-		}
+	iberian_path_lc = {
+		###
 		on_activate = {
 			ordered_owned_province = {
 				limit = {
@@ -193,6 +121,71 @@
 				order_by = total_population
 				set_trade_goods = horses
 			}
+		}
+		enable_tactic = cavalry_skirmish
+		modifier = {
+			light_cavalry_offensive = 0.1
+			light_cavalry_discipline = 0.1
+			light_cavalry_plains_combat_bonus = 0.1
+			light_cavalry_hills_combat_bonus = 0.1
+			light_cavalry_forest_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_1
+		requires = {
+			
+		}
+	}
+	iberian_path_hc = {
+		###
+		
+		modifier = {
+			heavy_cavalry_offensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_bactrian_path_end_bonus
+		requires = {
+			
+		}
+	}
+	iberian_path_we = {
+		###
+		modifier = {
+			warelephant_offensive = 0.1
+			warelephant_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = mauryan_mauryas_path_4
+		requires = {
+			
+		}
+	}
+	iberian_path_hi = {
+		###
+		on_activate = {
+			custom_tooltip = "create_high_martial_rising_star"
+			hidden_effect = {
+				create_character = {
+					add_martial = 8
+					add_trait = disciplined
+				}
+			}
+		}
+		modifier = {
+			heavy_infantry_offensive = 0.1
+			heavy_infantry_discipline = 0.1
+			heavy_infantry_forest_combat_bonus = 0.1
+			heavy_infantry_hills_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.06
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = {
+			
 		}
 	}
 }

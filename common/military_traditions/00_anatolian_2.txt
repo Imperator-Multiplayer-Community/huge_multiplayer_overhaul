@@ -59,101 +59,9 @@
 			lydian_path_3
 		}
 	}
-	### ARCHERS
-	lydian_path_2 = {
-		###
-		allow = {
-			NOT = {
-				has_variable = archers_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = archers_super_unit
-		}
-		modifier = {
-			archers_defensive = 0.1
-			archers_hills_combat_bonus = 0.05
-			archers_forest_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = greek_antigonid_path_6
-		requires = {
-		}
-	}
-	lydian_path_8 = {
-		###
-		modifier = {
-			archers_discipline = 0.1
-			archers_plains_combat_bonus = 0.05
-			archers_hills_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = greek_antigonid_path_5
-		requires = {
-			lydian_path_2
-		}
-	}
-	lydian_path_11 = {
-		###
-		modifier = {
-			archers_defensive = 0.1
-			archers_forest_combat_bonus = 0.05
-			archers_plains_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = persian_achaemenid_path_7
-		requires = {
-			lydian_path_8
-		}
-	}
-	### LIGHT INFANTRY
-	lydian_path_4 = {
-		###
-		allow = {
-			NOT = {
-				has_variable = light_infantry_super_unit
-			}
-		}
-		on_activate = {
-			set_variable = light_infantry_super_unit
-		}
-		modifier = {
-			light_infantry_offensive = 0.1
-			light_infantry_hills_combat_bonus = 0.05
-			light_infantry_forest_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = persian_achaemenid_path_1
-		requires = {
-		}
-	}
-	lydian_path_5 = {
-		###
-		modifier = {
-			light_infantry_discipline = 0.1
-			light_infantry_plains_combat_bonus = 0.05
-			light_infantry_forest_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = celtic_germanic_path_end_bonus
-		requires = {
-			lydian_path_4
-		}
-	}
-	lydian_path_7 = {
-		###
-		modifier = {
-			light_infantry_cost = -0.15
-			light_infantry_plains_combat_bonus = 0.05
-			light_infantry_hills_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = greek_seleucid_path_6
-		requires = {
-			lydian_path_5
-		}
-	}
-	lydian_path_14 = {
+	
+	#New trads
+	anatolian_path_li = {
 		###
 		on_activate = {
 			custom_tooltip = "create_high_martial_rising_star"
@@ -166,72 +74,107 @@
 		}
 		modifier = {
 			light_infantry_defensive = 0.1
-			light_infantry_morale = 0.1
-			light_infantry_marsh_combat_bonus = 0.1
-			light_infantry_farmland_combat_bonus = 0.1
+			light_infantry_discipline = 0.1
 			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		icon = levantine_greco_path_2
+		icon = persian_scythian_path_7
 		requires = {
-			lydian_path_7
 		}
 	}
-	### LIGHT CAVALRY
-	armenian_path_1 = {
+	anatolian_path_s = {
 		###
-		allow = {
-			NOT = {
-				has_variable = light_cavalry_super_unit
-			}
+		modifier = {
+			archers_defensive = 0.1
+			archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.03
 		}
-		on_activate = {
-			set_variable = light_cavalry_super_unit
+		icon = greek_antigonid_path_6
+		requires = {
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
 		}
+	}
+	anatolian_path_ha = {
+		###
+		
+		modifier = {
+			horse_archers_defensive = 0.1
+			horse_archers_discipline = 0.1
+			army_maintenance_cost = 0.01
+			monthly_military_experience_modifier = -0.04
+		}
+		icon = persian_scythian_path_1
+		requires = {
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
+		}
+	}
+	anatolian_path_c = {
+		###
+				
+		modifier = {
+			camels_defensive = 0.1
+			camels_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
+			army_maintenance_cost = 0.01
+		}
+		icon = north_african_tribal_path_2
+		requires = {
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
+		}
+	}
+	anatolian_path_lc = {
+		###
 		enable_tactic = hit_and_run_tactics
 		modifier = {
 			light_cavalry_defensive = 0.1
+			light_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.04
 			army_maintenance_cost = 0.01
 		}
 		icon = persian_bactrian_path_1
 		requires = {
+			
 		}
 	}
-	armenian_path_3 = {
+	anatolian_path_hc = {
 		###
+		
 		modifier = {
-			light_cavalry_discipline = 0.1
-			light_cavalry_plains_combat_bonus = 0.05
-			light_cavalry_hills_combat_bonus = 0.05
+			heavy_cavalry_defensive = 0.1
+			heavy_cavalry_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
-		icon = persian_scythian_path_2
+		icon = persian_bactrian_path_end_bonus
 		requires = {
-			armenian_path_1
+			
 		}
 	}
-	armenian_path_6 = {
+	anatolian_path_we = {
 		###
 		modifier = {
-			light_cavalry_offensive = 0.1
-			light_cavalry_plains_combat_bonus = 0.05
-			light_cavalry_forest_combat_bonus = 0.05
+			warelephant_defensive = 0.1
+			warelephant_discipline = 0.1
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
-		icon = persian_scythian_path_end_bonus
+		icon = mauryan_mauryas_path_4
 		requires = {
-			armenian_path_3
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
 		}
 	}
-	### HEAVY INFANTRY
-	armenian_path_4 = {
+	anatolian_path_hi = {
 		###
-		allow = {
-			NOT = {
-				has_variable = heavy_infantry_super_unit
-			}
-		}
 		on_activate = {
-			set_variable = heavy_infantry_super_unit
 			custom_tooltip = "create_high_martial_rising_star"
 			hidden_effect = {
 				create_character = {
@@ -241,39 +184,66 @@
 			}
 		}
 		modifier = {
-			heavy_infantry_offensive = 0.1
-			heavy_infantry_forest_combat_bonus = 0.05
-			army_maintenance_cost = 0.01
-		}
-		icon = persian_scythian_path_7
-		requires = {
-		}
-	}
-	armenian_path_9 = {
-		###
-		modifier = {
+			heavy_infantry_defensive = 0.1
 			heavy_infantry_discipline = 0.1
-			heavy_infantry_hills_combat_bonus = 0.05
+			monthly_military_experience_modifier = -0.06
 			army_maintenance_cost = 0.01
 		}
-		icon = persian_achaemenid_path_2
+		icon = persian_achaemenid_path_1
 		requires = {
-			armenian_path_4
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
 		}
 	}
-	armenian_path_2 = {
+	anatolian_path_terrain1 = {
 		###
 		modifier = {
-			archers_movement_speed = 0.1
-			light_cavalry_movement_speed = 0.1
-			heavy_infantry_movement_speed = 0.1
+			light_infantry_plains_combat_bonus = 0.1
+			light_infantry_farmland_combat_bonus = 0.1
+			light_infantry_marsh_combat_bonus = 0.1
+			heavy_cavalry_plains_combat_bonus = 0.1
+			light_cavalry_plains_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.03
 			army_maintenance_cost = 0.01
 		}
-		icon = persian_bactrian_path_end_bonus
+		icon = persian_achaemenid_path_1
 		requires = {
-			armenian_path_6
-			armenian_path_9
-			lydian_path_11
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
 		}
 	}
+	anatolian_path_terrain2 = {
+		###
+		modifier = {
+			light_infantry_hills_combat_bonus = 0.1
+			heavy_cavalry_hills_combat_bonus = 0.1
+			light_cavalry_hills_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.03
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = {
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
+		}
+	}
+	anatolian_path_terrain3 = {
+		###
+		modifier = {
+			light_infantry_forest_combat_bonus = 0.1
+			heavy_cavalry_forest_combat_bonus = 0.1
+			light_cavalry_forest_combat_bonus = 0.1
+			monthly_military_experience_modifier = -0.03
+			army_maintenance_cost = 0.01
+		}
+		icon = persian_achaemenid_path_1
+		requires = {
+			anatolian_path_li
+			anatolian_path_lc
+			anatolian_path_hc
+		}
+	}		
 }
